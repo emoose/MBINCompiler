@@ -587,4 +587,64 @@ namespace MBINCompiler
     {
         public List<TkLocalisationEntry> Table;
     }
+
+    public class GcCreatureStupidName : NMSTemplate
+    {
+        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 0x10)]
+        public string Id;
+        public int Count;
+        public List<NMSString0x80> Names;
+    }
+
+    public class GcCreatureStupidNameTable : NMSTemplate
+    {
+        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 0x80)]
+        public string StupidUserName;
+
+        public List<GcCreatureStupidName> Table;
+    }
+
+    public class TkProceduralTexture : NMSTemplate
+    {
+        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 0x10)]
+        public string Name;
+        public TkPaletteTexture Palette;
+        public float Probability;
+        public int TextureGameplayUse;
+        public string[] TextureGameplayUseValues()
+        {
+            return new[] { "IgnoreName", "MatchName", "DoNotMatchName" };
+        }
+        public bool OverrideAverageColour;
+        public Colour AverageColour;
+        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 0x80)]
+        public string Diffuse;
+        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 0x80)]
+        public string Normal;
+        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 0x80)]
+        public string Mask;
+    }
+
+    public class TkProceduralTextureLayer : NMSTemplate
+    {
+        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 0x10)]
+        public string Name;
+        public float Probability;
+        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 0x10)]
+        public string Group;
+        public bool SelectToMatchBase;
+        public List<TkProceduralTexture> Textures;
+    }
+
+    public class TkProceduralTextureList : NMSTemplate
+    {
+        public TkProceduralTextureLayer Layer1;
+        public TkProceduralTextureLayer Layer2;
+        public TkProceduralTextureLayer Layer3;
+        public TkProceduralTextureLayer Layer4;
+        public TkProceduralTextureLayer Layer5;
+        public TkProceduralTextureLayer Layer6;
+        public TkProceduralTextureLayer Layer7;
+        public TkProceduralTextureLayer Layer8;
+    }
 }

@@ -90,6 +90,16 @@ namespace MBINCompiler
                     return new TkLocalisationEntry();
                 case "TkLocalisationTable":
                     return new TkLocalisationTable();
+                case "GcCreatureStupidNameTable":
+                    return new GcCreatureStupidNameTable();
+                case "GcCreatureStupidName":
+                    return new GcCreatureStupidName();
+                case "TkProceduralTexture":
+                    return new TkProceduralTexture();
+                case "TkProceduralTextureLayer":
+                    return new TkProceduralTextureLayer();
+                case "TkProceduralTextureList":
+                    return new TkProceduralTextureList();
             }
 
             return null;
@@ -239,7 +249,7 @@ namespace MBINCompiler
                     list.Add(DeserializeTemplate(reader, templateName));
                 }
             }
-            reader.Align(0x10);
+            reader.Align(0x8);
             //else
             //    reader.BaseStream.Position += 8; // wtf?
 
@@ -263,7 +273,7 @@ namespace MBINCompiler
                 list.Add((T)(object)DeserializeTemplate(reader, typeof(T).Name));
             }
             reader.BaseStream.Position = listEndPosition;
-            reader.Align(0x10);
+            reader.Align(0x8);
 
 
             return list;

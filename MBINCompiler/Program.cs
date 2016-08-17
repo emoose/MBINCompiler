@@ -28,16 +28,24 @@ namespace MBINCompiler
             {
                 @"C:\NMS\METADATA\REALITY\TABLES\NMS_DIALOG_GCALIENPUZZLETABLE.MBIN" // wtf? why don't you decompile properly
             };
-            
-           /* foreach(var fname in tests)
+
+            /*foreach(var test in tests)
             {
-                var file = new MBINFile(fname);
-                file.Load();
-                var wew = file.UnserializeToXML();
+                var file2 = new MBINFile(test);
+                file2.Load();
+                var wew = file2.SerializeToXML();
+                wew = wew;
+            }
+
+            foreach (var test in penaltyBox)
+            {
+                var file2 = new MBINFile(test);
+                file2.Load();
+                var wew = file2.SerializeToXML();
                 wew = wew;
             }*/
 
-            if(args.Length < 1)
+            if (args.Length < 1)
             {
                 Console.WriteLine("Usage: MBINCompiler [InputPath]");
                 Console.WriteLine("Will write decompiled output to [InputPath].exml");
