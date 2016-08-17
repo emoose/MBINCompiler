@@ -81,8 +81,9 @@ namespace MBINCompiler
         public int Unknown8;
         public int UnknownC;
         public long Unknown10;
-        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 0x48)]
+        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 0x40)]
         public string TemplateName;
+        public long Unknown58;
 
         public string GetXMLTemplateName()
         {
@@ -361,6 +362,7 @@ namespace MBINCompiler
         }
         public GcAlienRace AlienRace;
         public int Level;
+        public int Padding;
     }
 
     public class GcAlienSpeechTable : NMSTemplate

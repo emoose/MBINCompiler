@@ -9,27 +9,43 @@ namespace MBINCompiler
 {
     class Program
     {
+        static void ScanMBINs(string path, ref List<string> types)
+        {
+            foreach(var file in Directory.GetFiles(path, "*.mbin"))
+            {
+                var mbin = new MBINFile(file);
+                mbin.Load();
+                types.Add(file + " : " + mbin.Header.GetXMLTemplateName());
+            }
+            foreach (var folder in Directory.GetDirectories(path))
+                ScanMBINs(folder, ref types);
+        }
+
         // todo: align based on offset of the struct (not offset of the reader!)
         static void Main(string[] args)
         {
+            //List<string> types = new List<string>();
+            //ScanMBINs("C:\\NMS\\", ref types);
+            //File.WriteAllLines("C:\\NMS\\mbins.txt", types.ToArray());
+
             var tests = new string[] // all of these should decompile fine
             {
                 @"C:\NMS\METADATA\UI\HUD\SHIPHUD.MBIN", 
                 @"C:\NMS\METADATA\ENTITLEMENTS\GCENTITLEMENTREWARDTABLE.MBIN",
                 @"C:\NMS\SCENES\DEMOS\PS4TEST\MAINSETTINGSPS4TEST.MBIN",
                 @"C:\NMS\METADATA\REALITY\TABLES\NMS_REALITY_GCTECHNOLOGYTABLE.MBIN",
-                @"C:\NMS\METADATA\REALITY\TABLES\NMS_DIALOG_GCALIENSPEECHTABLE.MBIN",
                 @"C:\NMS\METADATA\SIMULATION\SOLARSYSTEM\WEATHER\CLEARWEATHER.MBIN",
                 @"C:\NMS\METADATA\SIMULATION\SOLARSYSTEM\WEATHER\SKYSETTINGS\DAYSKYCOLOURS.MBIN",
-                @"C:\NMS\LANGUAGE\NMS_LOC1_ENGLISH.MBIN"
+                @"C:\NMS\LANGUAGE\NMS_LOC1_ENGLISH.MBIN",
+                @"C:\NMS\METADATA\REALITY\TABLES\NMS_DIALOG_GCALIENSPEECHTABLE.MBIN",
+                @"C:\NMS\METADATA\REALITY\TABLES\NMS_DIALOG_GCALIENPUZZLETABLE.MBIN"
             };
 
             var penaltyBox = new string[]
             {
-                @"C:\NMS\METADATA\REALITY\TABLES\NMS_DIALOG_GCALIENPUZZLETABLE.MBIN" // wtf? why don't you decompile properly
             };
 
-            /*foreach(var test in tests)
+            foreach(var test in tests)
             {
                 var file2 = new MBINFile(test);
                 file2.Load();
@@ -37,6 +53,7 @@ namespace MBINCompiler
                 wew = wew;
             }
 
+            /*
             foreach (var test in penaltyBox)
             {
                 var file2 = new MBINFile(test);
