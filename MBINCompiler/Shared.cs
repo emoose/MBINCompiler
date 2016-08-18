@@ -133,7 +133,7 @@ namespace MBINCompiler
                 int stringLength = reader.ReadInt32();
                 int unkC = reader.ReadInt32();
                 reader.BaseStream.Position = templatePosition + stringPos;
-                ((VariableSizeString)obj).Value = new string(reader.ReadChars(stringLength)).TrimEnd(new[] { '\0' });
+                ((VariableSizeString) obj).Value = reader.ReadString(Encoding.UTF8, stringLength);
                 reader.BaseStream.Position = templatePosition + 0x10;
                 return obj;
             }
@@ -230,6 +230,22 @@ namespace MBINCompiler
             long mod = offset % alignBy;
             if (mod != 0)
                 reader.BaseStream.Position += (alignBy - mod);
+        }
+
+        public static string ReadString(this BinaryReader reader, Encoding encoding, int size, bool nullTerminated = false)
+        {
+            byte[] stringData = reader.ReadBytes(size);
+            string stringValue = encoding.GetString(stringData);
+            if (nullTerminated)
+            {
+                int nullIndex = stringValue.IndexOf("\0", StringComparison.Ordinal);
+                if (nullIndex > 0)
+                {
+                    stringValue = stringValue.Remove(nullIndex);
+                }
+            }
+
+            return stringValue;
         }
 
         public static List<NMSTemplate> DeserializeGenericList(this BinaryReader reader, long templateStartOffset)
