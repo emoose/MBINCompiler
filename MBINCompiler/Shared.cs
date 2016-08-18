@@ -100,6 +100,16 @@ namespace MBINCompiler
                     return new TkProceduralTextureLayer();
                 case "TkProceduralTextureList":
                     return new TkProceduralTextureList();
+                case "GcTerrainTileType":
+                    return new GcTerrainTileType();
+                case "GcCreatureRoles":
+                    return new GcCreatureRoles();
+                case "GcCreatureTypes":
+                    return new GcCreatureTypes();
+                case "GcCreatureRoleDescription":
+                    return new GcCreatureRoleDescription();
+                case "GcCreatureRoleDescriptionTable":
+                    return new GcCreatureRoleDescriptionTable();
             }
 
             return null;
