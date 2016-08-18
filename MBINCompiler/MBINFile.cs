@@ -8,7 +8,7 @@ using System.Xml;
 
 namespace MBINCompiler
 {
-    class MBINFile
+    public class MBINFile
     {
         public MBINHeader Header;
         private readonly IO _io;
