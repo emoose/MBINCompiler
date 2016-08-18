@@ -25,9 +25,9 @@ namespace MBINCompilerTests
 
             foreach (var test in tests)
             {
-                var file2 = new MBINFile(test);
-                file2.Load();
-                var wew = file2.SerializeToXML();
+                var file = new MBINFile(test);
+                file.Load();
+                Assert.IsNotNull(file.SerializeToXML(), test + " serialization was null");
             }
         }
     }

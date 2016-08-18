@@ -74,7 +74,7 @@ namespace MBINCompiler
         }
     }
 
-    class MBINHeader : NMSTemplate
+    public class MBINHeader : NMSTemplate
     {
         public int Magic;
         public int Unknown4;
