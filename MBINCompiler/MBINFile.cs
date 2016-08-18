@@ -8,7 +8,7 @@ using System.Xml;
 
 namespace MBINCompiler
 {
-    public class MBINFile
+    public class MBINFile : IDisposable
     {
         public MBINHeader Header;
         private readonly IO _io;
@@ -30,7 +30,7 @@ namespace MBINCompiler
         public bool Save()
         {
             _io.Stream.Position = 0;
-           // _io.Writer.WriteStruct(Header);
+            // _io.Writer.WriteStruct(Header);
             _io.Stream.Flush();
 
             return true;
@@ -60,6 +60,12 @@ namespace MBINCompiler
                 xmlTextWriter.Flush();
                 return stringWriter.GetStringBuilder().ToString();
             }
+        }
+
+        public void Dispose()
+        {
+            if (_io != null)
+                _io.Dispose();
         }
     }
 }
