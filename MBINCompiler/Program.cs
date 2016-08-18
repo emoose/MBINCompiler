@@ -20,8 +20,7 @@ namespace MBINCompiler
             foreach (var folder in Directory.GetDirectories(path))
                 ScanMBINs(folder, ref types);
         }
-
-        // todo: align based on offset of the struct (not offset of the reader!)
+        
         static void Main(string[] args)
         {
             if (args.Length < 1)

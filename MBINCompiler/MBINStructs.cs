@@ -649,4 +649,70 @@ namespace MBINCompiler
         public TkProceduralTextureLayer Layer7;
         public TkProceduralTextureLayer Layer8;
     }
+
+    public class GcTerrainTileType : NMSTemplate
+    {
+        public int TileType;
+        public string[] TileTypeValues()
+        {
+            return new[]
+            {
+                "Air", "Base", "Rock", "Mountain", "Underwater", "Cave", "Dirt", "Liquid", "Substance"
+            };
+        }
+    }
+
+    public class GcCreatureRoles : NMSTemplate
+    {
+        public int CreatureRole; // enum(0xA)
+        public string[] CreatureRoleValues()
+        {
+            return new[]
+            {
+                "None", "Predator", "PlayerPredator", "Prey", "Passive", "Bird", "FishPrey", "FishPredator", "Butterfly", "Robot"
+            };
+        }
+    }
+
+    public class GcCreatureTypes : NMSTemplate
+    {
+        public int CreatureType; // enum(0x16)
+        public string[] CreatureTypeValues()
+        {
+            return new[]
+            {
+                "None", "Bird", "FlyingLizard", "FlyingSnake", "Butterfly", "Beetle", "Fish", "Shark",
+                "Crab", "Snake", "Dino", "Antelope", "Rodent", "Cat", "Drone", "Quad",
+                "Walker", "Predator", "PlayerPredator", "Prey", "Passive", "Brainless"
+            };
+        }
+    }
+
+    public class GcCreatureRoleDescription : NMSTemplate
+    {
+        public GcCreatureRoles CreatureRole;
+        public GcCreatureTypes CreatureType;
+        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 0x10)]
+        public string ForceID;
+        public float MinGroupScale;
+        public float MaxGroupScale;
+        public int MinGroupSize;
+        public int MaxGroupSize;
+        public float GroupsPerSquareKm;
+        public float FractionActiveInDay;
+        public float FractionActiveInNight;
+        public float ProbabilityOfBeingEnabled;
+        public float IncreasedSpawnDistance;
+
+        public int Padding;
+    }
+
+    public class GcCreatureRoleDescriptionTable : NMSTemplate
+    {
+        public List<GcCreatureRoleDescription> RoleDescription;
+
+        public float MinScaleVariance;
+        public float MaxScaleVariance;
+        public GcTerrainTileType TileType;
+    }
 }
