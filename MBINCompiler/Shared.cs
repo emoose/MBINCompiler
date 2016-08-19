@@ -5,115 +5,36 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 using System.Reflection;
+using MBINCompiler.Models.Structs;
+using MBINCompiler.Models;
 
 namespace MBINCompiler
 {
     static class Shared
     {
+        private static Type[] NMSTemplateTypes;
+
         public static NMSTemplate TemplateFromName(string templateName)
         {
-            switch (templateName)
+            if (NMSTemplateTypes == null || NMSTemplateTypes.Length <= 0)
             {
-                case "MBINHeader":
-                    return new MBINHeader();
-                case "GcHUDComponent":
-                    return new GcHUDComponent();
-                case "GcHUDLayerData":
-                    return new GcHUDLayerData();
-                case "GcHUDImageData":
-                    return new GcHUDImageData();
-                case "GcTextPreset":
-                    return new GcTextPreset();
-                case "GcHUDTextData":
-                    return new GcHUDTextData();
-                case "GcEntitlementRewardsTable":
-                    return new GcEntitlementRewardsTable();
-                case "GcEntitlementRewardData":
-                    return new GcEntitlementRewardData();
-                case "GcSceneSettings":
-                    return new GcSceneSettings();
-                case "NMSString0x80":
-                    return new NMSString0x80();
-                case "NMSString0x10":
-                    return new NMSString0x10();
-                case "GcInventoryType":
-                    return new GcInventoryType();
-                case "GcTechnologyRequirement":
-                    return new GcTechnologyRequirement();
-                case "GcStatsTypes":
-                    return new GcStatsTypes();
-                case "GcStatsBonus":
-                    return new GcStatsBonus();
-                case "GcTechnology":
-                    return new GcTechnology();
-                case "GcTechnologyTable":
-                    return new GcTechnologyTable();
-                case "VariableSizeString":
-                    return new VariableSizeString();
-                case "Colour":
-                    return new Colour();
-                case "GcAlienRace":
-                    return new GcAlienRace();
-                case "GcAlienSpeechEntry":
-                    return new GcAlienSpeechEntry();
-                case "GcAlienSpeechTable":
-                    return new GcAlienSpeechTable();
-                case "GcInteractionType":
-                    return new GcInteractionType();
-                case "GcAlienPuzzleOption":
-                    return new GcAlienPuzzleOption();
-                case "GcAlienPuzzleEntry":
-                    return new GcAlienPuzzleEntry();
-                case "GcAlienPuzzleTable":
-                    return new GcAlienPuzzleTable();
-                case "TkPaletteTexture":
-                    return new TkPaletteTexture();
-                case "GcHeavyAirSettingValues":
-                    return new GcHeavyAirSettingValues();
-                case "GcHeavyAirSetting":
-                    return new GcHeavyAirSetting();
-                case "GcFogProperties":
-                    return new GcFogProperties();
-                case "GcColourModifier":
-                    return new GcColourModifier();
-                case "GcWeatherColourModifiers":
-                    return new GcWeatherColourModifiers();
-                case "GcHazardValues":
-                    return new GcHazardValues();
-                case "GcWeatherProperties":
-                    return new GcWeatherProperties();
-                case "GcPlanetWeatherColourData":
-                    return new GcPlanetWeatherColourData();
-                case "GcWeatherColourSettingList":
-                    return new GcWeatherColourSettingList();
-                case "TkLocalisationEntry":
-                    return new TkLocalisationEntry();
-                case "TkLocalisationTable":
-                    return new TkLocalisationTable();
-                case "GcCreatureStupidNameTable":
-                    return new GcCreatureStupidNameTable();
-                case "GcCreatureStupidName":
-                    return new GcCreatureStupidName();
-                case "TkProceduralTexture":
-                    return new TkProceduralTexture();
-                case "TkProceduralTextureLayer":
-                    return new TkProceduralTextureLayer();
-                case "TkProceduralTextureList":
-                    return new TkProceduralTextureList();
-                case "GcTerrainTileType":
-                    return new GcTerrainTileType();
-                case "GcCreatureRoles":
-                    return new GcCreatureRoles();
-                case "GcCreatureTypes":
-                    return new GcCreatureTypes();
-                case "GcCreatureRoleDescription":
-                    return new GcCreatureRoleDescription();
-                case "GcCreatureRoleDescriptionTable":
-                    return new GcCreatureRoleDescriptionTable();
+                NMSTemplateTypes = Assembly.GetExecutingAssembly()
+                    .GetTypes()
+                    .Where(t => t.BaseType == typeof(NMSTemplate))
+                    .ToArray();
             }
 
-            return null;
+
+            var type = NMSTemplateTypes.FirstOrDefault(t => t.Name == templateName);
+
+            if (type == null)
+                return null; // Template type doesn't exist
+
+            var ctor = type.GetConstructors().First();
+
+            return ctor.Invoke(null) as NMSTemplate;
         }
+
         public static NMSTemplate DeserializeTemplate(this BinaryReader reader, string templateName)
         {
             if (templateName.StartsWith("c") && templateName.Length > 1)
@@ -127,7 +48,7 @@ namespace MBINCompiler
             long templatePosition = reader.BaseStream.Position;
             System.Diagnostics.Debug.Print(templateName + " position: " + templatePosition.ToString("X"));
 
-            if(templateName == "VariableSizeString")
+            if (templateName == "VariableSizeString")
             {
                 long stringPos = reader.ReadInt64();
                 int stringLength = reader.ReadInt32();
@@ -211,7 +132,7 @@ namespace MBINCompiler
 
                         break;
                     default:
-                        if(fieldType == "Colour")
+                        if (fieldType == "Colour")
                             reader.Align(0x10, templatePosition);
 
                         var data = reader.DeserializeTemplate(fieldType);
@@ -304,7 +225,7 @@ namespace MBINCompiler
 
             reader.BaseStream.Position = listPosition + listStartOffset;
             var list = new List<T>();
-            for(int i = 0; i < numEntries; i++)
+            for (int i = 0; i < numEntries; i++)
             {
                 list.Add((T)(object)DeserializeTemplate(reader, typeof(T).Name));
             }
