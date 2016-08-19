@@ -73,7 +73,7 @@
     <Compile Include="Models\Structs\GcHUDTextData.cs" />
     <Compile Include="Models\Structs\GcInteractionType.cs" />
     <Compile Include="Models\Structs\GcInventoryType.cs" />
-    <Compile Include="Models\Structs\GcPlanetData.cs" />
+    <Compile Include="Models\Structs\GcPlanetData_UNFINISHED.cs" />
     <Compile Include="Models\Structs\GcPlanetWeatherColourData.cs" />
     <Compile Include="Models\Structs\GcSceneSettings.cs" />
     <Compile Include="Models\Structs\GcStatsBonus.cs" />
@@ -83,6 +83,7 @@
     <Compile Include="Models\Structs\GcTechnologyTable.cs" />
     <Compile Include="Models\Structs\GcTerrainTileType.cs" />
     <Compile Include="Models\Structs\GcTextPreset.cs" />
+    <Compile Include="Models\Structs\GcTextPresetTable.cs" />
     <Compile Include="Models\Structs\GcWeatherColourModifiers.cs" />
     <Compile Include="Models\Structs\GcWeatherColourSettingList.cs" />
     <Compile Include="Models\Structs\GcWeatherProperties.cs" />

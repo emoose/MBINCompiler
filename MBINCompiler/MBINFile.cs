@@ -24,7 +24,7 @@ namespace MBINCompiler
         public bool Load()
         {
             _io.Stream.Position = 0;
-            Header = (MBINHeader)_io.Reader.DeserializeTemplate("MBINHeader");
+            Header = (MBINHeader)NMSTemplate.DeserializeBinaryTemplate(_io.Reader, "MBINHeader");
             return true;
         }
 
@@ -40,27 +40,7 @@ namespace MBINCompiler
         public NMSTemplate GetData()
         {
             _io.Stream.Position = 0x60;
-            return _io.Reader.DeserializeTemplate(Header.GetXMLTemplateName());
-        }
-
-        public string SerializeToXML()
-        {
-            var obj = GetData();
-            if (obj == null)
-                return null;
-
-            var xmlDoc = new XmlDocument();
-            var el = obj.AppendToXml(null, xmlDoc);
-
-            var xmlSettings = new XmlWriterSettings();
-            xmlSettings.Indent = true;
-            using (var stringWriter = new StringWriter())
-            using (var xmlTextWriter = XmlWriter.Create(stringWriter, xmlSettings))
-            {
-                xmlDoc.WriteTo(xmlTextWriter);
-                xmlTextWriter.Flush();
-                return stringWriter.GetStringBuilder().ToString();
-            }
+            return NMSTemplate.DeserializeBinaryTemplate(_io.Reader, Header.GetXMLTemplateName());
         }
 
         public void Dispose()

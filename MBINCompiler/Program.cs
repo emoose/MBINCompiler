@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.IO;
 
 namespace MBINCompiler
@@ -38,6 +35,7 @@ namespace MBINCompiler
                 Console.WriteLine("Unsupported input file extension, only .mbin is currently supported, exiting...");
                 return;
             }
+
             var output = Path.ChangeExtension(input, ".exml"); // emoose XML, because there's no way this XML format is compatible with MXML
             if(File.Exists(output))
             {
@@ -48,10 +46,18 @@ namespace MBINCompiler
             // no error checking ^^ (todo: error checking)
             var file = new MBINFile(input);
             file.Load();
-            var xmlString = file.SerializeToXML();
-            if(String.IsNullOrEmpty(xmlString))
+
+            var data = file.GetData();
+            if(data == null)
             {
-                Console.WriteLine("Failed to serialize template \"" + file.Header.GetXMLTemplateName() + "\" to XML, template structure might not be supported yet.");
+                Console.WriteLine("Failed to deserialize template \"" + file.Header.GetXMLTemplateName() + "\", has the structure been mapped yet?");
+                return;
+            }
+
+            var xmlString = data.SerializeToXml();
+            if(string.IsNullOrEmpty(xmlString))
+            {
+                Console.WriteLine("Error serializing template \"" + file.Header.GetXMLTemplateName() + "\" to XML!");
                 return;
             }
             File.WriteAllText(output, xmlString);
