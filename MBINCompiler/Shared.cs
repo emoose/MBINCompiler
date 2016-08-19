@@ -28,7 +28,7 @@ namespace MBINCompiler
             if (nullTerminated)
             {
                 int nullIndex = stringValue.IndexOf("\0", StringComparison.Ordinal);
-                if (nullIndex > 0)
+                if (nullIndex >= 0)
                 {
                     stringValue = stringValue.Remove(nullIndex);
                 }
