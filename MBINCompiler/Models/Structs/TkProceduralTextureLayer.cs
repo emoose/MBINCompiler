@@ -9,6 +9,7 @@ namespace MBINCompiler.Models.Structs
         public string Name;
 
         public float Probability;
+        public int Unknown14;
 
         [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 0x10)]
         public string Group;

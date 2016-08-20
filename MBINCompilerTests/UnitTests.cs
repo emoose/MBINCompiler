@@ -53,6 +53,9 @@ namespace MBINCompilerTests
                 "SCENES/CREATURESTUPIDNAMETABLE.MBIN",
                 "SCENES/CREATURESTUPIDNAMETABLEPS4.MBIN",
 
+                // GcDebugOptions
+                "GCDEBUGOPTIONS.GLOBAL.MBIN",
+
                 // GcEntitlementRewardsTable
                 "METADATA/ENTITLEMENTS/GCENTITLEMENTREWARDTABLE.MBIN",
                 "METADATA/ENTITLEMENTS/GCENTITLEMENTREWARDTABLEPC.MBIN",

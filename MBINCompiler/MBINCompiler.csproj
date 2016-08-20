@@ -61,6 +61,7 @@
     <Compile Include="Models\Structs\GcCreatureStupidName.cs" />
     <Compile Include="Models\Structs\GcCreatureStupidNameTable.cs" />
     <Compile Include="Models\Structs\GcCreatureTypes.cs" />
+    <Compile Include="Models\Structs\GcDebugOptions.cs" />
     <Compile Include="Models\Structs\GcEntitlementRewardData.cs" />
     <Compile Include="Models\Structs\GcEntitlementRewardsTable.cs" />
     <Compile Include="Models\Structs\GcFogProperties.cs" />

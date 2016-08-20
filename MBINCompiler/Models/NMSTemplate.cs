@@ -64,6 +64,7 @@ namespace MBINCompiler.Models
             var fields = type.GetFields();
             foreach (var field in fields)
             {
+                var fieldAddr = reader.BaseStream.Position - templatePosition;
                 var fieldName = field.Name;
                 var fieldType = field.FieldType.Name;
                 switch (fieldType)
@@ -85,7 +86,7 @@ namespace MBINCompiler.Models
 
                         if (fieldType == "String")
                         {
-                            reader.Align(0x8, templatePosition);
+                           // reader.Align(0x4, templatePosition);
                             var str = reader.ReadString(Encoding.UTF8, size, true);
                             field.SetValue(obj, str);
                         }
