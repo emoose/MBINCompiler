@@ -914,6 +914,9 @@ namespace MBINCompilerTests
                 "TEXTURES/UI/HUD/MENUS/ELEMENTGRADIENT.TEXTURE.MBIN",
             };
 
+            if (!Directory.Exists(baseDir))
+                return;
+
             foreach (var test in tests)
             {
                 var fullPath = Path.Combine(baseDir, test);
