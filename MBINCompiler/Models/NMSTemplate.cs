@@ -136,6 +136,7 @@ namespace MBINCompiler.Models
                     default:
                         if (fieldType == "Colour") // unsure if this is needed?
                             reader.Align(0x10, templatePosition);
+                        // todo: align for VariableSizeString?
 
                         var data = DeserializeBinaryTemplate(reader, fieldType);
                         if (data != null)

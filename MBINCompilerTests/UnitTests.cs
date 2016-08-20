@@ -1,6 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using MBINCompiler;
+using MBINCompiler.Models.Structs;
 using System.IO;
 
 namespace MBINCompilerTests
@@ -9,6 +10,43 @@ namespace MBINCompilerTests
     public class UnitTests
     {
         String baseDir = "C:/NMS";
+        String testFile1 = "../../MBINCompilerTestTemplate.MBIN";
+
+        [TestMethod]
+        public void template_fields_test1()
+        {
+            var file = new MBINFile(testFile1);
+            file.Load();
+            Assert.AreEqual(file.Header.GetXMLTemplateName(), "MBINCompilerTestTemplate", testFile1 + " header not using TemplateType MBINCompilerTestTemplate!");
+
+            var data = file.GetData();
+            Assert.IsNotNull(data, testFile1 + " deserialized data was null");
+            Assert.IsNotNull(data.SerializeToXml(), testFile1 + " xml serialization was null");
+            Assert.IsInstanceOfType(data, typeof(MBINCompilerTestTemplate), testFile1 + " template isn't of type MBINCompilerTestTemplate!");
+
+            MBINCompilerTestTemplate test = (MBINCompilerTestTemplate)data;
+            Assert.AreEqual(test.TestBoolTrue, true);
+            Assert.AreEqual(test.TestBoolFalse, false);
+            Assert.AreEqual(test.TestBool3, true);
+            Assert.AreEqual(test.TestInt16, 1337);
+            Assert.AreEqual(test.TestInt32, 2448);
+            Assert.AreEqual(test.TestInt64, 3559);
+            Assert.AreEqual(test.TestFloat, 1337.0);
+            Assert.AreEqual(test.TestEnumYes, 1);
+            Assert.AreEqual(test.TestEnumNo, 0);
+
+            var expectedString = "SixteenByteStrng";
+            Assert.AreEqual(test.TestString, expectedString);
+
+            var expectedDynamicString = "NoWayToControlItIt'sTotallyDynamicWheneverYou'reAround";
+            Assert.AreEqual(test.TestDynamicString.Value, expectedDynamicString);
+
+            string[] expectedStrings = new[] { "FirstEntry", "SecondEntry", "ThirdEntry" };
+            Assert.AreEqual(test.Test0x80ByteStringList.Count, expectedStrings.Length);
+
+            for(int i = 0; i < expectedStrings.Length; i++)
+                Assert.AreEqual(test.Test0x80ByteStringList[i].Value, expectedStrings[i]);
+        }
 
         [TestMethod]
         public void should_successfully_decompile()
