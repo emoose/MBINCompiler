@@ -233,7 +233,8 @@ namespace MBINCompiler.Models
 
             var xmlSettings = new XmlWriterSettings();
             xmlSettings.Indent = true;
-            using (var stringWriter = new StringWriter())
+            xmlSettings.Encoding = Encoding.UTF8;
+            using (var stringWriter = new EncodedStringWriter(Encoding.UTF8))
             using (var xmlTextWriter = XmlWriter.Create(stringWriter, xmlSettings))
             {
                 xmlDoc.WriteTo(xmlTextWriter);
@@ -304,6 +305,16 @@ namespace MBINCompiler.Models
             }
 
             return el;
+        }
+
+        private sealed class EncodedStringWriter : StringWriter
+        {
+            public EncodedStringWriter(Encoding encoding)
+            {
+                Encoding = encoding;
+            }
+
+            public override Encoding Encoding { get; }
         }
     }
 }
