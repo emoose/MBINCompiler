@@ -25,6 +25,7 @@ namespace MBINCompiler
                 Console.WriteLine("Usage: MBINCompiler [InputPath]");
                 Console.WriteLine("Will write decompiled output to [InputPath].exml");
                 Console.WriteLine("Recompiling .exml back to .mbin will come soon!");
+                Console.ReadLine();
                 return;
             }
 
@@ -33,6 +34,7 @@ namespace MBINCompiler
             if(Path.GetExtension(input).ToLower() != ".mbin")
             {
                 Console.WriteLine("Unsupported input file extension, only .mbin is currently supported, exiting...");
+                Console.ReadLine();
                 return;
             }
 
@@ -40,6 +42,7 @@ namespace MBINCompiler
             if(File.Exists(output))
             {
                 Console.WriteLine("Output file \"" + output + "\" already exists, exiting...");
+                Console.ReadLine();
                 return;
             }
 
@@ -51,6 +54,7 @@ namespace MBINCompiler
             if(data == null)
             {
                 Console.WriteLine("Failed to deserialize template \"" + file.Header.GetXMLTemplateName() + "\", has the structure been mapped yet?");
+                Console.ReadLine();
                 return;
             }
 
@@ -58,10 +62,12 @@ namespace MBINCompiler
             if(string.IsNullOrEmpty(xmlString))
             {
                 Console.WriteLine("Error serializing template \"" + file.Header.GetXMLTemplateName() + "\" to XML!");
+                Console.ReadLine();
                 return;
             }
             File.WriteAllText(output, xmlString);
             Console.WriteLine("XML data written to \"" + output + "\" successfully?");
+            Console.ReadLine();
         }
     }
 }
