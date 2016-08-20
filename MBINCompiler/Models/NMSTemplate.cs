@@ -13,27 +13,20 @@ namespace MBINCompiler.Models
 {
     public class NMSTemplate
     {
-        private static Type[] NMSTemplateTypes;
+        private static readonly Dictionary<string, Type> NMSTemplateMap = Assembly.GetExecutingAssembly()
+                .GetTypes()
+                .Where(t => t.BaseType == typeof(NMSTemplate))
+                .ToDictionary(t => t.Name);
 
         public static NMSTemplate TemplateFromName(string templateName)
         {
-            if (NMSTemplateTypes == null || NMSTemplateTypes.Length <= 0)
+            Type type;
+            if (!NMSTemplateMap.TryGetValue(templateName, out type))
             {
-                NMSTemplateTypes = Assembly.GetExecutingAssembly()
-                    .GetTypes()
-                    .Where(t => t.BaseType == typeof(NMSTemplate))
-                    .ToArray();
+                return null; // Template type doesn't exist
             }
 
-
-            var type = NMSTemplateTypes.FirstOrDefault(t => t.Name == templateName);
-
-            if (type == null)
-                return null; // Template type doesn't exist
-
-            var ctor = type.GetConstructors().First();
-
-            return ctor.Invoke(null) as NMSTemplate;
+            return Activator.CreateInstance(type) as NMSTemplate;
         }
 
         public static NMSTemplate DeserializeBinaryTemplate(BinaryReader reader, string templateName)
@@ -86,7 +79,7 @@ namespace MBINCompiler.Models
 
                         if (fieldType == "String")
                         {
-                           // reader.Align(0x4, templatePosition);
+                            // reader.Align(0x4, templatePosition);
                             var str = reader.ReadString(Encoding.UTF8, size, true);
                             field.SetValue(obj, str);
                         }
@@ -214,7 +207,7 @@ namespace MBINCompiler.Models
             for (int i = 0; i < numEntries; i++)
             {
                 var template = DeserializeBinaryTemplate(reader, typeof(T).Name);
-                if(template == null)
+                if (template == null)
                     throw new Exception("Failed to deserialize template " + typeof(T).Name + "!");
 
                 list.Add((T)(object)template);
@@ -242,7 +235,7 @@ namespace MBINCompiler.Models
                 return stringWriter.GetStringBuilder().ToString();
             }
         }
-        
+
         public XmlElement AppendToXml(XmlElement parentElement, XmlDocument document)
         {
             XmlElement el = null;
@@ -282,14 +275,19 @@ namespace MBINCompiler.Models
                         break;
 
                     case "Byte[]":
-                        break; // todo
-                    case "List`1":
+                        byte[] bytes = (byte[])field.GetValue(this);
+                        string base64Value = bytes == null ? null : Convert.ToBase64String(bytes);
                         var prop2 = (XmlElement)el.AppendChild(document.CreateElement("Property"));
                         prop2.SetAttribute("name", fieldName);
+                        prop2.SetAttribute("value", base64Value);
+                        break;
+                    case "List`1":
+                        var prop3 = (XmlElement)el.AppendChild(document.CreateElement("Property"));
+                        prop3.SetAttribute("name", fieldName);
 
                         IList templates = (IList)field.GetValue(this);
                         foreach (var template in templates)
-                            ((NMSTemplate)template).AppendToXml(prop2, document);
+                            ((NMSTemplate)template).AppendToXml(prop3, document);
 
                         break;
 
@@ -305,6 +303,77 @@ namespace MBINCompiler.Models
             }
 
             return el;
+        }
+
+        public static NMSTemplate DeserializeXml(EXmlData xmlData)
+        {
+            NMSTemplate template = TemplateFromName(xmlData.Template);
+            Type templateType = template.GetType();
+            foreach (var xmlProperty in xmlData.Properties)
+            {
+                FieldInfo field = templateType.GetField(xmlProperty.Name);
+                Type fieldType = field.FieldType;
+                object fieldValue;
+                switch (fieldType.Name)
+                {
+                    case "String":
+                        fieldValue = xmlProperty.Value;
+                        break;
+                    case "Single":
+                        fieldValue = float.Parse(xmlProperty.Value);
+                        break;
+                    case "Boolean":
+                        fieldValue = bool.Parse(xmlProperty.Value);
+                        break;
+                    case "Int16":
+                        fieldValue = short.Parse(xmlProperty.Value);
+                        break;
+                    case "Int32":
+                        var valuesMethod = templateType.GetMethod(field.Name + "Values");
+                        if (valuesMethod != null)
+                        {
+                            string[] values = (string[])valuesMethod.Invoke(template, null);
+                            fieldValue = Array.FindIndex(values, v => v == xmlProperty.Value);
+                        }
+                        else
+                        {
+                            fieldValue = int.Parse(xmlProperty.Value);
+                        }
+                        break;
+                    case "Int64":
+                        fieldValue = long.Parse(xmlProperty.Value);
+                        break;
+                    case "Byte[]":
+                        fieldValue = xmlProperty.Value == null ? null : Convert.FromBase64String(xmlProperty.Value);
+                        break;
+                    case "List`1":
+                        Type elementType = fieldType.GetGenericArguments()[0];
+                        Type listType = typeof(List<>).MakeGenericType(elementType);
+                        IList list = (IList)Activator.CreateInstance(listType);
+                        foreach (EXmlData innerXmlData in xmlProperty.Data)
+                        {
+                            NMSTemplate element = DeserializeXml(innerXmlData);
+                            list.Add(element);
+                        }
+
+                        fieldValue = list;
+                        break;
+                    default:
+                        fieldValue = fieldType.IsValueType ? Activator.CreateInstance(fieldType) : null;
+                        break;
+                }
+
+                field.SetValue(template, fieldValue);
+            }
+
+            foreach (EXmlData innerXmlData in xmlData.Data)
+            {
+                FieldInfo field = templateType.GetField(innerXmlData.Name);
+                NMSTemplate innerTemplate = DeserializeXml(innerXmlData);
+                field.SetValue(template, innerTemplate);
+            }
+
+            return template;
         }
 
         private sealed class EncodedStringWriter : StringWriter
