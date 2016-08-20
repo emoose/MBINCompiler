@@ -13,7 +13,7 @@ namespace MBINCompilerTests
         String testFile1 = "../../MBINCompilerTestTemplate.MBIN";
 
         [TestMethod]
-        public void template_fields_test1()
+        public void template_deserializing_test1()
         {
             var file = new MBINFile(testFile1);
             file.Load();
