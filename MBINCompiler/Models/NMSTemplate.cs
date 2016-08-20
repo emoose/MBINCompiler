@@ -97,26 +97,26 @@ namespace MBINCompiler.Models
                         }
                         break;
                     case "Single":
-                        reader.Align(4, templatePosition);
+                        reader.Align(4, 0);
                         field.SetValue(obj, reader.ReadSingle());
                         break;
                     case "Boolean":
                         field.SetValue(obj, reader.ReadByte() != 0);
                         break;
                     case "Int16":
-                        reader.Align(2, templatePosition);
+                        reader.Align(2, 0);
                         field.SetValue(obj, reader.ReadInt16());
                         break;
                     case "Int32":
-                        reader.Align(4, templatePosition);
+                        reader.Align(4, 0);
                         field.SetValue(obj, reader.ReadInt32());
                         break;
                     case "Int64":
-                        reader.Align(8, templatePosition);
+                        reader.Align(8, 0);
                         field.SetValue(obj, reader.ReadInt64());
                         break;
                     case "List`1":
-                        reader.Align(8, templatePosition);
+                        reader.Align(8, 0);
                         if (field.FieldType.IsGenericType && field.FieldType.GetGenericTypeDefinition() == typeof(List<>))
                         {
                             Type itemType = field.FieldType.GetGenericArguments()[0]; // use this...
@@ -135,7 +135,7 @@ namespace MBINCompiler.Models
                         break;
                     default:
                         if (fieldType == "Colour") // unsure if this is needed?
-                            reader.Align(0x10, templatePosition);
+                            reader.Align(0x10, 0);
                         // todo: align for VariableSizeString?
 
                         var data = DeserializeBinaryTemplate(reader, fieldType);
@@ -191,7 +191,7 @@ namespace MBINCompiler.Models
             }
 
             reader.BaseStream.Position = listEndPosition;
-            reader.Align(0x8, templateStartOffset);
+            reader.Align(0x8, 0);
 
             return list;
         }
@@ -221,7 +221,7 @@ namespace MBINCompiler.Models
             }
 
             reader.BaseStream.Position = listEndPosition;
-            reader.Align(0x8, templateStartOffset);
+            reader.Align(0x8, 0);
 
             return list;
         }
