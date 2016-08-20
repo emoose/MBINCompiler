@@ -51,6 +51,12 @@
     <Compile Include="Models\Structs\GcAlienPuzzleEntry.cs" />
     <Compile Include="Models\Structs\GcAlienPuzzleOption.cs" />
     <Compile Include="Models\Structs\GcAlienPuzzleTable.cs" />
+    <Compile Include="Models\Structs\TkTextureResource.cs" />
+    <Compile Include="Models\Structs\TkModelResource.cs" />
+    <Compile Include="Models\Structs\GcProductCategory.cs" />
+    <Compile Include="Models\Structs\GcRarity.cs" />
+    <Compile Include="Models\Structs\GcLegality.cs" />
+    <Compile Include="Models\Structs\GcRealitySubstanceCategory.cs" />
     <Compile Include="Models\Structs\GcAlienRace.cs" />
     <Compile Include="Models\Structs\GcAlienSpeechEntry.cs" />
     <Compile Include="Models\Structs\GcAlienSpeechTable.cs" />
@@ -74,8 +80,11 @@
     <Compile Include="Models\Structs\GcHUDTextData.cs" />
     <Compile Include="Models\Structs\GcInteractionType.cs" />
     <Compile Include="Models\Structs\GcInventoryType.cs" />
+    <Compile Include="Models\Structs\GcItemPriceModifiers.cs" />
     <Compile Include="Models\Structs\GcPlanetData_UNFINISHED.cs" />
     <Compile Include="Models\Structs\GcPlanetWeatherColourData.cs" />
+    <Compile Include="Models\Structs\GcProductData.cs" />
+    <Compile Include="Models\Structs\GcProductTable.cs" />
     <Compile Include="Models\Structs\GcSceneSettings.cs" />
     <Compile Include="Models\Structs\GcStatsBonus.cs" />
     <Compile Include="Models\Structs\GcStatsTypes.cs" />
