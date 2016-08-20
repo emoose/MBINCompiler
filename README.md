@@ -1,10 +1,12 @@
-# MBINCompiler
+# MBINCompiler [![Build status](https://ci.appveyor.com/api/projects/status/kivetlncubq7wktl?svg=true)](https://ci.appveyor.com/project/emoose/mbincompiler)
 
 A tool for decompiling No Man's Sky .MBIN files to XML format, eventually it'll live to its name and actually compile XMLs back to MBIN too.
 
 MBIN reading seems to be working well, structures just have to be created for all the different templates used by the game.
 
 Note that the format of XML files created by this tool could change at any time.
+
+Builds can be downloaded from our AppVeyor page: https://ci.appveyor.com/project/emoose/mbincompiler/build/artifacts
 
 Requests & Issues
 ---
