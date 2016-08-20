@@ -88,7 +88,7 @@
     <Compile Include="Models\Structs\GcWeatherColourModifiers.cs" />
     <Compile Include="Models\Structs\GcWeatherColourSettingList.cs" />
     <Compile Include="Models\Structs\GcWeatherProperties.cs" />
-    <Compile Include="Models\Structs\MBINCompilerTestStructure.cs" />
+    <Compile Include="Models\Structs\MBINCompilerTestTemplate.cs" />
     <Compile Include="Models\Structs\NMSString0x10.cs" />
     <Compile Include="Models\Structs\NMSString0x80.cs" />
     <Compile Include="Models\Structs\TkLocalisationEntry.cs" />
