@@ -43,7 +43,7 @@ namespace MBINCompilerGUI
             foreach (string file in files)
             {
                 //Console.WriteLine(file);
-                outputBox.Text += "\n\nSending: " + file;
+                outputBox.Text += "\n\nSending: " + file + "\n";
                 runComp(file);
             }
         }
