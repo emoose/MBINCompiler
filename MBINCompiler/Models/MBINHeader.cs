@@ -4,7 +4,7 @@ namespace MBINCompiler.Models
 {
     public class MBINHeader : NMSTemplate
     {
-        public int Magic;
+        public uint Magic;
         public int Unknown4;
         public int Unknown8;
         public int UnknownC;
@@ -21,6 +21,17 @@ namespace MBINCompiler.Models
                 return TemplateName;
 
             return TemplateName.Substring(1); // remove the "c" (compiled?) from the start of the template name
+        }
+
+        public void SetDefaults()
+        {
+            Magic = 0xCCCCCCCC; // can also be 0xDDDDDDDD, why?
+            Unknown4 = 2500;
+            Unknown8 = 0;
+            UnknownC = 0;
+            Unknown10 = 0; // hash of some kind? might be filename hash
+            TemplateName = string.Empty;
+            Unknown58 = 0; // can be 0xFEFEFE...
         }
     }
 }

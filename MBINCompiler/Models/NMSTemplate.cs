@@ -6,6 +6,7 @@ using System.IO;
 using System.Text;
 using System.Collections.Generic;
 using System.Reflection;
+using System.Diagnostics;
 
 using MBINCompiler.Models.Structs;
 
@@ -40,7 +41,7 @@ namespace MBINCompiler.Models
                 return null;
 
             long templatePosition = reader.BaseStream.Position;
-            System.Diagnostics.Debug.Print(templateName + " position: " + templatePosition.ToString("X"));
+            Debug.Print(templateName + " position: " + templatePosition.ToString("X"));
 
             if (templateName == "VariableSizeString")
             {
@@ -97,16 +98,19 @@ namespace MBINCompiler.Models
                         field.SetValue(obj, reader.ReadByte() != 0);
                         break;
                     case "Int16":
+                    case "UInt16":
                         reader.Align(2, 0);
-                        field.SetValue(obj, reader.ReadInt16());
+                        field.SetValue(obj, fieldType == "Int16" ? reader.ReadInt16() : (object)reader.ReadUInt16());
                         break;
                     case "Int32":
+                    case "UInt32":
                         reader.Align(4, 0);
-                        field.SetValue(obj, reader.ReadInt32());
+                        field.SetValue(obj, fieldType == "Int32" ? reader.ReadInt32() : (object)reader.ReadUInt32());
                         break;
                     case "Int64":
+                    case "UInt64":
                         reader.Align(8, 0);
-                        field.SetValue(obj, reader.ReadInt64());
+                        field.SetValue(obj, fieldType == "Int64" ? reader.ReadInt64() : (object)reader.ReadUInt64());
                         break;
                     case "List`1":
                         reader.Align(8, 0);
@@ -144,7 +148,7 @@ namespace MBINCompiler.Models
         public static List<NMSTemplate> DeserializeGenericList(BinaryReader reader, long templateStartOffset)
         {
             long listPosition = reader.BaseStream.Position;
-            System.Diagnostics.Debug.WriteLine("DeserializeGenericList start 0x" + listPosition.ToString("X"));
+            Debug.WriteLine("DeserializeGenericList start 0x" + listPosition.ToString("X"));
 
             long templateNamesOffset = reader.ReadInt64(); // TODO: USE THIS!
             int numTemplates = reader.ReadInt32();
@@ -192,9 +196,9 @@ namespace MBINCompiler.Models
         public static List<T> DeserializeList<T>(BinaryReader reader, long templateStartOffset)
         {
             long listPosition = reader.BaseStream.Position;
-            System.Diagnostics.Debug.WriteLine("DeserializeList start 0x" + listPosition.ToString("X"));
+            Debug.WriteLine("DeserializeList start 0x" + listPosition.ToString("X"));
 
-            long listStartOffset = reader.ReadInt64(); // TODO: USE THIS!
+            long listStartOffset = reader.ReadInt64();
             int numEntries = reader.ReadInt32();
             uint listMagic = reader.ReadUInt32();
             if (listMagic != 0xAAAAAA01)
@@ -262,6 +266,10 @@ namespace MBINCompiler.Models
                     case "Boolean":
                     case "Int16":
                     case "Int32":
+                    case "Int64":
+                    case "UInt16":
+                    case "UInt32":
+                    case "UInt64":
                         var prop = (XmlElement)el.AppendChild(document.CreateElement("Property"));
                         prop.SetAttribute("name", fieldName);
                         var value = field.GetValue(this).ToString();
@@ -326,9 +334,11 @@ namespace MBINCompiler.Models
                         fieldValue = bool.Parse(xmlProperty.Value);
                         break;
                     case "Int16":
-                        fieldValue = short.Parse(xmlProperty.Value);
+                    case "UInt16":
+                        fieldValue = fieldType.Name == "Int16" ? short.Parse(xmlProperty.Value) : (object)ushort.Parse(xmlProperty.Value);
                         break;
                     case "Int32":
+                    case "UInt32":
                         var valuesMethod = templateType.GetMethod(field.Name + "Values");
                         if (valuesMethod != null)
                         {
@@ -337,11 +347,12 @@ namespace MBINCompiler.Models
                         }
                         else
                         {
-                            fieldValue = int.Parse(xmlProperty.Value);
+                            fieldValue = fieldType.Name == "Int32" ? int.Parse(xmlProperty.Value) : (object)uint.Parse(xmlProperty.Value);
                         }
                         break;
                     case "Int64":
-                        fieldValue = long.Parse(xmlProperty.Value);
+                    case "UInt64":
+                        fieldValue = fieldType.Name == "Int64" ? long.Parse(xmlProperty.Value) : (object)ulong.Parse(xmlProperty.Value);
                         break;
                     case "Byte[]":
                         fieldValue = xmlProperty.Value == null ? null : Convert.FromBase64String(xmlProperty.Value);
@@ -374,6 +385,257 @@ namespace MBINCompiler.Models
             }
 
             return template;
+        }
+
+        public void SerializeGenericList(BinaryWriter writer, IList list, long listHeaderPosition, ref long additionalDataOffset, ref List<Tuple<long, object>> additionalData)
+        {
+            long listPosition = writer.BaseStream.Position;
+            Debug.WriteLine($"SerializeList start 0x{listPosition.ToString("X")}, header 0x{listHeaderPosition}");
+
+            writer.BaseStream.Position = listHeaderPosition;
+
+            // write the list header into the template
+            if (list.Count > 0)
+                writer.Write(listPosition - listHeaderPosition);
+            else
+                writer.Write((long)0); // lists with 0 entries have offset set to 0
+
+            writer.Write((Int32)list.Count);
+            writer.Write((UInt32)0xAAAAAA01);
+
+            // reserve space for list offsets+names
+            writer.BaseStream.Position = listPosition;
+            writer.Write(new byte[list.Count * 0x48]);
+            writer.Align(0x10, 0); // why
+
+            var entryOffsetNamePairs = new Dictionary<long, string>();
+            foreach (var entry in list)
+            {
+                entryOffsetNamePairs.Add(writer.BaseStream.Position, entry.GetType().Name);
+                var template = (NMSTemplate)entry;
+                var addtData = new Dictionary<long, object>();
+                template.AppendToWriter(writer, ref additionalDataOffset, ref additionalData);
+            }
+
+            long dataEndOffset = writer.BaseStream.Position;
+
+            writer.BaseStream.Position = listPosition;
+            foreach (var entry in entryOffsetNamePairs)
+            {
+                var position = writer.BaseStream.Position;
+                var offset = entry.Key - position; // get offset of this entry from the current offset
+                writer.Write(offset);
+                writer.WriteString("c" + entry.Value, Encoding.UTF8, 0x40);
+            }
+
+            writer.BaseStream.Position = dataEndOffset;
+        }
+
+        public void SerializeList(BinaryWriter writer, IList list, long listHeaderPosition, ref long additionalDataOffset, ref List<Tuple<long, object>> additionalData)
+        {
+           /* Type elementType = list.GetType().GetGenericArguments()[0];
+            if (elementType == typeof(NMSString0x10) || elementType == typeof(NMSString0x80))
+                writer.Align(0x8, 0); // strings are aligned 8 instead of 10, ask sean why
+            else
+                writer.Align(0x10, 0);*/
+
+            long listPosition = writer.BaseStream.Position;
+            Debug.WriteLine($"SerializeList start 0x{listPosition.ToString("X")}, header 0x{listHeaderPosition}");
+
+            writer.BaseStream.Position = listHeaderPosition;
+
+            // write the list header into the template
+            if (list.Count > 0)
+                writer.Write(listPosition - listHeaderPosition);
+            else
+                writer.Write((long)0); // lists with 0 entries have offset set to 0
+            writer.Write((Int32)list.Count);
+            writer.Write((UInt32)0xAAAAAA01);
+
+            writer.BaseStream.Position = listPosition;
+
+            foreach (var entry in list)
+            {
+                var template = (NMSTemplate)entry;
+                template.AppendToWriter(writer, ref additionalDataOffset, ref additionalData);
+
+                /*if (elementType == typeof(NMSString0x10) || elementType == typeof(NMSString0x80))
+                    writer = writer;// writer.Align(0x8, 0); // strings are aligned 8 instead of 10, ask sean why
+                else
+                    writer.Align(0x10, 0);*/
+            }
+        }
+
+        public byte[] SerializeToBytes()
+        {
+            using (var stream = new MemoryStream())
+            using (var writer = new BinaryWriter(stream, Encoding.ASCII))
+            {
+                long addtOffset = 0;
+                var addtData = new List<Tuple<long, object>>();
+                AppendToWriter(writer, ref addtOffset, ref addtData);
+                return stream.ToArray();
+            }
+        }
+
+        public void AppendToWriter(BinaryWriter writer, ref long additionalDataOffset, ref List<Tuple<long, object>> additionalData)
+        {
+            long templatePosition = writer.BaseStream.Position;
+            Debug.Print($"[C] writing {GetType().Name} to offset 0x{templatePosition.ToString("X")}");
+
+            bool writeAddtData = additionalDataOffset == 0;
+            additionalDataOffset = 1; // stop child templates from writing addt data
+
+            var type = GetType();
+            var fields = type.GetFields();
+
+            foreach (var field in fields)
+            {
+                var fieldAddr = writer.BaseStream.Position - templatePosition;
+                var fieldName = field.Name;
+                var fieldType = field.FieldType.Name;
+                var fieldData = field.GetValue(this);
+                switch (fieldType)
+                {
+                    case "String":
+                    case "Byte[]":
+                        int size = 0;
+                        foreach (var attr in field.CustomAttributes)
+                        {
+                            if (attr.AttributeType.Name != "MarshalAsAttribute")
+                                continue;
+                            foreach (var named in attr.NamedArguments)
+                            {
+                                if (named.MemberName != "SizeConst")
+                                    continue;
+                                size = (int)named.TypedValue.Value;
+                            }
+                        }
+
+                        if (fieldType == "String")
+                        {
+                            writer.WriteString((string)fieldData, Encoding.UTF8, size, true);
+                        }
+                        else
+                        {
+                            byte[] bytes = (byte[])fieldData;
+                            Array.Resize(ref bytes, size);
+                            writer.Write(bytes);
+                        }
+                        break;
+                    case "Single":
+                        writer.Align(4, 0);
+                        writer.Write((Single)fieldData);
+                        break;
+                    case "Boolean":
+                        var value = (bool)field.GetValue(this);
+                        writer.Write(value ? (byte)1 : (byte)0);
+                        break;
+                    case "Int16":
+                    case "UInt16":
+                        writer.Align(2, 0);
+                        if (fieldType == "Int16")
+                            writer.Write((Int16)fieldData);
+                        else
+                            writer.Write((UInt16)fieldData);
+                        break;
+                    case "Int32":
+                    case "UInt32":
+                        writer.Align(4, 0);
+                        if (fieldType == "Int32")
+                            writer.Write((Int32)fieldData);
+                        else
+                            writer.Write((UInt32)fieldData);
+                        break;
+                    case "Int64":
+                    case "UInt64":
+                        writer.Align(8, 0);
+                        if (fieldType == "Int64")
+                            writer.Write((Int64)fieldData);
+                        else
+                            writer.Write((UInt64)fieldData);
+                        break;
+                    case "List`1":
+                        writer.Align(8, 0);
+                        if (field.FieldType.IsGenericType && field.FieldType.GetGenericTypeDefinition() == typeof(List<>))
+                        {
+                            long listPos = writer.BaseStream.Position;
+                            writer.Write((Int64)0); // listPosition
+                            writer.Write((Int32)0); // listCount
+                            writer.Write((UInt32)0xAAAAAA01);
+
+                            var list = (IList)field.GetValue(this);
+
+                            additionalData.Add(new Tuple<long, object>(listPos, list));
+                        }
+
+                        break;
+                    default:
+
+                        if (fieldType == "Colour") // unsure if this is needed?
+                            writer.Align(0x10, 0);
+
+                        // todo: align for VariableSizeString?
+                        if (fieldType == "VariableSizeString")
+                        {
+                            long fieldPos = writer.BaseStream.Position;
+                            writer.Write((Int64)0); // listPosition
+                            writer.Write((Int32)0); // listCount
+                            writer.Write((UInt32)0xAAAAAA01);
+                            var fieldValue = (VariableSizeString)field.GetValue(this);
+                            additionalData.Add(new Tuple<long, object>(fieldPos, fieldValue));
+                        }
+                        else
+                        {
+                            var obj = field.GetValue(this);
+                            if (obj.GetType().BaseType == typeof(NMSTemplate))
+                                ((NMSTemplate)obj).AppendToWriter(writer, ref additionalDataOffset, ref additionalData);
+                            else
+                                throw new Exception($"[C] Unknown type {fieldType} not NMSTemplate for {fieldName}");
+                        }
+
+                        break;
+                }
+            }
+
+            additionalDataOffset = writer.BaseStream.Position;
+
+            if (!writeAddtData) // only primary template will write addt data
+                return;
+
+            // now serialize our lists/strings
+            for (int i = 0; i < additionalData.Count; i++) // no foreach because this loop might add more to additionalData
+            {
+                var data = additionalData[i];
+                writer.BaseStream.Position = additionalDataOffset; // addtDataOffset gets updated by child templates
+                writer.Align(0x8, 0); // todo: check if this alignment is correct
+
+                if (data.Item2.GetType() == typeof(VariableSizeString))
+                {
+                    var str = (VariableSizeString)data.Item2;
+
+                    var stringPos = writer.BaseStream.Position;
+                    writer.WriteString(str.Value, Encoding.UTF8);
+                    var stringEndPos = writer.BaseStream.Position;
+
+                    writer.BaseStream.Position = data.Item1;
+                    writer.Write(stringPos - data.Item1);
+                    writer.Write((Int32)str.Value.Length);
+                    writer.Write((UInt32)0xAAAAAA01);
+
+                    writer.BaseStream.Position = stringEndPos;
+                }
+                else if (data.Item2.GetType().IsGenericType && data.Item2.GetType().GetGenericTypeDefinition() == typeof(List<>))
+                {
+                    Type itemType = data.Item2.GetType().GetGenericArguments()[0];
+                    if (itemType == typeof(NMSTemplate))
+                        SerializeGenericList(writer, (IList)data.Item2, data.Item1, ref additionalDataOffset, ref additionalData);
+                    else
+                        SerializeList(writer, (IList)data.Item2, data.Item1, ref additionalDataOffset, ref additionalData);
+                }
+                else
+                    throw new Exception($"[C] Unknown type {data.Item2.GetType()} in additionalData list!");
+            }
         }
 
         private sealed class EncodedStringWriter : StringWriter

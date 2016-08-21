@@ -18,7 +18,7 @@ namespace MBINCompiler
         public MBINFile(string path)
         {
             _filePath = path;
-            _io = new IO(path);
+            _io = new IO(path, FileMode.OpenOrCreate);
         }
 
         public bool Load()
@@ -31,8 +31,8 @@ namespace MBINCompiler
         public bool Save()
         {
             _io.Stream.Position = 0;
-            // _io.Writer.WriteStruct(Header);
-            _io.Stream.Flush();
+            _io.Writer.Write(Header.SerializeToBytes());
+            _io.Writer.Flush();
 
             return true;
         }
@@ -41,6 +41,15 @@ namespace MBINCompiler
         {
             _io.Stream.Position = 0x60;
             return NMSTemplate.DeserializeBinaryTemplate(_io.Reader, Header.GetXMLTemplateName());
+        }
+
+        public void SetData(NMSTemplate template)
+        {
+            _io.Stream.SetLength(0x60);
+            _io.Stream.Position = 0x60;
+
+            _io.Writer.Write(template.SerializeToBytes());
+            Header.TemplateName = "c" + template.GetType().Name;
         }
 
         public void Dispose()
