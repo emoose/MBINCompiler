@@ -57,9 +57,6 @@ namespace MBINCompiler
             if (String.IsNullOrEmpty(output))
                 output = Path.ChangeExtension(input, ".MBIN");
 
-            if (File.Exists(output))
-                File.Delete(output); // todo: ask for confirmation?
-
             var data = EXmlFile.ReadTemplate(input);
             if (data == null)
             {
@@ -67,10 +64,19 @@ namespace MBINCompiler
                 return;
             }
 
+            if (data.GetType().Name == "TkGeometryData") // todo: change to typeof(TkGeometryData) when we've mapped that template
+                output = Path.ChangeExtension(input, ".MBIN.PC");
+
+            if (File.Exists(output))
+                File.Delete(output); // todo: ask for confirmation?
+
             using (var file = new MBINFile(output))
             {
                 file.Header = new Models.MBINHeader();
                 file.Header.SetDefaults();
+                if (data.GetType().Name == "TkGeometryData")
+                    file.Header.Magic = 0xDDDDDDDD; // only used by TkGeometryData / .MBIN.PC files, maybe used to signal the file is PC only?
+
                 file.SetData(data);
                 file.Save();
             }

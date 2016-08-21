@@ -27,9 +27,9 @@ namespace MBINCompiler.Models
         {
             Magic = 0xCCCCCCCC; // can also be 0xDDDDDDDD, why?
             Unknown4 = 2500;
-            Unknown8 = 0;
-            UnknownC = 0;
-            Unknown10 = 0; // hash of some kind? might be filename hash
+            Unknown8 = 0x4E49424D;
+            UnknownC = 0x706D6F43;
+            Unknown10 = 0x302E3172656C69; // hash of some kind? might be filename hash
             TemplateName = string.Empty;
             Unknown58 = 0; // can be 0xFEFEFE...
         }
