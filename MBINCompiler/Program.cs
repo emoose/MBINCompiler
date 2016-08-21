@@ -102,7 +102,23 @@ namespace MBINCompiler
             else if (inputExtension == ".exml")
                 CompileFile(input, output);
             else
-                Console.WriteLine($"Unsupported file extension {inputExtension}!");
+            {
+                bool isMBin = false;
+                if(File.Exists(input) && new FileInfo(input).Length > 4)
+                {
+                    using (var stream = File.OpenRead(input))
+                    using (var reader = new BinaryReader(stream))
+                    {
+                        isMBin = reader.ReadUInt32() == 0xCCCCCCCC && reader.ReadUInt32() == 2500; // CC CC CC CC C4 09 00 00
+                    }
+                }
+
+                if (isMBin)
+                    DecompileFile(input, output);
+                else
+                    Console.WriteLine($"Unsupported file extension {inputExtension}!");
+            }
+                
         }
     }
 }
