@@ -126,6 +126,17 @@ namespace MBINCompiler.Models
                         }
 
                         break;
+                    case "NMSTemplate":
+                        reader.Align(8, 0);
+                        long offset = reader.BaseStream.Position + reader.ReadInt64();
+                        string name = reader.ReadString(Encoding.ASCII, 0x40, true);
+                        long cached = reader.BaseStream.Position;
+                        reader.BaseStream.Position = offset;
+                        NMSTemplate val = DeserializeBinaryTemplate(reader, name);
+                        if (val != null)
+                            field.SetValue(obj, val);
+                        reader.BaseStream.Position = cached;
+                        break;
                     default:
                         if (fieldType == "Colour") // unsure if this is needed?
                             reader.Align(0x10, 0);
@@ -262,6 +273,7 @@ namespace MBINCompiler.Models
                     case "Boolean":
                     case "Int16":
                     case "Int32":
+                    case "Int64":
                         var prop = (XmlElement)el.AppendChild(document.CreateElement("Property"));
                         prop.SetAttribute("name", fieldName);
                         var value = field.GetValue(this).ToString();
@@ -290,7 +302,15 @@ namespace MBINCompiler.Models
                             ((NMSTemplate)template).AppendToXml(prop3, document);
 
                         break;
-
+                    case "NMSTemplate":
+                        var obj = field.GetValue(this);
+                        if (obj != null)
+                        {
+                          NMSTemplate template = (NMSTemplate)obj;
+                          var element = template.AppendToXml(el, document);
+                          element.SetAttribute("name", fieldName);
+                        }
+                        break;
                     default:
                         if (field.FieldType.BaseType.Name == "NMSTemplate")
                         {
