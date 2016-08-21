@@ -22,6 +22,8 @@ If you'd like to contribute and have reverse-engineering experience, I've writte
 
 Templates aren't the only contributions accepted though, if you have any improvements to make to the source code they'd be greatly appreciated, while I like to pretend that I'm a decent C# programmer there are loads of people who have a better grasp of the language than I, if any of you can help to improve the code in any way I'd be very grateful.
 
+If you want to talk about development feel free to join the NMS modding discord, MBINCompiler discussion usually takes place in the #modding-mbin channel: https://discordapp.com/invite/3Ytkxss (should work in browsers too, no client downloads needed)
+
 Examples
 ---
 SCENES\SCREENSHOTS\E32015\MAINSETTINGS.MBIN:
