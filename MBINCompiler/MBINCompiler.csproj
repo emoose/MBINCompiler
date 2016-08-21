@@ -108,6 +108,9 @@
     <Compile Include="Models\Structs\TkProceduralTextureChosenOptionSampler.cs" />
     <Compile Include="Models\Structs\TkProceduralTextureChosenOptionList.cs" />
     <Compile Include="Models\Structs\TkProceduralTextureChosenOption.cs" />
+    <Compile Include="Models\Structs\TkTransformData.cs" />
+    <Compile Include="Models\Structs\TkSceneNodeAttributeData.cs" />
+    <Compile Include="Models\Structs\TkSceneNodeData.cs" />
     <Compile Include="Models\Structs\TkTextureResource.cs" />
     <Compile Include="Models\Structs\TkModelResource.cs" />
     <Compile Include="Models\Structs\GcProductCategory.cs" />
@@ -172,7 +175,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
   </Target>
