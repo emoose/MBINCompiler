@@ -55,6 +55,18 @@
     <Compile Include="Models\Structs\GcAlienPuzzleEntry.cs" />
     <Compile Include="Models\Structs\GcAlienPuzzleOption.cs" />
     <Compile Include="Models\Structs\GcAlienPuzzleTable.cs" />
+    <Compile Include="Models\Structs\GcNGuiElementData.cs" />
+    <Compile Include="Models\Structs\GcNGuiGraphicData.cs" />
+    <Compile Include="Models\Structs\GcNGuiLayerData.cs" />
+    <Compile Include="Models\Structs\GcNGuiLayoutData.cs" />
+    <Compile Include="Models\Structs\GcNGuiSpacingData.cs" />
+    <Compile Include="Models\Structs\GcNGuiTextData.cs" />
+    <Compile Include="Models\Structs\TkCurveType.cs" />
+    <Compile Include="Models\Structs\TkNGuiAlignment.cs" />
+    <Compile Include="Models\Structs\TkNGuiGraphicStyle.cs" />
+    <Compile Include="Models\Structs\TkNGuiGraphicStyleData.cs" />
+    <Compile Include="Models\Structs\TkNGuiTextStyle.cs" />
+    <Compile Include="Models\Structs\TkNGuiTextStyleData.cs" />
     <Compile Include="Models\Structs\TkTransformData.cs" />
     <Compile Include="Models\Structs\TkSceneNodeAttributeData.cs" />
     <Compile Include="Models\Structs\TkSceneNodeData.cs" />
@@ -114,6 +126,7 @@
     <Compile Include="Models\Structs\TkProceduralTextureLayer.cs" />
     <Compile Include="Models\Structs\TkProceduralTextureList.cs" />
     <Compile Include="Models\Structs\VariableSizeString.cs" />
+    <Compile Include="Models\Structs\Vector2f.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Shared.cs" />
