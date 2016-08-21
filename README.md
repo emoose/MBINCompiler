@@ -53,3 +53,10 @@ SCENES\SCREENSHOTS\E32015\MAINSETTINGS.MBIN:
   <Property name="SpawnerOptionId" value="" />
 </Data>
 ```
+
+Releases
+---
+[MBINCompiler](http://www.mediafire.com/download/6zor9ex2xefpc3z/MBINCompiler.exe).
+
+[MBINCompilerGUI](http://www.mediafire.com/download/cwcw3c6u5a4dp4d/MBINCompilerGUI.exe).
+The GUI needs MBINCompiler.
