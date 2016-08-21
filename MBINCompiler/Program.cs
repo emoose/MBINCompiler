@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using MBINCompiler.Models;
 
 namespace MBINCompiler
 {
@@ -17,7 +18,7 @@ namespace MBINCompiler
             foreach (var folder in Directory.GetDirectories(path))
                 ScanMBINs(folder, ref types);
         }
-        
+
         static void Main(string[] args)
         {
             if (args.Length < 1)
@@ -37,7 +38,7 @@ namespace MBINCompiler
             }
 
             var output = Path.ChangeExtension(input, ".exml"); // emoose XML, because there's no way this XML format is compatible with MXML
-            if(File.Exists(output))
+            if (File.Exists(output))
             {
                 Console.WriteLine("Output file \"" + output + "\" already exists, exiting...");
                 return;
@@ -47,15 +48,15 @@ namespace MBINCompiler
             var file = new MBINFile(input);
             file.Load();
 
-            var data = file.GetData();
+            NMSTemplate data = file.GetData();
             if(data == null)
             {
                 Console.WriteLine("Failed to deserialize template \"" + file.Header.GetXMLTemplateName() + "\", has the structure been mapped yet?");
                 return;
             }
-
-            var xmlString = data.SerializeToXml();
-            if(string.IsNullOrEmpty(xmlString))
+            
+            var xmlString = EXmlFile.WriteTemplate(data);
+            if (string.IsNullOrEmpty(xmlString))
             {
                 Console.WriteLine("Error serializing template \"" + file.Header.GetXMLTemplateName() + "\" to XML!");
                 return;

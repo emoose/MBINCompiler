@@ -46,6 +46,7 @@
     <Compile Include="IO.cs" />
     <Compile Include="MBINFile.cs" />
     <Compile Include="EXmlFile.cs" />
+    <Compile Include="Models\EXmlBase.cs" />
     <Compile Include="Models\EXmlData.cs" />
     <Compile Include="Models\EXmlProperty.cs" />
     <Compile Include="Models\MBINHeader.cs" />

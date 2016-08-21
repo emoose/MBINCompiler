@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Linq;
 using System.Collections;
-using System.Xml;
 using System.IO;
 using System.Text;
 using System.Collections.Generic;
@@ -230,36 +229,15 @@ namespace MBINCompiler.Models
             return list;
         }
 
-        public string SerializeToXml()
+        public EXmlData SerializeEXml()
         {
-            var xmlDoc = new XmlDocument();
-            var el = AppendToXml(null, xmlDoc);
-
-            var xmlSettings = new XmlWriterSettings();
-            xmlSettings.Indent = true;
-            xmlSettings.Encoding = Encoding.UTF8;
-            using (var stringWriter = new EncodedStringWriter(Encoding.UTF8))
-            using (var xmlTextWriter = XmlWriter.Create(stringWriter, xmlSettings))
+            Type type = GetType();
+            EXmlData xmlData = new EXmlData
             {
-                xmlDoc.WriteTo(xmlTextWriter);
-                xmlTextWriter.Flush();
-                return stringWriter.GetStringBuilder().ToString();
-            }
-        }
+                Template = type.Name
+            };
 
-        public XmlElement AppendToXml(XmlElement parentElement, XmlDocument document)
-        {
-            XmlElement el = null;
-            if (parentElement != null)
-                el = (XmlElement)parentElement.AppendChild(document.CreateElement("Data"));
-            else
-                el = (XmlElement)document.AppendChild(document.CreateElement("Data"));
-
-            var type = GetType();
-            el.SetAttribute("template", type.Name);
-
-            var fields = type.GetFields();
-            foreach (var field in fields)
+            foreach (var field in type.GetFields())
             {
                 if (field.Name.StartsWith("Padding"))
                     continue;
@@ -274,8 +252,6 @@ namespace MBINCompiler.Models
                     case "Int16":
                     case "Int32":
                     case "Int64":
-                        var prop = (XmlElement)el.AppendChild(document.CreateElement("Property"));
-                        prop.SetAttribute("name", fieldName);
                         var value = field.GetValue(this).ToString();
                         var valuesMethod = type.GetMethod(field.Name + "Values"); // if we have an "xxxValues()" method in the struct, use that to get the value name
                         if (valuesMethod != null)
@@ -283,53 +259,72 @@ namespace MBINCompiler.Models
                             string[] values = (string[])valuesMethod.Invoke(this, null);
                             value = values[(int)field.GetValue(this)];
                         }
-                        prop.SetAttribute("value", value);
+
+                        xmlData.Elements.Add(new EXmlProperty
+                        {
+                            Name = fieldName,
+                            Value = value
+                        });
                         break;
 
                     case "Byte[]":
                         byte[] bytes = (byte[])field.GetValue(this);
                         string base64Value = bytes == null ? null : Convert.ToBase64String(bytes);
-                        var prop2 = (XmlElement)el.AppendChild(document.CreateElement("Property"));
-                        prop2.SetAttribute("name", fieldName);
-                        prop2.SetAttribute("value", base64Value);
+
+                        xmlData.Elements.Add(new EXmlProperty
+                        {
+                            Name = fieldName,
+                            Value = base64Value
+                        });
                         break;
                     case "List`1":
-                        var prop3 = (XmlElement)el.AppendChild(document.CreateElement("Property"));
-                        prop3.SetAttribute("name", fieldName);
+                        EXmlProperty listProperty = new EXmlProperty
+                        {
+                            Name = fieldName
+                        };
 
                         IList templates = (IList)field.GetValue(this);
-                        foreach (var template in templates)
-                            ((NMSTemplate)template).AppendToXml(prop3, document);
+                        foreach (var template in templates.Cast<NMSTemplate>())
+                        {
+                            listProperty.Elements.Add(template.SerializeEXml());
+                        }
 
+                        xmlData.Elements.Add(listProperty);
                         break;
                     case "NMSTemplate":
-                        var obj = field.GetValue(this);
-                        if (obj != null)
+                        if (field.GetValue(this) != null)
                         {
-                          NMSTemplate template = (NMSTemplate)obj;
-                          var element = template.AppendToXml(el, document);
-                          element.SetAttribute("name", fieldName);
+                            NMSTemplate template = (NMSTemplate)field.GetValue(this);
+
+                            EXmlData templateXmlData = template.SerializeEXml();
+                            templateXmlData.Name = fieldName;
+
+                            xmlData.Elements.Add(templateXmlData);
                         }
                         break;
                     default:
                         if (field.FieldType.BaseType.Name == "NMSTemplate")
                         {
                             NMSTemplate template = (NMSTemplate)field.GetValue(this);
-                            var element = template.AppendToXml(el, document);
-                            element.SetAttribute("name", fieldName);
+
+                            EXmlData templateXmlData = template.SerializeEXml();
+                            templateXmlData.Name = fieldName;
+
+                            xmlData.Elements.Add(templateXmlData);
                         }
+
                         break;
                 }
             }
 
-            return el;
+            return xmlData;
         }
 
-        public static NMSTemplate DeserializeXml(EXmlData xmlData)
+        public static NMSTemplate DeserializeEXml(EXmlData xmlData)
         {
             NMSTemplate template = TemplateFromName(xmlData.Template);
             Type templateType = template.GetType();
-            foreach (var xmlProperty in xmlData.Properties)
+            foreach (var xmlProperty in xmlData.Elements.OfType<EXmlProperty>())
             {
                 FieldInfo field = templateType.GetField(xmlProperty.Name);
                 Type fieldType = field.FieldType;
@@ -370,9 +365,9 @@ namespace MBINCompiler.Models
                         Type elementType = fieldType.GetGenericArguments()[0];
                         Type listType = typeof(List<>).MakeGenericType(elementType);
                         IList list = (IList)Activator.CreateInstance(listType);
-                        foreach (EXmlData innerXmlData in xmlProperty.Data)
+                        foreach (EXmlData innerXmlData in xmlProperty.Elements.OfType<EXmlData>())
                         {
-                            NMSTemplate element = DeserializeXml(innerXmlData);
+                            NMSTemplate element = DeserializeEXml(innerXmlData);
                             list.Add(element);
                         }
 
@@ -386,24 +381,14 @@ namespace MBINCompiler.Models
                 field.SetValue(template, fieldValue);
             }
 
-            foreach (EXmlData innerXmlData in xmlData.Data)
+            foreach (EXmlData innerXmlData in xmlData.Elements.OfType<EXmlData>())
             {
                 FieldInfo field = templateType.GetField(innerXmlData.Name);
-                NMSTemplate innerTemplate = DeserializeXml(innerXmlData);
+                NMSTemplate innerTemplate = DeserializeEXml(innerXmlData);
                 field.SetValue(template, innerTemplate);
             }
 
             return template;
-        }
-
-        private sealed class EncodedStringWriter : StringWriter
-        {
-            public EncodedStringWriter(Encoding encoding)
-            {
-                Encoding = encoding;
-            }
-
-            public override Encoding Encoding { get; }
         }
     }
 }

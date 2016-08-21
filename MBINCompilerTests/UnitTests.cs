@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using MBINCompiler;
 using MBINCompiler.Models.Structs;
@@ -21,10 +22,11 @@ namespace MBINCompilerTests
 
             var data = file.GetData();
             Assert.IsNotNull(data, testFile1 + " deserialized data was null");
-            Assert.IsNotNull(data.SerializeToXml(), testFile1 + " xml serialization was null");
-            Assert.IsInstanceOfType(data, typeof(MBINCompilerTestTemplate), testFile1 + " template isn't of type MBINCompilerTestTemplate!");
+            Assert.IsNotNull(data.SerializeEXml(), testFile1 + " xml serialization was null");
+            Assert.IsInstanceOfType(data, typeof(MBINCompilerTestTemplate),
+                testFile1 + " template isn't of type MBINCompilerTestTemplate!");
 
-            MBINCompilerTestTemplate test = (MBINCompilerTestTemplate)data;
+            MBINCompilerTestTemplate test = (MBINCompilerTestTemplate) data;
             Assert.AreEqual(test.TestBoolTrue, true);
             Assert.AreEqual(test.TestBoolFalse, false);
             Assert.AreEqual(test.TestBool3, true);
@@ -41,10 +43,10 @@ namespace MBINCompilerTests
             var expectedDynamicString = "NoWayToControlItIt'sTotallyDynamicWheneverYou'reAround";
             Assert.AreEqual(test.TestDynamicString.Value, expectedDynamicString);
 
-            string[] expectedStrings = new[] { "FirstEntry", "SecondEntry", "ThirdEntry" };
+            string[] expectedStrings = new[] {"FirstEntry", "SecondEntry", "ThirdEntry"};
             Assert.AreEqual(test.Test0x80ByteStringList.Count, expectedStrings.Length);
 
-            for(int i = 0; i < expectedStrings.Length; i++)
+            for (int i = 0; i < expectedStrings.Length; i++)
                 Assert.AreEqual(test.Test0x80ByteStringList[i].Value, expectedStrings[i]);
         }
 
@@ -961,10 +963,10 @@ namespace MBINCompilerTests
                 var file = new MBINFile(fullPath);
                 file.Load();
 
-                System.Diagnostics.Debug.WriteLine("testing " + test);
+                Debug.WriteLine("testing " + test);
                 var data = file.GetData();
                 Assert.IsNotNull(data, test + " deserialized data was null");
-                Assert.IsNotNull(data.SerializeToXml(), test + " xml serialization was null");
+                Assert.IsNotNull(data.SerializeEXml(), test + " xml serialization was null");
             }
         }
     }
