@@ -69,6 +69,7 @@ namespace MBINCompiler
 
             using (var file = new MBINFile(output))
             {
+                file.Header = new Models.MBINHeader();
                 file.Header.SetDefaults();
                 file.SetData(data);
                 file.Save();
