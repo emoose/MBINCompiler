@@ -9,10 +9,8 @@ namespace MBINCompiler.Models.Structs
         public List<GcGenericRewardTableEntry> GenericTable;
         public List<GcGenericRewardTableEntry> InteractionTable;
         public List<GcGenericRewardTableEntry> EntitlementTable;
-
-        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 0x80)]
-        public string TechRewardOrder;
-        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 0x80)]
-        public string ProductRewardOrder;
+        
+        public List<string> TechRewardOrder;
+        public List<string> ProductRewardOrder;
     }
 }
