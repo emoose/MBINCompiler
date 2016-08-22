@@ -48,19 +48,33 @@ namespace MBINCompiler
         {
             if (encoding == null)
                 encoding = Encoding.ASCII;
-            if (size == null)
-                size = str.Length;
+
+            int bufferSize = encoding.GetBytes(str).Length;
+            if (size != null)
+                bufferSize = size.Value;
+
             int encodingSize = encoding.GetMaxByteCount(1);
 
-            byte[] stringData = encoding.GetBytes(str);
-            Array.Resize(ref stringData, size.Value); // does this work with UTF16 encoded chars?
-            if (nullTerminated)
+            if (nullTerminated && size == null)
+                bufferSize += 1; // add space for null terminator
+
+            byte[] stringBytes = encoding.GetBytes(str);
+            Array.Resize(ref stringBytes, bufferSize);
+
+            if (nullTerminated && bufferSize > 0)
             {
-                int nullOffset = encoding.GetBytes(str).Length;
-                for (int i = 0; i < encodingSize && nullOffset + i < size.Value; i++)
-                    stringData[nullOffset + i] = 0;
+                var trimmedStringBytes = encoding.GetBytes(encoding.GetString(stringBytes));
+                if (trimmedStringBytes.Length > stringBytes.Length)
+                    trimmedStringBytes = stringBytes; // .NET failed to reencode the trimmed string properly?
+
+                int nullOffset = trimmedStringBytes.Length;
+                if (nullOffset == bufferSize)
+                    nullOffset -= 1;
+
+                stringBytes[nullOffset] = 0; // atm this might add a null in the middle of a character!
             }
-            writer.Write(stringData);
+
+            writer.Write(stringBytes);
         }
     }
 }

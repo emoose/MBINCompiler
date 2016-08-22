@@ -81,22 +81,23 @@ namespace MBINCompilerTests
                 Expected = new byte[] { 0x61, 0x62, 0x63, 0x00 }
             });
 
-            //testCases.Add(new WriteStringTestCase
-            //{
-            //    Value = "",
-            //    Encoding = Encoding.ASCII,
-            //    Size = null,
-            //    NullTerminated = true,
-            //    Expected = new byte[] { 0x00 }
-            //});
-            //testCases.Add(new WriteStringTestCase
-            //{
-            //    Value = "abc",
-            //    Encoding = Encoding.ASCII,
-            //    Size = null,
-            //    NullTerminated = true,
-            //    Expected = new byte[] { 0x61, 0x62, 0x63, 0x00 }
-            //});
+            testCases.Add(new WriteStringTestCase
+            {
+                Value = "",
+                Encoding = Encoding.ASCII,
+                Size = null,
+                NullTerminated = true,
+                Expected = new byte[] { 0x00 }
+            });
+
+            testCases.Add(new WriteStringTestCase
+            {
+                Value = "abc",
+                Encoding = Encoding.ASCII,
+                Size = null,
+                NullTerminated = true,
+                Expected = new byte[] { 0x61, 0x62, 0x63, 0x00 }
+            });
 
             testCases.Add(new WriteStringTestCase
             {
@@ -115,22 +116,22 @@ namespace MBINCompilerTests
                 Expected = new byte[] { 0x00, 0x00 }
             });
 
-            //testCases.Add(new WriteStringTestCase
-            //{
-            //    Value = "abc",
-            //    Encoding = Encoding.ASCII,
-            //    Size = 1,
-            //    NullTerminated = true,
-            //    Expected = new byte[] { 0x00 }
-            //});
-            //testCases.Add(new WriteStringTestCase
-            //{
-            //    Value = "abc",
-            //    Encoding = Encoding.ASCII,
-            //    Size = 2,
-            //    NullTerminated = true,
-            //    Expected = new byte[] { 0x61, 0x00 }
-            //});
+            testCases.Add(new WriteStringTestCase
+            {
+                Value = "abc",
+                Encoding = Encoding.ASCII,
+                Size = 1,
+                NullTerminated = true,
+                Expected = new byte[] { 0x00 }
+            });
+            testCases.Add(new WriteStringTestCase
+            {
+                Value = "abc",
+                Encoding = Encoding.ASCII,
+                Size = 2,
+                NullTerminated = true,
+                Expected = new byte[] { 0x61, 0x00 }
+            });
             testCases.Add(new WriteStringTestCase
             {
                 Value = "abc",
@@ -144,7 +145,7 @@ namespace MBINCompilerTests
         }
 
         [TestMethod]
-        public void TestStringWritUtf8()
+        public void TestStringWriteUtf8()
         {
             List<WriteStringTestCase> testCases = new List<WriteStringTestCase>();
             testCases.Add(new WriteStringTestCase
@@ -155,19 +156,19 @@ namespace MBINCompilerTests
                 NullTerminated = false,
                 Expected = new byte[] { }
             });
-            //testCases.Add(new WriteStringTestCase
-            //{
-            //    Value = "𠜎𢱑𩶘",
-            //    Encoding = Encoding.UTF8,
-            //    Size = null,
-            //    NullTerminated = false,
-            //    Expected = new byte[]
-            //    {
-            //        0xF0, 0xA0, 0x9C, 0x8E,
-            //        0xF0, 0xA2, 0xB1, 0x91,
-            //        0xF0, 0xA9, 0xB6, 0x98
-            //    }
-            //});
+            testCases.Add(new WriteStringTestCase
+            {
+                Value = "𠜎𢱑𩶘",
+                Encoding = Encoding.UTF8,
+                Size = null,
+                NullTerminated = false,
+                Expected = new byte[]
+                {
+                    0xF0, 0xA0, 0x9C, 0x8E,
+                    0xF0, 0xA2, 0xB1, 0x91,
+                    0xF0, 0xA9, 0xB6, 0x98
+                }
+            });
 
             testCases.Add(new WriteStringTestCase
             {
@@ -225,28 +226,28 @@ namespace MBINCompilerTests
                 }
             });
 
-            //testCases.Add(new WriteStringTestCase
-            //{
-            //    Value = "",
-            //    Encoding = Encoding.UTF8,
-            //    Size = null,
-            //    NullTerminated = true,
-            //    Expected = new byte[] { 0x00 }
-            //});
-            //testCases.Add(new WriteStringTestCase
-            //{
-            //    Value = "𠜎𢱑𩶘",
-            //    Encoding = Encoding.UTF8,
-            //    Size = null,
-            //    NullTerminated = true,
-            //    Expected = new byte[]
-            //    {
-            //        0xF0, 0xA0, 0x9C, 0x8E,
-            //        0xF0, 0xA2, 0xB1, 0x91,
-            //        0xF0, 0xA9, 0xB6, 0x98,
-            //        0x00
-            //    }
-            //});
+            testCases.Add(new WriteStringTestCase
+            {
+                Value = "",
+                Encoding = Encoding.UTF8,
+                Size = null,
+                NullTerminated = true,
+                Expected = new byte[] { 0x00 }
+            });
+            testCases.Add(new WriteStringTestCase
+            {
+                Value = "𠜎𢱑𩶘",
+                Encoding = Encoding.UTF8,
+                Size = null,
+                NullTerminated = true,
+                Expected = new byte[]
+                {
+                    0xF0, 0xA0, 0x9C, 0x8E,
+                    0xF0, 0xA2, 0xB1, 0x91,
+                    0xF0, 0xA9, 0xB6, 0x98,
+                    0x00
+                }
+            });
 
             testCases.Add(new WriteStringTestCase
             {
@@ -265,14 +266,14 @@ namespace MBINCompilerTests
                 Expected = new byte[] { 0x00, 0x00 }
             });
 
-            //testCases.Add(new WriteStringTestCase
-            //{
-            //    Value = "𠜎𢱑𩶘",
-            //    Encoding = Encoding.UTF8,
-            //    Size = 1,
-            //    NullTerminated = true,
-            //    Expected = new byte[] { 0x00 }
-            //});
+            testCases.Add(new WriteStringTestCase
+            {
+                Value = "𠜎𢱑𩶘",
+                Encoding = Encoding.UTF8,
+                Size = 1,
+                NullTerminated = true,
+                Expected = new byte[] { 0x00 }
+            });
             //testCases.Add(new WriteStringTestCase
             //{
             //    Value = "𠜎𢱑𩶘",
