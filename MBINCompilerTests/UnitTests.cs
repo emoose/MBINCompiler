@@ -57,8 +57,15 @@ namespace MBINCompilerTests
             "METADATA/REALITY/TABLES/NMS_DIALOG_GCALIENSPEECHTABLE.MBIN",
             "LANGUAGE/NMS_DIALOG.MBIN",
 
+            // GcAtlasGlobals
+            "GCATLASGLOBALS.GLOBAL.MBIN",
+
             // GcAlienPuzzleTable
-            // "METADATA/REALITY/TABLES/NMS_DIALOG_GCALIENPUZZLETABLE.MBIN",
+            "METADATA/REALITY/TABLES/NMS_DIALOG_GCALIENPUZZLETABLE.MBIN",
+
+            // GcBootLogoData
+            "METADATA/UI/BOOTLOGOPC.MBIN",
+            "METADATA/UI/BOOTLOGOPS4.MBIN",
 
             // GcCreatureRoleDescriptionTable tests
             "METADATA/SIMULATION/ECOSYSTEM/ROLEDESCRIPTIONTABLES/AIR/AIRTABLECOMMON.MBIN",
@@ -147,6 +154,12 @@ namespace MBINCompilerTests
             // GcTextPresetTable
             "METADATA/FONTS/TEXTPRESETTABLE.MBIN",
 
+            // GcUserSettingsData
+            "METADATA/ENGINESETTINGS/GCUSERSETTINGSDATA.MBIN",
+
+            // GcWaterGlobals
+            "GCWATERGLOBALS.GLOBAL.MBIN",
+
             // GcWeatherColourSettingList
             "METADATA/SIMULATION/SOLARSYSTEM/WEATHER/SKYSETTINGS/DAYSKYCOLOURS.MBIN",
             "METADATA/SIMULATION/SOLARSYSTEM/WEATHER/SKYSETTINGS/DUSKSKYCOLOURS.MBIN",
@@ -161,6 +174,13 @@ namespace MBINCompilerTests
             "METADATA/SIMULATION/SOLARSYSTEM/WEATHER/SCORCHED.MBIN",
             "METADATA/SIMULATION/SOLARSYSTEM/WEATHER/SNOWWEATHER.MBIN",
             "METADATA/SIMULATION/SOLARSYSTEM/WEATHER/TOXIC.MBIN",
+
+            // TkEngineSettingsMapping
+            "METADATA/ENGINESETTINGS/TKENGINESETTINGSMAPPING.MBIN",
+
+            // TkGraphicsSettings
+            "METADATA/ENGINESETTINGS/TKGRAPHICSSETTINGS.MBIN",
+            "METADATA/ENGINESETTINGS/TKGRAPHICSSETTINGSPS4.MBIN",
 
             // TkLocalisationTable (these take years)
             /*
