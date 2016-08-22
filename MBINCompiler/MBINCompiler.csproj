@@ -123,7 +123,7 @@
     <Compile Include="Models\Structs\GcRewardSpecificTech.cs" />
     <Compile Include="Models\Structs\GcRewardSpecificWeapon.cs" />
     <Compile Include="Models\Structs\GcRewardStanding.cs" />
-    <Compile Include="Models\Structs\GcRewradSubstance.cs" />
+    <Compile Include="Models\Structs\GcRewardSubstance.cs" />
     <Compile Include="Models\Structs\GcRewardSpecificProduct.cs" />
     <Compile Include="Models\Structs\GcRewardSpecificTechFromList.cs" />
     <Compile Include="Models\Structs\GcRewardTableChoice.cs" />
@@ -135,6 +135,11 @@
     <Compile Include="Models\Structs\GcRewardTable.cs" />
     <Compile Include="Models\Structs\GcUserSettingsData.cs" />
     <Compile Include="Models\Structs\GcWaterGlobals.cs" />
+    <Compile Include="Models\Structs\TkButtonImageLookup.cs" />
+    <Compile Include="Models\Structs\TkButtonPathMapping.cs" />
+    <Compile Include="Models\Structs\TkControllerButtonLookup.cs" />
+    <Compile Include="Models\Structs\TkControllerList.cs" />
+    <Compile Include="Models\Structs\TkControllerSpecification.cs" />
     <Compile Include="Models\Structs\TkEngineSettingsMapping.cs" />
     <Compile Include="Models\Structs\TkGraphicsSettings.cs" />
     <Compile Include="Models\Structs\TkProceduralTextureChosenOptionSampler.cs" />
