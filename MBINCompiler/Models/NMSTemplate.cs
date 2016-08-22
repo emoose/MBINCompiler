@@ -131,14 +131,21 @@ namespace MBINCompiler.Models
                         break;
                     case "NMSTemplate":
                         reader.Align(8, 0);
-                        long offset = reader.BaseStream.Position + reader.ReadInt64();
+                        long startPos = reader.BaseStream.Position;
+                        long offset = reader.ReadInt64();
                         string name = reader.ReadString(Encoding.ASCII, 0x40, true);
-                        long cached = reader.BaseStream.Position;
-                        reader.BaseStream.Position = offset;
-                        NMSTemplate val = DeserializeBinaryTemplate(reader, name);
-                        if (val != null)
+                        long endPos = reader.BaseStream.Position;
+
+                        if (offset != 0 && !String.IsNullOrEmpty(name))
+                        {
+                            reader.BaseStream.Position = startPos + offset;
+                            NMSTemplate val = DeserializeBinaryTemplate(reader, name);
+                            if (val == null)
+                                throw new Exception("Failed to deserialize template " + name + "!");
+
                             field.SetValue(obj, val);
-                        reader.BaseStream.Position = cached;
+                        }
+                        reader.BaseStream.Position = endPos;
                         break;
                     default:
                         if (fieldType == "Colour") // unsure if this is needed?

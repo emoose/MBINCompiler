@@ -58,6 +58,15 @@
     <Compile Include="Models\Structs\GcAtlasGlobals.cs" />
     <Compile Include="Models\Structs\GcBirdData.cs" />
     <Compile Include="Models\Structs\GcBootLogoData.cs" />
+    <Compile Include="Models\Structs\GcCostHealth.cs" />
+    <Compile Include="Models\Structs\GcCostJourneyMilestone.cs" />
+    <Compile Include="Models\Structs\GcCostJourneyStatLevel.cs" />
+    <Compile Include="Models\Structs\GcCostMoney.cs" />
+    <Compile Include="Models\Structs\GcCostProduct.cs" />
+    <Compile Include="Models\Structs\GcCostStanding.cs" />
+    <Compile Include="Models\Structs\GcCostSubstance.cs" />
+    <Compile Include="Models\Structs\GcCostTable.cs" />
+    <Compile Include="Models\Structs\GcCostTableEntry.cs" />
     <Compile Include="Models\Structs\GcCreatureAudioTable.cs" />
     <Compile Include="Models\Structs\GcCreatureData.cs" />
     <Compile Include="Models\Structs\GcCreatureDataTable.cs" />
