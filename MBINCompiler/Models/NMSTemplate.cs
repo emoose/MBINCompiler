@@ -322,6 +322,21 @@ namespace MBINCompiler.Models
                         }
 
                         break;
+                    case "NMSTemplate":
+                        writer.Align(8, 0);
+                        long refPos = writer.BaseStream.Position;
+                        writer.Write((Int64)0); // listPosition
+                        var template = (NMSTemplate)field.GetValue(this);
+                        if (template == null)
+                        {
+                            writer.WriteString("", Encoding.UTF8, 0x40);
+                        } 
+                        else 
+                        {
+                            writer.WriteString("c" + template.GetType().Name, Encoding.UTF8, 0x40);
+                            additionalData.Add(new Tuple<long, object>(refPos, template));
+                        }
+                        break;
                     default:
 
                         if (fieldType == "Colour") // unsure if this is needed?
@@ -452,6 +467,17 @@ namespace MBINCompiler.Models
                         writer.Write((UInt32)0xAAAAAA01);
 
                         writer.BaseStream.Position = stringEndPos;
+                    }
+                    else if (data.Item2.GetType().BaseType == typeof(NMSTemplate)) 
+                    {
+                        var pos = writer.BaseStream.Position;
+                        var template = (NMSTemplate)data.Item2;
+                        template.AppendToWriter(writer, ref additionalData);
+                        var endPos = writer.BaseStream.Position;
+                        writer.BaseStream.Position = data.Item1;
+                        writer.Write(pos - data.Item1);
+                        writer.WriteString(template.GetType().Name, Encoding.UTF8, 0x40);
+                        writer.BaseStream.Position = endPos;
                     }
                     else if (data.Item2.GetType().IsGenericType && data.Item2.GetType().GetGenericTypeDefinition() == typeof(List<>))
                     {

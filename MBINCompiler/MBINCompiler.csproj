@@ -61,7 +61,7 @@
     <Compile Include="Models\Structs\GcRewardTechRecipe.cs" />
     <Compile Include="Models\Structs\GcRewardDestructEntry.cs" />
     <Compile Include="Models\Structs\GcRewardDestructRarities.cs" />
-    <Compile Include="Models\Structs\GcRewardDestructTable_.cs" />
+    <Compile Include="Models\Structs\GcRewardDestructTable.cs" />
     <Compile Include="Models\Structs\GcRewardDamageTech.cs" />
     <Compile Include="Models\Structs\GcRewardRepairTech.cs" />
     <Compile Include="Models\Structs\GcRewardMultiSpecificProducts.cs" />

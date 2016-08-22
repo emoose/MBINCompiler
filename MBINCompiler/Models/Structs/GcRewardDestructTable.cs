@@ -2,7 +2,7 @@
 
 namespace MBINCompiler.Models.Structs
 {
-    public class GcRewardDestructTable_ : NMSTemplate
+    public class GcRewardDestructTable : NMSTemplate
     {
         public List<GcRewardDestructRarities> Categories;
     }
