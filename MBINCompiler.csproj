@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CE736EF9-7BE9-4FF0-9551-78F0071AA373}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MBINCompiler</RootNamespace>
+    <AssemblyName>MBINCompiler</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="IO.cs" />
+    <Compile Include="MBINFile.cs" />
+    <Compile Include="EXmlFile.cs" />
+    <Compile Include="Models\EXmlBase.cs" />
+    <Compile Include="Models\EXmlData.cs" />
+    <Compile Include="Models\EXmlProperty.cs" />
+    <Compile Include="Models\MBINHeader.cs" />
+    <Compile Include="Models\NMSTemplate.cs" />
+    <Compile Include="Models\Structs\Colour.cs" />
+    <Compile Include="Models\Structs\GcAlienPuzzleEntry.cs" />
+    <Compile Include="Models\Structs\GcAlienPuzzleOption.cs" />
+    <Compile Include="Models\Structs\GcAlienPuzzleTable.cs" />
+    <Compile Include="Models\Structs\GcGenericRewardTableEntry.cs" />
+    <Compile Include="Models\Structs\GcNGuiElementData.cs" />
+    <Compile Include="Models\Structs\GcNGuiGraphicData.cs" />
+    <Compile Include="Models\Structs\GcNGuiLayerData.cs" />
+    <Compile Include="Models\Structs\GcNGuiLayoutData.cs" />
+    <Compile Include="Models\Structs\GcNGuiSpacingData.cs" />
+    <Compile Include="Models\Structs\GcNGuiTextData.cs" />
+    <Compile Include="Models\Structs\GcRewardTable.cs" />
+    <Compile Include="Models\Structs\GcRewardTableCategory.cs" />
+    <Compile Include="Models\Structs\GcRewardTableEntry.cs" />
+    <Compile Include="Models\Structs\GcRewardTableItem.cs" />
+    <Compile Include="Models\Structs\GcRewardTableItemList.cs" />
+    <Compile Include="Models\Structs\GcTechnologyCategory.cs" />
+    <Compile Include="Models\Structs\GcTechnologyRarity.cs" />
+    <Compile Include="Models\Structs\TkCurveType.cs" />
+    <Compile Include="Models\Structs\TkNGuiAlignment.cs" />
+    <Compile Include="Models\Structs\TkNGuiGraphicStyle.cs" />
+    <Compile Include="Models\Structs\TkNGuiGraphicStyleData.cs" />
+    <Compile Include="Models\Structs\TkNGuiTextStyle.cs" />
+    <Compile Include="Models\Structs\TkNGuiTextStyleData.cs" />
+    <Compile Include="Models\Structs\TkTransformData.cs" />
+    <Compile Include="Models\Structs\TkSceneNodeAttributeData.cs" />
+    <Compile Include="Models\Structs\TkSceneNodeData.cs" />
+    <Compile Include="Models\Structs\TkTextureResource.cs" />
+    <Compile Include="Models\Structs\TkModelResource.cs" />
+    <Compile Include="Models\Structs\GcProductCategory.cs" />
+    <Compile Include="Models\Structs\GcRarity.cs" />
+    <Compile Include="Models\Structs\GcLegality.cs" />
+    <Compile Include="Models\Structs\GcRealitySubstanceCategory.cs" />
+    <Compile Include="Models\Structs\GcAlienRace.cs" />
+    <Compile Include="Models\Structs\GcAlienSpeechEntry.cs" />
+    <Compile Include="Models\Structs\GcAlienSpeechTable.cs" />
+    <Compile Include="Models\Structs\GcColourModifier.cs" />
+    <Compile Include="Models\Structs\GcCreatureRoleDescription.cs" />
+    <Compile Include="Models\Structs\GcCreatureRoleDescriptionTable.cs" />
+    <Compile Include="Models\Structs\GcCreatureRoles.cs" />
+    <Compile Include="Models\Structs\GcCreatureStupidName.cs" />
+    <Compile Include="Models\Structs\GcCreatureStupidNameTable.cs" />
+    <Compile Include="Models\Structs\GcCreatureTypes.cs" />
+    <Compile Include="Models\Structs\GcDebugOptions.cs" />
+    <Compile Include="Models\Structs\GcEntitlementRewardData.cs" />
+    <Compile Include="Models\Structs\GcEntitlementRewardsTable.cs" />
+    <Compile Include="Models\Structs\GcFogProperties.cs" />
+    <Compile Include="Models\Structs\GcHazardValues.cs" />
+    <Compile Include="Models\Structs\GcHeavyAirSetting.cs" />
+    <Compile Include="Models\Structs\GcHeavyAirSettingValues.cs" />
+    <Compile Include="Models\Structs\GcHUDComponent.cs" />
+    <Compile Include="Models\Structs\GcHUDImageData.cs" />
+    <Compile Include="Models\Structs\GcHUDLayerData.cs" />
+    <Compile Include="Models\Structs\GcHUDTextData.cs" />
+    <Compile Include="Models\Structs\GcInteractionType.cs" />
+    <Compile Include="Models\Structs\GcInventoryType.cs" />
+    <Compile Include="Models\Structs\GcInventoryTable.cs" />
+    <Compile Include="Models\Structs\GcInventoryTableEntry.cs" />
+    <Compile Include="Models\Structs\GcItemPriceModifiers.cs" />
+    <Compile Include="Models\Structs\GcPlanetData_UNFINISHED.cs" />
+    <Compile Include="Models\Structs\GcPlanetWeatherColourData.cs" />
+    <Compile Include="Models\Structs\GcProductData.cs" />
+    <Compile Include="Models\Structs\GcProductTable.cs" />
+    <Compile Include="Models\Structs\GcSceneSettings.cs" />
+    <Compile Include="Models\Structs\GcStatsBonus.cs" />
+    <Compile Include="Models\Structs\GcStatsTypes.cs" />
+    <Compile Include="Models\Structs\GcTechnology.cs" />
+    <Compile Include="Models\Structs\GcTechnologyRequirement.cs" />
+    <Compile Include="Models\Structs\GcTechnologyTable.cs" />
+    <Compile Include="Models\Structs\GcTerrainTileType.cs" />
+    <Compile Include="Models\Structs\GcTextPreset.cs" />
+    <Compile Include="Models\Structs\GcTextPresetTable.cs" />
+    <Compile Include="Models\Structs\GcWeatherColourModifiers.cs" />
+    <Compile Include="Models\Structs\GcWeatherColourSettingList.cs" />
+    <Compile Include="Models\Structs\GcWeatherProperties.cs" />
+    <Compile Include="Models\Structs\MBINCompilerTestTemplate.cs" />
+    <Compile Include="Models\Structs\NMSString0x10.cs" />
+    <Compile Include="Models\Structs\NMSString0x80.cs" />
+    <Compile Include="Models\Structs\TkLocalisationEntry.cs" />
+    <Compile Include="Models\Structs\TkLocalisationTable.cs" />
+    <Compile Include="Models\Structs\TkPaletteTexture.cs" />
+    <Compile Include="Models\Structs\TkProceduralTexture.cs" />
+    <Compile Include="Models\Structs\TkProceduralTextureLayer.cs" />
+    <Compile Include="Models\Structs\TkProceduralTextureList.cs" />
+    <Compile Include="Models\Structs\VariableSizeString.cs" />
+    <Compile Include="Models\Structs\Vector2f.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Shared.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
