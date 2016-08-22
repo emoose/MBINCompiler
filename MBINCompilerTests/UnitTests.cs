@@ -949,6 +949,49 @@ namespace MBINCompilerTests
             "TEXTURES/UI/HUD/MENUS/ELEMENTGRADIENT.TEXTURE.MBIN",
         };
 
+        private void decompileFile(string filePath, string output = "")
+        {
+            using (var file = new MBINFile(filePath))
+            {
+                file.Load();
+
+                System.Diagnostics.Debug.WriteLine("testing " + filePath);
+                var data = file.GetData();
+
+                Assert.IsNotNull(data, filePath + " deserialized data was null");
+                Assert.IsNotNull(data.SerializeEXml(), filePath + " xml serialization was null");
+                var xmlString = EXmlFile.WriteTemplate(data);
+                Assert.IsNotNull(xmlString, filePath + " xml data is null");
+
+                if (!String.IsNullOrEmpty(output))
+                {
+                    if (File.Exists(output))
+                        File.Delete(output);
+                    File.WriteAllText(output, xmlString);
+                }
+            }
+        }
+
+        private void compileFile(string filePath, string output)
+        {
+            var data = EXmlFile.ReadTemplate(filePath);
+            Assert.IsNotNull(data, filePath + " exml failed to deserialize");
+
+            if (File.Exists(output))
+                File.Delete(output); // todo: ask for confirmation?
+
+            using (var file = new MBINFile(output))
+            {
+                file.Header = new MBINCompiler.Models.MBINHeader();
+                file.Header.SetDefaults();
+                if (data.GetType().Name == "TkGeometryData")
+                    file.Header.Magic = 0xDDDDDDDD; // only used by TkGeometryData / .MBIN.PC files, maybe used to signal the file is PC only?
+
+                file.SetData(data);
+                file.Save();
+            }
+        }
+
         [TestMethod]
         public void should_successfully_decompile()
         {
@@ -958,15 +1001,13 @@ namespace MBINCompilerTests
             foreach (var test in gameTestFiles)
             {
                 var fullPath = Path.Combine(baseDir, test);
-                var file = new MBINFile(fullPath);
-                file.Load();
+                if (!File.Exists(fullPath))
+                    continue; // file might have been removed in an update
 
-                System.Diagnostics.Debug.WriteLine("testing " + test);
-                var data = file.GetData();
-                Assert.IsNotNull(data, test + " deserialized data was null");
-                Assert.IsNotNull(data.SerializeEXml(), test + " xml serialization was null");
+                decompileFile(fullPath);
             }
         }
+
 
         private string HashFile(string file)
         {
@@ -988,35 +1029,30 @@ namespace MBINCompilerTests
             foreach (var test in gameTestFiles)
             {
                 var fullPath = Path.Combine(baseDir, test);
+                if (!File.Exists(fullPath))
+                    continue; // file might have been removed in an update
 
-                if (File.Exists(fullPath + ".tmp"))
-                    File.Delete(fullPath + ".tmp");
                 if (File.Exists(fullPath + ".exml"))
                     File.Delete(fullPath + ".exml");
+                if (File.Exists(fullPath + ".test"))
+                    File.Delete(fullPath + ".test");
+                if (File.Exists(fullPath + ".test.exml"))
+                    File.Delete(fullPath + ".test.exml");
 
-                // copy original file
-                File.Copy(fullPath, fullPath + ".new");
+                decompileFile(fullPath, fullPath + ".exml");
+                compileFile(fullPath + ".exml", fullPath + ".test");
+                decompileFile(fullPath + ".test", fullPath + ".test.exml");
 
-                using (var file = new MBINFile(fullPath + ".new"))
-                {
-                    file.Load();
+                string oldHash = HashFile(fullPath + ".exml");
+                string newHash = HashFile(fullPath + ".test.exml");
 
-                    System.Diagnostics.Debug.WriteLine("testing " + test);
-                    var data = file.GetData();
-                    Assert.IsNotNull(data, test + " deserialized data was null");
-                    File.WriteAllText(Path.ChangeExtension(fullPath, ".exml"), EXmlFile.WriteTemplate(data));
-                    file.SetData(data);
-                }
-
-                string oldHash = HashFile(fullPath);
-                string newHash = HashFile(fullPath + ".new");
-
-                // check recompiled file matches
+                // check exml files match
                 Assert.AreEqual(newHash, oldHash);
 
-                // delete new files and move old one back
-                //File.Delete(fullPath + ".tmp");
-                //File.Delete(fullPath + ".exml");
+                // delete new files
+                File.Delete(fullPath + ".exml");
+                File.Delete(fullPath + ".test");
+                File.Delete(fullPath + ".test.exml");
             }
         }
     }
