@@ -2,7 +2,7 @@ using System.Runtime.InteropServices;
 
 namespace MBINCompiler.Models.Structs {
 
-    public class cGcInventoryTableEntry : NMSTemplate {
+    public class GcInventoryTableEntry : NMSTemplate {
     	public string Id;
 
         public int MinSize;
