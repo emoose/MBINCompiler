@@ -3,7 +3,7 @@ using System.Runtime.InteropServices;
 
 namespace MBINCompiler.Models.Structs
 {
-    class GcRewardTableItem
+    public class GcRewardTableItem
     {
         public float PercentageChance;
 
