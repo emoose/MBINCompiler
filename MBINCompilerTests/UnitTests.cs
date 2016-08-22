@@ -67,6 +67,9 @@ namespace MBINCompilerTests
             "METADATA/UI/BOOTLOGOPC.MBIN",
             "METADATA/UI/BOOTLOGOPS4.MBIN",
 
+            // GcCreatureAudioTable
+            "METADATA/SIMULATION/ECOSYSTEM/CREATUREAUDIOTABLE.MBIN",
+
             // GcCreatureFilenameTable
             "METADATA/SIMULATION/ECOSYSTEM/CREATUREFILENAMETABLE.MBIN",
 
