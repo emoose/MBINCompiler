@@ -1,9 +1,9 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Runtime.InteropServices;
 
 namespace MBINCompiler.Models.Structs
 {
-    class GcGenericRewardTableEntry
+    public class GcGenericRewardTableEntry
     {
         [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 0x10)]
         public string Id;
