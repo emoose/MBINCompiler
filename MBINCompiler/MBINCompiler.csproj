@@ -145,6 +145,7 @@
     <Compile Include="Models\Structs\GcRewardTable.cs" />
     <Compile Include="Models\Structs\GcUserSettingsData.cs" />
     <Compile Include="Models\Structs\GcWaterGlobals.cs" />
+    <Compile Include="Models\Structs\NMSString0x20.cs" />
     <Compile Include="Models\Structs\TkButtonImageLookup.cs" />
     <Compile Include="Models\Structs\TkButtonPathMapping.cs" />
     <Compile Include="Models\Structs\TkControllerButtonLookup.cs" />
@@ -152,6 +153,7 @@
     <Compile Include="Models\Structs\TkControllerSpecification.cs" />
     <Compile Include="Models\Structs\TkEngineSettings.cs" />
     <Compile Include="Models\Structs\TkEngineSettingsMapping.cs" />
+    <Compile Include="Models\Structs\TkEntitlementList.cs" />
     <Compile Include="Models\Structs\TkGraphicsSettings.cs" />
     <Compile Include="Models\Structs\TkProceduralTextureChosenOptionSampler.cs" />
     <Compile Include="Models\Structs\TkProceduralTextureChosenOptionList.cs" />
