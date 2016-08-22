@@ -3,7 +3,7 @@ using System.Runtime.InteropServices;
 
 namespace MBINCompiler.Models.Structs
 {
-    class GcRewardTable
+    public class GcRewardTable
     {
         public List<GcRewardTableEntry> Table;
         public List<GcGenericRewardTableEntry> GenericTable;
