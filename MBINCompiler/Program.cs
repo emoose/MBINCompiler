@@ -104,7 +104,7 @@ namespace MBINCompiler
             else
             {
                 bool isMBin = false;
-                if(File.Exists(input) && new FileInfo(input).Length > 4)
+                if(File.Exists(input) && new FileInfo(input).Length > 0x60)
                 {
                     using (var stream = File.OpenRead(input))
                     using (var reader = new BinaryReader(stream))
