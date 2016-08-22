@@ -57,6 +57,8 @@
     <Compile Include="Models\Structs\GcAlienPuzzleTable.cs" />
     <Compile Include="Models\Structs\GcAtlasGlobals.cs" />
     <Compile Include="Models\Structs\GcBootLogoData.cs" />
+    <Compile Include="Models\Structs\GcCreatureFilename.cs" />
+    <Compile Include="Models\Structs\GcCreatureFilenameTable.cs" />
     <Compile Include="Models\Structs\GcRewardAction.cs" />
     <Compile Include="Models\Structs\GcRewardProductRecipe.cs" />
     <Compile Include="Models\Structs\GcRewardTeachWord.cs" />
