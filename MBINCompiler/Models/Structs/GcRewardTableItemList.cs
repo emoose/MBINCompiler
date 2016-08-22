@@ -3,7 +3,7 @@ using System.Runtime.InteropServices;
 
 namespace MBINCompiler.Models.Structs
 {
-    class GcRewardTableItemList
+    public class GcRewardTableItemList
     {
         public bool EntitlementLinked;
 
