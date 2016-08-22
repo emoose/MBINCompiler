@@ -129,6 +129,17 @@ namespace MBINCompiler.Models
                         }
 
                         break;
+                    case "NMSTemplate":
+                        reader.Align(8, 0);
+                        long offset = reader.BaseStream.Position + reader.ReadInt64();
+                        string name = reader.ReadString(Encoding.ASCII, 0x40, true);
+                        long cached = reader.BaseStream.Position;
+                        reader.BaseStream.Position = offset;
+                        NMSTemplate val = DeserializeBinaryTemplate(reader, name);
+                        if (val != null)
+                            field.SetValue(obj, val);
+                        reader.BaseStream.Position = cached;
+                        break;
                     default:
                         if (fieldType == "Colour") // unsure if this is needed?
                             reader.Align(0x10, 0);
@@ -221,7 +232,7 @@ namespace MBINCompiler.Models
 
             return list;
         }
-
+        
         public void AppendToWriter(BinaryWriter writer, ref List<Tuple<long, object>> additionalData)
         {
             long templatePosition = writer.BaseStream.Position;
@@ -310,6 +321,21 @@ namespace MBINCompiler.Models
                             additionalData.Add(new Tuple<long, object>(listPos, list));
                         }
 
+                        break;
+                    case "NMSTemplate":
+                        writer.Align(8, 0);
+                        long refPos = writer.BaseStream.Position;
+                        writer.Write((Int64)0); // listPosition
+                        var template = (NMSTemplate)field.GetValue(this);
+                        if (template == null)
+                        {
+                            writer.WriteString("", Encoding.UTF8, 0x40);
+                        } 
+                        else 
+                        {
+                            writer.WriteString("c" + template.GetType().Name, Encoding.UTF8, 0x40);
+                            additionalData.Add(new Tuple<long, object>(refPos, template));
+                        }
                         break;
                     default:
 
@@ -442,6 +468,17 @@ namespace MBINCompiler.Models
 
                         writer.BaseStream.Position = stringEndPos;
                     }
+                    else if (data.Item2.GetType().BaseType == typeof(NMSTemplate)) 
+                    {
+                        var pos = writer.BaseStream.Position;
+                        var template = (NMSTemplate)data.Item2;
+                        template.AppendToWriter(writer, ref additionalData);
+                        var endPos = writer.BaseStream.Position;
+                        writer.BaseStream.Position = data.Item1;
+                        writer.Write(pos - data.Item1);
+                        writer.WriteString(template.GetType().Name, Encoding.UTF8, 0x40);
+                        writer.BaseStream.Position = endPos;
+                    }
                     else if (data.Item2.GetType().IsGenericType && data.Item2.GetType().GetGenericTypeDefinition() == typeof(List<>))
                     {
                         Type itemType = data.Item2.GetType().GetGenericArguments()[0];
@@ -457,7 +494,6 @@ namespace MBINCompiler.Models
                 return stream.ToArray();
             }
         }
-
         public EXmlData SerializeEXml()
         {
             Type type = GetType();
@@ -474,7 +510,7 @@ namespace MBINCompiler.Models
                     continue;
                 var fieldName = field.Name;
                 var fieldType = field.FieldType.Name;
-                
+
                 switch (fieldType)
                 {
                     case "String":
@@ -503,7 +539,7 @@ namespace MBINCompiler.Models
                     case "Byte[]":
                         byte[] bytes = (byte[])field.GetValue(this);
                         string base64Value = bytes == null ? null : Convert.ToBase64String(bytes);
-                        
+
                         xmlData.Elements.Add(new EXmlProperty
                         {
                             Name = fieldName,
@@ -523,6 +559,17 @@ namespace MBINCompiler.Models
                         }
 
                         xmlData.Elements.Add(listProperty);
+                        break;
+                    case "NMSTemplate":
+                        if (field.GetValue(this) != null)
+                        {
+                            NMSTemplate template = (NMSTemplate)field.GetValue(this);
+
+                            EXmlData templateXmlData = template.SerializeEXml();
+                            templateXmlData.Name = fieldName;
+
+                            xmlData.Elements.Add(templateXmlData);
+                        }
                         break;
                     default:
                         if (field.FieldType.BaseType.Name == "NMSTemplate")
