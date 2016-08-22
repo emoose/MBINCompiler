@@ -55,6 +55,8 @@
     <Compile Include="Models\Structs\GcAlienPuzzleEntry.cs" />
     <Compile Include="Models\Structs\GcAlienPuzzleOption.cs" />
     <Compile Include="Models\Structs\GcAlienPuzzleTable.cs" />
+    <Compile Include="Models\Structs\GcAtlasGlobals.cs" />
+    <Compile Include="Models\Structs\GcBootLogoData.cs" />
     <Compile Include="Models\Structs\GcRewardAction.cs" />
     <Compile Include="Models\Structs\GcRewardProductRecipe.cs" />
     <Compile Include="Models\Structs\GcRewardTeachWord.cs" />
@@ -106,6 +108,10 @@
     <Compile Include="Models\Structs\GcRewardTableCategory.cs" />
     <Compile Include="Models\Structs\GcRewardTableEntry.cs" />
     <Compile Include="Models\Structs\GcRewardTable.cs" />
+    <Compile Include="Models\Structs\GcUserSettingsData.cs" />
+    <Compile Include="Models\Structs\GcWaterGlobals.cs" />
+    <Compile Include="Models\Structs\TkEngineSettingsMapping.cs" />
+    <Compile Include="Models\Structs\TkGraphicsSettings.cs" />
     <Compile Include="Models\Structs\TkProceduralTextureChosenOptionSampler.cs" />
     <Compile Include="Models\Structs\TkProceduralTextureChosenOptionList.cs" />
     <Compile Include="Models\Structs\TkProceduralTextureChosenOption.cs" />
