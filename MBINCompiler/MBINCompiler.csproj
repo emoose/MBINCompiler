@@ -107,6 +107,8 @@
     <Compile Include="Models\Structs\GcHUDTextData.cs" />
     <Compile Include="Models\Structs\GcInteractionType.cs" />
     <Compile Include="Models\Structs\GcInventoryType.cs" />
+    <Compile Include="Models\Structs\GcInventoryTable.cs" />
+    <Compile Include="Models\Structs\GcInventoryTableEntry.cs" />
     <Compile Include="Models\Structs\GcItemPriceModifiers.cs" />
     <Compile Include="Models\Structs\GcPlanetData_UNFINISHED.cs" />
     <Compile Include="Models\Structs\GcPlanetWeatherColourData.cs" />
