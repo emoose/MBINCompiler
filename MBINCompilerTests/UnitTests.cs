@@ -210,6 +210,9 @@ namespace MBINCompilerTests
             // TkControllerList
             "METADATA/INPUT/GCCONTROLLERLIST.MBIN",
 
+            // TkEngineSettings
+            "METADATA/ENGINE/TKENGINESETTINGS.MBIN",
+
             // TkEngineSettingsMapping
             "METADATA/ENGINESETTINGS/TKENGINESETTINGSMAPPING.MBIN",
 

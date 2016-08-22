@@ -150,6 +150,7 @@
     <Compile Include="Models\Structs\TkControllerButtonLookup.cs" />
     <Compile Include="Models\Structs\TkControllerList.cs" />
     <Compile Include="Models\Structs\TkControllerSpecification.cs" />
+    <Compile Include="Models\Structs\TkEngineSettings.cs" />
     <Compile Include="Models\Structs\TkEngineSettingsMapping.cs" />
     <Compile Include="Models\Structs\TkGraphicsSettings.cs" />
     <Compile Include="Models\Structs\TkProceduralTextureChosenOptionSampler.cs" />
