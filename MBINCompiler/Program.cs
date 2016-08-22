@@ -26,12 +26,8 @@ namespace MBINCompiler
             if (File.Exists(output))
                 File.Delete(output); // todo: ask for confirmation?
 
-            if (File.Exists(input))
-                File.Delete(input + ".tmp"); // todo: ask for confirmation?
-
             // no error checking ^^ (todo: error checking)
-            File.Copy(input, input + ".tmp");
-            var file = new MBINFile(input + ".tmp");
+            var file = new MBINFile(input);
             file.Load();
 
             var data = file.GetData();
