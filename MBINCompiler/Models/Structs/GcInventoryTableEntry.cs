@@ -15,7 +15,7 @@ namespace MBINCompiler.Models.Structs {
                 "ShuSmall", "ShtMedium", "ShtLarge", 
                 "DrpSmall", "DrpMedium", "DrpLarge", 
                 "WeaponSmall", "WeaponMedium", "WeaponLarge" 
-            }
+            };
         }
     }
 
