@@ -107,6 +107,8 @@
     <Compile Include="Models\Structs\GcProductData.cs" />
     <Compile Include="Models\Structs\GcProductTable.cs" />
     <Compile Include="Models\Structs\GcSceneSettings.cs" />
+    <Compile Include="Models\Structs\GcSubstanceData.cs" />
+    <Compile Include="Models\Structs\GcSubstanceTable.cs" />
     <Compile Include="Models\Structs\GcStatsBonus.cs" />
     <Compile Include="Models\Structs\GcStatsTypes.cs" />
     <Compile Include="Models\Structs\GcTechnology.cs" />
