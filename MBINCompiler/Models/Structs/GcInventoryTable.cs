@@ -2,7 +2,7 @@ using System.Collections.Generic;
 
 namespace MBINCompiler.Models.Structs {
 
-    public class cGcInventoryTable : NMSTemplate {
+    public class GcInventoryTable : NMSTemplate {
     	public List<cGcInventoryTableEntry> Table;
     }
 
