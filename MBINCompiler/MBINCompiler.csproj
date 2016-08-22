@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -55,12 +55,18 @@
     <Compile Include="Models\Structs\GcAlienPuzzleEntry.cs" />
     <Compile Include="Models\Structs\GcAlienPuzzleOption.cs" />
     <Compile Include="Models\Structs\GcAlienPuzzleTable.cs" />
+    <Compile Include="Models\Structs\GcGenericRewardTableEntry.cs" />
     <Compile Include="Models\Structs\GcNGuiElementData.cs" />
     <Compile Include="Models\Structs\GcNGuiGraphicData.cs" />
     <Compile Include="Models\Structs\GcNGuiLayerData.cs" />
     <Compile Include="Models\Structs\GcNGuiLayoutData.cs" />
     <Compile Include="Models\Structs\GcNGuiSpacingData.cs" />
     <Compile Include="Models\Structs\GcNGuiTextData.cs" />
+    <Compile Include="Models\Structs\GcRewardTable.cs" />
+    <Compile Include="Models\Structs\GcRewardTableCategory.cs" />
+    <Compile Include="Models\Structs\GcRewardTableEntry.cs" />
+    <Compile Include="Models\Structs\GcRewardTableItem.cs" />
+    <Compile Include="Models\Structs\GcRewardTableItemList.cs" />
     <Compile Include="Models\Structs\GcTechnologyCategory.cs" />
     <Compile Include="Models\Structs\GcTechnologyRarity.cs" />
     <Compile Include="Models\Structs\TkCurveType.cs" />
@@ -101,8 +107,6 @@
     <Compile Include="Models\Structs\GcHUDTextData.cs" />
     <Compile Include="Models\Structs\GcInteractionType.cs" />
     <Compile Include="Models\Structs\GcInventoryType.cs" />
-    <Compile Include="Models\Structs\GcInventoryTable.cs" />
-    <Compile Include="Models\Structs\GcInventoryTableEntry.cs" />
     <Compile Include="Models\Structs\GcItemPriceModifiers.cs" />
     <Compile Include="Models\Structs\GcPlanetData_UNFINISHED.cs" />
     <Compile Include="Models\Structs\GcPlanetWeatherColourData.cs" />
