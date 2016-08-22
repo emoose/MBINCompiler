@@ -1,8 +1,10 @@
 # MBINCompiler [![Build status](https://ci.appveyor.com/api/projects/status/kivetlncubq7wktl?svg=true)](https://ci.appveyor.com/project/emoose/mbincompiler)
 
-A tool for decompiling No Man's Sky .MBIN files to XML format, eventually it'll live to its name and actually compile XMLs back to MBIN too.
+A tool for decompiling No Man's Sky MBIN files to XML format, and recompiling them back from XML to MBIN.
 
-MBIN reading seems to be working well, structures just have to be created for all the different templates used by the game.
+MBIN reading seems to be working well, structures just have to be created for all the different templates used by the game. 
+
+MBIN compiling also seems to be working well, but hasn't been tested very much yet (bug reports are welcomed!)
 
 Note that the format of XML files created by this tool could change at any time.
 
@@ -21,6 +23,8 @@ Contributions would be a great help for this tool, there are hundreds of differe
 If you'd like to contribute and have reverse-engineering experience, I've written a guide for finding templates in the game EXE [here](http://pastebin.com/5vdpCHnv).
 
 Templates aren't the only contributions accepted though, if you have any improvements to make to the source code they'd be greatly appreciated, while I like to pretend that I'm a decent C# programmer there are loads of people who have a better grasp of the language than I, if any of you can help to improve the code in any way I'd be very grateful.
+
+If you want to talk about development feel free to join the NMS modding discord, MBINCompiler discussion usually takes place in the #modding-mbin channel: https://discordapp.com/invite/3Ytkxss (should work in browsers too, no client downloads needed)
 
 Examples
 ---

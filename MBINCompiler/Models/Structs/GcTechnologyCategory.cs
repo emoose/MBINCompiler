@@ -2,11 +2,11 @@
 {
     public class GcTechnologyCategory : NMSTemplate
     {
-        public int Category;
+        public int TechnologyCategory;
 
-        public string[] CategoryValues()
+        public string[] TechnologyCategoryValues()
         {
-            return new[] { "Ship", "Weapon", "Suit", "Personal", "All" };
+            return new[] { "Ship", "Weapon", "Suit", "Personal", "All", "None" };
         }
     }
 }
