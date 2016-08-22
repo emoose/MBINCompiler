@@ -3,7 +3,7 @@ using System.Runtime.InteropServices;
 
 namespace MBINCompiler.Models.Structs
 {
-    class GcRewardTableEntry
+    public class GcRewardTableEntry
     {
         [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 0x10)]
         public string Id;
