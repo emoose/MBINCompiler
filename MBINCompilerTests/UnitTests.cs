@@ -70,6 +70,10 @@ namespace MBINCompilerTests
             // GcCreatureAudioTable
             "METADATA/SIMULATION/ECOSYSTEM/CREATUREAUDIOTABLE.MBIN",
 
+            // GcCreatureDataTable
+            "METADATA/SIMULATION/ECOSYSTEM/CREATUREDATATABLE.MBIN",
+            "METADATA/SIMULATION/ECOSYSTEM/ROBOTDATATABLE.MBIN",
+
             // GcCreatureFilenameTable
             "METADATA/SIMULATION/ECOSYSTEM/CREATUREFILENAMETABLE.MBIN",
 
