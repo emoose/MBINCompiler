@@ -50,9 +50,6 @@ namespace MBINCompilerTests
 
         string[] gameTestFiles = new string[] // all of these should decompile fine
         {
-            // GcRewardTable
-            "METADATA/REALITY/TABLES/REWARDTABLE.MBIN",
-
             // GcAlienSpeechTable
             "METADATA/REALITY/TABLES/NMS_DIALOG_GCALIENSPEECHTABLE.MBIN",
             "LANGUAGE/NMS_DIALOG.MBIN",
@@ -129,6 +126,12 @@ namespace MBINCompilerTests
             "METADATA/UI/HUD/WEAPONS/BULLETGUN.MBIN",
             "METADATA/UI/HUD/WEAPONS/LASER.MBIN",
             "METADATA/UI/HUD/WEAPONS/MISSILE.MBIN",
+
+            // GcPlayerDamageTable
+            "METADATA/REALITY/TABLES/DAMAGETABLE.MBIN",
+            
+            // GcRewardTable
+            "METADATA/REALITY/TABLES/REWARDTABLE.MBIN",
 
             // GcSceneSettings
             "SCENES/COMMON/DEFAULTSETTINGS.MBIN",

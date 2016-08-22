@@ -71,6 +71,8 @@
     <Compile Include="Models\Structs\GcCreatureSwarmData.cs" />
     <Compile Include="Models\Structs\GcCreatureVocalData.cs" />
     <Compile Include="Models\Structs\GcCreatureVocalSoundData.cs" />
+    <Compile Include="Models\Structs\GcPlayerDamageData.cs" />
+    <Compile Include="Models\Structs\GcPlayerDamageTable.cs" />
     <Compile Include="Models\Structs\GcRewardAction.cs" />
     <Compile Include="Models\Structs\GcRewardProductRecipe.cs" />
     <Compile Include="Models\Structs\GcRewardTeachWord.cs" />
