@@ -46,6 +46,9 @@ namespace MBINCompiler.Models.Structs
         [NMSAttribute(Size = 5, EnumValue = new string[5] { "Commodity", "Technology", "Fuel", "Tradeable", "Special" })]
         public TkTextureResource[] SubstanceChargeIcons;
 
+        [NMSAttribute(Ignore = true)]
+        public int EmptyNode1;
+
         [NMSAttribute(Size = 70, EnumValue = new string[70]
             {
                 "Weapon_Laser", "Weapon_Laser_Damage", "Weapon_Laser_Mining_Damage", "Weapon_Laser_Mining_Speed", "Weapon_Laser_HeatTime", "Weapon_Laser_Bounce", "Weapon_Laser_ReloadTime", "Weapon_Laser_Recoil",
@@ -61,7 +64,7 @@ namespace MBINCompiler.Models.Structs
         public TkTextureResource[] StatCategoryIcons;
 
         [NMSAttribute(Ignore = true)]
-        public long EmptyNode1;
+        public int EmptyNode2;
 
         [NMSAttribute(Size = 3, EnumValue = new string[3] { "Suit", "Weapon", "Ship" })]
         public GcStats[] Stats;
