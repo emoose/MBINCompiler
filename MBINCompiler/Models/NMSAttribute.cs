@@ -48,11 +48,25 @@ namespace MBINCompiler.Models
             }
         }
 
+        private string[] enumValue;
+        public string[] EnumValue
+        {
+            get
+            {
+                return enumValue;
+            }
+            set
+            {
+                enumValue = value;
+            }
+        }
+
         public NMSAttribute() 
         {
             size = 0;
             ignore = false;
             defaultValue = null;
+            enumValue = null;
         }
     }
 }

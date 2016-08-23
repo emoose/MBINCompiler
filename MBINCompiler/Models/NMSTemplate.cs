@@ -573,6 +573,15 @@ namespace MBINCompiler.Models
                                 valueStr = values[(int)value];
                             }
                         }
+                        else if (settings.EnumValue != null)
+                        {
+                            if (((int)value) == -1)
+                                valueStr = "";
+                            else
+                            {
+                                valueStr = settings.EnumValue[(int)value];
+                            }
+                        }
 
                         xmlData.Elements.Add(new EXmlProperty
                         {
@@ -633,10 +642,17 @@ namespace MBINCompiler.Models
                                 Name = fieldName
                             };
 
-                            Array array = (Array) field.GetValue(this);
+                            Array array = (Array)field.GetValue(this);
+                            int i = 0;
                             foreach (var template in array)
                             {
-                                arrayProperty.Elements.Add(((NMSTemplate)template).SerializeEXml());
+                                EXmlData data = ((NMSTemplate)template).SerializeEXml();
+                                if (settings.EnumValue != null)
+                                {
+                                    data.Name = settings.EnumValue[i];
+                                    i++;
+                                }
+                                arrayProperty.Elements.Add(data);
                             }
 
                             xmlData.Elements.Add(arrayProperty);
@@ -700,6 +716,15 @@ namespace MBINCompiler.Models
                             {
                                 string[] values = (string[])valuesMethod.Invoke(template, null);
                                 fieldValue = Array.FindIndex(values, v => v == xmlProperty.Value);
+                            }
+                        }
+                        else if(settings.EnumValue != null)
+                        {
+                            if (String.IsNullOrEmpty(xmlProperty.Value))
+                                fieldValue = (int)-1;
+                            else
+                            {
+                                fieldValue = Array.FindIndex(settings.EnumValue, v => v == xmlProperty.Value);
                             }
                         }
                         else
