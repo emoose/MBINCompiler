@@ -2,8 +2,7 @@
 {
     public class GcCreatureTypes : NMSTemplate
     {
-        public int CreatureType; // enum(0x16)
-
+        public int CreatureType;
         public string[] CreatureTypeValues()
         {
             return new[]

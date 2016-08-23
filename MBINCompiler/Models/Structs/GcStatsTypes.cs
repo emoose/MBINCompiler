@@ -2,7 +2,7 @@
 {
     public class GcStatsTypes : NMSTemplate
     {
-        public int StatsType; // enum, 0x46 types!
+        public int StatsType;
         public string[] StatsTypeValues()
         {
             return new[]

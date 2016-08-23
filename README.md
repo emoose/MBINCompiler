@@ -31,7 +31,7 @@ Examples
 SCENES\SCREENSHOTS\E32015\MAINSETTINGS.MBIN:
 
 ```xml
-<?xml version="1.0" encoding="utf-16"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Data template="GcSceneSettings">
   <Property name="NextSettingFile" value="" />
   <Property name="SceneFile" value="SCENES/DEMOS/E32015/MAINSETTINGS/SCENES/SPACE.SCENE.MBIN" />
@@ -52,6 +52,33 @@ SCENES\SCREENSHOTS\E32015\MAINSETTINGS.MBIN:
   <Property name="ShipPreloadFiles" />
   <Property name="SpawnShip" value="False" />
   <Property name="SpawnInsideShip" value="False" />
+  <Data name="PlayerState" template="GcPlayerSpawnStateData">
+    <Data name="PlayerPositionInSystem" template="Vector4f">
+      <Property name="x" value="0" />
+      <Property name="y" value="0" />
+      <Property name="z" value="0" />
+      <Property name="t" value="0" />
+    </Data>
+    <Data name="PlayerTransformAt" template="Vector4f">
+      <Property name="x" value="0" />
+      <Property name="y" value="0" />
+      <Property name="z" value="1" />
+      <Property name="t" value="1" />
+    </Data>
+    <Data name="ShipPositionInSystem" template="Vector4f">
+      <Property name="x" value="0" />
+      <Property name="y" value="0" />
+      <Property name="z" value="0" />
+      <Property name="t" value="0" />
+    </Data>
+    <Data name="ShipTransformAt" template="Vector4f">
+      <Property name="x" value="0" />
+      <Property name="y" value="0" />
+      <Property name="z" value="1" />
+      <Property name="t" value="1" />
+    </Data>
+    <Property name="LastKnownPlayerState" value="OnStation" />
+  </Data>
   <Property name="Events" />
   <Property name="PostWarpEvents" />
   <Property name="SpawnerOptionId" value="" />

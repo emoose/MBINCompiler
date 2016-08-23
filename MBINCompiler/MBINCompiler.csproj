@@ -98,6 +98,7 @@
     <Compile Include="Models\Structs\GcPlayerDamageTable.cs" />
     <Compile Include="Models\Structs\GcPlayerMissionProgressMapEntry.cs" />
     <Compile Include="Models\Structs\GcPlayerMissionProgressMapTable.cs" />
+    <Compile Include="Models\Structs\GcPlayerSpawnStateData.cs" />
     <Compile Include="Models\Structs\GcRealityCommonFactions.cs" />
     <Compile Include="Models\Structs\GcRewardAction.cs" />
     <Compile Include="Models\Structs\GcRewardProductRecipe.cs" />

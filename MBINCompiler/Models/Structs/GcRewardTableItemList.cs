@@ -8,7 +8,7 @@ namespace MBINCompiler.Models.Structs
         public bool EntitlementLinked;
         [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 0x20)]
         public string EntitlementId;
-        public GcRewardTableChoice RewardChoice; // enum
+        public GcRewardTableChoice RewardChoice;
         public List<GcRewardTableItem> List;
     }
 }

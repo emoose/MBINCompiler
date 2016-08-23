@@ -167,7 +167,7 @@ namespace MBINCompiler.Models
             long listPosition = reader.BaseStream.Position;
             System.Diagnostics.Debug.WriteLine("DeserializeGenericList start 0x" + listPosition.ToString("X"));
 
-            long templateNamesOffset = reader.ReadInt64(); // TODO: USE THIS!
+            long templateNamesOffset = reader.ReadInt64();
             int numTemplates = reader.ReadInt32();
             uint listMagic = reader.ReadUInt32();
             if (listMagic != 0xAAAAAA01)
@@ -215,7 +215,7 @@ namespace MBINCompiler.Models
             long listPosition = reader.BaseStream.Position;
             System.Diagnostics.Debug.WriteLine("DeserializeList start 0x" + listPosition.ToString("X"));
 
-            long listStartOffset = reader.ReadInt64(); // TODO: USE THIS!
+            long listStartOffset = reader.ReadInt64();
             int numEntries = reader.ReadInt32();
             uint listMagic = reader.ReadUInt32();
             if (listMagic != 0xAAAAAA01)
