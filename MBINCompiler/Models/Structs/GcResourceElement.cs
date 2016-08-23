@@ -6,6 +6,7 @@ namespace MBINCompiler.Models.Structs
     {
         [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 0x80)]
         public string Filename;
+        [NMSAttribute(Ignore = true)]
         public long EmptyNode1;
         public GcSeed GenerationSeed;
         [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 0x200)]

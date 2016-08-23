@@ -19,6 +19,7 @@ namespace MBINCompiler.Models.Structs
 
         public GcAlienRace AlienRace;
         public int Level;
+        [NMSAttribute(Ignore = true)]
         public int Padding;
     }
 }

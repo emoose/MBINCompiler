@@ -31,6 +31,7 @@ namespace MBINCompiler.Models.Structs
         public bool KeepOpen;
 
         [MarshalAs(UnmanagedType.ByValArray, SizeConst = 3)]
+        [NMSAttribute(Ignore = true)]
         public byte[] Padding;
     }
 }

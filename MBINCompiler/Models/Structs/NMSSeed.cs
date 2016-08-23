@@ -8,6 +8,7 @@ namespace MBINCompiler.Models.Structs
         public bool UseSeedValue;
 
         [MarshalAs(UnmanagedType.ByValArray, SizeConst = 7)]
+        [NMSAttribute(Ignore = true)]
         public byte[] Padding9; // todo: is this always here? might be padding inside the parent template instead
     }
 }

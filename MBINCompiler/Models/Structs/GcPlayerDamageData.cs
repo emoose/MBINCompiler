@@ -10,6 +10,7 @@ namespace MBINCompiler.Models.Structs
         public string DeathMessage;
         public TkTextureResource HitIcon;
         [MarshalAs(UnmanagedType.ByValArray, SizeConst = 4)]
+        [NMSAttribute(Ignore = true)]
         public byte[] PaddingB4;
         [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 0x20)]
         public string HitMessage;
@@ -19,6 +20,7 @@ namespace MBINCompiler.Models.Structs
         public float PushForce;
         public float CameraTurn;
         [MarshalAs(UnmanagedType.ByValArray, SizeConst = 4)]
+        [NMSAttribute(Ignore = true)]
         public byte[] Padding104;
         [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 0x10)]
         public string CameraShakeShield;

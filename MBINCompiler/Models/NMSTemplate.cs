@@ -57,6 +57,11 @@ namespace MBINCompiler.Models
             var fields = type.GetFields().OrderBy(field => field.MetadataToken); // hack to get fields in order of declaration (todo: use something less hacky, this might break mono?)
             foreach (var field in fields)
             {
+                NMSAttribute settings = field.GetCustomAttribute<NMSAttribute>();
+                if (settings == null)
+                {
+                    settings = new NMSAttribute();
+                }
                 var fieldAddr = reader.BaseStream.Position - templatePosition;
                 var fieldName = field.Name;
                 var fieldType = field.FieldType.Name;
@@ -151,10 +156,22 @@ namespace MBINCompiler.Models
                         if (fieldType == "Colour") // unsure if this is needed?
                             reader.Align(0x10, 0);
                         // todo: align for VariableSizeString?
-
-                        var data = DeserializeBinaryTemplate(reader, fieldType);
-                        if (data != null)
-                            field.SetValue(obj, data);
+                        if (field.FieldType.IsArray && field.FieldType.GetElementType().BaseType.Name == "NMSTemplate") 
+                        {
+                            var arrayType = field.FieldType.GetElementType();
+                            Array array = Array.CreateInstance(arrayType, settings.Size);
+                            for (int i = 0; i < settings.Size; ++i)
+                            {
+                                array.SetValue(DeserializeBinaryTemplate(reader, field.FieldType.GetElementType().Name), i);
+                            }
+                            field.SetValue(obj, array);
+                        } 
+                        else 
+                        {
+                            var data = DeserializeBinaryTemplate(reader, fieldType);
+                            if (data != null)
+                                field.SetValue(obj, data);
+                        }
                         break;
                 }
             }
@@ -361,6 +378,15 @@ namespace MBINCompiler.Models
                             var fieldValue = (VariableSizeString)field.GetValue(this);
                             additionalData.Add(new Tuple<long, object>(fieldPos, fieldValue));
                         }
+                        else if (field.FieldType.IsArray && field.FieldType.GetElementType().BaseType.Name == "NMSTemplate") 
+                        {
+                            var arrayType = field.FieldType.GetElementType();
+                            Array array = (Array)field.GetValue(this);
+                            foreach (var obj in array)
+                            {
+                                ((NMSTemplate)obj).AppendToWriter(writer, ref additionalData);
+                            }
+                        }
                         else
                         {
                             var obj = field.GetValue(this);
@@ -513,7 +539,12 @@ namespace MBINCompiler.Models
 
             foreach (var field in fields)
             {
-                if (field.Name.StartsWith("Padding"))
+                NMSAttribute settings = field.GetCustomAttribute<NMSAttribute>();
+                if (settings == null)
+                {
+                    settings = new NMSAttribute();
+                }
+                if (settings.Ignore)
                     continue;
                 var fieldName = field.Name;
                 var fieldType = field.FieldType.Name;
@@ -585,7 +616,7 @@ namespace MBINCompiler.Models
                         }
                         break;
                     default:
-                        if (field.FieldType.BaseType.Name == "NMSTemplate")
+                        if (field.FieldType.BaseType.Name == "NMSTemplate") 
                         {
                             NMSTemplate template = (NMSTemplate)field.GetValue(this);
 
@@ -593,6 +624,26 @@ namespace MBINCompiler.Models
                             templateXmlData.Name = fieldName;
 
                             xmlData.Elements.Add(templateXmlData);
+                        } 
+                        else if (field.FieldType.IsArray && field.FieldType.GetElementType().BaseType.Name == "NMSTemplate") 
+                        {
+                            var arrayType = field.FieldType.GetElementType();
+                            EXmlProperty arrayProperty = new EXmlProperty
+                            {
+                                Name = fieldName
+                            };
+
+                            Array array = (Array) field.GetValue(this);
+                            foreach (var template in array)
+                            {
+                                arrayProperty.Elements.Add(((NMSTemplate)template).SerializeEXml());
+                            }
+
+                            xmlData.Elements.Add(arrayProperty);
+                        }
+                        else 
+                        {
+                            throw new Exception(string.Format("Unable to encode {0} to EXml!", field));
                         }
 
                         break;
@@ -606,10 +657,24 @@ namespace MBINCompiler.Models
         {
             NMSTemplate template = TemplateFromName(xmlData.Template);
             Type templateType = template.GetType();
+            var templateFields = templateType.GetFields().OrderBy(field => field.MetadataToken); // hack to get fields in order of declaration (todo: use something less hacky, this might break mono?)
+
+            foreach(var templateField in templateFields)
+            {
+                NMSAttribute settings = templateField.GetCustomAttribute<NMSAttribute>();
+                if(settings == null)
+                    break;
+                if(settings.DefaultValue != null)
+                    templateField.SetValue(template, settings.DefaultValue);
+            }
+
             foreach (var xmlProperty in xmlData.Elements.OfType<EXmlProperty>())
             {
                 FieldInfo field = templateType.GetField(xmlProperty.Name);
                 Type fieldType = field.FieldType;
+                NMSAttribute settings = field.GetCustomAttribute<NMSAttribute>();
+                if (settings == null)
+                  settings = new NMSAttribute();
                 object fieldValue;
                 switch (fieldType.Name)
                 {
@@ -661,7 +726,22 @@ namespace MBINCompiler.Models
                         fieldValue = list;
                         break;
                     default:
-                        fieldValue = fieldType.IsValueType ? Activator.CreateInstance(fieldType) : null;
+                        if (field.FieldType.IsArray && field.FieldType.GetElementType().BaseType.Name == "NMSTemplate")
+                        {
+                            Array array = Array.CreateInstance(field.FieldType.GetElementType(), settings.Size);
+                            List<EXmlData> data = xmlProperty.Elements.OfType<EXmlData>().ToList();
+                            for (int i = 0; i < data.Count; ++i) 
+                            {
+                                NMSTemplate element = DeserializeEXml(data[i]);
+                                array.SetValue(element, i);
+                            }
+
+                            fieldValue = array;
+                        } 
+                        else 
+                        {
+                            fieldValue = fieldType.IsValueType ? Activator.CreateInstance(fieldType) : null;
+                        }
                         break;
                 }
 

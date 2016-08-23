@@ -4,6 +4,7 @@
     {
         public long Seed;
         public bool UseSeedValue;
+        [NMSAttribute(Ignore = true)]
         public int EmptyNode1;
     }
 }

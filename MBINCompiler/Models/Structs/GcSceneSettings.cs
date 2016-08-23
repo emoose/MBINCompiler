@@ -36,6 +36,7 @@ namespace MBINCompiler.Models.Structs
         /* 0x421 */ public bool SpawnInsideShip;
 
         [MarshalAs(UnmanagedType.ByValArray, SizeConst = 0xE)]
+        [NMSAttribute(Ignore = true)]
         /* 0x422 */ public byte[] Padding422;
 
         /* 0x430 */ public GcPlayerSpawnStateData PlayerState;

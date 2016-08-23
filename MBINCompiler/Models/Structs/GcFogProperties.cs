@@ -22,6 +22,7 @@ namespace MBINCompiler.Models.Structs
         public bool IsRaining;
 
         [MarshalAs(UnmanagedType.ByValArray, SizeConst = 0x3)]
+        [NMSAttribute(Ignore = true)]
         public byte[] Padding;
     }
 }
