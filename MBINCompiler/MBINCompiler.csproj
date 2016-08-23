@@ -86,6 +86,12 @@
     <Compile Include="Models\Structs\GcCreatureSwarmData.cs" />
     <Compile Include="Models\Structs\GcCreatureVocalData.cs" />
     <Compile Include="Models\Structs\GcCreatureVocalSoundData.cs" />
+    <Compile Include="Models\Structs\GcTradeData.cs" />
+    <Compile Include="Models\Structs\GcTradeSettings.cs" />
+    <Compile Include="Models\Structs\GcStatsEntry.cs" />
+    <Compile Include="Models\Structs\GcStatsGroup.cs" />
+    <Compile Include="Models\Structs\GcStats.cs" />
+    <Compile Include="Models\Structs\GcDiscoveryWorth.cs" />
     <Compile Include="Models\Structs\GcDoShipFlybyClose.cs" />
     <Compile Include="Models\Structs\GcDoShipFlybyIntercept.cs" />
     <Compile Include="Models\Structs\GcDoShipFlybyOverhead.cs" />
@@ -101,6 +107,8 @@
     <Compile Include="Models\Structs\GcPlayerMissionProgressMapTable.cs" />
     <Compile Include="Models\Structs\GcPlayerSpawnStateData.cs" />
     <Compile Include="Models\Structs\GcRealityCommonFactions.cs" />
+    <Compile Include="Models\Structs\GcRealityIconTable.cs" />
+    <Compile Include="Models\Structs\GcRealityManagerData.cs" />
     <Compile Include="Models\Structs\GcRewardAction.cs" />
     <Compile Include="Models\Structs\GcRewardProductRecipe.cs" />
     <Compile Include="Models\Structs\GcRewardTeachWord.cs" />
@@ -166,7 +174,9 @@
     <Compile Include="Models\Structs\GcTexturePrefetchData.cs" />
     <Compile Include="Models\Structs\GcUserSettingsData.cs" />
     <Compile Include="Models\Structs\GcWaterGlobals.cs" />
+    <Compile Include="Models\Structs\NMSInt.cs" />
     <Compile Include="Models\Structs\NMSSeed.cs" />
+    <Compile Include="Models\Structs\NMSFloat.cs" />
     <Compile Include="Models\Structs\NMSString0x20.cs" />
     <Compile Include="Models\Structs\TkButtonImageLookup.cs" />
     <Compile Include="Models\Structs\TkButtonPathMapping.cs" />
