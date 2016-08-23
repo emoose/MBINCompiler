@@ -529,18 +529,24 @@ namespace MBINCompiler.Models
                     case "UInt32":
                     case "Int64":
                     case "UInt64":
-                        var value = field.GetValue(this).ToString();
+                        var value = field.GetValue(this);
+                        var valueStr = value.ToString();
                         var valuesMethod = type.GetMethod(field.Name + "Values"); // if we have an "xxxValues()" method in the struct, use that to get the value name
                         if (valuesMethod != null)
                         {
-                            string[] values = (string[])valuesMethod.Invoke(this, null);
-                            value = values[(int)field.GetValue(this)];
+                            if (((int)value) == -1)
+                                valueStr = "";
+                            else
+                            {
+                                string[] values = (string[])valuesMethod.Invoke(this, null);
+                                valueStr = values[(int)value];
+                            }
                         }
 
                         xmlData.Elements.Add(new EXmlProperty
                         {
                             Name = fieldName,
-                            Value = value
+                            Value = valueStr
                         });
                         break;
                     case "Byte[]":
@@ -623,8 +629,13 @@ namespace MBINCompiler.Models
                         var valuesMethod = templateType.GetMethod(field.Name + "Values");
                         if (valuesMethod != null)
                         {
-                            string[] values = (string[])valuesMethod.Invoke(template, null);
-                            fieldValue = Array.FindIndex(values, v => v == xmlProperty.Value);
+                            if (String.IsNullOrEmpty(xmlProperty.Value))
+                                fieldValue = (int)-1;
+                            else
+                            {
+                                string[] values = (string[])valuesMethod.Invoke(template, null);
+                                fieldValue = Array.FindIndex(values, v => v == xmlProperty.Value);
+                            }
                         }
                         else
                         {
