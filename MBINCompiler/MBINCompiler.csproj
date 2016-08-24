@@ -96,6 +96,8 @@
     <Compile Include="Models\Structs\GcDoShipFlybyIntercept.cs" />
     <Compile Include="Models\Structs\GcDoShipFlybyOverhead.cs" />
     <Compile Include="Models\Structs\GcExperienceSpawnTable.cs" />
+    <Compile Include="Models\Structs\GcFontData.cs" />
+    <Compile Include="Models\Structs\GcFontTable.cs" />
     <Compile Include="Models\Structs\GcHeavyAirList.cs" />
     <Compile Include="Models\Structs\GcInventoryTable.cs" />
     <Compile Include="Models\Structs\GcInventoryTableEntry.cs" />
