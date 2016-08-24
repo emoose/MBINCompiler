@@ -92,10 +92,10 @@ namespace MBINCompiler
 
             var input = args[0];
             var output = args.Length > 1 ? args[1] : String.Empty;
-            var inputExtension = Path.GetExtension(input).ToLower();
-            if (inputExtension == ".mbin")
+            var inputExtension = Path.GetExtension(input) ?? String.Empty;
+            if (inputExtension.Equals(".mbin", StringComparison.OrdinalIgnoreCase))
                 DecompileFile(input, output);
-            else if (inputExtension == ".exml")
+            else if (inputExtension.Equals(".exml", StringComparison.OrdinalIgnoreCase)) 
                 CompileFile(input, output);
             else
             {
