@@ -37,6 +37,12 @@ namespace MBINCompiler
             return rootTemplate;
         }
 
+        public static EXmlData ReadExmlDataFromString(string xml)
+        {
+            using (var reader = new StringReader(xml))
+            using (var xmlReader = XmlReader.Create(reader))
+                return (EXmlData)Serializer.Deserialize(xmlReader);
+        }
 
         public static string WriteTemplate(NMSTemplate template)
         {

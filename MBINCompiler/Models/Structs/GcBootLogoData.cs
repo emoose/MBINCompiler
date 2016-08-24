@@ -2,7 +2,7 @@
 
 namespace MBINCompiler.Models.Structs
 {
-    class GcBootLogoData : NMSTemplate
+    public class GcBootLogoData : NMSTemplate
     {
         [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 0x100)]
         public string Texture1;
