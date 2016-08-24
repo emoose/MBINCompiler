@@ -31,6 +31,7 @@ namespace MBINCompiler.Models.Structs
         public bool UseMipMaps;
         public bool IsSRGB;
         [MarshalAs(UnmanagedType.ByValArray, SizeConst = 4)]
+        [NMSAttribute(Ignore = true)]
         public byte[] PaddingA4;
         [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 0x10)]
         public string MaterialAlternativeId;
@@ -48,6 +49,7 @@ namespace MBINCompiler.Models.Structs
 
         public int Anisotropy;
         [MarshalAs(UnmanagedType.ByValArray, SizeConst = 4)]
+        [NMSAttribute(Ignore = true)]
         public byte[] PaddingC4;
     }
 

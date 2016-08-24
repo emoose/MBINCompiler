@@ -19,7 +19,8 @@ namespace MBINCompiler.Models.Structs
         public float FractionActiveInNight;
         public float ProbabilityOfBeingEnabled;
         public float IncreasedSpawnDistance;
-
+    
+        [NMSAttribute(Ignore = true)]
         public int Padding;
     }
 }

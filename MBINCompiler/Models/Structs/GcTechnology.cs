@@ -19,6 +19,7 @@ namespace MBINCompiler.Models.Structs
         /* 0x130 */ public bool Teach;
 
         [MarshalAs(UnmanagedType.ByValArray, SizeConst = 0x7)]
+        [NMSAttribute(Ignore = true)]
         /* 0x131 */ public byte[] Padding131;
 
         [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 0x20)]

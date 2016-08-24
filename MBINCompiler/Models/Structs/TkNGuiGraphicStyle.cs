@@ -24,6 +24,7 @@ namespace MBINCompiler.Models.Structs
         public Vector2f CustomMaxStart;
 
         [MarshalAs( UnmanagedType.ByValArray, SizeConst = 0x4 )]
+        [NMSAttribute(Ignore = true)]
         public byte[] Padding;
     }
 }

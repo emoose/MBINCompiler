@@ -4,8 +4,8 @@ namespace MBINCompiler.Models.Structs
 {
     public class TkNGuiGraphicStyleData :NMSTemplate
     {
-        public float PddingX;
-        public float PddingY;
+        public float PaddingX;
+        public float PaddingY;
         public float MarginX;
         public float MarginY;
         public Colour Colour;
@@ -31,6 +31,7 @@ namespace MBINCompiler.Models.Structs
         public float GradientEndOffset;
 
         [MarshalAs( UnmanagedType.ByValArray, SizeConst = 0xC )]
+        [NMSAttribute(Ignore = true)]
         public byte[] Padding1;
 
         public Colour GradientColour;

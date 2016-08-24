@@ -13,6 +13,7 @@ namespace MBINCompiler.Models.Structs
         public float MinRange;
         public float Scale;
         [MarshalAs(UnmanagedType.ByValArray, SizeConst = 4)]
+        [NMSAttribute(Ignore = true)]
         public byte[] Padding34;
         [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 0x10)]
         public string Reward;

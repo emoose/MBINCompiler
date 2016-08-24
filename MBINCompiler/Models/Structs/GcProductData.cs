@@ -31,7 +31,9 @@ namespace MBINCompiler.Models.Structs
         public bool SpecificChargeOnly;
         public float NormalisedValueOnWorld;
         public float NormalisedValueOffWorld;
+        [NMSAttribute(Ignore = true)]
         public int EmptyNode1;
+        [NMSAttribute(Ignore = true)]
         public int EmptyNode2;
     }
 }

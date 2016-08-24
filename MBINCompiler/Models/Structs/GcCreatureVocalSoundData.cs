@@ -20,6 +20,7 @@ namespace MBINCompiler.Models.Structs
         public bool PlayOnlyOnce;
 
         [MarshalAs(UnmanagedType.ByValArray, SizeConst = 6)]
+        [NMSAttribute(Ignore = true)]
         public byte[] Padding22;
     }
 }

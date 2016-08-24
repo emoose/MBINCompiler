@@ -15,6 +15,7 @@ namespace MBINCompiler.Models.Structs
 
         public bool Special;
         [MarshalAs( UnmanagedType.ByValArray, SizeConst = 0xF )]
+        [NMSAttribute(Ignore = true)]
         public byte[] Padding1;
     }
 }
