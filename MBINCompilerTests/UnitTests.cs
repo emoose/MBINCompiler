@@ -11755,6 +11755,9 @@ namespace MBINCompilerTests
 
             // TkTrophyData
             "METADATA/TROPHIES/TKTROPHYDATA.MBIN",
+
+            // GcRealityManagerData
+            "METADATA/REALITY/DEFAULTREALITY.MBIN",
         };
 
         private void decompileFile(string filePath, string output = "")
