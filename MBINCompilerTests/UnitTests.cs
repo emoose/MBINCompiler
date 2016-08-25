@@ -10547,6 +10547,9 @@ namespace MBINCompilerTests
             // GcRewardTable
             "METADATA/REALITY/TABLES/REWARDTABLE.MBIN",
 
+            // GcSelectableObjectTable
+            "METADATA/SIMULATION/ENVIRONMENT/SELECTABLEOBJECTTABLE.MBIN",
+
             // GcSceneSettings
             "SCENES/COMMON/DEFAULTSETTINGS.MBIN",
             "SCENES/DEMOS/PS4BIOMETEST/BARRENSETTINGS.MBIN",

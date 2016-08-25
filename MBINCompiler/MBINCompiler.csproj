@@ -96,6 +96,9 @@
     <Compile Include="Models\Structs\GcProjectileDataTable.cs" />
     <Compile Include="Models\Structs\GcProjectileImpactData.cs" />
     <Compile Include="Models\Structs\GcProjectileImpactType.cs" />
+    <Compile Include="Models\Structs\GcSelectableObjectData.cs" />
+    <Compile Include="Models\Structs\GcSelectableObjectList.cs" />
+    <Compile Include="Models\Structs\GcSelectableObjectTable.cs" />
     <Compile Include="Models\Structs\GcStatLevelData.cs" />
     <Compile Include="Models\Structs\GcTradeData.cs" />
     <Compile Include="Models\Structs\GcTradeSettings.cs" />
