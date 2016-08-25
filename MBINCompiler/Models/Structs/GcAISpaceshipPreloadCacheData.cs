@@ -9,7 +9,7 @@ namespace MBINCompiler.Models.Structs
         [NMSAttribute(Ignore = true)]
         public byte[] Padding4;
 
-        public NMSSeed Seed;
+        public GcSeed Seed;
         [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 0x100)]
         public string AltId;
     }

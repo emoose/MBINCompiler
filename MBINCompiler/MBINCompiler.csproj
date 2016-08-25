@@ -62,6 +62,7 @@
     <Compile Include="Models\Structs\GcAlienPuzzleTable.cs" />
     <Compile Include="Models\Structs\GcAtlasGlobals.cs" />
     <Compile Include="Models\Structs\GcAudioPulseDemo.cs" />
+    <Compile Include="Models\Structs\GcAudioWwiseEvents.cs" />
     <Compile Include="Models\Structs\GcBirdData.cs" />
     <Compile Include="Models\Structs\GcBootLogoData.cs" />
     <Compile Include="Models\Structs\GcCostHealth.cs" />
@@ -86,6 +87,11 @@
     <Compile Include="Models\Structs\GcCreatureSwarmData.cs" />
     <Compile Include="Models\Structs\GcCreatureVocalData.cs" />
     <Compile Include="Models\Structs\GcCreatureVocalSoundData.cs" />
+    <Compile Include="Models\Structs\GcLaserBeamData.cs" />
+    <Compile Include="Models\Structs\GcProjectileData.cs" />
+    <Compile Include="Models\Structs\GcProjectileDataTable.cs" />
+    <Compile Include="Models\Structs\GcProjectileImpactData.cs" />
+    <Compile Include="Models\Structs\GcProjectileImpactType.cs" />
     <Compile Include="Models\Structs\GcTradeData.cs" />
     <Compile Include="Models\Structs\GcTradeSettings.cs" />
     <Compile Include="Models\Structs\GcStatsEntry.cs" />
@@ -177,7 +183,6 @@
     <Compile Include="Models\Structs\GcUserSettingsData.cs" />
     <Compile Include="Models\Structs\GcWaterGlobals.cs" />
     <Compile Include="Models\Structs\NMSInt.cs" />
-    <Compile Include="Models\Structs\NMSSeed.cs" />
     <Compile Include="Models\Structs\NMSFloat.cs" />
     <Compile Include="Models\Structs\NMSString0x20.cs" />
     <Compile Include="Models\Structs\TkButtonImageLookup.cs" />

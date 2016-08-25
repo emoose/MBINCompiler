@@ -69,7 +69,8 @@ namespace MBINCompiler.Models
                 {
                     case "String":
                     case "Byte[]":
-                        int size = 0;
+                        int size = settings.Size;
+
                         foreach (var attr in field.CustomAttributes)
                         {
                             if (attr.AttributeType.Name != "MarshalAsAttribute")

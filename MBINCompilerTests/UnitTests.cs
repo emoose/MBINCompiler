@@ -10532,6 +10532,9 @@ namespace MBINCompilerTests
             // GcProductTable
             "METADATA/REALITY/TABLES/NMS_REALITY_GCPRODUCTTABLE.MBIN",
 
+            // GcProjectileDataTable
+            "METADATA/PROJECTILES/PROJECTILETABLE.MBIN",
+
             // GcRewardDestructTable
             "METADATA/REALITY/TABLES/REWARDDESTRUCTTABLE.MBIN",
 
