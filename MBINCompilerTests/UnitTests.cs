@@ -10517,6 +10517,9 @@ namespace MBINCompilerTests
             "METADATA/UI/HUD/WEAPONS/LASER.MBIN",
             "METADATA/UI/HUD/WEAPONS/MISSILE.MBIN",
 
+            // GcHUDManagerData
+            "METADATA/UI/HUD/GCHUDMANAGER.MBIN",
+
             // GcInventoryTable
             "METADATA/REALITY/TABLES/INVENTORYTABLE.MBIN",
 
@@ -10525,6 +10528,12 @@ namespace MBINCompilerTests
 
             // GcLeveledStatTable
             "METADATA/GAMESTATE/STATS/LEVELEDSTATSTABLE.MBIN",
+
+            // GcNGuiSpecialTextImages
+            "METADATA/UI/SPECIALSTYLESIMAGESDATA.MBIN",
+
+            // GcNGuiSpecialTextStyles
+            "METADATA/UI/SPECIALSTYLESDATA.MBIN",
 
             // GcPlayerDamageTable
             "METADATA/REALITY/TABLES/DAMAGETABLE.MBIN",
