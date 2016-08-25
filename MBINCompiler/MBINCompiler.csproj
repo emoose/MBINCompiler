@@ -54,6 +54,9 @@
     <Compile Include="Models\NMSTemplate.cs" />
     <Compile Include="Models\Structs\Colour.cs" />
     <Compile Include="Models\Structs\GcAIShipSpawnData.cs" />
+    <Compile Include="Models\Structs\GcAISpaceshipInstanceData.cs" />
+    <Compile Include="Models\Structs\GcAISpaceshipManagerData.cs" />
+    <Compile Include="Models\Structs\GcAISpaceshipMappingData.cs" />
     <Compile Include="Models\Structs\GcAISpaceshipPreloadCacheData.cs" />
     <Compile Include="Models\Structs\GcAISpaceshipPreloadList.cs" />
     <Compile Include="Models\Structs\GcAISpaceshipRoles.cs" />
@@ -87,12 +90,16 @@
     <Compile Include="Models\Structs\GcCreatureSwarmData.cs" />
     <Compile Include="Models\Structs\GcCreatureVocalData.cs" />
     <Compile Include="Models\Structs\GcCreatureVocalSoundData.cs" />
+    <Compile Include="Models\Structs\GcDebrisData.cs" />
+    <Compile Include="Models\Structs\GcExplosionData.cs" />
+    <Compile Include="Models\Structs\GcExplosionDataTable.cs" />
     <Compile Include="Models\Structs\GcFontTypesEnum.cs" />
     <Compile Include="Models\Structs\GcHUDManagerData.cs" />
     <Compile Include="Models\Structs\GcInputActionMapping.cs" />
     <Compile Include="Models\Structs\GcLaserBeamData.cs" />
     <Compile Include="Models\Structs\GcLeveledStatData.cs" />
     <Compile Include="Models\Structs\GcLeveledStatTable.cs" />
+    <Compile Include="Models\Structs\GcNGuiFileBrowserRecents.cs" />
     <Compile Include="Models\Structs\GcNGuiSpecialTextImageData.cs" />
     <Compile Include="Models\Structs\GcNGuiSpecialTextImages.cs" />
     <Compile Include="Models\Structs\GcNGuiSpecialTextStyleData.cs" />
@@ -210,6 +217,7 @@
     <Compile Include="Models\Structs\GcWeatherTable.cs" />
     <Compile Include="Models\Structs\NMSInt.cs" />
     <Compile Include="Models\Structs\NMSFloat.cs" />
+    <Compile Include="Models\Structs\NMSString0x100.cs" />
     <Compile Include="Models\Structs\NMSString0x20.cs" />
     <Compile Include="Models\Structs\TkActionButtonLookup.cs" />
     <Compile Include="Models\Structs\TkActionButtonMap.cs" />
@@ -230,8 +238,10 @@
     <Compile Include="Models\Structs\TkLanguages.cs" />
     <Compile Include="Models\Structs\TkLanguagesAllowedData.cs" />
     <Compile Include="Models\Structs\TkMaterialData.cs" />
+    <Compile Include="Models\Structs\TkNGuiEditorLayout.cs" />
     <Compile Include="Models\Structs\TkNGuiLayoutList.cs" />
     <Compile Include="Models\Structs\TkNGuiLayoutListData.cs" />
+    <Compile Include="Models\Structs\TkNGuiWindowLayoutData.cs" />
     <Compile Include="Models\Structs\TkParticleData.cs" />
     <Compile Include="Models\Structs\TkPlatformButtonPair.cs" />
     <Compile Include="Models\Structs\TkProceduralTextureChosenOptionSampler.cs" />

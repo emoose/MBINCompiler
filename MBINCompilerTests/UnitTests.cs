@@ -10412,6 +10412,9 @@ namespace MBINCompilerTests
 
         string[] testFiles = new string[]
         {
+            // GcAISpaceshipManagerData
+            "METADATA/SIMULATION/SPACE/AISPACESHIPMANAGER.MBIN",
+
             // GcAISpaceshipPreloadList
             "SCENES/COMMON/SHIPPRELOADDEFAULT/SHIPPRELOADFACTIONCAPITAL.MBIN",
             "SCENES/COMMON/SHIPPRELOADDEFAULT/SHIPPRELOADFACTIONCAPITALB.MBIN",
@@ -10499,6 +10502,12 @@ namespace MBINCompilerTests
             // GcExperienceSpawnTable
             "METADATA/SIMULATION/SCENE/EXPERIENCESPAWNTABLE.MBIN",
 
+            // GcExplosionDataTable
+            "METADATA/EFFECTS/EXPLOSIONTABLE.MBIN",
+            "METADATA/EFFECTS/PLANETEFFECTS.MBIN",
+            "METADATA/EFFECTS/PLAYEREFFECTS.MBIN",
+            "METADATA/EFFECTS/SPACEEFFECTS.MBIN",
+
             // GcHeavyAirList
             "METADATA/SIMULATION/SOLARSYSTEM/ATMOSPHERE/UNDERWATERHEAVYAIRLIST.MBIN",
 
@@ -10528,6 +10537,9 @@ namespace MBINCompilerTests
 
             // GcLeveledStatTable
             "METADATA/GAMESTATE/STATS/LEVELEDSTATSTABLE.MBIN",
+
+            // GcNGuiFileBrowserRecents
+            "METADATA/UI/FILEBROWSERRECENTS.MBIN",
 
             // GcNGuiSpecialTextImages
             "METADATA/UI/SPECIALSTYLESIMAGESDATA.MBIN",
@@ -10748,6 +10760,11 @@ namespace MBINCompilerTests
             "LANGUAGE/NMS_LOC1_SPANISH.MBIN",
             "LANGUAGE/NMS_LOC1_TRADITIONALCHINESE.MBIN",
             "LANGUAGE/NMS_LOC1_USENGLISH.MBIN",*/
+
+            // TkNGuiEditorLayout
+            "METADATA/UI/LAYOUT.MBIN",
+            "METADATA/UI/LAYOUTS/EFFECTEDITLAYOUTDEFAULT.MBIN",
+            "METADATA/UI/LAYOUTS/GUIEDITLAYOUTDEFAULT.MBIN",
 
             // TkNGuiLayoutList
             "METADATA/UI/LAYOUTLIST.MBIN",
