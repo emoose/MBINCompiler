@@ -101,6 +101,8 @@
     <Compile Include="Models\Structs\GcLeveledStatTable.cs" />
     <Compile Include="Models\Structs\GcNGuiFileBrowserRecents.cs" />
     <Compile Include="Models\Structs\GcNGuiPreset.cs" />
+    <Compile Include="Models\Structs\GcNGuiPresetGraphic.cs" />
+    <Compile Include="Models\Structs\GcNGuiPresetText.cs" />
     <Compile Include="Models\Structs\GcNGuiSpecialTextImageData.cs" />
     <Compile Include="Models\Structs\GcNGuiSpecialTextImages.cs" />
     <Compile Include="Models\Structs\GcNGuiSpecialTextStyleData.cs" />
@@ -234,6 +236,8 @@
     <Compile Include="Models\Structs\TkGameSettings.cs" />
     <Compile Include="Models\Structs\TkGraphicsSettings.cs" />
     <Compile Include="Models\Structs\TkHeavyAirData.cs" />
+    <Compile Include="Models\Structs\TkImGuiData.cs" />
+    <Compile Include="Models\Structs\TkImGuiWindowData.cs" />
     <Compile Include="Models\Structs\TkInputEnum.cs" />
     <Compile Include="Models\Structs\TkLanguageFontTable.cs" />
     <Compile Include="Models\Structs\TkLanguageFontTableEntry.cs" />
