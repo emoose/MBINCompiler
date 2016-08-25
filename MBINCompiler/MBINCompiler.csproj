@@ -185,6 +185,8 @@
     <Compile Include="Models\Structs\NMSInt.cs" />
     <Compile Include="Models\Structs\NMSFloat.cs" />
     <Compile Include="Models\Structs\NMSString0x20.cs" />
+    <Compile Include="Models\Structs\TkActionButtonLookup.cs" />
+    <Compile Include="Models\Structs\TkActionButtonMap.cs" />
     <Compile Include="Models\Structs\TkButtonImageLookup.cs" />
     <Compile Include="Models\Structs\TkButtonPathMapping.cs" />
     <Compile Include="Models\Structs\TkControllerButtonLookup.cs" />
@@ -203,6 +205,7 @@
     <Compile Include="Models\Structs\TkNGuiLayoutList.cs" />
     <Compile Include="Models\Structs\TkNGuiLayoutListData.cs" />
     <Compile Include="Models\Structs\TkParticleData.cs" />
+    <Compile Include="Models\Structs\TkPlatformButtonPair.cs" />
     <Compile Include="Models\Structs\TkProceduralTextureChosenOptionSampler.cs" />
     <Compile Include="Models\Structs\TkProceduralTextureChosenOptionList.cs" />
     <Compile Include="Models\Structs\TkProceduralTextureChosenOption.cs" />
