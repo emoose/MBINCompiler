@@ -90,6 +90,8 @@
     <Compile Include="Models\Structs\GcLaserBeamData.cs" />
     <Compile Include="Models\Structs\GcLeveledStatData.cs" />
     <Compile Include="Models\Structs\GcLeveledStatTable.cs" />
+    <Compile Include="Models\Structs\GcPlayerHazardData.cs" />
+    <Compile Include="Models\Structs\GcPlayerHazardTable.cs" />
     <Compile Include="Models\Structs\GcProjectileData.cs" />
     <Compile Include="Models\Structs\GcProjectileDataTable.cs" />
     <Compile Include="Models\Structs\GcProjectileImpactData.cs" />

@@ -10529,6 +10529,9 @@ namespace MBINCompilerTests
             // GcPlayerDamageTable
             "METADATA/REALITY/TABLES/DAMAGETABLE.MBIN",
 
+            // GcPlayerHazardTable
+            "METADATA/SIMULATION/ENVIRONMENT/HAZARDTABLE.MBIN",
+
             // GcPlayerMissionProgressMapTable
             "METADATA/GAMESTATE/PATCHPLAYERMISSIONMAPTABLE.MBIN",
 
