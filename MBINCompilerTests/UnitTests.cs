@@ -10523,6 +10523,9 @@ namespace MBINCompilerTests
             // GcJourneyMilestoneTable
             "METADATA/GAMESTATE/STATS/JOURNEYMILESTONETABLE.MBIN",
 
+            // GcLeveledStatTable
+            "METADATA/GAMESTATE/STATS/LEVELEDSTATSTABLE.MBIN",
+
             // GcPlayerDamageTable
             "METADATA/REALITY/TABLES/DAMAGETABLE.MBIN",
 

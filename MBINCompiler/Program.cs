@@ -80,8 +80,37 @@ namespace MBINCompiler
             Console.WriteLine($"MBIN data written to \"{output}\" successfully?");
         }
 
+        static void decompileFolder(string folderPath)
+        {
+            foreach(var file in Directory.GetFiles(folderPath, "*.mbin*"))
+            {
+                if (file.Contains("LANGUAGE") || file.Contains("language"))
+                    continue;
+
+                if (!file.EndsWith(".mbin", StringComparison.InvariantCultureIgnoreCase) && !file.EndsWith(".mbin.pc", StringComparison.InvariantCultureIgnoreCase))
+                    continue;
+
+                var output = file.Replace("C:\\NMS\\", "D:\\NMSOUT\\");
+                if (!Directory.Exists(Path.GetDirectoryName(output)))
+                    Directory.CreateDirectory(Path.GetDirectoryName(output));
+
+                try
+                {
+                    DecompileFile(file, output);
+                }
+                catch { }
+            }
+
+            foreach (var dir in Directory.GetDirectories(folderPath))
+                decompileFolder(dir);
+        }
+
         static void Main(string[] args)
         {
+           /* Directory.CreateDirectory("D:\\NMSOUT\\");
+            decompileFolder("C:\\NMS\\");
+            return;*/
+
             if (args.Length < 1)
             {
                 Console.WriteLine("Usage: MBINCompiler [InputPath]");

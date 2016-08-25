@@ -88,10 +88,13 @@
     <Compile Include="Models\Structs\GcCreatureVocalData.cs" />
     <Compile Include="Models\Structs\GcCreatureVocalSoundData.cs" />
     <Compile Include="Models\Structs\GcLaserBeamData.cs" />
+    <Compile Include="Models\Structs\GcLeveledStatData.cs" />
+    <Compile Include="Models\Structs\GcLeveledStatTable.cs" />
     <Compile Include="Models\Structs\GcProjectileData.cs" />
     <Compile Include="Models\Structs\GcProjectileDataTable.cs" />
     <Compile Include="Models\Structs\GcProjectileImpactData.cs" />
     <Compile Include="Models\Structs\GcProjectileImpactType.cs" />
+    <Compile Include="Models\Structs\GcStatLevelData.cs" />
     <Compile Include="Models\Structs\GcTradeData.cs" />
     <Compile Include="Models\Structs\GcTradeSettings.cs" />
     <Compile Include="Models\Structs\GcStatsEntry.cs" />
