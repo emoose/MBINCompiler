@@ -10541,6 +10541,9 @@ namespace MBINCompilerTests
             // GcNGuiFileBrowserRecents
             "METADATA/UI/FILEBROWSERRECENTS.MBIN",
 
+            // GcNGuiPreset
+            "METADATA/UI/PRESETDATA.MBIN",
+
             // GcNGuiSpecialTextImages
             "METADATA/UI/SPECIALSTYLESIMAGESDATA.MBIN",
 
@@ -10579,6 +10582,9 @@ namespace MBINCompilerTests
 
             // GcSelectableObjectTable
             "METADATA/SIMULATION/ENVIRONMENT/SELECTABLEOBJECTTABLE.MBIN",
+
+            // GcScannerIcons
+            "METADATA/UI/HUD/SCANNERICONS.MBIN",
 
             // GcSceneSettings
             "SCENES/COMMON/DEFAULTSETTINGS.MBIN",

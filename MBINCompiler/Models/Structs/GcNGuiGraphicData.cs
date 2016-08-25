@@ -2,8 +2,10 @@
 {
     public class GcNGuiGraphicData : NMSTemplate
     {
-        public GcNGuiElementData Data;
+        public GcNGuiElementData ElementData;
         public TkNGuiGraphicStyle Style;
-        public NMSString0x80 Image;
+
+        [NMS(Size = 0x80)]
+        public string Image;
     }
 }

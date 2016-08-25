@@ -6,8 +6,10 @@ namespace MBINCompiler.Models.Structs
     {
         public GcNGuiElementData Data;
         public TkNGuiGraphicStyle Style;
-        public NMSString0x80 Image;
+        [NMS(Size = 0x80)]
+        public string Image;
         public List<NMSTemplate> Children;
-        public NMSString0x80 DataFilename;
+        [NMS(Size = 0x80)]
+        public string DataFilename;
     }
 }

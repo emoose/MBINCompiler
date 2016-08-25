@@ -4,18 +4,22 @@ namespace MBINCompiler.Models.Structs
 {
     public class GcNGuiElementData : NMSTemplate
     {
-        public NMSString0x10 ID;
-        public NMSString0x10 PresetID;
+        [NMS(Size = 0x10)]
+        public string ID;
+        [NMS(Size = 0x10)]
+        public string PresetID;
 
-        [MarshalAs( UnmanagedType.ByValArray, SizeConst = 0x8 )]
-        public byte[] CreationTime;
+        public long CreationTime;
 
         public bool IsHidden;
 
         [MarshalAs( UnmanagedType.ByValArray, SizeConst = 0x3 )]
         [NMSAttribute(Ignore = true)]
-        public byte[] Padding1;
+        public byte[] Padding29;
 
         public GcNGuiLayoutData Layout;
+
+        [NMS(Size = 4)]
+        public byte[] Padding5C;
     }
 }

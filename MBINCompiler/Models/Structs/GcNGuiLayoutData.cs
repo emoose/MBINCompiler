@@ -9,31 +9,22 @@ namespace MBINCompiler.Models.Structs
         public float Width; 
         public bool WidthPercentage;
 
-        [MarshalAs( UnmanagedType.ByValArray, SizeConst = 0x3 )]
-        [NMSAttribute(Ignore = true)]
-        public byte[] Padding1;
-
         public float Height;
         public bool HeightPercentage;
         public bool ConstrainProportions;
-
-        [MarshalAs( UnmanagedType.ByValArray, SizeConst = 0x2 )]
-        [NMSAttribute(Ignore = true)]
-        public byte[] Padding2;
 
         public float ConstrainAspect;
         public bool Anchor;
         public bool AnchorPercent;
         public bool SameLine;
 
-        [MarshalAs( UnmanagedType.ByValArray, SizeConst = 0x1 )]
-        [NMSAttribute(Ignore = true)]
-        public byte[] Padding3;
+        [NMS(Size = 1)]
+        public byte[] Padding1F;
 
         public TkNGuiAlignment Align;
-        public bool SlowCursorOnHower;
+        public bool SlowCursorOnHover;
 
-        [MarshalAs( UnmanagedType.ByValArray, SizeConst = 0xB )]
+        [MarshalAs( UnmanagedType.ByValArray, SizeConst = 0x7 )]
         [NMSAttribute(Ignore = true)]
         public byte[] Padding4;
     }

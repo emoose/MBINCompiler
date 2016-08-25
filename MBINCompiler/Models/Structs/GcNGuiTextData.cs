@@ -8,9 +8,10 @@ namespace MBINCompiler.Models.Structs
         public TkNGuiTextStyle Style;
         public TkNGuiGraphicStyle GraphicStyle;
 
-        public NMSString0x80 Image;
+        [NMS(Size = 0x80)]
+        public string Image;
 
-        [MarshalAs( UnmanagedType.ByValTStr, SizeConst = 0x200 )]
+        [NMS(Size = 0x200)]
         public string Text;
 
         public bool Special;

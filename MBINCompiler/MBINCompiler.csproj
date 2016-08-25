@@ -100,6 +100,7 @@
     <Compile Include="Models\Structs\GcLeveledStatData.cs" />
     <Compile Include="Models\Structs\GcLeveledStatTable.cs" />
     <Compile Include="Models\Structs\GcNGuiFileBrowserRecents.cs" />
+    <Compile Include="Models\Structs\GcNGuiPreset.cs" />
     <Compile Include="Models\Structs\GcNGuiSpecialTextImageData.cs" />
     <Compile Include="Models\Structs\GcNGuiSpecialTextImages.cs" />
     <Compile Include="Models\Structs\GcNGuiSpecialTextStyleData.cs" />
@@ -114,6 +115,7 @@
     <Compile Include="Models\Structs\GcProjectileDataTable.cs" />
     <Compile Include="Models\Structs\GcProjectileImpactData.cs" />
     <Compile Include="Models\Structs\GcProjectileImpactType.cs" />
+    <Compile Include="Models\Structs\GcScannerIcons.cs" />
     <Compile Include="Models\Structs\GcSelectableObjectData.cs" />
     <Compile Include="Models\Structs\GcSelectableObjectList.cs" />
     <Compile Include="Models\Structs\GcSelectableObjectTable.cs" />
