@@ -89,6 +89,7 @@
     <Compile Include="Models\Structs\GcCreatureVocalSoundData.cs" />
     <Compile Include="Models\Structs\GcFontTypesEnum.cs" />
     <Compile Include="Models\Structs\GcHUDManagerData.cs" />
+    <Compile Include="Models\Structs\GcInputActionMapping.cs" />
     <Compile Include="Models\Structs\GcLaserBeamData.cs" />
     <Compile Include="Models\Structs\GcLeveledStatData.cs" />
     <Compile Include="Models\Structs\GcLeveledStatTable.cs" />
@@ -98,6 +99,8 @@
     <Compile Include="Models\Structs\GcNGuiSpecialTextStyles.cs" />
     <Compile Include="Models\Structs\GcNGuiStyleAnimationData.cs" />
     <Compile Include="Models\Structs\GcNGuiStyleAnimationKeyframeData.cs" />
+    <Compile Include="Models\Structs\GcPaletteData.cs" />
+    <Compile Include="Models\Structs\GcPaletteList.cs" />
     <Compile Include="Models\Structs\GcPlayerHazardData.cs" />
     <Compile Include="Models\Structs\GcPlayerHazardTable.cs" />
     <Compile Include="Models\Structs\GcProjectileData.cs" />
@@ -204,6 +207,7 @@
     <Compile Include="Models\Structs\GcTexturePrefetchData.cs" />
     <Compile Include="Models\Structs\GcUserSettingsData.cs" />
     <Compile Include="Models\Structs\GcWaterGlobals.cs" />
+    <Compile Include="Models\Structs\GcWeatherTable.cs" />
     <Compile Include="Models\Structs\NMSInt.cs" />
     <Compile Include="Models\Structs\NMSFloat.cs" />
     <Compile Include="Models\Structs\NMSString0x20.cs" />
@@ -217,7 +221,9 @@
     <Compile Include="Models\Structs\TkEngineSettings.cs" />
     <Compile Include="Models\Structs\TkEngineSettingsMapping.cs" />
     <Compile Include="Models\Structs\TkEntitlementList.cs" />
+    <Compile Include="Models\Structs\TkGameSettings.cs" />
     <Compile Include="Models\Structs\TkGraphicsSettings.cs" />
+    <Compile Include="Models\Structs\TkHeavyAirData.cs" />
     <Compile Include="Models\Structs\TkInputEnum.cs" />
     <Compile Include="Models\Structs\TkLanguageFontTable.cs" />
     <Compile Include="Models\Structs\TkLanguageFontTableEntry.cs" />
