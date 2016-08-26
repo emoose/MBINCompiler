@@ -11,31 +11,21 @@ namespace MBINCompiler.Models.Structs
         public List<TkJointBindingData> JointBindings;
 		public List<TkJointExtentData> JointExtents;
 		
-		public List<FakeInt32> JointMirrorPairs; // This is a List<int> but we use FakeInt32 because this feature is not implemented yet
+		public List<int> JointMirrorPairs;
         public List<TkJointMirrorAxis> JointMirrorAxes;
 		
-		public List<FakeInt32> SkinMatrixLayout;
-		public List<FakeInt32> MeshVertRStart;
-		public List<FakeInt32> MeshVertREnd;
-		public List<FakeInt32> MeshBaseSkinMat;
+		public List<int> SkinMatrixLayout;
+		public List<int> MeshVertRStart;
+		public List<int> MeshVertREnd;
+		public List<int> MeshBaseSkinMat;
 		public List<Vector4f> MeshAABBMin;
 		public List<Vector4f> MeshAABBMax;
 		
 		public TkVertexLayout VertexLayout;
 		public TkVertexLayout SmallVertexLayout;
 		
-		/*public List<FakeInt16> IndexBuffer;
-		public List<FakeInt32> VertexStream;
-		public List<FakeInt32> SmallVertexStream;*/
-    }
-
-    public class FakeInt16 : NMSTemplate
-    {
-        public short value;
-    }
-
-    public class FakeInt32 : NMSTemplate
-    {
-        public int value;
+		/*public List<short> IndexBuffer;
+		public List<int> VertexStream;
+		public List<int> SmallVertexStream;*/
     }
 }
