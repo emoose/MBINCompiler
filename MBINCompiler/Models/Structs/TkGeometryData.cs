@@ -10,9 +10,9 @@ namespace MBINCompiler.Models.Structs
 
 		// I have an invalid list read Exception here maybe it is linked to the primitive arrays not being supported ?
         public List<TkJointBindingData> JointBindings;
-		/*public List<TkJointExtentData> JointExtents;
+		public List<TkJointExtentData> JointExtents;
 		
-		public byte[] JointMirrorPairs;
+		/*public byte[] JointMirrorPairs;
 		
 		public List<TkJointMirrorAxis> JointMirrorAxes;
 		
@@ -26,7 +26,7 @@ namespace MBINCompiler.Models.Structs
 		public TkVertexLayout VertexLayout;
 		public TkVertexLayout SmallVertexLayout;
 		
-		public byte[] IndexBuffer;
+		public int[] IndexBuffer;
 		public byte[] VertexStream;
 		public byte[] SmallVertexStream;*/
     }

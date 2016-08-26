@@ -99,6 +99,26 @@ namespace MBINCompiler.Models
                         reader.Align(4, 0);
                         field.SetValue(obj, reader.ReadSingle());
                         break;
+                    case "Single[]":
+                        int n = 0;
+                        foreach (var attr in field.CustomAttributes)
+                        {
+                            if (attr.AttributeType.Name != "NMSAttribute")
+                                continue;
+                            foreach (var named in attr.NamedArguments)
+                            {
+                                if (named.MemberName != "Size")
+                                    continue;
+                                n = (int)named.TypedValue.Value;
+                            }
+                        }
+                        Single[] tab = new Single[n];
+                        for (var i=0; i<n; i++)
+                        {
+                            tab[i] = reader.ReadSingle();
+                        }
+                        field.SetValue(obj, tab);
+                        break;
                     case "Boolean":
                         field.SetValue(obj, reader.ReadByte() != 0);
                         break;
@@ -588,6 +608,19 @@ namespace MBINCompiler.Models
                         {
                             Name = fieldName,
                             Value = valueStr
+                        });
+                        break;
+                    case "Single[]":
+                        float[] arr = (float[])field.GetValue(this);
+                        string str = "";
+                        foreach (var elt in arr)
+                        {
+                            str += elt.ToString() + " ";
+                        }
+                        xmlData.Elements.Add(new EXmlProperty
+                        {
+                            Name = fieldName,
+                            Value = str
                         });
                         break;
                     case "Byte[]":
