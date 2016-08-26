@@ -68,6 +68,13 @@
     <Compile Include="Models\Structs\GcAudioWwiseEvents.cs" />
     <Compile Include="Models\Structs\GcBiomeList.cs" />
     <Compile Include="Models\Structs\GcBiomeListPerStarType.cs" />
+    <Compile Include="Models\Structs\GcExternalObjectListOptions.cs" />
+    <Compile Include="Models\Structs\GcHeavyAirColourData.cs" />
+    <Compile Include="Models\Structs\GcMiningSubstanceData.cs" />
+    <Compile Include="Models\Structs\GcPlanetHeavyAirData.cs" />
+    <Compile Include="Models\Structs\GcPlanetWaterData.cs" />
+    <Compile Include="Models\Structs\GcTerrainControls.cs" />
+    <Compile Include="Models\Structs\GcTileTypeOptions.cs" />
     <Compile Include="Models\Structs\GcBirdData.cs" />
     <Compile Include="Models\Structs\GcBootLogoData.cs" />
     <Compile Include="Models\Structs\GcBuildingClusterPlacement.cs" />
@@ -105,6 +112,7 @@
     <Compile Include="Models\Structs\GcHUDManagerData.cs" />
     <Compile Include="Models\Structs\GcInputActionMapping.cs" />
     <Compile Include="Models\Structs\GcLaserBeamData.cs" />
+    <Compile Include="Models\Structs\GcBiomeData.cs" />
     <Compile Include="Models\Structs\GcLeveledStatData.cs" />
     <Compile Include="Models\Structs\GcLeveledStatTable.cs" />
     <Compile Include="Models\Structs\GcNGuiFileBrowserRecents.cs" />
@@ -227,6 +235,7 @@
     <Compile Include="Models\Structs\GcUserSettingsData.cs" />
     <Compile Include="Models\Structs\GcWaterGlobals.cs" />
     <Compile Include="Models\Structs\GcWeatherTable.cs" />
+    <Compile Include="Models\Structs\NMSBool.cs" />
     <Compile Include="Models\Structs\NMSInt.cs" />
     <Compile Include="Models\Structs\NMSFloat.cs" />
     <Compile Include="Models\Structs\NMSString0x100.cs" />
