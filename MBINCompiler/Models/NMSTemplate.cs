@@ -678,9 +678,7 @@ namespace MBINCompiler.Models
             foreach(var templateField in templateFields)
             {
                 NMSAttribute settings = templateField.GetCustomAttribute<NMSAttribute>();
-                if(settings == null)
-                    break;
-                if(settings.DefaultValue != null)
+                if(settings?.DefaultValue != null)
                     templateField.SetValue(template, settings.DefaultValue);
             }
 
