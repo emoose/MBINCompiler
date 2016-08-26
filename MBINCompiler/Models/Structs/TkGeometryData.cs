@@ -8,26 +8,34 @@ namespace MBINCompiler.Models.Structs
 		public int IndexCount;
 		public int Indices16Bit;
 
-		// I have an invalid list read Exception here maybe it is linked to the primitive arrays not being supported ?
         public List<TkJointBindingData> JointBindings;
 		public List<TkJointExtentData> JointExtents;
 		
-		/*public byte[] JointMirrorPairs;
+		public List<FakeInt32> JointMirrorPairs; // This is a List<int> but we use FakeInt32 because this feature is not implemented yet
+        public List<TkJointMirrorAxis> JointMirrorAxes;
 		
-		public List<TkJointMirrorAxis> JointMirrorAxes;
-		
-		public byte[] SkinMatrixLayout;
-		public byte[] MeshVertRStart;
-		public byte[] MeshVertREnd;
-		public byte[] MeshBaseSkinMat;
-		public byte[] MeshAABBMin;
-		public byte[] MeshAABBMax;
+		public List<FakeInt32> SkinMatrixLayout;
+		public List<FakeInt32> MeshVertRStart;
+		public List<FakeInt32> MeshVertREnd;
+		public List<FakeInt32> MeshBaseSkinMat;
+		public List<Vector4f> MeshAABBMin;
+		public List<Vector4f> MeshAABBMax;
 		
 		public TkVertexLayout VertexLayout;
 		public TkVertexLayout SmallVertexLayout;
 		
-		public int[] IndexBuffer;
-		public byte[] VertexStream;
-		public byte[] SmallVertexStream;*/
+		/*public List<FakeInt16> IndexBuffer;
+		public List<FakeInt32> VertexStream;
+		public List<FakeInt32> SmallVertexStream;*/
+    }
+
+    public class FakeInt16 : NMSTemplate
+    {
+        public short value;
+    }
+
+    public class FakeInt32 : NMSTemplate
+    {
+        public int value;
     }
 }
