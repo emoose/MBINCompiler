@@ -14,11 +14,20 @@ namespace MBINCompiler
         public MBINHeader Header;
         private readonly IO _io;
         private readonly string _filePath;
+        private readonly bool _keepOpen;
 
         public MBINFile(string path)
         {
             _filePath = path;
             _io = new IO(path, FileMode.OpenOrCreate);
+            _keepOpen = false;
+        }
+
+        public MBINFile(Stream stream, bool keepOpen = false)
+        {
+            _filePath = "/DEV/NULL";
+            _io = new IO(stream);
+            _keepOpen = keepOpen;
         }
 
         public bool Load()
@@ -54,7 +63,7 @@ namespace MBINCompiler
 
         public void Dispose()
         {
-            if (_io != null)
+            if (_io != null && _keepOpen == false)
                 _io.Dispose();
         }
     }
