@@ -58,10 +58,7 @@ namespace MBINCompiler.Models
             foreach (var field in fields)
             {
                 NMSAttribute settings = field.GetCustomAttribute<NMSAttribute>();
-                if (settings == null)
-                {
-                    settings = new NMSAttribute();
-                }
+
                 var fieldAddr = reader.BaseStream.Position - templatePosition;
                 var fieldName = field.Name;
                 var fieldType = field.FieldType.Name;
@@ -69,7 +66,7 @@ namespace MBINCompiler.Models
                 {
                     case "String":
                     case "Byte[]":
-                        int size = settings.Size;
+                        int size = settings?.Size ?? 0;
 
                         foreach (var attr in field.CustomAttributes)
                         {
@@ -272,11 +269,13 @@ namespace MBINCompiler.Models
                 var fieldName = field.Name;
                 var fieldType = field.FieldType.Name;
                 var fieldData = field.GetValue(this);
+                NMSAttribute settings = field.GetCustomAttribute<NMSAttribute>();
+
                 switch (fieldType)
                 {
                     case "String":
                     case "Byte[]":
-                        int size = 0;
+                        int size = settings?.Size ?? 0;
                         foreach (var attr in field.CustomAttributes)
                         {
                             if (attr.AttributeType.Name != "MarshalAsAttribute")
