@@ -81,20 +81,6 @@ namespace MBINCompiler.Models.Structs
         }
     }
 
-    public class GcHeavyAirColourData : NMSTemplate
-    {
-        public Colour Colour1;
-        public Colour Colour2;
-    }
-
-    public class GcPlanetHeavyAirData : NMSTemplate
-    {
-        [NMS(Size = 0x80)]
-        public string Filename;
-        [NMS(Size = 5)]
-        public GcHeavyAirColourData[] Colours;
-    }
-
     public class GcPlanetWeatherData : NMSTemplate
     {
         public GcWeatherOptions WeatherOptions;
@@ -119,37 +105,6 @@ namespace MBINCompiler.Models.Structs
         public int DayColourIndex;
         public int DuskColourIndex;
         public int NightColourIndex;
-    }
-
-    public class GcPlanetWaterData : NMSTemplate
-    {
-        public Colour WaterColourNear;
-        public Colour WaterColourFar;
-        public float WaterStrength;
-        public float WaterColourStrength;
-        public float WaterMultiplyStrength;
-        public float WaterMultiplyMax;
-        public float WaterRoughness;
-        public float FresnelPower;
-        public float FresnelMin;
-        public float FresnelMax;
-        public float Wave1Scale;
-        public float Wave1Height;
-        public float Wave1Speed;
-        public float Wave2Scale;
-        public float Wave2Height;
-        public float Wave2Speed;
-        public float NormalMap1Scale;
-        public float NormalMap1Speed;
-        public float NormalMap2Scale;
-        public float NormalMap2Speed;
-        public float FoamFadeHeight;
-        public float Foam1Scale;
-        public float Foam1Speed;
-        public float Foam2Scale;
-        public float Foam2Speed;
-        public Colour FoamColour;
-        public GcPlanetHeavyAirData HeavyAir;
     }
 
     public class GcSelectableObjectSpawnData : NMSTemplate
@@ -266,22 +221,6 @@ namespace MBINCompiler.Models.Structs
         public List<GcCreatureRoleData> AvailableRoles;
     }
 
-    public class GcTerrainControls : NMSTemplate
-    {
-        [NMS(Size = 7)]
-        public float[] NoiseLayers;
-        [NMS(Size = 9)]
-        public float[] GridLayers;
-        [NMS(Size = 7)]
-        public float[] Features;
-        public float UndergroundCaves;
-
-        public float WaterActiveFrequency;
-        public float HighWaterActiveFrequency;
-        public float RockTileFrequency;
-        public float SubstanceTileFrequency;
-    }
-
     public class GcBiomeType : NMSTemplate
     {
         public int Biome;
@@ -289,20 +228,6 @@ namespace MBINCompiler.Models.Structs
         {
             return new[] { "Lush", "Toxic", "Scorched", "Radioactive", "Frozen", "Barren", "Dead", "Test", "All" };
         }
-    }
-
-    public class GcExternalObjectListOptions : NMSTemplate
-    {
-        [NMS(Size = 0x80)]
-        public string Name;
-        public float Probability;
-        public GcTerrainTileType TileType;
-        [NMS(Size = 4)]
-        public NMSString0x80[] Options;
-        public bool AllowLimiting;
-
-        [NMS(Size = 7)]
-        public byte[] Padding219;
     }
 
     public class GcPlanetGenerationIntermediateData : NMSTemplate
