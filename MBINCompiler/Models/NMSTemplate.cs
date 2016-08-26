@@ -32,6 +32,10 @@ namespace MBINCompiler.Models
 
         public static object DeserializeValue(BinaryReader reader, Type field, NMSAttribute settings, long templatePosition, FieldInfo fieldInfo, NMSTemplate parent)
         {
+            var template = parent.CustomDeserialize(reader, field, settings, templatePosition, fieldInfo);
+            if (template != null)
+                return template;
+
             var fieldType = field.Name;
             switch (fieldType)
             {
@@ -228,9 +232,7 @@ namespace MBINCompiler.Models
             for (int i = 0; i < numEntries; i++)
             {
                 // todo: get rid of DeserializeGenericList? this seems like it would work fine with List<NMSTemplate>
-                var template = parent.CustomDeserialize(reader, field.FieldType.GetGenericArguments()[0], settings, templateStartOffset, field);
-                if (template == null)
-                    template = DeserializeValue(reader, field.FieldType.GetGenericArguments()[0], settings, templateStartOffset, field, parent);
+                var template = DeserializeValue(reader, field.FieldType.GetGenericArguments()[0], settings, templateStartOffset, field, parent);
                 if (template == null)
                     throw new Exception($"Failed to deserialize type {typeof(T).Name}!");
 

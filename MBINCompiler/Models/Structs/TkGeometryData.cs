@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Reflection;
 
@@ -37,14 +38,35 @@ namespace MBINCompiler.Models.Structs
             switch(fieldName)
             {
                 case "IndexBuffer":
-                    if (Indices16Bit == 1)
-                    {
-                        
-                    } else
-                    {
+                    long listPosition = reader.BaseStream.Position;
+                    Debug.WriteLine($"DeserializeList start 0x{listPosition:X}");
 
+                    long listStartOffset = reader.ReadInt64();
+                    int numEntries = reader.ReadInt32() * ((Indices16Bit == 1) ? 2 : 1); // Adjust size
+                    uint listMagic = reader.ReadUInt32();
+                    if (listMagic != 0xAAAAAA01 && listMagic != 1)
+                        throw new Exception($"Invalid list read, magic 0x{listMagic:X} expected 0xAAAAAA01 / 0x1");
+
+                    long listEndPosition = reader.BaseStream.Position;
+
+                    reader.BaseStream.Position = listPosition + listStartOffset;
+                    var indices = new List<int>();
+                    for (int i = 0; i < numEntries; i++)
+                    {
+                        if (Indices16Bit == 1)
+                        {
+                            indices.Add((int)reader.ReadUInt16());
+                        }
+                        else
+                        {
+                            indices.Add((int)reader.ReadUInt32());
+                        }
                     }
-                    return null;
+
+                    reader.BaseStream.Position = listEndPosition;
+                    reader.Align(0x8, 0);
+
+                    return indices;
                 case "VertexStream":
                     return null;
                 case "SmallVertexStream":
