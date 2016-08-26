@@ -706,6 +706,9 @@ namespace MBINCompiler.Models
                     case "Int16":
                         fieldValue = short.Parse(xmlProperty.Value);
                         break;
+                    case "UInt16":
+                        fieldValue = ushort.Parse(xmlProperty.Value);
+                        break;
                     case "Int32":
                         var valuesMethod = templateType.GetMethod(field.Name + "Values");
                         if (valuesMethod != null)
@@ -732,8 +735,14 @@ namespace MBINCompiler.Models
                             fieldValue = int.Parse(xmlProperty.Value);
                         }
                         break;
+                    case "UInt32":
+                        fieldValue = uint.Parse(xmlProperty.Value);
+                        break;
                     case "Int64":
                         fieldValue = long.Parse(xmlProperty.Value);
+                        break;
+                    case "UInt64":
+                        fieldValue = ulong.Parse(xmlProperty.Value);
                         break;
                     case "Byte[]":
                         fieldValue = xmlProperty.Value == null ? null : Convert.FromBase64String(xmlProperty.Value);
