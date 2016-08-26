@@ -248,6 +248,16 @@
     <Compile Include="Models\Structs\TkNGuiLayoutList.cs" />
     <Compile Include="Models\Structs\TkNGuiLayoutListData.cs" />
     <Compile Include="Models\Structs\TkNGuiWindowLayoutData.cs" />
+    <Compile Include="Models\Structs\TkNoiseCaveData.cs" />
+    <Compile Include="Models\Structs\TkNoiseFeatureData.cs" />
+    <Compile Include="Models\Structs\TkNoiseFlattenOptions.cs" />
+    <Compile Include="Models\Structs\TkNoiseFlattenPoint.cs" />
+    <Compile Include="Models\Structs\TkNoiseGridData.cs" />
+    <Compile Include="Models\Structs\TkNoiseOffsetEnum.cs" />
+    <Compile Include="Models\Structs\TkNoiseSuperFormulaData.cs" />
+    <Compile Include="Models\Structs\TkNoiseUberData.cs" />
+    <Compile Include="Models\Structs\TkNoiseUberLayerData.cs" />
+    <Compile Include="Models\Structs\TkNoiseVoxelTypeEnum.cs" />
     <Compile Include="Models\Structs\TkParticleData.cs" />
     <Compile Include="Models\Structs\TkPlatformButtonPair.cs" />
     <Compile Include="Models\Structs\TkProceduralTextureChosenOptionSampler.cs" />
@@ -330,6 +340,10 @@
     <Compile Include="Models\Structs\TkProceduralTextureList.cs" />
     <Compile Include="Models\Structs\TkTrophyData.cs" />
     <Compile Include="Models\Structs\TkTrophyEntry.cs" />
+    <Compile Include="Models\Structs\TkVoxelGeneratorData.cs" />
+    <Compile Include="Models\Structs\TkVoxelGeneratorRegionData.cs" />
+    <Compile Include="Models\Structs\TkVoxelGeneratorSettingsArray.cs" />
+    <Compile Include="Models\Structs\TkVoxelGeneratorSettingsElement.cs" />
     <Compile Include="Models\Structs\VariableSizeString.cs" />
     <Compile Include="Models\Structs\Vector2f.cs" />
     <Compile Include="Models\Structs\Vector4f.cs" />

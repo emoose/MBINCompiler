@@ -11866,6 +11866,9 @@ namespace MBINCompilerTests
 
             // TkTrophyData
             "METADATA/TROPHIES/TKTROPHYDATA.MBIN",
+
+            // TkVoxelGeneratorSettingsArray
+            "METADATA/SIMULATION/SOLARSYSTEM/VOXELGENERATORSETTINGS.MBIN",
         };
 
         private void decompileFile(string filePath, string output = "")
