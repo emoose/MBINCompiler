@@ -11,12 +11,7 @@
         public GcColourModifier CloudColour1;
         public GcColourModifier CloudColour2;
 
-        // todo: change this to array
-        public GcColourModifier HeavyAirColour1;
-
-        public GcColourModifier HeavyAirColour2;
-        public GcColourModifier HeavyAirColour3;
-        public GcColourModifier HeavyAirColour4;
-        public GcColourModifier HeavyAirColour5;
+        [NMS(Size = 5)]
+        public GcColourModifier[] HeavyAirColour;
     }
 }
