@@ -38,6 +38,7 @@ namespace MBINCompiler.Models.Structs
             switch(fieldName)
             {
                 case "IndexBuffer":
+                    reader.Align(8, 0);
                     long listPosition = reader.BaseStream.Position;
                     Debug.WriteLine($"DeserializeList start 0x{listPosition:X}");
 
@@ -69,6 +70,7 @@ namespace MBINCompiler.Models.Structs
                     return indices;
                 case "VertexStream":
                 case "SmallVertexStream":
+                    reader.Align(8, 0);
                     listPosition = reader.BaseStream.Position;
                     Debug.WriteLine($"DeserializeList start 0x{listPosition:X}");
 
