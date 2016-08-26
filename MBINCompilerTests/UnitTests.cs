@@ -10577,6 +10577,9 @@ namespace MBINCompilerTests
             // GcProjectileDataTable
             "METADATA/PROJECTILES/PROJECTILETABLE.MBIN",
 
+            // GcRealityManagerData
+            "METADATA/REALITY/DEFAULTREALITY.MBIN",
+
             // GcRewardDestructTable
             "METADATA/REALITY/TABLES/REWARDDESTRUCTTABLE.MBIN",
 
