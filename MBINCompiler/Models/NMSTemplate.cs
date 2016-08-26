@@ -76,7 +76,7 @@ namespace MBINCompiler.Models
                     reader.Align(8, 0);
                     if (field.IsGenericType && field.GetGenericTypeDefinition() == typeof(List<>))
                     {
-                        Type itemType = field.GetGenericArguments()[0]; // use this...
+                        Type itemType = field.GetGenericArguments()[0];
                         if (itemType == typeof(NMSTemplate))
                             return DeserializeGenericList(reader, templatePosition);
                         else
@@ -84,7 +84,7 @@ namespace MBINCompiler.Models
                             // todo: get rid of this nastiness
                             MethodInfo method = typeof(NMSTemplate).GetMethod("DeserializeList", BindingFlags.Static | BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic)
                                                          .MakeGenericMethod(new Type[] { itemType });
-                            var list = method.Invoke(null, new object[] { reader, templatePosition });
+                            var list = method.Invoke(null, new object[] { reader, fieldInfo, settings, templatePosition });
                             return list;
                         }
                     }
@@ -210,7 +210,7 @@ namespace MBINCompiler.Models
             return list;
         }
 
-        public static List<T> DeserializeList<T>(BinaryReader reader, long templateStartOffset)
+        public static List<T> DeserializeList<T>(BinaryReader reader, FieldInfo field, NMSAttribute settings, long templateStartOffset)
         {
             long listPosition = reader.BaseStream.Position;
             Debug.WriteLine($"DeserializeList start 0x{listPosition:X}");
@@ -227,11 +227,12 @@ namespace MBINCompiler.Models
             var list = new List<T>();
             for (int i = 0; i < numEntries; i++)
             {
-                var template = DeserializeBinaryTemplate(reader, typeof(T).Name);
+                // todo: get rid of DeserializeGenericList? this seems like it would work fine with List<NMSTemplate>
+                var template = DeserializeValue(reader, field.FieldType.GetGenericArguments()[0], settings, templateStartOffset, field);
                 if (template == null)
-                    throw new Exception($"Failed to deserialize template {typeof(T).Name}!");
+                    throw new Exception($"Failed to deserialize type {typeof(T).Name}!");
 
-                list.Add((T)(object)template);
+                list.Add((T)template);
             }
 
             reader.BaseStream.Position = listEndPosition;
@@ -240,14 +241,14 @@ namespace MBINCompiler.Models
             return list;
         }
 
-        public void SerializeMBIN(BinaryWriter writer, Type fieldType, object fieldData, NMSAttribute settings, long fieldAddr, FieldInfo field, ref List<Tuple<long, object>> additionalData)
+        public void SerializeMBIN(BinaryWriter writer, Type fieldType, object fieldData, NMSAttribute settings, FieldInfo field, ref List<Tuple<long, object>> additionalData)
         {
             switch (fieldType.Name)
             {
                 case "String":
                 case "Byte[]":
                     int size = settings?.Size ?? 0;
-                    MarshalAsAttribute legacySettings = field.GetCustomAttribute<MarshalAsAttribute>();
+                    MarshalAsAttribute legacySettings = field?.GetCustomAttribute<MarshalAsAttribute>();
                     if (legacySettings != null)
                     {
                         size = legacySettings.SizeConst;
@@ -255,7 +256,7 @@ namespace MBINCompiler.Models
 
                     if (fieldType.Name == "String")
                     {
-                        writer.WriteString((string)fieldData, Encoding.UTF8, size, true);
+                        writer.WriteString((string)fieldData, Encoding.UTF8, size);
                     }
                     else
                     {
@@ -298,7 +299,7 @@ namespace MBINCompiler.Models
                     break;
                 case "List`1":
                     writer.Align(8, 0);
-                    if (field.FieldType.IsGenericType && field.FieldType.GetGenericTypeDefinition() == typeof(List<>))
+                    if (field != null && field.FieldType.IsGenericType && field.FieldType.GetGenericTypeDefinition() == typeof(List<>))
                     {
                         // write empty list header
                         long listPos = writer.BaseStream.Position;
@@ -349,7 +350,7 @@ namespace MBINCompiler.Models
                         Array array = (Array)fieldData;
                         foreach (var obj in array)
                         {
-                            SerializeMBIN(writer, obj.GetType(), obj, settings, writer.BaseStream.Position - fieldAddr, field, ref additionalData);
+                            SerializeMBIN(writer, obj.GetType(), obj, settings, field, ref additionalData);
                         }
                     }
                     else
@@ -357,7 +358,7 @@ namespace MBINCompiler.Models
                         if (fieldType.BaseType == typeof(NMSTemplate))
                             ((NMSTemplate)fieldData).AppendToWriter(writer, ref additionalData);
                         else
-                            throw new Exception($"[C] Unknown type {fieldType} not NMSTemplate for {field.Name}");
+                            throw new Exception($"[C] Unknown type {fieldType} not NMSTemplate" + (field != null ? $" for {field.Name}" : ""));
                     }
 
                     break;
@@ -377,7 +378,7 @@ namespace MBINCompiler.Models
                 var fieldAddr = writer.BaseStream.Position - templatePosition;
                 var fieldData = field.GetValue(this);
                 NMSAttribute settings = field.GetCustomAttribute<NMSAttribute>();
-                SerializeMBIN(writer, field.FieldType, fieldData, settings, fieldAddr, field, ref additionalData);
+                SerializeMBIN(writer, field.FieldType, fieldData, settings, field, ref additionalData);
             }
         }
 
@@ -444,8 +445,7 @@ namespace MBINCompiler.Models
 
             foreach (var entry in list)
             {
-                var template = (NMSTemplate)entry;
-                template.AppendToWriter(writer, ref additionalData);
+                SerializeMBIN(writer, entry.GetType(), entry, null, null, ref additionalData);
             }
         }
 
@@ -510,6 +510,7 @@ namespace MBINCompiler.Models
         public EXmlBase SerializeEXmlValue(Type fieldType, FieldInfo field, NMSAttribute settings, object value)
         {
             string t = fieldType.Name;
+            int i = 0;
             switch (fieldType.Name)
             {
                 case "String":
@@ -561,18 +562,26 @@ namespace MBINCompiler.Models
                         Value = base64Value
                     };
                 case "List`1":
+                    var listType = field.FieldType.GetGenericArguments()[0];
                     EXmlProperty listProperty = new EXmlProperty
                     {
                         Name = field.Name
                     };
 
                     IList templates = (IList)value;
-                    foreach (var template in templates.Cast<NMSTemplate>())
+                    i = 0;
+                    foreach (var template in templates)
                     {
-                        var element = template.SerializeEXml();
-                        if (settings?.EnumValue == null)
-                            element.Name = null;
-                        listProperty.Elements.Add(element);
+                        EXmlBase data = SerializeEXmlValue(listType, field, settings, template);
+                        if (settings?.EnumValue != null)
+                        {
+                            data.Name = settings.EnumValue[i];
+                            i++;
+                        }
+                        else
+                            data.Name = null;
+
+                        listProperty.Elements.Add(data);
                     }
 
                     return listProperty;
@@ -606,7 +615,7 @@ namespace MBINCompiler.Models
                         };
 
                         Array array = (Array)value;
-                        int i = 0;
+                        i = 0;
                         foreach (var template in array)
                         {
                             EXmlBase data = SerializeEXmlValue(arrayType, field, settings, template);
@@ -704,12 +713,16 @@ namespace MBINCompiler.Models
                     Type elementType = fieldType.GetGenericArguments()[0];
                     Type listType = typeof(List<>).MakeGenericType(elementType);
                     IList list = (IList)Activator.CreateInstance(listType);
-                    foreach (EXmlData innerXmlData in xmlProperty.Elements.OfType<EXmlData>())
+                    foreach (EXmlData innerXmlData in xmlProperty.Elements.OfType<EXmlData>()) // child templates
                     {
                         NMSTemplate element = DeserializeEXml(innerXmlData);
                         list.Add(element);
                     }
-
+                    foreach(EXmlProperty innerXmlData in xmlProperty.Elements.OfType<EXmlProperty>()) // primitive types
+                    {
+                        object element = DeserializeEXmlValue(template, elementType, field, innerXmlData, templateType, settings);
+                        list.Add(element);
+                    }
                     return list;
                 default:
                     if (field.FieldType.IsArray && field.FieldType.GetElementType().BaseType.Name == "NMSTemplate")
