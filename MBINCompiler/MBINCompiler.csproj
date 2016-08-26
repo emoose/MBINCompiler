@@ -66,6 +66,8 @@
     <Compile Include="Models\Structs\GcAtlasGlobals.cs" />
     <Compile Include="Models\Structs\GcAudioPulseDemo.cs" />
     <Compile Include="Models\Structs\GcAudioWwiseEvents.cs" />
+    <Compile Include="Models\Structs\GcBiomeList.cs" />
+    <Compile Include="Models\Structs\GcBiomeListPerStarType.cs" />
     <Compile Include="Models\Structs\GcBirdData.cs" />
     <Compile Include="Models\Structs\GcBootLogoData.cs" />
     <Compile Include="Models\Structs\GcBuildingClusterPlacement.cs" />
@@ -240,11 +242,15 @@
     <Compile Include="Models\Structs\TkEngineSettingsMapping.cs" />
     <Compile Include="Models\Structs\TkEntitlementList.cs" />
     <Compile Include="Models\Structs\TkGameSettings.cs" />
+    <Compile Include="Models\Structs\TkGeometryData.cs" />
     <Compile Include="Models\Structs\TkGraphicsSettings.cs" />
     <Compile Include="Models\Structs\TkHeavyAirData.cs" />
     <Compile Include="Models\Structs\TkImGuiData.cs" />
     <Compile Include="Models\Structs\TkImGuiWindowData.cs" />
     <Compile Include="Models\Structs\TkInputEnum.cs" />
+    <Compile Include="Models\Structs\TkJointBindingData.cs" />
+    <Compile Include="Models\Structs\TkJointExtentData.cs" />
+    <Compile Include="Models\Structs\TkJointMirrorAxis.cs" />
     <Compile Include="Models\Structs\TkLanguageFontTable.cs" />
     <Compile Include="Models\Structs\TkLanguageFontTableEntry.cs" />
     <Compile Include="Models\Structs\TkLanguages.cs" />
@@ -346,6 +352,8 @@
     <Compile Include="Models\Structs\TkProceduralTextureList.cs" />
     <Compile Include="Models\Structs\TkTrophyData.cs" />
     <Compile Include="Models\Structs\TkTrophyEntry.cs" />
+    <Compile Include="Models\Structs\TkVertexElement.cs" />
+    <Compile Include="Models\Structs\TkVertexLayout.cs" />
     <Compile Include="Models\Structs\TkVoxelGeneratorData.cs" />
     <Compile Include="Models\Structs\TkVoxelGeneratorRegionData.cs" />
     <Compile Include="Models\Structs\TkVoxelGeneratorSettingsArray.cs" />
