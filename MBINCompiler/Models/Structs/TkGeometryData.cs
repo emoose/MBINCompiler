@@ -1,4 +1,7 @@
+using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Reflection;
 
 namespace MBINCompiler.Models.Structs
 {
@@ -24,8 +27,31 @@ namespace MBINCompiler.Models.Structs
 		public TkVertexLayout VertexLayout;
 		public TkVertexLayout SmallVertexLayout;
 		
-		/*public List<short> IndexBuffer;
-		public List<int> VertexStream;
+		public List<int> IndexBuffer;
+		/*public List<int> VertexStream;
 		public List<int> SmallVertexStream;*/
+
+        public override object CustomDeserialize(BinaryReader reader, Type field, NMSAttribute settings, long templatePosition, FieldInfo fieldInfo)
+        {
+            var fieldName = fieldInfo.Name;
+            switch(fieldName)
+            {
+                case "IndexBuffer":
+                    if (Indices16Bit == 1)
+                    {
+                        
+                    } else
+                    {
+
+                    }
+                    return null;
+                case "VertexStream":
+                    return null;
+                case "SmallVertexStream":
+                    return null;
+                default:
+                    return null;
+            }
+        }
     }
 }
