@@ -11970,11 +11970,11 @@ namespace MBINCompilerTests
                 var fullPath = Path.Combine(baseDir, test);
                 if (!File.Exists(fullPath))
                 {
-                    Debug.Print($"recompileFiles: test file {test} not found!");
+                    Debug.WriteLine($"recompileFiles: test file {test} not found!");
                     continue; // file might have been removed in an update
                 }
 
-                Debug.Print($"recompileFiles: {test}");
+                Debug.WriteLine($"recompileFiles: {test}");
 
                 if (File.Exists(fullPath + ".exml"))
                     File.Delete(fullPath + ".exml");

@@ -40,7 +40,7 @@ namespace MBINCompiler.Models
                 return null;
 
             long templatePosition = reader.BaseStream.Position;
-            System.Diagnostics.Debug.Print(templateName + " position: " + templatePosition.ToString("X"));
+            Debug.WriteLine($"{templateName} position: 0x{templatePosition:X}");
 
             if (templateName == "VariableSizeString")
             {
@@ -147,7 +147,7 @@ namespace MBINCompiler.Models
                             reader.BaseStream.Position = startPos + offset;
                             NMSTemplate val = DeserializeBinaryTemplate(reader, name);
                             if (val == null)
-                                throw new Exception("Failed to deserialize template " + name + "!");
+                                throw new Exception($"Failed to deserialize template {name}!");
 
                             field.SetValue(obj, val);
                         }
@@ -183,13 +183,13 @@ namespace MBINCompiler.Models
         public static List<NMSTemplate> DeserializeGenericList(BinaryReader reader, long templateStartOffset)
         {
             long listPosition = reader.BaseStream.Position;
-            System.Diagnostics.Debug.WriteLine("DeserializeGenericList start 0x" + listPosition.ToString("X"));
+            Debug.WriteLine($"DeserializeGenericList start 0x{listPosition:X}");
 
             long templateNamesOffset = reader.ReadInt64();
             int numTemplates = reader.ReadInt32();
             uint listMagic = reader.ReadUInt32();
-            if (listMagic != 0xAAAAAA01)
-                throw new Exception("Invalid generic list read, magic 0x" + listMagic.ToString("X") + " expected 0xAAAAAA01");
+            if (listMagic != 0xAAAAAA01 && listMagic != 1)
+                throw new Exception($"Invalid generic list read, magic 0x{listMagic:X} expected 0xAAAAAA01 / 0x1");
 
             long listEndPosition = reader.BaseStream.Position;
 
@@ -216,7 +216,7 @@ namespace MBINCompiler.Models
                     reader.BaseStream.Position = templateInfo.Key;
                     var template = DeserializeBinaryTemplate(reader, templateInfo.Value);
                     if (template == null)
-                        throw new Exception("Failed to deserialize template " + templateInfo.Value + "!");
+                        throw new Exception($"Failed to deserialize template {templateInfo.Value}!");
 
                     list.Add(template);
                 }
@@ -231,13 +231,13 @@ namespace MBINCompiler.Models
         public static List<T> DeserializeList<T>(BinaryReader reader, long templateStartOffset)
         {
             long listPosition = reader.BaseStream.Position;
-            System.Diagnostics.Debug.WriteLine("DeserializeList start 0x" + listPosition.ToString("X"));
+            Debug.WriteLine($"DeserializeList start 0x{listPosition:X}");
 
             long listStartOffset = reader.ReadInt64();
             int numEntries = reader.ReadInt32();
             uint listMagic = reader.ReadUInt32();
-            if (listMagic != 0xAAAAAA01)
-                throw new Exception("Invalid list read, magic 0x" + listMagic.ToString("X") + " expected 0xAAAAAA01");
+            if (listMagic != 0xAAAAAA01 && listMagic != 1)
+                throw new Exception($"Invalid list read, magic 0x{listMagic:X} expected 0xAAAAAA01 / 0x1");
 
             long listEndPosition = reader.BaseStream.Position;
 
@@ -247,7 +247,7 @@ namespace MBINCompiler.Models
             {
                 var template = DeserializeBinaryTemplate(reader, typeof(T).Name);
                 if (template == null)
-                    throw new Exception("Failed to deserialize template " + typeof(T).Name + "!");
+                    throw new Exception($"Failed to deserialize template {typeof(T).Name}!");
 
                 list.Add((T)(object)template);
             }
@@ -261,7 +261,7 @@ namespace MBINCompiler.Models
         public void AppendToWriter(BinaryWriter writer, ref List<Tuple<long, object>> additionalData)
         {
             long templatePosition = writer.BaseStream.Position;
-            Debug.Print($"[C] writing {GetType().Name} to offset 0x{templatePosition.ToString("X")}");
+            Debug.WriteLine($"[C] writing {GetType().Name} to offset 0x{templatePosition:X}");
 
             var type = GetType();
             var fields = type.GetFields().OrderBy(field => field.MetadataToken); // hack to get fields in order of declaration (todo: use something less hacky, this might break mono?)
