@@ -37,12 +37,9 @@ namespace MBINCompiler.Models
             {
                 case "String":
                 case "Byte[]":
-                    int size = 0;
+                    int size = settings?.Size ?? 0;
                     MarshalAsAttribute legacySettings = fieldInfo.GetCustomAttribute<MarshalAsAttribute>();
-                    if (settings.Size > 0)
-                    {
-                        size = settings.Size;
-                    } else if(legacySettings != null)
+                    if(legacySettings != null)
                     {
                         size = legacySettings.SizeConst;
                     }
@@ -249,13 +246,9 @@ namespace MBINCompiler.Models
             {
                 case "String":
                 case "Byte[]":
-                    int size = 0;
+                    int size = settings?.Size ?? 0;
                     MarshalAsAttribute legacySettings = field.GetCustomAttribute<MarshalAsAttribute>();
-                    if (settings.Size > 0)
-                    {
-                        size = settings.Size;
-                    }
-                    else if (legacySettings != null)
+                    if (legacySettings != null)
                     {
                         size = legacySettings.SizeConst;
                     }
@@ -516,7 +509,7 @@ namespace MBINCompiler.Models
         }
         public EXmlBase SerializeEXmlValue(Type fieldType, FieldInfo field, NMSAttribute settings, object value)
         {
-            string t= fieldType.Name;
+            string t = fieldType.Name;
             switch (fieldType.Name)
             {
                 case "String":
@@ -542,7 +535,7 @@ namespace MBINCompiler.Models
                                 valueStr = values[(int)value];
                             }
                         }
-                        else if (settings.EnumValue != null)
+                        else if (settings?.EnumValue != null)
                         {
                             if (((int)value) == -1)
                                 valueStr = "";
@@ -576,7 +569,10 @@ namespace MBINCompiler.Models
                     IList templates = (IList)value;
                     foreach (var template in templates.Cast<NMSTemplate>())
                     {
-                        listProperty.Elements.Add(template.SerializeEXml());
+                        var element = template.SerializeEXml();
+                        if (settings?.EnumValue == null)
+                            element.Name = null;
+                        listProperty.Elements.Add(element);
                     }
 
                     return listProperty;
@@ -614,11 +610,14 @@ namespace MBINCompiler.Models
                         foreach (var template in array)
                         {
                             EXmlBase data = SerializeEXmlValue(arrayType, field, settings, template);
-                            if (settings.EnumValue != null)
+                            if (settings?.EnumValue != null)
                             {
                                 data.Name = settings.EnumValue[i];
                                 i++;
                             }
+                            else
+                                data.Name = null;
+
                             arrayProperty.Elements.Add(data);
                         }
 
@@ -668,6 +667,8 @@ namespace MBINCompiler.Models
                     return bool.Parse(xmlProperty.Value);
                 case "Int16":
                     return short.Parse(xmlProperty.Value);
+                case "UInt16":
+                    return ushort.Parse(xmlProperty.Value);
                 case "Int32":
                     var valuesMethod = templateType.GetMethod(field.Name + "Values");
                     if (valuesMethod != null)
@@ -680,21 +681,23 @@ namespace MBINCompiler.Models
                             return Array.FindIndex(values, v => v == xmlProperty.Value);
                         }
                     }
-                    else if (settings.EnumValue != null)
+                    else if (settings?.EnumValue != null)
                     {
                         if (String.IsNullOrEmpty(xmlProperty.Value))
                             return -1;
                         else
-                        {
                             return Array.FindIndex(settings.EnumValue, v => v == xmlProperty.Value);
-                        }
                     }
                     else
                     {
                         return int.Parse(xmlProperty.Value);
                     }
+                case "UInt32":
+                    return uint.Parse(xmlProperty.Value);
                 case "Int64":
                     return long.Parse(xmlProperty.Value);
+                case "UInt64":
+                    return ulong.Parse(xmlProperty.Value);
                 case "Byte[]":
                     return xmlProperty.Value == null ? null : Convert.FromBase64String(xmlProperty.Value);
                 case "List`1":
@@ -758,8 +761,6 @@ namespace MBINCompiler.Models
                 FieldInfo field = templateType.GetField(xmlProperty.Name);
                 Type fieldType = field.FieldType;
                 NMSAttribute settings = field.GetCustomAttribute<NMSAttribute>();
-                if (settings == null)
-                    settings = new NMSAttribute();
                 object fieldValue = DeserializeEXmlValue(template, fieldType, field, xmlProperty, templateType, settings);
                 field.SetValue(template, fieldValue);
             }
