@@ -45,7 +45,7 @@ namespace MBINCompiler
             }
 
             File.WriteAllText(output, xmlString);
-            Console.WriteLine("XML data written to \"{output}\" successfully?");
+            Console.WriteLine($"XML data written to \"{output}\" successfully?");
         }
 
         static void CompileFile(string input, string output)
