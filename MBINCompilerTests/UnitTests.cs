@@ -5,6 +5,7 @@ using System.Diagnostics;
 
 using MBINCompiler;
 using MBINCompiler.Models.Structs;
+using System.Text;
 
 namespace MBINCompilerTests
 {
@@ -12,8 +13,9 @@ namespace MBINCompilerTests
     public class UnitTests
     {
         String baseDir = "C:/NMS";
+        #region Test Files
         String testFile1 = "../../MBINCompilerTestTemplate.MBIN";
-
+        #region TkMaterialData
         string[] testFilesTkMaterialData = new string[]
         {
             // TkMaterialData
@@ -7805,7 +7807,8 @@ namespace MBINCompilerTests
             "MODELS/TESTS/TRICOLOURTEST/TRICOLOUR/TRIHORNSMAT.MATERIAL.MBIN",
             "MODELS/TESTS/TRICOLOURTEST/TRICOLOUR/TURTLEBODYMAT.MATERIAL.MBIN",
         };
-
+        #endregion
+        #region  TkSceneNodeData
         string[] testFilesTkSceneNodeData = new string[]
         {
             // TkSceneNodeData
@@ -10202,7 +10205,8 @@ namespace MBINCompilerTests
             "SCENES/TESTSCENES/TESTPLANETS/SCENES/SPACE.SCENE.MBIN",
             "SCENES/TESTSCENES/TESTPLANETS/SCENES/ZOOPLANETSCENE.SCENE.MBIN",
         };
-
+        #endregion
+        #region GcNGuiLayerData
         string[] testFilesGcNGuiLayerData = new string[]
         {
             // GcNGuiLayerData
@@ -10409,7 +10413,8 @@ namespace MBINCompilerTests
             "UI/SLOTS/SLOT_NEXTLEFT.MBIN",
             "UI/SLOTS/SLOT_NEXTRIGHT.MBIN",
         };
-
+        #endregion
+        #region Others
         string[] testFiles = new string[]
         {
             // GcAISpaceshipManagerData
@@ -11876,37 +11881,37 @@ namespace MBINCompilerTests
             // TkVoxelGeneratorSettingsArray
             "METADATA/SIMULATION/SOLARSYSTEM/VOXELGENERATORSETTINGS.MBIN",
         };
-
-        private void decompileFile(string filePath, string output = "")
+        #endregion
+        #endregion
+        private MemoryStream decompile(Stream stream)
         {
-            using (var file = new MBINFile(filePath))
+            using (var file = new MBINFile(stream))
             {
                 file.Load();
                 var data = file.GetData();
 
-                Assert.IsNotNull(data, $"{filePath} deserialized data was null");
-                Assert.IsNotNull(data.SerializeEXml(), $"{filePath} xml serialization was null");
+                Assert.IsNotNull(data, "deserialized data was null");
+                Assert.IsNotNull(data.SerializeEXml(), "xml serialization was null");
                 var xmlString = EXmlFile.WriteTemplate(data);
-                Assert.IsNotNull(xmlString, $"{filePath} xml data is null");
+                Assert.IsNotNull(xmlString, "xml data is null");
 
-                if (!String.IsNullOrEmpty(output))
+                MemoryStream memory = new MemoryStream();
+                using (TextWriter writer = new StreamWriter(memory, Encoding.Default, 4096, true))
                 {
-                    if (File.Exists(output))
-                        File.Delete(output);
-                    File.WriteAllText(output, xmlString);
+                    writer.Write(xmlString);
                 }
+                memory.Position = 0;
+                return memory;
             }
         }
 
-        private void compileFile(string filePath, string output)
+        private MemoryStream compile(Stream stream)
         {
-            var data = EXmlFile.ReadTemplate(filePath);
-            Assert.IsNotNull(data, $"{filePath} exml failed to deserialize");
+            var data = EXmlFile.ReadTemplateFromStream(stream);
+            Assert.IsNotNull(data, "exml failed to deserialize");
 
-            if (File.Exists(output))
-                File.Delete(output); // todo: ask for confirmation?
-
-            using (var file = new MBINFile(output))
+            MemoryStream memory = new MemoryStream();
+            using (var file = new MBINFile(memory, true))
             {
                 file.Header = new MBINCompiler.Models.MBINHeader();
                 file.Header.SetDefaults();
@@ -11916,16 +11921,16 @@ namespace MBINCompilerTests
                 file.SetData(data);
                 file.Save();
             }
+            memory.Position = 0;
+            return memory;
         }
 
-        private string HashFile(string file)
+        private string Hash(Stream stream)
         {
             using (var sha = System.Security.Cryptography.SHA1.Create())
             {
-                using (var stream = File.OpenRead(file))
-                {
-                    return BitConverter.ToString(sha.ComputeHash(stream));
-                }
+                stream.Position = 0;
+                return BitConverter.ToString(sha.ComputeHash(stream));
             }
         }
 
@@ -11979,30 +11984,18 @@ namespace MBINCompilerTests
 
                 Debug.WriteLine($"recompileFiles: {test}");
 
-                if (File.Exists(fullPath + ".exml"))
-                    File.Delete(fullPath + ".exml");
-                if (File.Exists(fullPath + ".test"))
-                    File.Delete(fullPath + ".test");
-                if (File.Exists(fullPath + ".test.exml"))
-                    File.Delete(fullPath + ".test.exml");
+                Stream vanillaEXML = decompile(File.Open(fullPath, FileMode.Open));
+                Stream compiledMBIN = compile(vanillaEXML);
+                Stream recompiledEXML = decompile(compiledMBIN);
 
-                decompileFile(fullPath, fullPath + ".exml");
-                compileFile(fullPath + ".exml", fullPath + ".test");
-                decompileFile(fullPath + ".test", fullPath + ".test.exml");
-
-                string oldHash = HashFile(fullPath + ".exml");
-                string newHash = HashFile(fullPath + ".test.exml");
+                string vanilla = Hash(vanillaEXML);
+                string recompiled = Hash(recompiledEXML);
 
                 // check exml files match
-                Assert.AreEqual(newHash, oldHash);
-
-                // delete new files
-                if (File.Exists(fullPath + ".exml"))
-                    File.Delete(fullPath + ".exml");
-                if (File.Exists(fullPath + ".test"))
-                    File.Delete(fullPath + ".test");
-                if (File.Exists(fullPath + ".test.exml"))
-                    File.Delete(fullPath + ".test.exml");
+                Assert.AreEqual(recompiled, vanilla);
+                vanillaEXML.Dispose();
+                compiledMBIN.Dispose();
+                recompiledEXML.Dispose();
             }
         }
 
