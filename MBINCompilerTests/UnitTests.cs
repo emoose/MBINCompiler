@@ -11881,10 +11881,10 @@ namespace MBINCompilerTests
                 file.Load();
                 var data = file.GetData();
 
-                Assert.IsNotNull(data, filePath + " deserialized data was null");
-                Assert.IsNotNull(data.SerializeEXml(), filePath + " xml serialization was null");
+                Assert.IsNotNull(data, $"{filePath} deserialized data was null");
+                Assert.IsNotNull(data.SerializeEXml(), $"{filePath} xml serialization was null");
                 var xmlString = EXmlFile.WriteTemplate(data);
-                Assert.IsNotNull(xmlString, filePath + " xml data is null");
+                Assert.IsNotNull(xmlString, $"{filePath} xml data is null");
 
                 if (!String.IsNullOrEmpty(output))
                 {
@@ -11898,7 +11898,7 @@ namespace MBINCompilerTests
         private void compileFile(string filePath, string output)
         {
             var data = EXmlFile.ReadTemplate(filePath);
-            Assert.IsNotNull(data, filePath + " exml failed to deserialize");
+            Assert.IsNotNull(data, $"{filePath} exml failed to deserialize");
 
             if (File.Exists(output))
                 File.Delete(output); // todo: ask for confirmation?
@@ -11932,12 +11932,12 @@ namespace MBINCompilerTests
         {
             var file = new MBINFile(testFile1);
             file.Load();
-            Assert.AreEqual(file.Header.GetXMLTemplateName(), "MBINCompilerTestTemplate", testFile1 + " header not using TemplateType MBINCompilerTestTemplate!");
+            Assert.AreEqual(file.Header.GetXMLTemplateName(), "MBINCompilerTestTemplate", $"{testFile1} header not using TemplateType MBINCompilerTestTemplate!");
 
             var data = file.GetData();
-            Assert.IsNotNull(data, testFile1 + " deserialized data was null");
-            Assert.IsNotNull(data.SerializeEXml(), testFile1 + " xml serialization was null");
-            Assert.IsInstanceOfType(data, typeof(MBINCompilerTestTemplate), testFile1 + " template isn't of type MBINCompilerTestTemplate!");
+            Assert.IsNotNull(data, $"{testFile1} deserialized data was null");
+            Assert.IsNotNull(data.SerializeEXml(), $"{testFile1} xml serialization was null");
+            Assert.IsInstanceOfType(data, typeof(MBINCompilerTestTemplate), $"{testFile1} template isn't of type MBINCompilerTestTemplate!");
 
             MBINCompilerTestTemplate test = (MBINCompilerTestTemplate)data;
             Assert.AreEqual(test.TestBoolTrue, true);
@@ -11984,14 +11984,14 @@ namespace MBINCompilerTests
                     File.Delete(fullPath + ".test.exml");
 
                 decompileFile(fullPath, fullPath + ".exml");
-                /* compileFile(fullPath + ".exml", fullPath + ".test");
-                 decompileFile(fullPath + ".test", fullPath + ".test.exml");
+                compileFile(fullPath + ".exml", fullPath + ".test");
+                decompileFile(fullPath + ".test", fullPath + ".test.exml");
 
-                 string oldHash = HashFile(fullPath + ".exml");
-                 string newHash = HashFile(fullPath + ".test.exml");
+                string oldHash = HashFile(fullPath + ".exml");
+                string newHash = HashFile(fullPath + ".test.exml");
 
-                 // check exml files match
-                 Assert.AreEqual(newHash, oldHash);*/
+                // check exml files match
+                Assert.AreEqual(newHash, oldHash);
 
                 // delete new files
                 if (File.Exists(fullPath + ".exml"))

@@ -8,11 +8,11 @@ namespace MBINCompiler
     {
         static void ScanMBINs(string path, ref List<string> types)
         {
-            foreach (var file in Directory.GetFiles(path, "*.mbin"))
+            foreach (var file in Directory.GetFiles(path, "*.mbin*"))
             {
                 var mbin = new MBINFile(file);
                 mbin.Load();
-                types.Add(file + " : " + mbin.Header.GetXMLTemplateName());
+                types.Add($"{file} : {mbin.Header.GetXMLTemplateName()}");
             }
             foreach (var folder in Directory.GetDirectories(path))
                 ScanMBINs(folder, ref types);
@@ -33,19 +33,19 @@ namespace MBINCompiler
             var data = file.GetData();
             if (data == null)
             {
-                Console.WriteLine("Failed to deserialize template \"" + file.Header.GetXMLTemplateName() + "\", has the structure been mapped yet?");
+                Console.WriteLine($"Failed to deserialize template \"{file.Header.GetXMLTemplateName()}\", has the structure been mapped yet?");
                 return;
             }
 
             var xmlString = EXmlFile.WriteTemplate(data);
             if (string.IsNullOrEmpty(xmlString))
             {
-                Console.WriteLine("Error serializing template \"" + file.Header.GetXMLTemplateName() + "\" to XML!");
+                Console.WriteLine($"Error serializing template \"{file.Header.GetXMLTemplateName()}\" to XML!");
                 return;
             }
 
             File.WriteAllText(output, xmlString);
-            Console.WriteLine("XML data written to \"" + output + "\" successfully?");
+            Console.WriteLine("XML data written to \"{output}\" successfully?");
         }
 
         static void CompileFile(string input, string output)

@@ -405,7 +405,7 @@ namespace MBINCompiler.Models
         public void SerializeGenericList(BinaryWriter writer, IList list, long listHeaderPosition, ref List<Tuple<long, object>> additionalData)
         {
             long listPosition = writer.BaseStream.Position;
-            Debug.WriteLine($"SerializeList start 0x{listPosition.ToString("X")}, header 0x{listHeaderPosition}");
+            Debug.WriteLine($"SerializeList start 0x{listPosition:X}, header 0x{listHeaderPosition:X}");
 
             writer.BaseStream.Position = listHeaderPosition;
 
@@ -449,7 +449,7 @@ namespace MBINCompiler.Models
         public void SerializeList(BinaryWriter writer, IList list, long listHeaderPosition, ref List<Tuple<long, object>> additionalData)
         {
             long listPosition = writer.BaseStream.Position;
-            Debug.WriteLine($"SerializeList start 0x{listPosition.ToString("X")}, header 0x{listHeaderPosition}");
+            Debug.WriteLine($"SerializeList start 0x{listPosition:X}, header 0x{listHeaderPosition:X}");
 
             writer.BaseStream.Position = listHeaderPosition;
 
