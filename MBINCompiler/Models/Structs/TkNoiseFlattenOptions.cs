@@ -3,13 +3,13 @@
     public class TkNoiseFlattenOptions : NMSTemplate
     {
         public int Flattening;
-        public string[] FlatteningOptions()
+        public string[] FlatteningValues()
         {
             return new[] { "None", "Natural", "Artificial", "AddResource" };
         }
 
         public int WaterPlacement;
-        public string[] WaterPlacementOptions()
+        public string[] WaterPlacementValues()
         {
             return new[] { "None", "Underwater" };
         }

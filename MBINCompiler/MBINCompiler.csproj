@@ -68,6 +68,12 @@
     <Compile Include="Models\Structs\GcAudioWwiseEvents.cs" />
     <Compile Include="Models\Structs\GcBirdData.cs" />
     <Compile Include="Models\Structs\GcBootLogoData.cs" />
+    <Compile Include="Models\Structs\GcBuildingClusterPlacement.cs" />
+    <Compile Include="Models\Structs\GcBuildingDefinitionData.cs" />
+    <Compile Include="Models\Structs\GcBuildingDefinitionTable.cs" />
+    <Compile Include="Models\Structs\GcBuildingDensity.cs" />
+    <Compile Include="Models\Structs\GcBuildingFilename.cs" />
+    <Compile Include="Models\Structs\GcBuildingFilenameList.cs" />
     <Compile Include="Models\Structs\GcCostHealth.cs" />
     <Compile Include="Models\Structs\GcCostJourneyMilestone.cs" />
     <Compile Include="Models\Structs\GcCostJourneyStatLevel.cs" />

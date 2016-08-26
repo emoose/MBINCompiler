@@ -10446,6 +10446,9 @@ namespace MBINCompilerTests
             "METADATA/UI/BOOTLOGOPC.MBIN",
             "METADATA/UI/BOOTLOGOPS4.MBIN",
 
+            // GcBuildingDefinitionTable
+            "METADATA/SIMULATION/ENVIRONMENT/PLANETBUILDINGTABLE.MBIN",
+
             // GcCostTable
             "METADATA/REALITY/TABLES/COSTTABLE.MBIN",
 
