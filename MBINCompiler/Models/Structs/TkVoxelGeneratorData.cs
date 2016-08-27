@@ -23,10 +23,7 @@
         public float BuildingSmoothingRadius;
         public float BuildingSmoothingHeight;
         public float WaterFadeInDistance;
-
-        [NMS(Size = 0x50)]
-        public byte[] Regions;
-        // todo: change Regions byte array above to the below once primitive arrays/lists are done
-        // public TkVoxelGeneratorRegionData Regions;
+        
+        public TkVoxelGeneratorRegionData Regions;
     }
 }

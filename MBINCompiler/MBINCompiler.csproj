@@ -326,7 +326,7 @@
     <Compile Include="Models\Structs\GcInteractionType.cs" />
     <Compile Include="Models\Structs\GcInventoryType.cs" />
     <Compile Include="Models\Structs\GcItemPriceModifiers.cs" />
-    <Compile Include="Models\Structs\Unfinished\GcPlanetData_UNFINISHED.cs" />
+    <Compile Include="Models\Structs\Unfinished\GcPlanetData.cs" />
     <Compile Include="Models\Structs\GcPlanetWeatherColourData.cs" />
     <Compile Include="Models\Structs\GcProductData.cs" />
     <Compile Include="Models\Structs\GcProductTable.cs" />
