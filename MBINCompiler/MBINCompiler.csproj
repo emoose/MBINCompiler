@@ -43,6 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Half.cs" />
+    <Compile Include="HalfHelper.cs" />
     <Compile Include="IO.cs" />
     <Compile Include="MBINFile.cs" />
     <Compile Include="EXmlFile.cs" />
