@@ -285,6 +285,7 @@
     <Compile Include="Models\Structs\TkLanguagesAllowedData.cs" />
     <Compile Include="Models\Structs\TkMaterialData.cs" />
     <Compile Include="Models\Structs\TkNGuiEditorLayout.cs" />
+    <Compile Include="Models\Structs\TkNGuiEditorStyleData.cs" />
     <Compile Include="Models\Structs\TkNGuiLayoutList.cs" />
     <Compile Include="Models\Structs\TkNGuiLayoutListData.cs" />
     <Compile Include="Models\Structs\TkNGuiWindowLayoutData.cs" />

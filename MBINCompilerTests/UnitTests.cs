@@ -10909,6 +10909,9 @@ namespace MBINCompilerTests
             "METADATA/UI/LAYOUTS/EFFECTEDITLAYOUTDEFAULT.MBIN",
             "METADATA/UI/LAYOUTS/GUIEDITLAYOUTDEFAULT.MBIN",
 
+            // TkNGuiEditorStyleData
+            "UI/STYLES/EDITORDATA.MBIN",
+
             // TkNGuiLayoutList
             "METADATA/UI/LAYOUTLIST.MBIN",
 
