@@ -43,7 +43,7 @@ namespace MBINCompiler.Models
                 case "Byte[]":
                     int size = settings?.Size ?? 0;
                     MarshalAsAttribute legacySettings = fieldInfo.GetCustomAttribute<MarshalAsAttribute>();
-                    if(legacySettings != null)
+                    if (legacySettings != null)
                     {
                         size = legacySettings.SizeConst;
                     }
@@ -370,7 +370,7 @@ namespace MBINCompiler.Models
                     break;
             }
         }
-        
+
         public void AppendToWriter(BinaryWriter writer, ref List<Tuple<long, object>> additionalData)
         {
             long templatePosition = writer.BaseStream.Position;
@@ -466,7 +466,7 @@ namespace MBINCompiler.Models
                 AppendToWriter(writer, ref additionalData);
 
                 // now write values of lists etc
-                for(int i = 0; i < additionalData.Count; i++)
+                for (int i = 0; i < additionalData.Count; i++)
                 {
                     var data = additionalData[i];
                     //writer.BaseStream.Position = additionalDataOffset; // addtDataOffset gets updated by child templates
@@ -487,7 +487,7 @@ namespace MBINCompiler.Models
 
                         writer.BaseStream.Position = stringEndPos;
                     }
-                    else if (data.Item2.GetType().BaseType == typeof(NMSTemplate)) 
+                    else if (data.Item2.GetType().BaseType == typeof(NMSTemplate))
                     {
                         var pos = writer.BaseStream.Position;
                         var template = (NMSTemplate)data.Item2;
@@ -724,7 +724,7 @@ namespace MBINCompiler.Models
                         NMSTemplate element = DeserializeEXml(innerXmlData);
                         list.Add(element);
                     }
-                    foreach(EXmlProperty innerXmlData in xmlProperty.Elements.OfType<EXmlProperty>()) // primitive types
+                    foreach (EXmlProperty innerXmlData in xmlProperty.Elements.OfType<EXmlProperty>()) // primitive types
                     {
                         object element = DeserializeEXmlValue(template, elementType, field, innerXmlData, templateType, settings);
                         list.Add(element);
@@ -741,7 +741,7 @@ namespace MBINCompiler.Models
                             array.SetValue(element, i);
                         }
 
-                         return array;
+                        return array;
                     }
                     else if (field.FieldType.IsArray)
                     {
@@ -768,10 +768,10 @@ namespace MBINCompiler.Models
             Type templateType = template.GetType();
             var templateFields = templateType.GetFields().OrderBy(field => field.MetadataToken); // hack to get fields in order of declaration (todo: use something less hacky, this might break mono?)
 
-            foreach(var templateField in templateFields)
+            foreach (var templateField in templateFields)
             {
                 NMSAttribute settings = templateField.GetCustomAttribute<NMSAttribute>();
-                if(settings?.DefaultValue != null)
+                if (settings?.DefaultValue != null)
                     templateField.SetValue(template, settings.DefaultValue);
             }
 

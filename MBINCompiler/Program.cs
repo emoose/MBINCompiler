@@ -60,7 +60,7 @@ namespace MBINCompiler
                 return;
             }
 
-            if (data.GetType().Name == "TkGeometryData") // todo: change to typeof(TkGeometryData) when we've mapped that template
+            if (data.GetType() == typeof(Models.Structs.TkGeometryData))
                 output = Path.ChangeExtension(input, ".MBIN.PC");
 
             if (File.Exists(output))
@@ -70,7 +70,7 @@ namespace MBINCompiler
             {
                 file.Header = new Models.MBINHeader();
                 file.Header.SetDefaults();
-                if (data.GetType().Name == "TkGeometryData")
+                if (data.GetType() == typeof(Models.Structs.TkGeometryData))
                     file.Header.Magic = 0xDDDDDDDD; // only used by TkGeometryData / .MBIN.PC files, maybe used to signal the file is PC only?
 
                 file.SetData(data);
@@ -122,7 +122,7 @@ namespace MBINCompiler
             var input = args[0];
             var output = args.Length > 1 ? args[1] : String.Empty;
             var inputExtension = Path.GetExtension(input) ?? String.Empty;
-            if (inputExtension.Equals(".mbin", StringComparison.OrdinalIgnoreCase))
+            if (inputExtension.Equals(".mbin", StringComparison.OrdinalIgnoreCase) || input.EndsWith(".mbin.pc", StringComparison.OrdinalIgnoreCase))
                 DecompileFile(input, output);
             else if (inputExtension.Equals(".exml", StringComparison.OrdinalIgnoreCase)) 
                 CompileFile(input, output);
@@ -134,7 +134,9 @@ namespace MBINCompiler
                     using (var stream = File.OpenRead(input))
                     using (var reader = new BinaryReader(stream))
                     {
-                        isMBin = reader.ReadUInt32() == 0xCCCCCCCC && reader.ReadUInt32() == 2500; // CC CC CC CC C4 09 00 00
+                        var magic = reader.ReadUInt32();
+                        var unk4 = reader.ReadUInt32();
+                        isMBin = (magic == 0xCCCCCCCC || magic == 0xDDDDDDDD) && unk4 == 2500; // CC CC CC CC C4 09 00 00
                     }
                 }
 
