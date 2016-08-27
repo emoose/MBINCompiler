@@ -366,6 +366,14 @@
     <Compile Include="Models\Structs\TkLanguageFontTableEntry.cs" />
     <Compile Include="Models\Structs\TkLanguages.cs" />
     <Compile Include="Models\Structs\TkLanguagesAllowedData.cs" />
+    <Compile Include="Models\Structs\TkLSystemGlobalRestriction.cs" />
+    <Compile Include="Models\Structs\TkLSystemGlobalVariation.cs" />
+    <Compile Include="Models\Structs\TkLSystemInnerRule.cs" />
+    <Compile Include="Models\Structs\TkLSystemLocatorEntry.cs" />
+    <Compile Include="Models\Structs\TkLSystemRestrictionData.cs" />
+    <Compile Include="Models\Structs\TkLSystemRule.cs" />
+    <Compile Include="Models\Structs\TkLSystemRulesData.cs" />
+    <Compile Include="Models\Structs\TkLSystemRuleTemplate.cs" />
     <Compile Include="Models\Structs\TkMaterialFlags.cs" />
     <Compile Include="Models\Structs\TkMaterialUniform.cs" />
     <Compile Include="Models\Structs\TkMaterialSampler.cs" />
