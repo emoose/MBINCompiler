@@ -247,8 +247,11 @@ namespace MBINCompiler.Models
             return list;
         }
 
-        public void SerializeMBIN(BinaryWriter writer, Type fieldType, object fieldData, NMSAttribute settings, FieldInfo field, ref List<Tuple<long, object>> additionalData)
+        public void SerializeValue(BinaryWriter writer, Type fieldType, object fieldData, NMSAttribute settings, FieldInfo field, ref List<Tuple<long, object>> additionalData)
         {
+            if (CustomSerialize(writer, fieldType, fieldData, settings, field, ref additionalData))
+                return;
+
             switch (fieldType.Name)
             {
                 case "String":
@@ -270,6 +273,9 @@ namespace MBINCompiler.Models
                         Array.Resize(ref bytes, size);
                         writer.Write(bytes);
                     }
+                    break;
+                case "Byte":
+                    writer.Write((Byte)fieldData);
                     break;
                 case "Single":
                     writer.Align(4, 0);
@@ -356,7 +362,7 @@ namespace MBINCompiler.Models
                         Array array = (Array)fieldData;
                         foreach (var obj in array)
                         {
-                            SerializeMBIN(writer, obj.GetType(), obj, settings, field, ref additionalData);
+                            SerializeValue(writer, obj.GetType(), obj, settings, field, ref additionalData);
                         }
                     }
                     else
@@ -384,7 +390,7 @@ namespace MBINCompiler.Models
                 var fieldAddr = writer.BaseStream.Position - templatePosition;
                 var fieldData = field.GetValue(this);
                 NMSAttribute settings = field.GetCustomAttribute<NMSAttribute>();
-                SerializeMBIN(writer, field.FieldType, fieldData, settings, field, ref additionalData);
+                SerializeValue(writer, field.FieldType, fieldData, settings, field, ref additionalData);
             }
         }
 
@@ -451,7 +457,7 @@ namespace MBINCompiler.Models
 
             foreach (var entry in list)
             {
-                SerializeMBIN(writer, entry.GetType(), entry, null, null, ref additionalData);
+                SerializeValue(writer, entry.GetType(), entry, null, null, ref additionalData);
             }
         }
 
@@ -797,6 +803,11 @@ namespace MBINCompiler.Models
         public virtual object CustomDeserialize(BinaryReader reader, Type field, NMSAttribute settings, long templatePosition, FieldInfo fieldInfo)
         {
             return null;
+        }
+
+        public virtual bool CustomSerialize(BinaryWriter writer, Type field, object fieldData, NMSAttribute settings, FieldInfo fieldInfo, ref List<Tuple<long, object>> additionalData)
+        {
+            return false;
         }
     }
 }

@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
@@ -31,6 +32,74 @@ namespace MBINCompiler.Models.Structs
         public List<int> IndexBuffer;
         public List<float> VertexStream;
         public List<float> SmallVertexStream;
+
+        public override bool CustomSerialize(BinaryWriter writer, Type field, object fieldData, NMSAttribute settings, FieldInfo fieldInfo, ref List<Tuple<long, object>> additionalData)
+        {
+            if (field == null || fieldInfo == null)
+                return false;
+
+            var fieldName = fieldInfo.Name;
+            switch(fieldName)
+            {
+                case nameof(IndexBuffer):
+                    writer.Align(8, 0);
+
+                    // write empty list header
+                    long listPos = writer.BaseStream.Position;
+                    writer.Write((Int64)0); // listPosition
+                    writer.Write((Int32)0); // listCount
+                    writer.Write((UInt32)0xAAAAAA01);
+
+                    IList data = (IList)fieldData;
+
+                    if(Indices16Bit != 1) // if 32bit indices, we can just pass it directly
+                        additionalData.Add(new Tuple<long, object>(listPos, data)); 
+                    else
+                    {
+                        // otherwise we have to create 32bit indices from the 16bit ones
+                        var list32Bit = new List<uint>();
+                        for(int i = 0; i < data.Count; i += 2)
+                        {
+                            uint val32Bit = (uint)((int)data[i+1] << 16 | (int)data[i]);
+                            list32Bit.Add(val32Bit);
+                        }
+                        additionalData.Add(new Tuple<long, object>(listPos, list32Bit));
+                    }
+
+                    return true;
+
+                case nameof(VertexStream):
+                case nameof(SmallVertexStream):
+                    writer.Align(8, 0);
+
+                    // write empty list header
+                    long listPos2 = writer.BaseStream.Position;
+                    writer.Write((Int64)0); // listPosition
+                    writer.Write((Int32)0); // listCount
+                    writer.Write((UInt32)0xAAAAAA01);
+
+                    IList vertexData = (IList)fieldData;
+
+                    // list size field for VertexStream/SmallVertexSteam is the number of bytes, so we'll have to use a List<byte> in the additionalData
+                    byte[] streamData = null;
+                    using (var ms = new MemoryStream())
+                    using (var writer2 = new BinaryWriter(ms))
+                    {
+                        foreach (var vertex in vertexData)
+                        {
+                            writer2.Write(Shared.ToHalf((float)vertex)); // todo: why doesn't this get the original value?
+                        }
+                        streamData = ms.ToArray();
+                    }
+
+                    var listBytes = new List<byte>(streamData);
+                    additionalData.Add(new Tuple<long, object>(listPos2, listBytes));
+
+                    return true;
+            }
+
+            return false;
+        }
 
         public override object CustomDeserialize(BinaryReader reader, Type field, NMSAttribute settings, long templatePosition, FieldInfo fieldInfo)
         {
