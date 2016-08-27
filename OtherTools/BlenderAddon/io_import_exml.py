@@ -53,40 +53,51 @@ class ImportEXML(Operator, ImportHelper):
         normals = []
         edges = []
         faces = []
-        try:
-            nbVertices = int(getProperty(xmlRoot, 'VertexCount').get('value'))
-            vertexData = getFloatList(getProperty(xmlRoot, 'VertexStream'))
-            
-            print ("Verts : "+str(nbVertices)+"\n")
-            
-            for i in range(0, nbVertices):
-                vert = (vertexData[i*18], vertexData[i*18+2], vertexData[i*18+1])
-                norm = [vertexData[i*18+4], vertexData[i*18+6], vertexData[i*18+5]]
-                vertices.append(vert)
-                normals.append(norm)
-            
-            indexData = getIntList(getProperty(xmlRoot, 'IndexBuffer'))
-            nbFaces = int(len(indexData)/3)
-            
-            print ("Faces : "+str(nbFaces))
-            
-            for i in range(0, nbFaces):
-                face = (indexData[i*3], indexData[i*3+1], indexData[i*3+2])
-                faces.append(face)
-                
-        finally:
-            mesh = bpy.data.meshes.new("mesh001")
-            mesh.from_pydata(vertices, edges, faces)
-            mesh.update()
-            
-            normals2 = []
-            for l in mesh.loops:
-                normals2.append(normals[l.vertex_index])
-            mesh.normals_split_custom_set(normals2)
-            
-            obj = bpy.data.objects.new(name="obj001", object_data=mesh)
-            obj.location = (0, 0, 0)
-            bpy.context.scene.objects.link(obj)
+        
+        # Extract data from vertex stream
+        nbVertices = int(getProperty(xmlRoot, 'VertexCount').get('value'))
+        vertexData = getFloatList(getProperty(xmlRoot, 'VertexStream'))
+        stride = int(int(getProperty(getProperty(xmlRoot, 'VertexLayout'), 'Stride').get('value'))/2);
+        
+        
+        for i in range(0, nbVertices):
+            vert = (vertexData[i*stride], vertexData[i*stride+2], vertexData[i*stride+1])
+            norm = [vertexData[i*stride+4], vertexData[i*stride+6], vertexData[i*stride+5]]
+            vertices.append(vert)
+            normals.append(norm)
+        
+        
+        # Extract Faces
+        indexData = getIntList(getProperty(xmlRoot, 'IndexBuffer'))
+        nbFaces = int(len(indexData)/3)
+        
+        for i in range(0, nbFaces):
+            face = (indexData[i*3], indexData[i*3+1], indexData[i*3+2])
+            faces.append(face)
+        
+        # Create mesh
+        mesh = bpy.data.meshes.new("mesh001")
+        mesh.from_pydata(vertices, edges, faces)
+        mesh.update()
+        
+        # Set normals to the mesh
+        normals2 = []
+        for l in mesh.loops:
+            normals2.append(normals[l.vertex_index])
+        mesh.normals_split_custom_set(normals2)
+        
+        # Create object
+        obj = bpy.data.objects.new(name="obj001", object_data=mesh)
+        obj.location = (0, 0, 0)
+        bpy.context.scene.objects.link(obj)
+        
+        # Define vertex groups
+        grpStart = getIntList(getProperty(xmlRoot, 'MeshVertRStart'))
+        grpEnd = getIntList(getProperty(xmlRoot, 'MeshVertREnd'))
+        
+        for i in range(0, len(grpStart)):
+            grp = obj.vertex_groups.new("group_"+str(i))
+            grp.add(range(grpStart[i], grpEnd[i]+1), 1.0, 'REPLACE')
         
         return {'FINISHED'}
 
