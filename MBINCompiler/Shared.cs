@@ -94,6 +94,20 @@ namespace MBINCompiler
             return BitConverter.ToSingle(buff, 0);
         }
 
+        public static ushort HalfLittleToUInt16(float value)
+        {
+            byte[] buff = BitConverter.GetBytes(value);
+            int i = BitConverter.ToInt32(buff, 0);
+            int sign = i >> 31;
+            int exp = (i >> 23) & 0xFF;
+            int mant = (i >> 13) & 0x7FF;
+
+            exp = exp - (127 - 15);
+
+            UInt16 ret = (ushort)((sign << 15) | (exp << 10) | mant);
+            return ret;
+        }
+
         public static float ToFloat(UInt16 u)
         {
             // UInt16 u = binaryReader.ReadUInt16();

@@ -87,7 +87,7 @@ namespace MBINCompiler.Models.Structs
                     {
                         foreach (var vertex in vertexData)
                         {
-                            writer2.Write(Shared.ToHalf((float)vertex)); // todo: why doesn't this get the original value?
+                            writer2.Write(Shared.HalfLittleToUInt16((float)vertex));//Shared.ToHalf((float)vertex)); // todo: why doesn't this get the original value?
                         }
                         streamData = ms.ToArray();
                     }
