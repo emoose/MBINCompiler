@@ -170,8 +170,8 @@ namespace MBINCompiler.Models
             long templateNamesOffset = reader.ReadInt64();
             int numTemplates = reader.ReadInt32();
             uint listMagic = reader.ReadUInt32();
-            if (listMagic != 0xAAAAAA01 && listMagic != 1)
-                throw new Exception($"Invalid generic list read, magic 0x{listMagic:X} expected 0xAAAAAA01 / 0x1");
+            if ((listMagic & 0xFF) != 1)
+                throw new Exception($"Invalid generic list read, magic {listMagic:X8} expected xxxxxx01");
 
             long listEndPosition = reader.BaseStream.Position;
 
@@ -218,8 +218,8 @@ namespace MBINCompiler.Models
             long listStartOffset = reader.ReadInt64();
             int numEntries = reader.ReadInt32();
             uint listMagic = reader.ReadUInt32();
-            if (listMagic != 0xAAAAAA01 && listMagic != 1)
-                throw new Exception($"Invalid list read, magic 0x{listMagic:X} expected 0xAAAAAA01 / 0x1");
+            if ((listMagic & 0xFF) != 1)
+                throw new Exception($"Invalid list read, magic {listMagic:X8} expected xxxxxx01");
 
             long listEndPosition = reader.BaseStream.Position;
 

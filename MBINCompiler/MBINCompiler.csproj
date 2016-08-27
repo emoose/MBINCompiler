@@ -266,6 +266,9 @@
     <Compile Include="Models\Structs\NMSString0x20.cs" />
     <Compile Include="Models\Structs\TkActionButtonLookup.cs" />
     <Compile Include="Models\Structs\TkActionButtonMap.cs" />
+    <Compile Include="Models\Structs\TkAnimMetadata.cs" />
+    <Compile Include="Models\Structs\TkAnimNodeData.cs" />
+    <Compile Include="Models\Structs\TkAnimNodeFrameData.cs" />
     <Compile Include="Models\Structs\TkButtonImageLookup.cs" />
     <Compile Include="Models\Structs\TkButtonPathMapping.cs" />
     <Compile Include="Models\Structs\TkControllerButtonLookup.cs" />
