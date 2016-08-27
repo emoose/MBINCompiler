@@ -288,6 +288,7 @@
     <Compile Include="Models\Structs\TkLanguages.cs" />
     <Compile Include="Models\Structs\TkLanguagesAllowedData.cs" />
     <Compile Include="Models\Structs\TkMaterialData.cs" />
+    <Compile Include="Models\Structs\TkModelDescriptorList.cs" />
     <Compile Include="Models\Structs\TkNGuiEditorLayout.cs" />
     <Compile Include="Models\Structs\TkNGuiEditorStyleData.cs" />
     <Compile Include="Models\Structs\TkNGuiLayoutList.cs" />
@@ -321,6 +322,8 @@
     <Compile Include="Models\Structs\TkNGuiGraphicStyleData.cs" />
     <Compile Include="Models\Structs\TkNGuiTextStyle.cs" />
     <Compile Include="Models\Structs\TkNGuiTextStyleData.cs" />
+    <Compile Include="Models\Structs\TkResourceDescriptorData.cs" />
+    <Compile Include="Models\Structs\TkResourceDescriptorList.cs" />
     <Compile Include="Models\Structs\TkSpeedLineData.cs" />
     <Compile Include="Models\Structs\TkTrailData.cs" />
     <Compile Include="Models\Structs\TkTransformData.cs" />
