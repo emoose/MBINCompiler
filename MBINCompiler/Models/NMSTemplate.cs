@@ -159,6 +159,8 @@ namespace MBINCompiler.Models
                 field.SetValue(obj, DeserializeValue(reader, field.FieldType, settings, templatePosition, field));
             }
 
+            Debug.WriteLine($"{templateName} end position: 0x{reader.BaseStream.Position:X}");
+
             return obj;
         }
 
