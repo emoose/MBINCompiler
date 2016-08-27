@@ -76,6 +76,7 @@
     <Compile Include="Models\Structs\GcCreatureRoleDataTable.cs" />
     <Compile Include="Models\Structs\GcCreatureSpawnData.cs" />
     <Compile Include="Models\Structs\GcEnvironmentSpawnData.cs" />
+    <Compile Include="Models\Structs\GcExternalObjectList.cs" />
     <Compile Include="Models\Structs\GcExternalObjectListOptions.cs" />
     <Compile Include="Models\Structs\GcGalaxyStarTypes.cs" />
     <Compile Include="Models\Structs\GcHeavyAirColourData.cs" />
