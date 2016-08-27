@@ -30,8 +30,12 @@ namespace MBINCompiler.Models
             return Activator.CreateInstance(type) as NMSTemplate;
         }
 
-        public static object DeserializeValue(BinaryReader reader, Type field, NMSAttribute settings, long templatePosition, FieldInfo fieldInfo)
+        public static object DeserializeValue(BinaryReader reader, Type field, NMSAttribute settings, long templatePosition, FieldInfo fieldInfo, NMSTemplate parent)
         {
+            var template = parent.CustomDeserialize(reader, field, settings, templatePosition, fieldInfo);
+            if (template != null)
+                return template;
+
             var fieldType = field.Name;
             switch (fieldType)
             {
@@ -78,13 +82,13 @@ namespace MBINCompiler.Models
                     {
                         Type itemType = field.GetGenericArguments()[0];
                         if (itemType == typeof(NMSTemplate))
-                            return DeserializeGenericList(reader, templatePosition);
+                            return DeserializeGenericList(reader, templatePosition, parent);
                         else
                         {
                             // todo: get rid of this nastiness
                             MethodInfo method = typeof(NMSTemplate).GetMethod("DeserializeList", BindingFlags.Static | BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic)
                                                          .MakeGenericMethod(new Type[] { itemType });
-                            var list = method.Invoke(null, new object[] { reader, fieldInfo, settings, templatePosition });
+                            var list = method.Invoke(null, new object[] { reader, fieldInfo, settings, templatePosition, parent });
                             return list;
                         }
                     }
@@ -115,7 +119,7 @@ namespace MBINCompiler.Models
                         Array array = Array.CreateInstance(arrayType, settings.Size);
                         for (int i = 0; i < settings.Size; ++i)
                         {
-                            array.SetValue(DeserializeValue(reader, field.GetElementType(), settings, templatePosition, fieldInfo), i);
+                            array.SetValue(DeserializeValue(reader, field.GetElementType(), settings, templatePosition, fieldInfo, parent), i);
                         }
                         return array;
                     }
@@ -156,7 +160,7 @@ namespace MBINCompiler.Models
             foreach (var field in fields)
             {
                 NMSAttribute settings = field.GetCustomAttribute<NMSAttribute>();
-                field.SetValue(obj, DeserializeValue(reader, field.FieldType, settings, templatePosition, field));
+                field.SetValue(obj, DeserializeValue(reader, field.FieldType, settings, templatePosition, field, obj));
             }
 
             Debug.WriteLine($"{templateName} end position: 0x{reader.BaseStream.Position:X}");
@@ -164,7 +168,7 @@ namespace MBINCompiler.Models
             return obj;
         }
 
-        public static List<NMSTemplate> DeserializeGenericList(BinaryReader reader, long templateStartOffset)
+        public static List<NMSTemplate> DeserializeGenericList(BinaryReader reader, long templateStartOffset, NMSTemplate parent)
         {
             long listPosition = reader.BaseStream.Position;
             Debug.WriteLine($"DeserializeGenericList start 0x{listPosition:X}");
@@ -212,7 +216,7 @@ namespace MBINCompiler.Models
             return list;
         }
 
-        public static List<T> DeserializeList<T>(BinaryReader reader, FieldInfo field, NMSAttribute settings, long templateStartOffset)
+        public static List<T> DeserializeList<T>(BinaryReader reader, FieldInfo field, NMSAttribute settings, long templateStartOffset, NMSTemplate parent)
         {
             long listPosition = reader.BaseStream.Position;
             Debug.WriteLine($"DeserializeList start 0x{listPosition:X}");
@@ -230,7 +234,7 @@ namespace MBINCompiler.Models
             for (int i = 0; i < numEntries; i++)
             {
                 // todo: get rid of DeserializeGenericList? this seems like it would work fine with List<NMSTemplate>
-                var template = DeserializeValue(reader, field.FieldType.GetGenericArguments()[0], settings, templateStartOffset, field);
+                var template = DeserializeValue(reader, field.FieldType.GetGenericArguments()[0], settings, templateStartOffset, field, parent);
                 if (template == null)
                     throw new Exception($"Failed to deserialize type {typeof(T).Name}!");
 
@@ -788,6 +792,11 @@ namespace MBINCompiler.Models
             }
 
             return template;
+        }
+
+        public virtual object CustomDeserialize(BinaryReader reader, Type field, NMSAttribute settings, long templatePosition, FieldInfo fieldInfo)
+        {
+            return null;
         }
     }
 }
