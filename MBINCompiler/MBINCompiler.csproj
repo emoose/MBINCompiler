@@ -66,6 +66,7 @@
     <Compile Include="Models\Structs\GcAtlasGlobals.cs" />
     <Compile Include="Models\Structs\GcAudioPulseDemo.cs" />
     <Compile Include="Models\Structs\GcAudioWwiseEvents.cs" />
+    <Compile Include="Models\Structs\GcBiomeFileList.cs" />
     <Compile Include="Models\Structs\GcBiomeType.cs" />
     <Compile Include="Models\Structs\GcBuildingClassification.cs" />
     <Compile Include="Models\Structs\GcBuildingDensityLevels.cs" />
