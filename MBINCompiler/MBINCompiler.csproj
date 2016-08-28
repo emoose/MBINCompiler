@@ -49,6 +49,9 @@
     <Compile Include="Models\EXmlBase.cs" />
     <Compile Include="Models\EXmlData.cs" />
     <Compile Include="Models\EXmlProperty.cs" />
+    <Compile Include="Models\GcGalacticAddressData.cs" />
+    <Compile Include="Models\GcPlayerMissionProgress.cs" />
+    <Compile Include="Models\GcWordKnowledge.cs" />
     <Compile Include="Models\MBINHeader.cs" />
     <Compile Include="Models\NMSAttribute.cs" />
     <Compile Include="Models\NMSTemplate.cs" />
@@ -78,11 +81,14 @@
     <Compile Include="Models\Structs\GcCreatureRoleData.cs" />
     <Compile Include="Models\Structs\GcCreatureRoleDataTable.cs" />
     <Compile Include="Models\Structs\GcCreatureSpawnData.cs" />
+    <Compile Include="Models\Structs\GcDefaultSaveData.cs" />
     <Compile Include="Models\Structs\GcEnvironmentSpawnData.cs" />
     <Compile Include="Models\Structs\GcExternalObjectList.cs" />
     <Compile Include="Models\Structs\GcExternalObjectListOptions.cs" />
     <Compile Include="Models\Structs\GcGalaxyStarTypes.cs" />
     <Compile Include="Models\Structs\GcHeavyAirColourData.cs" />
+    <Compile Include="Models\Structs\GcInteractionBuffer.cs" />
+    <Compile Include="Models\Structs\GcInteractionData.cs" />
     <Compile Include="Models\Structs\GcMiningSubstanceData.cs" />
     <Compile Include="Models\Structs\GcObjectSpawnData.cs" />
     <Compile Include="Models\Structs\GcPlanetBuildingData.cs" />
@@ -96,6 +102,12 @@
     <Compile Include="Models\Structs\GcPlanetSize.cs" />
     <Compile Include="Models\Structs\GcPlanetWaterData.cs" />
     <Compile Include="Models\Structs\GcPlanetWeatherData.cs" />
+    <Compile Include="Models\Structs\GcPlayerStat.cs" />
+    <Compile Include="Models\Structs\GcPlayerStateData.cs" />
+    <Compile Include="Models\Structs\GcPlayerStatsGroup.cs" />
+    <Compile Include="Models\Structs\GcSavedEntitlement.cs" />
+    <Compile Include="Models\Structs\GcSavedInteractionRaceData.cs" />
+    <Compile Include="Models\Structs\GcScanEventSave.cs" />
     <Compile Include="Models\Structs\GcSelectableObjectSpawnData.cs" />
     <Compile Include="Models\Structs\GcSelectableObjectSpawnList.cs" />
     <Compile Include="Models\Structs\GcTerrainControls.cs" />
@@ -257,6 +269,7 @@
     <Compile Include="Models\Structs\GcRewardTableEntry.cs" />
     <Compile Include="Models\Structs\GcRewardTable.cs" />
     <Compile Include="Models\Structs\GcTexturePrefetchData.cs" />
+    <Compile Include="Models\Structs\GcUniverseAddressData.cs" />
     <Compile Include="Models\Structs\GcUserSettingsData.cs" />
     <Compile Include="Models\Structs\GcWaterGlobals.cs" />
     <Compile Include="Models\Structs\GcWeatherOptions.cs" />
