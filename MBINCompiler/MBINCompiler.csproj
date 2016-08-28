@@ -55,6 +55,7 @@
     <Compile Include="Models\Structs\GcPlayerMissionProgress.cs" />
     <Compile Include="Models\Structs\GcScanEventData.cs" />
     <Compile Include="Models\Structs\GcScanEventTable.cs" />
+    <Compile Include="Models\Structs\GcTestMetadata.cs" />
     <Compile Include="Models\Structs\GcWordKnowledge.cs" />
     <Compile Include="Models\MBINHeader.cs" />
     <Compile Include="Models\NMSAttribute.cs" />

@@ -1,0 +1,97 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace MBINCompiler.Models.Structs
+{
+    public class GcTestMetadata : NMSTemplate
+    {
+        public bool TestBool;
+        public int TestInt;
+        public short TestInt16;
+        public ushort TestUInt16;
+
+        [NMS(Size = 4, Ignore = true)]
+        public byte[] PaddingC;
+
+        public long TestInt64;
+        public ulong TestUInt64;
+        public long TestInt64_2;
+        public ulong TestUInt64_2;
+
+        [NMS(Size = 0x10, Ignore = true)]
+        public byte[] Padding30;
+
+        public Vector4f TestVector; // actually Vector3, but it's 0x10 bytes so we read it as Vector4
+        public Vector2f TestVector2;
+        [NMS(Size = 8, Ignore = true)]
+        public byte[] Padding58;
+
+        public Vector4f TestVector4;
+        public Colour TestColour;
+        public float TestFloat;
+        [NMS(Size = 4, Ignore = true)]
+        public byte[] Padding84;
+
+        public GcSeed TestSeed;
+
+        [NMS(Size = 0x80)]
+        public string TestModelFilename;
+        [NMS(Size = 0x80)]
+        public string TestTextureFilename;
+        [NMS(Size = 0x20)]
+        public string TestString;
+        [NMS(Size = 0x80)]
+        public string TestString128;
+        [NMS(Size = 0x100)]
+        public string TestString256;
+        [NMS(Size = 0x200)]
+        public string TestString512;
+
+        [NMS(Size = 0x10)]
+        public string TestID; // most likely they use a special ID field which maps this to the object using this ID automatically
+        [NMS(Size = 0x20)]
+        public string TestLocID; // ditto
+
+        [NMS(Size = 8, Ignore = true)]
+        public byte[] Padding568;
+
+        public Vector4f DocOptionalVector;
+        [NMS(Size = 0x40)]
+        public string DocRenamedString64;
+        [NMS(Size = 0x20)]
+        public string DocOptionalRenamed;
+        public int DocOptionalEnum;
+        public string[] DocOptionalEnumValues()
+        {
+            return new[] { "SomeValue1", "SomeValue2", "SomeValue3", "SomeValue4" };
+        }
+        [NMS(Size = 4, Ignore = true)]
+        public byte[] Padding5E4;
+
+        public VariableSizeString TestDynamicString;
+        public int TestEnum;
+        public string[] TestEnumValues()
+        {
+            return new[] { "Default", "Option1", "Option2", "Option3" };
+        }
+
+        [NMS(Size = 0xA)]
+        public float[] TestStaticArray;
+
+        public List<float> TestDynamicArray;
+
+        [NMS(Size = 0x4, EnumValue = new[] { "Default", "Option1", "Option2", "Option3" })]
+        public float[] TestEnumArray;
+
+        [NMS(Size = 0x16, EnumValue = new[] // EnumValue taken from GcBuildingClassification.BuildingClass
+            {
+                "None", "TerrainResource", "Shelter", "Abandoned", "Terminal", "Shop", "Outpost", "Waypoint",
+                "Beacon", "RadioTower", "Observatory", "Depot", "Factory", "Harvester", "Plaque", "Monolith",
+                "Portal", "Ruin", "Debris", "DamagedMachine", "DistressSignal", "LandingPad"
+            })]
+        public float[] TestExternalEnumArray; // external probably means it gets enum values from outside the GcTestMetadata source file
+    }
+}
