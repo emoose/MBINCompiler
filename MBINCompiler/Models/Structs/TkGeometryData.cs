@@ -87,7 +87,9 @@ namespace MBINCompiler.Models.Structs
                     {
                         foreach (var vertex in vertexData)
                         {
-                            writer2.Write(Shared.HalfLittleToUInt16((float)vertex));//Shared.ToHalf((float)vertex)); // todo: why doesn't this get the original value?
+                            var floatVertex = (float)vertex;
+                            var halfVertex = (Half)floatVertex;
+                            writer2.Write(halfVertex.value);
                         }
                         streamData = ms.ToArray();
                     }
@@ -156,7 +158,8 @@ namespace MBINCompiler.Models.Structs
                     List<float> vertices = new List<float>();
                     while (reader.BaseStream.Position < (listPosition + listStartOffset + numEntries))
                     {
-                        vertices.Add(reader.ReadHalfLittle());
+                        ushort vertex = reader.ReadUInt16();
+                        vertices.Add((float)Half.ToHalf(vertex));
                     }
 
                     reader.BaseStream.Position = listEndPosition;
