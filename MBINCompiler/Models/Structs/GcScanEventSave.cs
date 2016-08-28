@@ -1,21 +1,23 @@
 ﻿namespace MBINCompiler.Models.Structs
 {
-    public class GcScanEventSave : NMSTemplate
+    public class GcScanEventSave : NMSTemplate // 0x50 bytes
     {
         public int Table;
+        [NMS(Size = 4, Ignore = true)]
+        public byte[] Padding4;
 
+        [NMS(Size = 0x10)]
         public string Event;
 
-        public string GalacticAddress;
+        public ulong GalacticAddress;
 
-        public BuildingSeed BuildingSeed;
+        public GcSeed BuildingSeed;
 
-        public GcBuildingClassification BuildingClass; // Not sure about this one
-    }
+        public Vector4f BuildingLocation;
 
-    public class BuildingSeed : NMSTemplate
-    {
-        public bool Use_Seed_Value;
-        public string Seed;
+        public GcBuildingClassification BuildingClass;
+
+        [NMS(Size = 0xC, Ignore = true)]
+        public byte[] Padding44;
     }
 }

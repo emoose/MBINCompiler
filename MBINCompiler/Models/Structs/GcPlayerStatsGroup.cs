@@ -2,11 +2,12 @@
 
 namespace MBINCompiler.Models.Structs
 {
-    public class GcPlayerStatsGroup : NMSTemplate
+    public class GcPlayerStatsGroup : NMSTemplate // 0x28 bytes
     {
+        [NMS(Size = 0x10)]
         public string GroupId;
 
-        public string Address;
+        public ulong Address;
 
         public List<GcPlayerStat> Stats;
     }

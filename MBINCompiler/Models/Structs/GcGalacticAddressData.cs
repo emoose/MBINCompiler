@@ -1,6 +1,6 @@
 ﻿namespace MBINCompiler.Models.Structs
 {
-    public class GcGalacticAddressData : NMSTemplate
+    public class GcGalacticAddressData : NMSTemplate // 0x14 bytes
     {
         public int VoxelX;
 

@@ -163,6 +163,8 @@ namespace MBINCompiler.Models
                 field.SetValue(obj, DeserializeValue(reader, field.FieldType, settings, templatePosition, field, obj));
             }
 
+            obj.FinishDeserialize();
+
             Debug.WriteLine($"{templateName} end position: 0x{reader.BaseStream.Position:X}");
 
             return obj;
@@ -237,7 +239,10 @@ namespace MBINCompiler.Models
                 var template = DeserializeValue(reader, field.FieldType.GetGenericArguments()[0], settings, templateStartOffset, field, parent);
                 if (template == null)
                     throw new Exception($"Failed to deserialize type {typeof(T).Name}!");
-
+                if(template.GetType().BaseType == typeof(NMSTemplate))
+                {
+                    ((NMSTemplate)template).FinishDeserialize();
+                }
                 list.Add((T)template);
             }
 
@@ -798,6 +803,32 @@ namespace MBINCompiler.Models
             }
 
             return template;
+        }
+
+        // func thats run after template is deserialized, can be used for checks etc
+        public void FinishDeserialize()
+        {
+#if DEBUG
+            // check enums are valid
+            var fields = GetType().GetFields().OrderBy(field => field.MetadataToken); // hack to get fields in order of declaration (todo: use something less hacky, this might break mono?)
+            foreach (var field in fields)
+            {
+                var fieldType = field.FieldType.Name;
+                if (fieldType != "Int32")
+                    continue;
+
+                var valuesMethod = GetType().GetMethod(field.Name + "Values"); // if we have an "xxxValues()" method in the struct, use that to get the value name
+                if (valuesMethod == null)
+                    continue;
+
+                int value = (int)field.GetValue(this);
+                if (value == -1)
+                    continue;
+
+                string[] values = (string[])valuesMethod.Invoke(this, null);
+                string valueStr = values[(int)value];
+            }
+#endif
         }
 
         public virtual object CustomDeserialize(BinaryReader reader, Type field, NMSAttribute settings, long templatePosition, FieldInfo fieldInfo)

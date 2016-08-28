@@ -13875,6 +13875,16 @@ namespace MBINCompilerTests
 
             // GcDebugOptions
             "GCDEBUGOPTIONS.GLOBAL.MBIN",
+            
+            // GcDefaultSaveData
+            "METADATA/GAMESTATE/DEFAULTSAVEDATA.MBIN",
+            "SCENES/SAVES/ALLMISSIONSDONE.MBIN",
+            "SCENES/SAVES/BEGINFINALJOURNEY.MBIN",
+            "SCENES/SAVES/BUILTHYPERDRIVE.MBIN",
+            "SCENES/SAVES/FACTORYBIT.MBIN",
+            "SCENES/SAVES/LEARNEDHYPERDRIVE.MBIN",
+            "SCENES/SAVES/REPAIREDSHIP.MBIN",
+            // uses older structures? "SCENES/SAVES/JUSTABOUTTOGETBLACKHOLE.MBIN",
 
             // GcEntitlementRewardsTable
             "METADATA/ENTITLEMENTS/GCENTITLEMENTREWARDTABLE.MBIN",

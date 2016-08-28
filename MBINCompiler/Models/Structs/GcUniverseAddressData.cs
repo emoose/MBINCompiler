@@ -1,6 +1,6 @@
 ﻿namespace MBINCompiler.Models.Structs
 {
-    public class GcUniverseAddressData : NMSTemplate
+    public class GcUniverseAddressData : NMSTemplate // 0x18 bytes
     {
         public int RealityIndex;
 
