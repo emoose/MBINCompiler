@@ -53,6 +53,8 @@
     <Compile Include="Models\EXmlProperty.cs" />
     <Compile Include="Models\Structs\GcGalacticAddressData.cs" />
     <Compile Include="Models\Structs\GcPlayerMissionProgress.cs" />
+    <Compile Include="Models\Structs\GcScanEventData.cs" />
+    <Compile Include="Models\Structs\GcScanEventTable.cs" />
     <Compile Include="Models\Structs\GcWordKnowledge.cs" />
     <Compile Include="Models\MBINHeader.cs" />
     <Compile Include="Models\NMSAttribute.cs" />
@@ -103,7 +105,7 @@
     <Compile Include="Models\Structs\GcCreatureSpawnComponentData.cs" />
     <Compile Include="Models\Structs\GcCreatureSpawnData.cs" />
     <Compile Include="Models\Structs\GcCustomInventoryComponentData.cs" />
-	<Compile Include="Models\Structs\GcDefaultSaveData.cs" />
+    <Compile Include="Models\Structs\GcDefaultSaveData.cs" />
     <Compile Include="Models\Structs\GcDestroyAction.cs" />
     <Compile Include="Models\Structs\GcDestructableComponentData.cs" />
     <Compile Include="Models\Structs\GcDiscoveryTypes.cs" />

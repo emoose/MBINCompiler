@@ -1,4 +1,5 @@
-﻿using System.Runtime.InteropServices;
+﻿// Source: https://sourceforge.net/projects/csharp-half/
+using System.Runtime.InteropServices;
 
 namespace System
 {
