@@ -49,9 +49,9 @@
     <Compile Include="Models\EXmlBase.cs" />
     <Compile Include="Models\EXmlData.cs" />
     <Compile Include="Models\EXmlProperty.cs" />
-    <Compile Include="Models\GcGalacticAddressData.cs" />
-    <Compile Include="Models\GcPlayerMissionProgress.cs" />
-    <Compile Include="Models\GcWordKnowledge.cs" />
+    <Compile Include="Models\Structs\GcGalacticAddressData.cs" />
+    <Compile Include="Models\Structs\GcPlayerMissionProgress.cs" />
+    <Compile Include="Models\Structs\GcWordKnowledge.cs" />
     <Compile Include="Models\MBINHeader.cs" />
     <Compile Include="Models\NMSAttribute.cs" />
     <Compile Include="Models\NMSTemplate.cs" />

@@ -1,4 +1,4 @@
-﻿namespace MBINCompiler.Models
+﻿namespace MBINCompiler.Models.Structs
 {
     public class GcWordKnowledge : NMSTemplate
     {
