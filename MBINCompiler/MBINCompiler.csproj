@@ -63,6 +63,7 @@
     <Compile Include="Models\Structs\GcAISpaceshipManagerData.cs" />
     <Compile Include="Models\Structs\GcAISpaceshipMappingData.cs" />
     <Compile Include="Models\Structs\GcAISpaceshipPreloadCacheData.cs" />
+    <Compile Include="Models\Structs\GcAISpaceshipPreloadCacheDataTable.cs" />
     <Compile Include="Models\Structs\GcAISpaceshipPreloadList.cs" />
     <Compile Include="Models\Structs\GcAISpaceshipRoles.cs" />
     <Compile Include="Models\Structs\GcAISpaceshipTypes.cs" />
@@ -70,6 +71,10 @@
     <Compile Include="Models\Structs\GcAlienPuzzleOption.cs" />
     <Compile Include="Models\Structs\GcAlienPuzzleTable.cs" />
     <Compile Include="Models\Structs\GcAnimFrameEvent.cs" />
+    <Compile Include="Models\Structs\GcAsteroidGeneratorAssignment.cs" />
+    <Compile Include="Models\Structs\GcAsteroidGeneratorRing.cs" />
+    <Compile Include="Models\Structs\GcAsteroidGeneratorSlab.cs" />
+    <Compile Include="Models\Structs\GcAsteroidGeneratorSurround.cs" />
     <Compile Include="Models\Structs\GcAtlasGlobals.cs" />
     <Compile Include="Models\Structs\GcAudioAreaTriggerComponentData.cs" />
     <Compile Include="Models\Structs\GcAudioPulseDemo.cs" />
@@ -130,6 +135,7 @@
     <Compile Include="Models\Structs\GcPlanetBuildingData.cs" />
     <Compile Include="Models\Structs\GcPlanetClass.cs" />
     <Compile Include="Models\Structs\GcPlanetColourData.cs" />
+    <Compile Include="Models\Structs\GcPlanetGenerationInputData.cs" />
     <Compile Include="Models\Structs\GcPlanetGenerationIntermediateData.cs" />
     <Compile Include="Models\Structs\GcPlanetHazardData.cs" />
     <Compile Include="Models\Structs\GcPlanetHeavyAirData.cs" />
@@ -151,8 +157,16 @@
     <Compile Include="Models\Structs\GcShootableComponentData.cs" />
     <Compile Include="Models\Structs\GcSimpleInteractionComponentData.cs" />
     <Compile Include="Models\Structs\GcSizeIndicator.cs" />
+    <Compile Include="Models\Structs\GcSolarSystemClass.cs" />
+    <Compile Include="Models\Structs\GcSolarSystemData.cs" />
+    <Compile Include="Models\Structs\GcSolarSystemLocator.cs" />
+    <Compile Include="Models\Structs\GcSolarSystemLocatorChoice.cs" />
+    <Compile Include="Models\Structs\GcSolarSystemLocatorTypes.cs" />
+    <Compile Include="Models\Structs\GcSolarSystemTraderSpawnData.cs" />
     <Compile Include="Models\Structs\GcSpaceshipClasses.cs" />
     <Compile Include="Models\Structs\GcSpaceshipComponentData.cs" />
+    <Compile Include="Models\Structs\GcSpaceSkyProperties.cs" />
+    <Compile Include="Models\Structs\GcSpaceStationSpawnData.cs" />
     <Compile Include="Models\Structs\GcSpawnAction.cs" />
     <Compile Include="Models\Structs\GcSpawnComponentOption.cs" />
     <Compile Include="Models\Structs\GcStateTimeEvent.cs" />
