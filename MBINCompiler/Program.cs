@@ -53,7 +53,9 @@ namespace MBINCompiler
         static void CompileFile(string input, string output)
         {
             if (String.IsNullOrEmpty(output))
-                output = Path.ChangeExtension(input, ".MBIN");
+                output = input;
+
+            output = Path.ChangeExtension(output, ".MBIN");
 
             var data = EXmlFile.ReadTemplate(input);
             if (data == null)
@@ -63,7 +65,7 @@ namespace MBINCompiler
             }
 
             if (data.GetType() == typeof(Models.Structs.TkGeometryData))
-                output = Path.ChangeExtension(input, ".MBIN.PC");
+                output = Path.ChangeExtension(output, ".MBIN.PC");
 
             if (File.Exists(output))
                 File.Delete(output); // todo: ask for confirmation?
