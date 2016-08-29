@@ -145,24 +145,39 @@ namespace MBINCompiler
             }
         }
 
+        static void PrintHelp()
+        {
+            Console.WriteLine(@"Usage: MBINCompiler [Input File or Folder]");
+            Console.WriteLine(@"Will write decompiled output to [Input File].exml or [Input Folder]\*.exml");
+
+            Console.WriteLine(@"Usage: MBINCompiler [Input Folder] [Output Folder]");
+            Console.WriteLine(@"Will write decompiled & recompile files from [Input Folder] and write them to [Output Folder]");
+
+            Console.WriteLine("Recompiling .exml back to .mbin is available for testing, use at your own risk!");
+        }
+
         static void Main(string[] args)
         {
-            if (args.Length < 1)
+            string input, output;
+
+            if (args[0] == "/?" || args[0] == "/help" || args[0] == "--help" || args[0] == "-h" || args.Length < 1)
             {
-                Console.WriteLine(@"Usage: MBINCompiler [Input File or Folder]");
-                Console.WriteLine(@"Will write decompiled output to [Input File].exml or [Input Folder]\*.exml");
-
-                Console.WriteLine(@"Usage: MBINCompiler [Input Folder] [Output Folder]");
-                Console.WriteLine(@"Will write decompiled & recompile files from [Input Folder] and write them to [Output Folder]");
-
-                Console.WriteLine("Recompiling .exml back to .mbin is available for testing, use at your own risk!");
+                PrintHelp();
                 return;
             }
 
-            var input = Path.GetFullPath(args[0]);
-            var output = args.Length > 1 ? Path.GetFullPath(args[1]) : String.Empty;
+            try
+            { 
+                input = Path.GetFullPath(args[0]);
+                output = args.Length > 1 ? Path.GetFullPath(args[1]) : String.Empty;
+            }
+            catch(Exception ex)
+            {
+                PrintHelp();
+                return;
+            }
 
-            var inputExtension = Path.GetExtension(input) ?? String.Empty;
+            string inputExtension = Path.GetExtension(input) ?? String.Empty;
             if (inputExtension.Equals(".mbin", StringComparison.OrdinalIgnoreCase) || input.EndsWith(".mbin.pc", StringComparison.OrdinalIgnoreCase))
                 DecompileFile(input, output);
             else if (inputExtension.Equals(".exml", StringComparison.OrdinalIgnoreCase)) 
