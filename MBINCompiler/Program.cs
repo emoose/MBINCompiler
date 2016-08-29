@@ -23,7 +23,7 @@ namespace MBINCompiler
             if (String.IsNullOrEmpty(output))
                 output = input;
 
-            output = Path.ChangeExtension(input, ".exml"); // emoose XML, because there's no way this XML format is compatible with MXML
+            output = Path.ChangeExtension(output, ".exml"); // emoose XML, because there's no way this XML format is compatible with MXML
 
             if (File.Exists(output))
                 File.Delete(output); // todo: ask for confirmation?
