@@ -395,6 +395,8 @@
     <Compile Include="Models\Structs\TkImGuiSettings.cs" />
     <Compile Include="Models\Structs\TkImGuiWindowData.cs" />
     <Compile Include="Models\Structs\TkInputEnum.cs" />
+    <Compile Include="Models\Structs\TkInputFrame.cs" />
+    <Compile Include="Models\Structs\TkInputFrameArray.cs" />
     <Compile Include="Models\Structs\TkJointBindingData.cs" />
     <Compile Include="Models\Structs\TkJointExtentData.cs" />
     <Compile Include="Models\Structs\TkJointMirrorAxis.cs" />
