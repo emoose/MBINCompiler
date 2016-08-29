@@ -51,6 +51,9 @@
     <Compile Include="Models\EXmlBase.cs" />
     <Compile Include="Models\EXmlData.cs" />
     <Compile Include="Models\EXmlProperty.cs" />
+    <Compile Include="Models\Structs\GcCreatureRoleFilename.cs" />
+    <Compile Include="Models\Structs\GcCreatureRoleFilenameList.cs" />
+    <Compile Include="Models\Structs\GcCreatureRoleFilenameTable.cs" />
     <Compile Include="Models\Structs\GcGalacticAddressData.cs" />
     <Compile Include="Models\Structs\GcPlayerMissionProgress.cs" />
     <Compile Include="Models\Structs\GcScanEventData.cs" />

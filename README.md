@@ -10,6 +10,12 @@ Note that the format of XML files created by this tool could change at any time.
 
 Builds can be downloaded from our AppVeyor page: https://ci.appveyor.com/project/emoose/mbincompiler/build/artifacts
 
+If you use MBINCompiler to make a mod a mention of us would be appreciated, while not required it'd help a lot to get more exposure.
+
+Also please don't redistribute compiled exes outside of the AppVeyor page, MBINC is changing very rapidly and having outdated builds hosted off-site would be detrimental.
+
+If you want to link to us please link directly to this GitHub page. Once I've felt that MBINC has reached a decent level of usability it'll be released properly on all the usual mod sites.
+
 Requests & Issues
 ---
 If you have any problems with the compiler feel free to write a bug report in the issue tracker.
@@ -24,7 +30,7 @@ If you'd like to contribute and have reverse-engineering experience, I've writte
 
 Templates aren't the only contributions accepted though, if you have any improvements to make to the source code they'd be greatly appreciated, while I like to pretend that I'm a decent C# programmer there are loads of people who have a better grasp of the language than I, if any of you can help to improve the code in any way I'd be very grateful.
 
-If you want to talk about development feel free to join the NMS modding discord, MBINCompiler discussion usually takes place in the #modding-mbin channel: https://discordapp.com/invite/3Ytkxss (should work in browsers too, no client downloads needed)
+If you want to talk about development feel free to join the NMS modding discord, MBINCompiler discussion usually takes place in the #mod-mbin channel: https://discordapp.com/invite/3Ytkxss (should work in browsers too, no client downloads needed)
 
 Examples
 ---
