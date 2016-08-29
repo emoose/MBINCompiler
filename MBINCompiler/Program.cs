@@ -21,7 +21,9 @@ namespace MBINCompiler
         static void DecompileFile(string input, string output)
         {
             if (String.IsNullOrEmpty(output))
-                output = Path.ChangeExtension(input, ".exml"); // emoose XML, because there's no way this XML format is compatible with MXML
+                output = input;
+
+            output = Path.ChangeExtension(input, ".exml"); // emoose XML, because there's no way this XML format is compatible with MXML
 
             if (File.Exists(output))
                 File.Delete(output); // todo: ask for confirmation?
