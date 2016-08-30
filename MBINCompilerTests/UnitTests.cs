@@ -1,18 +1,20 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.IO;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
 using System.Diagnostics;
+using System.IO;
+using System.Text;
 
 using MBINCompiler;
 using MBINCompiler.Models.Structs;
-using System.Text;
+using MBINCompilerTests.Properties;
 
 namespace MBINCompilerTests
 {
     [TestClass]
     public class UnitTests
     {
-        String baseDir = "C:/NMS";
+        private readonly string baseDir = Settings.Default.InputFolder ?? @"C:\NMS";
+
         #region Test Files
         String testFile1 = "../../MBINCompilerTestTemplate.MBIN";
         #region TkAnimMetadata
@@ -14720,6 +14722,8 @@ namespace MBINCompilerTests
         };
         #endregion
         #endregion
+
+
         private MemoryStream decompile(Stream stream)
         {
             using (var file = new MBINFile(stream))

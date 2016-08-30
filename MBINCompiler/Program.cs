@@ -21,7 +21,9 @@ namespace MBINCompiler
         static void DecompileFile(string input, string output)
         {
             if (String.IsNullOrEmpty(output))
-                output = Path.ChangeExtension(input, ".exml"); // emoose XML, because there's no way this XML format is compatible with MXML
+                output = input;
+
+            output = Path.ChangeExtension(output, ".exml"); // emoose XML, because there's no way this XML format is compatible with MXML
 
             if (File.Exists(output))
                 File.Delete(output); // todo: ask for confirmation?
@@ -51,7 +53,9 @@ namespace MBINCompiler
         static void CompileFile(string input, string output)
         {
             if (String.IsNullOrEmpty(output))
-                output = Path.ChangeExtension(input, ".MBIN");
+                output = input;
+
+            output = Path.ChangeExtension(output, ".MBIN");
 
             var data = EXmlFile.ReadTemplate(input);
             if (data == null)
@@ -61,7 +65,7 @@ namespace MBINCompiler
             }
 
             if (data.GetType() == typeof(Models.Structs.TkGeometryData))
-                output = Path.ChangeExtension(input, ".MBIN.PC");
+                output = Path.ChangeExtension(output, ".MBIN.PC");
 
             if (File.Exists(output))
                 File.Delete(output); // todo: ask for confirmation?
@@ -80,17 +84,20 @@ namespace MBINCompiler
             Console.WriteLine($"MBIN data written to \"{output}\" successfully?");
         }
 
-        static void decompileFolder(string folderPath)
+        static void decompileFolder(string inPath, string outPath)
         {
-            foreach(var file in Directory.GetFiles(folderPath, "*.mbin*"))
+            if (string.IsNullOrEmpty(outPath)) outPath = inPath;
+
+            foreach (var file in Directory.GetFiles(inPath, "*.mbin*"))
             {
                 if (file.Contains("LANGUAGE") || file.Contains("language"))
                     continue;
 
-                if (!file.EndsWith(".mbin", StringComparison.InvariantCultureIgnoreCase) && !file.EndsWith(".mbin.pc", StringComparison.InvariantCultureIgnoreCase))
+                if (!file.EndsWith(".mbin", StringComparison.InvariantCultureIgnoreCase)
+                    && !file.EndsWith(".mbin.pc", StringComparison.InvariantCultureIgnoreCase))
                     continue;
 
-                var output = file.Replace("C:\\NMS\\", "D:\\NMSOUT\\");
+                var output = file.Replace(inPath, outPath);
                 if (!Directory.Exists(Path.GetDirectoryName(output)))
                     Directory.CreateDirectory(Path.GetDirectoryName(output));
 
@@ -101,31 +108,89 @@ namespace MBINCompiler
                 catch { }
             }
 
+            foreach (var dir in Directory.GetDirectories(inPath))
+            {
+                string outDirPath = dir.Replace(inPath, outPath);
+                decompileFolder(dir, outDirPath);
+            }
+        }
+
+        static void compileFolder(string folderPath, string outPath)
+        {
+            if (string.IsNullOrEmpty(outPath))
+            {
+                Console.WriteLine("Output folder not specified. Bulk compile aborted.");
+                return;
+            }
+
+            foreach (var file in Directory.GetFiles(folderPath, "*.exml"))
+            {
+                if (file.Contains("LANGUAGE") || file.Contains("language"))
+                    continue;
+
+                if (!file.EndsWith(".exml", StringComparison.InvariantCultureIgnoreCase) && !file.EndsWith(".exml.pc", StringComparison.InvariantCultureIgnoreCase))
+                    continue;
+
+                var output = file.Replace(folderPath, outPath);
+                if (!Directory.Exists(Path.GetDirectoryName(output)))
+                    Directory.CreateDirectory(Path.GetDirectoryName(output));
+
+                try
+                {
+                    CompileFile(file, output);
+                }
+                catch { }
+            }
+
             foreach (var dir in Directory.GetDirectories(folderPath))
-                decompileFolder(dir);
+            {
+                string outDirPath = dir.Replace(folderPath, outPath);
+                compileFolder(dir, outDirPath);
+            }
+        }
+
+        static void PrintHelp()
+        {
+            Console.WriteLine(@"Usage: MBINCompiler [Input File or Folder]");
+            Console.WriteLine(@"Will write decompiled output to [Input File].exml or [Input Folder]\*.exml");
+
+            Console.WriteLine(@"Usage: MBINCompiler [Input Folder] [Output Folder]");
+            Console.WriteLine(@"Will write decompiled & recompile files from [Input Folder] and write them to [Output Folder]");
+
+            Console.WriteLine("Recompiling .exml back to .mbin is available for testing, use at your own risk!");
         }
 
         static void Main(string[] args)
         {
-           /* Directory.CreateDirectory("D:\\NMSOUT\\");
-            decompileFolder("C:\\NMS\\");
-            return;*/
+            string input, output;
 
-            if (args.Length < 1)
+            if (args[0] == "/?" || args[0] == "/help" || args[0] == "--help" || args[0] == "-h" || args.Length < 1)
             {
-                Console.WriteLine("Usage: MBINCompiler [InputPath]");
-                Console.WriteLine("Will write decompiled output to [InputPath].exml");
-                Console.WriteLine("Recompiling .exml back to .mbin will come soon!");
+                PrintHelp();
                 return;
             }
 
-            var input = args[0];
-            var output = args.Length > 1 ? args[1] : String.Empty;
-            var inputExtension = Path.GetExtension(input) ?? String.Empty;
+            try
+            { 
+                input = Path.GetFullPath(args[0]);
+                output = args.Length > 1 ? Path.GetFullPath(args[1]) : String.Empty;
+            }
+            catch(Exception ex)
+            {
+                PrintHelp();
+                return;
+            }
+
+            string inputExtension = Path.GetExtension(input) ?? String.Empty;
             if (inputExtension.Equals(".mbin", StringComparison.OrdinalIgnoreCase) || input.EndsWith(".mbin.pc", StringComparison.OrdinalIgnoreCase))
                 DecompileFile(input, output);
             else if (inputExtension.Equals(".exml", StringComparison.OrdinalIgnoreCase)) 
                 CompileFile(input, output);
+            else if (String.IsNullOrEmpty(inputExtension) && Directory.Exists(input))
+            {
+                decompileFolder(input, output);
+                compileFolder(input, output);
+            }
             else
             {
                 bool isMBin = false;
