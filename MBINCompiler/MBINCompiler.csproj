@@ -366,6 +366,7 @@
     <Compile Include="Models\Structs\TkActionButtonMap.cs" />
     <Compile Include="Models\Structs\TkAnimationComponentData.cs" />
     <Compile Include="Models\Structs\TkAnimationData.cs" />
+    <Compile Include="Models\Structs\TkAnimationDataTable.cs" />
     <Compile Include="Models\Structs\TkAnimMetadata.cs" />
     <Compile Include="Models\Structs\TkAnimNodeData.cs" />
     <Compile Include="Models\Structs\TkAnimNodeFrameData.cs" />

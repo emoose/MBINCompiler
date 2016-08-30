@@ -14201,6 +14201,10 @@ namespace MBINCompilerTests
             // TkActionButtonLookup
             "METADATA/INPUT/GCACTIONBUTTONLOOKUP.MBIN",
 
+            // TkAnimationDataTable
+            "METADATA/ANIMATION/PLAYERANIMSTABLE.MBIN",
+            "METADATA/ANIMATION/WEAPONANIMSTABLE.MBIN",
+
             // TkControllerList
             "METADATA/INPUT/GCCONTROLLERLIST.MBIN",
 
