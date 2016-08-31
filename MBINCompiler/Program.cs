@@ -164,7 +164,7 @@ namespace MBINCompiler
         {
             string input, output;
 
-            if (args[0] == "/?" || args[0] == "/help" || args[0] == "--help" || args[0] == "-h" || args.Length < 1)
+            if (args.Length < 1 || args[0] == "/?" || args[0] == "/help" || args[0] == "--help" || args[0] == "-h")
             {
                 PrintHelp();
                 return;
