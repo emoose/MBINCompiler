@@ -20,7 +20,7 @@ namespace MBINCompiler.Models.Structs
         public float ProbabilityOfBeingEnabled;
         public float IncreasedSpawnDistance;
     
-        [NMSAttribute(Ignore = true)]
+        [NMS(Ignore = true)]
         public int Padding;
     }
 }

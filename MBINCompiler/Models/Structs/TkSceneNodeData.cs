@@ -10,7 +10,7 @@ namespace MBINCompiler.Models.Structs
         [NMS(Size = 0x10)]
         public string Type;
         public TkTransformData Transform;
-        [NMSAttribute(Ignore = true)]
+        [NMS(Ignore = true)]
         public int EmptyNode1;
         public List<TkSceneNodeAttributeData> Attributes;
         public List<TkSceneNodeData> Children;

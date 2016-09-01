@@ -6,7 +6,7 @@ namespace MBINCompiler.Models.Structs
     {
         [NMS(Size = 0x80)]
         public string Filename;
-        [NMSAttribute(Ignore = true)]
+        [NMS(Ignore = true)]
         public int EmptyNode1;
     }
 }
