@@ -1,4 +1,4 @@
-﻿namespace MBINCompiler.Models.Structs.Unfinished
+﻿namespace MBINCompiler.Models.Structs
 {
     public class GcSimulationGlobals : NMSTemplate
     {
