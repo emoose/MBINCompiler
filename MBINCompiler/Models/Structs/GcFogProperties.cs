@@ -1,6 +1,4 @@
-﻿using System.Runtime.InteropServices;
-
-namespace MBINCompiler.Models.Structs
+﻿namespace MBINCompiler.Models.Structs
 {
     public class GcFogProperties : NMSTemplate
     {
@@ -21,8 +19,7 @@ namespace MBINCompiler.Models.Structs
         public float DepthOfFieldFade;
         public bool IsRaining;
 
-        [MarshalAs(UnmanagedType.ByValArray, SizeConst = 0x3)]
-        [NMSAttribute(Ignore = true)]
+        [NMS(Size = 0x3, Ignore = true)]
         public byte[] Padding;
     }
 }

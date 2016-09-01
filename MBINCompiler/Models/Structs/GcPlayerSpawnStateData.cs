@@ -1,7 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Runtime.InteropServices;
-
-namespace MBINCompiler.Models.Structs
+﻿namespace MBINCompiler.Models.Structs
 {
     public class GcPlayerSpawnStateData : NMSTemplate
     {
@@ -15,8 +12,7 @@ namespace MBINCompiler.Models.Structs
             return new[] { "OnFoot", "InShip", "OnStation" };
         }
 
-        [MarshalAs(UnmanagedType.ByValArray, SizeConst = 0xC)]
-        [NMSAttribute(Ignore = true)]
+        [NMS(Size = 0xC, Ignore = true)]
         public byte[] Padding44;
     }
 }

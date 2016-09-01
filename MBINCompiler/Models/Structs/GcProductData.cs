@@ -1,19 +1,18 @@
-﻿using System.Runtime.InteropServices;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace MBINCompiler.Models.Structs
 {
     public class GcProductData : NMSTemplate
     {
-        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 0x10)]
+        [NMS(Size = 0x10)]
         public string Id;
-        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 0x80)]
+        [NMS(Size = 0x80)]
         public string Name;
-        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 0x80)]
+        [NMS(Size = 0x80)]
         public string NameLower;
         public VariableSizeString Subtitle;
         public VariableSizeString Description;
-        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 0x20)]
+        [NMS(Size = 0x20)]
         public string Hint;
         public TkModelResource Debis;
         public int BaseValue;
@@ -31,9 +30,9 @@ namespace MBINCompiler.Models.Structs
         public bool SpecificChargeOnly;
         public float NormalisedValueOnWorld;
         public float NormalisedValueOffWorld;
-        [NMSAttribute(Ignore = true)]
+        [NMS(Ignore = true)]
         public int EmptyNode1;
-        [NMSAttribute(Ignore = true)]
+        [NMS(Ignore = true)]
         public int EmptyNode2;
     }
 }

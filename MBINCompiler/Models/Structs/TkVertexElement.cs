@@ -1,5 +1,3 @@
-using System.Runtime.InteropServices;
-
 namespace MBINCompiler.Models.Structs
 {
     public class TkVertexElement : NMSTemplate
@@ -16,7 +14,7 @@ namespace MBINCompiler.Models.Structs
             return new[] { "PerVertex", "PerModel" };
         }
 
-        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 8)]
+        [NMS(Size = 8)]
         public string PlatformData;
     }
 }

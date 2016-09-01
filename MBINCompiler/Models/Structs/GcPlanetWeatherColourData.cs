@@ -1,6 +1,4 @@
-﻿using System.Runtime.InteropServices;
-
-namespace MBINCompiler.Models.Structs
+﻿namespace MBINCompiler.Models.Structs
 {
     public class GcPlanetWeatherColourData : NMSTemplate
     {
@@ -12,7 +10,7 @@ namespace MBINCompiler.Models.Structs
         public Colour FogColour;
         public Colour HeightFogColour;
 
-        [MarshalAs(UnmanagedType.ByValArray, SizeConst = 0x10)]
+        [NMS(Size = 0x10)]
         public byte[] SkyGradientSpeed; // not sure what type this is?
 
         public Colour LightColour;

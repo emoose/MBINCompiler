@@ -1,6 +1,4 @@
-﻿using System.Runtime.InteropServices;
-
-namespace MBINCompiler.Models.Structs
+﻿namespace MBINCompiler.Models.Structs
 {
     public class GcNGuiElementData : NMSTemplate
     {
@@ -13,13 +11,12 @@ namespace MBINCompiler.Models.Structs
 
         public bool IsHidden;
 
-        [MarshalAs( UnmanagedType.ByValArray, SizeConst = 0x3 )]
-        [NMSAttribute(Ignore = true)]
+        [NMS(Size = 0x3, Ignore = true)]
         public byte[] Padding29;
 
         public GcNGuiLayoutData Layout;
 
-        [NMS(Size = 4)]
+        [NMS(Size = 4, Ignore = true)]
         public byte[] Padding5C;
     }
 }

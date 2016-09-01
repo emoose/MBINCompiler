@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using System.Runtime.InteropServices;
 
 namespace MBINCompiler.Models.Structs
 {
@@ -8,7 +7,7 @@ namespace MBINCompiler.Models.Structs
         public int ElementCount;
         public int Stride;
 
-        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 8)]
+        [NMS(Size = 8)]
         public string PlatformData;
 
         public List<TkVertexElement> VertexElements;

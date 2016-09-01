@@ -8,7 +8,7 @@
         public float RangeMax;
         public bool LessIsBetter;
 
-        [NMSAttribute(Ignore = true)]
+        [NMS(Ignore = true)]
         public int EmptyNode1;
     }
 }

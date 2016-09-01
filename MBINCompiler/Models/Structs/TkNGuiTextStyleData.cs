@@ -1,6 +1,4 @@
-﻿using System.Runtime.InteropServices;
-
-namespace MBINCompiler.Models.Structs
+﻿namespace MBINCompiler.Models.Structs
 {
     public class TkNGuiTextStyleData : NMSTemplate
     {
@@ -11,15 +9,13 @@ namespace MBINCompiler.Models.Structs
         public bool IsIndented;
         public bool HasDropShadow;
 
-        [MarshalAs( UnmanagedType.ByValArray, SizeConst = 0x2 )]
-        [NMSAttribute(Ignore = true)]
+        [NMS(Size = 0x2, Ignore = true)]
         public byte[] Padding1;
 
         public float DropShadowOffset;
         public bool HasOutline;
 
-        [MarshalAs( UnmanagedType.ByValArray, SizeConst = 0x3 )]
-        [NMSAttribute(Ignore = true)]
+        [NMS(Size = 0x3, Ignore = true)]
         public byte[] Padding2;
 
         public float OutlineSize;
@@ -30,8 +26,7 @@ namespace MBINCompiler.Models.Structs
         public int FontIndex;
         public TkNGuiAlignment Align;
 
-        [MarshalAs( UnmanagedType.ByValArray, SizeConst = 0x8 )]
-        [NMSAttribute(Ignore = true)]
+        [NMS(Size = 0x8, Ignore = true)]
         public byte[] Padding3;
     }
 }

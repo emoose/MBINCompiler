@@ -2,7 +2,7 @@
 {
     public class GcStats : NMSTemplate
     {
-        [NMSAttribute(Size = 4)]
+        [NMS(Size = 4)]
         public GcStatsGroup[] Stats;
     }
 }

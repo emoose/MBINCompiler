@@ -10,17 +10,17 @@ namespace MBINCompiler.Models.Structs
         public GcMiningSubstanceData MiningSubstance4;
         public GcPlanetWaterData Water;
 
-        [NMSAttribute(Size = 0x80)]
+        [NMS(Size = 0x80)]
         public string DiffuseMap;
-        [NMSAttribute(Size = 0x80)]
+        [NMS(Size = 0x80)]
         public string NormalMap;
 
-        [NMSAttribute(Size = 10)]
+        [NMS(Size = 10)]
         public GcTileTypeOptions[] TileTypes;
 
         public List<GcExternalObjectListOptions> ExternalObjectLists;
 
-        [NMSAttribute(Size = 7, EnumValue = new string[7] { "Clear", "Dust", "Humid", "Snow", "Toxic", "Scorched", "Radioactive" } )]
+        [NMS(Size = 7, EnumValue = new string[7] { "Clear", "Dust", "Humid", "Snow", "Toxic", "Scorched", "Radioactive" } )]
         public NMSBool[] WeatherOptions;
 
         public GcTerrainControls Terrain;

@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace MBINCompiler.Models.Structs
+﻿namespace MBINCompiler.Models.Structs
 {
     public class GcInteractionBuffer : NMSTemplate // 0x7D10 bytes
     {

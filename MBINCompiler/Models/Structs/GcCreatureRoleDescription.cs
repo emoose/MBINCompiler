@@ -1,13 +1,11 @@
-﻿using System.Runtime.InteropServices;
-
-namespace MBINCompiler.Models.Structs
+﻿namespace MBINCompiler.Models.Structs
 {
     public class GcCreatureRoleDescription : NMSTemplate
     {
         public GcCreatureRoles CreatureRole;
         public GcCreatureTypes CreatureType;
 
-        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 0x10)]
+        [NMS(Size = 0x10)]
         public string ForceID;
 
         public float MinGroupScale;
@@ -20,7 +18,7 @@ namespace MBINCompiler.Models.Structs
         public float ProbabilityOfBeingEnabled;
         public float IncreasedSpawnDistance;
     
-        [NMSAttribute(Ignore = true)]
+        [NMS(Ignore = true)]
         public int Padding;
     }
 }

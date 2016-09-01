@@ -1,6 +1,4 @@
-﻿using System.Runtime.InteropServices;
-
-namespace MBINCompiler.Models.Structs
+﻿namespace MBINCompiler.Models.Structs
 {
     public class TkParticleData : NMSTemplate
     {
@@ -15,8 +13,7 @@ namespace MBINCompiler.Models.Structs
         public TkCurveType Curve1;
         public TkCurveType Curve2;
         public float EmitterSpreadAngle;
-        [MarshalAs(UnmanagedType.ByValArray, SizeConst = 8)]
-        [NMSAttribute(Ignore = true)]
+        [NMS(Size = 8, Ignore = true)]
         public byte[] Padding28;
 
         public Vector4f EmitterDirection;
@@ -41,8 +38,7 @@ namespace MBINCompiler.Models.Structs
         public float MaxRenderDistance;
         public float MaxSpawnDistance;
 
-        [MarshalAs(UnmanagedType.ByValArray, SizeConst = 8)]
-        [NMSAttribute(Ignore = true)]
+        [NMS(Size = 8, Ignore = true)]
         public byte[] PaddingB8;
     }
 }

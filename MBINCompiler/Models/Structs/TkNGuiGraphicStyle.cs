@@ -1,6 +1,4 @@
-﻿using System.Runtime.InteropServices;
-
-namespace MBINCompiler.Models.Structs
+﻿namespace MBINCompiler.Models.Structs
 {
     public class TkNGuiGraphicStyle : NMSTemplate
     {
@@ -23,8 +21,7 @@ namespace MBINCompiler.Models.Structs
         public Vector2f CustomMinStart;
         public Vector2f CustomMaxStart;
 
-        [MarshalAs( UnmanagedType.ByValArray, SizeConst = 0x4 )]
-        [NMSAttribute(Ignore = true)]
+        [NMS(Size = 0x4, Ignore = true)]
         public byte[] Padding;
     }
 }

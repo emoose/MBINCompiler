@@ -1,11 +1,10 @@
 ﻿using System.Collections.Generic;
-using System.Runtime.InteropServices;
 
 namespace MBINCompiler.Models.Structs
 {
     public class GcWeatherProperties : NMSTemplate
     {
-        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 0x10)]
+        [NMS(Size = 0x10)]
         public string Name;
 
         public GcFogProperties Fog;

@@ -1,17 +1,14 @@
-﻿using System.Runtime.InteropServices;
-using System.Collections.Generic;
-
-namespace MBINCompiler.Models.Structs
+﻿namespace MBINCompiler.Models.Structs
 {
     public class GcSubstanceData : NMSTemplate
     {
-        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 0x20)]
+        [NMS(Size = 0x20)]
         public string Name;
-        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 0x20)]
+        [NMS(Size = 0x20)]
         public string NameLower;
-        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 0x10)]
+        [NMS(Size = 0x10)]
         public string Id;
-        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 0x20)]
+        [NMS(Size = 0x20)]
         public string Symbol;
         public TkTextureResource Icon;
         public TkModelResource Debris;

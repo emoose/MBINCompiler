@@ -1,15 +1,13 @@
-﻿using System.Runtime.InteropServices;
-
-namespace MBINCompiler.Models.Structs
+﻿namespace MBINCompiler.Models.Structs
 {
     public class GcResourceElement : NMSTemplate
     {
-        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 0x80)]
+        [NMS(Size = 0x80)]
         public string Filename;
-        [NMSAttribute(Ignore = true)]
+        [NMS(Ignore = true)]
         public long EmptyNode1;
         public GcSeed GenerationSeed;
-        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 0x200)]
+        [NMS(Size = 0x200)]
         public string AltId;
         public TkProceduralTextureChosenOptionList Texture;
     }
