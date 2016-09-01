@@ -1,6 +1,4 @@
-﻿using System.Runtime.InteropServices;
-
-namespace MBINCompiler.Models.Structs
+﻿namespace MBINCompiler.Models.Structs
 {
     public class GcCreatureHealthData : NMSTemplate
     {

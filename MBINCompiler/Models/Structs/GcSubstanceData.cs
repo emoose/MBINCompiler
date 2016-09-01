@@ -1,7 +1,4 @@
-﻿using System.Runtime.InteropServices;
-using System.Collections.Generic;
-
-namespace MBINCompiler.Models.Structs
+﻿namespace MBINCompiler.Models.Structs
 {
     public class GcSubstanceData : NMSTemplate
     {

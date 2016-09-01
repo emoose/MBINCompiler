@@ -1,7 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Runtime.InteropServices;
-
-namespace MBINCompiler.Models.Structs
+﻿namespace MBINCompiler.Models.Structs
 {
     public class TkMaterialSampler : NMSTemplate
     {

@@ -1,6 +1,4 @@
-﻿using System.Runtime.InteropServices;
-
-namespace MBINCompiler.Models.Structs
+﻿namespace MBINCompiler.Models.Structs
 {
     public class NMSString0x10 : NMSTemplate
     {

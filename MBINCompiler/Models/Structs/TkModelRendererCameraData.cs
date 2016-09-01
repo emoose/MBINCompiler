@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace MBINCompiler.Models.Structs
+﻿namespace MBINCompiler.Models.Structs
 {
     public class TkModelRendererCameraData : NMSTemplate // 0x40 bytes
     {

@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace MBINCompiler.Models.Structs
+﻿namespace MBINCompiler.Models.Structs
 {
     public class GcOutpostLSystemPair : NMSTemplate // 0x320 bytes
     {

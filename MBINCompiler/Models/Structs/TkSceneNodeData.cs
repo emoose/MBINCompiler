@@ -1,5 +1,4 @@
-﻿using System.Runtime.InteropServices;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace MBINCompiler.Models.Structs
 {
