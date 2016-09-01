@@ -531,10 +531,12 @@
     <Compile Include="Models\Structs\TkVoxelGeneratorRegionData.cs" />
     <Compile Include="Models\Structs\TkVoxelGeneratorSettingsArray.cs" />
     <Compile Include="Models\Structs\TkVoxelGeneratorSettingsElement.cs" />
+    <Compile Include="Models\Structs\Unfinished\GcAudioGlobals.cs" />
     <Compile Include="Models\Structs\Unfinished\GcBuildingGlobals.cs" />
     <Compile Include="Models\Structs\Unfinished\GcGraphicsGlobals.cs" />
     <Compile Include="Models\Structs\Unfinished\GcPlacementGlobals.cs" />
     <Compile Include="Models\Structs\GcSimulationGlobals.cs" />
+    <Compile Include="Models\Structs\Unfinished\GcSceneOptions.cs" />
     <Compile Include="Models\Structs\Unfinished\GcSmokeTestOptions.cs" />
     <Compile Include="Models\Structs\Unfinished\GcSolarGenerationGlobals.cs" />
     <Compile Include="Models\Structs\Unfinished\GcTerrainGlobals.cs" />
