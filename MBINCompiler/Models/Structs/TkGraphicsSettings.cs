@@ -43,8 +43,7 @@ namespace MBINCompiler.Models.Structs
         /* 0x38 */ public int Brightness;
         /* 0x3C */ public int MaxframeRate;
         /* 0x40 */ public bool NoHudMode;
-        [MarshalAs(UnmanagedType.ByValArray, SizeConst = 3)]
-        [NMSAttribute(Ignore = true)]
+        [NMS(Size = 3, Ignore = true)]
         /* 0x41 */ public byte[] Padding41;
     }
 }

@@ -9,7 +9,7 @@ namespace MBINCompiler.Models.Structs
         public float FlapSpeed;
         public float FlapAccel;
 
-        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 0x80)]
+        [NMS(Size = 0x80)]
         public string CircleAttractor;
     }
 }

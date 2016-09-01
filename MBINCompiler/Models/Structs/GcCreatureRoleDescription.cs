@@ -7,7 +7,7 @@ namespace MBINCompiler.Models.Structs
         public GcCreatureRoles CreatureRole;
         public GcCreatureTypes CreatureType;
 
-        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 0x10)]
+        [NMS(Size = 0x10)]
         public string ForceID;
 
         public float MinGroupScale;

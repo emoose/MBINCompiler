@@ -4,7 +4,7 @@ namespace MBINCompiler.Models.Structs
 {
     public class GcSpawnDensity : NMSTemplate
     {
-        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 0x10)]
+        [NMS(Size = 0x10)]
         public string Name;
         public bool Active;
         public int CoverageType;

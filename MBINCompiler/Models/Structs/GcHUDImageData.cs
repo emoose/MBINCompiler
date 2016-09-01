@@ -6,7 +6,7 @@ namespace MBINCompiler.Models.Structs
     {
         public GcHUDComponent Data;
 
-        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 0x80)]
+        [NMS(Size = 0x80)]
         public string Image;
 
         public Colour Colour;

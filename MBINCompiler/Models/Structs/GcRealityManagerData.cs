@@ -11,25 +11,25 @@ namespace MBINCompiler.Models.Structs
         [NMSAttribute(Size = 7, EnumValue = new string[7] { "Unknown", "SolarSystem", "Planet", "Animal", "Flora", "Mineral", "Sector" })]
         public GcDiscoveryWorth[] DiscoveryWorth;
 
-        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 0x80)]
+        [NMS(Size = 0x80)]
         public string TechnologyTable;
-        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 0x80)]
+        [NMS(Size = 0x80)]
         public string SubstanceTable;
-        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 0x80)]
+        [NMS(Size = 0x80)]
         public string ProductTable;
-        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 0x80)]
+        [NMS(Size = 0x80)]
         public string AlienWordsTable;
-        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 0x80)]
+        [NMS(Size = 0x80)]
         public string AlienPuzzlesTable;
-        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 0x80)]
+        [NMS(Size = 0x80)]
         public string RewardTable;
-        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 0x80)]
+        [NMS(Size = 0x80)]
         public string RewardDestructTable;
-        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 0x80)]
+        [NMS(Size = 0x80)]
         public string InventoryTable;
-        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 0x80)]
+        [NMS(Size = 0x80)]
         public string DamageTable;
-        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 0x80)]
+        [NMS(Size = 0x80)]
         public string CostTable;
 
         public GcRealityIconTable Icons;

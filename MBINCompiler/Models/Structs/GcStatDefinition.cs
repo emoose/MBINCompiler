@@ -9,7 +9,7 @@ namespace MBINCompiler.Models.Structs
         public GcStatDisplayType DisplayType;
         public GcStatValueData DefaultValue;
 
-        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 0x10)]
+        [NMS(Size = 0x10)]
         public string Id;
     }
 }

@@ -4,7 +4,7 @@ namespace MBINCompiler.Models.Structs
 {
     public class TkSpeedLineData : NMSTemplate
     {
-        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 0x80)]
+        [NMS(Size = 0x80)]
         public string Material;
         public int NumberOfParticles;
         public float Radius;

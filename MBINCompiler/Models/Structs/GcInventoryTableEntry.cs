@@ -4,7 +4,7 @@ namespace MBINCompiler.Models.Structs
 {
     public class GcInventoryTableEntry : NMSTemplate
     {
-        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 0x10)]
+        [NMS(Size = 0x10)]
         public string Id;
         public int MinSize;
         public int MaxSize;
@@ -14,8 +14,7 @@ namespace MBINCompiler.Models.Structs
             return new[] { "SciSmall", "SciMedium", "SciLarge", "FgtSmall", "FgtMedium", "FgtLarge", "ShuSmall", "ShtMedium", "ShtLarge", "DrpSmall", "DrpMedium", "DrpLarge", "WeaponSmall", "WeaponMedium", "WeaponLarge" }; // Shu/Sht spelling mistake(?) is from the exe
         }
 
-        [MarshalAs(UnmanagedType.ByValArray, SizeConst = 4)]
-        [NMSAttribute(Ignore = true)]
+        [NMS(Size = 4, Ignore = true)]
         public byte[] Padding1C;
     }
 }

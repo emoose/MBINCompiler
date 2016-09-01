@@ -24,8 +24,7 @@ namespace MBINCompiler.Models.Structs
         public TkNGuiAlignment Align;
         public bool SlowCursorOnHover;
 
-        [MarshalAs( UnmanagedType.ByValArray, SizeConst = 0x7 )]
-        [NMSAttribute(Ignore = true)]
+        [NMS(Size = 0x7, Ignore = true)]
         public byte[] Padding4;
     }
 }

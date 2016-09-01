@@ -6,7 +6,7 @@ namespace MBINCompiler.Models.Structs
     {
         public GcHUDComponent Data;
 
-        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 0x80)]
+        [NMS(Size = 0x80)]
         public string Text;
 
         [NMS(Size = 8, Ignore = true)]

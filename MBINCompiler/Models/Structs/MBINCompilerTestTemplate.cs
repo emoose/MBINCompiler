@@ -14,7 +14,7 @@ namespace MBINCompiler.Models.Structs
         public float TestFloat;
         public int TestEnumYes;
         public int TestEnumNo;
-        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 0x10)]
+        [NMS(Size = 0x10)]
         public string TestString;
         public VariableSizeString TestDynamicString;
         public List<NMSString0x80> Test0x80ByteStringList;

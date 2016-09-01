@@ -7,7 +7,7 @@ namespace MBINCompiler.Models.Structs
         public GcInventoryType Type;
         [NMSAttribute(Ignore = true)]
         public int EmptyNode1;
-        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 0x10)]
+        [NMS(Size = 0x10)]
         public string Id;
         public int Amount;
         public int MaxAmount;

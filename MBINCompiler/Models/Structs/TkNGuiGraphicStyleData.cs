@@ -30,8 +30,7 @@ namespace MBINCompiler.Models.Structs
         public float GradientStartOffset;
         public float GradientEndOffset;
 
-        [MarshalAs( UnmanagedType.ByValArray, SizeConst = 0xC )]
-        [NMSAttribute(Ignore = true)]
+        [NMS(Size = 0xC, Ignore = true)]
         public byte[] Padding1;
 
         public Colour GradientColour;

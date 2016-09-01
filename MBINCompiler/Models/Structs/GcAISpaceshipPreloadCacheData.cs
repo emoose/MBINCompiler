@@ -5,12 +5,11 @@ namespace MBINCompiler.Models.Structs
     public class GcAISpaceshipPreloadCacheData : NMSTemplate
     {
         public GcAISpaceshipRoles ShipRole;
-        [MarshalAs(UnmanagedType.ByValArray, SizeConst = 4)]
-        [NMSAttribute(Ignore = true)]
+        [NMS(Size = 4, Ignore = true)]
         public byte[] Padding4;
 
         public GcSeed Seed;
-        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 0x100)]
+        [NMS(Size = 0x100)]
         public string AltId;
     }
 }

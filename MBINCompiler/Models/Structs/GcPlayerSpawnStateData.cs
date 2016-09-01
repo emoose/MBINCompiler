@@ -15,8 +15,7 @@ namespace MBINCompiler.Models.Structs
             return new[] { "OnFoot", "InShip", "OnStation" };
         }
 
-        [MarshalAs(UnmanagedType.ByValArray, SizeConst = 0xC)]
-        [NMSAttribute(Ignore = true)]
+        [NMS(Size = 0xC, Ignore = true)]
         public byte[] Padding44;
     }
 }

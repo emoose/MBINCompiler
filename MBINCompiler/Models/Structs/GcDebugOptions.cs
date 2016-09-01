@@ -27,9 +27,9 @@ namespace MBINCompiler.Models.Structs
 
         /* 0x1C */ public int Monitor;
 
-        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 0x100)]
+        [NMS(Size = 0x100)]
         /* 0x20 */ public string ForceUniverseAddress; // 0x100
-        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 0x100)]
+        [NMS(Size = 0x100)]
         /* 0x120 */ public string ForcePlayerPosition; // 0x100
 
         /* 0x220 */ public bool ForceInitialShip;
@@ -51,9 +51,9 @@ namespace MBINCompiler.Models.Structs
             return new[] { "None", "InNearestStation", "OnNearestPlanet", "OnFurthestPlanet", "NextToPlayerShip", "FromSettings", "OnRandomPlanet", "OnGameStartPlanet", "AwayFromYourShip" };
         }
 
-        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 0x80)]
+        [NMS(Size = 0x80)]
         /* 0x230 */ public string SceneSettings; // 0x80
-        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 0x100)]
+        [NMS(Size = 0x100)]
         /* 0x2B0 */ public string WorkingDirectory; // 0x100
 
         /* 0x3B0 */ public int SolarSystemBoot;
@@ -102,7 +102,7 @@ namespace MBINCompiler.Models.Structs
         /* 0x3DE */ public bool StopSwitchingToSecondaryInteractions;
         /* 0x3E0 */ public int DebugLanguages; // unused?
 
-        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 0x20)]
+        [NMS(Size = 0x20)]
         /* 0x3E4 */ public string AllowedLanguagesFile; // 0x20
         /* 0x404 */ public bool DoAlienLanguage;
         /* 0x408 */ public int ForceInteractionRaceTo;
@@ -113,11 +113,11 @@ namespace MBINCompiler.Models.Structs
         }
         /* 0x410 */ public bool DebugPersistentInteractions;
 
-        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 0x80)]
+        [NMS(Size = 0x80)]
         /* 0x411 */ public string RealityPresetFile; // 0x80
         /* 0x492 */ public short RealityGenerationIteration;
 
-        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 0x80)]
+        [NMS(Size = 0x80)]
         /* 0x494 */ public string DefaultSaveData; // 0x80
         /* 0x514 */ public bool FormatDownloadStorageAreaOnBoot;
         /* 0x515 */ public bool ForceBasicLoadScreen;
@@ -139,7 +139,7 @@ namespace MBINCompiler.Models.Structs
         /* 0x530 */ public bool ShowGPUMemory;
         /* 0x531 */ public bool ShowMempoolOverlay;
 
-        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 0x100)]
+        [NMS(Size = 0x100)]
         /* 0x532 */ public string ShowUniverseAddressOnGalaxyMap; // 0x100
         /* 0x632 */ public bool ShowGraphs;
         /* 0x633 */ public bool GraphCommandBuffer;
@@ -163,9 +163,9 @@ namespace MBINCompiler.Models.Structs
         /* 0x651 */ public bool CompressTextures;
         /* 0x652 */ public bool DebugIBL;
         /* 0x653 */ public bool DisableShadowSwitching;
-        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 0x80)]
+        [NMS(Size = 0x80)]
         /* 0x654 */ public string PipelineFile; // 0x80
-        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 0x80)]
+        [NMS(Size = 0x80)]
         /* 0x6D4 */ public string PipelineFilePS4; // 0x80
         /* 0x754 */ public bool RenderLowFramerate;
         /* 0x755 */ public bool SimulateNoNetworkConnection;
@@ -174,23 +174,23 @@ namespace MBINCompiler.Models.Structs
         {
             return new[] { "None", "ManualURI", "InetProxy" };
         }
-        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 0x80)]
+        [NMS(Size = 0x80)]
         /* 0x75C */ public string ProxyURI; // 0x80
         /* 0x7DC */ public int ServerEnv;
         public string[] ServerEnvValues()
         {
             return new[] { "default", "dev", "qa", "prodqa", "prod", "custom", "pentest" };
         }
-        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 0x80)]
+        [NMS(Size = 0x80)]
         /* 0x7E0 */ public string AuthBaseUrl; // 0x80
         /* 0x860 */ public bool CertificateSecurityBypass;
-        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 0x20)]
+        [NMS(Size = 0x20)]
         /* 0x861 */ public string OverrideUsernameForDev; // 0x20
         /* 0x884 */ public int DiscoveryAutoSyncIntervalSeconds;
         /* 0x888 */ public int DiscoveryTrimLimitOverride;
         /* 0x88C */ public int DiscoveryTrimTriggerOverride;
         /* 0x890 */ public bool EnableSynergy;
-        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 0x20)]
+        [NMS(Size = 0x20)]
         /* 0x891 */ public string SynergyServer; // 0x20
         /* 0x8B4 */ public int SynergyPort;
         /* 0x8B8 */ public int MaxNumDebugMessages;
@@ -199,19 +199,19 @@ namespace MBINCompiler.Models.Structs
         /* 0x8C4 */ public bool UseProcTextureDebugger;
         /* 0x8C8 */ public int ProceduralModelsShown;
         /* 0x8CC */ public int ProceduralModelBatchSize;
-        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 0x80)]
+        [NMS(Size = 0x80)]
         /* 0x8D0 */ public string DebugFont; // 0x80
-        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 0x80)]
+        [NMS(Size = 0x80)]
         /* 0x950 */ public string DebugFontTexture; // 0x80
-        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 0x80)]
+        [NMS(Size = 0x80)]
         /* 0x9D0 */ public string CursorTexture; // 0x80
-        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 0x80)]
+        [NMS(Size = 0x80)]
         /* 0xA50 */ public string PauseTexture; // 0x80
-        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 0x80)]
+        [NMS(Size = 0x80)]
         /* 0xAD0 */ public string PlayTexture; // 0x80
-        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 0x80)]
+        [NMS(Size = 0x80)]
         /* 0xB50 */ public string StepTexture; // 0x80
-        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 0x80)]
+        [NMS(Size = 0x80)]
         /* 0xBD0 */ public string RenderToTexture; // 0x80
         /* 0xC50 */ public bool HmdEnable;
         /* 0xC51 */ public bool HmdOutput;

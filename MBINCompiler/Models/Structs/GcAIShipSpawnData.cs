@@ -4,7 +4,7 @@ namespace MBINCompiler.Models.Structs
 {
     public class GcAIShipSpawnData : NMSTemplate
     {
-        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 0x20)]
+        [NMS(Size = 0x20)]
         public string Message;
 
         public TkInputEnum InputEnum;
@@ -12,12 +12,11 @@ namespace MBINCompiler.Models.Structs
         public GcAISpaceshipRoles ShipRole;
         public float MinRange;
         public float Scale;
-        [MarshalAs(UnmanagedType.ByValArray, SizeConst = 4)]
-        [NMSAttribute(Ignore = true)]
+        [NMS(Size = 4, Ignore = true)]
         public byte[] Padding34;
-        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 0x10)]
+        [NMS(Size = 0x10)]
         public string Reward;
-        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 0x20)]
+        [NMS(Size = 0x20)]
         public string RewardMessage;
         public bool AttackFreighter;
         public Vector2f Spread;
