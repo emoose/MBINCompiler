@@ -18,7 +18,7 @@ namespace MBINCompiler.Models.Structs
 
         public GcNGuiLayoutData Layout;
 
-        [NMS(Size = 4)]
+        [NMS(Size = 4, Ignore = true)]
         public byte[] Padding5C;
     }
 }

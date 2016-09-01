@@ -18,7 +18,7 @@ namespace MBINCompiler.Models.Structs
         public bool AnchorPercent;
         public bool SameLine;
 
-        [NMS(Size = 1)]
+        [NMS(Size = 1, Ignore = true)]
         public byte[] Padding1F;
 
         public TkNGuiAlignment Align;

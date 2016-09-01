@@ -37,7 +37,7 @@ namespace MBINCompiler.Models.Structs
         [NMS(Size = 0x10)]
         /* 0x318 */ public string DefaultImpact;
         /* 0x328 */ public List<GcProjectileImpactData> Impacts;
-        [NMS(Size = 8)]
+        [NMS(Size = 8, Ignore = true)]
         /* 0x338 */ public byte[] Padding338;
     }
 }
