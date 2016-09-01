@@ -2,6 +2,6 @@
 {
     public class GcWaterGlobals : NMSTemplate
     {
-        public bool WaterRippleEffects;
+        public bool Unknown0; // enable/disable water perhaps?
     }
 }
