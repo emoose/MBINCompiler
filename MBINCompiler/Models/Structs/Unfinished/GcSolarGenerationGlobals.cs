@@ -14,15 +14,15 @@ namespace MBINCompiler.Models.Structs
 
         public float Unknown10;
         public float Unknown14;
-        public float Unknown18; // unused?
-        public float Unknown1C; // unused?
+        public float Unknown18; // unused? 
+        public float Unknown1C; // unused? 
 
-        public float Unknown20;
-        public float Unknown24;
-        public bool Unknown28; // unused?
-        public int Unknown2C; // unused? non-float?
+        public float minPlanetDistance;
+        public float maxPlanetDistance;
+        public float Unknown28; // unused?   // changed bool to float
+        public int Unknown2c; // unused? non-float?
 
-        public bool Unknown30;
+        public float Unknown30; // changed bool to float
         public float Unknown34; // unused?
         public float Unknown38; // unused?
         public float Unknown3C; // qword?
@@ -43,7 +43,7 @@ namespace MBINCompiler.Models.Structs
         public float Unknown6C;
 
         public float Unknown70;
-        public bool Unknown74;
+        public uint Unknown74; // changed bool to uint
         public float Unknown78;
         public float Unknown7C;
 
@@ -65,33 +65,33 @@ namespace MBINCompiler.Models.Structs
         public float UnknownB0;
         public float UnknownB4;
         public float UnknownB8;
-        public float UnknownBC;
+        public float UnknownAsteroidSpacing;
 
-        public float UnknownC0;
+        public float UnknownAsteroidFadeIn;
         public float UnknownC4;
-        public int UnknownC8;
-        public int UnknownCC;
+        public int UnknownAsteroidMinDropAmount;
+        public int UnknownAsteroidMaxDropAmount;
 
-        [NMS(Size = 0x10)]
-        public string UnknownD0; // unused?
+        [NMS(Size = 16)]
+        public string UnknownAsteroidDroppedItem;
 
-        public float UnknownE0;
-        public float UnknownE4;
-        public float UnknownE8;
+        public float SmallAsteroidScale;
+        public float SmallAsteroidSpacing;
+        public float SmallAsteroidFadeIn;
         public float UnknownEC;
 
-        public int UnknownF0;
-        public int UnknownF4;
+        public int SmallAsteroidMinDropAmount;
+        public int SmallAsteroidMaxDropAmount;
 
         [NMS(Size = 0x10)]
-        public string UnknownF8;
+        public string SmallAsteroidDroppedItem;
 
         public float Unknown108; // unused?
         public float Unknown10C; // unused?
 
-        public float Unknown110;
+        public float LargeAsteroidSpacing_maybe;
         public float Unknown114;
-        public float Unknown118;
+        public float LargeAsteroidFadeIn_maybe;
         public float Unknown11C;
 
         public float Unknown120; // unused?
@@ -101,8 +101,8 @@ namespace MBINCompiler.Models.Structs
 
         public float Unknown130;
 
-        [NMS(Size = 6)]
-        public Vector3i[] Unknown134;
+        [NMS(Size = 0x6)]
+        public Vector3i Unknown134;
 
         public int Unknown17C;
     }
