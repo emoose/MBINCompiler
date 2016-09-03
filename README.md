@@ -1,20 +1,22 @@
 # MBINCompiler [![Build status](https://ci.appveyor.com/api/projects/status/kivetlncubq7wktl?svg=true)](https://ci.appveyor.com/project/emoose/mbincompiler)
 
-A tool for decompiling No Man's Sky MBIN files to XML format, and recompiling them back from XML to MBIN.
+*Compiled builds can be downloaded from our AppVeyor page*: https://ci.appveyor.com/project/emoose/mbincompiler/build/artifacts
 
-MBIN reading seems to be working well, structures just have to be created for all the different templates used by the game. 
+A tool for decompiling No Man's Sky MBIN files to XML format, and recompiling them back from XML to MBIN. MBIN reading seems to be working well, and so far we've managed to map every single main template used by the game (excluding globals templates).
 
-MBIN compiling also seems to be working well, but hasn't been tested very much yet (bug reports are welcomed!)
+MBIN compiling also seems to be working well in some cases, although it also seems to be having issues in others... Bug reports are always welcomed!
 
-Note that the format of XML files created by this tool could change at any time.
-
-Builds can be downloaded from our AppVeyor page: https://ci.appveyor.com/project/emoose/mbincompiler/build/artifacts
+**Note that the format of XML files created by this tool could change at any time.**
 
 If you use MBINCompiler to make a mod a mention of us would be appreciated, while not required it'd help a lot to get more exposure.
 
-Also please don't redistribute compiled exes outside of the AppVeyor page, MBINC is changing very rapidly and having outdated builds hosted off-site would be detrimental.
+Also **please don't redistribute compiled exes outside of the AppVeyor page**, MBINC is changing very rapidly and having outdated builds hosted off-site would be detrimental.
 
-If you want to link to us please link directly to this GitHub page. Once I've felt that MBINC has reached a decent level of usability it'll be released properly on all the usual mod sites.
+**This also applies to any kind of GUI frontends or tool-sets which make use of MBINC!**
+
+There are a lot of issues with MBINC at the moment, and as said above MBINC is changing very rapidly. Please wait until we have a stable release before including MBINC in any kind of GUI or tool-set. Although if you get in touch with me I might be in a good mood, feel free to find me on Discord!
+
+If you want to link to us please link directly to this GitHub page. Once I've felt that MBINC has reached a decent level of usability it'll be released properly on all the usual mod sites, and you'll be free to use it as part of your programs.
 
 Requests & Issues
 ---
