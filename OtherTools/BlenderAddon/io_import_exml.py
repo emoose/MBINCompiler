@@ -24,7 +24,7 @@ def getProperty(node, name):
     for p in node:
         if 'name' in p.keys() and p.get('name')==name:
             return p
-    return null
+    return None
     
 def getFloatList(node):
     list = []
