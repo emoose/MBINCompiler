@@ -2,7 +2,7 @@
 
 namespace MBINCompiler.Models.Structs
 {
-    public class GcTestMetadata : NMSTemplate
+    public class GcTestMetadata : NMSTemplate // size = 0x6A4
     {
         public bool TestBool;
         public int TestInt;
@@ -89,5 +89,11 @@ namespace MBINCompiler.Models.Structs
                 "Portal", "Ruin", "Debris", "DamagedMachine", "DistressSignal", "LandingPad"
             })]
         public float[] TestExternalEnumArray; // external probably means it gets enum values from outside the GcTestMetadata source file
+
+        public int TestFlags; // not mentioned in the normal template sub that we get fields from, mentioned in different one @ 0x140237E50 (which is also much easier to understand, and it seems all templates have these alternate subs...)
+        public string[] TestFlagsValues()
+        {
+            return new[] { "null", "Flag1", "Flag2" }; // null is actually a pointer to 00 in the exe, we give it a value here because xml parser treats empty values different
+        }
     }
 }
