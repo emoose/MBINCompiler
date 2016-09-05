@@ -758,6 +758,15 @@ namespace MBINCompiler.Models
                     {
                         Array array = Array.CreateInstance(field.FieldType.GetElementType(), settings.Size);
                         List<EXmlData> data = xmlProperty.Elements.OfType<EXmlData>().ToList();
+                        if(data.Count != settings.Size)
+                        {
+                            // todo: add a comment in the XML to indicate arrays (+ their size), also need to do the same for showing valid enum values
+                            var error = $"{field.Name}: XML array size {data.Count} doesn't match expected array size {settings.Size}";
+                            Console.WriteLine($"Error: {error}!");
+                            Console.WriteLine("You might have added/removed an item from an array field");
+                            Console.WriteLine("(arrays can't be shortened or extended as they're a fixed size set by the game)");
+                            throw new Exception(error);
+                        }
                         for (int i = 0; i < data.Count; ++i)
                         {
                             NMSTemplate element = DeserializeEXml(data[i]);
