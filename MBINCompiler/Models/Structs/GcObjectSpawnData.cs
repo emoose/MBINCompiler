@@ -16,6 +16,9 @@ namespace MBINCompiler.Models.Structs
         /* 0x2B0 */ public List<GcResourceElement> AltResources;
 
         /* 0x2C0 */ public GcTerrainTileType PlacementTileType;
+        [NMS(Size = 4, Ignore = true)]
+        /* 0x2C4 */ public byte[] Padding2C4;
+
         [NMS(Size = 0x10)]
         /* 0x2C8 */ public string Placement;
         /* 0x2D8 */ public GcSeed PlacementSeed;
