@@ -10,5 +10,8 @@
         public int MaxNodesActivated;
         public int MaxGroupsActivated;
         public bool UseRaycast;
+
+        [NMS(Size = 3, Ignore = true)]
+        public byte[] Padding31;
     }
 }

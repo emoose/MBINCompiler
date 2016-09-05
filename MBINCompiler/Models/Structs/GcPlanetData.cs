@@ -4,10 +4,11 @@
     {
         [NMS(Size = 0x80)]
         public string Name;
-        public GcPlanetLife LifeSetting1;
-        public GcPlanetLife LifeSetting2;
+        public GcPlanetLife Life;
+        public GcPlanetLife CreatureLife;
         public GcPlanetHazardData Hazard;
-        public int ResourceLevel;
+
+        /* 0x100 */ public int ResourceLevel;
         public string[] ResourceLevelValues()
         {
             return new[] { "Low", "High" };
@@ -21,7 +22,10 @@
         [NMS(Size = 0x10)]
         public string RareSubstanceID;
 
-        public GcPlanetColourData PlanetColourData;
+        [NMS(Size = 8, Ignore = true)]
+        public byte[] Padding138;
+
+        public GcPlanetColourData Colours;
 
         [NMS(Size = 0xD)]
         public Colour[] TileColours;
@@ -37,11 +41,18 @@
         [NMS(Size = 0x80)]
         public string NormalMap;
         public GcEnvironmentSpawnData SpawnData;
-        public GcAlienRace AlienRace;
+        public GcAlienRace InhabitingRace;
         public GcPlanetBuildingData BuildingData;
         public GcPlanetGenerationIntermediateData GenerationData;
         public Vector2f SentinelTimer;
         public Vector2f FlybyTimer;
+        public GcPlanetInfo PlanetInfo;
+        [NMS(Size = 2, Ignore = true)]
+        public byte[] Padding2E8A;
+
         public GcPlanetSentinelData SentinelData;
+
+        [NMS(Size = 0xC, Ignore = true)]
+        public byte[] Padding2E94;
     }
 }

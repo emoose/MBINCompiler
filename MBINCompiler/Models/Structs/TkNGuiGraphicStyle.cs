@@ -15,8 +15,8 @@
 
         public float AnimTime;
         public float AnimSplit;
-        public TkCurveType Curve1;
-        public TkCurveType Curve2;
+        public TkCurveType AnimCurve1;
+        public TkCurveType AnimCurve2;
 
         public Vector2f CustomMinStart;
         public Vector2f CustomMaxStart;

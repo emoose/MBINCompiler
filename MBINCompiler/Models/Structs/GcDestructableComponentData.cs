@@ -35,6 +35,9 @@ namespace MBINCompiler.Models.Structs
 
         /* 0x114 */ public bool ShowInteract;
         /* 0x118 */ public float ShowInteractRange;
-        /* 0x11C */ public bool DamageGrenadeSingleHit;
+        /* 0x11C */ public bool GrenadeSingleHit;
+
+        [NMS(Size = 3, Ignore = true)]
+        /* 0x11D */ public byte[] Padding11D;
     }
 }

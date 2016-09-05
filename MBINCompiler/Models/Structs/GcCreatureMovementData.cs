@@ -11,5 +11,8 @@ namespace MBINCompiler.Models.Structs
         public float HeightMin;
         public float HeightMax;
         public float HeightTime;
+
+        [NMS(Size = 4, Ignore = true)]
+        public byte[] Padding24;
     }
 }

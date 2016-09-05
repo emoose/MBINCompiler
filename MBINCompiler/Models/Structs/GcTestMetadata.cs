@@ -95,5 +95,8 @@ namespace MBINCompiler.Models.Structs
         {
             return new[] { "null", "Flag1", "Flag2" }; // null is actually a pointer to 00 in the exe, we give it a value here because xml parser treats empty values different
         }
+
+        [NMS(Size = 0xC, Ignore = true)]
+        public byte[] Padding6A4;
     }
 }

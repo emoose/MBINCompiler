@@ -14,5 +14,8 @@
         public float USpread;
         public float PushAmount;
         public bool FlipPush;
+
+        [NMS(Size = 7, Ignore = true)]
+        public byte[] Padding79;
     }
 }

@@ -10,8 +10,8 @@
         public float ParticleLife;
         public float EmitterLife;
         public float EmitterMidLifeRatio;
-        public TkCurveType Curve1;
-        public TkCurveType Curve2;
+        public TkCurveType EmitterLifeCurve1;
+        public TkCurveType EmitterLifeCurve2;
         public float EmitterSpreadAngle;
         [NMS(Size = 8, Ignore = true)]
         public byte[] Padding28;

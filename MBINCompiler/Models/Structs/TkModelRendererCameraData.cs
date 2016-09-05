@@ -12,5 +12,8 @@
         public float LightPitch;
         public float LightRotate;
         public TkCameraWanderData Wander;
+
+        [NMS(Size = 4, Ignore = true)]
+        public byte[] Padding3C;
     }
 }

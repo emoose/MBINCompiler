@@ -14,5 +14,8 @@ namespace MBINCompiler.Models.Structs
         public List<float> CorrelationMat;
 
         public float AdultCorrelationValue;
+
+        [NMS(Size = 4, Ignore = true)]
+        public byte[] PaddingC4;
     }
 }

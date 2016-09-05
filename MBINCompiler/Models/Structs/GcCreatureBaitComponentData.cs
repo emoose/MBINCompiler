@@ -10,5 +10,8 @@ namespace MBINCompiler.Models.Structs
 
         public bool Debug;
         public bool InducesRage;
+
+        [NMS(Size = 6, Ignore = true)]
+        public byte[] Padding1A;
     }
 }

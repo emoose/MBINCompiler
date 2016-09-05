@@ -34,7 +34,10 @@
         public int ModelRenderDisplayBorder;
         public float ModelRenderDisplayOffset;
         public float ModelRenderDisplayMove;
-        public TkCurveType Curve1;
-        public TkCurveType Curve2;
+        public TkCurveType ModelRenderDisplayAlphaCurve;
+        public TkCurveType ModelRenderDisplayMoveCurve;
+
+        [NMS(Size = 8, Ignore = true)]
+        public byte[] Padding1C8;
     }
 }

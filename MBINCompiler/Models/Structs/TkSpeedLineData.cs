@@ -22,5 +22,8 @@
         {
             return new[] { "Absolute", "Relative" };
         }
+
+        [NMS(Size = 0xC, Ignore = true)]
+        public byte[] PaddingD4;
     }
 }

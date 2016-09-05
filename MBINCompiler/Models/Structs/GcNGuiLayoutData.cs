@@ -22,7 +22,7 @@
         public TkNGuiAlignment Align;
         public bool SlowCursorOnHover;
 
-        [NMS(Size = 0x7, Ignore = true)]
-        public byte[] Padding4;
+        [NMS(Size = 0x3, Ignore = true)]
+        public byte[] Padding29;
     }
 }

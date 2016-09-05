@@ -18,5 +18,8 @@
             return new[] { "Carnivore", "Omnivore", "Herbivore" };
         }
         public float BaseScale;
+
+        [NMS(Size = 4, Ignore = true)]
+        public byte[] Padding48C;
     }
 }

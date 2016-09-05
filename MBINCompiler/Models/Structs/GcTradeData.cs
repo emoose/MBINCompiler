@@ -18,5 +18,8 @@ namespace MBINCompiler.Models.Structs
         public int MinNumberOfStarItems;
         public int MaxNumberOfStarItems;
         public float StarItemMarkUp;
+
+        [NMS(Size = 4, Ignore = true)]
+        public byte[] Padding4C;
     }
 }

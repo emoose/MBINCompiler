@@ -20,7 +20,7 @@
         }
         public bool Inverse;
 
-        [NMS(Size = 7, Ignore = true)]
+        [NMS(Size = 3, Ignore = true)]
         public byte[] Padding21;
     }
 }

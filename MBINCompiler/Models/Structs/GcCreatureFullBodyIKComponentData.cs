@@ -12,5 +12,8 @@ namespace MBINCompiler.Models.Structs
         }
 
         public bool UseFootGlue;
+
+        [NMS(Size = 3, Ignore = true)]
+        public byte[] Padding15;
     }
 }

@@ -17,5 +17,8 @@
         public bool UseMiningDamage;
         public int MinDamage;
         public bool StaticUntilShot;
+
+        [NMS(Size = 3, Ignore = true)]
+        public byte[] Padding2D;
     }
 }

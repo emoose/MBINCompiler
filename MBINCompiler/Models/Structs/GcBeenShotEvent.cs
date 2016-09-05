@@ -10,8 +10,5 @@
 
         public int DamageThreshold;
         public float HealthThreshold;
-
-        [NMS(Size = 4, Ignore = true)]
-        public byte[] PaddingC;
     }
 }

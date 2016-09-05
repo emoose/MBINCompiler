@@ -73,5 +73,8 @@ namespace MBINCompiler.Models.Structs
 
         [NMS(Size = 5, EnumValue = new string[5] { "Commodity", "Technology", "Fuel", "Tradeable", "Special" })]
         public float[] NormalizedPriceLimits;
+
+        [NMS(Size = 0xC, Ignore = true)]
+        public byte[] Padding47E4;
     }
 }

@@ -28,5 +28,8 @@
         {
             return new[] { "Sphere", "UpperHalfSphere", "BottomHalfSphere" };
         }
+
+        [NMS(Size = 0xC, Ignore = true)]
+        public byte[] Padding134;
     }
 }

@@ -14,7 +14,7 @@ namespace MBINCompiler.Models.Structs
         [NMS(Size = 8, Ignore = true)]
         /* 0x008 */ public byte[] Padding8;
         /* 0x010 */ public TkModelRendererData Renderer;
-        /* 0x080 */ public GcAlienRace AlienRace;
+        /* 0x080 */ public GcAlienRace Race;
         /* 0x084 */ public float AttractDistanceSq;
         /* 0x088 */ public bool RepeatInteraction;
         /* 0x089 */ public bool UseInteractCamera;
@@ -36,5 +36,8 @@ namespace MBINCompiler.Models.Structs
 
         /* 0x120 */ public float SecondaryCameraTransitionTime;
         /* 0x124 */ public bool DoInteractionsInOrder;
+
+        [NMS(Size = 0xB, Ignore = true)]
+        /* 0x125 */ public byte[] Padding125;
     }
 }

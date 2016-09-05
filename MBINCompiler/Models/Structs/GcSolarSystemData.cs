@@ -7,7 +7,7 @@ namespace MBINCompiler.Models.Structs
         /* 0x0000 */ public GcSeed Seed;
         [NMS(Size = 0x80)]
         /* 0x0010 */ public string Name;
-        /* 0x0090 */ public GcSolarSystemClass SolarSystemClass;
+        /* 0x0090 */ public GcSolarSystemClass Class;
         /* 0x0094 */ public int Planets;
         [NMS(Size = 8, Ignore = true)]
         /* 0x0098 */ public byte[] Padding98;
@@ -46,11 +46,8 @@ namespace MBINCompiler.Models.Structs
 
         [NMS(Size = 4, Ignore = true)]
         /* 0x051C */ public byte[] Padding51C;
-        /* 0x0520 */ public GcPlanetColourData PlanetColourData;
-        /* 0x1100 */ public Colour SunColour;
-        /* 0x1110 */ public Colour LightColour;
-        /* 0x1120 */ public Colour BounceColour;
-
+        /* 0x0520 */ public GcPlanetColourData Colours;
+        /* 0x1100 */ public GcLightProperties Light;
         /* 0x1130 */ public int SkyType;
         public string[] SkyTypeValues()
         {
@@ -64,6 +61,9 @@ namespace MBINCompiler.Models.Structs
         /* 0x1270 */ public string HeavyAir;
         [NMS(Size = 6)]
         /* 0x12F0 */ public GcAISpaceshipPreloadCacheDataTable[] FactionShips;
-        /* 0x1350 */ public GcAlienRace AlienRace;
+        /* 0x1350 */ public GcAlienRace InhabitingRace;
+
+        [NMS(Size = 0xC, Ignore = true)]
+        /* 0x1354 */ public byte[] Padding1354;
     }
 }

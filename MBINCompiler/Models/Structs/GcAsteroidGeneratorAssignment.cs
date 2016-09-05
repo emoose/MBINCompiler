@@ -6,5 +6,8 @@
         public GcSolarSystemLocatorChoice Locator;
         public GcSeed Seed;
         public int AsteroidCount;
+
+        [NMS(Size = 4, Ignore = true)]
+        public byte[] Padding44;
     }
 }

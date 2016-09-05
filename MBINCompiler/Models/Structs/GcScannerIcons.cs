@@ -55,5 +55,8 @@
         public TkTextureResource CreatureDiscovered;
         public TkTextureResource CreatureUndiscovered;
         public TkTextureResource CreatureUnknown;
+
+        [NMS(Size = 4, Ignore = true)]
+        public byte[] Padding39DC;
     }
 }

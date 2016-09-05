@@ -1,10 +1,11 @@
 ﻿namespace MBINCompiler.Models.Structs
 {
-    public class GcRewardTechRecipe : NMSTemplate
+    public class GcRealitySubstanceCraftingMix : NMSTemplate // 0x18 bytes
     {
-        public GcTechnologyCategory Category;
         [NMS(Size = 0x10)]
-        public string RewardGroup;
+        public string ID;
+
+        public int Ratio;
 
         [NMS(Size = 4, Ignore = true)]
         public byte[] Padding14;

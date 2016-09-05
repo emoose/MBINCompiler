@@ -11,5 +11,8 @@
         public float NoiseOffset;
         public float NoiseScale;
         public float NoiseApply;
+
+        [NMS(Size = 4, Ignore = true)]
+        public byte[] Padding7C;
     }
 }

@@ -55,7 +55,11 @@
     <Compile Include="Models\Structs\GcCreatureRoleFilenameList.cs" />
     <Compile Include="Models\Structs\GcCreatureRoleFilenameTable.cs" />
     <Compile Include="Models\Structs\GcGalacticAddressData.cs" />
+    <Compile Include="Models\Structs\GcLightProperties.cs" />
+    <Compile Include="Models\Structs\GcPlanetInfo.cs" />
     <Compile Include="Models\Structs\GcPlayerMissionProgress.cs" />
+    <Compile Include="Models\Structs\GcRealityCraftingRecipeData.cs" />
+    <Compile Include="Models\Structs\GcRealitySubstanceCraftingMix.cs" />
     <Compile Include="Models\Structs\GcScanEventData.cs" />
     <Compile Include="Models\Structs\GcScanEventTable.cs" />
     <Compile Include="Models\Structs\GcTestMetadata.cs" />

@@ -2,10 +2,13 @@
 {
     public class GcAISpaceshipComponentData : NMSTemplate
     {
-        public GcAISpaceshipTypes ShipType;
-        public GcSpaceshipClasses ShipClass;
-        public GcPrimaryAxis PrimaryAxis;
+        public GcAISpaceshipTypes Type;
+        public GcSpaceshipClasses Class;
+        public GcPrimaryAxis Axis;
         [NMS(Size = 0x10)]
         public string Weapon;
+
+        [NMS(Size = 4, Ignore = true)]
+        public byte[] Padding1C;
     }
 }

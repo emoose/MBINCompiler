@@ -10,8 +10,5 @@
 
         [NMS(Size = 0x80)]
         public string Name;
-
-        [NMS(Size = 4, Ignore = true)]
-        public byte[] Padding84;
     }
 }

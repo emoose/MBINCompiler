@@ -11,5 +11,8 @@
         }
 
         public bool ShipScannable;
+
+        [NMS(Size = 3, Ignore = true)]
+        public byte[] PaddingD;
     }
 }

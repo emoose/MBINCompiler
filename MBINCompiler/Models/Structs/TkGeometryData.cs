@@ -86,12 +86,13 @@ namespace MBINCompiler.Models.Structs
                     using (var ms = new MemoryStream())
                     using (var writer2 = new BinaryWriter(ms))
                     {
-                        foreach (var vertex in vertexData)
-                        {
-                            var floatVertex = (float)vertex;
-                            var halfVertex = (Half)floatVertex;
-                            writer2.Write(halfVertex.value);
-                        }
+                        if(vertexData != null)
+                            foreach (var vertex in vertexData)
+                            {
+                                var floatVertex = (float)vertex;
+                                var halfVertex = (Half)floatVertex;
+                                writer2.Write(halfVertex.value);
+                            }
                         streamData = ms.ToArray();
                     }
 

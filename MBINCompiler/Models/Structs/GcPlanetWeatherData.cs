@@ -24,5 +24,8 @@
         public int DayColourIndex;
         public int DuskColourIndex;
         public int NightColourIndex;
+
+        [NMS(Size = 4, Ignore = true)]
+        public byte[] Padding1FC;
     }
 }
