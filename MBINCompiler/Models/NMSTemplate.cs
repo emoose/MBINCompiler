@@ -518,7 +518,7 @@ namespace MBINCompiler.Models
                         var endPos = writer.BaseStream.Position;
                         writer.BaseStream.Position = data.Item1;
                         writer.Write(pos - data.Item1);
-                        writer.WriteString(template.GetType().Name, Encoding.UTF8, 0x40);
+                        writer.WriteString("c" + template.GetType().Name, Encoding.UTF8, 0x40);
                         writer.BaseStream.Position = endPos;
                     }
                     else if (data.Item2.GetType().IsGenericType && data.Item2.GetType().GetGenericTypeDefinition() == typeof(List<>))
