@@ -1,5 +1,7 @@
-﻿using System.IO;
+﻿using System.Globalization;
+using System.IO;
 using System.Text;
+using System.Threading;
 using System.Xml;
 using System.Xml.Serialization;
 using MBINCompiler.Models;
@@ -19,15 +21,29 @@ namespace MBINCompiler
 
         public static NMSTemplate ReadTemplateFromString(string xml)
         {
+            var origCulture = Thread.CurrentThread.CurrentCulture;
+            Thread.CurrentThread.CurrentCulture = CultureInfo.InvariantCulture;
+
             using (var reader = new StringReader(xml))
             using (var xmlReader = XmlReader.Create(reader))
-                return ReadTemplateFromXmlReader(xmlReader);
+            {
+                var template = ReadTemplateFromXmlReader(xmlReader);
+                Thread.CurrentThread.CurrentCulture = origCulture;
+                return template;
+            }
         }
 
         public static NMSTemplate ReadTemplateFromStream(Stream input)
         {
+            var origCulture = Thread.CurrentThread.CurrentCulture;
+            Thread.CurrentThread.CurrentCulture = CultureInfo.InvariantCulture;
+
             using (var reader = XmlReader.Create(input))
-                return ReadTemplateFromXmlReader(reader);
+            {
+                var template = ReadTemplateFromXmlReader(reader);
+                Thread.CurrentThread.CurrentCulture = origCulture;
+                return template;
+            }
         }
 
         private static NMSTemplate ReadTemplateFromXmlReader(XmlReader reader)
@@ -39,13 +55,23 @@ namespace MBINCompiler
 
         public static EXmlData ReadExmlDataFromString(string xml)
         {
+            var origCulture = Thread.CurrentThread.CurrentCulture;
+            Thread.CurrentThread.CurrentCulture = CultureInfo.InvariantCulture;
+
             using (var reader = new StringReader(xml))
             using (var xmlReader = XmlReader.Create(reader))
-                return (EXmlData)Serializer.Deserialize(xmlReader);
+            {
+                var data = (EXmlData)Serializer.Deserialize(xmlReader);
+                Thread.CurrentThread.CurrentCulture = origCulture;
+                return data;
+            }
         }
 
         public static string WriteTemplate(NMSTemplate template)
         {
+            var origCulture = Thread.CurrentThread.CurrentCulture;
+            Thread.CurrentThread.CurrentCulture = CultureInfo.InvariantCulture;
+
             var xmlSettings = new XmlWriterSettings
             {
                 Indent = true,
@@ -57,7 +83,10 @@ namespace MBINCompiler
                 EXmlData data = template.SerializeEXml();
                 Serializer.Serialize(xmlTextWriter, data, Namespaces);
                 xmlTextWriter.Flush();
-                return stringWriter.GetStringBuilder().ToString();
+
+                var xmlData = stringWriter.GetStringBuilder().ToString();
+                Thread.CurrentThread.CurrentCulture = origCulture;
+                return xmlData;
             }
         }
 

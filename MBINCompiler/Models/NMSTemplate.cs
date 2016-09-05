@@ -540,10 +540,11 @@ namespace MBINCompiler.Models
         {
             string t = fieldType.Name;
             int i = 0;
+            string valueString = String.Empty;
+
             switch (fieldType.Name)
             {
                 case "String":
-                case "Single":
                 case "Boolean":
                 case "Int16":
                 case "UInt16":
@@ -551,45 +552,38 @@ namespace MBINCompiler.Models
                 case "UInt32":
                 case "Int64":
                 case "UInt64":
-                    var valueStr = value.ToString();
-                    if (fieldType.Name == "Int32")
+                    valueString = value.ToString();
+                    if (fieldType.Name != "Int32")
+                        break;
+                    
+                    var valuesMethod = GetType().GetMethod(field.Name + "Values"); // if we have an "xxxValues()" method in the struct, use that to get the value name
+                    if (valuesMethod != null)
                     {
-                        var valuesMethod = GetType().GetMethod(field.Name + "Values"); // if we have an "xxxValues()" method in the struct, use that to get the value name
-                        if (valuesMethod != null)
+                        if (((int)value) == -1)
+                            valueString = "";
+                        else
                         {
-                            if (((int)value) == -1)
-                                valueStr = "";
-                            else
-                            {
-                                string[] values = (string[])valuesMethod.Invoke(this, null);
-                                valueStr = values[(int)value];
-                            }
-                        }
-                        else if (settings?.EnumValue != null)
-                        {
-                            if (((int)value) == -1)
-                                valueStr = "";
-                            else
-                            {
-                                valueStr = settings.EnumValue[(int)value];
-                            }
+                            string[] values = (string[])valuesMethod.Invoke(this, null);
+                            valueString = values[(int)value];
                         }
                     }
-
-                    return new EXmlProperty
+                    else if (settings?.EnumValue != null)
                     {
-                        Name = field.Name,
-                        Value = valueStr
-                    };
+                        if (((int)value) == -1)
+                            valueString = "";
+                        else
+                            valueString = settings.EnumValue[(int)value];
+                    }
+                    break;
+                case "Single":
+                    valueString = ((float)value).ToString(System.Globalization.CultureInfo.InvariantCulture);
+                    break;
+                case "Double":
+                    valueString = ((double)value).ToString(System.Globalization.CultureInfo.InvariantCulture);
+                    break;
                 case "Byte[]":
-                    byte[] bytes = (byte[])value;
-                    string base64Value = bytes == null ? null : Convert.ToBase64String(bytes);
-
-                    return new EXmlProperty
-                    {
-                        Name = field.Name,
-                        Value = base64Value
-                    };
+                    valueString = value == null ? null : Convert.ToBase64String((byte[])value);
+                    break;
                 case "List`1":
                     var listType = field.FieldType.GetGenericArguments()[0];
                     EXmlProperty listProperty = new EXmlProperty
@@ -666,6 +660,12 @@ namespace MBINCompiler.Models
                         throw new Exception(string.Format("Unable to encode {0} to EXml!", field));
                     }
             }
+
+            return new EXmlProperty
+            {
+                Name = field.Name,
+                Value = valueString
+            };
         }
 
         public EXmlData SerializeEXml()
