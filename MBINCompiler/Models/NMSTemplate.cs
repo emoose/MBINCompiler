@@ -254,7 +254,7 @@ namespace MBINCompiler.Models
 
         public void SerializeValue(BinaryWriter writer, Type fieldType, object fieldData, NMSAttribute settings, FieldInfo field, ref List<Tuple<long, object>> additionalData, ref int addtDataIndex)
         {
-            if (CustomSerialize(writer, fieldType, fieldData, settings, field, ref additionalData))
+            if (CustomSerialize(writer, fieldType, fieldData, settings, field, ref additionalData, ref addtDataIndex))
                 return;
 
             switch (fieldType.Name)
@@ -857,7 +857,7 @@ namespace MBINCompiler.Models
             return null;
         }
 
-        public virtual bool CustomSerialize(BinaryWriter writer, Type field, object fieldData, NMSAttribute settings, FieldInfo fieldInfo, ref List<Tuple<long, object>> additionalData)
+        public virtual bool CustomSerialize(BinaryWriter writer, Type field, object fieldData, NMSAttribute settings, FieldInfo fieldInfo, ref List<Tuple<long, object>> additionalData, ref int addtDataIndex)
         {
             return false;
         }

@@ -33,7 +33,7 @@ namespace MBINCompiler.Models.Structs
         public List<float> VertexStream;
         public List<float> SmallVertexStream;
 
-        public override bool CustomSerialize(BinaryWriter writer, Type field, object fieldData, NMSAttribute settings, FieldInfo fieldInfo, ref List<Tuple<long, object>> additionalData)
+        public override bool CustomSerialize(BinaryWriter writer, Type field, object fieldData, NMSAttribute settings, FieldInfo fieldInfo, ref List<Tuple<long, object>> additionalData, ref int addtDataIndex)
         {
             if (field == null || fieldInfo == null)
                 return false;
@@ -53,7 +53,7 @@ namespace MBINCompiler.Models.Structs
                     IList data = (IList)fieldData;
 
                     if(Indices16Bit != 1) // if 32bit indices, we can just pass it directly
-                        additionalData.Add(new Tuple<long, object>(listPos, data)); 
+                        additionalData.Insert(addtDataIndex, new Tuple<long, object>(listPos, data)); 
                     else
                     {
                         // otherwise we have to create 32bit indices from the 16bit ones
@@ -63,8 +63,9 @@ namespace MBINCompiler.Models.Structs
                             uint val32Bit = (uint)((int)data[i+1] << 16 | (int)data[i]);
                             list32Bit.Add(val32Bit);
                         }
-                        additionalData.Add(new Tuple<long, object>(listPos, list32Bit));
+                        additionalData.Insert(addtDataIndex, new Tuple<long, object>(listPos, list32Bit));
                     }
+                    addtDataIndex++;
 
                     return true;
 
@@ -95,7 +96,8 @@ namespace MBINCompiler.Models.Structs
                     }
 
                     var listBytes = new List<byte>(streamData);
-                    additionalData.Add(new Tuple<long, object>(listPos2, listBytes));
+                    additionalData.Insert(addtDataIndex, new Tuple<long, object>(listPos2, listBytes));
+                    addtDataIndex++;
 
                     return true;
             }
