@@ -1,18 +1,18 @@
-﻿using System.Runtime.InteropServices;
+﻿using System;
 
 namespace MBINCompiler.Models
 {
     public class MBINHeader : NMSTemplate
     {
-        public uint Magic;
-        public int Unknown4;
-        public long BuildDateTime; // 0x0 for most files, 0xFFFF.. for TkGeometryData files, timestamp eg. 201607201542 (decimal) on global files.
-        public long Unknown10;
+        public uint Magic; // can be 0xCCCCCCCC, or 0xDDDDDDDD for MBIN.PC files, probably used to seperate PC files from PS4
+        public int Version; // seems to be a version field, game checks this under certain conditions to make sure it's equal to 2500
+        public long BuildDateTime; // 0x0 for most files, 0xFFFF.. for TkGeometryData files, timestamp eg. 201607201542 (decimal) on global files and older MBINs, likely removed the code that set it at some stage
+        public long TemplateGUID; // seems to be unique across templates (files using the same template share the same GUID)
 
-        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 0x40)]
+        [NMS(Size = 0x40)]
         public string TemplateName;
 
-        public long Unknown58;
+        public ulong Padding58; // doesn't seem to be used in the game, stores 00.../FE... in the games files
 
         public string GetXMLTemplateName()
         {
@@ -24,12 +24,15 @@ namespace MBINCompiler.Models
 
         public void SetDefaults()
         {
-            Magic = 0xCCCCCCCC; // can also be 0xDDDDDDDD, why?
-            Unknown4 = 2500;
+            Magic = 0xCCCCCCCC;
+            Version = 2500;
+            
+            // these two values aren't checked, so we can set them to whatever we like
             BuildDateTime = 0x706D6F434E49424D;
-            Unknown10 = 0x302E3172656C69; // hash of some kind? might be filename hash, checked against 0xFFCA41E11361EE54i64 inside MBIN loading routine, which is value used inside METADATA/UI/LAYOUT.MBIN
+            TemplateGUID = 0x302E3172656C69;
+
             TemplateName = string.Empty;
-            Unknown58 = 0; // can be 0xFEFEFE...
+            Padding58 = ulong.Parse($"{DateTime.Now:yyyyMMddhhmm}"); // may as well make use of this field too
         }
     }
 }
