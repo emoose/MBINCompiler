@@ -24,5 +24,8 @@ namespace MBINCompiler.Models.Structs
         public NMSBool[] WeatherOptions;
 
         public GcTerrainControls Terrain;
+
+        [NMS(Size = 8, Ignore = true)]
+        public byte[] Padding408;
     }
 }

@@ -5,14 +5,11 @@
         public TkNoiseFlattenOptions FlattenType;
         public GcBuildingClusterPlacement BuildingClusterPlacement;
         public bool AddWaypoint;
+        public bool AddShelter;
         public bool AddLandingPad;
 
-        public float Density1; // todo: change this to float[]
-        public float Density2;
-        public float Density3;
-        public float Density4;
-        public float Density5;
-        public float Density6;
+        [NMS(Size = 6, EnumValue = new[] { "Dead", "Low", "Mid", "Full", "RelicOnly", "IndustrialOnly"})]
+        public float[] Density;
 
         public int NumModelsToGenerate;
 
