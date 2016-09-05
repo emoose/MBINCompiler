@@ -481,19 +481,22 @@ namespace MBINCompiler.Models
                 {
                     var data = additionalData[i];
                     //writer.BaseStream.Position = additionalDataOffset; // addtDataOffset gets updated by child templates
+                    long origPos = writer.BaseStream.Position;
                     writer.Align(0x8, 0); // todo: check if this alignment is correct
 
                     if (data.Item2.GetType() == typeof(VariableSizeString))
                     {
+                        writer.BaseStream.Position = origPos; // no alignment for dynamicstrings
+
                         var str = (VariableSizeString)data.Item2;
 
                         var stringPos = writer.BaseStream.Position;
-                        writer.WriteString(str.Value, Encoding.UTF8);
+                        writer.WriteString(str.Value, Encoding.UTF8, null, true);
                         var stringEndPos = writer.BaseStream.Position;
 
                         writer.BaseStream.Position = data.Item1;
                         writer.Write(stringPos - data.Item1);
-                        writer.Write((Int32)str.Value.Length);
+                        writer.Write((Int32)(stringEndPos - stringPos) - 1); // -1 for null terminator
                         writer.Write((UInt32)0xAAAAAA01);
 
                         writer.BaseStream.Position = stringEndPos;
