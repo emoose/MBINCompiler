@@ -30,6 +30,30 @@ namespace MBINCompiler.Models
             return Activator.CreateInstance(type) as NMSTemplate;
         }
 
+        public int GetDataSize()
+        {
+            using (var ms = new MemoryStream())
+            {
+                using (var bw = new BinaryWriter(ms))
+                {
+                    List<Tuple<long, object>> addt = new List<Tuple<long, object>>();
+                    int addtIdx = 0;
+                    AppendToWriter(bw, ref addt, ref addtIdx, GetType());
+                }
+                var bytes = ms.ToArray();
+                return bytes.Length;
+            }
+        }
+
+        public static int GetTemplateDataSize(string templateName)
+        {
+            var template = TemplateFromName(templateName);
+            if (template == null)
+                return 0;
+
+            return template.GetDataSize();
+        }
+
         public static object DeserializeValue(BinaryReader reader, Type field, NMSAttribute settings, long templatePosition, FieldInfo fieldInfo, NMSTemplate parent)
         {
             var template = parent.CustomDeserialize(reader, field, settings, templatePosition, fieldInfo);
@@ -366,15 +390,28 @@ namespace MBINCompiler.Models
                     {
                         var arrayType = fieldType.GetElementType();
                         Array array = (Array)fieldData;
+                        if (array == null)
+                            array = Array.CreateInstance(arrayType, settings.Size);
+
                         foreach (var obj in array)
                         {
-                            SerializeValue(writer, obj.GetType(), obj, settings, field, ref additionalData, ref addtDataIndex);
+                            var realObj = obj;
+                            if (realObj == null)
+                                realObj = Activator.CreateInstance(arrayType);
+
+                            SerializeValue(writer, realObj.GetType(), realObj, settings, field, ref additionalData, ref addtDataIndex);
                         }
                     }
                     else
                     {
                         if (fieldType.BaseType == typeof(NMSTemplate))
-                            ((NMSTemplate)fieldData).AppendToWriter(writer, ref additionalData, ref addtDataIndex);
+                        {
+                            var realData = (NMSTemplate)fieldData;
+                            if (realData == null)
+                                realData = (NMSTemplate)Activator.CreateInstance(fieldType);
+
+                            realData.AppendToWriter(writer, ref additionalData, ref addtDataIndex, GetType());
+                        }
                         else
                             throw new Exception($"[C] Unknown type {fieldType} not NMSTemplate" + (field != null ? $" for {field.Name}" : ""));
                     }
@@ -383,10 +420,10 @@ namespace MBINCompiler.Models
             }
         }
 
-        public void AppendToWriter(BinaryWriter writer, ref List<Tuple<long, object>> additionalData, ref int addtDataIndex)
+        public void AppendToWriter(BinaryWriter writer, ref List<Tuple<long, object>> additionalData, ref int addtDataIndex, Type parent)
         {
             long templatePosition = writer.BaseStream.Position;
-            Debug.WriteLine($"[C] writing {GetType().Name} to offset 0x{templatePosition:X}");
+            Debug.WriteLine($"[C] writing {GetType().Name} to offset 0x{templatePosition:X} (parent: {parent.Name})");
 
             var type = GetType();
             var fields = type.GetFields().OrderBy(field => field.MetadataToken); // hack to get fields in order of declaration (todo: use something less hacky, this might break mono?)
@@ -430,7 +467,7 @@ namespace MBINCompiler.Models
                 var template = (NMSTemplate)entry;
                 var addtData = new Dictionary<long, object>();
                 Debug.WriteLine($"[C] writing {template.GetType().Name} to offset 0x{writer.BaseStream.Position:X}");
-                template.AppendToWriter(writer, ref additionalData, ref addtDataIndexThis);
+                template.AppendToWriter(writer, ref additionalData, ref addtDataIndexThis, GetType());
             }
 
             long dataEndOffset = writer.BaseStream.Position;
@@ -482,7 +519,7 @@ namespace MBINCompiler.Models
 
                 int i = 0;
                 // write primary template + any embedded templates
-                AppendToWriter(writer, ref additionalData, ref i);
+                AppendToWriter(writer, ref additionalData, ref i, GetType());
 
                 // now write values of lists etc
                 for (i = 0; i < additionalData.Count; i++)
@@ -514,7 +551,7 @@ namespace MBINCompiler.Models
                         var pos = writer.BaseStream.Position;
                         var template = (NMSTemplate)data.Item2;
                         int i2 = i + 1;
-                        template.AppendToWriter(writer, ref additionalData, ref i2);
+                        template.AppendToWriter(writer, ref additionalData, ref i2, GetType());
                         var endPos = writer.BaseStream.Position;
                         writer.BaseStream.Position = data.Item1;
                         writer.Write(pos - data.Item1);
@@ -525,7 +562,7 @@ namespace MBINCompiler.Models
                     {
                         Type itemType = data.Item2.GetType().GetGenericArguments()[0];
                         if (itemType == typeof(NMSTemplate))
-                            SerializeGenericList(writer, (IList)data.Item2, data.Item1, ref additionalData, i+1);
+                            SerializeGenericList(writer, (IList)data.Item2, data.Item1, ref additionalData, i + 1);
                         else
                             SerializeList(writer, (IList)data.Item2, data.Item1, ref additionalData, i + 1);
                     }

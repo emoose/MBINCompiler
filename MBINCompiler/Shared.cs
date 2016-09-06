@@ -48,6 +48,8 @@ namespace MBINCompiler
         {
             if (encoding == null)
                 encoding = Encoding.ASCII;
+            if (str == null)
+                str = String.Empty;
 
             int bufferSize = encoding.GetBytes(str).Length;
             if (size != null)
