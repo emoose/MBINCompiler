@@ -3,20 +3,21 @@
     public class GcSolarGenerationGlobals : NMSTemplate
     {
         public bool Unknown0;
-        [NMS(Size = 0xF)]
-        public byte[] Unknown1;
+
+        [NMS(Size = 0xF, Ignore = true)]
+        public byte[] Padding1;
 
         public float Unknown10;
         public float Unknown14;
         public float Unknown18; // unused? 
         public float Unknown1C; // unused? 
 
-        public float minPlanetDistance;
-        public float maxPlanetDistance;
-        public float Unknown28; // unused?   // changed bool to float
-        public int Unknown2c; // unused? non-float?
+        public float MinPlanetDistance;
+        public float MaxPlanetDistance;
+        public bool Unknown28; // unused?
+        public float Unknown2C; // unused?
 
-        public float Unknown30; // changed bool to float
+        public bool Unknown30;
         public float Unknown34; // unused?
         public float Unknown38; // unused?
         public float Unknown3C; // qword?
@@ -37,7 +38,7 @@
         public float Unknown6C;
 
         public float Unknown70;
-        public uint Unknown74; // changed bool to uint
+        public bool Unknown74;
         public float Unknown78;
         public float Unknown7C;
 
@@ -96,7 +97,7 @@
         public float Unknown130;
 
         [NMS(Size = 0x6)]
-        public Vector3i Unknown134;
+        public Vector3i[] Unknown134;
 
         public int Unknown17C;
     }

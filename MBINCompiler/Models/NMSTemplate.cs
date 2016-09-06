@@ -38,9 +38,10 @@ namespace MBINCompiler.Models
                 var addt = new List<Tuple<long, object>>();
                 int addtIdx = 0;
 
-                PrintToDebug = !PrintToDebug;
+                var prevPTD = PrintToDebug;
+                PrintToDebug = false;
                 AppendToWriter(bw, ref addt, ref addtIdx, GetType());
-                PrintToDebug = !PrintToDebug;
+                PrintToDebug = prevPTD;
 
                 return ms.ToArray().Length;
             }
