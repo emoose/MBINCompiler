@@ -49,5 +49,10 @@
         public float Unknown64;
         public float Unknown68;
         public float Unknown6C;
+
+        public float Unknown70;
+        public float Unknown74;
+        public float Unknown78;
+        public float Unknown7C;
     }
 }

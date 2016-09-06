@@ -26,7 +26,7 @@ namespace MBINCompiler.Models.Structs
 
         public GcGalaxyMarkerSettings Template40;     // offset: 64, sz: 112, origin: sub_140141660(v1 + 64);, comment: call sub        // line:   sub_140141660(v1 + 64);
         public GcGalaxyMarkerSettings TemplateB0;     // offset: 176, sz: 112, origin: sub_140141660(v2 + 176); // cGcGalaxyMarkerSettings, comment: call sub        // line:   sub_140141660(v2 + 176); // cGcGalaxyMarkerSettings
-        public GcGalaxyMarkerSettings Template12A;     // offset: 288, sz: 112, origin: sub_140141660(v3 + 288);, comment: call sub        // line:   sub_140141660(v3 + 298);
+        public GcGalaxyMarkerSettings Template120;     // offset: 288, sz: 112, origin: sub_140141660(v3 + 288);, comment: call sub        // line:   sub_140141660(v3 + 298);
         public GcGalaxyMarkerSettings Template190;     // offset: 400, sz: 112, origin: sub_140141660(v4 + 400);, comment: call sub        // line:   sub_140141660(v4 + 400);
         public GcGalaxyMarkerSettings Template200;     // offset: 512, sz: 112, origin: sub_140141660(v5 + 512);, comment: call sub        // line:   sub_140141660(v5 + 512);
         public GcGalaxyMarkerSettings Template270;     // offset: 624, sz: 112, origin: sub_140141660(v6 + 624);, comment: call sub        // line:   sub_140141660(v6 + 624);
@@ -62,13 +62,11 @@ namespace MBINCompiler.Models.Structs
         public float Unknown354;     // offset: 852, sz: 4, origin: 1092616192, parsed: 10        // line:   *(_DWORD *)(v7 + 852) = 1092616192;
         public float Unknown358;     // offset: 856, sz: 4, origin: 1050253722, parsed: 0.3        // line:   *(_DWORD *)(v7 + 856) = 1050253722;
         public float Unknown35C;     // offset: 860, sz: 4, origin: 1051260355i64, parsed: 0.33, comment: two packed floats in a QWORD?(1)
-        public float Unknown360;     // offset: 864, sz: 4, origin: 1051260355i64, parsed: 0, comment: two packed floats in a QWORD?(2)        // line:   *(_QWORD *)(v7 + 860) = 1051260355i64;
-        public long Unknown364;     // offset: 868, sz: 8, origin: 0i64, parsed: 0. comment: either a long or two floats        // line:   *(_QWORD *)(v7 + 868) = 0i64;
+        public int Unknown360; // code treats 360/368 as two seperate ints
+        public int Unknown364;
 
-        // missing 4 bytes at offset 868
-        // could be a subroutine, padding or something that the parser skipped
-        [NMS(Size = 0x4, Ignore = true)]
-        public byte[] Padding36C;        // offset: 876, sz: 4, comment: auto padding 
+        [NMS(Size = 0x8, Ignore = true)]
+        public byte[] Padding368;
 
         public float Unknown370;     // offset: 880, sz: 4, origin: 1053609165, parsed: 0.4        // line:   *(_DWORD *)(v7 + 880) = 1053609165;
         public float Unknown374;     // offset: 884, sz: 4, origin: 1050253722, parsed: 0.3        // line:   *(_DWORD *)(v7 + 884) = 1050253722;
@@ -132,22 +130,10 @@ namespace MBINCompiler.Models.Structs
         public byte[] Padding418;        // offset: 1048, sz: 8, comment: auto padding 
 
         public float Unknown420;     // offset: 1056, sz: 4, origin: 1065353216, parsed: 1        // line:   *(_DWORD *)(v7 + 1056) = 1065353216;
-
-        // missing 12 bytes at offset 1056
-        // could be a subroutine, padding or something that the parser skipped
-        [NMS(Size = 0xC, Ignore = true)]
-        public byte[] Padding424;        // offset: 1060, sz: 12, comment: auto padding 
-
-        public float Unknown430;     // offset: 1072, sz: 4, origin: 1065353216, parsed: 1        // line:   *(_DWORD *)(v7 + 1072) = 1065353216;
         public float Unknown424;     // offset: 1060, sz: 4, origin: 1065353216, parsed: 1        // line:   *(_DWORD *)(v7 + 1060) = 1065353216;
         public float Unknown428;     // offset: 1064, sz: 4, origin: 1065353216, parsed: 1        // line:   *(_DWORD *)(v7 + 1064) = 1065353216;
         public float Unknown42C;     // offset: 1068, sz: 4, origin: 1065353216, parsed: 1        // line:   *(_DWORD *)(v7 + 1068) = 1065353216;
-
-        // missing 4 bytes at offset 1068
-        // could be a subroutine, padding or something that the parser skipped
-        [NMS(Size = 0x4, Ignore = true)]
-        public byte[] Padding430;        // offset: 1072, sz: 4, comment: auto padding 
-
+        public float Unknown430;     // offset: 1072, sz: 4, origin: 1065353216, parsed: 1        // line:   *(_DWORD *)(v7 + 1072) = 1065353216;
         public float Unknown434;     // offset: 1076, sz: 4, origin: 1065353216, parsed: 1        // line:   *(_DWORD *)(v7 + 1076) = 1065353216;
         public float Unknown438;     // offset: 1080, sz: 4, origin: 1065353216, parsed: 1        // line:   *(_DWORD *)(v7 + 1080) = 1065353216;
         public float Unknown43C;     // offset: 1084, sz: 4, origin: 1065353216, parsed: 1        // line:   *(_DWORD *)(v7 + 1084) = 1065353216;
@@ -160,22 +146,10 @@ namespace MBINCompiler.Models.Structs
         public float Unknown458;     // offset: 1112, sz: 4, origin: 1065353216, parsed: 1        // line:   *(_DWORD *)(v7 + 1112) = 1065353216;
         public float Unknown45C;     // offset: 1116, sz: 4, origin: 1065353216, parsed: 1        // line:   *(_DWORD *)(v7 + 1116) = 1065353216;
         public float Unknown460;     // offset: 1120, sz: 4, origin: 1065353216, parsed: 1        // line:   *(_DWORD *)(v7 + 1120) = 1065353216;
-
-        // missing 12 bytes at offset 1120
-        // could be a subroutine, padding or something that the parser skipped
-        [NMS(Size = 0xC, Ignore = true)]
-        public byte[] Padding464;        // offset: 1124, sz: 12, comment: auto padding 
-
-        public float Unknown470;     // offset: 1136, sz: 4, origin: 1065353216, parsed: 1        // line:   *(_DWORD *)(v7 + 1136) = 1065353216;
         public float Unknown464;     // offset: 1124, sz: 4, origin: 1065353216, parsed: 1        // line:   *(_DWORD *)(v7 + 1124) = 1065353216;
         public float Unknown468;     // offset: 1128, sz: 4, origin: 1065353216, parsed: 1        // line:   *(_DWORD *)(v7 + 1128) = 1065353216;
         public float Unknown46C;     // offset: 1132, sz: 4, origin: 1065353216, parsed: 1        // line:   *(_DWORD *)(v7 + 1132) = 1065353216;
-
-        // missing 4 bytes at offset 1132
-        // could be a subroutine, padding or something that the parser skipped
-        [NMS(Size = 0x4, Ignore = true)]
-        public byte[] Padding470;        // offset: 1136, sz: 4, comment: auto padding 
-
+        public float Unknown470;     // offset: 1136, sz: 4, origin: 1065353216, parsed: 1        // line:   *(_DWORD *)(v7 + 1136) = 1065353216;
         public float Unknown474;     // offset: 1140, sz: 4, origin: 1065353216, parsed: 1        // line:   *(_DWORD *)(v7 + 1140) = 1065353216;
         public float Unknown478;     // offset: 1144, sz: 4, origin: 1065353216, parsed: 1        // line:   *(_DWORD *)(v7 + 1144) = 1065353216;
         public float Unknown47C;     // offset: 1148, sz: 4, origin: 1065353216, parsed: 1        // line:   *(_DWORD *)(v7 + 1148) = 1065353216;
@@ -209,14 +183,21 @@ namespace MBINCompiler.Models.Structs
         public float Unknown4EC;     // offset: 1260, sz: 4, origin: 1028443341, parsed: 0.05        // line:   *(_DWORD *)(v7 + 1260) = 1028443341;
         public float Unknown4F0;     // offset: 1264, sz: 4, origin: 1082130432, parsed: 4        // line:   *(_DWORD *)(v7 + 1264) = 1082130432;
         public float Unknown4F4;     // offset: 1268, sz: 4, origin: 1065353216i64, parsed: 1, comment: two packed floats in a QWORD?(1)
-        public float Unknown4F8;     // offset: 1272, sz: 4, origin: 1065353216i64, parsed: 0, comment: two packed floats in a QWORD?(2)        // line:   *(_QWORD *)(v7 + 1268) = 1065353216i64;
-        public long Unknown4FC;     // offset: 1276, sz: 8, origin: 0i64, parsed: 0. comment: either a long or two floats        // line:   *(_QWORD *)(v7 + 1276) = 0i64;
-        public long Unknown504;     // offset: 1284, sz: 8, origin: 0i64, parsed: 0. comment: either a long or two floats        // line:   *(_QWORD *)(v7 + 1284) = 0i64;
-        public long Unknown50C;     // offset: 1292, sz: 8, origin: 0i64, parsed: 0. comment: either a long or two floats        // line:   *(_QWORD *)(v7 + 1292) = 0i64;
-        public long Unknown514;     // offset: 1300, sz: 8, origin: 0i64, parsed: 0. comment: either a long or two floats        // line:   *(_QWORD *)(v7 + 1300) = 0i64;
-        public long Unknown51C;     // offset: 1308, sz: 8, origin: 0i64, parsed: 0. comment: either a long or two floats        // line:   *(_QWORD *)(v7 + 1308) = 0i64;
-        public long Unknown524;     // offset: 1316, sz: 8, origin: 0i64, parsed: 0. comment: either a long or two floats        // line:   *(_QWORD *)(v7 + 1316) = 0i64;
-        public long Unknown52C;     // offset: 1324, sz: 8, origin: 0i64, parsed: 0. comment: either a long or two floats        // line:   *(_QWORD *)(v7 + 1324) = 0i64;
+        public int Unknown4F8;
+        public int Unknown4FC;
+        public int Unknown500;
+        public int Unknown504;
+        public int Unknown508;
+        public int Unknown50C;
+        public int Unknown510;
+        public int Unknown514;
+        public int Unknown518;
+        public int Unknown51C;
+        public int Unknown520;
+        public int Unknown524;
+        public int Unknown528;
+        public int Unknown52C;
+        public float Unknown530;
         public float Unknown534;     // offset: 1332, sz: 4, origin: 1036831949, parsed: 0.1        // line:   *(_DWORD *)(v7 + 1332) = 1036831949;
         public float Unknown538;     // offset: 1336, sz: 4, origin: 1120403456, parsed: 100        // line:   *(_DWORD *)(v7 + 1336) = 1120403456;
         public float Unknown53C;     // offset: 1340, sz: 4, origin: 1061997773, parsed: 0.8        // line:   *(_DWORD *)(v7 + 1340) = 1061997773;
