@@ -14,18 +14,18 @@ namespace MBINCompiler.Models
 {
     public class NMSTemplate
     {
-        private static readonly Dictionary<string, Type> NMSTemplateMap = Assembly.GetExecutingAssembly()
+        internal static readonly Dictionary<string, Type> NMSTemplateMap = Assembly.GetExecutingAssembly()
                 .GetTypes()
                 .Where(t => t.BaseType == typeof(NMSTemplate))
                 .ToDictionary(t => t.Name);
+
+        internal static bool PrintToDebug = true; // disable this when doing things in debug mode (tests etc) for a nice speedup
 
         public static NMSTemplate TemplateFromName(string templateName)
         {
             Type type;
             if (!NMSTemplateMap.TryGetValue(templateName, out type))
-            {
                 return null; // Template type doesn't exist
-            }
 
             return Activator.CreateInstance(type) as NMSTemplate;
         }
@@ -33,15 +33,16 @@ namespace MBINCompiler.Models
         public int GetDataSize()
         {
             using (var ms = new MemoryStream())
+            using (var bw = new BinaryWriter(ms))
             {
-                using (var bw = new BinaryWriter(ms))
-                {
-                    List<Tuple<long, object>> addt = new List<Tuple<long, object>>();
-                    int addtIdx = 0;
-                    AppendToWriter(bw, ref addt, ref addtIdx, GetType());
-                }
-                var bytes = ms.ToArray();
-                return bytes.Length;
+                var addt = new List<Tuple<long, object>>();
+                int addtIdx = 0;
+
+                PrintToDebug = !PrintToDebug;
+                AppendToWriter(bw, ref addt, ref addtIdx, GetType());
+                PrintToDebug = !PrintToDebug;
+
+                return ms.ToArray().Length;
             }
         }
 
@@ -166,7 +167,7 @@ namespace MBINCompiler.Models
                 return null;
 
             long templatePosition = reader.BaseStream.Position;
-            Debug.WriteLine($"{templateName} position: 0x{templatePosition:X}");
+            if(PrintToDebug) Debug.WriteLine($"{templateName} position: 0x{templatePosition:X}");
 
             if (templateName == "VariableSizeString")
             {
@@ -189,7 +190,7 @@ namespace MBINCompiler.Models
 
             obj.FinishDeserialize();
 
-            Debug.WriteLine($"{templateName} end position: 0x{reader.BaseStream.Position:X}");
+            if (PrintToDebug) Debug.WriteLine($"{templateName} end position: 0x{reader.BaseStream.Position:X}");
 
             return obj;
         }
@@ -197,7 +198,7 @@ namespace MBINCompiler.Models
         public static List<NMSTemplate> DeserializeGenericList(BinaryReader reader, long templateStartOffset, NMSTemplate parent)
         {
             long listPosition = reader.BaseStream.Position;
-            Debug.WriteLine($"DeserializeGenericList start 0x{listPosition:X}");
+            if (PrintToDebug) Debug.WriteLine($"DeserializeGenericList start 0x{listPosition:X}");
 
             long templateNamesOffset = reader.ReadInt64();
             int numTemplates = reader.ReadInt32();
@@ -245,7 +246,7 @@ namespace MBINCompiler.Models
         public static List<T> DeserializeList<T>(BinaryReader reader, FieldInfo field, NMSAttribute settings, long templateStartOffset, NMSTemplate parent)
         {
             long listPosition = reader.BaseStream.Position;
-            Debug.WriteLine($"DeserializeList start 0x{listPosition:X}");
+            if (PrintToDebug) Debug.WriteLine($"DeserializeList start 0x{listPosition:X}");
 
             long listStartOffset = reader.ReadInt64();
             int numEntries = reader.ReadInt32();
@@ -423,7 +424,7 @@ namespace MBINCompiler.Models
         public void AppendToWriter(BinaryWriter writer, ref List<Tuple<long, object>> additionalData, ref int addtDataIndex, Type parent)
         {
             long templatePosition = writer.BaseStream.Position;
-            Debug.WriteLine($"[C] writing {GetType().Name} to offset 0x{templatePosition:X} (parent: {parent.Name})");
+            if (PrintToDebug) Debug.WriteLine($"[C] writing {GetType().Name} to offset 0x{templatePosition:X} (parent: {parent.Name})");
 
             var type = GetType();
             var fields = type.GetFields().OrderBy(field => field.MetadataToken); // hack to get fields in order of declaration (todo: use something less hacky, this might break mono?)
@@ -440,7 +441,7 @@ namespace MBINCompiler.Models
         public void SerializeGenericList(BinaryWriter writer, IList list, long listHeaderPosition, ref List<Tuple<long, object>> additionalData, int addtDataIndex)
         {
             long listPosition = writer.BaseStream.Position;
-            Debug.WriteLine($"SerializeList start 0x{listPosition:X}, header 0x{listHeaderPosition:X}");
+            if (PrintToDebug) Debug.WriteLine($"SerializeList start 0x{listPosition:X}, header 0x{listHeaderPosition:X}");
 
             writer.BaseStream.Position = listHeaderPosition;
 
@@ -466,7 +467,7 @@ namespace MBINCompiler.Models
                 entryOffsetNamePairs.Add(writer.BaseStream.Position, entry.GetType().Name);
                 var template = (NMSTemplate)entry;
                 var addtData = new Dictionary<long, object>();
-                Debug.WriteLine($"[C] writing {template.GetType().Name} to offset 0x{writer.BaseStream.Position:X}");
+                if (PrintToDebug) Debug.WriteLine($"[C] writing {template.GetType().Name} to offset 0x{writer.BaseStream.Position:X}");
                 template.AppendToWriter(writer, ref additionalData, ref addtDataIndexThis, GetType());
             }
 
@@ -487,7 +488,7 @@ namespace MBINCompiler.Models
         public void SerializeList(BinaryWriter writer, IList list, long listHeaderPosition, ref List<Tuple<long, object>> additionalData, int addtDataIndex)
         {
             long listPosition = writer.BaseStream.Position;
-            Debug.WriteLine($"SerializeList start 0x{listPosition:X}, header 0x{listHeaderPosition:X}");
+            if (PrintToDebug) Debug.WriteLine($"SerializeList start 0x{listPosition:X}, header 0x{listHeaderPosition:X}");
 
             writer.BaseStream.Position = listHeaderPosition;
 
@@ -505,7 +506,7 @@ namespace MBINCompiler.Models
 
             foreach (var entry in list)
             {
-                Debug.WriteLine($"[C] writing {entry.GetType().Name} to offset 0x{writer.BaseStream.Position:X}");
+                if (PrintToDebug) Debug.WriteLine($"[C] writing {entry.GetType().Name} to offset 0x{writer.BaseStream.Position:X}");
                 SerializeValue(writer, entry.GetType(), entry, null, null, ref additionalData, ref addtDataIndexThis);
             }
         }

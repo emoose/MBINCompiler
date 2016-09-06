@@ -67,7 +67,7 @@ namespace MBINCompiler.Models.Structs
 
         public GcTradeSettings TradeSettings;
 
-        public List<NMSInt> SuitUpgradePrices;
+        public List<int> SuitUpgradePrices;
 
         public List<NMSString0x10> NeverSellableItems;
 

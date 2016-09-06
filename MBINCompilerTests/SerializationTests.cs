@@ -11,7 +11,7 @@ using MBINCompilerTests.Properties;
 namespace MBINCompilerTests
 {
     [TestClass]
-    public class UnitTests
+    public class SerializationTests
     {
         private readonly string baseDir = Settings.Default.InputFolder ?? @"C:\NMS";
 

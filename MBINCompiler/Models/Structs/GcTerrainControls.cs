@@ -2,12 +2,12 @@
 {
     public class GcTerrainControls : NMSTemplate
     {
-        [NMS(Size = 7)]
-        public NMSFloat[] NoiseLayers;
-        [NMS(Size = 9)]
-        public NMSFloat[] GridLayers;
-        [NMS(Size = 7)]
-        public NMSFloat[] Features;
+        [NMS(Size = 7, EnumValue = new[] { "Base", "Hill", "Mountain", "Rock", "UnderWater", "Texture", "Elevation" })]
+        public float[] NoiseLayers;
+        [NMS(Size = 9, EnumValue = new[] { "Small", "Large", "Resources_Heridium", "Resources_Iridium", "Resources_Copper", "Resources_Nickel", "Resources_Aluminium", "Resources_Gold", "Resources_Emeril" })]
+        public float[] GridLayers;
+        [NMS(Size = 7, EnumValue = new[] { "River", "Crater", "Arches", "ArchesSmall", "Blobs", "BlobsSmall", "Substance" })]
+        public float[] Features;
 
         public float UndergroundCaves;
         public float WaterActiveFrequency;

@@ -2,7 +2,6 @@
 {
     public class GcRewardEnergy : NMSTemplate
     {
-        public int AmountMin;
-        public int AmountMax;
+        public float Amount; // might be int
     }
 }

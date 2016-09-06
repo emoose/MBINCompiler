@@ -7,7 +7,12 @@ namespace MBINCompiler.Models.Structs
         public bool EntitlementLinked;
         [NMS(Size = 0x20)]
         public string EntitlementId;
-        public GcRewardTableChoice RewardChoice;
+        public int RewardChoice;
+        public string[] RewardChoiceValues()
+        {
+            return new[] { "GiveAll", "Select", "TryEach" };
+        }
+
         public List<GcRewardTableItem> List;
     }
 }

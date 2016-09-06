@@ -21,7 +21,7 @@ namespace MBINCompiler.Models.Structs
         public List<GcExternalObjectListOptions> ExternalObjectLists;
 
         [NMS(Size = 7, EnumValue = new string[7] { "Clear", "Dust", "Humid", "Snow", "Toxic", "Scorched", "Radioactive" } )]
-        public NMSBool[] WeatherOptions;
+        public bool[] WeatherOptions;
 
         public GcTerrainControls Terrain;
 

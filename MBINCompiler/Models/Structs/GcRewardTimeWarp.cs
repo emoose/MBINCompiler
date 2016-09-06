@@ -2,5 +2,6 @@
 {
     public class GcRewardTimeWarp : NMSTemplate
     {
+        public bool Dummy; // unused?
     }
 }

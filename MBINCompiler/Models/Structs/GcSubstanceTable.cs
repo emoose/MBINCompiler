@@ -4,7 +4,7 @@ namespace MBINCompiler.Models.Structs
 {
     public class GcSubstanceTable : NMSTemplate
     {
-        public List<GcSubstanceData> Table;
+        public List<GcRealitySubstanceData> Table;
         public List<GcRealityCraftingRecipeData> Crafting;
     }
 }

@@ -6,9 +6,7 @@
         public GcRarity Rarity;
         public bool IgnoreRarity;
         public int ItemLevel;
-        public bool AllowComponent;
-        public bool AllowDevice;
-        public bool AllowConsumable;
-        public bool AllowCuriosity;
+        [NMS(Size = 4, EnumValue = new[] { "Component", "Device", "Consumable", "Curiosity" })]
+        public bool[] AllowedProductTypes;
     }
 }

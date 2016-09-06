@@ -312,9 +312,6 @@
     <Compile Include="Models\Structs\GcRewardMoney.cs" />
     <Compile Include="Models\Structs\GcRewardShield.cs" />
     <Compile Include="Models\Structs\GcRewardShowBlackHoles.cs" />
-    <Compile Include="Models\Structs\GcScanType.cs" />
-    <Compile Include="Models\Structs\GcGlobalMission.cs" />
-    <Compile Include="Models\Structs\GcProductTypes.cs" />
     <Compile Include="Models\Structs\GcShipAIPerformanceArray.cs" />
     <Compile Include="Models\Structs\GcSpawnDensity.cs" />
     <Compile Include="Models\Structs\GcSpawnDensityList.cs" />
@@ -327,7 +324,6 @@
     <Compile Include="Models\Structs\GcStatType.cs" />
     <Compile Include="Models\Structs\GcStatValueData.cs" />
     <Compile Include="Models\Structs\GcTechnologyCategory.cs" />
-    <Compile Include="Models\Structs\GcSignalScanType.cs" />
     <Compile Include="Models\Structs\GcResourceElement.cs" />
     <Compile Include="Models\Structs\GcExactResource.cs" />
     <Compile Include="Models\Structs\GcInventoryIndex.cs" />
@@ -344,7 +340,6 @@
     <Compile Include="Models\Structs\GcRewardSubstance.cs" />
     <Compile Include="Models\Structs\GcRewardSpecificProduct.cs" />
     <Compile Include="Models\Structs\GcRewardSpecificTechFromList.cs" />
-    <Compile Include="Models\Structs\GcRewardTableChoice.cs" />
     <Compile Include="Models\Structs\GcGenericRewardTableEntry.cs" />
     <Compile Include="Models\Structs\GcRewardTableItem.cs" />
     <Compile Include="Models\Structs\GcRewardTableItemList.cs" />
@@ -361,9 +356,6 @@
     <Compile Include="Models\Structs\GcWaypointComponentData.cs" />
     <Compile Include="Models\Structs\GcWeatherOptions.cs" />
     <Compile Include="Models\Structs\GcWeatherTable.cs" />
-    <Compile Include="Models\Structs\NMSBool.cs" />
-    <Compile Include="Models\Structs\NMSInt.cs" />
-    <Compile Include="Models\Structs\NMSFloat.cs" />
     <Compile Include="Models\Structs\NMSString0x100.cs" />
     <Compile Include="Models\Structs\NMSString0x20.cs" />
     <Compile Include="Models\Structs\TkActionButtonLookup.cs" />
@@ -505,7 +497,7 @@
     <Compile Include="Models\Structs\GcProductData.cs" />
     <Compile Include="Models\Structs\GcProductTable.cs" />
     <Compile Include="Models\Structs\GcSceneSettings.cs" />
-    <Compile Include="Models\Structs\GcSubstanceData.cs" />
+    <Compile Include="Models\Structs\GcRealitySubstanceData.cs" />
     <Compile Include="Models\Structs\GcSubstanceTable.cs" />
     <Compile Include="Models\Structs\GcStatsBonus.cs" />
     <Compile Include="Models\Structs\GcStatsTypes.cs" />

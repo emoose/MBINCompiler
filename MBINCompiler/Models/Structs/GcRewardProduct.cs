@@ -5,10 +5,8 @@
         public GcRealitySubstanceCategory Category;
         public GcRarity Rarity;
         public int ItemLevel;
-        public bool AllowComponent;
-        public bool AllowDevice;
-        public bool AllowConsumable;
-        public bool AllowCuriosity;
+        [NMS(Size = 4, EnumValue = new[] { "Component", "Device", "Consumable", "Curiosity" })]
+        public bool[] AllowedProductTypes;
         public int AmountMin;
         public int AmountMax;
     }

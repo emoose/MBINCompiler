@@ -2,6 +2,6 @@
 {
     public class GcTextStylePlain : NMSTemplate
     {
-        // empty?
+        public bool Dummy; // unused?
     }
 }

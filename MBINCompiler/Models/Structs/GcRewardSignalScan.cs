@@ -2,6 +2,10 @@
 {
     public class GcRewardSignalScan : NMSTemplate
     {
-        public GcSignalScanType SignalScanType;
+        public int SignalScanType;
+        public string[] SignalScanTypeValues()
+        {
+            return new[] { "None", "DropPod", "Shelter", "Search", "Relic", "Industrial" };
+        }
     }
 }
