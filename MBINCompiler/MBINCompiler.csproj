@@ -537,10 +537,10 @@
     <Compile Include="Models\Structs\TkVoxelGeneratorSettingsElement.cs" />
     <Compile Include="Models\Structs\Unfinished\GcAudioGlobals.cs" />
     <Compile Include="Models\Structs\Unfinished\GcBuildingGlobals.cs" />
-    <Compile Include="Models\Structs\Unfinished\GcGalaxyGenerationSetupData.cs" />
+    <Compile Include="Models\Structs\GcGalaxyGenerationSetupData.cs" />
     <Compile Include="Models\Structs\Unfinished\GcGalaxyGlobals.cs" />
-    <Compile Include="Models\Structs\Unfinished\GcGalaxyMarkerSettings.cs" />
-    <Compile Include="Models\Structs\Unfinished\GcGalaxyRenderSetupData.cs" />
+    <Compile Include="Models\Structs\GcGalaxyMarkerSettings.cs" />
+    <Compile Include="Models\Structs\GcGalaxyRenderSetupData.cs" />
     <Compile Include="Models\Structs\Unfinished\GcGraphicsGlobals.cs" />
     <Compile Include="Models\Structs\Unfinished\GcPlacementGlobals.cs" />
     <Compile Include="Models\Structs\GcSimulationGlobals.cs" />
