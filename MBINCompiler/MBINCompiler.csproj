@@ -538,8 +538,8 @@
     <Compile Include="Models\Structs\Unfinished\GcPlacementGlobals.cs" />
     <Compile Include="Models\Structs\GcSimulationGlobals.cs" />
     <Compile Include="Models\Structs\Unfinished\GcSceneOptions.cs" />
-    <Compile Include="Models\Structs\Unfinished\GcShipHUDTargetData.cs" />
-    <Compile Include="Models\Structs\Unfinished\GcShipHUDTargetIconData.cs" />
+    <Compile Include="Models\Structs\GcShipHUDTargetData.cs" />
+    <Compile Include="Models\Structs\GcShipHUDTargetIconData.cs" />
     <Compile Include="Models\Structs\Unfinished\GcSkyGlobals.cs" />
     <Compile Include="Models\Structs\Unfinished\GcSmokeTestOptions.cs" />
     <Compile Include="Models\Structs\Unfinished\GcSolarGenerationGlobals.cs" />
