@@ -51,6 +51,9 @@
     <Compile Include="Models\EXmlBase.cs" />
     <Compile Include="Models\EXmlData.cs" />
     <Compile Include="Models\EXmlProperty.cs" />
+    <Compile Include="Models\Structs\GcCameraShakeData.cs" />
+    <Compile Include="Models\Structs\GcCameraShakeCaptureData.cs" />
+    <Compile Include="Models\Structs\GcCameraShakeMechanicalData.cs" />
     <Compile Include="Models\Structs\GcCreatureRoleFilename.cs" />
     <Compile Include="Models\Structs\GcCreatureRoleFilenameList.cs" />
     <Compile Include="Models\Structs\GcCreatureRoleFilenameTable.cs" />
@@ -527,6 +530,7 @@
     <Compile Include="Models\Structs\TkVoxelGeneratorRegionData.cs" />
     <Compile Include="Models\Structs\TkVoxelGeneratorSettingsArray.cs" />
     <Compile Include="Models\Structs\TkVoxelGeneratorSettingsElement.cs" />
+    <Compile Include="Models\Structs\Unfinished\GcCreatureGlobals.cs" />
     <Compile Include="Models\Structs\Unfinished\GcAudioGlobals.cs" />
     <Compile Include="Models\Structs\Unfinished\GcBuildingGlobals.cs" />
     <Compile Include="Models\Structs\GcGalaxyGenerationSetupData.cs" />
