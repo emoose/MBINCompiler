@@ -57,6 +57,8 @@
     <Compile Include="Models\Structs\GcCreatureRoleFilename.cs" />
     <Compile Include="Models\Structs\GcCreatureRoleFilenameList.cs" />
     <Compile Include="Models\Structs\GcCreatureRoleFilenameTable.cs" />
+    <Compile Include="Models\Structs\GcDroneControlData.cs" />
+    <Compile Include="Models\Structs\GcDroneData.cs" />
     <Compile Include="Models\Structs\GcGalacticAddressData.cs" />
     <Compile Include="Models\Structs\GcLightProperties.cs" />
     <Compile Include="Models\Structs\GcPlanetInfo.cs" />
@@ -544,6 +546,7 @@
     <Compile Include="Models\Structs\Unfinished\GcGraphicsGlobals.cs" />
     <Compile Include="Models\Structs\Unfinished\GcPlacementGlobals.cs" />
     <Compile Include="Models\Structs\GcSimulationGlobals.cs" />
+    <Compile Include="Models\Structs\Unfinished\GcRobotGlobals.cs" />
     <Compile Include="Models\Structs\Unfinished\GcSceneOptions.cs" />
     <Compile Include="Models\Structs\GcShipHUDTargetData.cs" />
     <Compile Include="Models\Structs\GcShipHUDTargetIconData.cs" />
