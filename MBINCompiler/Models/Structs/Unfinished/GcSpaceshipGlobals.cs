@@ -89,13 +89,7 @@ namespace MBINCompiler.Models.Structs
         public float Unknown1F0;     // offset: 0x1F0, sz: 4, origin: 0x42C80000, parsed: 100        // line:   *(_DWORD *)(v1 + 0x1F0) = 0x42C80000;
         public float Unknown1F4;     // offset: 0x1F4, sz: 4, origin: 0x447A0000i64, parsed: 1000, comment: two packed floats in a QWORD?(1)
         public float Unknown1F8;     // offset: 504, sz: 4, origin: 0x447A0000i64, parsed: 0, comment: two packed floats in a QWORD?(2)        // line:   *(_QWORD *)(v1 + 0x1F4) = 0x447A0000i64;
-        // line:   *(_DWORD *)(v1 + 0x1FC) = v2;
-
-        // missing 4 bytes at offset 500
-        // could be padding, a undefined subroutine or a pointer accessing larger memory
-        [NMS(Size = 0x4, Ignore = true)]
-        public byte[] Padding1FC;        // offset: 508, sz: 4, comment: auto padding 
-
+        public float Unknown1FC;
         public float Unknown200;     // offset: 0x200, sz: 4, origin: 0x40A00000i64, parsed: 5, comment: two packed floats in a QWORD?(1)
         public float Unknown204;     // offset: 516, sz: 4, origin: 0x40A00000i64, parsed: 0, comment: two packed floats in a QWORD?(2)        // line:   *(_QWORD *)(v1 + 0x200) = 0x40A00000i64;
         public float Unknown208;     // offset: 0x208, sz: 4, origin: 0x41200000, parsed: 10        // line:   *(_DWORD *)(v1 + 0x208) = 0x41200000;
@@ -165,12 +159,9 @@ namespace MBINCompiler.Models.Structs
         public float Unknown2F4;     // offset: 0x2F4, sz: 4, origin: 0x3E19999A, parsed: 0.15        // line:   *(_DWORD *)(v1 + 0x2F4) = 0x3E19999A;
         public float Unknown2F8;     // offset: 0x2F8, sz: 4, origin: 0x40800000, parsed: 4        // line:   *(_DWORD *)(v1 + 0x2F8) = 0x40800000;
         public int Unknown2FC;     // offset: 0x2FC, sz: 4, origin: 0x1F4, parsed: 500        // line:   *(_DWORD *)(v1 + 0x2FC) = 0x1F4;
-        // line:   *(_WORD *)(v1 + 0x300) = v2;
 
-        // missing 4 bytes at offset 764
-        // could be padding, a undefined subroutine or a pointer accessing larger memory
-        [NMS(Size = 0x4, Ignore = true)]
-        public byte[] Padding300;        // offset: 768, sz: 4, comment: auto padding 
+        public bool Unknown300; // unused?
+        public bool Unknown301; // used!
 
         public float Unknown304;     // offset: 0x304, sz: 4, origin: 0x41A00000, parsed: 20        // line:   *(_DWORD *)(v1 + 0x304) = 0x41A00000;
         public float Unknown308;     // offset: 0x308, sz: 4, origin: 0x41200000, parsed: 10        // line:   *(_DWORD *)(v1 + 0x308) = 0x41200000;
@@ -244,21 +235,23 @@ namespace MBINCompiler.Models.Structs
 
         public float Unknown410;     // offset: 0x410, sz: 4, origin: 0xC0000000, parsed: -2        // line:   *(_DWORD *)(v1 + 0x410) = 0xC0000000;
         public float Unknown414;     // offset: 0x414, sz: 4, origin: 0xC0000000, parsed: -2        // line:   *(_DWORD *)(v1 + 0x414) = 0xC0000000;
+        public float Unknown418;
         // line:   *(_DWORD *)(v1 + 0x418) = v2;
 
         // missing 8 bytes at offset 1044
         // could be padding, a undefined subroutine or a pointer accessing larger memory
-        [NMS(Size = 0x8, Ignore = true)]
-        public byte[] Padding418;        // offset: 1048, sz: 8, comment: auto padding 
+        [NMS(Size = 0x4, Ignore = true)]
+        public byte[] Padding41C;        // offset: 1048, sz: 8, comment: auto padding 
 
         public float Unknown420;     // offset: 0x420, sz: 4, origin: 0x40000000, parsed: 2        // line:   *(_DWORD *)(v1 + 0x420) = 0x40000000;
         public float Unknown424;     // offset: 0x424, sz: 4, origin: 0xC0000000, parsed: -2        // line:   *(_DWORD *)(v1 + 0x424) = 0xC0000000;
+        public float Unknown428;
         // line:   *(_DWORD *)(v1 + 0x428) = v2;
 
         // missing 8 bytes at offset 1060
         // could be padding, a undefined subroutine or a pointer accessing larger memory
-        [NMS(Size = 0x8, Ignore = true)]
-        public byte[] Padding428;        // offset: 1064, sz: 8, comment: auto padding 
+        [NMS(Size = 0x4, Ignore = true)]
+        public byte[] Padding42C;        // offset: 1064, sz: 8, comment: auto padding 
 
         public float Unknown430;     // offset: 0x430, sz: 4, origin: 0x3F800000i64, parsed: 1, comment: two packed floats in a QWORD?(1)
         public float Unknown434;     // offset: 1076, sz: 4, origin: 0x3F800000i64, parsed: 0, comment: two packed floats in a QWORD?(2)        // line:   *(_QWORD *)(v1 + 0x430) = 0x3F800000i64;
