@@ -51,6 +51,7 @@
     <Compile Include="Models\EXmlBase.cs" />
     <Compile Include="Models\EXmlData.cs" />
     <Compile Include="Models\EXmlProperty.cs" />
+    <Compile Include="Models\Structs\GcModelViewCollection.cs" />
     <Compile Include="Models\Structs\GcCameraShakeData.cs" />
     <Compile Include="Models\Structs\GcCameraShakeCaptureData.cs" />
     <Compile Include="Models\Structs\GcCameraShakeMechanicalData.cs" />
