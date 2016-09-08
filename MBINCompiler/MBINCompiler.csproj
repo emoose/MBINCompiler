@@ -63,6 +63,8 @@
     <Compile Include="Models\Structs\GcLightProperties.cs" />
     <Compile Include="Models\Structs\GcPlanetInfo.cs" />
     <Compile Include="Models\Structs\GcPlayerMissionProgress.cs" />
+    <Compile Include="Models\Structs\GcPlayerSpaceshipControlData.cs" />
+    <Compile Include="Models\Structs\GcPlayerSpaceshipEngineData.cs" />
     <Compile Include="Models\Structs\GcRealityCraftingRecipeData.cs" />
     <Compile Include="Models\Structs\GcRealitySubstanceCraftingMix.cs" />
     <Compile Include="Models\Structs\GcScanEventData.cs" />
@@ -553,6 +555,7 @@
     <Compile Include="Models\Structs\Unfinished\GcSkyGlobals.cs" />
     <Compile Include="Models\Structs\Unfinished\GcSmokeTestOptions.cs" />
     <Compile Include="Models\Structs\Unfinished\GcSolarGenerationGlobals.cs" />
+    <Compile Include="Models\Structs\Unfinished\GcSpaceshipGlobals.cs" />
     <Compile Include="Models\Structs\Unfinished\GcTerrainGlobals.cs" />
     <Compile Include="Models\Structs\VariableSizeString.cs" />
     <Compile Include="Models\Structs\Vector2f.cs" />
