@@ -4,491 +4,405 @@ namespace MBINCompiler.Models.Structs // 0x690
     {
         // generated with MBINRawTemplateParser
 
-        // line: char *__fastcall sub_140139230(__int64 a1)
+        // line: char *__fastcall GcCreatureGlobals_LoadDefaults(__int64 a1)
         // line: {
         // line:   __int64 v1; // rdi@1
         // line:   char *result; // rax@1
         // line:   v1 = a1;
         public bool Unknown0;     // offset: 0, sz: 1, origin: 0, parsed: 0        // line:   *(_BYTE *)a1 = 0;
+        public float Unknown4;     // offset: 4, sz: 4, origin: 0, parsed: 0        // line:   *(_DWORD *)(a1 + 4) = 0;
+        public float Unknown8;     // offset: 8, sz: 4, origin: 0x3F800000i64, parsed: 1, comment: two packed floats in a QWORD?(1)
+        public float UnknownC;     // offset: 12, sz: 4, origin: 0x3F800000i64, parsed: 0, comment: two packed floats in a QWORD?(2)        // line:   *(_QWORD *)(a1 + 8) = 0x3F800000i64;
 
-        // missing 3 bytes at offset 0
-        // does 0 contain a DWORD?
-        [NMS(Size = 0x3, Ignore = true)]
-        public byte[] Padding1;        // offset: 1, sz: 3, comment: auto padding
+        public float Unknown10;     // offset: 0x10, sz: 4, origin: 0x3D4CCCCD, parsed: 0.05        // line:   *(_DWORD *)(a1 + 0x10) = 0x3D4CCCCD;
+        public float Unknown14;     // offset: 0x14, sz: 4, origin: 0x40A00000, parsed: 5        // line:   *(_DWORD *)(a1 + 0x14) = 0x40A00000;
+        public float Unknown18;     // offset: 0x18, sz: 4, origin: 0x41400000, parsed: 12        // line:   *(_DWORD *)(a1 + 0x18) = 0x41400000;
+        public float Unknown1C;     // offset: 0x1C, sz: 4, origin: 0x3F800000, parsed: 1        // line:   *(_DWORD *)(a1 + 0x1C) = 0x3F800000;
 
-        public float Unknown4;     // offset: 4, sz: 4, origin: 0, parsed: 0        // line:   *(_DWORD *)(a1 + 4) = 0; // adjust offset order!
-        public float Unknown8;     // offset: 8, sz: 4, origin: 1065353216i64, parsed: 1, comment: two packed floats in a QWORD?(1)
-        public float UnknownC;     // offset: 12, sz: 4, origin: 1065353216i64, parsed: 0, comment: two packed floats in a QWORD?(2)        // line:   *(_QWORD *)(a1 + 8) = 1065353216i64;
-        public float Unknown10;     // offset: 16, sz: 4, origin: 1028443341, parsed: 0.05        // line:   *(_DWORD *)(a1 + 16) = 1028443341;
-        public float Unknown14;     // offset: 20, sz: 4, origin: 1084227584, parsed: 5        // line:   *(_DWORD *)(a1 + 20) = 1084227584;
-        public float Unknown18;     // offset: 24, sz: 4, origin: 1094713344, parsed: 12        // line:   *(_DWORD *)(a1 + 24) = 1094713344;
-        public float Unknown1C;     // offset: 28, sz: 4, origin: 1065353216, parsed: 1        // line:   *(_DWORD *)(a1 + 28) = 1065353216;
-        public float Unknown20;     // offset: 32, sz: 4, origin: 1065353216, parsed: 1        // line:   *(_DWORD *)(a1 + 32) = 1065353216;
-        public float Unknown24;     // offset: 36, sz: 4, origin: 1045220557, parsed: 0.2        // line:   *(_DWORD *)(a1 + 36) = 1045220557;
-        public float Unknown28;     // offset: 40, sz: 4, origin: 1090519040, parsed: 8        // line:   *(_DWORD *)(a1 + 40) = 1090519040;
-        public float Unknown2C;     // offset: 44, sz: 4, origin: 1092616192, parsed: 10        // line:   *(_DWORD *)(a1 + 44) = 1092616192;
-        public float Unknown30;     // offset: 48, sz: 4, origin: 1120403456, parsed: 100        // line:   *(_DWORD *)(a1 + 48) = 1120403456;
-        public float Unknown34;     // offset: 52, sz: 4, origin: 1036831949, parsed: 0.1        // line:   *(_DWORD *)(a1 + 52) = 1036831949;
-        public float Unknown38;     // offset: 56, sz: 4, origin: 1036831949, parsed: 0.1        // line:   *(_DWORD *)(a1 + 56) = 1036831949;
-        public float Unknown3C;     // offset: 60, sz: 4, origin: 1065353216, parsed: 1        // line:   *(_DWORD *)(a1 + 60) = 1065353216;
-        public float Unknown40;     // offset: 64, sz: 4, origin: 1092616192, parsed: 10        // line:   *(_DWORD *)(a1 + 64) = 1092616192;
-        public float Unknown44;     // offset: 68, sz: 4, origin: 1036831949, parsed: 0.1        // line:   *(_DWORD *)(a1 + 68) = 1036831949;
-        public float Unknown48;     // offset: 72, sz: 4, origin: 1069547520, parsed: 1.5        // line:   *(_DWORD *)(a1 + 72) = 1069547520;
-        public float Unknown4C;     // offset: 76, sz: 4, origin: 1065353216, parsed: 1        // line:   *(_DWORD *)(a1 + 76) = 1065353216;
-        public float Unknown50;     // offset: 80, sz: 4, origin: 1051931443, parsed: 0.35        // line:   *(_DWORD *)(a1 + 80) = 1051931443;
-        public float Unknown54;     // offset: 84, sz: 4, origin: 1075838976, parsed: 2.5        // line:   *(_DWORD *)(a1 + 84) = 1075838976;
-        public float Unknown58;     // offset: 88, sz: 4, origin: 1075838976, parsed: 2.5        // line:   *(_DWORD *)(a1 + 88) = 1075838976;
-        public float Unknown5C;     // offset: 92, sz: 4, origin: 1063675494, parsed: 0.9        // line:   *(_DWORD *)(a1 + 92) = 1063675494;
-        public float Unknown60;     // offset: 96, sz: 4, origin: 1092616192, parsed: 10        // line:   *(_DWORD *)(a1 + 96) = 1092616192;
+        public float Unknown20;     // offset: 0x20, sz: 4, origin: 0x3F800000, parsed: 1        // line:   *(_DWORD *)(a1 + 0x20) = 0x3F800000;
+        public float Unknown24;     // offset: 0x24, sz: 4, origin: 0x3E4CCCCD, parsed: 0.2        // line:   *(_DWORD *)(a1 + 0x24) = 0x3E4CCCCD;
+        public float Unknown28;     // offset: 0x28, sz: 4, origin: 0x41000000, parsed: 8        // line:   *(_DWORD *)(a1 + 0x28) = 0x41000000;
+        public float Unknown2C;     // offset: 0x2C, sz: 4, origin: 0x41200000, parsed: 10        // line:   *(_DWORD *)(a1 + 0x2C) = 0x41200000;
 
-        // missing 12 bytes at offset 96
-        // could be padding, a undefined subroutine or a pointer accessing larger memory
+        public float Unknown30;     // offset: 0x30, sz: 4, origin: 0x42C80000, parsed: 100        // line:   *(_DWORD *)(a1 + 0x30) = 0x42C80000;
+        public float Unknown34;     // offset: 0x34, sz: 4, origin: 0x3DCCCCCD, parsed: 0.1        // line:   *(_DWORD *)(a1 + 0x34) = 0x3DCCCCCD;
+        public float Unknown38;     // offset: 0x38, sz: 4, origin: 0x3DCCCCCD, parsed: 0.1        // line:   *(_DWORD *)(a1 + 0x38) = 0x3DCCCCCD;
+        public float Unknown3C;     // offset: 0x3C, sz: 4, origin: 0x3F800000, parsed: 1        // line:   *(_DWORD *)(a1 + 0x3C) = 0x3F800000;
+
+        public float Unknown40;     // offset: 0x40, sz: 4, origin: 0x41200000, parsed: 10        // line:   *(_DWORD *)(a1 + 0x40) = 0x41200000;
+        public float Unknown44;     // offset: 0x44, sz: 4, origin: 0x3DCCCCCD, parsed: 0.1        // line:   *(_DWORD *)(a1 + 0x44) = 0x3DCCCCCD;
+        public float Unknown48;     // offset: 0x48, sz: 4, origin: 0x3FC00000, parsed: 1.5        // line:   *(_DWORD *)(a1 + 0x48) = 0x3FC00000;
+        public float Unknown4C;     // offset: 0x4C, sz: 4, origin: 0x3F800000, parsed: 1        // line:   *(_DWORD *)(a1 + 0x4C) = 0x3F800000;
+
+        public float Unknown50;     // offset: 0x50, sz: 4, origin: 0x3EB33333, parsed: 0.35        // line:   *(_DWORD *)(a1 + 0x50) = 0x3EB33333;
+        public float Unknown54;     // offset: 0x54, sz: 4, origin: 0x40200000, parsed: 2.5        // line:   *(_DWORD *)(a1 + 0x54) = 0x40200000;
+        public float Unknown58;     // offset: 0x58, sz: 4, origin: 0x40200000, parsed: 2.5        // line:   *(_DWORD *)(a1 + 0x58) = 0x40200000;
+        public float Unknown5C;     // offset: 0x5C, sz: 4, origin: 0x3F666666, parsed: 0.9        // line:   *(_DWORD *)(a1 + 0x5C) = 0x3F666666;
+
+        public float Unknown60;     // offset: 0x60, sz: 4, origin: 0x41200000, parsed: 10        // line:   *(_DWORD *)(a1 + 0x60) = 0x41200000;
         [NMS(Size = 0xC, Ignore = true)]
-        public byte[] Padding64;        // offset: 100, sz: 12, comment: auto padding
+        public byte[] Padding64;        // offset: 100, sz: 12, comment: auto padding 
 
-        public GcCameraShakeData Template70;     // offset: 112, sz: 192, origin: sub_1401373A0((char *)(a1 + 112));, comment: call sub        // line:   sub_1401373A0((char *)(a1 + 112));
-        public float Unknown130;     // offset: 304, sz: 4, origin: 1056964608, parsed: 0.5        // line:   *(_DWORD *)(v1 + 304) = 1056964608;
-        public float Unknown134;     // offset: 308, sz: 4, origin: 1065353216, parsed: 1        // line:   *(_DWORD *)(v1 + 308) = 1065353216;
-        public float Unknown138;     // offset: 312, sz: 4, origin: 1056964608, parsed: 0.5        // line:   *(_DWORD *)(v1 + 312) = 1056964608;
-        public float Unknown13C;     // offset: 316, sz: 4, origin: 1077936128, parsed: 3        // line:   *(_DWORD *)(v1 + 316) = 1077936128;
-        public float Unknown140;     // offset: 320, sz: 4, origin: 1145569280, parsed: 800        // line:   *(_DWORD *)(v1 + 320) = 1145569280;
-        public float Unknown144;     // offset: 324, sz: 4, origin: 1143930880, parsed: 700        // line:   *(_DWORD *)(v1 + 324) = 1143930880;
-        public float Unknown148;     // offset: 328, sz: 4, origin: 1084227584, parsed: 5        // line:   *(_DWORD *)(v1 + 328) = 1084227584;
-        public float Unknown14C;     // offset: 332, sz: 4, origin: 1147207680, parsed: 900        // line:   *(_DWORD *)(v1 + 332) = 1147207680;
-        public float Unknown150;     // offset: 336, sz: 4, origin: 1084227584, parsed: 5        // line:   *(_DWORD *)(v1 + 336) = 1084227584;
-        public float Unknown154;     // offset: 340, sz: 4, origin: 1065353216, parsed: 1        // line:   *(_DWORD *)(v1 + 340) = 1065353216;
-        public float Unknown158;     // offset: 344, sz: 4, origin: 1109393408, parsed: 40        // line:   *(_DWORD *)(v1 + 344) = 1109393408;
-        public float Unknown15C;     // offset: 348, sz: 4, origin: 1092616192, parsed: 10        // line:   *(_DWORD *)(v1 + 348) = 1092616192;
-        public float Unknown160;     // offset: 352, sz: 4, origin: 1065353216, parsed: 1        // line:   *(_DWORD *)(v1 + 352) = 1065353216;
-        public float Unknown164;     // offset: 356, sz: 4, origin: 1065353216, parsed: 1        // line:   *(_DWORD *)(v1 + 356) = 1065353216;
-        public float Unknown168;     // offset: 360, sz: 4, origin: 0x40000000, parsed: 2        // line:   *(_DWORD *)(v1 + 360) = 0x40000000;
-        public float Unknown16C;     // offset: 364, sz: 4, origin: 1056964608, parsed: 0.5        // line:   *(_DWORD *)(v1 + 364) = 1056964608;
-        public float Unknown170;     // offset: 368, sz: 4, origin: 1092616192, parsed: 10        // line:   *(_DWORD *)(v1 + 368) = 1092616192;
-        public float Unknown174;     // offset: 372, sz: 4, origin: 1077936128, parsed: 3        // line:   *(_DWORD *)(v1 + 372) = 1077936128;
-        public float Unknown178;     // offset: 376, sz: 4, origin: 1112014848, parsed: 50        // line:   *(_DWORD *)(v1 + 376) = 1112014848;
-        public float Unknown17C;     // offset: 380, sz: 4, origin: 1148846080, parsed: 1000        // line:   *(_DWORD *)(v1 + 380) = 1148846080;
-        public float Unknown180;     // offset: 384, sz: 4, origin: 1084437299, parsed: 5.1        // line:   *(_DWORD *)(v1 + 384) = 1084437299;
-        public float Unknown184;     // offset: 388, sz: 4, origin: 1065353216, parsed: 1        // line:   *(_DWORD *)(v1 + 388) = 1065353216;
-        public float Unknown188;     // offset: 392, sz: 4, origin: 1050253722, parsed: 0.3        // line:   *(_DWORD *)(v1 + 392) = 1050253722;
-        public float Unknown18C;     // offset: 396, sz: 4, origin: 1056964608, parsed: 0.5        // line:   *(_DWORD *)(v1 + 396) = 1056964608;
-        public float Unknown190;     // offset: 400, sz: 4, origin: 1050253722, parsed: 0.3        // line:   *(_DWORD *)(v1 + 400) = 1050253722;
-        public float Unknown194;     // offset: 404, sz: 4, origin: 1097859072, parsed: 15        // line:   *(_DWORD *)(v1 + 404) = 1097859072;
-        public float Unknown198;     // offset: 408, sz: 4, origin: 1101004800, parsed: 20        // line:   *(_DWORD *)(v1 + 408) = 1101004800;
-        public float Unknown19C;     // offset: 412, sz: 4, origin: 981668463, parsed: 0.001        // line:   *(_DWORD *)(v1 + 412) = 981668463;
-        public float Unknown1A0;     // offset: 416, sz: 4, origin: 1061997773, parsed: 0.8        // line:   *(_DWORD *)(v1 + 416) = 1061997773;
-        public float Unknown1A4;     // offset: 420, sz: 4, origin: 1056964608, parsed: 0.5        // line:   *(_DWORD *)(v1 + 420) = 1056964608;
-        public float Unknown1A8;     // offset: 424, sz: 4, origin: 1112014848, parsed: 50        // line:   *(_DWORD *)(v1 + 424) = 1112014848;
-        public float Unknown1AC;     // offset: 428, sz: 4, origin: 1050253722, parsed: 0.3        // line:   *(_DWORD *)(v1 + 428) = 1050253722;
-        public float Unknown1B0;     // offset: 432, sz: 4, origin: 1092616192, parsed: 10        // line:   *(_DWORD *)(v1 + 432) = 1092616192;
-        public float Unknown1B4;     // offset: 436, sz: 4, origin: 1099956224, parsed: 18        // line:   *(_DWORD *)(v1 + 436) = 1099956224;
-        public float Unknown1B8;     // offset: 440, sz: 4, origin: 0x40000000, parsed: 2        // line:   *(_DWORD *)(v1 + 440) = 0x40000000;
-        public float Unknown1BC;     // offset: 444, sz: 4, origin: 1077936128, parsed: 3        // line:   *(_DWORD *)(v1 + 444) = 1077936128;
-        public float Unknown1C0;     // offset: 448, sz: 4, origin: 1090519040, parsed: 8        // line:   *(_DWORD *)(v1 + 448) = 1090519040;
-        public float Unknown1C4;     // offset: 452, sz: 4, origin: 0x40000000, parsed: 2        // line:   *(_DWORD *)(v1 + 452) = 0x40000000;
-        public float Unknown1C8;     // offset: 456, sz: 4, origin: 1077936128, parsed: 3        // line:   *(_DWORD *)(v1 + 456) = 1077936128;
-        public float Unknown1CC;     // offset: 460, sz: 4, origin: 1120403456, parsed: 100        // line:   *(_DWORD *)(v1 + 460) = 1120403456;
-        public float Unknown1D0;     // offset: 464, sz: 4, origin: 1065353216, parsed: 1        // line:   *(_DWORD *)(v1 + 464) = 1065353216;
-        public float Unknown1D4;     // offset: 468, sz: 4, origin: 1084227584, parsed: 5        // line:   *(_DWORD *)(v1 + 468) = 1084227584;
-        public float Unknown1D8;     // offset: 472, sz: 4, origin: 1050253722, parsed: 0.3        // line:   *(_DWORD *)(v1 + 472) = 1050253722;
-        public float Unknown1DC;     // offset: 476, sz: 4, origin: 1112014848, parsed: 50        // line:   *(_DWORD *)(v1 + 476) = 1112014848;
-        public float Unknown1E0;     // offset: 480, sz: 4, origin: 1084227584, parsed: 5        // line:   *(_DWORD *)(v1 + 480) = 1084227584;
-        public float Unknown1E4;     // offset: 484, sz: 4, origin: 1065353216, parsed: 1        // line:   *(_DWORD *)(v1 + 484) = 1065353216;
-        public float Unknown1E8;     // offset: 488, sz: 4, origin: 1075838976, parsed: 2.5        // line:   *(_DWORD *)(v1 + 488) = 1075838976;
-        public float Unknown1EC;     // offset: 492, sz: 4, origin: 1077936128, parsed: 3        // line:   *(_DWORD *)(v1 + 492) = 1077936128;
-        public float Unknown1F0;     // offset: 496, sz: 4, origin: 1106247680, parsed: 30        // line:   *(_DWORD *)(v1 + 496) = 1106247680;
-        public float Unknown1F4;     // offset: 500, sz: 4, origin: 1140457472, parsed: 500        // line:   *(_DWORD *)(v1 + 500) = 1140457472;
-        public float Unknown1F8;     // offset: 504, sz: 4, origin: 1112014848, parsed: 50        // line:   *(_DWORD *)(v1 + 504) = 1112014848;
-        public float Unknown1FC;     // offset: 508, sz: 4, origin: 1036831949, parsed: 0.1        // line:   *(_DWORD *)(v1 + 508) = 1036831949;
-        public float Unknown200;     // offset: 512, sz: 4, origin: 1058642330, parsed: 0.6        // line:   *(_DWORD *)(v1 + 512) = 1058642330;
-        public float Unknown204;     // offset: 516, sz: 4, origin: 1097859072, parsed: 15        // line:   *(_DWORD *)(v1 + 516) = 1097859072;
-        public float Unknown208;     // offset: 520, sz: 4, origin: 1096810496, parsed: 14        // line:   *(_DWORD *)(v1 + 520) = 1096810496;
-        public float Unknown20C;     // offset: 524, sz: 4, origin: 1120403456, parsed: 100        // line:   *(_DWORD *)(v1 + 524) = 1120403456;
-        public float Unknown210;     // offset: 528, sz: 4, origin: 1069547520, parsed: 1.5        // line:   *(_DWORD *)(v1 + 528) = 1069547520;
-        public float Unknown214;     // offset: 532, sz: 4, origin: 1077936128, parsed: 3        // line:   *(_DWORD *)(v1 + 532) = 1077936128;
-        public float Unknown218;     // offset: 536, sz: 4, origin: 1084227584, parsed: 5        // line:   *(_DWORD *)(v1 + 536) = 1084227584;
-        public float Unknown21C;     // offset: 540, sz: 4, origin: 1077936128, parsed: 3        // line:   *(_DWORD *)(v1 + 540) = 1077936128;
-        public float Unknown220;     // offset: 544, sz: 4, origin: 1090519040, parsed: 8        // line:   *(_DWORD *)(v1 + 544) = 1090519040;
-        public float Unknown224;     // offset: 548, sz: 4, origin: 1084227584, parsed: 5        // line:   *(_DWORD *)(v1 + 548) = 1084227584;
-        public float Unknown228;     // offset: 552, sz: 4, origin: 1097859072i64, parsed: 15, comment: two packed floats in a QWORD?(1)
-        public float Unknown22C;     // offset: 556, sz: 4, origin: 1097859072i64, parsed: 0, comment: two packed floats in a QWORD?(2)        // line:   *(_QWORD *)(v1 + 552) = 1097859072i64;
-        public float Unknown230;     // offset: 560, sz: 4, origin: 0, parsed: 0        // line:   *(_DWORD *)(v1 + 560) = 0;
-        public float Unknown234;     // offset: 564, sz: 4, origin: 1084227584, parsed: 5        // line:   *(_DWORD *)(v1 + 564) = 1084227584;
-        public float Unknown238;     // offset: 568, sz: 4, origin: 1086324736i64, parsed: 6, comment: two packed floats in a QWORD?(1)
-        public float Unknown23C;     // offset: 572, sz: 4, origin: 1086324736i64, parsed: 0, comment: two packed floats in a QWORD?(2)        // line:   *(_QWORD *)(v1 + 568) = 1086324736i64;
-        public float Unknown240;     // offset: 576, sz: 4, origin: 1096810496i64, parsed: 14, comment: two packed floats in a QWORD?(1)
-        public float Unknown244;     // offset: 580, sz: 4, origin: 1096810496i64, parsed: 0, comment: two packed floats in a QWORD?(2)        // line:   *(_QWORD *)(v1 + 576) = 1096810496i64;
-        public float Unknown248;     // offset: 584, sz: 4, origin: 0, parsed: 0        // line:   *(_DWORD *)(v1 + 584) = 0;
-        public float Unknown24C;     // offset: 588, sz: 4, origin: 1120403456, parsed: 100        // line:   *(_DWORD *)(v1 + 588) = 1120403456;
-        public float Unknown250;     // offset: 592, sz: 4, origin: 1125515264, parsed: 150        // line:   *(_DWORD *)(v1 + 592) = 1125515264;
-        public float Unknown254;     // offset: 596, sz: 4, origin: 1114636288, parsed: 60        // line:   *(_DWORD *)(v1 + 596) = 1114636288;
-        public float Unknown258;     // offset: 600, sz: 4, origin: 1097859072i64, parsed: 15, comment: two packed floats in a QWORD?(1)
-        public float Unknown25C;     // offset: 604, sz: 4, origin: 1097859072i64, parsed: 0, comment: two packed floats in a QWORD?(2)        // line:   *(_QWORD *)(v1 + 600) = 1097859072i64;
-        public float Unknown260;     // offset: 608, sz: 4, origin: 0, parsed: 0        // line:   *(_DWORD *)(v1 + 608) = 0;
-        public float Unknown264;     // offset: 612, sz: 4, origin: 1120403456, parsed: 100        // line:   *(_DWORD *)(v1 + 612) = 1120403456;
-        public float Unknown268;     // offset: 616, sz: 4, origin: 1125515264, parsed: 150        // line:   *(_DWORD *)(v1 + 616) = 1125515264;
-        public float Unknown26C;     // offset: 620, sz: 4, origin: 1114636288, parsed: 60        // line:   *(_DWORD *)(v1 + 620) = 1114636288;
-        public float Unknown270;     // offset: 624, sz: 4, origin: 1097859072i64, parsed: 15, comment: two packed floats in a QWORD?(1)
-        public float Unknown274;     // offset: 628, sz: 4, origin: 1097859072i64, parsed: 0, comment: two packed floats in a QWORD?(2)        // line:   *(_QWORD *)(v1 + 624) = 1097859072i64;
-        public float Unknown278;     // offset: 632, sz: 4, origin: 0, parsed: 0        // line:   *(_DWORD *)(v1 + 632) = 0;
-        public float Unknown27C;     // offset: 636, sz: 4, origin: 1120403456, parsed: 100        // line:   *(_DWORD *)(v1 + 636) = 1120403456;
-        public float Unknown280;     // offset: 640, sz: 4, origin: 1125515264, parsed: 150        // line:   *(_DWORD *)(v1 + 640) = 1125515264;
-        public float Unknown284;     // offset: 644, sz: 4, origin: 1114636288, parsed: 60        // line:   *(_DWORD *)(v1 + 644) = 1114636288;
-        public float Unknown288;     // offset: 648, sz: 4, origin: 1097859072, parsed: 15        // line:   *(_DWORD *)(v1 + 648) = 1097859072;
-        public bool Unknown28C;     // offset: 652, sz: 1, origin: 0, parsed: 0        // line:   *(_BYTE *)(v1 + 652) = 0;
+        public GcCameraShakeData Unknown70;
 
-        // missing 3 bytes at offset 652
-        // does 652 contain a DWORD?
-        [NMS(Size = 0x3, Ignore = true)]
-        public byte[] Padding28D;        // offset: 653, sz: 3, comment: auto padding
+        public float Unknown130;     // offset: 0x130, sz: 4, origin: 0x3F000000, parsed: 0.5        // line:   *(_DWORD *)(v1 + 0x130) = 0x3F000000;
+        public float Unknown134;     // offset: 0x134, sz: 4, origin: 0x3F800000, parsed: 1        // line:   *(_DWORD *)(v1 + 0x134) = 0x3F800000;
+        public float Unknown138;     // offset: 0x138, sz: 4, origin: 0x3F000000, parsed: 0.5        // line:   *(_DWORD *)(v1 + 0x138) = 0x3F000000;
+        public float Unknown13C;     // offset: 0x13C, sz: 4, origin: 0x40400000, parsed: 3        // line:   *(_DWORD *)(v1 + 0x13C) = 0x40400000;
 
-        public float Unknown290;     // offset: 656, sz: 4, origin: 1067030938, parsed: 1.2        // line:   *(_DWORD *)(v1 + 656) = 1067030938;
-        public float Unknown294;     // offset: 660, sz: 4, origin: 1075838976, parsed: 2.5        // line:   *(_DWORD *)(v1 + 660) = 1075838976;
-        public float Unknown298;     // offset: 664, sz: 4, origin: 1083179008, parsed: 4.5        // line:   *(_DWORD *)(v1 + 664) = 1083179008;
-        public int Unknown29C;     // offset: 668, sz: 4, origin: 40, parsed: 40        // line:   *(_DWORD *)(v1 + 668) = 40;
-        public int Unknown2A0;     // offset: 672, sz: 4, origin: 80, parsed: 80        // line:   *(_DWORD *)(v1 + 672) = 80;
-        public int Unknown2A4;     // offset: 676, sz: 4, origin: 160, parsed: 160        // line:   *(_DWORD *)(v1 + 676) = 160;
-        public int Unknown2A8;     // offset: 680, sz: 4, origin: 360, parsed: 360        // line:   *(_DWORD *)(v1 + 680) = 360;
-        // line: //  *(_QWORD *)(v1 + 688) = 0i64;
-        // line: //  *(_QWORD *)(v1 + 696) = 0i64;
+        public float Unknown140;     // offset: 0x140, sz: 4, origin: 0x44480000, parsed: 800        // line:   *(_DWORD *)(v1 + 0x140) = 0x44480000;
+        public float Unknown144;     // offset: 0x144, sz: 4, origin: 0x442F0000, parsed: 700        // line:   *(_DWORD *)(v1 + 0x144) = 0x442F0000;
+        public float Unknown148;     // offset: 0x148, sz: 4, origin: 0x40A00000, parsed: 5        // line:   *(_DWORD *)(v1 + 0x148) = 0x40A00000;
+        public float Unknown14C;     // offset: 0x14C, sz: 4, origin: 0x44610000, parsed: 900        // line:   *(_DWORD *)(v1 + 0x14C) = 0x44610000;
+
+        public float Unknown150;     // offset: 0x150, sz: 4, origin: 0x40A00000, parsed: 5        // line:   *(_DWORD *)(v1 + 0x150) = 0x40A00000;
+        public float Unknown154;     // offset: 0x154, sz: 4, origin: 0x3F800000, parsed: 1        // line:   *(_DWORD *)(v1 + 0x154) = 0x3F800000;
+        public float Unknown158;     // offset: 0x158, sz: 4, origin: 0x42200000, parsed: 40        // line:   *(_DWORD *)(v1 + 0x158) = 0x42200000;
+        public float Unknown15C;     // offset: 0x15C, sz: 4, origin: 0x41200000, parsed: 10        // line:   *(_DWORD *)(v1 + 0x15C) = 0x41200000;
+
+        public float Unknown160;     // offset: 0x160, sz: 4, origin: 0x3F800000, parsed: 1        // line:   *(_DWORD *)(v1 + 0x160) = 0x3F800000;
+        public float Unknown164;     // offset: 0x164, sz: 4, origin: 0x3F800000, parsed: 1        // line:   *(_DWORD *)(v1 + 0x164) = 0x3F800000;
+        public float Unknown168;     // offset: 0x168, sz: 4, origin: 0x40000000, parsed: 2        // line:   *(_DWORD *)(v1 + 0x168) = 0x40000000;
+        public float Unknown16C;     // offset: 0x16C, sz: 4, origin: 0x3F000000, parsed: 0.5        // line:   *(_DWORD *)(v1 + 0x16C) = 0x3F000000;
+
+        public float Unknown170;     // offset: 0x170, sz: 4, origin: 0x41200000, parsed: 10        // line:   *(_DWORD *)(v1 + 0x170) = 0x41200000;
+        public float Unknown174;     // offset: 0x174, sz: 4, origin: 0x40400000, parsed: 3        // line:   *(_DWORD *)(v1 + 0x174) = 0x40400000;
+        public float Unknown178;     // offset: 0x178, sz: 4, origin: 0x42480000, parsed: 50        // line:   *(_DWORD *)(v1 + 0x178) = 0x42480000;
+        public float Unknown17C;     // offset: 0x17C, sz: 4, origin: 0x447A0000, parsed: 1000        // line:   *(_DWORD *)(v1 + 0x17C) = 0x447A0000;
+
+        public float Unknown180;     // offset: 0x180, sz: 4, origin: 0x40A33333, parsed: 5.1        // line:   *(_DWORD *)(v1 + 0x180) = 0x40A33333;
+        public float Unknown184;     // offset: 0x184, sz: 4, origin: 0x3F800000, parsed: 1        // line:   *(_DWORD *)(v1 + 0x184) = 0x3F800000;
+        public float Unknown188;     // offset: 0x188, sz: 4, origin: 0x3E99999A, parsed: 0.3        // line:   *(_DWORD *)(v1 + 0x188) = 0x3E99999A;
+        public float Unknown18C;     // offset: 0x18C, sz: 4, origin: 0x3F000000, parsed: 0.5        // line:   *(_DWORD *)(v1 + 0x18C) = 0x3F000000;
+
+        public float Unknown190;     // offset: 0x190, sz: 4, origin: 0x3E99999A, parsed: 0.3        // line:   *(_DWORD *)(v1 + 0x190) = 0x3E99999A;
+        public float Unknown194;     // offset: 0x194, sz: 4, origin: 0x41700000, parsed: 15        // line:   *(_DWORD *)(v1 + 0x194) = 0x41700000;
+        public float Unknown198;     // offset: 0x198, sz: 4, origin: 0x41A00000, parsed: 20        // line:   *(_DWORD *)(v1 + 0x198) = 0x41A00000;
+        public float Unknown19C;     // offset: 0x19C, sz: 4, origin: 0x3A83126F, parsed: 0.001        // line:   *(_DWORD *)(v1 + 0x19C) = 0x3A83126F;
+
+        public float Unknown1A0;     // offset: 0x1A0, sz: 4, origin: 0x3F4CCCCD, parsed: 0.8        // line:   *(_DWORD *)(v1 + 0x1A0) = 0x3F4CCCCD;
+        public float Unknown1A4;     // offset: 0x1A4, sz: 4, origin: 0x3F000000, parsed: 0.5        // line:   *(_DWORD *)(v1 + 0x1A4) = 0x3F000000;
+        public float Unknown1A8;     // offset: 0x1A8, sz: 4, origin: 0x42480000, parsed: 50        // line:   *(_DWORD *)(v1 + 0x1A8) = 0x42480000;
+        public float Unknown1AC;     // offset: 0x1AC, sz: 4, origin: 0x3E99999A, parsed: 0.3        // line:   *(_DWORD *)(v1 + 0x1AC) = 0x3E99999A;
+
+        public float Unknown1B0;     // offset: 0x1B0, sz: 4, origin: 0x41200000, parsed: 10        // line:   *(_DWORD *)(v1 + 0x1B0) = 0x41200000;
+        public float Unknown1B4;     // offset: 0x1B4, sz: 4, origin: 0x41900000, parsed: 18        // line:   *(_DWORD *)(v1 + 0x1B4) = 0x41900000;
+        public float Unknown1B8;     // offset: 0x1B8, sz: 4, origin: 0x40000000, parsed: 2        // line:   *(_DWORD *)(v1 + 0x1B8) = 0x40000000;
+        public float Unknown1BC;     // offset: 0x1BC, sz: 4, origin: 0x40400000, parsed: 3        // line:   *(_DWORD *)(v1 + 0x1BC) = 0x40400000;
+
+        public float Unknown1C0;     // offset: 0x1C0, sz: 4, origin: 0x41000000, parsed: 8        // line:   *(_DWORD *)(v1 + 0x1C0) = 0x41000000;
+        public float Unknown1C4;     // offset: 0x1C4, sz: 4, origin: 0x40000000, parsed: 2        // line:   *(_DWORD *)(v1 + 0x1C4) = 0x40000000;
+        public float Unknown1C8;     // offset: 0x1C8, sz: 4, origin: 0x40400000, parsed: 3        // line:   *(_DWORD *)(v1 + 0x1C8) = 0x40400000;
+        public float Unknown1CC;     // offset: 0x1CC, sz: 4, origin: 0x42C80000, parsed: 100        // line:   *(_DWORD *)(v1 + 0x1CC) = 0x42C80000;
+
+        public float Unknown1D0;     // offset: 0x1D0, sz: 4, origin: 0x3F800000, parsed: 1        // line:   *(_DWORD *)(v1 + 0x1D0) = 0x3F800000;
+        public float Unknown1D4;     // offset: 0x1D4, sz: 4, origin: 0x40A00000, parsed: 5        // line:   *(_DWORD *)(v1 + 0x1D4) = 0x40A00000;
+        public float Unknown1D8;     // offset: 0x1D8, sz: 4, origin: 0x3E99999A, parsed: 0.3        // line:   *(_DWORD *)(v1 + 0x1D8) = 0x3E99999A;
+        public float Unknown1DC;     // offset: 0x1DC, sz: 4, origin: 0x42480000, parsed: 50        // line:   *(_DWORD *)(v1 + 0x1DC) = 0x42480000;
+
+        public float Unknown1E0;     // offset: 0x1E0, sz: 4, origin: 0x40A00000, parsed: 5        // line:   *(_DWORD *)(v1 + 0x1E0) = 0x40A00000;
+        public float Unknown1E4;     // offset: 0x1E4, sz: 4, origin: 0x3F800000, parsed: 1        // line:   *(_DWORD *)(v1 + 0x1E4) = 0x3F800000;
+        public float Unknown1E8;     // offset: 0x1E8, sz: 4, origin: 0x40200000, parsed: 2.5        // line:   *(_DWORD *)(v1 + 0x1E8) = 0x40200000;
+        public float Unknown1EC;     // offset: 0x1EC, sz: 4, origin: 0x40400000, parsed: 3        // line:   *(_DWORD *)(v1 + 0x1EC) = 0x40400000;
+
+        public float Unknown1F0;     // offset: 0x1F0, sz: 4, origin: 0x41F00000, parsed: 30        // line:   *(_DWORD *)(v1 + 0x1F0) = 0x41F00000;
+        public float Unknown1F4;     // offset: 0x1F4, sz: 4, origin: 0x43FA0000, parsed: 500        // line:   *(_DWORD *)(v1 + 0x1F4) = 0x43FA0000;
+        public float Unknown1F8;     // offset: 0x1F8, sz: 4, origin: 0x42480000, parsed: 50        // line:   *(_DWORD *)(v1 + 0x1F8) = 0x42480000;
+        public float Unknown1FC;     // offset: 0x1FC, sz: 4, origin: 0x3DCCCCCD, parsed: 0.1        // line:   *(_DWORD *)(v1 + 0x1FC) = 0x3DCCCCCD;
+
+        public float Unknown200;     // offset: 0x200, sz: 4, origin: 0x3F19999A, parsed: 0.6        // line:   *(_DWORD *)(v1 + 0x200) = 0x3F19999A;
+        public float Unknown204;     // offset: 0x204, sz: 4, origin: 0x41700000, parsed: 15        // line:   *(_DWORD *)(v1 + 0x204) = 0x41700000;
+        public float Unknown208;     // offset: 0x208, sz: 4, origin: 0x41600000, parsed: 14        // line:   *(_DWORD *)(v1 + 0x208) = 0x41600000;
+        public float Unknown20C;     // offset: 0x20C, sz: 4, origin: 0x42C80000, parsed: 100        // line:   *(_DWORD *)(v1 + 0x20C) = 0x42C80000;
+
+        public float Unknown210;     // offset: 0x210, sz: 4, origin: 0x3FC00000, parsed: 1.5        // line:   *(_DWORD *)(v1 + 0x210) = 0x3FC00000;
+        public float Unknown214;     // offset: 0x214, sz: 4, origin: 0x40400000, parsed: 3        // line:   *(_DWORD *)(v1 + 0x214) = 0x40400000;
+        public float Unknown218;     // offset: 0x218, sz: 4, origin: 0x40A00000, parsed: 5        // line:   *(_DWORD *)(v1 + 0x218) = 0x40A00000;
+        public float Unknown21C;     // offset: 0x21C, sz: 4, origin: 0x40400000, parsed: 3        // line:   *(_DWORD *)(v1 + 0x21C) = 0x40400000;
+
+        public float Unknown220;     // offset: 0x220, sz: 4, origin: 0x41000000, parsed: 8        // line:   *(_DWORD *)(v1 + 0x220) = 0x41000000;
+        public float Unknown224;     // offset: 0x224, sz: 4, origin: 0x40A00000, parsed: 5        // line:   *(_DWORD *)(v1 + 0x224) = 0x40A00000;
+        public float Unknown228;     // offset: 0x228, sz: 4, origin: 0x41700000i64, parsed: 15, comment: two packed floats in a QWORD?(1)
+        public float Unknown22C;     // offset: 556, sz: 4, origin: 0x41700000i64, parsed: 0, comment: two packed floats in a QWORD?(2)        // line:   *(_QWORD *)(v1 + 0x228) = 0x41700000i64;
+
+        public float Unknown230;     // offset: 0x230, sz: 4, origin: 0, parsed: 0        // line:   *(_DWORD *)(v1 + 0x230) = 0;
+        public float Unknown234;     // offset: 0x234, sz: 4, origin: 0x40A00000, parsed: 5        // line:   *(_DWORD *)(v1 + 0x234) = 0x40A00000;
+        public float Unknown238;     // offset: 0x238, sz: 4, origin: 0x40C00000i64, parsed: 6, comment: two packed floats in a QWORD?(1)
+        public float Unknown23C;     // offset: 572, sz: 4, origin: 0x40C00000i64, parsed: 0, comment: two packed floats in a QWORD?(2)        // line:   *(_QWORD *)(v1 + 0x238) = 0x40C00000i64;
+
+        public float Unknown240;     // offset: 0x240, sz: 4, origin: 0x41600000i64, parsed: 14, comment: two packed floats in a QWORD?(1)
+        public float Unknown244;     // offset: 580, sz: 4, origin: 0x41600000i64, parsed: 0, comment: two packed floats in a QWORD?(2)        // line:   *(_QWORD *)(v1 + 0x240) = 0x41600000i64;
+        public float Unknown248;     // offset: 0x248, sz: 4, origin: 0, parsed: 0        // line:   *(_DWORD *)(v1 + 0x248) = 0;
+        public float Unknown24C;     // offset: 0x24C, sz: 4, origin: 0x42C80000, parsed: 100        // line:   *(_DWORD *)(v1 + 0x24C) = 0x42C80000;
+
+        public float Unknown250;     // offset: 0x250, sz: 4, origin: 0x43160000, parsed: 150        // line:   *(_DWORD *)(v1 + 0x250) = 0x43160000;
+        public float Unknown254;     // offset: 0x254, sz: 4, origin: 0x42700000, parsed: 60        // line:   *(_DWORD *)(v1 + 0x254) = 0x42700000;
+        public float Unknown258;     // offset: 0x258, sz: 4, origin: 0x41700000i64, parsed: 15, comment: two packed floats in a QWORD?(1)
+        public float Unknown25C;     // offset: 604, sz: 4, origin: 0x41700000i64, parsed: 0, comment: two packed floats in a QWORD?(2)        // line:   *(_QWORD *)(v1 + 0x258) = 0x41700000i64;
+
+        public float Unknown260;     // offset: 0x260, sz: 4, origin: 0, parsed: 0        // line:   *(_DWORD *)(v1 + 0x260) = 0;
+        public float Unknown264;     // offset: 0x264, sz: 4, origin: 0x42C80000, parsed: 100        // line:   *(_DWORD *)(v1 + 0x264) = 0x42C80000;
+        public float Unknown268;     // offset: 0x268, sz: 4, origin: 0x43160000, parsed: 150        // line:   *(_DWORD *)(v1 + 0x268) = 0x43160000;
+        public float Unknown26C;     // offset: 0x26C, sz: 4, origin: 0x42700000, parsed: 60        // line:   *(_DWORD *)(v1 + 0x26C) = 0x42700000;
+
+        public float Unknown270;     // offset: 0x270, sz: 4, origin: 0x41700000i64, parsed: 15, comment: two packed floats in a QWORD?(1)
+        public float Unknown274;     // offset: 628, sz: 4, origin: 0x41700000i64, parsed: 0, comment: two packed floats in a QWORD?(2)        // line:   *(_QWORD *)(v1 + 0x270) = 0x41700000i64;
+        public float Unknown278;     // offset: 0x278, sz: 4, origin: 0, parsed: 0        // line:   *(_DWORD *)(v1 + 0x278) = 0;
+        public float Unknown27C;     // offset: 0x27C, sz: 4, origin: 0x42C80000, parsed: 100        // line:   *(_DWORD *)(v1 + 0x27C) = 0x42C80000;
+
+        public float Unknown280;     // offset: 0x280, sz: 4, origin: 0x43160000, parsed: 150        // line:   *(_DWORD *)(v1 + 0x280) = 0x43160000;
+        public float Unknown284;     // offset: 0x284, sz: 4, origin: 0x42700000, parsed: 60        // line:   *(_DWORD *)(v1 + 0x284) = 0x42700000;
+        public float Unknown288;     // offset: 0x288, sz: 4, origin: 0x41700000, parsed: 15        // line:   *(_DWORD *)(v1 + 0x288) = 0x41700000;
+        public bool Unknown28C;     // offset: 0x28C, sz: 1, origin: 0, parsed: 0        // line:   *(_BYTE *)(v1 + 0x28C) = 0;
+
+        public float Unknown290;     // offset: 0x290, sz: 4, origin: 0x3F99999A, parsed: 1.2        // line:   *(_DWORD *)(v1 + 0x290) = 0x3F99999A;
+        public float Unknown294;     // offset: 0x294, sz: 4, origin: 0x40200000, parsed: 2.5        // line:   *(_DWORD *)(v1 + 0x294) = 0x40200000;
+        public float Unknown298;     // offset: 0x298, sz: 4, origin: 0x40900000, parsed: 4.5        // line:   *(_DWORD *)(v1 + 0x298) = 0x40900000;
+        public int Unknown29C;     // offset: 0x29C, sz: 4, origin: 0x28, parsed: 40        // line:   *(_DWORD *)(v1 + 0x29C) = 0x28;
+
+        public int Unknown2A0;     // offset: 0x2A0, sz: 4, origin: 0x50, parsed: 80        // line:   *(_DWORD *)(v1 + 0x2A0) = 0x50;
+        public int Unknown2A4;     // offset: 0x2A4, sz: 4, origin: 0xA0, parsed: 160        // line:   *(_DWORD *)(v1 + 0x2A4) = 0xA0;
+        public int Unknown2A8;     // offset: 0x2A8, sz: 4, origin: 0x168, parsed: 360        // line:   *(_DWORD *)(v1 + 0x2A8) = 0x168;
 
         // missing 4 bytes at offset 680
         // could be padding, a undefined subroutine or a pointer accessing larger memory
         [NMS(Size = 0x4, Ignore = true)]
-        public byte[] Padding2AC;        // offset: 684, sz: 4, comment: auto padding
+        public byte[] Padding2AC;        // offset: 684, sz: 4, comment: auto padding 
 
-        [NMS(Size = 0xF)]
-        public string Unknown2B0;     // offset: 688, sz: 15, origin:  "LARGECREATUREWA"        // line:   strncpy((char *)(v1 + 688), "LARGECREATUREWA", 0xFui64);
-        // line:   strupr((char *)(v1 + 688));
-        // line:   *(_BYTE *)(v1 + 703) = 0;
-        public float Unknown2C0;     // offset: 704, sz: 4, origin: 0x40000000, parsed: 2        // line:   *(_DWORD *)(v1 + 704) = 0x40000000;
-        // line: //  *(_QWORD *)(v1 + 712) = 0i64;
-        // line: //  *(_QWORD *)(v1 + 720) = 0i64;
+        [NMS(Size = 0x10)]
+        public string Unknown2B0;     // offset: 0x2B0, sz: 15, origin:  "LARGECREATUREWA"        // line:   strncpy((char *)(v1 + 0x2B0), "LARGECREATUREWA", 0xFui64);
+        // line:   strupr((char *)(v1 + 0x2B0));
+        // line:   *(_BYTE *)(v1 + 0x2BF) = 0;
+        public float Unknown2C0;     // offset: 0x2C0, sz: 4, origin: 0x40000000, parsed: 2        // line:   *(_DWORD *)(v1 + 0x2C0) = 0x40000000;
 
         // missing 4 bytes at offset 704
         // could be padding, a undefined subroutine or a pointer accessing larger memory
         [NMS(Size = 0x4, Ignore = true)]
-        public byte[] Padding2C4;        // offset: 708, sz: 4, comment: auto padding
+        public byte[] Padding2C4;        // offset: 708, sz: 4, comment: auto padding 
 
-        [NMS(Size = 0xF)]
-        public string Unknown2C8;     // offset: 712, sz: 15, origin:  "LARGECREATUREWA"        // line:   strncpy((char *)(v1 + 712), "LARGECREATUREWA", 0xFui64);
-        // line:   strupr((char *)(v1 + 712));
-        // line:   *(_BYTE *)(v1 + 727) = 0;
-        public float Unknown2D8;     // offset: 728, sz: 4, origin: 1077936128, parsed: 3        // line:   *(_DWORD *)(v1 + 728) = 1077936128;
-        // line: //  *(_QWORD *)(v1 + 736) = 0i64;
-        // line: //  *(_QWORD *)(v1 + 744) = 0i64;
+        [NMS(Size = 0x10)]
+        public string Unknown2C8;     // offset: 0x2C8, sz: 15, origin:  "LARGECREATUREWA"        // line:   strncpy((char *)(v1 + 0x2C8), "LARGECREATUREWA", 0xFui64);
+        // line:   strupr((char *)(v1 + 0x2C8));
+        // line:   *(_BYTE *)(v1 + 0x2D7) = 0;
+        public float Unknown2D8;     // offset: 0x2D8, sz: 4, origin: 0x40400000, parsed: 3        // line:   *(_DWORD *)(v1 + 0x2D8) = 0x40400000;
 
         // missing 4 bytes at offset 728
         // could be padding, a undefined subroutine or a pointer accessing larger memory
         [NMS(Size = 0x4, Ignore = true)]
-        public byte[] Padding2DC;        // offset: 732, sz: 4, comment: auto padding
+        public byte[] Padding2DC;        // offset: 732, sz: 4, comment: auto padding 
 
-        [NMS(Size = 0xF)]
-        public string Unknown2E0;     // offset: 736, sz: 15, origin:  "LARGECREATUREWA"        // line:   strncpy((char *)(v1 + 736), "LARGECREATUREWA", 0xFui64);
-        // line:   strupr((char *)(v1 + 736));
-        // line:   *(_BYTE *)(v1 + 751) = 0;
-        public float Unknown2F0;     // offset: 752, sz: 4, origin: 1082130432, parsed: 4        // line:   *(_DWORD *)(v1 + 752) = 1082130432;
-        // line: //  *(_QWORD *)(v1 + 760) = 0i64;
-        // line: //  *(_QWORD *)(v1 + 768) = 0i64;
+        [NMS(Size = 0x10)]
+        public string Unknown2E0;     // offset: 0x2E0, sz: 15, origin:  "LARGECREATUREWA"        // line:   strncpy((char *)(v1 + 0x2E0), "LARGECREATUREWA", 0xFui64);
+        // line:   strupr((char *)(v1 + 0x2E0));
+        // line:   *(_BYTE *)(v1 + 0x2EF) = 0;
+        public float Unknown2F0;     // offset: 0x2F0, sz: 4, origin: 0x40800000, parsed: 4        // line:   *(_DWORD *)(v1 + 0x2F0) = 0x40800000;
 
         // missing 4 bytes at offset 752
         // could be padding, a undefined subroutine or a pointer accessing larger memory
         [NMS(Size = 0x4, Ignore = true)]
-        public byte[] Padding2F4;        // offset: 756, sz: 4, comment: auto padding
+        public byte[] Padding2F4;        // offset: 756, sz: 4, comment: auto padding 
 
-        [NMS(Size = 0xF)]
-        public string Unknown2F8;     // offset: 760, sz: 15, origin:  "LARGECREATUREWA"        // line:   strncpy((char *)(v1 + 760), "LARGECREATUREWA", 0xFui64);
-        // line:   strupr((char *)(v1 + 760));
-        // line:   *(_BYTE *)(v1 + 775) = 0;
-        public float Unknown308;     // offset: 776, sz: 4, origin: 1090519040, parsed: 8        // line:   *(_DWORD *)(v1 + 776) = 1090519040;
-        public float Unknown30C;     // offset: 780, sz: 4, origin: 1106247680, parsed: 30        // line:   *(_DWORD *)(v1 + 780) = 1106247680;
-        public float Unknown310;     // offset: 784, sz: 4, origin: 1116471296, parsed: 70        // line:   *(_DWORD *)(v1 + 784) = 1116471296;
-        public float Unknown314;     // offset: 788, sz: 4, origin: 1097859072, parsed: 15        // line:   *(_DWORD *)(v1 + 788) = 1097859072;
-        public float Unknown318;     // offset: 792, sz: 4, origin: 1114636288, parsed: 60        // line:   *(_DWORD *)(v1 + 792) = 1114636288;
-        public float Unknown31C;     // offset: 796, sz: 4, origin: 1077936128, parsed: 3        // line:   *(_DWORD *)(v1 + 796) = 1077936128;
-        public float Unknown320;     // offset: 800, sz: 4, origin: 1109393408, parsed: 40        // line:   *(_DWORD *)(v1 + 800) = 1109393408;
-        public float Unknown324;     // offset: 804, sz: 4, origin: 1109393408, parsed: 40        // line:   *(_DWORD *)(v1 + 804) = 1109393408;
-        public float Unknown328;     // offset: 808, sz: 4, origin: 1092616192, parsed: 10        // line:   *(_DWORD *)(v1 + 808) = 1092616192;
-        public float Unknown32C;     // offset: 812, sz: 4, origin: 1116471296, parsed: 70        // line:   *(_DWORD *)(v1 + 812) = 1116471296;
-        public int Unknown330;     // offset: 816, sz: 4, origin: 110, parsed: 110        // line:   *(_DWORD *)(v1 + 816) = 110;
-        public int Unknown334;     // offset: 820, sz: 4, origin: 120, parsed: 120        // line:   *(_DWORD *)(v1 + 820) = 120;
-        public int Unknown338;     // offset: 824, sz: 4, origin: 150, parsed: 150        // line:   *(_DWORD *)(v1 + 824) = 150;
-        public int Unknown33C;     // offset: 828, sz: 4, origin: 160, parsed: 160        // line:   *(_DWORD *)(v1 + 828) = 160;
-        public int Unknown340;     // offset: 832, sz: 4, origin: 93, parsed: 93        // line:   *(_DWORD *)(v1 + 832) = 93;
-        public float Unknown344;     // offset: 836, sz: 4, origin: 1082130432, parsed: 4        // line:   *(_DWORD *)(v1 + 836) = 1082130432;
-        public float Unknown348;     // offset: 840, sz: 4, origin: 1069547520, parsed: 1.5        // line:   *(_DWORD *)(v1 + 840) = 1069547520;
-        public float Unknown34C;     // offset: 844, sz: 4, origin: 1093664768, parsed: 11        // line:   *(_DWORD *)(v1 + 844) = 1093664768;
-        public float Unknown350;     // offset: 848, sz: 4, origin: 1088421888, parsed: 7        // line:   *(_DWORD *)(v1 + 848) = 1088421888;
-        public float Unknown354;     // offset: 852, sz: 4, origin: 1050253722, parsed: 0.3        // line:   *(_DWORD *)(v1 + 852) = 1050253722;
-        public float Unknown358;     // offset: 856, sz: 4, origin: 1088421888, parsed: 7        // line:   *(_DWORD *)(v1 + 856) = 1088421888;
-        public float Unknown35C;     // offset: 860, sz: 4, origin: 1050253722, parsed: 0.3        // line:   *(_DWORD *)(v1 + 860) = 1050253722;
-        public float Unknown360;     // offset: 864, sz: 4, origin: 1114636288, parsed: 60        // line:   *(_DWORD *)(v1 + 864) = 1114636288;
-        public float Unknown364;     // offset: 868, sz: 4, origin: 1117782016, parsed: 80        // line:   *(_DWORD *)(v1 + 868) = 1117782016;
-        public float Unknown368;     // offset: 872, sz: 4, origin: 1106247680, parsed: 30        // line:   *(_DWORD *)(v1 + 872) = 1106247680;
-        public float Unknown36C;     // offset: 876, sz: 4, origin: 1106247680, parsed: 30        // line:   *(_DWORD *)(v1 + 876) = 1106247680;
-        public float Unknown370;     // offset: 880, sz: 4, origin: 1084227584, parsed: 5        // line:   *(_DWORD *)(v1 + 880) = 1084227584;
-        public float Unknown374;     // offset: 884, sz: 4, origin: 1058642330, parsed: 0.6        // line:   *(_DWORD *)(v1 + 884) = 1058642330;
-        public float Unknown378;     // offset: 888, sz: 4, origin: 1060320051, parsed: 0.7        // line:   *(_DWORD *)(v1 + 888) = 1060320051;
-        public float Unknown37C;     // offset: 892, sz: 4, origin: 1109393408, parsed: 40        // line:   *(_DWORD *)(v1 + 892) = 1109393408;
-        public float Unknown380;     // offset: 896, sz: 4, origin: 1065353216, parsed: 1        // line:   *(_DWORD *)(v1 + 896) = 1065353216;
-        public float Unknown384;     // offset: 900, sz: 4, origin: 1166315520, parsed: 4242        // line:   *(_DWORD *)(v1 + 900) = 1166315520;
-        public float Unknown388;     // offset: 904, sz: 4, origin: 1058642330, parsed: 0.6        // line:   *(_DWORD *)(v1 + 904) = 1058642330;
-        public float Unknown38C;     // offset: 908, sz: 4, origin: 1063675494, parsed: 0.9        // line:   *(_DWORD *)(v1 + 908) = 1063675494;
-        public float Unknown390;     // offset: 912, sz: 4, origin: 1108082688, parsed: 35        // line:   *(_DWORD *)(v1 + 912) = 1108082688;
-        public float Unknown394;     // offset: 916, sz: 4, origin: 1101004800, parsed: 20        // line:   *(_DWORD *)(v1 + 916) = 1101004800;
-        public float Unknown398;     // offset: 920, sz: 4, origin: 1061997773, parsed: 0.8        // line:   *(_DWORD *)(v1 + 920) = 1061997773;
-        public float Unknown39C;     // offset: 924, sz: 4, origin: 0x40000000, parsed: 2        // line:   *(_DWORD *)(v1 + 924) = 0x40000000;
-        public int Unknown3A0;     // offset: 928, sz: 4, origin: 12, parsed: 12        // line:   *(_DWORD *)(v1 + 928) = 12;
-        public int Unknown3A4;     // offset: 932, sz: 4, origin: 18, parsed: 18        // line:   *(_DWORD *)(v1 + 932) = 18;
-        public float Unknown3A8;     // offset: 936, sz: 4, origin: 1065353216, parsed: 1        // line:   *(_DWORD *)(v1 + 936) = 1065353216;
-        public float Unknown3AC;     // offset: 940, sz: 4, origin: 1061158912, parsed: 0.75        // line:   *(_DWORD *)(v1 + 940) = 1061158912;
-        public float Unknown3B0;     // offset: 944, sz: 4, origin: 1060320051, parsed: 0.7        // line:   *(_DWORD *)(v1 + 944) = 1060320051;
-        public float Unknown3B4;     // offset: 948, sz: 4, origin: 0x40000000, parsed: 2        // line:   *(_DWORD *)(v1 + 948) = 0x40000000;
-        public float Unknown3B8;     // offset: 952, sz: 4, origin: 1045220557, parsed: 0.2        // line:   *(_DWORD *)(v1 + 952) = 1045220557;
-        public float Unknown3BC;     // offset: 956, sz: 4, origin: 1058642330, parsed: 0.6        // line:   *(_DWORD *)(v1 + 956) = 1058642330;
-        public float Unknown3C0;     // offset: 960, sz: 4, origin: 1097859072, parsed: 15        // line:   *(_DWORD *)(v1 + 960) = 1097859072;
-        public float Unknown3C4;     // offset: 964, sz: 4, origin: 1098907648, parsed: 16        // line:   *(_DWORD *)(v1 + 964) = 1098907648;
-        public float Unknown3C8;     // offset: 968, sz: 4, origin: 1060320051, parsed: 0.7        // line:   *(_DWORD *)(v1 + 968) = 1060320051;
-        public float Unknown3CC;     // offset: 972, sz: 4, origin: 1086324736, parsed: 6        // line:   *(_DWORD *)(v1 + 972) = 1086324736;
-        public float Unknown3D0;     // offset: 976, sz: 4, origin: 1065353216, parsed: 1        // line:   *(_DWORD *)(v1 + 976) = 1065353216;
-        public float Unknown3D4;     // offset: 980, sz: 4, origin: 0x40000000, parsed: 2        // line:   *(_DWORD *)(v1 + 980) = 0x40000000;
-        public float Unknown3D8;     // offset: 984, sz: 4, origin: 1082130432, parsed: 4        // line:   *(_DWORD *)(v1 + 984) = 1082130432;
-        public float Unknown3DC;     // offset: 988, sz: 4, origin: 1065353216, parsed: 1        // line:   *(_DWORD *)(v1 + 988) = 1065353216;
-        public float Unknown3E0;     // offset: 992, sz: 4, origin: 1075838976, parsed: 2.5        // line:   *(_DWORD *)(v1 + 992) = 1075838976;
-        public float Unknown3E4;     // offset: 996, sz: 4, origin: 1086324736, parsed: 6        // line:   *(_DWORD *)(v1 + 996) = 1086324736;
-        public float Unknown3E8;     // offset: 1000, sz: 4, origin: 1077936128, parsed: 3        // line:   *(_DWORD *)(v1 + 1000) = 1077936128;
-        public float Unknown3EC;     // offset: 1004, sz: 4, origin: 1086324736, parsed: 6        // line:   *(_DWORD *)(v1 + 1004) = 1086324736;
-        public float Unknown3F0;     // offset: 1008, sz: 4, origin: 1048576000, parsed: 0.25        // line:   *(_DWORD *)(v1 + 1008) = 1048576000;
-        public float Unknown3F4;     // offset: 1012, sz: 4, origin: 1048576000, parsed: 0.25        // line:   *(_DWORD *)(v1 + 1012) = 1048576000;
-        public float Unknown3F8;     // offset: 1016, sz: 4, origin: 1086324736, parsed: 6        // line:   *(_DWORD *)(v1 + 1016) = 1086324736;
-        public float Unknown3FC;     // offset: 1020, sz: 4, origin: 1077936128, parsed: 3        // line:   *(_DWORD *)(v1 + 1020) = 1077936128;
-        public float Unknown400;     // offset: 1024, sz: 4, origin: 1086324736, parsed: 6        // line:   *(_DWORD *)(v1 + 1024) = 1086324736;
-        public float Unknown404;     // offset: 1028, sz: 4, origin: 0x40000000, parsed: 2        // line:   *(_DWORD *)(v1 + 1028) = 0x40000000;
-        public float Unknown408;     // offset: 1032, sz: 4, origin: 1069547520, parsed: 1.5        // line:   *(_DWORD *)(v1 + 1032) = 1069547520;
-        public float Unknown40C;     // offset: 1036, sz: 4, origin: 1114636288, parsed: 60        // line:   *(_DWORD *)(v1 + 1036) = 1114636288;
-        public float Unknown410;     // offset: 1040, sz: 4, origin: 1092616192, parsed: 10        // line:   *(_DWORD *)(v1 + 1040) = 1092616192;
-        public float Unknown414;     // offset: 1044, sz: 4, origin: 1114636288, parsed: 60        // line:   *(_DWORD *)(v1 + 1044) = 1114636288;
-        public float Unknown418;     // offset: 1048, sz: 4, origin: 1157234688, parsed: 2000        // line:   *(_DWORD *)(v1 + 1048) = 1157234688;
-        public int Unknown41C;     // offset: 1052, sz: 4, origin: 4, parsed: 4        // line:   *(_DWORD *)(v1 + 1052) = 4;
-        public short Unknown420;     // offset: 1056, sz: 2, origin: 0, parsed: 0        // line:   *(_WORD *)(v1 + 1056) = 0;
+        [NMS(Size = 0x10)]
+        public string Unknown2F8;     // offset: 0x2F8, sz: 15, origin:  "LARGECREATUREWA"        // line:   strncpy((char *)(v1 + 0x2F8), "LARGECREATUREWA", 0xFui64);
+        // line:   strupr((char *)(v1 + 0x2F8));
+        // line:   *(_BYTE *)(v1 + 0x307) = 0;
+        public float Unknown308;     // offset: 0x308, sz: 4, origin: 0x41000000, parsed: 8        // line:   *(_DWORD *)(v1 + 0x308) = 0x41000000;
+        public float Unknown30C;     // offset: 0x30C, sz: 4, origin: 0x41F00000, parsed: 30        // line:   *(_DWORD *)(v1 + 0x30C) = 0x41F00000;
 
-        // missing 2 bytes at offset 1056
-        // does 1056 contain a DWORD?
-        [NMS(Size = 0x2, Ignore = true)]
-        public byte[] Padding422;        // offset: 1058, sz: 2, comment: auto padding
+        public float Unknown310;     // offset: 0x310, sz: 4, origin: 0x428C0000, parsed: 70        // line:   *(_DWORD *)(v1 + 0x310) = 0x428C0000;
+        public float Unknown314;     // offset: 0x314, sz: 4, origin: 0x41700000, parsed: 15        // line:   *(_DWORD *)(v1 + 0x314) = 0x41700000;
+        public float Unknown318;     // offset: 0x318, sz: 4, origin: 0x42700000, parsed: 60        // line:   *(_DWORD *)(v1 + 0x318) = 0x42700000;
+        public float Unknown31C;     // offset: 0x31C, sz: 4, origin: 0x40400000, parsed: 3        // line:   *(_DWORD *)(v1 + 0x31C) = 0x40400000;
 
-        public float Unknown424;     // offset: 1060, sz: 4, origin: 1117782016, parsed: 80        // line:   *(_DWORD *)(v1 + 1060) = 1117782016;
-        public bool Unknown428;     // offset: 1064, sz: 1, origin: 1, parsed: 1        // line:   *(_BYTE *)(v1 + 1064) = 1;
+        public float Unknown320;     // offset: 0x320, sz: 4, origin: 0x42200000, parsed: 40        // line:   *(_DWORD *)(v1 + 0x320) = 0x42200000;
+        public float Unknown324;     // offset: 0x324, sz: 4, origin: 0x42200000, parsed: 40        // line:   *(_DWORD *)(v1 + 0x324) = 0x42200000;
+        public float Unknown328;     // offset: 0x328, sz: 4, origin: 0x41200000, parsed: 10        // line:   *(_DWORD *)(v1 + 0x328) = 0x41200000;
+        public float Unknown32C;     // offset: 0x32C, sz: 4, origin: 0x428C0000, parsed: 70        // line:   *(_DWORD *)(v1 + 0x32C) = 0x428C0000;
 
-        // missing 3 bytes at offset 1064
-        // does 1064 contain a DWORD?
-        [NMS(Size = 0x3, Ignore = true)]
-        public byte[] Padding429;        // offset: 1065, sz: 3, comment: auto padding
+        public int Unknown330;     // offset: 0x330, sz: 4, origin: 0x6E, parsed: 110        // line:   *(_DWORD *)(v1 + 0x330) = 0x6E;
+        public int Unknown334;     // offset: 0x334, sz: 4, origin: 0x78, parsed: 120        // line:   *(_DWORD *)(v1 + 0x334) = 0x78;
+        public int Unknown338;     // offset: 0x338, sz: 4, origin: 0x96, parsed: 150        // line:   *(_DWORD *)(v1 + 0x338) = 0x96;
+        public int Unknown33C;     // offset: 0x33C, sz: 4, origin: 0xA0, parsed: 160        // line:   *(_DWORD *)(v1 + 0x33C) = 0xA0;
 
-        public float Unknown42C;     // offset: 1068, sz: 4, origin: 1045220557, parsed: 0.2        // line:   *(_DWORD *)(v1 + 1068) = 1045220557;
-        public float Unknown430;     // offset: 1072, sz: 4, origin: 1045220557, parsed: 0.2        // line:   *(_DWORD *)(v1 + 1072) = 1045220557;
-        public float Unknown434;     // offset: 1076, sz: 4, origin: 1053609165, parsed: 0.4        // line:   *(_DWORD *)(v1 + 1076) = 1053609165;
-        public float Unknown438;     // offset: 1080, sz: 4, origin: 1067030938, parsed: 1.2        // line:   *(_DWORD *)(v1 + 1080) = 1067030938;
-        public bool Unknown43C;     // offset: 1084, sz: 1, origin: 1, parsed: 1        // line:   *(_BYTE *)(v1 + 1084) = 1;
-        // line: //  *(_QWORD *)(v1 + 1088) = 0i64;
-        // line: //  *(_QWORD *)(v1 + 1096) = 0i64;
+        public int Unknown340;     // offset: 0x340, sz: 4, origin: 0x5D, parsed: 93        // line:   *(_DWORD *)(v1 + 0x340) = 0x5D;
+        public float Unknown344;     // offset: 0x344, sz: 4, origin: 0x40800000, parsed: 4        // line:   *(_DWORD *)(v1 + 0x344) = 0x40800000;
+        public float Unknown348;     // offset: 0x348, sz: 4, origin: 0x3FC00000, parsed: 1.5        // line:   *(_DWORD *)(v1 + 0x348) = 0x3FC00000;
+        public float Unknown34C;     // offset: 0x34C, sz: 4, origin: 0x41300000, parsed: 11        // line:   *(_DWORD *)(v1 + 0x34C) = 0x41300000;
+
+        public float Unknown350;     // offset: 0x350, sz: 4, origin: 0x40E00000, parsed: 7        // line:   *(_DWORD *)(v1 + 0x350) = 0x40E00000;
+        public float Unknown354;     // offset: 0x354, sz: 4, origin: 0x3E99999A, parsed: 0.3        // line:   *(_DWORD *)(v1 + 0x354) = 0x3E99999A;
+        public float Unknown358;     // offset: 0x358, sz: 4, origin: 0x40E00000, parsed: 7        // line:   *(_DWORD *)(v1 + 0x358) = 0x40E00000;
+        public float Unknown35C;     // offset: 0x35C, sz: 4, origin: 0x3E99999A, parsed: 0.3        // line:   *(_DWORD *)(v1 + 0x35C) = 0x3E99999A;
+
+        public float Unknown360;     // offset: 0x360, sz: 4, origin: 0x42700000, parsed: 60        // line:   *(_DWORD *)(v1 + 0x360) = 0x42700000;
+        public float Unknown364;     // offset: 0x364, sz: 4, origin: 0x42A00000, parsed: 80        // line:   *(_DWORD *)(v1 + 0x364) = 0x42A00000;
+        public float Unknown368;     // offset: 0x368, sz: 4, origin: 0x41F00000, parsed: 30        // line:   *(_DWORD *)(v1 + 0x368) = 0x41F00000;
+        public float Unknown36C;     // offset: 0x36C, sz: 4, origin: 0x41F00000, parsed: 30        // line:   *(_DWORD *)(v1 + 0x36C) = 0x41F00000;
+
+        public float Unknown370;     // offset: 0x370, sz: 4, origin: 0x40A00000, parsed: 5        // line:   *(_DWORD *)(v1 + 0x370) = 0x40A00000;
+        public float Unknown374;     // offset: 0x374, sz: 4, origin: 0x3F19999A, parsed: 0.6        // line:   *(_DWORD *)(v1 + 0x374) = 0x3F19999A;
+        public float Unknown378;     // offset: 0x378, sz: 4, origin: 0x3F333333, parsed: 0.7        // line:   *(_DWORD *)(v1 + 0x378) = 0x3F333333;
+        public float Unknown37C;     // offset: 0x37C, sz: 4, origin: 0x42200000, parsed: 40        // line:   *(_DWORD *)(v1 + 0x37C) = 0x42200000;
+
+        public float Unknown380;     // offset: 0x380, sz: 4, origin: 0x3F800000, parsed: 1        // line:   *(_DWORD *)(v1 + 0x380) = 0x3F800000;
+        public float Unknown384;     // offset: 0x384, sz: 4, origin: 0x45849000, parsed: 4242        // line:   *(_DWORD *)(v1 + 0x384) = 0x45849000;
+        public float Unknown388;     // offset: 0x388, sz: 4, origin: 0x3F19999A, parsed: 0.6        // line:   *(_DWORD *)(v1 + 0x388) = 0x3F19999A;
+        public float Unknown38C;     // offset: 0x38C, sz: 4, origin: 0x3F666666, parsed: 0.9        // line:   *(_DWORD *)(v1 + 0x38C) = 0x3F666666;
+
+        public float Unknown390;     // offset: 0x390, sz: 4, origin: 0x420C0000, parsed: 35        // line:   *(_DWORD *)(v1 + 0x390) = 0x420C0000;
+        public float Unknown394;     // offset: 0x394, sz: 4, origin: 0x41A00000, parsed: 20        // line:   *(_DWORD *)(v1 + 0x394) = 0x41A00000;
+        public float Unknown398;     // offset: 0x398, sz: 4, origin: 0x3F4CCCCD, parsed: 0.8        // line:   *(_DWORD *)(v1 + 0x398) = 0x3F4CCCCD;
+        public float Unknown39C;     // offset: 0x39C, sz: 4, origin: 0x40000000, parsed: 2        // line:   *(_DWORD *)(v1 + 0x39C) = 0x40000000;
+
+        public int Unknown3A0;     // offset: 0x3A0, sz: 4, origin: 0xC, parsed: 12        // line:   *(_DWORD *)(v1 + 0x3A0) = 0xC;
+        public int Unknown3A4;     // offset: 0x3A4, sz: 4, origin: 0x12, parsed: 18        // line:   *(_DWORD *)(v1 + 0x3A4) = 0x12;
+        public float Unknown3A8;     // offset: 0x3A8, sz: 4, origin: 0x3F800000, parsed: 1        // line:   *(_DWORD *)(v1 + 0x3A8) = 0x3F800000;
+        public float Unknown3AC;     // offset: 0x3AC, sz: 4, origin: 0x3F400000, parsed: 0.75        // line:   *(_DWORD *)(v1 + 0x3AC) = 0x3F400000;
+
+        public float Unknown3B0;     // offset: 0x3B0, sz: 4, origin: 0x3F333333, parsed: 0.7        // line:   *(_DWORD *)(v1 + 0x3B0) = 0x3F333333;
+        public float Unknown3B4;     // offset: 0x3B4, sz: 4, origin: 0x40000000, parsed: 2        // line:   *(_DWORD *)(v1 + 0x3B4) = 0x40000000;
+        public float Unknown3B8;     // offset: 0x3B8, sz: 4, origin: 0x3E4CCCCD, parsed: 0.2        // line:   *(_DWORD *)(v1 + 0x3B8) = 0x3E4CCCCD;
+        public float Unknown3BC;     // offset: 0x3BC, sz: 4, origin: 0x3F19999A, parsed: 0.6        // line:   *(_DWORD *)(v1 + 0x3BC) = 0x3F19999A;
+
+        public float Unknown3C0;     // offset: 0x3C0, sz: 4, origin: 0x41700000, parsed: 15        // line:   *(_DWORD *)(v1 + 0x3C0) = 0x41700000;
+        public float Unknown3C4;     // offset: 0x3C4, sz: 4, origin: 0x41800000, parsed: 16        // line:   *(_DWORD *)(v1 + 0x3C4) = 0x41800000;
+        public float Unknown3C8;     // offset: 0x3C8, sz: 4, origin: 0x3F333333, parsed: 0.7        // line:   *(_DWORD *)(v1 + 0x3C8) = 0x3F333333;
+        public float Unknown3CC;     // offset: 0x3CC, sz: 4, origin: 0x40C00000, parsed: 6        // line:   *(_DWORD *)(v1 + 0x3CC) = 0x40C00000;
+
+        public float Unknown3D0;     // offset: 0x3D0, sz: 4, origin: 0x3F800000, parsed: 1        // line:   *(_DWORD *)(v1 + 0x3D0) = 0x3F800000;
+        public float Unknown3D4;     // offset: 0x3D4, sz: 4, origin: 0x40000000, parsed: 2        // line:   *(_DWORD *)(v1 + 0x3D4) = 0x40000000;
+        public float Unknown3D8;     // offset: 0x3D8, sz: 4, origin: 0x40800000, parsed: 4        // line:   *(_DWORD *)(v1 + 0x3D8) = 0x40800000;
+        public float Unknown3DC;     // offset: 0x3DC, sz: 4, origin: 0x3F800000, parsed: 1        // line:   *(_DWORD *)(v1 + 0x3DC) = 0x3F800000;
+
+        public float Unknown3E0;     // offset: 0x3E0, sz: 4, origin: 0x40200000, parsed: 2.5        // line:   *(_DWORD *)(v1 + 0x3E0) = 0x40200000;
+        public float Unknown3E4;     // offset: 0x3E4, sz: 4, origin: 0x40C00000, parsed: 6        // line:   *(_DWORD *)(v1 + 0x3E4) = 0x40C00000;
+        public float Unknown3E8;     // offset: 0x3E8, sz: 4, origin: 0x40400000, parsed: 3        // line:   *(_DWORD *)(v1 + 0x3E8) = 0x40400000;
+        public float Unknown3EC;     // offset: 0x3EC, sz: 4, origin: 0x40C00000, parsed: 6        // line:   *(_DWORD *)(v1 + 0x3EC) = 0x40C00000;
+
+        public float Unknown3F0;     // offset: 0x3F0, sz: 4, origin: 0x3E800000, parsed: 0.25        // line:   *(_DWORD *)(v1 + 0x3F0) = 0x3E800000;
+        public float Unknown3F4;     // offset: 0x3F4, sz: 4, origin: 0x3E800000, parsed: 0.25        // line:   *(_DWORD *)(v1 + 0x3F4) = 0x3E800000;
+        public float Unknown3F8;     // offset: 0x3F8, sz: 4, origin: 0x40C00000, parsed: 6        // line:   *(_DWORD *)(v1 + 0x3F8) = 0x40C00000;
+        public float Unknown3FC;     // offset: 0x3FC, sz: 4, origin: 0x40400000, parsed: 3        // line:   *(_DWORD *)(v1 + 0x3FC) = 0x40400000;
+
+        public float Unknown400;     // offset: 0x400, sz: 4, origin: 0x40C00000, parsed: 6        // line:   *(_DWORD *)(v1 + 0x400) = 0x40C00000;
+        public float Unknown404;     // offset: 0x404, sz: 4, origin: 0x40000000, parsed: 2        // line:   *(_DWORD *)(v1 + 0x404) = 0x40000000;
+        public float Unknown408;     // offset: 0x408, sz: 4, origin: 0x3FC00000, parsed: 1.5        // line:   *(_DWORD *)(v1 + 0x408) = 0x3FC00000;
+        public float Unknown40C;     // offset: 0x40C, sz: 4, origin: 0x42700000, parsed: 60        // line:   *(_DWORD *)(v1 + 0x40C) = 0x42700000;
+
+        public float Unknown410;     // offset: 0x410, sz: 4, origin: 0x41200000, parsed: 10        // line:   *(_DWORD *)(v1 + 0x410) = 0x41200000;
+        public float Unknown414;     // offset: 0x414, sz: 4, origin: 0x42700000, parsed: 60        // line:   *(_DWORD *)(v1 + 0x414) = 0x42700000;
+        public float Unknown418;     // offset: 0x418, sz: 4, origin: 0x44FA0000, parsed: 2000        // line:   *(_DWORD *)(v1 + 0x418) = 0x44FA0000;
+        public int Unknown41C;     // offset: 0x41C, sz: 4, origin: 4, parsed: 4        // line:   *(_DWORD *)(v1 + 0x41C) = 4;
+
+        public bool Unknown420;     // offset: 0x420, sz: 2, origin: 0, parsed: 0        // line:   *(_WORD *)(v1 + 0x420) = 0;
+        public bool Unknown421;
+        public float Unknown424;     // offset: 0x424, sz: 4, origin: 0x42A00000, parsed: 80        // line:   *(_DWORD *)(v1 + 0x424) = 0x42A00000;
+        public bool Unknown428;     // offset: 0x428, sz: 1, origin: 1, parsed: 1        // line:   *(_BYTE *)(v1 + 0x428) = 1;
+        public float Unknown42C;     // offset: 0x42C, sz: 4, origin: 0x3E4CCCCD, parsed: 0.2        // line:   *(_DWORD *)(v1 + 0x42C) = 0x3E4CCCCD;
+
+        public float Unknown430;     // offset: 0x430, sz: 4, origin: 0x3E4CCCCD, parsed: 0.2        // line:   *(_DWORD *)(v1 + 0x430) = 0x3E4CCCCD;
+        public float Unknown434;     // offset: 0x434, sz: 4, origin: 0x3ECCCCCD, parsed: 0.4        // line:   *(_DWORD *)(v1 + 0x434) = 0x3ECCCCCD;
+        public float Unknown438;     // offset: 0x438, sz: 4, origin: 0x3F99999A, parsed: 1.2        // line:   *(_DWORD *)(v1 + 0x438) = 0x3F99999A;
+        public bool Unknown43C;     // offset: 0x43C, sz: 1, origin: 1, parsed: 1        // line:   *(_BYTE *)(v1 + 0x43C) = 1;
 
         // missing 3 bytes at offset 1084
         // does 1084 contain a DWORD?
         [NMS(Size = 0x3, Ignore = true)]
-        public byte[] Padding43D;        // offset: 1085, sz: 3, comment: auto padding
+        public byte[] Padding43D;        // offset: 1085, sz: 3, comment: auto padding 
 
-        [NMS(Size = 0xF)]
-        public string Unknown440;     // offset: 1088, sz: 15, origin:  "DEATHBLOODSMALL"        // line:   strncpy((char *)(v1 + 1088), "DEATHBLOODSMALL", 0xFui64);
-        // line:   strupr((char *)(v1 + 1088));
-        // line:   *(_BYTE *)(v1 + 1103) = 0;
-        // line: //  *(_QWORD *)(v1 + 1104) = 0i64;
-        // line: //  *(_QWORD *)(v1 + 1112) = 0i64;
-        [NMS(Size = 0xD)]
-        public string Unknown450;     // offset: 1104, sz: 13, origin:  "DEATHBLOODMED"        // line:   strncpy((char *)(v1 + 1104), "DEATHBLOODMED", 0xDui64);
-        // line:   strupr((char *)(v1 + 1104));
-        // line:   *(_BYTE *)(v1 + 1117) = 0;
-        // line: //  *(_QWORD *)(v1 + 1120) = 0i64;
-        // line: //  *(_QWORD *)(v1 + 1128) = 0i64;
+        [NMS(Size = 0x10)]
+        public string Unknown440;     // offset: 0x440, sz: 15, origin:  "DEATHBLOODSMALL"        // line:   strncpy((char *)(v1 + 0x440), "DEATHBLOODSMALL", 0xFui64);
 
-        // missing 3 bytes at offset 1104
-        // does 1104 contain a string which doesn't use all available space?
-        [NMS(Size = 0x3, Ignore = true)]
-        public byte[] Padding45D;        // offset: 1117, sz: 3, comment: auto padding
+        [NMS(Size = 0x10)]
+        public string Unknown450;     // offset: 0x450, sz: 13, origin:  "DEATHBLOODMED"        // line:   strncpy((char *)(v1 + 0x450), "DEATHBLOODMED", 0xDui64);
 
-        [NMS(Size = 0xD)]
-        public string Unknown460;     // offset: 1120, sz: 13, origin:  "DEATHBLOODBIG"        // line:   strncpy((char *)(v1 + 1120), "DEATHBLOODBIG", 0xDui64);
-        // line:   strupr((char *)(v1 + 1120));
-        // line:   *(_BYTE *)(v1 + 1133) = 0;
+        [NMS(Size = 0x10)]
+        public string Unknown460;     // offset: 0x460, sz: 13, origin:  "DEATHBLOODBIG"        // line:   strncpy((char *)(v1 + 0x460), "DEATHBLOODBIG", 0xDui64);
 
-        // missing 3 bytes at offset 1120
-        // does 1120 contain a string which doesn't use all available space?
-        [NMS(Size = 0x3, Ignore = true)]
-        public byte[] Padding46D;        // offset: 1133, sz: 3, comment: auto padding
+        public float Unknown470;     // offset: 0x470, sz: 4, origin: 0x3E99999A, parsed: 0.3        // line:   *(_DWORD *)(v1 + 0x470) = 0x3E99999A;
+        public float Unknown474;     // offset: 0x474, sz: 4, origin: 0x41000000, parsed: 8        // line:   *(_DWORD *)(v1 + 0x474) = 0x41000000;
+        public float Unknown478;     // offset: 0x478, sz: 4, origin: 0x41900000, parsed: 18        // line:   *(_DWORD *)(v1 + 0x478) = 0x41900000;
+        public float Unknown47C;     // offset: 0x47C, sz: 4, origin: 0x42340000, parsed: 45        // line:   *(_DWORD *)(v1 + 0x47C) = 0x42340000;
 
-        public float Unknown470;     // offset: 1136, sz: 4, origin: 1050253722, parsed: 0.3        // line:   *(_DWORD *)(v1 + 1136) = 1050253722;
-        public float Unknown474;     // offset: 1140, sz: 4, origin: 1090519040, parsed: 8        // line:   *(_DWORD *)(v1 + 1140) = 1090519040;
-        public float Unknown478;     // offset: 1144, sz: 4, origin: 1099956224, parsed: 18        // line:   *(_DWORD *)(v1 + 1144) = 1099956224;
-        public float Unknown47C;     // offset: 1148, sz: 4, origin: 1110704128, parsed: 45        // line:   *(_DWORD *)(v1 + 1148) = 1110704128;
-        public float Unknown480;     // offset: 1152, sz: 4, origin: 1101004800, parsed: 20        // line:   *(_DWORD *)(v1 + 1152) = 1101004800;
-        public float Unknown484;     // offset: 1156, sz: 4, origin: 1116471296, parsed: 70        // line:   *(_DWORD *)(v1 + 1156) = 1116471296;
-        public float Unknown488;     // offset: 1160, sz: 4, origin: 1101004800, parsed: 20        // line:   *(_DWORD *)(v1 + 1160) = 1101004800;
-        public float Unknown48C;     // offset: 1164, sz: 4, origin: 1092616192, parsed: 10        // line:   *(_DWORD *)(v1 + 1164) = 1092616192;
-        public float Unknown490;     // offset: 1168, sz: 4, origin: 1056964608i64, parsed: 0.5, comment: two packed floats in a QWORD?(1)
-        public float Unknown494;     // offset: 1172, sz: 4, origin: 1056964608i64, parsed: 0, comment: two packed floats in a QWORD?(2)        // line:   *(_QWORD *)(v1 + 1168) = 1056964608i64;
-        public bool Unknown498;     // offset: 1176, sz: 1, origin: 0, parsed: 0        // line:   *(_BYTE *)(v1 + 1176) = 0;
+        public float Unknown480;     // offset: 0x480, sz: 4, origin: 0x41A00000, parsed: 20        // line:   *(_DWORD *)(v1 + 0x480) = 0x41A00000;
+        public float Unknown484;     // offset: 0x484, sz: 4, origin: 0x428C0000, parsed: 70        // line:   *(_DWORD *)(v1 + 0x484) = 0x428C0000;
+        public float Unknown488;     // offset: 0x488, sz: 4, origin: 0x41A00000, parsed: 20        // line:   *(_DWORD *)(v1 + 0x488) = 0x41A00000;
+        public float Unknown48C;     // offset: 0x48C, sz: 4, origin: 0x41200000, parsed: 10        // line:   *(_DWORD *)(v1 + 0x48C) = 0x41200000;
 
-        // missing 3 bytes at offset 1176
-        // does 1176 contain a DWORD?
-        [NMS(Size = 0x3, Ignore = true)]
-        public byte[] Padding499;        // offset: 1177, sz: 3, comment: auto padding
+        public float Unknown490;     // offset: 0x490, sz: 4, origin: 0x3F000000i64, parsed: 0.5, comment: two packed floats in a QWORD?(1)
+        public float Unknown494;     // offset: 1172, sz: 4, origin: 0x3F000000i64, parsed: 0, comment: two packed floats in a QWORD?(2)        // line:   *(_QWORD *)(v1 + 0x490) = 0x3F000000i64;
+        public bool Unknown498;     // offset: 0x498, sz: 1, origin: 0, parsed: 0        // line:   *(_BYTE *)(v1 + 0x498) = 0;
+        public int Unknown49C;     // offset: 0x49C, sz: 4, origin: 4, parsed: 4        // line:   *(_DWORD *)(v1 + 0x49C) = 4;
 
-        public int Unknown49C;     // offset: 1180, sz: 4, origin: 4, parsed: 4        // line:   *(_DWORD *)(v1 + 1180) = 4;
-        public int Unknown4A0;     // offset: 1184, sz: 4, origin: 4, parsed: 4        // line:   *(_DWORD *)(v1 + 1184) = 4;
-        public float Unknown4A4;     // offset: 1188, sz: 4, origin: 1048576000, parsed: 0.25        // line:   *(_DWORD *)(v1 + 1188) = 1048576000;
-        public float Unknown4A8;     // offset: 1192, sz: 4, origin: 1061997773, parsed: 0.8        // line:   *(_DWORD *)(v1 + 1192) = 1061997773;
-        public float Unknown4AC;     // offset: 1196, sz: 4, origin: 1061997773, parsed: 0.8        // line:   *(_DWORD *)(v1 + 1196) = 1061997773;
-        public float Unknown4B0;     // offset: 1200, sz: 4, origin: 1064514355, parsed: 0.95        // line:   *(_DWORD *)(v1 + 1200) = 1064514355;
-        public float Unknown4B4;     // offset: 1204, sz: 4, origin: 1036831949, parsed: 0.1        // line:   *(_DWORD *)(v1 + 1204) = 1036831949;
-        public float Unknown4B8;     // offset: 1208, sz: 4, origin: 1065353216, parsed: 1        // line:   *(_DWORD *)(v1 + 1208) = 1065353216;
-        public float Unknown4BC;     // offset: 1212, sz: 4, origin: 0x40000000, parsed: 2        // line:   *(_DWORD *)(v1 + 1212) = 0x40000000;
-        public float Unknown4C0;     // offset: 1216, sz: 4, origin: 1088421888, parsed: 7        // line:   *(_DWORD *)(v1 + 1216) = 1088421888;
-        public float Unknown4C4;     // offset: 1220, sz: 4, origin: 1092616192, parsed: 10        // line:   *(_DWORD *)(v1 + 1220) = 1092616192;
-        public float Unknown4C8;     // offset: 1224, sz: 4, origin: 1058642330, parsed: 0.6        // line:   *(_DWORD *)(v1 + 1224) = 1058642330;
-        public float Unknown4CC;     // offset: 1228, sz: 4, origin: 1050253722, parsed: 0.3        // line:   *(_DWORD *)(v1 + 1228) = 1050253722;
-        public float Unknown4D0;     // offset: 1232, sz: 4, origin: 1056964608, parsed: 0.5        // line:   *(_DWORD *)(v1 + 1232) = 1056964608;
-        public float Unknown4D4;     // offset: 1236, sz: 4, origin: 1061997773, parsed: 0.8        // line:   *(_DWORD *)(v1 + 1236) = 1061997773;
-        public bool Unknown4D8;     // offset: 1240, sz: 1, origin: 0, parsed: 0        // line:   *(_BYTE *)(v1 + 1240) = 0;
+        public int Unknown4A0;     // offset: 0x4A0, sz: 4, origin: 4, parsed: 4        // line:   *(_DWORD *)(v1 + 0x4A0) = 4;
+        public float Unknown4A4;     // offset: 0x4A4, sz: 4, origin: 0x3E800000, parsed: 0.25        // line:   *(_DWORD *)(v1 + 0x4A4) = 0x3E800000;
+        public float Unknown4A8;     // offset: 0x4A8, sz: 4, origin: 0x3F4CCCCD, parsed: 0.8        // line:   *(_DWORD *)(v1 + 0x4A8) = 0x3F4CCCCD;
+        public float Unknown4AC;     // offset: 0x4AC, sz: 4, origin: 0x3F4CCCCD, parsed: 0.8        // line:   *(_DWORD *)(v1 + 0x4AC) = 0x3F4CCCCD;
 
-        // missing 3 bytes at offset 1240
-        // does 1240 contain a DWORD?
-        [NMS(Size = 0x3, Ignore = true)]
-        public byte[] Padding4D9;        // offset: 1241, sz: 3, comment: auto padding
+        public float Unknown4B0;     // offset: 0x4B0, sz: 4, origin: 0x3F733333, parsed: 0.95        // line:   *(_DWORD *)(v1 + 0x4B0) = 0x3F733333;
+        public float Unknown4B4;     // offset: 0x4B4, sz: 4, origin: 0x3DCCCCCD, parsed: 0.1        // line:   *(_DWORD *)(v1 + 0x4B4) = 0x3DCCCCCD;
+        public float Unknown4B8;     // offset: 0x4B8, sz: 4, origin: 0x3F800000, parsed: 1        // line:   *(_DWORD *)(v1 + 0x4B8) = 0x3F800000;
+        public float Unknown4BC;     // offset: 0x4BC, sz: 4, origin: 0x40000000, parsed: 2        // line:   *(_DWORD *)(v1 + 0x4BC) = 0x40000000;
 
-        public float Unknown4DC;     // offset: 1244, sz: 4, origin: 1060320051, parsed: 0.7        // line:   *(_DWORD *)(v1 + 1244) = 1060320051;
-        public float Unknown4E0;     // offset: 1248, sz: 4, origin: 1077936128, parsed: 3        // line:   *(_DWORD *)(v1 + 1248) = 1077936128;
-        public float Unknown4E4;     // offset: 1252, sz: 4, origin: 1065353216, parsed: 1        // line:   *(_DWORD *)(v1 + 1252) = 1065353216;
-        public float Unknown4E8;     // offset: 1256, sz: 4, origin: 1067450368, parsed: 1.25        // line:   *(_DWORD *)(v1 + 1256) = 1067450368;
-        public bool Unknown4EC;     // offset: 1260, sz: 1, origin: 0, parsed: 0        // line:   *(_BYTE *)(v1 + 1260) = 0;
+        public float Unknown4C0;     // offset: 0x4C0, sz: 4, origin: 0x40E00000, parsed: 7        // line:   *(_DWORD *)(v1 + 0x4C0) = 0x40E00000;
+        public float Unknown4C4;     // offset: 0x4C4, sz: 4, origin: 0x41200000, parsed: 10        // line:   *(_DWORD *)(v1 + 0x4C4) = 0x41200000;
+        public float Unknown4C8;     // offset: 0x4C8, sz: 4, origin: 0x3F19999A, parsed: 0.6        // line:   *(_DWORD *)(v1 + 0x4C8) = 0x3F19999A;
+        public float Unknown4CC;     // offset: 0x4CC, sz: 4, origin: 0x3E99999A, parsed: 0.3        // line:   *(_DWORD *)(v1 + 0x4CC) = 0x3E99999A;
+
+        public float Unknown4D0;     // offset: 0x4D0, sz: 4, origin: 0x3F000000, parsed: 0.5        // line:   *(_DWORD *)(v1 + 0x4D0) = 0x3F000000;
+        public float Unknown4D4;     // offset: 0x4D4, sz: 4, origin: 0x3F4CCCCD, parsed: 0.8        // line:   *(_DWORD *)(v1 + 0x4D4) = 0x3F4CCCCD;
+        public bool Unknown4D8;     // offset: 0x4D8, sz: 1, origin: 0, parsed: 0        // line:   *(_BYTE *)(v1 + 0x4D8) = 0;
+        public float Unknown4DC;     // offset: 0x4DC, sz: 4, origin: 0x3F333333, parsed: 0.7        // line:   *(_DWORD *)(v1 + 0x4DC) = 0x3F333333;
+
+        public float Unknown4E0;     // offset: 0x4E0, sz: 4, origin: 0x40400000, parsed: 3        // line:   *(_DWORD *)(v1 + 0x4E0) = 0x40400000;
+        public float Unknown4E4;     // offset: 0x4E4, sz: 4, origin: 0x3F800000, parsed: 1        // line:   *(_DWORD *)(v1 + 0x4E4) = 0x3F800000;
+        public float Unknown4E8;     // offset: 0x4E8, sz: 4, origin: 0x3FA00000, parsed: 1.25        // line:   *(_DWORD *)(v1 + 0x4E8) = 0x3FA00000;
+        public bool Unknown4EC;     // offset: 0x4EC, sz: 1, origin: 0, parsed: 0        // line:   *(_BYTE *)(v1 + 0x4EC) = 0;
+        // line:   strncpy(
+        // line:     (char *)(v1 + 0x4ED),
+        // line:     "metadata/simulation/ecosystem/roledescriptiontables/ground/groundtablecommon.mxml",
+        // line:     0x80ui64);
+
+        // missing 127 bytes at offset 1260
+        // could be padding, a undefined subroutine or a pointer accessing larger memory
         [NMS(Size = 0x80)]
-        public string Unknown4ED;     // offset: 1261, sz: 128, origin:  "metadata/simulation/ecosystem/roledescriptiontables/ground/groundtablecommon.mxml"        // line:   strncpy((char *)(v1 + 1261), "metadata/simulation/ecosystem/roledescriptiontables/ground/groundtablecommon.mxml", 0x80ui64);
-        // line:   *(_BYTE *)(v1 + 1388) = 0;
+        public byte[] Unknown4ED;
+
         [NMS(Size = 0x80)]
-        public string Unknown56D;     // offset: 1389, sz: 128, origin:  "metadata/simulation/ecosystem/roledescriptiontables/air/AirTableCommon.mxml"        // line:   strncpy((char *)(v1 + 1389), "metadata/simulation/ecosystem/roledescriptiontables/air/AirTableCommon.mxml", 0x80ui64);
-        // line:   *(_BYTE *)(v1 + 1516) = 0;
+        public string Unknown56D;     // offset: 0x56D, sz: 128, origin:  "metadata/simulation/ecosystem/roledescriptiontables/air/AirTableCommon.mxml"        // line:   strncpy((char *)(v1 + 0x56D), "metadata/simulation/ecosystem/roledescriptiontables/air/AirTableCommon.mxml", 0x80ui64);
+                                      // line:   *(_BYTE *)(v1 + 0x5EC) = 0;
 
-        // missing 3 bytes at offset 1389
-        // does 1389 contain a string which doesn't use all available space?
-        [NMS(Size = 0x3, Ignore = true)]
-        public byte[] Padding5ED;        // offset: 1517, sz: 3, comment: auto padding
+        public float Unknown5F0;     // offset: 0x5F0, sz: 4, origin: 0x3F99999A, parsed: 1.2        // line:   *(_DWORD *)(v1 + 0x5F0) = 0x3F99999A;
+        public float Unknown5F4;     // offset: 0x5F4, sz: 4, origin: 0x3F8CCCCD, parsed: 1.1        // line:   *(_DWORD *)(v1 + 0x5F4) = 0x3F8CCCCD;
 
-        public float Unknown5F0;     // offset: 1520, sz: 4, origin: 1067030938, parsed: 1.2        // line:   *(_DWORD *)(v1 + 1520) = 1067030938;
-        public float Unknown5F4;     // offset: 1524, sz: 4, origin: 1066192077, parsed: 1.1        // line:   *(_DWORD *)(v1 + 1524) = 1066192077;
-        // line: //  *(_QWORD *)(v1 + 1528) = 0i64;
-        // line: //  *(_QWORD *)(v1 + 1536) = 0i64;
-        [NMS(Size = 5)]
-        public string Unknown5F8;     // offset: 1528, sz: 5, origin:  "FUEL1"        // line:   strncpy((char *)(v1 + 1528), "FUEL1", 5ui64);
-        // line:   strupr((char *)(v1 + 1528));
-        // line:   *(_BYTE *)(v1 + 1533) = 0;
-        // line: //  *(_QWORD *)(v1 + 1544) = 0i64;
-        // line: //  *(_QWORD *)(v1 + 1552) = 0i64;
+        [NMS(Size = 0x10)]
+        public string Unknown5F8;
 
-        // missing 11 bytes at offset 1528
-        // does 1528 contain a string which doesn't use all available space?
-        [NMS(Size = 0xB, Ignore = true)]
-        public byte[] Padding5FD;        // offset: 1533, sz: 11, comment: auto padding
+        [NMS(Size = 0x10)]
+        public string Unknown608;
 
-        [NMS(Size = 5)]
-        public string Unknown608;     // offset: 1544, sz: 5, origin:  "TECH1"        // line:   strncpy((char *)(v1 + 1544), "TECH1", 5ui64);
-        // line:   strupr((char *)(v1 + 1544));
-        // line:   *(_BYTE *)(v1 + 1549) = 0;
-        // line: //  *(_QWORD *)(v1 + 1560) = 0i64;
-        // line: //  *(_QWORD *)(v1 + 1568) = 0i64;
+        [NMS(Size = 0x10)]
+        public string Unknown618;
 
-        // missing 11 bytes at offset 1544
-        // does 1544 contain a string which doesn't use all available space?
-        [NMS(Size = 0xB, Ignore = true)]
-        public byte[] Padding60D;        // offset: 1549, sz: 11, comment: auto padding
+        [NMS(Size = 0x10)]
+        public string Unknown628;
 
-        [NMS(Size = 4)]
-        public string Unknown618;     // offset: 1560, sz: 4, origin:  "COM1"        // line:   strncpy((char *)(v1 + 1560), "COM1", 4ui64);
-        // line:   strupr((char *)(v1 + 1560));
-        // line:   *(_BYTE *)(v1 + 1564) = 0;
-        // line: //  *(_QWORD *)(v1 + 1576) = 0i64;
-        // line: //  *(_QWORD *)(v1 + 1584) = 0i64;
+        [NMS(Size = 0x10)]
+        public string Unknown638;
 
-        // missing 12 bytes at offset 1560
-        // does 1560 contain a string which doesn't use all available space?
-        [NMS(Size = 0xC, Ignore = true)]
-        public byte[] Padding61C;        // offset: 1564, sz: 12, comment: auto padding
+        [NMS(Size = 0x10)]
+        public string Unknown648;
 
-        [NMS(Size = 5)]
-        public string Unknown628;     // offset: 1576, sz: 5, origin:  "FUEL1"        // line:   strncpy((char *)(v1 + 1576), "FUEL1", 5ui64);
-        // line:   strupr((char *)(v1 + 1576));
-        // line:   *(_BYTE *)(v1 + 1581) = 0;
-        // line: //  *(_QWORD *)(v1 + 1592) = 0i64;
-        // line: //  *(_QWORD *)(v1 + 1600) = 0i64;
+        [NMS(Size = 0x10)]
+        public string Unknown658;
 
-        // missing 11 bytes at offset 1576
-        // does 1576 contain a string which doesn't use all available space?
-        [NMS(Size = 0xB, Ignore = true)]
-        public byte[] Padding62D;        // offset: 1581, sz: 11, comment: auto padding
+        [NMS(Size = 0x10)]
+        public string Unknown668;
 
-        [NMS(Size = 5)]
-        public string Unknown638;     // offset: 1592, sz: 5, origin:  "TECH1"        // line:   strncpy((char *)(v1 + 1592), "TECH1", 5ui64);
-        // line:   strupr((char *)(v1 + 1592));
-        // line:   *(_BYTE *)(v1 + 1597) = 0;
-        // line: //  *(_QWORD *)(v1 + 1608) = 0i64;
-        // line: //  *(_QWORD *)(v1 + 1616) = 0i64;
+        [NMS(Size = 0x10)]
+        public string Unknown678;
 
-        // missing 11 bytes at offset 1592
-        // does 1592 contain a string which doesn't use all available space?
-        [NMS(Size = 0xB, Ignore = true)]
-        public byte[] Padding63D;        // offset: 1597, sz: 11, comment: auto padding
-
-        [NMS(Size = 4)]
-        public string Unknown648;     // offset: 1608, sz: 4, origin:  "COM1"        // line:   strncpy((char *)(v1 + 1608), "COM1", 4ui64);
-        // line:   strupr((char *)(v1 + 1608));
-        // line:   *(_BYTE *)(v1 + 1612) = 0;
-        // line: //  *(_QWORD *)(v1 + 1624) = 0i64;
-        // line: //  *(_QWORD *)(v1 + 1632) = 0i64;
-
-        // missing 12 bytes at offset 1608
-        // does 1608 contain a string which doesn't use all available space?
-        [NMS(Size = 0xC, Ignore = true)]
-        public byte[] Padding64C;        // offset: 1612, sz: 12, comment: auto padding
-
-        [NMS(Size = 0xC)]
-        public string Unknown658;     // offset: 1624, sz: 12, origin:  "CREATURELOOT"        // line:   strncpy((char *)(v1 + 1624), "CREATURELOOT", 0xCui64);
-        // line:   strupr((char *)(v1 + 1624));
-        // line:   *(_BYTE *)(v1 + 1636) = 0;
-        // line: //  *(_QWORD *)(v1 + 1640) = 0i64;
-        // line: //  *(_QWORD *)(v1 + 1648) = 0i64;
-
-        // missing 4 bytes at offset 1624
-        // does 1624 contain a string which doesn't use all available space?
-        [NMS(Size = 0x4, Ignore = true)]
-        public byte[] Padding664;        // offset: 1636, sz: 4, comment: auto padding
-
-        [NMS(Size = 0xC)]
-        public string Unknown668;     // offset: 1640, sz: 12, origin:  "CREATURELOOT"        // line:   strncpy((char *)(v1 + 1640), "CREATURELOOT", 0xCui64);
-        // line:   strupr((char *)(v1 + 1640));
-        // line:   *(_BYTE *)(v1 + 1652) = 0;
-        // line: //  *(_QWORD *)(v1 + 1656) = 0i64;
-        // line: //  *(_QWORD *)(v1 + 1664) = 0i64;
-
-        // missing 4 bytes at offset 1640
-        // does 1640 contain a string which doesn't use all available space?
-        [NMS(Size = 0x4, Ignore = true)]
-        public byte[] Padding674;        // offset: 1652, sz: 4, comment: auto padding
-
-        [NMS(Size = 0xC)]
-        public string Unknown678;     // offset: 1656, sz: 12, origin:  "CREATURELOOT"        // line:   strncpy((char *)(v1 + 1656), "CREATURELOOT", 0xCui64);
-        // line:   result = strupr((char *)(v1 + 1656));
-        // line:   *(_BYTE *)(v1 + 1668) = 0;
-        // line:   return result;
-        // line: }
-
-        [NMS(Size = 0xC, Ignore = true)]
-        public byte[] Padding684; // manual padding to fit size
+        [NMS(Size = 8, Ignore = true)]
+        public string Padding688;
     }
 }
