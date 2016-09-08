@@ -69,6 +69,8 @@
     <Compile Include="Models\Structs\GcRealitySubstanceCraftingMix.cs" />
     <Compile Include="Models\Structs\GcScanEventData.cs" />
     <Compile Include="Models\Structs\GcScanEventTable.cs" />
+    <Compile Include="Models\Structs\GcShipAIAttackData.cs" />
+    <Compile Include="Models\Structs\GcShipAIPlanetPatrolData.cs" />
     <Compile Include="Models\Structs\GcTestMetadata.cs" />
     <Compile Include="Models\Structs\GcWordKnowledge.cs" />
     <Compile Include="Models\MBINHeader.cs" />
@@ -536,6 +538,7 @@
     <Compile Include="Models\Structs\TkVoxelGeneratorRegionData.cs" />
     <Compile Include="Models\Structs\TkVoxelGeneratorSettingsArray.cs" />
     <Compile Include="Models\Structs\TkVoxelGeneratorSettingsElement.cs" />
+    <Compile Include="Models\Structs\Unfinished\GcAISpaceshipGlobals.cs" />
     <Compile Include="Models\Structs\Unfinished\GcCreatureGlobals.cs" />
     <Compile Include="Models\Structs\Unfinished\GcAudioGlobals.cs" />
     <Compile Include="Models\Structs\Unfinished\GcBuildingGlobals.cs" />
