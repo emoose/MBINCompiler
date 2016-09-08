@@ -460,6 +460,8 @@
     <Compile Include="Models\Structs\TkResourceDescriptorData.cs" />
     <Compile Include="Models\Structs\TkResourceDescriptorList.cs" />
     <Compile Include="Models\Structs\TkRotationComponentData.cs" />
+    <Compile Include="Models\Structs\TkShearWindData.cs" />
+    <Compile Include="Models\Structs\TkShearWindOctaveData.cs" />
     <Compile Include="Models\Structs\TkSpeedLineData.cs" />
     <Compile Include="Models\Structs\TkTrailData.cs" />
     <Compile Include="Models\Structs\TkTransformData.cs" />
@@ -534,6 +536,7 @@
     <Compile Include="Models\Structs\Unfinished\GcAudioGlobals.cs" />
     <Compile Include="Models\Structs\Unfinished\GcBuildingGlobals.cs" />
     <Compile Include="Models\Structs\GcGalaxyGenerationSetupData.cs" />
+    <Compile Include="Models\Structs\Unfinished\GcEnvironmentGlobals.cs" />
     <Compile Include="Models\Structs\Unfinished\GcGalaxyGlobals.cs" />
     <Compile Include="Models\Structs\GcGalaxyMarkerSettings.cs" />
     <Compile Include="Models\Structs\GcGalaxyRenderSetupData.cs" />
