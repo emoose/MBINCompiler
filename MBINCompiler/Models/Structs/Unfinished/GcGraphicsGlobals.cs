@@ -51,7 +51,7 @@
         public float Unknown218;
         public float Unknown21C;
 
-        public float Unknown220;
+        public float EngineRenderDistance;
         public float Unknown224;
         public float Unknown228;
         public float Unknown22C;
@@ -247,9 +247,9 @@
         public float Unknown488;
         public float Unknown48C;
 
-        public GcPlanetWaterData PlanetWaterData1;
+        public GcPlanetWaterData Unknown490;
 
-        public GcPlanetWaterData PlanetWaterData2;
+        public GcPlanetWaterData Unknown640;
 
         public float Unknown7F0;
         public float Unknown7F4;
