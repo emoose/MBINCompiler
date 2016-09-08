@@ -358,15 +358,9 @@ namespace MBINCompiler.Models.Structs // 0x690
         public float Unknown4E4;     // offset: 0x4E4, sz: 4, origin: 0x3F800000, parsed: 1        // line:   *(_DWORD *)(v1 + 0x4E4) = 0x3F800000;
         public float Unknown4E8;     // offset: 0x4E8, sz: 4, origin: 0x3FA00000, parsed: 1.25        // line:   *(_DWORD *)(v1 + 0x4E8) = 0x3FA00000;
         public bool Unknown4EC;     // offset: 0x4EC, sz: 1, origin: 0, parsed: 0        // line:   *(_BYTE *)(v1 + 0x4EC) = 0;
-        // line:   strncpy(
-        // line:     (char *)(v1 + 0x4ED),
-        // line:     "metadata/simulation/ecosystem/roledescriptiontables/ground/groundtablecommon.mxml",
-        // line:     0x80ui64);
 
-        // missing 127 bytes at offset 1260
-        // could be padding, a undefined subroutine or a pointer accessing larger memory
         [NMS(Size = 0x80)]
-        public byte[] Unknown4ED;
+        public string Unknown4ED; // offset: 0x4ED, sz: 128, origin:  "metadata/simulation/ecosystem/roledescriptiontables/ground/groundtablecommon.mxml"
 
         [NMS(Size = 0x80)]
         public string Unknown56D;     // offset: 0x56D, sz: 128, origin:  "metadata/simulation/ecosystem/roledescriptiontables/air/AirTableCommon.mxml"        // line:   strncpy((char *)(v1 + 0x56D), "metadata/simulation/ecosystem/roledescriptiontables/air/AirTableCommon.mxml", 0x80ui64);
