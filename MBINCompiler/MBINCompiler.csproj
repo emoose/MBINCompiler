@@ -541,6 +541,7 @@
     <Compile Include="Models\Structs\TkVoxelGeneratorSettingsElement.cs" />
     <Compile Include="Models\Structs\Unfinished\GcAISpaceshipGlobals.cs" />
     <Compile Include="Models\Structs\Unfinished\GcCameraGlobals.cs" />
+    <Compile Include="Models\Structs\Unfinished\GcUIGlobals.cs" />
     <Compile Include="Models\Structs\Unfinished\GcCreatureGlobals.cs" />
     <Compile Include="Models\Structs\Unfinished\GcAudioGlobals.cs" />
     <Compile Include="Models\Structs\Unfinished\GcBuildingGlobals.cs" />
