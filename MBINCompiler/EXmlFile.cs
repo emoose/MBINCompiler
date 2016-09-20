@@ -80,7 +80,7 @@ namespace MBINCompiler
             using (var stringWriter = new EncodedStringWriter(Encoding.UTF8))
             using (var xmlTextWriter = XmlWriter.Create(stringWriter, xmlSettings))
             {
-                EXmlData data = template.SerializeEXml();
+                var data = template.SerializeEXml(false);
                 Serializer.Serialize(xmlTextWriter, data, Namespaces);
                 xmlTextWriter.Flush();
 

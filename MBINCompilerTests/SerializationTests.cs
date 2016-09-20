@@ -14735,7 +14735,7 @@ namespace MBINCompilerTests
                 var data = file.GetData();
 
                 Assert.IsNotNull(data, "deserialized data was null");
-                Assert.IsNotNull(data.SerializeEXml(), "xml serialization was null");
+                Assert.IsNotNull(data.SerializeEXml(false), "xml serialization was null");
                 var xmlString = EXmlFile.WriteTemplate(data);
                 Assert.IsNotNull(xmlString, "xml data is null");
 
@@ -14788,7 +14788,7 @@ namespace MBINCompilerTests
 
             var data = file.GetData();
             Assert.IsNotNull(data, $"{testFile1} deserialized data was null");
-            Assert.IsNotNull(data.SerializeEXml(), $"{testFile1} xml serialization was null");
+            Assert.IsNotNull(data.SerializeEXml(false), $"{testFile1} xml serialization was null");
             Assert.IsInstanceOfType(data, typeof(MBINCompilerTestTemplate), $"{testFile1} template isn't of type MBINCompilerTestTemplate!");
 
             MBINCompilerTestTemplate test = (MBINCompilerTestTemplate)data;
@@ -14828,12 +14828,18 @@ namespace MBINCompilerTests
 
                 Debug.WriteLine($"recompileFiles: {test}");
 
-                Stream vanillaEXML = decompile(File.Open(fullPath, FileMode.Open));
-                Stream compiledMBIN = compile(vanillaEXML);
-                Stream recompiledEXML = decompile(compiledMBIN);
+                var vanillaEXML = decompile(File.Open(fullPath, FileMode.Open));
+                var compiledMBIN = compile(vanillaEXML);
+                var recompiledEXML = decompile(compiledMBIN);
 
                 string vanilla = Hash(vanillaEXML);
                 string recompiled = Hash(recompiledEXML);
+
+                if(vanilla != recompiled)
+                {
+                    File.WriteAllBytes("D:\\vanilla.exml", vanillaEXML.ToArray());
+                    File.WriteAllBytes("D:\\recompiled.exml", recompiledEXML.ToArray());
+                }
 
                 // check exml files match
                 Assert.AreEqual(recompiled, vanilla);

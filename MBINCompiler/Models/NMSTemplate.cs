@@ -652,7 +652,7 @@ namespace MBINCompiler.Models
                     {
                         NMSTemplate template = (NMSTemplate)value;
 
-                        EXmlData templateXmlData = template.SerializeEXml();
+                        var templateXmlData = template.SerializeEXml(true);
                         templateXmlData.Name = field.Name;
 
                         return templateXmlData;
@@ -663,7 +663,7 @@ namespace MBINCompiler.Models
                     {
                         NMSTemplate template = (NMSTemplate)value;
 
-                        EXmlData templateXmlData = template.SerializeEXml();
+                        var templateXmlData = template.SerializeEXml(true);
                         templateXmlData.Name = field.Name;
 
                         return templateXmlData;
@@ -707,13 +707,20 @@ namespace MBINCompiler.Models
             };
         }
 
-        public EXmlData SerializeEXml()
+        public EXmlBase SerializeEXml(bool isChildTemplate)
         {
             Type type = GetType();
-            EXmlData xmlData = new EXmlData
+            EXmlBase xmlData = new EXmlProperty
             {
-                Template = type.Name
+                Value = type.Name + ".xml"
             };
+            if (!isChildTemplate)
+            {
+                xmlData = new EXmlData
+                {
+                    Template = type.Name
+                };
+            }
 
             var fields = type.GetFields().OrderBy(field => field.MetadataToken); // hack to get fields in order of declaration (todo: use something less hacky, this might break mono?)
 
@@ -781,14 +788,16 @@ namespace MBINCompiler.Models
                     Type elementType = fieldType.GetGenericArguments()[0];
                     Type listType = typeof(List<>).MakeGenericType(elementType);
                     IList list = (IList)Activator.CreateInstance(listType);
-                    foreach (EXmlData innerXmlData in xmlProperty.Elements.OfType<EXmlData>()) // child templates
+                    foreach (var innerXmlData in xmlProperty.Elements) // child templates
                     {
-                        NMSTemplate element = DeserializeEXml(innerXmlData);
-                        list.Add(element);
-                    }
-                    foreach (EXmlProperty innerXmlData in xmlProperty.Elements.OfType<EXmlProperty>()) // primitive types
-                    {
-                        object element = DeserializeEXmlValue(template, elementType, field, innerXmlData, templateType, settings);
+                        object element = null;
+                        if(innerXmlData.GetType() == typeof(EXmlData) || (innerXmlData.GetType() == typeof(EXmlProperty) && ((EXmlProperty)innerXmlData).Value.EndsWith(".xml")))
+                            element = DeserializeEXml(innerXmlData); // child template if <Data> tag or <Property> tag with value ending in .xml (todo: better way of finding <Property> child templates)
+                        else if(innerXmlData.GetType() == typeof(EXmlProperty))
+                            element = DeserializeEXmlValue(template, elementType, field, (EXmlProperty)innerXmlData, templateType, settings);
+                        if (element == null)
+                            throw new Exception("element == null ??!");
+
                         list.Add(element);
                     }
                     return list;
@@ -796,7 +805,7 @@ namespace MBINCompiler.Models
                     if (field.FieldType.IsArray && field.FieldType.GetElementType().BaseType.Name == "NMSTemplate")
                     {
                         Array array = Array.CreateInstance(field.FieldType.GetElementType(), settings.Size);
-                        List<EXmlData> data = xmlProperty.Elements.OfType<EXmlData>().ToList();
+                        var data = xmlProperty.Elements.OfType<EXmlProperty>().ToList();
                         if(data.Count != settings.Size)
                         {
                             // todo: add a comment in the XML to indicate arrays (+ their size), also need to do the same for showing valid enum values
@@ -833,9 +842,18 @@ namespace MBINCompiler.Models
             }
         }
 
-        public static NMSTemplate DeserializeEXml(EXmlData xmlData)
+        public static NMSTemplate DeserializeEXml(EXmlBase xmlData)
         {
-            NMSTemplate template = TemplateFromName(xmlData.Template);
+            NMSTemplate template = null;
+
+            if (xmlData.GetType() == typeof(EXmlData))
+                template = TemplateFromName(((EXmlData)xmlData).Template);
+            else if (xmlData.GetType() == typeof(EXmlProperty))
+                template = TemplateFromName(((EXmlProperty)xmlData).Value.Replace(".xml", ""));
+
+            if (template == null)
+                return null;
+
             Type templateType = template.GetType();
             var templateFields = templateType.GetFields().OrderBy(field => field.MetadataToken); // hack to get fields in order of declaration (todo: use something less hacky, this might break mono?)
 
@@ -849,9 +867,17 @@ namespace MBINCompiler.Models
             foreach (var xmlProperty in xmlData.Elements.OfType<EXmlProperty>())
             {
                 FieldInfo field = templateType.GetField(xmlProperty.Name);
-                Type fieldType = field.FieldType;
-                NMSAttribute settings = field.GetCustomAttribute<NMSAttribute>();
-                object fieldValue = DeserializeEXmlValue(template, fieldType, field, xmlProperty, templateType, settings);
+                object fieldValue = null;
+                if (field.FieldType == typeof(NMSTemplate) || field.FieldType.BaseType == typeof(NMSTemplate))
+                {
+                    fieldValue = DeserializeEXml(xmlProperty);
+                }
+                else
+                {
+                    Type fieldType = field.FieldType;
+                    NMSAttribute settings = field.GetCustomAttribute<NMSAttribute>();
+                    fieldValue = DeserializeEXmlValue(template, fieldType, field, xmlProperty, templateType, settings);
+                }
                 field.SetValue(template, fieldValue);
             }
 

@@ -2,7 +2,7 @@
 {
     public class GcInputActionMapping : NMSTemplate
     {
-        public int RemappedKey;
-        public int RemappedPad;
+        public int RemappedKey = -1;
+        public int RemappedPad = -1;
     }
 }
