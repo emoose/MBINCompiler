@@ -6,7 +6,7 @@
 
         public string[] AlienRaceValues()
         {
-            return new[] { "Traders", "Warriors", "Explorers", "Robots", "Atlas", "None" };
+            return new[] { "Traders", "Warriors", "Explorers", "Robots", "Atlas", "Diplomat", "None" };
         }
     }
 }

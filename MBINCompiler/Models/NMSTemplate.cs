@@ -164,6 +164,8 @@ namespace MBINCompiler.Models
 
             NMSTemplate obj = TemplateFromName(templateName);
 
+            Console.WriteLine("Gk Hack: " + "Deserializing Template: " + templateName);
+
             if (obj == null)
                 return null;
 

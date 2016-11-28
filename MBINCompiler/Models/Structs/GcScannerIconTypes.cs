@@ -7,7 +7,8 @@
         {
             return new[]
             {
-                "None", "Health", "Shield", "Hazard", "Tech", "Signal", "Fuel", "Mineral", "Multi", "Artifact", "TechRecipe", "RareProp"
+                "None", "Health", "Shield", "Hazard", "Tech", "Heridium", "Platinum", "Chrysonite", "Signal", "Fuel",
+				"Carbon", "Plutonium", "Thamium", "Mineral", "Iron", "Zinc", "Titanium", "Multi", "Artifact", "TechRecipe", "RareProp", "Trade", "Exotic"
             };
         }
     }

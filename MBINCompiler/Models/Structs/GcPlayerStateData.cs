@@ -40,91 +40,93 @@ namespace MBINCompiler.Models.Structs
 
         /* 0x004A8 */ public int PostMissionIndex;
         /* 0x004AC */ public int Health;
-        /* 0x004B0 */ public int Shield;
-        /* 0x004B4 */ public int Units;
-        /* 0x004B8 */ public int ShipHealth;
+		/* 0x004B0 */ public int ShipHealth;
+        /* 0x004B4 */ public int Shield;
+		/* 0x004B8 */ public int ShipShield;
+		/* 0x004BC */ public int Energy;
+        /* 0x004C0 */ public int Units;
 
-        /* 0x004C0 */ public ulong TimeAlive;
-        /* 0x004C8 */ public ulong TotalPlayTime;
+        /* 0x004C8 */ public ulong TimeAlive;
+        /* 0x004D0 */ public ulong TotalPlayTime;
 
-        /* 0x004D0 */ public List<GcScanEventSave> MarkerStack;
+        /* 0x004D8 */ public List<GcScanEventSave> MarkerStack;
         [NMS(Size = 0x3E8)]
-        /* 0x004E0 */ public ulong[] CompletedInteractions;
+        /* 0x004E8 */ public ulong[] CompletedInteractions;
 
-        /* 0x02420 */ public List<GcPlayerStatsGroup> Stats;
+        /* 0x02428 */ public List<GcPlayerStatsGroup> Stats;
 
         [NMS(Size = 7)]
-        /* 0x02430 */ public GcInteractionBuffer[] StoredInteractions;
+        /* 0x02440 */ public GcInteractionBuffer[] StoredInteractions;
 
         [NMS(Size = 6)]
-        /* 0x38FA0 */ public float[] Hazard;
+        /* 0x38FB0 */ public float[] Hazard;
 
-        /* 0x38FB8 */ public int BoltAmmo;
-        /* 0x38FBC */ public int LaserAmmo;
-        /* 0x38FC0 */ public int GrenadeAmmo;
+        /* 0x38FC8 */ public int BoltAmmo;
+        /* 0x38FCC */ public int LaserAmmo;
+        /* 0x38FD0 */ public int GrenadeAmmo;
         [NMS(Size = 0xC, Ignore = true)]
-        /* 0x38FC4 */ public byte[] Padding38FC4;
+        /* 0x38FD4 */ public byte[] Padding38FD4;
 
-        /* 0x38FD0 */ public Vector4f FirstSpawnPosition;
+        /* 0x38FE0 */ public Vector4f FirstSpawnPosition;
 
         [NMS(Size = 0x18)]
-        /* 0x38FE0 */ public GcSavedInteractionRaceData[] SavedInteractionIndicies; // element size = 6, num elements = 0x18, total size = 0x90, end offset = 0x38FE0 + 0x90 = 0x39070, but next field is 0x39220?
+        /* 0x38FF0 */ public GcSavedInteractionRaceData[] SavedInteractionIndicies; // element size = 6, num elements = 0x18, total size = 0x90, end offset = 0x38FE0 + 0x90 = 0x39070, but next field is 0x39220?
 
         [NMS(Size = 0xA)]
-        /* 0x39220 */ public GcUniverseAddressData[] AtlasStationAdressData;
+        /* 0x39488 */ public GcUniverseAddressData[] AtlasStationAdressData;
 
-        /* 0x39310 */ public bool FirstAtlasStationDiscovered;
+        /* 0x39578 */ public bool FirstAtlasStationDiscovered;
 
-        /* 0x39314 */ public int ProgressionLevel;
+        /* 0x3957C */ public int ProgressionLevel;
 
-        /* 0x39318 */ public bool IsNew;
+        /* 0x39580 */ public bool IsNew;
 
-        /* 0x39319 */ public bool UseSmallerBlackholeJumps;
+        /* 0x39581 */ public bool UseSmallerBlackholeJumps;
 
-        /* 0x39320 */ public List<GcSavedEntitlement> UsedEntitlements;
-
-        [NMS(Size = 0x10)]
-        /* 0x39330 */ public Vector4f[] PlanetPositions;
+        /* 0x39588 */ public List<GcSavedEntitlement> UsedEntitlements;
 
         [NMS(Size = 0x10)]
-        /* 0x39430 */ public GcSeed[] PlanetSeeds;
-
-        /* 0x39530 */ public int PrimaryPlanet;
-        [NMS(Size = 4, Ignore = true)]
-        /* 0x39534 */ public byte[] Padding39534;
-
-        /* 0x39538 */ public ulong TimeLastSpaceBattle; // unsure what type, seems to be 8 bytes
-        /* 0x39540 */ public int WarpsLastSpaceBattle;
-        [NMS(Size = 4, Ignore = true)]
-        /* 0x39544 */ public byte[] Padding39544;
-
-        /* 0x39548 */ public ulong TimeLastMiniStation; // unsure what type, seems to be 8 bytes
-        /* 0x39550 */ public int WarpsLastMiniStation;
-        [NMS(Size = 4, Ignore = true)]
-        /* 0x39554 */ public byte[] Padding39554;
-
-        /* 0x39558 */ public ulong MiniStationUA; // unsure what type, seems to be 8 bytes
-
-        /* 0x39560 */ public GcUniverseAddressData GameStartAddress1;
-        /* 0x39578 */ public GcUniverseAddressData GameStartAddress2;
+        /* 0x395A0 */ public Vector4f[] PlanetPositions;
 
         [NMS(Size = 0x10)]
-        /* 0x39590 */ public bool[] GalacticMapRequests;
+        /* 0x396A0 */ public GcSeed[] PlanetSeeds;
 
-        /* 0x395A0 */ public float SavedSunAngle;
+        /* 0x397A0 */ public int PrimaryPlanet;
+        [NMS(Size = 4, Ignore = true)]
+        /* 0x397A4 */ public byte[] Padding397A4;
+
+        /* 0x397A8 */ public ulong TimeLastSpaceBattle; // unsure what type, seems to be 8 bytes
+        /* 0x397B0 */ public int WarpsLastSpaceBattle;
+        [NMS(Size = 4, Ignore = true)]
+        /* 0x3957B4 */ public byte[] Padding397B4;
+
+        /* 0x397B8 */ public ulong TimeLastMiniStation; // unsure what type, seems to be 8 bytes
+        /* 0x397C0 */ public int WarpsLastMiniStation;
+        [NMS(Size = 4, Ignore = true)]
+        /* 0x397C4 */ public byte[] Padding397C4;
+
+        /* 0x397C8 */ public ulong MiniStationUA; // unsure what type, seems to be 8 bytes
+
+        /* 0x397D0 */ public GcUniverseAddressData GameStartAddress1;
+        /* 0x397E8 */ public GcUniverseAddressData GameStartAddress2;
+
+        [NMS(Size = 0x10)]
+        /* 0x39800 */ public bool[] GalacticMapRequests;
+
+        /* 0x39820 */ public float SavedSunAngle;
         [NMS(Size = 0xC, Ignore = true)]
-        /* 0x395A4 */ public byte[] Padding395A4;
+        /* 0x39824 */ public byte[] Padding39824;
 
-        /* 0x395B0 */ public Vector4f SavedSunAxis;
+        /* 0x39830 */ public Vector4f SavedSunAxis;
 
-        /* 0x395C0 */ public ulong HazardTimeAlive; // unsure what type, seems to be 8 bytes
+        /* 0x39840 */ public ulong HazardTimeAlive; // unsure what type, seems to be 8 bytes
 
-        /* 0x395C8 */ public bool RevealBlackHoles;
+        /* 0x39848 */ public bool RevealBlackHoles;
         [NMS(Size = 0x3, Ignore = true)]
-        /* 0x395C9 */ public byte[] Padding395C9;
+        /* 0x39849 */ public byte[] Padding39849;
 
         [NMS(Size = 0xB)]
-        /* 0x395CC */ public GcUniverseAddressData[] NewAtlasStationAdressData;
+        /* 0x3984C */ public GcUniverseAddressData[] NewAtlasStationAdressData;
 
         [NMS(Size = 0xC, Ignore = true)]
         public byte[] Padding396D4;

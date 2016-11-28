@@ -48,7 +48,7 @@
         public int TargetBuildingType;
         public string[] TargetBuildingTypeValues()
         {
-            return new[] { "Any", "AnyShelter", "BuildingClass", "Specific", "SpaceStation", "SpaceAnomaly" };
+            return new[] { "Any", "AnyShelter", "BuildingClass", "Specific", "SpaceStation", "SpaceAnomaly", "Freighter", "SpaceStation"};
         }
 
         public GcBuildingClassification TargetBuildingClassification;
