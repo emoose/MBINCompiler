@@ -17,7 +17,8 @@ write-host -NoNewline "Run files through MBINCompiler? " $mbin `n
 write-host -NoNewline "Verbose Output? " $verbose `n
 write-host -NoNewline "Skip MODELS Directory? " $excludeModels `n
 pause
-
+If ($excludeModels -eq $true){
+	add-content output.txt "##The MODELS directory is excluded in this listing"
 Get-ChildItem $PSScriptRoot -recurse -Filter *.mbin |
 
 Foreach-Object {
