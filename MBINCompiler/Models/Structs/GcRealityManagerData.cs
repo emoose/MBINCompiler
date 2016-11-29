@@ -40,7 +40,7 @@ namespace MBINCompiler.Models.Structs
         public Colour[] RarityColours;
 
         [NMS(Size = 6, EnumValue = new string[6] { "Commodity", "Technology", "Fuel", "Tradeable", "Special", "BuildingPart" })]
-        public Colour[] SubstanceCategoryColours;
+        /* 0x19A0 */ public Colour[] SubstanceCategoryColours;
 
         [NMS(Size = 6, EnumValue = new string[6] { "Commodity", "Technology", "Fuel", "Tradeable", "Special", "BuildingPart" })]
         public TkTextureResource[] SubstanceChargeIcons;
@@ -72,7 +72,7 @@ namespace MBINCompiler.Models.Structs
 
         public List<NMSString0x10> NeverSellableItems;
 
-        [NMS(Size = 5, EnumValue = new string[5] { "Commodity", "Technology", "Fuel", "Tradeable", "Special" })]
+        [NMS(Size = 6, EnumValue = new string[6] { "Commodity", "Technology", "Fuel", "Tradeable", "Special", "BuildingPart" })]
         public float[] NormalizedPriceLimits;
 
         [NMS(Size = 0xC, Ignore = true)]

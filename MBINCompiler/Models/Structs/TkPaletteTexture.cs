@@ -11,7 +11,7 @@
                 "Dirt", "Metal", "Paint", "Plastic", "Fur", "Scale", "Feather", "Water",
                 "Cloud", "Sky", "Space", "Underbelly", "Undercoat", "Snow", "SkyHorizon", "SkyFog",
                 "SkyHeightFog", "SkySunset", "SkyNight", "WaterNear", "SpaceCloud", "SpaceBottom", "SpaceSolar", "SpaceLight",
-                "Warrior", "Scientific", "Trader", "WarriorAlt", "ScientificAlt", "TraderAlt"
+                "Warrior", "Scientific", "Trader", "WarriorAlt", "ScientificAlt", "TraderAlt", "RockSaturated", "RockLight", "RockDark"
             };
         }
 

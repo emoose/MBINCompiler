@@ -4,6 +4,8 @@
     {
         [NMS(Size = 0x10)]
         public string Name;
+		[NMS(Size = 0x10)]
+		public string ResourceHint;
         public float Probability;
         public GcTerrainTileType TileType;
         [NMS(Size = 4, EnumValue = new[] { "Dead", "Low", "Mid", "Full" })]
