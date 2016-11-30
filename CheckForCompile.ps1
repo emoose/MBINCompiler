@@ -50,7 +50,7 @@ Foreach-Object {
             if ($verbose -eq $true){
                 write-host -NoNewline "Attempting MBIN Compiler..."
             }
-            & $MBINCompilerLocation $FullEXML
+            & $MBINCompilerLocation $FullMBIN
         }
         $PastePath = $FULLMBIN.Replace("D:\Games\SteamLibrary\steamapps\common\No Man's Sky\GAMEDATA","- [ ] ")
 		$PastePath = $PastePath.Replace("\","/")
