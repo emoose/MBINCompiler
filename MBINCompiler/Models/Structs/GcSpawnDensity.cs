@@ -3,15 +3,17 @@
     public class GcSpawnDensity : NMSTemplate
     {
         [NMS(Size = 0x10)]
-        public string Name;
-        public bool Active;
-        public int CoverageType;
+        /* 0x000 */ public string Name;
+        /* 0x010 */ public bool Active;
+		[NMS(Size = 3, Ignore = true)]
+        /* 0x011 */ public byte[] Padding011;
+        /* 0x014 */ public int CoverageType;
         public string[] CoverageTypeValues()
         {
-            return new[] { "Total", "SmoothPatch" };
+            return new[] { "Total", "SmoothPatch", "GridPatch" };
         }
 
-        public float PatchSize;
-        public float RegionScale;
+        /* 0x018 */ public float PatchSize;
+        /* 0x01C */ public float RegionScale;
     }
 }

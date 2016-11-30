@@ -9,24 +9,31 @@ namespace MBINCompiler.Models.Structs
         /* 0x010 */ public GcResourceElement Model;
         /* 0x2B8 */ public GcAudioWwiseEvents AkEvent;
         /* 0x2BC */ public float Scale;
-        /* 0x2C0 */ public float Radius;
-        /* 0x2C4 */ public float Speed;
-        /* 0x2C8 */ public float Gravity;
-        /* 0x2CC */ public float Life;
-        /* 0x2D0 */ public float Offset;
-        /* 0x2D4 */ public float RagdollPush;
-        /* 0x2D8 */ public int Damage;
-        /* 0x2DC */ public int MiningDamage;
-        /* 0x2E0 */ public int Bounces;
-        /* 0x2E4 */ public bool HitOnBounce;
-        [NMS(Size = 3, Ignore = true)]
-        /* 0x2E5 */ public byte[] Padding2E5;
-
+		/* 0x2C0 */ public bool IsAutonomous;
+		[NMS(Size = 3, Ignore = true)]
+        /* 0x2C1 */ public byte[] Padding2C1;
+        /* 0x2C4 */ public float Radius;
+        /* 0x2C8 */ public float Speed;
+        /* 0x2CC */ public float Gravity;
+        /* 0x2D0 */ public float Life;
+        /* 0x2D4 */ public float Offset;
+        /* 0x2D8 */ public float RagdollPush;
+        /* 0x2DC */ public int Damage;
+        /* 0x2E0 */ public int MiningDamage;
+        /* 0x2E4 */ public int Bounces;
+        /* 0x2E8 */ public bool HitOnBounce;
+		[NMS(Size = 7, Ignore = true)]
+		/* 0x2E9 */ public byte[] Padding2E9;
         [NMS(Size = 0x10)]
-        /* 0x2E8 */ public string PlayerDamage;
+        /* 0x2F0 */ public string PlayerDamage;
         /* 0x300 */ public Colour Colour;
-        [NMS(Size = 4, Ignore = true)]
-        /* 0x310 */ public byte[] Padding310;
+		
+		/* Not sure about from here to line 36*/ 
+		/* 0x310 */ public int BehaviourFlags;
+		public string[] BehaviourFlagsValues()
+		{
+			return new[] { "DestroyTerrain", "DestroyAsteroids", "GatherResources", "Homing", "HomingLaser", "ScareCreatures" };
+		}
 
         /* 0x314 */ public int Class;
         public string[] ClassValues()
@@ -37,7 +44,6 @@ namespace MBINCompiler.Models.Structs
         [NMS(Size = 0x10)]
         /* 0x318 */ public string DefaultImpact;
         /* 0x328 */ public List<GcProjectileImpactData> Impacts;
-        [NMS(Size = 8, Ignore = true)]
-        /* 0x338 */ public byte[] Padding338;
+
     }
 }
