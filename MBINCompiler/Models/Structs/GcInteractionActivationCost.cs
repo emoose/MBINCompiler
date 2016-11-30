@@ -13,5 +13,8 @@ namespace MBINCompiler.Models.Structs
 
         [NMS(Size = 3, Ignore = true)]
         public byte[] Padding25;
+		
+		[NMS(Size = 0x10)]
+		public string RequiredTech;
     }
 }
