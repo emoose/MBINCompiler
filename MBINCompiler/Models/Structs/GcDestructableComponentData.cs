@@ -32,8 +32,10 @@ namespace MBINCompiler.Models.Structs
         /* 0x0F4 */ public bool DestroyedModelUsesScale;
         /* 0x0F8 */ public float DestroyForce;
         /* 0x0FC */ public float DestroyForceRadius;
-		/* 0x100 */ public string DestroyEffect;
-        /* 0x110 */ public List<NMSString0x10> DestroyEffectPoints;
+        [NMS(Size = 0x10)]
+        /* 0x100 */ public string DestroyEffect;
+        [NMS(Size = 0x10)]
+        /* 0x110 */ public string DestroyEffectPoint;
         /* 0x120 */ public float DestroyEffectTime;
 
         /* 0x124 */ public bool ShowInteract;
