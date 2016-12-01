@@ -1,6 +1,6 @@
 # MBINCompiler
 
-*Updated version to Emoose's project originally found here: https://github.com/emoose/MBINCompiler
+*Updated version to Emoose's project originally found here:* https://github.com/emoose/MBINCompiler
 
 As emoose doesn't seem to be updating MBINCompiler for support with NMS v1.1, we are updating the program ourselves.
 
