@@ -67,15 +67,10 @@
     <Compile Include="Models\Structs\GcNPCSpawnTable.cs" />
     <Compile Include="Models\Structs\GcPersistentBaseTypes.cs" />
     <Compile Include="Models\Structs\GcBaseBuildingProperties.cs" />
-    <Compile Include="Models\Structs\GcBaseBuildingPalette.cs" />
-    <Compile Include="Models\Structs\GcBaseBuildingObjectDecorationTypes.cs" />
     <Compile Include="Models\Structs\GcMissionTable.cs" />
     <Compile Include="Models\Structs\GcGenericMissionSequence.cs" />
     <Compile Include="Models\Structs\GcBuildingCostPartCount.cs" />
     <Compile Include="Models\Structs\GcBaseBuildingTable.cs" />
-    <Compile Include="Models\Structs\GcBaseBuildingEntry.cs" />
-    <Compile Include="Models\Structs\GcBaseBuildingObjectTypes.cs" />
-    <Compile Include="Models\Structs\GcBaseBuildingGroup.cs" />
     <Compile Include="Models\Structs\GcInteractionBaseBuildingState.cs" />
     <Compile Include="Models\Structs\GcNPCHabitationComponentData.cs" />
     <Compile Include="Models\Structs\GcCostNPCHabitation.cs" />
@@ -93,13 +88,10 @@
     <Compile Include="Models\Structs\GcLightProperties.cs" />
     <Compile Include="Models\Structs\GcNPCHabitationType.cs" />
     <Compile Include="Models\Structs\GcNPCPlacementInfo.cs" />
-    <Compile Include="Models\Structs\GcNPCSpawnTable.cs" />
-    <Compile Include="Models\Structs\GcPersistentBaseTypes.cs" />
     <Compile Include="Models\Structs\GcPlanetInfo.cs" />
     <Compile Include="Models\Structs\GcPlayerMissionProgress.cs" />
     <Compile Include="Models\Structs\GcPlayerSpaceshipControlData.cs" />
     <Compile Include="Models\Structs\GcPlayerSpaceshipEngineData.cs" />
-    <Compile Include="Models\Structs\GcNPCPlacementInfo.cs" />
     <Compile Include="Models\Structs\GcRealityCraftingRecipeData.cs" />
     <Compile Include="Models\Structs\GcRealitySubstanceCraftingMix.cs" />
     <Compile Include="Models\Structs\GcRewardIncrementInteractionIndex.cs" />
@@ -118,7 +110,6 @@
     <Compile Include="Models\Structs\GcShipAIAttackData.cs" />
     <Compile Include="Models\Structs\GcShipAIPlanetPatrolData.cs" />
     <Compile Include="Models\Structs\GcTestMetadata.cs" />
-    <Compile Include="Models\Structs\GcUniqueNPCSpawnData.cs" />
     <Compile Include="Models\Structs\GcWordKnowledge.cs" />
     <Compile Include="Models\MBINHeader.cs" />
     <Compile Include="Models\NMSAttribute.cs" />
