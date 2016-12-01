@@ -17,7 +17,9 @@ namespace MBINCompiler.Models.Structs
 
         /* 0x298 */ public List<GcBaseBuildingEntry> Objects;
         /* 0x2A8 */ public List<GcBaseBuildingGroup> Groups;
-        /* 0x2C0 */ public List<GcBaseBuildingPalette> Palettes;
-        /* 0x4C0 */ public GcBaseBuildingProperties Properties;
+        //Commenting Palettes and PRoperties. PRobably exist in the functions
+        //THey are definitely missing from the basebuildingtable.mbin
+        ///* 0x2C0 */ public List<GcBaseBuildingPalette> Palettes;
+        ///* 0x4C0 */ public GcBaseBuildingProperties Properties;
     }
 }
