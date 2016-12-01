@@ -22,6 +22,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -51,21 +52,38 @@
     <Compile Include="Models\EXmlBase.cs" />
     <Compile Include="Models\EXmlData.cs" />
     <Compile Include="Models\EXmlProperty.cs" />
+    <Compile Include="Models\Structs\GcMetaBallComponentData.cs" />
     <Compile Include="Models\Structs\GcAtlasDownloadType.cs" />
+<<<<<<< HEAD
     <Compile Include="Models\Structs\GcBaseBuildingComponentData.cs" />
     <Compile Include="Models\Structs\GcBaseBuildingEntry.cs" />
     <Compile Include="Models\Structs\GcBaseBuildingGroup.cs" />
     <Compile Include="Models\Structs\GcBaseBuildingObjectDecorationTypes.cs" />
     <Compile Include="Models\Structs\GcBaseBuildingObjectTypes.cs" />
     <Compile Include="Models\Structs\GcBaseBuildingPalette.cs" />
+=======
+    <Compile Include="Models\Structs\GcColouriseComponentData.cs" />
+    <Compile Include="Models\Structs\GcDecorationComponentData.cs" />
+    <Compile Include="Models\Structs\GcNPCPlacementComponentData.cs" />
+    <Compile Include="Models\Structs\GcBaseBuildingComponentData.cs" />
+    <Compile Include="Models\Structs\GcUniqueNPCSpawnData.cs" />
+    <Compile Include="Models\Structs\GcNPCSpawnTable.cs" />
+    <Compile Include="Models\Structs\GcPersistentBaseTypes.cs" />
+>>>>>>> refs/remotes/monkeyman192/master
     <Compile Include="Models\Structs\GcBaseBuildingProperties.cs" />
-    <Compile Include="Models\Structs\GcBaseBuildingTable.cs" />
+    <Compile Include="Models\Structs\GcBaseBuildingPalette.cs" />
+    <Compile Include="Models\Structs\GcBaseBuildingObjectDecorationTypes.cs" />
+    <Compile Include="Models\Structs\GcMissionTable.cs" />
+    <Compile Include="Models\Structs\GcGenericMissionSequence.cs" />
     <Compile Include="Models\Structs\GcBuildingCostPartCount.cs" />
+    <Compile Include="Models\Structs\GcBaseBuildingTable.cs" />
+    <Compile Include="Models\Structs\GcBaseBuildingEntry.cs" />
+    <Compile Include="Models\Structs\GcBaseBuildingObjectTypes.cs" />
+    <Compile Include="Models\Structs\GcBaseBuildingGroup.cs" />
+    <Compile Include="Models\Structs\GcInteractionBaseBuildingState.cs" />
+    <Compile Include="Models\Structs\GcNPCHabitationComponentData.cs" />
     <Compile Include="Models\Structs\GcCostNPCHabitation.cs" />
     <Compile Include="Models\Structs\GcCostInstalledTech.cs" />
-    <Compile Include="Models\Structs\GcGenericMissionSequence.cs" />
-    <Compile Include="Models\Structs\GcInteractionBaseBuildingState.cs" />
-    <Compile Include="Models\Structs\GcMissionTable.cs" />
     <Compile Include="Models\Structs\GcModelViewCollection.cs" />
     <Compile Include="Models\Structs\GcCameraShakeData.cs" />
     <Compile Include="Models\Structs\GcCameraShakeCaptureData.cs" />
@@ -77,7 +95,6 @@
     <Compile Include="Models\Structs\GcDroneData.cs" />
     <Compile Include="Models\Structs\GcGalacticAddressData.cs" />
     <Compile Include="Models\Structs\GcLightProperties.cs" />
-    <Compile Include="Models\Structs\GcNPCHabitationComponentData.cs" />
     <Compile Include="Models\Structs\GcNPCHabitationType.cs" />
     <Compile Include="Models\Structs\GcNPCPlacementInfo.cs" />
     <Compile Include="Models\Structs\GcNPCSpawnTable.cs" />
@@ -86,6 +103,7 @@
     <Compile Include="Models\Structs\GcPlayerMissionProgress.cs" />
     <Compile Include="Models\Structs\GcPlayerSpaceshipControlData.cs" />
     <Compile Include="Models\Structs\GcPlayerSpaceshipEngineData.cs" />
+    <Compile Include="Models\Structs\GcNPCPlacementInfo.cs" />
     <Compile Include="Models\Structs\GcRealityCraftingRecipeData.cs" />
     <Compile Include="Models\Structs\GcRealitySubstanceCraftingMix.cs" />
     <Compile Include="Models\Structs\GcRewardIncrementInteractionIndex.cs" />
@@ -422,6 +440,7 @@
     <Compile Include="Models\Structs\TkControllerButtonLookup.cs" />
     <Compile Include="Models\Structs\TkControllerList.cs" />
     <Compile Include="Models\Structs\TkControllerSpecification.cs" />
+    <Compile Include="Models\Structs\GcChainComponentData.cs" />
     <Compile Include="Models\Structs\TkDynamicChainComponentData.cs" />
     <Compile Include="Models\Structs\TkEngineSettings.cs" />
     <Compile Include="Models\Structs\TkEngineSettingsMapping.cs" />
