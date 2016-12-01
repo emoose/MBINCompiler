@@ -2,7 +2,7 @@
 
 namespace MBINCompiler.Models.Structs
 {
-    public class GcBasebuildingTable : NMSTemplate
+    public class GcBaseBuildingTable : NMSTemplate
     {
         /* 0x000 */ public TkModelResource LegModel;
         /* 0x084 */ public TkModelResource BaseRadiusModel;

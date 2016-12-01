@@ -72,6 +72,8 @@ namespace MBINCompiler.Models.Structs
 
         public List<NMSString0x10> NeverSellableItems;
 
+        public List<NMSString0x10> NeverOfferedForSale;
+
         [NMS(Size = 6, EnumValue = new string[6] { "Commodity", "Technology", "Fuel", "Tradeable", "Special", "BuildingPart" })]
         public float[] NormalizedPriceLimits;
 

@@ -7,8 +7,6 @@ namespace MBINCompiler.Models.Structs
         [NMS(Size = 0x10)]
         /* 0x000 */ public string ID;
         /* 0x010 */ public TkModelResource Model;
-        [NMS(Size = 4, Ignore = true)]
-        /* 0x090 */ public byte[] Padding90;
         /* 0x094 */ public GcBaseBuildingObjectTypes Type;
         /* 0x098 */ public GcBaseBuildingObjectDecorationTypes DecorationType;
         /* 0x09C */ public GcBiomeType Biome;

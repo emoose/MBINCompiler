@@ -6,7 +6,7 @@
         public string[] SimpleInteractionTypeValues()
         {
             return new[] { "Interact", "Treasure", "Beacon", "Scan", "Save", "CallShip", "Word", "Tech", "GenericReward", "Feed",
-                "Teleport", "CalimBase", "TeleportStartPoint", "TeleportEndPoint", "Portal", "Chest", "ResourceHarvester",
+                "Teleport", "ClaimBase", "TeleportStartPoint", "TeleportEndPoint", "Portal", "Chest", "ResourceHarvester",
                 "BaseCapsule", "NPCTerminalMessage"};
         }
 

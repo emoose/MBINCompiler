@@ -113,6 +113,8 @@ namespace MBINCompiler.Models.Structs
         [NMS(Size = 0x10)]
         /* 0x39800 */ public bool[] GalacticMapRequests;
 
+        /* 0x39810 */ public Vector4f FirstShipPosition;
+
         /* 0x39820 */ public float SavedSunAngle;
         [NMS(Size = 0xC, Ignore = true)]
         /* 0x39824 */ public byte[] Padding39824;
