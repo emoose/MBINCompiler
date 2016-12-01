@@ -255,3 +255,4 @@ paket-files/
 # CodeRush
 .cr/
 /MBINCompilerTests/app.config
+MBINCompiler/MBINCompiler.csproj
