@@ -39,7 +39,7 @@ namespace MBINCompiler.Models.Structs
         
         public string[] ClassValues()
         {
-            return new[] { "Player", "PlayerShip", "Ship", "Robot", "Paparis" };
+            return new[] { "Player", "PlayerShip", "Ship", "Robot"};
         }
 
         
