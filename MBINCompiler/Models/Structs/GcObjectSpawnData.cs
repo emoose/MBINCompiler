@@ -19,74 +19,77 @@ namespace MBINCompiler.Models.Structs
         [NMS(Size = 4, Ignore = true)]
         /* 0x2C4 */ public byte[] Padding2C4;
 
+        [NMS(Size = 0x10, Ignore = true)]
+        /* 0x2C8 */ public byte[] Padding2C8;
+
         [NMS(Size = 0x10)]
-        /* 0x2C8 */ public string Placement;
-        /* 0x2D8 */ public GcSeed PlacementSeed;
-        /* 0x2E8 */ public int PlacementPriority;
+        /* 0x2D8 */ public string Placement;
+        /* 0x2E8 */ public GcSeed PlacementSeed;
+        /* 0x2F8 */ public int PlacementPriority;
         public string[] PlacementPriorityValues()
         {
             return new[] { "Low", "Normal", "High" };
         }
 
-        /* 0x2EC */ public float PlacementCoverage;
-        /* 0x2F0 */ public float PlacementFlatDensity;
-        /* 0x2F4 */ public float PlacementSlopeDensity;
-        /* 0x2F8 */ public float PlacementSlopeMultiplier;
+        /* 0x2FC */ public float PlacementCoverage;
+        /* 0x300 */ public float PlacementFlatDensity;
+        /* 0x304 */ public float PlacementSlopeDensity;
+        /* 0x308 */ public float PlacementSlopeMultiplier;
 
-        /* 0x2FC */ public int RestrictionsLargeObjectCoverage;
+        /* 0x30C */ public int RestrictionsLargeObjectCoverage;
         public string[] RestrictionsLargeObjectCoverageValues()
         {
             return new[] { "DoNotPlace", "DoNotPlaceClose", "OnlyPlaceAround", "AlwaysPlace" };
         }
-        /* 0x300 */ public int RestrictionsOverlapStyle;
+        /* 0x310 */ public int RestrictionsOverlapStyle;
         public string[] RestrictionsOverlapStyleValues()
         {
             return new[] { "None", "SameSeed", "All" };
         }
-        /* 0x304 */ public float RestrictionsMinHeight;
-        /* 0x308 */ public float RestrictionsMaxHeight;
-        /* 0x30C */ public bool RestrictionsRelativeToSeaLevel;
-        /* 0x310 */ public float RestrictionsMinAngle;
-        /* 0x314 */ public float RestrictionsMaxAngle;
+        /* 0x314 */ public float RestrictionsMinHeight;
+        /* 0x318 */ public float RestrictionsMaxHeight;
+        /* 0x31C */ public bool RestrictionsRelativeToSeaLevel;
+        /* 0x320 */ public float RestrictionsMinAngle;
+        /* 0x324 */ public float RestrictionsMaxAngle;
 
-        /* 0x318 */ public int FadeMinRegionRadius; // might be float
-        /* 0x31C */ public int FadeMaxRegionRadius; // might be float
-        /* 0x320 */ public int FadeMaxImposterRadius; // might be float
+        /* 0x328 */ public int FadeMinRegionRadius; // might be float
+        /* 0x32C */ public int FadeMaxRegionRadius; // might be float
+        /* 0x330 */ public int FadeMaxImposterRadius; // might be float
 
-        /* 0x324 */ public float FadeInStartDistance;
-        /* 0x328 */ public float FadeInEndDistance;
-        /* 0x32C */ public float FadeInOffsetDistance;
-        /* 0x330 */ public float FadeOutStartDistance;
-        /* 0x334 */ public float FadeOutEndDistance;
-        /* 0x338 */ public float FadeOutOffsetDistance;
+        /* 0x334 */ public float FadeInStartDistance;
+        /* 0x338 */ public float FadeInEndDistance;
+        /* 0x33C */ public float FadeInOffsetDistance;
+        /* 0x340 */ public float FadeOutStartDistance;
+        /* 0x344 */ public float FadeOutEndDistance;
+        /* 0x348 */ public float FadeOutOffsetDistance;
 
-        /* 0x33C */ public bool MatchGroundColour;
-        /* 0x340 */ public int GroundColourIndex;
+        /* 0x34C */ public bool MatchGroundColour;
+        /* 0x350 */ public int GroundColourIndex;
         public string[] GroundColourIndexValues()
         {
             return new[] { "Auto", "Main", "Patch" };
         }
 
-        /* 0x344 */ public bool SwapPrimaryForSecondaryColour;
-        /* 0x345 */ public bool SwapPrimaryForRandomColour;
+        /* 0x354 */ public bool SwapPrimaryForSecondaryColour;
+        /* 0x355 */ public bool SwapPrimaryForRandomColour;
 
-        /* 0x346 */ public bool PositioningAlignToNormal;
-        /* 0x348 */ public float PositioningMinScale;
-        /* 0x34C */ public float PositioningMaxScale;
-        /* 0x350 */ public float PositioningMinYScale;
-        /* 0x354 */ public float PositioningMaxYScale;
-        /* 0x358 */ public float PositioningSlopeScaling;
-        /* 0x35C */ public float PositioningPatchEdgeScaling;
-        /* 0x360 */ public float PositioningMaxXZRotation;
+        /* 0x356 */ public bool PositioningAlignToNormal;
+        /* 0x358 */ public float PositioningMinScale;
+        /* 0x35C */ public float PositioningMaxScale;
+        /* 0x360 */ public float PositioningMinScaleY;
+        /* 0x364 */ public float PositioningMaxScaleY;
+        /* 0x368 */ public float PositioningSlopeScaling;
+        /* 0x36C */ public float PositioningPatchEdgeScaling;
+        /* 0x370 */ public float PositioningMaxXZRotation;
 
-        /* 0x364 */ public bool ObjectAutoCollision;
-        /* 0x365 */ public bool ObjectCollideWithPlayer;
-        /* 0x366 */ public bool ObjectCreaturesCanEat;
-        /* 0x368 */ public float ObjectShearWindStrength;
+        /* 0x374 */ public bool ObjectAutoCollision;
+        /* 0x375 */ public bool ObjectCollideWithPlayer;
+        /* 0x376 */ public bool ObjectCreaturesCanEat;
+        /* 0x378 */ public float ObjectShearWindStrength;
 
-        /* 0x36C */ public int RuntimeCacheCachedCollisionNodeCount; // might be float
-        /* 0x370 */ public bool RuntimeCacheAllowLimiting;
+        /* 0x37C */ public int RuntimeCacheCachedCollisionNodeCount; // might be float
+        /* 0x380 */ public bool RuntimeCacheAllowLimiting;
         [NMS(Size = 0x7, Ignore = true)]
-        /* 0x371 */ public byte[] Padding371;
+        /* 0x381 */ public byte[] Padding371;
     }
 }
