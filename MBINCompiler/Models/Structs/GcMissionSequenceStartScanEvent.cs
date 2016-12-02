@@ -2,14 +2,16 @@
 {
     public class GcMissionSequenceStartScanEvent : NMSTemplate
     {
+        [NMS(Size = 0x80)]
+        /* 0x000 */ public string DebugText;
+        /* 0x080 */ public float Time;
         [NMS(Size = 0x10)]
-        /* 0x00 */ public string MissionID;
-        /* 0x10 */ public bool AutoStart;
-        /* 0x11 */ public bool RemoveOnCompletion;
-        [NMS(Size = 6, Ignore = true)]
-        /* 0x12 */ public byte[] Padding12;
-        ///* 0x18 */ public List<> StartingConditions;
-        ///* 0x28 */ public List<> CancelingConditions;
-        ///* 0x38 */ public List<> NotificationSequence;
+        /* 0x084 */ public string Event;
+        /* 0x098 */ public bool FromShipScan;
+        public int Table;
+        /* 0x09C */ public string[] TableValues()
+        {
+            return new[] { "Space", "Planet", "Mission", "Tutorial" };
+        }
     }
 }

@@ -52,6 +52,12 @@
     <Compile Include="Models\EXmlBase.cs" />
     <Compile Include="Models\EXmlData.cs" />
     <Compile Include="Models\EXmlProperty.cs" />
+    <Compile Include="Models\Structs\GcGameMode.cs" />
+    <Compile Include="Models\Structs\GcMissionConditionBasePartNear.cs" />
+    <Compile Include="Models\Structs\GcMissionConditionCriticalMissionsDone.cs" />
+    <Compile Include="Models\Structs\GcMissionConditionGameMode.cs" />
+    <Compile Include="Models\Structs\GcMissionConsequenceRemoveScanEvent.cs" />
+    <Compile Include="Models\Structs\GcMissionConditionBaseClaimed.cs" />
     <Compile Include="Models\Structs\GcMissionSequenceStartScanEvent.cs" />
     <Compile Include="Models\Structs\GcMissionSequenceWait.cs" />
     <Compile Include="Models\Structs\GcMissionSequenceWaitForBuild.cs" />
