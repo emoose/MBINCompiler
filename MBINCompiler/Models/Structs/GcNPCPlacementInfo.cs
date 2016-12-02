@@ -16,10 +16,14 @@
         [NMS(Size = 0x10)]
         /* 0x060 */ public string SpawnSpecific;
         /* 0x070 */ public GcAlienRace Race;
-        /* 0x074 */ public float InteractionOverride;     // what type is this? This type is just a dummy type
+        /* 0x074 */ public GcInteractionType InteractionType;
+        
         [NMS(Size = 0x10)]
         /* 0x078 */ public string ForceInteraction;
         /* 0x088 */ public bool DisableInteraction;
         /* 0x089 */ public bool UseFreighterNPC;
+        [NMS(Size = 0x6, Ignore = true)]
+        public byte[] pad6;
+        
     }
 }
