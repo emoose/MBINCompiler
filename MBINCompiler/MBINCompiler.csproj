@@ -282,6 +282,7 @@
     <Compile Include="Models\Structs\GcBiomeData.cs" />
     <Compile Include="Models\Structs\GcLeveledStatData.cs" />
     <Compile Include="Models\Structs\GcLeveledStatTable.cs" />
+	<Compile Include="Models\Structs\GcMissileComponentData.cs" />
     <Compile Include="Models\Structs\GcNGuiFileBrowserRecents.cs" />
     <Compile Include="Models\Structs\GcNGuiPreset.cs" />
     <Compile Include="Models\Structs\GcNGuiPresetGraphic.cs" />
