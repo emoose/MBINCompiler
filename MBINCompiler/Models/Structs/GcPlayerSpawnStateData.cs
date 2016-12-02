@@ -13,5 +13,8 @@
         }
 		/* 0x060 */ public Vector4f FreighterPositionInSystem;
 		/* 0x070 */ public Vector4f FreighterTransformAt;
+		/* 0x080 */ public Vector4f FreighterTransformUp;
+         [NMS(Size = 0xC, Ignore = true)]
+        public byte[] Padding44; 
     }
 }
