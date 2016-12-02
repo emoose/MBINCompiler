@@ -20,10 +20,9 @@ namespace MBINCompiler.Models.Structs
         /* 0x0AC */ public int PlanetLimit;
         /* 0x0B0 */ public int RegionLimit;
 
-        [NMS(Size = 8, Ignore = true)]
-        /* 0x0B4 */ public byte[] PaddingB4;
-        /* 0x0B4 */ //public PerBaseLimits;   // don't know what this is? something 8 bytes
-        //PerBaseLimits is a list of 2 ints
+        /* 0x0B4 */
+        [NMS(Size = 2, Ignore = true)]
+        public int[] PerBaseLimits;   // don't know what this is? something 8 bytes
         /* 0x0BC */ public float CollisionRadiusFactor;
         /* 0x0C0 */ public bool CheckCollision;
         /* 0x0C1 */ public bool CollidesWithPlayer;
