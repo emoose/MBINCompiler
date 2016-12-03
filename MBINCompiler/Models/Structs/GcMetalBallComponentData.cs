@@ -2,7 +2,7 @@
 
 namespace MBINCompiler.Models.Structs
 {
-    public class GcMetaBallComponentData : NMSTemplate
+    public class GcMetalBallComponentData : NMSTemplate
     {
         [NMS(Size = 0x80)]
         /* 0x000 */ public string File;

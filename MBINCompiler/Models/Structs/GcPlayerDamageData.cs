@@ -14,6 +14,7 @@
         [NMS(Size = 0x20)]
         public string CriticalHitMessage;
         public float Damage;
+        public float HardModeMultiplier;
         public float PushForce;
         public float CameraTurn;
         [NMS(Size = 4, Ignore = true)]
