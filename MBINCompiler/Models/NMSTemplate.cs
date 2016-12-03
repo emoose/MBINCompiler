@@ -164,7 +164,7 @@ namespace MBINCompiler.Models
 
             NMSTemplate obj = TemplateFromName(templateName);
 
-            Console.WriteLine("Gk Hack: " + "Deserializing Template: " + templateName);
+            //Console.WriteLine("Gk Hack: " + "Deserializing Template: " + templateName);
             
             if (obj == null)
                 return null;
@@ -189,7 +189,7 @@ namespace MBINCompiler.Models
             {
                 NMSAttribute settings = field.GetCustomAttribute<NMSAttribute>();
                 field.SetValue(obj, DeserializeValue(reader, field.FieldType, settings, templatePosition, field, obj));
-                Console.WriteLine("Gk Hack: " + templateName + " Deserialized Value: " + field.Name + " value: " + field.GetValue(obj));
+                //Console.WriteLine("Gk Hack: " + templateName + " Deserialized Value: " + field.Name + " value: " + field.GetValue(obj));
             }
 
             
