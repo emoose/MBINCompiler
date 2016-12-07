@@ -1,0 +1,7 @@
+﻿namespace MBINCompiler.Models.Structs
+{
+    {
+        {
+        }
+    }
+}

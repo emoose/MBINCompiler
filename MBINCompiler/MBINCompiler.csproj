@@ -88,6 +88,8 @@
     <Compile Include="Models\Structs\GcColouriseComponentData.cs" />
     <Compile Include="Models\Structs\GcDecorationComponentData.cs" />
     <Compile Include="Models\Structs\GcNPCPlacementComponentData.cs" />
+    <Compile Include="Models\Structs\GcGalaxyMarkerTypes.cs" />
+    <Compile Include="Models\Structs\TkVolumeTriggerType.cs" />
     <Compile Include="Models\Structs\GcSpaceSkyColours.cs" />
     <Compile Include="Models\Structs\GcZoomData.cs" />
     <Compile Include="Models\Structs\TkMaterialMetaData.cs" />

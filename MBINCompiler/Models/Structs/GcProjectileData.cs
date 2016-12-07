@@ -29,15 +29,21 @@ namespace MBINCompiler.Models.Structs
         /* 0x2F0 */ public string PlayerDamage;
         /* 0x300 */ public Colour Colour;
 
-        /* 0x314 */ //THIS SHOULD GO AFTER THE CLASS, BUT THE VALUES ARE WEIRD
-        [NMS(Size = 4, Ignore = true)]
-        public byte[] Padding314;
+        public int BehaviourFlags;
+        //* 0x310 */ public string[] BehaviourFlagsValues()
+        /*{
+            return new[] { "None", "DestroyTerrain", "DestroyAsteroids", "None", "GatherResources", "None", "None", "None", "Homing",
+                 "None", "None", "None", "None", "None", "None", "None","HomingLaser",
+                 "None", "None", "None", "None", "None", "None", "None", "None",
+                 "None", "None", "None", "None", "None", "None", "None", "ScareCreatures",
+                 "None", "None", "None", "None", "None", "None", "None", "None",
+                 "None", "None", "None", "None", "None", "None", "None", "None",
+                 "None", "None", "None", "None", "None", "None", "None", "None",
+                 "None", "None", "None", "None", "None", "None", "None", "ExplosionForce" , "None", };
+        }*/
 
-        /* 0x304 */
         public int Class;
-
-        
-        public string[] ClassValues()
+        /* 0x314 */ public string[] ClassValues()
         {
             return new[] { "Player", "PlayerShip", "Ship", "Robot"};
         }
