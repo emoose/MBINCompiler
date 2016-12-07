@@ -52,6 +52,8 @@
     <Compile Include="Models\EXmlBase.cs" />
     <Compile Include="Models\EXmlData.cs" />
     <Compile Include="Models\EXmlProperty.cs" />
+    <Compile Include="Models\Structs\GcTeleportEndpoint.cs" />
+    <Compile Include="Models\Structs\GcBuildingDistribution.cs" />
     <Compile Include="Models\Structs\GcGameMode.cs" />
     <Compile Include="Models\Structs\GcMissionConditionBasePartNear.cs" />
     <Compile Include="Models\Structs\GcMissionConditionCriticalMissionsDone.cs" />
@@ -88,7 +90,7 @@
     <Compile Include="Models\Structs\GcColouriseComponentData.cs" />
     <Compile Include="Models\Structs\GcDecorationComponentData.cs" />
     <Compile Include="Models\Structs\GcNPCPlacementComponentData.cs" />
-    <Compile Include="Models\Structs\GcGalaxyMarkerTypes.cs" />
+    <Compile Include="Models\Structs\GcPlanetSize.cs" />
     <Compile Include="Models\Structs\TkVolumeTriggerType.cs" />
     <Compile Include="Models\Structs\GcSpaceSkyColours.cs" />
     <Compile Include="Models\Structs\GcZoomData.cs" />
@@ -235,7 +237,7 @@
     <Compile Include="Models\Structs\GcPlanetHeavyAirData.cs" />
     <Compile Include="Models\Structs\GcPlanetLife.cs" />
     <Compile Include="Models\Structs\GcPlanetSentinelData.cs" />
-    <Compile Include="Models\Structs\GcPlanetSize.cs" />
+    <Compile Include="Models\Structs\GcGalaxyMarkerTypes.cs" />
     <Compile Include="Models\Structs\GcPlanetWaterData.cs" />
     <Compile Include="Models\Structs\GcPlanetWeatherData.cs" />
     <Compile Include="Models\Structs\GcPlayerStat.cs" />

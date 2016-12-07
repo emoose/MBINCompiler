@@ -130,7 +130,16 @@ namespace MBINCompiler.Models.Structs
         [NMS(Size = 0xB)]
         /* 0x3984C */ public GcUniverseAddressData[] NewAtlasStationAdressData;
 
-        [NMS(Size = 0xC, Ignore = true)]
-        public byte[] Padding396D4;
+        /* 0x39958 */ public GcResourceElement CurrentFreighter;
+        /* 0x39C00 */ public GcInventoryLayout FreighterLayout;
+        /* 0x39C20 */ public GcInventoryContainer FreighterInventory;
+        /* 0x39C40 */ public GcUniverseAddressData FreighterUniverseAddress;
+        /* 0x39C58 */ public BaseBuildingObjects;
+        /* 0x39C68 */ public NPCWorkers;    // list of length 0x5
+        /* 0x3AA00 */ public PersistentPlayerBases; // list of length 0x2
+        /* 0x3AA80 */ public TeleportEndpoints;
+        /* 0x3AA90 */ public SavedInteractionTimes;     // list of length 0x2A
+        /* 0x3ABE0 */ public GcInventoryLayout BuggyLayout;
+        /* 0x3AC00 */ public GcInventoryContainer BuggyInventory;
     }
 }
