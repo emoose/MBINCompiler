@@ -256,3 +256,4 @@ paket-files/
 .cr/
 /MBINCompilerTests/app.config
 output.txt
+MBINCompiler/Properties/app.manifest

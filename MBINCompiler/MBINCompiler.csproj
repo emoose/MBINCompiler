@@ -52,6 +52,8 @@
     <Compile Include="Models\EXmlBase.cs" />
     <Compile Include="Models\EXmlData.cs" />
     <Compile Include="Models\EXmlProperty.cs" />
+    <Compile Include="Models\Structs\GcCreatureGroups.cs" />
+    <Compile Include="Models\Structs\GcNPCWorkerData.cs" />
     <Compile Include="Models\Structs\GcTeleportEndpoint.cs" />
     <Compile Include="Models\Structs\GcBuildingDistribution.cs" />
     <Compile Include="Models\Structs\GcGameMode.cs" />
@@ -79,7 +81,7 @@
     <Compile Include="Models\Structs\GcMissionSequenceGatherForBuild.cs" />
     <Compile Include="Models\Structs\GcMissionSequenceBuild.cs" />
     <Compile Include="Models\Structs\GcMissionSequenceShowMessage.cs" />
-    <Compile Include="Models\Structs\GcMetalBallComponentData.cs" />
+    <Compile Include="Models\Structs\GcMetaBallComponentData.cs" />
     <Compile Include="Models\Structs\GcAtlasDownloadType.cs" />
     <Compile Include="Models\Structs\GcBaseBuildingComponentData.cs" />
     <Compile Include="Models\Structs\GcBaseBuildingEntry.cs" />
