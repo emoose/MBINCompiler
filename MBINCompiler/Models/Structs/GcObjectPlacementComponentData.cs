@@ -6,6 +6,10 @@
         public string GroupNodeName;
 
         public int ActivationType;
+        public string[] ActivationTypeValues()
+        {
+            return new[] { "GroupNode", "Locator"};
+        }
         public float FractionOfNodesActive;
         public int MaxNodesActivated;
         public int MaxGroupsActivated;

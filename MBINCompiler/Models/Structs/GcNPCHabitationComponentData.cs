@@ -4,5 +4,6 @@
     {
         [NMS(Size = 0x10)]
         public string NPCSpawnLocator;
+        public GcNPCHabitationType NPCHabitationType;
     }
 }

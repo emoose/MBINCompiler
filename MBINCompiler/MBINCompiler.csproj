@@ -52,8 +52,15 @@
     <Compile Include="Models\EXmlBase.cs" />
     <Compile Include="Models\EXmlData.cs" />
     <Compile Include="Models\EXmlProperty.cs" />
+    <Compile Include="Models\Structs\GcMessageCrime.cs" />
+    <Compile Include="Models\Structs\GcAtlasMessage.cs" />
     <Compile Include="Models\Structs\GcCreatureGroups.cs" />
+    <Compile Include="Models\Structs\GcMiningComponentData.cs" />
+    <Compile Include="Models\Structs\GcRobotLaserData.cs" />
     <Compile Include="Models\Structs\GcNPCWorkerData.cs" />
+    <Compile Include="Models\Structs\GcPersistentBase.cs" />
+    <Compile Include="Models\Structs\GcPersistentBBObjectData.cs" />
+    <Compile Include="Models\Structs\GcPersistentBaseEntry.cs" />
     <Compile Include="Models\Structs\GcTeleportEndpoint.cs" />
     <Compile Include="Models\Structs\GcBuildingDistribution.cs" />
     <Compile Include="Models\Structs\GcGameMode.cs" />
