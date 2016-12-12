@@ -52,6 +52,9 @@
     <Compile Include="Models\EXmlBase.cs" />
     <Compile Include="Models\EXmlData.cs" />
     <Compile Include="Models\EXmlProperty.cs" />
+    <Compile Include="Models\Structs\GcAtlasDiscoveryMetadata.cs" />
+    <Compile Include="Models\Structs\GcAtlasDiscoveryData.cs" />
+    <Compile Include="Models\Structs\GcAtlasRecvVoxel.cs" />
     <Compile Include="Models\Structs\GcMessageCrime.cs" />
     <Compile Include="Models\Structs\GcAtlasMessage.cs" />
     <Compile Include="Models\Structs\GcCreatureGroups.cs" />
@@ -646,6 +649,8 @@
     <Compile Include="Models\Structs\Unfinished\GcSolarGenerationGlobals.cs" />
     <Compile Include="Models\Structs\Unfinished\GcSpaceshipGlobals.cs" />
     <Compile Include="Models\Structs\Unfinished\GcTerrainGlobals.cs" />
+    <Compile Include="Models\Structs\GcFlyingSnakeData.cs" />
+    <Compile Include="Models\Structs\GcGalaxyStarAnomaly.cs" />
     <Compile Include="Models\Structs\VariableSizeString.cs" />
     <Compile Include="Models\Structs\Vector2f.cs" />
     <Compile Include="Models\Structs\Vector3i.cs" />
@@ -656,6 +661,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\Structs\Unused\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

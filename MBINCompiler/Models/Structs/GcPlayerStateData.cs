@@ -69,7 +69,7 @@ namespace MBINCompiler.Models.Structs
 
         /* 0x38FE0 */ public Vector4f FirstSpawnPosition;
 
-        [NMS(Size = 0x18)]
+        [NMS(Size = 0x2A)]
         /* 0x38FF0 */ public GcSavedInteractionRaceData[] SavedInteractionIndicies; // element size = 6, num elements = 0x18, total size = 0x90, end offset = 0x38FE0 + 0x90 = 0x39070, but next field is 0x39220?
 
         [NMS(Size = 0xA)]
@@ -134,12 +134,38 @@ namespace MBINCompiler.Models.Structs
         /* 0x39C00 */ public GcInventoryLayout FreighterLayout;
         /* 0x39C20 */ public GcInventoryContainer FreighterInventory;
         /* 0x39C40 */ public GcUniverseAddressData FreighterUniverseAddress;
-        /* 0x39C58 */ //public BaseBuildingObjects;
-        /* 0x39C68 */ //public NPCWorkers;    // list of length 0x5
+        /* 0x39C58 */ public  GcPersistentBBObjectData BaseBuildingObjects;     // maybe?
+        [NMS(Size = 0x5)]
+        /* 0x39C68 */ public GcNPCWorkerData[] NPCWorkers;    // list of length 0x5
         /* 0x3AA00 */ //public PersistentPlayerBases; // list of length 0x2
-        /* 0x3AA80 */ //public TeleportEndpoints;
-        /* 0x3AA90 */ //public SavedInteractionTimes;     // list of length 0x2A
+        /* 0x3AA80 */ public GcTeleportEndpoint TeleportEndpoints;
+        /* 0x3AA90 */ //public 140321A90 SavedInteractionTimes;     // list of length 0x2A
         /* 0x3ABE0 */ public GcInventoryLayout BuggyLayout;
         /* 0x3AC00 */ public GcInventoryContainer BuggyInventory;
+        /* 0x3AC20 */ public GcInventoryLayout Chest1Layout;
+        /* 0x3AC40 */ public GcInventoryContainer Chest1Inventory;
+        /* 0x3AC60 */ public GcInventoryLayout Chest2Layout;
+        /* 0x3AC80 */ public GcInventoryContainer Chest2Inventory;
+        /* 0x3ACA0 */ public GcInventoryLayout Chest3Layout;
+        /* 0x3ACC0 */ public GcInventoryContainer Chest3Inventory;
+        /* 0x3ACE0 */ public GcInventoryLayout Chest4Layout;
+        /* 0x3AD00 */ public GcInventoryContainer Chest4Inventory;
+        /* 0x3AD20 */ public GcInventoryLayout Chest5Layout;
+        /* 0x3AD40 */ public GcInventoryContainer Chest5Inventory;
+        /* 0x3AD60 */ public GcInventoryLayout Chest6Layout;
+        /* 0x3AD80 */ public GcInventoryContainer Chest6Inventory;
+        /* 0x3ADA0 */ public GcInventoryLayout Chest7Layout;
+        /* 0x3ADC0 */ public GcInventoryContainer Chest7Inventory;
+        /* 0x3ADE0 */ public GcInventoryLayout Chest8Layout;
+        /* 0x3AE00 */ public GcInventoryContainer Chest8Inventory;
+        /* 0x3AE20 */ public GcInventoryLayout Chest9Layout;
+        /* 0x3AE40 */ public GcInventoryContainer Chest9Inventory;
+        /* 0x3AE60 */ public GcInventoryLayout Chest10Layout;
+        /* 0x3AE80 */ public GcInventoryContainer Chest10Inventory;
+        /* 0x3AEA0 */ public GcInventoryLayout ChestMagicLayout;
+        /* 0x3AEC0 */ public GcInventoryContainer ChestMagicInventory;
+        /* 0x3AEE0 */ public GcInventoryLayout ChestMagic2Layout;
+        /* 0x3AF00 */ public GcInventoryContainer ChestMagic2Inventory;
+        /* 0x3AF20 */ public GcResourceElement CurrentFreighterNPC;
     }
 }
