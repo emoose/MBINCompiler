@@ -6,9 +6,10 @@ namespace MBINCompiler.Models.Structs
     {
         [NMS(Size = 0x80)]
         /* 0x000 */ public string File;
-        ///* 0x080 */ public Root;    // don't know what type
+        [NMS(Size = 0x20)]
+        /* 0x080 */ public string Root;
         /* 0x0A0 */ public float Radius;
-        ///* 0x0B0 */ public MinSize;
-        ///* 0x0C0 */ public MaxSize;
+        /* 0x0B0 */ public Vector4f MinSize;
+        /* 0x0C0 */ public Vector4f MaxSize;
     }
 }

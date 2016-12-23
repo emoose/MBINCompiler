@@ -9,6 +9,6 @@ namespace MBINCompiler.Models.Structs
         /* 0x08 */ public byte[] pad8;
         /* 0x10 */ public Vector4f Position;
         /* 0x20 */ public ulong UserData;
-        /* 0x28 */ // public ?? Objects;
+        /* 0x28 */ public List<GcPersistentBaseEntry> Objects;
     }
 }

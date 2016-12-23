@@ -31,6 +31,6 @@ namespace MBINCompiler.Models.Structs
         /* 0x78 */ public string Name;
         [NMS(Size = 0x20)]
         /* 0x98 */ public string TerminalMessage;
-        /* 0xB8 */ public List<GcActionTrigger> BaseBuildingTriggerActions;
+        /* 0xB8 */ public List<GcBaseBuildingTriggerAction> BaseBuildingTriggerActions;
     }
 }

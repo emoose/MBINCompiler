@@ -55,6 +55,9 @@
     <Compile Include="Models\Structs\GcAtlasDiscoveryMetadata.cs" />
     <Compile Include="Models\Structs\GcAtlasDiscoveryData.cs" />
     <Compile Include="Models\Structs\GcAtlasRecvVoxel.cs" />
+    <Compile Include="Models\Structs\GcCreatureLegIKComponentData.cs" />
+    <Compile Include="Models\Structs\GcPlayerComponentData.cs" />
+    <Compile Include="Models\Structs\GcFoliageComponentData.cs" />
     <Compile Include="Models\Structs\GcMessageCrime.cs" />
     <Compile Include="Models\Structs\GcAtlasMessage.cs" />
     <Compile Include="Models\Structs\GcCreatureGroups.cs" />
@@ -64,6 +67,7 @@
     <Compile Include="Models\Structs\GcPersistentBase.cs" />
     <Compile Include="Models\Structs\GcPersistentBBObjectData.cs" />
     <Compile Include="Models\Structs\GcPersistentBaseEntry.cs" />
+    <Compile Include="Models\Structs\GcBaseBuildingTriggerAction.cs" />
     <Compile Include="Models\Structs\GcTeleportEndpoint.cs" />
     <Compile Include="Models\Structs\GcBuildingDistribution.cs" />
     <Compile Include="Models\Structs\GcGameMode.cs" />
@@ -103,6 +107,10 @@
     <Compile Include="Models\Structs\GcDecorationComponentData.cs" />
     <Compile Include="Models\Structs\GcNPCPlacementComponentData.cs" />
     <Compile Include="Models\Structs\GcPlanetSize.cs" />
+    <Compile Include="Models\Structs\TkInstanceWindComponentData.cs" />
+    <Compile Include="Models\Structs\GcGalaxyVoxelAttributesData.cs" />
+    <Compile Include="Models\Structs\TkProceduralModelList.cs" />
+    <Compile Include="Models\Structs\TkRandomComponentData.cs" />
     <Compile Include="Models\Structs\TkVolumeTriggerType.cs" />
     <Compile Include="Models\Structs\GcSpaceSkyColours.cs" />
     <Compile Include="Models\Structs\GcZoomData.cs" />
@@ -651,6 +659,7 @@
     <Compile Include="Models\Structs\Unfinished\GcTerrainGlobals.cs" />
     <Compile Include="Models\Structs\GcFlyingSnakeData.cs" />
     <Compile Include="Models\Structs\GcGalaxyStarAnomaly.cs" />
+    <Compile Include="Models\Structs\GcCameraAerialViewData.cs" />
     <Compile Include="Models\Structs\VariableSizeString.cs" />
     <Compile Include="Models\Structs\Vector2f.cs" />
     <Compile Include="Models\Structs\Vector3i.cs" />

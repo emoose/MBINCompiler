@@ -8,8 +8,8 @@
         public GcPlanetLife CreatureLife;
         public GcPlanetHazardData Hazard;
 
-        /* 0x100 */ public int ResourceLevel;
-        public string[] ResourceLevelValues()
+        public int ResourceLevel;
+        /* 0x0100 */ public string[] ResourceLevelValues()
         {
             return new[] { "Low", "High" };
         }

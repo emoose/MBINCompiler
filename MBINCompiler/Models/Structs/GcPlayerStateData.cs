@@ -134,12 +134,14 @@ namespace MBINCompiler.Models.Structs
         /* 0x39C00 */ public GcInventoryLayout FreighterLayout;
         /* 0x39C20 */ public GcInventoryContainer FreighterInventory;
         /* 0x39C40 */ public GcUniverseAddressData FreighterUniverseAddress;
-        /* 0x39C58 */ public  GcPersistentBBObjectData BaseBuildingObjects;     // maybe?
+        /* 0x39C58 */ public List<GcPersistentBBObjectData> BaseBuildingObjects;     // maybe?
         [NMS(Size = 0x5)]
-        /* 0x39C68 */ public GcNPCWorkerData[] NPCWorkers;    // list of length 0x5
-        /* 0x3AA00 */ //public PersistentPlayerBases; // list of length 0x2
+        /* 0x39C68 */ public GcNPCWorkerData[] NPCWorkers;    // list of length 0x5     // not in the save data?
+        [NMS(Size = 0x2)]
+        /* 0x3AA00 */ public GcPersistentBase[] PersistentPlayerBases; // list of length 0x2
         /* 0x3AA80 */ public GcTeleportEndpoint TeleportEndpoints;
-        /* 0x3AA90 */ //public 140321A90 SavedInteractionTimes;     // list of length 0x2A
+        [NMS(Size = 0x2A)]
+        /* 0x3AA90 */ public ulong[] SavedInteractionTimes;     // list of length 0x2A
         /* 0x3ABE0 */ public GcInventoryLayout BuggyLayout;
         /* 0x3AC00 */ public GcInventoryContainer BuggyInventory;
         /* 0x3AC20 */ public GcInventoryLayout Chest1Layout;
