@@ -56,6 +56,8 @@
     <Compile Include="Models\Structs\GcAtlasDiscoveryData.cs" />
     <Compile Include="Models\Structs\GcAtlasRecvVoxel.cs" />
     <Compile Include="Models\Structs\GcCreatureLegIKComponentData.cs" />
+    <Compile Include="Models\Structs\GcGalaxyCameraData.cs" />
+    <Compile Include="Models\Structs\GcInteractionBufferType.cs" />
     <Compile Include="Models\Structs\GcPlayerComponentData.cs" />
     <Compile Include="Models\Structs\GcFoliageComponentData.cs" />
     <Compile Include="Models\Structs\GcMessageCrime.cs" />
@@ -68,6 +70,7 @@
     <Compile Include="Models\Structs\GcPersistentBBObjectData.cs" />
     <Compile Include="Models\Structs\GcPersistentBaseEntry.cs" />
     <Compile Include="Models\Structs\GcBaseBuildingTriggerAction.cs" />
+    <Compile Include="Models\Structs\GcSpaceshipGlobals.cs" />
     <Compile Include="Models\Structs\GcTeleportEndpoint.cs" />
     <Compile Include="Models\Structs\GcBuildingDistribution.cs" />
     <Compile Include="Models\Structs\GcGameMode.cs" />
@@ -655,11 +658,13 @@
     <Compile Include="Models\Structs\Unfinished\GcSkyGlobals.cs" />
     <Compile Include="Models\Structs\Unfinished\GcSmokeTestOptions.cs" />
     <Compile Include="Models\Structs\Unfinished\GcSolarGenerationGlobals.cs" />
-    <Compile Include="Models\Structs\Unfinished\GcSpaceshipGlobals.cs" />
+    <Compile Include="Models\Structs\Unfinished\GcSpaceshipGlobals-old.cs" />
     <Compile Include="Models\Structs\Unfinished\GcTerrainGlobals.cs" />
     <Compile Include="Models\Structs\GcFlyingSnakeData.cs" />
     <Compile Include="Models\Structs\GcGalaxyStarAnomaly.cs" />
     <Compile Include="Models\Structs\GcCameraAerialViewData.cs" />
+    <Compile Include="Models\Structs\Unused\GcPlayerSpaceshipAim.cs" />
+    <Compile Include="Models\Structs\Unused\GcPlayerSpaceshipWarpData.cs" />
     <Compile Include="Models\Structs\VariableSizeString.cs" />
     <Compile Include="Models\Structs\Vector2f.cs" />
     <Compile Include="Models\Structs\Vector3i.cs" />
@@ -671,9 +676,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Models\Structs\Unused\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.

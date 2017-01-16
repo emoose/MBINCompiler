@@ -2,7 +2,7 @@
 {
     public class GcSolarGenerationGlobals : NMSTemplate
     {
-        public bool Unknown0;
+        public bool Unknown0;    //?(if false player spawns in space)
 
         [NMS(Size = 0xF, Ignore = true)]
         public byte[] Padding1;
@@ -20,7 +20,7 @@
         public bool Unknown30;
         public float Unknown34; // unused?
         public float Unknown38; // unused?
-        public float Unknown3C; // qword?
+        public float Unknown3C;
 
         public float Unknown40; // unused?
         public float Unknown44;
@@ -37,18 +37,19 @@
         public float Unknown68;
         public float Unknown6C;
 
-        public float Unknown70;
-        public bool Unknown74;
-        public float Unknown78;
-        public float Unknown7C;
+        public float AsteroidMinDistanceFromPlanets;  //0x70
+        public int Unknown74;	//?(no asteroids if false) // was bool, now value=0x00000101 //may be several bools in DWORD
+        public float AsteroidNoiseDistribution; //0x78 (lower values increase spread)
+        public float AsteroidSpreadDistribution; //0x7C (lower values increase spread)
 
-        public int Unknown80;
+        public int Unknown80;   //?(500 creates large asteroids everywhere, 50 no asteroids)
         public float Unknown84; // unused?
         public float Unknown88; // unused?
-        public float Unknown8C;
+        public float AsteroidRotationXSpeed; //0x8C
 
-        public float Unknown90;
-        public float Unknown94;
+        public float AsteroidRotationYSpeed; //0x90
+        public float SmallAsteroidScaleVariance; //0x94
+
         public float Unknown98;
         public float Unknown9C;
 
@@ -60,45 +61,54 @@
         public float UnknownB0;
         public float UnknownB4;
         public float UnknownB8;
-        public float UnknownAsteroidSpacing;
+        public float UnknownBC;
 
-        public float UnknownAsteroidFadeIn;
+        public float UnknownC0;
         public float UnknownC4;
-        public int UnknownAsteroidMinDropAmount;
-        public int UnknownAsteroidMaxDropAmount;
+        public float UnknownC8;
+        public float UnknownCC;
 
-        [NMS(Size = 16)]
+        public float UnknownD0;
+        public float UnknownD4;
+        public float UnknownD8;
+        public float UnknownDC;
+
+        public float UnknownE0;
+        public int UnknownE4;
+        public int UnknownE8;
+        public int UnknownEC;
+
+        [NMS(Size = 0x10)]
         public string UnknownAsteroidDroppedItem;
 
-        public float SmallAsteroidScale;
-        public float SmallAsteroidSpacing;
-        public float SmallAsteroidFadeIn;
-        public float UnknownEC;
-
-        public int SmallAsteroidMinDropAmount;
-        public int SmallAsteroidMaxDropAmount;
+        public int Unknown100;
+        public float Unknown104;
+        public int Unknown108;
+        public int Unknown10C;
 
         [NMS(Size = 0x10)]
         public string SmallAsteroidDroppedItem;
 
-        public float Unknown108; // unused?
-        public float Unknown10C; // unused?
-
-        public float LargeAsteroidSpacing_maybe;
-        public float Unknown114;
-        public float LargeAsteroidFadeIn_maybe;
-        public float Unknown11C;
-
-        public float Unknown120; // unused?
-        public float Unknown124; // unused?
-        public int Unknown128;
-        public float Unknown12C;
+        [NMS(Size = 0x10)]
+        public string OtherAsteroidDroppedItem;
 
         public float Unknown130;
+        public int Unknown134;
+        public float Unknown138;
+        public float Unknown13C;
 
-        [NMS(Size = 0x6)]
-        public Vector3i[] Unknown134;
+        public float Unknown140;
+        public float Unknown144;
+        public float Unknown148;
+        public int Unknown14C;
 
-        public int Unknown17C;
+        public float Unknown150; //?(minimum asteroid distance from space station?)
+        public float Unknown154; //?(minimum asteroid distance from space station?)
+        public float Unknown158; //?(minimum asteroid distance from anomaly or black hole?)
+
+
+        [NMS(Size = 0xB)]
+        public Vector3i[] Unknown15C;
+
     }
 }

@@ -3,10 +3,10 @@
     public class GcObjectPlacementComponentData : NMSTemplate
     {
         [NMS(Size = 0x20)]
-        public string GroupNodeName;
+        /* 0x00 */ public string GroupNodeName;
 
         public int ActivationType;
-        public string[] ActivationTypeValues()
+        /* 0x20 */ public string[] ActivationTypeValues()
         {
             return new[] { "GroupNode", "Locator"};
         }

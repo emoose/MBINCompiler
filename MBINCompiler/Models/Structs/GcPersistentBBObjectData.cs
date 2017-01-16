@@ -1,8 +1,6 @@
-﻿using System.Collections.Generic;
-
-namespace MBINCompiler.Models.Structs
+﻿namespace MBINCompiler.Models.Structs
 {
-    public class GcPersistentBBObjectData : NMSTemplate
+    public class GcPersistentBBObjectData : NMSTemplate // size = 0x60
     {
         /* 0x00 */ public ulong Timestamp;
         [NMS(Size = 0x10)]

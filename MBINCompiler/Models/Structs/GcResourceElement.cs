@@ -5,24 +5,14 @@
         [NMS(Size = 0x80)]
         /* 0x00 */ public string Filename;
 
-        /* 0x80 */
         [NMS(Size = 8, Ignore = true)]
-        public byte[] PreSeedPad80;
+        /* 0x80 */ public byte[] Padding80;
 
-        // Exploding GcSeed Struct
-        /* 0x88 */
-        public long Seed;
-        /* 0x90 */
-        public bool UseSeedValue;
+        /* 0x88 */ public GcSeed Seed;
 
-        /* 0x91 */
-        [NMS(Size = 7, Ignore = true)]
-        public byte[] PreSeedPad91;
         [NMS(Size = 0x200)]
-        public string AltId;
+        /* 0x98 */ public string AltId;
 
-        [NMS(Size = 0x10, Ignore = true)]
-        public byte[] skip;
-        //public TkProceduralTextureChosenOptionList Texture;
+        /* 0x298 */ public TkProceduralTextureChosenOptionList ProceduralTexture;
     }
 }

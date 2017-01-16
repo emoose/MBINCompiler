@@ -163,8 +163,14 @@ namespace MBINCompiler.Models
                 templateName = templateName.Substring(1);
 
             NMSTemplate obj = TemplateFromName(templateName);
+            
+            //using (System.IO.StreamWriter file =
+            //    new System.IO.StreamWriter(@"T:\mbincompiler_debug.txt", true))
+            //{
+            //    file.WriteLine("Deserializing Template: " + templateName);
+            //}
 
-            //Console.WriteLine("Gk Hack: " + "Deserializing Template: " + templateName);
+                //Console.WriteLine("Gk Hack: " + "Deserializing Template: " + templateName);
             
             if (obj == null)
                 return null;
@@ -190,6 +196,13 @@ namespace MBINCompiler.Models
                 NMSAttribute settings = field.GetCustomAttribute<NMSAttribute>();
                 field.SetValue(obj, DeserializeValue(reader, field.FieldType, settings, templatePosition, field, obj));
                 //Console.WriteLine("Gk Hack: " + templateName + " Deserialized Value: " + field.Name + " value: " + field.GetValue(obj));
+                //Console.WriteLine($"{templateName} position: 0x{templatePosition:X}");
+                //using (System.IO.StreamWriter file =
+                //    new System.IO.StreamWriter(@"T:\mbincompiler_debug.txt", true))
+                //{
+                //    file.WriteLine(" Deserialized Value: " + field.Name + " value: " + field.GetValue(obj));
+                //    file.WriteLine($"{templateName} position: 0x{templatePosition:X}");
+                //}
             }
 
             
