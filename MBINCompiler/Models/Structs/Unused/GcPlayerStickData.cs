@@ -1,6 +1,6 @@
 ﻿namespace MBINCompiler.Models.Structs
 {
-    public class GcBoidData : NMSTemplate
+    public class GcPlayerStickData : NMSTemplate
     {
         /* 0x000 */ public float AcceleratorStickPoint;
         /* 0x004 */ public float AcceleratorMinTime;

@@ -1,9 +1,9 @@
 ﻿namespace MBINCompiler.Models.Structs
 {
-    public class GcSpaceshipTravelData : NMSTemplate
+    public class GcSpaceshipTravelData : NMSTemplate //size = 0x48
     {
         /* 0x000 */ public float MinSpeed;
-        /* 0x004 */ public float MaxSpeed; // Not sure about this, think I need to make a struct for these Curve things
+        /* 0x004 */ public float MaxSpeed;
         /* 0x008 */ public float BoostSpeed;
         /* 0x00C */ public float Force;
         /* 0x010 */ public float MinSpeedForce;

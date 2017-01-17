@@ -55,6 +55,7 @@
     <Compile Include="Models\Structs\GcAtlasDiscoveryMetadata.cs" />
     <Compile Include="Models\Structs\GcAtlasDiscoveryData.cs" />
     <Compile Include="Models\Structs\GcAtlasRecvVoxel.cs" />
+    <Compile Include="Models\Structs\GcAtmosphereList.cs" />
     <Compile Include="Models\Structs\GcCreatureLegIKComponentData.cs" />
     <Compile Include="Models\Structs\GcGalaxyCameraData.cs" />
     <Compile Include="Models\Structs\GcInteractionBufferType.cs" />
@@ -70,6 +71,9 @@
     <Compile Include="Models\Structs\GcPersistentBBObjectData.cs" />
     <Compile Include="Models\Structs\GcPersistentBaseEntry.cs" />
     <Compile Include="Models\Structs\GcBaseBuildingTriggerAction.cs" />
+    <Compile Include="Models\Structs\GcSolarSystemEventWarpPlayer.cs" />
+    <Compile Include="Models\Structs\GcSolarSystemEventWarpOut.cs" />
+    <Compile Include="Models\Structs\GcSolarSystemEventWarpIn.cs" />
     <Compile Include="Models\Structs\GcSpaceshipGlobals.cs" />
     <Compile Include="Models\Structs\GcTeleportEndpoint.cs" />
     <Compile Include="Models\Structs\GcBuildingDistribution.cs" />
@@ -664,7 +668,9 @@
     <Compile Include="Models\Structs\GcGalaxyStarAnomaly.cs" />
     <Compile Include="Models\Structs\GcCameraAerialViewData.cs" />
     <Compile Include="Models\Structs\Unused\GcPlayerSpaceshipAim.cs" />
-    <Compile Include="Models\Structs\Unused\GcPlayerSpaceshipWarpData.cs" />
+    <Compile Include="Models\Structs\GcPlayerSpaceshipWarpData.cs" />
+    <Compile Include="Models\Structs\Unused\GcPlayerStickData.cs" />
+    <Compile Include="Models\Structs\Unused\GcSpaceshipTravelData.cs" />
     <Compile Include="Models\Structs\VariableSizeString.cs" />
     <Compile Include="Models\Structs\Vector2f.cs" />
     <Compile Include="Models\Structs\Vector3i.cs" />
