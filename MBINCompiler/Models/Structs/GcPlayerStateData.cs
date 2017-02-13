@@ -31,8 +31,8 @@ namespace MBINCompiler.Models.Structs
 
         /* 0x003D8 */ public GcExactResource CurrentWeapon;
 
-        /* 0x00468 */ public List<string> KnownTech;
-        /* 0x00478 */ public List<string> KnownProducts;
+        /* 0x00468 */ public List<NMSString0x10> KnownTech;
+        /* 0x00478 */ public List<NMSString0x10> KnownProducts;
 
         /* 0x00488 */ public List<GcWordKnowledge> KnownWords;
 

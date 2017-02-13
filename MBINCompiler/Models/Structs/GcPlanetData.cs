@@ -35,7 +35,7 @@
         public string TerrainFile;
         public TkVoxelGeneratorData Terrain;
         [NMS(Size = 0xA)]
-        public TkPaletteTexture[] TileTypes;
+        public TkListedPaletteTexture[] TileTypes;
         [NMS(Size = 0x80)]
         public string DiffuseTexture;
         [NMS(Size = 0x80)]

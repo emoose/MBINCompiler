@@ -116,6 +116,7 @@
     <Compile Include="Models\Structs\GcPlanetSize.cs" />
     <Compile Include="Models\Structs\TkInstanceWindComponentData.cs" />
     <Compile Include="Models\Structs\GcGalaxyVoxelAttributesData.cs" />
+    <Compile Include="Models\Structs\TkListedPaletteTexture.cs" />
     <Compile Include="Models\Structs\TkProceduralModelList.cs" />
     <Compile Include="Models\Structs\TkRandomComponentData.cs" />
     <Compile Include="Models\Structs\TkVolumeTriggerType.cs" />
@@ -642,6 +643,7 @@
     <Compile Include="Models\Structs\Unfinished\GcAISpaceshipGlobals.cs" />
     <Compile Include="Models\Structs\Unfinished\GcCameraGlobals.cs" />
     <Compile Include="Models\Structs\Unfinished\GcPlayerGlobals.cs" />
+    <Compile Include="Models\Structs\Unfinished\GcPlayerGlobals_old.cs" />
     <Compile Include="Models\Structs\Unfinished\GcUIGlobals.cs" />
     <Compile Include="Models\Structs\Unfinished\GcCreatureGlobals.cs" />
     <Compile Include="Models\Structs\Unfinished\GcAudioGlobals.cs" />
@@ -671,6 +673,7 @@
     <Compile Include="Models\Structs\GcPlayerSpaceshipWarpData.cs" />
     <Compile Include="Models\Structs\Unused\GcPlayerStickData.cs" />
     <Compile Include="Models\Structs\Unused\GcSpaceshipTravelData.cs" />
+    <Compile Include="Models\Structs\Unused\GcTerrainOverlyColours.cs" />
     <Compile Include="Models\Structs\VariableSizeString.cs" />
     <Compile Include="Models\Structs\Vector2f.cs" />
     <Compile Include="Models\Structs\Vector3i.cs" />
