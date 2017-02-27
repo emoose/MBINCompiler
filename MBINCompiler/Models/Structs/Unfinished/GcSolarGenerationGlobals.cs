@@ -46,7 +46,6 @@
         public float Unknown84; // unused?
         public float Unknown88; // unused?
         public float AsteroidRotationXSpeed; //0x8C
-
         public float AsteroidRotationYSpeed; //0x90
         public float SmallAsteroidScaleVariance; //0x94
 
@@ -69,40 +68,40 @@
         public float UnknownCC;
 
         public float UnknownD0;
-        public float UnknownD4;
-        public float UnknownD8;
-        public float UnknownDC;
+        public float SmallAsteroidFadeIn;
+        public float SmallAsteroidZoomIn;
+        public float SmallAsteroidSpacing;
 
-        public float UnknownE0;
-        public int UnknownE4;
-        public int UnknownE8;
+        public float SpecialAsteroidScale;
+        public int SpecialAsteroidDropMin;
+        public int SpecialAsteroidDropMax;
         public int UnknownEC;
 
         [NMS(Size = 0x10)]
-        public string UnknownAsteroidDroppedItem;
+        public string SpecialAsteroidDroppedItem;
 
         public int Unknown100;
-        public float Unknown104;
-        public int Unknown108;
-        public int Unknown10C;
+        public float SmallAsteroidScale;
+        public int SmallAsteroidDropMin;
+        public int SmallAsteroidDropMax;
 
         [NMS(Size = 0x10)]
-        public string SmallAsteroidDroppedItem;
+        public string SmallAsteroid1DroppedItem;
 
         [NMS(Size = 0x10)]
-        public string OtherAsteroidDroppedItem;
+        public string SmallAsteroid2DroppedItem;
 
         public float Unknown130;
         public int Unknown134;
-        public float Unknown138;
+        public float LargeAsteroidSpacing;
         public float Unknown13C;
 
-        public float Unknown140;
-        public float Unknown144;
+        public float LargeAsteroidZoomInner;
+        public float LargeAsteroidZoomOuter;
         public float Unknown148;
         public int Unknown14C;
 
-        public float Unknown150; //?(minimum asteroid distance from space station?)
+        public float AsteroidMinDistanceFromSpacestation; //?(minimum asteroid distance from space station?)
         public float Unknown154; //?(minimum asteroid distance from space station?)
         public float Unknown158; //?(minimum asteroid distance from anomaly or black hole?)
 

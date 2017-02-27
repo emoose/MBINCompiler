@@ -11,6 +11,8 @@
         public float LockedScaledElevationSpeed;
         public float FreePanSpeed;
         public float FreePanSpeedTurbo;
+        public float FreeUpDownSpeed;
+        public float FreeUpDownSpeedTurbo;
         public float FreeRotateSpeed;
         public float FreeElevationBlendRate;
         public float ZoomOutSpin;
@@ -20,7 +22,7 @@
         public float ZoomInRate;
         public float CameraShakeDriftClip;
         public float CameraShakeDriftShift;
-        public float CameraSakeSmoothingRate;
+        public float CameraShakeSmoothingRate;
         public float CameraShakeMaximum;
     }
 }

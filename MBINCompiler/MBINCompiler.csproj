@@ -56,8 +56,14 @@
     <Compile Include="Models\Structs\GcAtlasDiscoveryData.cs" />
     <Compile Include="Models\Structs\GcAtlasRecvVoxel.cs" />
     <Compile Include="Models\Structs\GcAtmosphereList.cs" />
+    <Compile Include="Models\Structs\GcAudioWwiseRTPCs.cs" />
+    <Compile Include="Models\Structs\GcGalaxyAudioSetupData.cs" />
     <Compile Include="Models\Structs\GcCreatureLegIKComponentData.cs" />
+    <Compile Include="Models\Structs\GcGalaxyRenderAnostreakData.cs" />
+    <Compile Include="Models\Structs\GcGalaxyStarColours.cs" />
+    <Compile Include="Models\Structs\GcGalaxyStarAttributesData.cs" />
     <Compile Include="Models\Structs\GcGalaxyCameraData.cs" />
+    <Compile Include="Models\Structs\GcGalaxyWaypointTypes.cs" />
     <Compile Include="Models\Structs\GcInteractionBufferType.cs" />
     <Compile Include="Models\Structs\GcPlayerComponentData.cs" />
     <Compile Include="Models\Structs\GcFoliageComponentData.cs" />
@@ -642,6 +648,7 @@
     <Compile Include="Models\Structs\TkVoxelGeneratorSettingsElement.cs" />
     <Compile Include="Models\Structs\Unfinished\GcAISpaceshipGlobals.cs" />
     <Compile Include="Models\Structs\Unfinished\GcCameraGlobals.cs" />
+    <Compile Include="Models\Structs\Unfinished\GcGalaxyGlobals_old.cs" />
     <Compile Include="Models\Structs\Unfinished\GcPlayerGlobals.cs" />
     <Compile Include="Models\Structs\Unfinished\GcPlayerGlobals_old.cs" />
     <Compile Include="Models\Structs\Unfinished\GcUIGlobals.cs" />
@@ -669,9 +676,11 @@
     <Compile Include="Models\Structs\GcFlyingSnakeData.cs" />
     <Compile Include="Models\Structs\GcGalaxyStarAnomaly.cs" />
     <Compile Include="Models\Structs\GcCameraAerialViewData.cs" />
+    <Compile Include="Models\Structs\Unused\GcCameraSpawnSetupData.cs" />
     <Compile Include="Models\Structs\Unused\GcPlayerSpaceshipAim.cs" />
     <Compile Include="Models\Structs\GcPlayerSpaceshipWarpData.cs" />
     <Compile Include="Models\Structs\Unused\GcPlayerStickData.cs" />
+    <Compile Include="Models\Structs\Unused\GcResourceCollectEffect.cs" />
     <Compile Include="Models\Structs\Unused\GcSpaceshipTravelData.cs" />
     <Compile Include="Models\Structs\Unused\GcTerrainOverlyColours.cs" />
     <Compile Include="Models\Structs\VariableSizeString.cs" />
