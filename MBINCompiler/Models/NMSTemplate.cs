@@ -18,8 +18,10 @@ namespace MBINCompiler.Models
                 .GetTypes()
                 .Where(t => t.BaseType == typeof(NMSTemplate))
                 .ToDictionary(t => t.Name);
-
-        internal static bool PrintToDebug = true; // disable this when doing things in debug mode (tests etc) for a nice speedup
+		/////////////////////////////////////////////////////////////////////////////////////
+		// The boolean value below determines whether or not debug information is printed. //
+		/////////////////////////////////////////////////////////////////////////////////////
+        internal static bool PrintToDebug = false; // disable this when doing things in debug mode (tests etc) for a nice speedup
 
         public static NMSTemplate TemplateFromName(string templateName)
         {
@@ -170,7 +172,7 @@ namespace MBINCompiler.Models
                 file.WriteLine("Deserializing Template: " + templateName);
             }*/
 
-                //Console.WriteLine("Gk Hack: " + "Deserializing Template: " + templateName);
+                if(PrintToDebug == true) Console.WriteLine("Gk Hack: " + "Deserializing Template: " + templateName);
             
             if (obj == null)
                 return null;
@@ -195,8 +197,10 @@ namespace MBINCompiler.Models
             {
                 NMSAttribute settings = field.GetCustomAttribute<NMSAttribute>();
                 field.SetValue(obj, DeserializeValue(reader, field.FieldType, settings, templatePosition, field, obj));
-                //Console.WriteLine("Gk Hack: " + templateName + " Deserialized Value: " + field.Name + " value: " + field.GetValue(obj));
-                //Console.WriteLine($"{templateName} position: 0x{reader.BaseStream.Position:X}");
+                if(PrintToDebug == true) {
+					Console.WriteLine("Gk Hack: " + templateName + " Deserialized Value: " + field.Name + " value: " + field.GetValue(obj));
+					Console.WriteLine($"{templateName} position: 0x{reader.BaseStream.Position:X}");
+				}
                 /*using (System.IO.StreamWriter file =
                     new System.IO.StreamWriter(@"T:\mbincompiler_debug.txt", true))
                 {
