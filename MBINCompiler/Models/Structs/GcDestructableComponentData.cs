@@ -7,51 +7,55 @@ namespace MBINCompiler.Models.Structs
         [NMS(Size = 0x10)]
         /* 0x000 */ public string Explosion;
         /* 0x010 */ public float ExplosionScale;
+        /* 0x014 */ public bool ExplosionScaleToBounds;
+        [NMS(Size = 3, Ignore = true)]
+        /* 0x015 */ public byte[] Padding15;
+
+        [NMS(Size = 0x10)]
+        /* 0x018 */public string VehicleDestroyEffect;
+
+        [NMS(Size = 0x10)]
+        /* 0x028 */ public string TriggerAction;
+        /* 0x038 */ public int IncreaseWanted;
         [NMS(Size = 4, Ignore = true)]
-        /* 0x014 */ public byte[] Padding14;
+        /* 0x03C */ public byte[] Padding3C;
 
         [NMS(Size = 0x10)]
-        /* 0x018 */ public string TriggerAction;
-        /* 0x028 */ public int IncreaseWanted;
-        [NMS(Size = 4, Ignore = true)]
-        /* 0x02C */ public byte[] Padding2C;
+        /* 0x040 */ public string LootReward;
 
+        /* 0x050 */ public int LootRewardAmountMin;
+        /* 0x054 */ public int LootRewardAmountMax;
+
+        /* 0x058 */ public List<GcSubstanceAmount> GivesSubstances;
         [NMS(Size = 0x10)]
-        /* 0x030 */ public string LootReward;
+        /* 0x068 */ public string GivesReward;
+		/* 0x078 */ public float HardModeSubstanceMultiplier;
 
-        /* 0x040 */ public int LootRewardAmountMin;
-        /* 0x044 */ public int LootRewardAmountMax;
-
-        /* 0x048 */ public List<GcSubstanceAmount> GivesSubstances;
-        [NMS(Size = 0x10)]
-        /* 0x058 */ public string GivesReward;
-		/* 0x068 */ public float HardModeSubstanceMultiplier;
-
-        /* 0x06C */ public bool RemoveModel;
+        /* 0x07C */ public bool RemoveModel;
         [NMS(Size = 0x3, Ignore = true)]
-        /* 0x06D */ public byte[] Padding6D;
+        /* 0x07D */ public byte[] Padding7D;
         [NMS(Size = 0x80)]
-        /* 0x070 */ public string DestroyedModel;
+        /* 0x080 */ public string DestroyedModel;
         [NMS(Size = 0x4, Ignore = true)]
-        /* 0x0F0 */ public byte[] PaddingF0;
-        /* 0x0F4 */ public bool DestroyedModelUsesScale;
+        /* 0x100 */ public byte[] Padding100;
+        /* 0x104 */ public bool DestroyedModelUsesScale;
         [NMS(Size = 0x3, Ignore = true)]
-        /* 0x0F5 */public byte[] PaddingF5;
-        /* 0x0F8 */ public float DestroyForce;
-        /* 0x0FC */ public float DestroyForceRadius;
+        /* 0x105 */public byte[] Padding105;
+        /* 0x108 */ public float DestroyForce;
+        /* 0x10C */ public float DestroyForceRadius;
         [NMS(Size = 0x10)]
-        /* 0x100 */ public string DestroyEffect;
+        /* 0x110 */ public string DestroyEffect;
         [NMS(Size = 0x10)]
-        /* 0x110 */ public string DestroyEffectPoint;
-        /* 0x120 */ public float DestroyEffectTime;
+        /* 0x120 */ public string DestroyEffectPoint;
+        /* 0x130 */ public float DestroyEffectTime;
 
-        /* 0x124 */ public bool ShowInteract;
+        /* 0x134 */ public bool ShowInteract;
         [NMS(Size = 0x3, Ignore = true)]
-        /* 0x125 */ public byte[] Padding125;
-        /* 0x128 */ public float ShowInteractRange;
-        /* 0x12C */ public bool GrenadeSingleHit;
+        /* 0x135 */ public byte[] Padding135;
+        /* 0x138 */ public float ShowInteractRange;
+        /* 0x13C */ public bool GrenadeSingleHit;
 
         [NMS(Size = 3, Ignore = true)]
-        /* 0x12D */ public byte[] Padding12D;
+        /* 0x13D */ public byte[] Padding13D;
     }
 }

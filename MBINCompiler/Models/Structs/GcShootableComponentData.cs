@@ -11,7 +11,7 @@
 					[NMS(Size = 0x10)]
 		/* 0x08 */	public string ImpactShakeEffect;
 
-		/* 0x18 */	public GcProjectileImpactType ImpactType;
+		/* 0x18 */	public GcProjectileImpactType ForceImpactType;
 		/* 0x1C */	public int IncreaseWanted;
 		/* 0x20 */	public float IncreaseWantedThresholdTime;
 		/* 0x24 */	public bool UseMiningDamage;

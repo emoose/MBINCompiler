@@ -6,7 +6,7 @@
 
         public string[] ProductCategoryValues()
         {
-            return new[] { "Component", "Device", "Consumable", "Curiousity", "Generic", "None" };
+            return new[] { "Component", "Device", "Consumable", "Curiousity", "BuildingPart" };
         }
     }
 }

@@ -5,12 +5,20 @@ namespace MBINCompiler.Models.Structs
     public class TkPhysicsComponentData : NMSTemplate
     {
         public TkPhysicsData Data;
-        /* 0x018 */ public bool TriggerVolume;
-        /* 0x01C */ public TkVolumeTriggerType VolumeTriggerType;
-        /* 0x020 */ public bool Climbable;
-        /* 0x021 */ public bool IgnoreModelOwner;
-        [NMS(Size = 6, Ignore = true)]
-        /* 0x022 */ public byte[] Padding22;
-        /* 0x028 */ public NMSTemplate RagdollData;
+        /* 0x018 */ public NMSTemplate RagdollData;
+        /* 0x060 */ public TkVolumeTriggerType VolumeTriggerType;
+        /* 0x064 */ public int SurfaceProperties;
+        public string[] SurfacePropertiesValues()
+        {
+            return new[] { "None", "Glass" };
+        }
+        /* 0x068 */ public bool TriggerVolume;
+        
+        /* 0x069 */ public bool Climbable;
+        /* 0x06A */ public bool IgnoreModelOwner;
+        /* 0x06B */ public bool NoVehicleCollision;
+        [NMS(Size = 4, Ignore = true)]
+        /* 0x06C */ public byte[] Padding6C;
+        
     }
 }

@@ -19,8 +19,7 @@ namespace MBINCompiler.Models.Structs
         [NMS(Size = 4, Ignore = true)]
         /* 0x2C4 */ public byte[] Padding2C4;
 
-        [NMS(Size = 0x10, Ignore = true)]
-        /* 0x2C8 */ public byte[] Padding2C8;
+        /* 0x2C8 */ public List<GcTerrainTileType> ExtraTileTypes;
 
         [NMS(Size = 0x10)]
         /* 0x2D8 */ public string Placement;
@@ -84,12 +83,14 @@ namespace MBINCompiler.Models.Structs
 
         /* 0x374 */ public bool ObjectAutoCollision;
         /* 0x375 */ public bool ObjectCollideWithPlayer;
-        /* 0x376 */ public bool ObjectCreaturesCanEat;
-        /* 0x378 */ public float ObjectShearWindStrength;
+        /* 0x376 */ public bool CollideWithPlayerVehicle;
+        /* 0x377 */ public bool DestroyedByPlayerVehicle;
+        /* 0x378 */ public bool ObjectCreaturesCanEat;
+        /* 0x37C */ public float ObjectShearWindStrength;
+        [NMS(Size = 0x10)]
+        /* 0x380 */ public string DestroyedByVehicleEffect;
 
-        /* 0x37C */ public int RuntimeCacheCachedCollisionNodeCount; // might be float
-        /* 0x380 */ public bool RuntimeCacheAllowLimiting;
-        [NMS(Size = 0x7, Ignore = true)]
-        /* 0x381 */ public byte[] Padding371;
+        /* 0x390 */ public int RuntimeCacheCachedCollisionNodeCount; // might be float
+        /* 0x394 */ public bool RuntimeCacheAllowLimiting;
     }
 }

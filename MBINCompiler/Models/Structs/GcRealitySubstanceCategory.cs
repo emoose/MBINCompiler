@@ -6,7 +6,7 @@
 
         public string[] SubstanceCategoryValues()
         {
-            return new[] { "Commodity", "Technology", "Fuel", "Tradeable", "Special", "None" };
+            return new[] { "Commodity", "Technology", "Fuel", "Tradeable", "Special", "BuildingPart" };
         }
     }
 }

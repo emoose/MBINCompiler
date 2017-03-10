@@ -7,9 +7,9 @@ namespace MBINCompiler.Models.Structs
         public int SimpleInteractionType;
         /* 0x00 */ public string[] SimpleInteractionTypeValues()
         {
-            return new[] { "Interact", "Treasure", "Beacon", "Scan", "Save", "CallShip", "Word", "Tech", "GenericReward", "Feed",
+            return new[] { "Interact", "Treasure", "Beacon", "Scan", "Save", "CallShip", "CallVehicl", "Word", "Tech", "GenericReward", "Feed",
                 "Teleport", "ClaimBase", "TeleportStartPoint", "TeleportEndPoint", "Portal", "Chest", "ResourceHarvester",
-                "BaseCapsule", "NPCTerminalMessage"};
+                "BaseCapsule", "Hologram", "NPCTerminalMessage", "VehicleBoot"};
         }
 
         /* 0x04 */ public float InteractDistance;

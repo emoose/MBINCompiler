@@ -5,7 +5,7 @@
         public int PresetGameMode;
         public string[] PresetGameModeValues()
         {
-            return new[] { "Unspecified", "Normal", "Creative", "Survival" };
+            return new[] { "Unspecified", "Normal", "Creative", "Survival", "Ambient", "Permadeath" };
         }
     }
 }
