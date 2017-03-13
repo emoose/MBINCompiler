@@ -4,12 +4,14 @@ namespace MBINCompiler.Models.Structs
 {
     public class GcSimpleInteractionComponentData : NMSTemplate
     {
+        // the custom interactions have been added to allow for exactly that. They are not handled differently by the game files and using them might cause interactions to be a bit... weird...
         public int SimpleInteractionType;
         /* 0x00 */ public string[] SimpleInteractionTypeValues()
         {
             return new[] { "Interact", "Treasure", "Beacon", "Scan", "Save", "CallShip", "CallVehicl", "Word", "Tech", "GenericReward", "Feed",
                 "Teleport", "ClaimBase", "TeleportStartPoint", "TeleportEndPoint", "Portal", "Chest", "ResourceHarvester",
-                "BaseCapsule", "Hologram", "NPCTerminalMessage", "VehicleBoot"};
+                "BaseCapsule", "Hologram", "NPCTerminalMessage", "VehicleBoot",
+                "CUSTOMINTERACTION0", "CUSTOMINTERACTION1", "CUSTOMINTERACTION2", "CUSTOMINTERACTION3", "CUSTOMINTERACTION4"};
         }
 
         /* 0x04 */ public float InteractDistance;

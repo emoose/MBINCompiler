@@ -2,7 +2,7 @@
 
 namespace MBINCompiler.Models.Structs
 {
-    public class TkPhysicsComponentData : NMSTemplate
+    public class TkPhysicsComponentData : NMSTemplate       // used in a global?
     {
         public TkPhysicsData Data;
         /* 0x018 */ public NMSTemplate RagdollData;

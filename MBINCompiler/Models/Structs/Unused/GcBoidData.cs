@@ -1,6 +1,6 @@
 ﻿namespace MBINCompiler.Models.Structs
 {
-    public class GcBoidData : NMSTemplate
+    public class GcBoidData : NMSTemplate       // maybe in a global?
     {
         /* 0x000 */ public float Coherence;
         /* 0x004 */ public float Alignment;

@@ -15,7 +15,7 @@ namespace MBINCompiler.Models.Structs
         /* 0x24 */ public int ResolutionWidth;
         /* 0x28 */ public int ResolutionHeight;
         /* 0x2C */ public int VSyncEx;
-		public string[] VsyncValues()
+		public string[] VsyncExValues()
 		{
 			return new string[] { "Off", "On", "Adaptive" };
 		}
@@ -41,7 +41,7 @@ namespace MBINCompiler.Models.Structs
             return new string[] { "Low", "Normal", "High" };
         }
         /* 0x44 */ public int AntiAliasingEx2;
-        public string[] AntiAliasingValues()
+        public string[] AntiAliasingEX2Values()
         {
             return new string[] { "Auto", "None", "FXAA", "TAA_LOW", "TAA", "TAA_FXAA", "SSAA4" };
         }
@@ -56,19 +56,26 @@ namespace MBINCompiler.Models.Structs
         /* 0x58 */ public float FoVInShip;
         /* 0x5C */ public int Brightness;
         /* 0x60 */ public int MaxframeRate;
-        /* 0x64 */ public bool NoHudMode;
-		/* 0x68 */ public int NumHighThreads;
-		/* 0x6C */ public int NumLowThreads;
-		/* 0x70 */ public int TextureStreaming;
-		public string[] TextureStreamingValues()
+		/* 0x64 */ public int NumHighThreads;
+		/* 0x68 */ public int NumLowThreads;
+		/* 0x6C */ public int TextureStreamingEx;
+		public string[] TextureStreamingExValues()
 		{
-			return new string[] { "Off", "On" };
+			return new string[] { "Off", "On", "Auto" };
 		}
-		/* 0x74 */ public int TexturePageSizeKb;
-		/* 0x78 */ public bool ShowRequirementsWarnings;
-		/* 0x79 */ public bool RemoveBaseBuildingRestrictions;
+		/* 0x70 */ public int TexturePageSizeKb;
+		/* 0x74 */ public bool ShowRequirementsWarnings;
+		/* 0x75 */ public bool RemoveBaseBuildingRestrictions;
 		[NMS(Size = 3, Ignore = true)]
-		/* 0x7A */ public byte[] Padding80;
-		/* 0x7C */ public int BaseBuildingLimit;
+		/* 0x76 */ public byte[] Padding76;
+		/* 0x78 */ public int BaseBuildingLimit;
+        /* 0x7C */ public float MouseClickSpeedMultiplier;
+        /* 0x80 */ public int AmbientOcclusion;
+        public string[] AmbientOcclusionValues()
+        {
+            return new string[] { "SSAO", "HBAO", "Off" };
+        }
+        /* 0x84 */ public bool UseHDR;
+        /* 0x85 */ public bool UseLightShafts;
     }
 }

@@ -1,6 +1,6 @@
 namespace MBINCompiler.Models.Structs
 {
-    public class GcCameraAerialViewData : NMSTemplate
+    public class GcCameraAerialViewData : NMSTemplate           // possibly in a global
     {
         /* 0x000 */ public float Time;
 		/* 0x004 */ public int AerialViewMode;

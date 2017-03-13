@@ -1,19 +1,10 @@
-﻿// generated output for subroutine:
-// __int64 __fastcall GcAISpaceshipGlobals_LoadDefaults(__int64 a1) -----> hash: C7EC6D18
-// hash of whole input: 21519724
-
-namespace MBINCompiler.Models.Structs
+﻿namespace MBINCompiler.Models.Structs
 {
     public class GcAISpaceshipGlobals : NMSTemplate
     {
-        // generated with MBINRawTemplateParser
-
-        // line: __int64 __fastcall GcAISpaceshipGlobals_LoadDefaults(__int64 a1)
-        // line: {
-        // line:   __int64 v1; // rdi@1
-        public bool Unknown0;     // offset: 0, sz: 1, origin: 0, parsed: 0        // line:   *(_BYTE *)a1 = 0;
+        public bool Unknown0;
         [NMS(Size = 0x3, Ignore = true)]
-        public byte[] Padding1;        // offset: 1, sz: 3, comment: auto padding 
+        public byte[] Padding1;
 
         public float Unknown4;
         public float Unknown8;
@@ -80,9 +71,9 @@ namespace MBINCompiler.Models.Structs
 
         public GcShipAIAttackData UnknownE4;
 
-        public int Unknown17C;
-        public int Unknown180;
-        public int Unknown184;
+        public int UnknownInt17C;
+        public int UnknownInt180;
+        public int UnknownInt184;
         public float Unknown188;
         public float Unknown18C;
         public float Unknown190;
@@ -140,7 +131,7 @@ namespace MBINCompiler.Models.Structs
         public float Unknown260;
         public float Unknown264;        // this is actually a QWORD... Only looks like it has 0x4 data anyway... maybe it is a long or something?
         [NMS(Size = 0x8, Ignore = true)]
-        public byte[] Padding268;       // something going on in the exe here? Origin: 00000001401B5D97 in 1.13 exe (GOG)
+        public byte[] Padding268;       // [rdi+26Ch], esi
 
         public float Unknown270;
         public float Unknown274;
@@ -239,10 +230,10 @@ namespace MBINCompiler.Models.Structs
         public float Unknown44C;
         public float Unknown450;
         public float Unknown454;
-        public int Unknown458;
-        public int Unknown45C;
-        public int Unknown460;
-        public int Unknown464;
+        public int UnknownInt458;
+        public int UnknownInt45C;
+        public int UnknownInt460;
+        public int UnknownInt464;
 
         [NMS(Size = 0x10)]
         public string Unknown468;
@@ -251,12 +242,12 @@ namespace MBINCompiler.Models.Structs
         [NMS(Size = 0x10)]
         public string Unknown488;
 
-        public int Unknown498;
-        public int Unknown49C;
-        public int Unknown4A0;
-        public int Unknown4A4;
-        public int Unknown4A8;
-        public int Unknown4AC;
+        public int UnknownInt498;
+        public int UnknownInt49C;
+        public int UnknownInt4A0;
+        public int UnknownInt4A4;
+        public int UnknownInt4A8;
+        public int UnknownInt4AC;
         public float Unknown4B0;
         public float Unknown4B4;
 
@@ -270,8 +261,8 @@ namespace MBINCompiler.Models.Structs
         public float Unknown564;
         public float Unknown568;
         public float Unknown56C;
-        public int Unknown570;
-        public int Unknown574;
+        public int UnknownInt570;
+        public int UnknownInt574;
         public float Unknown578;
         public float Unknown57C;
         public float Unknown580;
@@ -294,7 +285,7 @@ namespace MBINCompiler.Models.Structs
         public bool Unknown5BC;
         [NMS(Size = 0x3, Ignore = true)]
         public byte[] Padding5BD;
-        public int Unknown5C0;
+        public int UnknownInt5C0;
         public float Unknown5C4;
         public float Unknown5C8;
         public float Unknown5CC;
@@ -323,10 +314,10 @@ namespace MBINCompiler.Models.Structs
         public float Unknown718;
         public float Unknown71C;
         public float Unknown720;
-        public int Unknown724;
+        public int UnknownInt724;
         public float Unknown728;
         public float Unknown72C;
-        public int Unknown730;
+        public int UnknownInt730;
         public float Unknown734;
         public float Unknown738;
         public float Unknown73C;
@@ -355,7 +346,7 @@ namespace MBINCompiler.Models.Structs
         public byte[] Padding791;
         public float Unknown794;
         public float Unknown798;
-        public int Unknown79C;
+        public int UnknownInt79C;
         public float Unknown7A0;
         public float Unknown7A4;
         public float Unknown7A8;
@@ -372,8 +363,8 @@ namespace MBINCompiler.Models.Structs
         public float Unknown7D4;
         public float Unknown7D8;
         public float Unknown7DC;        // [rdi+7DCh], sil
-        public int Unknown7E0;
-        public int Unknown7E4;
+        public int UnknownInt7E0;
+        public int UnknownInt7E4;
         public float Unknown7E8;
         public float Unknown7EC;
         public float Unknown7F0;
@@ -392,7 +383,7 @@ namespace MBINCompiler.Models.Structs
         public float Unknown824;
         public float Unknown828;
         public float Unknown82C;
-        public int Unknown830;
+        public int UnknownInt830;
         public float Unknown834;
         public float Unknown838;
         public float Unknown83C;
@@ -508,7 +499,7 @@ namespace MBINCompiler.Models.Structs
         public float Unknown9F4;
         public float Unknown9F8;
         public float Unknown9FC;
-        public int UnknownA00;
+        public int UnknownIntA00;
         public float UnknownA04;
         public float UnknownA08;
 

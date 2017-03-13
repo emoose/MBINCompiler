@@ -1,6 +1,6 @@
 namespace MBINCompiler.Models.Structs
 {
-    public class GcShipHUDTargetIconData : NMSTemplate
+    public class GcShipHUDTargetIconData : NMSTemplate      // starts at 0x6F0 in the GcGameplayGlobals
     {
         [NMS(Size = 0x80)]
         public string Corner;

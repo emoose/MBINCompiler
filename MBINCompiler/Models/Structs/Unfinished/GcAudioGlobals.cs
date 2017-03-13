@@ -3,21 +3,8 @@
     public class GcAudioGlobals : NMSTemplate
     {
         // the func that uses the blocks of floats below (up to 0x3C) seems to associate each 3 with a different NPC type
-        public float Unknown0; // None
-        public float Unknown4; // None
-        public float Unknown8; // None
-        public float UnknownC; // Pirate
-        public float Unknown10; // Pirate
-        public float Unknown14; // Pirate
-        public float Unknown18; // Police
-        public float Unknown1C; // Police
-        public float Unknown20; // Police
-        public float Unknown24; // Trader
-        public float Unknown28; // Trader
-        public float Unknown2C; // Trader
-        public float Unknown30; // Freighter
-        public float Unknown34; // Freighter
-        public float Unknown38; // Freighter
+        [NMS(Size = 0x5, EnumValue = new string[0x5] { "None", "Pirate", "Police", "Trader", "Freighter"})]
+        public GcAudio3PointDopplerData[] Unknown0;
 
         public float Unknown3C;
         public float Unknown40;
@@ -36,6 +23,7 @@
         public float Unknown74;
         public float Unknown78;
         public float Unknown7C;
+
         public float Unknown80;
         public float Unknown84;
         public float Unknown88;
@@ -50,7 +38,7 @@
 
         public bool UnknownAC; // if false, main code chunk inside cGcAudioManager::RunObstructionQueries won't get run (default true)
 
-        public float UnknownB0;
+        public int UnknownB0;
         public float UnknownB4;
         public float UnknownB8;
         public float UnknownBC;

@@ -2,6 +2,6 @@
 {
     public class GcWaypointComponentData : NMSTemplate
     {
-        public TkTextureResource Icon;
+        public TkModelResource Icon;
     }
 }

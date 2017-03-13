@@ -62,6 +62,8 @@
         /* 0xB0 */ public string TargetForceInteraction;
         /* 0xC0 */ public GcInteractionType TargetInterationType;
 		/* 0xC4 */ public bool ForceRestartInteraction;
+        [NMS(Size = 0x3, Ignore = true)]
+        /* 0xC5 */ public byte[] PaddingC5;
 		[NMS(Size = 0x10)]
 		/* 0xC8 */ public string HasReward;
         [NMS(Size = 0x8, Ignore = true)]

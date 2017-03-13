@@ -30,14 +30,13 @@ namespace MBINCompiler.Models
             Magic = 0xCCCCCCCC;
             Version = 2500;
             
-            // these two values aren't checked, so we can set them to whatever we like
-            //BuildDateTime = 0x706D6F434E49424D;
-            //TemplateGUID = 0x302E3172656C69;
+            // set the 0x10 bytes to be the MBINCompiler version
             string ver = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString();
             Tag = String.Format("MBINCver{0}", ver.Substring(0, ver.Length - 2));
 
             TemplateName = string.Empty;
-            Padding58 = ulong.Parse($"{DateTime.Now:yyyyMMddhhmm}"); // may as well make use of this field too
+            Padding58 = 0;
+            //Padding58 = ulong.Parse($"{DateTime.Now:yyyyMMddhhmm}"); // may as well make use of this field too
         }
     }
 }
