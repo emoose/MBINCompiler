@@ -2,7 +2,7 @@
 
 namespace MBINCompiler.Models.Structs
 {
-    public class TkInstanceWindComponentData : NMSTemplate
+    public class TkInstanceWindComponentData : NMSTemplate       // possibly in a global
     {
         /* 0x00 */ public bool EnableLdsWind;
         /* 0x04 */ public float BaseMass;

@@ -2,7 +2,7 @@
 
 namespace MBINCompiler.Models.Structs
 {
-    public class TkDynamicChainComponentData : NMSTemplate
+    public class TkDynamicChainComponentData : NMSTemplate      // possibly in a global...
     {
         public float AngularLimit;
         public float TwistLimit;

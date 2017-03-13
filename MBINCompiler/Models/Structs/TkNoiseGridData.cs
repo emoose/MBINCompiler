@@ -1,14 +1,16 @@
 ﻿namespace MBINCompiler.Models.Structs
 {
-    public class TkNoiseGridData : NMSTemplate // 0x184 bytes
+    public class TkNoiseGridData : NMSTemplate // 0x184 bytes       // possibly in a global??
     {
-        public bool Active;
-        public int MaximumLOD;
-        public bool Subtract;
-        public bool SwapZY;
-        public bool Hemisphere;
-        public TkNoiseVoxelTypeEnum NoiseVoxelType;
-        public int NoiseGridType;
+        /* 0x000 */ public bool Active;
+        /* 0x004 */ public int MaximumLOD;
+        /* 0x008 */ public bool Subtract;
+        /* 0x009 */ public bool SwapZY;
+        /* 0x00A */ public bool Hemisphere;
+        [NMS(Size = 0x1, Ignore = true)]
+        /* 0x00B */ public byte[] PaddingB;
+        /* 0x00C */ public TkNoiseVoxelTypeEnum NoiseVoxelType;
+        /* 0x010 */ public int NoiseGridType;
         public string[] NoiseGridTypeValues()
         {
             return new[]
@@ -20,33 +22,30 @@
         }
 
         [NMS(Size = 0x80)]
-        public string Filename;
-        public float MinWidth;
-        public float MaxWidth;
-        public float MinHeight;
-        public float MaxHeight;
-        public float MinHeightOffset;
-        public float MaxHeightOffset;
-        public float HeightOffset;
+        /* 0x014 */ public string Filename;
+        /* 0x094 */ public float MinWidth;
+        /* 0x098 */ public float MaxWidth;
+        /* 0x09C */ public float MinHeight;
+        /* 0x0A0 */ public float MaxHeight;
+        /* 0x0A4 */ public float MinHeightOffset;
+        /* 0x0A8 */ public float MaxHeightOffset;
+        /* 0x0AC */ public float HeightOffset;
 
-        public TkNoiseOffsetEnum OffsetType;
-        public float RegionRatio;
-        public float RegionScale;
-        public TkNoiseUberLayerData TurbulenceNoiseLayer;
-        public float Yaw;
-        public float Pitch;
-        public float Roll;
-        public float VaryYaw;
-        public float VaryPitch;
-        public float VaryRoll;
-        public float SmoothRadius;
-        public int SeedOffset;
-        public float RandomPrimitive;
-        public TkNoiseSuperFormulaData SuperFormula1; // not an array
-        public TkNoiseSuperFormulaData SuperFormula2; // not an array
-        public TkNoiseSuperFormulaData SuperFormula3; // not an array
-
-        [NMS(Size = 0xC, Ignore = true)]
-        public byte[] Padding178; // ???
+        /* 0x0B0 */ public TkNoiseOffsetEnum OffsetType;
+        /* 0x0B4 */ public float RegionRatio;
+        /* 0x0B8 */ public float RegionScale;
+        /* 0x0BC */ public TkNoiseUberLayerData TurbulenceNoiseLayer;
+        /* 0x124 */ public float Yaw;
+        /* 0x128 */ public float Pitch;
+        /* 0x12C */ public float Roll;
+        /* 0x130 */ public float VaryYaw;
+        /* 0x134 */ public float VaryPitch;
+        /* 0x138 */ public float VaryRoll;
+        /* 0x13C */ public float SmoothRadius;
+        /* 0x140 */ public int SeedOffset;
+        /* 0x144 */ public float RandomPrimitive;
+        /* 0x148 */ public TkNoiseSuperFormulaData SuperFormula1;
+        /* 0x158 */ public TkNoiseSuperFormulaData SuperFormula2;
+        /* 0x168 */ public TkNoiseSuperPrimitiveData SuperPrimitive;
     }
 }

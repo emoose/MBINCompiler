@@ -33,7 +33,9 @@ namespace MBINCompiler.Models.Structs
         /* 0x214 */ public bool Chargeable;
         /* 0x218 */ public int ChargeAmount;
 
-        /* 0x21C */ public GcRealitySubstanceCategory SubstanceCategory;
+        ///* 0x21C */ public Unknown0x4 ChargeType;
+
+        /* 0x21C */ public GcRealitySubstanceCategory SubstanceCategory;        // should be ChargeType??
         /* 0x220 */ public List<NMSString0x10> ChargeBy;
         /* 0x230 */ public bool BuildFullyCharged;
         /* 0x231 */ public bool Upgrade;
@@ -44,17 +46,33 @@ namespace MBINCompiler.Models.Structs
 
         /* 0x23C */ public float Value;
         /* 0x240 */ public List<GcTechnologyRequirement> Requirements;
-        /* 0x250 */ public List<GcStatsBonus> StatBonuses;
+        /* 0x250 */ public GcStatsTypes BaseStat;
+        [NMS(Size = 0x4, Ignore = true)]
+        /* 0x254 */ public byte[] Padding254;
+        /* 0x258 */ public List<GcStatsBonus> StatBonuses;
 
         [NMS(Size = 0x10)]
-        /* 0x260 */ public string RequiredTech;
+        /* 0x268 */ public string RequiredTech;
 
-        /* 0x270 */ public float RequiredLevel; // todo: is this correct?
+        /* 0x278 */ public int RequiredLevel;
+
+        [NMS(Size = 0x4, Ignore = true)]
+        /* 0x27C */ public byte[] Padding27C;
 
         /* 0x280 */ public Colour UpgradeColour;
         /* 0x290 */ public Colour LinkColour;
 
         [NMS(Size = 0x10)]
         /* 0x2A0 */ public string RewardGroup;
+
+        /* 0x2B0 */ public int BaseValue;
+        /* 0x2B4 */ public GcItemPriceModifiers Cost;
+        /* 0x2C8 */ public int RequiredRank;
+        /* 0x2CC */ public GcAlienRace DispensingRace;
+        /* 0x2D0 */ public int FragmentCost;
+        /* 0x2D4 */ public GcTechnologyRarity TechShopRarity;
+
+        [NMS(Size = 0x8, Ignore = true)]
+        /* 0x2D5 */ public byte[] Padding2D5;
     }
 }

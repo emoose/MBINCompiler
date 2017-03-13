@@ -4,13 +4,13 @@
 
 namespace MBINCompiler.Models.Structs
 {
-    public class GcPlayerGlobals : NMSTemplate // 0x990
+    public class GcPlayerGlobals : NMSTemplate // looking around 0x3EF in hex looks like there is some kind of struct that is repeated 4-5 times. Length maybe 0x34
     {
         public float Unknown0;
         public float Unknown4;
         public float Unknown8;
         public float UnknownC;
-        public float Unknown10;
+        public int Unknown10;
         public float Unknown14;
         public float Unknown18;
         public float Unknown1C;
@@ -40,9 +40,7 @@ namespace MBINCompiler.Models.Structs
         public float Unknown7C;
         public float Unknown80;
         public float Unknown84;
-        public bool Unknown88;
-        [NMS(Size = 0x3, Ignore = true)]
-        public byte[] Padding89;
+        public float Unknown88;
         public float Unknown8C;
         public float Unknown90;
         public float Unknown94;
@@ -50,13 +48,13 @@ namespace MBINCompiler.Models.Structs
         public float Unknown9C;
         public float UnknownA0;
         public float UnknownA4;
-        public float UnknownA8;
-        public bool UnknownAC;
+        public bool UnknownA8;
         [NMS(Size = 0x3, Ignore = true)]
-        public byte[] PaddingAD;
+        public byte[] PaddingA9;
+        public float UnknownAC;
         public float UnknownB0;
-        public int UnknownB4;
-        public int UnknownB8;
+        public float UnknownB4;
+        public float UnknownB8;
         public float UnknownBC;
         public float UnknownC0;
         public float UnknownC4;
@@ -65,55 +63,54 @@ namespace MBINCompiler.Models.Structs
         public float UnknownD0;
         public float UnknownD4;
         public float UnknownD8;
-        public float UnknownDC;
-        public float UnknownE0;         // data: 0x40000000
-        public float UnknownE4;
-        public float UnknownE8;
+        public bool UnknownDC;
+        public float UnknownE0;
+        public int UnknownE4;
+        public int UnknownE8;
         public float UnknownEC;
-        public bool UnknownF0;
-        [NMS(Size = 0x3, Ignore = true)]
-        public byte[] PaddingF1;
+        public float UnknownF0;
         public float UnknownF4;
         public float UnknownF8;
         public float UnknownFC;
         public float Unknown100;
         public float Unknown104;
         public float Unknown108;
-        public Vector2f Unknown10C;     // just to test. Should maybe be a long?
-        public int Unknown114;
-        public bool Unknown118;
-        [NMS(Size = 0x3, Ignore = true)]
-        public byte[] Padding119;
-        public int Unknown11C;
-        public int Unknown120;
+        public float Unknown10C;
+        public float Unknown110;
+        public float Unknown114;
+        public float Unknown118;
+        public float Unknown11C;
+        public bool Unknown120;
         public float Unknown124;
         public float Unknown128;
         public float Unknown12C;
         public float Unknown130;
         public float Unknown134;
         public float Unknown138;
-        public float Unknown13C;
-        public float Unknown140;            // data: 0x40000000
-        public float Unknown144;
-        public float Unknown148;
-        public float Unknown14C;
-        public float Unknown150;
+        public Vector2f Unknown13C;
+        public int Unknown144;
+        public float Unknown148;        // start of some struct?
+
+        public int Unknown14C;
+        public int Unknown150;
         public float Unknown154;
         public float Unknown158;
-        public int Unknown15C;
-        public int Unknown160;
+        public float Unknown15C;
+        public float Unknown160;
         public float Unknown164;
         public float Unknown168;
-        public float Unknown16C;            // data: 0x40000000
-        public float Unknown170;            // data: 0x40000000
+        public float Unknown16C;
+        public float Unknown170;
         public float Unknown174;
         public float Unknown178;
         public float Unknown17C;
         public float Unknown180;
         public float Unknown184;
         public float Unknown188;
-        public float Unknown18C;
-        public float Unknown190;
+        // struct repeated?
+
+        public int Unknown18C;
+        public int Unknown190;
         public float Unknown194;
         public float Unknown198;
         public float Unknown19C;
@@ -121,27 +118,28 @@ namespace MBINCompiler.Models.Structs
         public float Unknown1A4;
         public float Unknown1A8;
         public float Unknown1AC;
-        public int Unknown1B0;
+        public float Unknown1B0;
         public float Unknown1B4;
         public float Unknown1B8;
-        public int Unknown1BC;
-        public int Unknown1C0;
+        public float Unknown1BC;
+        public float Unknown1C0;
         public float Unknown1C4;
         public float Unknown1C8;
+
         public float Unknown1CC;
-        public int Unknown1D0;
+        public float Unknown1D0;
         public float Unknown1D4;
         public float Unknown1D8;
         public float Unknown1DC;
-        public float Unknown1E0;
+        public int Unknown1E0;
         public float Unknown1E4;
         public float Unknown1E8;
-        public float Unknown1EC;
-        public float Unknown1F0;
+        public int Unknown1EC;
+        public int Unknown1F0;
         public float Unknown1F4;
         public float Unknown1F8;
         public float Unknown1FC;
-        public float Unknown200;
+        public int Unknown200;
         public float Unknown204;
         public float Unknown208;
         public float Unknown20C;
@@ -195,19 +193,20 @@ namespace MBINCompiler.Models.Structs
         public float Unknown2CC;
         public float Unknown2D0;
         public float Unknown2D4;
-        public int Unknown2D8;
+        public float Unknown2D8;
         public float Unknown2DC;
         public float Unknown2E0;
         public float Unknown2E4;
         public float Unknown2E8;
         public float Unknown2EC;
         public float Unknown2F0;
-        public float Unknown2F4;            // data: 0x40000000
+        public float Unknown2F4;
         public float Unknown2F8;
-        public float Unknown2FC;            // data: 0x40000000
+        public float Unknown2FC;
         public float Unknown300;
         public float Unknown304;
-        public float Unknown308;
+
+        public float Unknown308;        // [rcx+308h], esi
         public float Unknown30C;
         public float Unknown310;
         public float Unknown314;
@@ -220,8 +219,9 @@ namespace MBINCompiler.Models.Structs
         public float Unknown330;
         public float Unknown334;
         public float Unknown338;
+
         public float Unknown33C;
-        public float Unknown340;            // data: 0x40000000
+        public float Unknown340;
         public float Unknown344;
         public float Unknown348;
         public float Unknown34C;
@@ -234,7 +234,7 @@ namespace MBINCompiler.Models.Structs
         public float Unknown368;
         public float Unknown36C;
         public float Unknown370;
-        public float Unknown374;            // data: 0x40000000
+        public float Unknown374;
         public float Unknown378;
         public float Unknown37C;
         public float Unknown380;
@@ -247,7 +247,7 @@ namespace MBINCompiler.Models.Structs
         public float Unknown39C;
         public float Unknown3A0;
         public float Unknown3A4;
-        public float Unknown3A8;            // data: 0x40000000
+        public float Unknown3A8;
         public float Unknown3AC;
         public float Unknown3B0;
         public float Unknown3B4;
@@ -260,7 +260,7 @@ namespace MBINCompiler.Models.Structs
         public float Unknown3D0;
         public float Unknown3D4;
         public float Unknown3D8;
-        public float Unknown3DC;            // data: 0x40000000
+        public float Unknown3DC;
         public float Unknown3E0;
         public float Unknown3E4;
         public float Unknown3E8;
@@ -268,7 +268,7 @@ namespace MBINCompiler.Models.Structs
         public float Unknown3F0;
         public float Unknown3F4;
         public float Unknown3F8;
-        public float Unknown3FC;            // data: 0x40000000
+        public float Unknown3FC;
         public float Unknown400;
         public float Unknown404;
         public float Unknown408;
@@ -281,20 +281,19 @@ namespace MBINCompiler.Models.Structs
         public float Unknown424;
         public float Unknown428;
         public float Unknown42C;
-        public bool Unknown430;
-        [NMS(Size = 0x3, Ignore = true)]
-        public byte[] Padding431;
+        public float Unknown430;
         public float Unknown434;
         public float Unknown438;
         public float Unknown43C;
         public float Unknown440;
         public float Unknown444;
-        public float Unknown448;            // data: 0x40000000
+        public float Unknown448;
         public float Unknown44C;
-        public long Unknown450;
-        public int Unknown458;
+        public float Unknown450;
+        public float Unknown454;
+        public float Unknown458;
         public float Unknown45C;
-        public float Unknown460;
+        public bool Unknown460;
         public float Unknown464;
         public float Unknown468;
         public float Unknown46C;
@@ -302,10 +301,10 @@ namespace MBINCompiler.Models.Structs
         public float Unknown474;
         public float Unknown478;
         public float Unknown47C;
-        public float Unknown480;
-        public float Unknown484;
-        public long Unknown488;
-        public float Unknown490;            // data: 0x40000000
+        public Vector2f Unknown480;
+        public int Unknown488;        // [rcx+488h], esi
+        public float Unknown48C;
+        public float Unknown490;
         public float Unknown494;
         public float Unknown498;
         public float Unknown49C;
@@ -314,122 +313,135 @@ namespace MBINCompiler.Models.Structs
         public float Unknown4A8;
         public float Unknown4AC;
         public float Unknown4B0;
-        public int Unknown4B4;
-        public float Unknown4B8;
-        public float Unknown4BC;
+        public float Unknown4B4;
+        public float Unknown4B8;        // QWORD with next 4 bytes
+        public int Unknown4BC;
         public float Unknown4C0;
         public float Unknown4C4;
         public float Unknown4C8;
-        public float Unknown4CC;            // data: 0x40000000
+        public float Unknown4CC;
         public float Unknown4D0;
         public float Unknown4D4;
         public float Unknown4D8;
         public float Unknown4DC;
         public float Unknown4E0;
-        public float Unknown4E4;
+        public int Unknown4E4;
+        public float Unknown4E8;
+        public float Unknown4EC;
+        public float Unknown4F0;
+        public float Unknown4F4;
+        public float Unknown4F8;
+        public float Unknown4FC;
+        public float Unknown500;
+        public float Unknown504;
+        public float Unknown508;
+        public float Unknown50C;
+        public float Unknown510;
+        public float Unknown514;
         [NMS(Size = 0x80)]
-        public string Unkown4E8;
+        public string Unknown518;
 
-        // looks like some kind of struct here... a list of things maybe?
-        public int Unknown568;
-        public Vector2f Unknown56C;     // just to see...
-        public float Unknown574;
-        public float Unknown578;            // data: 0x40000000
-        public float Unknown57C;
-        public float Unknown580;
-        public float Unknown584;
-        public Vector2f Unknown588;     // just to see...
-        public int Unknown590;
-
-        public float Unknown594;
-        public float Unknown598;
-        public float Unknown59C;
-        public Vector2f Unknown5A0;     // just to see...
-        public int Unknown5A8;
+        public float Unknown598;     // [rdi+598h], esi
+        public float Unknown59C;        // QWORD with next 4 bytes
+        public int Unknown5A0;
+        public float Unknown5A4;
+        public float Unknown5A8;
 
         public float Unknown5AC;
         public float Unknown5B0;
         public float Unknown5B4;
-        public Vector2f Unknown5B8;     // just to see...
-        public int Unknown5C0;
+        public float Unknown5B8;
+        public int Unknown5BC;
+        public int Unknown5C0;        // [rdi+5C0h], esi      padding?
 
         public float Unknown5C4;
         public float Unknown5C8;
         public float Unknown5CC;
-        public Vector2f Unknown5D0;     // just to see...
-        public int Unknown5D8;
+        public float Unknown5D0;
+        public int Unknown5D4;
+        public int Unknown5D8;        // [rdi+5D8h], esi      padding?
 
         public float Unknown5DC;
         public float Unknown5E0;
         public float Unknown5E4;
-        public Vector2f Unknown5E8;     // just to see...
-        public int Unknown5F0;
+        public float Unknown5E8;
+        public int Unknown5EC;
+        public int Unknown5F0;        // [rdi+5F0h], esi      padding?
 
         public float Unknown5F4;
         public float Unknown5F8;
         public float Unknown5FC;
-        public Vector2f Unknown600;     // just to see...
-        public int Unknown608;
+        public float Unknown600;
+        public int Unknown604;
+        public int Unknown608;        // [rdi+608h], esi      padding?
 
         public float Unknown60C;
         public float Unknown610;
         public float Unknown614;
-        public Vector2f Unknown618;     // just to see...
-        public int Unknown620;
+        public float Unknown618;
+        public int Unknown61C;
+        public int Unknown620;        // [rdi+620h], esi      padding?
 
         public float Unknown624;
         public float Unknown628;
         public float Unknown62C;
         public float Unknown630;
-        public float Unknown634;
-        public float Unknown638;
+        public int Unknown634;
+        public int Unknown638;        // [rdi+638h], esi      padding?
+
         public float Unknown63C;
         public float Unknown640;
         public float Unknown644;
         public float Unknown648;
-        public Vector2f Unknown64C;
-        public Vector2f Unknown654;
+        public int Unknown64C;
+        public int Unknown650;        // [rdi+650h], esi      padding?
+
+        public float Unknown654;
+        public float Unknown658;
         public float Unknown65C;
         public float Unknown660;
         public float Unknown664;
         public float Unknown668;
         public float Unknown66C;
         public float Unknown670;
-        public Vector2f Unknown674;
-        public Vector2f Unknown67C;
-        public float Unknown684;
-        public float Unknown688;
+        public float Unknown674;
+        public float Unknown678;
+        public float Unknown67C;
+        public int Unknown680;
+        public Vector2f Unknown684;     // 2nd 4 bytes may be padding?
         public float Unknown68C;
         public float Unknown690;
         public float Unknown694;
         public float Unknown698;
-        public Vector2f Unknown69C;
-        public Vector2f Unknown6A4;
-        public float Unknown6AC;
-        public float Unknown6B0;
+        public float Unknown69C;
+        public float Unknown6A0;
+        public float Unknown6A4;
+        public int Unknown6A8;
+        public Vector2f Unknown6AC;     // 2nd 4 bytes may be padding?
         public float Unknown6B4;
         public float Unknown6B8;
         public float Unknown6BC;
         public float Unknown6C0;
         public float Unknown6C4;
         public float Unknown6C8;
-        public int Unknown6CC;
-        public float Unknown6D0;
-        public float Unknown6D4;
-        public float Unknown6D8;
-        public Vector2f Unknown6DC;
+        public float Unknown6CC;
+        public int Unknown6D0;
+        public Vector2f Unknown6D4;     // 2nd 4 bytes may be padding?
+        public float Unknown6DC;
+        public float Unknown6E0;
         public float Unknown6E4;
         public float Unknown6E8;
         public float Unknown6EC;
         public float Unknown6F0;
         public float Unknown6F4;
         public float Unknown6F8;
-        public float Unknown6FC;
+        public float Unknown6FC;        // [rdi+6FCh], esi      padding or start of struct?
         public float Unknown700;
         public float Unknown704;
         public float Unknown708;
-        public Vector2f Unknown70C;
-        public Vector2f Unknown714;
+        public Vector2f Unknown70C;     // 2nd 4 bytes may be padding?
+        public float Unknown714;
+        public float Unknown718;
         public float Unknown71C;
         public float Unknown720;
         public float Unknown724;
@@ -437,30 +449,30 @@ namespace MBINCompiler.Models.Structs
         public float Unknown72C;
         public float Unknown730;
         public float Unknown734;
-        public Vector2f Unknown738;
-        public float Unknown740;
-        public float Unknown744;
-        public float Unknown748;
-        public float Unknown74C;
-        public int Unknown750;
+        public float Unknown738;
+        public Vector2f Unknown73C;     // 2nd 4 bytes may be padding?
+        public float Unknown744;        // [rdi+744h], esi      padding or start of struct?
+        public float Nothing748;
+        public float Nothing74C;        // up to and including here?
+        public float Unknown750;
         public float Unknown754;
         public float Unknown758;
         public float Unknown75C;
         public float Unknown760;
         public float Unknown764;
-        public Vector2f Unknown768;
+        public float Unknown768;        // QWORD with next 4 bytes
+        public int Unknown76C;
         public float Unknown770;
         public float Unknown774;
         public float Unknown778;
         public float Unknown77C;
-        public float Unknown780;
+        public int Unknown780;
         public float Unknown784;
         public float Unknown788;
         public float Unknown78C;
         public float Unknown790;
         public float Unknown794;
-        public float Unknown798;
-        public float Unknown79C;
+        public Vector2f Unknown798;     // 2nd 4 bytes may be padding?
         public float Unknown7A0;
         public float Unknown7A4;
         public float Unknown7A8;
@@ -476,27 +488,27 @@ namespace MBINCompiler.Models.Structs
         public float Unknown7D0;
         public float Unknown7D4;
         public float Unknown7D8;
-        public int Unknown7DC;
-        public int Unknown7E0;
+        public float Unknown7DC;
+        public float Unknown7E0;
         public float Unknown7E4;
         public float Unknown7E8;
         public float Unknown7EC;
         public float Unknown7F0;
         public float Unknown7F4;
         public float Unknown7F8;
-        public Vector2f Unknown7FC;            // data: 0x40000000
+        public float Unknown7FC;
+        public float Unknown800;
         public float Unknown804;
         public float Unknown808;
-        public float Unknown80C;
-        public float Unknown810;
+        public int Unknown80C;
+        public int Unknown810;
         public float Unknown814;
-        public float Unknown818;            // data: 0x40000000
+        public float Unknown818;
         public float Unknown81C;
         public float Unknown820;
         public float Unknown824;
         public float Unknown828;
-        public float Unknown82C;
-        public float Unknown830;
+        public Vector2f Unknown82C;     // 2nd 4 bytes may be padding?
         public float Unknown834;
         public float Unknown838;
         public float Unknown83C;
@@ -526,7 +538,7 @@ namespace MBINCompiler.Models.Structs
         public float Unknown89C;
         public float Unknown8A0;
         public float Unknown8A4;
-        public float Unknown8A8;            // data: 0x40000000
+        public float Unknown8A8;
         public float Unknown8AC;
         public float Unknown8B0;
         public float Unknown8B4;
@@ -538,78 +550,126 @@ namespace MBINCompiler.Models.Structs
         public float Unknown8CC;
         public float Unknown8D0;
         public float Unknown8D4;
-        public int Unknown8D8;
+        public float Unknown8D8;
         public float Unknown8DC;
         public float Unknown8E0;
-        public float Unknown8E4;            // data: 0x40000000
+        public float Unknown8E4;
         public float Unknown8E8;
-        public bool Unknown8EC;
-        [NMS(Size = 0x3, Ignore = true)]
-        public byte[] Padding8ED;
+        public float Unknown8EC;
         public float Unknown8F0;
         public float Unknown8F4;
         public float Unknown8F8;
-        public bool Unknown8FC;
-        [NMS(Size = 0x3, Ignore = true)]
-        public byte[] Padding8FD;
+        public float Unknown8FC;
         public float Unknown900;
         public float Unknown904;
         public float Unknown908;
         public float Unknown90C;
         public float Unknown910;
-        public float Unknown914;            // data: 0x40000000
+        public float Unknown914;
         public float Unknown918;
         public float Unknown91C;
         public float Unknown920;
-        public float Unknown924;
+        public int Unknown924;
         public float Unknown928;
         public float Unknown92C;
-        public float Unknown930;            // data: 0x40000000
+        public float Unknown930;
         public float Unknown934;
-        public float Unknown938;
+        public float Nothing938;        // [rdi+938h], esi      padding or start of struct?
         public float Unknown93C;
         public float Unknown940;
         public float Unknown944;
-        public float Unknown948;
-        public float Unknown94C;            // data: 0x40000000
+        public int Unknown948;        // [rdi+948h], esi      padding or start of struct?
+        public float Unknown94C;
         public float Unknown950;
         public float Unknown954;
         public float Unknown958;
         public float Unknown95C;
         public float Unknown960;
         public float Unknown964;
-        public float Unknown968;            // data: 0x40000000
-        public Vector2f Unknown96C;
+        public float Unknown968;
+        public float Unknown96C;
+        public float Unknown970;
         public float Unknown974;
         public float Unknown978;
-        [NMS(Size = 0x4, Ignore = true)]
-        public byte[] Padding97C;
-        public Vector2f Unknown980;
-        public Vector2f Unknown988;
-        public int Unknown990;
-        public Vector2f Unknown994;
-        public int Unknown99C;
-        public Vector2f Unknown9A0;
-        public Vector2f Unknown9A8;
-        public Vector2f Unknown9B0;
-        public Vector2f Unknown9B8;
-        public Vector2f Unknown9C0;
-        public Vector2f Unknown9C8;
-        public int Unknown9D0;
-        public Vector2f Unknown9D4;
+        public float Unknown97C;
+        public float Unknown980;
+        public float Unknown984;
+        public float Unknown988;
+        public float Unknown98C;
+        public float Unknown990;
+        public float Unknown994;
+        public float Unknown998;
+        public float Unknown99C;
+        public float Unknown9A0;
+        public float Unknown9A4;
+        public float Unknown9A8;
+        public float Unknown9AC;
+        public float Unknown9B0;
+        public float Unknown9B4;
+        public Vector2f Unknown9B8;     // 2nd 4 bytes may be padding?
+        public float Unknown9C0;
+        public float Unknown9C4;
+        // rbx, [rsp+28h+arg_0]
+        public float Unknown9C8;
+        public float Unknown9CC;
+        public float Unknown9D0;
+        public Vector2f Unknown9D4;     // 2nd 4 bytes may be padding?
         public int Unknown9DC;
-        public Vector2f Unknown9E0;
-        public Vector2f Unknown9E8;
-        public Vector2f Unknown9F0;
-        public Vector2f Unknown9F8;
-        public Vector2f UnknownA00;
-        public Vector2f UnknownA08;
-        public int UnknownA10;
-        public Vector2f UnknownA14;
-        public int UnknownA1C;
-        public Vector2f UnknownA20;
-        public Vector2f UnknownA28;
-        public Vector2f UnknownA30;
-        public Vector2f UnknownA38;
+
+        // lots of stuff going on here... will just leave as all floats for the moment...
+
+        public float Unknown9E0;
+        public float Unknown9E4;
+        public float Unknown9E8;
+        public float Unknown9EC;
+        public float Unknown9F0;        // [rdi+9F0h], rsi
+        public float Unknown9F4;
+        public float Unknown9F8;
+        public float Unknown9FC;
+        public float UnknownA00;
+        public float UnknownA04;
+        public float UnknownA08;
+        public float UnknownA0C;
+        public float UnknownA10;
+        public float UnknownA14;
+        public float UnknownA18;
+        public float UnknownA1C;
+        public float UnknownA20;
+        public float UnknownA24;
+        public float UnknownA28;
+        public float UnknownA2C;
+        public float UnknownA30;
+        public float UnknownA34;
+        public float UnknownA38;
+        public float UnknownA3C;
+        public float UnknownA40;
+        public float UnknownA44;
+        public float UnknownA48;
+        public float UnknownA4C;
+        public float UnknownA50;
+        public float UnknownA54;
+        public float UnknownA58;
+        public float UnknownA5C;
+        public float UnknownA60;
+        public float UnknownA64;
+        public float UnknownA68;
+        public float UnknownA6C;
+        public float UnknownA70;
+        public float UnknownA74;
+        public float UnknownA78;
+        public float UnknownA7C;
+        public float UnknownA80;
+        public float UnknownA84;
+        public float UnknownA88;
+        public float UnknownA8C;
+        public float UnknownA90;
+        public float UnknownA94;
+        public float UnknownA98;
+        public float UnknownA9C;
+        public float UnknownAA0;
+        public float UnknownAA4;
+        public float UnknownAA8;
+        public float UnknownAAC;
+
     }
 }

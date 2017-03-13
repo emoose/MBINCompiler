@@ -12,8 +12,12 @@
         /* 0x07 */ public bool EverythingIsFree;
         /* 0x08 */ public bool EverythingIsKnown;
         /* 0x09 */ public bool EverythingIsStar;
+        //public bool Unknown1;
+        //public bool Unknown2;
         /* 0x0A */ public bool UseScreenEffects;
         /* 0x0B */ public bool UseGunImpactEffect;
+        //public bool Unknown3;
+        //public bool Unknown4;
         /* 0x0C */ public bool RenderCreatureDetails;
 		/* 0x0D */ public bool UseDebugScreenSettings;
         /* 0x10 */ public int ScreenWidth;

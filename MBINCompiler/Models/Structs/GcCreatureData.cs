@@ -5,23 +5,27 @@ namespace MBINCompiler.Models.Structs
     public class GcCreatureData : NMSTemplate
     {
         [NMS(Size = 0x10)]
-        public string Id;
+        /* 0x00 */ public string Id;
+
+        /* 0x10 */ public bool OnlySpawnWhenIdIsForced;
 
         [NMS(Size = 0x20)]
-        public string Genus;
+        /* 0x11 */ public string Genus;
 
-        public GcCreatureTypes CreatureType;
+        [NMS(Size = 0x3, Ignore = true)]
+        /* 0x31 */ public byte[] Padding31;
 
-        public int MoveArea;
+        /* 0x34 */ public GcCreatureTypes ForceType;
+        /* 0x38 */ public int MoveArea;
         public string[] MoveAreaValues()
         {
             return new[] { "Ground", "Water", "Air", "Space" };
         }
 
-        public float MinScale;
-        public float MaxScale;
-        public GcRarity Rarity;
+        /* 0x3C */ public float MinScale;
+        /* 0x40 */ public float MaxScale;
+        /* 0x44 */ public GcRarity Rarity;
 
-        public List<NMSTemplate> Data;
+        /* 0x48 */ public List<NMSTemplate> Data;
     }
 }

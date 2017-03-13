@@ -22,7 +22,7 @@
         public int Gradient;
 
         public string[] GradientValues()
-        { return new string[] { "None", "Vertical", "Horizontal" }; }
+        { return new string[] { "None", "Vertical", "Horizontal", "HorizontalBounce" }; }
 
 
         public float GradientStartOffset;

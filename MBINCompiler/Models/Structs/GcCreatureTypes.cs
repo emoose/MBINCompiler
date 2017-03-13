@@ -8,7 +8,7 @@
             return new[]
             {
                 "None", "Bird", "FlyingLizard", "FlyingSnake", "Butterfly", "Beetle", "Fish", "Shark",
-                "Crab", "Snake", "Dino", "Antelope", "Rodent", "Cat", "Drone", "Quad",
+                "Crab", "Snake", "Dino", "Antelope", "Rodent", "Cat", "Fiend", "Drone", "Quad",
                 "Walker", "Predator", "PlayerPredator", "Prey", "Passive", "Brainless"
             };
         }

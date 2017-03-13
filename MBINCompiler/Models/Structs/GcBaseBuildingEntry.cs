@@ -20,14 +20,14 @@ namespace MBINCompiler.Models.Structs
         /* 0x0AC */ public int PlanetLimit;
         /* 0x0B0 */ public int RegionLimit;
 
-        [NMS(Size = 2, Ignore = false)]
+        [NMS(Size = 3, Ignore = false)]
         /* 0x0B4 */ public int[] PerBaseLimits;
-        /* 0x0BC */ public float CollisionRadiusFactor;
-        /* 0x0C0 */ public bool CheckCollision;
-        /* 0x0C1 */ public bool CollidesWithPlayer;
-        /* 0x0C2 */ public bool CanPlaceOnItself;
-        [NMS(Size = 5, Ignore = true)]
-        /* 0x0C3 */ public byte[] PaddingC3;
+        /* 0x0C0 */ public float CollisionRadiusFactor;
+        /* 0x0C4 */ public bool CheckCollision;
+        /* 0x0C5 */ public bool CollidesWithPlayer;
+        /* 0x0C6 */ public bool CanPlaceOnItself;
+        [NMS(Size = 1, Ignore = true)]
+        /* 0x0C7 */ public byte[] PaddingC3;
 
         [NMS(Size = 0x10)]
         /* 0x0C8 */ public string Group;
@@ -44,7 +44,15 @@ namespace MBINCompiler.Models.Structs
         [NMS(Size = 0x20)]
         /* 0x0F0 */ public string Hint;
         /* 0x110 */ public bool RemoveGrass;
-        [NMS(Size = 7, Ignore = true)]
-        /* 0x114 */ public byte[] Padding114;
+        /* 0x111 */ public bool RemoveIfNoNeighbours;
+        /* 0x112 */ public bool ForceCheckPlayerInside;
+
+        /* 0x114 */ public float PlayerInsideRadiusFactor;
+        /* 0x118 */ public bool CanChangeColour;
+        /* 0x119 */ public bool CanChangeMaterial;
+
+
+        [NMS(Size = 6, Ignore = true)]
+        /* 0x120 */ public byte[] Padding120;
     }
 }

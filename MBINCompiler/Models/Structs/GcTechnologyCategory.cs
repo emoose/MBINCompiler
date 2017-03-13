@@ -6,7 +6,7 @@
 
         public string[] TechnologyCategoryValues()
         {
-            return new[] { "Ship", "Weapon", "Suit", "Personal", "All", "None", "Freighter", "Buggy"};
+            return new[] { "Ship", "Weapon", "Suit", "Personal", "All", "None", "Freighter", "Vehicle"};
         }
     }
 }
