@@ -8,5 +8,6 @@
         public int AmountMin;
         public int AmountMax;
         public float HardModeMultiplier;
+        public bool DisableMultiplier;
     }
 }

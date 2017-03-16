@@ -7,5 +7,8 @@
         public int AmountMin;
         public int AmountMax;
 		public float HardModeMultiplier;
+        public bool DisableMultiplier;
+        [NMS(Size = 0x3, Ignore = true)]
+        public byte[] EndPadding;
     }
 }
