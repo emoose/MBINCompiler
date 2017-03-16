@@ -1,6 +1,6 @@
 ﻿namespace MBINCompiler.Models.Structs
 {
-    public class GcFogProperties : NMSTemplate
+    public class GcFogProperties : NMSTemplate      // size: 0xDC
     {
         public float FogStrength;
         public float FogMax;

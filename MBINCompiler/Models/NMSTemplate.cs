@@ -138,6 +138,8 @@ namespace MBINCompiler.Models
                 default:
                     if (fieldType == "Colour") // unsure if this is needed?
                         reader.Align(0x10, 0);
+					if (fieldType == "VariableStringSize")
+						reader.Align(0x4, 0);
                     // todo: align for VariableSizeString?
                     if (field.IsArray)
                     {

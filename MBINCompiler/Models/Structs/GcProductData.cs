@@ -2,37 +2,35 @@
 
 namespace MBINCompiler.Models.Structs
 {
-    public class GcProductData : NMSTemplate
+    public class GcProductData : NMSTemplate		// size: 0x2C0
     {
         [NMS(Size = 0x10)]
-        public string Id;
+        /* 0x000 */ public string Id;
         [NMS(Size = 0x80)]
-        public string Name;
+        /* 0x010 */ public string Name;
         [NMS(Size = 0x80)]
-        public string NameLower;
-        public VariableSizeString Subtitle;
-        public VariableSizeString Description;
+        /* 0x090 */ public string NameLower;
+        /* 0x110 */ public VariableSizeString Subtitle;
+        /* 0x120 */ public VariableSizeString Description;
         [NMS(Size = 0x20)]
-        public string Hint;
-        public TkModelResource Debis;
-        public int BaseValue;
-        public int Level;
-        public TkTextureResource Icon;
-        public Colour Colour;
-        public GcRealitySubstanceCategory SubstanceCategory;
-        public GcProductCategory Category;
-        public GcRarity Rarity;
-        public GcLegality Legality;
-        public bool Consumable;
-        public int ChargeValue;
-        public List<GcTechnologyRequirement> Requirements;
-        public GcItemPriceModifiers Cost;
-        public bool SpecificChargeOnly;
-        public float NormalisedValueOnWorld;
-        public float NormalisedValueOffWorld;
-        [NMS(Ignore = true)]
-        public int EmptyNode1;
-        [NMS(Ignore = true)]
-        public int EmptyNode2;
+        /* 0x130 */ public string Hint;
+        /* 0x150 */ public TkModelResource DebrisFile;
+        /* 0x1D4 */ public int BaseValue;
+        /* 0x1D8 */ public int Level;
+        /* 0x1DC */ public TkModelResource Icon;
+        /* 0x260 */ public Colour Colour;
+        /* 0x270 */ public GcRealitySubstanceCategory SubstanceCategory;
+        /* 0x274 */ public GcProductCategory Category;
+        /* 0x278 */ public GcRarity Rarity;
+        /* 0x27C */ public GcLegality Legality;
+        /* 0x280 */ public bool Consumable;
+        /* 0x284 */ public int ChargeValue;
+        /* 0x288 */ public List<GcTechnologyRequirement> Requirements;
+        /* 0x298 */ public GcItemPriceModifiers Cost;
+        /* 0x2AC */ public bool SpecificChargeOnly;
+        /* 0x2B0 */ public float NormalisedValueOnWorld;
+        /* 0x2B4 */ public float NormalisedValueOffWorld;
+        [NMS(Size = 0x8, Ignore = true)]
+        public byte[] EndPadding;
     }
 }
