@@ -1,6 +1,6 @@
 ﻿namespace MBINCompiler.Models.Structs
 {
-    public class GcExperienceTimers : NMSTemplate       // probably used in a global
+    public class GcExperienceTimers : NMSTemplate      // size: 0x20 // probably used in a global
     {
 	  /* 0x00 */ public int HighChance;
 	  /* 0x04 */ public int LowChance;

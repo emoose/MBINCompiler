@@ -1,13 +1,13 @@
 ﻿namespace MBINCompiler.Models.Structs
 {
-    public class GcScanEffectData : NMSTemplate 
+    public class GcScanEffectData : NMSTemplate        // size: 0x40         // in gameplay globals?
     {
-		/* 0x000 */ public int ScanEffectType; // Not sure about calling this an int with the padding... maybe string?
+		/* 0x000 */ public int ScanEffectType;
 		public string[] ScanEffectTypeValues()
 		{
 			return new[] { "Building", "TargetShip", "Creature", "Ground", "Objects" };
 		}
-		[NMS(Size = 6, Ignore = true)]
+		[NMS(Size = 0xC, Ignore = true)]
         public byte[] Padding4;
 
 		/* 0x010 */ public Colour Colour;
@@ -18,5 +18,7 @@
 		/* 0x02D */ public bool Transparent;
 		/* 0x030 */ public float FadeInTime;
 		/* 0x034 */ public float FadeOutTime;
+        [NMS(Size = 0x8, Ignore = true)]
+        /* 0x038 */ public byte[] EndPadding;
     }
 }

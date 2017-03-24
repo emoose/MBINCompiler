@@ -1,8 +1,8 @@
 ﻿namespace MBINCompiler.Models.Structs
 {
-    public class GcModelViewCollection : NMSTemplate // 0x5B0
+    public class GcModelViewCollection : NMSTemplate // 0x7E0
     {
-        [NMS(Size = 13)] // 13 * 0x70 = 0x5B0
+        [NMS(Size = 0x12)] // 18 * 0x70 = 0x7E0
         public TkModelRendererData[] ModelViews; // List or Array?
     }
 }

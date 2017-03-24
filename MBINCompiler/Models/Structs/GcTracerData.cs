@@ -1,6 +1,6 @@
 namespace MBINCompiler.Models.Structs
 {
-    public class GcTracerData : NMSTemplate     // possibly in a global
+    public class GcTracerData : NMSTemplate     // in gameplay globals
     {
         public float Length;
         public float Speed;

@@ -111,48 +111,12 @@ namespace MBINCompiler.Models.Structs // 0x690
         public float Unknown1FC;     // offset: 0x1FC, sz: 4, origin: 0x3DCCCCCD, parsed: 0.1        // line:   *(_DWORD *)(v1 + 0x1FC) = 0x3DCCCCCD;
 
         public float Unknown200;     // offset: 0x200, sz: 4, origin: 0x3F19999A, parsed: 0.6        // line:   *(_DWORD *)(v1 + 0x200) = 0x3F19999A;
-        public float Unknown204;     // offset: 0x204, sz: 4, origin: 0x41700000, parsed: 15        // line:   *(_DWORD *)(v1 + 0x204) = 0x41700000;
-        public float Unknown208;     // offset: 0x208, sz: 4, origin: 0x41600000, parsed: 14        // line:   *(_DWORD *)(v1 + 0x208) = 0x41600000;
-        public float Unknown20C;     // offset: 0x20C, sz: 4, origin: 0x42C80000, parsed: 100        // line:   *(_DWORD *)(v1 + 0x20C) = 0x42C80000;
+        public GcFlyingSnakeData Unknown204;     // offset: 0x204, sz: 4, origin: 0x41700000, parsed: 15        // line:   *(_DWORD *)(v1 + 0x204) = 0x41700000;
 
-        public float Unknown210;     // offset: 0x210, sz: 4, origin: 0x3FC00000, parsed: 1.5        // line:   *(_DWORD *)(v1 + 0x210) = 0x3FC00000;
-        public float Unknown214;     // offset: 0x214, sz: 4, origin: 0x40400000, parsed: 3        // line:   *(_DWORD *)(v1 + 0x214) = 0x40400000;
-        public float Unknown218;     // offset: 0x218, sz: 4, origin: 0x40A00000, parsed: 5        // line:   *(_DWORD *)(v1 + 0x218) = 0x40A00000;
-        public float Unknown21C;     // offset: 0x21C, sz: 4, origin: 0x40400000, parsed: 3        // line:   *(_DWORD *)(v1 + 0x21C) = 0x40400000;
+        public GcCreatureAlertData Unknown244;     // offset: 580, sz: 4, origin: 0x41600000i64, parsed: 0, comment: two packed floats in a QWORD?(2)        // line:   *(_QWORD *)(v1 + 0x240) = 0x41600000i64;
+        public GcCreatureAlertData Unknown25C;     // offset: 604, sz: 4, origin: 0x41700000i64, parsed: 0, comment: two packed floats in a QWORD?(2)        // line:   *(_QWORD *)(v1 + 0x258) = 0x41700000i64;
+        public GcCreatureAlertData Unknown274;     // offset: 628, sz: 4, origin: 0x41700000i64, parsed: 0, comment: two packed floats in a QWORD?(2)        // line:   *(_QWORD *)(v1 + 0x270) = 0x41700000i64;
 
-        public float Unknown220;     // offset: 0x220, sz: 4, origin: 0x41000000, parsed: 8        // line:   *(_DWORD *)(v1 + 0x220) = 0x41000000;
-        public float Unknown224;     // offset: 0x224, sz: 4, origin: 0x40A00000, parsed: 5        // line:   *(_DWORD *)(v1 + 0x224) = 0x40A00000;
-        public float Unknown228;     // offset: 0x228, sz: 4, origin: 0x41700000i64, parsed: 15, comment: two packed floats in a QWORD?(1)
-        public float Unknown22C;     // offset: 556, sz: 4, origin: 0x41700000i64, parsed: 0, comment: two packed floats in a QWORD?(2)        // line:   *(_QWORD *)(v1 + 0x228) = 0x41700000i64;
-
-        public float Unknown230;     // offset: 0x230, sz: 4, origin: 0, parsed: 0        // line:   *(_DWORD *)(v1 + 0x230) = 0;
-        public float Unknown234;     // offset: 0x234, sz: 4, origin: 0x40A00000, parsed: 5        // line:   *(_DWORD *)(v1 + 0x234) = 0x40A00000;
-        public float Unknown238;     // offset: 0x238, sz: 4, origin: 0x40C00000i64, parsed: 6, comment: two packed floats in a QWORD?(1)
-        public float Unknown23C;     // offset: 572, sz: 4, origin: 0x40C00000i64, parsed: 0, comment: two packed floats in a QWORD?(2)        // line:   *(_QWORD *)(v1 + 0x238) = 0x40C00000i64;
-
-        public float Unknown240;     // offset: 0x240, sz: 4, origin: 0x41600000i64, parsed: 14, comment: two packed floats in a QWORD?(1)
-        public float Unknown244;     // offset: 580, sz: 4, origin: 0x41600000i64, parsed: 0, comment: two packed floats in a QWORD?(2)        // line:   *(_QWORD *)(v1 + 0x240) = 0x41600000i64;
-        public float Unknown248;     // offset: 0x248, sz: 4, origin: 0, parsed: 0        // line:   *(_DWORD *)(v1 + 0x248) = 0;
-        public float Unknown24C;     // offset: 0x24C, sz: 4, origin: 0x42C80000, parsed: 100        // line:   *(_DWORD *)(v1 + 0x24C) = 0x42C80000;
-
-        public float Unknown250;     // offset: 0x250, sz: 4, origin: 0x43160000, parsed: 150        // line:   *(_DWORD *)(v1 + 0x250) = 0x43160000;
-        public float Unknown254;     // offset: 0x254, sz: 4, origin: 0x42700000, parsed: 60        // line:   *(_DWORD *)(v1 + 0x254) = 0x42700000;
-        public float Unknown258;     // offset: 0x258, sz: 4, origin: 0x41700000i64, parsed: 15, comment: two packed floats in a QWORD?(1)
-        public float Unknown25C;     // offset: 604, sz: 4, origin: 0x41700000i64, parsed: 0, comment: two packed floats in a QWORD?(2)        // line:   *(_QWORD *)(v1 + 0x258) = 0x41700000i64;
-
-        public float Unknown260;     // offset: 0x260, sz: 4, origin: 0, parsed: 0        // line:   *(_DWORD *)(v1 + 0x260) = 0;
-        public float Unknown264;     // offset: 0x264, sz: 4, origin: 0x42C80000, parsed: 100        // line:   *(_DWORD *)(v1 + 0x264) = 0x42C80000;
-        public float Unknown268;     // offset: 0x268, sz: 4, origin: 0x43160000, parsed: 150        // line:   *(_DWORD *)(v1 + 0x268) = 0x43160000;
-        public float Unknown26C;     // offset: 0x26C, sz: 4, origin: 0x42700000, parsed: 60        // line:   *(_DWORD *)(v1 + 0x26C) = 0x42700000;
-
-        public float Unknown270;     // offset: 0x270, sz: 4, origin: 0x41700000i64, parsed: 15, comment: two packed floats in a QWORD?(1)
-        public float Unknown274;     // offset: 628, sz: 4, origin: 0x41700000i64, parsed: 0, comment: two packed floats in a QWORD?(2)        // line:   *(_QWORD *)(v1 + 0x270) = 0x41700000i64;
-        public float Unknown278;     // offset: 0x278, sz: 4, origin: 0, parsed: 0        // line:   *(_DWORD *)(v1 + 0x278) = 0;
-        public float Unknown27C;     // offset: 0x27C, sz: 4, origin: 0x42C80000, parsed: 100        // line:   *(_DWORD *)(v1 + 0x27C) = 0x42C80000;
-
-        public float Unknown280;     // offset: 0x280, sz: 4, origin: 0x43160000, parsed: 150        // line:   *(_DWORD *)(v1 + 0x280) = 0x43160000;
-        public float Unknown284;     // offset: 0x284, sz: 4, origin: 0x42700000, parsed: 60        // line:   *(_DWORD *)(v1 + 0x284) = 0x42700000;
-        public float Unknown288;     // offset: 0x288, sz: 4, origin: 0x41700000, parsed: 15        // line:   *(_DWORD *)(v1 + 0x288) = 0x41700000;
         public bool Unknown28C;     // offset: 0x28C, sz: 1, origin: 0, parsed: 0        // line:   *(_BYTE *)(v1 + 0x28C) = 0;
 
         public float Unknown290;     // offset: 0x290, sz: 4, origin: 0x3F99999A, parsed: 1.2        // line:   *(_DWORD *)(v1 + 0x290) = 0x3F99999A;

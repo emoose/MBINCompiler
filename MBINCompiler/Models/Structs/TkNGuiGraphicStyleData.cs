@@ -1,6 +1,6 @@
 ﻿namespace MBINCompiler.Models.Structs
 {
-    public class TkNGuiGraphicStyleData :NMSTemplate
+    public class TkNGuiGraphicStyleData :NMSTemplate        // size: 0x80
     {
         public float PaddingX;
         public float PaddingY;

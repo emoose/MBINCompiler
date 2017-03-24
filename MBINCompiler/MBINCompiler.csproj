@@ -52,6 +52,11 @@
     <Compile Include="Models\EXmlBase.cs" />
     <Compile Include="Models\EXmlData.cs" />
     <Compile Include="Models\EXmlProperty.cs" />
+    <Compile Include="Models\Structs\GcDiscoveryHelperTimings.cs" />
+    <Compile Include="Models\Structs\GcHUDStartup.cs" />
+    <Compile Include="Models\Structs\GcHUDStartupTable.cs" />
+    <Compile Include="Models\Structs\GcInventorySlotActionData.cs" />
+    <Compile Include="Models\Structs\GcSpaceMapObjectData.cs" />
     <Compile Include="Models\Structs\GcBlockListPersistence.cs" />
     <Compile Include="Models\Structs\GcBlockedMessage.cs" />
     <Compile Include="Models\Structs\GcNGuiActionData.cs" />
@@ -723,6 +728,9 @@
     <Compile Include="Models\Structs\GcAudioNPCDoppler.cs" />
     <Compile Include="Models\Structs\Unused\GcBoidData.cs" />
     <Compile Include="Models\Structs\GcGeneratedShipCounts.cs" />
+    <Compile Include="Models\Structs\GcInventoryValueData.cs" />
+    <Compile Include="Models\Structs\GcCreatureAlertData.cs" />
+    <Compile Include="Models\Structs\GcScanEffectData.cs" />
     <Compile Include="Models\Structs\VariableSizeString.cs" />
     <Compile Include="Models\Structs\Vector2f.cs" />
     <Compile Include="Models\Structs\Vector3i.cs" />
