@@ -6,65 +6,9 @@
         [NMS(Size = 0x3, Ignore = true)]
         public byte[] Padding1;
 
-        public float Unknown4;
-        public float Unknown8;
-        public float UnknownC;
-        public float Unknown10;
-        public float Unknown14;
-        public float Unknown18;
-        public float Unknown1C;
-        public float Unknown20;
-        public float Unknown24;
-
-        public float Unknown28;
-        public float Unknown2C;
-        public float Unknown30;
-        public float Unknown34;
-        public float Unknown38;
-        public float Unknown3C;
-        public float Unknown40;
-        public float Unknown44;
-        public float Unknown48;
-
-        public float Unknown4C;
-        public float Unknown50;
-        public float Unknown54;
-        public float Unknown58;
-        public float Unknown5C;
-        public float Unknown60;
-        public float Unknown64;
-        public float Unknown68;
-        public float Unknown6C;
-
-        public float Unknown70;
-        public float Unknown74;
-        public float Unknown78;
-        public float Unknown7C;
-        public float Unknown80;
-        public float Unknown84;
-        public float Unknown88;
-        public float Unknown8C;
-        public float Unknown90;
-
-        public float Unknown94;
-        public float Unknown98;
-        public float Unknown9C;
-        public float UnknownA0;
-        public float UnknownA4;
-        public float UnknownA8;
-        public float UnknownAC;
-        public float UnknownB0;
-        public float UnknownB4;
-
-        public float UnknownB8;
-        public float UnknownBC;
-        public float UnknownC0;
-        public float UnknownC4;
-        public float UnknownC8;
-        public float UnknownCC;
-        public float UnknownD0;
-        public float UnknownD4;
-        public float UnknownD8;
+        public GcSpaceshipTravelData Unknown4;
+        public GcSpaceshipTravelData Unknown4C;
+        public GcSpaceshipTravelData Unknown94;
 
         public float UnknownDC;
         public float UnknownE0;
@@ -79,24 +23,9 @@
         public float Unknown190;
         public float Unknown194;
         public float Unknown198;
-        public float Unknown19C;
-        public float Unknown1A0;
-        public float Unknown1A4;
-        public float Unknown1A8;
-        public float Unknown1AC;
-        public float Unknown1B0;
-        public float Unknown1B4;
-        public float Unknown1B8;
-        public float Unknown1BC;
-        public float Unknown1C0;
-        public float Unknown1C4;
-        public float Unknown1C8;
-        public float Unknown1CC;
-        public float Unknown1D0;
-        public float Unknown1D4;
-        public float Unknown1D8;
-        public float Unknown1DC;
-        public float Unknown1E0;
+
+        public GcSpaceshipTravelData Unknown19C;
+
         public float Unknown1E4;
         public float Unknown1E8;
         public float Unknown1EC;
@@ -179,10 +108,9 @@
         public float Unknown384;        // probably unused
         public float Unknown388;        // [rdi+388h], esi
         public float Unknown38C;
-        public float Unknown390;
-        public float Unknown394;        // QWORD
-        public float Unknown398;        // probably unused
-        public float Unknown39C;        // [rdi+39Ch], esi
+
+        public TkHitCurveData Unknown390;
+
         public float Unknown3A0;
         public float Unknown3A4;        // QWORD
         public float Unknown3A8;        // probably unused
@@ -299,7 +227,7 @@
         public float Unknown5EC;
         public float Unknown5F0;
         public float Unknown5F4;        // QWORD
-        public float Unknown5F8;        // probably unused
+        public int UnknownInt5F8;        // probably unused
         public float Unknown5FC;
         public float Unknown600;
 
@@ -410,7 +338,7 @@
         public float Unknown890;
         public float Unknown894;
         public float Unknown898;        // QWORD
-        public float Unknown89C;        // probably not needed
+        public int UnknownInt89C;        // probably not needed
         public float Unknown8A0;
         public float Unknown8A4;
         public float Unknown8A8;
@@ -420,34 +348,11 @@
         public float Unknown8B8;
         public float Unknown8BC;
         public float Unknown8C0;
-        public float Unknown8C4;
-        public float Unknown8C8;
-        public float Unknown8CC;
-        public float Unknown8D0;        // QWORD
-        public float Unknown8D4;        // probably not needed
-        public float Unknown8D8;        // QWORD
-        public float Unknown8DC;        // probably not needed
-        public float Unknown8E0;
-        public float Unknown8E4;
-        public float Unknown8E8;
-        public float Unknown8EC;
-        public float Unknown8F0;
-        public float Unknown8F4;
-        public float Unknown8F8;
-        public float Unknown8FC;
-        public float Unknown900;
-        public float Unknown904;
-        public float Unknown908;
-        public float Unknown90C;
-        public float Unknown910;
-        public float Unknown914;
-        public float Unknown918;
-        public float Unknown91C;
-        public float Unknown920;
-        public float Unknown924;
-        public float Unknown928;
-        public float Unknown92C;
-        public float Unknown930;
+
+        public GcProjectileLineData Unknown8C4;
+
+        public GcSpaceshipTravelData Unknown8EC;
+
         public float Unknown934;
         public float Unknown938;
         public float Unknown93C;
@@ -495,13 +400,8 @@
         public float Unknown9E4;
         public float Unknown9E8;
         public float Unknown9EC;
-        public float Unknown9F0;
-        public float Unknown9F4;
-        public float Unknown9F8;
-        public float Unknown9FC;
-        public int UnknownIntA00;
-        public float UnknownA04;
-        public float UnknownA08;
+
+        public GcShipAIDeathData Unknown9F0;
 
         public GcShipAIAttackData UnknownA0C;
         public GcShipAIAttackData UnknownAA4;

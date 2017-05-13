@@ -64,46 +64,11 @@ namespace MBINCompiler.Models.Structs
         public float UnknownEC;
 
         public Colour UnknownF0;
-        /*
-        public float UnknownF0;
-        public float UnknownF4;
-        public float UnknownF8;
-        public float UnknownFC;*/
-
         public Colour Unknown100;
-        /*
-        public float Unknown100;
-        public float Unknown104;
-        public float Unknown108;
-        public float Unknown10C;*/
-
         public Colour Unknown110;
-        /*
-        public float Unknown110;
-        public float Unknown114;
-        public float Unknown118;
-        public float Unknown11C;*/
-
         public Colour Unknown120;
-        /*
-        public float Unknown120;
-        public float Unknown124;
-        public float Unknown128;
-        public float Unknown12C;*/
-
         public Colour Unknown130;
-        /*
-        public float Unknown130;        // possibly padding?
-        public float Unknown134;
-        public float Unknown138;
-        public float Unknown13C;*/
-
         public Colour Unknown140;
-        /*
-        public float Unknown140;
-        public float Unknown144;
-        public float Unknown148;
-        public float Unknown14C;*/
 
         public float Unknown150;
         public float Unknown154;
@@ -188,32 +153,13 @@ namespace MBINCompiler.Models.Structs
         public GcSpaceSkyColours Unknown900;
 
         public float Unknown9B0;
-        public float Unknown9B4;
-        public long Unknown9B8;
-        //public float Unknown9BC;
-        public float Unknown9C0;
-        public float Unknown9C4;
-        public float Unknown9C8;
-        public float Unknown9CC;
-        public float Unknown9D0;
-        public float Unknown9D4;
-        public float Unknown9D8;
-        public float Unknown9DC;
-        public float Unknown9E0;
-        public float Unknown9E4;
-        public float Unknown9E8;
-        public float Unknown9EC;
-        public float Unknown9F0;
-        public float Unknown9F4;
-        public float Unknown9F8;
-        public float Unknown9FC;
-        public float UnknownA00;
-        public float UnknownA04;
-        public float UnknownA08;
-        public float UnknownA0C;
-        public float UnknownA10;
-        public float UnknownA14;
-        public float UnknownA18;
-        public float UnknownA1C;
+        public long Unknown9B4;
+
+        public Colour Unknown9C0;
+        public Colour Unknown9D0;
+        public Colour Unknown9E0;
+        public Colour Unknown9F0;
+        public Colour UnknownA00;
+        public Colour UnknownA10;
     }
 }

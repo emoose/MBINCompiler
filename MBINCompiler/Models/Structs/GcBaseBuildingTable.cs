@@ -17,8 +17,10 @@ namespace MBINCompiler.Models.Structs
 
         /* 0x298 */ public List<GcBaseBuildingEntry> Objects;
         /* 0x2A8 */ public List<GcBaseBuildingGroup> Groups;
-        [NMS(Size = 16)]
+        [NMS(Size = 0x10)]
         /* 0x2C0 */ public GcBaseBuildingPalette[] Palettes;
-        /* 0x4C0 */ public GcBaseBuildingProperties Properties;
+        [NMS(Size = 0x4)]
+        /* 0x4C0 */ public GcBaseBuildingMaterial[] Materials;
+        /* 0x740 */ public GcBaseBuildingProperties Properties;
     }
 }

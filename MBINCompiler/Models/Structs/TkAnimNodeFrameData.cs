@@ -2,10 +2,11 @@
 
 namespace MBINCompiler.Models.Structs
 {
-    public class TkAnimNodeFrameData : NMSTemplate
+    public class TkAnimNodeFrameData : NMSTemplate      // size: 0x30
     {
         public List<Vector4f> Rotations;
-        public List<Vector4f> Translations; // actually Vector3f
-        public List<Vector4f> Scales; // actually Vector3f
+        public List<Vector4f> Translations;
+        public List<Vector4f> Scales;
     }
+
 }

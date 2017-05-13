@@ -1,35 +1,35 @@
 ﻿using System.Collections.Generic;
-using System.Runtime.InteropServices;
+
 namespace MBINCompiler.Models.Structs
 {
-    public class GcAIShipSpawnData : NMSTemplate
+    public class GcAIShipSpawnData : NMSTemplate        // size: 0xA8       // in a global?
     {
         [NMS(Size = 0x20)]
-        public string Message;
+        /* 0x00 */ public string Message;
 
-        public TkInputEnum InputEnum;
-        public bool WarpIn;
-        public GcAISpaceshipRoles ShipRole;
-        public float MinRange;
-        public float Scale;
-        [NMS(Size = 4, Ignore = true)]
-        public byte[] Padding34;
+        /* 0x20 */ public TkInputEnum Shortcut;
+        /* 0x24 */ public bool WarpIn;
+        [NMS(Size = 0x3, Ignore = true)]
+        /* 0x25 */ public byte[] Padding25;
+        /* 0x28 */ public GcAISpaceshipRoles ShipRole;
+        /* 0x2C */ public float MinRange;
+        /* 0x30 */ public Vector2f Scale;
         [NMS(Size = 0x10)]
-        public string Reward;
+        /* 0x38 */ public string Reward;
         [NMS(Size = 0x20)]
-        public string RewardMessage;
-        public bool AttackFreighter;
-        public Vector2f Spread;
-        public Vector2f Count;
-        public Vector2f StartTime;
+        /* 0x48 */ public string RewardMessage;
+        /* 0x68 */ public bool AttackFreighter;
+        /* 0x6C */ public Vector2f Spread;
+        /* 0x74 */ public Vector2f Count;
+        /* 0x7C */ public Vector2f StartTime;
         public int SpawnShape;
-        public string[] SpawnShapeValues()
+        /* 0x84 */ public string[] SpawnShapeValues()
         {
             return new[] { "Sphere", "Cone" };
         }
 
-        public GcShipAIPerformanceArray AIPerformanceArray;
+        /* 0x88 */ public GcShipAIPerformanceArray Performances;
 
-        public List<GcAIShipSpawnData> ChildSpawns;
+        /* 0x98 */ public List<GcAIShipSpawnData> ChildSpawns;
     }
 }

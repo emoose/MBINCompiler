@@ -1,6 +1,6 @@
 ﻿namespace MBINCompiler.Models.Structs
 {
-    public class GcDebugOptions : NMSTemplate
+    public class GcDebugOptions : NMSTemplate           // locations at start of lines will be wrong in parts
     {
         /* 0x00 */ public bool SkipIntro;
         /* 0x01 */ public bool VideoCaptureMode;
@@ -12,12 +12,12 @@
         /* 0x07 */ public bool EverythingIsFree;
         /* 0x08 */ public bool EverythingIsKnown;
         /* 0x09 */ public bool EverythingIsStar;
-        //public bool Unknown1;
-        //public bool Unknown2;
+        public bool Unknown1;
+        public bool Unknown2;
         /* 0x0A */ public bool UseScreenEffects;
         /* 0x0B */ public bool UseGunImpactEffect;
-        //public bool Unknown3;
-        //public bool Unknown4;
+        public bool Unknown3;
+        public bool Unknown4;
         /* 0x0C */ public bool RenderCreatureDetails;
 		/* 0x0D */ public bool UseDebugScreenSettings;
         /* 0x10 */ public int ScreenWidth;
@@ -32,33 +32,35 @@
         /* 0x20 */ public int Monitor;
 		/* should there be padding here? */
         [NMS(Size = 0x100)]
-        /* 0x123? */ public string ForceUniverseAddress; // 0x100
+        /* 0x028 */ public string ForceUniverseAddress; // 0x100
         [NMS(Size = 0x100)]
-        /* 0x223 */ public string ForcePlayerPosition; // 0x100
+        /* 0x128 */ public string ForcePlayerPosition; // 0x100
 
-        /* 0x224 */ public bool ForceInitialShip;
-        /* 0x225 */ public bool ForceInitialWeapon;
-        /* 0x228 */ public int GameStateMode;
+        /* 0x228 */ public bool ForceInitialShip;
+        /* 0x229 */ public bool ForceInitialWeapon;
+        [NMS(Size = 0x2, Ignore = true)]
+        public byte[] Padding22A;
+        /* 0x22C */ public int GameStateMode;
         public string[] GameStateModeValues()
         {
             return new[] { "LoadPreset", "UserStorage", "FreshStart" };
         }
 
-        /* 0x22C */ public int BootMode;
+        /* 0x230 */ public int BootMode;
         public string[] BootModeValues()
         {
             return new[] { "SolarSystem", "GalaxyMap", "SmokeTest", "SmokeTestGalaxyMap", "Scratchpad", "UnitTest" };
         }
-        /* 0x230 */ public int PlayerSpawnLocationOverride;
+        /* 0x234 */ public int PlayerSpawnLocationOverride;
         public string[] PlayerSpawnLocationOverrideValues()
         {
             return new[] { "None", "FromSettings", "Space", "SpaceStation", "RandomPlanet", "GameStartPlanet" };
         }
 
         [NMS(Size = 0x80)]
-        /* 0x234 */ public string SceneSettings; // 0x80
+        /* 0x238 */ public string SceneSettings; // 0x80
         [NMS(Size = 0x100)]
-        /* 0x2B4 */ public string WorkingDirectory; // 0x100
+        /* 0x2B8 */ public string WorkingDirectory; // 0x100
 
         /* 0x3B4 */ public int SolarSystemBoot;
         public string[] SolarSystemBootValues()
@@ -142,14 +144,16 @@
         }
         /* 0x534 */ public bool DebugBuildingSpawns;
         /* 0x535 */ public bool StressTestLongNameDisplay;
-        /* 0x536 */ public bool ShowFramerate;
+        public bool Unknown5;
+        /* 0x536 */public bool ShowFramerate;
         /* 0x537 */ public bool ShowPositionDebug;
-        /* 0x538 */ public bool ShowGPUMemory;
+        /* 0x538 */public bool ShowGPUMemory;
+        public bool Unknown6;
         /* 0x539 */ public bool ShowMempoolOverlay;
 
         [NMS(Size = 0x100)]
-        /* 0x53A */ public string ShowUniverseAddressOnGalaxyMap; // 0x100
-        /* 0x63A */ public bool ShowGraphs;
+        /* 0x540 */ public string ShowUniverseAddressOnGalaxyMap; // 0x100
+        /* 0x640 */ public bool ShowGraphs;
         /* 0x63B */ public bool GraphCommandBuffer;
         /* 0x63C */ public bool GraphGeneration;
         /* 0x63D */ public bool GraphFPS;
@@ -160,6 +164,8 @@
             return new[] { "None", "TourSolarSystem", "RegeneratePlanet" };// "None" isnt specified in exe
         }
         /* 0x644 */ public bool SmokeTestCameraFly;
+        public bool Unknown7;
+        public bool Unknown8;
         /* 0x648 */ public int SmokeTestConfigCaptureCycles;
         /* 0x64C */ public float SmokeTestConfigCaptureDurationInSeconds;
         /* 0x650 */ public int SmokeTestConfigCaptureFolderNameNumberOffset;
@@ -187,7 +193,7 @@
         /* 0x7E4 */ public int ServerEnv;
         public string[] ServerEnvValues()
         {
-            return new[] { "default", "dev", "prodqa", "prod", "custom", "pentest" }; // There was a "qa" entry between "dev" and "prodqa" but that seems to have been removed in exe
+            return new[] { "default", "dev", "qa", "prodqa", "prod", "custom", "pentest" }; // There was a "qa" entry between "dev" and "prodqa" but that seems to have been removed in exe
         }
         [NMS(Size = 0x80)]
         /* 0x7E8 */ public string AuthBaseUrl; // 0x80
@@ -264,5 +270,8 @@
         /* 0xCC4 */ public float MaxFrameRate;
 		/* 0xCC8 */ public bool DisableBaseBuilding; // looks like a bool but its 4 bytes?
 		/* 0xCC9 */ public bool DisableBaseBuildingLimits;
+        [NMS(Size = 0x2, Ignore = true)]
+        public byte[] PaddingCD2;
+        /* 0xCD4 */ public float UnknownCD4;
     }
 }

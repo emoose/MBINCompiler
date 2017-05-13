@@ -33,7 +33,7 @@ namespace MBINCompiler.Models.Structs
         public float Unknown60;
         public float Unknown64;
         public float Unknown68;
-        public float Unknown6C;
+        public int UnknownInt6C;
         public float Unknown70;
         public float Unknown74;
         public float Unknown78;
@@ -66,7 +66,7 @@ namespace MBINCompiler.Models.Structs
         public float UnknownE4;
         public float UnknownE8;
         public float UnknownEC;
-        public float UnknownF0;
+        public int UnknownIntF0;
         public float UnknownF4;
         public float UnknownF8;
         public float UnknownFC;
@@ -77,7 +77,7 @@ namespace MBINCompiler.Models.Structs
         public float Unknown110;
         public float Unknown114;
         public float Unknown118;
-        public float Unknown11C;
+        public int UnknownInt11C;
         public float Unknown120;
         public float Unknown124;
         public float Unknown128;
@@ -99,11 +99,11 @@ namespace MBINCompiler.Models.Structs
         public float Unknown168;
         public float Unknown16C;
         public float Unknown170;
-        public float Unknown174;
+        public int UnknownInt174;
         public float Unknown178;
         public float Unknown17C;
         public float Unknown180;
-        public float Unknown184;
+        public int UnknownInt184;
         public float Unknown188;
         public float Unknown18C;
         public float Unknown190;
@@ -122,7 +122,7 @@ namespace MBINCompiler.Models.Structs
         public float Unknown1C4;
         public float Unknown1C8;
         public float Unknown1CC;
-        public float Unknown1D0;
+        public int UnknownInt1D0;
         public float Unknown1D4;
         public float Unknown1D8;
         public float Unknown1DC;
@@ -146,7 +146,7 @@ namespace MBINCompiler.Models.Structs
         public float Unknown224;
         public float Unknown228;
         public float Unknown22C;
-        public float Unknown230;
+        public int UnknownInt230;
         public float Unknown234;
         public float Unknown238;
         public float Unknown23C;
@@ -156,12 +156,12 @@ namespace MBINCompiler.Models.Structs
         public float Unknown24C;
         public float Unknown250;
         public float Unknown254;
-        public float Unknown258;
-        public float Unknown25C;
+        public int UnknownInt258;
+        public int UnknownInt25C;
         public float Unknown260;
         public float Unknown264;
-        public float Unknown268;
-        public float Unknown26C;
+        public int UnknownInt268;
+        public int UnknownInt26C;
         public int UnknownInt270;
         public float Unknown274;
         public float Unknown278;
@@ -200,8 +200,8 @@ namespace MBINCompiler.Models.Structs
         public float Unknown2FC;
         public float Unknown300;
         public float Unknown304;
-        public float Unknown308;
-        public float Unknown30C;
+        public int UnknownInt308;
+        public int UnknownInt30C;
         public float Unknown310;
         public float Unknown314;
         public float Unknown318;
@@ -511,7 +511,7 @@ namespace MBINCompiler.Models.Structs
         public float Unknown21C8;
         public float Unknown21CC;
         public float Unknown21D0;
-        public float Unknown21D4;
+        public int UnknownInt21D4;
         public float Unknown21D8;
         public float Unknown21DC;
         public float Unknown21E0;
@@ -571,38 +571,47 @@ namespace MBINCompiler.Models.Structs
 
         public float Unknown2BA8;
         public float Unknown2BAC;
-        public float Unknown2BB0;
+
+        public float Unknown2BB0;           // following 8 blocks maybe Colour's?
         public float Unknown2BB4;
         public float Unknown2BB8;
         public float Unknown2BBC;
+
         public float Unknown2BC0;
         public float Unknown2BC4;
         public float Unknown2BC8;
         public float Unknown2BCC;
+
         public float Unknown2BD0;
         public float Unknown2BD4;
         public float Unknown2BD8;
         public float Unknown2BDC;
+
         public float Unknown2BE0;
         public float Unknown2BE4;
         public float Unknown2BE8;
         public float Unknown2BEC;
+
         public float Unknown2BF0;
         public float Unknown2BF4;
         public float Unknown2BF8;
         public float Unknown2BFC;
+
         public float Unknown2C00;
         public float Unknown2C04;
         public float Unknown2C08;
         public float Unknown2C0C;
+
         public float Unknown2C10;
         public float Unknown2C14;
         public float Unknown2C18;
         public float Unknown2C1C;
+
         public float Unknown2C20;
         public float Unknown2C24;
         public float Unknown2C28;
         public float Unknown2C2C;
+
         public float Unknown2C30;
         public float Unknown2C34;
         public float Unknown2C38;
@@ -639,7 +648,7 @@ namespace MBINCompiler.Models.Structs
         public float Unknown3488;
         public float Unknown348C;
         public float Unknown3490;
-        public float Unknown3494;
+        public int UnknownInt3494;
         public float Unknown3498;
         public float Unknown349C;
         public float Unknown34A0;
@@ -652,12 +661,12 @@ namespace MBINCompiler.Models.Structs
         public float Unknown34BC;
         public float Unknown34C0;
         public float Unknown34C4;
-        public float Unknown34C8;
+        public int UnknownInt34C8;
         public float Unknown34CC;
         public float Unknown34D0;
         public float Unknown34D4;
-        public float Unknown34D8;
-        public float Unknown34DC;
+        public int UnknownInt34D8;
+        public int UnknownInt34DC;
         public float Unknown34E0;
         public float Unknown34E4;
         public float Unknown34E8;
@@ -667,7 +676,7 @@ namespace MBINCompiler.Models.Structs
         public float Unknown34F8;
         public float Unknown34FC;
         public float Unknown3500;
-        public float Unknown3504;
+        public int UnknownInt3504;
         public float Unknown3508;
         public float Unknown350C;
         public float Unknown3510;
@@ -819,7 +828,7 @@ namespace MBINCompiler.Models.Structs
         public float Unknown3FE4;
         public float Unknown3FE8;
         public float Unknown3FEC;
-        public float Unknown3FF0;
+        public int UnknownInt3FF0;
         public float Unknown3FF4;
         public float Unknown3FF8;
         public float Unknown3FFC;
@@ -841,7 +850,7 @@ namespace MBINCompiler.Models.Structs
         public float Unknown403C;
         public float Unknown4040;
         public float Unknown4044;
-        public float Unknown4048;
+        public int UnknownInt4048;
         public float Unknown404C;
         public float Unknown4050;
         public float Unknown4054;
@@ -911,7 +920,7 @@ namespace MBINCompiler.Models.Structs
         public float Unknown4154;
         public float Unknown4158;
         public float Unknown415C;
-        public float Unknown4160;
+        public int UnknownInt4160;
         public bool Unknown4164;
         public GcDiscoveryHelperTimings Unknown4168;
 

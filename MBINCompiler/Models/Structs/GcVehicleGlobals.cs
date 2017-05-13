@@ -10,7 +10,8 @@ namespace MBINCompiler.Models.Structs
         public float Unknown4;
         public float Unknown8;
         public float UnknownC;
-        public Vector2f Unknown10;
+        public float Unknown10;
+        public float Unknown14;
         public float Unknown18;
         public float Unknown1C;
         public float Unknown20;
@@ -56,9 +57,11 @@ namespace MBINCompiler.Models.Structs
         public int UnknownInt104;
         public float Unknown108;
         public float Unknown10C;
-        public Vector2f Unknown110;
+        public float Unknown110;
+        public float Unknown114;
         public float Unknown118;
-        public Vector2f Unknown11C;
+        public float Unknown11C;
+        public float Unknown120;
         public float Unknown124;
         public bool Unknown128;
         [NMS(Size = 0x3, Ignore = true)]
@@ -77,27 +80,23 @@ namespace MBINCompiler.Models.Structs
         public float Unknown158;
         public float Unknown15C;
         public float Unknown160;
-        public bool Unknown164;
-        [NMS(Size = 0x3, Ignore = true)]
-        public byte[] Padding165;
-        public float Unknown168;
+        public float Unknown164;
+        public bool Unknown168;
         public float Unknown16C;
-        public int UnknownInt170;       // 2nd 4 bytes of previous QWORD
-        public float Unknown174;
+        public float Unknown170;
+        public int UnknowInt174;       // 2nd 4 bytes of previous QWORD
         public float Unknown178;
-        public bool Unknown17C;
-        [NMS(Size = 0x3, Ignore = true)]
-        public byte[] Padding17D;
-        public Vector2f Unknown180;
+        public float Unknown17C;
+        public bool Unknown180;
+        public float Unknown184;
         public float Unknown188;
         public float Unknown18C;
-        public bool Unknown190;
-        [NMS(Size = 0x3, Ignore = true)]
-        public byte[] Padding191;
-        public float Unknown194;
+        public float Unknown190;
+        public bool Unknown194;
+        public float Unknown198;
 
-        [NMS(Size = 0x8, Ignore = true)]
-        public byte[] Padding198;
+        [NMS(Size = 0x4, Ignore = true)]
+        public byte[] Padding19C;
 
         public GcVehicleData BikeData;        // size: 0xBB0
         public GcVehicleData MedBuggyData;

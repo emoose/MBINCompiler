@@ -74,9 +74,6 @@ namespace MBINCompiler.Models.Structs
             })]
         public TkTextureResource[] StatCategoryIcons;
 
-        [NMS(Ignore = true)]
-        public int EmptyNode2;
-
         [NMS(Size = 3, EnumValue = new string[3] { "Suit", "Weapon", "Ship" })]
         public GcStats[] Stats;
 

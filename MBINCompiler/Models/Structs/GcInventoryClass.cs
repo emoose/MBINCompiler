@@ -5,7 +5,7 @@
         public int InventoryClass;
         public string[] InventoryValues()
         {
-            return new[] { "C", "Unnamed1", "Unnamed2", "S" };
+            return new[] { "C", "B", "A", "S" };
         }
     }
 }

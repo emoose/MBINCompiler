@@ -20,5 +20,7 @@ namespace MBINCompiler.Models.Structs
         /* 0x30 */ public float DepthOfFieldAmount;
         /* 0x34 */ public float Vignette;
         /* 0x38 */ public int Filter;
+        [NMS(Size = 0x4, Ignore = true)]
+        /* 0x3C */ public byte[] EndPadding;
     }
 }

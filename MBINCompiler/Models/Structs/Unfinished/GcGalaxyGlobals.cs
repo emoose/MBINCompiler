@@ -20,66 +20,75 @@ namespace MBINCompiler.Models.Structs
         public byte[] Padding38;
         [NMS(Size = 0x5, EnumValue = new[] { "Core", "FreeRoam", "Waypoint", "Blackhole", "Atlas" })]
         public Colour[] PathIconColours;
-        [NMS(Size = 0x6, EnumValue = new[] { "Home", "Waypoint", "Contact", "Blackhole", "AtlasStation", "Selection" })]
+        [NMS(Size = 0x7, EnumValue = new[] { "Home", "Waypoint", "Contact", "Blackhole", "AtlasStation", "Selection", "PlanetBase" })]
         public GcGalaxyMarkerSettings[] GalaxyMarkers;
 
-        public float Unknown330;
-        public float Unknown334;
-        public float Unknown338;
-        public float Unknown33C;
-        public float Unknown340;
-        public float Unknown344;
-        public float Unknown348;
-        public float Unknown34C;
-        public float Unknown350;
-        public float Unknown354;
-        public float Unknown358;
-        public float Unknown35C;
-        public float Unknown360;
-        public float Unknown364;
-        public float Unknown368;
-        public float Unknown36C;
-        public float Unknown370;
-        public float Unknown374;
-        public float Unknown378;
-        public float Unknown37C;
-        public float Unknown380;
-        public int Unknown384;
-        public float Unknown388;
-        public float Unknown38C;
-        public float Unknown390;
-        public float Unknown394;
-        public float Unknown398;
-        public float Unknown39C;
         public float Unknown3A0;
         public float Unknown3A4;
         public float Unknown3A8;
         public float Unknown3AC;
-        public int Unknown3B0;
-        public int Unknown3B4;
-        [NMS(Size = 0x8, Ignore = true)]
-        public byte[] Padding3B8;
+        public float Unknown3B0;
+        public float Unknown3B4;
+        public float Unknown3B8;
+        public float Unknown3BC;
+        public float Unknown3C0;
+        public float Unknown3C4;
+        public float Unknown3C8;
+        public float Unknown3CC;
+        public float Unknown3D0;
+        public float Unknown3D4;
+        public float Unknown3D8;
+        public float Unknown3DC;
+        public float Unknown3E0;
+        public float Unknown3E4;
+        public float Unknown3E8;
+        public float Unknown3EC;
+        public float Unknown3F0;
+        public int UnknownInt3F4;
+        public float Unknown3F8;
+        public float Unknown3FC;
+        public float Unknown400;
+        public float Unknown404;
+        public float Unknown408;
+        public float Unknown40C;
+        public float Unknown410;
+        public float Unknown414;
+        public float Unknown418;
+        public float Unknown41C;
+        public int UnknownInt420;
+        public int UnknownInt424;
+        public float Unknown428;        // maybe padding with the next 4 bytes also?
+        public float Unknown42C;
+        /* 0x430 */
         public GcGalaxyRenderAnostreakData AnoStreakConfig1;
+        /* 0x460 */
         public GcGalaxyRenderAnostreakData AnoStreakConfig2;
-        public GcGalaxyRenderAnostreakData AnoStreakConfig3;
-        public Colour Unknown450;
-        public float Unknown460;
-        public float Unknown464;
-        [NMS(Size = 0x8, Ignore = true)]
-        public byte[] Padding468;
-        public GcGalaxyStarColours StarColours1;
-        public GcGalaxyStarColours StarColours2;
-        public GcGalaxyCameraData Unknown4F0;
-        public GcGalaxyAudioSetupData Unknown548;
-        public float Unknown58C;
-        public float Unknown590;
-        public float Unknown594;
-        public float Unknown598;
-        public float Unknown59C;
 
-        public GcGalaxyRenderSetupData Unknown5A0;
-        public GcGalaxyGenerationSetupData Unknown790;
-        public GcGalaxyRenderSetupData Unknown900;
-        public GcGalaxyGenerationSetupData UnknownAF0;
+        public Colour Unknown490;
+        public Colour Unknown4A0;
+        public float Unknown4B0;
+        [NMS(Size = 0xC, Ignore = true)]
+        public byte[] Padding4B4;
+        public Colour Unknown4C0;
+
+        public float Unknown4D0;
+        public float Unknown4D4;
+        [NMS(Size = 0x8, Ignore = true)]
+        public byte[] Padding4D8;
+
+        /* 0x4E0 */ public GcGalaxyStarColours GalaxyStarColours1;
+        /* 0x520 */ public GcGalaxyStarColours GalaxyStarColours2;
+        /* 0X560 */ public GcGalaxyCameraData GalaxyCameraData;
+        /* 0x5B8 */ public GcGalaxyAudioSetupData GalaxyAudioSetupData;
+        public float Unknown5FC;
+        public float Unknown600;
+        public float Unknown604;
+        public float Unknown608;
+        public float Unknown60C;
+
+        public GcGalaxyRenderSetupData Unknown610;
+        public GcGalaxyGenerationSetupData Unknown800;
+        public GcGalaxyRenderSetupData Unknown970;
+        public GcGalaxyGenerationSetupData UnknownB60;
     }
 }

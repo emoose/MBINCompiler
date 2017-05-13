@@ -2,7 +2,7 @@
 
 namespace MBINCompiler.Models.Structs
 {
-    public class GcExperienceSpawnTable : NMSTemplate
+    public class GcExperienceSpawnTable : NMSTemplate       // size: 0xD0
     {
         public List<GcAIShipSpawnData> FlybySpawns;
         public List<GcAIShipSpawnData> OutpostSpawns;

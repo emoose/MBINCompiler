@@ -5,7 +5,7 @@
         public int GalaxyMarkerType;
         public string[] GalaxyMarkerTypeValues()
         {
-            return new[] { "Home", "Waypoint", "Contact", "Blackhole", "AtlasStation", "Selection"};
+            return new[] { "Home", "Waypoint", "Contact", "Blackhole", "AtlasStation", "Selection", "PlanetBase"};
         }
     }
 }

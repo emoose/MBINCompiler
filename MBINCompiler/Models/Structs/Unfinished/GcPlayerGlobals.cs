@@ -275,17 +275,7 @@ namespace MBINCompiler.Models.Structs
         public float Unknown40C;
         public float Unknown410;
         public float Unknown414;
-        public float Unknown418;
-        public float Unknown41C;
-        public float Unknown420;
-        public float Unknown424;
-        public float Unknown428;
-        public float Unknown42C;
-        public float Unknown430;
-        public float Unknown434;
-        public float Unknown438;
-        public float Unknown43C;
-        public float Unknown440;
+        public GcBoidData Unknown418;
         public float Unknown444;
         public float Unknown448;
         public float Unknown44C;
@@ -351,85 +341,24 @@ namespace MBINCompiler.Models.Structs
         public float Unknown5B0;
         public float Unknown5B4;
         public float Unknown5B8;
-        public int Unknown5BC;
-        public int Unknown5C0;        // [rdi+5C0h], esi      padding?
 
-        public float Unknown5C4;
-        public float Unknown5C8;
-        public float Unknown5CC;
-        public float Unknown5D0;
-        public int Unknown5D4;
-        public int Unknown5D8;        // [rdi+5D8h], esi      padding?
+        public GcCreatureAlertData Unknown5BC;
+        public GcCreatureAlertData Unknown5D4;
+        public GcCreatureAlertData Unknown5EC;
+        public GcCreatureAlertData Unknown604;
+        public GcCreatureAlertData Unknown61C;
+        public GcCreatureAlertData Unknown634;
+        public GcCreatureAlertData Unknown64C;
 
-        public float Unknown5DC;
-        public float Unknown5E0;
-        public float Unknown5E4;
-        public float Unknown5E8;
-        public int Unknown5EC;
-        public int Unknown5F0;        // [rdi+5F0h], esi      padding?
-
-        public float Unknown5F4;
-        public float Unknown5F8;
-        public float Unknown5FC;
-        public float Unknown600;
-        public int Unknown604;
-        public int Unknown608;        // [rdi+608h], esi      padding?
-
-        public float Unknown60C;
-        public float Unknown610;
-        public float Unknown614;
-        public float Unknown618;
-        public int Unknown61C;
-        public int Unknown620;        // [rdi+620h], esi      padding?
-
-        public float Unknown624;
-        public float Unknown628;
-        public float Unknown62C;
-        public float Unknown630;
-        public int Unknown634;
-        public int Unknown638;        // [rdi+638h], esi      padding?
-
-        public float Unknown63C;
-        public float Unknown640;
-        public float Unknown644;
-        public float Unknown648;
-        public int Unknown64C;
-        public int Unknown650;        // [rdi+650h], esi      padding?
-
-        public float Unknown654;
-        public float Unknown658;
-        public float Unknown65C;
-        public float Unknown660;
         public float Unknown664;
         public float Unknown668;
         public float Unknown66C;
-        public float Unknown670;
-        public float Unknown674;
-        public float Unknown678;
-        public float Unknown67C;
-        public int Unknown680;
-        public Vector2f Unknown684;     // 2nd 4 bytes may be padding?
-        public float Unknown68C;
-        public float Unknown690;
-        public float Unknown694;
-        public float Unknown698;
-        public float Unknown69C;
-        public float Unknown6A0;
-        public float Unknown6A4;
-        public int Unknown6A8;
-        public Vector2f Unknown6AC;     // 2nd 4 bytes may be padding?
-        public float Unknown6B4;
-        public float Unknown6B8;
-        public float Unknown6BC;
-        public float Unknown6C0;
-        public float Unknown6C4;
-        public float Unknown6C8;
-        public float Unknown6CC;
-        public int Unknown6D0;
-        public Vector2f Unknown6D4;     // 2nd 4 bytes may be padding?
-        public float Unknown6DC;
-        public float Unknown6E0;
-        public float Unknown6E4;
+        public GcProjectileLineData Unknown670;
+
+        public GcProjectileLineData Unknown698;
+
+        public GcProjectileLineData Unknown6C0;
+
         public float Unknown6E8;
         public float Unknown6EC;
         public float Unknown6F0;
@@ -515,8 +444,8 @@ namespace MBINCompiler.Models.Structs
         public float Unknown840;
         public float Unknown844;
         public float Unknown848;
-        public float Unknown84C;
-        public float Unknown850;
+        public float PlayerWalkSpeed;
+        public float PlayerRunSpeed;
         public float Unknown854;
         public float Unknown858;
         public float Unknown85C;
@@ -555,53 +484,17 @@ namespace MBINCompiler.Models.Structs
         public float Unknown8E0;
         public float Unknown8E4;
         public float Unknown8E8;
-        public float Unknown8EC;
-        public float Unknown8F0;
-        public float Unknown8F4;
-        public float Unknown8F8;
-        public float Unknown8FC;
-        public float Unknown900;
-        public float Unknown904;
-        public float Unknown908;
-        public float Unknown90C;
-        public float Unknown910;
-        public float Unknown914;
-        public float Unknown918;
-        public float Unknown91C;
-        public float Unknown920;
+        public GcPlayerStickData Unknown8EC;
+        public GcPlayerStickData Unknown908;
         public int Unknown924;
         public float Unknown928;
         public float Unknown92C;
         public float Unknown930;
-        public float Unknown934;
-        public float Nothing938;        // [rdi+938h], esi      padding or start of struct?
-        public float Unknown93C;
-        public float Unknown940;
-        public float Unknown944;
-        public int Unknown948;        // [rdi+948h], esi      padding or start of struct?
-        public float Unknown94C;
-        public float Unknown950;
-        public float Unknown954;
-        public float Unknown958;
-        public float Unknown95C;
-        public float Unknown960;
-        public float Unknown964;
-        public float Unknown968;
-        public float Unknown96C;
-        public float Unknown970;
-        public float Unknown974;
-        public float Unknown978;
-        public float Unknown97C;
-        public float Unknown980;
-        public float Unknown984;
-        public float Unknown988;
-        public float Unknown98C;
-        public float Unknown990;
-        public float Unknown994;
-        public float Unknown998;
-        public float Unknown99C;
-        public float Unknown9A0;
-        public float Unknown9A4;
+        public GcCameraSpawnSetupData Unknown934;
+        public GcCameraSpawnSetupData Unknown944;
+        public GcInventoryValueData Unknown954;
+        public GcInventoryValueData Unknown970;
+        public GcInventoryValueData Unknown98C;
         public float Unknown9A8;
         public float Unknown9AC;
         public float Unknown9B0;
@@ -622,54 +515,9 @@ namespace MBINCompiler.Models.Structs
         public float Unknown9E4;
         public float Unknown9E8;
         public float Unknown9EC;
-        public float Unknown9F0;        // [rdi+9F0h], rsi
-        public float Unknown9F4;
-        public float Unknown9F8;
-        public float Unknown9FC;
-        public float UnknownA00;
-        public float UnknownA04;
-        public float UnknownA08;
-        public float UnknownA0C;
-        public float UnknownA10;
-        public float UnknownA14;
-        public float UnknownA18;
-        public float UnknownA1C;
-        public float UnknownA20;
-        public float UnknownA24;
-        public float UnknownA28;
-        public float UnknownA2C;
-        public float UnknownA30;
-        public float UnknownA34;
-        public float UnknownA38;
-        public float UnknownA3C;
-        public float UnknownA40;
-        public float UnknownA44;
-        public float UnknownA48;
-        public float UnknownA4C;
-        public float UnknownA50;
-        public float UnknownA54;
-        public float UnknownA58;
-        public float UnknownA5C;
-        public float UnknownA60;
-        public float UnknownA64;
-        public float UnknownA68;
-        public float UnknownA6C;
-        public float UnknownA70;
-        public float UnknownA74;
-        public float UnknownA78;
-        public float UnknownA7C;
-        public float UnknownA80;
-        public float UnknownA84;
-        public float UnknownA88;
-        public float UnknownA8C;
-        public float UnknownA90;
-        public float UnknownA94;
-        public float UnknownA98;
-        public float UnknownA9C;
-        public float UnknownAA0;
-        public float UnknownAA4;
-        public float UnknownAA8;
-        public float UnknownAAC;
+        public GcCameraAnomalySetupData Unknown9F0;
+        public GcCameraAnomalySetupData UnknownA30;
+        public GcCameraAnomalySetupData UnknownA70;
 
     }
 }

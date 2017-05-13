@@ -6,12 +6,12 @@
         public float Unknown0;
         public float Unknown4;
         public float Unknown8;
-        public int UnknownC;
+        public int UnknownIntC;
 
         public float Unknown10;
         public float Unknown14;
         public float Unknown18;
-        public int Unknown1C;
+        public int UnknownInt1C;
 
         public float Unknown20;
         public float Unknown24;

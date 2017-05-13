@@ -7,7 +7,7 @@ namespace MBINCompiler.Models.Structs
         [NMS(Size = 0x10)]
         public string ActionId;
         public bool ScaleToFitFont;
-        public TkInputEnum InputButton;
+        public TkInputEnum PadButtonId;
         public List<TkPlatformButtonPair> Platforms;
     }
 }

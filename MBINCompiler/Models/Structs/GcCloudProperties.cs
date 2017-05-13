@@ -16,6 +16,8 @@
         /* 0x48 */ public float BackwardScatteringG;
         /* 0x4C */ public float DarkOutlineScalar;
         /* 0x50 */ public float AnimationScale;
+        [NMS(Size = 0xC, Ignore = true)]
+        /* 0x54 */ public byte[] Padding54;
         /* 0x60 */ public Vector4f BaseOffset;
         /* 0x70 */ public Vector4f DetailOffset;
         /* 0x80 */ public float BaseScale;
@@ -36,6 +38,6 @@
         /* 0xE0 */ public float HorizonFadeScalar;
         /* 0xE4 */ public float HorizonDistance;
         /* 0xE8 */ public float AtmosphereStartHeight;
-        /* 0xEC */ public float AtmosphereEndHeigh;
+        /* 0xEC */ public float AtmosphereEndHeight;
     }
 }

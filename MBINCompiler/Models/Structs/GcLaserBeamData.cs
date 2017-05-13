@@ -2,7 +2,7 @@
 
 namespace MBINCompiler.Models.Structs
 {
-    public class GcLaserBeamData : NMSTemplate
+    public class GcLaserBeamData : NMSTemplate      // size: 0x1A0
     {
         [NMS(Size = 0x10)]
         /* 0x000 */ public string Id;
@@ -16,9 +16,9 @@ namespace MBINCompiler.Models.Structs
         /* 0x11C */ public float PulseAmplitude;
         /* 0x120 */ public float StartTime;
         /* 0x124 */ public float EndTime;
-        /* 0x128 */ public GcAudioWwiseEvents AkEvent1; // not an array
-        /* 0x12C */ public GcAudioWwiseEvents AkEvent2;
-        /* 0x130 */ public GcAudioWwiseEvents AkEvent3;
+        /* 0x128 */ public GcAudioWwiseEvents AudioStart;
+        /* 0x12C */ public GcAudioWwiseEvents AudioStop;
+        /* 0x130 */ public GcAudioWwiseEvents AudioOverheat;
         /* 0x134 */ public int Damage;
         [NMS(Size = 0x10)]
         /* 0x138 */ public string PlayerDamage;
@@ -30,7 +30,11 @@ namespace MBINCompiler.Models.Structs
         /* 0x170 */ public float MiningHitRate;
         /* 0x174 */ public bool HasLight;
         /* 0x175 */ public bool CanMine;
+        [NMS(Size = 0x2, Ignore = true)]
+        public byte[] Padding176;
         /* 0x178 */ public float LightScale;
+        [NMS(Size = 0x4, Ignore = true)]
+        public byte[] Padding17C;
         /* 0x180 */ public Colour LightColour;
         /* 0x190 */ public Colour Colour;
     }

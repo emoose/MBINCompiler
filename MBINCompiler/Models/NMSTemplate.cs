@@ -301,7 +301,6 @@ namespace MBINCompiler.Models
         {
             if (CustomSerialize(writer, fieldType, fieldData, settings, field, ref additionalData, ref addtDataIndex))
                 return;
-
             switch (fieldType.Name)
             {
                 case "String":
@@ -390,6 +389,9 @@ namespace MBINCompiler.Models
                         additionalData.Insert(addtDataIndex++, new Tuple<long, object>(refPos, template));
                     }
                     break;
+                case "Dictionary`2":
+                    // have something defined so that it just ignores it
+                    break;
                 default:
 
                     if (fieldType.Name == "Colour") // unsure if this is needed?
@@ -471,13 +473,14 @@ namespace MBINCompiler.Models
             else
                 writer.Write((long)0); // lists with 0 entries have offset set to 0
 
+
             writer.Write((Int32)list.Count);
             writer.Write((UInt32)0xAAAAAA01);
 
             // reserve space for list offsets+names
             writer.BaseStream.Position = listPosition;
-            writer.Write(new byte[list.Count * 0x48]);
-            writer.Align(0x10, 0); // why
+            writer.Write(new byte[list.Count * 0x48]);              // this seems to need to be reserved even if 
+            writer.Align(0x8, 0); // why                            // this was changed from 0x10 to 0x8 which fixes some files at least. Does it break others??
 
             int addtDataIndexThis = addtDataIndex;
 
@@ -505,7 +508,7 @@ namespace MBINCompiler.Models
             writer.BaseStream.Position = dataEndOffset;
         }
 
-        public void SerializeList(BinaryWriter writer, IList list, long listHeaderPosition, ref List<Tuple<long, object>> additionalData, int addtDataIndex)
+        public void SerializeList(BinaryWriter writer, IList list, long listHeaderPosition, ref List<Tuple<long, object>> additionalData, int addtDataIndex, UInt32 LineEnding = (UInt32)0xAAAAAA01)
         {
             long listPosition = writer.BaseStream.Position;
             if (PrintToDebug) Debug.WriteLine($"SerializeList start 0x{listPosition:X}, header 0x{listHeaderPosition:X}");
@@ -518,7 +521,7 @@ namespace MBINCompiler.Models
             else
                 writer.Write((long)0); // lists with 0 entries have offset set to 0
             writer.Write((Int32)list.Count);
-            writer.Write((UInt32)0xAAAAAA01);
+            writer.Write(LineEnding);       // this is where the 4bytes at the end of a list are written
 
             writer.BaseStream.Position = listPosition;
 
@@ -552,7 +555,7 @@ namespace MBINCompiler.Models
 
                     if (data.Item2.GetType() == typeof(VariableSizeString))
                     {
-                        writer.BaseStream.Position = origPos; // no alignment for dynamicstrings
+                        writer.BaseStream.Position = origPos; // no alignment for dynamicstrings        TODO: not true?
 
                         var str = (VariableSizeString)data.Item2;
 
@@ -585,7 +588,12 @@ namespace MBINCompiler.Models
                         if (itemType == typeof(NMSTemplate))
                             SerializeGenericList(writer, (IList)data.Item2, data.Item1, ref additionalData, i + 1);
                         else
-                            SerializeList(writer, (IList)data.Item2, data.Item1, ref additionalData, i + 1);
+                        {
+                            if (itemType == typeof(TkAnimNodeData) || itemType == typeof(TkAnimNodeFrameData))
+                                SerializeList(writer, (IList)data.Item2, data.Item1, ref additionalData, i + 1, (UInt32)0xFEFEFE01);
+                            else
+                                SerializeList(writer, (IList)data.Item2, data.Item1, ref additionalData, i + 1);
+                        }
                     }
                     else
                         throw new Exception($"[C] Unknown type {data.Item2.GetType()} in additionalData list!");
@@ -615,6 +623,17 @@ namespace MBINCompiler.Models
                         break;
                     
                     var valuesMethod = GetType().GetMethod(field.Name + "Values"); // if we have an "xxxValues()" method in the struct, use that to get the value name
+                    var dictData = GetType().GetMethod(field.Name + "Dict");
+                    if (dictData != null)
+                    {
+                        if (((int)value) == -1)
+                            valueString = "";
+                        else
+                        {
+                            Dictionary<int, string> dataDict = (Dictionary<int, string>)dictData.Invoke(this, null);
+                            valueString = dataDict[(int)value];
+                        }
+                    }
                     if (valuesMethod != null)
                     {
                         if (((int)value) == -1)
@@ -774,6 +793,18 @@ namespace MBINCompiler.Models
                     return ushort.Parse(xmlProperty.Value);
                 case "Int32":
                     var valuesMethod = templateType.GetMethod(field.Name + "Values");
+                    var dictData = templateType.GetMethod(field.Name + "Dict");
+                    if (dictData != null)
+                    {
+                        if (String.IsNullOrEmpty(xmlProperty.Value))
+                            return -1;
+                        else
+                        {
+                            Dictionary<int, string>  dataDict = (Dictionary<int, string>)dictData.Invoke(template, null);
+                            int key = dataDict.Where(kvp => kvp.Value == xmlProperty.Value).Select(kvp => kvp.Key).FirstOrDefault();
+                            return key;
+                        }
+                    }
                     if (valuesMethod != null)
                     {
                         if (String.IsNullOrEmpty(xmlProperty.Value))
@@ -861,7 +892,8 @@ namespace MBINCompiler.Models
             }
         }
 
-        public static NMSTemplate DeserializeEXml(EXmlBase xmlData)
+        public static NMSTemplate DeserializeEXml(EXmlBase xmlData)      // this is the inital code that is run when converting exml to mbin.
+        // this code is run to parse over the exml file and put it into a data structure that is processed by SerializeValue() (I think...)
         {
             NMSTemplate template = null;
 
@@ -878,6 +910,7 @@ namespace MBINCompiler.Models
 
             foreach (var templateField in templateFields)
             {
+                // check to see if the object has a default value in the struct
                 NMSAttribute settings = templateField.GetCustomAttribute<NMSAttribute>();
                 if (settings?.DefaultValue != null)
                     templateField.SetValue(template, settings.DefaultValue);
