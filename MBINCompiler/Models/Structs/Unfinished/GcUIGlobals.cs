@@ -104,7 +104,7 @@ namespace MBINCompiler.Models.Structs
         public float Unknown17C;
         public float Unknown180;
         public int UnknownInt184;
-        public float Unknown188;
+        public float PlanetScanTime;
         public float Unknown18C;
         public float Unknown190;
         public float Unknown194;
@@ -572,45 +572,54 @@ namespace MBINCompiler.Models.Structs
         public float Unknown2BA8;
         public float Unknown2BAC;
 
+        public Colour Unknown2BB0;
+        /*
         public float Unknown2BB0;           // following 8 blocks maybe Colour's?
         public float Unknown2BB4;
         public float Unknown2BB8;
-        public float Unknown2BBC;
+        public float Unknown2BBC;*/
 
-        public float Unknown2BC0;
+        public Colour Unknown2BC0;
+        /*public float Unknown2BC0;
         public float Unknown2BC4;
         public float Unknown2BC8;
-        public float Unknown2BCC;
+        public float Unknown2BCC;*/
 
-        public float Unknown2BD0;
+        public Colour Unknown2BD0;
+        /*public float Unknown2BD0;
         public float Unknown2BD4;
         public float Unknown2BD8;
-        public float Unknown2BDC;
+        public float Unknown2BDC;*/
 
-        public float Unknown2BE0;
+        public Colour Unknown2BE0;
+        /*public float Unknown2BE0;
         public float Unknown2BE4;
         public float Unknown2BE8;
-        public float Unknown2BEC;
+        public float Unknown2BEC;*/
 
-        public float Unknown2BF0;
+        public Colour Unknown2BF0;
+        /*public float Unknown2BF0;
         public float Unknown2BF4;
         public float Unknown2BF8;
-        public float Unknown2BFC;
+        public float Unknown2BFC;*/
 
-        public float Unknown2C00;
+        public Colour Unknown2C00;
+        /*public float Unknown2C00;
         public float Unknown2C04;
         public float Unknown2C08;
-        public float Unknown2C0C;
+        public float Unknown2C0C;*/
 
-        public float Unknown2C10;
+        public Colour Unknown2C10;
+        /*public float Unknown2C10;
         public float Unknown2C14;
         public float Unknown2C18;
-        public float Unknown2C1C;
+        public float Unknown2C1C;*/
 
-        public float Unknown2C20;
+        public Colour Unknown2C20;
+        /*public float Unknown2C20;
         public float Unknown2C24;
         public float Unknown2C28;
-        public float Unknown2C2C;
+        public float Unknown2C2C;*/
 
         public float Unknown2C30;
         public float Unknown2C34;
@@ -645,9 +654,9 @@ namespace MBINCompiler.Models.Structs
         public float Unknown347C;
         public float Unknown3480;
         public float Unknown3484;
-        public float Unknown3488;
-        public float Unknown348C;
-        public float Unknown3490;
+        public float FastActionTime1;
+        public float FastActionTime2;
+        public float FastActionTime3;
         public int UnknownInt3494;
         public float Unknown3498;
         public float Unknown349C;
@@ -921,7 +930,7 @@ namespace MBINCompiler.Models.Structs
         public float Unknown4158;
         public float Unknown415C;
         public int UnknownInt4160;
-        public bool Unknown4164;
+        public bool DisplayMenu3DModels;
         public GcDiscoveryHelperTimings Unknown4168;
 
         public GcHUDStartupTable Unknown4174;
@@ -939,5 +948,8 @@ namespace MBINCompiler.Models.Structs
         public int UnknownInt42AC;
         public float Unknown42B0;
         public float Unknown42B4;
+
+        [NMS(Size = 0x8, Ignore = true)]
+        public byte[] EndPadding;
     }
 }

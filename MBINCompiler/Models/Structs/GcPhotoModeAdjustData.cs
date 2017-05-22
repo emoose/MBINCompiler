@@ -2,15 +2,15 @@
 
 namespace MBINCompiler.Models.Structs
 {
-    public class GcPhotoModeAdjustData : NMSTemplate
+    public class GcPhotoModeAdjustData : NMSTemplate        // size: 0x18
     {
-        public float AdjustMin;
-        public TkCurveType AdjustMinCurve;
-        public float AdjustMax;
-        public float AdjustMaxRange;
-        public TkCurveType AdjustMaxCurve;
-        public bool Inverted;
+        /* 0x00 */ public float AdjustMin;
+        /* 0x04 */ public TkCurveType AdjustMinCurve;
+        /* 0x08 */ public float AdjustMax;                         // 40000000h
+        /* 0x0C */ public float AdjustMaxRange;                    // 40000000h
+        /* 0x10 */ public TkCurveType AdjustMaxCurve;
+        /* 0x14 */ public bool Inverted;
         [NMS(Size = 0x3, Ignore = true)]
-        public byte[] EndPadding;       // just a guess...
+        /* 0x15 */ public byte[] EndPadding;
     }
 }

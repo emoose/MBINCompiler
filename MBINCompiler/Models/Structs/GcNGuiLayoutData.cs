@@ -1,6 +1,6 @@
 ﻿namespace MBINCompiler.Models.Structs
 {
-    public class GcNGuiLayoutData : NMSTemplate
+    public class GcNGuiLayoutData : NMSTemplate     // size: 0x2C
     {
         public float PositionX;
         public float PositionY;

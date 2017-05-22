@@ -2,50 +2,49 @@
 
 namespace MBINCompiler.Models.Structs
 {
-    public class GcRealityManagerData : NMSTemplate
+    public class GcRealityManagerData : NMSTemplate     // size: 0x5670
     {
-        public float RealityIteration;
+        /* 0x0000 */ public float RealityIteration;
 
-        // TODO: Probably keep these values in a static class.
         [NMS(Size = 7, EnumValue = new string[7] { "Unknown", "SolarSystem", "Planet", "Animal", "Flora", "Mineral", "Sector" })]
-        public GcDiscoveryWorth[] DiscoveryWorth;
+        /* 0x0004 */ public GcDiscoveryWorth[] DiscoveryWorth;
 
         [NMS(Size = 0x80)]
-        public string TechnologyTable;
+        /* 0x0090 */ public string TechnologyTable;
         [NMS(Size = 0x80)]
-        public string SubstanceTable;
+        /* 0x0110 */ public string SubstanceTable;
         [NMS(Size = 0x80)]
-        public string ProductTable;
+        /* 0x0190 */ public string ProductTable;
         [NMS(Size = 0x80)]
-        public string AlienWordsTable;
+        /* 0x0210 */ public string AlienWordsTable;
         [NMS(Size = 0x80)]
-        public string AlienPuzzlesTable;
+        /* 0x0290 */ public string AlienPuzzlesTable;
         [NMS(Size = 0x80)]
-        public string RewardTable;
+        /* 0x0310 */ public string RewardTable;
         [NMS(Size = 0x80)]
-        public string RewardDestructTable;
+        /* 0x0390 */ public string RewardDestructTable;
         [NMS(Size = 0x80)]
-        public string InventoryTable;
+        /* 0x0410 */ public string InventoryTable;
         [NMS(Size = 0x80)]
-        public string DamageTable;
+        /* 0x0490 */ public string DamageTable;
         [NMS(Size = 0x80)]
-        public string PurchaseableBuildingBlueprintsTable;
+        /* 0x0510 */ public string PurchaseableBuildingBlueprintsTable;
         [NMS(Size = 0x80)]
-        public string CostTable;
+        /* 0x0590 */ public string CostTable;
 
-        public GcRealityIconTable Icons;
+        /* 0x0610 */ public GcRealityIconTable Icons;
 
         [NMS(Size = 6, EnumValue = new string[6] { "None", "NoOxygen", "ExtremeHeat", "ExtremeCold", "ToxicGas", "Radiation" })]
-        public Colour[] HazardColours;
+        /* 0x1E50 */ public Colour[] HazardColours;
 
         [NMS(Size = 3, EnumValue = new string[3] { "Common", "Uncommon", "Rare" })]
-        public Colour[] RarityColours;
+        /* 0x1EB0 */ public Colour[] RarityColours;
 
         [NMS(Size = 6, EnumValue = new string[6] { "Commodity", "Technology", "Fuel", "Tradeable", "Special", "BuildingPart" })]
-        /* 0x19A0 */ public Colour[] SubstanceCategoryColours;
+        /* 0x1EE0 */ public Colour[] SubstanceCategoryColours;
 
         [NMS(Size = 6, EnumValue = new string[6] { "Commodity", "Technology", "Fuel", "Tradeable", "Special", "BuildingPart" })]
-        public TkTextureResource[] SubstanceChargeIcons;
+        /* 0x1F40 */ public TkTextureResource[] SubstanceChargeIcons;
 
         [NMS(Size = 84, EnumValue = new string[84]
             {
@@ -72,23 +71,20 @@ namespace MBINCompiler.Models.Structs
                 "Ship_Scan", "Ship_Hyperdrive", "Ship_Hyperdrive_JumpDistance", "Ship_Launcher", "Ship_Launcher_TakeOffCost",
                 "Ship_PulseDrive", "Ship_PulseDrive_MiniJumpFuelSpending", "Ship_Boost", "Ship_Maneuverability"
             })]
-        public TkTextureResource[] StatCategoryIcons;
+        /* 0x2258 */ public TkTextureResource[] StatCategoryIcons;
 
         [NMS(Size = 3, EnumValue = new string[3] { "Suit", "Weapon", "Ship" })]
-        public GcStats[] Stats;
+        /* 0x48A8 */ public GcStats[] Stats;
 
-        public GcTradeSettings TradeSettings;
+        /* 0x5588 */ public GcTradeSettings TradeSettings;
 
-        public List<int> SuitUpgradePrices;
+        /* 0x5628 */ public List<int> SuitUpgradePrices;
 
-        public List<NMSString0x10> NeverSellableItems;
+        /* 0x5638 */ public List<NMSString0x10> NeverSellableItems;
 
-        public List<NMSString0x10> NeverOfferedForSale;
+        /* 0x5648 */ public List<NMSString0x10> NeverOfferedForSale;
 
-        [NMS(Size = 6, EnumValue = new string[6] { "Commodity", "Technology", "Fuel", "Tradeable", "Special", "BuildingPart" })]
-        public float[] NormalizedPriceLimits;
-
-        [NMS(Size = 0xC, Ignore = true)]
-        public byte[] Padding47E4;
+        [NMS(Size = 5, EnumValue = new string[5] { "Commodity", "Technology", "Fuel", "Tradeable", "Special"})]         // not sure about these values....
+        /* 0x5658 */ public float[] NormalizedPriceLimits;
     }
 }

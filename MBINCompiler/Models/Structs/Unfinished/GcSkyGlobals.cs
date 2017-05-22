@@ -2,24 +2,9 @@ namespace MBINCompiler.Models.Structs
 {
     public class GcSkyGlobals : NMSTemplate
     {
-        public float Unknown0;
-        public float Unknown4;
-        public float Unknown8;
-        public float UnknownC;
-        public int UnknownInt10;     // part of previous QWORD
-        public float Unknown14;
-        public float Unknown18;
-        public float Unknown1C;
-        public float Unknown20;
-        public float Unknown24;
-        public float Unknown28;     // part of previous QWORD
-        public float Unknown2C;
-        public float Unknown30;
-        public float Unknown34;
-        public float Unknown38;
-        public float Unknown3C;
-        public float Unknown40;
-        public int UnknownInt44;     // part of previous QWORD
+        public GcPhotoModeAdjustData Unknown0;
+        public GcPhotoModeAdjustData Unknown18;
+        public GcPhotoModeAdjustData Unknown30;
         public int UnknownInt48;
         public float Unknown4C;
         public bool Unknown50;
@@ -127,19 +112,6 @@ namespace MBINCompiler.Models.Structs
         public float Unknown228;
 
         public GcSkyProperties Unknown22C;
-
-        /*
-        public float Unknown22C;
-        public float Unknown230;
-        public float Unknown234;
-        public float Unknown238;
-        public float Unknown23C;
-        public float Unknown240;
-        public float Unknown244;
-        public float Unknown248;
-        public float Unknown24C;
-        public float Unknown250;
-        public Vector2f Unknown254;*/
 
         public GcFogProperties Unknown25C;
         public GcFogProperties Unknown338;

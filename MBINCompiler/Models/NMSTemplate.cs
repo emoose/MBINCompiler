@@ -36,11 +36,12 @@ namespace MBINCompiler.Models
             using (var bw = new BinaryWriter(ms))
             {
                 var addt = new List<Tuple<long, object>>();
+                var listObjects = new List<Tuple<long, object>>();
                 int addtIdx = 0;
 
                 var prevPTD = PrintToDebug;
                 PrintToDebug = false;
-                AppendToWriter(bw, ref addt, ref addtIdx, GetType());
+                AppendToWriter(bw, ref addt, ref listObjects, ref addtIdx, GetType());
                 PrintToDebug = prevPTD;
 
                 return ms.ToArray().Length;
@@ -297,10 +298,16 @@ namespace MBINCompiler.Models
             return list;
         }
 
-        public void SerializeValue(BinaryWriter writer, Type fieldType, object fieldData, NMSAttribute settings, FieldInfo field, ref List<Tuple<long, object>> additionalData, ref int addtDataIndex)
+        public void SerializeValue(BinaryWriter writer, Type fieldType, object fieldData, NMSAttribute settings, FieldInfo field, ref List<Tuple<long, object>> additionalData, ref List<Tuple<long, object>> listObjects, ref int addtDataIndex)
         {
             if (CustomSerialize(writer, fieldType, fieldData, settings, field, ref additionalData, ref addtDataIndex))
                 return;
+            /*using (System.IO.StreamWriter file =
+                new System.IO.StreamWriter(@"T:\mbincompiler_debug.txt", true))
+            {
+                file.WriteLine(" Deserialized Value: " + field.Name + " value: " + fieldData);
+                file.WriteLine($"{fieldType} position: 0x{writer.BaseStream.Position:X}");
+            }*/
             switch (fieldType.Name)
             {
                 case "String":
@@ -369,7 +376,13 @@ namespace MBINCompiler.Models
                         writer.Write((UInt32)0xAAAAAA01);
 
                         var list = (IList)fieldData;
-                        additionalData.Insert(addtDataIndex, new Tuple<long, object>(listPos, list));
+                        //Console.WriteLine($"Adding {field.Name}");
+                        additionalData.Add(new Tuple<long, object>(listPos, list));
+                        foreach (var entry in list)
+                        {
+                            listObjects.Add(new Tuple<long, object>(listPos, entry));
+                        }
+                        //additionalData.Insert(addtDataIndex, new Tuple<long, object>(listPos, list));
                         addtDataIndex++;
                     }
 
@@ -393,7 +406,6 @@ namespace MBINCompiler.Models
                     // have something defined so that it just ignores it
                     break;
                 default:
-
                     if (fieldType.Name == "Colour") // unsure if this is needed?
                         writer.Align(0x10, 0);
 
@@ -422,7 +434,7 @@ namespace MBINCompiler.Models
                             if (realObj == null)
                                 realObj = Activator.CreateInstance(arrayType);
 
-                            SerializeValue(writer, realObj.GetType(), realObj, settings, field, ref additionalData, ref addtDataIndex);
+                            SerializeValue(writer, realObj.GetType(), realObj, settings, field, ref additionalData, ref listObjects, ref addtDataIndex);
                         }
                     }
                     else
@@ -433,7 +445,7 @@ namespace MBINCompiler.Models
                             if (realData == null)
                                 realData = (NMSTemplate)Activator.CreateInstance(fieldType);
 
-                            realData.AppendToWriter(writer, ref additionalData, ref addtDataIndex, GetType());
+                            realData.AppendToWriter(writer, ref additionalData, ref listObjects, ref addtDataIndex, GetType());
                         }
                         else
                             throw new Exception($"[C] Unknown type {fieldType} not NMSTemplate" + (field != null ? $" for {field.Name}" : ""));
@@ -443,7 +455,7 @@ namespace MBINCompiler.Models
             }
         }
 
-        public void AppendToWriter(BinaryWriter writer, ref List<Tuple<long, object>> additionalData, ref int addtDataIndex, Type parent)
+        public void AppendToWriter(BinaryWriter writer, ref List<Tuple<long, object>> additionalData, ref List<Tuple<long, object>> listObjects,  ref int addtDataIndex, Type parent)
         {
             long templatePosition = writer.BaseStream.Position;
             if (PrintToDebug) Debug.WriteLine($"[C] writing {GetType().Name} to offset 0x{templatePosition:X} (parent: {parent.Name})");
@@ -451,21 +463,29 @@ namespace MBINCompiler.Models
             var type = GetType();
             var fields = type.GetFields().OrderBy(field => field.MetadataToken); // hack to get fields in order of declaration (todo: use something less hacky, this might break mono?)
             
+            //Console.WriteLine(additionalData.LastOrDefault());
+            //Console.WriteLine($"[C] writing {GetType().Name} to offset 0x{templatePosition:X}");
+            //System.Threading.Thread.Sleep(100);
+
             foreach (var field in fields)
             {
+                //Console.WriteLine(field.Name);
                 var fieldAddr = writer.BaseStream.Position - templatePosition;
                 var fieldData = field.GetValue(this);
                 NMSAttribute settings = field.GetCustomAttribute<NMSAttribute>();
-                SerializeValue(writer, field.FieldType, fieldData, settings, field, ref additionalData, ref addtDataIndex);
+                SerializeValue(writer, field.FieldType, fieldData, settings, field, ref additionalData, ref listObjects, ref addtDataIndex);
             }
         }
 
-        public void SerializeGenericList(BinaryWriter writer, IList list, long listHeaderPosition, ref List<Tuple<long, object>> additionalData, int addtDataIndex)
+        public void SerializeGenericList(BinaryWriter writer, IList list, long listHeaderPosition, ref List<Tuple<long, object>> additionalData, ref List<Tuple<long, object>> listObjects2, int addtDataIndex)
+        // This serialises a List of NMSTemplate objects
         {
             long listPosition = writer.BaseStream.Position;
             if (PrintToDebug) Debug.WriteLine($"SerializeList start 0x{listPosition:X}, header 0x{listHeaderPosition:X}");
 
             writer.BaseStream.Position = listHeaderPosition;
+            //Console.WriteLine(listHeaderPosition);
+            //Console.WriteLine("^ list header position in serialise generic list");
 
             // write the list header into the template
             if (list.Count > 0)
@@ -479,19 +499,57 @@ namespace MBINCompiler.Models
 
             // reserve space for list offsets+names
             writer.BaseStream.Position = listPosition;
-            writer.Write(new byte[list.Count * 0x48]);              // this seems to need to be reserved even if 
-            writer.Align(0x8, 0); // why                            // this was changed from 0x10 to 0x8 which fixes some files at least. Does it break others??
+            writer.Write(new byte[list.Count * 0x48]);              // this seems to need to be reserved even if there are no elements (check?)
+            //writer.Align(0x10, 0); // why                            // this was changed from 0x10 to 0x8 which fixes some files at least. Does it break others??
 
             int addtDataIndexThis = addtDataIndex;
+            //Console.WriteLine(addtDataIndexThis);
+            //Console.WriteLine("blah");
+            //System.Threading.Thread.Sleep(3000);
 
             var entryOffsetNamePairs = new Dictionary<long, string>();
             foreach (var entry in list)
             {
+                if (entry.GetType().Name == "GcNGuiLayerData")
+                {
+                    writer.Align(0x10, 0);
+                }
+                else
+                {
+                    writer.Align(0x8, 0);
+                }
+                //Console.WriteLine(writer.BaseStream.Position);
+                //Console.WriteLine("this is a really long thing");
+                //System.Threading.Thread.Sleep(3000);
+                // add the starting location of the data chunk and the name to a dictionary
                 entryOffsetNamePairs.Add(writer.BaseStream.Position, entry.GetType().Name);
                 var template = (NMSTemplate)entry;
+                var listObjects = new List <Tuple<long, object>>();
                 var addtData = new Dictionary<long, object>();
                 if (PrintToDebug) Debug.WriteLine($"[C] writing {template.GetType().Name} to offset 0x{writer.BaseStream.Position:X}");
-                template.AppendToWriter(writer, ref additionalData, ref addtDataIndexThis, GetType());
+                //SerializeValue(writer, entry.GetType(), entry, null, null, ref additionalData, ref addtDataIndexThis);
+                template.AppendToWriter(writer, ref listObjects, ref listObjects2, ref addtDataIndexThis, GetType());
+                for (int i = 0; i < listObjects.Count; i++)
+                {
+                    var data = listObjects[i];
+                    //writer.BaseStream.Position = additionalDataOffset; // addtDataOffset gets updated by child templates
+                    long origPos = writer.BaseStream.Position;
+                    writer.Align(0x8, 0); // todo: check if this alignment is correct
+                    if (data.Item2.GetType().IsGenericType && data.Item2.GetType().GetGenericTypeDefinition() == typeof(List<>))
+                    {
+                        Type itemType = data.Item2.GetType().GetGenericArguments()[0];
+                        if (itemType == typeof(NMSTemplate))
+                            SerializeGenericList(writer, (IList)data.Item2, data.Item1, ref additionalData, ref listObjects, i + 1);
+                        else
+                        {
+                            if (itemType == typeof(TkAnimNodeData) || itemType == typeof(TkAnimNodeFrameData))
+                                SerializeList(writer, (IList)data.Item2, data.Item1, ref additionalData, ref listObjects, i + 1, (UInt32)0xFEFEFE01);
+                            else
+                                SerializeList(writer, (IList)data.Item2, data.Item1, ref additionalData, ref listObjects, i + 1);
+                        }
+                    }
+                }
+                
             }
 
             long dataEndOffset = writer.BaseStream.Position;
@@ -501,6 +559,8 @@ namespace MBINCompiler.Models
             {
                 var position = writer.BaseStream.Position;
                 var offset = entry.Key - position; // get offset of this entry from the current offset
+                //Console.WriteLine(offset);
+                //System.Threading.Thread.Sleep(1000);
                 writer.Write(offset);
                 writer.WriteString("c" + entry.Value, Encoding.UTF8, 0x40);
             }
@@ -508,7 +568,7 @@ namespace MBINCompiler.Models
             writer.BaseStream.Position = dataEndOffset;
         }
 
-        public void SerializeList(BinaryWriter writer, IList list, long listHeaderPosition, ref List<Tuple<long, object>> additionalData, int addtDataIndex, UInt32 LineEnding = (UInt32)0xAAAAAA01)
+        public void SerializeList(BinaryWriter writer, IList list, long listHeaderPosition, ref List<Tuple<long, object>> additionalData, ref List<Tuple<long, object>> listObjects, int addtDataIndex, UInt32 LineEnding = (UInt32)0xAAAAAA01)
         {
             long listPosition = writer.BaseStream.Position;
             if (PrintToDebug) Debug.WriteLine($"SerializeList start 0x{listPosition:X}, header 0x{listHeaderPosition:X}");
@@ -530,7 +590,7 @@ namespace MBINCompiler.Models
             foreach (var entry in list)
             {
                 if (PrintToDebug) Debug.WriteLine($"[C] writing {entry.GetType().Name} to offset 0x{writer.BaseStream.Position:X}");
-                SerializeValue(writer, entry.GetType(), entry, null, null, ref additionalData, ref addtDataIndexThis);
+                SerializeValue(writer, entry.GetType(), entry, null, null, ref additionalData, ref listObjects, ref addtDataIndexThis);
             }
         }
 
@@ -540,15 +600,18 @@ namespace MBINCompiler.Models
             using (var writer = new BinaryWriter(stream, Encoding.ASCII))
             {
                 var additionalData = new List<Tuple<long, object>>();
+                var listObjects = new List<Tuple<long, object>>();      // this will be a flattened version of the above list hopefully
 
                 int i = 0;
                 // write primary template + any embedded templates
-                AppendToWriter(writer, ref additionalData, ref i, GetType());
+                AppendToWriter(writer, ref additionalData, ref listObjects, ref i, GetType());
 
                 // now write values of lists etc
                 for (i = 0; i < additionalData.Count; i++)
                 {
                     var data = additionalData[i];
+                    //Console.WriteLine(data);
+                    //System.Threading.Thread.Sleep(5000);
                     //writer.BaseStream.Position = additionalDataOffset; // addtDataOffset gets updated by child templates
                     long origPos = writer.BaseStream.Position;
                     writer.Align(0x8, 0); // todo: check if this alignment is correct
@@ -575,7 +638,7 @@ namespace MBINCompiler.Models
                         var pos = writer.BaseStream.Position;
                         var template = (NMSTemplate)data.Item2;
                         int i2 = i + 1;
-                        template.AppendToWriter(writer, ref additionalData, ref i2, GetType());
+                        template.AppendToWriter(writer, ref additionalData, ref listObjects, ref i2, GetType());
                         var endPos = writer.BaseStream.Position;
                         writer.BaseStream.Position = data.Item1;
                         writer.Write(pos - data.Item1);
@@ -584,15 +647,16 @@ namespace MBINCompiler.Models
                     }
                     else if (data.Item2.GetType().IsGenericType && data.Item2.GetType().GetGenericTypeDefinition() == typeof(List<>))
                     {
+                        // this will serialise a dynamic length list of either a generic type, or a specific type
                         Type itemType = data.Item2.GetType().GetGenericArguments()[0];
                         if (itemType == typeof(NMSTemplate))
-                            SerializeGenericList(writer, (IList)data.Item2, data.Item1, ref additionalData, i + 1);
+                            SerializeGenericList(writer, (IList)data.Item2, data.Item1, ref additionalData, ref listObjects, i + 1);
                         else
                         {
                             if (itemType == typeof(TkAnimNodeData) || itemType == typeof(TkAnimNodeFrameData))
-                                SerializeList(writer, (IList)data.Item2, data.Item1, ref additionalData, i + 1, (UInt32)0xFEFEFE01);
+                                SerializeList(writer, (IList)data.Item2, data.Item1, ref additionalData, ref listObjects, i + 1, (UInt32)0xFEFEFE01);
                             else
-                                SerializeList(writer, (IList)data.Item2, data.Item1, ref additionalData, i + 1);
+                                SerializeList(writer, (IList)data.Item2, data.Item1, ref additionalData, ref listObjects, i + 1);
                         }
                     }
                     else

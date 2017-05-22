@@ -7,52 +7,45 @@
         public bool Unknown2; // if unset, does some more calcs
         public bool Unknown3; // unused
 
-        public int Unknown4; // planet gen related
-        public int Unknown8; // planet gen related
-        public int UnknownC; // planet gen related
+        public float Unknown4; // planet gen related
+        public float Unknown8; // planet gen related
+        public float UnknownC; // planet gen related
 
         public float Unknown10; // unused?
         public float Unknown14; // unused?
-        public float Unknown18;
-        public float Unknown1C;
+        public int UnknownInt18;           // possibly 4 bool?
 
-        public float Unknown20;
-        public float Unknown24;
+
+        public int UnknownInt1C;
+        public int UnknownInt20;
+        public int UnknownInt24;
+
         public float Unknown28;
-        public int Unknown2C;
+        public float Unknown2C;
+        public float Unknown30;
+        public float Unknown34;
+        public float Unknown38;
+        public float Unknown3C;
+        public float Unknown40;
 
-        public bool Unknown30;
-        public bool Unknown31; // unused
-        public bool Unknown32; // unused
-        public bool Unknown33; // unused
-        public int Unknown34;
-        public int Unknown38;
-        public bool Unknown3C; // if set, overrides some values with the values from 34 / 40 / 4C
-        public bool Unknown3D; // unused
-        public bool Unknown3E; // unused
-        public bool Unknown3F; // unused
+        public GcMiningSubstanceData Unknown44;
+        //public int UnknownInt48;
+        //public int UnknownInt4C;
 
-        public int Unknown40;
-        public int Unknown44;
-        public bool Unknown48;
-        public bool Unknown49; // unused
-        public bool Unknown4A; // unused
-        public bool Unknown4B; // unused
-        public float Unknown4C;
+        public GcMiningSubstanceData Unknown50;
+        //public int UnknownInt54;
+        //public int UnknownInt58;
 
-        public float Unknown50; // unused?
-        public float Unknown54; // unused?
-        public float Unknown58; // unused?
-        public float Unknown5C;
+        public GcMiningSubstanceData Unknown5C;
+        //public int UnknownInt60;
+        //public int UnknownInt64;
 
-        public float Unknown60;
-        public float Unknown64;
-        public float Unknown68;
-        public float Unknown6C;
+        public GcMiningSubstanceData Unknown68;
+        //public int UnknownInt6C;
+        //public int UnknownInt70;
 
-        public float Unknown70;
-        public float Unknown74;
-        public float Unknown78;
-        public float Unknown7C;
+        public GcTerrainOverlayColours Unknown74;
+        public GcTerrainOverlayColours Unknown8C;
+        public GcTerrainOverlayColours UnknownA4;
     }
 }

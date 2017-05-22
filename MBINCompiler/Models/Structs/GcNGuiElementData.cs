@@ -1,19 +1,19 @@
 ﻿namespace MBINCompiler.Models.Structs
 {
-    public class GcNGuiElementData : NMSTemplate
+    public class GcNGuiElementData : NMSTemplate        // size: 0x58
     {
         [NMS(Size = 0x10)]
-        public string ID;
+        /* 0x00 */ public string ID;
         [NMS(Size = 0x10)]
-        public string PresetID;
+        /* 0x10 */ public string PresetID;
 
-        public long CreationTime;
+        /* 0x20 */ public long CreationTime;
 
-        public bool IsHidden;
+        /* 0x28 */ public bool IsHidden;
 
         [NMS(Size = 0x3, Ignore = true)]
         public byte[] Padding29;
 
-        public GcNGuiLayoutData Layout;
+        /* 0x2C */ public GcNGuiLayoutData Layout;
     }
 }
