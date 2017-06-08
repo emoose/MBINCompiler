@@ -76,7 +76,7 @@ namespace MBINCompiler.Models.Structs
         public float Unknown148;
         public float Unknown14C;
         public float Unknown150;
-        public float Unknown154;
+        public float EngineFuelConsumeRate;
         public float Unknown158;
         public float Unknown15C;
         public float Unknown160;

@@ -82,8 +82,8 @@
         public float Unknown2B0;
         public float Unknown2B4;
         public float Unknown2B8;
-        public float Unknown2BC;
-        public float Unknown2C0;
+        public float MinViewDistance;
+        public float MaxViewDistance;
         public float Unknown2C4;
         public float Unknown2C8;
         public float Unknown2CC;
@@ -287,5 +287,7 @@
         public float Unknown908;
         public float Unknown90C;
         public float Unknown910;
+        [NMS(Size = 0xC, Ignore = true)]
+        public byte[] EndPadding;
     }
 }

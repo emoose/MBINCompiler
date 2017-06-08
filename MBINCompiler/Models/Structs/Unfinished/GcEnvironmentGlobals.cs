@@ -75,7 +75,7 @@
         public float Unknown204;
         public float Unknown208;
         public float Unknown20C;
-        public float Unknown210;
+        public float AtmosphericCloudsDrawDistance;
         public float Unknown214;
         public float Unknown218;
         public float Unknown21C;

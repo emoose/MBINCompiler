@@ -1,20 +1,13 @@
 ﻿namespace MBINCompiler.Models.Structs
 {
-    public class GcInventoryTableEntry : NMSTemplate
+    public class GcInventoryTableEntry : NMSTemplate        // size: 0x20
     {
         [NMS(Size = 0x10)]
-        public string Id;
-        public int MinSize;
-        public int MaxSize;
-        public int SizeType;
-        public string[] SizeTypeValues()
-        {
-            return new[] { "SciSmall", "SciMedium", "SciLarge", "FgtSmall", "FgtMedium", "FgtLarge", "ShuSmall", "ShtMedium", "ShtLarge", "DrpSmall", "DrpMedium", "DrpLarge",
-						   "WeaponSmall", "WeaponMedium", "WeaponLarge", "FreighterSmall", "FreighterMedium", "FreighterLarge", "BuggySmall", "BuggyMedium", "BuggyLarge",
-						   "ChestSmall", "ChestMedium", "ChestLarge"}; // Shu/Sht spelling mistake(?) is from the exe
-        }
-
+        /* 0x00 */ public string Id;
+        /* 0x04 */ public int MinSize;
+        /* 0x08 */ public int MaxSize;
+        /* 0x0C */ public GcInventoryLayoutSizeType LayoutSizeType;
         [NMS(Size = 4, Ignore = true)]
-        public byte[] Padding1C;
+        /* 0x10 */ public byte[] EndPadding;
     }
 }

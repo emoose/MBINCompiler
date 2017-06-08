@@ -1,6 +1,6 @@
 ﻿namespace MBINCompiler.Models.Structs
 {
-    public class GcBirdData : NMSTemplate
+    public class GcBirdData : NMSTemplate		// size: 0x90
     {
         public float FlapSpeedMax;
         public float FlapSpeedMin;

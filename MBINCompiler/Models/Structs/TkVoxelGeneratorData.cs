@@ -1,29 +1,29 @@
 ﻿namespace MBINCompiler.Models.Structs
 {
-    public class TkVoxelGeneratorData : NMSTemplate
+    public class TkVoxelGeneratorData : NMSTemplate // size: 0x1348
     {
-        public GcSeed BaseSeed;
-        public float SeaRatio;
-        public float NoSeaBaseLevel;
-        public TkNoiseVoxelTypeEnum NoiseVoxelType1;
-        public TkNoiseVoxelTypeEnum NoiseVoxelType2;
+        /* 0x0000 */ public GcSeed BaseSeed;
+        /* 0x0010 */ public float SeaRatio;
+        /* 0x0014 */ public float NoSeaBaseLevel;
+        /* 0x0018 */ public TkNoiseVoxelTypeEnum BuildingVoxelType;
+        /* 0x001C */ public TkNoiseVoxelTypeEnum ResourceVoxelType;
 
         [NMS(Size = 7)]
-        public TkNoiseUberLayerData[] NoiseLayers;
+        /* 0x0020 */ public TkNoiseUberLayerData[] NoiseLayers;
         [NMS(Size = 9)]
-        public TkNoiseGridData[] GridLayers;
+        /* 0x02F8 */ public TkNoiseGridData[] GridLayers;
         [NMS(Size = 7)]
-        public TkNoiseFeatureData[] Features;
+        /* 0x109C */ public TkNoiseFeatureData[] Features;
 
-        public TkNoiseCaveData CavesUnderground;
-        public float MinimumCaveDepth;
-        public float CaveRoofSmoothingDist;
-        public float MaximumSeaLevelCaveDepth;
-        public float BuildingTextureRadius;
-        public float BuildingSmoothingRadius;
-        public float BuildingSmoothingHeight;
-        public float WaterFadeInDistance;
+        /* 0x125C */ public TkNoiseCaveData CavesUnderground;
+        /* 0x12DC */ public float MinimumCaveDepth;
+        /* 0x12E0 */ public float CaveRoofSmoothingDist;
+        /* 0x12E4 */ public float MaximumSeaLevelCaveDepth;
+        /* 0x12E8 */ public float BuildingTextureRadius;
+        /* 0x12EC */ public float BuildingSmoothingRadius;
+        /* 0x12F0 */ public float BuildingSmoothingHeight;
+        /* 0x12F4 */ public float WaterFadeInDistance;
         
-        public TkVoxelGeneratorRegionData Regions;
+        /* 0x12F8 */ public TkVoxelGeneratorRegionData Regions;
     }
 }
