@@ -58,11 +58,22 @@ namespace MBINCompiler.Models.Structs
                     {
                         // otherwise we have to create 32bit indices from the 16bit ones
                         var list32Bit = new List<uint>();
-                        for(int i = 0; i < data.Count; i += 2)
+                        int effective_count = (data.Count / 2) * 2;
+
+                        for (int i = 0; i < effective_count; i += 2)
                         {
-                            uint val32Bit = (uint)((int)data[i+1] << 16 | (int)data[i]);
+                            uint val32Bit = (uint)((int)data[i + 1] << 16 | (int) data[i]);
                             list32Bit.Add(val32Bit);
                         }
+
+                        //Handle odd cases
+                        if (data.Count % 2 == 1)
+                        {
+                            //uint val32Bit = (uint)((int)data[data.Count - 1] << 16);
+                            uint val32Bit = (uint)((int)data[data.Count - 1]);
+                            list32Bit.Add(val32Bit);
+                        }
+
                         additionalData.Insert(addtDataIndex, new Tuple<long, object>(listPos, list32Bit));
                     }
                     addtDataIndex++;
