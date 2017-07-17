@@ -7,7 +7,7 @@ namespace MBINCompiler.Models.Structs
         [NMS(Size = 0x10)]
         /* 0x000 */ public string Id;
         /* 0x010 */ public GcResourceElement Model;
-        /* 0x2B8 */ public GcAudioWwiseEvents AkEvent;
+        /* 0x2B8 */ public GcAudioWwiseEvents FireAudioEvent;
         /* 0x2BC */ public float Scale;
         /* 0x2C0 */ public bool isAutonomous;
         /* 0x2C4 */ public float Radius;
