@@ -24,7 +24,7 @@ namespace MBINCompiler.Models.Structs
         public float Unknown3C;
         public float Unknown40;
         public float Unknown44;
-        public float Unknown48;
+        public float VehicleSummonDistance;
         public float Unknown4C;
         public float Unknown50;
         public float Unknown54;

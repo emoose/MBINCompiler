@@ -1,6 +1,6 @@
 ﻿namespace MBINCompiler.Models.Structs
 {
-    public class GcInteractionBufferType : NMSTemplate // 0x7D10 bytes
+    public class GcInteractionBufferType : NMSTemplate
     {
         public int InterationBufferType;
         public string[] InterationBufferTypeValues()

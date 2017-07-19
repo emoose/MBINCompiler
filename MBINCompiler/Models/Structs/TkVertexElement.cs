@@ -1,6 +1,6 @@
 namespace MBINCompiler.Models.Structs
 {
-    public class TkVertexElement : NMSTemplate
+    public class TkVertexElement : NMSTemplate      // size: 0x20
     {
         public int SemanticID;
         public int Size;

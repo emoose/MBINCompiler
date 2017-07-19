@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Text;
 
 namespace MBINCompiler
 {
@@ -78,6 +79,12 @@ namespace MBINCompiler
                 file.Header.SetDefaults();
                 if (data.GetType() == typeof(Models.Structs.TkGeometryData))
                     file.Header.Magic = 0xDDDDDDDD; // only used by TkGeometryData / .MBIN.PC files, maybe used to signal the file is PC only?
+                if (data.GetType() == typeof(Models.Structs.TkAnimMetadata))
+                {
+                    file.Header.Tag = 0xFFFFFFFFFFFFFFFF;
+                    file.Header.MbinVersion = 0x9B251350AE1ABCA7;
+                    file.Header.EndPadding = 0xFEFEFEFEFEFEFEFE;
+                }
 
                 file.SetData(data);
                 file.Save();

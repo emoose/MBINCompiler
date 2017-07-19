@@ -2,15 +2,15 @@
 {
     public class GcSpaceshipGlobals : NMSTemplate
     {
-        public float Unknown0;
+        /* 0x000 */ public float CockpitViewOffset;
         public float Unknown4;
         public float Unknown8;
         public float UnknownC;
         public float Unknown10;
         public float Unknown14;
-        public float Unknown18;
-        public float Unknown1C;
-        public float Unknown20;
+        public float ShipTiltOnTurning;
+        public float ShipTiltOnTurningDampning;
+        public float VerticalCameraTiltOnBreak;
         public float Unknown24;
         public float Unknown28;
         public float Unknown2C;
@@ -22,10 +22,8 @@
         public float Unknown44;
         public int UnknownInt48;
         public int UnknownInt4C;
-        public float Unknown50;
-        public float Unknown54;
-        public float Unknown58;
-        public Vector2f Unknown5C;
+        public Colour ShipLaserMuzzleShotColour;
+        public float Unknown60;
         public float Unknown64;
         public float Unknown68;
         public float Unknown6C;
@@ -178,9 +176,9 @@
         public float Unknown360;
         public float Unknown364;
         public float Unknown368;
-        public float Unknown36C;
-        public float Unknown370;
-        public float Unknown374;
+        public float Unknown36C;        // angular force?
+        /* 0x370 */ public float PulseEngineCountdownTimeSeconds;
+        /* 0x374 */ public float MaxPulseEngineSpeed;
         public float Unknown378;
         public float Unknown37C;
         public float Unknown380;
@@ -190,7 +188,7 @@
         public float Unknown390;
         public float Unknown394;
         public float Unknown398;
-        public float Unknown39C;
+        /* 0x39C */ public float PulseEngineExitForce;
         public float Unknown3A0;
         public int UnknownInt3A4;
         public float Unknown3A8;
@@ -229,7 +227,7 @@
         public float Unknown430;
         public float Unknown434;
         public float Unknown438;
-        public float Unknown43C;
+        /* 0x43C */ public float BoostKeypressDelay;
         public float Unknown440;
         public float Unknown444;
         public float Unknown448;

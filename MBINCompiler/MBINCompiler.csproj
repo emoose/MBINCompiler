@@ -704,6 +704,7 @@
     <Compile Include="Models\Structs\GcVehicleGlobals.cs" />
     <Compile Include="Models\Structs\Unfinished\GcAISpaceshipGlobals.cs" />
     <Compile Include="Models\Structs\Unfinished\GcCameraGlobals.cs" />
+    <Compile Include="Models\Structs\EmptyNode.cs" />
     <Compile Include="Models\Structs\Unfinished\GcGalaxyGlobals_old.cs" />
     <Compile Include="Models\Structs\Unfinished\GcPlayerGlobals.cs" />
     <Compile Include="Models\Structs\Unfinished\GcPlayerGlobals_old.cs" />
