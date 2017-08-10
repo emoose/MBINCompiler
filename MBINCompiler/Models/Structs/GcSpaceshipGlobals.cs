@@ -8,9 +8,9 @@
         public float UnknownC;
         public float Unknown10;
         public float Unknown14;
-        public float ShipTiltOnTurning;
-        public float ShipTiltOnTurningDampning;
-        public float VerticalCameraTiltOnBreak;
+        /* 0x018 */ public float ShipTiltOnTurning;
+        /* 0x01C */ public float ShipTiltOnTurningDampning;
+        /* 0x020 */ public float VerticalCameraTiltOnBreak;
         public float Unknown24;
         public float Unknown28;
         public float Unknown2C;
@@ -22,7 +22,7 @@
         public float Unknown44;
         public int UnknownInt48;
         public int UnknownInt4C;
-        public Colour ShipLaserMuzzleShotColour;
+        /* 0x050 */ public Colour ShipLaserMuzzleShotColour;
         public float Unknown60;
         public float Unknown64;
         public float Unknown68;
@@ -57,7 +57,7 @@
         public float UnknownDC;
         public float UnknownE0;
         public float UnknownE4;
-        public float MinAutoLiftAltitude;
+        /* 0x0E8 */ public float MinAutoLiftAltitude;
         public float UnknownEC;
         public float UnknownF0;
         public Vector2f UnknownF4;
@@ -234,7 +234,7 @@
         public float Unknown44C;
         public float Unknown450;
         public float Unknown454;
-        public float Unknown458;
+        /* 0x458 */ public float MaxDownwardPitchAngle;
         public float Unknown45C;
         public float Unknown460;
         public float Unknown464;
@@ -273,8 +273,8 @@
         public float Unknown4E8;
         public float Unknown4EC;
         public int UnknownInt4F0;
-        public float Unknown4F4;
-        public float Unknown4F8;
+        /* 0x4F4 */ public float MinAltitudeOffset;
+        public float Unknown458;
         public float Unknown4FC;
         public float Unknown500;
         public float Unknown504;

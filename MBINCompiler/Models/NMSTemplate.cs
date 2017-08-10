@@ -505,7 +505,7 @@ namespace MBINCompiler.Models
             var entryOffsetNamePairs = new Dictionary<long, string>();
             foreach (var entry in list)
             {
-                if (entry.GetType().Name == "GcNGuiLayerData" || entry.GetType().Name == "GcNGuiTextData")
+                if (entry.GetType().Name == "GcNGuiLayerData" || entry.GetType().Name == "GcNGuiTextData" || entry.GetType().Name == "GcNGuiGraphicData")
                 {
                     writer.Align(0x10, 0);
                 }

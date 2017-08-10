@@ -16,7 +16,8 @@
         public TkShearWindOctaveData Octave2;
         public TkShearWindOctaveData Octave3;
 
-        [NMS(Size = 4, Ignore = true)]
-        public byte[] Padding7C;
+        public float Unknown;
+        //[NMS(Size = 4, Ignore = true)]
+        //public byte[] Padding7C;
     }
 }
