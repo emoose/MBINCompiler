@@ -4,8 +4,7 @@
     {
         [NMS(Size = 0x10)]
         public string Id;
-        public GcRewardTableCategory Common; // This actually is a GcRewardTableCategory[3], values are GcRarity
-        public GcRewardTableCategory Uncommon;
-        public GcRewardTableCategory Rare;
+        [NMS(Size = 0x3, EnumValue = new[] { "Common", "Uncommon", "Rare" })]
+        public GcRewardTableCategory[] Rarities;
     }
 }

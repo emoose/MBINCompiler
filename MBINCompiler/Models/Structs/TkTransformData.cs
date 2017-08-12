@@ -1,6 +1,6 @@
 ﻿namespace MBINCompiler.Models.Structs
 {
-    public class TkTransformData : NMSTemplate
+    public class TkTransformData : NMSTemplate      // size: 0x24
     {
         public float TransX;
         public float TransY;

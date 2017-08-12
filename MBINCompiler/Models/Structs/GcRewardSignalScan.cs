@@ -5,7 +5,7 @@
         public int SignalScanType;
         public string[] SignalScanTypeValues()
         {
-            return new[] { "None", "DropPod", "Shelter", "Search", "Relic", "Industrial" };
+            return new[] { "None", "DropPod", "Shelter", "Search", "Relic", "Industrial", "Alien", "CrashedFreighter" };
         }
     }
 }

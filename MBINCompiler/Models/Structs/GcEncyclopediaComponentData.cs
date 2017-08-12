@@ -2,6 +2,6 @@
 {
     public class GcEncyclopediaComponentData : NMSTemplate
     {
-        public GcDiscoveryTypes DiscoveryType;
+        public GcDiscoveryTypes Type;
     }
 }

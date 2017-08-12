@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace MBINCompiler.Models.Structs
+namespace MBINCompiler.Models.Structs       // size: 0x4E0
 {
     public class GcSceneSettings : NMSTemplate
     {
@@ -39,10 +39,10 @@ namespace MBINCompiler.Models.Structs
 
         /* 0x430 */ public GcPlayerSpawnStateData PlayerState;
 
-        /* 0x480 */ public List<NMSTemplate> Events;
-        /* 0x490 */ public List<NMSTemplate> PostWarpEvents;
+        /* 0x4B0 */ public List<NMSTemplate> Events;
+        /* 0x4C0 */ public List<NMSTemplate> PostWarpEvents;
 
         [NMS(Size = 0x10)]
-        /* 0x4A0 */ public string SpawnerOptionId;
+        /* 0x4D0 */ public string SpawnerOptionId;
     }
 }

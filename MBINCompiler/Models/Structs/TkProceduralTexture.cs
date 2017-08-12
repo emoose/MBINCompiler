@@ -1,29 +1,30 @@
 ﻿namespace MBINCompiler.Models.Structs
 {
-    public class TkProceduralTexture : NMSTemplate
+    public class TkProceduralTexture : NMSTemplate      // size: 0x1D0
     {
-        [NMS(Size = 0x10)]
-        public string Name;
+        [NMS(Size = 0x20)]
+        /* 0x000 */ public string Name;
 
-        public TkPaletteTexture Palette;
-        public float Probability;
-        public int TextureGameplayUse;
-
+        /* 0x020 */ public TkPaletteTexture Palette;
+        /* 0x028 */ public float Probability;
+        /* 0x02C */ public int TextureGameplayUse;
         public string[] TextureGameplayUseValues()
         {
             return new[] { "IgnoreName", "MatchName", "DoNotMatchName" };
         }
 
-        public bool OverrideAverageColour;
-        public Colour AverageColour;
+        /* 0x030 */ public bool OverrideAverageColour;
+        [NMS(Size = 0xF, Ignore = true)]
+        /* 0x031 */ public byte[] Padding31;
+        /* 0x040 */ public Colour AverageColour;
 
         [NMS(Size = 0x80)]
-        public string Diffuse;
+        /* 0x050 */ public string Diffuse;
 
         [NMS(Size = 0x80)]
-        public string Normal;
+        /* 0x0D0 */ public string Normal;
 
         [NMS(Size = 0x80)]
-        public string Mask;
+        /* 0x150 */ public string Mask;
     }
 }

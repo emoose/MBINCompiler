@@ -2,7 +2,7 @@
 
 namespace MBINCompiler.Models.Structs
 {
-    public class GcDestructableComponentData : NMSTemplate
+    public class GcDestructableComponentData : NMSTemplate      // size: 0x148
     {
         [NMS(Size = 0x10)]
         /* 0x000 */ public string Explosion;
@@ -27,35 +27,38 @@ namespace MBINCompiler.Models.Structs
         /* 0x054 */ public int LootRewardAmountMax;
 
         /* 0x058 */ public List<GcSubstanceAmount> GivesSubstances;
-        [NMS(Size = 0x10)]
-        /* 0x068 */ public string GivesReward;
-		/* 0x078 */ public float HardModeSubstanceMultiplier;
 
-        /* 0x07C */ public bool RemoveModel;
-        [NMS(Size = 0x3, Ignore = true)]
-        /* 0x07D */ public byte[] Padding7D;
-        [NMS(Size = 0x80)]
-        /* 0x080 */ public string DestroyedModel;
+        /* 0x68 */ public GcStatTrackType StatsToTrack;      // not sure about this...
         [NMS(Size = 0x4, Ignore = true)]
-        /* 0x100 */ public byte[] Padding100;
-        /* 0x104 */ public bool DestroyedModelUsesScale;
-        [NMS(Size = 0x3, Ignore = true)]
-        /* 0x105 */public byte[] Padding105;
-        /* 0x108 */ public float DestroyForce;
-        /* 0x10C */ public float DestroyForceRadius;
-        [NMS(Size = 0x10)]
-        /* 0x110 */ public string DestroyEffect;
-        [NMS(Size = 0x10)]
-        /* 0x120 */ public string DestroyEffectPoint;
-        /* 0x130 */ public float DestroyEffectTime;
+        /* 0x6C */ public byte[] Padding6C;
 
-        /* 0x134 */ public bool ShowInteract;
+        [NMS(Size = 0x10)]
+        /* 0x070 */ public string GivesReward;
+		/* 0x080 */ public float HardModeSubstanceMultiplier;
+
+        /* 0x084 */ public bool RemoveModel;
         [NMS(Size = 0x3, Ignore = true)]
-        /* 0x135 */ public byte[] Padding135;
-        /* 0x138 */ public float ShowInteractRange;
-        /* 0x13C */ public bool GrenadeSingleHit;
+        /* 0x085 */ public byte[] Padding85;
+        [NMS(Size = 0x80)]
+        /* 0x088 */ public TkTextureResource DestroyedModel;
+        /* 0x10C */ public bool DestroyedModelUsesScale;
+        [NMS(Size = 0x3, Ignore = true)]
+        /* 0x10D */public byte[] Padding10D;
+        /* 0x110 */ public float DestroyForce;
+        /* 0x114 */ public float DestroyForceRadius;
+        [NMS(Size = 0x10)]
+        /* 0x118 */ public string DestroyEffect;
+        [NMS(Size = 0x10)]
+        /* 0x128 */ public string DestroyEffectPoint;
+        /* 0x138 */ public float DestroyEffectTime;
+
+        /* 0x13C */ public bool ShowInteract;
+        [NMS(Size = 0x3, Ignore = true)]
+        /* 0x13D */ public byte[] Padding13D;
+        /* 0x140 */ public float ShowInteractRange;
+        /* 0x144 */ public bool GrenadeSingleHit;
 
         [NMS(Size = 3, Ignore = true)]
-        /* 0x13D */ public byte[] Padding13D;
+        /* 0x145 */ public byte[] Padding145;
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace MBINCompiler.Models.Structs
 {
-    public class GcAnimFrameEvent : NMSTemplate
+    public class GcAnimFrameEvent : NMSTemplate     // size: 0x18
     {
         [NMS(Size = 0x10)]
         public string Anim;

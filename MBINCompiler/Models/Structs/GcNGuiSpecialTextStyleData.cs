@@ -2,7 +2,7 @@
 
 namespace MBINCompiler.Models.Structs
 {
-    public class GcNGuiSpecialTextStyleData : NMSTemplate
+    public class GcNGuiSpecialTextStyleData : NMSTemplate       // size: 0x38
     {
         [NMS(Size = 0x10)]
         public string Name;

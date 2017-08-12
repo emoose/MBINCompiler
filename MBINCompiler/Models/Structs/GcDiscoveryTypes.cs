@@ -5,7 +5,7 @@
         public int DiscoveryType;
         public string[] DiscoveryTypeValues()
         {
-            return new[] { "Unknown", "SolarSystem", "Planet", "Animal", "Flora", "Mineral", "Sector" };
+            return new[] { "Unknown", "SolarSystem", "Planet", "Animal", "Flora", "Mineral", "Sector", "Building", "Interactable", "Sentinel" };
         }
     }
 }

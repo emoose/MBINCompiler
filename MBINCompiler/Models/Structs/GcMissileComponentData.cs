@@ -1,6 +1,6 @@
 namespace MBINCompiler.Models.Structs
 {
-    public class GcMissileComponentData : NMSTemplate
+    public class GcMissileComponentData : NMSTemplate       // size: 0x28
     {
         [NMS(Size = 0x10)]
         /* 0x000 */ public string Explosion;

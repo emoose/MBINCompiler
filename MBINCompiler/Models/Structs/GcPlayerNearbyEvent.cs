@@ -1,6 +1,6 @@
 ﻿namespace MBINCompiler.Models.Structs
 {
-    public class GcPlayerNearbyEvent : NMSTemplate
+    public class GcPlayerNearbyEvent : NMSTemplate      // size: 0x24
     {
         public int RequirePlayerAction;
         public string[] RequirePlayerActionValues()

@@ -1,14 +1,8 @@
 ﻿namespace MBINCompiler.Models.Structs
 {
-    public class TkProceduralTextureList : NMSTemplate
+    public class TkProceduralTextureList : NMSTemplate      //size: 0x200
     {
-        public TkProceduralTextureLayer Layer1;
-        public TkProceduralTextureLayer Layer2;
-        public TkProceduralTextureLayer Layer3;
-        public TkProceduralTextureLayer Layer4;
-        public TkProceduralTextureLayer Layer5;
-        public TkProceduralTextureLayer Layer6;
-        public TkProceduralTextureLayer Layer7;
-        public TkProceduralTextureLayer Layer8;
+        [NMS(Size = 0x8)]
+        public TkProceduralTextureLayer[] Layers;
     }
 }

@@ -4,7 +4,7 @@ namespace MBINCompiler.Models.Structs
 {
     public class TkResourceDescriptorData : NMSTemplate
     {
-        [NMS(Size = 0x10)]
+        [NMS(Size = 0x20)]
         public string Id;
         [NMS(Size = 0x80)]
         public string Name;

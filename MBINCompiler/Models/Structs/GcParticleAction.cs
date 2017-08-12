@@ -1,6 +1,6 @@
 ﻿namespace MBINCompiler.Models.Structs
 {
-    public class GcParticleAction : NMSTemplate
+    public class GcParticleAction : NMSTemplate // size: 0x38
     {
         [NMS(Size = 0x10)]
         public string Effect;

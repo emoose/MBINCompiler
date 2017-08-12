@@ -4,6 +4,6 @@ namespace MBINCompiler.Models.Structs
 {
     public class GcPlayerMissionProgressMapTable : NMSTemplate
     {
-        public List<GcPlayerMissionProgressMapEntry> GcMissionProgressTable;
+        public List<GcPlayerMissionProgressMapEntry> MissionProgressTable;
     }
 }

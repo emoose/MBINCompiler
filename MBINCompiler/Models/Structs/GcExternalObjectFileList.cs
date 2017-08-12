@@ -2,7 +2,7 @@
 
 namespace MBINCompiler.Models.Structs
 {
-    public class GcExternalObjectFileList : NMSTemplate
+    public class GcExternalObjectFileList : NMSTemplate     // size: 0x38
     {
         [NMS(Size = 0x10)]
         public string Id;
@@ -13,7 +13,7 @@ namespace MBINCompiler.Models.Structs
         public bool NotOnExtremePlanets;
         public bool NotOnStartPlanets;
 
-        public GcBiomeType Biome;
+        public GcBiomeType OnlyOnBiome;
 
         public float ProbabilityOfBeingActive;
         public int MinFilesToChoose;

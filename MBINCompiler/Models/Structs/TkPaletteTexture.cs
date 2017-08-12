@@ -2,7 +2,7 @@
 {
     public class TkPaletteTexture : NMSTemplate
     {
-        public int Palette;
+        public int Palette;     // elements: 0x29
         public string[] PaletteValues()
         {
             return new[]

@@ -2,16 +2,16 @@ namespace MBINCompiler.Models.Structs
 {
     public class GcGalaxyGlobals : NMSTemplate
     {
-        public float Unknown0;
+        /* 0x000 */ public float NextStarSelectionLineThickness;
         public float Unknown4;
-        public float Unknown8;              // something to do with the UI?
-        public float UnknownC;              // somehting to do with the UI?
-        public float Unknown10;
-        public float Unknown14;
-        public float Unknown18;
-        public float Unknown1C;
-        public float Unknown20;
-        public float Unknown24;
+        /* 0x008 */ public float TopBottomBarVisibility;
+        /* 0x00C */ public float PathSelectionPositionX;
+        /* 0x010 */ public float PathSelectionPositionY;
+        /* 0x014 */ public float PathCircleSeparation;
+        /* 0x018 */ public float PathCircleForegroundRadius;
+        /* 0x01C */ public float PathCircleBackgroundRadius;
+        /* 0x020 */ public float SelectedPathIndicatorRadius;
+        /* 0x024 */ public float SelectedPathIndicatorThickness;
         public float Unknown28;
         public float Unknown2C;
         public int Unknown30;
@@ -80,11 +80,11 @@ namespace MBINCompiler.Models.Structs
         /* 0x520 */ public GcGalaxyStarColours GalaxyStarColours2;
         /* 0X560 */ public GcGalaxyCameraData GalaxyCameraData;
         /* 0x5B8 */ public GcGalaxyAudioSetupData GalaxyAudioSetupData;
-        public float Unknown5FC;
-        public float Unknown600;
-        public float Unknown604;
-        public float Unknown608;
-        public float Unknown60C;
+        /* 0x5FC */ public float ShipToGalaxyAnimationLength;
+        /* 0x600 */ public float ShipToGalaxyFodeOutLength;
+        /* 0x604 */ public float GalaxyToShipFadeInLength;
+        /* 0x608 */ public float GalaxyToShipFadeOutLength;
+        /* 0x60C */ public float ColourNoiseFrequency;
 
         public GcGalaxyRenderSetupData Unknown610;
         public GcGalaxyGenerationSetupData Unknown800;

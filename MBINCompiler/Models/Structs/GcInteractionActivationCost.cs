@@ -2,7 +2,7 @@
 
 namespace MBINCompiler.Models.Structs
 {
-    public class GcInteractionActivationCost : NMSTemplate
+    public class GcInteractionActivationCost : NMSTemplate      // size: 0x38
     {
         [NMS(Size = 0x10)]
         /* 0x00 */ public string SubstanceId;

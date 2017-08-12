@@ -2,7 +2,7 @@
 
 namespace MBINCompiler.Models.Structs
 {
-    public class GcMissionSequenceGroup : NMSTemplate
+    public class GcMissionSequenceGroup : NMSTemplate       // size: 0x1D8
     {
         [NMS(Size = 0x80)]
         /* 0x000 */ public string DebugText;

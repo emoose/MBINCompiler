@@ -2,9 +2,9 @@
 
 namespace MBINCompiler.Models.Structs
 {
-    public class TkAnimationComponentData : NMSTemplate
+    public class TkAnimationComponentData : NMSTemplate     // size: 0xF0
     {
-        public TkAnimationData Idle;
-        public List<TkAnimationData> Anims;
+        /* 0x00 */ public TkAnimationData Idle;
+        /* 0xE0 */ public List<TkAnimationData> Anims;
     }
 }

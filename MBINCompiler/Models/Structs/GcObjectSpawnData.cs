@@ -2,7 +2,7 @@
 
 namespace MBINCompiler.Models.Structs
 {
-    public class GcObjectSpawnData : NMSTemplate // 0x378 bytes
+    public class GcObjectSpawnData : NMSTemplate // 0x3B0 bytes
     {
         /* 0x000 */ public int Type;
         public string[] TypeValues()
@@ -61,36 +61,41 @@ namespace MBINCompiler.Models.Structs
         /* 0x340 */ public float FadeOutStartDistance;
         /* 0x344 */ public float FadeOutEndDistance;
         /* 0x348 */ public float FadeOutOffsetDistance;
+        [NMS(Size = 5)]
+        /* 0x34C */ public float[] LodDistances;
 
-        /* 0x34C */ public bool MatchGroundColour;
-        /* 0x350 */ public int GroundColourIndex;
+        /* 0x360 */ public bool MatchGroundColour;
+        /* 0x364 */ public int GroundColourIndex;
         public string[] GroundColourIndexValues()
         {
             return new[] { "Auto", "Main", "Patch" };
         }
 
-        /* 0x354 */ public bool SwapPrimaryForSecondaryColour;
-        /* 0x355 */ public bool SwapPrimaryForRandomColour;
+        /* 0x368 */ public bool SwapPrimaryForSecondaryColour;
+        /* 0x369 */ public bool SwapPrimaryForRandomColour;
+        /* 0x36A */ public bool PositioningAlignToNormal;
+        /* 0x36C */ public float PositioningMinScale;
+        /* 0x370 */ public float PositioningMaxScale;
+        /* 0x374 */ public float PositioningMinScaleY;
+        /* 0x378 */ public float PositioningMaxScaleY;
+        /* 0x37C */ public float PositioningSlopeScaling;
+        /* 0x380 */ public float PositioningPatchEdgeScaling;
+        /* 0x384 */ public float PositioningMaxXZRotation;
 
-        /* 0x356 */ public bool PositioningAlignToNormal;
-        /* 0x358 */ public float PositioningMinScale;
-        /* 0x35C */ public float PositioningMaxScale;
-        /* 0x360 */ public float PositioningMinScaleY;
-        /* 0x364 */ public float PositioningMaxScaleY;
-        /* 0x368 */ public float PositioningSlopeScaling;
-        /* 0x36C */ public float PositioningPatchEdgeScaling;
-        /* 0x370 */ public float PositioningMaxXZRotation;
-
-        /* 0x374 */ public bool ObjectAutoCollision;
-        /* 0x375 */ public bool ObjectCollideWithPlayer;
-        /* 0x376 */ public bool CollideWithPlayerVehicle;
-        /* 0x377 */ public bool DestroyedByPlayerVehicle;
-        /* 0x378 */ public bool ObjectCreaturesCanEat;
-        /* 0x37C */ public float ObjectShearWindStrength;
+        /* 0x388 */ public bool ObjectAutoCollision;
+        /* 0x389 */ public bool ObjectCollideWithPlayer;
+        /* 0x38A */ public bool CollideWithPlayerVehicle;
+        /* 0x38B */ public bool DestroyedByPlayerVehicle;
+        /* 0x38C */ public bool ObjectCreaturesCanEat;
+        /* 0x390 */ public float ObjectShearWindStrength;
+        [NMS(Size = 0x4, Ignore =true)]
+        /* 0x394 */ public byte[] Padding394;
         [NMS(Size = 0x10)]
-        /* 0x380 */ public string DestroyedByVehicleEffect;
+        /* 0x398 */ public string DestroyedByVehicleEffect;
 
-        /* 0x390 */ public int RuntimeCacheCachedCollisionNodeCount; // might be float
-        /* 0x394 */ public bool RuntimeCacheAllowLimiting;
+        /* 0x3A9 */ public int RuntimeCacheCachedCollisionNodeCount; // might be float
+        /* 0x3AC */ public bool RuntimeCacheAllowLimiting;
+        [NMS(Size = 0x3, Ignore = true)]
+        /* 0x3AD */ public byte[] EndPadding;
     }
 }

@@ -2,16 +2,15 @@
 
 namespace MBINCompiler.Models.Structs
 {
-    public class GcRewardTableItemList : NMSTemplate
+    public class GcRewardTableItemList : NMSTemplate        // size: 0x18
     {
-        public bool EntitlementLinked;
-        [NMS(Size = 0x20)]
-        public string EntitlementId;
         public int RewardChoice;
         public string[] RewardChoiceValues()
         {
-            return new[] { "GiveAll", "Select", "TryEach" };
+            return new[] { "GiveAll", "Select", "SelectAlways", "TryEach" };
         }
+        [NMS(Size = 0x4, Ignore = true)]
+        public byte[] Padding4;
 
         public List<GcRewardTableItem> List;
     }

@@ -2,18 +2,19 @@
 
 namespace MBINCompiler.Models.Structs
 {
-    public class TkProceduralTextureLayer : NMSTemplate
+    public class TkProceduralTextureLayer : NMSTemplate     // size: 0x40
     {
         [NMS(Size = 0x10)]
-        public string Name;
+        /* 0x00 */ public string Name;
 
-        public float Probability;
-        public int Unknown14;
+        /* 0x10 */ public float Probability;
+        [NMS(Size = 0x4, Ignore = true)]
+        /* 0x14 */ public byte[] Padding14;
 
         [NMS(Size = 0x10)]
-        public string Group;
+        /* 0x18 */ public string Group;
 
-        public bool SelectToMatchBase;
-        public List<TkProceduralTexture> Textures;
+        /* 0x28 */ public bool SelectToMatchBase;
+        /* 0x30 */ public List<TkProceduralTexture> Textures;
     }
 }

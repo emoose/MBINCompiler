@@ -6,7 +6,7 @@ namespace MBINCompiler.Models.Structs
         public GcPhotoModeAdjustData Unknown18;
         public GcPhotoModeAdjustData Unknown30;
         public int UnknownInt48;
-        public float Unknown4C;
+        /* 0x04C */ public float SunOrbitPeriod;
         public bool Unknown50;
         public float Unknown54;
         public float Unknown58;
@@ -113,10 +113,8 @@ namespace MBINCompiler.Models.Structs
 
         public GcSkyProperties Unknown22C;
 
-        public GcFogProperties Unknown25C;
-        public GcFogProperties Unknown338;
-        public GcFogProperties Unknown414;
-        public GcFogProperties Unknown4F0;
+        [NMS(Size = 0x4, EnumValue = new[] {"ClearFog", "StormFog", "ExtremeWeatherFog", "InFlightFog" })]
+        /* 0x25C */ public GcFogProperties[] PlanetFogProperties;
         public GcSpaceSkyProperties Unknown5D0;
         public GcSpaceSkyProperties Unknown660;
         public GcSpaceSkyColours Unknown6F0;

@@ -1,6 +1,6 @@
 ﻿namespace MBINCompiler.Models.Structs
 {
-    public class GcPlayAudioAction : NMSTemplate
+    public class GcPlayAudioAction : NMSTemplate        // size: 0x88
     {
         [NMS(Size = 0x80)]
         public string Sound;

@@ -2,12 +2,12 @@
 
 namespace MBINCompiler.Models.Structs
 {
-    public class GcBiomeFileList : NMSTemplate
+    public class GcBiomeFileList : NMSTemplate      // size: 0xC0
     {
-        [NMS(Size = 9)]
-        public NMSString0x80[] BiomeFiles;
+        [NMS(Size = 0xA, EnumValue = new[] { "Lush", "Toxic", "Scorched", "Radioactive", "Frozen", "Barren", "Dead", "Weird", "Test", "All" })]
+        /* 0x00 */ public GcBiomeFileListOptions[] BiomeFiles;
 
-        public List<GcExternalObjectListOptions> CommonExternalObjectLists;
-        public List<GcExternalObjectFileList> OptionalExternalObjectLists;
+        /* 0xA0 */ public List<GcExternalObjectListOptions> CommonExternalObjectLists;
+        /* 0xB0 */ public List<GcExternalObjectFileList> OptionalExternalObjectLists;
     }
 }

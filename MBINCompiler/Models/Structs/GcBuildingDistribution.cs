@@ -1,6 +1,6 @@
 ﻿namespace MBINCompiler.Models.Structs
 {
-    public class GcBuildingDistribution : NMSTemplate // 0x2C00 bytes
+    public class GcBuildingDistribution : NMSTemplate // size: 0x18 bytes
     {
         [NMS(Size = 0x10)]
         public string Name;

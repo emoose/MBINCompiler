@@ -2,7 +2,7 @@
 
 namespace MBINCompiler.Models.Structs
 {
-    public class GcBaseBuildingEntry : NMSTemplate
+    public class GcBaseBuildingEntry : NMSTemplate      // size: 0x130
     {
         [NMS(Size = 0x10)]
         /* 0x000 */ public string ID;
@@ -50,9 +50,18 @@ namespace MBINCompiler.Models.Structs
         /* 0x114 */ public float PlayerInsideRadiusFactor;
         /* 0x118 */ public bool CanChangeColour;
         /* 0x119 */ public bool CanChangeMaterial;
+        /* 0x11A */ public bool EditsTerrain;
 
+        /* 0x11C */ public int BaseTerrainEditShape;
+        public string[] BaseTerrainEditShapeValues()
+        {
+            return new[] { "Cube", "Cylinder"};
+        }
 
-        [NMS(Size = 6, Ignore = true)]
-        /* 0x120 */ public byte[] Padding120;
+        /* 0x120 */ public float TerrainEditBaseYOffset;
+        /* 0x124 */ public float TerrainEditTopYOffset;
+        /* 0x128 */ public float TerrainEditBoundsScalar;
+        [NMS(Size = 0x4, Ignore = true)]
+        /* 0x12C */ public byte[] EndPadding;
     }
 }

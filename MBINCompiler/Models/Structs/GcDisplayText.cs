@@ -2,7 +2,7 @@
 {
     public class GcDisplayText : NMSTemplate
     {
-        public int HUDTextDisplayType;
+        public int HUDTextDisplayType;      // size: 0x304
         public string[] HUDTextDisplayTypeValues()
         {
             return new[] { "Full", "Compact", "EyeLevel", "Prompt", "Tooltip" };

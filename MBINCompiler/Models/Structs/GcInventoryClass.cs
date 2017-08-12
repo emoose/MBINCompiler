@@ -3,7 +3,7 @@
     public class GcInventoryClass : NMSTemplate
     {
         public int InventoryClass;
-        public string[] InventoryValues()
+        public string[] InventoryClassValues()
         {
             return new[] { "C", "B", "A", "S" };
         }

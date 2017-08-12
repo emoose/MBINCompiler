@@ -119,8 +119,8 @@ namespace MBINCompiler.Models.Structs
         public float Unknown1548;
         public float Unknown154C;
         public float Unknown1550;
-        public float Unknown1554;
-        public float Unknown1558;
+        /* 0x1554 */ public float MinStationaryHeadBob;
+        /* 0x1558 */ public float MaxStationaryHeadBob;
         public float Unknown155C;
         public float Unknown1560;
         public float Unknown1564;
@@ -155,10 +155,10 @@ namespace MBINCompiler.Models.Structs
         public float Unknown15D8;
         public float Unknown15DC;
         public float Unknown15E0;
-        public float Unknown15E4;
-        public float Unknown15E8;
-        public float Unknown15EC;
-        public float Unknown15F0;
+        /* 0x15E4 */ public float ShipCameraFOVlanded;
+        /* 0x15E8 */ public float ShipCameraFOVatCruisingSpeed;
+        /* 0x15EC */ public float ShipCameraFOVatFullSpeed;
+        /* 0x15F0 */ public float ShipCameraFOVusingPulseDrive;
         public float Unknown15F4;
         public float Unknown15F8;
         public float Unknown15FC;

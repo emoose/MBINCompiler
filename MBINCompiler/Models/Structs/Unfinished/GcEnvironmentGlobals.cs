@@ -42,7 +42,7 @@
         public float Unknown180;
         public float Unknown184;
         public float Unknown188;
-        public float Unknown18C;
+        /* 0x18C */ public float TerrainLODFadeSpeed;
         public float Unknown190;
         public float Unknown194;
         public float Unknown198;
@@ -58,8 +58,8 @@
         public float Unknown1C0;
         public float Unknown1C4;
         public float Unknown1C8;
-        public float Unknown1CC;
-        public float Unknown1D0;
+        /* 0x1CC */ public float MinCloudHeight;
+        /* 0x1D0 */ public float MaxCloudHeight;
         public float Unknown1D4;
         public float Unknown1D8;
         public float Unknown1DC;
@@ -71,11 +71,11 @@
         public float Unknown1F4;
         public float Unknown1F8;
         public float Unknown1FC;
-        public float Unknown200;
+        /* 0x200 */ public float HiLODStartHeight;
         public float Unknown204;
         public float Unknown208;
-        public float Unknown20C;
-        public float AtmosphericCloudsDrawDistance;
+        /* 0x20C */ public float PlanetActiveZoneHeight;
+        /* 0x210 */ public float AtmosphericCloudsDrawDistance;
         public float Unknown214;
         public float Unknown218;
         public float Unknown21C;
@@ -96,8 +96,8 @@
         public float Unknown258;
         public float Unknown25C;
         public float Unknown260;
-        public float Unknown264;
-        public float Unknown268;
+        /* 0x264 */ public float MinBaseFogIntensity;
+        /* 0x268 */ public float MaxBaseFogIntensity;
         public float Unknown26C;
         public float Unknown270;
         public float Unknown274;
@@ -114,7 +114,7 @@
         public float Unknown2A0;
         public float Unknown2A4;
         public float Unknown2A8;
-        public float Unknown2AC;
+        /* 0x2AC */ public float SurfaceSunlightActiveHeight;
         public float Unknown2B0;
         public float Unknown2B4;
         public float Unknown2B8;

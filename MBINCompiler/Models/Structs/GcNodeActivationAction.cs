@@ -11,8 +11,9 @@
         [NMS(Size = 0x80)]
         /* 0x04 */ public string Name;
         /* 0x84 */ public bool IncludePhysics;
-        /* 0x85 */ public bool UseMasterModel;
-        [NMS(Size = 2, Ignore = true)]
-        /* 0x86 */ public byte[] Padding86;
+        /* 0x85 */ public bool NotifyNPC;
+        /* 0x86 */ public bool UseMasterModel;
+        [NMS(Size = 1, Ignore = true)]
+        /* 0x87 */ public byte[] EndPadding;
     }
 }

@@ -5,33 +5,38 @@ using System.Diagnostics;
 using System.IO;
 using System.Reflection;
 
-namespace MBINCompiler.Models.Structs
+namespace MBINCompiler.Models.Structs       // size: 0x150
 {
     public class TkGeometryData : NMSTemplate
     {
-        public int VertexCount;
-        public int IndexCount;
-        public int Indices16Bit;
+        /* 0x000 */ public int VertexCount;
+        /* 0x004 */ public int IndexCount;
+        /* 0x008 */ public int Indices16Bit;
+        /* 0x00C */ public int CollisionIndexCount;
 
-        public List<TkJointBindingData> JointBindings;
-        public List<TkJointExtentData> JointExtents;
+        /* 0x010 */ public List<TkJointBindingData> JointBindings;
+        /* 0x020 */ public List<TkJointExtentData> JointExtents;
 
-        public List<int> JointMirrorPairs;
-        public List<TkJointMirrorAxis> JointMirrorAxes;
+        /* 0x030 */ public List<int> JointMirrorPairs;
+        /* 0x040 */ public List<TkJointMirrorAxis> JointMirrorAxes;
 
-        public List<int> SkinMatrixLayout;
-        public List<int> MeshVertRStart;
-        public List<int> MeshVertREnd;
-        public List<int> MeshBaseSkinMat;
-        public List<Vector4f> MeshAABBMin;
-        public List<Vector4f> MeshAABBMax;
+        /* 0x050 */ public List<int> SkinMatrixLayout;
+        /* 0x060 */ public List<int> MeshVertRStart;
+        /* 0x070 */ public List<int> MeshVertREnd;
+        /* 0x080 */ public List<int> BoundHullVertSt;
+        /* 0x090 */ public List<int> BoundHullVertEd;
+        /* 0x0A0 */ public List<int> MeshBaseSkinMat;
+        /* 0x0B0 */ public List<Vector4f> MeshAABBMin;
+        /* 0x0C0 */ public List<Vector4f> MeshAABBMax;
 
-        public TkVertexLayout VertexLayout;
-        public TkVertexLayout SmallVertexLayout;
+        /* 0x0D0 */ public List<Vector4f> BoundHullVerts;
 
-        public List<int> IndexBuffer;
-        public List<float> VertexStream;
-        public List<float> SmallVertexStream;
+        /* 0x0E0 */ public TkVertexLayout VertexLayout;
+        /* 0x100 */ public TkVertexLayout SmallVertexLayout;
+
+        /* 0x120 */ public List<int> IndexBuffer;
+        /* 0x130 */ public List<float> VertexStream;
+        /* 0x140 */ public List<float> SmallVertexStream;
 
         public override bool CustomSerialize(BinaryWriter writer, Type field, object fieldData, NMSAttribute settings, FieldInfo fieldInfo, ref List<Tuple<long, object>> additionalData, ref int addtDataIndex)
         {

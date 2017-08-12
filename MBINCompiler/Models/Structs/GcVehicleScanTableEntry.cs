@@ -2,7 +2,7 @@
 
 namespace MBINCompiler.Models.Structs
 {
-    public class GcVehicleScanTableEntry : NMSTemplate
+    public class GcVehicleScanTableEntry : NMSTemplate      //size: 0xC8
     {
         
         /* 0x00 */ public List<NMSString0x10> ScanList;
@@ -10,6 +10,6 @@ namespace MBINCompiler.Models.Structs
         /* 0x20 */ public string Name;
         [NMS(Size = 0x10)]
         /* 0x30 */ public string RequiredTech;
-        /* 0x40 */ public TkModelResource Icon;
+        /* 0x40 */ public TkTextureResource Icon;
     }
 }

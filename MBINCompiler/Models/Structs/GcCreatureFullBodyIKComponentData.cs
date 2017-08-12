@@ -2,7 +2,7 @@
 
 namespace MBINCompiler.Models.Structs
 {
-    public class GcCreatureFullBodyIKComponentData : NMSTemplate
+    public class GcCreatureFullBodyIKComponentData : NMSTemplate        // size: 0x18
     {
         public List<GcCreatureIkData> JointData;
         public int HeadUpAxis;

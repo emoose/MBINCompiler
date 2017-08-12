@@ -1,9 +1,8 @@
 ﻿namespace MBINCompiler.Models.Structs
 {
-    public class GcRewardTableCategory : NMSTemplate
+    public class GcRewardTableCategory : NMSTemplate        // size: 0x48
     {
-        public GcRewardTableItemList Small; // This actually is a GcRewardTableItemList[3], values are GcSizes
-        public GcRewardTableItemList Medium;
-        public GcRewardTableItemList Large;
+        [NMS(Size = 0x3, EnumValue = new[] { "Small", "Medium", "Large"})]
+        public GcRewardTableItemList[] Sizes;
     }
 }

@@ -1,23 +1,22 @@
 ﻿namespace MBINCompiler.Models.Structs
 {
-    public class GcAlienSpeechEntry : NMSTemplate
+    public class GcAlienSpeechEntry : NMSTemplate       // size: 0x40
     {
         [NMS(Size = 0x10)]
-        public string Id;
+        /* 0x00 */ public string Id;
 
         [NMS(Size = 0x20)]
-        public string Text;
+        /* 0x10 */ public string Text;
 
-        public int WordInteractEffect;
-
+        /* 0x30 */ public int WordInteractEffect;
         public string[] WordInteractEffectValues()
         {
             return new[] { "Pain", "Heal" };
         }
 
-        public GcAlienRace AlienRace;
-        public int Level;
+        /* 0x34 */ public GcAlienRace AlienRace;
+        /* 0x38 */ public int Level;
         [NMS(Ignore = true)]
-        public int Padding;
+        public int EndPadding;
     }
 }

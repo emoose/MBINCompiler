@@ -2,12 +2,11 @@
 
 namespace MBINCompiler.Models.Structs
 {
-    public class GcInventoryLayoutGenerationDataEntry : NMSTemplate     // size: 0x20
+    public class GcInventoryLayoutGenerationDataEntry : NMSTemplate     // size: 0x10
     {
-        public int MinSlots;
-        public int MaxSlots;
-        public int MinExtraTech;
-        public int MaxExtraTech;
-        public List<NMSString0x10> GenerationTech;
+        public int MinSlots;            // 1
+        public int MaxSlots;            // 5
+        public int MinExtraTech;        // 1
+        public int MaxExtraTech;        // 3
     }
 }

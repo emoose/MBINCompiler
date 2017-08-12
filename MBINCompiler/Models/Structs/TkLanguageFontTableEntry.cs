@@ -1,6 +1,6 @@
 ﻿namespace MBINCompiler.Models.Structs
 {
-    public class TkLanguageFontTableEntry : NMSTemplate
+    public class TkLanguageFontTableEntry : NMSTemplate     // size: 0x184
     {
         public TkLanguages Language;
         [NMS(Size = 0x80)]

@@ -2,7 +2,7 @@
 
 namespace MBINCompiler.Models.Structs
 {
-    public class TkAnimPoseComponentData : NMSTemplate
+    public class TkAnimPoseComponentData : NMSTemplate      // size: 0xC8
     {
         public List<TkAnimPoseData> PoseAnims;
 

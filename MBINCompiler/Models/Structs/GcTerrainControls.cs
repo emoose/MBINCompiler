@@ -10,9 +10,9 @@
         /* 0x40 */ public float[] Features;
         [NMS(Size = 1, EnumValue = new[] { "Underground" })]
         /* 0x5C */ public float[] Caves;
-        public float WaterActiveFrequency;
-        public float HighWaterActiveFrequency;
-        public float RockTileFrequency;
-        public float SubstanceTileFrequency;
+        public float WaterActiveFrequency;              // 3F4CCCCDh
+        public float HighWaterActiveFrequency;          // 3E800000h
+        public float RockTileFrequency;                 // 3E800000h
+        public float SubstanceTileFrequency;            // 3E800000h
     }
 }

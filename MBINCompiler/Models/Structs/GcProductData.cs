@@ -2,7 +2,7 @@
 
 namespace MBINCompiler.Models.Structs
 {
-    public class GcProductData : NMSTemplate		// size: 0x2C0
+    public class GcProductData : NMSTemplate		// size: 0x2D0
     {
         [NMS(Size = 0x10)]
         /* 0x000 */ public string Id;
@@ -30,7 +30,11 @@ namespace MBINCompiler.Models.Structs
         /* 0x2AC */ public bool SpecificChargeOnly;
         /* 0x2B0 */ public float NormalisedValueOnWorld;
         /* 0x2B4 */ public float NormalisedValueOffWorld;
-        [NMS(Size = 0x8, Ignore = true)]
-        public byte[] EndPadding;
+        /* 0x2B8 */ public GcTradeCategory TradeCategory;
+        /* 0x2BC */ public bool WikiEnabled;
+        /* 0x2BD */ public bool IsCraftable;
+        /* 0x2C0 */ public float EconomyInfluenceMultiplier;
+        [NMS(Size = 0xC, Ignore = true)]
+        /* 0x2C4 */ public byte[] EndPadding;
     }
 }

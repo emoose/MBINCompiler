@@ -10,7 +10,7 @@ namespace MBINCompiler.Models.Structs
         public float Unknown4;
         public float Unknown8;
         public float UnknownC;
-        public int Unknown10;
+        public int UnknownInt10;
         public float Unknown14;
         public float Unknown18;
         public float Unknown1C;
@@ -26,11 +26,11 @@ namespace MBINCompiler.Models.Structs
         public float Unknown44;
         public float Unknown48;
         public float Unknown4C;
-        public float Unknown50;
+        public float Unknown50;     // colour?
         public float Unknown54;
         public float Unknown58;
         public float Unknown5C;
-        public float Unknown60;
+        public float Unknown60;     // colour?
         public float Unknown64;
         public float Unknown68;
         public float Unknown6C;
@@ -65,8 +65,8 @@ namespace MBINCompiler.Models.Structs
         public float UnknownD8;
         public bool UnknownDC;
         public float UnknownE0;
-        public int UnknownE4;
-        public int UnknownE8;
+        public int UnknownIntE4;
+        public int UnknownIntE8;
         public float UnknownEC;
         public float UnknownF0;
         public float UnknownF4;
@@ -88,11 +88,11 @@ namespace MBINCompiler.Models.Structs
         public float Unknown134;
         public float Unknown138;
         public Vector2f Unknown13C;
-        public int Unknown144;
+        public int UnknownInt144;
         public float Unknown148;        // start of some struct?
 
-        public int Unknown14C;
-        public int Unknown150;
+        public int UnknownInt14C;
+        public int UnknownInt150;
         public float Unknown154;
         public float Unknown158;
         public float Unknown15C;
@@ -131,15 +131,15 @@ namespace MBINCompiler.Models.Structs
         public float Unknown1D4;
         public float Unknown1D8;
         public float Unknown1DC;
-        public int Unknown1E0;
+        public int UnknownInt1E0;
         public float Unknown1E4;
         public float Unknown1E8;
-        public int Unknown1EC;
-        public int Unknown1F0;
+        public int UnknownInt1EC;
+        public int UnknownInt1F0;
         public float Unknown1F4;
         public float Unknown1F8;
         public float Unknown1FC;
-        public int Unknown200;
+        public int UnknownInt200;
         public float Unknown204;
         public float Unknown208;
         public float Unknown20C;
@@ -292,7 +292,7 @@ namespace MBINCompiler.Models.Structs
         public float Unknown478;
         public float Unknown47C;
         public Vector2f Unknown480;
-        public int Unknown488;        // [rcx+488h], esi
+        public int UnknownInt488;        // [rcx+488h], esi
         public float Unknown48C;
         public float Unknown490;
         public float Unknown494;
@@ -305,7 +305,7 @@ namespace MBINCompiler.Models.Structs
         public float Unknown4B0;
         public float Unknown4B4;
         public float Unknown4B8;        // QWORD with next 4 bytes
-        public int Unknown4BC;
+        public int UnknownInt4BC;
         public float Unknown4C0;
         public float Unknown4C4;
         public float Unknown4C8;
@@ -315,7 +315,7 @@ namespace MBINCompiler.Models.Structs
         public float Unknown4D8;
         public float Unknown4DC;
         public float Unknown4E0;
-        public int Unknown4E4;
+        public int UnknownInt4E4;
         public float Unknown4E8;
         public float Unknown4EC;
         public float Unknown4F0;
@@ -333,7 +333,7 @@ namespace MBINCompiler.Models.Structs
 
         public float Unknown598;     // [rdi+598h], esi
         public float Unknown59C;        // QWORD with next 4 bytes
-        public int Unknown5A0;
+        public int UnknownInt5A0;
         public float Unknown5A4;
         public float Unknown5A8;
 
@@ -350,7 +350,7 @@ namespace MBINCompiler.Models.Structs
         public GcCreatureAlertData Unknown634;
         public GcCreatureAlertData Unknown64C;
 
-        public float Unknown664;
+        public float Unknown664;        // maybe relates to the data below?
         public float Unknown668;
         public float Unknown66C;
         public GcProjectileLineData Unknown670;
@@ -390,12 +390,12 @@ namespace MBINCompiler.Models.Structs
         public float Unknown760;
         public float Unknown764;
         public float Unknown768;        // QWORD with next 4 bytes
-        public int Unknown76C;
+        public int UnknownInt76C;
         public float Unknown770;
         public float Unknown774;
         public float Unknown778;
         public float Unknown77C;
-        public int Unknown780;
+        public int UnknownInt780;
         public float Unknown784;
         public float Unknown788;
         public float Unknown78C;
@@ -429,8 +429,8 @@ namespace MBINCompiler.Models.Structs
         public float Unknown800;
         public float Unknown804;
         public float Unknown808;
-        public int Unknown80C;
-        public int Unknown810;
+        public int UnknownInt80C;
+        public int UnknownInt810;
         public float Unknown814;
         public float Unknown818;
         public float Unknown81C;
@@ -444,8 +444,8 @@ namespace MBINCompiler.Models.Structs
         public float Unknown840;
         public float Unknown844;
         public float Unknown848;
-        public float PlayerWalkSpeed;
-        public float PlayerRunSpeed;
+        /* 0x84C */ public float PlayerWalkSpeed;
+        /* 0x850 */ public float PlayerRunSpeed;
         public float Unknown854;
         public float Unknown858;
         public float Unknown85C;
@@ -486,7 +486,7 @@ namespace MBINCompiler.Models.Structs
         public float Unknown8E8;
         public GcPlayerStickData Unknown8EC;
         public GcPlayerStickData Unknown908;
-        public int Unknown924;
+        public int UnknownInt924;
         public float Unknown928;
         public float Unknown92C;
         public float Unknown930;
@@ -507,7 +507,7 @@ namespace MBINCompiler.Models.Structs
         public float Unknown9CC;
         public float Unknown9D0;
         public Vector2f Unknown9D4;     // 2nd 4 bytes may be padding?
-        public int Unknown9DC;
+        public int UnknownInt9DC;
 
         // lots of stuff going on here... will just leave as all floats for the moment...
 

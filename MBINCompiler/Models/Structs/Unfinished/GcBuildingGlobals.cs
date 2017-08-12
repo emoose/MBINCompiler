@@ -85,6 +85,10 @@
         public float Unknown100;
         public float Unknown104;
         public float Unknown108; // unused?
-        public int Unknown10C; // unused? only int in the file?
+        public int UnknownInt10C; // unused? only int in the file?
+        public float Unknown110;
+        public float Unknown114;
+        public float Unknown118;
+        public float Unknown11C;
     }
 }
