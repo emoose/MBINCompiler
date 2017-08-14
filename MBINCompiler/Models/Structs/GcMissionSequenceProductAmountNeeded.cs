@@ -3,13 +3,15 @@
     public class GcMissionSequenceProductAmountNeeded : NMSTemplate
     {
         [NMS(Size = 0x80)]
-        /* 0x000 */ public string DebugText;
+        /* 0x000 */ public string Message;
+        [NMS(Size = 0x10)]
+        /* 0x080 */ public string Item;
+        [NMS(Size = 0x10)]
+        /* 0x090 */ public string ToBuild;
+        /* 0x0A0 */ public bool IsRepair;
         [NMS(Size = 0x80)]
-        /* 0x080 */ public string Message;
-        [NMS(Size = 0x10)]
-        /* 0x100 */ public string Item;
-        [NMS(Size = 0x10)]
-        /* 0x110 */ public string ToBuild;
-        /* 0x120 */ public bool IsRepair;
+        /* 0x0A1 */ public string DebugText;
+        [NMS(Size = 0x7, Ignore = true)]
+        /* 0x121 */ public byte[] Endpadding;
     }
 }

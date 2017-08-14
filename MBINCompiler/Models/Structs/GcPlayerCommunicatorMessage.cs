@@ -1,6 +1,6 @@
 ﻿namespace MBINCompiler.Models.Structs
 {
-    public class GcPlayerCommunicatorMessage : NMSTemplate
+    public class GcPlayerCommunicatorMessage : NMSTemplate      // size: 0x28
     {
         [NMS(Size = 0x20)]
         public string Dialog;

@@ -12,7 +12,7 @@
         public bool IsSRGB;
         [NMS(Size = 4, Ignore = true)]
         public byte[] PaddingA4;
-        [NMS(Size = 0x10)]
+        [NMS(Size = 0x20)]
         public string MaterialAlternativeId;
         public int TextureAddressMode;
         public string[] TextureAddressModeValues()

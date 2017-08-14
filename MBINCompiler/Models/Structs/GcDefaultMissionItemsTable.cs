@@ -6,7 +6,7 @@ namespace MBINCompiler.Models.Structs
     {
         public List<GcDefaultMissionSubstance> PrimarySubstances;
         public List<GcDefaultMissionSubstance> SecondarySubstances;
-        public List<GcDefaulMissionProduct> PrimaryProducts;
-        public List<GcDefaulMissionProduct> SecondaryProducts;
+        public List<GcDefaultMissionProduct> PrimaryProducts;
+        public List<GcDefaultMissionProduct> SecondaryProducts;
     }
 }

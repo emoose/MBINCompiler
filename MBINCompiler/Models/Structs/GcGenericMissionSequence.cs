@@ -68,7 +68,7 @@ namespace MBINCompiler.Models.Structs
         [NMS(Size = 0x2, Ignore = true)]
         /* 0x376 */ public byte[] Padding376;
 
-        /* 0x378 */ public List<NMSString0x10> Dialog;              // as a dummy, list of something..elements seems to be 0xA40 long??
+        /* 0x378 */ public List<GcAlienPuzzleEntry> Dialog;
         /* 0x388 */ public List<GcScanEventData> ScanEvents;
         /* 0x398 */ public List<GcGenericRewardTableEntry> Rewards;
         /* 0x3A8 */ public List<GcCostTableEntry> Costs;

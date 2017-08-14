@@ -1,24 +1,26 @@
 ﻿namespace MBINCompiler.Models.Structs
 {
-    public class GcSpaceshipTravelData : NMSTemplate //size = 0x48
+    public class GcSpaceshipTravelData : NMSTemplate //size = 0x58
     {
-        /* 0x000 */ public float MinSpeed;
-        /* 0x004 */ public float MaxSpeed;
-        /* 0x008 */ public float BoostSpeed;
-        /* 0x00C */ public float Force;
-        /* 0x010 */ public float MinSpeedForce;
-        /* 0x014 */ public float TurnMin;
-		/* 0x018 */ public float TurnMax;
-		/* 0x01C */ public float DirectionBrake;
-		/* 0x020 */ public float PlanetMinSpeed;
-		/* 0x024 */ public float PlanetMaxSpeed;
-		/* 0x028 */ public float PlanetBoostSpeed;
-		/* 0x02C */ public float PlanetForce;
-		/* 0x030 */ public float PlanetTurnMin;
-		/* 0x034 */ public float PlanetTurnMax;
-		/* 0x038 */ public float PlanetDirectionBrake;
-		/* 0x03C */ public float Falloff;
-		/* 0x040 */ public float Roll;
-		/* 0x044 */ public float MinHeight;
+        [NMS(Size = 0x10)]
+        /* 0x00 */ public string Id;
+        /* 0x10 */ public float MinSpeed;
+        /* 0x14 */ public float MaxSpeed;
+        /* 0x18 */ public float BoostSpeed;
+        /* 0x1C */ public float Force;
+        /* 0x20 */ public float MinSpeedForce;
+        /* 0x24 */ public float TurnMin;
+		/* 0x28 */ public float TurnMax;
+		/* 0x2C */ public float DirectionBrake;
+		/* 0x30 */ public float PlanetMinSpeed;
+		/* 0x34 */ public float PlanetMaxSpeed;
+		/* 0x38 */ public float PlanetBoostSpeed;
+		/* 0x3C */ public float PlanetForce;
+		/* 0x40 */ public float PlanetTurnMin;
+		/* 0x44 */ public float PlanetTurnMax;
+		/* 0x48 */ public float PlanetDirectionBrake;
+		/* 0x4C */ public float Falloff;
+		/* 0x50 */ public float Roll;
+		/* 0x54 */ public float MinHeight;
     }
 }

@@ -5,7 +5,7 @@
         public int GalaxyStarAnomaly;
         public string[] GalaxyStarAnomalyValues()
         {
-            return new[] { "None", "AtlasStation", "BlackHole", "MiniStation" };
+            return new[] { "None", "AtlasStation", "AtlasStationFinal", "BlackHole", "MiniStation" };
         }
     }
 }

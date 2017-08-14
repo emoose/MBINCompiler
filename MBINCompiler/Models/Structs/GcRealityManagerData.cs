@@ -2,15 +2,21 @@
 
 namespace MBINCompiler.Models.Structs
 {
-    public class GcRealityManagerData : NMSTemplate     // size: 0x5670
+    public class GcRealityManagerData : NMSTemplate     // size: 0x7440
     {
-        /* 0x0000 */ public float RealityIteration;
+        /* 0x0000 */ public uint RealityIteration;
 
-        [NMS(Size = 7, EnumValue = new string[7] { "Unknown", "SolarSystem", "Planet", "Animal", "Flora", "Mineral", "Sector" })]
+        [NMS(Size = 0xA)]
         /* 0x0004 */ public GcDiscoveryWorth[] DiscoveryWorth;
 
+        [NMS(Size = 0x4)]
+        /* 0x011C */ public float[] CreatureDiscoverySizeMultiplier;
+        [NMS(Size = 0x4, Ignore = true)]
+        /* 0x12C */ public byte[] Padding12C;
+
+
         [NMS(Size = 0x80)]
-        /* 0x0090 */ public string TechnologyTable;
+        /* 0x011C */ public string TechnologyTable;
         [NMS(Size = 0x80)]
         /* 0x0110 */ public string SubstanceTable;
         [NMS(Size = 0x80)]

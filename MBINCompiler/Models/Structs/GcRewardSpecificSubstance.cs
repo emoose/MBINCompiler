@@ -1,7 +1,10 @@
 ﻿namespace MBINCompiler.Models.Structs
 {
-    public class GcRewardSpecificSubstance : NMSTemplate
+    public class GcRewardSpecificSubstance : NMSTemplate        // size: 0x28
     {
+        public GcDefaultMissionProduct Default;
+        [NMS(Size = 0x4, Ignore = true)]
+        public byte[] Padding4;
         [NMS(Size = 0x10)]
         public string Id;
         public int AmountMin;

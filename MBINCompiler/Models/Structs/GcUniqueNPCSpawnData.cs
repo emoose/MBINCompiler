@@ -2,23 +2,22 @@
 {
     public class GcUniqueNPCSpawnData : NMSTemplate // 0x2C8 bytes
     {
-        public int NPCSpawnCondition;
+        /* 0x000 */ public int NPCSpawnCondition;
         public string[] NPCSpawnConditionValues()
         {
             return new[] { "Always", "MiniStation" };
         }
 
         [NMS(Size = 4, Ignore = true)]
-        /* 0x08 */ public byte[] pad8;
+        /* 0x004 */ public byte[] Padding4;
 
         [NMS(Size = 0x10)]
-        public string ID;
-        public GcResourceElement ResourceElement;
+        /* 0x008 */ public string ID;
+        /* 0x018 */ public GcResourceElement ResourceElement;
 
-        public GcAlienRace Race;
+        /* 0x2C0 */ public GcAlienRace Race;
         [NMS(Size = 4, Ignore = true)]
-        /* 0x08 */
-        public byte[] pad4;
+        /* 0x2C4 */ public byte[] EndPadding;
 
     }
 }

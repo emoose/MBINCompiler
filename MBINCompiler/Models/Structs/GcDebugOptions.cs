@@ -125,6 +125,10 @@
 
         [NMS(Size = 0x80)]
         /* 0x498 */ public string RealityPresetFile; // 0x80
+        [NMS(Size = 0x20)]
+        public string NMSLocale;     // for temperature choice?
+        [NMS(Size = 0x20)]
+        public string NMSUpdateVersion;
         /* 0x49A */ public short RealityGenerationIteration;
 
         [NMS(Size = 0x80)]
@@ -201,12 +205,16 @@
         [NMS(Size = 0x20)]
         /* 0x869 */ public string OverrideUsernameForDev; // 0x20
         /* 0x88C */ public int DiscoveryAutoSyncIntervalSeconds;
+        [NMS(Size = 0x20)]
+        public string DummyString;
+        public int DummyInt;
         /* 0x888 */ //public int DiscoveryTrimLimitOverride; // Looks like both these
         /* 0x88C */ //public int DiscoveryTrimTriggerOverride; // lines have been removed in exe
         /* 0x890 */ public bool EnableSynergy;
         [NMS(Size = 0x20)]
         /* 0x891 */ public string SynergyServer; // 0x20
         /* 0x8B4 */ public int SynergyPort;
+        public int Something;
         /* 0x8B8 */ public int MaxNumDebugMessages;
         /* 0x8BC */ public bool PreloadToolbox;
         /* 0x8C0 */ public int DebugTextureSize;
@@ -244,6 +252,7 @@
 		/* 0xC73?*/ public int ForceStarTypeTo; // unused? added
         /* 0xC78 */ public bool ForceBiome;
         /* 0xC7C?*/ public int ForceBiomeTo; // unused?
+        public int BadValue;
         /* 0xC80 */ public bool ForceBuildingRace;
         /* 0xC81?*/ public int ForceBuildingRaceTo; // unused?
         /* 0xC88 */ public bool ForceLifeLevel;

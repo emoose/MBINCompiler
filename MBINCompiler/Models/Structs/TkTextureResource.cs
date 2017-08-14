@@ -1,6 +1,6 @@
 ﻿namespace MBINCompiler.Models.Structs
 {
-    public class TkTextureResource : NMSTemplate
+    public class TkTextureResource : NMSTemplate        // size: 0x84
     {
         [NMS(Size = 0x80)]
         public string Filename;

@@ -1,8 +1,8 @@
 ﻿namespace MBINCompiler.Models.Structs
 {
-    public class GcAISpaceshipManagerData : NMSTemplate
+    public class GcAISpaceshipManagerData : NMSTemplate     // size: 0x50
     {
-        [NMS(Size = 6)]
-        public GcAISpaceshipMappingData[] FactionMapping;
+        [NMS(Size = 5)]
+        public GcAISpaceshipModelDataArray[] FactionMapping;
     }
 }

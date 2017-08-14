@@ -4,8 +4,8 @@
     {
         [NMS(Size = 0x80)]
         /* 0x000 */ public string Message;
+        /* 0x080 */ public int Amount;
         [NMS(Size = 0x80)]
-        /* 0x080 */ public string DebugText;
-        /* 0x100 */ public int Amount;
+        /* 0x084 */ public string DebugText;
     }
 }

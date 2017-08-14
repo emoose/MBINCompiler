@@ -29,5 +29,7 @@
         /* 0x1F0 */ public GcTradeCategory tradeCategory;
         /* 0x1F4 */ public bool WikiEnabled;
         /* 0x1F8 */ public float EconomyInfluenceMultiplier;
+        [NMS(Size = 0x4, Ignore = true)]
+        public byte[] EndPadding;
     }
 }

@@ -29,7 +29,7 @@ namespace MBINCompiler.Models.Structs
         /* 0x3C */ public int InteractCrimeLevel;
         /* 0x40 */ public GcInteractionActivationCost ActivationCost;
 
-        /* 0x78 */ public GcStatTrackType StatToTrack;        // 8 bytes. Not sure if this is right??
+        /* 0x78 */ public GcStatsEnum StatToTrack;        // 8 bytes. Not sure if this is right??
         [NMS(Size = 0x4, Ignore = true)]
         /* 0x7C */ public byte[] Padding7C;
 

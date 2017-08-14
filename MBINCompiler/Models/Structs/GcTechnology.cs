@@ -2,7 +2,7 @@
 
 namespace MBINCompiler.Models.Structs
 {
-    public class GcTechnology : NMSTemplate
+    public class GcTechnology : NMSTemplate     // size: 0x2E0
     {
         [NMS(Size = 0x10)]
         /* 0x000 */ public string ID; // 0x10
@@ -71,8 +71,8 @@ namespace MBINCompiler.Models.Structs
         /* 0x2CC */ public GcAlienRace DispensingRace;
         /* 0x2D0 */ public int FragmentCost;
         /* 0x2D4 */ public GcTechnologyRarity TechShopRarity;
-
-        [NMS(Size = 0x8, Ignore = true)]
-        /* 0x2D5 */ public byte[] Padding2D5;
+        /* 0x2D8 */ public bool WikiEnabled;
+        [NMS(Size = 0x7, Ignore = true)]
+        /* 0x2D9 */ public byte[] Padding2D9;
     }
 }

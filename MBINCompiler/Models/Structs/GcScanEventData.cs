@@ -1,72 +1,75 @@
 ﻿namespace MBINCompiler.Models.Structs
 {
-    public class GcScanEventData : NMSTemplate // 0xE0 bytes
+    public class GcScanEventData : NMSTemplate // 0x1D8 bytes
     {
-        [NMS(Size = 0x10)]
-        /* 0x00 */ public string Name;
-        [NMS(Size = 0x10)]
-        /* 0x10 */ public string NextOption;
+        [NMS(Size = 0x20)]
+        /* 0x000 */ public string Name;
+        [NMS(Size = 0x20)]
+        /* 0x020 */ public string ForceInteraction;
+        /* 0x040 */ public GcInteractionType ForceInteractionType;
+        /* 0x044 */ public bool ForceBroken;
+        /* 0x045 */ public bool ForceFixed;
+        /* 0x046 */ public bool AlwaysShow;
 
-        /* 0x20 */ public int TriggerEventStartType;
-        public string[] TriggerEventStartTypeValues()
+        /* 0x048 */ public int EventStartType;
+        public string[] EventStartTypeValues()
         {
             return new[] { "None", "Special", "Discovered", "Timer", "ObjectScan", "LeaveBuilding" };
         }
-
-        /* 0x24 */ public int TriggerEventEndType;
-        public string[] TriggerEventEndTypeValues()
+        /* 0x04C */ public int EventEndType;
+        public string[] EventEndTypeValues()
         {
             return new[] { "None", "Proximity", "Interact", "EnterBuilding", "TimedInteract" };
         }
-
-        /* 0x28 */ public int TriggerEventPriority;
-        public string[] TriggerEventPriorityValues()
+        /* 0x050 */ public int EventPriority;
+        public string[] EventPriorityValues()
         {
             return new[] { "Regular", "High" };
         }
-
-        /* 0x2C */ public float MessagesStartTime;
-        /* 0x30 */ public float MessagesMessageTime;
-        /* 0x34 */ public float MessagesMessageDisplayTime;
-        /* 0x38 */ public GcAudioWwiseEvents MessagesAkEvent;
-        /* 0x3C */ public float MessagesIconTime;
-        /* 0x40 */ public float MessagesTooltipTime;
-        /* 0x44 */ public bool MessagesTooltipRepeats;
-        /* 0x45 */ public bool MessagesShowEndTooltip;
-        [NMS(Size = 0x20)]
-        /* 0x46 */ public string MessagesOSDMessage;
-        [NMS(Size = 0x20)]
-        /* 0x66 */ public string MessagesTooltipMessage;
-
-        [NMS(Size = 0x2, Ignore = true)]
-        /* 0x86 */ public byte[] Padding86;
-
-        /* 0x88 */ public int TargetBuildingLocation;
-        public string[] TargetBuildingLocationValues()
+        /* 0x054 */ public int BuildingLocation;
+        public string[] BuildingLocationValues()
         {
-            return new[] { "Nearest", "Random", "RandomOnNearPlanet", "RandomOnFarPlanet" };
+            return new[] { "Nearest", "AllNearest", "Random", "RandomOnNearPlanet", "RandomOnFarPlanet" };
         }
-        /* 0x8C */ public int TargetBuildingType;
-        public string[] TargetBuildingTypeValues()
+        /* 0x058 */ public int BuildingType;
+        public string[] BuildingTypeValues()
         {
-            return new[] { "Any", "AnyShelter", "BuildingClass", "Specific", "SpaceStation", "SpaceAnomaly", "Freighter", "SpaceStationHire", "ExternalPlanetBase", "PlanetBaseTerminal"};
+            return new[] { "Any", "AnyShelter", "BuildingClass", "SpaceStation", "SpaceAnomaly",
+                           "Atlas", "Freighter", "ExternalPlanetBase", "PlanetBaseTerminal" };
+        }
+        /* 0x05C */ public GcBuildingClassification BuildingClass;
+
+        /* 0x060 */ public int SolarSystemLocation;
+        public string[] SolarSystemLocationValues()
+        {
+            return new[] { "Local", "Near", "LocalOrNear"};
         }
 
-        /* 0x90 */ public GcBuildingClassification TargetBuildingClassification;
-
-        [NMS(Size = 0xC, Ignore = true)]
-        /* 0x94 */ public byte[] Padding94;
-
-        /* 0xA0 */ public Vector4f TargetSpecificBuildingLoc;
+        /* 0x064 */ public GcScanEventSolarSystemLookup SolarSystemAttributes;
+        /* 0x080 */ public bool ForceRestartInteraction;
+        [NMS(Size = 07, Ignore = true)]
+        /* 0x081 */ public byte[] Padding81;
         [NMS(Size = 0x10)]
-        /* 0xB0 */ public string TargetForceInteraction;
-        /* 0xC0 */ public GcInteractionType TargetInterationType;
-		/* 0xC4 */ public bool ForceRestartInteraction;
-        [NMS(Size = 0x3, Ignore = true)]
-        /* 0xC5 */ public byte[] PaddingC5;
-		[NMS(Size = 0x10)]
-		/* 0xC8 */ public string HasReward;
-        [NMS(Size = 0x8, Ignore = true)]
-        public byte[] PaddingD8;
+        /* 0x088 */ public string HasReward;
+        [NMS(Size = 0x20)]
+        /* 0x098 */ public string NextOption;
+        /* 0x0B8 */ public GcScanEventTriggers TriggerActions;
+        [NMS(Size = 0x20)]
+        /* 0x0D8 */ public string OSDMessage;
+        [NMS(Size = 0x20)]
+        /* 0x0F8 */ public string MarkerLabel;
+        /* 0x118 */ public TkTextureResource Markericon;
+        /* 0x19C */ public float StartTime;
+        /* 0x1A0 */ public float MessageTime;
+        /* 0x1A4 */ public float MessageDisplayTime;
+        /* 0x1A8 */ public GcAudioWwiseEvents MessageAudio;
+        /* 0x1AC */ public float IconTime;
+        /* 0x1B0 */ public float TooltipTime;
+        /* 0x1B4 */ public bool TooltipRepeats;
+        /* 0x1B5 */ public bool ShowEndTooltip;
+        [NMS(Size = 0x20)]
+        /* 0x1B6 */ public string TooltipMessage;
+        [NMS(Size = 0x2, Ignore = true)]
+        /* 0x1D6 */ public byte[] EndPadding;
     }
 }
