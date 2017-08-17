@@ -1,11 +1,11 @@
 ﻿namespace MBINCompiler.Models.Structs
 {
-    public class GcDiscoveryWorth : NMSTemplate
+    public class GcDiscoveryWorth : NMSTemplate     // size: 0x1C
     {
-        public int Common;
-        public int Uncommon;
-        public int Rare;
-        public int OnScan;
+        [NMS(Size = 0x3)]
+        public int[] Record;
+        [NMS(Size = 0x3)]
+        public int[] OnScan;
         public int Mission;
     }
 }

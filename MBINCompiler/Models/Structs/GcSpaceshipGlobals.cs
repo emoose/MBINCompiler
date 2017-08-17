@@ -132,9 +132,9 @@
         /* 0X2DC */ public float Unknown2DC;
         /* 0X2E0 */ public float Unknown2E0;
         /* 0X2E4 */ public float Unknown2E4;
-        /* 0X2E8 */ public float Unknown2E8;
+        /* 0X2E8 */ public float ShipTiltOnTurning;
         /* 0X2EC */ public float Unknown2EC;
-        /* 0X2F0 */ public float Unknown2F0;
+        /* 0X2F0 */ public float ShipTiltOnTurningDampening;
         /* 0X2F4 */ public float Unknown2F4;
         /* 0X2F8 */ public float Unknown2F8;
         /* 0X2FC */ public float Unknown2FC;
@@ -263,13 +263,13 @@
         /* 0X544 */ public float Unknown544;
         /* 0X548 */ public float Unknown548;
         /* 0X54C */ public float Unknown54C;
-        /* 0X550 */ public float Unknown550;
+        /* 0X550 */ public float PulseEngineSpaceStaionClearanceRange;
         /* 0X554 */ public float PulseEngineCountdownTimeSeconds;
         /* 0X558 */ public float MaxPulseEngineSpeed;
         /* 0X55C */ public float Unknown55C;
         /* 0X560 */ public float Unknown560;
         /* 0X564 */ public float Unknown564;
-        /* 0X568 */ public float Unknown568;
+        /* 0X568 */ public float PuleEnginePlanetCutoffRange;
         /* 0X56C */ public float Unknown56C;
         /* 0X570 */ public float Unknown570;
         /* 0X574 */ public float Unknown574;

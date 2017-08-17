@@ -1,8 +1,11 @@
 ﻿namespace MBINCompiler.Models.Structs
 {
-    public class GcSpaceSkyProperties : NMSTemplate 
+    public class GcSpaceSkyProperties : NMSTemplate         // size: 0xA0
     {
-		  /* 0x00 */ public Colour PlanetSkyColour;
+          public GcPlanetWeatherColourIndex ColourIndex;        // add + 0x10 to all the next values
+          [NMS(Size = 0x8, Ignore = true)]
+          public byte[] Padding8;
+          /* 0x00 */ public Colour PlanetSkyColour;
 		  /* 0x10 */ public Colour PlanetHorizonColour;
 		  /* 0x20 */ public float SunStrength;
 		  /* 0x24 */ public float SunSize;

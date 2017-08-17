@@ -11,7 +11,7 @@
         public float HeightFogOffset;
         public float HeightFogMax;
         public float FogHeight;
-        public GcHeavyAirSetting HeavyAir; // Originally was HeavyAirSettings but from IDA I think it should just be HeavyAir
+        public GcHeavyAirSetting HeavyAir;
         public float CloudRatio;
         public float FullscreenEffect;
         public float DepthOfField;

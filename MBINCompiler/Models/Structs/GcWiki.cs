@@ -2,8 +2,8 @@
 
 namespace MBINCompiler.Models.Structs
 {
-    public class GcStats : NMSTemplate
+    public class GcWiki : NMSTemplate
     {
-        public List<GcStatsGroup> Stats;
+        public List<GcWikiCategory> Categories;
     }
 }

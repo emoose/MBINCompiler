@@ -9,6 +9,9 @@ namespace MBINCompiler.Models.Structs
 
         public TkTextureResource Icon;
 
+        [NMS(Size = 0x4, Ignore = true)]
+        public byte[] Padding94;
+
         public List<GcStatsEntry> StatIds;
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace MBINCompiler.Models.Structs
 {
-    public class GcPlanetWeatherColourData : NMSTemplate
+    public class GcPlanetWeatherColourData : NMSTemplate        // size: 0xB0
     {
         public Colour SkyColour;
         public Colour SkyUpperColour;

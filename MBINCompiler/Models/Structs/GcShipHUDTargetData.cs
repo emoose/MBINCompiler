@@ -1,6 +1,6 @@
 namespace MBINCompiler.Models.Structs
 {
-    public class GcShipHUDTargetData : NMSTemplate
+    public class GcShipHUDTargetData : NMSTemplate      // size: 0x430
     {
         public GcShipHUDTargetIconData IconData;
 

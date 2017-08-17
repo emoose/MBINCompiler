@@ -1,6 +1,6 @@
 ﻿namespace MBINCompiler.Models.Structs
 {
-    public class TkNGuiGraphicStyle : NMSTemplate
+    public class TkNGuiGraphicStyle : NMSTemplate       // size: 0x1B0
     {
         public TkNGuiGraphicStyleData Default;
         public TkNGuiGraphicStyleData Highlight;
@@ -10,7 +10,7 @@
 
         public int Animate;
         public string[] AnimateValues()
-        { return new string[] { "None", "WipeRightToLeft", "SimpleWipe", "CustomWipe"}; }
+        { return new string[] { "None", "WipeRightToLeft", "SimpleWipe", "SimpleWipeDown", "CustomWipe", "CustomWipeAlpha"}; }
 
 
         public float AnimTime;

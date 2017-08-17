@@ -126,9 +126,9 @@
         [NMS(Size = 0x80)]
         /* 0x498 */ public string RealityPresetFile; // 0x80
         [NMS(Size = 0x20)]
-        public string NMSLocale;     // for temperature choice?
+        public string MainTextbankPrefix;
         [NMS(Size = 0x20)]
-        public string NMSUpdateVersion;
+        public string UpdateTextBankPrefix;
         /* 0x49A */ public short RealityGenerationIteration;
 
         [NMS(Size = 0x80)]
