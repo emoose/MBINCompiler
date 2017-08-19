@@ -1,32 +1,24 @@
 ﻿namespace MBINCompiler.Models.Structs
 {
-    public class TkNGuiTextStyleData : NMSTemplate
+    public class TkNGuiTextStyleData : NMSTemplate      // size: 0x40
     {
-        public Colour Colour;
-        public float FontHeight;
-        public float FontSpacing;
+        /* 0x00 */ public Colour Colour;
+        /* 0x10 */ public float FontHeight;
+        /* 0x14 */ public float FontSpacing;
+        /* 0x18 */ public bool IsIndented;
+        /* 0x19 */ public bool HasDropShadow;
+        /* 0x1C */ public float DropShadowOffset;
+        /* 0x20 */ public bool HasOutline;
 
-        public bool IsIndented;
-        public bool HasDropShadow;
-
-        [NMS(Size = 0x2, Ignore = true)]
-        public byte[] Padding1;
-
-        public float DropShadowOffset;
-        public bool HasOutline;
-
-        [NMS(Size = 0x3, Ignore = true)]
-        public byte[] Padding2;
-
-        public float OutlineSize;
-        public bool IsParagraph;
-        public bool AllowScroll;
-        public bool ForceUpperCase;
-        public bool AutoAdjustHeight;
-        public int FontIndex;
-        public TkNGuiAlignment Align;
+        /* 0x24 */ public float OutlineSize;
+        /* 0x28 */ public bool IsParagraph;
+        /* 0x29 */ public bool AllowScroll;
+        /* 0x2A */ public bool ForceUpperCase;
+        /* 0x2B */ public bool AutoAdjustHeight;
+        /* 0x2C */ public int FontIndex;
+        /* 0x30 */ public TkNGuiAlignment Align;
 
         [NMS(Size = 0x8, Ignore = true)]
-        public byte[] Padding3;
+        public byte[] EndPadding;
     }
 }
