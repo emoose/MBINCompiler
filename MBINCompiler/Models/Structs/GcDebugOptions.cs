@@ -2,25 +2,25 @@
 {
     public class GcDebugOptions : NMSTemplate           // locations at start of lines will be wrong in parts
     {
-        /* 0x00 */ public bool SkipIntro;
+        /* 0x00 */ public bool SkipIntro;                   // confirmed 1.3
         /* 0x01 */ public bool VideoCaptureMode;
-        /* 0x02 */ public bool GodMode;
-		/* 0x03	*/ public bool AlwaysHaveFocus;
-        /* 0x04 */ public bool DisableVibration;
-        /* 0x05 */ public bool MapWarpCheckIgnoreFuel;
-        /* 0x06 */ public bool MapWarpCheckIgnoreDrive;
-        /* 0x07 */ public bool EverythingIsFree;
-        /* 0x08 */ public bool EverythingIsKnown;
-        /* 0x09 */ public bool EverythingIsStar;
-        public bool UnknownA;
-        public bool UnknownB;
+        public bool Unknown2;
+        /* 0x03 */ public bool GodMode;                     // confirmed 1.3
+		/* 0x04	*/ public bool AlwaysHaveFocus;
+        /* 0x05 */ public bool DisableVibration;
+        /* 0x06 */ public bool MapWarpCheckIgnoreFuel;
+        /* 0x07 */ public bool MapWarpCheckIgnoreDrive;
+        public bool Unknown8;
+        /* 0x09 */ public bool EverythingIsFree;            // confirmed 1.3
+        /* 0x0A */ public bool EverythingIsKnown;           // confirmed 1.3
+        /* 0x0B */ public bool EverythingIsStar;
         public bool UnknownC;
         public bool UnknownD;
-        /* 0x0E */ public bool UseScreenEffects;
-        /* 0x0F */ public bool UseGunImpactEffect;
-        /* 0x10 */ public bool RenderCreatureDetails;
-		/* 0x11 */ public bool UseDebugScreenSettings;
-        public bool Unknown12;
+        public bool UnknownE;
+        /* 0x0F */ public bool UseScreenEffects;
+        /* 0x10 */ public bool UseGunImpactEffect;
+        /* 0x11 */ public bool RenderCreatureDetails;
+		/* 0x12 */ public bool UseDebugScreenSettings;      // confirmed 1.3
         public bool Unknown13;
         /* 0x10 */ public int ScreenWidth;
         /* 0x14 */ public int ScreenHeight;
@@ -150,11 +150,11 @@
         }
         /* 0x534 */ public bool DebugBuildingSpawns;
         /* 0x535 */ public bool StressTestLongNameDisplay;
-        public bool Unknown5;
+        public bool Unknown535;
         /* 0x536 */public bool ShowFramerate;
         /* 0x537 */ public bool ShowPositionDebug;
         /* 0x538 */public bool ShowGPUMemory;
-        public bool Unknown6;
+        public bool Unknown538;
         /* 0x539 */ public bool ShowMempoolOverlay;
 
         [NMS(Size = 0x100)]
@@ -170,8 +170,8 @@
             return new[] { "None", "TourSolarSystem", "RegeneratePlanet" };// "None" isnt specified in exe
         }
         /* 0x644 */ public bool SmokeTestCameraFly;
-        public bool Unknown7;
-        public bool Unknown8;
+        public bool Unknown645;
+        public bool Unknown646;
         /* 0x648 */ public int SmokeTestConfigCaptureCycles;
         /* 0x64C */ public float SmokeTestConfigCaptureDurationInSeconds;
         /* 0x650 */ public int SmokeTestConfigCaptureFolderNameNumberOffset;
@@ -247,6 +247,7 @@
         /* 0xC60 */ public int HmdEyeBufferHeight;
         /* 0xC64 */ public float HmdEyeScalePos;
         /* 0xC68 */ public float HmdHeadScalePos;
+
         /* 0xCDC */ public float HmdImmersionFactor;
         /* 0xCE0 */ public bool ForceExtremeWeather;
         /* 0xCE1 */ public bool ForceExtremeSentinels;

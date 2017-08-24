@@ -12,9 +12,9 @@
         [NMS(Size = 0x80)]
         public string SpaceStationScene;
         [NMS(Size = 1)]
-        public NMSString0x80[] BlackHoleScenes; // only one entry but it's treated as an array?
-        [NMS(Size = 0xB)]
-        public NMSString0x80[] AtlasStationScenes; // item at index 9 is used for something special?
+        public NMSString0x80[] BlackHoleScenes;
+        [NMS(Size = 0xC)]
+        public NMSString0x80[] AtlasStationScenes;
         [NMS(Size = 0x80)]
         public string AnomalyScene;
         [NMS(Size = 0x80)]
@@ -45,7 +45,7 @@
         public string WarpTunnelScene;
         [NMS(Size = 0x80)]
         public string WarpTunnelBlackHoleScene;
-        [NMS(Size = 0x80)]
-        public string WarpPortalScene;
+        [NMS(Size = 3)]
+        public NMSString0x80[] WarpPortalScenes;
     }
 }

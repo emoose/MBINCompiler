@@ -2,6 +2,6 @@
 {
     public class GcRewardAdvancePortalState : NMSTemplate
     {
-        public bool DoIt;
+        
     }
 }

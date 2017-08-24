@@ -138,7 +138,7 @@ namespace MBINCompiler.Models
                 default:
                     if (fieldType == "Colour") // unsure if this is needed?
                         reader.Align(0x10, 0);
-					if (fieldType == "VariableStringSize")
+					if (fieldType == "VariableStringSize" || fieldType == "GcRewardProduct")
 						reader.Align(0x4, 0);
                     // todo: align for VariableSizeString?
                     if (field.IsArray)
@@ -505,6 +505,23 @@ namespace MBINCompiler.Models
             var entryOffsetNamePairs = new Dictionary<long, string>();
             foreach (var entry in list)
             {
+                int alignment;
+                try
+                {
+                    //Console.WriteLine("Dlist code");
+                    alignment = entry.GetType().GetCustomAttribute<NMSAttribute>().Alignment;
+                    //Console.WriteLine(entry.GetType());
+                    //Console.WriteLine(alignment);
+                    //System.Threading.Thread.Sleep(100);
+                }
+                catch (NullReferenceException)
+                // In this case the class has no alignment value associated with it, just set as default value of 4
+                {
+                    alignment = 0x8;
+                }
+
+                writer.Align(alignment, 0);
+                /*
                 if (entry.GetType().Name == "GcNGuiLayerData" || entry.GetType().Name == "GcNGuiTextData" || entry.GetType().Name == "GcNGuiGraphicData")
                 {
                     writer.Align(0x10, 0);
@@ -512,7 +529,7 @@ namespace MBINCompiler.Models
                 else
                 {
                     writer.Align(0x8, 0);
-                }
+                }*/
                 // add the starting location of the data chunk and the name to a dictionary
                 if (entry.GetType().Name != "EmptyNode")
                 {
@@ -575,6 +592,23 @@ namespace MBINCompiler.Models
 
         public void SerializeList(BinaryWriter writer, IList list, long listHeaderPosition, ref List<Tuple<long, object>> additionalData, int addtDataIndex, UInt32 ListEnding = (UInt32)0xAAAAAA01)
         {
+            // first thing we want to do is align the writer with the location of the first element of the list
+            if (list.Count != 0)
+            {
+                int alignment;
+                try
+                {
+                    alignment = list[0].GetType().GetCustomAttribute<NMSAttribute>().Alignment;
+                }
+                catch (NullReferenceException)
+                // In this case the class has no alignment value associated with it, just set as default value of 4
+                {
+                    alignment = 0x8;
+                }
+
+                writer.Align(alignment, 0);
+            }
+
             long listPosition = writer.BaseStream.Position;
             if (PrintToDebug) Debug.WriteLine($"SerializeList start 0x{listPosition:X}, header 0x{listHeaderPosition:X}");
 
@@ -596,6 +630,7 @@ namespace MBINCompiler.Models
 
             foreach (var entry in list)
             {
+
                 if (PrintToDebug) Debug.WriteLine($"[C] writing {entry.GetType().Name} to offset 0x{writer.BaseStream.Position:X}");
                 SerializeValue(writer, entry.GetType(), entry, null, null, ref additionalData, ref addtDataIndexThis);
             }
@@ -635,17 +670,21 @@ namespace MBINCompiler.Models
                     //System.Threading.Thread.Sleep(1000);
                     //writer.BaseStream.Position = additionalDataOffset; // addtDataOffset gets updated by child templates
                     long origPos = writer.BaseStream.Position;
+                    //Console.WriteLine(data.Item2.GetType());
+                    //Console.WriteLine(typeof(GcRewardSubstance));
+
+                    // get the custom alignment value from the class if it has one
+                    int alignment;
                     try
                     {
-                        if (data.Item2.GetType().GetGenericArguments()[0] == typeof(GcLaserBeamData))
-                            writer.Align(0x10, 0);
-                        else
-                            writer.Align(0x8, 0); // todo: check if this alignment is correct
+                        alignment = data.Item2.GetType().GetCustomAttribute<NMSAttribute>().Alignment;
                     }
-                    catch (IndexOutOfRangeException)
+                    catch (NullReferenceException)
+                    // In this case the class has no alignment value associated with it, just set as default value of 4
                     {
-                        writer.Align(0x8, 0);
+                        alignment = 0x4;
                     }
+                    writer.Align(alignment, 0);
 
                     if (data.Item2.GetType() == typeof(VariableSizeString))
                     {

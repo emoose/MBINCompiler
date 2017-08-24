@@ -1,5 +1,6 @@
 ﻿namespace MBINCompiler.Models.Structs
 {
+    [NMS(Alignment = 0x10)]
     public class GcNGuiGraphicData : NMSTemplate
     {
         public GcNGuiElementData ElementData;

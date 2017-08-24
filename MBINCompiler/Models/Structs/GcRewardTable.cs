@@ -8,7 +8,7 @@ namespace MBINCompiler.Models.Structs
         public List<GcGenericRewardTableEntry> GenericTable;
         public List<GcGenericRewardTableEntry> InteractionTable;
         public List<GcGenericRewardTableEntry> MissionBoardTable;
-        public List<GcRewardTableEntitlementItem> EntitlementTable;        // something different??
+        public List<GcRewardTableEntitlementItem> EntitlementTable;
         public List<NMSString0x10> TechRewardOrder;
         public List<NMSString0x10> ProductRewardOrder;
     }

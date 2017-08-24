@@ -1,5 +1,6 @@
 ﻿namespace MBINCompiler.Models.Structs
 {
+    [NMS(Size = 0x18)]
     public class GcPortalSaveData : NMSTemplate
     {
         public GcSeed PortalSeed;

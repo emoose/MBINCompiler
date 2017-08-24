@@ -2,6 +2,7 @@
 
 namespace MBINCompiler.Models.Structs       // size: 0x310
 {
+    [NMS(Alignment = 0x10)]
     public class GcNGuiLayerData : NMSTemplate
     {
         /* 0x000 */ public GcNGuiElementData Data;
