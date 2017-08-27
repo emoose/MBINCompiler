@@ -564,40 +564,16 @@ namespace MBINCompiler.Models
             {
                 int alignment;
                 try
-<<<<<<< HEAD
-=======
-                {
-                    //Console.WriteLine("Dlist code");
-                    alignment = entry.GetType().GetCustomAttribute<NMSAttribute>().Alignment;
-                    //Console.WriteLine(entry.GetType());
-                    //Console.WriteLine(alignment);
-                    //System.Threading.Thread.Sleep(100);
-                }
-                catch (NullReferenceException)
-                // In this case the class has no alignment value associated with it, just set as default value of 4
-                {
-                    alignment = 0x8;
-                }
-
-                writer.Align(alignment, 0);
-                /*
-                if (entry.GetType().Name == "GcNGuiLayerData" || entry.GetType().Name == "GcNGuiTextData" || entry.GetType().Name == "GcNGuiGraphicData")
->>>>>>> a167f2967c14c53eb8bd546a76a395ddee84962e
                 {
                     alignment = entry.GetType().GetCustomAttribute<NMSAttribute>().Alignment;
                 }
                 catch (NullReferenceException)
                 {
-<<<<<<< HEAD
                     alignment = 0x8;
                 }
 
                 writer.Align(alignment, 0);
 
-=======
-                    writer.Align(0x8, 0);
-                }*/
->>>>>>> a167f2967c14c53eb8bd546a76a395ddee84962e
                 // add the starting location of the data chunk and the name to a dictionary
                 //Console.WriteLine(writer.BaseStream.Position);
                 //Console.WriteLine(entry.GetType().Name);
