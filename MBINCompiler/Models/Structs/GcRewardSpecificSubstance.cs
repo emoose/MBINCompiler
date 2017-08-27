@@ -1,5 +1,6 @@
 ﻿namespace MBINCompiler.Models.Structs
 {
+    [NMS(Alignment =0x8)]
     public class GcRewardSpecificSubstance : NMSTemplate        // size: 0x28
     {
         public GcDefaultMissionProduct Default;

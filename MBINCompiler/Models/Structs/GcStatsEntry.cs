@@ -2,13 +2,13 @@
 {
     public class GcStatsEntry : NMSTemplate
     {
-        public GcStatsTypes StatsType;
+        public GcStatsTypes Type;
         public Colour Colour;
         public float RangeMin;
         public float RangeMax;
         public bool LessIsBetter;
 
-        [NMS(Ignore = true)]
-        public int EmptyNode1;
+        [NMS(Size = 0x7, Ignore = true)]
+        public byte[] EndPadding;
     }
 }

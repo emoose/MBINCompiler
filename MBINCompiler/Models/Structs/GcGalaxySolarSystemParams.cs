@@ -1,6 +1,7 @@
 ﻿namespace MBINCompiler.Models.Structs
 {
-    public class GcGalaxySolarSystemParams : NMSTemplate       // size: 0x58        // used in global? cf. 0000000140258EAA in 1.30 exe
+    [NMS(Size = 0x58)]
+    public class GcGalaxySolarSystemParams : NMSTemplate
     {
         /* 0x00 */ public GcGalaxySolarSystemOrbitParams PlanetParameters;
         /* 0x1C */ public GcGalaxySolarSystemOrbitParams MoonParameters;

@@ -10,8 +10,8 @@
         /* 0x14 */ public float Unknown14;
         /* 0x18 */ public float Unknown18;
         /* 0x1C */ public float Unknown1C;
-        /* 0x20 */ public float MinPlanetDistance;
-        /* 0x24 */ public float MaxPlanetDistance;
+        /* 0x20 */ public float MinSpaceStationPlanetDistance;
+        /* 0x24 */ public float MaxSpaceStationPlanetDistance;
         /* 0x28 */ public bool Unknown28;
         [NMS(Size = 0x3, Ignore = true)]
         /* 0x29 */ public byte[] Padding29;

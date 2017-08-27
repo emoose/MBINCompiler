@@ -52,8 +52,8 @@
         public float Unknown98;
         public float Unknown9C;
 
-        public float UnknownA0; // unused?
-        public float UnknownA4; // unused?
+        public float UnknownA0;
+        public float UnknownA4;
         public float UnknownA8;
         public float UnknownAC;
 
@@ -64,8 +64,8 @@
 
         public float UnknownC0;
         public float UnknownC4;
-        public float UnknownC8; // unused?
-        public float UnknownCC; // unused?
+        public float UnknownC8;
+        public float UnknownCC;
 
         public float UnknownD0;
         public float UnknownD4;
@@ -77,18 +77,22 @@
         public float UnknownE8;
         public float UnknownEC;
 
-        public float UnknownF0; // unused?
-        public float UnknownF4; // unused?
+        public float UnknownF0;
+        public float UnknownF4;
         public float UnknownF8;
-        public float UnknownFC; // unused?
+        public float UnknownFC;
 
         public float Unknown100;
         public float Unknown104;
-        public float Unknown108; // unused?
-        public int UnknownInt10C; // unused? only int in the file?
+        public float Unknown108;
+        public float Unknown10C;
         public float Unknown110;
         public float Unknown114;
         public float Unknown118;
-        public float Unknown11C;
+        public int UnknownInt11C;
+        public float Unknown120;
+        public float Unknown124;        // this and next 2 floats probably just end padding...
+        public float Unknown128;
+        public float Unknown12C;
     }
 }

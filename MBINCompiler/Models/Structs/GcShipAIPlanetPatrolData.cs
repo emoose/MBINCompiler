@@ -1,6 +1,7 @@
 ﻿namespace MBINCompiler.Models.Structs
 {
-    public class GcShipAIPlanetPatrolData : NMSTemplate     // size: 0x38
+    [NMS(Size = 0x38)]
+    public class GcShipAIPlanetPatrolData : NMSTemplate
     {
         [NMS(Size = 0x10)]
         public string Squad;

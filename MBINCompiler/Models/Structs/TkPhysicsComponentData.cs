@@ -2,6 +2,7 @@
 
 namespace MBINCompiler.Models.Structs
 {
+    [NMS(Size = 0x70)]
     public class TkPhysicsComponentData : NMSTemplate       // used in a global?
     {
         public TkPhysicsData Data;

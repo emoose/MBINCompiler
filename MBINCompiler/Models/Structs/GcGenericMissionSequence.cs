@@ -2,7 +2,8 @@
 
 namespace MBINCompiler.Models.Structs
 {
-    public class GcGenericMissionSequence : NMSTemplate     // size: 0x400
+    [NMS(Size = 0x410)]
+    public class GcGenericMissionSequence : NMSTemplate
     {
         [NMS(Size = 0x10)]
         /* 0x000 */ public string MissionID;

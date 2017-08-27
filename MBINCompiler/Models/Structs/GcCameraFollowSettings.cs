@@ -1,6 +1,7 @@
 namespace MBINCompiler.Models.Structs
 {
-    public class GcCameraFollowSettings : NMSTemplate           // size: 0xD0
+    [NMS(Size = 0xD0)]
+    public class GcCameraFollowSettings : NMSTemplate
     {
         [NMS(Size =  0x10)]
         /* 0x00 */ public string Name;

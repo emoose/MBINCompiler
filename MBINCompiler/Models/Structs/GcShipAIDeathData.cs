@@ -1,5 +1,6 @@
 ﻿namespace MBINCompiler.Models.Structs
 {
+    [NMS(Size = 0x1C)]
     public class GcShipAIDeathData : NMSTemplate
     {
         /* 0x000 */ public float DroneDeathTime;            // 3FE66666h

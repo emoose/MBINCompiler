@@ -2,6 +2,5 @@
 {
     public class GcRewardStartPurchase : NMSTemplate
     {
-        public bool Dummy; // unused?
     }
 }

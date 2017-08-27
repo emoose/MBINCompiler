@@ -1,6 +1,7 @@
 ﻿namespace MBINCompiler.Models.Structs
 {
-    public class GcGalaxyRenderAnostreakData : NMSTemplate      // size: 0x30, Used in GalaxyGlobals
+    [NMS(Size = 0x30)]
+    public class GcGalaxyRenderAnostreakData : NMSTemplate
     {
         /* 0x00 */ public Colour OuterColour;
         /* 0x10 */ public Colour InnerColour;

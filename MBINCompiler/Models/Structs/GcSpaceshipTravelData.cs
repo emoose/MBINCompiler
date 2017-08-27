@@ -1,6 +1,7 @@
 ﻿namespace MBINCompiler.Models.Structs
 {
-    public class GcSpaceshipTravelData : NMSTemplate //size = 0x58
+    [NMS(Size = 0x58)]
+    public class GcSpaceshipTravelData : NMSTemplate
     {
         [NMS(Size = 0x10)]
         /* 0x00 */ public string Id;

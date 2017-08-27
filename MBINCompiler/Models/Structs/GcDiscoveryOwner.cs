@@ -1,8 +1,7 @@
-﻿using System.Collections.Generic;
-
-namespace MBINCompiler.Models.Structs
+﻿namespace MBINCompiler.Models.Structs
 {
-    public class GcDiscoveryOwner : NMSTemplate // size = 0xC4
+    [NMS(Size = 0xC4)]
+    public class GcDiscoveryOwner : NMSTemplate
     {
 
         [NMS(Size = 0x40)]

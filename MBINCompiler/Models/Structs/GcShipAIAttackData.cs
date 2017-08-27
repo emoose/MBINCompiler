@@ -1,6 +1,7 @@
 ﻿namespace MBINCompiler.Models.Structs
 {
-    public class GcShipAIAttackData : NMSTemplate       // size: 0xD0       // in global?
+    [NMS(Size = 0xD0)]
+    public class GcShipAIAttackData : NMSTemplate
     {
         [NMS(Size = 0x10)]
         /* 0x00 */ public string Id;

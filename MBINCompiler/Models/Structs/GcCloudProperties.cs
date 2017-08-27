@@ -1,6 +1,7 @@
 ﻿namespace MBINCompiler.Models.Structs
 {
-    public class GcCloudProperties : NMSTemplate      // probably used in a global...
+    [NMS(Size = 0xF0)]
+    public class GcCloudProperties : NMSTemplate
     {
         /* 0x00 */ public Vector2f CoverageOffset;
         /* 0x08 */ public float HorizonCoverageStart;

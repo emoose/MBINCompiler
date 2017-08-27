@@ -2,9 +2,7 @@
 {
     public class GcAudioGlobals : NMSTemplate
     {
-        // the func that uses the blocks of floats below (up to 0x3C) seems to associate each 3 with a different NPC type
-        [NMS(Size = 0x5, EnumValue = new string[0x5] { "None", "Pirate", "Police", "Trader", "Freighter"})]
-        public GcAudio3PointDopplerData[] Unknown0;
+        public GcAudioNPCDoppler Unknown0;
 
         public float Unknown3C;
         public float Unknown40;
@@ -35,17 +33,19 @@
         public float UnknownA0;
         public float UnknownA4;
         public float UnknownA8;
+        public float UnknownAC;
+        public bool UnknownB0; // if false, main code chunk inside cGcAudioManager::RunObstructionQueries won't get run (default true)
 
-        public bool UnknownAC; // if false, main code chunk inside cGcAudioManager::RunObstructionQueries won't get run (default true)
-
-        public int UnknownB0;
         public float UnknownB4;
         public float UnknownB8;
         public float UnknownBC;
+        public float UnknownC0;
 
-        public bool UnknownC0; // if true, loads music from /MUSIC/PULSE.XML? (default true)
+        public bool UnknownC4; // if true, loads music from /MUSIC/PULSE.XML? (default true)        // WORD
 
-        [NMS(Size = 3, Ignore = true)]
-        public byte[] PaddingC1;
+        public float UnknownC8;
+        public float UnknownCC;
+        public float UnknownD0;
+        public float UnknownD4;
     }
 }

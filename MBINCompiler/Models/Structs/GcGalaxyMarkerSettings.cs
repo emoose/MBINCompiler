@@ -1,6 +1,7 @@
 ﻿namespace MBINCompiler.Models.Structs
 {
-    public class GcGalaxyMarkerSettings : NMSTemplate       // size: 0x70
+    [NMS(Size = 0x120)]
+    public class GcGalaxyMarkerSettings : NMSTemplate
     {
         [NMS(Size = 3)]
         /* 0x00 */ public Colour[] Colours;
@@ -15,9 +16,14 @@
         /* 0x58 */ public float RadiusMinimum;
         /* 0x5C */ public float RadiusBaseOffset;
         /* 0x60 */ public float RadiusEdge;
-        /* 0x64 */ public Vector2f TimeScaleRange;
+        [NMS(Size = 0x80)]
+        /* 0x64 */ public string Icon;
+        /* 0xE4 */ public Vector2f IconSize;
+        [NMS(Size = 0x20)]
+        /* 0xEC */ public string MarkerLabel;
+        /* 0x10C */ public Vector2f TimeScaleRange;
 
-        [NMS(Size = 4, Ignore = true)]
-        public byte[] Padding6C;
+        [NMS(Size = 0xC, Ignore = true)]
+        /* 0x114 */ public byte[] EndPadding;
     }
 }

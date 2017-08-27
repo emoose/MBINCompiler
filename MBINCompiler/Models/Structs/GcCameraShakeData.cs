@@ -1,6 +1,7 @@
 ﻿namespace MBINCompiler.Models.Structs
 {
-    public class GcCameraShakeData : NMSTemplate // 0xC0
+    [NMS(Size = 0xC0)]
+    public class GcCameraShakeData : NMSTemplate
     {
         [NMS(Size = 0x10)]
         public string Name;

@@ -1,5 +1,6 @@
 ﻿namespace MBINCompiler.Models.Structs
 {
+    [NMS(Size = 0x2C)]
     public class GcAudioPulseDemo : NMSTemplate
     {
         public float MixRateSeconds;

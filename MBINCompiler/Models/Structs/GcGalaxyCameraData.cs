@@ -1,6 +1,7 @@
 ﻿namespace MBINCompiler.Models.Structs
 {
-    public class GcGalaxyCameraData : NMSTemplate // size = 0x58
+    [NMS(Size = 0x64)]
+    public class GcGalaxyCameraData : NMSTemplate
     {
         /* 0x00 */ public float CameraFOV;                      // 42C80000h
         /* 0x04 */ public float MovementBlendRateFree;          // 40400000h
@@ -20,9 +21,12 @@
         /* 0x3C */ public float ZoomOutPushDist;                // 400CCCCDh
         /* 0x40 */ public float ZoomOutRate;                    // 3ECCCCCDh
         /* 0x44 */ public float ZoomInRate;                     // 40400000h
-        /* 0x48 */ public float CameraShakeDriftClip;           // 3E99999Ah
-        /* 0x4C */ public float CameraShakeDriftShift;          // 3D4CCCCDh
-        /* 0x50 */ public float CameraShakeSmoothingRate;       // 40800000h
-        /* 0x54 */ public float CameraShakeMaximum;             // 3F800000h
+        /* 0x48 */ public float MinZoomDIstance;
+        /* 0x4C */ public float MaxZoomDistance;
+        /* 0x50 */ public float MinPushingZoomDistance;
+        /* 0x54 */ public float CameraShakeDriftClip;           // 3E99999Ah
+        /* 0x58 */ public float CameraShakeDriftShift;          // 3D4CCCCDh
+        /* 0x5C */ public float CameraShakeSmoothingRate;       // 40800000h
+        /* 0x60 */ public float CameraShakeMaximum;             // 3F800000h
     }
 }

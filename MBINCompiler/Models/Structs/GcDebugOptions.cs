@@ -2,24 +2,26 @@
 {
     public class GcDebugOptions : NMSTemplate           // locations at start of lines will be wrong in parts
     {
-        /* 0x00 */ public bool SkipIntro;
+        /* 0x00 */ public bool SkipIntro;                   // confirmed 1.3
         /* 0x01 */ public bool VideoCaptureMode;
-        /* 0x02 */ public bool GodMode;
-		/* 0x03	*/ public bool AlwaysHaveFocus;
-        /* 0x04 */ public bool DisableVibration;
-        /* 0x05 */ public bool MapWarpCheckIgnoreFuel;
-        /* 0x06 */ public bool MapWarpCheckIgnoreDrive;
-        /* 0x07 */ public bool EverythingIsFree;
-        /* 0x08 */ public bool EverythingIsKnown;
-        /* 0x09 */ public bool EverythingIsStar;
-        public bool Unknown1;
         public bool Unknown2;
-        /* 0x0A */ public bool UseScreenEffects;
-        /* 0x0B */ public bool UseGunImpactEffect;
-        public bool Unknown3;
-        public bool Unknown4;
-        /* 0x0C */ public bool RenderCreatureDetails;
-		/* 0x0D */ public bool UseDebugScreenSettings;
+        /* 0x03 */ public bool GodMode;                     // confirmed 1.3
+		/* 0x04	*/ public bool AlwaysHaveFocus;
+        /* 0x05 */ public bool DisableVibration;
+        /* 0x06 */ public bool MapWarpCheckIgnoreFuel;
+        /* 0x07 */ public bool MapWarpCheckIgnoreDrive;
+        public bool Unknown8;
+        /* 0x09 */ public bool EverythingIsFree;            // confirmed 1.3
+        /* 0x0A */ public bool EverythingIsKnown;           // confirmed 1.3
+        /* 0x0B */ public bool EverythingIsStar;
+        public bool UnknownC;
+        public bool UnknownD;
+        public bool UnknownE;
+        /* 0x0F */ public bool UseScreenEffects;
+        /* 0x10 */ public bool UseGunImpactEffect;
+        /* 0x11 */ public bool RenderCreatureDetails;
+		/* 0x12 */ public bool UseDebugScreenSettings;      // confirmed 1.3
+        public bool Unknown13;
         /* 0x10 */ public int ScreenWidth;
         /* 0x14 */ public int ScreenHeight;
         /* 0x18 */ public bool DisableVSync;
@@ -125,14 +127,14 @@
 
         [NMS(Size = 0x80)]
         /* 0x498 */ public string RealityPresetFile; // 0x80
-        [NMS(Size = 0x20)]
-        public string MainTextbankPrefix;
-        [NMS(Size = 0x20)]
-        public string UpdateTextBankPrefix;
         /* 0x49A */ public short RealityGenerationIteration;
+        [NMS(Size = 0x20)]
+        /* 0x4A0 */ public string MainTextbankPrefix;
+        [NMS(Size = 0x20)]
+        /* 0x4C0 */ public string UpdateTextBankPrefix;
 
         [NMS(Size = 0x80)]
-        /* 0x51B */ public string DefaultSaveData; // 0x80
+        /* 0x4E0 */ public string DefaultSaveData; // 0x80
         /* 0x51C */ public bool FormatDownloadStorageAreaOnBoot;
         /* 0x51D */ public bool ForceBasicLoadScreen;
         /* 0x520 */ public float BootLogoFadeRate;
@@ -148,11 +150,11 @@
         }
         /* 0x534 */ public bool DebugBuildingSpawns;
         /* 0x535 */ public bool StressTestLongNameDisplay;
-        public bool Unknown5;
+        public bool Unknown535;
         /* 0x536 */public bool ShowFramerate;
         /* 0x537 */ public bool ShowPositionDebug;
         /* 0x538 */public bool ShowGPUMemory;
-        public bool Unknown6;
+        public bool Unknown538;
         /* 0x539 */ public bool ShowMempoolOverlay;
 
         [NMS(Size = 0x100)]
@@ -168,8 +170,8 @@
             return new[] { "None", "TourSolarSystem", "RegeneratePlanet" };// "None" isnt specified in exe
         }
         /* 0x644 */ public bool SmokeTestCameraFly;
-        public bool Unknown7;
-        public bool Unknown8;
+        public bool Unknown645;
+        public bool Unknown646;
         /* 0x648 */ public int SmokeTestConfigCaptureCycles;
         /* 0x64C */ public float SmokeTestConfigCaptureDurationInSeconds;
         /* 0x650 */ public int SmokeTestConfigCaptureFolderNameNumberOffset;
@@ -200,7 +202,7 @@
             return new[] { "default", "dev", "qa", "prodqa", "prod", "custom", "pentest" }; // There was a "qa" entry between "dev" and "prodqa" but that seems to have been removed in exe
         }
         [NMS(Size = 0x80)]
-        /* 0x7E8 */ public string AuthBaseUrl; // 0x80
+        /* 0x830 */ public string AuthBaseUrl; // 0x80
         /* 0x868 */ public bool CertificateSecurityBypass;
         [NMS(Size = 0x20)]
         /* 0x869 */ public string OverrideUsernameForDev; // 0x20
@@ -240,47 +242,52 @@
         /* 0xC52 */ public bool HmdTracking;
         /* 0xC53 */ public bool HmdStereoRender;
         /* 0xC54 */ public bool HmdDistortionPassthru;
-        /* 0xC58 */ public int HmdMonitor; // (int?)
+        /* 0xC58 */ public int HmdMonitor;
         /* 0xC5C */ public int HmdEyeBufferWidth;
         /* 0xC60 */ public int HmdEyeBufferHeight;
         /* 0xC64 */ public float HmdEyeScalePos;
         /* 0xC68 */ public float HmdHeadScalePos;
-        /* 0xC6C */ public float HmdImmersionFactor;
-        /* 0xC70 */ public bool ForceExtremeWeather;
-        /* 0xC71 */ public bool ForceExtremeSentinels;
-		/* 0xC72 */ public bool ForceStarType;
-		/* 0xC73?*/ public int ForceStarTypeTo; // unused? added
-        /* 0xC78 */ public bool ForceBiome;
-        /* 0xC7C?*/ public int ForceBiomeTo; // unused?
-        public int BadValue;
-        /* 0xC80 */ public bool ForceBuildingRace;
-        /* 0xC81?*/ public int ForceBuildingRaceTo; // unused?
-        /* 0xC88 */ public bool ForceLifeLevel;
-        /* 0xC89?*/ public int ForceLifeLevelTo; // unused?
-        /* 0xC8D?*/ public int ForceAnomalyTo; // unused?
-        /* 0xC94 */ public bool DisableLimits;
-        /* 0xC95 */ public bool LimitPerRegionInstances;
-        /* 0xC96 */ public bool LimitPerRegionBodies;
-        /* 0xC97 */ public bool LimitGlobalInstances;
-        /* 0xC98 */ public bool LimitGlobalBodies;
-        /* 0xC9C */ public int GenerateFarLodBuildingDist;
-        /* 0xCA0 */ public bool DeferRegionBodies;
-        /* 0xCA4 */ public float GenerateCostDistance;
-        /* 0xCA8 */ public float GenerateCostAngle;
-        /* 0xCAC */ public float GenerateCostLOD;
-        /* 0xCB0 */ public float GenerateCostWait;
-        /* 0xCB4 */ public bool DChecksEnabled;
-        /* 0xCB5 */ public bool DChecksOutputJson;
-        /* 0xCB6 */ public bool DChecksOutputBinary;
-        /* 0xCB7 */ public bool DChecksOutputFileLine;
-        /* 0xCB8 */ public int FrameFlipRateDefault;
-        /* 0xCBC */ public int FrameFlipRateLoad;
-        /* 0xCC0 */ public int FrameFlipRateGame;
-        /* 0xCC4 */ public float MaxFrameRate;
-		/* 0xCC8 */ public bool DisableBaseBuilding; // looks like a bool but its 4 bytes?
-		/* 0xCC9 */ public bool DisableBaseBuildingLimits;
-        [NMS(Size = 0x2, Ignore = true)]
-        public byte[] PaddingCD2;
-        /* 0xCD4 */ public float UnknownCD4;
+
+        /* 0xCDC */ public float HmdImmersionFactor;
+        /* 0xCE0 */ public bool ForceExtremeWeather;
+        /* 0xCE1 */ public bool ForceExtremeSentinels;
+		/* 0xCE2 */ public bool ForceStarType;
+		/* 0xCE4 */ public int ForceStarTypeTo;
+        /* 0xCE8 */ public bool ForceBiome;
+        /* 0xCEC */ public int ForceBiomeTo;
+        /* 0xCF0 */ public int BadValue;
+
+        /* 0xCF4 */ public bool ForceBuildingRace;
+        /* 0xCF8 */ public int ForceBuildingRaceTo;
+        /* 0xCFC */ public bool ForceLifeLevel;
+        /* 0xD00 */ public int ForceLifeLevelTo;
+        /* 0xD04 */ public bool ForceAnomaly;
+        /* 0xD08 */ public int ForceAnomalyTo;
+        [NMS(Size = 0x4, Ignore = true)]
+        /* 0xD0C */ public byte[] PaddingD0C;
+        /* 0xD10 */ public bool UnknownBool;
+        /* 0xD11 */ public bool DisableLimits;
+        /* 0xD12 */ public bool LimitPerRegionInstances;
+        /* 0xD13 */ public bool LimitPerRegionBodies;
+        /* 0xD14 */ public bool LimitGlobalInstances;
+        /* 0xD15 */ public bool LimitGlobalBodies;
+
+        /* 0xD18 */ public int GenerateFarLodBuildingDist;
+        /* 0xD1C */ public bool DeferRegionBodies;
+        /* 0xD20 */ public float GenerateCostDistance;
+        /* 0xD24 */ public float GenerateCostAngle;
+        /* 0xD28 */ public float GenerateCostLOD;
+        /* 0xD2C */ public float GenerateCostWait;
+        /* 0xD30 */ public bool DChecksEnabled;
+        /* 0xD31 */ public bool DChecksOutputJson;
+        /* 0xD32 */ public bool DChecksOutputBinary;
+        /* 0xD33 */ public bool DChecksOutputFileLine;
+        /* 0xD34 */ public int FrameFlipRateDefault;
+        /* 0xD38 */ public int FrameFlipRateLoad;
+        /* 0xD3C */ public int FrameFlipRateGame;
+        /* 0xD40 */ public float MaxFrameRate;
+		/* 0xD44 */ public bool DisableBaseBuilding;
+		/* 0xD45 */ public bool DisableBaseBuildingLimits;
+        /* 0xD48 */ public float UnknownCD4;
     }
 }

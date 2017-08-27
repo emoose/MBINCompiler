@@ -2,11 +2,11 @@
 {
     public class GcEnvironmentGlobals : NMSTemplate
     {
-        public GcCloudProperties Unknown0;
-        public float UnknownF0;
-        public float UnknownF4;
-        public float UnknownF8;
-        public float UnknownFC;
+        public float Unknown0;
+        public float Unknown4;
+        [NMS(Size = 8, Ignore = true)]
+        public byte[] Padding8;
+        public GcCloudProperties Unknown10;
         public float Unknown100;
         public float Unknown104;
         public float Unknown108;
@@ -29,11 +29,11 @@
         public float Unknown14C;
         public float Unknown150;
         public float Unknown154;
-        public int UnknownInt158;
+        public float Unknown158;
         public float Unknown15C;
         public float Unknown160;
         public float Unknown164;
-        public float Unknown168;
+        public int UnknownInt168;
         public float Unknown16C;
         public float Unknown170;
         public float Unknown174;
@@ -42,11 +42,11 @@
         public float Unknown180;
         public float Unknown184;
         public float Unknown188;
-        /* 0x18C */ public float TerrainLODFadeSpeed;
+        public float Unknown18C;
         public float Unknown190;
         public float Unknown194;
         public float Unknown198;
-        public float Unknown19C;
+        /* 0x19C */ public float TerrainLODFadeSpeed;
         public float Unknown1A0;
         public float Unknown1A4;
         public float Unknown1A8;
@@ -58,12 +58,12 @@
         public float Unknown1C0;
         public float Unknown1C4;
         public float Unknown1C8;
-        /* 0x1CC */ public float MinCloudHeight;
-        /* 0x1D0 */ public float MaxCloudHeight;
+        public float Unknown1CC;
+        public float Unknown1D0;
         public float Unknown1D4;
         public float Unknown1D8;
-        public float Unknown1DC;
-        public float Unknown1E0;
+        /* 0x1DC */ public float MinCloudHeight;
+        /* 0x1E0 */ public float MaxCloudHeight;
         public float Unknown1E4;
         public float Unknown1E8;
         public float Unknown1EC;
@@ -71,15 +71,15 @@
         public float Unknown1F4;
         public float Unknown1F8;
         public float Unknown1FC;
-        /* 0x200 */ public float HiLODStartHeight;
+        public float Unknown200;
         public float Unknown204;
         public float Unknown208;
-        /* 0x20C */ public float PlanetActiveZoneHeight;
-        /* 0x210 */ public float AtmosphericCloudsDrawDistance;
+        public float Unknown20C;
+        /* 0x210 */ public float HiLODStartHeight;
         public float Unknown214;
         public float Unknown218;
-        public float Unknown21C;
-        public float Unknown220;
+        /* 0x21C */ public float PlanetActiveZoneHeight;
+        /* 0x220 */ public float AtmosphericCloudsDrawDistance;
         public float Unknown224;
         public float Unknown228;
         public float Unknown22C;
@@ -96,12 +96,12 @@
         public float Unknown258;
         public float Unknown25C;
         public float Unknown260;
-        /* 0x264 */ public float MinBaseFogIntensity;
-        /* 0x268 */ public float MaxBaseFogIntensity;
+        public float Unknown264;
+        public float Unknown268;
         public float Unknown26C;
         public float Unknown270;
-        public float Unknown274;
-        public float Unknown278;
+        /* 0x274 */ public float MinBaseFogIntensity;
+        /* 0x278 */ public float MaxBaseFogIntensity;
         public float Unknown27C;
         public float Unknown280;
         public float Unknown284;
@@ -114,20 +114,24 @@
         public float Unknown2A0;
         public float Unknown2A4;
         public float Unknown2A8;
-        /* 0x2AC */ public float SurfaceSunlightActiveHeight;
+        public float Unknown2AC;
         public float Unknown2B0;
         public float Unknown2B4;
         public float Unknown2B8;
-        public float Unknown2BC;
+        /* 0x2BC */ public float SurfaceSunlightActiveHeight;
         public float Unknown2C0;
         public float Unknown2C4;
         public float Unknown2C8;
-        public bool Unknown2CC;
+        public float Unknown2CC;
+        public float Unknown2D0;
+        public float Unknown2D4;
+        public float Unknown2D8;
+        public bool Unknown2DC;
         [NMS(Size = 0x3, Ignore = true)]
-        public byte[] Padding2CD;
+        public byte[] Padding2DD;
 
-        public TkShearWindData WindData;
-        public TkShearWindData StringWindData;
-        public TkShearWindData UnderwaterWindData;
+        /* 0x2E0 */ public TkShearWindData WindData;
+        /* 0x360 */ public TkShearWindData StrongWindData;
+        /* 0x3E0 */ public TkShearWindData UnderwaterWindData;
     }
 }

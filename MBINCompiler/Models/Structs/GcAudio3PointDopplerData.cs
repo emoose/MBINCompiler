@@ -1,5 +1,6 @@
 namespace MBINCompiler.Models.Structs
 {
+    [NMS(Size = 0xC)]
     public class GcAudio3PointDopplerData : NMSTemplate
     {
         /* 0x0 */ public float Front;

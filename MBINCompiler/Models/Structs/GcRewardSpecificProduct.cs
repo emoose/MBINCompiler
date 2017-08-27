@@ -1,5 +1,6 @@
 ﻿namespace MBINCompiler.Models.Structs
 {
+    [NMS(Alignment = 0x8)]
     public class GcRewardSpecificProduct : NMSTemplate
     {
         public GcDefaultMissionProductEnum Default;

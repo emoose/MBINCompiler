@@ -1,7 +1,9 @@
 namespace MBINCompiler.Models.Structs
 {
-    public class GcAudioNPCDoppler : NMSTemplate        // pretty certain this is used somehow in the GcAudioGlobals
+    [NMS(Size = 0x3C)]
+    public class GcAudioNPCDoppler : NMSTemplate
     {
-		/* 0x000 */ public float Config;//List<GcAudioNPCDoppler> Config;
-	}
+        [NMS(Size = 0x5, EnumValue = new string[0x5] { "None", "Pirate", "Police", "Trader", "Freighter" })]        // enum vals from old audio globals...
+		public GcAudio3PointDopplerData[] Config;
+    }
 }

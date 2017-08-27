@@ -5,7 +5,7 @@
         public int InterationBufferType;
         public string[] InterationBufferTypeValues()
         {
-            return new[] { "DistressSignal", "Crate", "Destructable", "Terrain", "Cost", "Building", "Creature"};
+            return new[] { "Distress_Signal", "Crate", "Destructable", "Terrain", "Cost", "Building", "Creature", "Maintenance"};
         }
     }
 }

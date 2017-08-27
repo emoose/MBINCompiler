@@ -2,7 +2,8 @@
 
 namespace MBINCompiler.Models.Structs
 {
-    public class GcAIShipSpawnData : NMSTemplate        // size: 0xA8       // in a global?
+    [NMS(Size = 0xA8)]
+    public class GcAIShipSpawnData : NMSTemplate
     {
         [NMS(Size = 0x20)]
         /* 0x00 */ public string Message;
