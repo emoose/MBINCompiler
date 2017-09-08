@@ -10,9 +10,15 @@ namespace libMBIN
     // ReSharper disable once InconsistentNaming
     public class IO : IDisposable
     {
+        #region Public Fields
+
         public BinaryReader Reader;
         public BinaryWriter Writer;
         public Stream Stream;
+
+        #endregion
+
+        #region Constructors
 
         public IO(string filePath)
         {
@@ -38,6 +44,10 @@ namespace libMBIN
             Reader.Dispose();
             Writer.Dispose();
         }
+
+        #endregion
+
+        #region Public
 
         public bool AddBytes(long numBytes)
         {
@@ -104,10 +114,16 @@ namespace libMBIN
             return true;
         }
 
+        #endregion
+
+        #region Private
+
         private void InitIo()
         {
             Reader = new BinaryReader(Stream, Encoding.ASCII);
             Writer = new BinaryWriter(Stream);
         }
+
+        #endregion
     }
 }
