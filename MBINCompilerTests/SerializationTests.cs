@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Text;
 
+using libMBIN;
 using MBINCompiler;
 using MBINCompiler.Models.Structs;
 using MBINCompilerTests.Properties;
