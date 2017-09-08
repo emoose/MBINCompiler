@@ -42,8 +42,8 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Source\EXmlFile.cs" />
-    <Compile Include="Source\Half.cs" />
-    <Compile Include="Source\HalfHelper.cs" />
+    <Compile Include="Source\Common\System\Half.cs" />
+    <Compile Include="Source\Common\System\HalfHelper.cs" />
     <Compile Include="Source\IO.cs" />
     <Compile Include="Source\MBINFile.cs" />
     <Compile Include="Source\Models\EXmlBase.cs" />
@@ -926,6 +926,7 @@
     <Compile Include="Source\Models\Structs\Unfinished\GcRobotGlobals.cs" />
     <Compile Include="Source\Models\Structs\Unfinished\GcSceneOptions.cs" />
     <Compile Include="Source\Models\Structs\Unfinished\GcScratchpadGlobals.cs" />
+    <Compile Include="Source\Common\Shared.cs" />
     <None Include="Source\Models\Structs\Unfinished\GcSkyGlobals.cs" />
     <Compile Include="Source\Models\Structs\Unfinished\GcSmokeTestOptions.cs" />
     <Compile Include="Source\Models\Structs\Unfinished\GcSolarGenerationGlobals.cs" />
@@ -939,10 +940,10 @@
     <Compile Include="Source\Models\Structs\Vector3f.cs" />
     <Compile Include="Source\Models\Structs\Vector3i.cs" />
     <Compile Include="Source\Models\Structs\Vector4f.cs" />
-    <Compile Include="Source\Shared.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Source\Models\Structs\.0StructsThatNeedChanged.md" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
