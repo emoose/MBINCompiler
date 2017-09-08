@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace MBINCompiler.Models.Structs
+namespace libMBIN.Models.Structs
 {
     public class GcInventoryTable : NMSTemplate     // size: 0x6F0
     {

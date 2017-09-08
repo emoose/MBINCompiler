@@ -1,4 +1,4 @@
-﻿namespace MBINCompiler.Models.Structs
+﻿namespace libMBIN.Models.Structs
 {
     public class GcRealityCraftingRecipeData : NMSTemplate // 0x58 bytes
     {

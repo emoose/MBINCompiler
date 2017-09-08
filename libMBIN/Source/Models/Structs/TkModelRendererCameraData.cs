@@ -1,4 +1,4 @@
-﻿namespace MBINCompiler.Models.Structs
+﻿namespace libMBIN.Models.Structs
 {
     public class TkModelRendererCameraData : NMSTemplate // 0x40 bytes
     {

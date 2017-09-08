@@ -1,4 +1,4 @@
-﻿namespace MBINCompiler.Models.Structs
+﻿namespace libMBIN.Models.Structs
 {
     public class GcDebugOptions : NMSTemplate           // locations at start of lines will be wrong in parts
     {

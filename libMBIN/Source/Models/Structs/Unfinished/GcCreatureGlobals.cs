@@ -1,4 +1,4 @@
-namespace MBINCompiler.Models.Structs // 0x690
+namespace libMBIN.Models.Structs // 0x690
 {
     public class GcCreatureGlobals : NMSTemplate
     {

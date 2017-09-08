@@ -1,4 +1,4 @@
-﻿namespace MBINCompiler.Models.Structs
+﻿namespace libMBIN.Models.Structs
 {
     public class GcSolarSystemLocator : NMSTemplate // 0x60 bytes
     {

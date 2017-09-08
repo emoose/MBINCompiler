@@ -1,4 +1,4 @@
-﻿namespace MBINCompiler.Models.Structs
+﻿namespace libMBIN.Models.Structs
 {
     public class GcPlayerStat : NMSTemplate // 0x20 bytes
     {

@@ -2,7 +2,10 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
+
 using libMBIN;
+using libMBIN.Models;
+using libMBIN.Models.Structs;
 
 namespace MBINCompiler
 {
@@ -68,7 +71,7 @@ namespace MBINCompiler
                 return;
             }
 
-            if (data.GetType() == typeof(Models.Structs.TkGeometryData))
+            if (data.GetType() == typeof(TkGeometryData))
                 output = Path.ChangeExtension(output, ".MBIN.PC");
 
             if (File.Exists(output))
@@ -76,11 +79,11 @@ namespace MBINCompiler
 
             using (var file = new MBINFile(output))
             {
-                file.Header = new Models.MBINHeader();
+                file.Header = new MBINHeader();
                 file.Header.SetDefaults();
-                if (data.GetType() == typeof(Models.Structs.TkGeometryData))
+                if (data.GetType() == typeof(TkGeometryData))
                     file.Header.Magic = 0xDDDDDDDD; // only used by TkGeometryData / .MBIN.PC files, maybe used to signal the file is PC only?
-                if (data.GetType() == typeof(Models.Structs.TkAnimMetadata))
+                if (data.GetType() == typeof(TkAnimMetadata))
                 {
                     file.Header.Tag = 0xFFFFFFFFFFFFFFFF;
                     file.Header.MbinVersion = 0x9B251350AE1ABCA7;
@@ -201,7 +204,7 @@ namespace MBINCompiler
                 input = Path.GetFullPath(args[0]);
                 output = args.Length > 1 ? Path.GetFullPath(args[1]) : String.Empty;
             }
-            catch(Exception ex)
+            catch(Exception)
             {
                 PrintHelp();
                 return;

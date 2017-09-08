@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace MBINCompiler.Models.Structs       // size: 0xD8
+namespace libMBIN.Models.Structs       // size: 0xD8
 {
     public class TkSceneNodeData : NMSTemplate
     {

@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace MBINCompiler.Models.Structs
+namespace libMBIN.Models.Structs
 {
     public class GcNPCPlacementComponentData : NMSTemplate // 0x20 bytes
     {

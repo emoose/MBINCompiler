@@ -1,4 +1,4 @@
-﻿namespace MBINCompiler.Models.Structs
+﻿namespace libMBIN.Models.Structs
 {
     public class GcSubstanceAmount : NMSTemplate // 0x20 bytes
     {

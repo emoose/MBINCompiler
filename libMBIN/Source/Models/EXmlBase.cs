@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Xml.Serialization;
 
-namespace MBINCompiler.Models
+namespace libMBIN.Models
 {
     [XmlInclude(typeof(EXmlData))]
     [XmlInclude(typeof(EXmlProperty))]

@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace MBINCompiler.Models.Structs       // size: 0x4E0
+namespace libMBIN.Models.Structs       // size: 0x4E0
 {
     public class GcSceneSettings : NMSTemplate
     {

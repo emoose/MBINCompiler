@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace MBINCompiler.Models.Structs
+namespace libMBIN.Models.Structs
 {
     public class GcRealityIconTable : NMSTemplate       // size: 0x3008
     {

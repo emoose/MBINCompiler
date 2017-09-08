@@ -1,4 +1,4 @@
-﻿namespace MBINCompiler.Models.Structs
+﻿namespace libMBIN.Models.Structs
 {
     [NMS(Size = 0xC4)]
     public class GcDiscoveryOwner : NMSTemplate

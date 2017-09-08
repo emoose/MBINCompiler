@@ -1,4 +1,4 @@
-﻿namespace MBINCompiler.Models.Structs
+﻿namespace libMBIN.Models.Structs
 {
     [NMS(Size = 0xD0)]
     public class GcShipAIAttackData : NMSTemplate

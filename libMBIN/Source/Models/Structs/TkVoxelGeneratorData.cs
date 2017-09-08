@@ -1,4 +1,4 @@
-﻿namespace MBINCompiler.Models.Structs
+﻿namespace libMBIN.Models.Structs
 {
     public class TkVoxelGeneratorData : NMSTemplate // size: 0x12F8
     {

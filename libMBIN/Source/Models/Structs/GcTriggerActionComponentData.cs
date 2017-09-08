@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace MBINCompiler.Models.Structs       // size: 0x30
+namespace libMBIN.Models.Structs       // size: 0x30
 {
     public class GcTriggerActionComponentData : NMSTemplate
     {

@@ -5,8 +5,10 @@ using System.IO;
 using System.Text;
 
 using libMBIN;
-using MBINCompiler;
-using MBINCompiler.Models.Structs;
+using libMBIN.Models;
+using libMBIN.Models.Structs;
+
+// using MBINCompiler;
 using MBINCompilerTests.Properties;
 
 namespace MBINCompilerTests
@@ -14758,7 +14760,7 @@ namespace MBINCompilerTests
             MemoryStream memory = new MemoryStream();
             using (var file = new MBINFile(memory, true))
             {
-                file.Header = new MBINCompiler.Models.MBINHeader();
+                file.Header = new MBINHeader();
                 file.Header.SetDefaults();
                 if (data.GetType().Name == "TkGeometryData")
                     file.Header.Magic = 0xDDDDDDDD; // only used by TkGeometryData / .MBIN.PC files, maybe used to signal the file is PC only?

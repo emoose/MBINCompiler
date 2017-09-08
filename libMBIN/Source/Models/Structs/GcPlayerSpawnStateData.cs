@@ -1,4 +1,4 @@
-﻿namespace MBINCompiler.Models.Structs
+﻿namespace libMBIN.Models.Structs
 {
     public class GcPlayerSpawnStateData : NMSTemplate           // possibly in a global? cf. sub_14022A510 in 1.2 exe
     {

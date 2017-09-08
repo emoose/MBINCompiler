@@ -5,9 +5,9 @@ using System.Text;
 using System.Threading;
 using System.Xml;
 using System.Xml.Serialization;
-using MBINCompiler.Models;
+using libMBIN.Models;
 
-namespace MBINCompiler
+namespace libMBIN
 {
     public static class EXmlFile
     {

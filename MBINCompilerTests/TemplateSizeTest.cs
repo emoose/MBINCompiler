@@ -1,12 +1,14 @@
-﻿using System.Collections.Generic;
-using System.IO;
+﻿using System.IO;
 using System.Text;
+using System.Collections.Generic;
+using System.Diagnostics;
+
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-using MBINCompiler;
-using MBINCompiler.Models;
-using MBINCompilerTests.Properties;
-using System.Diagnostics;
+using libMBIN.Models;
+
+//using MBINCompiler;
+//using MBINCompilerTests.Properties;
 
 namespace MBINCompilerTests
 {

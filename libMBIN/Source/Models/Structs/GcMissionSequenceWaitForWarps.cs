@@ -1,4 +1,4 @@
-﻿namespace MBINCompiler.Models.Structs
+﻿namespace libMBIN.Models.Structs
 {
     public class GcMissionSequenceWaitForWarps : NMSTemplate        // size: 0x104
     {

@@ -1,4 +1,4 @@
-﻿namespace MBINCompiler.Models.Structs
+﻿namespace libMBIN.Models.Structs
 {
     public class GcSubstanceSecondary : NMSTemplate     // size: 0x20
     {

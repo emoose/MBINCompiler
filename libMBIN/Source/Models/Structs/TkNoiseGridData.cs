@@ -1,4 +1,4 @@
-﻿namespace MBINCompiler.Models.Structs
+﻿namespace libMBIN.Models.Structs
 {
     public class TkNoiseGridData : NMSTemplate // 0x184 bytes       // possibly in a global??
     {

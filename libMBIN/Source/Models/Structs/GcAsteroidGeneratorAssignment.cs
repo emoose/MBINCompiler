@@ -1,4 +1,4 @@
-﻿namespace MBINCompiler.Models.Structs
+﻿namespace libMBIN.Models.Structs
 {
     public class GcAsteroidGeneratorAssignment : NMSTemplate // 0x48 bytes
     {

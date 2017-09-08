@@ -1,4 +1,4 @@
-﻿namespace MBINCompiler.Models.Structs
+﻿namespace libMBIN.Models.Structs
 {
     [NMS(Size = 0x80)]
     public class TkShearWindData : NMSTemplate

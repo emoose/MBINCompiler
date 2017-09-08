@@ -1,4 +1,4 @@
-﻿namespace MBINCompiler.Models.Structs
+﻿namespace libMBIN.Models.Structs
 {
     public class TkNGuiGraphicStyle : NMSTemplate       // size: 0x1B0
     {

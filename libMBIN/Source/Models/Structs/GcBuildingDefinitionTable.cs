@@ -1,4 +1,4 @@
-﻿namespace MBINCompiler.Models.Structs
+﻿namespace libMBIN.Models.Structs
 {
     public class GcBuildingDefinitionTable : NMSTemplate        // size: 0x183B0
     {

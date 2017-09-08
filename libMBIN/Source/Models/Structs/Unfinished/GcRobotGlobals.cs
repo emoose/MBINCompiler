@@ -1,4 +1,4 @@
-﻿namespace MBINCompiler.Models.Structs.Unfinished
+﻿namespace libMBIN.Models.Structs.Unfinished
 {
     public class GcRobotGlobals : NMSTemplate
     {

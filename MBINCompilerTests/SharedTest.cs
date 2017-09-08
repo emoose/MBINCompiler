@@ -311,7 +311,7 @@ namespace MBINCompilerTests
                 var stream = new MemoryStream();
                 var writer = new BinaryWriter(stream);
 
-                MBINCompiler.Shared.WriteString(writer, testCase.Value, testCase.Encoding, testCase.Size,
+                libMBIN.Shared.WriteString(writer, testCase.Value, testCase.Encoding, testCase.Size,
                     testCase.NullTerminated);
 
                 byte[] actual = stream.ToArray();

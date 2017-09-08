@@ -1,4 +1,4 @@
-﻿namespace MBINCompiler.Models.Structs
+﻿namespace libMBIN.Models.Structs
 {
     public class TkImGuiSettings : NMSTemplate // 0x190 bytes       // used in GCGRAPHICSGLOBALS.GLOBAL
     {

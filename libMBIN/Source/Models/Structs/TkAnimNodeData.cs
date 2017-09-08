@@ -5,7 +5,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Reflection;
 
-namespace MBINCompiler.Models.Structs
+namespace libMBIN.Models.Structs
 {
     public class TkAnimNodeData : NMSTemplate       // size: 0x20
     {

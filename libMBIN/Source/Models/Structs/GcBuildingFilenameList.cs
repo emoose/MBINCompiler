@@ -1,4 +1,4 @@
-﻿namespace MBINCompiler.Models.Structs
+﻿namespace libMBIN.Models.Structs
 {
     public class GcBuildingFilenameList : NMSTemplate // 0x3600 bytes
     {

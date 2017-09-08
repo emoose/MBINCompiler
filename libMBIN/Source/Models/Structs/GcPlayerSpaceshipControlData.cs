@@ -1,4 +1,4 @@
-﻿namespace MBINCompiler.Models.Structs
+﻿namespace libMBIN.Models.Structs
 {
     public class GcPlayerSpaceshipControlData : NMSTemplate     // size = 0xF4
     {

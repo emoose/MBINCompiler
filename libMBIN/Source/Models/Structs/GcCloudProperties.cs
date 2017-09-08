@@ -1,4 +1,4 @@
-﻿namespace MBINCompiler.Models.Structs
+﻿namespace libMBIN.Models.Structs
 {
     [NMS(Size = 0xF0)]
     public class GcCloudProperties : NMSTemplate

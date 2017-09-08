@@ -1,4 +1,4 @@
-﻿namespace MBINCompiler.Models.Structs
+﻿namespace libMBIN.Models.Structs
 {
     public class TkAudioAnimTrigger : NMSTemplate // 0x98 bytes
     {

@@ -1,4 +1,4 @@
-namespace MBINCompiler.Models.Structs
+namespace libMBIN.Models.Structs
 {
     [NMS(Size = 0x200)]
     public class GcGalaxyRenderSetupData : NMSTemplate

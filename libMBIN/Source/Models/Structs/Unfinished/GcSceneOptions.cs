@@ -1,4 +1,4 @@
-﻿namespace MBINCompiler.Models.Structs.Unfinished
+﻿namespace libMBIN.Models.Structs.Unfinished
 {
     public class GcSceneOptions : NMSTemplate // doesn't seem like any of this is used by the game..
     {

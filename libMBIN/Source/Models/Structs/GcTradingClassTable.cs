@@ -1,4 +1,4 @@
-﻿namespace MBINCompiler.Models.Structs
+﻿namespace libMBIN.Models.Structs
 {
     public class GcTradingClassTable : NMSTemplate      // size: 0xAAC
     {

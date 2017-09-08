@@ -1,4 +1,4 @@
-﻿namespace MBINCompiler.Models.Structs
+﻿namespace libMBIN.Models.Structs
 {
     [NMS(Size = 0x150)]
     public class GcAtlasSendSubmitMonument : NMSTemplate

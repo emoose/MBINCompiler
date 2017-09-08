@@ -1,4 +1,4 @@
-﻿namespace MBINCompiler.Models.Structs
+﻿namespace libMBIN.Models.Structs
 {
     public class GcInteractionBuffer : NMSTemplate // 0x7D00 bytes
     {

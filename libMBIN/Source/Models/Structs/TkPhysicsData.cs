@@ -1,4 +1,4 @@
-﻿namespace MBINCompiler.Models.Structs
+﻿namespace libMBIN.Models.Structs
 {
     public class TkPhysicsData : NMSTemplate        // possibly used in a global? cf. sub_1405EAAD0 (in 1.2 exe)
     {

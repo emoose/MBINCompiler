@@ -6,11 +6,11 @@ using System.Text;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Reflection;
-
-using MBINCompiler.Models.Structs;
 using System.Runtime.InteropServices;
 
-namespace MBINCompiler.Models
+using libMBIN.Models.Structs;
+
+namespace libMBIN.Models
 {
     public class NMSTemplate
     {
@@ -1171,7 +1171,7 @@ namespace MBINCompiler.Models
                 {
                     string valueStr = values[(int)value];
                 }
-                catch (IndexOutOfRangeException e){
+                catch (IndexOutOfRangeException){
                     Console.WriteLine("Values index out of Range. Struct: " + GetType() + " field: " + field.Name);
                     throw new Exception("Error");
                 }

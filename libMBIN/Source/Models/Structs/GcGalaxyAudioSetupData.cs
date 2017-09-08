@@ -1,4 +1,4 @@
-﻿namespace MBINCompiler.Models.Structs
+﻿namespace libMBIN.Models.Structs
 {
     public class GcGalaxyAudioSetupData : NMSTemplate       // size: 0x44
     {

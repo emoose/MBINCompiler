@@ -1,4 +1,4 @@
-﻿namespace MBINCompiler.Models.Structs
+﻿namespace libMBIN.Models.Structs
 {
     public class GcNGuiLayoutData : NMSTemplate     // size: 0x2C
     {

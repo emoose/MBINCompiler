@@ -1,4 +1,4 @@
-﻿namespace MBINCompiler.Models.Structs
+﻿namespace libMBIN.Models.Structs
 {
     // loaded at 0x141624650
     public class GcGraphicsGlobals : NMSTemplate

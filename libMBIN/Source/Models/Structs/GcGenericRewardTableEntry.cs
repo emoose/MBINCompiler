@@ -1,4 +1,4 @@
-﻿namespace MBINCompiler.Models.Structs
+﻿namespace libMBIN.Models.Structs
 {
     [NMS(Alignment = 0x8)]
     public class GcGenericRewardTableEntry : NMSTemplate

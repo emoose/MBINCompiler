@@ -2,7 +2,7 @@
 // char *__fastcall GcSpaceshipGlobals_LoadDefaults(__int64 a1) -----> hash: 3C805E77
 // hash of whole input: A1693D66
 
-namespace MBINCompiler.Models.Structs
+namespace libMBIN.Models.Structs
 {
     public class GcSpaceshipGlobals_old : NMSTemplate
     {

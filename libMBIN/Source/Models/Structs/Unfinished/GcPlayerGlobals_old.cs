@@ -2,7 +2,7 @@
 // char *__fastcall sub_140153C50(__int64 a1) -----> hash: 5FCBDD7
 // hash of whole input: A92EA4F
 
-namespace MBINCompiler.Models.Structs
+namespace libMBIN.Models.Structs
 {
     public class GcPlayerGlobals_old : NMSTemplate // 0x990
     {

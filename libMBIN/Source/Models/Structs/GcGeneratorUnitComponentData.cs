@@ -1,4 +1,4 @@
-﻿namespace MBINCompiler.Models.Structs
+﻿namespace libMBIN.Models.Structs
 {
     public class GcGeneratorUnitComponentData : NMSTemplate     // size: 0x1A0
     {

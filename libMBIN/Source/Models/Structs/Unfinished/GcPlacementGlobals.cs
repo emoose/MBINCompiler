@@ -1,4 +1,4 @@
-﻿namespace MBINCompiler.Models.Structs
+﻿namespace libMBIN.Models.Structs
 {
     // doesn't seem like the game uses any of the values here?
     public class GcPlacementGlobals : NMSTemplate

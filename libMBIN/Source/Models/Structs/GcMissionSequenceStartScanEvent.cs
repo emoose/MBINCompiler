@@ -1,4 +1,4 @@
-﻿namespace MBINCompiler.Models.Structs
+﻿namespace libMBIN.Models.Structs
 {
     public class GcMissionSequenceStartScanEvent : NMSTemplate          // size: 0xB0
     {

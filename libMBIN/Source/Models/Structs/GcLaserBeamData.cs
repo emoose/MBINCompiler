@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace MBINCompiler.Models.Structs
+namespace libMBIN.Models.Structs
 {
     [NMS(Alignment = 0x10)]
     public class GcLaserBeamData : NMSTemplate      // size: 0x1A0

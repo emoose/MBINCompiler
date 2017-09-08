@@ -1,4 +1,4 @@
-﻿namespace MBINCompiler.Models.Structs
+﻿namespace libMBIN.Models.Structs
 {
     public class GcButtonSpawn : NMSTemplate        // size: 0x28       // in a global?
     {

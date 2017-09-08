@@ -1,4 +1,4 @@
-﻿namespace MBINCompiler.Models.Structs
+﻿namespace libMBIN.Models.Structs
 {
     [NMS(Alignment = 0x10)]
     public class GcNGuiTextData : NMSTemplate       // size: 0x550

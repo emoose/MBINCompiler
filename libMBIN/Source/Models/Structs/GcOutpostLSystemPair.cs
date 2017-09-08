@@ -1,4 +1,4 @@
-﻿namespace MBINCompiler.Models.Structs
+﻿namespace libMBIN.Models.Structs
 {
     public class GcOutpostLSystemPair : NMSTemplate // 0x320 bytes
     {

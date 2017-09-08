@@ -2,7 +2,7 @@
 // char *__fastcall GcCameraGlobals_LoadDefaults(__int64 a1) -----> hash: 9F9579A4
 // hash of whole input: AF9F542F
 
-namespace MBINCompiler.Models.Structs
+namespace libMBIN.Models.Structs
 {
     public class GcCameraGlobals : NMSTemplate
     {

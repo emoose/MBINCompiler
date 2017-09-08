@@ -1,4 +1,4 @@
-﻿namespace MBINCompiler.Models.Structs
+﻿namespace libMBIN.Models.Structs
 {
     public class GcGalacticAddressData : NMSTemplate // 0x14 bytes
     {

@@ -2,7 +2,7 @@
 // signed __int64 __fastcall raw_GcUIGlobals(__int64 a1) -----> hash: 21D52E2
 // hash of whole input: 8AEA2A75
 
-namespace MBINCompiler.Models.Structs
+namespace libMBIN.Models.Structs
 {
     public class GcUIGlobals : NMSTemplate // 0x3DE0
     {

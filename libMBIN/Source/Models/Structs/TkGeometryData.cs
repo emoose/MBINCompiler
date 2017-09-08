@@ -5,7 +5,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Reflection;
 
-namespace MBINCompiler.Models.Structs       // size: 0x150
+namespace libMBIN.Models.Structs       // size: 0x150
 {
     public class TkGeometryData : NMSTemplate
     {

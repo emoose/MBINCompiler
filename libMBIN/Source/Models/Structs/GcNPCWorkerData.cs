@@ -1,4 +1,4 @@
-﻿namespace MBINCompiler.Models.Structs
+﻿namespace libMBIN.Models.Structs
 {
     public class GcNPCWorkerData : NMSTemplate      // size: 0x2C0
     {

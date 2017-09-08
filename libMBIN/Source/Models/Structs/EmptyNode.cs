@@ -1,4 +1,4 @@
-namespace MBINCompiler.Models.Structs // 0x48
+namespace libMBIN.Models.Structs // 0x48
 {
     public class EmptyNode : NMSTemplate
     {

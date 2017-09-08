@@ -1,6 +1,6 @@
 ﻿using System.Xml.Serialization;
 
-namespace MBINCompiler.Models
+namespace libMBIN.Models
 {
 
     [XmlType("Property")]

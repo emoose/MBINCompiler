@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace MBINCompiler.Models.Structs
+namespace libMBIN.Models.Structs
 {
     [NMS(Size = 0xA8)]
     public class GcAIShipSpawnData : NMSTemplate

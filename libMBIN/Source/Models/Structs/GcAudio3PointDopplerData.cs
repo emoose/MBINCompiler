@@ -1,4 +1,4 @@
-namespace MBINCompiler.Models.Structs
+namespace libMBIN.Models.Structs
 {
     [NMS(Size = 0xC)]
     public class GcAudio3PointDopplerData : NMSTemplate

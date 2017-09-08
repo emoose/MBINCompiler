@@ -1,4 +1,4 @@
-﻿namespace MBINCompiler.Models.Structs
+﻿namespace libMBIN.Models.Structs
 {
     public class TkAnimPoseCorrelationData : NMSTemplate // 0x28 bytes
     {

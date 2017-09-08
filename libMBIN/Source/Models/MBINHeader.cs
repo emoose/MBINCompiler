@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Reflection;
 
-namespace MBINCompiler.Models
+namespace libMBIN.Models
 {
     public class MBINHeader : NMSTemplate
     {

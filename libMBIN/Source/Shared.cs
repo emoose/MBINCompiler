@@ -5,10 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 using System.Reflection;
-using MBINCompiler.Models.Structs;
-using MBINCompiler.Models;
 
-namespace MBINCompiler
+namespace libMBIN
 {
     internal static class Shared
     {

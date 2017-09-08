@@ -1,4 +1,4 @@
-﻿namespace MBINCompiler.Models.Structs
+﻿namespace libMBIN.Models.Structs
 {
     public class GcSpaceSkyProperties : NMSTemplate         // size: 0xA0
     {

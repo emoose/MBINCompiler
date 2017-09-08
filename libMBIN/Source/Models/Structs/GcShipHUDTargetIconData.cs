@@ -1,4 +1,4 @@
-namespace MBINCompiler.Models.Structs
+namespace libMBIN.Models.Structs
 {
     public class GcShipHUDTargetIconData : NMSTemplate      // starts at 0x6F0 in the GcGameplayGlobals
     {

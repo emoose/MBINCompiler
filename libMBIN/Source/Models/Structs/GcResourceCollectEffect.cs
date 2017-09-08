@@ -1,4 +1,4 @@
-﻿namespace MBINCompiler.Models.Structs
+﻿namespace libMBIN.Models.Structs
 {
     public class GcResourceCollectEffect : NMSTemplate      // size: 0x34      // possibly in a global?
     {

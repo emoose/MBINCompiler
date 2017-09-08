@@ -1,4 +1,4 @@
-﻿namespace MBINCompiler.Models.Structs
+﻿namespace libMBIN.Models.Structs
 {
     public class GcSpawnComponentOption : NMSTemplate // 0x2C8 bytes
     {

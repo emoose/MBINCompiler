@@ -1,4 +1,4 @@
-﻿namespace MBINCompiler.Models.Structs
+﻿namespace libMBIN.Models.Structs
 {
     public class TkAnimPoseExampleElement : NMSTemplate // 0x18 bytes
     {
