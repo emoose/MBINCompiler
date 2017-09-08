@@ -7,239 +7,296 @@ using libMBIN;
 using libMBIN.Models;
 using libMBIN.Models.Structs;
 
-namespace MBINCompiler
-{
-    class Program
-    {
-        static void ScanMBINs(string path, ref List<string> types)
-        {
-            foreach (var file in Directory.GetFiles(path, "*.mbin*"))
-            {
-                var mbin = new MBINFile(file);
+namespace MBINCompiler {
+
+    // TODO: (GH) needs more refactoring
+    class Program {
+
+        // TODO: (GH) not used
+        static void ScanMBINs( string path, ref List<string> types ) {
+            foreach (var file in Directory.GetFiles( path, "*.mbin*" )) {
+                var mbin = new MBINFile( file );
                 mbin.Load();
-                types.Add($"{file} : {mbin.Header.GetXMLTemplateName()}");
+                types.Add( $"{file} : {mbin.Header.GetXMLTemplateName()}" );
             }
-            foreach (var folder in Directory.GetDirectories(path))
-                ScanMBINs(folder, ref types);
+            foreach (var folder in Directory.GetDirectories( path )) {
+                ScanMBINs( folder, ref types );
+            }
         }
 
-        static void DecompileFile(string input, string output, bool getVersion = false)
-        {
-            if (String.IsNullOrEmpty(output))
-                output = input;
+        static void DecompileFile( string inputPath, string outputPath, bool getVersion = false ) {
+            outputPath = String.IsNullOrEmpty( outputPath ) ? inputPath : outputPath;
 
-            output = Path.ChangeExtension(output, ".exml"); // emoose XML, because there's no way this XML format is compatible with MXML
+            outputPath = Path.ChangeExtension( outputPath, ".exml" ); // emoose XML, because there's no way this XML format is compatible with MXML
 
-            if (File.Exists(output))
-                File.Delete(output); // todo: ask for confirmation?
+            if (File.Exists( outputPath )) {
+                File.Delete( outputPath ); // todo: ask for confirmation?
+            }
 
             // no error checking ^^ (todo: error checking)
-            var file = new MBINFile(input);
-            file.Load(getVersion);
+            var file = new MBINFile( inputPath );
+            file.Load( getVersion );
 
-            if (!getVersion)
-            {
+            if (!getVersion) {
                 var data = file.GetData();
-                if (data == null)
-                {
-                    Console.WriteLine($"Failed to deserialize template \"{file.Header.GetXMLTemplateName()}\", has the structure been mapped yet?");
+                if (data == null) {
+                    Console.WriteLine( $"Failed to deserialize template \"{file.Header.GetXMLTemplateName()}\", has the structure been mapped yet?" );
                     return;
                 }
 
-                var xmlString = EXmlFile.WriteTemplate(data);
-                if (string.IsNullOrEmpty(xmlString))
-                {
-                    Console.WriteLine($"Error serializing template \"{file.Header.GetXMLTemplateName()}\" to XML!");
+                var xmlString = EXmlFile.WriteTemplate( data );
+                if (string.IsNullOrEmpty( xmlString )) {
+                    Console.WriteLine( $"Error serializing template \"{file.Header.GetXMLTemplateName()}\" to XML!" );
                     return;
                 }
-                File.WriteAllText(output, xmlString);
-                Console.WriteLine($"XML data written to \"{output}\" successfully?");
+                File.WriteAllText( outputPath, xmlString );
+                Console.WriteLine( $"XML data written to \"{outputPath}\" successfully?" );
             }
         }
 
-        static void CompileFile(string input, string output)
-        {
-            if (String.IsNullOrEmpty(output))
-                output = input;
+        static void CompileFile( string inputPath, string outputPath ) {
+            outputPath = String.IsNullOrEmpty( outputPath ) ? inputPath : outputPath;
 
-            output = Path.ChangeExtension(output, ".MBIN");
+            outputPath = Path.ChangeExtension( outputPath, ".MBIN" );
 
-            var data = EXmlFile.ReadTemplate(input);
-            if (data == null)
-            {
-                Console.WriteLine("Failed to deserialize EXML file, is it formatted correctly?");
+            var data = EXmlFile.ReadTemplate( inputPath );
+            if (data == null) {
+                Console.WriteLine( "Failed to deserialize EXML file, is it formatted correctly?" );
                 return;
             }
 
-            if (data.GetType() == typeof(TkGeometryData))
-                output = Path.ChangeExtension(output, ".MBIN.PC");
+            if (data.GetType() == typeof( TkGeometryData )) {
+                outputPath = Path.ChangeExtension( outputPath, ".MBIN.PC" );
+            }
 
-            if (File.Exists(output))
-                File.Delete(output); // todo: ask for confirmation?
+            if (File.Exists( outputPath )) {
+                File.Delete( outputPath ); // todo: ask for confirmation?
+            }
 
-            using (var file = new MBINFile(output))
-            {
+            using (var file = new MBINFile( outputPath )) {
                 file.Header = new MBINHeader();
                 file.Header.SetDefaults();
-                if (data.GetType() == typeof(TkGeometryData))
+                if (data.GetType() == typeof( TkGeometryData ))
                     file.Header.Magic = 0xDDDDDDDD; // only used by TkGeometryData / .MBIN.PC files, maybe used to signal the file is PC only?
-                if (data.GetType() == typeof(TkAnimMetadata))
-                {
+                if (data.GetType() == typeof( TkAnimMetadata )) {
                     file.Header.Tag = 0xFFFFFFFFFFFFFFFF;
                     file.Header.MbinVersion = 0x9B251350AE1ABCA7;
                     file.Header.EndPadding = 0xFEFEFEFEFEFEFEFE;
                 }
 
-                file.SetData(data);
+                file.SetData( data );
                 file.Save();
             }
 
-            Console.WriteLine($"MBIN data written to \"{output}\" successfully?");
+            Console.WriteLine( $"MBIN data written to \"{outputPath}\" successfully?" );
         }
 
-        static void decompileFolder(string inPath, string outPath)
-        {
-            if (string.IsNullOrEmpty(outPath)) outPath = inPath;
+        static void DecompileFolder( string inputPath, string outputPath ) {
+            outputPath = string.IsNullOrEmpty( outputPath ) ? inputPath : outputPath;
 
-            foreach (var file in Directory.GetFiles(inPath, "*.mbin*"))
-            {
-                if (file.Contains("LANGUAGE") || file.Contains("language"))
-                    continue;
+            foreach (var file in Directory.GetFiles( inputPath, "*.mbin*" )) {
+                if (!IsCompilable( file, "mbin" )) continue;
 
-                if (!file.EndsWith(".mbin", StringComparison.InvariantCultureIgnoreCase)
-                    && !file.EndsWith(".mbin.pc", StringComparison.InvariantCultureIgnoreCase))
-                    continue;
-
-                var output = file.Replace(inPath, outPath);
-                if (!Directory.Exists(Path.GetDirectoryName(output)))
-                    Directory.CreateDirectory(Path.GetDirectoryName(output));
-
-                try
-                {
-                    DecompileFile(file, output);
+                var output = file.Replace( inputPath, outputPath );
+                if (!Directory.Exists( Path.GetDirectoryName( output ) )) {
+                    Directory.CreateDirectory( Path.GetDirectoryName( output ) );
                 }
-                catch { }
-            }
 
-            foreach (var dir in Directory.GetDirectories(inPath))
-            {
-                string outDirPath = dir.Replace(inPath, outPath);
-                decompileFolder(dir, outDirPath);
-            }
-        }
-
-        static void compileFolder(string folderPath, string outPath)
-        {
-            if (string.IsNullOrEmpty(outPath))
-            {
-                Console.WriteLine("Output folder not specified. Bulk compile aborted.");
-                return;
-            }
-
-            foreach (var file in Directory.GetFiles(folderPath, "*.exml"))
-            {
-                if (file.Contains("LANGUAGE") || file.Contains("language"))
-                    continue;
-
-                if (!file.EndsWith(".exml", StringComparison.InvariantCultureIgnoreCase) && !file.EndsWith(".exml.pc", StringComparison.InvariantCultureIgnoreCase))
-                    continue;
-
-                var output = file.Replace(folderPath, outPath);
-                if (!Directory.Exists(Path.GetDirectoryName(output)))
-                    Directory.CreateDirectory(Path.GetDirectoryName(output));
-
-                try
-                {
-                    CompileFile(file, output);
+                try {
+                    DecompileFile( file, output );
+                } catch {
+                    // TODO: (GH) handle exceptions!
                 }
-                catch { }
             }
 
-            foreach (var dir in Directory.GetDirectories(folderPath))
-            {
-                string outDirPath = dir.Replace(folderPath, outPath);
-                compileFolder(dir, outDirPath);
+            foreach (var dir in Directory.GetDirectories( inputPath )) {
+                string outDirPath = dir.Replace( inputPath, outputPath );
+                DecompileFolder( dir, outDirPath );
             }
         }
 
-        static void PrintHelp()
-        {
-            Console.WriteLine(@"Usage: MBINCompiler [Input File or Folder]");
-            Console.WriteLine(@"Will write decompiled output to [Input File].exml or [Input Folder]\*.exml");
+        static void CompileFolder( string inputPath, string outputPath ) {
+            if (!ValidateOutputPath( outputPath )) return;
 
-            Console.WriteLine(@"Usage: MBINCompiler [Input Folder] [Output Folder]");
-            Console.WriteLine(@"Will write decompiled & recompile files from [Input Folder] and write them to [Output Folder]");
+            foreach (var file in Directory.GetFiles( inputPath, "*.exml" )) {
+                if (!IsCompilable( file, "exml" )) continue;
 
-            Console.WriteLine("Recompiling .exml back to .mbin is available for testing, use at your own risk!");
+                var output = file.Replace( inputPath, outputPath );
+                if (!Directory.Exists( Path.GetDirectoryName( output ) )) {
+                    Directory.CreateDirectory( Path.GetDirectoryName( output ) );
+                }
+
+                try {
+                    CompileFile( file, output );
+                } catch {
+                    // TODO: (GH) handle exceptions!
+                }
+            }
+
+            foreach (var dir in Directory.GetDirectories( inputPath )) {
+                string outDirPath = dir.Replace( inputPath, outputPath );
+                CompileFolder( dir, outDirPath );
+            }
         }
 
-        static void Main(string[] args)
-        {
-            string input, output;
+        static bool ValidateOutputPath( string outputPath ) {
+            if (!string.IsNullOrEmpty( outputPath )) return true;
+            Console.WriteLine( "Output folder not specified. Bulk compile aborted." );
+            return false;
+        }
+
+        static bool IsCompilable( string filePath, string ext ) {
+            if (filePath.Contains( "LANGUAGE" )) return false;
+            if (filePath.Contains( "language" )) return false;
+            return IsFileType( filePath, ext );
+        }
+
+        static bool IsFileType( string filePath, string extType ) {
+            if (filePath.EndsWith( $".{extType}", StringComparison.OrdinalIgnoreCase )) return true;
+            if (filePath.EndsWith( $".{extType}.pc", StringComparison.OrdinalIgnoreCase )) return true;
+            return false;
+        }
+
+        static string GetVersionString() {
+            return System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString();
+        }
+
+        /// <summary>
+        /// Show the version string.
+        /// </summary>
+        /// <returns>Always returns 0 (exit code = success)</returns>
+        static int ShowVersion() {
+            string ver = GetVersionString();
+            // TODO: (GH) show full version string?
+            Console.WriteLine( ver.Substring( 0, ver.Length - 2 ) );
+            return 0;
+        }
+
+        /// <summary>
+        /// Display the help info.
+        /// </summary>
+        /// <returns>Always returns 0 (exit code = success)</returns>
+        static int ShowHelp() {
+            Console.WriteLine($"MBINCompiler v{GetVersionString()}\n");
+
+            // TODO: (GH) show general description
+            // TODO: (GH) show full syntax
+
+            Console.WriteLine( @"Usage: MBINCompiler [Input File or Folder]" );
+            Console.WriteLine( @"Will write decompiled output to [Input File].exml or [Input Folder]\*.exml" );
+
+            Console.WriteLine( @"Usage: MBINCompiler [Input Folder] [Output Folder]" );
+            Console.WriteLine( @"Will write decompiled & recompiled files from [Input Folder] and write them to [Output Folder]" );
+
+            // TODO: (GH) can probably remove this or change the warning to be more informative.
+            Console.WriteLine( "Recompiling .exml back to .mbin is available for testing, use at your own risk!" );
+
+            return 0;
+        }
+
+        /// <summary>
+        /// Display an error message and optionally display the help info.
+        /// </summary>
+        /// <param name="msg">The error message to display.</param>
+        /// <param name="showHelp">If true, also calls <see cref="ShowHelp()"/>.</param>
+        /// <param name="exitCode">The value to return, unless <paramref name="showHelp"/> is true.</param>
+        /// <returns>Returns 1 if <paramref name="showHelp"/> is true, otherwise <paramref name="exitCode"/>.</returns>
+        /// <summary>
+        static int ShowError(string msg, bool showHelp = false, int exitCode = 2) {
+            Console.WriteLine( $"ERROR: {msg}\n" );
+            if (showHelp) ShowHelp();
+            return showHelp ? 1 : exitCode;
+        }
+
+        /// <summary>
+        /// <see cref="ShowError(string, bool, int)"/>
+        /// </summary>
+        /// <param name="msg"></param>
+        /// <param name="exitCode"></param>
+        /// <returns></returns>
+        static int ShowError(string msg, int exitCode) {
+            return ShowError( msg, false, exitCode );
+        }
+
+        static void ShowWarning(string msg) {
+            Console.WriteLine( $"WARNING: {msg}" );
+        }
+
+        static int Main( string[] args ) {
+            string inputPath, outputPath;
             bool getVer = false;
 
-            if (args.Length < 1 || args[0] == "/?" || args[0] == "/help" || args[0] == "--help" || args[0] == "-h")
-            {
-                PrintHelp();
-                return;
+            if (args.Length == 0)    return ShowHelp();
+
+            // there's at least 1 arg
+
+            if (args[0] == "/?")     return ShowHelp();
+            if (args[0] == "/help")  return ShowHelp();
+            if (args[0] == "--help") return ShowHelp();
+            if (args[0] == "-h")     return ShowHelp();
+
+            if (args[0] == "-version") return ShowVersion();
+            if (args[0] == "-v")       return ShowVersion();
+
+            // at least the first argument is an input param
+
+            // if there is 2 args, is the 2nd arg a version switch?
+            if (args.Length > 1) {
+                getVer |= (args[1] == "--version");
+                getVer |= (args[1] == "-v");
             }
 
-            foreach (string arg in args)
-            {
-                if (arg == "-version" || arg == "-v")
-                {
-                    if (args[0] == "-version" || args[0] == "-v")
-                    {
-                        string ver = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString();
-                        Console.WriteLine(ver.Substring(0, ver.Length - 2));
-                        return;
+            try {
+                // get the absolute paths
+                inputPath = Path.GetFullPath( args[0] );
+                outputPath = String.Empty;
+                if (!getVer && (args.Length > 1)) outputPath = Path.GetFullPath( args[1] );
+            } catch (Exception e) {
+                return ShowError( $"ERROR: {e.Message}", true );
+            }
+
+            try {
+                if (Directory.Exists( inputPath )) {
+                    DecompileFolder( inputPath, outputPath );
+                    CompileFolder( inputPath, outputPath );
+                } else if (IsFileType( inputPath, "exml" )) {
+                    CompileFile( inputPath, outputPath );
+                } else { // assume MBIN
+                    bool isMBin = true;
+
+                    isMBin = IsFileType( inputPath, "mbin" );
+                    if (!isMBin) {
+                        if (File.Exists( inputPath ) && new FileInfo( inputPath ).Length > 0x60) {
+                            using (var stream = File.OpenRead( inputPath )) {
+                                using (var reader = new BinaryReader( stream )) {
+                                    // MBINs start with
+                                    //    CC CC CC CC C4 09 00 00
+                                    // or DD DD DD DD C4 09 00 00
+                                    var magic = reader.ReadUInt32();
+                                    var unk4 = reader.ReadUInt32();
+                                    isMBin = (magic == 0xCCCCCCCC || magic == 0xDDDDDDDD);
+                                    isMBin &= (unk4 == 2500);
+                                }
+                            }
+                        }
+
+                        if (!isMBin) {
+                            return ShowError( $"Unknown/Unsupported file type! Expected EXML or MBIN format.\nFilePath: {inputPath}" );
+                        }
+
+                        string ext = Path.GetExtension( inputPath ) ?? String.Empty;
+                        ShowWarning( $"MBIN format detected in file with unrecognized extension. Attempting to decompile.\n"
+                                   + $"FilePath: {inputPath}\n" );
                     }
-                    if (args[1] == "-version" || args[1] == "-v")
-                        getVer = true;
+
+                    DecompileFile( inputPath, outputPath, getVer );
                 }
+            } catch (Exception e) {
+                return ShowError( $"ERROR: {e.Message}" );
             }
 
-            try
-            { 
-                input = Path.GetFullPath(args[0]);
-                output = args.Length > 1 ? Path.GetFullPath(args[1]) : String.Empty;
-            }
-            catch(Exception)
-            {
-                PrintHelp();
-                return;
-            }
-
-            string inputExtension = Path.GetExtension(input) ?? String.Empty;
-            if (inputExtension.Equals(".mbin", StringComparison.OrdinalIgnoreCase) || input.EndsWith(".mbin.pc", StringComparison.OrdinalIgnoreCase))
-                DecompileFile(input, output, getVer);
-            else if (inputExtension.Equals(".exml", StringComparison.OrdinalIgnoreCase)) 
-                CompileFile(input, output);
-            else if (String.IsNullOrEmpty(inputExtension) && Directory.Exists(input))
-            {
-                decompileFolder(input, output);
-                compileFolder(input, output);
-            }
-            else
-            {
-                bool isMBin = false;
-                if(File.Exists(input) && new FileInfo(input).Length > 0x60)
-                {
-                    using (var stream = File.OpenRead(input))
-                    using (var reader = new BinaryReader(stream))
-                    {
-                        var magic = reader.ReadUInt32();
-                        var unk4 = reader.ReadUInt32();
-                        isMBin = (magic == 0xCCCCCCCC || magic == 0xDDDDDDDD) && unk4 == 2500; // CC CC CC CC C4 09 00 00
-                    }
-                }
-
-                if (isMBin)
-                    DecompileFile(input, output, getVer);
-                else
-                    Console.WriteLine($"Unsupported file extension {inputExtension}!");
-            }
-                
+            return 0;
         }
-    }
-}
+
+    } // class
+} // namespace
