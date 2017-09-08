@@ -2,7 +2,8 @@
 
 namespace MBINCompiler.Models.Structs
 {
-    public class GcTechnology : NMSTemplate     // size: 0x2E0
+    [NMS(Size = 0x2E0)]
+    public class GcTechnology : NMSTemplate
     {
         [NMS(Size = 0x10)]
         /* 0x000 */ public string ID; // 0x10

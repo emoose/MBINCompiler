@@ -1,27 +1,24 @@
 ﻿namespace MBINCompiler.Models.Structs
 {
-    public class TkNGuiGraphicStyle : NMSTemplate       // size: 0x1B0
+    [NMS(Size = 0x1B0)]
+    public class TkNGuiGraphicStyle : NMSTemplate
     {
-        public TkNGuiGraphicStyleData Default;
-        public TkNGuiGraphicStyleData Highlight;
-        public TkNGuiGraphicStyleData Active;
-        public float HighlightTime;
-        public float HighlightScale;
-
-        public int Animate;
+        /* 0x000 */ public TkNGuiGraphicStyleData Default;
+        /* 0x080 */ public TkNGuiGraphicStyleData Highlight;
+        /* 0x100 */ public TkNGuiGraphicStyleData Active;
+        /* 0x180 */ public float HighlightTime;
+        /* 0x184 */ public float HighlightScale;
+        /* 0x188 */ public float GlobalFade;
+        /* 0x18C */ public int Animate;
         public string[] AnimateValues()
         { return new string[] { "None", "WipeRightToLeft", "SimpleWipe", "SimpleWipeDown", "CustomWipe", "CustomWipeAlpha"}; }
 
+        /* 0x190 */ public float AnimTime;
+        /* 0x194 */ public float AnimSplit;
+        /* 0x198 */ public TkCurveType AnimCurve1;
+        /* 0x19C */ public TkCurveType AnimCurve2;
 
-        public float AnimTime;
-        public float AnimSplit;
-        public TkCurveType AnimCurve1;
-        public TkCurveType AnimCurve2;
-
-        public Vector2f CustomMinStart;
-        public Vector2f CustomMaxStart;
-
-        [NMS(Size = 0x4, Ignore = true)]
-        public byte[] Padding;
+        /* 0x1A0 */ public Vector2f CustomMinStart;
+        /* 0x1A8 */ public Vector2f CustomMaxStart;
     }
 }

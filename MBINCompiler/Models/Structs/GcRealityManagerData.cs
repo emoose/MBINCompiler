@@ -2,7 +2,8 @@
 
 namespace MBINCompiler.Models.Structs
 {
-    public class GcRealityManagerData : NMSTemplate     // size: 0x74D0
+    [NMS(Size = 0x7560)]
+    public class GcRealityManagerData : NMSTemplate
     {
         /* 0x0000 */ public int RealityIteration;
 
@@ -84,7 +85,7 @@ namespace MBINCompiler.Models.Structs
         [NMS(Size = 6, EnumValue = new string[6] { "Commodity", "Technology", "Fuel", "Tradeable", "Special", "BuildingPart" })]
         /* 0x3FF0 */ public TkTextureResource[] SubstanceChargeIcons;
 
-        [NMS(Size = 0x5C, EnumValue = new string[0x5C]
+        [NMS(Size = 0x5D, EnumValue = new string[0x5D]
             {
                 "Unspecified", "Weapon_Laser", "Weapon_Laser_Damage", "Weapon_Laser_Mining_Damage", "Weapon_Laser_Mining_Speed",
                 "Weapon_Laser_HeatTime", "Weapon_Laser_Bounce", "Weapon_Laser_ReloadTime", "Weapon_Laser_Recoil",
@@ -108,32 +109,29 @@ namespace MBINCompiler.Models.Structs
                 "Ship_Weapons_Rockets", "Ship_Armour_Shield", "Ship_Armour_Shield_Strength", "Ship_Armour_Health",
                 "Ship_Scan", "Ship_Scan_EconomyFilter", "Ship_Scan_ConflictFilter", "Ship_Hyperdrive", "Ship_Hyperdrive_JumpDistance",
                 "Ship_Launcher", "Ship_Launcher_TakeOffCost", "Ship_PulseDrive", "Ship_PulseDrive_MiniJumpFuelSpending", "Ship_Boost",
-                "Ship_Maneuverability", "Freighter_Hyperdrive", "Freighter_Hyperdrive_JumpDistance"
+                "Ship_Maneuverability", "Ship_BoostManeuverability", "Freighter_Hyperdrive",
+                "Freighter_Hyperdrive_JumpDistance"
             })]
         /* 0x4308 */ public TkTextureResource[] StatCategoryIcons;
 
         [NMS(Size = 4, EnumValue = new string[4] { "Suit", "Weapon", "Ship", "Freighter" })]
-        /* 0x7278 */ public GcStats[] Stats;
+        /* 0x7300 */ public GcStats[] Stats;
 
-        /* 0x72B8 */ public GcTradeSettings TradeSettings;
-
-        /* 0x73C8 */ public GcInventoryLayout SuitStartingSlotLayout;
-        /* 0x73E8 */ public GcInventoryLayout SuitTechOnlyStartingSlotLayout;
-        /* 0x7408 */ public GcInventoryLayout SuitCargoStartingSlotLayout;
-        /* 0x7428 */ public GcInventoryLayout ShipStartingLayout;
-        /* 0x7448 */ public GcInventoryLayout ShipTechOnlyStartingLayout;
-
-        /* 0x7468 */ public List<int> SuitUpgradePrices;
-        /* 0x7478 */ public List<int> SuitTechOnlyUpgradePrices;
-        /* 0x7488 */ public List<int> SuitCargoUpgradePrices;
-
-        /* 0x7498 */ public List<NMSString0x10> NeverSellableItems;
-        /* 0x74A8 */ public List<NMSString0x10> NeverOfferedForSale;
-
+        /* 0x7340 */ public GcTradeSettings TradeSettings;
+        /* 0x7450 */ public GcInventoryLayout SuitStartingSlotLayout;
+        /* 0x7470 */ public GcInventoryLayout SuitTechOnlyStartingSlotLayout;
+        /* 0x7490 */ public GcInventoryLayout SuitCargoStartingSlotLayout;
+        /* 0x74B0 */ public GcInventoryLayout ShipStartingLayout;
+        /* 0x74D0 */ public GcInventoryLayout ShipTechOnlyStartingLayout;
+        /* 0x74F0 */ public List<int> SuitUpgradePrices;
+        /* 0x7500 */ public List<int> SuitTechOnlyUpgradePrices;
+        /* 0x7510 */ public List<int> SuitCargoUpgradePrices;
+        /* 0x7520 */ public List<NMSString0x10> NeverSellableItems;
+        /* 0x7530 */ public List<NMSString0x10> NeverOfferedForSale;
         [NMS(Size = 5, EnumValue = new string[5] { "Commodity", "Technology", "Fuel", "Tradeable", "Special"})]         // not sure about these values....
-        /* 0x74B8 */ public float[] NormalizedPriceLimits;
+        /* 0x7540 */ public float[] NormalizedPriceLimits;
 
-        [NMS(Size = 0x4, Ignore = true)]
+        [NMS(Size = 0xC, Ignore = true)]
         public byte[] EndPadding;
     }
 }

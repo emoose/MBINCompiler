@@ -10,7 +10,7 @@ namespace libMBIN.Models.Structs
         [NMS(Size = 0x4, EnumValue = new[] { "Pistol", "Rifle", "Pristine", "Alien" })]
         /* 0x2E8 */ public GcInventoryCostDataEntry[] WeaponCostData;
         /* 0x388 */ public GcInventoryCostDataEntry VehicleCostData;
-        [NMS(Size = 0x3)]
+        [NMS(Size = 0x3, EnumValue = new[] { "Gek_System", "Vykeen_System", "Korvax_System" })]
         /* 0x3B0 */ public GcInventoryClassProbabilities[] ClassProbabilityData;
         /* 0x3E0 */ public GcInventoryGenerationBaseStatData VehicleBaseStatsData;
         [NMS(Size = 0x7, EnumValue = new[] { "Freighter", "Dropship", "Fighter", "Scientific", "Shuttle", "PlayerFreighter", "Royal" })]

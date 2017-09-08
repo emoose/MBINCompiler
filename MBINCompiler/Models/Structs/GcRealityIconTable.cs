@@ -16,7 +16,9 @@ namespace MBINCompiler.Models.Structs
         [NMS(Size = 0x7, EnumValue = new string[7] { "Gek", "Korvax", "Vykeen", "TradeGuild", "WarriorGuild", "ExplorerGuild", "None" })]
         /* 0x08C4 */ public TkTextureResource[] MissionFactionIcons;
 
-        [NMS(Size = 0xB)]
+        [NMS(Size = 0xB, EnumValue = new string[0xB] {"Unknown", "SolarSystem", "Planet", "Animal",
+                                                      "Flora", "Mineral", "Sector", "Building", "Interactable",
+                                                      "Sentinel", "StarShip" })]
         /* 0x0C60 */ public TkTextureResource[] BinocularDiscoveryIcons;
 
         [NMS(Size = 0x7, EnumValue = new string[7] { "Mining", "HighTech", "Trading", "Manufacturing", "Fusion", "Scientific", "PowerGeneration" })]
@@ -30,9 +32,11 @@ namespace MBINCompiler.Models.Structs
 
         /* 0x1AD0 */ public List<GcPlanetResourceIconLookup> PlanetResourceIconLookups;
 
-        [NMS(Size = 0x29)]/*, EnumValue = new string[0x29] { "Stamina", "NoStamina", "EnergyCharge", "Scanner", "NoScanner", "Grave", "Resources","Inventory",
+        [NMS(Size = 0x29, EnumValue = new string[0x29] { "Stamina", "NoStamina", "EnergyCharge", "Scanner", "NoScanner", "Grave", "Resources","Inventory",
             "InventoryFull", "RareItems", "Pirates", "PirateScan", "Drone", "Quad", "Walker", "DroneOff", "Police", "AtlasStation", "BlackHole", "SaveGame",
-            "empty", "VehicleBoost", "VehicleBoostRecharge", "Fuel", "GekStanding", "VykeenStanding", "KorvaxStanding", "GekDiamondStanding", "VykeenDiamondStanding", "KorvaxDiamondStanding"})]*/
+            "Jetpack", "VehicleBoost", "VehicleBoostRecharge", "Fuel", "GekStanding", "VykeenStanding", "KorvaxStanding", "GekDiamondStanding", "VykeenDiamondStanding", "KorvaxDiamondStanding",
+            "TradeGuildStanding", "WarGuildStanding", "ExplorerGuildStanding", "TradeGuildDiamondStanding", "WarGuildDiamondStanding",
+            "ExplorationGuildDiamondStanding", "GMPathToCentre", "GMAtlas", "GMBlackHole", "GMUserWaypoint", "GMUserMission"})]
         /* 0x1AE0 */ public TkTextureResource[] GameIcons;
         [NMS(Size = 0x4, Ignore = true)]
         public byte[] EndPadding;

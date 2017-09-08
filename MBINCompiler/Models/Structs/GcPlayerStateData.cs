@@ -2,7 +2,7 @@
 
 namespace MBINCompiler.Models.Structs
 {
-    [NMS(Size = 0x4EA10)]
+    [NMS(Size = 0x4EA40)]
     public class GcPlayerStateData : NMSTemplate
     {
         /* 0x00000 */ public GcUniverseAddressData UniverseAddress;
@@ -50,7 +50,7 @@ namespace MBINCompiler.Models.Structs
         [NMS(Size = 0x10)]
         /* 0x00688 */ public string PreviousMissionID;
         /* 0x00698 */ public ulong PreviousMissionSeed;
-        /* 0x006A0 */ public GcInteractionData HoloExplorerInteraction;     // size: 0x20
+        /* 0x006A0 */ public GcInteractionData HoloExplorerInteraction;
         /* 0x006C0 */ public GcInteractionData HoloScepticInteraction;
         /* 0x006E0 */ public GcInteractionData HoloNooneInteraction;
         /* 0x00700 */ public int Health;
@@ -88,7 +88,7 @@ namespace MBINCompiler.Models.Structs
 
         /* 0x3EFA0 */ public Vector4f FirstSpawnPosition;
 
-        [NMS(Size = 0x3D, EnumValue = new[] {
+        [NMS(Size = 0x3E, EnumValue = new[] {
                 "None", "Shop", "NPC", "NPC_Secondary", "NPC_Anomaly", "NPC_Anomaly_Secondary", "Ship", "Outpost",
                 "SpaceStation", "RadioTower", "Monolith", "Factory", "AbandonedShip", "Harvester", "Observatory", "TradingPost",
                 "DistressBeacon", "Portal", "Plaque", "AtlasStation", "AbandonedBuildings", "WeaponTerminal", "SuitTerminal", "SignalScanner",
@@ -97,152 +97,146 @@ namespace MBINCompiler.Models.Structs
                 "MessageBeacon", "NPC_HIRE_Scientist", "NPC_HIRE_Scientist_Wait", "NPC_Recruit", "NPC_Freighter_Captain_Secondary", "NPC_Recruit_Secondary",
                 "Vehicle", "MessageModule", "TechShop", "VehicleRaseStart", "BuildingShop", "MissionGiver", "HoloHub", "HoloExplorer", "HoloSceptic", "HoloNoone",
                 "PortalRunEntry", "PortalActivate", "CrashedFreighter", "GraveInCave", "GlitchyStroyBox", "NetworkPlayer", "NetworkMonument",
-                "AnomalyComputer", "AtlasPlinth" })]
+                "AnomalyComputer", "AtlasPlinth", "Epilogue" })]
         /* 0x3EFB0 */ public GcSavedInteractionRaceData[] SavedInteractionIndicies;
 
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x3F65C */ public byte[] Padding3F65C;
-
-        /* 0x3F660 */ public List<NMSString0x10> InteractionProgressTable;
+        /* 0x3F678 */ public List<NMSString0x10> InteractionProgressTable;
 
         [NMS(Size = 0xA)]
-        /* 0x3F670 */ public GcUniverseAddressData[] AtlasStationAdressData;
+        /* 0x3F688 */ public GcUniverseAddressData[] AtlasStationAdressData;
         [NMS(Size = 0xB)]
-        /* 0x3F760 */ public GcUniverseAddressData[] NewAtlasStationAdressData;
+        /* 0x3F778 */ public GcUniverseAddressData[] NewAtlasStationAdressData;
 
-        /* 0x3F868 */ public List<GcUniverseAddressData> VisitedAtlasStationsData;
+        /* 0x3F880 */ public List<GcUniverseAddressData> VisitedAtlasStationsData;
 
-        /* 0x3F878 */ public bool FirstAtlasStationDiscovered;
-        /* 0x3F87C */ public int ProgressionLevel;
-        /* 0x3F880 */ public bool IsNew;
-        /* 0x3F881 */ public bool UseSmallerBlackholeJumps;
+        /* 0x3F890 */ public bool FirstAtlasStationDiscovered;
+        /* 0x3F894 */ public int ProgressionLevel;
+        /* 0x3F898 */ public bool IsNew;
+        /* 0x3F899 */ public bool UseSmallerBlackholeJumps;
 
         [NMS(Size = 0x6, Ignore = true)]
-        /* 0x3F882 */ public byte[] Padding3F882;
+        /* 0x3F89A */ public byte[] Padding3F89A;
 
-        /* 0x3F888 */ public List<GcSavedEntitlement> UsedEntitlements;
-
-        [NMS(Size = 0x8, Ignore = true)]
-        /* 0x3F989 */ public byte[] Padding3F898;
+        /* 0x3F8A0 */ public List<GcSavedEntitlement> UsedEntitlements;
 
         [NMS(Size = 0x10)]
-        /* 0x3F8A0 */ public Vector4f[] PlanetPositions;
+        /* 0x3F8B0 */ public Vector4f[] PlanetPositions;
 
         [NMS(Size = 0x10)]
-        /* 0x3F9A0 */ public GcSeed[] PlanetSeeds;
+        /* 0x3F9B0 */ public GcSeed[] PlanetSeeds;
 
-        /* 0x3FAA0 */ public int PrimaryPlanet;
-        [NMS(Size = 4, Ignore = true)]
-        /* 0x3FAA4 */ public byte[] Padding3FAA4;
-
-        /* 0x3FAA8 */ public ulong TimeLastSpaceBattle;
-        /* 0x3FAB0 */ public int WarpsLastSpaceBattle;
+        /* 0x3FAB0 */ public int PrimaryPlanet;
         [NMS(Size = 4, Ignore = true)]
         /* 0x3FAB4 */ public byte[] Padding3FAB4;
 
-        /* 0x3FAB8 */ public ulong TimeLastMiniStation;
-        /* 0x3FAC0 */ public int WarpsLastMiniStation;
+        /* 0x3FAB8 */ public ulong TimeLastSpaceBattle;
+        /* 0x3FAC0 */ public int WarpsLastSpaceBattle;
         [NMS(Size = 4, Ignore = true)]
         /* 0x3FAC4 */ public byte[] Padding3FAC4;
 
-        /* 0x3FAC8 */ public ulong MiniStationUA;
-        /* 0x3FAD0 */ public Vector4f AnomalyPositionOverride;
+        /* 0x3FAC8 */ public ulong TimeLastMiniStation;
+        /* 0x3FAD0 */ public int WarpsLastMiniStation;
+        [NMS(Size = 4, Ignore = true)]
+        /* 0x3FAD4 */ public byte[] Padding3FAD4;
 
-        /* 0x3FAE0 */ public GcUniverseAddressData GameStartAddress1;
-        /* 0x3FAF8 */ public GcUniverseAddressData GameStartAddress2;
+        /* 0x3FAD8 */ public ulong MiniStationUA;
+        /* 0x3FAE0 */ public Vector4f AnomalyPositionOverride;
+
+        /* 0x3FAF0 */ public GcUniverseAddressData GameStartAddress1;
+        /* 0x3FB08 */ public GcUniverseAddressData GameStartAddress2;
 
         [NMS(Size = 0x10)]
-        /* 0x3FB10 */ public bool[] GalacticMapRequests;
+        /* 0x3FB20 */ public bool[] GalacticMapRequests;
 
-        /* 0x3FB20 */ public Vector4f FirstShipPosition;
+        /* 0x3FB30 */ public Vector4f FirstShipPosition;
 
-        /* 0x3FB30 */ public float SavedSunAngle;
+        /* 0x3FB40 */ public float SavedSunAngle;
         [NMS(Size = 0xC, Ignore = true)]
-        /* 0x3FB34 */ public byte[] Padding3FB34;
+        /* 0x3FB44 */ public byte[] Padding3FB44;
 
-        /* 0x3FB40 */ public Vector4f SavedSunAxis;
+        /* 0x3FB50 */ public Vector4f SavedSunAxis;
 
-        /* 0x3FB50 */ public ulong HazardTimeAlive;
+        /* 0x3FB60 */ public ulong HazardTimeAlive;
 
-        /* 0x3FB58 */ public bool RevealBlackHoles;
+        /* 0x3FB68 */ public bool RevealBlackHoles;
         [NMS(Size = 0x7, Ignore = true)]
-        /* 0x3FB59 */ public byte[] Padding3FB59;
+        /* 0x3FB69 */ public byte[] Padding3FB69;
 
-        /* 0x3FB60 */ public GcResourceElement CurrentFreighter;
-        /* 0x3FE08 */ public GcInventoryLayout FreighterLayout;
-        /* 0x3FE28 */ public GcInventoryContainer FreighterInventory;
-        /* 0x3FE88 */ public GcInventoryContainer FreighterInventory_TechOnly;
-        /* 0x3FEE8 */ public GcUniverseAddressData FreighterUniverseAddress;
-        /* 0x3FF00 */ public List<GcPersistentBBObjectData> BaseBuildingObjects;
-        /* 0x3FF10 */ public GcTerrainEditsBuffer TerrainEditData;
+        /* 0x3FB70 */ public GcResourceElement CurrentFreighter;
+        /* 0x3FE18 */ public GcInventoryLayout FreighterLayout;
+        /* 0x3FE38 */ public GcInventoryContainer FreighterInventory;
+        /* 0x3FE98 */ public GcInventoryContainer FreighterInventory_TechOnly;
+        /* 0x3FEF8 */ public GcUniverseAddressData FreighterUniverseAddress;
+        /* 0x3FF10 */ public List<GcPersistentBBObjectData> BaseBuildingObjects;
+        /* 0x3FF20 */ public GcTerrainEditsBuffer TerrainEditData;
         [NMS(Size = 0x5)]
-        /* 0x4ABD0 */ public GcNPCWorkerData[] NPCWorkers;
+        /* 0x4ABE0 */ public GcNPCWorkerData[] NPCWorkers;
         [NMS(Size = 0x3)]
-        /* 0x4B990 */ public GcPersistentBase[] PersistentPlayerBases;
-        /* 0x4BE40 */ public List<GcTeleportEndpoint> TeleportEndpoints;
+        /* 0x4B9A0 */ public GcPersistentBase[] PersistentPlayerBases;
+        /* 0x4BE50 */ public List<GcTeleportEndpoint> TeleportEndpoints;
                 //[NMS(Size = 0x2F)]
-                ///* 0x4BE50 */ public ulong[] SavedInteractionTimes;
+                ///* 0x4BE60 */ public ulong[] SavedInteractionTimes;
 
         // I am just going to forget about fixing the offsets here... too much effort... The correct offsets will continue afterwards...
 
-        /* 0x4BE50 */ public GcInventoryLayout Chest1Layout;
-        /* 0x4BE70 */ public GcInventoryContainer Chest1Inventory;
-        /* 0x4BED0 */ public GcInventoryLayout Chest2Layout;
-        /* 0x4BEF0 */ public GcInventoryContainer Chest2Inventory;
-        /* 0x4BF50 */ public GcInventoryLayout Chest3Layout;
-        /* 0x4BF70 */ public GcInventoryContainer Chest3Inventory;
-        /* 0x4BFD0 */ public GcInventoryLayout Chest4Layout;
-        /* 0x4BFF0 */ public GcInventoryContainer Chest4Inventory;
-        /* 0x4C050 */ public GcInventoryLayout Chest5Layout;
-        /* 0x4C070 */ public GcInventoryContainer Chest5Inventory;
-        /* 0x4C0D0 */ public GcInventoryLayout Chest6Layout;
-        /* 0x4C0F0 */ public GcInventoryContainer Chest6Inventory;
-        /* 0x4C150 */ public GcInventoryLayout Chest7Layout;
-        /* 0x4C170 */ public GcInventoryContainer Chest7Inventory;
-        /* 0x4C1D0 */ public GcInventoryLayout Chest8Layout;
-        /* 0x4C1F0 */ public GcInventoryContainer Chest8Inventory;
-        /* 0x4C250 */ public GcInventoryLayout Chest9Layout;
-        /* 0x4C270 */ public GcInventoryContainer Chest9Inventory;
-        /* 0x4C2D0 */ public GcInventoryLayout Chest10Layout;
-        /* 0x4C2F0 */ public GcInventoryContainer Chest10Inventory;
-        /* 0x4C350 */ public GcInventoryLayout ChestMagicLayout;
-        /* 0x4C370 */ public GcInventoryContainer ChestMagicInventory;
-        /* 0x4C3D0 */ public GcInventoryLayout ChestMagic2Layout;
-        /* 0x4C3F0 */ public GcInventoryContainer ChestMagic2Inventory;
-        /* 0x4C450 */ public GcResourceElement CurrentFreighterNPC;
+        /* 0x4BE60 */ public GcInventoryLayout Chest1Layout;
+        /* 0x4BE80 */ public GcInventoryContainer Chest1Inventory;
+        /* 0x4BEE0 */ public GcInventoryLayout Chest2Layout;
+        /* 0x4BF00 */ public GcInventoryContainer Chest2Inventory;
+        /* 0x4BF60 */ public GcInventoryLayout Chest3Layout;
+        /* 0x4BF80 */ public GcInventoryContainer Chest3Inventory;
+        /* 0x4BFE0 */ public GcInventoryLayout Chest4Layout;
+        /* 0x4C000 */ public GcInventoryContainer Chest4Inventory;
+        /* 0x4C060 */ public GcInventoryLayout Chest5Layout;
+        /* 0x4C080 */ public GcInventoryContainer Chest5Inventory;
+        /* 0x4C0E0 */ public GcInventoryLayout Chest6Layout;
+        /* 0x4C100 */ public GcInventoryContainer Chest6Inventory;
+        /* 0x4C160 */ public GcInventoryLayout Chest7Layout;
+        /* 0x4C180 */ public GcInventoryContainer Chest7Inventory;
+        /* 0x4C1E0 */ public GcInventoryLayout Chest8Layout;
+        /* 0x4C200 */ public GcInventoryContainer Chest8Inventory;
+        /* 0x4C260 */ public GcInventoryLayout Chest9Layout;
+        /* 0x4C280 */ public GcInventoryContainer Chest9Inventory;
+        /* 0x4C2E0 */ public GcInventoryLayout Chest10Layout;
+        /* 0x4C300 */ public GcInventoryContainer Chest10Inventory;
+        /* 0x4C360 */ public GcInventoryLayout ChestMagicLayout;
+        /* 0x4C380 */ public GcInventoryContainer ChestMagicInventory;
+        /* 0x4C3E0 */ public GcInventoryLayout ChestMagic2Layout;
+        /* 0x4C400 */ public GcInventoryContainer ChestMagic2Inventory;
+        /* 0x4C460 */ public GcResourceElement CurrentFreighterNPC;
 
         [NMS(Size = 0x8, Ignore = true)]
-        /* 0x4C6F8 */ public byte[] Padding4C6F8;
+        /* 0x4C708 */ public byte[] Padding4C708;
 
         [NMS(Size = 0x3)]
-        /* 0x4C700 */ public GcPlayerOwnershipData[] VehicleOwnership;
-        /* 0x4D270 */ public int PrimaryVehicle;
+        /* 0x4C710 */ public GcPlayerOwnershipData[] VehicleOwnership;
+        /* 0x4D280 */ public int PrimaryVehicle;
         [NMS(Size = 0xC, Ignore = true)]
-        /* 0x4D274 */ public byte[] Padding4D274;
+        /* 0x4D284 */ public byte[] Padding4D284;
         [NMS(Size = 0x6)]
-        /* 0x4D280 */ public GcPlayerOwnershipData[] ShipOwnership;
-        /* 0x4E960 */ public int PrimaryShip;
+        /* 0x4D290 */ public GcPlayerOwnershipData[] ShipOwnership;
+        /* 0x4E970 */ public int PrimaryShip;
 
-        /* 0x4E964 */ public bool MultiShipEnabled;
+        /* 0x4E974 */ public bool MultiShipEnabled;
         [NMS(Size = 0x20)]
-        /* 0x4E965 */ public string PlayerWeaponName;
+        /* 0x4E975 */ public string PlayerWeaponName;
         [NMS(Size = 0x20)]
-        /* 0x4E985 */ public string PlayerFreighterName;
+        /* 0x4E995 */ public string PlayerFreighterName;
         [NMS(Size = 0xB, Ignore = true)]
-        /* 0x4E9A5 */ public byte[] Padding4E9A5;
-        /* 0x4E9B0 */ public Vector4f StartGameShipPosition;
-        /* 0x4E9C0 */ public int TradingSupplyDataIndex;
+        /* 0x4E9B5 */ public byte[] Padding4E9B5;
+        /* 0x4E9C0 */ public Vector4f StartGameShipPosition;
+        /* 0x4E9D0 */ public int TradingSupplyDataIndex;
         [NMS(Size = 0x4, Ignore = true)]
-        /* 0x4E9C4 */ public byte[] Padding4E9C4;
-        /* 0x4E9C8 */ public List<GcTradingSupplyData> TradingSupplyData;
-        /* 0x4E9D8 */ public List<GcPortalData> LastPortal;     // just a guess...
-        /* 0x4E9E8 */ public GcPortalSaveData VisitedPortal;
-        /* 0x4EA00 */ public int KnownPortalRunes;
-        /* 0x4EA04 */ public bool OnOtherSideOfPortal;
+        /* 0x4E9D4 */ public byte[] Padding4E9D4;
+        /* 0x4E9D8 */ public List<GcTradingSupplyData> TradingSupplyData;
+        /* 0x4E9E8 */ public List<GcPortalData> LastPortal;     // just a guess...
+        /* 0x4E9F8 */ public GcPortalSaveData VisitedPortal;
+        /* 0x4EA10 */ public int KnownPortalRunes;
+        /* 0x4EA14 */ public bool OnOtherSideOfPortal;
         [NMS(Size = 0xB, Ignore = true)]
-        /* 0x4EA05 */ public byte[] Padding4EA05;
-        /* 0x4EA10 */ public Vector4f PortalMarkerPosition_Local;
-        /* 0x4EA20 */ public Vector4f PortalMarkerPosition_Offset;
+        /* 0x4EA15 */ public byte[] Padding4EA15;
+        /* 0x4EA20 */ public Vector4f PortalMarkerPosition_Local;
+        /* 0x4EA30 */ public Vector4f PortalMarkerPosition_Offset;
 
     }
 }

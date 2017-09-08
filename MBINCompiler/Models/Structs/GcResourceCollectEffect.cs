@@ -1,6 +1,7 @@
 ﻿namespace MBINCompiler.Models.Structs
 {
-    public class GcResourceCollectEffect : NMSTemplate      // size: 0x34      // possibly in a global?
+    [NMS(Size = 0x34)]
+    public class GcResourceCollectEffect : NMSTemplate      // in GcPlayerGlobals
     {
         /* 0x000 */ public float PlayerOffset;
         /* 0x004 */ public float SizeMin;

@@ -2,7 +2,7 @@
 {
     public class GcMissionConsequenceRemoveScanEvent : NMSTemplate
     {
-        [NMS(Size = 0x10)]
+        [NMS(Size = 0x20)]
         /* 0x00 */ public string Event;
     }
 }

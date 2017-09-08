@@ -1,6 +1,7 @@
 ﻿namespace MBINCompiler.Models.Structs
 {
-    public class GcPlayerSpawnStateData : NMSTemplate           // possibly in a global? cf. sub_14022A510 in 1.2 exe
+    [NMS(Size = 0x80)]
+    public class GcPlayerSpawnStateData : NMSTemplate
     {
         /* 0x000 */ public Vector4f PlayerPositionInSystem;
         /* 0x010 */ public Vector4f PlayerTransformAt;

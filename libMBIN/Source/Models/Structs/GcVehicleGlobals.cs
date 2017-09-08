@@ -93,7 +93,7 @@ namespace libMBIN.Models.Structs
         public float Unknown18C;
         public float Unknown190;
         public bool Unknown194;
-        public float Unknown198;
+        /* 0x198 */ public float ScannerRechargeTime;
 
         [NMS(Size = 0x4, Ignore = true)]
         public byte[] Padding19C;

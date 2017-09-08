@@ -1,6 +1,7 @@
 ﻿namespace MBINCompiler.Models.Structs
 {
-    public class TkModelRendererData : NMSTemplate // 0x70 bytes
+    [NMS(Size = 0x70)]
+    public class TkModelRendererData : NMSTemplate
     {
         public TkModelRendererCameraData Camera;
         public float Fov;

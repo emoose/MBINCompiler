@@ -1,6 +1,7 @@
 ﻿namespace MBINCompiler.Models.Structs
 {
-    public class TkImGuiSettings : NMSTemplate // 0x190 bytes       // used in GCGRAPHICSGLOBALS.GLOBAL
+    [NMS(Size = 0x190)]
+    public class TkImGuiSettings : NMSTemplate
     {
         public Colour BackgroundColour;
         public Colour WindowTitleColour;

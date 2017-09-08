@@ -1,5 +1,6 @@
 ﻿namespace MBINCompiler.Models.Structs
 {
+    [NMS(Size = 0x20)]
     public class GcHeavyAirColourData : NMSTemplate
     {
         /* 0x000 */ public Colour Colour1;

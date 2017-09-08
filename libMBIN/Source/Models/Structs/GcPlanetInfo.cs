@@ -1,5 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
+    [NMS(Size = 0x382)]
     public class GcPlanetInfo : NMSTemplate
     {
         [NMS(Size = 0x80)]

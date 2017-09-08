@@ -1,5 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
+    [NMS(Size = 0x18)]
     public class GcTerrainOverlayColours : NMSTemplate          // probably in global?
     {
         /* 0x000 */ public float Cutoff;        // 3F000000h

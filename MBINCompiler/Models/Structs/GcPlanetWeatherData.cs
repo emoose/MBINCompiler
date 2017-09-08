@@ -1,31 +1,32 @@
 ﻿namespace MBINCompiler.Models.Structs
 {
+    [NMS(Size = 0x150)]
     public class GcPlanetWeatherData : NMSTemplate
     {
-        public GcWeatherOptions WeatherOptions;
-        public GcPlanetWeatherColourData NightColours;
-        public GcPlanetHeavyAirData HeavyAir;
-        public float NightDensity;
-        public int WeatherIntensity;
+        public GcWeatherOptions WeatherOptions;     // weather type?
+        //public GcPlanetWeatherColourData NightColours;
+        [NMS(Size = 0xC, Ignore = true)]
+        public byte[] Padding4;
+        /* 0x010 */ public GcPlanetHeavyAirData HeavyAir;
+        /* 0x130 */ public int WeatherIntensity;
         public string[] WeatherIntensityValues()
         {
             return new[] { "Default", "Extreme" };
         }
-        public int StormFrequency;
+        /* 0x134 */ public int StormFrequency;
         public string[] StormFrequencyValues()
         {
             return new[] { "None", "Low", "High" };
         }
-        public int AtmosphereType;
+        /* 0x138 */ public int AtmosphereType;
         public string[] AtmosphereTypeValues()
         {
             return new[] { "None", "Normal" };
         }
-        public int DayColourIndex;
-        public int DuskColourIndex;
-        public int NightColourIndex;
+        /* 0x13C */ public int DayColourIndex;
+        /* 0x140 */ public int DuskColourIndex;
 
-        [NMS(Size = 4, Ignore = true)]
-        public byte[] Padding1FC;
+        [NMS(Size = 0xC, Ignore = true)]
+        /* 0x144 */ public byte[] EndPadding;
     }
 }

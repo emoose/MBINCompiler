@@ -1,6 +1,7 @@
 ﻿namespace MBINCompiler.Models.Structs
 {
-    public class GcZoomData : NMSTemplate       // in gameplayglobals?
+    [NMS(Size = 0x1C)]
+    public class GcZoomData : NMSTemplate
     {
         public int ZoomType;
         public string[] ZoomTypeValues()

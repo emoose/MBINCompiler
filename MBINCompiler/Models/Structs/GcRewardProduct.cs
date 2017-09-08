@@ -1,6 +1,7 @@
 ﻿namespace MBINCompiler.Models.Structs
 {
-    public class GcRewardProduct : NMSTemplate      // size: 0x1C
+    [NMS(Size = 0x1C)]
+    public class GcRewardProduct : NMSTemplate
     {
         /* 0x00 */ public GcRealitySubstanceCategory Category;
         /* 0x04 */ public GcRarity Rarity;

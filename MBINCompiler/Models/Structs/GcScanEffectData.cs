@@ -1,6 +1,7 @@
 ﻿namespace MBINCompiler.Models.Structs
 {
-    public class GcScanEffectData : NMSTemplate        // size: 0x50         // in gameplay globals?
+    [NMS(Size = 0x50)]
+    public class GcScanEffectData : NMSTemplate
     {
         [NMS(Size = 0x10)]
         /* 0x00 */ public string Id;

@@ -25,10 +25,10 @@
         /* 0x10 */ public int ScreenWidth;
         /* 0x14 */ public int ScreenHeight;
         /* 0x18 */ public bool DisableVSync;
-        /* 0x1C */ public int GameWindowMode;
+        /* 0x1C */ public int GameWindowMode;       // only a byte used??
         public string[] GameWindowModeValues()
         {
-            return new[] { "Bordered", "Borderless", "Fullscreen" };
+            return new[] { "Bordered", "Borderless", "Fullscreen" };        // this and GameStateModeValues below swapped in exe
         }
 
         /* 0x20 */ public int Monitor;
@@ -45,13 +45,14 @@
         /* 0x22C */ public int GameStateMode;
         public string[] GameStateModeValues()
         {
-            return new[] { "LoadPreset", "UserStorage", "FreshStart" };
+            return new[] { "LoadPreset", "UserStorage", "FreshStart" };     // this and GameWindowModeValues above swapped in exe
         }
 
         /* 0x230 */ public int BootMode;
         public string[] BootModeValues()
         {
-            return new[] { "SolarSystem", "GalaxyMap", "SmokeTest", "SmokeTestGalaxyMap", "Scratchpad", "UnitTest" };
+            return new[] {"MinimalSolarSystem", "SolarSystem", "GalaxyMap", "SmokeTest",
+                          "SmokeTestGalaxyMap", "Scratchpad", "UnitTest" };
         }
         /* 0x234 */ public int PlayerSpawnLocationOverride;
         public string[] PlayerSpawnLocationOverrideValues()
@@ -72,7 +73,7 @@
         /* 0x3B8 */ public int ShaderPreload;
         public string[] ShaderPreloadValues()
         {
-            return new[] { "Off", "Full" };
+            return new[] { "Off", "Full" };     // this and BootLoadDelayValues swapped order in exe?
         }
 		/* Unsure of whats going on with PresetGameMode, I added it but its way shorter than everything else  Check address 1401BC1D2 */
 		/* 0x3BC?*/ public int PresetGameMode; // Looks just like DebugLanguages below which had unused note
@@ -83,7 +84,7 @@
         /* 0x3C4 */ public int BootLoadDelay;
         public string[] BootLoadDelayValues()
         {
-            return new[] { "LoadAll", "WaitForPlanet", "WaitForNothing" };
+            return new[] { "LoadAll", "WaitForPlanet", "WaitForNothing" };      // this and ShaderPreloadValues order swapped in exe?
         }
         /* 0x3C8 */ public bool UseParticles;
         /* 0x3C9 */ public bool UseVolumetrics;
@@ -115,14 +116,15 @@
         /* 0x3E7 */ public int DebugLanguages; // unused?
 
         [NMS(Size = 0x20)]
-        /* 0x40B */ public string AllowedLanguagesFile; // 0x20
+        /* 0x40B */ public string AllowedLanguagesFile;
         /* 0x40C */ public bool DoAlienLanguage;
         /* 0x410 */ public int ForceInteractionRaceTo; // unused?
         /* 0x414 */ public int RealityMode;
         public string[] RealityModeValues()
         {
-            return new[] { "LoadPreset", "Generate" };
+            return new[] { "LoadPreset", "Generate" };      // this and RecordSettingValues swapped order in exe?
         }
+
         /* 0x418 */ public bool DebugPersistentInteractions;
 
         [NMS(Size = 0x80)]
@@ -135,18 +137,18 @@
 
         [NMS(Size = 0x80)]
         /* 0x4E0 */ public string DefaultSaveData; // 0x80
-        /* 0x51C */ public bool FormatDownloadStorageAreaOnBoot;
-        /* 0x51D */ public bool ForceBasicLoadScreen;
-        /* 0x520 */ public float BootLogoFadeRate;
-        /* 0x524 */ public bool BootMusic;
-        /* 0x525 */ public bool LogMissingLocalisedText;
-        /* 0x526 */ public bool FleetDirectorAutoMode;
-        /* 0x528 */ public float _3dTextDistance;
-        /* 0x52C */ public float _3dTextMinScale;
-        /* 0x530 */ public int RecordSetting;
+        /* 0x560 */ public bool FormatDownloadStorageAreaOnBoot;
+        /* 0x561 */ public bool ForceBasicLoadScreen;
+        /* 0x564 */ public float BootLogoFadeRate;
+        /* 0x568 */ public bool BootMusic;
+        /* 0x569 */ public bool LogMissingLocalisedText;
+        /* 0x56A */ public bool FleetDirectorAutoMode;
+        /* 0x56C */ public float _3dTextDistance;
+        /* 0x570 */ public float _3dTextMinScale;
+        /* 0x574 */ public int RecordSetting;
         public string[] RecordSettingValues()
         {
-            return new[] { "None", "Record", "Playback" }; // "None" isnt specified in exe
+            return new[] { "None", "Record", "Playback" };      // this and RealityModeValues swapped order in exe?
         }
         /* 0x534 */ public bool DebugBuildingSpawns;
         /* 0x535 */ public bool StressTestLongNameDisplay;
@@ -167,7 +169,7 @@
         /* 0x640 */ public int SmokeTestCycleMode;
         public string[] SmokeTestCycleModeValues()
         {
-            return new[] { "None", "TourSolarSystem", "RegeneratePlanet" };// "None" isnt specified in exe
+            return new[] { "None", "TourSolarSystem", "RegeneratePlanet" };
         }
         /* 0x644 */ public bool SmokeTestCameraFly;
         public bool Unknown645;
@@ -192,14 +194,14 @@
         /* 0x760 */ public int ProxyType;
         public string[] ProxyTypeValues()
         {
-            return new[] { "None", "ManualURI", "InetProxy" };
+            return new[] { "None", "ManualURI", "InetProxy" };      // this and ServerEnvValues swapped order in exe?
         }
         [NMS(Size = 0x80)]
         /* 0x764 */ public string ProxyURI; // 0x80
         /* 0x7E4 */ public int ServerEnv;
         public string[] ServerEnvValues()
         {
-            return new[] { "default", "dev", "qa", "prodqa", "prod", "custom", "pentest" }; // There was a "qa" entry between "dev" and "prodqa" but that seems to have been removed in exe
+            return new[] { "default", "dev", "qa", "prodqa", "prod", "custom", "pentest" };     // this and ProxyTypeValues swapped order in exe? 
         }
         [NMS(Size = 0x80)]
         /* 0x830 */ public string AuthBaseUrl; // 0x80
@@ -289,5 +291,7 @@
 		/* 0xD44 */ public bool DisableBaseBuilding;
 		/* 0xD45 */ public bool DisableBaseBuildingLimits;
         /* 0xD48 */ public float UnknownCD4;
+
+        // ["None", "Server", "Client"] enum somewhere here??
     }
 }

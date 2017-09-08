@@ -1,7 +1,7 @@
 ﻿namespace libMBIN.Models.Structs
 {
-    public class GcMissionConditionIsCurrentMission : NMSTemplate       // seems to be empty?
+    [NMS(Size = 0)]
+    public class GcMissionConditionIsCurrentMission : NMSTemplate
     {
-        public bool Dummy;      // dunno...
     }
 }

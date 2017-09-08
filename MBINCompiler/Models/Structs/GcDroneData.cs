@@ -1,5 +1,6 @@
 ﻿namespace MBINCompiler.Models.Structs
 {
+    [NMS(Size = 0x1C0)]
     public class GcDroneData : NMSTemplate
     {
         public GcDroneControlData Patrol;

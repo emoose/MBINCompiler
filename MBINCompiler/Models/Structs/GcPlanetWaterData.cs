@@ -1,6 +1,7 @@
 ﻿namespace MBINCompiler.Models.Structs
 {
-    public class GcPlanetWaterData : NMSTemplate        // size: 0x1B0
+    [NMS(Size = 0x1B0)]
+    public class GcPlanetWaterData : NMSTemplate
     {
         public Colour WaterColourNear;
         public Colour WaterColourFar;

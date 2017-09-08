@@ -2,6 +2,7 @@
 
 namespace MBINCompiler.Models.Structs
 {
+    [NMS(Size = 0x3C8)]
     public class GcPlanetGenerationIntermediateData : NMSTemplate
     {
         public GcSeed Seed;

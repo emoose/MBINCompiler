@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 
-namespace MBINCompiler.Models.Structs       // size: 0x310
+namespace MBINCompiler.Models.Structs
 {
-    [NMS(Alignment = 0x10)]
+    [NMS(Alignment = 0x10, Size = 0x310)]
     public class GcNGuiLayerData : NMSTemplate
     {
         /* 0x000 */ public GcNGuiElementData Data;

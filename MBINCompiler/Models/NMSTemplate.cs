@@ -200,7 +200,7 @@ namespace MBINCompiler.Models
                 //Console.WriteLine("Gk Hack: " + templateName + " Deserialized Value: " + field.Name + " value: " + field.GetValue(obj));
                 //Console.WriteLine($"{templateName} position: 0x{reader.BaseStream.Position:X}");
                 /*using (System.IO.StreamWriter file =
-                    new System.IO.StreamWriter(@"T:\mbincompiler_debug.txt", true))
+                    new System.IO.StreamWriter(@"D:\mbincompiler_debug.txt", true))
                 {
                     file.WriteLine(" Deserialized Value: " + field.Name + " value: " + field.GetValue(obj));
                     file.WriteLine($"{templateName} position: 0x{reader.BaseStream.Position:X}");
@@ -232,26 +232,32 @@ namespace MBINCompiler.Models
             var list = new List<NMSTemplate>();
             if (numTemplates > 0)
             {
-                Dictionary<long, string> templates = new Dictionary<long, string>();
+                //Dictionary<long, string> templates = new Dictionary<long, string>();
+                List < KeyValuePair < long, String >> templates = new List<KeyValuePair<long, String>>();
                 for (int i = 0; i < numTemplates; i++)
                 {
                     long nameOffset = reader.BaseStream.Position;
                     long templateOffset = reader.ReadInt64();
                     var name = reader.ReadString(Encoding.UTF8, 0x40, true);
+                    /*Console.WriteLine(name);
+                    Console.WriteLine(nameOffset);
+                    Console.WriteLine(templateOffset);
+                    Console.WriteLine(nameOffset + templateOffset);*/
+
                     if (templateOffset == 0)
                     {
                         // sometimes there are lists which have n values, but less than n actual structs in them. We replace the empty thing with EmptyNode
-                        templates.Add(nameOffset + templateOffset, "EmptyNode");
+                        templates.Add(new KeyValuePair<long, string>(nameOffset + templateOffset, "EmptyNode"));
                     }
                     else
                     {
-                        templates.Add(nameOffset + templateOffset, name);
+                        templates.Add(new KeyValuePair<long, string>(nameOffset + templateOffset, name));
                     }
                 }
 
                 long pos = reader.BaseStream.Position;
 
-                foreach (var templateInfo in templates)
+                foreach (KeyValuePair<long, string> templateInfo in templates)
                 {
                     reader.BaseStream.Position = templateInfo.Key;
                     var template = DeserializeBinaryTemplate(reader, templateInfo.Value);
@@ -306,6 +312,9 @@ namespace MBINCompiler.Models
         {
             if (CustomSerialize(writer, fieldType, fieldData, settings, field, ref additionalData, ref addtDataIndex))
                 return;
+            //Console.WriteLine(fieldType.Name);
+            //Console.WriteLine("bloop");
+            //System.Threading.Thread.Sleep(200);
             switch (fieldType.Name)
             {
                 case "String":
@@ -394,6 +403,7 @@ namespace MBINCompiler.Models
                     writer.Align(8, 0);
                     long refPos = writer.BaseStream.Position;
                     var template = (NMSTemplate)fieldData;
+                    //Console.WriteLine(template);
                     if (template == null || template.GetType().Name == "EmptyNode")
                     {
                         writer.Write((Int64)0); // listPosition
@@ -498,7 +508,9 @@ namespace MBINCompiler.Models
             // I think I need to add something like the offset stuff in the list serialisation
             // then check for NMSTemplate types?
 
+
             var entryOffsetNamePairs = new Dictionary<long, string>();
+            //List<KeyValuePair<long, String>> templates = new List<KeyValuePair<long, String>>();
 
             if (type.Name != "EmptyNode")
             {
@@ -511,10 +523,10 @@ namespace MBINCompiler.Models
                         //Console.WriteLine("hello");
                         //Console.WriteLine(field);
 
-                        System.Threading.Thread.Sleep(1000);
-                        entryOffsetNamePairs.Add(writer.BaseStream.Position, field.GetType().Name);
+                        //System.Threading.Thread.Sleep(1000);
+                        //entryOffsetNamePairs.Add(writer.BaseStream.Position, field.GetType().Name);
                         NMSAttribute settings = field.GetCustomAttribute<NMSAttribute>();
-                        SerializeValue(writer, field.FieldType, fieldData, settings, field, ref additionalData, ref addtDataIndex, structLength - (int)fieldAddr);
+                        SerializeValue(writer, field.FieldType, fieldData, settings, field, ref additionalData, ref addtDataIndex, structLength);// - (int)fieldAddr);
 
                     }
                     else
@@ -696,7 +708,8 @@ namespace MBINCompiler.Models
 
             foreach (var entry in list)
             {
-
+                //Console.WriteLine(entry.GetType());
+                //System.Threading.Thread.Sleep(1000);
                 if (PrintToDebug) Debug.WriteLine($"[C] writing {entry.GetType().Name} to offset 0x{writer.BaseStream.Position:X}");
                 SerializeValue(writer, entry.GetType(), entry, null, null, ref additionalData, ref addtDataIndexThis);
             }
@@ -705,8 +718,6 @@ namespace MBINCompiler.Models
             {
                 writer.Write(0xFEFEFEFEFEFEFEFE);
             }
-
-
         }
 
         public byte[] SerializeBytes()
