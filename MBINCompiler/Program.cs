@@ -251,8 +251,8 @@ namespace MBINCompiler {
             if (args[0] == "--help") return ShowHelp();
             if (args[0] == "-h")     return ShowHelp();
 
-            if (args[0] == "-version") return ShowVersion();
-            if (args[0] == "-v")       return ShowVersion();
+            if (args[0] == "--version") return ShowVersion();
+            if (args[0] == "-v")        return ShowVersion();
 
             // at least the first argument is an input param
 
