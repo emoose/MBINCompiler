@@ -54,15 +54,11 @@
     <Compile Include="Models\EXmlProperty.cs" />
     <Compile Include="Models\Structs\GcAISpaceshipModelData.cs" />
     <Compile Include="Models\Structs\GcAISpaceshipModelDataArray.cs" />
-<<<<<<< HEAD
     <Compile Include="Models\Structs\GcAtlasBase.cs" />
     <Compile Include="Models\Structs\GcAtlasSendSubmitMonument.cs" />
     <Compile Include="Models\Structs\GcInteractionDof.cs" />
     <Compile Include="Models\Structs\GcMultiplayerGlobals.cs" />
     <Compile Include="Models\Structs\GcAtlasMonument.cs" />
-=======
-    <Compile Include="Models\Structs\GcMultiplayerGlobals.cs" />
->>>>>>> a167f2967c14c53eb8bd546a76a395ddee84962e
     <Compile Include="Models\Structs\GcTerrainEditsBuffer.cs" />
     <Compile Include="Models\Structs\GcTerrainEdit.cs" />
     <Compile Include="Models\Structs\GcGeneratorUnitComponentData.cs" />
