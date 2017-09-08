@@ -308,7 +308,7 @@ namespace MBINCompiler {
                     DecompileFile( inputPath, outputPath, getVer );
                 }
             } catch (Exception e) {
-                return ShowError( $"ERROR: {e.Message}" );
+                return ShowError( e.Message );
             }
 
             return 0;
