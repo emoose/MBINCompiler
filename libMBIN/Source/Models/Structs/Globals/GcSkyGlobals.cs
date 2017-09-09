@@ -102,10 +102,11 @@
         /* 0X220 */ public float Unknown220;
         /* 0X224 */ public float Unknown224;
         /* 0X228 */ public float Unknown228;
-        /* 0X22C */ public GcSkyProperties Unknown22C;
+        /* 0x22C */ public float Unknown22C;
+        /* 0X22C */ public GcSkyProperties Unknown230;
 
         [NMS(Size = 0x4, EnumValue = new[] {"ClearFog", "StormFog", "ExtremeWeatherFog", "InFlightFog" })]
-        /* 0x25C */ public GcFogProperties[] PlanetFogProperties;
+        /* 0x260 */ public GcFogProperties[] PlanetFogProperties;
 
         /* 0X5D0 */ public GcSpaceSkyProperties Unknown5D0;
         /* 0X670 */ public GcSpaceSkyProperties Unknown670;

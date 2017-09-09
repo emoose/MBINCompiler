@@ -293,7 +293,8 @@
         public float Unknown928;
         public float Unknown92C;
         public float Unknown930;
-        [NMS(Size = 0xC, Ignore = true)]
+        public float Unknown934;
+        [NMS(Size = 0x8, Ignore = true)]
         public byte[] EndPadding;
     }
 }

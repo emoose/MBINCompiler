@@ -677,7 +677,7 @@
     <Compile Include="Source\Models\Structs\GcSimpleInteractionComponentData.cs" />
     <Compile Include="Source\Models\Structs\GcSimulationGlobals.cs" />
     <Compile Include="Source\Models\Structs\GcSizeIndicator.cs" />
-    <Compile Include="Source\Models\Structs\GcSkyGlobals.cs" />
+    <Compile Include="Source\Models\Structs\Globals\GcSkyGlobals.cs" />
     <Compile Include="Source\Models\Structs\GcSkyProperties.cs" />
     <Compile Include="Source\Models\Structs\GcSolarSystemClass.cs" />
     <Compile Include="Source\Models\Structs\GcSolarSystemData.cs" />

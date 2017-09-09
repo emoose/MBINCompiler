@@ -2,7 +2,8 @@
 
 namespace libMBIN.Models.Structs
 {
-    public class GcRealityIconTable : NMSTemplate       // size: 0x3008
+    [NMS(Size = 0x3428)]
+    public class GcRealityIconTable : NMSTemplate
     {
         [NMS(Size = 6, EnumValue = new string[6] { "None", "NoOxygen", "ExtremeHeat", "ExtremeCold", "ToxicGas", "Radiation" })]
         /* 0x0000 */ public TkTextureResource[] HazardIcons;
@@ -32,11 +33,12 @@ namespace libMBIN.Models.Structs
 
         /* 0x1AD0 */ public List<GcPlanetResourceIconLookup> PlanetResourceIconLookups;
 
-        [NMS(Size = 0x29, EnumValue = new string[0x29] { "Stamina", "NoStamina", "EnergyCharge", "Scanner", "NoScanner", "Grave", "Resources","Inventory",
+        [NMS(Size = 0x31, EnumValue = new string[0x31] { "Stamina", "NoStamina", "EnergyCharge", "Scanner", "NoScanner", "Grave", "Resources", "Inventory",
             "InventoryFull", "RareItems", "Pirates", "PirateScan", "Drone", "Quad", "Walker", "DroneOff", "Police", "AtlasStation", "BlackHole", "SaveGame",
-            "Jetpack", "VehicleBoost", "VehicleBoostRecharge", "Fuel", "GekStanding", "VykeenStanding", "KorvaxStanding", "GekDiamondStanding", "VykeenDiamondStanding", "KorvaxDiamondStanding",
-            "TradeGuildStanding", "WarGuildStanding", "ExplorerGuildStanding", "TradeGuildDiamondStanding", "WarGuildDiamondStanding",
-            "ExplorationGuildDiamondStanding", "GMPathToCentre", "GMAtlas", "GMBlackHole", "GMUserWaypoint", "GMUserMission"})]
+            "Jetpack", "VehicleBoost", "VehicleBoostRecharge", "Fuel", "GekStanding", "VykeenStanding", "KorvaxStanding", "GekDiamondStanding",
+            "VykeenDiamondStanding", "KorvaxDiamondStanding", "TradeGuildStanding", "WarGuildStanding", "ExplorerGuildStanding", "TradeGuildDiamondStanding",
+            "WarGuildDiamondStanding", "ExplorationGuildDiamondStanding", "GMPathToCentre", "GMAtlas", "GMBlackHole", "GMUserWaypoint", "GMUserMission",
+            "TransferPersonal", "TransferPersonalCargo", "TransferShip", "TransferBike", "TransferBuggy", "TransferTruck", "TransferFreighter", "TransferBase"})]
         /* 0x1AE0 */ public TkTextureResource[] GameIcons;
         [NMS(Size = 0x4, Ignore = true)]
         public byte[] EndPadding;

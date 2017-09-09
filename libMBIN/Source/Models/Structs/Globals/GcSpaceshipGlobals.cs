@@ -24,8 +24,8 @@
         /* 0X34 */ public float Unknown34;
         /* 0X38 */ public float Unknown38;
         /* 0X3C */ public float Unknown3C;
-        /* 0X40 */ public bool Unknown40;
-        /* 0X44 */ public float Unknown44;
+        /* 0X40 */ public float Unknown40;
+        /* 0X44 */ public bool Unknown44;
         /* 0X48 */ public float Unknown48;
         /* 0X4C */ public float Unknown4C;
         /* 0X50 */ public float Unknown50;
