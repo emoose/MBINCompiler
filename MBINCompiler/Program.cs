@@ -104,8 +104,10 @@ namespace MBINCompiler {
 
                 try {
                     DecompileFile( file, output );
-                } catch {
+                // } catch {
                     // TODO: (GH) handle exceptions!
+                } finally {
+                    // nothing to do
                 }
             }
 
@@ -128,8 +130,10 @@ namespace MBINCompiler {
 
                 try {
                     CompileFile( file, output );
-                } catch {
+                // } catch {
                     // TODO: (GH) handle exceptions!
+                } finally {
+                    // nothing to do
                 }
             }
 
@@ -171,7 +175,7 @@ namespace MBINCompiler {
         /// </summary>
         /// <returns>Always returns 0 (exit code = success)</returns>
         static int ShowVersion() {
-            string ver = GetVersionString();
+            string ver = libMBIN.Version.GetVersionString();
             // TODO: (GH) show full version string?
             Console.WriteLine( ver.Substring( 0, ver.Length - 2 ) );
             return 0;
@@ -182,7 +186,9 @@ namespace MBINCompiler {
         /// </summary>
         /// <returns>Always returns 0 (exit code = success)</returns>
         static int ShowHelp() {
-            Console.WriteLine($"MBINCompiler v{GetVersionString()}\n");
+            Console.WriteLine( $"MBINCompiler v{GetVersionString()}" );
+            Console.WriteLine( $"libMBIN v{libMBIN.Version.GetVersionString()}" );
+            Console.WriteLine( );
 
             // TODO: (GH) show general description
             // TODO: (GH) show full syntax
