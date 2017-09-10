@@ -170,14 +170,25 @@ namespace MBINCompiler {
             Console.ReadKey();
         }
 
+        static void ShowVersionStringVerbose() {
+            Console.WriteLine( $"MBINCompiler v{GetVersionString()}" );
+            Console.WriteLine( $"libMBIN v{libMBIN.Version.GetVersionString()}" );
+        }
+
+        static void ShowVersionStringCompact() {
+            Console.WriteLine( libMBIN.Version.GetVersionString() );
+        }
+
         /// <summary>
         /// Show the version string.
         /// </summary>
         /// <returns>Always returns 0 (exit code = success)</returns>
-        static int ShowVersion() {
-            string ver = libMBIN.Version.GetVersionString();
-            // TODO: (GH) show full version string?
-            Console.WriteLine( ver.Substring( 0, ver.Length - 2 ) );
+        static int ShowVersion( bool verbose = true ) {
+            if (verbose) {
+                ShowVersionStringVerbose();
+            } else {
+                ShowVersionStringCompact();
+            }
             return 0;
         }
 
@@ -186,8 +197,7 @@ namespace MBINCompiler {
         /// </summary>
         /// <returns>Always returns 0 (exit code = success)</returns>
         static int ShowHelp() {
-            Console.WriteLine( $"MBINCompiler v{GetVersionString()}" );
-            Console.WriteLine( $"libMBIN v{libMBIN.Version.GetVersionString()}" );
+            ShowVersionStringVerbose();
             Console.WriteLine( );
 
             // TODO: (GH) show general description
@@ -251,8 +261,8 @@ namespace MBINCompiler {
             if (args[0] == "--help") return ShowHelp();
             if (args[0] == "-h")     return ShowHelp();
 
-            if (args[0] == "--version") return ShowVersion();
-            if (args[0] == "-v")        return ShowVersion();
+            if (args[0] == "--version") return ShowVersion( true );
+            if (args[0] == "-v") return ShowVersion( false );
 
             // at least the first argument is an input param
 
