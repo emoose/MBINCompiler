@@ -161,6 +161,11 @@ namespace MBINCompiler {
             return System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString();
         }
 
+        static void WaitForKeypress() {
+            Console.WriteLine("Press any key");
+            Console.ReadKey();
+        }
+
         /// <summary>
         /// Show the version string.
         /// </summary>
@@ -191,6 +196,7 @@ namespace MBINCompiler {
             // TODO: (GH) can probably remove this or change the warning to be more informative.
             Console.WriteLine( "Recompiling .exml back to .mbin is available for testing, use at your own risk!" );
 
+            WaitForKeypress();
             return 0;
         }
 
@@ -204,7 +210,11 @@ namespace MBINCompiler {
         /// <summary>
         static int ShowError(string msg, bool showHelp = false, int exitCode = 2) {
             Console.WriteLine( $"ERROR: {msg}\n" );
-            if (showHelp) ShowHelp();
+            if (showHelp) {
+                ShowHelp();
+            } else {
+                WaitForKeypress();
+            }
             return showHelp ? 1 : exitCode;
         }
 
