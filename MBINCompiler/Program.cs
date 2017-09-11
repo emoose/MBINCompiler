@@ -35,9 +35,19 @@ namespace MBINCompiler {
 
             // no error checking ^^ (todo: error checking)
             var file = new MBINFile( inputPath );
-            file.Load( getVersion );
+            file.Load( );
 
-            if (!getVersion) {
+            if (getVersion) {
+                System.Version mbinVersion = file.Header.GetMBINVersion();
+                Console.WriteLine( mbinVersion );
+
+                //if (mbinVer == null) {
+                //    Console.WriteLine( (new System.Version(0,0,0,0)).ToString() );// "0.0.0.0" );
+                //} else {
+                //    Console.WriteLine( mbinVer );
+                //}
+
+            } else {
                 var data = file.GetData();
                 if (data == null) {
                     Console.WriteLine( $"Failed to deserialize template \"{file.Header.GetXMLTemplateName()}\", has the structure been mapped yet?" );
@@ -321,6 +331,7 @@ namespace MBINCompiler {
                 return ShowError( e.Message );
             }
 
+            //WaitForKeypress();
             return 0;
         }
 
