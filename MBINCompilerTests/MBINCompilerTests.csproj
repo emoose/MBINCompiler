@@ -67,10 +67,6 @@
     <Compile Include="TemplateSizeTest.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\libMBIN\libMBIN.csproj">
-      <Project>{f2d295a6-d082-4eb4-8fc9-f4687f674939}</Project>
-      <Name>libMBIN</Name>
-    </ProjectReference>
     <ProjectReference Include="..\MBINCompiler\MBINCompiler.csproj">
       <Project>{ce736ef9-7be9-4ff0-9551-78f0071aa373}</Project>
       <Name>MBINCompiler</Name>
