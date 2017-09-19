@@ -24,7 +24,7 @@ namespace MBINCompiler {
             }
         }
 
-        static void DecompileFile( string inputPath, string outputPath, bool getVersion = false ) {
+        static void DecompileFile( string inputPath, string outputPath, bool getVersion = false, bool verbose = false ) {
             outputPath = String.IsNullOrEmpty( outputPath ) ? inputPath : outputPath;
 
             outputPath = Path.ChangeExtension( outputPath, ".exml" ); // emoose XML, because there's no way this XML format is compatible with MXML
@@ -38,14 +38,7 @@ namespace MBINCompiler {
             file.Load( );
 
             if (getVersion) {
-                System.Version mbinVersion = file.Header.GetMBINVersion();
-                Console.WriteLine( mbinVersion );
-
-                //if (mbinVer == null) {
-                //    Console.WriteLine( (new System.Version(0,0,0,0)).ToString() );// "0.0.0.0" );
-                //} else {
-                //    Console.WriteLine( mbinVer );
-                //}
+                ShowMBINVersion(file, verbose);
 
             } else {
                 var data = file.GetData();
@@ -180,6 +173,20 @@ namespace MBINCompiler {
             Console.ReadKey();
         }
 
+        static void ShowMBINVersion(MBINFile file, bool verbose = false) {
+            System.Version mbinVersion = file.Header.GetMBINVersion();
+            string versionString = mbinVersion.ToString();
+
+            if (verbose) {
+                if (versionString != "0.0.0.0") {
+                    versionString = "Compiled with MBINCompiler v" + versionString;
+                } else {
+                    versionString = "Unknown MBIN version!\nNot compiled by MBINCompiler.";
+                }
+            }
+            Console.WriteLine( versionString );
+        }
+
         static void ShowVersionStringVerbose() {
             Console.WriteLine( $"MBINCompiler v{GetVersionString()}" );
             Console.WriteLine( $"libMBIN v{libMBIN.Version.GetVersionString()}" );
@@ -258,6 +265,7 @@ namespace MBINCompiler {
         static int Main( string[] args ) {
             string inputPath, outputPath;
             bool getVer = false;
+            bool versionVerbose = false;
 
             if (args.Length == 0)    return ShowHelp();
 
@@ -276,6 +284,7 @@ namespace MBINCompiler {
             // if there is 2 args, is the 2nd arg a version switch?
             if (args.Length > 1) {
                 getVer |= (args[1] == "--version");
+                versionVerbose |= getVer;
                 getVer |= (args[1] == "-v");
             }
 
@@ -322,7 +331,7 @@ namespace MBINCompiler {
                                    + $"FilePath: {inputPath}\n" );
                     }
 
-                    DecompileFile( inputPath, outputPath, getVer );
+                    DecompileFile( inputPath, outputPath, getVer, versionVerbose );
                 }
 
             } catch (Exception e) {
