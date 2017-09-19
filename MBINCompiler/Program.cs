@@ -288,7 +288,7 @@ namespace MBINCompiler {
                 outputPath = String.Empty;
                 if (!getVer && (args.Length > 1)) outputPath = Path.GetFullPath( args[1] );
             } catch (Exception e) {
-                return ShowError( $"ERROR: {e.Message}", true );
+                return ShowError( e.Message, true );
             }
 
             try {
