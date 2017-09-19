@@ -1,6 +1,7 @@
 ﻿namespace libMBIN.Models.Structs
 {
-    public class GcBuildingSpawnData : NMSTemplate // 0x5D0 bytes
+    [NMS(Size = 0x5D0)]
+    public class GcBuildingSpawnData : NMSTemplate
     {
         /* 0x000 */ public float Density;
         [NMS(Size = 4, Ignore = true)]
@@ -15,22 +16,19 @@
         /* 0x561 */ public byte[] Padding561;
 
         /* 0x568 */ public GcSeed Seed;
-        /* 0x578 */ public GcBuildingClassification BuildingClass;
-        /* 0x57C */ public GcBuildingClusterPlacement BuildingClusterPlacement;
-        /* 0x580 */ public bool AddWaypoint;
-        /* 0x581 */ public bool AddShelter;
-        /* 0x582 */ public bool AddLandingPad;
-        /* 0x583 */ public bool GivesShelter;
-
-        /* 0x584 */ public bool PositioningAlignToNormal;
-        /* 0x585 */ public bool PositioningLowerIntoGround;
-        /* 0x588 */ public float PositioningScale;
-        /* 0x58C */ public float PositioningMaxXZRotation;
-        /* 0x590 */ public float PositioningRadius;
-
-        /* 0x594 */ public int InstanceID;
-        [NMS(Size = 0x8, Ignore = true)]
-        /* 0x598 */ public byte[] Padding598;
+        /* 0x578 */ public GcBuildingClassification Classification;
+        /* 0x57C */ public GcBuildingClusterPlacement Placement;
+        /* 0x580 */ public TkNoiseFlattenOptions FlattenType;
+        /* 0x588 */ public bool AddWaypoint;
+        /* 0x589 */ public bool AddShelter;
+        /* 0x58A */ public bool AddLandingPad;
+        /* 0x58B */ public bool GivesShelter;
+        /* 0x58C */ public bool AlignToNormal;
+        /* 0x58D */ public bool LowerIntoGround;
+        /* 0x590 */ public float Scale;
+        /* 0x594 */ public float MaxXZRotation;
+        /* 0x598 */ public float Radius;
+        /* 0x59C */ public int InstanceID;
 
         /* 0x5A0 */ public Vector4f AABBMin;
         /* 0x5B0 */ public Vector4f AABBMax;

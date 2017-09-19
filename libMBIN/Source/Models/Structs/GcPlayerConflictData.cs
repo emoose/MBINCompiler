@@ -5,10 +5,7 @@
         public int ConflictLevel;
         public string[] ConflictLevelValues()
         {
-            return new[]
-            {
-                "Low", "Default", "High"
-            };
+            return new[] { "Low", "Default", "High" };
         }
     }
 }

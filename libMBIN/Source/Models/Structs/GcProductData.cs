@@ -2,7 +2,8 @@
 
 namespace libMBIN.Models.Structs
 {
-    public class GcProductData : NMSTemplate		// size: 0x2D0
+    [NMS(Size = 0x2D0)]
+    public class GcProductData : NMSTemplate
     {
         [NMS(Size = 0x10)]
         /* 0x000 */ public string Id;

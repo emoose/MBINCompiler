@@ -128,7 +128,7 @@
         /* 0X560 */ public float Unknown560;
         /* 0X564 */ public float Unknown564;
         /* 0X568 */ public float Unknown568;
-        /* 0X56C */ public float Unknown56C;
+        /* 0X56C */ public float ThrustAutoBrake;
         /* 0X570 */ public float ReverseBrakeAtmosphereBrakeEffect;
         /* 0X574 */ public float Unknown574;
         /* 0X578 */ public float Unknown578;
@@ -140,11 +140,11 @@
         /* 0X590 */ public float Unknown590;
         /* 0X594 */ public float Unknown594;
         /* 0X598 */ public float ShipTiltOnTurning;
-        /* 0X59C */ public float Unknown59C;
+        /* 0X59C */ public float ReverseShipTiltOnTurning;
         /* 0X5A0 */ public float ShipTiltOnTurningDampening;
         /* 0X5A4 */ public float Unknown5A4;
         /* 0X5A8 */ public float Unknown5A8;
-        /* 0X5AC */ public float Unknown5AC;
+        /* 0X5AC */ public float ReverseSteeringMultiplier;
         /* 0X5B0 */ public float Unknown5B0;
         /* 0X5B4 */ public float Unknown5B4;
         /* 0X5B8 */ public float Unknown5B8;
@@ -276,7 +276,7 @@
         /* 0X80C */ public float Unknown80C;
         /* 0X810 */ public float Unknown810;
         /* 0X814 */ public float Unknown814;
-        /* 0X818 */ public float PuleEnginePlanetCutoffRange;
+        /* 0X818 */ public float PulseEnginePlanetCutoffRange;
         /* 0X81C */ public float Unknown81C;
         /* 0X820 */ public float Unknown820;
         /* 0X824 */ public float Unknown824;
@@ -311,9 +311,9 @@
         /* 0X898 */ public float Unknown898;
         /* 0X89C */ public float Unknown89C;
         /* 0X8A0 */ public float Unknown8A0;
-        /* 0X8A4 */ public float Unknown8A4;
+        /* 0X8A4 */ public float MaxLandingHeight;
         /* 0X8A8 */ public float Unknown8A8;
-        /* 0X8AC */ public float Unknown8AC;
+        /* 0X8AC */ public float MaxAllowableLandingAngle;
         /* 0X8B0 */ public float Unknown8B0;
         /* 0X8B4 */ public float Unknown8B4;
         /* 0X8B8 */ public float Unknown8B8;
@@ -328,7 +328,7 @@
         /* 0X8DC */ public float Unknown8DC;
         /* 0X8E0 */ public float Unknown8E0;
         /* 0X8E4 */ public float Unknown8E4;
-        /* 0X8E8 */ public float Unknown8E8;
+        /* 0X8E8 */ public float MinFreighterCollisionDistance;
         /* 0X8EC */ public float Unknown8EC;
         /* 0X8F0 */ public float Unknown8F0;
         /* 0X8F4 */ public float Unknown8F4;
