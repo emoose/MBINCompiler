@@ -228,6 +228,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcGalaxyAudioSetupData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcGalaxyCameraData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcGalaxyGenerationSetupData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcGalaxyInfoIcons.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcGalaxyMarkerSettings.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcGalaxyMarkerTypes.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcGalaxyRenderAnostreakData.cs" />
