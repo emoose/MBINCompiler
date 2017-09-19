@@ -5,10 +5,7 @@
         public int TradingClass;
         public string[] TradingClassValues()
         {
-            return new[]
-            {
-                "Mining", "HighTech", "Trading", "Manufacturing", "Fusion", "Scientific", "PowerGeneration"
-            };
+            return new[] { "Mining", "HighTech", "Trading", "Manufacturing", "Fusion", "Scientific", "PowerGeneration"};
         }
     }
 }

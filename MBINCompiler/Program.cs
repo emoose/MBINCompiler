@@ -161,6 +161,11 @@ namespace MBINCompiler {
             return System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString();
         }
 
+        static void WaitForKeypress() {
+            Console.WriteLine( "Press any key" );
+            Console.ReadKey();
+        }
+
         /// <summary>
         /// Show the version string.
         /// </summary>
@@ -177,7 +182,7 @@ namespace MBINCompiler {
         /// </summary>
         /// <returns>Always returns 0 (exit code = success)</returns>
         static int ShowHelp() {
-            Console.WriteLine($"MBINCompiler v{GetVersionString()}\n");
+            Console.WriteLine( $"MBINCompiler v{GetVersionString()}\n" );
 
             // TODO: (GH) show general description
             // TODO: (GH) show full syntax
@@ -191,6 +196,7 @@ namespace MBINCompiler {
             // TODO: (GH) can probably remove this or change the warning to be more informative.
             Console.WriteLine( "Recompiling .exml back to .mbin is available for testing, use at your own risk!" );
 
+            WaitForKeypress();
             return 0;
         }
 
@@ -202,9 +208,13 @@ namespace MBINCompiler {
         /// <param name="exitCode">The value to return, unless <paramref name="showHelp"/> is true.</param>
         /// <returns>Returns 1 if <paramref name="showHelp"/> is true, otherwise <paramref name="exitCode"/>.</returns>
         /// <summary>
-        static int ShowError(string msg, bool showHelp = false, int exitCode = 2) {
+        static int ShowError( string msg, bool showHelp = false, int exitCode = 2 ) {
             Console.WriteLine( $"ERROR: {msg}\n" );
-            if (showHelp) ShowHelp();
+            if (showHelp) {
+                ShowHelp();
+            } else {
+                WaitForKeypress();
+            }
             return showHelp ? 1 : exitCode;
         }
 
@@ -214,11 +224,11 @@ namespace MBINCompiler {
         /// <param name="msg"></param>
         /// <param name="exitCode"></param>
         /// <returns></returns>
-        static int ShowError(string msg, int exitCode) {
+        static int ShowError( string msg, int exitCode ) {
             return ShowError( msg, false, exitCode );
         }
 
-        static void ShowWarning(string msg) {
+        static void ShowWarning( string msg ) {
             Console.WriteLine( $"WARNING: {msg}" );
         }
 
@@ -226,17 +236,17 @@ namespace MBINCompiler {
             string inputPath, outputPath;
             bool getVer = false;
 
-            if (args.Length == 0)    return ShowHelp();
+            if (args.Length == 0) return ShowHelp();
 
             // there's at least 1 arg
 
-            if (args[0] == "/?")     return ShowHelp();
-            if (args[0] == "/help")  return ShowHelp();
+            if (args[0] == "/?") return ShowHelp();
+            if (args[0] == "/help") return ShowHelp();
             if (args[0] == "--help") return ShowHelp();
-            if (args[0] == "-h")     return ShowHelp();
+            if (args[0] == "-h") return ShowHelp();
 
             if (args[0] == "-version") return ShowVersion();
-            if (args[0] == "-v")       return ShowVersion();
+            if (args[0] == "-v") return ShowVersion();
 
             // at least the first argument is an input param
 
@@ -294,7 +304,7 @@ namespace MBINCompiler {
             } catch (Exception e) {
                 return ShowError( $"ERROR: {e.Message}" );
             }
-
+            //WaitForKeypress();
             return 0;
         }
 

@@ -265,6 +265,7 @@
     <Compile Include="Source\Models\Structs\GcGalaxyGenerationSetupData.cs" />
     <Compile Include="Source\Models\Structs\GcGalaxyMarkerSettings.cs" />
     <Compile Include="Source\Models\Structs\GcGalaxyMarkerTypes.cs" />
+    <Compile Include="Source\Models\Structs\GcGalaxyInfoIcons.cs" />
     <Compile Include="Source\Models\Structs\GcGalaxyRenderAnostreakData.cs" />
     <Compile Include="Source\Models\Structs\GcGalaxyRenderSetupData.cs" />
     <Compile Include="Source\Models\Structs\GcGalaxySolarSystemOrbitParams.cs" />

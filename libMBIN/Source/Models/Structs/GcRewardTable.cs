@@ -2,11 +2,14 @@
 
 namespace libMBIN.Models.Structs
 {
-    public class GcRewardTable : NMSTemplate        // size: 0x70
+    [NMS(Size = 0x90)]
+    public class GcRewardTable : NMSTemplate
     {
         public List<GcRewardTableEntry> Table;
         public List<GcGenericRewardTableEntry> GenericTable;
         public List<GcGenericRewardTableEntry> InteractionTable;
+        public List<GcGenericRewardTableEntry> OldInteractionTable;
+        public List<GcGenericRewardTableEntry> SpecialRewardTable;
         public List<GcGenericRewardTableEntry> MissionBoardTable;
         public List<GcRewardTableEntitlementItem> EntitlementTable;
         public List<NMSString0x10> TechRewardOrder;

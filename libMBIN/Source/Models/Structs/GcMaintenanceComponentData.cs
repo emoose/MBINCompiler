@@ -2,9 +2,10 @@
 
 namespace libMBIN.Models.Structs
 {
-    public class GcMaintenanceComponentData : NMSTemplate       // size: 0xF0
+    [NMS(Size = 0xF0, Alignment = 0x10)]
+    public class GcMaintenanceComponentData : NMSTemplate
     {
-        /* 0x000 */ public List<GcMaintenanceElement> PreInstalledTech;     // elements are 0x38
+        /* 0x000 */ public List<GcMaintenanceElement> PreInstalledTech;
         /* 0x010 */ public int VisibleMaintenanceSlots;
         /* 0x014 */ public bool AllowRepair;
         /* 0x015 */ public bool AllowCharge;

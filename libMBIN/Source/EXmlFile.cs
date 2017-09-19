@@ -82,7 +82,7 @@ namespace libMBIN
             using (var xmlTextWriter = XmlWriter.Create(stringWriter, xmlSettings))
             {
                 string ver = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString();
-                //xmlTextWriter.WriteComment(String.Format("File created using MBINCompiler version ({0})", ver.Substring(0, ver.Length - 2)));
+                xmlTextWriter.WriteComment(String.Format("File created using MBINCompiler version ({0})", ver.Substring(0, ver.Length - 2)));
                 var data = template.SerializeEXml(false);
                 Serializer.Serialize(xmlTextWriter, data, Namespaces);
                 xmlTextWriter.Flush();

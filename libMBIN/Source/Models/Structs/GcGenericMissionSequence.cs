@@ -59,33 +59,33 @@ namespace libMBIN.Models.Structs
 
         /* 0x350 */ public GcMissionBoardOptions MissionBoardOptions;
 
-        /* 0x370 */ public int AutoStart;
+        /* 0x380 */ public int AutoStart;
         public string[] AutoStartValues()
         {
             return new[] { "None", "AllModes", "NotCreative", "Survival", "Creative", "OnSelected"};
         }
-        /* 0x374 */ public bool RestartOnCompletion;
-        /* 0x375 */ public bool CloseMissionGiver;
+        /* 0x384 */ public bool RestartOnCompletion;
+        /* 0x385 */ public bool CloseMissionGiver;
         [NMS(Size = 0x2, Ignore = true)]
-        /* 0x376 */ public byte[] Padding376;
+        /* 0x386 */ public byte[] Padding386;
 
-        /* 0x378 */ public List<GcAlienPuzzleEntry> Dialog;
-        /* 0x388 */ public List<GcScanEventData> ScanEvents;
-        /* 0x398 */ public List<GcGenericRewardTableEntry> Rewards;
-        /* 0x3A8 */ public List<GcCostTableEntry> Costs;
+        /* 0x388 */ public List<GcAlienPuzzleEntry> Dialog;
+        /* 0x398 */ public List<GcScanEventData> ScanEvents;
+        /* 0x3A8 */ public List<GcGenericRewardTableEntry> Rewards;
+        /* 0x3B8 */ public List<GcCostTableEntry> Costs;
 
-        /* 0x3B8 */ public GcMissionConditionTest StartConditionTest;
-        /* 0x3BC */ public GcMissionConditionTest CancelConditionTest;  // ?? maybe?
-        /* 0x3C0 */ public bool StartIsCancel;
+        /* 0x3C8 */ public GcMissionConditionTest StartConditionTest;
+        /* 0x3CC */ public GcMissionConditionTest CancelConditionTest;  // ?? maybe?
+        /* 0x3D0 */ public bool StartIsCancel;
         [NMS(Size = 0x7, Ignore = true)]
-        /* 0x3C1 */ public byte[] Padding3C1;
+        /* 0x3D1 */ public byte[] Padding3D1;
 
-        /* 0x3C8 */ public List<NMSTemplate> StartingConditions;
-        /* 0x3D8 */ public List<NMSTemplate> CancelingConditions;
-        /* 0x3E8 */ public List<NMSTemplate> NotificationSequence;
-        /* 0x3F8 */ public bool IsProceduralAllowed;
+        /* 0x3D8 */ public List<NMSTemplate> StartingConditions;
+        /* 0x3E8 */ public List<NMSTemplate> CancelingConditions;
+        /* 0x3F8 */ public List<NMSTemplate> NotificationSequence;
+        /* 0x408 */ public bool IsProceduralAllowed;
 
         [NMS(Size = 0x7, Ignore = true)]
-        /* 0x3F9 */ public byte[] EndPadding;
+        /* 0x409 */ public byte[] EndPadding;
     }
 }

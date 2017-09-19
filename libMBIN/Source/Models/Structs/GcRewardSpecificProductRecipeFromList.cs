@@ -9,7 +9,7 @@ namespace libMBIN.Models.Structs
         public int ProductListRewardOrder;
         public string[] ProductListRewardOrderValues()
         {
-            return new[] { "OneRandom", "InOrder" };
+            return new[] { "OneRandom", "InOrder", "TryAllRandom" };
         }
 
         [NMS(Size = 4, Ignore = true)]
