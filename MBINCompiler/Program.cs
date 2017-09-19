@@ -208,19 +208,16 @@ namespace MBINCompiler {
         /// <returns>Always returns 0 (exit code = success)</returns>
         static int ShowHelp() {
             ShowVersionStringVerbose();
-            Console.WriteLine( );
+            Console.WriteLine();
 
             // TODO: (GH) show general description
             // TODO: (GH) show full syntax
 
             Console.WriteLine( @"Usage: MBINCompiler [Input File or Folder]" );
             Console.WriteLine( @"Will write decompiled output to [Input File].exml or [Input Folder]\*.exml" );
-
+            Console.WriteLine();
             Console.WriteLine( @"Usage: MBINCompiler [Input Folder] [Output Folder]" );
             Console.WriteLine( @"Will write decompiled & recompiled files from [Input Folder] and write them to [Output Folder]" );
-
-            // TODO: (GH) can probably remove this or change the warning to be more informative.
-            Console.WriteLine( "Recompiling .exml back to .mbin is available for testing, use at your own risk!" );
 
             WaitForKeypress();
             return 0;
