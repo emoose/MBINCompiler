@@ -327,8 +327,9 @@ namespace MBINCompiler {
 
                     DecompileFile( inputPath, outputPath, getVer );
                 }
+
             } catch (Exception e) {
-                return ShowError( e.Message );
+                return ShowError( "An unknown exception occurred!\n" + e.Message + "\nStacktrace:\n" + e.StackTrace );
             }
 
             //WaitForKeypress();
