@@ -1,5 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
+    [NMS(Alignment = 0x8)]
     public class GcShootableComponentData : NMSTemplate
     {
         /* 0x00 */ 	public int Health;

@@ -32,6 +32,10 @@
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcAISpaceshipMappingData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcAISpaceshipModelData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcAISpaceshipModelDataArray.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcMissionConditionIsMissionInProgress.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcMissionConditionMissionMessageWarp.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcMissionConsequenceRemoveCommunicatorMessage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcMissionSequenceStartMission.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcAISpaceshipPreloadCacheData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcAISpaceshipPreloadCacheDataTable.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcAISpaceshipPreloadList.cs" />
@@ -764,7 +768,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\Globals\GcGraphicsGlobals.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\Globals\GcPlacementGlobals.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\Globals\GcPlayerGlobals.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\Globals\GcPlayerGlobals_old.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\Globals\GcRobotGlobals.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\Globals\GcSceneOptions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\Globals\GcScratchpadGlobals.cs" />

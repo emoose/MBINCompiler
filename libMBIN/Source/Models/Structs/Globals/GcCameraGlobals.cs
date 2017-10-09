@@ -181,8 +181,8 @@
         /* 0X17F8 */ public float Unknown17F8;
         /* 0X17FC */ public float Unknown17FC;
         /* 0X1800 */ public bool Unknown1800;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0X1804 */ public byte[] Padding1804;
+        [NMS(Size = 0x7, Ignore = true)]
+        /* 0X1801 */ public byte[] Padding1801;
 
         public GcCameraFollowSettings Unknown1808;
         public GcCameraFollowSettings Unknown18D8;

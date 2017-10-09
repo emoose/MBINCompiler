@@ -174,10 +174,10 @@
         /* 0X2C0 */ public float Unknown2C0;
         /* 0x2C4 */ public float Unknown2C4;
         /* 0x2C8 */ public float Unknown2C8;
-        /* 0X2CC */ public float SprintStaminaDecreaseRate;
-        /* 0X2D0 */ public float StaminaIncreaseRate;
-        /* 0X2D4 */ public float Unknown2D4;
-        /* 0X2D8 */ public float Unknown2D8;
+        /* 0X2CC */ public float Unknown2CC;
+        /* 0X2D0 */ public float Unknown2D0;
+        /* 0X2D4 */ public float SprintStaminaDecreaseRate;
+        /* 0X2D8 */ public float StaminaIncreaseRate;
         /* 0X2DC */ public float Unknown2DC;
         /* 0X2E0 */ public float Unknown2E0;
         /* 0X2E4 */ public float Unknown2E4;

@@ -8,5 +8,7 @@
         {
             return new[] { "None", "Active", "Joined", "Reward"};
         }
+        public int FreighterBattleDistance;
+        public TkEqualityEnum FreighterBattleTest;
     }
 }

@@ -100,7 +100,7 @@ namespace libMBIN.Models.Structs
                 "AnomalyComputer", "AtlasPlinth", "Epilogue" })]
         /* 0x3EFB0 */ public GcSavedInteractionRaceData[] SavedInteractionIndicies;
 
-        /* 0x3F678 */ public List<NMSString0x10> InteractionProgressTable;
+        /* 0x3F678 */ public List<NMSString0x20> InteractionProgressTable;
 
         [NMS(Size = 0xA)]
         /* 0x3F688 */ public GcUniverseAddressData[] AtlasStationAdressData;

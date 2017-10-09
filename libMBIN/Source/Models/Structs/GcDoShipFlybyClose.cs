@@ -1,5 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
+    [NMS(Alignment = 0x8)]
     public class GcDoShipFlybyClose : NMSTemplate
     {
         public float LockOffset;        // 42C80000h

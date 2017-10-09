@@ -4,28 +4,27 @@ namespace libMBIN.Models.Structs
     {
         /* 0x0 */ public bool Unknown0;
         /* 0x1 */ public bool Unknown1;
-        /* 0x4 */ public float Unknown4;
-        /* 0x8 */ public float Unknown8;
-        /* 0xC */ public float UnknownC;
-        /* 0X10 */ public int UnknownInt10;
-        /* 0X14 */ public int UnknownInt14;
-        /* 0X18 */ public int UnknownInt18;
+        [NMS(Size = 0xE, Ignore = true)]
+        /* 0x2 */ public byte[] Padding2;
+        /* 0x10 */ public float Unknown10;
+        /* 0x14 */ public float Unknown14;
+        /* 0x18 */ public float Unknown18;
+        /* 0x1C */ public float Unknown1C;
+        /* 0x20 */ public float Unknown20;
+        /* 0x24 */ public float Unknown24;
+        /* 0x28 */ public float Unknown28;
+        /* 0X2C */ public int UnknownInt2C;
+        /* 0X30 */ public int UnknownInt30;
+        /* 0X34 */ public int UnknownInt34;
         [NMS(Size = 0x20)]
-        /* 0x1C */ public string Unknown1C;     // string is '...'
-        /* 0x3C */ public int UnknownInt3C;
+        /* 0x38 */ public string Unknown38;     // string is '...'
+        /* 0x58 */ public int UnknownInt3C;
         [NMS(Size = 0x20)]
-        /* 0x40 */ public string Unknown40;     // string is '...'
+        /* 0x5C */ public string Unknown5C;     // string is '...'
 
-        /* 0X60 */ public float Unknown60;
-        /* 0X64 */ public float Unknown64;
-        /* 0X68 */ public bool Unknown68;
-        /* 0X6C */ public float Unknown6C;
-        /* 0X70 */ public float Unknown70;
-        /* 0X74 */ public float Unknown74;
-        /* 0X78 */ public float Unknown78;
         /* 0X7C */ public float Unknown7C;
         /* 0X80 */ public float Unknown80;
-        /* 0X84 */ public float Unknown84;
+        /* 0X84 */ public bool Unknown84;
         /* 0X88 */ public float Unknown88;
         /* 0X8C */ public float Unknown8C;
         /* 0X90 */ public float Unknown90;
@@ -52,13 +51,13 @@ namespace libMBIN.Models.Structs
         /* 0XE4 */ public float UnknownE4;
         /* 0XE8 */ public float UnknownE8;
         /* 0XEC */ public float UnknownEC;
-        /* 0XF0 */ public int UnknownIntF0;
-        /* 0XF4 */ public int UnknownIntF4;
-        /* 0XF8 */ public int UnknownIntF8;
+        /* 0XF0 */ public float UnknownF0;
+        /* 0XF4 */ public float UnknownF4;
+        /* 0XF8 */ public float UnknownF8;
         /* 0XFC */ public float UnknownFC;
-        /* 0X100 */ public float Unknown100;
-        /* 0X104 */ public float Unknown104;
-        /* 0X108 */ public float Unknown108;
+        /* 0X100 */ public int UnknownInt100;
+        /* 0X104 */ public int UnknownInt104;
+        /* 0X108 */ public int UnknownInt108;
         /* 0X10C */ public float Unknown10C;
         /* 0X110 */ public float Unknown110;
         /* 0X114 */ public float Unknown114;
@@ -69,14 +68,14 @@ namespace libMBIN.Models.Structs
         /* 0X128 */ public float Unknown128;
         /* 0X12C */ public float Unknown12C;
         /* 0X130 */ public float Unknown130;
+        /* 0X134 */ public float Unknown134;
+        /* 0X138 */ public float Unknown138;
+        /* 0X13C */ public float Unknown13C;
+        /* 0X140 */ public float Unknown140;
         [NMS(Size = 0xC, Ignore = true)]
-        /* 0x134 */ public byte[] Padding134;
-        /* 0x140 */ public GcScanEffectData Unknown140;
-        /* 0x190 */ public bool Unknown190;
-        /* 0X194 */ public float Unknown194;
-        /* 0X198 */ public float Unknown198;
-        /* 0X19C */ public float Unknown19C;
-        /* 0X1A0 */ public float Unknown1A0;
+        /* 0x144 */ public byte[] Padding144;
+        /* 0x150 */ public GcScanEffectData Unknown150;
+        /* 0x1A0 */ public bool Unknown1A0;
         /* 0X1A4 */ public float Unknown1A4;
         /* 0X1A8 */ public float Unknown1A8;
         /* 0X1AC */ public float Unknown1AC;
@@ -88,14 +87,15 @@ namespace libMBIN.Models.Structs
         /* 0X1C4 */ public float Unknown1C4;
         /* 0X1C8 */ public float Unknown1C8;
         /* 0X1CC */ public float Unknown1CC;
-        /* 0x1D0 */ public bool Unknown1D0;
+        /* 0X1D0 */ public float Unknown1D0;
+        /* 0X1D4 */ public float Unknown1D4;
+        /* 0X1D8 */ public float Unknown1D8;
+        /* 0X1DC */ public float Unknown1DC;
+        /* 0x1E0 */ public bool Unknown1E0;
         [NMS(Size = 0xF, Ignore = true)]
-        /* 0x1E0 */ public GcScanEffectData Unknown1E0;
-        /* 0x230 */ public bool Unknown230;
-        /* 0X234 */ public float Unknown234;
-        /* 0X238 */ public float Unknown238;
-        /* 0X23C */ public float Unknown23C;
-        /* 0X240 */ public float Unknown240;
+        /* 0x1E1 */ public byte[] Padding1E1;
+        /* 0x1F0 */ public GcScanEffectData Unknown1F0;
+        /* 0x240 */ public bool Unknown240;
         /* 0X244 */ public float Unknown244;
         /* 0X248 */ public float Unknown248;
         /* 0X24C */ public float Unknown24C;
@@ -129,11 +129,11 @@ namespace libMBIN.Models.Structs
         /* 0X2BC */ public float Unknown2BC;
         /* 0X2C0 */ public float Unknown2C0;
         /* 0X2C4 */ public float Unknown2C4;
-        /* 0X2C8 */ public int UnknownInt2C8;
+        /* 0X2C8 */ public float Unknown2C8;
         /* 0X2CC */ public float Unknown2CC;
         /* 0X2D0 */ public float Unknown2D0;
         /* 0X2D4 */ public float Unknown2D4;
-        /* 0X2D8 */ public float Unknown2D8;
+        /* 0X2D8 */ public int UnknownInt2D8;
         /* 0X2DC */ public float Unknown2DC;
         /* 0X2E0 */ public float Unknown2E0;
         /* 0X2E4 */ public float Unknown2E4;
@@ -149,25 +149,25 @@ namespace libMBIN.Models.Structs
         /* 0X30C */ public float Unknown30C;
         /* 0X310 */ public float Unknown310;
         /* 0X314 */ public float Unknown314;
-        /* 0X318 */ public int UnknownInt318;
+        /* 0X318 */ public float Unknown318;
         /* 0X31C */ public float Unknown31C;
         /* 0X320 */ public float Unknown320;
         /* 0X324 */ public float Unknown324;
-        /* 0X328 */ public float Unknown328;
+        /* 0X328 */ public int UnknownInt328;
         /* 0X32C */ public float Unknown32C;
         /* 0X330 */ public float Unknown330;
         /* 0X334 */ public float Unknown334;
         /* 0X338 */ public float Unknown338;
         /* 0X33C */ public float Unknown33C;
         /* 0X340 */ public float Unknown340;
+        /* 0X344 */ public float Unknown344;
+        /* 0X348 */ public float Unknown348;
+        /* 0X34C */ public float Unknown34C;
+        /* 0X350 */ public float Unknown350;
         [NMS(Size = 0xC, Ignore = true)]
-        /* 0x344 */ public byte[] Padding344;
-        /* 0x350 */ public GcScanEffectData Unknown350;
+        /* 0x354 */ public byte[] Padding354;
+        /* 0x360 */ public GcScanEffectData Unknown360;
 
-        /* 0X3A0 */ public float Unknown3A0;
-        /* 0X3A4 */ public float Unknown3A4;
-        /* 0X3A8 */ public float Unknown3A8;
-        /* 0X3AC */ public float Unknown3AC;
         /* 0X3B0 */ public float Unknown3B0;
         /* 0X3B4 */ public float Unknown3B4;
         /* 0X3B8 */ public float Unknown3B8;
@@ -182,15 +182,15 @@ namespace libMBIN.Models.Structs
         /* 0X3DC */ public float Unknown3DC;
         /* 0X3E0 */ public float Unknown3E0;
         /* 0X3E4 */ public float Unknown3E4;
-        /* 0X3E8 */ public int UnknownInt3E8;
-        /* 0X3EC */ public float PlanetScanTime;
+        /* 0X3E8 */ public float Unknown3E8;
+        /* 0X3EC */ public float Unknown3EC;
         /* 0X3F0 */ public float Unknown3F0;
         /* 0X3F4 */ public float Unknown3F4;
         /* 0X3F8 */ public int UnknownInt3F8;
-        /* 0X3FC */ public float Unknown3FC;
+        /* 0X3FC */ public float PlanetScanTime;
         /* 0X400 */ public float Unknown400;
         /* 0X404 */ public float Unknown404;
-        /* 0X408 */ public float Unknown408;
+        /* 0X408 */ public int UnknownInt408;
         /* 0X40C */ public float Unknown40C;
         /* 0X410 */ public float Unknown410;
         /* 0X414 */ public float Unknown414;
@@ -205,11 +205,11 @@ namespace libMBIN.Models.Structs
         /* 0X438 */ public float Unknown438;
         /* 0X43C */ public float Unknown43C;
         /* 0X440 */ public float Unknown440;
-        /* 0X444 */ public int UnknownInt444;
+        /* 0X444 */ public float Unknown444;
         /* 0X448 */ public float Unknown448;
         /* 0X44C */ public float Unknown44C;
         /* 0X450 */ public float Unknown450;
-        /* 0X454 */ public float Unknown454;
+        /* 0X454 */ public int UnknownInt454;
         /* 0X458 */ public float Unknown458;
         /* 0X45C */ public float Unknown45C;
         /* 0X460 */ public float Unknown460;
@@ -228,30 +228,30 @@ namespace libMBIN.Models.Structs
         /* 0X494 */ public float Unknown494;
         /* 0X498 */ public float Unknown498;
         /* 0X49C */ public float Unknown49C;
-        /* 0X4A0 */ public int UnknownInt4A0;
+        /* 0X4A0 */ public float Unknown4A0;
         /* 0X4A4 */ public float Unknown4A4;
         /* 0X4A8 */ public float Unknown4A8;
         /* 0X4AC */ public float Unknown4AC;
-        /* 0X4B0 */ public float Unknown4B0;
+        /* 0X4B0 */ public int UnknownInt4B0;
         /* 0X4B4 */ public float Unknown4B4;
         /* 0X4B8 */ public float Unknown4B8;
         /* 0X4BC */ public float Unknown4BC;
-
-        /* 0X4C0 */ public float Unknown4C0;        // these 0x10 bytes are the same in 0x10. struct repeated 2x?
+        /* 0X4C0 */ public float Unknown4C0;
         /* 0X4C4 */ public float Unknown4C4;
-        /* 0X4C8 */ public int UnknownInt4C8;
-        /* 0X4CC */ public int UnknownInt4CC;
+        /* 0X4C8 */ public float Unknown4C8;
+        /* 0X4CC */ public float Unknown4CC;
 
-        /* 0X4D0 */ public float Unknown4D0;
+        /* 0X4D0 */ public float Unknown4D0;        // these 0x10 bytes are the same in 0x10. struct repeated 2x?
         /* 0X4D4 */ public float Unknown4D4;
         /* 0X4D8 */ public int UnknownInt4D8;
         /* 0X4DC */ public int UnknownInt4DC;
 
-        /* 0X4E0 */ public int UnknownInt4E0;
+        /* 0X4E0 */ public float Unknown4E0;
         /* 0X4E4 */ public float Unknown4E4;
-        /* 0X4E8 */ public float Unknown4E8;
-        /* 0X4EC */ public float Unknown4EC;
-        /* 0X4F0 */ public float Unknown4F0;
+        /* 0X4E8 */ public int UnknownInt4E8;
+        /* 0X4EC */ public int UnknownInt4EC;
+
+        /* 0X4F0 */ public int UnknownInt4F0;
         /* 0X4F4 */ public float Unknown4F4;
         /* 0X4F8 */ public float Unknown4F8;
         /* 0X4FC */ public float Unknown4FC;
@@ -260,11 +260,11 @@ namespace libMBIN.Models.Structs
         /* 0X508 */ public float Unknown508;
         /* 0X50C */ public float Unknown50C;
         /* 0X510 */ public float Unknown510;
-        /* 0X514 */ public int UnknownInt514;
+        /* 0X514 */ public float Unknown514;
         /* 0X518 */ public float Unknown518;
         /* 0X51C */ public float Unknown51C;
         /* 0X520 */ public float Unknown520;
-        /* 0X524 */ public float Unknown524;
+        /* 0X524 */ public int UnknownInt524;
         /* 0X528 */ public float Unknown528;
         /* 0X52C */ public float Unknown52C;
         /* 0X530 */ public float Unknown530;
@@ -289,15 +289,15 @@ namespace libMBIN.Models.Structs
         /* 0X57C */ public float Unknown57C;
         /* 0X580 */ public float Unknown580;
         /* 0X584 */ public float Unknown584;
-        /* 0X588 */ public int UnknownInt588;
-        /* 0X58C */ public int UnknownInt58C;
+        /* 0X588 */ public float Unknown588;
+        /* 0X58C */ public float Unknown58C;
         /* 0X590 */ public float Unknown590;
         /* 0X594 */ public float Unknown594;
-        /* 0X598 */ public float Unknown598;
-        /* 0X59C */ public float Unknown59C;
+        /* 0X598 */ public int UnknownInt598;
+        /* 0X59C */ public int UnknownInt59C;
         /* 0X5A0 */ public float Unknown5A0;
-        /* 0X5A4 */ public float Unknown5A4;
-        /* 0X5A8 */ public float Unknown5A8;
+        /* 0X5A4 */ public int UnknownInt5A4;
+        /* 0X5A8 */ public int UnknownInt5A8;
         /* 0X5AC */ public float Unknown5AC;
         /* 0X5B0 */ public float Unknown5B0;
         /* 0X5B4 */ public float Unknown5B4;
@@ -320,30 +320,31 @@ namespace libMBIN.Models.Structs
         /* 0X5F8 */ public float Unknown5F8;
         /* 0X5FC */ public float Unknown5FC;
         /* 0X600 */ public float Unknown600;
+        /* 0X604 */ public float Unknown604;
+        /* 0X608 */ public float Unknown608;
+        /* 0X60C */ public float Unknown60C;
+        /* 0X610 */ public float Unknown610;
+        /* 0X614 */ public float Unknown614;
+        /* 0X618 */ public float Unknown618;
+        /* 0X61C */ public float Unknown61C;
 
-        /* 0x604 */ public TkNGuiRectanglePulseEffect Unknown604;
-        /* 0x618 */ public TkNGuiRectanglePulseEffect Unknown618;
-        /* 0x62C */ public float Unknown62C;
-        /* 0x630 */ public float Unknown630;
-        /* 0X634 */ public float Unknown634;
-        /* 0X638 */ public float Unknown638;
-        /* 0X63C */ public float Unknown63C;
-        /* 0X640 */ public float Unknown640;
-        /* 0X644 */ public float Unknown644;
-        /* 0X648 */ public float Unknown648;
-        /* 0X64C */ public float Unknown64C;
-        /* 0X650 */ public float Unknown650;
+        /* 0x620 */ public TkNGuiRectanglePulseEffect Unknown620;
+        /* 0x634 */ public TkNGuiRectanglePulseEffect Unknown634;
+        /* 0x648 */ public float Unknown648;        // this and next float probably padding...
+        /* 0x64C */ public float Unknown64C;
+
+        /* 0x650 */ public float Unknown650;
         /* 0X654 */ public float Unknown654;
-        /* 0X658 */ public int UnknownInt658;
-        /* 0X65C */ public bool Unknown65C;
+        /* 0X658 */ public float Unknown658;
+        /* 0X65C */ public float Unknown65C;
         /* 0X660 */ public float Unknown660;
         /* 0X664 */ public float Unknown664;
         /* 0X668 */ public float Unknown668;
         /* 0X66C */ public float Unknown66C;
         /* 0X670 */ public float Unknown670;
         /* 0X674 */ public float Unknown674;
-        /* 0X678 */ public float Unknown678;
-        /* 0X67C */ public float Unknown67C;
+        /* 0X678 */ public int UnknownInt678;
+        /* 0X67C */ public bool Unknown67C;
         /* 0X680 */ public float Unknown680;
         /* 0X684 */ public float Unknown684;
         /* 0X688 */ public float Unknown688;
@@ -389,127 +390,127 @@ namespace libMBIN.Models.Structs
         /* 0X728 */ public float Unknown728;
         /* 0X72C */ public float Unknown72C;
         /* 0X730 */ public float Unknown730;
+        /* 0X734 */ public float Unknown734;
+        /* 0X738 */ public float Unknown738;
+        /* 0X73C */ public float Unknown73C;
+        /* 0X740 */ public float Unknown740;
+        /* 0X744 */ public float Unknown744;
+        /* 0X748 */ public float Unknown748;
+        /* 0X74C */ public float Unknown74C;
+        /* 0X750 */ public float Unknown750;
         [NMS(Size = 0x80)]
-        /* 0x734 */ public string Unknown734;
+        /* 0x754 */ public string Unknown754;
         [NMS(Size = 0x80)]
-        /* 0x7B4 */ public string Unknown7B4;
+        /* 0x7D4 */ public string Unknown7D4;
         [NMS(Size = 0x80)]
-        /* 0x834 */ public string Unknown834;
+        /* 0x854 */ public string Unknown854;
         [NMS(Size = 0x80)]
-        /* 0x8B4 */ public string Unknown8B4;
+        /* 0x8D4 */ public string Unknown8D4;
         [NMS(Size = 0x80)]
-        /* 0x934 */ public string Unknown934;
+        /* 0x954 */ public string Unknown954;
         [NMS(Size = 0x80)]
-        /* 0x9B4 */ public string Unknown9B4;
+        /* 0x9D4 */ public string Unknown9D4;
         [NMS(Size = 0x80)]
-        /* 0xA34 */ public string UnknownA34;
+        /* 0xA54 */ public string UnknownA54;
         [NMS(Size = 0x80)]
-        /* 0xAB4 */ public string UnknownAB4;
+        /* 0xAD4 */ public string UnknownAD4;
         [NMS(Size = 0x80)]
-        /* 0xB34 */ public string UnknownB34;
+        /* 0xB54 */ public string UnknownB54;
         [NMS(Size = 0x80)]
-        /* 0xBB4 */ public string UnknownBB4;
+        /* 0xBD4 */ public string UnknownBD4;
         [NMS(Size = 0x80)]
-        /* 0xC34 */ public string UnknownC34;
+        /* 0xC54 */ public string UnknownC54;
         [NMS(Size = 0x80)]
-        /* 0xCB4 */ public string UnknownCB4;
+        /* 0xCD4 */ public string UnknownCD4;
         [NMS(Size = 0x80)]
-        /* 0xD34 */ public string UnknownD34;
+        /* 0xD54 */ public string UnknownD54;
         [NMS(Size = 0x80)]
-        /* 0xDB4 */ public string UnknownDB4;
+        /* 0xDD4 */ public string UnknownDD4;
         [NMS(Size = 0x80)]
-        /* 0xE34 */ public string UnknownE34;
+        /* 0xE54 */ public string UnknownE54;
         [NMS(Size = 0x80)]
-        /* 0xEB4 */ public string UnknownEB4;
+        /* 0xED4 */ public string UnknownED4;
         [NMS(Size = 0x80)]
-        /* 0xF34 */ public string UnknownF34;
+        /* 0xF54 */ public string UnknownF54;
         [NMS(Size = 0x80)]
-        /* 0xFB4 */ public string UnknownFB4;
+        /* 0xFD4 */ public string UnknownFD4;
         [NMS(Size = 0x80)]
-        /* 0x1034 */ public string Unknown1034;
+        /* 0x1054 */ public string Unknown1054;
         [NMS(Size = 0x80)]
-        /* 0x10B4 */ public string Unknown10B4;
+        /* 0x10D4 */ public string Unknown10D4;
         [NMS(Size = 0x80)]
-        /* 0x1134 */ public string Unknown1134;
+        /* 0x1154 */ public string Unknown1154;
         [NMS(Size = 0x80)]
-        /* 0x11B4 */ public string Unknown11B4;
+        /* 0x11D4 */ public string Unknown11D4;
         [NMS(Size = 0x80)]
-        /* 0x1234 */ public string Unknown1234;
+        /* 0x1254 */ public string Unknown1254;
         [NMS(Size = 0x80)]
-        /* 0x12B4 */ public string Unknown12B4;
+        /* 0x12D4 */ public string Unknown12D4;
         [NMS(Size = 0x80)]
-        /* 0x1334 */ public string Unknown1334;
+        /* 0x1354 */ public string Unknown1354;
         [NMS(Size = 0x80)]
-        /* 0x13B4 */ public string Unknown13B4;
+        /* 0x13D4 */ public string Unknown13D4;
         [NMS(Size = 0x80)]
-        /* 0x1434 */ public string Unknown1434;
+        /* 0x1454 */ public string Unknown1454;
         [NMS(Size = 0x80)]
-        /* 0x14B4 */ public string Unknown14B4;
+        /* 0x14D4 */ public string Unknown14D4;
         [NMS(Size = 0x80)]
-        /* 0x1534 */ public string Unknown1534;
+        /* 0x1554 */ public string Unknown1554;
         [NMS(Size = 0x80)]
-        /* 0x15B4 */ public string Unknown15B4;
+        /* 0x15D4 */ public string Unknown15D4;
         [NMS(Size = 0x80)]
-        /* 0x1634 */ public string Unknown1634;
+        /* 0x1654 */ public string Unknown1654;
         [NMS(Size = 0x80)]
-        /* 0x16B4 */ public string Unknown16B4;
+        /* 0x16D4 */ public string Unknown16D4;
         [NMS(Size = 0x80)]
-        /* 0x1734 */ public string Unknown1734;
+        /* 0x1754 */ public string Unknown1754;
         [NMS(Size = 0x80)]
-        /* 0x17B4 */ public string Unknown17B4;
+        /* 0x17D4 */ public string Unknown17D4;
         [NMS(Size = 0x80)]
-        /* 0x1834 */ public string Unknown1834;
+        /* 0x1854 */ public string Unknown1854;
         [NMS(Size = 0x80)]
-        /* 0x18B4 */ public string Unknown18B4;
+        /* 0x18D4 */ public string Unknown18D4;
         [NMS(Size = 0x80)]
-        /* 0x1934 */ public string Unknown1934;
+        /* 0x1954 */ public string Unknown1954;
         [NMS(Size = 0x80)]
-        /* 0x19B4 */ public string Unknown19B4;
+        /* 0x19D4 */ public string Unknown19D4;
         [NMS(Size = 0x80)]
-        /* 0x1A34 */ public string Unknown1A34;
+        /* 0x1A54 */ public string Unknown1A54;
         [NMS(Size = 0x80)]
-        /* 0x1AB4 */ public string Unknown1AB4;
+        /* 0x1AD4 */ public string Unknown1AD4;
         [NMS(Size = 0x80)]
-        /* 0x1B34 */ public string Unknown1B34;
+        /* 0x1B54 */ public string Unknown1B54;
         [NMS(Size = 0x80)]
-        /* 0x1BB4 */ public string Unknown1BB4;
+        /* 0x1BD4 */ public string Unknown1BD4;
         [NMS(Size = 0x80)]
-        /* 0x1C34 */ public string Unknown1C34;
+        /* 0x1C54 */ public string Unknown1C54;
         [NMS(Size = 0x80)]
-        /* 0x1CB4 */ public string Unknown1CB4;
+        /* 0x1CD4 */ public string Unknown1CD4;
         [NMS(Size = 0x80)]
-        /* 0x1D34 */ public string Unknown1D34;
+        /* 0x1D54 */ public string Unknown1D54;
         [NMS(Size = 0x80)]
-        /* 0x1DB4 */ public string Unknown1DB4;
+        /* 0x1DD4 */ public string Unknown1DD4;
         [NMS(Size = 0x80)]
-        /* 0x1E34 */ public string Unknown1E34;
+        /* 0x1E54 */ public string Unknown1E54;
         [NMS(Size = 0x80)]
-        /* 0x1EB4 */ public string Unknown1EB4;
+        /* 0x1ED4 */ public string Unknown1ED4;
         [NMS(Size = 0x80)]
-        /* 0x1F34 */ public string Unknown1F34;
+        /* 0x1F54 */ public string Unknown1F54;
         [NMS(Size = 0x80)]
-        /* 0x1FB4 */ public string Unknown1FB4;
+        /* 0x1FD4 */ public string Unknown1FD4;
         [NMS(Size = 0x80)]
-        /* 0x2034 */ public string Unknown2034;
+        /* 0x2054 */ public string Unknown2054;
         [NMS(Size = 0x80)]
-        /* 0x20B4 */ public string Unknown20B4;
+        /* 0x20D4 */ public string Unknown20D4;
         [NMS(Size = 0x80)]
-        /* 0x2134 */ public string Unknown2134;
+        /* 0x2154 */ public string Unknown2154;
         [NMS(Size = 0x80)]
-        /* 0x21B4 */ public string Unknown21B4;
+        /* 0x21D4 */ public string Unknown21D4;
         [NMS(Size = 0x80)]
-        /* 0x2234 */ public string Unknown2234;
+        /* 0x2254 */ public string Unknown2254;
 
-        /* 0x22B4 */ public float Unkown22B4;
-        /* 0x22B8 */ public int Unknown22B8;
-        /* 0X22BC */ public float Unknown22BC;
-        /* 0X22C0 */ public float Unknown22C0;
-        /* 0X22C4 */ public float Unknown22C4;
-        /* 0X22C8 */ public float Unknown22C8;
-        /* 0X22CC */ public float Unknown22CC;
-        /* 0X22D0 */ public float Unknown22D0;
-        /* 0X22D4 */ public float Unknown22D4;
-        /* 0X22D8 */ public float Unknown22D8;
+        /* 0x22D4 */ public float Unkown22D4;
+        /* 0x22D8 */ public int Unknown22D8;
         /* 0X22DC */ public float Unknown22DC;
         /* 0X22E0 */ public float Unknown22E0;
         /* 0X22E4 */ public float Unknown22E4;
@@ -551,21 +552,21 @@ namespace libMBIN.Models.Structs
         /* 0X2374 */ public float Unknown2374;
         /* 0X2378 */ public float Unknown2378;
         /* 0X237C */ public float Unknown237C;
+        /* 0X2380 */ public float Unknown2380;
+        /* 0X2384 */ public float Unknown2384;
+        /* 0X2388 */ public float Unknown2388;
+        /* 0X238C */ public float Unknown238C;
+        /* 0X2390 */ public float Unknown2390;
+        /* 0X2394 */ public float Unknown2394;
+        /* 0X2398 */ public float Unknown2398;
+        /* 0X239C */ public float Unknown239C;
         [NMS(Size = 0x20)]
-		/* 0x2380 */ public string Unknown2380;
-		[NMS(Size = 0x20)]
 		/* 0x23A0 */ public string Unknown23A0;
 		[NMS(Size = 0x20)]
 		/* 0x23C0 */ public string Unknown23C0;
+		[NMS(Size = 0x20)]
+		/* 0x23E0 */ public string Unknown23E0;
 
-		/* 0X23E0 */ public float Unknown23E0;
-		/* 0X23E4 */ public float Unknown23E4;
-		/* 0X23E8 */ public float Unknown23E8;
-		/* 0X23EC */ public float Unknown23EC;
-		/* 0X23F0 */ public float Unknown23F0;
-		/* 0X23F4 */ public float Unknown23F4;
-		/* 0X23F8 */ public float Unknown23F8;
-		/* 0X23FC */ public float Unknown23FC;
 		/* 0X2400 */ public float Unknown2400;
 		/* 0X2404 */ public float Unknown2404;
 		/* 0X2408 */ public float Unknown2408;
@@ -590,8 +591,7 @@ namespace libMBIN.Models.Structs
 		/* 0X2454 */ public float Unknown2454;
 		/* 0X2458 */ public float Unknown2458;
 		/* 0X245C */ public float Unknown245C;
-
-		/* 0X2460 */ public float Unknown2460;      // some kind of struct here? (0x20 long repeated twice)
+		/* 0X2460 */ public float Unknown2460;
 		/* 0X2464 */ public float Unknown2464;
 		/* 0X2468 */ public float Unknown2468;
 		/* 0X246C */ public float Unknown246C;
@@ -600,7 +600,7 @@ namespace libMBIN.Models.Structs
 		/* 0X2478 */ public float Unknown2478;
 		/* 0X247C */ public float Unknown247C;
 
-		/* 0X2480 */ public float Unknown2480;
+		/* 0X2480 */ public float Unknown2480;      // some kind of struct here? (0x20 long repeated twice)
 		/* 0X2484 */ public float Unknown2484;
 		/* 0X2488 */ public float Unknown2488;
 		/* 0X248C */ public float Unknown248C;
@@ -614,15 +614,16 @@ namespace libMBIN.Models.Structs
 		/* 0X24A8 */ public float Unknown24A8;
 		/* 0X24AC */ public float Unknown24AC;
 		/* 0X24B0 */ public float Unknown24B0;
-		/* 0X24B4 */ public int UnknownInt24B4;
+		/* 0X24B4 */ public float Unknown24B4;
 		/* 0X24B8 */ public float Unknown24B8;
 		/* 0X24BC */ public float Unknown24BC;
+
 		/* 0X24C0 */ public float Unknown24C0;
 		/* 0X24C4 */ public float Unknown24C4;
 		/* 0X24C8 */ public float Unknown24C8;
 		/* 0X24CC */ public float Unknown24CC;
 		/* 0X24D0 */ public float Unknown24D0;
-		/* 0X24D4 */ public float Unknown24D4;
+		/* 0X24D4 */ public int UnknownInt24D4;
 		/* 0X24D8 */ public float Unknown24D8;
 		/* 0X24DC */ public float Unknown24DC;
 		/* 0X24E0 */ public float Unknown24E0;
@@ -653,23 +654,23 @@ namespace libMBIN.Models.Structs
 		/* 0X2544 */ public float Unknown2544;
 		/* 0X2548 */ public float Unknown2548;
 		/* 0X254C */ public float Unknown254C;
-        /* 0x2550 */ public bool Unknown2550;
-        /* 0x2551 */ public bool Unknown2551;
-        /* 0x2552 */ public bool Unknown2552;
-        [NMS(Size = 0x20)]
-        /* 0x2553 */ public string Unknown2553;
+		/* 0X2550 */ public float Unknown2550;
+		/* 0X2554 */ public float Unknown2554;
+		/* 0X2558 */ public float Unknown2558;
+		/* 0X255C */ public float Unknown255C;
+		/* 0X2560 */ public float Unknown2560;
+		/* 0X2564 */ public float Unknown2564;
+		/* 0X2568 */ public float Unknown2568;
+		/* 0X256C */ public float Unknown256C;
+        /* 0x2570 */ public bool Unknown2570;
+        /* 0x2571 */ public bool Unknown2571;
+        /* 0x2572 */ public bool Unknown2572;
         [NMS(Size = 0x20)]
         /* 0x2573 */ public string Unknown2573;
-        /* 0x2594 */ public float Unknown2594;
-        /* 0X2598 */ public float Unknown2598;
-		/* 0X259C */ public float Unknown259C;
-		/* 0X25A0 */ public float Unknown25A0;
-		/* 0X25A4 */ public float Unknown25A4;
-		/* 0X25A8 */ public float Unknown25A8;
-		/* 0X25AC */ public float Unknown25AC;
-		/* 0X25B0 */ public float Unknown25B0;
-		/* 0X25B4 */ public float Unknown25B4;
-		/* 0X25B8 */ public float Unknown25B8;
+        [NMS(Size = 0x20)]
+        /* 0x2593 */ public string Unknown2593;
+        /* 0x25B4 */ public float Unknown25B4;
+        /* 0X25B8 */ public float Unknown25B8;
 		/* 0X25BC */ public float Unknown25BC;
 		/* 0X25C0 */ public float Unknown25C0;
 		/* 0X25C4 */ public float Unknown25C4;
@@ -683,28 +684,28 @@ namespace libMBIN.Models.Structs
 		/* 0X25E4 */ public float Unknown25E4;
 		/* 0X25E8 */ public float Unknown25E8;
 		/* 0X25EC */ public float Unknown25EC;
+		/* 0X25F0 */ public float Unknown25F0;
+		/* 0X25F4 */ public float Unknown25F4;
+		/* 0X25F8 */ public float Unknown25F8;
+		/* 0X25FC */ public float Unknown25FC;
+		/* 0X2600 */ public float Unknown2600;
+		/* 0X2604 */ public float Unknown2604;
+		/* 0X2608 */ public float Unknown2608;
+		/* 0X260C */ public float Unknown260C;
 
         [NMS(Size = 6, EnumValue = new string[6] { "None", "NoOxygen", "ExtremeHeat", "ExtremeCold", "ToxicGas", "Radiation" })]
-        /* 0x25F0 */ public NMSString0x80[] HazardEffects;
+        /* 0x2610 */ public NMSString0x80[] HazardEffects;
 
         [NMS(Size = 6, EnumValue = new string[6] { "None", "NoOxygen", "ExtremeHeat", "ExtremeCold", "ToxicGas", "Radiation" })]
-        /* 0x28F0 */ public NMSString0x80[] HazardEffectsNormal;
+        /* 0x2910 */ public NMSString0x80[] HazardEffectsNormal;
 
         [NMS(Size = 6, EnumValue = new string[6] { "None", "NoOxygen", "ExtremeHeat", "ExtremeCold", "ToxicGas", "Radiation" })]
-        /* 0x2BF0 */ public NMSString0x80[] HazardEffectsRefraction;
+        /* 0x2C10 */ public NMSString0x80[] HazardEffectsRefraction;
 
-        /* 0x2EF0 */ public float Unknown2EF0;
+        /* 0x2F10 */ public float Unknown2F10;
         [NMS(Size = 0xC, Ignore = true)]
-        /* 0x2EF4 */ public byte[] Padding2EF4;
-        /* 0X2F00 */ public float Unknown2F00;
-		/* 0X2F04 */ public float Unknown2F04;
-		/* 0X2F08 */ public float Unknown2F08;
-		/* 0X2F0C */ public float Unknown2F0C;
-		/* 0X2F10 */ public float Unknown2F10;
-		/* 0X2F14 */ public float Unknown2F14;
-		/* 0X2F18 */ public float Unknown2F18;
-		/* 0X2F1C */ public float Unknown2F1C;
-		/* 0X2F20 */ public float Unknown2F20;
+        /* 0x2F14 */ public byte[] Padding2F14;
+        /* 0X2F20 */ public float Unknown2F20;
 		/* 0X2F24 */ public float Unknown2F24;
 		/* 0X2F28 */ public float Unknown2F28;
 		/* 0X2F2C */ public float Unknown2F2C;
@@ -744,46 +745,46 @@ namespace libMBIN.Models.Structs
 		/* 0X2FB4 */ public float Unknown2FB4;
 		/* 0X2FB8 */ public float Unknown2FB8;
 		/* 0X2FBC */ public float Unknown2FBC;
-        /* 0x2FC0 */ public GcModelViewCollection Unknown2FC0;
-        /* 0x3810 */ public Colour CursorMainColour;
-		/* 0X3820 */ public Colour CursorActionColour;
-		/* 0X3830 */ public Colour CursorDeleteColour;
-		/* 0X3840 */ public float Unknown3840;
-		/* 0X3844 */ public float Unknown3844;
-		/* 0X3848 */ public float FastActionTime1;
-		/* 0X384C */ public float FastActionTime2;
-		/* 0X3850 */ public float FastActionTime3;
-		/* 0X3854 */ public int UnknownInt3854;
-		/* 0X3858 */ public float CursorSize;
-		/* 0X385C */ public float Unknown385C;
+		/* 0X2FC0 */ public float Unknown2FC0;
+		/* 0X2FC4 */ public float Unknown2FC4;
+		/* 0X2FC8 */ public float Unknown2FC8;
+		/* 0X2FCC */ public float Unknown2FCC;
+		/* 0X2FD0 */ public float Unknown2FD0;
+		/* 0X2FD4 */ public float Unknown2FD4;
+		/* 0X2FD8 */ public float Unknown2FD8;
+		/* 0X2FDC */ public float Unknown2FDC;
+        /* 0x2FE0 */ public GcModelViewCollection Unknown2FE0;
+        /* 0x3830 */ public Colour CursorMainColour;
+		/* 0X3840 */ public Colour CursorActionColour;
+		/* 0X3850 */ public Colour CursorDeleteColour;
 		/* 0X3860 */ public float Unknown3860;
-		/* 0X3864 */ public float CursorThickness;
-		/* 0X3868 */ public float DelayToLeaveMenu;
-		/* 0X386C */ public float Unknown386C;
-		/* 0X3870 */ public float DelayToShowMenuCursor;
-		/* 0X3874 */ public float Unknown3874;
-		/* 0X3878 */ public float Unknown3878;
+		/* 0X3864 */ public float Unknown3864;
+		/* 0X3868 */ public float FastActionTime1;
+		/* 0X386C */ public float FastActionTime2;
+		/* 0X3870 */ public float FastActionTime3;
+		/* 0X3874 */ public int UnknownInt3874;
+		/* 0X3878 */ public float CursorSize;
 		/* 0X387C */ public float Unknown387C;
-		/* 0X3880 */ public float DelayToEnterMenu;
-		/* 0X3884 */ public float Unknown3884;
-		/* 0X3888 */ public int UnknownInt3888;
+		/* 0X3880 */ public float Unknown3880;
+		/* 0X3884 */ public float CursorThickness;
+		/* 0X3888 */ public float DelayToLeaveMenu;
 		/* 0X388C */ public float Unknown388C;
-		/* 0X3890 */ public float Unknown3890;
+		/* 0X3890 */ public float DelayToShowMenuCursor;
 		/* 0X3894 */ public float Unknown3894;
-		/* 0X3898 */ public int UnknownInt3898;
-		/* 0X389C */ public int UnknownInt389C;
-		/* 0X38A0 */ public float Unknown38A0;
+		/* 0X3898 */ public float Unknown3898;
+		/* 0X389C */ public float Unknown389C;
+		/* 0X38A0 */ public float DelayToEnterMenu;
 		/* 0X38A4 */ public float Unknown38A4;
-		/* 0X38A8 */ public float Unknown38A8;
-		/* 0X38AC */ public int UnknownInt38AC;
+		/* 0X38A8 */ public int UnknownInt38A8;
+		/* 0X38AC */ public float Unknown38AC;
 		/* 0X38B0 */ public float Unknown38B0;
 		/* 0X38B4 */ public float Unknown38B4;
-		/* 0X38B8 */ public float Unknown38B8;
-		/* 0X38BC */ public float Unknown38BC;
+		/* 0X38B8 */ public int UnknownInt38B8;
+		/* 0X38BC */ public int UnknownInt38BC;
 		/* 0X38C0 */ public float Unknown38C0;
 		/* 0X38C4 */ public float Unknown38C4;
 		/* 0X38C8 */ public float Unknown38C8;
-		/* 0X38CC */ public float Unknown38CC;
+		/* 0X38CC */ public int UnknownInt38CC;
 		/* 0X38D0 */ public float Unknown38D0;
 		/* 0X38D4 */ public float Unknown38D4;
 		/* 0X38D8 */ public float Unknown38D8;
@@ -868,20 +869,20 @@ namespace libMBIN.Models.Structs
 		/* 0X3A14 */ public float Unknown3A14;
 		/* 0X3A18 */ public float Unknown3A18;
 		/* 0X3A1C */ public float Unknown3A1C;
-        /* 0x3A20 */ public GcSpaceMapObjectData Unknown3A20;
-        /* 0x3A50 */ public GcSpaceMapObjectData Unknown3A50;
-        /* 0x3A80 */ public GcSpaceMapObjectData Unknown3A80;
-        /* 0x3AB0 */ public GcSpaceMapObjectData Unknown3AB0;
-        /* 0x3AE0 */ public GcSpaceMapObjectData Unknown3AE0;
-        /* 0x3B10 */ public float Unknown3B10;
-		/* 0X3B14 */ public float Unknown3B14;
-		/* 0X3B18 */ public float Unknown3B18;
-		/* 0X3B1C */ public float Unknown3B1C;
-		/* 0X3B20 */ public float Unknown3B20;
-		/* 0X3B24 */ public float Unknown3B24;
-		/* 0X3B28 */ public float Unknown3B28;
-		/* 0X3B2C */ public float Unknown3B2C;
-		/* 0X3B30 */ public float Unknown3B30;
+		/* 0X3A20 */ public float Unknown3A20;
+		/* 0X3A24 */ public float Unknown3A24;
+		/* 0X3A28 */ public float Unknown3A28;
+		/* 0X3A2C */ public float Unknown3A2C;
+		/* 0X3A30 */ public float Unknown3A30;
+		/* 0X3A34 */ public float Unknown3A34;
+		/* 0X3A38 */ public float Unknown3A38;
+		/* 0X3A3C */ public float Unknown3A3C;
+        /* 0x3A40 */ public GcSpaceMapObjectData Unknown3A40;
+        /* 0x3A70 */ public GcSpaceMapObjectData Unknown3A70;
+        /* 0x3AA0 */ public GcSpaceMapObjectData Unknown3AA0;
+        /* 0x3AD0 */ public GcSpaceMapObjectData Unknown3AD0;
+        /* 0x3B00 */ public GcSpaceMapObjectData Unknown3B00;
+        /* 0x3B30 */ public float Unknown3B30;
 		/* 0X3B34 */ public float Unknown3B34;
 		/* 0X3B38 */ public float Unknown3B38;
 		/* 0X3B3C */ public float Unknown3B3C;
@@ -889,42 +890,42 @@ namespace libMBIN.Models.Structs
 		/* 0X3B44 */ public float Unknown3B44;
 		/* 0X3B48 */ public float Unknown3B48;
 		/* 0X3B4C */ public float Unknown3B4C;
-		/* 0X3B50 */ public Colour Unknown3B50;
-		/* 0X3B60 */ public Colour Unknown3B60;
+		/* 0X3B50 */ public float Unknown3B50;
+		/* 0X3B54 */ public float Unknown3B54;
+		/* 0X3B58 */ public float Unknown3B58;
+		/* 0X3B5C */ public float Unknown3B5C;
+		/* 0X3B60 */ public float Unknown3B60;
+		/* 0X3B64 */ public float Unknown3B64;
+		/* 0X3B68 */ public float Unknown3B68;
+		/* 0X3B6C */ public float Unknown3B6C;
 		/* 0X3B70 */ public Colour Unknown3B70;
 		/* 0X3B80 */ public Colour Unknown3B80;
 		/* 0X3B90 */ public Colour Unknown3B90;
+		/* 0X3BA0 */ public Colour Unknown3BA0;
+		/* 0X3BB0 */ public Colour Unknown3BB0;
 
         [NMS(Size = 0x100)]
-		/* 0x3BA0 */ public string Unknown3BA0;
+		/* 0x3BC0 */ public string Unknown3BC0;
 		[NMS(Size = 0x100)]
-		/* 0x3CA0 */ public string Unknown3CA0;
+		/* 0x3CC0 */ public string Unknown3CC0;
 		[NMS(Size = 0x100)]
-		/* 0x3DA0 */ public string Unknown3DA0;
+		/* 0x3DC0 */ public string Unknown3DC0;
 		[NMS(Size = 0x100)]
-		/* 0x3EA0 */ public string Unknown3EA0;
+		/* 0x3EC0 */ public string Unknown3EC0;
 		[NMS(Size = 0x100)]
-		/* 0x3FA0 */ public string Unknown3FA0;
+		/* 0x3FC0 */ public string Unknown3FC0;
 		[NMS(Size = 0x100)]
-		/* 0x40A0 */ public string Unknown40A0;
+		/* 0x40C0 */ public string Unknown40C0;
 		[NMS(Size = 0x100)]
-		/* 0x41A0 */ public string Unknown41A0;
+		/* 0x41C0 */ public string Unknown41C0;
 		[NMS(Size = 0x100)]
-		/* 0x42A0 */ public string Unknown42A0;
+		/* 0x42C0 */ public string Unknown42C0;
 
-        /* 0x43A0 */ public float Unknown43A0;
-		/* 0X43A4 */ public float Unknown43A4;
-		/* 0X43A8 */ public float Unknown43A8;
-		/* 0X43AC */ public float Unknown43AC;
-		/* 0X43B0 */ public int UnknownInt43B0;
-		/* 0X43B4 */ public float Unknown43B4;
-		/* 0X43B8 */ public float Unknown43B8;
-		/* 0X43BC */ public float Unknown43BC;
-		/* 0X43C0 */ public float Unknown43C0;
+        /* 0x43C0 */ public float Unknown43C0;
 		/* 0X43C4 */ public float Unknown43C4;
 		/* 0X43C8 */ public float Unknown43C8;
 		/* 0X43CC */ public float Unknown43CC;
-		/* 0X43D0 */ public float Unknown43D0;
+		/* 0X43D0 */ public int UnknownInt43D0;
 		/* 0X43D4 */ public float Unknown43D4;
 		/* 0X43D8 */ public float Unknown43D8;
 		/* 0X43DC */ public float Unknown43DC;
@@ -938,7 +939,7 @@ namespace libMBIN.Models.Structs
 		/* 0X43FC */ public float Unknown43FC;
 		/* 0X4400 */ public float Unknown4400;
 		/* 0X4404 */ public float Unknown4404;
-		/* 0X4408 */ public int UnknownInt4408;
+		/* 0X4408 */ public float Unknown4408;
 		/* 0X440C */ public float Unknown440C;
 		/* 0X4410 */ public float Unknown4410;
 		/* 0X4414 */ public float Unknown4414;
@@ -946,7 +947,7 @@ namespace libMBIN.Models.Structs
 		/* 0X441C */ public float Unknown441C;
 		/* 0X4420 */ public float Unknown4420;
 		/* 0X4424 */ public float Unknown4424;
-		/* 0X4428 */ public float Unknown4428;
+		/* 0X4428 */ public int UnknownInt4428;
 		/* 0X442C */ public float Unknown442C;
 		/* 0X4430 */ public float Unknown4430;
 		/* 0X4434 */ public float Unknown4434;
@@ -1009,21 +1010,29 @@ namespace libMBIN.Models.Structs
 		/* 0X4518 */ public float Unknown4518;
 		/* 0X451C */ public float Unknown451C;
 		/* 0X4520 */ public float Unknown4520;
-		/* 0X4524 */ public int UnknownInt4524;
-		/* 0X4528 */ public bool DisplayMenu3DModels;
+		/* 0X4524 */ public float Unknown4524;
+		/* 0X4528 */ public float Unknown4528;
+		/* 0X452C */ public float Unknown452C;
+		/* 0X4530 */ public float Unknown4530;
+		/* 0X4534 */ public float Unknown4534;
+		/* 0X4538 */ public float Unknown4538;
+		/* 0X453C */ public float Unknown453C;
+		/* 0X4540 */ public float Unknown4540;
+		/* 0X4544 */ public int UnknownInt4544;
+		/* 0X4548 */ public bool DisplayMenu3DModels;
 
-        /* 0x452C */ public GcDiscoveryHelperTimings Unknown452C;
-        /* 0x4538 */ public GcHUDStartupTable Unknown4538;
+        /* 0x454C */ public GcDiscoveryHelperTimings Unknown454C;
+        /* 0x4558 */ public GcHUDStartupTable Unknown4558;
         [NMS(Size = 0x6)]
-        /* 0x45B8 */ public GcInventorySlotActionData[] Unknown45B8;
+        /* 0x45D8 */ public GcInventorySlotActionData[] Unknown45D8;
 
-		/* 0X4660 */ public float Unknown4660;
-		/* 0X4664 */ public float Unknown4664;
-		/* 0X4668 */ public float Unknown4668;
-		/* 0X466C */ public int UnknownInt466C;
-		/* 0X4670 */ public int UnknownInt4670;
-		/* 0X4674 */ public float Unknown4674;
-		/* 0X4678 */ public float Unknown4678;
+		/* 0X4680 */ public float Unknown4680;
+		/* 0X4684 */ public float Unknown4684;
+		/* 0X4688 */ public float Unknown4688;
+		/* 0X468C */ public int UnknownInt468C;
+		/* 0X4690 */ public int UnknownInt4690;
+		/* 0X4694 */ public float Unknown4694;
+		/* 0X4698 */ public float Unknown4698;
         [NMS(Size = 0x4, Ignore = true)]
         public byte[] EndPadding;
     }

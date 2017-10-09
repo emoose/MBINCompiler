@@ -1,5 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
+    [NMS(Alignment = 0x8)]
     public class GcMissionSequenceReward : NMSTemplate
     {
         [NMS(Size = 0x80)]

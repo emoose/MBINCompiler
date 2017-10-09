@@ -2,7 +2,8 @@
 
 namespace libMBIN.Models.Structs
 {
-    public class GcAlienPuzzleEntry : NMSTemplate       // size: 0x4E0
+    [NMS(Size = 0x4E0, Alignment = 0x8)]
+    public class GcAlienPuzzleEntry : NMSTemplate
     {
         [NMS(Size = 0x20)]
         /* 0x000 */ public string Id;
@@ -25,7 +26,7 @@ namespace libMBIN.Models.Structs
         [NMS(Size = 0x5, Ignore = true)]
         /* 0x4AB */ public byte[] Padding4AB;
         /* 0x4B0 */ public List<GcAlienPuzzleOption> Options;
-        /* 0x4C0 */ public List<NMSString0x10> AdditionalText;
-        /* 0x4D0 */ public List<NMSString0x10> AdditionalTextAlien;
+        /* 0x4C0 */ public List<NMSString0x20> AdditionalText;
+        /* 0x4D0 */ public List<NMSString0x20> AdditionalTextAlien;
     }
 }

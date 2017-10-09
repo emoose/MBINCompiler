@@ -7,7 +7,7 @@ namespace libMBIN.Models.Structs
         public int EqualityEnum;
         public string[] EqualityEnumValues()
         {
-            return new[] { "Equal", "Greater", "Less"};
+            return new[] { "Equal", "Greater", "Less", "GreaterEqual", "LessEqual"};
         }
     }
 }

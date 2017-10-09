@@ -2,6 +2,7 @@
 
 namespace libMBIN.Models.Structs
 {
+    [NMS(Alignment = 0x8)]
     public class GcMissionSequenceGroup : NMSTemplate       // size: 0x1D8
     {
         /* 0x000 */ public bool Silent;

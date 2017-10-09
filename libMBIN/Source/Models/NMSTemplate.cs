@@ -395,6 +395,7 @@ namespace libMBIN.Models
                 case "NMSTemplate":
                     writer.Align(8, 0);
                     long refPos = writer.BaseStream.Position;
+                    
                     var template = (NMSTemplate)fieldData;
                     if (template == null || template.GetType().Name == "EmptyNode")
                     {
@@ -489,7 +490,7 @@ namespace libMBIN.Models
             }
 
             //var entryOffsetNamePairs = new Dictionary<long, string>();
-            List<KeyValuePair<long, String>> entryOffsetNamePairs = new List<KeyValuePair<long, String>>();
+            //List<KeyValuePair<long, String>> entryOffsetNamePairs = new List<KeyValuePair<long, String>>();
 
             if (type.Name != "EmptyNode")
             {
@@ -525,14 +526,19 @@ namespace libMBIN.Models
         public void SerializeGenericList(BinaryWriter writer, IList list, long listHeaderPosition, ref List<Tuple<long, object>> additionalData, int addtDataIndex, UInt32 listEnding)
         // This serialises a List of NMSTemplate objects
         {
+            writer.Align(0x8, 0);       // Make sure that all c~ names are offset at 0x8.
             long listPosition = writer.BaseStream.Position;
+
             if (PrintToDebug) Debug.WriteLine($"SerializeList start 0x{listPosition:X}, header 0x{listHeaderPosition:X}");
 
             writer.BaseStream.Position = listHeaderPosition;
 
             // write the list header into the template
             if (list.Count > 0)
+            {
+                //Console.WriteLine($"SerializeList start 0x{listPosition:X}, header 0x{listHeaderPosition:X}");
                 writer.Write(listPosition - listHeaderPosition);
+            }
             else
                 writer.Write((long)0); // lists with 0 entries have offset set to 0
 
@@ -560,26 +566,28 @@ namespace libMBIN.Models
                 }
 
                 writer.Align(alignment, 0);
+                //Console.WriteLine($"pos 0x{writer.BaseStream.Position:X}");
+                //Console.WriteLine(entry.GetType().Name);
                 entryOffsetNamePairs.Add(new KeyValuePair<long, string>(writer.BaseStream.Position, entry.GetType().Name));
 
                 var template = (NMSTemplate)entry;
                 var listObjects = new List <Tuple<long, object>>();     // new list of objects so that this data is serialised first
                 var addtData = new Dictionary<long, object>();
                 if (PrintToDebug) Debug.WriteLine($"[C] writing {template.GetType().Name} to offset 0x{writer.BaseStream.Position:X}");
+                //Console.WriteLine($"[C] writing {template.GetType().Name} to offset 0x{writer.BaseStream.Position:X}");
                 // pass the new listObject object in place of additionalData so that this branch is serialised before the whole layer
                 template.AppendToWriter(writer, ref listObjects, ref addtDataIndexThis, GetType());
                 for (int i = 0; i < listObjects.Count; i++)
                 {
                     var data = listObjects[i];
                     //writer.BaseStream.Position = additionalDataOffset; // addtDataOffset gets updated by child templates
-                    
-                    long origPos = writer.BaseStream.Position;
                     writer.Align(0x8, 0); // todo: check if this alignment is correct
+                    long origPos = writer.BaseStream.Position;
                     if (data.Item2.GetType().IsGenericType && data.Item2.GetType().GetGenericTypeDefinition() == typeof(List<>))
                     {
                         //Console.WriteLine("blahblah");
                         Type itemType = data.Item2.GetType().GetGenericArguments()[0];
-                        //Console.WriteLine(itemType.Name);
+                        
                         if (itemType == typeof(NMSTemplate))
                         {
                             SerializeGenericList(writer, (IList)data.Item2, data.Item1, ref listObjects, i + 1, listEnding);
@@ -592,7 +600,7 @@ namespace libMBIN.Models
                     else
                     {
                         //Console.WriteLine("this is it!!!");
-                        //Console.WriteLine(origPos);
+                        //Console.WriteLine($"0x{origPos:X}");
                         // first, write the correct offset at the correct location
                         long headerPos = data.Item1;
                         writer.BaseStream.Position = headerPos;
@@ -615,11 +623,14 @@ namespace libMBIN.Models
                 // Iterate through the list headers and write the correct data
                 if (kvp.Value != "EmptyNode")
                 {
+                    //long tempPos = writer.BaseStream.Position;
                     writer.Align(0x8, 0);
+                    //long correction = writer.BaseStream.Position - tempPos;
                     // in this case, we have an actual non-empty header.
-                    var position = writer.BaseStream.Position;
-                    var offset = kvp.Key - position; // get offset of this entry from the current offset
+                    long position = writer.BaseStream.Position;
+                    long offset = kvp.Key - position; // get offset of this entry from the current offset
                     writer.Write(offset);
+                    //Console.WriteLine(kvp.Value);
                     writer.WriteString("c" + kvp.Value, Encoding.UTF8, 0x40);
                     //Console.WriteLine(kvp.Value);
                     //Console.WriteLine(offset);

@@ -18,9 +18,8 @@
         /* 0x64 */ public int Health;
         [NMS(Size = 0x10)]
         /* 0x68 */ public string Gun;
-        /* 0x78 */ public TkTextureResource Icon;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0xFC */ public byte[] EndPadding;
+        /* 0x78 */ public int LaserDamageLevel;
+        /* 0x7C */ public TkTextureResource Icon;
 
     }
 }

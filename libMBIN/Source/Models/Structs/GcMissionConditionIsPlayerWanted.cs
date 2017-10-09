@@ -3,5 +3,6 @@
     public class GcMissionConditionIsPlayerWanted : NMSTemplate
     {
         public int Level;
+        public TkEqualityEnum Test;
     }
 }
