@@ -1,13 +1,22 @@
 ﻿namespace libMBIN.Models.Structs
 {
-    [NMS(Alignment = 0x8)]
+    [NMS(Alignment = 0x8, Size = 0x220)]
     public class GcMissionSequenceFreighterEngage : NMSTemplate      // size: 0x180
     {
         [NMS(Size = 0x80)]
         /* 0x000 */ public string MessageGetToSpace;
         [NMS(Size = 0x80)]
         /* 0x080 */ public string Message;
+        /* 0x100 */ public float EngageDistance;
+        /* 0x104 */ public float EngageTime;
+        /* 0x108 */ public float TimeAfterWarp;
+        [NMS(Size = 0x4, Ignore = true)]
+        /* 0x10C */ public byte[] Padding10C;
+        [NMS(Size = 0x10)]
+        /* 0x110 */ public string TimeoutMessage;
         [NMS(Size = 0x80)]
-        /* 0x190 */ public string DebugText;
+        /* 0x120 */ public string TimeoutOSDMessage;
+        [NMS(Size = 0x80)]
+        /* 0x1A0 */ public string DebugText;
     }
 }

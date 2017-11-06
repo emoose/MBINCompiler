@@ -46,8 +46,8 @@ namespace libMBIN.Models.Structs
         /* 0X1CC */ public int UnknownInt1CC;
         /* 0X1D0 */ public int UnknownInt1D0;
         /* 0X1D4 */ public float Unknown1D4;
-        /* 0X1D8 */ public int UnknownInt1D8;
-        /* 0X1DC */ public float Unknown1DC;
+        /* 0X1D8 */ public int WarpsBetweenSpaceBattles;
+        /* 0X1DC */ public float HoursBetweenSpaceBattles;
         /* 0X1E0 */ public float Unknown1E0;
         /* 0X1E4 */ public float Unknown1E4;
         /* 0X1E8 */ public float Unknown1E8;
@@ -318,8 +318,8 @@ namespace libMBIN.Models.Structs
         /* 0X1044 */ public float Unknown1044;
         /* 0X1048 */ public float Unknown1048;
         /* 0X104C */ public float Unknown104C;
-        /* 0X1050 */ public int UnknownInt1050;
-        /* 0X1054 */ public float Unknown1054;
+        /* 0X1050 */ public int WarpsBetweenAnomalySpawns;
+        /* 0X1054 */ public float HoursBetweenAnomalySpawns;
 
         [NMS(Size = 0x80)]
         /* 0x1058 */ public string Unknown1058;

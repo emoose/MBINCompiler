@@ -2,6 +2,7 @@
 
 namespace libMBIN.Models.Structs
 {
+    [NMS(Alignment = 0x8)]
     public class GcMissionConditionGroup : NMSTemplate
     {
         public GcMissionConditionTest ConditionTest;
