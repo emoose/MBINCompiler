@@ -19,13 +19,16 @@
         // new offset: 0x34 for the following data I think...
         // there are some changes though...
 
-        public float Unknown34; // planet gen related
+        public float Unknown34; // planet gen related       
         public float Unknown38; // planet gen related
         public float Unknown3C; // planet gen related
 
         public float Unknown40; // unused?
         public float Unknown44; // unused?
-        public int UnknownInt48;           // possibly 4 bool?
+        /* 0x48 */ public bool RemovePlanetTerrain;     // only checked on system warp
+        [NMS(Size = 0x1, Ignore = true)]
+        public byte[] Padding49;
+        public bool Unknown4A;                          // only checked on system warp      // totally changes the terrain
 
 
         public int UnknownInt4C;

@@ -3,27 +3,25 @@
     public class GcSolarGenerationGlobals : NMSTemplate
     {
         /* 0x0 */ public bool Unknown0;
-        /* 0x4 */ public float Unknown4;
-        /* 0x8 */ public float Unknown8;
-        /* 0xC */ public float UnknownC;
+        /* 0x4 */ public float Unknown4;    // unused?
+        /* 0x8 */ public float Unknown8;    // unused?
+        /* 0xC */ public float UnknownC;    // unused?
         /* 0x10 */ public float Unknown10;
         /* 0x14 */ public float Unknown14;
         /* 0x18 */ public float Unknown18;
         /* 0x1C */ public float Unknown1C;
         /* 0x20 */ public float MinSolarSystemScale;        // ??
         /* 0x24 */ public float MaxSolarSystemScale;        // ??
-        /* 0x28 */ public bool Unknown28;
-        [NMS(Size = 0x3, Ignore = true)]
-        /* 0x29 */ public byte[] Padding29;
-        /* 0x2C */ public float Unknown2C;      // possibly meant to be 4 bytes as padding at end of struct? or padding before start??
-        /* 0x30 */ public bool Unknown30;
+        [NMS(Size = 0x8, Ignore = true)]
+        /* 0x28 */ public byte[] Padding28;
+        /* 0x30 */ public bool PlanetBuildingRaceMatchesSystemRace;
         /* 0x34 */ public float Unknown34;
         /* 0x38 */ public float Unknown38;
         /* 0x3C */ public float Unknown3C;
         /* 0x40 */ public float Unknown40;
         /* 0x44 */ public float Unknown44;
         /* 0x48 */ public float Unknown48;
-        /* 0x4C */ public float Unknown4C;
+        /* 0x4C */ public float ExtremeWeatherChance;
         /* 0x50 */ public float Unknown50;
         /* 0x54 */ public int UnknownInt54;
         /* 0x58 */ public int UnknownInt58;
@@ -66,22 +64,23 @@
         /* 0xE0 */ public float SpecialAsteroidScale;
         /* 0xE4 */ public int SpecialAsteroidDropMin;
         /* 0xE8 */ public int SpecialAsteroidDropMax;
-        /* 0xEC */ public float UnknownEC;      // 4 bytes of padding?
+        [NMS(Size = 0x4, Ignore = true)]
+        /* 0xEC */ public byte[] PaddingEC;
 
         [NMS(Size = 0x10)]
-        /* 0xF0 */ public string SpecialAsteroidDroppedItem;
+        /* 0xF0 */ public string SpecialAsteroidDroppedItem;            // seems to be ignored???
 
-        /* 0x100 */ public int UnknownInt100;
+        /* 0x100 */ public int UnknownInt100;                           // only checked on system warp
         /* 0x104 */ public float SmallAsteroidScale;
         /* 0x108 */ public int SmallAsteroidDropMin;
         /* 0x10C */ public int SmallAsteroidDropMax;
 
         [NMS(Size = 0x10)]
-        /* 0x110 */ public string SmallAsteroid1DroppedItem;
+        /* 0x110 */ public string SmallAsteroidDroppedItem1;
         [NMS(Size = 0x10)]
-        /* 0x120 */ public string SmallAsteroid2DroppedItem;
+        /* 0x120 */ public string SmallAsteroidDroppedItem2;
 
-        /* 0x130 */ public float Unknown130;
+        /* 0x130 */ public float SmallAsteroidDroppedItem1Rate;
         /* 0x134 */ public int UnknownInt134;
         /* 0x138 */ public float LargeAsteroidSpacing;
         /* 0x13C */ public float Unknown13C;

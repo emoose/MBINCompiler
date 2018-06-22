@@ -11,7 +11,8 @@
         public float Unknown104;
         public float Unknown108;
         public float Unknown10C;
-        public float Unknown110;
+        public bool Unknown110;         // only checked on system warp
+        public bool Unknown111;         // only checked on system warp
         public float Unknown114;
         public float Unknown118;
         public float Unknown11C;
@@ -31,7 +32,7 @@
         public float Unknown154;
         public float Unknown158;
         public float Unknown15C;
-        public float Unknown160;
+        public bool Unknown160;
         public float Unknown164;
         public int UnknownInt168;
         public float Unknown16C;
@@ -118,8 +119,8 @@
         public float Unknown2B0;
         public float Unknown2B4;
         public float Unknown2B8;
-        /* 0x2BC */ public float SurfaceSunlightActiveHeight;
-        public float Unknown2C0;
+        /* 0x2BC */ public float SurfaceSunlightActiveHeight;       // used with 0x2C0 to scale a value
+        public float Unknown2C0;                                    // scale factor used with the above
         public float Unknown2C4;
         public float Unknown2C8;
         public float Unknown2CC;

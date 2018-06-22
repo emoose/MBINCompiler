@@ -6,6 +6,7 @@ using System.Text;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Reflection;
+using System.Xml;
 
 using libMBIN.Models.Structs;
 using System.Runtime.InteropServices;
@@ -844,14 +845,14 @@ namespace libMBIN.Models
                             string[] values = (string[])valuesMethod.Invoke(this, null);
                             valueString = values[(int)value];
                         }
-                    }
+                    }/*
                     else if (settings?.EnumValue != null)
                     {
                         if (((int)value) == -1)
                             valueString = "";
                         else
                             valueString = settings.EnumValue[(int)value];
-                    }
+                    }*/
                     break;
                 case "Single":
                     valueString = ((float)value).ToString(System.Globalization.CultureInfo.InvariantCulture);
@@ -1015,14 +1016,14 @@ namespace libMBIN.Models
                             string[] values = (string[])valuesMethod.Invoke(template, null);
                             return Array.FindIndex(values, v => v == xmlProperty.Value);
                         }
-                    }
+                    }/*
                     else if (settings?.EnumValue != null)
                     {
                         if (String.IsNullOrEmpty(xmlProperty.Value))
                             return -1;
                         else
                             return Array.FindIndex(settings.EnumValue, v => v == xmlProperty.Value);
-                    }
+                    }*/
                     else
                     {
                         return int.Parse(xmlProperty.Value);
@@ -1042,10 +1043,12 @@ namespace libMBIN.Models
                     foreach (var innerXmlData in xmlProperty.Elements) // child templates
                     {
                         object element = null;
-                        if(innerXmlData.GetType() == typeof(EXmlData) || (innerXmlData.GetType() == typeof(EXmlProperty) && ((EXmlProperty)innerXmlData).Value.EndsWith(".xml")))
+                        if (innerXmlData.GetType() == typeof(EXmlData) || (innerXmlData.GetType() == typeof(EXmlProperty) && ((EXmlProperty)innerXmlData).Value.EndsWith(".xml")))
                             element = DeserializeEXml(innerXmlData); // child template if <Data> tag or <Property> tag with value ending in .xml (todo: better way of finding <Property> child templates)
-                        else if(innerXmlData.GetType() == typeof(EXmlProperty))
+                        else if (innerXmlData.GetType() == typeof(EXmlProperty))
                             element = DeserializeEXmlValue(template, elementType, field, (EXmlProperty)innerXmlData, templateType, settings);
+                        else if (innerXmlData.GetType() == typeof(EXmlMeta))
+                            Console.WriteLine(((EXmlMeta)innerXmlData).Comment);
                         if (element == null)
                             throw new Exception("element == null ??!");
 
@@ -1056,11 +1059,20 @@ namespace libMBIN.Models
                     if (field.FieldType.IsArray && field.FieldType.GetElementType().BaseType.Name == "NMSTemplate")
                     {
                         Array array = Array.CreateInstance(field.FieldType.GetElementType(), settings.Size);
-                        var data = xmlProperty.Elements.OfType<EXmlProperty>().ToList();
-                        if(data.Count != settings.Size)
+                        //var data = xmlProperty.Elements.OfType<EXmlProperty>().ToList();
+                        List<EXmlBase> data = xmlProperty.Elements.ToList();
+                        int numMeta = 0;
+                        foreach (EXmlBase entry in data)
+                        {
+                            if (entry.GetType() == typeof(EXmlMeta))
+                            {
+                                numMeta += 1;
+                            }
+                        }
+                        if (data.Count - numMeta != settings.Size)
                         {
                             // todo: add a comment in the XML to indicate arrays (+ their size), also need to do the same for showing valid enum values
-                            var error = $"{field.Name}: XML array size {data.Count} doesn't match expected array size {settings.Size}";
+                            var error = $"{field.Name}: XML array size {data.Count - numMeta} doesn't match expected array size {settings.Size}";
                             Console.WriteLine($"Error: {error}!");
                             Console.WriteLine("You might have added/removed an item from an array field");
                             Console.WriteLine("(arrays can't be shortened or extended as they're a fixed size set by the game)");
@@ -1068,8 +1080,15 @@ namespace libMBIN.Models
                         }
                         for (int i = 0; i < data.Count; ++i)
                         {
-                            NMSTemplate element = DeserializeEXml(data[i]);
-                            array.SetValue(element, i);
+                            if (data[i].GetType() == typeof(EXmlProperty))
+                            {
+                                NMSTemplate element = DeserializeEXml(data[i]);
+                                array.SetValue(element, i - numMeta);
+                            }
+                            else if (data[i].GetType() == typeof(EXmlMeta))
+                            {
+                                Console.WriteLine(((EXmlMeta)data[i]).Comment);     // don't need to worry about nummeta here since it is already counted above...
+                            }
                         }
 
                         return array;
@@ -1077,11 +1096,21 @@ namespace libMBIN.Models
                     else if (field.FieldType.IsArray)
                     {
                         Array array = Array.CreateInstance(field.FieldType.GetElementType(), settings.Size);
-                        List<EXmlProperty> data = xmlProperty.Elements.OfType<EXmlProperty>().ToList();
+                        //List<EXmlProperty> data = xmlProperty.Elements.OfType<EXmlProperty>().ToList();
+                        List<EXmlBase> data = xmlProperty.Elements.ToList();
+                        int numMeta = 0;
                         for (int i = 0; i < data.Count; ++i)
                         {
-                            object element = DeserializeEXmlValue(template, field.FieldType.GetElementType(), field, data[i], templateType, settings);
-                            array.SetValue(element, i);
+                            if (data[i].GetType() == typeof(EXmlProperty))
+                            {
+                                object element = DeserializeEXmlValue(template, field.FieldType.GetElementType(), field, (EXmlProperty)data[i], templateType, settings);
+                                array.SetValue(element, i - numMeta);
+                            }
+                            else if (data[i].GetType() == typeof(EXmlMeta))
+                            {
+                                Console.WriteLine(((EXmlMeta)data[i]).Comment);
+                                numMeta += 1;           // increment so that the actual data is still placed at the right spot
+                            }
                         }
 
                         return array;
@@ -1098,10 +1127,22 @@ namespace libMBIN.Models
         {
             NMSTemplate template = null;
 
+            //Console.WriteLine(xmlData.Name);
+            //Console.WriteLine(xmlData.GetType().ToString());
+
             if (xmlData.GetType() == typeof(EXmlData))
                 template = TemplateFromName(((EXmlData)xmlData).Template);
             else if (xmlData.GetType() == typeof(EXmlProperty))
                 template = TemplateFromName(((EXmlProperty)xmlData).Value.Replace(".xml", ""));
+            else if (xmlData.GetType() == typeof(EXmlMeta))
+                Console.WriteLine(((EXmlMeta)xmlData).Comment);
+
+            /*
+            Console.WriteLine("Getting types");
+            foreach (var property in xmlData.Elements)
+            {
+                Console.WriteLine(property.GetType());
+            }*/
 
             if (template == null)
                 return null;
@@ -1117,6 +1158,40 @@ namespace libMBIN.Models
                     templateField.SetValue(template, settings.DefaultValue);
             }
 
+            foreach (var xmlElement in xmlData.Elements)
+            {
+                if (xmlElement.GetType() == typeof(EXmlProperty))
+                {
+                    EXmlProperty xmlProperty = (EXmlProperty)xmlElement;
+                    FieldInfo field = templateType.GetField(xmlProperty.Name);
+                    object fieldValue = null;
+                    if (field.FieldType == typeof(NMSTemplate) || field.FieldType.BaseType == typeof(NMSTemplate))
+                    {
+                        fieldValue = DeserializeEXml(xmlProperty);
+                    }
+                    else
+                    {
+                        Type fieldType = field.FieldType;
+                        NMSAttribute settings = field.GetCustomAttribute<NMSAttribute>();
+                        fieldValue = DeserializeEXmlValue(template, fieldType, field, xmlProperty, templateType, settings);
+                    }
+                    field.SetValue(template, fieldValue);
+                }
+                else if (xmlElement.GetType() == typeof(EXmlData))
+                {
+                    EXmlData innerXmlData = (EXmlData)xmlElement;
+                    FieldInfo field = templateType.GetField(innerXmlData.Name);
+                    NMSTemplate innerTemplate = DeserializeEXml(innerXmlData);
+                    field.SetValue(template, innerTemplate);
+                }
+                else if (xmlElement.GetType() == typeof(EXmlMeta))
+                {
+                    EXmlMeta xmlMeta = (EXmlMeta)xmlElement;
+                    string comment = xmlMeta.Comment;
+                    Console.WriteLine(comment);
+                }
+            }
+            /*
             foreach (var xmlProperty in xmlData.Elements.OfType<EXmlProperty>())
             {
                 FieldInfo field = templateType.GetField(xmlProperty.Name);
@@ -1140,6 +1215,13 @@ namespace libMBIN.Models
                 NMSTemplate innerTemplate = DeserializeEXml(innerXmlData);
                 field.SetValue(template, innerTemplate);
             }
+
+            foreach (var xmlProperty in xmlData.Elements.OfType<EXmlMeta>())
+            {
+                Console.WriteLine("Hello!!!");
+                string comment = xmlProperty.Comment;
+                Console.WriteLine(comment);
+            }*/
 
             return template;
         }

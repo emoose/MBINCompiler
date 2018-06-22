@@ -15,22 +15,22 @@
         public float Unknown28;
         public float Unknown2C;
         public float Unknown30;
-        public float Unknown34;
+        public bool Unknown34;
         public float Unknown38;
         public float Unknown3C;
         public float Unknown40;
         public float Unknown44;
         public float Unknown48;
         public float Unknown4C;
-        public float Unknown50;
-        public float Unknown54;
+        public float Unknown50;         // game checks if something is larger than this value
+        public float Unknown54;         // game checks if something is larger than this value
         public int UnknownInt58;
         public int UnknownInt5C;
         public int UnknownInt60;
         public int UnknownInt64;
         public float Unknown68;
         public float Unknown6C;
-        public float Unknown70;
+        public float Unknown70;         // this and following 3 values all used in a single xmmword
         public float Unknown74;
         public float Unknown78;
         public float Unknown7C;
@@ -38,7 +38,7 @@
         public float Unknown84;
         public float Unknown88;
         public float Unknown8C;
-        public float Unknown90;
+        public float Unknown90;         // this and following 3 values all used in a single xmmword
         public float Unknown94;
         public float Unknown98;
         public float Unknown9C;
@@ -68,9 +68,8 @@
         public float UnknownFC;
         public float Unknown100;
         public float Unknown104;
-        public float Unknown108;
-        [NMS(Size = 0x4, Ignore = true)]
-        public byte[] Padding10C;
+        [NMS(Size = 0x8, Ignore = true)]
+        public byte[] Padding108;
 
         /* 0x110 */ public GcRobotLaserData WalkerLaserData;
         /* 0x160 */ public GcRobotLaserData QuadLaserData;

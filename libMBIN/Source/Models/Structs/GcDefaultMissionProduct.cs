@@ -2,6 +2,6 @@
 {
     public class GcDefaultMissionProduct : NMSTemplate
     {
-        public gcproducttableEnum Product;
+        public GcProductTableEnum Product;
     }
 }

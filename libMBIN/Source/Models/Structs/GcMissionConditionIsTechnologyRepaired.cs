@@ -2,6 +2,6 @@
 {
     public class GcMissionConditionIsTechnologyRepaired : NMSTemplate
     {
-        public int Technology;      // technology enum?
+        public GcTechnologyTableEnum Technology;
     }
 }

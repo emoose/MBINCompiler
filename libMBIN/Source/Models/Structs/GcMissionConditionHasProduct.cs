@@ -3,7 +3,7 @@
     public class GcMissionConditionHasProduct : NMSTemplate
     {
         public GcDefaultMissionProductEnum Default;
-        public gcproducttableEnum Product;
+        public GcProductTableEnum Product;
         public int Amount;
     }
 }

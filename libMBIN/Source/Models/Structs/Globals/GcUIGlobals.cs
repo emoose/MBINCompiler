@@ -12,7 +12,7 @@ namespace libMBIN.Models.Structs
         /* 0x1C */ public float Unknown1C;
         /* 0x20 */ public float Unknown20;
         /* 0x24 */ public float Unknown24;
-        /* 0x28 */ public float Unknown28;
+        /* 0x28 */ public float TabTransitionSpeed;
         /* 0X2C */ public int UnknownInt2C;
         /* 0X30 */ public int UnknownInt30;
         /* 0X34 */ public int UnknownInt34;
@@ -618,7 +618,7 @@ namespace libMBIN.Models.Structs
 		/* 0X24B8 */ public float Unknown24B8;
 		/* 0X24BC */ public float Unknown24BC;
 
-		/* 0X24C0 */ public float Unknown24C0;
+		/* 0X24C0 */ public float AnalysisVisorScanTime;
 		/* 0X24C4 */ public float Unknown24C4;
 		/* 0X24C8 */ public float Unknown24C8;
 		/* 0X24CC */ public float Unknown24CC;

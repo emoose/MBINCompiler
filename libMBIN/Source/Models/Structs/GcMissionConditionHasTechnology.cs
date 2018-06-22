@@ -2,6 +2,6 @@
 {
     public class GcMissionConditionHasTechnology : NMSTemplate
     {
-        public gctechnologytableEnum Technology;
+        public GcTechnologyTableEnum Technology;
     }
 }

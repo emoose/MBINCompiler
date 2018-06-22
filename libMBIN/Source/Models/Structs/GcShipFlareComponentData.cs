@@ -3,7 +3,7 @@
     public class GcShipFlareComponentData : NMSTemplate
     {
         public int FlareType;
-        public string[] FlaseTypeValues()
+        public string[] FlareTypeValues()
         {
             return new[] { "Default"};
         }

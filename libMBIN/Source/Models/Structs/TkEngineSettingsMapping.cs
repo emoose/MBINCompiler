@@ -10,26 +10,12 @@
         public float ReflectionMultiplierNormal;
         public float ReflectionMultiplierHigh;
 
-        /* unsure what these mean, all are labelled "NeedsGameRestart", first one is checked and if true another 0x13 are read? */
-        public bool NeedsGameRestart;
-        public bool NeedsGameRestart1;
-        public bool NeedsGameRestart2;
-        public bool NeedsGameRestart3;
-        public bool NeedsGameRestart4;
-        public bool NeedsGameRestart5;
-        public bool NeedsGameRestart6;
-        public bool NeedsGameRestart7;
-        public bool NeedsGameRestart8;
-        public bool NeedsGameRestart9;
-        public bool NeedsGameRestart10;
-        public bool NeedsGameRestart11;
-        public bool NeedsGameRestart12;
-        public bool NeedsGameRestart13;
-        public bool NeedsGameRestart14;
-        public bool NeedsGameRestart15;
-        public bool NeedsGameRestart16;
-        public bool NeedsGameRestart17;
-        public bool NeedsGameRestart18;
-        public bool NeedsGameRestart19;
+        // boolean describing whether or not the game needs to restant when the specific setting has been changed... I think...
+        [NMS(Size = 0x1D, EnumValue = new string[0x1D]{ "FullScreen", "Borderless", "ResolutionWidth", "ResolutionHeight", "Monitor",
+           "FoVOnFoot", "FoVInShip", "VSync", "GSync", "ShadowDetail", "TextureDetail", "GenerationDetail", "ReflectionsQuality",
+           "AntiAliasing", "MotionBlurQuality", "AnisotropyLevel", "Brightness", "AvailableMonitors", "MaxFrameRate", "NumLowThreads",
+           "NumHighThreads", "TextureStreaming", "TexturePageSizeKb", "MotionBlurStrength", "ShowRequirementsWarnings", "AmbientOcclusion",
+           "UseLightshafts", "MaxTextureMemoryMb", "FixedTextureMemory" })]
+        public bool[] NeedsGameRestart;
     }
 }

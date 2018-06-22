@@ -1,6 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
-    public class gcproducttableEnum : NMSTemplate
+    public class GcProductTableEnum : NMSTemplate
     {
         public int Product;
         public string[] ProductValues()

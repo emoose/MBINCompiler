@@ -15,6 +15,7 @@ namespace libMBIN
         private readonly IO _io;
         private readonly string _filePath;
         private readonly bool _keepOpen;
+        public ulong FileLength = 0;
 
         public MBINFile(string path)
         {
@@ -75,7 +76,17 @@ namespace libMBIN
             _io.Stream.SetLength(0x60);
             _io.Stream.Position = 0x60;
 
+            /*
+            // if we want to get the file size:
+            byte[] data = template.SerializeBytes();
+            _io.Writer.Write(data);
+
+            this.FileLength = (ulong)data.LongLength;
+            */
+
+            // otherwise just do:
             _io.Writer.Write(template.SerializeBytes());
+
             Header.TemplateName = "c" + template.GetType().Name;
         }
 

@@ -14,6 +14,9 @@ namespace libMBIN
         private static readonly XmlSerializer Serializer = new XmlSerializer(typeof(EXmlData));
         private static readonly XmlSerializerNamespaces Namespaces = new XmlSerializerNamespaces(new[] { new XmlQualifiedName("", "") });
 
+        private static XmlReaderSettings readerSettings = new XmlReaderSettings();
+
+
         public static NMSTemplate ReadTemplate(string filePath)
         {
             using (var input = File.OpenRead(filePath))
@@ -24,9 +27,10 @@ namespace libMBIN
         {
             var origCulture = Thread.CurrentThread.CurrentCulture;
             Thread.CurrentThread.CurrentCulture = CultureInfo.InvariantCulture;
+            readerSettings.IgnoreComments = false;
 
             using (var reader = new StringReader(xml))
-            using (var xmlReader = XmlReader.Create(reader))
+            using (var xmlReader = XmlReader.Create(reader, readerSettings))
             {
                 var template = ReadTemplateFromXmlReader(xmlReader);
                 Thread.CurrentThread.CurrentCulture = origCulture;
@@ -38,8 +42,9 @@ namespace libMBIN
         {
             var origCulture = Thread.CurrentThread.CurrentCulture;
             Thread.CurrentThread.CurrentCulture = CultureInfo.InvariantCulture;
+            readerSettings.IgnoreComments = false;
 
-            using (var reader = XmlReader.Create(input))
+            using (var reader = XmlReader.Create(input, readerSettings))
             {
                 var template = ReadTemplateFromXmlReader(reader);
                 Thread.CurrentThread.CurrentCulture = origCulture;
@@ -58,9 +63,10 @@ namespace libMBIN
         {
             var origCulture = Thread.CurrentThread.CurrentCulture;
             Thread.CurrentThread.CurrentCulture = CultureInfo.InvariantCulture;
+            readerSettings.IgnoreComments = false;
 
             using (var reader = new StringReader(xml))
-            using (var xmlReader = XmlReader.Create(reader))
+            using (var xmlReader = XmlReader.Create(reader, readerSettings))
             {
                 var data = (EXmlData)Serializer.Deserialize(xmlReader);
                 Thread.CurrentThread.CurrentCulture = origCulture;

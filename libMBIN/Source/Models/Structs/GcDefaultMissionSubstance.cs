@@ -2,6 +2,6 @@
 {
     public class GcDefaultMissionSubstance : NMSTemplate
     {
-        public gcsubstancetableEnum Substance;
+        public GcSubstanceTableEnum Substance;
     }
 }

@@ -72,28 +72,41 @@ namespace libMBIN.Models.Structs
         /* 0X234 */ public float Unknown234;
         /* 0X238 */ public float Unknown238;
         /* 0X23C */ public float Unknown23C;
-        /* 0X240 */ public int UnknownInt240;
+        /* 0X240 */ public int RearShotDamageMultiplier;
         /* 0X244 */ public float Unknown244;
         /* 0X248 */ public int UnknownInt248;
         /* 0X24C */ public float Unknown24C;
         /* 0X250 */ public float Unknown250;
         /* 0X254 */ public float Unknown254;
-        /* 0X258 */ public float Unknown258;
+        /* 0X258 */ public float ExtremeSentinelChance;
 
-        /* 0x25C */ public GcExperienceTimers Unknown25C;
+        /* the following is a GcExperienceTimers struct, but 
+        I have expanded it so that the individual values can be named appropriately */
+	    /* 0x25C */ public int inverse_SentinelTimer_A_or_B_Chance_percent;        // if *rand* > value, sentinel timer is A, then check Timer_B chance
+	    /* 0x260 */ public int SentinelTimer_B_Chance_percent;
+	    /* 0x264 */ public Vector2f SentinelTimer_Default_or_Aggressive;       // for agressive sentinals and...
+	    /* 0x26C */ public Vector2f SentinelTimer_A;
+	    /* 0x274 */ public Vector2f SentinelTimer_B;
+
         
         /* 0x27C */ public int UnknownInt27C;
 
         /* 0x280 */ public GcExperienceTimers Unknown280;
-        /* 0x2A0 */ public GcExperienceTimers Unknown2A0;
-        /* 0x2C0 */ public GcExperienceTimers Unknown2C0;
+        /* 0x2A0 */ public GcExperienceTimers NormalModePirateSpawns;
+        /* 0x2C0 */ public GcExperienceTimers HardModePirateSpawns;
         /* 0X2E0 */ public float Unknown2E0;
         /* 0X2E4 */ public float Unknown2E4;
         /* 0X2E8 */ public float Unknown2E8;
         /* 0X2EC */ public float Unknown2EC;
 
-        /* 0x2F0 */ public GcExperienceTimers Unknown2F0;
-        /* 0x310 */ public GcExperienceTimers Unknown310;
+        // OnPlanet FlybyTimer determination
+        /* 0x2F0 */ public int inverse_FlybyTimer_A_or_B_Chance_percent;
+	    /* 0x2F4 */ public int FlyByTimer_B_Chance_percent;
+	    /* 0x2F8 */ public Vector2f FlybyTimer_Default;
+	    /* 0x300 */ public Vector2f FlybyTimer_A;                     
+	    /* 0x308 */ public Vector2f FlybyTimer_B_or_Aggressive;                            // planetdata flyby on agressive sentinal planets (maybe??)
+
+        /* 0x310 */ public GcExperienceTimers RandomSpaceFlybySpawns;
 
         /* 0x330 */ public int UnknownInt330;
         /* 0X334 */ public int UnknownInt334;
@@ -127,8 +140,8 @@ namespace libMBIN.Models.Structs
         /* 0X3CC */ public GcResourceCollectEffect Unknown3CC;
         /* 0X400 */ public float Unknown400;
 
-        /* 0x404 */ public GcScanData Unknown404;
-        /* 0x418 */ public GcScanData Unknown418;
+        /* 0x404 */ public GcScanData NormalModeScanning;
+        /* 0x418 */ public GcScanData SurvivalModeScanning;
         /* 0x42C */ public GcScanData Unknown42C;
         /* 0x440 */ public GcScanData Unknown440;
         /* 0x454 */ public GcScanData Unknown454;
@@ -136,7 +149,7 @@ namespace libMBIN.Models.Structs
         /* 0x47C */ public GcScanData Unknown47C;
         /* 0x490 */ public GcScanData Unknown490;
         /* 0x4A4 */ public GcScanData Unknown4A4;
-        /* 0x4B8 */ public GcScanData Unknown4B8;
+        /* 0x4B8 */ public GcScanData ShipScanning;
 
         /* 0x4CC */ public float Unknown4CC;
         /* 0x4D0 */ public float Unknown4D0;
@@ -284,13 +297,13 @@ namespace libMBIN.Models.Structs
         /* 0XF4C */ public float FlashlightAngle;
         /* 0XF50 */ public float FlashlightIntensity;
         /* 0XF54 */ public float FlashlightXoffset;
-        /* 0XF58 */ public float FlashlightYoffset;
+        /* 0XF58 */ public float FlashlightYoffset;     // this and the value following are grouped together in a QWORD in the exe
         /* 0XF5C */ public float FlashlightZoffset;
-        /* 0XF60 */ public float UnknownF60;
-        /* 0XF64 */ public float UnknownF64;
-        /* 0XF68 */ public float UnknownF68;
-        /* 0XF6C */ public float UnknownF6C;
-        /* 0XF70 */ public float UnknownF70;        // colour?
+        /* 0XF60 */ public float UnknownF60;            // read by flashlight function, but doesn't seem to do anything...
+        /* 0XF64 */ public float UnknownF64;            // unused?
+        /* 0XF68 */ public float UnknownF68;            // unused?
+        /* 0XF6C */ public float UnknownF6C;            // unused?
+        /* 0XF70 */ public float UnknownF70;            // colour?
         /* 0XF74 */ public float UnknownF74;
         /* 0XF78 */ public float UnknownF78;
         /* 0XF7C */ public float UnknownF7C;
@@ -315,9 +328,9 @@ namespace libMBIN.Models.Structs
         /* 0X1038 */ public float LesserMultiplicativeAdjacencyBonus;
         /* 0X103C */ public float Unknown103C;
         /* 0X1040 */ public float Unknown1040;
-        /* 0X1044 */ public float Unknown1044;
+        /* 0X1044 */ public float Unknown1044;          // only checked on game boot? Value directly below also...
         /* 0X1048 */ public float Unknown1048;
-        /* 0X104C */ public float Unknown104C;
+        /* 0X104C */ public float Unknown104C;          // unused?
         /* 0X1050 */ public int WarpsBetweenAnomalySpawns;
         /* 0X1054 */ public float HoursBetweenAnomalySpawns;
 
@@ -340,8 +353,8 @@ namespace libMBIN.Models.Structs
         /* 0X1104 */ public GcPortalData Unknown1104;
         /* 0X110C */ public int UnknownInt110C;
         /* 0X1110 */ public float Unknown1110;
-        /* 0X1114 */ public float Unknown1114;
-        /* 0X1118 */ public float Unknown1118;
+        /* 0X1114 */ public float HardModeHighStormFrequencyChance;
+        /* 0X1118 */ public float HardModeExtremeWeatherChance;
 
         [NMS(Size = 0x4, Ignore = true)]
         /* 0x111C */ public byte[] EndPadding;

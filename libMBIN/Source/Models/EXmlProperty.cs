@@ -2,7 +2,6 @@
 
 namespace libMBIN.Models
 {
-
     [XmlType("Property")]
     public class EXmlProperty : EXmlBase
     {

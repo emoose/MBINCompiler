@@ -9,10 +9,10 @@
         /* 0X4 */ public bool Unknown4;
         /* 0X5 */ public bool Unknown5;
         /* 0X6 */ public bool Unknown6;
-        /* 0X7 */ public bool Unknown7;
+        /* 0X7 */ public bool Unknown7;         // unused?
         /* 0X8 */ public float Unknown8;
         /* 0XC */ public float UnknownC;
-        /* 0X10 */ public float Unknown10;
+        /* 0X10 */ public float ThrustInputDelay;
         /* 0X14 */ public float Unknown14;
         /* 0X18 */ public float Unknown18;
         /* 0X1C */ public float Unknown1C;
@@ -31,11 +31,12 @@
         /* 0X50 */ public float Unknown50;
         /* 0X54 */ public float Unknown54;
         /* 0X58 */ public float Unknown58;
-        /* 0X5C */ public float Unknown5C;
+        [NMS(Size = 0x4, Ignore = true)]
+        /* 0X5C */ public byte[] Padding5C;
         /* 0X60 */ public float Unknown60;
         /* 0X64 */ public float Unknown64;
         /* 0X68 */ public float Unknown68;
-        /* 0X6C */ public float Unknown6C;
+        /* 0X6C */ public float Unknown6C;      // unused?
         /* 0X70 */ public float Unknown70;
         /* 0X74 */ public float Unknown74;
         /* 0X78 */ public float Unknown78;
@@ -71,12 +72,12 @@
         /* 0XF0 */ public float UnknownF0;
         /* 0XF4 */ public float UnknownF4;
         /* 0XF8 */ public float UnknownF8;
-        /* 0XFC */ public int UnknownIntFC;
+        /* 0XFC */ public int UnknownIntFC;     // unused
         /* 0X100 */ public int UnknownInt100;
         /* 0X104 */ public int UnknownInt104;
-        /* 0X108 */ public GcPlayerSpaceshipControlData Unknown108;
-        /* 0x1FC */ public GcPlayerSpaceshipControlData Unknown1FC;
-        /* 0x2F0 */ public GcPlayerSpaceshipControlData Unknown2F0;
+        /* 0X108 */ public GcPlayerSpaceshipControlData ShuttleControlData;
+        /* 0x1FC */ public GcPlayerSpaceshipControlData Fight_Sci_SClassControlData;
+        /* 0x2F0 */ public GcPlayerSpaceshipControlData Drop_HaulControlData;
 
         [NMS(Size = 0x4, EnumValue = new[] { "C", "B", "A", "S" })]
         /* 0x3E4 */ public GcPlayerSpaceshipClassBonuses[] ShipClassBonuses;
@@ -109,11 +110,11 @@
         /* 0X514 */ public float Unknown514;
         /* 0X518 */ public float Unknown518;
         /* 0X51C */ public float Unknown51C;
-        /* 0X520 */ public float Unknown520;
+        /* 0X520 */ public float Unknown520;                // xmmword
         /* 0X524 */ public float Unknown524;
         /* 0X528 */ public float Unknown528;
         /* 0X52C */ public float Unknown52C;
-        /* 0X530 */ public float Unknown530;
+        /* 0X530 */ public float Unknown530;                // xmmword
         /* 0X534 */ public float Unknown534;
         /* 0X538 */ public float Unknown538;
         /* 0X53C */ public float Unknown53C;
@@ -309,7 +310,7 @@
         /* 0X890 */ public float Unknown890;
         /* 0X894 */ public float Unknown894;
         /* 0X898 */ public float Unknown898;
-        /* 0X89C */ public float Unknown89C;
+        /* 0X89C */ public float TakeoffHeight;
         /* 0X8A0 */ public float Unknown8A0;
         /* 0X8A4 */ public float MaxLandingHeight;
         /* 0X8A8 */ public float Unknown8A8;

@@ -1,6 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
-    public class gcsubstancetableEnum : NMSTemplate
+    public class GcSubstanceTableEnum : NMSTemplate
     {
         public int Substance;
         public string[] SubstanceValues()

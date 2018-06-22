@@ -25,7 +25,7 @@
         /* 0x14 */ public int ScreenWidth;
         /* 0x18 */ public int ScreenHeight;
         /* 0x1C */ public bool DisableVSync;
-        /* 0x20 */ public int GameWindowMode;       // only a byte used??
+        /* 0x20 */ public int GameWindowMode;
         public string[] GameWindowModeValues()
         {
             return new[] { "Bordered", "Borderless", "Fullscreen" };        // this and GameStateModeValues below swapped in exe
@@ -85,26 +85,28 @@
         {
             return new[] { "LoadAll", "WaitForPlanet", "WaitForNothing" };      // this and ShaderPreloadValues order swapped in exe?
         }
-        /* 0x3C8 */ public bool UseParticles;
-        /* 0x3C9 */ public bool UseVolumetrics;
-        /* 0x3CA */ public bool UseClouds;
-        /* 0x3CB */ public bool UseTerrain;
-        /* 0x3CC */ public bool UseInstances;
-        /* 0x3CD */ public bool UseObjects;
-        /* 0x3CE */ public bool UseBuildings;
-        /* 0x3CF */ public bool UseCreatures;
-        /* 0x3D0 */ public bool UseElevation;
-        /* 0x3D1 */ public bool SpawnPirates;
-        /* 0x3D2 */ public bool SpawnRobots;
-        /* 0x3D3 */ public bool SpawnShips;
-        /* 0x3D4 */ public bool InstanceCollision;
-        /* 0x3D5 */ public bool MouseLookEnabled;
-        /* 0x3D6 */ public bool StartPaused;
-        /* 0x3D7 */ public bool DisableDebugControls;
-        /* 0x3D8 */ public bool DisableAsserts;
-        /* 0x3D9 */ public bool FixedFramerate;
-        /* 0x3DA */ public bool ScreenshotMode;
-        /* 0x3DB */ public bool RenderHud;
+		// addresses above possibly wrong?
+		
+        /* 0x3CC */ public bool UseParticles;
+        /* 0x3CD */ public bool UseVolumetrics;
+        /* 0x3CE */ public bool UseClouds;
+        /* 0x3CF */ public bool UseTerrain;
+        /* 0x3D0 */ public bool UseInstances;
+        /* 0x3D1 */ public bool UseObjects;
+        /* 0x3D2 */ public bool UseBuildings;
+        /* 0x3D3 */ public bool UseCreatures;					// confirmed 1.38
+        /* 0x3D4 */ public bool UseElevation;
+        /* 0x3D5 */ public bool SpawnPirates;
+        /* 0x3D6 */ public bool SpawnRobots;
+        /* 0x3D7 */ public bool SpawnShips;
+        /* 0x3D8 */ public bool InstanceCollision;				// confirmed 1.38
+        /* 0x3D9 */ public bool MouseLookEnabled;				// confirmed 1.38
+        /* 0x3DA */ public bool StartPaused;
+        /* 0x3DB */ public bool DisableDebugControls;
+        /* 0x3DC */ public bool DisableAsserts;
+        /* 0x3DD */ public bool FixedFramerate;
+        /* 0x3DE */ public bool ScreenshotMode;
+        /* 0x3DF */ public bool RenderHud;
 		/* 0x3DC */ public bool DisableDiscoveryNaming;
         /* 0x3DD */ public bool DebugDrawPlayerInteract;
         /* 0x3DE */ public bool ForceInteractionToSettings;
@@ -253,11 +255,11 @@
         /* 0xCFC */ public float HmdImmersionFactor;
         /* 0xD00 */ public bool ForceExtremeWeather;
         /* 0xD01 */ public bool ForceExtremeSentinels;
-		/* 0xD02 */ public bool ForceStarType;
+		/* 0xD02 */ public bool ForceStarType;      // maybe not??
 		/* 0xD04 */ public int ForceStarTypeTo;
         /* 0xD08 */ public bool ForceBiome;
         /* 0xD0C */ public int ForceBiomeTo;
-        /* 0xD10 */ public int BadValue;
+        /* 0xD10 */ public int ForceBiomeFileIndexTo;   // default = -1 => load biome files randomly per planet
 
         /* 0xD14 */ public bool ForceBuildingRace;
         /* 0xD18 */ public int ForceBuildingRaceTo;

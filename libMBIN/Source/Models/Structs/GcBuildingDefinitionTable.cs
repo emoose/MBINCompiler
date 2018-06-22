@@ -4,7 +4,7 @@
     {
         [NMS(Size = 5)]
         /* 0x00000 */ public GcBuildingDensity[] BuildingProbabilities;
-        [NMS(Size = 7)]
+        [NMS(Size = 7, EnumValue = new string[0x7]{ "Traders", "Warriors", "Explorers", "Robots", "Atlas", "Diplomats", "None" })]
         /* 0x00064 */ public GcBuildingFilenameList[] BuildingFiles;
         [NMS(Size = 0x4, Ignore = true)]
         /* 0x17A64 */ public byte[] Padding17A64;

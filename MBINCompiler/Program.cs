@@ -87,7 +87,13 @@ namespace MBINCompiler {
                     file.Header.EndPadding = 0xFEFEFEFEFEFEFEFE;
                 }
 
-                file.SetData( data );
+                file.SetData( data );       // this will also get the length of the data
+
+                if (data.GetType() != typeof(TkAnimMetadata))
+                {
+                    file.Header.EndPadding = file.FileLength;
+                }
+
                 file.Save();
             }
 

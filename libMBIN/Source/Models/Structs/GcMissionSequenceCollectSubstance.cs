@@ -6,7 +6,7 @@
         [NMS(Size = 0x80)]
         /* 0x000 */ public string Message;
         /* 0x080 */ public GcDefaultMissionSubstanceEnum Default;
-        /* 0x084 */ public gcsubstancetableEnum Product;
+        /* 0x084 */ public GcSubstanceTableEnum Product;
         /* 0x088 */ public int AmountMin;
         /* 0x08C */ public int AmountMax;
         /* 0x090 */ public bool WaitForSelected;

@@ -10,7 +10,7 @@ namespace libMBIN.Models.Structs // 0x690
         // line:   char *result; // rax@1
         // line:   v1 = a1;
         public bool Unknown0;     // offset: 0, sz: 1, origin: 0, parsed: 0        // line:   *(_BYTE *)a1 = 0;
-        public float Unknown4;     // offset: 4, sz: 4, origin: 0, parsed: 0        // line:   *(_DWORD *)(a1 + 4) = 0;
+        public float Unknown4;     // not used??
         public float Unknown8;     // offset: 8, sz: 4, origin: 0x3F800000i64, parsed: 1, comment: two packed floats in a QWORD?(1)
         public float UnknownC;     // offset: 12, sz: 4, origin: 0x3F800000i64, parsed: 0, comment: two packed floats in a QWORD?(2)        // line:   *(_QWORD *)(a1 + 8) = 0x3F800000i64;
 

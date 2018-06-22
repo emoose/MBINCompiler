@@ -10,7 +10,7 @@
         public float Unknown10;
         public float Unknown14;
         public float Unknown18; // unused?
-        public float Unknown1C;
+        /* 0x01C */ public float PlanetAddShelterChance;
 
         public float Unknown20;
         public float Unknown24; // unused?

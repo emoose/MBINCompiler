@@ -96,7 +96,7 @@ namespace libMBIN.Models.Structs
                 "NPC_HIRE_Farmer", "NPC_HIRE_Farmer_Wait", "NPC_HIRE_Builder", "NPC_HIRE_Builder_Wait", "NPC_HIRE_Vehicles", "NPC_HIRE_Vehicles_Wait",
                 "MessageBeacon", "NPC_HIRE_Scientist", "NPC_HIRE_Scientist_Wait", "NPC_Recruit", "NPC_Freighter_Captain_Secondary", "NPC_Recruit_Secondary",
                 "Vehicle", "MessageModule", "TechShop", "VehicleRaseStart", "BuildingShop", "MissionGiver", "HoloHub", "HoloExplorer", "HoloSceptic", "HoloNoone",
-                "PortalRunEntry", "PortalActivate", "CrashedFreighter", "GraveInCave", "GlitchyStroyBox", "NetworkPlayer", "NetworkMonument",
+                "PortalRunEntry", "PortalActivate", "CrashedFreighter", "GraveInCave", "GlitchyStoryBox", "NetworkPlayer", "NetworkMonument",
                 "AnomalyComputer", "AtlasPlinth", "Epilogue" })]
         /* 0x3EFB0 */ public GcSavedInteractionRaceData[] SavedInteractionIndicies;
 

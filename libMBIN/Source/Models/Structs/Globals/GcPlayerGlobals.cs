@@ -16,13 +16,13 @@
         public float Unknown4C;
         public float Unknown50;
         public float Unknown54;
-        public int UnknownInt58;
-        /* 0X5C */ public float Unknown5C;
+        /* 0x58 */ public int DeathCausesTechDamage;
+        /* 0X5C */ public float Unknown5C;                  // this to...
         /* 0X60 */ public float Unknown60;
         /* 0X64 */ public float Unknown64;
         /* 0X68 */ public float Unknown68;
         /* 0X6C */ public float Unknown6C;
-        /* 0X70 */ public float Unknown70;
+        /* 0X70 */ public float Unknown70;                  // this are all related to player death stuff somehow...
         /* 0X74 */ public float Unknown74;
         /* 0X78 */ public float Unknown78;
         /* 0X7C */ public float Unknown7C;
@@ -42,9 +42,9 @@
         /* 0XB4 */ public float UnknownB4;
         /* 0XB8 */ public float UnknownB8;
         /* 0XBC */ public float UnknownBC;
-        /* 0XC0 */ public float UnknownC0;
+        /* 0XC0 */ public float UnknownC0;              // this to...
         /* 0XC4 */ public float UnknownC4;
-        /* 0XC8 */ public float UnknownC8;
+        /* 0XC8 */ public float UnknownC8;              // low level jetpack depletion rate
         /* 0XCC */ public float UnknownCC;
         /* 0XD0 */ public float UnknownD0;
         /* 0XD4 */ public float UnknownD4;
@@ -55,10 +55,11 @@
         public float UnknownE8;
         public float UnknownEC;
         public float UnknownF0;
-        public float UnknownF4;
+        public float UnknownF4;                         // this... all called by the same function
+
         public bool UnknownF8;
         public bool UnknownF9;      // maybe?
-        public float UnknownFC;
+        /* 0xFC */ public float RepairCostPercentage;
         public float Unknown100;
         public float Unknown104;
         public float Unknown108;
@@ -86,7 +87,7 @@
         /* 0X160 */ public float Unknown160;
         /* 0X164 */ public float Unknown164;
         /* 0X168 */ public float Unknown168;
-        /* 0X16C */ public float Unknown16C;
+        /* 0X16C */ public bool Unknown16C;
         /* 0X170 */ public float Unknown170;
         /* 0X174 */ public float Unknown174;
         /* 0X178 */ public float Unknown178;
@@ -97,10 +98,13 @@
         /* 0X18C */ public float Unknown18C;
         /* 0X190 */ public float Unknown190;
         /* 0X194 */ public float Unknown194;
-        public int UnknownInt198;       // two bools?
-        public float Unknown19C;
-        public int UnknownInt1A0;
-        public int UnknownInt1A4;
+        /* 0X198 */ public bool Unknown198;
+        /* 0X199 */ public bool Unknown199;
+        /* 0X19A */ public bool Unknown19A;
+        /* 0X19B */ public bool LeftMouseButtonAutoFire;
+        /* 0X19C */ public bool CenterMouseButtonAutoFire;
+        /* 0X1A0 */ public int UnknownInt1A0;
+        /* 0X1A4 */ public int UnknownInt1A4;
         /* 0X1A8 */ public float Unknown1A8;
         /* 0X1AC */ public float Unknown1AC;
         /* 0X1B0 */ public float Unknown1B0;

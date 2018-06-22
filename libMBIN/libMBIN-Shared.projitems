@@ -16,6 +16,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Source\IO.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\MBINFile.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\EXmlBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\Models\EXmlMeta.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\EXmlData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\EXmlProperty.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\MBINHeader.cs" />
@@ -531,7 +532,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcProductCategory.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcProductData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcProductTable.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\gcproducttableEnum.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcProductTableEnum.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcProjectileData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcProjectileDataTable.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcProjectileImpactData.cs" />
@@ -693,14 +694,14 @@
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcSubstanceSecondary.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcSubstanceSecondaryLookup.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcSubstanceTable.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\gcsubstancetableEnum.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcSubstanceTableEnum.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcTechnology.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcTechnologyAttachmentComponentData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcTechnologyCategory.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcTechnologyRarity.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcTechnologyRequirement.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcTechnologyTable.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\gctechnologytableEnum.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcTechnologyTableEnum.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcTeleportEndpoint.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcTeleporterType.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcTerrainControls.cs" />

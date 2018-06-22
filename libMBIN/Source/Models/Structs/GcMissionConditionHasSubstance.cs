@@ -3,7 +3,7 @@
     public class GcMissionConditionHasSubstance : NMSTemplate
     {
         public GcDefaultMissionSubstanceEnum Default;
-        public gcsubstancetableEnum Substance;
+        public GcSubstanceTableEnum Substance;
         public int Amount;
 
     }

@@ -2,6 +2,6 @@
 {
     public class GcMissionConditionProductKnown : NMSTemplate
     {
-        public gcproducttableEnum Product;
+        public GcProductTableEnum Product;
     }
 }

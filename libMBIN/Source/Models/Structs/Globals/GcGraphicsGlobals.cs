@@ -2,7 +2,7 @@
 {
     public class GcGraphicsGlobals : NMSTemplate
     {
-        public float Unknown;
+        /* 0x000 */ public float GameBrightness;
         public float Unknown4;
         public float Unknown8;
         public float UnknownC;
@@ -10,7 +10,7 @@
         public float Unknown14;
         public float Unknown18;
         public float Unknown1C;
-        public float Unknown20;
+        /* 0x020 */ public float FogSaturationStrength;
         public float Unknown24;
         public float Unknown28;
         public float Unknown2C;

@@ -1,10 +1,12 @@
 ﻿using System.Collections.Generic;
 using System.Xml.Serialization;
+using System.Xml;
 
 namespace libMBIN.Models
 {
     [XmlInclude(typeof(EXmlData))]
     [XmlInclude(typeof(EXmlProperty))]
+    [XmlInclude(typeof(EXmlMeta))]
     public abstract class EXmlBase
     {
         protected EXmlBase()
@@ -17,6 +19,7 @@ namespace libMBIN.Models
 
         [XmlElement(typeof(EXmlData), ElementName = "Data")]
         [XmlElement(typeof(EXmlProperty), ElementName = "Property")]
+        [XmlElement(typeof(EXmlMeta), ElementName = "Meta")]
         public List<EXmlBase> Elements { get; set; }
     }
 }
