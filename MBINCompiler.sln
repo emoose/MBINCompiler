@@ -1,23 +1,19 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.16
+VisualStudioVersion = 15.0.27130.2036
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MBINCompiler", "MBINCompiler\MBINCompiler.csproj", "{CE736EF9-7BE9-4FF0-9551-78F0071AA373}"
-	ProjectSection(ProjectDependencies) = postProject
-		{F2D295A6-D082-4EB4-8FC9-F4687F674939} = {F2D295A6-D082-4EB4-8FC9-F4687F674939}
-	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MBINCompilerTests", "MBINCompilerTests\MBINCompilerTests.csproj", "{836B3A35-C1EA-47C8-B3AB-59C0E2E0C763}"
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "libMBIN-Shared", "libMBIN\libMBIN-Shared.shproj", "{B6850F17-D8FD-48DE-9CF2-240F1BA87236}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "libMBIN", "libMBIN\libMBIN.csproj", "{F2D295A6-D082-4EB4-8FC9-F4687F674939}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "libMBIN-DLL", "libMBIN-DLL\libMBIN-DLL.csproj", "{F2D295A6-D082-4EB4-8FC9-F4687F674939}"
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		libMBIN\libMBIN-Shared.projitems*{b6850f17-d8fd-48de-9cf2-240f1ba87236}*SharedItemsImports = 13
-		libMBIN\libMBIN-Shared.projitems*{ce736ef9-7be9-4ff0-9551-78f0071aa373}*SharedItemsImports = 4
 		libMBIN\libMBIN-Shared.projitems*{f2d295a6-d082-4eb4-8fc9-f4687f674939}*SharedItemsImports = 4
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -40,5 +36,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CA99F7CB-A4A0-4314-AE1C-092F0E8A7C2E}
 	EndGlobalSection
 EndGlobal
