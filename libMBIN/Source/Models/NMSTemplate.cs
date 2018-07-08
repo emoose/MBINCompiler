@@ -20,7 +20,7 @@ namespace libMBIN.Models
                 .Where(t => t.BaseType == typeof(NMSTemplate))
                 .ToDictionary(t => t.Name);
 
-        internal static bool PrintToDebug = true; // disable this when doing things in debug mode (tests etc) for a nice speedup
+        internal static bool PrintToDebug = false; // disable this when doing things in debug mode (tests etc) for a nice speedup
 
         public static NMSTemplate TemplateFromName(string templateName)
         {
@@ -376,17 +376,13 @@ namespace libMBIN.Models
                         writer.Write((Int32)0); // listCount
                         writer.Write(listEnding);
 
-                        var list = (IList)fieldData;
-                        try
-                        {
-                            additionalData.Insert(addtDataIndex, new Tuple<long, object>(listPos, list));
-                            addtDataIndex++;
+                        var data = new Tuple<long, object>( listPos, (IList) fieldData );
+                        if (additionalData.Count == additionalData.Capacity) {
+                            additionalData.Add( data );
+                        } else {
+                            additionalData.Insert( addtDataIndex, data );
                         }
-                        catch (ArgumentOutOfRangeException)
-                        {
-                            additionalData.Add(new Tuple<long, object>(listPos, list));
-                            addtDataIndex++;
-                        }
+                        addtDataIndex++;
                     }
 
                     break;
@@ -407,15 +403,13 @@ namespace libMBIN.Models
                     {
                         writer.Write((Int64)0);      // default value to be overridden later anyway
                         writer.WriteString("c" + template.GetType().Name, Encoding.UTF8, 0x40);
-                        try
-                        {
-                            additionalData.Insert(addtDataIndex++, new Tuple<long, object>(refPos, template));
-                            //addtDataIndex;
+                        var data = new Tuple<long, object>( refPos, template );
+                        if (additionalData.Count == additionalData.Capacity) {
+                            additionalData.Add( data );
+                        } else {
+                            additionalData.Insert(addtDataIndex++, data );
                         }
-                        catch (ArgumentOutOfRangeException)
-                        {
-                            additionalData.Add(new Tuple<long, object>(refPos, template));
-                        }
+
                     }
                     break;
                 case "Dictionary`2":
@@ -479,16 +473,9 @@ namespace libMBIN.Models
             var fields = type.GetFields().OrderBy(field => field.MetadataToken); // hack to get fields in order of declaration (todo: use something less hacky, this might break mono?)
 
             // todo: remove struct length?? Not needed any more I think...
-            int structLength;
-            try
-            {
-                structLength = type.GetCustomAttribute<NMSAttribute>().Size;
-            }
-            catch (NullReferenceException)
-            // In this case the class has no size associate with it, in which case we will just ignore it
-            {
-                structLength = 0;
-            }
+            NMSAttribute attribute = type.GetCustomAttribute<NMSAttribute>();
+            // If the class has no size associate with it, just ignore it
+            int structLength = (attribute != null) ? attribute.Size : 0;
 
             //var entryOffsetNamePairs = new Dictionary<long, string>();
             //List<KeyValuePair<long, String>> entryOffsetNamePairs = new List<KeyValuePair<long, String>>();
@@ -556,15 +543,7 @@ namespace libMBIN.Models
             List<KeyValuePair<long, String>> entryOffsetNamePairs = new List<KeyValuePair<long, String>>();
             foreach (var entry in list)
             {
-                int alignment;
-                try
-                {
-                    alignment = entry.GetType().GetCustomAttribute<NMSAttribute>().Alignment;
-                }
-                catch (NullReferenceException)
-                {
-                    alignment = 0x4;
-                }
+                int alignment = entry.GetType().GetCustomAttribute<NMSAttribute>()?.Alignment ?? 0x4;
 
                 writer.Align(alignment, 0);
                 //Console.WriteLine($"pos 0x{writer.BaseStream.Position:X}");
@@ -652,16 +631,8 @@ namespace libMBIN.Models
             // first thing we want to do is align the writer with the location of the first element of the list
             if (list.Count != 0)
             {
-                int alignment;
-                try
-                {
-                    alignment = list[0].GetType().GetCustomAttribute<NMSAttribute>().Alignment;
-                }
-                catch (NullReferenceException)
-                // In this case the class has no alignment value associated with it, just set as default value of 4
-                {
-                    alignment = 0x8;
-                }
+                // if the class has no alignment value associated with it, set a default value
+                int alignment = alignment = list[0].GetType().GetCustomAttribute<NMSAttribute>()?.Alignment ?? 0x8;
 
                 writer.Align(alignment, 0);
             }
@@ -730,25 +701,16 @@ namespace libMBIN.Models
                     //Console.WriteLine(typeof(GcRewardSubstance));
 
                     // get the custom alignment value from the class if it has one
-                    int alignment;
-                    try
-                    {
-                        alignment = data.Item2.GetType().GetCustomAttribute<NMSAttribute>().Alignment;
-                    }
-                    catch (NullReferenceException)
-                    // In this case the class has no alignment value associated with it, just set as default value of 4
-                    {
-                        alignment = 0x4;
-                    }
+                    // If the class has no alignment value associated with it, just set as default value of 4
+                    int alignment = data.Item2.GetType().GetCustomAttribute<NMSAttribute>()?.Alignment ?? 0x4;
+
                     // if we have an empty list we do not want to do alignment otherwise it can put off other things
-                    if (data.Item2.GetType().IsGenericType && data.Item2.GetType().GetGenericTypeDefinition() == typeof(List<>))
-                    {
-                        IList lst = (IList)data.Item2;
-                        if (lst.Count != 0)
-                            writer.Align(alignment, 0);
+                    if (data.Item2.GetType().IsGenericType && data.Item2.GetType().GetGenericTypeDefinition() == typeof( List<> )) {
+                        IList lst = (IList) data.Item2;
+                        if (lst.Count != 0) writer.Align( alignment, 0 );
+                    } else {
+                        writer.Align( alignment, 0 );
                     }
-                    else
-                        writer.Align(alignment, 0);
 
                     //Console.WriteLine("hi");
 
