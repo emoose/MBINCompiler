@@ -8,15 +8,13 @@ using libMBIN;
 using libMBIN.Models;
 using libMBIN.Models.Structs;
 
-// using MBINCompiler;
-using MBINCompilerTests.Properties;
+namespace MBINCompilerTests {
 
-namespace MBINCompilerTests
-{
     [TestClass]
-    public class SerializationTests
-    {
-        private readonly string baseDir = Settings.Default.InputFolder ?? @"C:\NMS";
+    public class SerializationTests {
+
+        private static string testResultsDirectory = "";
+        private static string baseDir = "";
 
         #region Test Files
         String testFile1 = "../../MBINCompilerTestTemplate.MBIN";
@@ -14729,199 +14727,171 @@ namespace MBINCompilerTests
         #endregion
         #endregion
 
+        [AssemblyInitialize]
+        public static void AssemblyInitialize( TestContext context ) {
+            testResultsDirectory = context.TestResultsDirectory;
+            baseDir = (string) context.Properties["InputFolder"];
+        }
 
-        private MemoryStream decompile(Stream stream)
-        {
-            using (var file = new MBINFile(stream))
-            {
+        private MemoryStream decompile( Stream stream ) {
+            using (var file = new MBINFile( stream )) {
                 file.Load();
                 var data = file.GetData();
 
-                Assert.IsNotNull(data, "deserialized data was null");
-                Assert.IsNotNull(data.SerializeEXml(false), "xml serialization was null");
-                var xmlString = EXmlFile.WriteTemplate(data);
-                Assert.IsNotNull(xmlString, "xml data is null");
+                Assert.IsNotNull( data, "deserialized data was null" );
+                Assert.IsNotNull( data.SerializeEXml( false ), "xml serialization was null" );
+                var xmlString = EXmlFile.WriteTemplate( data );
+                Assert.IsNotNull( xmlString, "xml data is null" );
 
                 MemoryStream memory = new MemoryStream();
-                using (TextWriter writer = new StreamWriter(memory, Encoding.Default, 4096, true))
-                {
-                    writer.Write(xmlString);
+                using (TextWriter writer = new StreamWriter( memory, Encoding.Default, 4096, true )) {
+                    writer.Write( xmlString );
                 }
                 memory.Position = 0;
                 return memory;
             }
         }
 
-        private MemoryStream compile(Stream stream)
-        {
-            var data = EXmlFile.ReadTemplateFromStream(stream);
-            Assert.IsNotNull(data, "exml failed to deserialize");
+        private MemoryStream compile( Stream stream ) {
+            var data = EXmlFile.ReadTemplateFromStream( stream );
+            Assert.IsNotNull( data, "exml failed to deserialize" );
 
             MemoryStream memory = new MemoryStream();
-            using (var file = new MBINFile(memory, true))
-            {
+            using (var file = new MBINFile( memory, true )) {
                 file.Header = new MBINHeader();
                 file.Header.SetDefaults();
                 if (data.GetType().Name == "TkGeometryData")
                     file.Header.Magic = 0xDDDDDDDD; // only used by TkGeometryData / .MBIN.PC files, maybe used to signal the file is PC only?
 
-                file.SetData(data);
+                file.SetData( data );
                 file.Save();
             }
             memory.Position = 0;
             return memory;
         }
 
-        private string Hash(Stream stream)
-        {
-            using (var sha = System.Security.Cryptography.SHA1.Create())
-            {
+        private string Hash( Stream stream ) {
+            using (var sha = System.Security.Cryptography.SHA1.Create()) {
                 stream.Position = 0;
-                return BitConverter.ToString(sha.ComputeHash(stream));
+                return BitConverter.ToString( sha.ComputeHash( stream ) );
             }
         }
 
 
         [TestMethod]
-        public void TestDeserialization()
-        {
-            var file = new MBINFile(testFile1);
+        public void TestDeserialization() {
+            var file = new MBINFile( testFile1 );
             file.Load();
-            Assert.AreEqual(file.Header.GetXMLTemplateName(), "MBINCompilerTestTemplate", $"{testFile1} header not using TemplateType MBINCompilerTestTemplate!");
+            Assert.AreEqual( file.Header.GetXMLTemplateName(), "MBINCompilerTestTemplate", $"{testFile1} header not using TemplateType MBINCompilerTestTemplate!" );
 
             var data = file.GetData();
-            Assert.IsNotNull(data, $"{testFile1} deserialized data was null");
-            Assert.IsNotNull(data.SerializeEXml(false), $"{testFile1} xml serialization was null");
-            Assert.IsInstanceOfType(data, typeof(MBINCompilerTestTemplate), $"{testFile1} template isn't of type MBINCompilerTestTemplate!");
+            Assert.IsNotNull( data, $"{testFile1} deserialized data was null" );
+            Assert.IsNotNull( data.SerializeEXml( false ), $"{testFile1} xml serialization was null" );
+            Assert.IsInstanceOfType( data, typeof( MBINCompilerTestTemplate ), $"{testFile1} template isn't of type MBINCompilerTestTemplate!" );
 
-            MBINCompilerTestTemplate test = (MBINCompilerTestTemplate)data;
-            Assert.AreEqual(test.TestBoolTrue, true);
-            Assert.AreEqual(test.TestBoolFalse, false);
-            Assert.AreEqual(test.TestBool3, true);
-            Assert.AreEqual(test.TestInt16, 1337);
-            Assert.AreEqual(test.TestInt32, 2448);
-            Assert.AreEqual(test.TestInt64, 3559);
-            Assert.AreEqual(test.TestFloat, 1337.0);
-            Assert.AreEqual(test.TestEnumYes, 1);
-            Assert.AreEqual(test.TestEnumNo, 0);
+            MBINCompilerTestTemplate test = (MBINCompilerTestTemplate) data;
+            Assert.AreEqual( test.TestBoolTrue, true );
+            Assert.AreEqual( test.TestBoolFalse, false );
+            Assert.AreEqual( test.TestBool3, true );
+            Assert.AreEqual( test.TestInt16, 1337 );
+            Assert.AreEqual( test.TestInt32, 2448 );
+            Assert.AreEqual( test.TestInt64, 3559 );
+            Assert.AreEqual( test.TestFloat, 1337.0 );
+            Assert.AreEqual( test.TestEnumYes, 1 );
+            Assert.AreEqual( test.TestEnumNo, 0 );
 
             var expectedString = "SixteenByteStrng";
-            Assert.AreEqual(test.TestString, expectedString);
+            Assert.AreEqual( test.TestString, expectedString );
 
             var expectedDynamicString = "NoWayToControlItIt'sTotallyDynamicWheneverYou'reAround";
-            Assert.AreEqual(test.TestDynamicString.Value, expectedDynamicString);
+            Assert.AreEqual( test.TestDynamicString.Value, expectedDynamicString );
 
             string[] expectedStrings = new[] { "FirstEntry", "SecondEntry", "ThirdEntry" };
-            Assert.AreEqual(test.Test0x80ByteStringList.Count, expectedStrings.Length);
+            Assert.AreEqual( test.Test0x80ByteStringList.Count, expectedStrings.Length );
 
             for (int i = 0; i < expectedStrings.Length; i++)
-                Assert.AreEqual(test.Test0x80ByteStringList[i].Value, expectedStrings[i]);
+                Assert.AreEqual( test.Test0x80ByteStringList[i].Value, expectedStrings[i] );
         }
 
-        private void recompileFiles(string[] files)
-        {
-            foreach (var test in files)
-            {
-                var fullPath = Path.Combine(baseDir, test);
-                if (!File.Exists(fullPath))
-                {
-                    Debug.WriteLine($"recompileFiles: test file {test} not found!");
+        private void recompileFiles( string[] files ) {
+            Assert.IsFalse( String.IsNullOrEmpty( baseDir ), "InputFolder not configured?\n"
+                    + "You must configure and use a .runsettings file with these unit tests.\n"
+                    + "See the comments in the Config/example.runsettings file for details."
+            );
+
+            Assert.IsTrue( Directory.Exists( baseDir ), "Path not found.\n"
+                    + "Invalid InputFolder path specified in runsettings.\n"
+                    + "\"" + baseDir + "\""
+            );
+
+            foreach (var test in files) {
+                var fullPath = Path.Combine( baseDir, test );
+                if (!File.Exists( fullPath )) {
+                    Debug.WriteLine( $"recompileFiles: test file {test} not found!" );
                     continue; // file might have been removed in an update
                 }
 
-                Debug.WriteLine($"recompileFiles: {test}");
+                Debug.WriteLine( $"recompileFiles: {test}" );
 
-                var vanillaEXML = decompile(File.Open(fullPath, FileMode.Open));
-                var compiledMBIN = compile(vanillaEXML);
-                var recompiledEXML = decompile(compiledMBIN);
+                var vanillaEXML = decompile( File.Open( fullPath, FileMode.Open ) );
+                var compiledMBIN = compile( vanillaEXML );
+                var recompiledEXML = decompile( compiledMBIN );
 
-                string vanilla = Hash(vanillaEXML);
-                string recompiled = Hash(recompiledEXML);
+                string vanilla = Hash( vanillaEXML );
+                string recompiled = Hash( recompiledEXML );
 
-                if(vanilla != recompiled)
-                {
-                    File.WriteAllBytes("D:\\vanilla.exml", vanillaEXML.ToArray());
-                    File.WriteAllBytes("D:\\recompiled.exml", recompiledEXML.ToArray());
+                if (vanilla != recompiled) {
+                    File.WriteAllBytes( testResultsDirectory + "/vanilla.exml", vanillaEXML.ToArray() );
+                    File.WriteAllBytes( testResultsDirectory + "/recompiled.exml", recompiledEXML.ToArray() );
                 }
 
-                // check exml files match
-                Assert.AreEqual(recompiled, vanilla);
                 vanillaEXML.Dispose();
                 compiledMBIN.Dispose();
                 recompiledEXML.Dispose();
+
+                // check exml files match
+                Assert.AreEqual( recompiled, vanilla );
             }
         }
 
         [TestMethod]
-        public void TestRecompile()
-        {
-            if (!Directory.Exists(baseDir))
-                return; // fix for appveyor until we figure out how to skip tests
-
-            recompileFiles(testFiles);
+        public void TestRecompile() {
+            recompileFiles( testFiles );
         }
 
         [TestMethod]
-        public void TestRecompileTkAnimMetadata()
-        {
-            if (!Directory.Exists(baseDir))
-                return; // fix for appveyor until we figure out how to skip tests
-
-            recompileFiles(testFilesTkAnimMetadata);
+        public void TestRecompileTkAnimMetadata() {
+            recompileFiles( testFilesTkAnimMetadata );
         }
 
         [TestMethod]
-        public void TestRecompileTkAttachmentData()
-        {
-            if (!Directory.Exists(baseDir))
-                return; // fix for appveyor until we figure out how to skip tests
-
-            recompileFiles(testFilesTkAttachmentData);
+        public void TestRecompileTkAttachmentData() {
+            recompileFiles( testFilesTkAttachmentData );
         }
 
         [TestMethod]
-        public void TestRecompileTkModelDescriptorList()
-        {
-            if (!Directory.Exists(baseDir))
-                return; // fix for appveyor until we figure out how to skip tests
-
-            recompileFiles(testFilesTkModelDescriptorList);
+        public void TestRecompileTkModelDescriptorList() {
+            recompileFiles( testFilesTkModelDescriptorList );
         }
 
         [TestMethod]
-        public void TestRecompileTkProceduralTextureList()
-        {
-            if (!Directory.Exists(baseDir))
-                return; // fix for appveyor until we figure out how to skip tests
-
-            recompileFiles(testFilesTkProceduralTextureList);
+        public void TestRecompileTkProceduralTextureList() {
+            recompileFiles( testFilesTkProceduralTextureList );
         }
 
         [TestMethod]
-        public void TestRecompileTkMaterialData()
-        {
-            if (!Directory.Exists(baseDir))
-                return; // fix for appveyor until we figure out how to skip tests
-
-            recompileFiles(testFilesTkMaterialData);
+        public void TestRecompileTkMaterialData() {
+            recompileFiles( testFilesTkMaterialData );
         }
 
         [TestMethod]
-        public void TestRecompileTkSceneNodeData()
-        {
-            if (!Directory.Exists(baseDir))
-                return; // fix for appveyor until we figure out how to skip tests
-
-            recompileFiles(testFilesTkSceneNodeData);
+        public void TestRecompileTkSceneNodeData() {
+            recompileFiles( testFilesTkSceneNodeData );
         }
 
         [TestMethod]
-        public void TestRecompileGcNGuiLayerData()
-        {
-            if (!Directory.Exists(baseDir))
-                return; // fix for appveyor until we figure out how to skip tests
-
-            recompileFiles(testFilesGcNGuiLayerData);
+        public void TestRecompileGcNGuiLayerData() {
+            recompileFiles( testFilesGcNGuiLayerData );
         }
     }
 }

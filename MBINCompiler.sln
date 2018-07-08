@@ -14,6 +14,7 @@ EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		libMBIN\libMBIN-Shared.projitems*{b6850f17-d8fd-48de-9cf2-240f1ba87236}*SharedItemsImports = 13
+		libMBIN\libMBIN-Shared.projitems*{ce736ef9-7be9-4ff0-9551-78f0071aa373}*SharedItemsImports = 4
 		libMBIN\libMBIN-Shared.projitems*{f2d295a6-d082-4eb4-8fc9-f4687f674939}*SharedItemsImports = 4
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
