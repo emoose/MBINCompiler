@@ -56,14 +56,14 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="WriteStringTest.cs" />
+    <Compile Include="WriteStringTests.cs" />
     <Compile Include="SerializationTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TemplateSizeTest.cs" />
+    <Compile Include="TemplateSizeTests.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Config\user.runsettings" />
     <None Include="Config\example.runsettings" />
+    <None Include="Config\user.runsettings" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\libMBIN-DLL\libMBIN-DLL.csproj">

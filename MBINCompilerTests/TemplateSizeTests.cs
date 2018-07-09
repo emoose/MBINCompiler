@@ -7,16 +7,12 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 using libMBIN.Models;
 
-//using MBINCompiler;
-//using MBINCompilerTests.Properties;
+namespace MBINCompilerTests {
 
-namespace MBINCompilerTests
-{
-    [TestClass]
-    public class TemplateSizeTest
-    {
-        readonly Dictionary<string, int> templateSizes = new Dictionary<string, int>()
-        {
+    //[TestClass]
+    public class TemplateSizeTests {
+
+        private readonly Dictionary<string, int> templateSizes = new Dictionary<string, int>() {
             { "TkCurveType", 0x4 },
             { "GcCameraAerialViewData", 0x24 },
             { "GcCameraShakeCapturedData", 0x14 },
@@ -676,13 +672,10 @@ namespace MBINCompilerTests
         };
 
         [TestMethod]
-        public void TestTemplateSizes()
-        {
+        public void TestTemplateSizes() {
             var doneTemplates = new List<string>();
-            foreach (var template in NMSTemplate.NMSTemplateMap)
-            {
-                if (!templateSizes.ContainsKey(template.Key))
-                {
+            foreach (var template in NMSTemplate.NMSTemplateMap) {
+                if (!templateSizes.ContainsKey(template.Key)) {
                     Debug.WriteLine($"TestTemplateSizes: no size defined for template {template.Key}!");
                     continue;
                 }
@@ -693,9 +686,11 @@ namespace MBINCompilerTests
                 doneTemplates.Add(template.Key);
             }
 
-            foreach(var template in templateSizes)
-                if (!doneTemplates.Contains(template.Key))
-                    Debug.WriteLine($"TestTemplateSizes: size 0x{template.Value:X} defined for missing template {template.Key}!");
+            foreach ( var template in templateSizes ) {
+                if ( !doneTemplates.Contains( template.Key ) ) {
+                    Debug.WriteLine( $"TestTemplateSizes: size 0x{template.Value:X} defined for missing template {template.Key}!" );
+                }
+            }
         }
     }
 }
