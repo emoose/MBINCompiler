@@ -9,7 +9,7 @@
     <Import_RootNamespace>libMBIN</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="$(MSBuildThisFileDirectory)Source\Common\Shared.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\Common\BinaryStreamExtensions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Common\System\Half.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Common\System\HalfHelper.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\EXmlFile.cs" />
