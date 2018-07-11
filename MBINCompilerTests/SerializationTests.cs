@@ -7,6 +7,7 @@ using System.Text;
 using libMBIN;
 using libMBIN.Models;
 using libMBIN.Models.Structs;
+using System.Collections.Generic;
 
 namespace MBINCompilerTests {
 
@@ -15,6 +16,7 @@ namespace MBINCompilerTests {
 
         private static string testResultsDirectory = "";
         private static string baseDir = "";
+        private static bool enableTimeProfileLogging = false;
 
         #region Test Files
         String testFile1 = "../../MBINCompilerTestTemplate.MBIN";
@@ -13778,8 +13780,7 @@ namespace MBINCompilerTests {
         };
         #endregion
         #region Others
-        string[] testFiles = new string[]
-        {
+        string[] testFiles = new string[] {
             // GcAISpaceshipManagerData
             "METADATA/SIMULATION/SPACE/AISPACESHIPMANAGER.MBIN",
 
@@ -13801,7 +13802,7 @@ namespace MBINCompilerTests {
             "METADATA/REALITY/TABLES/NMS_DIALOG_GCALIENPUZZLETABLE.MBIN",
 
             // GcAlienSpeechTable
-            "LANGUAGE/NMS_DIALOG.MBIN",
+            "LANGUAGE/NMS_DIALOG.MBIN", // doesn't exist anymore?
             "METADATA/REALITY/TABLES/NMS_DIALOG_GCALIENSPEECHTABLE.MBIN",
 
             // GcAtlasGlobals
@@ -13856,7 +13857,7 @@ namespace MBINCompilerTests {
             "METADATA/SIMULATION/ECOSYSTEM/ROLEDESCRIPTIONTABLES/GROUND/GROUNDTABLEALLCOW.MBIN",
             "METADATA/SIMULATION/ECOSYSTEM/ROLEDESCRIPTIONTABLES/GROUND/GROUNDTABLEBUSY.MBIN",
             "METADATA/SIMULATION/ECOSYSTEM/ROLEDESCRIPTIONTABLES/GROUND/GROUNDTABLECOMMON.MBIN",
-            "METADATA/SIMULATION/ECOSYSTEM/ROLEDESCRIPTIONTABLES/GROUND/GROUNDTABLECOMMON_TEST.MBIN",
+            "METADATA/SIMULATION/ECOSYSTEM/ROLEDESCRIPTIONTABLES/GROUND/GROUNDTABLECOMMON_TEST.MBIN", // doesn't exist anymore?
             "METADATA/SIMULATION/ECOSYSTEM/ROLEDESCRIPTIONTABLES/GROUND/GROUNDTABLEDEAD.MBIN",
             "METADATA/SIMULATION/ECOSYSTEM/ROLEDESCRIPTIONTABLES/GROUND/GROUNDTABLEDINOSAURS.MBIN",
             "METADATA/SIMULATION/ECOSYSTEM/ROLEDESCRIPTIONTABLES/GROUND/GROUNDTABLEGIANT.MBIN",
@@ -13867,7 +13868,7 @@ namespace MBINCompilerTests {
             "METADATA/SIMULATION/ECOSYSTEM/ROLEDESCRIPTIONTABLES/GROUND/GROUNDTABLESMALLPREDATORS.MBIN",
             "METADATA/SIMULATION/ECOSYSTEM/ROLEDESCRIPTIONTABLES/GROUND/GROUNDTABLESPARSE.MBIN",
             "METADATA/SIMULATION/ECOSYSTEM/ROLEDESCRIPTIONTABLES/SENTINELS/GROUNDTABLESENTINELS.MBIN",
-            "METADATA/SIMULATION/ECOSYSTEM/ROLEDESCRIPTIONTABLES/UNDERWATER/UNDERWATERTABLE1.MBIN",
+            "METADATA/SIMULATION/ECOSYSTEM/ROLEDESCRIPTIONTABLES/UNDERWATER/UNDERWATERTABLE1.MBIN", // doesn't exist anymore
             "METADATA/SIMULATION/ECOSYSTEM/ROLEDESCRIPTIONTABLES/UNDERWATER/UNDERWATERTABLECOMMON.MBIN",
             "METADATA/SIMULATION/ECOSYSTEM/ROLEDESCRIPTIONTABLES/UNDERWATER/UNDERWATERTABLEEMPTY.MBIN",
             "METADATA/SIMULATION/ECOSYSTEM/ROLEDESCRIPTIONTABLES/UNDERWATER/UNDERWATERTABLEWHALE.MBIN",
@@ -13890,7 +13891,7 @@ namespace MBINCompilerTests {
             "SCENES/SAVES/FACTORYBIT.MBIN",
             "SCENES/SAVES/LEARNEDHYPERDRIVE.MBIN",
             "SCENES/SAVES/REPAIREDSHIP.MBIN",
-            // uses older structures? "SCENES/SAVES/JUSTABOUTTOGETBLACKHOLE.MBIN",
+            "SCENES/SAVES/JUSTABOUTTOGETBLACKHOLE.MBIN", // uses older structures?
 
             // GcEntitlementRewardsTable
             "METADATA/ENTITLEMENTS/GCENTITLEMENTREWARDTABLE.MBIN",
@@ -13928,8 +13929,8 @@ namespace MBINCompilerTests {
             "METADATA/SIMULATION/SOLARSYSTEM/BIOMES/OBJECTS/CRYSTALS/TOXIC.MBIN",
 
             // these two fail to load, using older structs maybe? GcObjectSpawnData size is 0x370 in these, but is 0x378 in every other file
-            //"METADATA/SIMULATION/SOLARSYSTEM/BIOMES/OBJECTS/CRYSTALS/MOUNTAINFULL.MBIN",
-            //"METADATA/SIMULATION/SOLARSYSTEM/BIOMES/OBJECTS/CRYSTALS/UNDERWATERFULL.MBIN",
+            "METADATA/SIMULATION/SOLARSYSTEM/BIOMES/OBJECTS/CRYSTALS/MOUNTAINFULL.MBIN",
+            "METADATA/SIMULATION/SOLARSYSTEM/BIOMES/OBJECTS/CRYSTALS/UNDERWATERFULL.MBIN",
 
             "METADATA/SIMULATION/SOLARSYSTEM/BIOMES/OBJECTS/LEVELONEOBJECTS/FULL.MBIN",
             "METADATA/SIMULATION/SOLARSYSTEM/BIOMES/OBJECTS/LEVELONEOBJECTS/FULLSAFE.MBIN",
@@ -14009,7 +14010,7 @@ namespace MBINCompilerTests {
             "METADATA/GAMESTATE/STATS/LEVELEDSTATSTABLE.MBIN",
 
             // GcNGuiFileBrowserRecents
-            "METADATA/UI/FILEBROWSERRECENTS.MBIN",
+            "METADATA/UI/FILEBROWSERRECENTS.MBIN", // doesn't exist anymore
 
             // GcNGuiPreset
             "METADATA/UI/PRESETDATA.MBIN",
@@ -14077,7 +14078,7 @@ namespace MBINCompilerTests {
             "METADATA/SIMULATION/ENVIRONMENT/HAZARDTABLE.MBIN",
 
             // GcPlayerMissionProgressMapTable
-            "METADATA/GAMESTATE/PATCHPLAYERMISSIONMAPTABLE.MBIN",
+            "METADATA/GAMESTATE/PATCHPLAYERMISSIONMAPTABLE.MBIN", // doesn't exist anymore
 
             // GcProductTable
             "METADATA/REALITY/TABLES/NMS_REALITY_GCPRODUCTTABLE.MBIN",
@@ -14138,7 +14139,7 @@ namespace MBINCompilerTests {
             "GCSIMULATIONGLOBALS.GLOBAL.MBIN",
 
             // GcSolarSystemData
-            "SCENES/DEMOS/PS4BIOMETEST/PS4BIOMETESTSETTINGS/SOLARSYSTEMS/SOLARSYSTEM1.MBIN",
+            "SCENES/DEMOS/PS4BIOMETEST/PS4BIOMETESTSETTINGS/SOLARSYSTEMS/SOLARSYSTEM1.MBIN", // fails
             "SCENES/DEMOS/PS4TEST/MAINSETTINGS/SOLARSYSTEMS/SOLARSYSTEMPS4TEST.MBIN",
             "SCENES/DEMOS/SPRINGEVENT2016/MAINSETTINGS/SOLARSYSTEMS/SOLARSYSTEM1.MBIN",
             "SCENES/DEMOS/SPRINGEVENT2016/MAINSETTINGS/SOLARSYSTEMS/SOLARSYSTEM2.MBIN",
@@ -14730,16 +14731,92 @@ namespace MBINCompilerTests {
         [AssemblyInitialize]
         public static void AssemblyInitialize( TestContext context ) {
             testResultsDirectory = context.TestResultsDirectory;
-            baseDir = (string) context.Properties["InputFolder"];
+
+            string value = ((string) context.Properties["EnableTimeProfileLogging"] ?? "").ToUpper();
+            enableTimeProfileLogging = (value == "TRUE") || (value == "YES");
+
+            baseDir = (string) context.Properties["InputFolder"] ?? "";
         }
 
-        private MemoryStream decompile( Stream stream ) {
+        #region Private
+        private void AssertIsBaseDir() {
+            Assert.IsFalse( String.IsNullOrEmpty( baseDir ), "InputFolder not configured?\n"
+                    + "You must configure and use a .runsettings file with these unit tests.\n"
+                    + "See the comments in the Config/example.runsettings file for details."
+            );
+
+            Assert.IsTrue( Directory.Exists( baseDir ), "Path not found.\n"
+                    + "Invalid InputFolder path specified in runsettings.\n"
+                    + "\"" + baseDir + "\""
+            );
+        }
+
+        #region Log Methods
+        private void LogProfileTime( long compileTime, long decompileTime, long totalTime ) {
+            if ( enableTimeProfileLogging ) {
+                Debug.WriteLine( $"    compiled in { compileTime } ms, decompiled in { decompileTime } ms, completed in { totalTime } ms" );
+            }
+        }
+
+        private string LogRecompiledMismatch( string file ) {
+            Debug.WriteLine( $"Error: Vanilla EXML doesn't match recompiled EXML." );
+            return file;
+        }
+
+        private string LogFileNotFound( string file ) {
+            Debug.WriteLine( $"Error: File not found!");
+            return file;
+        }
+
+        private string LogUnHandledException( string file, Exception e ) {
+            Debug.WriteLine( $"An unhandled exception occurred while processing \"{ file }\"\n{ e }");
+            return file;
+        }
+
+        private string LogFilesNotFound( List<string> filesNotFound ) {
+            string msg = "";
+            if ( filesNotFound.Count != 0 ) {
+                msg = $"\n{ filesNotFound.Count } files not found.";
+                Debug.WriteLine( msg );
+                foreach ( var file in filesNotFound ) Debug.WriteLine( $"    { file }" );
+            }
+            return msg;
+        }
+
+        private string LogFilesFailed( List<string> filesFailed ) {
+            string msg = "";
+            if ( filesFailed.Count != 0 ) {
+                msg = $"\n{filesFailed.Count} files failed!";
+                Debug.WriteLine( msg );
+                foreach (var file in filesFailed) Debug.WriteLine( $"    { file }" );
+            }
+            return msg;
+        }
+
+        private void LogSummary( int numProcessed, long avgTime, long maxTime, TimeSpan totalTime ) {
+            Debug.WriteLine( $"\n{ numProcessed } files recompiled."
+                           + $"\nAvg Recompile Time: { avgTime / (float) numProcessed } ms"
+                           + $"\nMax Recompile Time: { maxTime } ms"
+                           + $"\nTotal Time: { totalTime }"
+            );
+        }
+        #endregion
+
+        private string Hash( Stream stream ) {
+            using (var sha = System.Security.Cryptography.SHA1.Create()) {
+                stream.Position = 0;
+                return BitConverter.ToString( sha.ComputeHash( stream ) );
+            }
+        }
+
+        private MemoryStream Decompile( Stream stream ) {
             using (var file = new MBINFile( stream )) {
                 file.Load();
                 var data = file.GetData();
-
                 Assert.IsNotNull( data, "deserialized data was null" );
+
                 Assert.IsNotNull( data.SerializeEXml( false ), "xml serialization was null" );
+
                 var xmlString = EXmlFile.WriteTemplate( data );
                 Assert.IsNotNull( xmlString, "xml data is null" );
 
@@ -14752,7 +14829,7 @@ namespace MBINCompilerTests {
             }
         }
 
-        private MemoryStream compile( Stream stream ) {
+        private MemoryStream Compile( Stream stream ) {
             var data = EXmlFile.ReadTemplateFromStream( stream );
             Assert.IsNotNull( data, "exml failed to deserialize" );
 
@@ -14760,8 +14837,9 @@ namespace MBINCompilerTests {
             using (var file = new MBINFile( memory, true )) {
                 file.Header = new MBINHeader();
                 file.Header.SetDefaults();
-                if (data.GetType().Name == "TkGeometryData")
-                    file.Header.Magic = 0xDDDDDDDD; // only used by TkGeometryData / .MBIN.PC files, maybe used to signal the file is PC only?
+
+                // only used by TkGeometryData / .MBIN.PC files, maybe used to signal the file is PC only?
+                if (data.GetType().Name == "TkGeometryData") file.Header.Magic = 0xDDDDDDDD;
 
                 file.SetData( data );
                 file.Save();
@@ -14770,16 +14848,82 @@ namespace MBINCompilerTests {
             return memory;
         }
 
-        private string Hash( Stream stream ) {
-            using (var sha = System.Security.Cryptography.SHA1.Create()) {
-                stream.Position = 0;
-                return BitConverter.ToString( sha.ComputeHash( stream ) );
+        private void Recompile( string[] files ) {
+            AssertIsBaseDir();
+
+            List<string> filesNotFound = new List<string>();
+            List<string> filesFailed   = new List<string>();
+
+            int numProcessed = 0;
+            long maxElapsed = 0;
+            long avgElapsed = 0;
+
+            Stopwatch timer = new Stopwatch();
+            timer.Start();
+
+            foreach (var test in files) {
+                long elapsed = timer.ElapsedMilliseconds;
+
+                try {
+                    Debug.WriteLine( $"RecompileFiles: {test}" );
+
+                    var fullPath = Path.Combine( baseDir, test );
+
+                    long decompileElapsed = timer.ElapsedMilliseconds;
+                    var vanillaEXML = Decompile( File.Open( fullPath, FileMode.Open ) );
+                    decompileElapsed = (timer.ElapsedMilliseconds - decompileElapsed);
+
+                    long compileElapsed = timer.ElapsedMilliseconds;
+                    var compiledMBIN = Compile( vanillaEXML );
+                    compileElapsed = (timer.ElapsedMilliseconds - compileElapsed);
+
+                    var recompiledEXML = Decompile( compiledMBIN );
+
+                    string vanilla = Hash( vanillaEXML );
+                    string recompiled = Hash( recompiledEXML );
+
+                    //if ( vanilla != recompiled ) {
+                    //    File.WriteAllBytes( testResultsDirectory + "/vanilla.exml", vanillaEXML.ToArray() );
+                    //    File.WriteAllBytes( testResultsDirectory + "/recompiled.exml", recompiledEXML.ToArray() );
+                    //}
+
+                    vanillaEXML.Dispose();
+                    compiledMBIN.Dispose();
+                    recompiledEXML.Dispose();
+
+                    elapsed = (timer.ElapsedMilliseconds - elapsed);
+                    LogProfileTime( compileElapsed, decompileElapsed, elapsed );
+
+                    maxElapsed = Math.Max( maxElapsed, elapsed );
+                    avgElapsed += elapsed;
+                    numProcessed++;
+
+                    // check exml files match
+                    if ( recompiled != vanilla ) filesFailed.Add( LogRecompiledMismatch( test ) );
+
+                } catch ( FileNotFoundException e ) {
+                    filesNotFound.Add( LogFileNotFound( test ) );
+                } catch ( Exception e ) {
+                    filesFailed.Add( LogUnHandledException( test, e ) );
+                }
+
             }
+
+            timer.Stop();
+
+            string errorMsg = "";
+            errorMsg += LogFilesNotFound( filesNotFound );
+            errorMsg += LogFilesFailed( filesFailed );
+
+            LogSummary( numProcessed, avgElapsed, maxElapsed, timer.Elapsed );
+
+            if ( errorMsg != "" ) Assert.Fail( errorMsg );
         }
+        #endregion
 
-
+        #region Tests
         [TestMethod]
-        public void TestDeserialization() {
+        public void TestMBINCompilerTemplate() {
             var file = new MBINFile( testFile1 );
             file.Load();
             Assert.AreEqual( file.Header.GetXMLTemplateName(), "MBINCompilerTestTemplate", $"{testFile1} header not using TemplateType MBINCompilerTestTemplate!" );
@@ -14809,89 +14953,50 @@ namespace MBINCompilerTests {
             string[] expectedStrings = new[] { "FirstEntry", "SecondEntry", "ThirdEntry" };
             Assert.AreEqual( test.Test0x80ByteStringList.Count, expectedStrings.Length );
 
-            for (int i = 0; i < expectedStrings.Length; i++)
+            for ( int i = 0; i < expectedStrings.Length; i++ ) {
                 Assert.AreEqual( test.Test0x80ByteStringList[i].Value, expectedStrings[i] );
-        }
-
-        private void recompileFiles( string[] files ) {
-            Assert.IsFalse( String.IsNullOrEmpty( baseDir ), "InputFolder not configured?\n"
-                    + "You must configure and use a .runsettings file with these unit tests.\n"
-                    + "See the comments in the Config/example.runsettings file for details."
-            );
-
-            Assert.IsTrue( Directory.Exists( baseDir ), "Path not found.\n"
-                    + "Invalid InputFolder path specified in runsettings.\n"
-                    + "\"" + baseDir + "\""
-            );
-
-            foreach (var test in files) {
-                var fullPath = Path.Combine( baseDir, test );
-                if (!File.Exists( fullPath )) {
-                    Debug.WriteLine( $"recompileFiles: test file {test} not found!" );
-                    continue; // file might have been removed in an update
-                }
-
-                Debug.WriteLine( $"recompileFiles: {test}" );
-
-                var vanillaEXML = decompile( File.Open( fullPath, FileMode.Open ) );
-                var compiledMBIN = compile( vanillaEXML );
-                var recompiledEXML = decompile( compiledMBIN );
-
-                string vanilla = Hash( vanillaEXML );
-                string recompiled = Hash( recompiledEXML );
-
-                if (vanilla != recompiled) {
-                    File.WriteAllBytes( testResultsDirectory + "/vanilla.exml", vanillaEXML.ToArray() );
-                    File.WriteAllBytes( testResultsDirectory + "/recompiled.exml", recompiledEXML.ToArray() );
-                }
-
-                vanillaEXML.Dispose();
-                compiledMBIN.Dispose();
-                recompiledEXML.Dispose();
-
-                // check exml files match
-                Assert.AreEqual( recompiled, vanilla );
             }
         }
 
         [TestMethod]
         public void TestRecompile() {
-            recompileFiles( testFiles );
+            Recompile( testFiles );
         }
 
         [TestMethod]
         public void TestRecompileTkAnimMetadata() {
-            recompileFiles( testFilesTkAnimMetadata );
+            Recompile( testFilesTkAnimMetadata );
         }
 
         [TestMethod]
         public void TestRecompileTkAttachmentData() {
-            recompileFiles( testFilesTkAttachmentData );
+            Recompile( testFilesTkAttachmentData );
         }
 
         [TestMethod]
         public void TestRecompileTkModelDescriptorList() {
-            recompileFiles( testFilesTkModelDescriptorList );
+            Recompile( testFilesTkModelDescriptorList );
         }
 
         [TestMethod]
         public void TestRecompileTkProceduralTextureList() {
-            recompileFiles( testFilesTkProceduralTextureList );
+            Recompile( testFilesTkProceduralTextureList );
         }
 
         [TestMethod]
         public void TestRecompileTkMaterialData() {
-            recompileFiles( testFilesTkMaterialData );
+            Recompile( testFilesTkMaterialData );
         }
 
         [TestMethod]
         public void TestRecompileTkSceneNodeData() {
-            recompileFiles( testFilesTkSceneNodeData );
+            Recompile( testFilesTkSceneNodeData );
         }
 
         [TestMethod]
         public void TestRecompileGcNGuiLayerData() {
-            recompileFiles( testFilesGcNGuiLayerData );
+            Recompile( testFilesGcNGuiLayerData );
         }
+        #endregion
     }
 }

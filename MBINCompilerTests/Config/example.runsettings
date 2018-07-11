@@ -18,6 +18,7 @@
 <RunSettings>  
   
   <TestRunParameters>
+    <Parameter name="EnableTimeProfileLogging" value="false" />
     <Parameter name="InputFolder" value="Path/To/Vanilla/MBIN/Directory" />
   </TestRunParameters>  
  
