@@ -18,6 +18,9 @@ namespace MBINCompilerTests {
         private static string baseDir = "";
         private static bool enableTimeProfileLogging = false;
 
+        private static string OPT_TIMEPROFILELOGGING = "EnableTimeProfileLogging";
+        private static string OPT_BASEDIR = "VanillaGameDataPath";
+
         #region Test Files
         String testFile1 = "../../MBINCompilerTestTemplate.MBIN";
         #region TkAnimMetadata
@@ -14732,21 +14735,21 @@ namespace MBINCompilerTests {
         public static void AssemblyInitialize( TestContext context ) {
             testResultsDirectory = context.TestResultsDirectory;
 
-            string value = ((string) context.Properties["EnableTimeProfileLogging"] ?? "").ToUpper();
+            string value = ((string) context.Properties[OPT_TIMEPROFILELOGGING] ?? "").ToUpper();
             enableTimeProfileLogging = (value == "TRUE") || (value == "YES");
 
-            baseDir = (string) context.Properties["InputFolder"] ?? "";
+            baseDir = (string) context.Properties[OPT_BASEDIR] ?? "";
         }
 
         #region Private
         private void AssertIsBaseDir() {
-            Assert.IsFalse( String.IsNullOrEmpty( baseDir ), "InputFolder not configured?\n"
+            Assert.IsFalse( String.IsNullOrEmpty( baseDir ), $"{OPT_BASEDIR} not configured?\n"
                     + "You must configure and use a .runsettings file with these unit tests.\n"
                     + "See the comments in the Config/example.runsettings file for details."
             );
 
             Assert.IsTrue( Directory.Exists( baseDir ), "Path not found.\n"
-                    + "Invalid InputFolder path specified in runsettings.\n"
+                    + $"Invalid {OPT_BASEDIR} parameter specified in runsettings.\n"
                     + "\"" + baseDir + "\""
             );
         }
