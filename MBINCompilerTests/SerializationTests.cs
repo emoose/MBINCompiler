@@ -14816,12 +14816,12 @@ namespace MBINCompilerTests {
             using (var file = new MBINFile( stream )) {
                 file.Load();
                 var data = file.GetData();
-                Assert.IsNotNull( data, "deserialized data was null" );
+                if (data == null) throw new Exception( "deserialized data was null" );
 
-                Assert.IsNotNull( data.SerializeEXml( false ), "xml serialization was null" );
+                if (data.SerializeEXml( false ) == null) throw new Exception( "xml serialization was null" );
 
                 var xmlString = EXmlFile.WriteTemplate( data );
-                Assert.IsNotNull( xmlString, "xml data is null" );
+                if ( String.IsNullOrEmpty( xmlString ) ) throw new Exception( "xml data is null" );
 
                 MemoryStream memory = new MemoryStream();
                 using (TextWriter writer = new StreamWriter( memory, Encoding.Default, 4096, true )) {
@@ -14834,7 +14834,7 @@ namespace MBINCompilerTests {
 
         private MemoryStream Compile( Stream stream ) {
             var data = EXmlFile.ReadTemplateFromStream( stream );
-            Assert.IsNotNull( data, "exml failed to deserialize" );
+            if (data == null) throw new Exception( "exml failed to deserialize" );
 
             MemoryStream memory = new MemoryStream();
             using (var file = new MBINFile( memory, true )) {
