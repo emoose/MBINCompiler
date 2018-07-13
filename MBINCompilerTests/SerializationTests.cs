@@ -14742,16 +14742,23 @@ namespace MBINCompilerTests {
         }
 
         #region Private
-        private void AssertIsBaseDir() {
-            Assert.IsFalse( String.IsNullOrEmpty( baseDir ), $"{OPT_BASEDIR} not configured?\n"
+        private static void ValidateBaseDirIsConfigured() {
+            if ( String.IsNullOrEmpty( baseDir ) ) throw new Exception( $"{OPT_BASEDIR} not configured?\n"
                     + "You must configure and use a .runsettings file with these unit tests.\n"
                     + "See the comments in the Config/example.runsettings file for details."
             );
+        }
 
-            Assert.IsTrue( Directory.Exists( baseDir ), "Path not found.\n"
+        private static void ValidateBaseDirExists() {
+            if ( !Directory.Exists( baseDir ) ) throw new Exception( "Path not found.\n"
                     + $"Invalid {OPT_BASEDIR} parameter specified in runsettings.\n"
                     + "\"" + baseDir + "\""
             );
+        }
+
+        private static void ValidateBaseDir() {
+            ValidateBaseDirIsConfigured();
+            ValidateBaseDirExists();
         }
 
         #region DebugLog Methods
@@ -14852,8 +14859,7 @@ namespace MBINCompilerTests {
         }
 
         private void Recompile( string[] files ) {
-            AssertIsBaseDir();
-
+            ValidateBaseDir();
             List<string> filesNotFound = new List<string>();
             List<string> filesFailed   = new List<string>();
 
