@@ -14754,29 +14754,29 @@ namespace MBINCompilerTests {
             );
         }
 
-        #region Log Methods
-        private void LogProfileTime( long compileTime, long decompileTime, long totalTime ) {
+        #region DebugLog Methods
+        private void DebugLogProfileTime( long compileTime, long decompileTime, long totalTime ) {
             if ( enableTimeProfileLogging ) {
                 Debug.WriteLine( $"    compiled in { compileTime } ms, decompiled in { decompileTime } ms, completed in { totalTime } ms" );
             }
         }
 
-        private string LogRecompiledMismatch( string file ) {
+        private string DebugLogRecompiledMismatch( string file ) {
             Debug.WriteLine( $"Error: Vanilla EXML doesn't match recompiled EXML." );
             return file;
         }
 
-        private string LogFileNotFound( string file ) {
+        private string DebugLogFileNotFound( string file ) {
             Debug.WriteLine( $"Error: File not found!");
             return file;
         }
 
-        private string LogUnHandledException( string file, Exception e ) {
+        private string DebugLogUnHandledException( string file, Exception e ) {
             Debug.WriteLine( $"An unhandled exception occurred while processing \"{ file }\"\n{ e }");
             return file;
         }
 
-        private string LogFilesNotFound( List<string> filesNotFound ) {
+        private string DebugLogFilesNotFound( List<string> filesNotFound ) {
             string msg = "";
             if ( filesNotFound.Count != 0 ) {
                 msg = $"\n{ filesNotFound.Count } files not found.";
@@ -14786,7 +14786,7 @@ namespace MBINCompilerTests {
             return msg;
         }
 
-        private string LogFilesFailed( List<string> filesFailed ) {
+        private string DebugLogFilesFailed( List<string> filesFailed ) {
             string msg = "";
             if ( filesFailed.Count != 0 ) {
                 msg = $"\n{filesFailed.Count} files failed!";
@@ -14796,7 +14796,7 @@ namespace MBINCompilerTests {
             return msg;
         }
 
-        private void LogSummary( int numProcessed, long avgTime, long maxTime, TimeSpan totalTime ) {
+        private void DebugLogSummary( int numProcessed, long avgTime, long maxTime, TimeSpan totalTime ) {
             Debug.WriteLine( $"\n{ numProcessed } files recompiled."
                            + $"\nAvg Recompile Time: { avgTime / (float) numProcessed } ms"
                            + $"\nMax Recompile Time: { maxTime } ms"
@@ -14895,19 +14895,19 @@ namespace MBINCompilerTests {
                     recompiledEXML.Dispose();
 
                     elapsed = (timer.ElapsedMilliseconds - elapsed);
-                    LogProfileTime( compileElapsed, decompileElapsed, elapsed );
+                    DebugLogProfileTime( compileElapsed, decompileElapsed, elapsed );
 
                     maxElapsed = Math.Max( maxElapsed, elapsed );
                     avgElapsed += elapsed;
                     numProcessed++;
 
                     // check exml files match
-                    if ( recompiled != vanilla ) filesFailed.Add( LogRecompiledMismatch( test ) );
+                    if ( recompiled != vanilla ) filesFailed.Add( DebugLogRecompiledMismatch( test ) );
 
                 } catch ( FileNotFoundException e ) {
-                    filesNotFound.Add( LogFileNotFound( test ) );
+                    filesNotFound.Add( DebugLogFileNotFound( test ) );
                 } catch ( Exception e ) {
-                    filesFailed.Add( LogUnHandledException( test, e ) );
+                    filesFailed.Add( DebugLogUnHandledException( test, e ) );
                 }
 
             }
@@ -14915,10 +14915,10 @@ namespace MBINCompilerTests {
             timer.Stop();
 
             string errorMsg = "";
-            errorMsg += LogFilesNotFound( filesNotFound );
-            errorMsg += LogFilesFailed( filesFailed );
+            errorMsg += DebugLogFilesNotFound( filesNotFound );
+            errorMsg += DebugLogFilesFailed( filesFailed );
 
-            LogSummary( numProcessed, avgElapsed, maxElapsed, timer.Elapsed );
+            DebugLogSummary( numProcessed, avgElapsed, maxElapsed, timer.Elapsed );
 
             if ( errorMsg != "" ) Assert.Fail( errorMsg );
         }
