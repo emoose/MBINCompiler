@@ -11,8 +11,8 @@
         public float Unknown104;
         public float Unknown108;
         public float Unknown10C;
-        public bool Unknown110;         // only checked on system warp
-        public bool Unknown111;         // only checked on system warp
+        public bool Unknown110;         // only checked on system warp          related to caves
+        public bool Unknown111;         // only checked on system warp          related to caves
         public float Unknown114;
         public float Unknown118;
         public float Unknown11C;
@@ -32,8 +32,8 @@
         public float Unknown154;
         public float Unknown158;
         public float Unknown15C;
-        public bool Unknown160;
-        public float Unknown164;
+        public bool Unknown160;         // makes a bunch of colours get swapped around too
+        public float Unknown164;        // something to do with colour palettes for terrain generation
         public int UnknownInt168;
         public float Unknown16C;
         public float Unknown170;

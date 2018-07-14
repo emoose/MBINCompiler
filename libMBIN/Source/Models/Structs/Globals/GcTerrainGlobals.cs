@@ -28,7 +28,7 @@
         /* 0x48 */ public bool RemovePlanetTerrain;     // only checked on system warp
         [NMS(Size = 0x1, Ignore = true)]
         public byte[] Padding49;
-        public bool Unknown4A;                          // only checked on system warp      // totally changes the terrain
+        /* 0x4A */ public bool DontReRollTerrainSettingsIndex;     // Setting this to False causes the TerrainSettingsIndex in the GcPlanetData struct to be randomized twice
 
 
         public int UnknownInt4C;
@@ -37,11 +37,11 @@
 
         public float Unknown58;
         public float Unknown5C;
-        public float Unknown60;
-        public float Unknown64;
-        public float Unknown68;
-        public float Unknown6C;
-        public float Unknown70;
+        /* 0x60 */ public float MaxElevationLayerRegionRatio;
+        /* 0x64 */ public float HighWaterLevelMin;
+        /* 0x68 */ public float HighWaterLevelMax;
+        /* 0x6C */ public float LowWaterLevelMin;
+        /* 0x70 */ public float LowWaterLevelMax;
 
         public GcMiningSubstanceData Unknown74;
         public GcMiningSubstanceData Unknown80;

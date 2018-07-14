@@ -344,7 +344,7 @@ namespace libMBIN.Models.Structs
         /* 0X670 */ public float Unknown670;
         /* 0X674 */ public float Unknown674;
         /* 0X678 */ public int UnknownInt678;
-        /* 0X67C */ public bool Unknown67C;
+        /* 0X67C */ public bool Unknown67C;         // something to do with planet name generation??
         /* 0X680 */ public float Unknown680;
         /* 0X684 */ public float Unknown684;
         /* 0X688 */ public float Unknown688;

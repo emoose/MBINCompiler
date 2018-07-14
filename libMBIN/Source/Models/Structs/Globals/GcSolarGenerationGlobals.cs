@@ -3,15 +3,14 @@
     public class GcSolarGenerationGlobals : NMSTemplate
     {
         /* 0x0 */ public bool Unknown0;
-        /* 0x4 */ public float Unknown4;    // unused?
-        /* 0x8 */ public float Unknown8;    // unused?
-        /* 0xC */ public float UnknownC;    // unused?
+        [NMS(Size = 0xF, Ignore = true)]
+        /* 0x1 */ public byte[] Padding1;
         /* 0x10 */ public float Unknown10;
         /* 0x14 */ public float Unknown14;
         /* 0x18 */ public float Unknown18;
         /* 0x1C */ public float Unknown1C;
         /* 0x20 */ public float MinSolarSystemScale;        // ??
-        /* 0x24 */ public float MaxSolarSystemScale;        // ??
+        /* 0x24 */ public float MaxSolarSystemScale;        // ??       used instead of +0x20 if +0x0 is True
         [NMS(Size = 0x8, Ignore = true)]
         /* 0x28 */ public byte[] Padding28;
         /* 0x30 */ public bool PlanetBuildingRaceMatchesSystemRace;

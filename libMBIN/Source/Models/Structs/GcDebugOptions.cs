@@ -275,8 +275,7 @@
         {
             return new[] { "None", "AtlasType1", "AtlasType2", "Blackhole", "Anomaly", "Spacewalk" };
         }
-        /* 0xD30 */
-        public bool UnknownD30;
+        /* 0xD30 */ public bool ForceSeaLevelTo_4_over_10;
         /* 0xD31 */ public bool DisableLimits;
         /* 0xD32 */ public bool LimitPerRegionInstances;
         /* 0xD33 */ public bool LimitPerRegionBodies;

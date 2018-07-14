@@ -8,13 +8,13 @@
         /* 0x0018 */ public TkNoiseVoxelTypeEnum BuildingVoxelType;
         /* 0x001C */ public TkNoiseVoxelTypeEnum ResourceVoxelType;
 
-        [NMS(Size = 7)]
+        [NMS(Size = 7, EnumValue = new[] { "Base", "Hill", "Mountain", "Rock", "UnderWater", "Texture", "Elevation" })]
         /* 0x0020 */ public TkNoiseUberLayerData[] NoiseLayers;
-        [NMS(Size = 9)]
+        [NMS(Size = 9, EnumValue = new[] { "Small", "Large", "Resources_Heridium", "Resources_Iridium", "Resources_Copper", "Resources_Nickel", "Resources_Aluminium", "Resources_Gold", "Resources_Emeril" })]
         /* 0x02F8 */ public TkNoiseGridData[] GridLayers;
-        [NMS(Size = 7)]
+        [NMS(Size = 7, EnumValue = new[] { "River", "Crater", "Arches", "ArchesSmall", "Blobs", "BlobsSmall", "Substance" })]
         /* 0x109C */ public TkNoiseFeatureData[] Features;
-        [NMS(Size = 1)]
+        [NMS(Size = 1, EnumValue = new[] { "Underground" })]
         /* 0x125C */ public TkNoiseCaveData[] CavesUnderground;
         /* 0x12DC */ public float MinimumCaveDepth;
         /* 0x12E0 */ public float CaveRoofSmoothingDist;

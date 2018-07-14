@@ -247,8 +247,8 @@
         public float Unknown548;
         public float Unknown54C;
 
-        public GcPlanetWaterData Unknown550;
-        public GcPlanetWaterData Unknown710;
+        public GcPlanetWaterData PlanetWaterData;       // All values here are the ones that all planets have except the colours
+        public GcPlanetWaterData UnusedPlanetWaterData;
 
         public float Unknown8B0;
         public float Unknown8B4;

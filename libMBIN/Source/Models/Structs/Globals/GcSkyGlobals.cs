@@ -91,7 +91,7 @@
         /* 0X1EC */ public float Unknown1EC;
         /* 0X1F0 */ public float Unknown1F0;
         /* 0X1F4 */ public float Unknown1F4;
-        /* 0X1F8 */ public float Unknown1F8;
+        /* 0X1F8 */ public float DefaultUnderwaterHeavyAirTransparency;           // value will be between 0 and 1. If it is set to a negative number then the value in the palette file is used.
         /* 0X1FC */ public float Unknown1FC;
         /* 0X200 */ public float Unknown200;
         /* 0X204 */ public float Unknown204;

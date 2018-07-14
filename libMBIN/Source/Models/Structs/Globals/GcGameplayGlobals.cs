@@ -60,7 +60,7 @@ namespace libMBIN.Models.Structs
         /* 0X204 */ public float Unknown204;
         /* 0X208 */ public float Unknown208;
         /* 0X20C */ public float Unknown20C;
-        /* 0X210 */ public float Unknown210;
+        /* 0X210 */ public float Unknown210;        // not used??
         /* 0X214 */ public float Unknown214;
         /* 0X218 */ public float Unknown218;
         /* 0X21C */ public float Unknown21C;
@@ -71,7 +71,7 @@ namespace libMBIN.Models.Structs
         /* 0X230 */ public float Unknown230;
         /* 0X234 */ public float Unknown234;
         /* 0X238 */ public float Unknown238;
-        /* 0X23C */ public float Unknown23C;
+        /* 0X23C */ public bool Unknown23C;         // something to do with building generation?? Maybe 'Don't generate buildings'?
         /* 0X240 */ public int RearShotDamageMultiplier;
         /* 0X244 */ public float Unknown244;
         /* 0X248 */ public int UnknownInt248;
@@ -82,7 +82,7 @@ namespace libMBIN.Models.Structs
 
         /* the following is a GcExperienceTimers struct, but 
         I have expanded it so that the individual values can be named appropriately */
-	    /* 0x25C */ public int inverse_SentinelTimer_A_or_B_Chance_percent;        // if *rand* > value, sentinel timer is A, then check Timer_B chance
+	    /* 0x25C */ public int SentinelTimer_Default_Chance_percent;        // if *rand* > value, sentinel timer is A, then check Timer_B chance
 	    /* 0x260 */ public int SentinelTimer_B_Chance_percent;
 	    /* 0x264 */ public Vector2f SentinelTimer_Default_or_Aggressive;       // for agressive sentinals and...
 	    /* 0x26C */ public Vector2f SentinelTimer_A;
@@ -100,7 +100,7 @@ namespace libMBIN.Models.Structs
         /* 0X2EC */ public float Unknown2EC;
 
         // OnPlanet FlybyTimer determination
-        /* 0x2F0 */ public int inverse_FlybyTimer_A_or_B_Chance_percent;
+        /* 0x2F0 */ public int FlybyTimer_Default_Chance_percent;
 	    /* 0x2F4 */ public int FlyByTimer_B_Chance_percent;
 	    /* 0x2F8 */ public Vector2f FlybyTimer_Default;
 	    /* 0x300 */ public Vector2f FlybyTimer_A;                     
@@ -360,3 +360,29 @@ namespace libMBIN.Models.Structs
         /* 0x111C */ public byte[] EndPadding;
     }
 }
+
+/* Notes and algorithms:
+
+Since the names for the sentinal timer and flyby timers are a bit hard to understand,
+this is the algorithm that shows how the game uses them:
+
+if SentinelLevel == Agressive:
+	MaxActiveDrones = 1
+	SentinelTimer = SentinelTimer_Default_or_Aggressive
+	FlybyTimer = FlybyTimer_B_or_Aggressive
+else:
+	MaxActiveDrones = 2
+	if RNG(0,100) >= SentinelTimer_Default_Chance_percent:
+		SentinelTimer = SentinelTimer_A
+		if RNG(0,100) < SentinelTimer_B_Chance_percent:
+			SentinelTimer = SentinelTimer_B
+	else:
+		SentinelTimer = SentinelTimer_Default_or_Aggressive
+	
+	if RNG(0,100) >= FlybyTimer_Default_Chance_percent:
+		FlybyTimer = FlybyTimer_A
+		if RNG(0,100) < FlybyTimer_B_Chance_percent:
+			FlybyTimer = FlybyTimer_B_or_Aggressive
+	else:
+		FlybyTimer = FlybyTimer_Default
+*/
