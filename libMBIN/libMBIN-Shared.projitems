@@ -12,6 +12,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Source\Common\Shared.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Common\System\Half.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Common\System\HalfHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\Common\System\INT_2_10_10_10_REV.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\EXmlFile.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\IO.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\MBINFile.cs" />

@@ -60,7 +60,7 @@
         public bool UnknownF8;
         public bool UnknownF9;      // maybe?
         /* 0xFC */ public float RepairCostPercentage;
-        public float Unknown100;
+        public float Unknown100;    // Same as above but for GameMode > 5 (so none you can actually use)
         public float Unknown104;
         public float Unknown108;
         public float Unknown10C;
@@ -362,13 +362,13 @@
         /* 0X7E4 */ public float Unknown7E4;
         /* 0X7E8 */ public float Unknown7E8;
         /* 0X7EC */ public float Unknown7EC;
-        /* 0X7F0 */ public float SwimSpeed;
-        /* 0X7F4 */ public float Unknown7F4;
-        /* 0X7F8 */ public float Unknown7F8;
-        /* 0X7FC */ public float Unknown7FC;
+        /* 0X7F0 */ public float SwimAcceleration;
+        /* 0X7F4 */ public float SwimSpeed;
+        /* 0X7F8 */ public float SwimStoppingForce;
+        /* 0X7FC */ public float UnderwaterBobAmplitude;
         /* 0X800 */ public float JetpackWaterSpeed;
-        /* 0X804 */ public float Unknown804;
-        /* 0X808 */ public float Unknown808;
+        /* 0X804 */ public float UnderwaterBobDamping;
+        /* 0X808 */ public float UnderwaterBobFrequency;        // kinda...
         /* 0X80C */ public float Unknown80C;
         /* 0X810 */ public float Unknown810;
         /* 0X814 */ public float Unknown814;

@@ -1,20 +1,21 @@
 namespace libMBIN.Models.Structs
 {
-    public class TkVertexElement : NMSTemplate      // size: 0x20
+    [NMS(Size = 0x20)]
+    public class TkVertexElement : NMSTemplate
     {
-        public int SemanticID;
-        public int Size;
-        public int Type;
-        public int Offset;
-        public int Normalise;
+        /* 0x00 */ public int SemanticID;
+        /* 0x04 */ public int Size;
+        /* 0x08 */ public int Type;
+        /* 0x0C */ public int Offset;
+        /* 0x10 */ public int Normalise;
 
-        public int Instancing;
+        /* 0x14 */ public int Instancing;
         public string[] InstancingValues()
         {
             return new[] { "PerVertex", "PerModel" };
         }
-        
+
         [NMS(Size = 8)]
-        public string PlatformData;
+        /* 0x18 */ public string PlatformData;
     }
 }

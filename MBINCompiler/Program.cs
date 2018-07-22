@@ -27,6 +27,9 @@ namespace MBINCompiler {
         static void DecompileFile( string inputPath, string outputPath, bool getVersion = false, bool verbose = false ) {
             outputPath = String.IsNullOrEmpty( outputPath ) ? inputPath : outputPath;
 
+            if (Path.GetExtension(outputPath) == ".PC")
+                outputPath = Path.GetFileNameWithoutExtension(outputPath);  // remove the ".PC"
+
             outputPath = Path.ChangeExtension( outputPath, ".exml" ); // emoose XML, because there's no way this XML format is compatible with MXML
 
             if (File.Exists( outputPath )) {
