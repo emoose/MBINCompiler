@@ -187,7 +187,7 @@ namespace libMBIN.Models
                 int stringLength = reader.ReadInt32();
                 int unkC = reader.ReadInt32();
                 reader.BaseStream.Position = templatePosition + stringPos;
-                ((VariableSizeString)obj).Value = reader.ReadString(Encoding.UTF8, stringLength);
+                ((VariableSizeString)obj).Value = reader.ReadString(Encoding.UTF8, stringLength).TrimEnd('\x00');
                 reader.BaseStream.Position = templatePosition + 0x10;
                 return obj;
             }

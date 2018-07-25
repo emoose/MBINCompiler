@@ -2,7 +2,7 @@
 {
     public class TkPaletteTexture : NMSTemplate
     {
-        public int Palette;     // elements: 0x29
+        public int Palette;     // elements: 0x34
         public string[] PaletteValues()
         {
             return new[]
@@ -11,7 +11,9 @@
                 "Dirt", "Metal", "Paint", "Plastic", "Fur", "Scale", "Feather", "Water",
                 "Cloud", "Sky", "Space", "Underbelly", "Undercoat", "Snow", "SkyHorizon", "SkyFog",
                 "SkyHeightFog", "SkySunset", "SkyNight", "WaterNear", "SpaceCloud", "SpaceBottom", "SpaceSolar", "SpaceLight",
-                "Warrior", "Scientific", "Trader", "WarriorAlt", "ScientificAlt", "TraderAlt", "RockSaturated", "RockLight", "RockDark"
+                "Warrior", "Scientific", "Trader", "WarriorAlt", "ScientificAlt", "TraderAlt", "RockSaturated", "RockLight", "RockDark",
+                "PlanetRing", "Custom_Head", "Custom_Torso", "Custom_Chest_Armour", "Custom_Backpack", "Custom_Arms", "Custom_Hands",
+                "Custom_Legs", "Custom_Feet", "Cave", "GrassAlt"
             };
         }
 

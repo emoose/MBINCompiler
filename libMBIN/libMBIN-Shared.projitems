@@ -24,6 +24,23 @@
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\NMSAttribute.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\NMSTemplate.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\Colour.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\TkInteractiveSceneData - Copy.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\TkInteractiveSceneData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\TkInteractivityData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcScreenFilters.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcJourneyMedalTiers.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcDiscoveryRewardLookup.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcDiscoveryRewardLookupTable.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcPlayerWeaponData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcInventoryClassCostMultiplier.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcPhotoCreature.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcPlanetCloudProperties.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcPlanetRingData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcTerrainTextureSettings.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcTerrainTexture.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcDamageMultiplier.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcDamageType.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcDamageMultiplierLookup.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\EmptyNode.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcActionTrigger.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcActionTriggerState.cs" />
@@ -479,6 +496,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcPhotoModeAdjustData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcPhotoModeSettings.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcPhysicsCollisionGroups.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcBuildingSpawnSlot.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcPlanetBuildingData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcPlanetClass.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcPlanetColourData.cs" />
@@ -719,6 +737,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcTextStyleShadow.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcTexturePrefetchData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcTileTypeOptions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcTileTypeSets.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcTileTypeSet.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcTracerData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcTradeCategory.cs" />
@@ -749,6 +768,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcWeaponClasses.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcWeatherColourModifiers.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcWeatherColourSettingList.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcWeatherWeightings.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcWeatherOptions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcWeatherProperties.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcWeatherTable.cs" />
@@ -815,6 +835,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\TkGameSettings.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\TkGeometryData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\TkGraphicsSettings.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcRewardJetpackBoost.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\TkHeavyAirData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\TkHitCurveData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\TkImGuiData.cs" />
