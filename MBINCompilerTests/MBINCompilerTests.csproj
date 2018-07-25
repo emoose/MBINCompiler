@@ -56,13 +56,23 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="WriteStringTests.cs" />
-    <Compile Include="SerializationTests.cs" />
+    <Compile Include="Source\Database\AbstractRecord.cs" />
+    <Compile Include="Source\Database\Table.cs" />
+    <Compile Include="Source\Database\Tables\TemplateSizeRecord.cs" />
+    <Compile Include="Source\Tests\CommandLineInterfaceTests.cs" />
+    <Compile Include="Source\Tests\DataAnalysis.cs" />
+    <Compile Include="Source\Utils.cs" />
+    <Compile Include="Source\Logger.cs" />
+    <Compile Include="Source\RunSettings.cs" />
+    <Compile Include="Source\Tests\TemplateTests.cs" />
+    <Compile Include="Source\Tests\WriteStringTests.cs" />
+    <Compile Include="Source\Tests\SerializationTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TemplateSizeTests.cs" />
+    <Compile Include="Source\Tests\TemplateSizeTests.cs" />
+    <Compile Include="Source\Database\Tables\TemplateSizeTable.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Config\example.runsettings" />
+    <None Include="Config\default.runsettings" />
     <None Include="Config\user.runsettings" />
   </ItemGroup>
   <ItemGroup>
@@ -71,6 +81,7 @@
       <Name>libMBIN-DLL</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>

@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 using System.Text;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -6,10 +7,14 @@ using System.Diagnostics;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 using libMBIN.Models;
+using MBINCompilerTests.Database;
 
 namespace MBINCompilerTests {
 
-    //[TestClass]
+    using Record = TemplateSizeRecord;
+    using Table = Table<TemplateSizeRecord>;
+
+    [TestClass]
     public class TemplateSizeTests {
 
         private readonly Dictionary<string, int> templateSizes = new Dictionary<string, int>() {
@@ -671,24 +676,70 @@ namespace MBINCompilerTests {
             { "GcSeed", 0x10 },
         };
 
+        [ClassInitialize]
+        public static void Initialize( TestContext context ) {
+            RunSettings.Initialize( context );
+        }
+
+        [TestMethod]
+        public void CreateTemplateSizeTable() {
+            string dataDir = Path.Combine( RunSettings.RootDataDir, libMBIN.Version.NMSVersion.ToString() );
+            Directory.CreateDirectory( dataDir ); // create the directory path if it doesn't exist
+
+            Table table = new Table();
+
+            string logPath = Path.Combine( dataDir , "TemplateSizes.tsv" );
+
+            foreach ( var type in NMSTemplate.NMSTemplateMap.Values ) {
+                NMSTemplate template = Activator.CreateInstance( type ) as NMSTemplate;
+                table.Add( new Record( template.GetType().Name, template.GetDataSize() ) );
+            }
+
+            Utils.SetFileReadOnly( logPath, false );
+            using ( var streamOut = new StreamWriter( logPath ) ) {
+                streamOut.WriteLine( "# Tab-separated values. Open with a spreadsheet app such as Excel.\n" );
+                streamOut.WriteLine( "# READ-ONLY. DO NOT MODIFY OR DELETE.\n" );
+                table.Save( streamOut );
+            }
+            Utils.SetFileReadOnly( logPath, true );
+        }
+
+        private System.Version GetTableVersion() {
+            System.Version version = new System.Version();
+            foreach (var path in Directory.GetDirectories( RunSettings.RootDataDir ) ) {
+                System.Version v = new System.Version( Path.GetFileName( path ) );
+                if ( v > version ) version = v;
+            }
+            return version;
+        }
+
+        private string GetTablePath() {
+            return Path.Combine( RunSettings.RootDataDir, GetTableVersion().ToString(), "TemplateSizes.tsv" );
+        }
+
         [TestMethod]
         public void TestTemplateSizes() {
+            Table table = new Table();
+            using ( StreamReader streamIn = new StreamReader( GetTablePath() ) ) {
+                table.Load( streamIn );
+            }
+
             var doneTemplates = new List<string>();
-            foreach (var template in NMSTemplate.NMSTemplateMap) {
-                if (!templateSizes.ContainsKey(template.Key)) {
-                    Debug.WriteLine($"TestTemplateSizes: no size defined for template {template.Key}!");
+
+            foreach (Record record in table) {
+                if ( !NMSTemplate.NMSTemplateMap.ContainsKey( record.TemplateName ) ) {
+                    Debug.WriteLine( $"TestTemplateSizes: size 0x{record.Size:X} defined for missing template {record.TemplateName}!" );
                     continue;
                 }
 
-                var templateSize = NMSTemplate.GetTemplateDataSize(template.Key);
-                var templateExpectedSize = templateSizes[template.Key];
-                Assert.AreEqual(templateExpectedSize, templateSize, $"template {template.Key} size 0x{templateSize:X} != 0x{templateExpectedSize:X}");
-                doneTemplates.Add(template.Key);
+                int size = NMSTemplate.GetTemplateDataSize( record.TemplateName );
+                Assert.AreEqual( record.Size, size, $"template {record.TemplateName} size 0x{record.Size:X} != 0x{size:X}" );
+                doneTemplates.Add( record.TemplateName );
             }
 
-            foreach ( var template in templateSizes ) {
-                if ( !doneTemplates.Contains( template.Key ) ) {
-                    Debug.WriteLine( $"TestTemplateSizes: size 0x{template.Value:X} defined for missing template {template.Key}!" );
+            foreach (var template in NMSTemplate.NMSTemplateMap) {
+                if (!doneTemplates.Contains( template.Key)) {
+                    Debug.WriteLine($"TestTemplateSizes: no size defined for template {template.Key}!");
                 }
             }
         }

@@ -19,7 +19,7 @@
   
   <TestRunParameters>
     <Parameter name="EnableTimeProfileLogging" value="false" />
-    <Parameter name="VanillaGameDataPath" value="Path/To/Vanilla/MBIN/Directory" />
+    <Parameter name="GameDataDir" value="Path/To/Vanilla/MBIN/Directory" />
   </TestRunParameters>  
  
 </RunSettings>  
