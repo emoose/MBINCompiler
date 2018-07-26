@@ -8,7 +8,7 @@
         public int Currency;
         public string[] CurrencyValues()
         {
-            return new[] { "None", "Units", "Nanites", "Specials"};
+            return new[] { "Units", "Nanites", "Specials"};
         }
     }
 }

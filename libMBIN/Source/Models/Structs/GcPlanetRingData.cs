@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace libMBIN.Models.Structs
+﻿namespace libMBIN.Models.Structs
 {
     [NMS(Size = 0x60)]
     public class GcPlanetRingData : NMSTemplate

@@ -173,7 +173,7 @@ namespace libMBIN.Models
                 file.WriteLine("Deserializing Template: " + templateName);
             }*/
 
-                //Console.WriteLine("Gk Hack: " + "Deserializing Template: " + templateName);
+            //Console.WriteLine("Gk Hack: " + "Deserializing Template: " + templateName);
             
             if (obj == null)
                 return null;

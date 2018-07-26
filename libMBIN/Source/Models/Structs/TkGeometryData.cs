@@ -36,7 +36,7 @@ namespace libMBIN.Models.Structs
         /* 0x100 */ public TkVertexLayout SmallVertexLayout;
 
         /* 0x120 */ public List<int> IndexBuffer;
-        ///* 0x130 */ public sub_1415742B0 StreamMetaDataArray;
+        /* 0x130 */ public List<TkMeshMetaData> StreamMetaDataArray;
         /* 0x130 */
         public List<float> VertexStream;
         /* 0x140 */
