@@ -3,7 +3,7 @@
 namespace libMBIN.Models.Structs
 {
     [NMS(Size = 0x70)]
-    public class TkPhysicsComponentData : NMSTemplate       // used in a global?
+    public class TkPhysicsComponentData : NMSTemplate
     {
         public TkPhysicsData Data;
         /* 0x018 */ public NMSTemplate RagdollData;

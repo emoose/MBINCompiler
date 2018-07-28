@@ -727,7 +727,7 @@ namespace libMBIN.Models
 
                         writer.BaseStream.Position = data.Item1;
                         writer.Write(stringPos - data.Item1);
-                        writer.Write((Int32)(stringEndPos - stringPos) - 1); // -1 for null terminator
+                        writer.Write((Int32)(stringEndPos - stringPos));
                         writer.Write(listEnding);
 
                         writer.BaseStream.Position = stringEndPos;

@@ -25,8 +25,8 @@ namespace libMBIN.Models.Structs
         /* 0x3C */ public float MinScale;
         /* 0x40 */ public float MaxScale;
         /* 0x44 */ public GcRarity Rarity;
-        /* 0x48 */ public int PredatorProbabilityModifier;      // should be an enum
-        /* 0x4C */ public int HerbivoreProbabilityModifier;
+        /* 0x48 */ public GcCreatureRoleFrequencyModifier PredatorProbabilityModifier;
+        /* 0x4C */ public GcCreatureRoleFrequencyModifier HerbivoreProbabilityModifier;
 
         /* 0x50 */ public List<NMSTemplate> Data;
     }

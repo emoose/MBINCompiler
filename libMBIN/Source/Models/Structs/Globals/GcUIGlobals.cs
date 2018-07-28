@@ -1037,3 +1037,7 @@ namespace libMBIN.Models.Structs
         public byte[] EndPadding;
     }
 }
+
+
+// some info to use later:
+// LoadPagesFromMetadataCache string is the start of the UI globals

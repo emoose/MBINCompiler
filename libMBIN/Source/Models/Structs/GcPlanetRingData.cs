@@ -4,6 +4,8 @@
     public class GcPlanetRingData : NMSTemplate
     {
         /* 0x00 */ public bool HasRings;
+        [NMS(Size = 0xF, Ignore = true)]
+        /* 0x01 */ public byte[] Padding1;
         /* 0x10 */ public Vector4f Up;
         /* 0x20 */ public Colour Colour1;
         /* 0x30 */ public Colour Colour2;
