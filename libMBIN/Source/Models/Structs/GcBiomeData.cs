@@ -21,6 +21,6 @@ namespace libMBIN.Models.Structs
         /* 0x2B8 */ public GcTerrainControls Terrain;
         [NMS(Size = 0x4, Ignore = true)]
         /* 0x32C */ public byte[] Padding32C;
-        /* 0x330 */ public List<float> FilterOptions;
+        /* 0x330 */ public List<GcScreenFilters> FilterOptions;
     }
 }
