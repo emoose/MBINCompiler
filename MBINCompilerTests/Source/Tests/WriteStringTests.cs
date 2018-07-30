@@ -1,11 +1,10 @@
 ﻿using System.Collections.Generic;
 using System.IO;
 using System.Text;
+
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-using libMBIN;
-
-namespace MBINCompilerTests.BinaryStream {
+namespace libMBIN.UnitTests.BinaryStream {
 
     [TestClass]
     public class WriteStringTests {
@@ -65,7 +64,7 @@ namespace MBINCompilerTests.BinaryStream {
 
         }
 
-        [TestMethod]
+        [TestMethod, TestProperty( "Time", "Fast" )]
         public void TestWriteStringAscii() {
             List<TestCase> testCases = new List<TestCase>() {
                 new TestCaseASCII   { Value = "",    Size = null, Expected = new byte[] { } }
@@ -91,7 +90,7 @@ namespace MBINCompilerTests.BinaryStream {
             RunWriteStringTests( testCases );
         }
 
-        [TestMethod]
+        [TestMethod, TestProperty( "Time", "Fast" )]
         public void TestWriteStringUtf8() {
             List<TestCase> testCases = new List<TestCase>() {
                 new TestCaseUTF8 { Value = "", Size = null, Expected = new byte[] { } }

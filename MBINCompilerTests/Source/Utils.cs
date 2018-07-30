@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.IO;
 
 namespace MBINCompilerTests {
 
@@ -36,15 +31,19 @@ namespace MBINCompilerTests {
             File.SetAttributes( path, attributes | (isReadOnly ? FileAttributes.ReadOnly : 0) );
         }
 
-        public static char NibbleToHexChar( int nibble ) => (char) (nibble + ((nibble < 0x0A) ? '0' : 'A' - 0x0A));
-        public static byte HexCharToNibble( char hex )   => (byte) (hex    - ((hex    < 'A')  ? '0' : 'A' - 0x0A));
+        // nibble 0 to 9 -> hex '0' to '9' = nibble + '0'
+        // nibble A to F -> hex 'A' to 'F' = nibble + ('A' - 0xA)
+        public static char NibbleToHexChar( int nibble ) => (char) (nibble + ((nibble < 0xA) ? '0' : ('A' - 0xA)));
+        // hex '0' to '9' -> nibble 0 to 9 = hex - '0'
+        // hex 'A' to 'F' -> nibble A to F = hex - ('A' - 0xA)
+        public static byte HexCharToNibble( char hex )   => (byte) (hex    - ((hex    < 'A')  ? '0' : ('A' - 0xA)));
 
         public static string BytesToHexString( byte[] bytes ) {
             char[] chars = new char[bytes.Length * 2];
             int i = 0;
             for (int j = 0; j < bytes.Length; j++) {
-                chars[i++] = NibbleToHexChar( (bytes[j] & 0xF0) >> 4);
-                chars[i++] = NibbleToHexChar( (bytes[j] & 0x0F) >> 0);
+                chars[i++] = NibbleToHexChar( (bytes[j] & 0xF0) >> 4 );
+                chars[i++] = NibbleToHexChar( (bytes[j] & 0x0F)      );
             }
             return new string( chars );
         }
@@ -54,18 +53,34 @@ namespace MBINCompilerTests {
             int i = 0;
             char[] chars = hex.ToCharArray();
             for ( int j = 0; j < chars.Length; j += 2 ) {
-                byte b  = (byte) (HexCharToNibble( chars[j + 0] ) << 4);
-                     b += (byte) (HexCharToNibble( chars[j + 1] ) << 0);
+                byte b  = (byte) (HexCharToNibble( chars[j + 0] ) << 4 );
+                     b += (byte) (HexCharToNibble( chars[j + 1] )      );
                 bytes[i] = b;
             }
             return bytes;
         }
 
-        public static string Hash( Stream stream ) {
-            using (var sha = System.Security.Cryptography.SHA1.Create()) {
-                stream.Position = 0;
-                return BytesToHexString( sha.ComputeHash( stream ) );
+        public static class SHA1 {
+
+            public static byte[] GetBytes( Stream stream, long position = 0 ) {
+                using ( var sha = System.Security.Cryptography.SHA1.Create() ) {
+                    stream.Position = position;
+                    return sha.ComputeHash( stream );
+                }
             }
+
+            public static string GetHexString( Stream stream, long position = 0 ) {
+                return BytesToHexString( GetBytes( stream, position ) );
+            }
+
+            public static byte[] GetBytes( string path, long position = 0 ) {
+                using ( var streamIn = new FileStream( path, FileMode.Open ) ) return GetBytes( streamIn, position );
+            }
+
+            public static string GetHexString( string path, long position = 0) {
+                using ( var streamIn = new FileStream( path, FileMode.Open ) ) return GetHexString( streamIn, position );
+            }
+
         }
 
     }

@@ -1,19 +1,19 @@
 ﻿// uncomment/comment this to enable/disable logging of test progress and time profiling
 #define LOG_VERBOSE
 
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Diagnostics;
 using System.IO;
 using System.Text;
-using System.Collections.Generic;
 using System.Threading;
 
-using libMBIN;
-using libMBIN.Models;
-using libMBIN.Models.Structs;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace MBINCompilerTests {
+using libMBIN.Models;
+
+using MBINCompilerTests;
+
+namespace libMBIN.UnitTests {
 
     [TestClass]
     public class SerializationTests {
@@ -36,7 +36,7 @@ namespace MBINCompilerTests {
         [ClassInitialize]
         public static void Initialize( TestContext context ) {
             RunSettings.Initialize( context );
-            RunSettings.ValidateGameDataPath();
+            RunSettings.ValidateGameDataDir();
         }
 
         #region Logging
@@ -198,8 +198,8 @@ namespace MBINCompilerTests {
                         var compiledMBIN = Compile( vanillaEXML );
                         var recompiledEXML = Decompile( compiledMBIN );
 
-                        file.hash = Utils.Hash( vanillaEXML );
-                        string hash = Utils.Hash( recompiledEXML );
+                        file.hash = Utils.SHA1.GetHexString( vanillaEXML );
+                        string hash = Utils.SHA1.GetHexString( recompiledEXML );
 
                         vanillaEXML.Dispose();
                         compiledMBIN.Dispose();
@@ -270,7 +270,7 @@ namespace MBINCompilerTests {
         #endregion
 
         #region Tests
-        [TestMethod]
+        [TestMethod, TestProperty( "Time", "Slow" )]
         public void TestRecompileVanillaGameData() {
             // TODO: HACK, for debugging the test
             // Change MAX to restrict how many files will be processed.
