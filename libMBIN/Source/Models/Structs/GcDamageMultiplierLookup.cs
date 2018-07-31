@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace libMBIN.Models.Structs
 {
     [NMS(Size = 0x28)]
@@ -7,7 +9,8 @@ namespace libMBIN.Models.Structs
         [NMS(Size = 0x10)]
         public string Id;
         public float Default;
-        [NMS(Size = 0x20)]
-        public GcDamageMultiplier[] Multipliers;
+        [NMS(Size = 0x4, Ignore = true)]
+        public byte[] Padding14;
+        public List<GcDamageMultiplier> Multipliers;
     }
 }

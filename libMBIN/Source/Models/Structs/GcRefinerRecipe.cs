@@ -11,7 +11,6 @@ namespace libMBIN.Models.Structs
         [NMS(Size = 0x4, Ignore = true)]
         /* 0x84 */ public byte[] Padding84;
         /* 0x88 */ public GcRefinerRecipeElement Result;
-        //* 0xA0 */ public sub_1407277D0 Ingredients; // DList?
-        public List<TkResourceDescriptorData> Descriptors;      // dummy to let is compile...
+        /* 0xA0 */ public List<GcRefinerRecipeElement> Ingredients;
     }
 }

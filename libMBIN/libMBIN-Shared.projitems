@@ -24,6 +24,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\NMSAttribute.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\NMSTemplate.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\Colour.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcTechList.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\TkRawID.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcMissionSequenceWaitForPhoto.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcMissionConditionExpeditionCount.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcGenericMissionVersionProgress.cs" />
@@ -49,6 +51,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcPhotoFlora.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcPhotoPlant.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcPlayerWeapons.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcSubstanceSecondaryBiome.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcYearlyRecurrence.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcMonthlyRecurrence.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcWeeklyRecurrence.cs" />

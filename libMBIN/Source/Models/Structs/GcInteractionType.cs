@@ -1,8 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
     public class GcInteractionType : NMSTemplate
-
-    // the custom interactions have been added to allow for exactly that. They are not handled differently by the game files and using them might cause interactions to be a bit... weird...
     {
         public int InteractionType;
         public string[] InteractionTypeValues()
