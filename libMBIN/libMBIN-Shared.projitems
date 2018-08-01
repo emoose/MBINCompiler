@@ -1107,7 +1107,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\Vector3f.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\Vector3i.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\Vector4f.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Source\Common\Version.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\Version.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="$(MSBuildThisFileDirectory)Source\Models\Structs\.0StructsThatNeedChanged.md" />
