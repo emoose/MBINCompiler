@@ -136,7 +136,11 @@
         /* 0x5A1 */ public bool FleetDirectorAutoMode;
         /* 0x5A4 */ public float _3dTextDistance;
         /* 0x5A8 */ public float _3dTextMinScale;
-        /* 0x5AC */ public float RecordSetting;
+        /* 0x5AC */ public int RecordSetting;
+        public string[] RecordSettingValues()
+        {
+            return new[] { "None", "Record", "Playback" };
+		}
         /* 0x5B0 */ public bool DebugBuildingSpawns;
         /* 0x5B1 */ public bool StressTestLongNameDisplay;
         [NMS(Size = 0x20)]
