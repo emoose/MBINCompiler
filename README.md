@@ -26,7 +26,7 @@ If you are a developer, you can access all the functionality that MBINCompiler u
 If you need help, would like to help or just interested in NMS modding, check out the [No Man's Sky Modding Server](https://discordapp.com/invite/3Ytkxss) on discord chat.
 
 
-## USAGE INSTRUCTIONS FOR _**MODDERS**_
+## USAGE INSTRUCTIONS
 
 If you are new to modding in NMS, check out the [NMS Modding Wiki](https://nmsmodding.wikia.com/wiki/No_Man%27s_Sky_Modding_Wiki) for how to get started before you continue with MBINCompiler.  
 
