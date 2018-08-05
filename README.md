@@ -49,7 +49,7 @@ See the [User-Documentation](../../wiki/User-Documentation) on the wiki for more
 If you run into errors, in most cases the errors are because:
 
 a) You made an error when editing the EXML file and it fails to recompile.
-Check if it's a problem with your file or with MBINCompiler by decompiling the vanilla MBIN to EXML and then recompling it back to MBIN to verify that. If the vanilla file recompiles fine, then it's most likely a problem with your file changes.
+Check if it's a problem with your file or with MBINCompiler by decompiling the vanilla MBIN to EXML and then recompling it back to MBIN to verify that it works or not. If the vanilla file recompiles fine, then it's most likely a problem with your file changes.
 
 b) You are trying to use an older version of MBINCompiler with a newer version of MBIN/EXML or vice versa.  
 Make sure you are using the correct version of MBINCompiler for the file you are trying to process.
