@@ -66,7 +66,19 @@ REM There's no guarantee the exe uses the latest source without building on dema
 REM but at least make sure the version in the compiled exe matches the source code.
 if not "%BUILD_VERSION%" == "%VERSION%" goto VERSION_MISMATCH
 
-echo _bin\github-release %OPT_PRERELEASE% "%REPO%" "v%TAG%" "%BRANCH%" "%MSG%" "%EXE_ARTIFACT%" "%DLL_ARTIFACT%"
+set STAGING_PATH=%SCRIPT_PATH%\DEPLOY.STAGING
+
+REM delete the staging folder, in case it exists
+rd /s /q "%STAGING_PATH%" > nul 2>&1
+REM copy artifacts to staging folder
+md "%STAGING_PATH%"
+copy "%EXE_ARTIFACT%" "%STAGING_PATH%\" > nul 2>&1
+copy "%DLL_ARTIFACT%" "%STAGING_PATH%\" > nul 2>&1
+
+_bin\github-release %OPT_PRERELEASE% "%REPO%" "v%TAG%" "%BRANCH%" "%MSG%" "%STAGING_PATH%\*"
+
+REM CLEANUP: delete the staging folder and it's contents
+rd /s /q "%STAGING_PATH%" > nul 2>&1
 
 exit /b 0
 
