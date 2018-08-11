@@ -21,14 +21,14 @@ namespace libMBIN.Models
         ///     For *.MBIN.PC files, this is always 0xDDDDDDDD.
         /// </summary>
         /// <remarks>Checked in NMS.exe</remarks>
-        /* 0x00 */ public uint Magic { get; set; }
+        /* 0x00 */ public uint Magic;// { get; set; }
 
         /// <summary>
         ///     Always 2500.
         ///     Likely a version field for NMS MBIN format.
         /// </summary>
         /// <remarks>Checked in NMS.exe</remarks>
-        /* 0x04 */ public int Version { get; set; }
+        /* 0x04 */ public int Version;// { get; set; }
 
         #region // Vanilla
         /// <summary>
@@ -52,13 +52,14 @@ namespace libMBIN.Models
         ///     If compiled by libMBIN this will be "MBINCver" encoded as a ulong value (0x726576434E49424D).
         /// </summary>
         /// <remarks>Hijacks the BuildDateTime field.</remarks>
-        /* 0x08 */ public ulong Tag { get; set; }
+        /* 0x08 */
+        public ulong Tag;// { get; set; }
 
         /// <summary>
         ///     Only applicable in MBIN files compiled by libMBIN.
         ///     If compiled by libMBIN this will contain the version of the compiler.
         /// </summary>
-        /* 0x10 */ public ulong MbinVersion { get; set; }
+        /* 0x10 */ public ulong MbinVersion;// { get; set; }
         #endregion
 
         /// <summary>
