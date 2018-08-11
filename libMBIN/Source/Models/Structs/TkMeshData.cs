@@ -24,7 +24,7 @@ namespace libMBIN.Models.Structs
             {
                 case nameof(MeshDataStream):
                     long listPosition = reader.BaseStream.Position;
-                    //Debug.WriteLine($"TkGeometryData.CustomDeserialize({fieldName}) start 0x{listPosition:X}");
+                    //DebugLog($"TkGeometryData.CustomDeserialize({fieldName}) start 0x{listPosition:X}");
 
                     long listStartOffset = reader.ReadInt64();
                     int numEntries = reader.ReadInt32();
