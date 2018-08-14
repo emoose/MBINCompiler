@@ -18,11 +18,11 @@ namespace libMBIN.Models.Structs
 
         /* 0x094 */ public int FrameStart;
         /* 0x098 */ public int FrameEnd;
-        [NMS(Size = 4, Ignore = true)]
-        /* 0x09C */ public byte[] Padding9C;
 
         [NMS(Size = 0x40)]
-        /* 0x0A0 */ public string StartNode;
+        /* 0x09C */ public string StartNode;
+        [NMS(Size = 4, Ignore = true)]
+        /* 0x0DC */ public byte[] PaddingDC;
         /* 0x0E0 */ public List<NMSString0x40> ExtraStartNodes;
 
         /* 0x0F0 */ public int Priority;
