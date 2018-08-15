@@ -19,12 +19,62 @@ namespace libMBIN.Models.Structs
         {
             var fieldName = fieldInfo.Name;
 
-            Dictionary<int, int> TypeMap = new Dictionary<int, int> { { 5131, 8 }, { 36255, 4 }, { 5121, 4 } };
-
             switch (fieldName)
             {
                 case nameof(Rotations):
-                    return 1;
+                    // sort out reading of list
+                    long listPosition = reader.BaseStream.Position;
+                    //DebugLog($"TkGeometryData.CustomDeserialize({fieldName}) start 0x{listPosition:X}");
+
+                    long listStartOffset = reader.ReadInt64();
+                    int numEntries = reader.ReadInt32();
+                    uint listMagic = reader.ReadUInt32();
+                    if ((listMagic & 0xFF) != 1)
+                        throw new Exception($"Invalid list read, magic {listMagic:X8} expected xxxxxx01");
+
+                    long listEndPosition = reader.BaseStream.Position;
+
+                    reader.BaseStream.Position = listPosition + listStartOffset;
+                    var indices = new List<short>();
+                    int j = 0;
+                    List<Vector4f> data = new List<Vector4f>();
+                    UInt16 c_x = 0x3FFF;
+                    UInt16 c_y = 0x3FFF;
+                    UInt16 c_z = 0x3FFF;
+                    float norm = 1.0f / 0x3FFF;
+                    float scale = 1.0f / (float)Math.Sqrt(2.0f);
+                    for (int i = 0; i < numEntries; i++)
+                    {
+                        // assign the variables
+                        if (j == 0)
+                            c_x = reader.ReadUInt16();
+                        else if (j == 1)
+                            c_y = reader.ReadUInt16();
+                        else if (j == 2)
+                            c_z = reader.ReadUInt16();
+
+                        // if j == 2 construct the new 4-vector and populate it
+                        if (j == 2)
+                        {
+                            Vector4f q = new Vector4f();
+                            q.x = ((float)(c_x - 0x3FFF)) * norm * scale;
+                            q.y = ((float)(c_y - 0x3FFF)) * norm * scale;
+                            q.z = ((float)(c_z - 0x3FFF)) * norm * scale;
+
+                            q.x = q.x % scale;
+                            q.y = q.y % scale;
+                            q.z = q.z % scale;
+
+                            //I assume that W is positive by default
+                            q.t = (float)Math.Sqrt(Math.Max(1.0f - q.x * q.x - q.y * q.y - q.z * q.z, 0.0));
+                            data.Add(q);
+                            j = 0;
+                        }
+                        else
+                            j += 1;
+                    }
+
+                    return data;
             }
             return null;
         }*/

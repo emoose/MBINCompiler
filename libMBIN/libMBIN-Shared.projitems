@@ -26,6 +26,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\Colour.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcLegacyItem.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcLegacyItemTable.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcMissionConditionStatChange.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcPlayerEmote.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcPlayerEmoteList.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\TkAnimVectorBlendNodeData.cs" />

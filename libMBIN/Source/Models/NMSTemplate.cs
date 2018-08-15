@@ -39,7 +39,7 @@ namespace libMBIN.Models
         // Use the NMSTEMPLATE_* defines at the top of this file to enable/disable debug logging.
 
         [Conditional( "DEBUG" )]
-        protected static void DebugLog( string msg ) => Debug.WriteLine( msg );
+        protected static void DebugLog( string msg ) => Console.WriteLine( msg );
 
         // TODO: static could be problematic for threading?
         private static bool isDebugLogTemplateEnabled = true;
@@ -246,7 +246,6 @@ namespace libMBIN.Models
                 }*/
             }
 
-            
             obj.FinishDeserialize();
 
             DebugLogTemplate($"{templateName} end position: 0x{reader.BaseStream.Position:X}");
