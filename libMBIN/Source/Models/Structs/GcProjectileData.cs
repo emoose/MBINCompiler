@@ -56,11 +56,8 @@ namespace libMBIN.Models.Structs
             };
         }
 
-        public int Class;
-        /* 0x364 */ public string[] ClassValues()
-        {
-            return new[] { "Player", "PlayerShip", "Ship", "Robot"};
-        }
+		public enum ClassEnum { Player, PlayerShip, Ship, Robot }
+		public ClassEnum Class;
 
         
 

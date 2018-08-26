@@ -11,11 +11,8 @@ namespace libMBIN.Models.Structs
         /* 0x0084 */ public GcPlanetLife CreatureLife;
         /* 0x0088 */ public GcPlanetHazardData Hazard;
 
-        public int ResourceLevel;
-        /* 0x0100 */ public string[] ResourceLevelValues()
-        {
-            return new[] { "Low", "High" };
-        }
+		public enum ResourceLevelEnum { Low, High }
+		public ResourceLevelEnum ResourceLevel;
 
         /* 0x0104 */ public GcBuildingDensityLevels BuildingDensityLevels;
         [NMS(Size = 0x10)]
