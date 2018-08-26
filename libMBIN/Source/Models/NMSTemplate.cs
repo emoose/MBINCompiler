@@ -346,6 +346,12 @@ namespace libMBIN.Models
         {
             if (CustomSerialize(writer, fieldType, fieldData, settings, field, ref additionalData, ref addtDataIndex))
                 return;
+
+            if (settings?.DefaultValue != null)
+            {
+                fieldData = settings.DefaultValue;
+            }
+
             switch (fieldType.Name)
             {
                 case "String":
@@ -754,8 +760,6 @@ namespace libMBIN.Models
                             writer.Align(alignment, 0);
                         }
 
-                        //DebugLog("hi");
-
                         if (data.Item2.GetType() == typeof(VariableSizeString))
                         {
                             //DebugLog(alignment);
@@ -817,9 +821,14 @@ namespace libMBIN.Models
         }
         public EXmlBase SerializeEXmlValue(Type fieldType, FieldInfo field, NMSAttribute settings, object value)
         {
-            string t = fieldType.Name;
+            //string t = fieldType.Name;
             int i = 0;
             string valueString = String.Empty;
+
+            if (settings?.DefaultValue != null)
+            {
+                value = settings.DefaultValue;
+            }
 
             switch (fieldType.Name)
             {
@@ -831,7 +840,7 @@ namespace libMBIN.Models
                 case "UInt32":
                 case "Int64":
                 case "UInt64":
-                    valueString = value.ToString();
+                    valueString = value?.ToString() ?? "";
                     if (fieldType.Name != "Int32")
                         break;
                     
@@ -915,7 +924,15 @@ namespace libMBIN.Models
                 default:
                     if (fieldType.BaseType.Name == "NMSTemplate")
                     {
-                        NMSTemplate template = (NMSTemplate)value;
+                        NMSTemplate template;
+                        if (value is null)
+                        {
+                            template = TemplateFromName(fieldType.Name);
+                        }
+                        else
+                        {
+                            template = (NMSTemplate)value;
+                        }
 
                         var templateXmlData = template.SerializeEXml(true);
                         templateXmlData.Name = field.Name;
@@ -976,34 +993,19 @@ namespace libMBIN.Models
                 };
             }
 
-            Console.WriteLine("hello");
-
             var fields = type.GetFields().OrderBy(field => field.MetadataToken); // hack to get fields in order of declaration (todo: use something less hacky, this might break mono?)
 
             foreach (var field in fields)
             {
-                if (field != null)
+
+                NMSAttribute settings = field.GetCustomAttribute<NMSAttribute>();
+                if (settings == null)
                 {
-                    NMSAttribute settings = field.GetCustomAttribute<NMSAttribute>();
-                    if (settings == null)
-                    {
-                        settings = new NMSAttribute();
-                    }
-                    if (settings.Ignore)
-                        continue;
-                    xmlData.Elements.Add(SerializeEXmlValue(field.FieldType, field, settings, field.GetValue(this)));
+                    settings = new NMSAttribute();
                 }
-                else
-                {
-                    // in this case the object is probably a list or an array and needs to be initialised as an empty version
-                    if (field.FieldType.Name == "List`1")
-                    {
-                        var listType = field.FieldType.GetGenericArguments()[0];
-                        Console.WriteLine(listType);
-                        Console.WriteLine(listType.Name);
-                        //field = new List<listType>
-                    }
-                }
+                if (settings.Ignore)
+                    continue;
+                xmlData.Elements.Add(SerializeEXmlValue(field.FieldType, field, settings, field.GetValue(this)));
             }
 
             return xmlData;
