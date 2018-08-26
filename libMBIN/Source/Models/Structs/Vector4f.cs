@@ -15,5 +15,7 @@
             this.z = z;
             this.t = t;
         }
+
+        public Vector4f() { }
     }
 }

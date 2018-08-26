@@ -14,5 +14,7 @@
             this.B = B;
             this.A = A;
         }
+
+        public Colour() { }
     }
 }

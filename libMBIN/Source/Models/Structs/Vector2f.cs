@@ -10,5 +10,7 @@
             this.x = x;
             this.y = y;
         }
+
+        public Vector2f() { }
     }
 }
