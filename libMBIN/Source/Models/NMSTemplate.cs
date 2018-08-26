@@ -180,6 +180,11 @@ namespace libMBIN.Models
 					if (fieldType == "VariableStringSize" || fieldType == "GcRewardProduct")
 						reader.Align(0x4, 0);
                     // todo: align for VariableSizeString?
+                    if (field.IsEnum)
+                    {
+                        reader.Align(4, 0);
+                        return fieldType == "Int32" ? (object)reader.ReadInt32() : (object)reader.ReadUInt32();
+                    }
                     if (field.IsArray)
                     {
                         var arrayType = field.GetElementType();
@@ -235,7 +240,14 @@ namespace libMBIN.Models
             foreach (var field in fields)
             {
                 NMSAttribute settings = field.GetCustomAttribute<NMSAttribute>();
-                field.SetValue(obj, DeserializeValue(reader, field.FieldType, settings, templatePosition, field, obj));
+                if (field.FieldType.IsEnum)
+                {
+                    field.SetValue(obj, Enum.ToObject(field.FieldType, DeserializeValue(reader, field.FieldType, settings, templatePosition, field, obj)));
+                }
+                else
+                {
+                    field.SetValue(obj, DeserializeValue(reader, field.FieldType, settings, templatePosition, field, obj));
+                }
                 //DebugLog("Gk Hack: " + templateName + " Deserialized Value: " + field.Name + " value: " + field.GetValue(obj));
                 //DebugLog($"{templateName} position: 0x{reader.BaseStream.Position:X}");
                 /*using (System.IO.StreamWriter file =
@@ -489,6 +501,11 @@ namespace libMBIN.Models
 
                             SerializeValue(writer, realObj.GetType(), realObj, settings, field, ref additionalData, ref addtDataIndex);
                         }
+                    }
+                    else if (fieldType.IsEnum)
+                    {
+                        writer.Align(4, 0);
+                        writer.Write((UInt32)Array.IndexOf(Enum.GetNames(field.FieldType), fieldData.ToString()));
                     }
                     else
                     {
@@ -821,7 +838,7 @@ namespace libMBIN.Models
         }
         public EXmlBase SerializeEXmlValue(Type fieldType, FieldInfo field, NMSAttribute settings, object value)
         {
-            //string t = fieldType.Name;
+            string t = fieldType.Name;
             int i = 0;
             string valueString = String.Empty;
 
@@ -964,6 +981,11 @@ namespace libMBIN.Models
                         }
 
                         return arrayProperty;
+                    }
+                    else if (fieldType.IsEnum)
+                    {
+                        valueString = value?.ToString();
+                        break;
                     }
                     else
                     {
@@ -1146,6 +1168,10 @@ namespace libMBIN.Models
                         }
 
                         return array;
+                    }
+                    else if (field.FieldType.IsEnum)
+                    {
+                        return Array.IndexOf(Enum.GetNames(field.FieldType), xmlProperty.Value);
                     }
                     else
                     {
