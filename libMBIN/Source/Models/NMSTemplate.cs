@@ -739,65 +739,77 @@ namespace libMBIN.Models
 
                     // get the custom alignment value from the class if it has one
                     // If the class has no alignment value associated with it, just set as default value of 4
-                    int alignment = data.Item2.GetType().GetCustomAttribute<NMSAttribute>()?.Alignment ?? 0x4;
+                    int alignment = data.Item2?.GetType().GetCustomAttribute<NMSAttribute>()?.Alignment ?? 0x4;
 
-                    // if we have an empty list we do not want to do alignment otherwise it can put off other things
-                    if (data.Item2.GetType().IsGenericType && data.Item2.GetType().GetGenericTypeDefinition() == typeof( List<> )) {
-                        IList lst = (IList) data.Item2;
-                        if (lst.Count != 0) writer.Align( alignment, 0 );
-                    } else {
-                        writer.Align( alignment, 0 );
-                    }
-
-                    //DebugLog("hi");
-
-                    if (data.Item2.GetType() == typeof(VariableSizeString))
+                    if (data.Item2 != null)
                     {
-                        //DebugLog(alignment);
-                        writer.BaseStream.Position = origPos; // no alignment for dynamicstrings
-
-                        var str = (VariableSizeString)data.Item2;
-
-                        var stringPos = writer.BaseStream.Position;
-                        writer.WriteString(str.Value, Encoding.UTF8, null, true);
-                        var stringEndPos = writer.BaseStream.Position;
-
-                        writer.BaseStream.Position = data.Item1;
-                        writer.Write(stringPos - data.Item1);
-                        writer.Write((Int32)(stringEndPos - stringPos));
-                        writer.Write(listEnding);
-
-                        writer.BaseStream.Position = stringEndPos;
-                    }
-                    else if (data.Item2.GetType().BaseType == typeof(NMSTemplate))
-                    {
-                        var pos = writer.BaseStream.Position;
-                        var template = (NMSTemplate)data.Item2;
-                        int i2 = i + 1;
-                        template.AppendToWriter(writer, ref additionalData, ref i2, GetType(), listEnding);
-                        var endPos = writer.BaseStream.Position;
-                        writer.BaseStream.Position = data.Item1;
-                        writer.Write(pos - data.Item1);
-                        writer.WriteString("c" + template.GetType().Name, Encoding.UTF8, 0x40);
-                        writer.BaseStream.Position = endPos;
-                    }
-                    else if (data.Item2.GetType().IsGenericType && data.Item2.GetType().GetGenericTypeDefinition() == typeof(List<>))
-                    {
-                        // this will serialise a dynamic length list of either a generic type, or a specific type
-                        Type itemType = data.Item2.GetType().GetGenericArguments()[0];
-                        if (itemType == typeof(NMSTemplate))
+                        // if we have an empty list we do not want to do alignment otherwise it can put off other things
+                        if (data.Item2.GetType().IsGenericType && data.Item2.GetType().GetGenericTypeDefinition() == typeof(List<>))
                         {
-                            // this is serialising a list of generic type
-                            SerializeGenericList(writer, (IList)data.Item2, data.Item1, ref additionalData, i + 1, listEnding);
+                            IList lst = (IList)data.Item2;
+                            if (lst.Count != 0) writer.Align(alignment, 0);
                         }
                         else
                         {
-                            // this is serialising a list if a particular type
-                            SerializeList(writer, (IList)data.Item2, data.Item1, ref additionalData, i + 1, listEnding);
+                            writer.Align(alignment, 0);
                         }
+
+                        //DebugLog("hi");
+
+                        if (data.Item2.GetType() == typeof(VariableSizeString))
+                        {
+                            //DebugLog(alignment);
+                            writer.BaseStream.Position = origPos; // no alignment for dynamicstrings
+
+                            var str = (VariableSizeString)data.Item2;
+
+                            var stringPos = writer.BaseStream.Position;
+                            writer.WriteString(str.Value, Encoding.UTF8, null, true);
+                            var stringEndPos = writer.BaseStream.Position;
+
+                            writer.BaseStream.Position = data.Item1;
+                            writer.Write(stringPos - data.Item1);
+                            writer.Write((Int32)(stringEndPos - stringPos));
+                            writer.Write(listEnding);
+
+                            writer.BaseStream.Position = stringEndPos;
+                        }
+                        else if (data.Item2.GetType().BaseType == typeof(NMSTemplate))
+                        {
+                            var pos = writer.BaseStream.Position;
+                            var template = (NMSTemplate)data.Item2;
+                            int i2 = i + 1;
+                            template.AppendToWriter(writer, ref additionalData, ref i2, GetType(), listEnding);
+                            var endPos = writer.BaseStream.Position;
+                            writer.BaseStream.Position = data.Item1;
+                            writer.Write(pos - data.Item1);
+                            writer.WriteString("c" + template.GetType().Name, Encoding.UTF8, 0x40);
+                            writer.BaseStream.Position = endPos;
+                        }
+                        else if (data.Item2.GetType().IsGenericType && data.Item2.GetType().GetGenericTypeDefinition() == typeof(List<>))
+                        {
+                            // this will serialise a dynamic length list of either a generic type, or a specific type
+                            Type itemType = data.Item2.GetType().GetGenericArguments()[0];
+                            if (itemType == typeof(NMSTemplate))
+                            {
+                                // this is serialising a list of generic type
+                                SerializeGenericList(writer, (IList)data.Item2, data.Item1, ref additionalData, i + 1, listEnding);
+                            }
+                            else
+                            {
+                                // this is serialising a list if a particular type
+                                SerializeList(writer, (IList)data.Item2, data.Item1, ref additionalData, i + 1, listEnding);
+                            }
+                        }
+                        else
+                            throw new Exception($"[C] Unknown type {data.Item2.GetType()} in additionalData list!");
                     }
                     else
-                        throw new Exception($"[C] Unknown type {data.Item2.GetType()} in additionalData list!");
+                    {
+                        writer.Align(alignment, 0);
+                        SerializeList(writer, new List<int>(), data.Item1, ref additionalData, i + 1, listEnding);  // pass an empty list. Data type doesn't matter...
+                    }
+
                 }
 
                 return stream.ToArray();
@@ -871,18 +883,21 @@ namespace libMBIN.Models
 
                     IList templates = (IList)value;
                     i = 0;
-                    foreach (var template in templates)
+                    if (templates != null)
                     {
-                        EXmlBase data = SerializeEXmlValue(listType, field, settings, template);
-                        if (settings?.EnumValue != null)
+                        foreach (var template in templates)
                         {
-                            data.Name = settings.EnumValue[i];
-                            i++;
-                        }
-                        else
-                            data.Name = null;
+                            EXmlBase data = SerializeEXmlValue(listType, field, settings, template);
+                            if (settings?.EnumValue != null)
+                            {
+                                data.Name = settings.EnumValue[i];
+                                i++;
+                            }
+                            else
+                                data.Name = null;
 
-                        listProperty.Elements.Add(data);
+                            listProperty.Elements.Add(data);
+                        }
                     }
 
                     return listProperty;
@@ -961,18 +976,34 @@ namespace libMBIN.Models
                 };
             }
 
+            Console.WriteLine("hello");
+
             var fields = type.GetFields().OrderBy(field => field.MetadataToken); // hack to get fields in order of declaration (todo: use something less hacky, this might break mono?)
 
             foreach (var field in fields)
             {
-                NMSAttribute settings = field.GetCustomAttribute<NMSAttribute>();
-                if (settings == null)
+                if (field != null)
                 {
-                    settings = new NMSAttribute();
+                    NMSAttribute settings = field.GetCustomAttribute<NMSAttribute>();
+                    if (settings == null)
+                    {
+                        settings = new NMSAttribute();
+                    }
+                    if (settings.Ignore)
+                        continue;
+                    xmlData.Elements.Add(SerializeEXmlValue(field.FieldType, field, settings, field.GetValue(this)));
                 }
-                if (settings.Ignore)
-                    continue;
-                xmlData.Elements.Add(SerializeEXmlValue(field.FieldType, field, settings, field.GetValue(this)));
+                else
+                {
+                    // in this case the object is probably a list or an array and needs to be initialised as an empty version
+                    if (field.FieldType.Name == "List`1")
+                    {
+                        var listType = field.FieldType.GetGenericArguments()[0];
+                        Console.WriteLine(listType);
+                        Console.WriteLine(listType.Name);
+                        //field = new List<listType>
+                    }
+                }
             }
 
             return xmlData;
@@ -1164,6 +1195,7 @@ namespace libMBIN.Models
                     EXmlProperty xmlProperty = (EXmlProperty)xmlElement;
                     FieldInfo field = templateType.GetField(xmlProperty.Name);
                     object fieldValue = null;
+                    Console.WriteLine(xmlProperty.Name);
                     if (field.FieldType == typeof(NMSTemplate) || field.FieldType.BaseType == typeof(NMSTemplate))
                     {
                         fieldValue = DeserializeEXml(xmlProperty);
@@ -1223,6 +1255,32 @@ namespace libMBIN.Models
             }*/
 
             return template;
+        }
+        
+        /// <summary>
+        /// Serialises the NMSTemplate object to a .mbin file with default header information.
+        /// </summary>
+        /// <param name="outputpath">The location to write the .mbin file.</param>
+        public void WriteToMbin(string outputpath)
+        {
+            using (var file = new MBINFile(outputpath))
+            {
+                file.Header = new MBINHeader();
+                var type = this.GetType();
+                file.Header.SetDefaults(type);
+                file.SetData(this);
+                file.Save();
+            }
+        }
+
+        /// <summary>
+        /// Writes the NMSTemplate object to an .exml file.
+        /// </summary>
+        /// <param name="outputpath">The location to write the .exml file.</param>
+        public void WriteToExml(string outputpath)
+        {
+            var data = EXmlFile.WriteTemplate(this);
+            File.WriteAllText(outputpath, data);
         }
 
         // func thats run after template is deserialized, can be used for checks etc
