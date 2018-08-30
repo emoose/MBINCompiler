@@ -55,10 +55,14 @@ namespace MBINCompiler
                         var mbin = new MBINFile( fIn );
                         if ( !mbin.Load() || !mbin.Header.IsValid ) return ErrorCode.FileInvalid;
                         var sw = new StreamWriter( ms );
-                        sw.Write( EXmlFile.WriteTemplate( mbin.GetData() ) );
+                        var data = mbin.GetData();
+                        if ( data is null ) throw new InvalidDataException( $"Failed to read {mbin.Header.GetXMLTemplateName()} from MBIN." );
+                        sw.Write( EXmlFile.WriteTemplate( data ) );
                         sw.Flush();
+                        if ( ms.Length == 0 ) throw new InvalidDataException( $"Failed serializing {mbin.Header.GetXMLTemplateName()} to EXML." );
                     } else if ( inputFormat == FormatType.EXML ) {
                         var data = EXmlFile.ReadTemplateFromStream( fIn );
+                        if ( data is null ) throw new InvalidDataException( $"Failed to deserialize EXML." );
                         if (data is TkGeometryData) fileOut += ".PC";
                         var mbin = new MBINFile( ms ) { Header = new MBINHeader() };
                         mbin.Header.SetDefaults( data.GetType() );
