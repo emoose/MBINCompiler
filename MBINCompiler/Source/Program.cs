@@ -1,4 +1,4 @@
-﻿#define DEBUG_LOG
+﻿//#define DEBUG_LOG
 
 using System;
 using System.Collections.Generic;
@@ -28,8 +28,9 @@ namespace MBINCompiler
         public static int Main( string[] args )
         {
 
-            Logger.Open( $"{Utils.GetExecutableName()}.log" );
-            Debug.Listeners.Add( new TextWriterTraceListener( Logger.GetStream() ) );
+            var logStream = new FileStream( $"{Utils.GetExecutableName()}.log", FileMode.Create );
+            Logger.AddStream( logStream );
+            Debug.Listeners.Add( new TextWriterTraceListener( logStream ) );
 
 #if DEBUG_LOG // log to console
             Debug.Listeners.Add( new ConsoleTraceListener() );
@@ -46,7 +47,7 @@ namespace MBINCompiler
 
             // get the Quiet option first, before we emit anything
             Quiet = options.GetOptionSwitch( "quiet" );
-            Logger.Quiet = Quiet;
+            if ( !Quiet ) Logger.AddStream( System.Console.OpenStandardOutput() );
 
             // now we can emit an error if we need to
             if ( invalidArguments ) return Console.ShowInvalidCommandLineArg( options );
