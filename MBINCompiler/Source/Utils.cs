@@ -48,10 +48,11 @@ namespace MBINCompiler
                 Console.Write( "\nOverwrite this file? " );
                 key = Console.ReadKey().KeyChar;
                 key = ( key >= 'a' ) ? (char) (key - 32) : key;
+                Console.WriteLine();
                 if ( key == 'O' ) overwrite = OverwriteMode.Always;
                 if ( key == 'K' ) overwrite = OverwriteMode.Never;
-                if ( ( key == 'Y' ) || ( overwrite == OverwriteMode.Always ) ) return true;
-                if ( ( key == 'N' ) || ( overwrite == OverwriteMode.Never  ) ) return false;
+                if ( ( key == 'Y' ) || ( key == 'O' ) ) return true;
+                if ( ( key == 'N' ) || ( key == 'K' ) ) return false;
             }
         }
     }

@@ -9,6 +9,7 @@ namespace MBINCompiler
 
         public static void Write( object obj ) => System.Console.Write( obj );
         public static void WriteLine( object obj ) => System.Console.WriteLine( obj );
+        public static void WriteLine() => System.Console.WriteLine();
 
         public static ConsoleKeyInfo ReadKey() => System.Console.ReadKey();
         public static string ReadLine() => System.Console.ReadLine();
@@ -66,7 +67,7 @@ namespace MBINCompiler
         /// <returns>Always returns 0 (exit code = success)</returns>
         public static int ShowVersion( bool quiet = false )
         {
-            Console.WriteLine( Version.GetVersionString( quiet ) );
+            WriteLine( Version.GetVersionString( quiet ) );
             return 0;
         }
 
@@ -76,8 +77,8 @@ namespace MBINCompiler
         public static void WaitForKeypress( bool wait = true )
         {
             if ( Quiet || !wait ) return;
-            Console.WriteLine( "\nPress any key to continue . . ." );
-            Console.ReadKey();
+            WriteLine( "\nPress any key to continue . . ." );
+            ReadKey();
         }
 
         public static string WrapLine( string txt = null, int padleft = 0, int width = 0 ) {
