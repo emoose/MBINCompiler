@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System;
 
 namespace libMBIN.Models.Structs
 {
@@ -40,24 +41,13 @@ namespace libMBIN.Models.Structs
         /* 0x34C */ public byte[] Padding33C;
         /* 0x350 */ public Colour Colour;
 
-        public int BehaviourFlags;
-        /* 0x360 */ public Dictionary<int, string> BehaviourFlagsDict()
-        {
-            return new Dictionary<int, string>
-            {
-                {0x00, "None"},
-                {0x01, "DestroyTerrain"},
-                {0x02, "DestroyAsteroids"},
-                {0x04, "GatherResources"},
-                {0x08, "Homing"},
-                {0x10, "HomingLaser"},
-                {0x20, "ScareCreatures"},
-                {0x40, "ExplosionForce"}
-            };
-        }
+        [Flags]
+        public enum BehaviourFlagsEnum { None = 0x00, DestroyTerrain = 0x01, DestroyAsteroids = 0x02, GatherResources = 0x04, Homing = 0x08, HomingLaser = 0x10,
+                                         ScareCreatures = 0x20, ExplosionForce = 0x40}
+        /* 0x360 */ public BehaviourFlagsEnum BehaviourFlags;
 
 		public enum ClassEnum { Player, PlayerShip, Ship, Robot }
-		public ClassEnum Class;
+		/* 0x364 */ public ClassEnum Class;
 
         
 
