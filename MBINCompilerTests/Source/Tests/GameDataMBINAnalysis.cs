@@ -1,14 +1,18 @@
 ﻿using System;
 using System.IO;
 using System.Threading;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 using MBINCompilerTests;
+
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+
 using Database = MBINCompilerTests.Database;
 
-namespace libMBIN.UnitTests.Analysis {
+namespace libMBIN.UnitTests.Analysis
+{
 
     using GameDataMBIN = Database.Tables.GameDataMBIN;
+    using Logger = MBINCompilerTests.Logger;
 
     [TestClass]
     public class GameDataMBINAnalysis {

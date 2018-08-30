@@ -15,6 +15,8 @@ using MBINCompilerTests;
 
 namespace libMBIN.UnitTests {
 
+    using Logger = MBINCompilerTests.Logger;
+
     [TestClass]
     public class SerializationTests {
 
