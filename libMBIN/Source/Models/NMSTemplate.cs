@@ -1223,7 +1223,7 @@ namespace libMBIN.Models
                     EXmlProperty xmlProperty = (EXmlProperty)xmlElement;
                     FieldInfo field = templateType.GetField(xmlProperty.Name);
                     object fieldValue = null;
-                    Console.WriteLine(xmlProperty.Name);
+                    DebugLog(xmlProperty.Name);
                     if (field.FieldType == typeof(NMSTemplate) || field.FieldType.BaseType == typeof(NMSTemplate))
                     {
                         fieldValue = DeserializeEXml(xmlProperty);
