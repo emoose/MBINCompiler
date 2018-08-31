@@ -89,8 +89,7 @@ namespace MBINCompiler
         {
             var paths = options.GetFileParams();
 
-            var code = GetOverwriteOption( options, out var overwrite );
-            if ( code != (int) ErrorCode.Success ) return code;
+            if ( !GetOverwriteOption( options ) ) return (int) ErrorCode.CommandLine;
 
             var force = options.GetOptionSwitch( "force" );
 
@@ -119,8 +118,7 @@ namespace MBINCompiler
             if ( autoFormat ) {
                 defaultInclude = "*.MBIN;*.MBIN.PC;*.EXML";
             } else {
-                code = SetFormatOptions( formatI, formatO );
-                if ( code != (int) ErrorCode.Success ) return code;
+                if ( !SetFormatOptions( formatI, formatO ) ) return (int) ErrorCode.CommandLine;
                 defaultInclude = ( InputFormat == FormatType.MBIN ) ? "*.MBIN;*.MBIN.PC" : "*.EXML";
             }
 
@@ -130,40 +128,38 @@ namespace MBINCompiler
             if ( !autoFormat ) ExcludeFilters.Add( $"*.{OutputFormat}" );
 
             // generate a filtered file listing of the combined paths
-            code = GetFileList( paths, out var fileList );
-            if ( code != (int) ErrorCode.Success ) return code;
+            if ( !GetFileList( paths, out var fileList ) ) return (int) ErrorCode.CommandLine;
 
-            if ( autoFormat ) {
-                code = AutoDetectFormat( fileList );
-                if ( code != (int) ErrorCode.Success ) return code;
-            }
-
+            // auto detect the input format if necessary
+            if ( autoFormat && !AutoDetectFormat( fileList ) ) return (int) ErrorCode.Unknown;
             Debug.WriteLine( $"--input-format={InputFormat} --output-format={OutputFormat}" );
 
             return (int) ConvertFileList( inputDir, outputDir, fileList, force );
         }
 
-        private static int GetOverwriteOption( CommandLineParser options, out OverwriteMode mode )
+        private static bool GetOverwriteOption( CommandLineParser options )
         {
-            mode = OverwriteMode.Prompt;
-
             var optO = options.GetOptionArg( "overwrite" );
             var optK = options.GetOptionArg( "keep" );
             bool isO = ( optO != null );
             bool isK = ( optK != null );
-            if ( isO && isK ) return Console.ShowCommandLineError( $"The {optO.name} and {optK.name} options cannot be used together." );
+            if ( isO && isK ) {
+                Console.ShowCommandLineError( $"The {optO.name} and {optK.name} options cannot be used together." );
+                return false;
+            }
 
-            mode = isO ? OverwriteMode.Always : isK ? OverwriteMode.Never : mode;
-            return (int) ErrorCode.Success;
+            Overwrite = isO ? OverwriteMode.Always : isK ? OverwriteMode.Never : OverwriteMode.Prompt;
+            return true;
         }
 
-        private static int SetFormatOptions( string formatI, string formatO )
+        private static bool SetFormatOptions( string formatI, string formatO )
         {
             if ( formatI != null ) {
                 InputFormat = ( formatI == "MBIN" ) ? FormatType.MBIN : InputFormat;
                 InputFormat = ( formatI == "EXML" ) ? FormatType.EXML : InputFormat;
                 if ( InputFormat == FormatType.Unknown ) {
-                    return Console.ShowCommandLineError( $"Invalid format specified: {formatI}" );
+                    Console.ShowCommandLineError( $"Invalid format specified: {formatI}" );
+                    return false;
                 }
             }
 
@@ -171,7 +167,8 @@ namespace MBINCompiler
                 OutputFormat = ( formatO == "MBIN" ) ? FormatType.MBIN : OutputFormat;
                 OutputFormat = ( formatO == "EXML" ) ? FormatType.EXML : OutputFormat;
                 if ( OutputFormat == FormatType.Unknown ) {
-                    return Console.ShowCommandLineError( $"Invalid format specified: {formatI}" );
+                    Console.ShowCommandLineError( $"Invalid format specified: {formatI}" );
+                    return false;
                 }
             }
 
@@ -179,13 +176,14 @@ namespace MBINCompiler
             if ( formatO == null ) OutputFormat = ( InputFormat == FormatType.MBIN ) ? FormatType.EXML : FormatType.MBIN;
 
             if ( InputFormat == OutputFormat ) {
-                return Console.ShowCommandLineError( "--input-format and --output-format cannot be the same type!" );
+                Console.ShowCommandLineError( "--input-format and --output-format cannot be the same type!" );
+                return false;
             }
 
-            return (int) ErrorCode.Success;
+            return true;
         }
 
-        private static int GetFileList( List<string> paths, out List<string> fileList )
+        private static bool GetFileList( List<string> paths, out List<string> fileList )
         {
             fileList = new List<string>();
             foreach ( var path in paths ) {
@@ -195,11 +193,12 @@ namespace MBINCompiler
                 } else if ( Directory.Exists( fullpath ) ) {
                     fileList.AddRange( GetFilteredFiles( fullpath ) );
                 } else {
-                    return Console.ShowCommandLineError( $"Invalid path.\n\"{path}\"" );
+                    Console.ShowCommandLineError( $"Invalid path.\n\"{path}\"" );
+                    return false;
                 }
             }
 
-            return (int) ErrorCode.Success;
+            return true;
         }
 
         private static List<string> GetFilteredFiles( string path )
@@ -231,7 +230,7 @@ namespace MBINCompiler
             return new string[] { };
         }
 
-        private static int AutoDetectFormat( List<string> fileList )
+        private static bool AutoDetectFormat( List<string> fileList )
         {
             // detect what types of file formats are found
             bool foundMBIN = false;
@@ -255,12 +254,13 @@ namespace MBINCompiler
                 Logger.WriteLine( "Auto-Detected --input-format=EXML" );
                 InputFormat = FormatType.EXML;
             } else {
-                return Console.ShowError( "No valid files found!" );
+                Console.ShowError( "No valid files found!" );
+                return false;
             }
 
             OutputFormat = ( InputFormat == FormatType.MBIN ) ? FormatType.EXML : FormatType.MBIN;
 
-            return (int) ErrorCode.Success;
+            return true;
         }
 
     }
