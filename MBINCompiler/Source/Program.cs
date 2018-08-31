@@ -99,8 +99,9 @@ namespace MBINCompiler
             if ( outputDir != null ) {
                 if ( paths.Count > 1 ) return Console.ShowInvalidCommandLineArg( paths[1] );
                 outputDir = Path.GetFullPath( outputDir );
-                if ( File.Exists( inputDir ) ) inputDir = Path.GetDirectoryName( inputDir );
             }
+            if ( File.Exists( inputDir ) ) inputDir = Path.GetDirectoryName( inputDir );
+            inputDir = Path.GetFullPath( Path.Combine( inputDir, "." ) );
 
             var optFormatI = options.GetOptionArg( "input-format" );
             var optFormatO = options.GetOptionArg( "output-format" );
@@ -188,10 +189,11 @@ namespace MBINCompiler
         {
             fileList = new List<string>();
             foreach ( var path in paths ) {
-                if ( File.Exists( path ) ) {
-                    fileList.Add( path );
-                } else if ( Directory.Exists( path ) ) {
-                    fileList.AddRange( GetFilteredFiles( path ) );
+                var fullpath = Path.GetFullPath( path );
+                if ( File.Exists( fullpath ) ) {
+                    fileList.Add( fullpath );
+                } else if ( Directory.Exists( fullpath ) ) {
+                    fileList.AddRange( GetFilteredFiles( fullpath ) );
                 } else {
                     return Console.ShowCommandLineError( $"Invalid path.\n\"{path}\"" );
                 }
