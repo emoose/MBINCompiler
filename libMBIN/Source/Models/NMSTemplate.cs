@@ -581,13 +581,13 @@ namespace libMBIN.Models
             }*/
         }
 
-        public void SerializeGenericList(BinaryWriter writer, IList list, long listHeaderPosition, ref List<Tuple<long, object>> additionalData, int addtDataIndex, UInt32 listEnding)
+        public void SerializeGenericList( BinaryWriter writer, IList list, long listHeaderPosition, ref List<Tuple<long, object>> additionalData, int addtDataIndex, UInt32 listEnding )
         // This serialises a List of NMSTemplate objects
         {
-            writer.Align(0x8, 0);       // Make sure that all c~ names are offset at 0x8.
+            writer.Align( 0x8, 0 );       // Make sure that all c~ names are offset at 0x8.
             long listPosition = writer.BaseStream.Position;
 
-            DebugLogTemplate($"SerializeList start 0x{listPosition:X}, header 0x{listHeaderPosition:X}");
+            DebugLogTemplate( $"SerializeList start {$"0x{listPosition:X},",-10} header {$"0x{listHeaderPosition:X},",-10} count {list.Count}");
 
             writer.BaseStream.Position = listHeaderPosition;
 
@@ -624,7 +624,6 @@ namespace libMBIN.Models
                 var listObjects = new List <Tuple<long, object>>();     // new list of objects so that this data is serialised first
                 var addtData = new Dictionary<long, object>();
                 DebugLogTemplate($"[C] writing {template.GetType().Name} to offset 0x{writer.BaseStream.Position:X}");
-                //DebugLog($"[C] writing {template.GetType().Name} to offset 0x{writer.BaseStream.Position:X}");
                 // pass the new listObject object in place of additionalData so that this branch is serialised before the whole layer
                 template.AppendToWriter(writer, ref listObjects, ref addtDataIndexThis, GetType());
                 for (int i = 0; i < listObjects.Count; i++)
@@ -708,7 +707,7 @@ namespace libMBIN.Models
             }
 
             long listPosition = writer.BaseStream.Position;
-            DebugLogTemplate($"SerializeList start 0x{listPosition:X}, header 0x{listHeaderPosition:X}");
+            DebugLogTemplate( $"SerializeList start {$"0x{listPosition:X},",-10} header {$"0x{listHeaderPosition:X},",-10} count {list.Count}" );
 
             writer.BaseStream.Position = listHeaderPosition;
 
