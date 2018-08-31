@@ -445,9 +445,9 @@ namespace libMBIN.Models
                         if ( addtDataIndex >= additionalData.Count ) {
                             additionalData.Add( data );
                         } else {
-                            additionalData.Insert( addtDataIndex, data );
+                            additionalData.Insert( addtDataIndex++, data );
                         }
-                        addtDataIndex++; // should this be incremented regardless of insert or add?
+                        //addtDataIndex++; // should this be incremented regardless of insert or add?
                     }
 
                     break;
