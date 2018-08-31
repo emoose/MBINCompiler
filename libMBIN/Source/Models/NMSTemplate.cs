@@ -2,7 +2,7 @@
 // They will always be disabled/ignored in Release builds.
 
 // Uncomment to enable debug logging of the template de/serialization.
-// #define NMSTEMPLATE_DEBUG_TEMPLATE
+#define NMSTEMPLATE_DEBUG_TEMPLATE
 
 // Uncomment to enable debug logging of XML comments
 // #define NMSTEMPLATE_DEBUG_COMMENTS
@@ -39,7 +39,7 @@ namespace libMBIN.Models
         // Use the NMSTEMPLATE_* defines at the top of this file to enable/disable debug logging.
 
         [Conditional( "DEBUG" )]
-        protected static void DebugLog( string msg ) => Console.WriteLine( msg );
+        protected static void DebugLog( string msg ) => Logger.WriteLine( msg );
 
         // TODO: static could be problematic for threading?
         private static bool isDebugLogTemplateEnabled = true;
@@ -47,7 +47,7 @@ namespace libMBIN.Models
         [Conditional( "DEBUG" )]
         private static void DebugLogTemplate( string msg ) {
             #if NMSTEMPLATE_DEBUG_TEMPLATE
-                if (enableDebugLogTemplate) DebugLog( msg );
+                if (isDebugLogTemplateEnabled) DebugLog( msg );
             #endif
         }
 
