@@ -277,7 +277,7 @@ namespace libMBIN.UnitTests {
             // TODO: HACK, for debugging the test
             // Change MAX to restrict how many files will be processed.
             // For unrestricted, set to int.MaxValue
-            const int MAX = 20; // TODO FIXME! should be int.MaxValue;
+            const int MAX = int.MaxValue; // TODO FIXME! should be int.MaxValue;
 
             // TODO: searchPattern should be handled better. *.MBIN and *.MBIN.PC but not *.MBIN.BAK, etc
             // TODO: make searchPattern customizable from .runsettings
@@ -285,7 +285,7 @@ namespace libMBIN.UnitTests {
             Array.Resize( ref paths, Math.Min( MAX, paths.Length ) );
 
             FileState[] files = FileState.CreateArray( paths );
-            using ( var streamOut = new LogFileStream( "GameData Report v1.38.tsv" ) ) { // TODO: hardcoded log file name!
+            using ( var streamOut = new LogFileStream( MBINCompilerTests.Database.Utils.GetTablePath( "RecompiledGameData" ) ) ) {
                 LogHeader( streamOut );
                 bool passed = Recompile( files, streamOut );
                 LogSummary( streamOut, files.Length );
