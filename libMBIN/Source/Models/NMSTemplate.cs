@@ -7,6 +7,9 @@
 // Uncomment to enable debug logging of XML comments
 // #define NMSTEMPLATE_DEBUG_COMMENTS
 
+// Uncomment to enable debug logging of XML property names
+// #define NMSTEMPLATE_DEBUG_PROPERTY_NAMES
+
 
 using System;
 using System.Linq;
@@ -54,6 +57,13 @@ namespace libMBIN.Models
         [Conditional( "DEBUG" )]
         private static void DebugLogComment( string msg ) {
             #if NMSTEMPLATE_DEBUG_COMMENTS
+                DebugLog( msg );
+            #endif
+        }
+
+        [Conditional( "DEBUG" )]
+        private static void DebugLogPropertyName( string msg ) {
+            #if NMSTEMPLATE_DEBUG_PROPERTY_NAMES
                 DebugLog( msg );
             #endif
         }
@@ -1223,7 +1233,7 @@ namespace libMBIN.Models
                     EXmlProperty xmlProperty = (EXmlProperty)xmlElement;
                     FieldInfo field = templateType.GetField(xmlProperty.Name);
                     object fieldValue = null;
-                    DebugLog(xmlProperty.Name);
+                    DebugLogPropertyName(xmlProperty.Name);
                     if (field.FieldType == typeof(NMSTemplate) || field.FieldType.BaseType == typeof(NMSTemplate))
                     {
                         fieldValue = DeserializeEXml(xmlProperty);
