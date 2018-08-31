@@ -243,6 +243,24 @@ namespace MBINCompiler
                 }
             }
 
+            // TODO: this should be handled better
+            if ( !foundMBIN && !foundEXML ) {
+                if ( (fileList.Count == 1) && File.Exists( fileList[0] ) ) {
+                    using ( var fIn = new FileStream( fileList[0], FileMode.Open ) ) {
+                        // possibly MBIN? check for a valid header
+                        using ( var mbin = new MBINFile( fIn, true ) ) foundMBIN = (mbin.Load() && mbin.Header.IsValid);
+                        if ( !foundMBIN ) { // possibly EXML? check for a valid xml tag
+                            var xmlTag = "<?xml version=\"1.0\" encoding=\"utf-8\"?>".ToLower();
+                            var bytes = new byte[xmlTag.Length];
+                            if ( fIn.Read( bytes, 0, xmlTag.Length ) == xmlTag.Length ) {
+                                var txt = System.Text.Encoding.ASCII.GetString( bytes ).ToLower();
+                                foundEXML = (txt == xmlTag);
+                            }
+                        }
+                    }
+                }
+            }
+
             if ( foundMBIN && foundEXML ) {
                 Console.WriteLine( "Both MBIN and EXML file types were detected!\n" +
                     "Unable to automatically determine the --input-format type." );
