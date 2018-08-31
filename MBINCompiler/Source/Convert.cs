@@ -87,7 +87,9 @@ namespace MBINCompiler
             if ( Path.HasExtension( file ) ) {
                 string x = Path.GetExtension( file ).ToUpper();
                 if ( x == ".PC" ) file = Path.ChangeExtension( file, null );
-                return Path.ChangeExtension( file, ext );
+                x = Path.GetExtension( file ).ToUpper();
+                if (x == ".MBIN") return Path.ChangeExtension( file, ext );
+                if (x == ".EXML") return Path.ChangeExtension( file, ext );
             }
             return file + $".{ext}";
         }
