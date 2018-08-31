@@ -442,12 +442,12 @@ namespace libMBIN.Models
                         writer.Write(listEnding);
 
                         var data = new Tuple<long, object>( listPos, (IList) fieldData );
-                        if (addtDataIndex >= additionalData.Count) {
+                        if ( addtDataIndex >= additionalData.Count ) {
                             additionalData.Add( data );
                         } else {
                             additionalData.Insert( addtDataIndex, data );
                         }
-                        addtDataIndex++;
+                        addtDataIndex++; // should this be incremented regardless of insert or add?
                     }
 
                     break;
@@ -469,12 +469,12 @@ namespace libMBIN.Models
                         writer.Write((Int64)0);      // default value to be overridden later anyway
                         writer.WriteString("c" + template.GetType().Name, Encoding.UTF8, 0x40);
                         var data = new Tuple<long, object>( refPos, template );
-                        if (additionalData.Count == additionalData.Capacity) {
+                        if ( addtDataIndex >= additionalData.Count ) {
                             additionalData.Add( data );
                         } else {
-                            additionalData.Insert(addtDataIndex++, data );
+                            additionalData.Insert( addtDataIndex++, data );
                         }
-
+                        // addtDataIndex++; // should this be incremented regardless of insert or add?
                     }
                     break;
                 case "Dictionary`2":
