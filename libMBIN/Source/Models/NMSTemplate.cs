@@ -7,6 +7,9 @@
 // Uncomment to enable debug logging of XML comments
 // #define NMSTEMPLATE_DEBUG_COMMENTS
 
+// Uncomment to enable debug logging of MBIN field names
+#define NMSTEMPLATE_DEBUG_FIELD_NAMES
+
 // Uncomment to enable debug logging of XML property names
 // #define NMSTEMPLATE_DEBUG_PROPERTY_NAMES
 
@@ -57,6 +60,13 @@ namespace libMBIN.Models
         [Conditional( "DEBUG" )]
         private static void DebugLogComment( string msg ) {
             #if NMSTEMPLATE_DEBUG_COMMENTS
+                DebugLog( msg );
+            #endif
+        }
+
+        [Conditional( "DEBUG" )]
+        private static void DebugLogFieldName( string msg ) {
+            #if NMSTEMPLATE_DEBUG_FIELD_NAMES
                 DebugLog( msg );
             #endif
         }
@@ -368,6 +378,8 @@ namespace libMBIN.Models
         {
             if (CustomSerialize(writer, fieldType, fieldData, settings, field, ref additionalData, ref addtDataIndex))
                 return;
+
+            DebugLogFieldName( $"{field?.DeclaringType}.{field?.Name} type={fieldType} additionalData.Count={additionalData?.Count ?? 0} addtDataIndex={addtDataIndex}" );
 
             if (settings?.DefaultValue != null)
             {
