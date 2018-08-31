@@ -93,6 +93,7 @@ namespace MBINCompiler
 
             var force = options.GetOptionSwitch( "force" );
 
+            if ( paths.Count < 1 ) return Console.ShowHelp( ErrorCode.CommandLine );
             var inputDir = paths[0];
             var outputDir = options.GetOptionArg( "output-dir" )?.value;
             if ( outputDir != null ) {
