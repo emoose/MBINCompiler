@@ -47,7 +47,7 @@ namespace MBINCompiler
 
             // get the Quiet option first, before we emit anything
             Quiet = options.GetOptionSwitch( "quiet" );
-            if ( !Quiet ) Logger.AddStream( Console.OpenStandardOutput() );
+            if ( !Quiet ) Logger.InsertStream( 0, System.Console.OpenStandardOutput() ); // stdout should always be the first stream in the Logger
 
             // now we can emit an error if we need to
             if ( invalidArguments ) return CommandLine.ShowInvalidCommandLineArg( options );

@@ -2,6 +2,7 @@
 
 namespace MBINCompiler
 {
+    using System.IO;
     using static CommandLineOptions;
 
     internal class CommandLine
@@ -20,6 +21,8 @@ namespace MBINCompiler
         /// <returns>Always returns 0 (exit code = success)</returns>
         public static int ShowHelp( ErrorCode code = ErrorCode.Success )
         {
+            if (System.Console.IsOutputRedirected) return (int) code;
+            if ( (code != ErrorCode.Success) && Quiet ) return (int) code;
             ShowHelpInfo();
             WaitForKeypress();
             return (int) code;
@@ -35,7 +38,14 @@ namespace MBINCompiler
         /// <summary>
         public static int ShowError( string msg, ErrorCode code = ErrorCode.Unknown, bool wait = true )
         {
-            libMBIN.Logger.WriteLine( $"\nERROR: {msg}\n" );
+            msg = $"ERROR: {msg}\n";
+            StreamWriter stdOut = null;
+            if ( !Quiet ) {
+                System.Console.Error.WriteLine( msg );
+                stdOut = libMBIN.Logger.RemoveStream( 0 );
+            }
+            libMBIN.Logger.WriteLine( msg );
+            libMBIN.Logger.InsertStream( 0, stdOut );
             WaitForKeypress( wait );
             return (int) code;
         }
@@ -76,7 +86,7 @@ namespace MBINCompiler
         /// </summary>
         public static void WaitForKeypress( bool wait = true )
         {
-            if ( Quiet || !wait ) return;
+            if ( Quiet || !wait || System.Console.IsOutputRedirected ) return;
             WriteLine( "\nPress any key to continue . . ." );
             ReadKey();
         }
