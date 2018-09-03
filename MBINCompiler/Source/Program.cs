@@ -47,22 +47,22 @@ namespace MBINCompiler
 
             // get the Quiet option first, before we emit anything
             Quiet = options.GetOptionSwitch( "quiet" );
-            if ( !Quiet ) Logger.AddStream( System.Console.OpenStandardOutput() );
+            if ( !Quiet ) Logger.AddStream( Console.OpenStandardOutput() );
 
             // now we can emit an error if we need to
-            if ( invalidArguments ) return Console.ShowInvalidCommandLineArg( options );
+            if ( invalidArguments ) return CommandLine.ShowInvalidCommandLineArg( options );
 
             try {
 
                 switch ( options.Verb ) {
-                    case "help": return Console.ShowHelp();
+                    case "help": return CommandLine.ShowHelp();
                     case "version": return HandleVersionMode( options );
                     default: return HandleConvertMode( options );
                 }
 
             } catch ( Exception e ) {
                 e = e.GetBaseException();
-                return Console.ShowError( $"{e.Message}\n\nStacktrace:\n\n{e.StackTrace}" );
+                return CommandLine.ShowError( $"{e.Message}\n\nStacktrace:\n\n{e.StackTrace}" );
             }
 
         }
@@ -70,18 +70,18 @@ namespace MBINCompiler
         private static int HandleVersionMode( CommandLineParser options )
         {
             var files = options.GetFileParams();
-            if ( files.Count == 0 ) return Console.ShowVersion( Quiet );
-            if ( files.Count >  1 ) return Console.ShowInvalidCommandLineArg( files[1] );
+            if ( files.Count == 0 ) return CommandLine.ShowVersion( Quiet );
+            if ( files.Count >  1 ) return CommandLine.ShowInvalidCommandLineArg( files[1] );
 
             var fIn = new FileStream( files[0], FileMode.Open, FileAccess.Read );
             var mbin = new MBINFile( fIn );
             if ( !mbin.Load() || !mbin.Header.IsValid ) {
-                return Console.ShowCommandLineError( "Invalid file type.\n" +
+                return CommandLine.ShowCommandLineError( "Invalid file type.\n" +
                                              "Only MBIN files can be versioned.\n" +
                                             $"\"{files[0]}\"" );
             }
 
-            Console.WriteLine( Version.GetMBINVersion( mbin, Quiet ) );
+            CommandLine.WriteLine( Version.GetMBINVersion( mbin, Quiet ) );
             return (int) ErrorCode.Success;
         }
 
@@ -93,11 +93,11 @@ namespace MBINCompiler
 
             var force = options.GetOptionSwitch( "force" );
 
-            if ( paths.Count < 1 ) return Console.ShowHelp( ErrorCode.CommandLine );
+            if ( paths.Count < 1 ) return CommandLine.ShowHelp( ErrorCode.CommandLine );
             var inputDir = paths[0];
             var outputDir = options.GetOptionArg( "output-dir" )?.value;
             if ( outputDir != null ) {
-                if ( paths.Count > 1 ) return Console.ShowInvalidCommandLineArg( paths[1] );
+                if ( paths.Count > 1 ) return CommandLine.ShowInvalidCommandLineArg( paths[1] );
                 outputDir = Path.GetFullPath( outputDir );
             }
             if ( File.Exists( inputDir ) ) inputDir = Path.GetDirectoryName( inputDir );
@@ -145,7 +145,7 @@ namespace MBINCompiler
             bool isO = ( optO != null );
             bool isK = ( optK != null );
             if ( isO && isK ) {
-                Console.ShowCommandLineError( $"The {optO.name} and {optK.name} options cannot be used together." );
+                CommandLine.ShowCommandLineError( $"The {optO.name} and {optK.name} options cannot be used together." );
                 return false;
             }
 
@@ -159,7 +159,7 @@ namespace MBINCompiler
                 InputFormat = ( formatI == "MBIN" ) ? FormatType.MBIN : InputFormat;
                 InputFormat = ( formatI == "EXML" ) ? FormatType.EXML : InputFormat;
                 if ( InputFormat == FormatType.Unknown ) {
-                    Console.ShowCommandLineError( $"Invalid format specified: {formatI}" );
+                    CommandLine.ShowCommandLineError( $"Invalid format specified: {formatI}" );
                     return false;
                 }
             }
@@ -168,7 +168,7 @@ namespace MBINCompiler
                 OutputFormat = ( formatO == "MBIN" ) ? FormatType.MBIN : OutputFormat;
                 OutputFormat = ( formatO == "EXML" ) ? FormatType.EXML : OutputFormat;
                 if ( OutputFormat == FormatType.Unknown ) {
-                    Console.ShowCommandLineError( $"Invalid format specified: {formatI}" );
+                    CommandLine.ShowCommandLineError( $"Invalid format specified: {formatI}" );
                     return false;
                 }
             }
@@ -177,7 +177,7 @@ namespace MBINCompiler
             if ( formatO == null ) OutputFormat = ( InputFormat == FormatType.MBIN ) ? FormatType.EXML : FormatType.MBIN;
 
             if ( InputFormat == OutputFormat ) {
-                Console.ShowCommandLineError( "--input-format and --output-format cannot be the same type!" );
+                CommandLine.ShowCommandLineError( "--input-format and --output-format cannot be the same type!" );
                 return false;
             }
 
@@ -194,7 +194,7 @@ namespace MBINCompiler
                 } else if ( Directory.Exists( fullpath ) ) {
                     fileList.AddRange( GetFilteredFiles( fullpath ) );
                 } else {
-                    Console.ShowCommandLineError( $"Invalid path.\n\"{path}\"" );
+                    CommandLine.ShowCommandLineError( $"Invalid path.\n\"{path}\"" );
                     return false;
                 }
             }
@@ -263,7 +263,7 @@ namespace MBINCompiler
             }
 
             if ( foundMBIN && foundEXML ) {
-                Console.WriteLine( "Both MBIN and EXML file types were detected!\n" +
+                CommandLine.WriteLine( "Both MBIN and EXML file types were detected!\n" +
                     "Unable to automatically determine the --input-format type." );
                 InputFormat = Utils.PromptInputFormat();
             } else if ( foundMBIN ) {
@@ -273,7 +273,7 @@ namespace MBINCompiler
                 Logger.WriteLine( "Auto-Detected --input-format=EXML" );
                 InputFormat = FormatType.EXML;
             } else {
-                Console.ShowError( "No valid files found!" );
+                CommandLine.ShowError( "No valid files found!" );
                 return false;
             }
 

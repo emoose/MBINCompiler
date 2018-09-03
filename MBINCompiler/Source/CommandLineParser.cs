@@ -30,7 +30,7 @@ namespace MBINCompiler
 
                 string desc = ( isRequired ? "(REQUIRED) " : "" ) + description;
 
-                desc = Console.WrapLine( desc, 4 + OPTION_FIELD_WIDTH );
+                desc = CommandLine.WrapLine( desc, 4 + OPTION_FIELD_WIDTH );
                 return String.Format( "  {0,-26}{1}", option, desc.TrimStart( ' ' ) );
             }
         }

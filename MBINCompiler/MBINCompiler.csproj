@@ -48,7 +48,7 @@
   <ItemGroup>
     <Compile Include="Source\CommandLineParser.cs" />
     <Compile Include="Source\CommandLineOptions.cs" />
-    <Compile Include="Source\Console.cs" />
+    <Compile Include="Source\CommandLine.cs" />
     <Compile Include="Source\Convert.cs" />
     <Compile Include="Source\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

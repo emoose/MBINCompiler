@@ -4,15 +4,15 @@ namespace MBINCompiler
 {
     using static CommandLineOptions;
 
-    internal class Console
+    internal class CommandLine
     {
 
-        public static void Write( object obj ) => System.Console.Write( obj );
-        public static void WriteLine( object obj ) => System.Console.WriteLine( obj );
-        public static void WriteLine() => System.Console.WriteLine();
+        public static void Write( object obj ) => Console.Write( obj );
+        public static void WriteLine( object obj ) => Console.WriteLine( obj );
+        public static void WriteLine() => Console.WriteLine();
 
-        public static ConsoleKeyInfo ReadKey() => System.Console.ReadKey();
-        public static string ReadLine() => System.Console.ReadLine();
+        public static ConsoleKeyInfo ReadKey() => Console.ReadKey();
+        public static string ReadLine() => Console.ReadLine();
 
         /// <summary>
         /// Display the help info and wait for a key press.
@@ -83,7 +83,7 @@ namespace MBINCompiler
 
         public static string WrapLine( string txt = null, int padleft = 0, int width = 0 ) {
             if (txt is null) { return ""; }
-            width = ( width > 0 ) ? width : System.Console.BufferWidth;
+            width = ( width > 0 ) ? width : Console.BufferWidth;
 
             // split into lines
             string[] lines = txt.Split( new char[] { '\n' }, StringSplitOptions.None );

@@ -30,7 +30,7 @@ namespace MBINCompiler
                 } catch ( Exception e ) {
                     if ( !force ) throw e;
                     e = e.GetBaseException();
-                    Console.ShowError( $"{fileIn}\n\n{e.Message}\n\nStacktrace:\n\n{e.StackTrace}\n", wait: false );
+                    CommandLine.ShowError( $"{fileIn}\n\n{e.Message}\n\nStacktrace:\n\n{e.StackTrace}\n", wait: false );
                     errorCode = ErrorCode.Unknown;
                 }
             }

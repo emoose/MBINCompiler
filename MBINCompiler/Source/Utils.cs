@@ -15,19 +15,19 @@ namespace MBINCompiler
 
         public static FormatType PromptInputFormat()
         {
-            Console.WriteLine(  "\nPlease specify the input file format:" );
-            Console.WriteLine(  "\nValid options are:" );
+            CommandLine.WriteLine(  "\nPlease specify the input file format:" );
+            CommandLine.WriteLine(  "\nValid options are:" );
 
             string[] names = Enum.GetNames( typeof( FormatType ) );
             string validFormats = String.Join( ", ", names, 1, names.Length - 2 );
             if ( names.Length > 2 ) validFormats += " or ";
             if ( names.Length > 1 ) validFormats += names[names.Length - 1];
-            Console.WriteLine( $"    {validFormats}" );
+            CommandLine.WriteLine( $"    {validFormats}" );
 
             string result;
             while ( true ) {
-                Console.Write( "\n--input-format=" );
-                result = Console.ReadLine().ToUpper();
+                CommandLine.Write( "\n--input-format=" );
+                result = CommandLine.ReadLine().ToUpper();
                 if ( result == "MBIN" ) break;
                 if ( result == "EXML" ) break;
             }
@@ -37,18 +37,18 @@ namespace MBINCompiler
 
         public static bool PromptOverwrite( string fileOut, ref OverwriteMode overwrite )
         {
-            Console.WriteLine( $"File already exists!\n\"{fileOut}\"\n" );
-            Console.WriteLine( "Options:\n" +
+            CommandLine.WriteLine( $"File already exists!\n\"{fileOut}\"\n" );
+            CommandLine.WriteLine( "Options:\n" +
                                "  [y]es\n" +
                                "  [n]o\n" +
                                "  [O]verwrite all existing files.\n" +
                                "  [K]eep all existing files." );
             char key;
             while (true) {
-                Console.Write( "\nOverwrite this file? " );
-                key = Console.ReadKey().KeyChar;
+                CommandLine.Write( "\nOverwrite this file? " );
+                key = CommandLine.ReadKey().KeyChar;
                 key = ( key >= 'a' ) ? (char) (key - 32) : key;
-                Console.WriteLine();
+                CommandLine.WriteLine();
                 if ( key == 'O' ) overwrite = OverwriteMode.Always;
                 if ( key == 'K' ) overwrite = OverwriteMode.Never;
                 if ( ( key == 'Y' ) || ( key == 'O' ) ) return true;
