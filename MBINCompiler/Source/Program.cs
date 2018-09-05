@@ -1,6 +1,4 @@
-﻿//#define DEBUG_LOG
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
@@ -32,7 +30,7 @@ namespace MBINCompiler
             Logger.AddStream( logStream );
             Debug.Listeners.Add( new TextWriterTraceListener( logStream ) );
 
-#if DEBUG_LOG // log to console
+#if DEBUG_STDOUT // log to console
             Debug.Listeners.Add( new ConsoleTraceListener() );
 #endif
 
