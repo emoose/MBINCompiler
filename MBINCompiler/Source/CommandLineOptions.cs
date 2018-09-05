@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace MBINCompiler
 {
-
+    using System.Text;
     using static CommandLineOptions.OptionBackers;
     using static CommandLineParser;
     using static Utils;
@@ -114,46 +114,50 @@ namespace MBINCompiler
         /// <summary>
         /// Display the help info.
         /// </summary>
-        public static void ShowHelpInfo()
+        public static string GetHelpInfo()
         {
             string exe = GetExecutableName();
 
-            CommandLine.WriteLine( Version.GetVersionStringVerbose() );
+            var sw = new StringBuilder();
+            
+            sw.AppendLine( Version.GetVersionStringVerbose() );
 
-            CommandLine.Write( "\nUsage:\n\n" +
+            sw.Append( "\nUsage:\n\n" +
                    $"    {exe} help\n" +
                    $"    {exe} version [(-q | --quiet)] [<File>]\n" +
                    $"    {exe} [convert] [<Option>...] [<Path>...]\n" );
 
-            CommandLine.Write( "\n\nModes:\n\n" +
+            sw.Append( "\n\nModes:\n\n" +
                     FormatWrapped( "  help", 20, "Show this help info.", true ) +
                     FormatWrapped( "  version", 20, "Show version info.", true ) +
                     FormatWrapped( "  convert", 20, "Convert files between MBIN and EXML formats.", true ) );
 
             if ( OPTIONS_GENERAL.Count > 0 ) {
-                CommandLine.Write( "\n\nGeneral Options:\n" );
-                foreach ( var option in OPTIONS_GENERAL ) { CommandLine.WriteLine( option ); }
+                sw.Append( "\n\nGeneral Options:\n" );
+                foreach ( var option in OPTIONS_GENERAL ) { sw.Append(option ); sw.AppendLine(); }
             }
 
-            CommandLine.Write( FormatWrapped( "\nversion [<Option>...] [<File>]\n\n", 4,
+            sw.Append( FormatWrapped( "\nversion [<Option>...] [<File>]\n\n", 4,
                     "    If no valid <File> is specified, the version for this exe is displayed.\n" +
                     "    If <File> is an MBIN, the version that the MBIN was compiled with will be displayed.\n" +
                     "\n" +
                     "    If -q or --quiet is used, a compact version string will be displayed with no decoration." ) );
 
             if ( OPTIONS_VERSION.Count > 0 ) {
-                CommandLine.Write( "\nversion Options:\n" );
-                foreach ( var option in OPTIONS_VERSION ) { CommandLine.WriteLine( option ); }
+                sw.Append( "\nversion Options:\n" );
+                foreach ( var option in OPTIONS_VERSION ) { sw.Append(option ); sw.AppendLine(); }
             }
 
-            CommandLine.Write( FormatWrapped( "\n\n[convert] [<Option>...] [<Path>...]\n\n", 4,
+            sw.Append( FormatWrapped( "\n\n[convert] [<Option>...] [<Path>...]\n\n", 4,
                     "    This mode is the default. The convert keyword is optional.\n" +
                     "    For each <Path>, convert all files between MBIN and EXML formats." ) );
 
             if ( OPTIONS_CONVERT.Count > 0 ) {
-                CommandLine.Write( "\nconvert Options:\n" );
-                foreach ( var option in OPTIONS_CONVERT ) { CommandLine.WriteLine( option ); }
+                sw.Append( "\nconvert Options:\n" );
+                foreach ( var option in OPTIONS_CONVERT ) { sw.Append(option ); sw.AppendLine(); }
             }
+
+            return sw.ToString();
         }
 
     }

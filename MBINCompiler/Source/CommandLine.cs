@@ -1,19 +1,12 @@
 ﻿using System;
+using System.IO;
 
 namespace MBINCompiler
 {
-    using System.IO;
     using static CommandLineOptions;
 
     internal class CommandLine
     {
-
-        public static void Write( object obj ) => Console.Write( obj );
-        public static void WriteLine( object obj ) => Console.WriteLine( obj );
-        public static void WriteLine() => Console.WriteLine();
-
-        public static ConsoleKeyInfo ReadKey() => Console.ReadKey();
-        public static string ReadLine() => Console.ReadLine();
 
         /// <summary>
         /// Display the help info and wait for a key press.
@@ -21,9 +14,8 @@ namespace MBINCompiler
         /// <returns>Always returns 0 (exit code = success)</returns>
         public static int ShowHelp( ErrorCode code = ErrorCode.Success )
         {
-            if (System.Console.IsOutputRedirected) return (int) code;
-            if ( (code != ErrorCode.Success) && Quiet ) return (int) code;
-            ShowHelpInfo();
+            if (Console.IsOutputRedirected) return (int) code;
+            Console.Out.Write( GetHelpInfo() );
             WaitForKeypress();
             return (int) code;
         }
@@ -75,9 +67,10 @@ namespace MBINCompiler
         /// Show the version string.
         /// </summary>
         /// <returns>Always returns 0 (exit code = success)</returns>
-        public static int ShowVersion( bool quiet = false )
+        public static int ShowVersion( bool quiet = false ) => ShowVersion( null, quiet );
+        public static int ShowVersion( libMBIN.MBINFile mbin , bool quiet = false )
         {
-            WriteLine( Version.GetVersionString( quiet ) );
+            Console.WriteLine( Version.GetVersionString( mbin, quiet) );
             return 0;
         }
 
@@ -87,8 +80,8 @@ namespace MBINCompiler
         public static void WaitForKeypress( bool wait = true )
         {
             if ( Quiet || !wait || System.Console.IsOutputRedirected ) return;
-            WriteLine( "\nPress any key to continue . . ." );
-            ReadKey();
+            Console.WriteLine( "\nPress any key to continue . . ." );
+            Console.ReadKey();
         }
 
         public static string WrapLine( string txt = null, int padleft = 0, int width = 0 ) {

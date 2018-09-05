@@ -79,7 +79,7 @@ namespace MBINCompiler
                                             $"\"{files[0]}\"" );
             }
 
-            CommandLine.WriteLine( Version.GetMBINVersion( mbin, Quiet ) );
+            CommandLine.ShowVersion( mbin, Quiet );
             return (int) ErrorCode.Success;
         }
 
