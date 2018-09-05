@@ -107,7 +107,7 @@ namespace libMBIN.UnitTests.Analysis
             const int MAX = int.MaxValue; // TODO FIXME! should be int.MaxValue;
 
             var table = new GameDataMBIN.Table();
-            if ( File.Exists( table.FilePath ) ) throw new Exception( $"A {table.Name} table already exists!\n{table.FilePath}" );
+            if ( File.Exists( table.FilePath ) ) throw new APIException( $"A {table.Name} table already exists!\n{table.FilePath}" );
 
             string[] files = Directory.GetFiles( RunSettings.GameDataDir, "*.MBIN*", SearchOption.AllDirectories );
             Array.Resize( ref files, Math.Min( MAX, files.Length ) );

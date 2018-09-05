@@ -34,7 +34,7 @@ namespace MBINCompiler
 #endif
 
             Logger.LogMessage( "VERSION", $"MBINCompiler v{Version.GetVersionStringCompact()}" );
-            Logger.LogMessage( "ARGS", $"\"{String.Join( "\" \"", args )}\"\n" );
+            Logger.LogMessage( "ARGS", $"\"{string.Join( "\" \"", args )}\"\n" );
             using ( var indent = new Logger.IndentScope() ) {
                 Logger.LogMessage( "If you encounter any errors, please submit a bug report and include this log file.\n" +
                                    "Please check that there isn't already a similar issue open before creating a new one.\n" +
@@ -70,14 +70,8 @@ namespace MBINCompiler
                     default: return HandleConvertMode( options );
                 }
 
-            } catch ( Exception e ) {
-                e = e.GetBaseException();
-                CommandLine.ShowError( $"{e.Message}\n" );
-                using ( var indent = new Logger.IndentScope() ) {
-                    Logger.LogMessage( $"{e.GetType()}:" );
-                    Logger.LogMessage( $"\n{e.StackTrace}" );
-                }
-                return (int) ErrorCode.Unknown;
+            } catch ( System.Exception e ) {
+                return CommandLine.ShowException( e );
             }
 
         }

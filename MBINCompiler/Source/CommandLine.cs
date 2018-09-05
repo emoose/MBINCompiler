@@ -21,6 +21,35 @@ namespace MBINCompiler {
             return (int) code;
         }
 
+        public static int ShowException( Exception e ) {
+            string msg = ( e.GetType() == typeof( CompilerException ) ) ? e.InnerException.Message : null;
+            ShowError( $"[{e.GetType().Name}]: {msg ?? e.Message}", wait: false );
+            using ( var indent = new Logger.IndentScope() ) {
+                var b = e;
+                bool once = true;
+                while (b.InnerException != null) {
+                    b = b.InnerException;
+                    msg = ( once && (msg != null) ) ? "" : null;
+                    msg = msg ?? $": {b.Message}";
+                    once = false;
+                    if ( b is System.Reflection.TargetInvocationException ) continue;
+                    Logger.LogMessage( $"[{b.GetType().Name}]{msg}" );
+                }
+
+                if ( e is CompilerException ) {
+                    Logger.LogMessage( "INFO", $"\n{((CompilerException) e).FileName}" );
+                    if ( e is MbinException ) {
+                        var mbin = ((MbinException) e).Mbin;
+                        Logger.LogMessage( "INFO", $"MBIN\tversion:\t{mbin.Header.GetMBINVersion()}\tguid:\t{mbin.Header.TemplateGUID:X}\ttemplate:\t{mbin.Header.TemplateName}" );
+                    }
+                    e = e.InnerException;
+                }
+
+                if ( !(e is System.IO.EndOfStreamException) ) Logger.LogMessage( $"\n{b.StackTrace}\n" );
+            }
+            return (int) ErrorCode.Unknown;
+        }
+
         /// <summary>
         /// Display an error message and optionally wait for a key press.
         /// </summary>

@@ -141,12 +141,12 @@ namespace libMBIN.UnitTests {
             using (var file = new MBINFile( stream )) {
                 file.Load();
                 var data = file.GetData();
-                if (data == null) throw new Exception( "deserialized data was null" );
+                if (data == null) throw new APIException( "deserialized data was null" );
 
-                if (data.SerializeEXml( false ) == null) throw new Exception( "xml serialization was null" );
+                if (data.SerializeEXml( false ) == null) throw new APIException( "xml serialization was null" );
 
                 var xmlString = EXmlFile.WriteTemplate( data );
-                if ( String.IsNullOrEmpty( xmlString ) ) throw new Exception( "xml data is null" );
+                if ( String.IsNullOrEmpty( xmlString ) ) throw new APIException( "xml data is null" );
 
                 MemoryStream memory = new MemoryStream();
                 using (TextWriter writer = new StreamWriter( memory, Encoding.Default, 4096, true )) {
@@ -159,7 +159,7 @@ namespace libMBIN.UnitTests {
 
         private static MemoryStream Compile( Stream stream ) {
             var data = EXmlFile.ReadTemplateFromStream( stream );
-            if (data == null) throw new Exception( "exml failed to deserialize" );
+            if (data == null) throw new APIException( "exml failed to deserialize" );
 
             MemoryStream memory = new MemoryStream();
             using (var file = new MBINFile( memory, true )) {
@@ -216,7 +216,7 @@ namespace libMBIN.UnitTests {
 
                     } catch ( FileNotFoundException ) { // missing
                         file.status = FileStatus.Missing;
-                    } catch ( Exception e ) { // fail
+                    } catch ( APIException e ) { // fail
                         file.status = FileStatus.Failed;
                         file.errorMessage = e.Message;
                     }

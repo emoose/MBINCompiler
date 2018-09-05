@@ -15,23 +15,34 @@ namespace MBINCompiler
 
         public static ErrorCode ConvertFileList( string inputDir, string outputDir, List<string> fileList, bool force )
         {
+            var failedFiles = new List<string>();
+            var exceptions = new List<Exception>();
             var errorCode = ErrorCode.Success;
             foreach ( var fileIn in fileList ) {
+                var path = fileIn;
+                if (outputDir != null) path = fileIn.Substring( inputDir.Length + 1 );
                 try {
                     string fileOut = fileIn;
                     if ( outputDir != null ) fileOut = fileOut.Replace( inputDir, outputDir );
 
+                    Console.Out.WriteLine( $"Converting {path}" );
                     ConvertFile( fileIn, fileOut, InputFormat, OutputFormat );
 
-                } catch ( Exception e ) {
+                } catch ( System.Exception e ) {
                     if ( !force ) throw;
-                    e = e.GetBaseException();
-                    CommandLine.ShowError( $"{e.Message}\n{fileIn}\n", wait: false );
-                    using ( var indent = new Logger.IndentScope() ) {
-                        Logger.LogMessage( $"{e.GetType()}:" );
-                        Logger.LogMessage( $"\n{e.StackTrace}" );
-                    }
-                    errorCode = ErrorCode.Unknown;
+                    failedFiles.Add( path );
+                    exceptions.Add( e );
+                    errorCode = (ErrorCode) CommandLine.ShowException( e );
+                }
+            }
+
+            Logger.LogInfo( $"\n\n{fileList.Count - failedFiles.Count} files successfully converted." );
+            if ( failedFiles.Count > 0 ) {
+                Logger.LogInfo( $"{failedFiles.Count} FILES FAILED.\n" );
+                for ( int i = 0; i < failedFiles.Count; i++ ) {
+                    Logger.LogInfo( "FILE: {0}", failedFiles[i] );
+                    if ( exceptions[i].GetType() == typeof( CompilerException ) ) exceptions[i] = exceptions[i].InnerException;
+                    Logger.LogInfo( "ERROR: {0}\n", exceptions[i].Message );
                 }
             }
 
@@ -40,46 +51,62 @@ namespace MBINCompiler
 
         public static void ConvertFile( string fileIn, string fileOut, FormatType inputFormat, FormatType outputFormat )
         {
-            Logger.LogInfo( $"Converting {fileIn}" );
-
             fileOut = ChangeFileExtension( fileOut, outputFormat );
 
             FileMode fileMode = GetFileMode( fileOut );
 
             Directory.CreateDirectory( Path.GetDirectoryName( fileOut ) );
 
-            Logger.Indent();
             try {
+                using ( var indentScope = new Logger.IndentScope() )
                 using ( var fIn = new FileStream( fileIn, FileMode.Open, FileAccess.Read ) )
                 using ( var ms = new MemoryStream() ) {
 
                     if ( inputFormat == FormatType.MBIN ) {
                         var mbin = new MBINFile( fIn );
                         if ( !mbin.Load() || !mbin.Header.IsValid ) throw new InvalidDataException( "Not a valid MBIN file!" );
-                        Logger.LogMessage( "INFO", $"MBIN\tversion:\t{mbin.Header.GetMBINVersion()}\tguid:\t{mbin.Header.TemplateGUID:X}\ttemplate:\t{mbin.Header.TemplateName}\tsize:\t{fIn.Length}" );
 
                         var sw = new StreamWriter( ms );
-                        var data = mbin.GetData();
-                        if ( data is null ) throw new InvalidDataException( $"Failed to read {mbin.Header.GetXMLTemplateName()} from MBIN." );
-                        sw.Write( EXmlFile.WriteTemplate( data ) );
-                        sw.Flush();
-                        if ( ms.Length == 0 ) throw new InvalidDataException( $"Failed serializing {mbin.Header.GetXMLTemplateName()} to EXML." );
+
+                        NMSTemplate data = null;
+                        try {
+                            data = mbin.GetData();
+                            if (data is null) throw new InvalidDataException( "Invalid MBIN data." );
+                        } catch (Exception e) {
+                            throw new MbinException( $"Failed to read {mbin.Header.GetXMLTemplateName()} from MBIN.", e, fileIn, mbin );
+                        }
+
+                        try {
+                            sw.Write( EXmlFile.WriteTemplate( data ) );
+                            sw.Flush();
+                            if ( ms.Length == 0 ) throw new InvalidDataException( "Invalid EXML data." );
+                        } catch (Exception e) {
+                            throw new MbinException( $"Failed serializing {mbin.Header.GetXMLTemplateName()} to EXML.", e, fileIn, mbin );
+                        }
 
                     } else if ( inputFormat == FormatType.EXML ) {
-                        var data = EXmlFile.ReadTemplateFromStream( fIn );
-                        if ( data is null ) throw new InvalidDataException( $"Failed to deserialize EXML." );
-                        if (data is TkGeometryData) fileOut += ".PC";
-                        var mbin = new MBINFile( ms ) { Header = new MBINHeader() };
-                        mbin.Header.SetDefaults( data.GetType() );
-                        mbin.SetData( data );
-                        mbin.Save();
+                        NMSTemplate data = null;
+                        try {
+                            data = EXmlFile.ReadTemplateFromStream( fIn );
+                            if ( data is null ) throw new InvalidDataException( $"Failed to deserialize EXML." );
+                            if ( data is TkGeometryData ) fileOut += ".PC";
+                            var mbin = new MBINFile( ms ) { Header = new MBINHeader() };
+                            mbin.Header.SetDefaults( data.GetType() );
+                            mbin.SetData( data );
+                            mbin.Save();
+                        } catch ( Exception e ) {
+                            throw new ExmlException( e, fileIn, data );
+                        }
+
                     }
 
                     ms.Flush();
                     using ( var fOut = new FileStream( fileOut, fileMode, FileAccess.Write ) ) ms.WriteTo( fOut );
                 }
-            } finally {
-                Logger.Unindent();
+            } catch ( Exception e ) {
+                File.Delete( fileOut );
+                if ( e is CompilerException ) throw;
+                throw new CompilerException( e, fileIn );
             }
 
         }
