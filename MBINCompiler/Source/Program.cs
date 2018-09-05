@@ -26,13 +26,20 @@ namespace MBINCompiler
         public static int Main( string[] args )
         {
 
-            var logStream = new FileStream( $"{Utils.GetExecutableName()}.log", FileMode.Create );
-            Logger.AddStream( logStream );
-            Debug.Listeners.Add( new TextWriterTraceListener( logStream ) );
+            Logger.Open( $"{Utils.GetExecutableName()}.log" );
+            Logger.EnableTraceLogging = true;
 
-#if DEBUG_STDOUT // log to console
-            Debug.Listeners.Add( new ConsoleTraceListener() );
+#if DEBUG_STDOUT
+            Logger.LogToConsole = true;
 #endif
+
+            Logger.LogMessage( "VERSION", $"MBINCompiler v{Version.GetVersionStringCompact()}" );
+            Logger.LogMessage( "ARGS", $"\"{String.Join( "\" \"", args )}\"\n" );
+            using ( var indent = new Logger.IndentScope() ) {
+                Logger.LogMessage( "If you encounter any errors, please submit a bug report and include this log file.\n" +
+                                   "Please check that there isn't already a similar issue open before creating a new one.\n" +
+                                   "https://github.com/monkeyman192/MBINCompiler/issues\n" );
+            }
 
             var options = new CommandLineParser( args );
             options.AddOptions( null,      OPTIONS_GENERAL );
@@ -45,10 +52,15 @@ namespace MBINCompiler
 
             // get the Quiet option first, before we emit anything
             Quiet = options.GetOptionSwitch( "quiet" );
-            if ( !Quiet ) Logger.InsertStream( 0, System.Console.OpenStandardOutput() ); // stdout should always be the first stream in the Logger
+            if ( Quiet ) {
+                Console.SetOut( new StreamWriter( Stream.Null ) );
+                Console.SetError( Console.Out );
+            }
 
             // now we can emit an error if we need to
             if ( invalidArguments ) return CommandLine.ShowInvalidCommandLineArg( options );
+
+            Console.Out.WriteLine();
 
             try {
 
@@ -60,7 +72,12 @@ namespace MBINCompiler
 
             } catch ( Exception e ) {
                 e = e.GetBaseException();
-                return CommandLine.ShowError( $"{e.Message}\n\nStacktrace:\n\n{e.StackTrace}" );
+                CommandLine.ShowError( $"{e.Message}\n" );
+                using ( var indent = new Logger.IndentScope() ) {
+                    Logger.LogMessage( $"{e.GetType()}:" );
+                    Logger.LogMessage( $"\n{e.StackTrace}" );
+                }
+                return (int) ErrorCode.Unknown;
             }
 
         }
@@ -75,8 +92,8 @@ namespace MBINCompiler
             var mbin = new MBINFile( fIn );
             if ( !mbin.Load() || !mbin.Header.IsValid ) {
                 return CommandLine.ShowCommandLineError( "Invalid file type.\n" +
-                                             "Only MBIN files can be versioned.\n" +
-                                            $"\"{files[0]}\"" );
+                                                         "Only MBIN files can be versioned.\n" +
+                                                        $"\"{files[0]}\"" );
             }
 
             CommandLine.ShowVersion( mbin, Quiet );
@@ -131,7 +148,6 @@ namespace MBINCompiler
 
             // auto detect the input format if necessary
             if ( autoFormat && !AutoDetectFormat( fileList ) ) return (int) ErrorCode.Unknown;
-            Debug.WriteLine( $"--input-format={InputFormat} --output-format={OutputFormat}" );
 
             return (int) ConvertFileList( inputDir, outputDir, fileList, force );
         }
@@ -166,7 +182,7 @@ namespace MBINCompiler
                 OutputFormat = ( formatO == "MBIN" ) ? FormatType.MBIN : OutputFormat;
                 OutputFormat = ( formatO == "EXML" ) ? FormatType.EXML : OutputFormat;
                 if ( OutputFormat == FormatType.Unknown ) {
-                    CommandLine.ShowCommandLineError( $"Invalid format specified: {formatI}" );
+                    CommandLine.ShowCommandLineError( $"Invalid format specified: {formatO}" );
                     return false;
                 }
             }
@@ -251,6 +267,7 @@ namespace MBINCompiler
                         if ( !foundMBIN ) { // possibly EXML? check for a valid xml tag
                             var xmlTag = "<?xml version=\"1.0\" encoding=\"utf-8\"?>".ToLower();
                             var bytes = new byte[xmlTag.Length];
+                            // TODO: handle potential leading whitespace?
                             if ( fIn.Read( bytes, 0, xmlTag.Length ) == xmlTag.Length ) {
                                 var txt = System.Text.Encoding.ASCII.GetString( bytes ).ToLower();
                                 foundEXML = (txt == xmlTag);
@@ -261,14 +278,17 @@ namespace MBINCompiler
             }
 
             if ( foundMBIN && foundEXML ) {
-                CommandLine.WriteLine( "Both MBIN and EXML file types were detected!\n" +
-                    "Unable to automatically determine the --input-format type." );
+                const string msg = "Unable to automatically determine the --input-format type.";
+                if ( Quiet ) return (CommandLine.ShowError( msg ) == (int) ErrorCode.Success);
+                CommandLine.ShowWarning( msg );
+                Console.Out.WriteLine( "Both MBIN and EXML file types were detected!\n" );
                 InputFormat = Utils.PromptInputFormat();
+                Console.Out.WriteLine();
             } else if ( foundMBIN ) {
-                Logger.WriteLine( "Auto-Detected --input-format=MBIN" );
+                Logger.LogInfo( "Auto-Detected --input-format=MBIN\n" );
                 InputFormat = FormatType.MBIN;
             } else if ( foundEXML ) {
-                Logger.WriteLine( "Auto-Detected --input-format=EXML" );
+                Logger.LogInfo( "Auto-Detected --input-format=EXML\n" );
                 InputFormat = FormatType.EXML;
             } else {
                 CommandLine.ShowError( "No valid files found!" );
@@ -276,6 +296,7 @@ namespace MBINCompiler
             }
 
             OutputFormat = ( InputFormat == FormatType.MBIN ) ? FormatType.EXML : FormatType.MBIN;
+            Logger.LogDebug( $"--input-format={InputFormat} --output-format={OutputFormat}\n" );
 
             return true;
         }

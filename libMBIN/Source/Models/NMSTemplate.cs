@@ -1,28 +1,28 @@
-﻿// These two defines require that the project is set to the 'Debug' configuration, not Release.
+﻿// These defines require that the project is set to the 'Debug' configuration, not Release.
 // They will always be disabled/ignored in Release builds.
 
 // Uncomment to enable debug logging of the template de/serialization.
-//#define NMSTEMPLATE_DEBUG_TEMPLATE
+//#define DEBUG_TEMPLATE
 
 // Uncomment to enable debug logging of XML comments
-// #define NMSTEMPLATE_DEBUG_COMMENTS
+//#define DEBUG_COMMENTS
 
 // Uncomment to enable debug logging of MBIN field names
-//#define NMSTEMPLATE_DEBUG_FIELD_NAMES
+//#define DEBUG_FIELD_NAMES
 
 // Uncomment to enable debug logging of XML property names
-// #define NMSTEMPLATE_DEBUG_PROPERTY_NAMES
+//#define DEBUG_PROPERTY_NAMES
 
 
 using System;
+using System.Linq;
 using System.Collections;
+using System.IO;
+using System.Text;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.IO;
-using System.Linq;
 using System.Reflection;
 using System.Runtime.InteropServices;
-using System.Text;
 
 using libMBIN.Models.Structs;
 
@@ -43,37 +43,34 @@ namespace libMBIN.Models
         // 
         // Use the NMSTEMPLATE_* defines at the top of this file to enable/disable debug logging.
 
-        [Conditional( "DEBUG" )]
-        protected static void DebugLog( string msg ) => Debug.WriteLine( msg );
-
         // TODO: static could be problematic for threading?
         private static bool isDebugLogTemplateEnabled = true;
 
         [Conditional( "DEBUG" )]
         private static void DebugLogTemplate( string msg ) {
-            #if NMSTEMPLATE_DEBUG_TEMPLATE
-                if (isDebugLogTemplateEnabled) DebugLog( msg );
+            #if DEBUG_TEMPLATE
+                if (isDebugLogTemplateEnabled) Logger.LogDebug( msg );
             #endif
         }
 
         [Conditional( "DEBUG" )]
         private static void DebugLogComment( string msg ) {
-            #if NMSTEMPLATE_DEBUG_COMMENTS
-                DebugLog( msg );
+            #if DEBUG_COMMENTS
+                Logger.LogDebug( msg );
             #endif
         }
 
         [Conditional( "DEBUG" )]
         private static void DebugLogFieldName( string msg ) {
-            #if NMSTEMPLATE_DEBUG_FIELD_NAMES
-                DebugLog( msg );
+            #if DEBUG_FIELD_NAMES
+                Logger.LogDebug( msg );
             #endif
         }
 
         [Conditional( "DEBUG" )]
         private static void DebugLogPropertyName( string msg ) {
-            #if NMSTEMPLATE_DEBUG_PROPERTY_NAMES
-                DebugLog( msg );
+            #if DEBUG_PROPERTY_NAMES
+                Logger.LogDebug( msg );
             #endif
         }
 
@@ -116,6 +113,8 @@ namespace libMBIN.Models
 
         public static object DeserializeValue(BinaryReader reader, Type field, NMSAttribute settings, long templatePosition, FieldInfo fieldInfo, NMSTemplate parent)
         {
+            DebugLogFieldName( $"{fieldInfo?.DeclaringType.Name}.{fieldInfo?.Name}\ttype:\t{field.Name}\tpos:\t{templatePosition}" );
+
             var template = parent.CustomDeserialize(reader, field, settings, templatePosition, fieldInfo);
             if (template != null)
                 return template;
@@ -241,7 +240,7 @@ namespace libMBIN.Models
                 return null;
 
             long templatePosition = reader.BaseStream.Position;
-            DebugLogTemplate($"{templateName} position: 0x{templatePosition:X}");
+            DebugLogTemplate($"{templateName}\tposition:\t0x{templatePosition:X}");
 
             if (templateName == "VariableSizeString")
             {
@@ -279,7 +278,7 @@ namespace libMBIN.Models
 
             obj.FinishDeserialize();
 
-            DebugLogTemplate($"{templateName} end position: 0x{reader.BaseStream.Position:X}");
+            DebugLogTemplate($"{templateName}\tend position:\t0x{reader.BaseStream.Position:X}");
 
             return obj;
         }
@@ -287,7 +286,7 @@ namespace libMBIN.Models
         public static List<NMSTemplate> DeserializeGenericList(BinaryReader reader, long templateStartOffset, NMSTemplate parent)
         {
             long listPosition = reader.BaseStream.Position;
-            DebugLogTemplate($"DeserializeGenericList start 0x{listPosition:X}");
+            DebugLogTemplate($"DeserializeGenericList\tstart\t0x{listPosition:X}");
 
             long templateNamesOffset = reader.ReadInt64();
             int numTemplates = reader.ReadInt32();
@@ -342,7 +341,7 @@ namespace libMBIN.Models
         public static List<T> DeserializeList<T>(BinaryReader reader, FieldInfo field, NMSAttribute settings, long templateStartOffset, NMSTemplate parent)
         {
             long listPosition = reader.BaseStream.Position;
-            DebugLogTemplate($"DeserializeList start 0x{listPosition:X}");
+            DebugLogTemplate($"DeserializeList\tstart\t0x{listPosition:X}");
 
             long listStartOffset = reader.ReadInt64();
             int numEntries = reader.ReadInt32();
@@ -375,10 +374,10 @@ namespace libMBIN.Models
 
         public void SerializeValue(BinaryWriter writer, Type fieldType, object fieldData, NMSAttribute settings, FieldInfo field, ref List<Tuple<long, object>> additionalData, ref int addtDataIndex, int structLength = 0, UInt32 listEnding = 0xAAAAAA01)
         {
+            DebugLogFieldName( $"{field?.DeclaringType.Name}.{field?.Name}\ttype:\t{fieldType.Name}\tadditionalData.Count:\t{additionalData?.Count ?? 0}\taddtDataIndex:\t{addtDataIndex}" );
+
             if (CustomSerialize(writer, fieldType, fieldData, settings, field, ref additionalData, ref addtDataIndex))
                 return;
-
-            DebugLogFieldName( $"{field?.DeclaringType}.{field?.Name} type={fieldType} additionalData.Count={additionalData?.Count ?? 0} addtDataIndex={addtDataIndex}" );
 
             if (settings?.DefaultValue != null)
             {
@@ -598,7 +597,7 @@ namespace libMBIN.Models
             writer.Align( 0x8, 0 );       // Make sure that all c~ names are offset at 0x8.
             long listPosition = writer.BaseStream.Position;
 
-            DebugLogTemplate( $"SerializeList start {$"0x{listPosition:X},",-10} header {$"0x{listHeaderPosition:X},",-10} count {list.Count}");
+            DebugLogTemplate( $"SerializeList\tstart:\t{$"0x{listPosition:X},",-10}\theader:\t{$"0x{listHeaderPosition:X},",-10}\tcount:\t{list.Count}");
 
             writer.BaseStream.Position = listHeaderPosition;
 
@@ -718,7 +717,7 @@ namespace libMBIN.Models
             }
 
             long listPosition = writer.BaseStream.Position;
-            DebugLogTemplate( $"SerializeList start {$"0x{listPosition:X},",-10} header {$"0x{listHeaderPosition:X},",-10} count {list.Count}" );
+            DebugLogTemplate( $"SerializeList\tstart:\t{$"0x{listPosition:X},",-10}\theader:\t{$"0x{listHeaderPosition:X},",-10}\tcount:\t{list.Count}" );
 
             writer.BaseStream.Position = listHeaderPosition;
 

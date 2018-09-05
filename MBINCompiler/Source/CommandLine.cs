@@ -1,8 +1,9 @@
 ﻿using System;
-using System.IO;
 
-namespace MBINCompiler
-{
+using libMBIN;
+
+namespace MBINCompiler {
+
     using static CommandLineOptions;
 
     internal class CommandLine
@@ -30,14 +31,7 @@ namespace MBINCompiler
         /// <summary>
         public static int ShowError( string msg, ErrorCode code = ErrorCode.Unknown, bool wait = true )
         {
-            msg = $"ERROR: {msg}\n";
-            StreamWriter stdOut = null;
-            if ( !Quiet ) {
-                System.Console.Error.WriteLine( msg );
-                stdOut = libMBIN.Logger.RemoveStream( 0 );
-            }
-            libMBIN.Logger.WriteLine( msg );
-            libMBIN.Logger.InsertStream( 0, stdOut );
+            Logger.LogError( msg );
             WaitForKeypress( wait );
             return (int) code;
         }
@@ -46,7 +40,7 @@ namespace MBINCompiler
         /// Display a warning message.
         /// </summary>
         /// <param name="msg">The warning message to display.</param>
-        public static void ShowWarning( string msg ) => libMBIN.Logger.WriteLine( $"WARNING: {msg}" );
+        public static void ShowWarning( string msg ) => Logger.LogWarning( msg );
 
         /// <summary>
         /// Display a command line parsing error message.
@@ -54,11 +48,7 @@ namespace MBINCompiler
         /// </summary>
         /// <param name="msg">The error message to display.</param>
         /// <returns>ErrorCode.CommandLine</returns>
-        public static int ShowCommandLineError( string msg )
-        {
-            ShowError( msg, wait: false );
-            return ShowHelp( ErrorCode.CommandLine );
-        }
+        public static int ShowCommandLineError( string msg ) => ShowHelp( (ErrorCode) ShowError( msg, ErrorCode.CommandLine, false ) );
 
         public static int ShowInvalidCommandLineArg( string arg ) => ShowCommandLineError( $"Invalid command line argument: {arg}" );
         public static int ShowInvalidCommandLineArg( CommandLineParser options ) => ShowInvalidCommandLineArg( options.Args[0] );
@@ -68,9 +58,9 @@ namespace MBINCompiler
         /// </summary>
         /// <returns>Always returns 0 (exit code = success)</returns>
         public static int ShowVersion( bool quiet = false ) => ShowVersion( null, quiet );
-        public static int ShowVersion( libMBIN.MBINFile mbin , bool quiet = false )
+        public static int ShowVersion( MBINFile mbin , bool quiet = false )
         {
-            Console.WriteLine( Version.GetVersionString( mbin, quiet) );
+            Logger.LogInfo( Version.GetVersionString( mbin, quiet) );
             return 0;
         }
 
@@ -79,8 +69,8 @@ namespace MBINCompiler
         /// </summary>
         public static void WaitForKeypress( bool wait = true )
         {
-            if ( Quiet || !wait || System.Console.IsOutputRedirected ) return;
-            Console.WriteLine( "\nPress any key to continue . . ." );
+            if ( Quiet || !wait || Console.IsOutputRedirected ) return;
+            Console.Out.WriteLine( "\nPress any key to continue . . ." );
             Console.ReadKey();
         }
 
