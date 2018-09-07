@@ -17,7 +17,7 @@ set REL_BRANCH=master
 set PRE_BRANCH=development
 
 REM -- DON'T TOUCH -------------------------
-set MSG=%*
+set MSG=%~1
 if "%MSG%" == "" goto HELP
 
 if "%GITHUB_TOKEN%" == "" goto INVALID_TOKEN
@@ -57,7 +57,7 @@ if not exist "%EXE_ARTIFACT%" goto NOT_COMPILED
 if not exist "%DLL_ARTIFACT%" goto NOT_COMPILED
 
 REM Get the version reported from the compiled exe.
-for /f %%I in ('"%BUILD_PATH%\MBINCompiler.exe" -v') do set BUILD_VERSION=%%I
+for /f %%I in ('"%BUILD_PATH%\MBINCompiler.exe" version -q') do set BUILD_VERSION=%%I
 
 REM Debug
 REM echo BUILD_VERSION=%BUILD_VERSION%
