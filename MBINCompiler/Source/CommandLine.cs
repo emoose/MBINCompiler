@@ -3,11 +3,37 @@
 using libMBIN;
 
 namespace MBINCompiler {
-
+    using System.IO;
     using static CommandLineOptions;
 
-    internal class CommandLine
+    internal static class CommandLine
     {
+
+        // Console.Out and Console.Error streams unaffected by Quiet option.
+        private static TextWriter StandardOut = null;
+        private static TextWriter StandardErr = null;
+
+        public static void Initialize() {
+            StandardOut = Console.Out;
+            StandardErr = Console.Error;
+        }
+
+        public class ForceConsoleOutput : IDisposable {
+            private TextWriter stdout;
+            private TextWriter stderr;
+
+            public ForceConsoleOutput() {
+                stdout = Console.Out;
+                stderr = Console.Error;
+                Console.SetOut(   StandardOut );
+                Console.SetError( StandardErr );
+            }
+
+            public void Dispose() {
+                Console.SetOut( stdout );
+                Console.SetError( stderr );
+            }
+        }
 
         /// <summary>
         /// Display the help info and wait for a key press.
@@ -16,7 +42,9 @@ namespace MBINCompiler {
         public static int ShowHelp( ErrorCode code = ErrorCode.Success )
         {
             if (Console.IsOutputRedirected) return (int) code;
-            Console.Out.Write( GetHelpInfo() );
+            using ( var forceConsole = new ForceConsoleOutput() ) {
+                Console.Out.Write( GetHelpInfo() );
+            }
             WaitForKeypress();
             return (int) code;
         }
@@ -89,7 +117,9 @@ namespace MBINCompiler {
         public static int ShowVersion( bool quiet = false ) => ShowVersion( null, quiet );
         public static int ShowVersion( MBINFile mbin , bool quiet = false )
         {
-            Logger.LogInfo( Version.GetVersionString( mbin, quiet) );
+            using ( var forceConsole = new ForceConsoleOutput() ) {
+                Logger.LogInfo( Version.GetVersionString( mbin, quiet ) );
+            }
             return 0;
         }
 

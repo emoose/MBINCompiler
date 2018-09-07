@@ -26,6 +26,8 @@ namespace MBINCompiler
         public static int Main( string[] args )
         {
 
+            CommandLine.Initialize();
+
             Logger.Open( $"{Utils.GetExecutableName()}.log" );
             Logger.EnableTraceLogging = true;
 
@@ -59,8 +61,6 @@ namespace MBINCompiler
 
             // now we can emit an error if we need to
             if ( invalidArguments ) return CommandLine.ShowInvalidCommandLineArg( options );
-
-            Console.Out.WriteLine();
 
             try {
 
