@@ -44,7 +44,7 @@ for /f "tokens=1,2,3,4,5,6" %%I in ('call "_lib\libMBIN-VERSION.BAT"') do (
 )
 
 if %PRERELEASE% == 0 (
-    if %RELEASE% == 0 goto INVALID_VERSION
+    REM if %RELEASE% == 0 goto INVALID_VERSION
     set OPT_PRERELEASE=
     set BRANCH=%REL_BRANCH%
 )
