@@ -6,14 +6,14 @@
         /* 0x4 */ public GcPhotoModeAdjustData FogAdjust;
         /* 0x1C */ public GcPhotoModeAdjustData CloudAdjust;
         /* 0x34 */ public GcPhotoModeAdjustData VignetteAdjust;
-        /* 0x4C */ public float DoFAdjustMagnitudeMaxCurve;
+        /* 0x4C */ public TkCurveType DoFAdjustMagnitudeMaxCurve;
         /* 0x50 */ public int DayLength;
         /* 0x54 */ public bool EnableDayNightCycle;
         [NMS(Size = 0xB, Ignore = true)]
         /* 0x55 */ public byte[] Padding55;
         /* 0x60 */ public Vector4f SunRotationAxis;
-        /* 0x70 */ public float SafeSkyMinIndex;
-        /* 0x74 */ public float SafeSkyMaxIndex;
+        /* 0x70 */ public int SafeSkyMinIndex;
+        /* 0x74 */ public int SafeSkyMaxIndex;
         /* 0x78 */ public int FrozenSkyMinIndex;
         /* 0x7C */ public int FrozenSkyMaxIndex;
         /* 0x80 */ public float SunClampAngle;

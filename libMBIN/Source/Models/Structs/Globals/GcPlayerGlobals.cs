@@ -18,6 +18,7 @@
 		/* 0xC0 */ public int DebugNumDrones;
         [NMS(Size = 0xC, Ignore = true)]
         /* 0xC4 */ public byte[] PaddingC4;
+		/* 0xD0 */ public Vector4f DebugWalkerSpawn;
 		/* 0xE0 */ public Vector4f DebugWalkerTarget;
 		/* 0xF0 */ public Vector4f DebugFlybyTarget;
 		/* 0x100 */ public Vector4f DebugFlybyDir;
@@ -102,7 +103,7 @@
 		/* 0x254 */ public float CockpitEjectTestSphereRange;
 		/* 0x258 */ public float CockpitEjectSideTestRange;
 		/* 0x25C */ public float WeaponShotgunSlowdown;
-		/* 0x260 */ public int MouseSmoothMode;
+		/* 0x260 */ public int MouseSmoothMode;			// probably an enum associated with this...
 		/* 0x264 */ public Vector2f MouseSpringStrength;
 		/* 0x26C */ public Vector2f MouseSpringStrengthMinDelta;
 		/* 0x274 */ public Vector2f MouseSpringStrengthMaxDelta;
@@ -361,7 +362,7 @@
         /* 0x81C */ public float AutoAimRadiusExtra;
         /* 0x820 */ public float AutoAimStickyMin;
         /* 0x824 */ public float AutoAimStickyMax;
-        /* 0x828 */ public float AutoAimDotCurve;
+        /* 0x828 */ public TkCurveType AutoAimDotCurve;
         /* 0x82C */ public TkCurveType AutoAimCentreOffsetCurve;
         /* 0x830 */ public float AimDistanceShip;
         /* 0x834 */ public float AimSpeed;
