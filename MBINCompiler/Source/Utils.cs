@@ -11,7 +11,8 @@ namespace MBINCompiler
     internal class Utils
     {
 
-        public static string GetExecutableName() => Path.GetFileNameWithoutExtension( Environment.GetCommandLineArgs()[0] );
+        public static string GetExecutablePath()      => Environment.GetCommandLineArgs()[0];
+        public static string GetExecutableName()      => Path.GetFileNameWithoutExtension( GetExecutablePath() );
 
         public static FormatType PromptInputFormat()
         {

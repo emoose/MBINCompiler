@@ -28,7 +28,7 @@ namespace MBINCompiler
 
             CommandLine.Initialize();
 
-            Logger.Open( $"{Utils.GetExecutableName()}.log" );
+            Logger.Open( Path.ChangeExtension( Utils.GetExecutablePath(), ".log" ) );
             Logger.EnableTraceLogging = true;
 
 #if DEBUG_STDOUT
