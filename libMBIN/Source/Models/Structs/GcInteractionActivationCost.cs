@@ -2,7 +2,7 @@
 
 namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x38)]
+	[NMS(Size = 0x38, GUID = 0x21E3CCED5C322A2A)]
     public class GcInteractionActivationCost : NMSTemplate
     {
         [NMS(Size = 0x10)]

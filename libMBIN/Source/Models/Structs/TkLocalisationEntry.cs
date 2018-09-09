@@ -1,5 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x0BDF1E47D45616C77)]
     public class TkLocalisationEntry : NMSTemplate
     {
         [NMS(Size = 0x20)]

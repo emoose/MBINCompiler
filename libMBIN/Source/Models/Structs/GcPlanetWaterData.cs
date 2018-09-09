@@ -1,6 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x1D0)]
+	[NMS(Size = 0x1D0, GUID = 0x586D342082D81B46)]
     public class GcPlanetWaterData : NMSTemplate
     {
         /* 0x00 */ public Colour WaterFogColourNear;

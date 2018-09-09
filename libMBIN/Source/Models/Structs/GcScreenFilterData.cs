@@ -1,6 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0xA8)]
+	[NMS(Size = 0xA8, GUID = 0x7C4CB3CB26C66166)]
     public class GcScreenFilterData : NMSTemplate
     {
         [NMS(Size = 0x20)]

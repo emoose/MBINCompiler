@@ -2,7 +2,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x3BB0)]
+	[NMS(Size = 0x3BB0, GUID = 0x1B2C9B6B65AF551E)]
     public class GcPlanetData : NMSTemplate
     {
         [NMS(Size = 0x80)]

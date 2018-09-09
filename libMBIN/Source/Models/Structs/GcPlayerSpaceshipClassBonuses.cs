@@ -1,6 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x30)]
+	[NMS(Size = 0x30, GUID = 0x9E42C06E5A1542B3)]
     public class GcPlayerSpaceshipClassBonuses : NMSTemplate
     {
         /* 0x00 */ public float ThrustForceMax;         // 42480000h

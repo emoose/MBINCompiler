@@ -2,7 +2,7 @@
 
 namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x298)]
+	[NMS(Size = 0x298, GUID = 0x1512A8A65E002815)]
     public class GcAtlasBase : NMSTemplate
     {
         [NMS(Size = 0x200)]

@@ -2,6 +2,7 @@
 
 namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x4150DB7F9D5B8C28)]
     public class GcRewardTableItemList : NMSTemplate        // size: 0x18
     {
 		public enum RewardChoiceEnum { GiveAll, Select, SelectAlways, TryEach, SelectSilent, TryFirst_ThenSelectAlways }

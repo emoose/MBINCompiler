@@ -1,5 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x41FEBAC9A23EF9D6)]
     public class GcDiscoveryHelperTimings : NMSTemplate // size = 0xC
     {
 

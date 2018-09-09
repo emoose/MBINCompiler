@@ -1,6 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x60)]
+	[NMS(Size = 0x60, GUID = 0x0E4F40DAA66FEC322)]
     public class GcCostStatCompare : NMSTemplate
     {
         [NMS(Size = 0x10)]

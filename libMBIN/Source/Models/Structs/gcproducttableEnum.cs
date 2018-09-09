@@ -1,5 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
+    [NMS(GUID = 0x0A52E9BE22C1596D4)]
     public class GcProductTableEnum : NMSTemplate
     {
         // super long list because it is auto-generated...

@@ -1,6 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0xDC0)]
+	[NMS(Size = 0xDC0, GUID = 0x1F5ADAD030236CE9)]
     public class GcModelViewCollection : NMSTemplate
     {
         [NMS(Size = 0x14, EnumValue = new string[0x14] {"Exosuit", "Weapon", "Ship", "Exocraft", "Animal", "AnimalThumbnails",

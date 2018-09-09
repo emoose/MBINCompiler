@@ -1,6 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x228, Alignment = 0x8)]
+	[NMS(Size = 0x228, Alignment = 0x8, GUID = 0x0F199BEEADD7DD970)]
     public class GcMissionSequenceWaitForScanEvent : NMSTemplate
     {
         [NMS(Size = 0x80)]

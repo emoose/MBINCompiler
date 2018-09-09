@@ -1,6 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x280, Alignment = 0x10)]
+	[NMS(Size = 0x280, Alignment = 0x10, GUID = 0x4FA1552617F32EFF)]
     public class GcNGuiGraphicData : NMSTemplate
     {
         /* 0x000 */ public GcNGuiElementData ElementData;

@@ -1,5 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x75A7492E264F5958)]
     public class GcCreatureHealthData : NMSTemplate
     {
         [NMS(Size = 0x10)]

@@ -1,5 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x38364E77B204C4F3)]
     public class GcParticleAction : NMSTemplate // size: 0x38
     {
         [NMS(Size = 0x10)]

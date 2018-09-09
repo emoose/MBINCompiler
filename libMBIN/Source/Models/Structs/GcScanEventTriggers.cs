@@ -2,6 +2,7 @@
 
 namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x0A0814A4C94B662F6)]
     public class GcScanEventTriggers : NMSTemplate      // size: 0x20
     {
         public float Range;

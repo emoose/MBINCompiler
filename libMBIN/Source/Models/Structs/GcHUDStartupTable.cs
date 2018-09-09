@@ -1,5 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x0C08CD04336C34A0C)]
     public class GcHUDStartupTable : NMSTemplate        // size: 0x80
     {
         /* 0x00 */ public float FadeInFlashTime;        // 40000000h

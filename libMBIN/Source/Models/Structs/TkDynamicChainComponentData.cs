@@ -2,6 +2,7 @@
 
 namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x0AE882B312D5F93D5)]
     public class TkDynamicChainComponentData : NMSTemplate      // possibly in a global...
     {
         public float AngularLimit;

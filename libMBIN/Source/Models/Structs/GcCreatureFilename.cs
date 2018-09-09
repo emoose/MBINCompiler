@@ -1,5 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x0A083E304078B40F3)]
     public class GcCreatureFilename : NMSTemplate
     {
         [NMS(Size = 0x10)]

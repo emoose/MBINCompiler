@@ -1,6 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x58)]
+	[NMS(Size = 0x58, GUID = 0x33EED7714D4189E8)]
     public class GcGalaxySolarSystemParams : NMSTemplate
     {
         /* 0x00 */ public GcGalaxySolarSystemOrbitParams PlanetParameters;

@@ -1,5 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x9C076D6012D84D8)]
     public class GcGalaxySolarSystemOrbitParams : NMSTemplate       // size: 0x1C       // used in global?
     {
         /* 0x00 */ public float FirstOrbitRadiusMin;        // 42480000h

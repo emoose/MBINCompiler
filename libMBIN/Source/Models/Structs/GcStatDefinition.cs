@@ -1,5 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x9FC1366FC90CF988)]
     public class GcStatDefinition : NMSTemplate
     {
         public GcStatType Type;

@@ -2,6 +2,7 @@
 
 namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x5F60C335588B8F1E)]
     public class GcGalaxyVoxelAttributesData : NMSTemplate
     {
         /* 0x00 */ public bool InsideGoalGap;

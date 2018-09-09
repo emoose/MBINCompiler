@@ -1,5 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x81EFA1D4D693E25A)]
     public class GcAnimFrameEvent : NMSTemplate     // size: 0x18
     {
         [NMS(Size = 0x10)]

@@ -2,6 +2,7 @@
 
 namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x5B969A12800050F)]
     public class GcCreatureMovementData : NMSTemplate
     {
         public List<GcCreatureMoveAnimData> Anims;

@@ -1,6 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x8)]
+	[NMS(Size = 0x8, GUID = 0x0CE1A64B4EE12B085)]
     public class GcPhotoFlora : NMSTemplate
     {
         public short AmountMin;

@@ -1,5 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x0A0E1569F241F7E28)]
     public class GcUniqueNPCSpawnData : NMSTemplate // 0x2C8 bytes
     {
 		public enum NPCSpawnConditionEnum { Always, MiniStation }

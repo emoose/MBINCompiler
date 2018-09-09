@@ -2,7 +2,7 @@
 
 namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x1E0)]
+	[NMS(Size = 0x1E0, GUID = 0x2564BC1E1547197C)]
     public class GcTerrainTexture : NMSTemplate      // size: 0x400
     {
         [NMS(Size = 0x80)]

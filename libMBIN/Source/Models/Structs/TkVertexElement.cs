@@ -1,6 +1,6 @@
 namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x20)]
+	[NMS(Size = 0x20, GUID = 0x56D2CFD1D4DB01F3)]
     public class TkVertexElement : NMSTemplate
     {
         /* 0x00 */ public int SemanticID;

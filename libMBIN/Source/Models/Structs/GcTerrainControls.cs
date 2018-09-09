@@ -1,6 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x74)]
+	[NMS(Size = 0x74, GUID = 0x0E9658EF1531C595E)]
     public class GcTerrainControls : NMSTemplate
     {
         [NMS(Size = 8, EnumValue = new[] { "Base", "Hill", "Mountain", "Rock", "UnderWater", "Texture", "Elevation", "Continent" })]

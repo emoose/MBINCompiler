@@ -1,5 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x9A1039C01ED519C)]
     public class GcSpawnComponentOption : NMSTemplate // 0x2C8 bytes
     {
         [NMS(Size = 0x10)]

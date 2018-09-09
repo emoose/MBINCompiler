@@ -2,7 +2,7 @@
 
 namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x70)]
+	[NMS(Size = 0x70, GUID = 0x0BD4CFE2A5D9127F8)]
     public class TkPhysicsComponentData : NMSTemplate
     {
         public TkPhysicsData Data;

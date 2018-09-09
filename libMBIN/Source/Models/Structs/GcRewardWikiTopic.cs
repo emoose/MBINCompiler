@@ -1,5 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x4ADB6398A852FD7B)]
     public class GcRewardWikiTopic : NMSTemplate
     {
         [NMS(Size = 0x20)]

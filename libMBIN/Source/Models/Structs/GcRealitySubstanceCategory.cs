@@ -1,5 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x0E94EBE3C24823966)]
     public class GcRealitySubstanceCategory : NMSTemplate
     {
 

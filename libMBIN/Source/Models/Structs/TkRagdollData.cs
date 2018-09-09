@@ -2,6 +2,7 @@
 
 namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x0E1B108BEAEA9229C)]
     public class TkRagdollData : NMSTemplate
     {
         public float Density;

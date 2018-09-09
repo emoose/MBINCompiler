@@ -1,5 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x0FC20774327D5CDB9)]
     public class GcPlayerOwnershipData : NMSTemplate        // size: 0x3D0
     {
         [NMS(Size = 0x20)]

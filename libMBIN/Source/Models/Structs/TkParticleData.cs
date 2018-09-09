@@ -1,6 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0xD0)]
+	[NMS(Size = 0xD0, GUID = 0x6FFE4AC2BE301EB6)]
     public class TkParticleData : NMSTemplate
     {
         /* 0x00 */ public bool StartEnabled;

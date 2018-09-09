@@ -1,6 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x20)]
+	[NMS(Size = 0x20, GUID = 0x28A5F0DD7B123C68)]
     public class GcPlayerCharacterIKOverrideData : NMSTemplate
     {
         public bool Enabled;

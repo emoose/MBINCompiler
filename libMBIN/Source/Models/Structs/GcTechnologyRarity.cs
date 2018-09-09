@@ -1,5 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x579D64C93CF3F6D1)]
     public class GcTechnologyRarity : NMSTemplate
     {
 

@@ -1,5 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x782E71276AD79AF2)]
     public class GcCostJourneyStatLevel : NMSTemplate
     {
         [NMS(Size = 0x10)]

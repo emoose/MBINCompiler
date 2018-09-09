@@ -1,5 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x0A385A1C7FA49076F)]
     public class GcSolarSystemLocator : NMSTemplate // 0x60 bytes
     {
         [NMS(Size = 0x20)]

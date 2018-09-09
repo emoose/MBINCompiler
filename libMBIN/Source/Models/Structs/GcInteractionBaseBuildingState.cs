@@ -2,6 +2,7 @@
 
 namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x74D72ACAAE69D013)]
     public class GcInteractionBaseBuildingState : NMSTemplate
     {
         [NMS(Size = 0x10)]

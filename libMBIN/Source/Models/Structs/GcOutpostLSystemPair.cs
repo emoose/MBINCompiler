@@ -1,5 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x0DBC5A035A3C5D89D)]
     public class GcOutpostLSystemPair : NMSTemplate // 0x320 bytes
     {
         [NMS(Size = 0x20)]

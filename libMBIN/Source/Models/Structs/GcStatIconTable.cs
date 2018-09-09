@@ -1,6 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x3700)]
+	[NMS(Size = 0x3700, GUID = 0x1E0206B2601F3050)]
     public class GcStatIconTable : NMSTemplate
     {
         [NMS(Size = 0x6E, EnumValue = new string[0x6E] { "Unspecified", "Weapon_Laser", "Weapon_Laser_Damage", "Weapon_Laser_Mining_Speed", "Weapon_Laser_HeatTime",

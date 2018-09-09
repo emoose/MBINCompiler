@@ -1,5 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x0DE740CFF10FD49AC)]
     public class GcBlockedUser : NMSTemplate        // size: 0xA0
     {
         [NMS(Size = 0x40)]

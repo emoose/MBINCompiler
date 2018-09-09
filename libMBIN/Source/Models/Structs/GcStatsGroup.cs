@@ -2,6 +2,7 @@
 
 namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x2874DA66C2CF0DB7)]
     public class GcStatsGroup : NMSTemplate     // size: 0xA8
     {
         [NMS(Size = 0x10)]

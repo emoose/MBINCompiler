@@ -2,7 +2,7 @@
 
 namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x1B0, Alignment = 0x10)]
+	[NMS(Size = 0x1B0, Alignment = 0x10, GUID = 0x47B43C6C2AEB9FEE)]
     public class GcLaserBeamData : NMSTemplate
     {
         [NMS(Size = 0x10)]

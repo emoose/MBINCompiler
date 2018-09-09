@@ -7,7 +7,7 @@
 /// </summary>
 namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x4C0)]
+	[NMS(Size = 0x4C0, GUID = 0x7F0C648A65F82876)]
     public class GcProceduralProductData : NMSTemplate
     {
         /* 0x000 */ public GcProductData Product;

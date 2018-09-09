@@ -1,5 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x3041C51DBAC8620E)]
     public class GcAtlasDiscoveryData : NMSTemplate     // size: 0x48
     {
         /* 0x00 */ public GcUniverseAddressData UniverseAddress;

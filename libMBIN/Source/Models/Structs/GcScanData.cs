@@ -1,6 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x14)]
+	[NMS(Size = 0x14, GUID = 0x0AF8C623DBEFEC570)]
     public class GcScanData : NMSTemplate
     {
 		public enum ScanTypeEnum { Tool, Beacon, RadioTower, Observatory, DistressSignal, Waypoint, Ship, DebugPlanet, DebugSpace, VisualOnly }

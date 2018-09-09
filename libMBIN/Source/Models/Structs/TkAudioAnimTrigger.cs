@@ -1,5 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x0B2224162A8931EAF)]
     public class TkAudioAnimTrigger : NMSTemplate // 0x98 bytes
     {
         [NMS(Size = 0x80)]

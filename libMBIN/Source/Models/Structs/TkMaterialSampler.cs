@@ -1,5 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x8CE6144467FBF05A)]
     public class TkMaterialSampler : NMSTemplate
     {
         [NMS(Size = 0x20)]

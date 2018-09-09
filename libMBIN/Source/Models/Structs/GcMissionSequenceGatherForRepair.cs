@@ -1,5 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x24B0E375003A3D0C)]
     public class GcMissionSequenceGatherForRepair : NMSTemplate
     {
         [NMS(Size = 0x80)]

@@ -1,6 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x1F1C0)]
+	[NMS(Size = 0x1F1C0, GUID = 0x183F1992F92E1E33)]
     public class GcTerrainEditsBuffer : NMSTemplate
     {
         [NMS(Size = 0x100)]

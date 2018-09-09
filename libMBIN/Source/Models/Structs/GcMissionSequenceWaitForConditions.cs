@@ -2,7 +2,7 @@
 
 namespace libMBIN.Models.Structs
 {
-    [NMS(Alignment = 0x8)]
+	[NMS(Alignment = 0x8, GUID = 0x79180494573CEF7E)]
     public class GcMissionSequenceWaitForConditions : NMSTemplate
     {
         [NMS(Size = 0x80)]

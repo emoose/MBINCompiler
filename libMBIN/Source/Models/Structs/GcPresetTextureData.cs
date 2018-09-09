@@ -1,5 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x7DFFC6F281EA6394)]
     public class GcPresetTextureData : NMSTemplate
     {
         [NMS(Size = 0x80)]

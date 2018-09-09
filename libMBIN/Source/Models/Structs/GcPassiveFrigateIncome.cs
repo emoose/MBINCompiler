@@ -1,6 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x20)]
+	[NMS(Size = 0x20, GUID = 0x2E3E5DACD50B6024)]
     public class GcPassiveFrigateIncome : NMSTemplate
     {
         [NMS(Size = 0x10)]

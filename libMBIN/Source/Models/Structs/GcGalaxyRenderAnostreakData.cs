@@ -1,6 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x30)]
+	[NMS(Size = 0x30, GUID = 0x0C6A8297C630A22AF)]
     public class GcGalaxyRenderAnostreakData : NMSTemplate
     {
         /* 0x00 */ public Colour OuterColour;

@@ -2,6 +2,7 @@
 
 namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x9A9C381629097F2D)]
     public class GcCustomInventoryComponentData : NMSTemplate
     {
         [NMS(Size = 0x10)]

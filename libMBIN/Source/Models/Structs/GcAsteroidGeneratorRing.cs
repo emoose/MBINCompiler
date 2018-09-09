@@ -1,5 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x0DEF24F60EAC6B496)]
     public class GcAsteroidGeneratorRing : NMSTemplate
     {
         public GcAsteroidGeneratorAssignment Assignment;

@@ -2,7 +2,7 @@
 
 namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x20)]
+	[NMS(Size = 0x20, GUID = 0x5F076FE1D69F1B0B)]
     public class GcBuildingPartSearchType : NMSTemplate
     {
 		public enum BuildPartSearchTypeEnum { Base, Freighter, AllPlayerOwned, OtherPlayerBase }

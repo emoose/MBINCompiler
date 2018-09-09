@@ -1,5 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x2259AC0209F03CD9)]
     public class GcMissionSequenceKill : NMSTemplate      // size: 0x10C
     {
         [NMS(Size = 0x80)]

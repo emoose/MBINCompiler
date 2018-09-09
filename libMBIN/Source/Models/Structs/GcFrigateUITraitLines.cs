@@ -1,6 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x14)]
+	[NMS(Size = 0x14, GUID = 0x0B16F8E87710A1DA6)]
     public class GcFrigateUITraitLines : NMSTemplate
     {
         public float Line0;

@@ -1,5 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x3BD123ED9F9C4AAE)]
     public class GcPlayerNearbyEvent : NMSTemplate      // size: 0x24
     {
 		public enum RequirePlayerActionEnum { None, Fire, InShip, OnFoot, OnFootOutside, Upload }

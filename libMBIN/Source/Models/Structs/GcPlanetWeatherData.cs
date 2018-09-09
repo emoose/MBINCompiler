@@ -1,6 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x150)]
+	[NMS(Size = 0x150, GUID = 0x0CC6637353420A3ED)]
     public class GcPlanetWeatherData : NMSTemplate
     {
         public GcWeatherOptions WeatherOptions;     // weather type?

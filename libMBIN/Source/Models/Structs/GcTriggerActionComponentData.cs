@@ -2,7 +2,7 @@
 
 namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x30)]
+	[NMS(Size = 0x30, GUID = 0x530AB19BD349A230)]
     public class GcTriggerActionComponentData : NMSTemplate
     {
         /* 0x00 */ public bool HideModel;

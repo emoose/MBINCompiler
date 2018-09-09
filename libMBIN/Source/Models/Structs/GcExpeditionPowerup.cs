@@ -1,6 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x58)]
+	[NMS(Size = 0x58, GUID = 0x8D71FA6CE0ED29EA)]
     public class GcExpeditionPowerup : NMSTemplate
     {
         [NMS(Size = 0x10)]

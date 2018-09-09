@@ -1,6 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x20)]
+	[NMS(Size = 0x20, GUID = 0x0E1870C528F718DCE)]
     public class GcNPCComponentData : NMSTemplate
     {
         public GcAlienRace AlienRace;

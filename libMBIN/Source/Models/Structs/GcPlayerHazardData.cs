@@ -1,5 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x0BBCFC24EB018B5F3)]
     public class GcPlayerHazardData : NMSTemplate
     {
         public float ProtectionInitialTime;

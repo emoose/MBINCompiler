@@ -281,7 +281,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcMissionConsequenceRemoveCommunicatorMessage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcMissionSequenceStartMission.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcAISpaceshipPreloadCacheData.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcAISpaceshipPreloadCacheDataTable.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcAISpaceshipPreloadList.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcAISpaceshipRoles.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcAISpaceshipTypes.cs" />
@@ -315,7 +314,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcAudioPulseDemo.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcAudioWwiseEvents.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcAudioWwiseRTPCs.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcBaseBuildingComponentData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcBaseBuildingEntry.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcBaseBuildingGroup.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcBaseBuildingMaterial.cs" />
@@ -324,7 +322,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcBaseBuildingPalette.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcBaseBuildingProperties.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcBaseBuildingTable.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcBaseBuildingTriggerAction.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcBeenShotEvent.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcBiomeData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcBiomeFileList.cs" />
@@ -641,7 +638,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcMissionSequenceGroup.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcMissionSequenceKill.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcMissionSequenceLearnWords.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcMissionSequenceMarker.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcMissionSequencePirates.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcMissionSequenceProductAmountNeeded.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcMissionSequenceReward.cs" />
@@ -672,7 +668,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcMissionSequenceWaitForSuitUpgrade.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcMissionSequenceWaitForWarps.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcMissionTable.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcMissionTextDummy.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcMissionType.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcModelViewCollection.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\Globals\GcMultiplayerGlobals.cs" />
@@ -743,7 +738,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcPlayAnimAction.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcPlayAudioAction.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcPlayerCommunicatorMessage.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcPlayerComponentData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcPlayerConflictData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcPlayerDamageData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcPlayerDamageTable.cs" />
@@ -1053,7 +1047,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\TkControllerSpecification.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\TkCurveType.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\TkDynamicChainComponentData.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\TkEngineSettings.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\TkEngineSettingsMapping.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\TkEntitlementList.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\TkEqualityEnum.cs" />
@@ -1098,7 +1091,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\TkModelRendererCameraData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\TkModelRendererData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\TkModelResource.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\TkMonitorName.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\TkNGuiAlignment.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\TkNGuiEditorLayout.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\TkNGuiEditorStyleData.cs" />
@@ -1167,8 +1159,5 @@
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\Quaternion.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\Vector4f.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Version.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="$(MSBuildThisFileDirectory)Source\Models\Structs\.0StructsThatNeedChanged.md" />
   </ItemGroup>
 </Project>

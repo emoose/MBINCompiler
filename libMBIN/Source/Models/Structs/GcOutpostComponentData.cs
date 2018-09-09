@@ -2,7 +2,7 @@
 
 namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x68)]
+	[NMS(Size = 0x68, GUID = 0x2A085978A47D2472)]
     public class GcOutpostComponentData : NMSTemplate
     {
         /* 0x00 */ public bool Frigate;

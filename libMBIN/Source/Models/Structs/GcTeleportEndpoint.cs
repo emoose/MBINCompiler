@@ -1,6 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x90)]
+	[NMS(Size = 0x90, GUID = 0x377F9168390C70C1)]
     public class GcTeleportEndpoint : NMSTemplate
     {
         /* 0x00 */ public GcUniverseAddressData UniverseAddress;

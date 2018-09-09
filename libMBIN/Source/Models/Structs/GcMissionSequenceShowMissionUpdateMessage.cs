@@ -1,6 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x8C)]
+	[NMS(Size = 0x8C, GUID = 0x85F5AD21EFF6A7AD)]
     public class GcMissionSequenceShowMissionUpdateMessage : NMSTemplate
     {
 		public enum MissionUpdateMessageEnum { Start, End }

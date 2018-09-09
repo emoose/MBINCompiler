@@ -1,6 +1,6 @@
 namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x180)]
+	[NMS(Size = 0x180, GUID = 0x139125167CF73FEB)]
     public class GcGalaxyGenerationSetupData : NMSTemplate
     {
         /* 0x00 */ public float SpiralFormChance;

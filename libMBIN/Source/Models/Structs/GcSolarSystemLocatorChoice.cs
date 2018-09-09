@@ -1,5 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x9876B949FCE1EA5B)]
     public class GcSolarSystemLocatorChoice : NMSTemplate       // size: 0x2C
     {
 		public enum ChoiceEnum { LookupName, AnyOfType, SpecificIndex, InFrontOfPlayer }

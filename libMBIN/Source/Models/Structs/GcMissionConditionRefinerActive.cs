@@ -1,6 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x88)]
+	[NMS(Size = 0x88, GUID = 0x39BC2F266DED2C79)]
     public class GcMissionConditionRefinerActive : NMSTemplate
     {
         public bool HasFuel;

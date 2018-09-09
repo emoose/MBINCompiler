@@ -1,6 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0xD8)]
+	[NMS(Size = 0xD8, GUID = 0x0DD4BD9ABFEFBE883)]
     public class GcExpeditionInterventionEventData : NMSTemplate
     {
         [NMS(Size = 0x20)]

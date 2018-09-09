@@ -1,6 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x210)]
+	[NMS(Size = 0x210, GUID = 0x0BE898E2CA0F0F87)]
     public class GcGeneratorUnitComponentData : NMSTemplate
     {
 		public enum GeneratorUnitTypeEnum { MiningUnit, GasHarvester }

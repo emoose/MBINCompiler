@@ -1,5 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x87DB4E0216224E8F)]
     public class GcScanEventSave : NMSTemplate // 0x50 bytes
     {
         public int Table;

@@ -2,6 +2,7 @@
 
 namespace libMBIN.Models.Structs       // size: 0xD8
 {
+	[NMS(GUID = 0x0D5756F96B501B8A2)]
     public class TkSceneNodeData : NMSTemplate
     {
         [NMS(Size = 0x80)]

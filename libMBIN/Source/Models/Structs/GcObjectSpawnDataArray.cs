@@ -2,7 +2,7 @@
 
 namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x18)]
+	[NMS(Size = 0x18, GUID = 0x0BC0EE957E29F834C)]
     public class GcObjectSpawnDataArray : NMSTemplate
     {
         public GcTerrainTileType TileType;

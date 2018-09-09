@@ -2,6 +2,7 @@
 
 namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x3828C7CE898239CA)]
     public class TkVoxelGeneratorRegionData : NMSTemplate // 0x50 bytes
     {
         /* 0x00 */ public float PlanetRadius;

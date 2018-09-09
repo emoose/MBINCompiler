@@ -1,6 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x104)]
+	[NMS(Size = 0x104, GUID = 0x55E557A8BDD48B98)]
     public class GcMissionSequenceLearnWords : NMSTemplate
     {
         [NMS(Size = 0x80)]

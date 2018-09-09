@@ -2,6 +2,7 @@
 
 namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x30BE414835A620E)]
     public class GcTechnologyAttachmentComponentData : NMSTemplate
     {
         /* 0x00 */ public List<NMSString0x10> Techs;

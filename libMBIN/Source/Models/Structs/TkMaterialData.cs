@@ -2,6 +2,7 @@
 
 namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x0D04D9D64AB1AC044)]
     public class TkMaterialData : NMSTemplate       // size: 0x1D8
     {
         [NMS(Size = 0x80)]

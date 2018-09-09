@@ -1,5 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x360F73387712D16B)]
     public class GcSubstanceSecondary : NMSTemplate     // size: 0x20
     {
         [NMS(Size = 0x10)]

@@ -1,6 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x1C)]
+	[NMS(Size = 0x1C, GUID = 0x0F7353267DC3C55C8)]
     public class GcRewardProduct : NMSTemplate
     {
         /* 0x00 */ public GcRealitySubstanceCategory Category;

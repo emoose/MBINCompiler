@@ -1,5 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x10B96B017A55BF39)]
     public class TkNGuiAlignment : NMSTemplate
     {
 

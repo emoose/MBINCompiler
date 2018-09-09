@@ -1,5 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x27B4FEC32B042806)]
     public class GcShipDialogueTreeEnum : NMSTemplate
     {
 		public enum DialogueTreeEnum { Bribe, Beg, Ambush, Trade, Help, Goods, Hostile }

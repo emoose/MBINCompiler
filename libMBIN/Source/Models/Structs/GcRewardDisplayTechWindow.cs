@@ -1,5 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x3E9B7B304DFC301C)]
     public class GcRewardDisplayTechWindow : NMSTemplate
     {
         [NMS(Size = 0x10)]

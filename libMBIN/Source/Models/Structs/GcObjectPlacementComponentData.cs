@@ -1,5 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x3D75143BE008F7FF)]
     public class GcObjectPlacementComponentData : NMSTemplate
     {
         [NMS(Size = 0x20)]

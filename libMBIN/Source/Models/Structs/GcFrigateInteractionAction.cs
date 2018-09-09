@@ -2,7 +2,7 @@
 
 namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x28)]
+	[NMS(Size = 0x28, GUID = 0x52D0E12CB9FB2FC7)]
     public class GcFrigateInteractionAction : NMSTemplate
     {
 		public enum ActionTypeEnum { Repair, UpdateDamagedComponents, CargoPhoneCall }

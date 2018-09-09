@@ -1,6 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x18)]
+	[NMS(Size = 0x18, GUID = 0x608078A388EF854B)]
     public class GcCharacterCustomisationBoneScaleData : NMSTemplate
     {
         [NMS(Size = 0x10)]

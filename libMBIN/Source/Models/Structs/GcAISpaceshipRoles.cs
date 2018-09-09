@@ -1,5 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x2CCEA81A61F5A8D4)]
     public class GcAISpaceshipRoles : NMSTemplate
     {
 		public enum AIShipRoleEnum { Standard, Freighter, CapitalFreighter, SmallFreighter, TinyFreighter, Frigate }

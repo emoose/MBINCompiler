@@ -1,6 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x10A4)]
+	[NMS(Size = 0x10A4, GUID = 0x72F5B7416AB51616)]
     public class TkNGuiWindowLayoutData : NMSTemplate
     {
         [NMS(Size = 0x80)]

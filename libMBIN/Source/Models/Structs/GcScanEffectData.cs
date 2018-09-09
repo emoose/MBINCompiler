@@ -1,6 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x50)]
+	[NMS(Size = 0x50, GUID = 0x2427F1DD0BFC8AE1)]
     public class GcScanEffectData : NMSTemplate
     {
         [NMS(Size = 0x10)]

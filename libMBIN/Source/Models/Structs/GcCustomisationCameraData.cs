@@ -1,6 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x34)]
+	[NMS(Size = 0x34, GUID = 0x0C758EE0D67375E80)]
     public class GcCustomisationCameraData : NMSTemplate
     {
         public int InteractionCameraIndex;

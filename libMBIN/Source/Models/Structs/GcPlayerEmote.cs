@@ -1,6 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x100)]
+	[NMS(Size = 0x100, GUID = 0x0E2535405D0C11B96)]
     public class GcPlayerEmote : NMSTemplate
     {
         [NMS(Size = 0x20)]

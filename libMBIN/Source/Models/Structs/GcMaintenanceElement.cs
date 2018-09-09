@@ -2,6 +2,7 @@
 
 namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x0A2897FCA5D887E81)]
     public class GcMaintenanceElement : NMSTemplate       // size: 0x38
     {
         /* 0x00 */ public int ItemGroupOverride;        // not sure what type this is

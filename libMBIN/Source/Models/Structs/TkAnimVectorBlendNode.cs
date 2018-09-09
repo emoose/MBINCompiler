@@ -2,7 +2,7 @@
 
 namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x18)]
+	[NMS(Size = 0x18, GUID = 0x1300B3988CAEE69E)]
     public class TkAnimVectorBlendNode : NMSTemplate
     {
 		public enum BlendOperationEnum { Blend, Add }

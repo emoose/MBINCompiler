@@ -1,5 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x0D878AA359F11F44D)]
     public class GcMissionSequenceGatherForRefuel : NMSTemplate
     {
         [NMS(Size = 0x80)]

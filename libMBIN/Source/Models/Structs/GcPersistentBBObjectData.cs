@@ -1,5 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x0F9E364878E24F868)]
     public class GcPersistentBBObjectData : NMSTemplate // size = 0x60
     {
         /* 0x00 */ public ulong Timestamp;

@@ -1,6 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
-    [NMS(Alignment = 0x8, Size = 0x220)]
+	[NMS(Alignment = 0x8, Size = 0x220, GUID = 0x36CC0CF9D3A92382)]
     public class GcMissionSequenceFreighterEngage : NMSTemplate      // size: 0x180
     {
         [NMS(Size = 0x80)]

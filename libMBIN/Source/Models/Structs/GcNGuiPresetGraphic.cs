@@ -1,5 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x9067BDCDA9A38C1E)]
     public class GcNGuiPresetGraphic : NMSTemplate
     {
         [NMS(Size = 0x10)]

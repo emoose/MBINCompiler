@@ -2,7 +2,7 @@
 
 namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x38)]
+	[NMS(Size = 0x38, GUID = 0x24AFDEE56923EAD3)]
     public class GcPersistentTerrainEdits : NMSTemplate
     {
         public ulong GalacticAddress;

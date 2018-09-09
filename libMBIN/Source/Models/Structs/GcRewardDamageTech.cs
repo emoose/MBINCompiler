@@ -1,6 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x20)]
+	[NMS(Size = 0x20, GUID = 0x0DE8F18A1FD0B2736)]
     public class GcRewardDamageTech : NMSTemplate
     {
         public GcTechnologyCategory Category;

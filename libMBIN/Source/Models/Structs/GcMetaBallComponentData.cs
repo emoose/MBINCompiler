@@ -2,6 +2,7 @@
 
 namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x1D1348AD9F68E484)]
     public class GcMetaBallComponentData : NMSTemplate
     {
         [NMS(Size = 0x80)]

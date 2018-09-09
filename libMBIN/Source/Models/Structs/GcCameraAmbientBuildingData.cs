@@ -1,6 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x50)]
+	[NMS(Size = 0x50, GUID = 0x0E7B910E9C497C58E)]
     public class GcCameraAmbientBuildingData : NMSTemplate
     {
         [NMS(Size = 0x10)]

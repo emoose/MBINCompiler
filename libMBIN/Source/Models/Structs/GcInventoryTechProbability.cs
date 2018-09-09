@@ -1,5 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x6CAEF8DD21A894EA)]
     public class GcInventoryTechProbability : NMSTemplate
     {
         [NMS(Size = 0x10)]

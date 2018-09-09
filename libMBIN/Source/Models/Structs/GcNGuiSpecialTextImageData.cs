@@ -1,5 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x85A1EEB4E962980B)]
     public class GcNGuiSpecialTextImageData : NMSTemplate
     {
         [NMS(Size = 0x10)]

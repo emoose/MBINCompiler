@@ -1,6 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x80)]
+	[NMS(Size = 0x80, GUID = 0x5A84B1136A0377E0)]
     public class TkNGuiGraphicStyleData : NMSTemplate
     {
         /* 0x00 */ public float PaddingX;

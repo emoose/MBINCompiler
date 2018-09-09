@@ -1,5 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x0B807E0A43E0D5F25)]
     public class GcMissionSequenceSetGlobalMission : NMSTemplate
     {
 		public enum GlobalMissionEnum { Atlas, BlackHole, Anomaly, Explore }

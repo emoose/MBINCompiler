@@ -1,5 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x0E570F5A95882F6FD)]
     public class GcPlayerMissionProgressMapEntry : NMSTemplate
     {
         [NMS(Size = 0x10)]

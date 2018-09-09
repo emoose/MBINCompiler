@@ -1,6 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x40)]
+	[NMS(Size = 0x40, GUID = 0x0C994B6BF65C27A2C)]
     public class GcRewardStatDiff : NMSTemplate
     {
         [NMS(Size = 0x10)]

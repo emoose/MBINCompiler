@@ -2,7 +2,7 @@
 
 namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x70)]
+	[NMS(Size = 0x70, GUID = 0x8EE38D16655115FC)]
     public class GcNPCAnimationSetData : NMSTemplate
     {
         public List<GcNPCProbabilityAnimationData> IdleAnimations;

@@ -1,6 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x60)]
+	[NMS(Size = 0x60, GUID = 0x0A681CB4CFB4D2B6B)]
     public class GcSpaceshipTravelData : NMSTemplate
     {
         [NMS(Size = 0x10)]

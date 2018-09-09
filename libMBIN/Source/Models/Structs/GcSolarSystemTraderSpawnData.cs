@@ -1,5 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x460A5242E45C4AF8)]
     public class GcSolarSystemTraderSpawnData : NMSTemplate     // in global?
     {
         public int MaxToSpawn;                      // 3

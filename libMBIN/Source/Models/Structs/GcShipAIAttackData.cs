@@ -1,6 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0xD0)]
+	[NMS(Size = 0xD0, GUID = 0x0DC9412B2F3921390)]
     public class GcShipAIAttackData : NMSTemplate
     {
         [NMS(Size = 0x10)]

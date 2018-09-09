@@ -1,6 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x8)]
+	[NMS(Size = 0x8, GUID = 0x7CCDABAB01548488)]
     public class GcPortalData : NMSTemplate
     {
         /* 0x0 */ public float RuneRotateTime;      // 3F000000h

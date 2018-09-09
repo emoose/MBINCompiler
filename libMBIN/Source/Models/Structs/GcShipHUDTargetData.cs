@@ -1,6 +1,6 @@
 namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x430)]
+	[NMS(Size = 0x430, GUID = 0x0EBA3C048EB64D94A)]
     public class GcShipHUDTargetData : NMSTemplate
     {
         public GcShipHUDTargetIconData IconData;

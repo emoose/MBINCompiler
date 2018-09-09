@@ -1,5 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x141A63354CB056EF)]
     public class TkNoiseFlattenPoint : NMSTemplate // 0x28 bytes
     {
         /* 0x00 */ public float Density;

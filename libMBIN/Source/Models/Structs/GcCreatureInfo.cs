@@ -1,6 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x498)]
+	[NMS(Size = 0x498, GUID = 0x0C2F25F7BCF665267)]
     public class GcCreatureInfo : NMSTemplate
     {
 		public enum AgeEnum { Regular, Weird }

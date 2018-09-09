@@ -2,7 +2,7 @@
 
 namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x138)]
+	[NMS(Size = 0x138, GUID = 0x43E75A538B7E1D0E)]
     public class TkAnimationData : NMSTemplate
     {
         [NMS(Size = 0x10)]

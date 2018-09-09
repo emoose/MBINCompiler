@@ -2,6 +2,7 @@
 
 namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x6DAB1474F9B0A50B)]
     public class TkLanguagesAllowedData : NMSTemplate
     {
         public List<TkLanguages> Allowed;

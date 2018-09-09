@@ -1,6 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x4C0)]
+	[NMS(Size = 0x4C0, GUID = 0x8522736968AF8553)]
     public class GcBaseBuildingMaterial : NMSTemplate
     {
         /* 0x00 */ public int MaterialIndex;

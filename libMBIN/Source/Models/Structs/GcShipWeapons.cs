@@ -1,5 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x0B1DE413EF5AFC669)]
     public class GcShipWeapons : NMSTemplate     // size: 0x40, in global?
     {
         [NMS(Size = 0x10)]

@@ -1,6 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x58)]
+	[NMS(Size = 0x58, GUID = 0x63ADDD99AFB6D901)]
     public class GcPlayerCommunicatorMessageWeighted : NMSTemplate
     {
         public GcPlayerCommunicatorMessage Message;

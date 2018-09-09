@@ -1,6 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x80)]
+	[NMS(Size = 0x80, GUID = 0x0CBFEA8C3D0A1AE37)]
     public class GcPlayerSpawnStateData : NMSTemplate
     {
         /* 0x000 */ public Vector4f PlayerPositionInSystem;

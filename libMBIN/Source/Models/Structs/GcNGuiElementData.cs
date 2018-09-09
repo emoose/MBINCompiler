@@ -1,6 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x50)]
+	[NMS(Size = 0x50, GUID = 0x483E6945FC60E4E1)]
     public class GcNGuiElementData : NMSTemplate
     {
         [NMS(Size = 0x10)]

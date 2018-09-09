@@ -1,5 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x54366264A902610C)]
     public class GcEntitlementRewardData : NMSTemplate
     {
         [NMS(Size = 0x10)]

@@ -1,5 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x70A99E84E5D737DB)]
     public class GcJourneyMilestoneData : NMSTemplate
     {
         [NMS(Size = 0x10)]

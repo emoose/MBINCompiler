@@ -2,6 +2,7 @@
 
 namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x77D27CE2F5C655FC)]
     public class GcSolarSystemEventWarpOut : NMSTemplate
     {
         /* 0x00 */ public float Time;

@@ -2,7 +2,7 @@
 
 namespace libMBIN.Models.Structs
 {
-    [NMS(Alignment = 0x10)]
+	[NMS(Alignment = 0x10, GUID = 0x0D4B7DD6169DC478)]
     public class TkMaterialUniform : NMSTemplate
     {
         [NMS(Size = 0x20)]

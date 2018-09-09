@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.Models.Structs
 {
-    [NMS(Alignment = 0x4)]
+	[NMS(Alignment = 0x4, GUID = 0x62EB9D0F5E67D4F6)]
     public class TkInputEnum : NMSTemplate
     {
         public int InputButton;

@@ -1,6 +1,6 @@
 namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x1C)]
+	[NMS(Size = 0x1C, GUID = 0x0BFBA97AD59322690)]
     public class GcInventoryValueData : NMSTemplate     // possibly in global?
     {
         /* 0x000 */ public float BaseMinValue;          // 41F00000h

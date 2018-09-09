@@ -1,5 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x4BF71BB18072DE17)]
     public class GcTradingClassTable : NMSTemplate      // size: 0xAAC
     {
         [NMS(Size = 0x7, EnumValue = new string[7] {"Mining", "HighTech", "Trading", "Manufacturing",

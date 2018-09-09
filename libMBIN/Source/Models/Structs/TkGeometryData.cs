@@ -7,7 +7,7 @@ using System.Reflection;
 
 namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x140)]
+	[NMS(Size = 0x140, GUID = 0x0CD49AC37B4729513)]
     public class TkGeometryData : NMSTemplate
     {
         /* 0x000 */ public int VertexCount;

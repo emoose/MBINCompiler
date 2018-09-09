@@ -1,5 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x8F21833376B03851)]
     public class GcRealityCraftingRecipeData : NMSTemplate // 0x58 bytes
     {
         [NMS(Size = 3)]

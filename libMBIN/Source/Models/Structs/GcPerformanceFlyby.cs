@@ -2,6 +2,7 @@
 
 namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x1C154290758F1D41)]
     public class GcPerformanceFlyby : NMSTemplate       // size: 0x18       in global??
     {
         public float Length;            // 44FA0000h

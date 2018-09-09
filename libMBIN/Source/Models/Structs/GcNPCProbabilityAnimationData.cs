@@ -1,6 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x18)]
+	[NMS(Size = 0x18, GUID = 0x0FECDFAAE257D62DC)]
     public class GcNPCProbabilityAnimationData : NMSTemplate
     {
         [NMS(Size = 0x10)]

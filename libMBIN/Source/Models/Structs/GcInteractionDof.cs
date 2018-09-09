@@ -2,7 +2,7 @@
 
 namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x14)]
+	[NMS(Size = 0x14, GUID = 0x0E134690B3AB11AF1)]
     public class GcInteractionDof : NMSTemplate     // in global?
     {
         /* 0x00 */ public bool IsEnabled;           // 101h     (ie. including next byte)

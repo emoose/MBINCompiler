@@ -2,6 +2,7 @@
 
 namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x66F519D76005DDAF)]
     public class GcRewardMultiSpecificProductRecipes : NMSTemplate
     {
         public List<NMSString0x10> ProductIds;

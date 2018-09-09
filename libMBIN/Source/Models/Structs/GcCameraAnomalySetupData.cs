@@ -1,5 +1,6 @@
 namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x0F9C90D4C466ED78B)]
     public class GcCameraAnomalySetupData : NMSTemplate     // size: 0x40
     {
         /* 0x00 */ public Vector4f CameraAt;

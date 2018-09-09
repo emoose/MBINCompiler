@@ -1,5 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x4905B2344858BDB3)]
     public class GcRewardScanEvent : NMSTemplate
     {
         [NMS(Size = 0x20)]

@@ -2,7 +2,7 @@
 
 namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0xC0)]
+	[NMS(Size = 0xC0, GUID = 0x3C366B1E74C90E62)]
     public class GcExplosionData : NMSTemplate
     {
         [NMS(Size = 0x10)]

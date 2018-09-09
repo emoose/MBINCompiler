@@ -1,6 +1,7 @@
 ﻿namespace libMBIN.Models.Structs
 {
-    public class GcCameraShakeCapturedData : NMSTemplate // 0x14
+    [NMS(GUID = 0x1B2372A3A018B4AD)]
+    public class GcCameraShakeCapturedData : NMSTemplate
     {
         /* 0x000 */ public bool Active;
 

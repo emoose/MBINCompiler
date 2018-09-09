@@ -2,7 +2,7 @@
 
 namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x58)]
+	[NMS(Size = 0x58, GUID = 0x1DFBCEEAFDE9D7C6)]
     public class GcActionTrigger : NMSTemplate
     {
         public NMSTemplate Trigger;

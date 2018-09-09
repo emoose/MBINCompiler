@@ -1,5 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x8C3E63EA3A2D7991)]
     public class GcAISpaceshipManagerData : NMSTemplate     // size: 0x50
     {
         [NMS(Size = 5, EnumValue = new string[5] { "Player", "Civilian", "Pirate", "Police", "Creature" })]

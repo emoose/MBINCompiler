@@ -1,6 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x270)]
+	[NMS(Size = 0x270, GUID = 0x53C079B61B3FB6A4)]
     public class GcWeatherColourModifiers : NMSTemplate
     {
         public GcColourModifier SkyColour;

@@ -1,6 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x60)]
+	[NMS(Size = 0x60, GUID = 0x0BF9AD056B83B4043)]
     public class GcPlanetRingData : NMSTemplate
     {
         /* 0x00 */ public bool HasRings;

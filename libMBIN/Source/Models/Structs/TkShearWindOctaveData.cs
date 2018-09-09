@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x4D99FFC8B020A397)]
     public class TkShearWindOctaveData : NMSTemplate
     {
         public float MinStrength;

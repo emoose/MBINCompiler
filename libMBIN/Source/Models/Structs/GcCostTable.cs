@@ -2,7 +2,7 @@
 
 namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x50)]
+	[NMS(Size = 0x50, GUID = 0x0FD3B29318714667E)]
     public class GcCostTable : NMSTemplate
     {
         public List<GcCostTableEntry> SimpleInteractionTable;

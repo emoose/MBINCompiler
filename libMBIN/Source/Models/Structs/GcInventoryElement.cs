@@ -1,5 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x5165572FA852C8DD)]
     public class GcInventoryElement : NMSTemplate
     {
         public GcInventoryType Type;

@@ -2,6 +2,7 @@
 
 namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x4A883BBD9F48ADC6)]
     public class TkInstanceWindComponentData : NMSTemplate       // possibly in a global
     {
         /* 0x00 */ public bool EnableLdsWind;

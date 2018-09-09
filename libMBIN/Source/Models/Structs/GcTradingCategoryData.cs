@@ -1,5 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x6EA695AFABAD730F)]
     public class GcTradingCategoryData : NMSTemplate       // size: 0xCC
     {
         [NMS(Size = 0x40)]

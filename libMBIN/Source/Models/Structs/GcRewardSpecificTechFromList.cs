@@ -2,6 +2,7 @@
 
 namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x0AD1718785B26B78F)]
     public class GcRewardSpecificTechFromList : NMSTemplate
     {
         public List<NMSString0x10> TechList;

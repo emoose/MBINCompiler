@@ -2,7 +2,7 @@
 
 namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0xB0)]
+	[NMS(Size = 0xB0, GUID = 0x1DDB48B0A2D81267)]
     public class GcTradeData : NMSTemplate
     {
         /* 0x00 */ public List<NMSString0x10> AlwaysPresentProducts;

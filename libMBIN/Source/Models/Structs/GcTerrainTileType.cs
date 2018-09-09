@@ -1,5 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x0AFB195227CDEA6E2)]
     public class GcTerrainTileType : NMSTemplate
     {
 

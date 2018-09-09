@@ -2,6 +2,7 @@
 
 namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x4A53B69223F74C8F)]
     public class GcInventoryGenerationBaseStatDataEntry : NMSTemplate     // size: 0x20
     {
         [NMS(Size = 0x10)]

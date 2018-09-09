@@ -1,6 +1,6 @@
 namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x10)]
+	[NMS(Size = 0x10, GUID = 0x181752F0C2DF5722)]
     public class GcCameraSpawnSetupData : NMSTemplate
     {
 		/* 0x000 */ public float Distance;              // 41A00000h

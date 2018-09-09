@@ -2,6 +2,7 @@
 
 namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x4DDDBDFBD1267CE7)]
     public class GcCreatureBaitComponentData : NMSTemplate
     {
         public List<NMSString0x10> AttractList;

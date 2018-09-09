@@ -1,5 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x79BCF4E60FAC1B71)]
     public class GcAlienSpeechEntry : NMSTemplate       // size: 0x40
     {
         [NMS(Size = 0x10)]

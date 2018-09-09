@@ -2,6 +2,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x0B5F73B43F19328BA)]
     public class TkVertexLayout : NMSTemplate
     {
         public int ElementCount;

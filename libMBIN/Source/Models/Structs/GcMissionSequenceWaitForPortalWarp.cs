@@ -1,6 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x121)]
+	[NMS(Size = 0x121, GUID = 0x417C3F79FC136943)]
     public class GcMissionSequenceWaitForPortalWarp : NMSTemplate
     {
         [NMS(Size = 0x80)]

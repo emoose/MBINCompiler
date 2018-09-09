@@ -1,5 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x8B752B493C2190FA)]
     public class TkProceduralTextureChosenOption : NMSTemplate      // size: 0x60
     {
         [NMS(Size = 0x10)]

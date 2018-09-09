@@ -1,6 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x528)]
+	[NMS(Size = 0x528, GUID = 0x3190441302E11BA2)]
     public class GcLeveledStatData : NMSTemplate
     {
         [NMS(Size = 0x10)]

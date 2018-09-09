@@ -1,6 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x80)]
+	[NMS(Size = 0x80, GUID = 0x3DEA2930CF2BF993)]
     public class GcTerrainEditing : NMSTemplate
     {
         /* 0x0 */ public float EditPlaneMaxAdditiveOffsetFactor;

@@ -1,6 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x1A8)]
+	[NMS(Size = 0x1A8, GUID = 0x881E40C22112767)]
     public class TkNoiseGridData : NMSTemplate
     {
         /* 0x000 */ public bool Active;

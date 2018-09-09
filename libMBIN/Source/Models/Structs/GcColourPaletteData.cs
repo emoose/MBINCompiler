@@ -1,6 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x70)]
+	[NMS(Size = 0x70, GUID = 0x0DAB31CFBF20311E9)]
     public class GcColourPaletteData : NMSTemplate
     {
         [NMS(Size = 0x5)]

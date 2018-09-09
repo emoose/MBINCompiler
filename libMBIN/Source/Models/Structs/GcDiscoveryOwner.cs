@@ -1,6 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0xC4)]
+	[NMS(Size = 0xC4, GUID = 0x204DFFD03BAA3C1A)]
     public class GcDiscoveryOwner : NMSTemplate
     {
 

@@ -1,6 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x130)]
+	[NMS(Size = 0x130, GUID = 0x53406B443DE8066D)]
     public class GcPlayerDamageData : NMSTemplate
     {
         [NMS(Size = 0x10)]

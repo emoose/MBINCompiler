@@ -2,6 +2,7 @@
 
 namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x600CAC2FB5629419)]
     public class GcShipAIAttackDataTable : NMSTemplate       // size: 0x60
     {
         /* 0x00 */ public List<GcShipAICombatDefinition> Definitions;

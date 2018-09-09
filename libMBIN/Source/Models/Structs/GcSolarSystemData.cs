@@ -2,7 +2,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x1DA0)]
+	[NMS(Size = 0x1DA0, GUID = 0x0AD8BF8166D70078D)]
     public class GcSolarSystemData : NMSTemplate
     {
         /* 0x0000 */ public GcSeed Seed;
@@ -62,7 +62,7 @@ namespace libMBIN.Models.Structs
         /* 0x1D74 */ public byte[] Padding1D74;
         
         
-        /* 0x1D78 */ public GcAISpaceshipPreloadCacheDataTable SystemShips;
+        /* 0x1D78 */ public List<GcAISpaceshipPreloadCacheData> SystemShips;
         /* 0x1D88 */ public GcAlienRace InhabitingRace;
         /* 0x1D8C */ public GcPlanetTradingData TradingData;
         /* 0x1D94 */ public GcPlayerConflictData ConflictData;

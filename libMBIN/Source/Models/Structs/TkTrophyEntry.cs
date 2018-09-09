@@ -1,6 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x78)]
+	[NMS(Size = 0x78, GUID = 0x0FF0643125795309F)]
     public class TkTrophyEntry : NMSTemplate
     {
         [NMS(Size = 0x10)]

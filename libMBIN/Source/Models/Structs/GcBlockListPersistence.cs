@@ -1,5 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x35EAC27A312632DF)]
     public class GcBlockListPersistence : NMSTemplate       // size: 0x3850
     {
         [NMS(Size = 0x32)]

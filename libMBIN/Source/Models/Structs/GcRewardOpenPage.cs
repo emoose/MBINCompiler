@@ -1,6 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x8)]
+	[NMS(Size = 0x8, GUID = 0x9EEEC8CD1EAE84D2)]
     public class GcRewardOpenPage : NMSTemplate
     {
 		public enum PageToOpenEnum { FreighterShipTransfer, DisplayPortalUa, ExpeditionSelect, TraderInventory, ExpeditionDetails, ExpeditionDebrief, FreeFreighterReward, BuildingPartsShop }

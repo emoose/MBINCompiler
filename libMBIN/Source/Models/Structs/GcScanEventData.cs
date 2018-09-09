@@ -2,7 +2,7 @@
 
 namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x1F0)]
+	[NMS(Size = 0x1F0, GUID = 0x0FCECBBA2CCCF6AB6)]
     public class GcScanEventData : NMSTemplate
     {
         [NMS(Size = 0x20)]

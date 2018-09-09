@@ -1,5 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x8AB614E47861119A)]
     public class GcNGuiActionData : NMSTemplate
     {
         [NMS(Size = 0x10)]

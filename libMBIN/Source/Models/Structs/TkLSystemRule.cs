@@ -2,6 +2,7 @@
 
 namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x0C3D61DFE9D3AB5CD)]
     public class TkLSystemRule : NMSTemplate // 0xB8 bytes
     {
         [NMS(Size = 0x20)]

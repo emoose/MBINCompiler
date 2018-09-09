@@ -2,6 +2,7 @@
 
 namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x7A792008B203503F)]
     public class GcAISpaceshipPreloadList : NMSTemplate
     {
         public GcRealityCommonFactions Faction;

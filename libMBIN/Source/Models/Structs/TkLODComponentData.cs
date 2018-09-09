@@ -2,7 +2,7 @@
 
 namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x18)]
+	[NMS(Size = 0x18, GUID = 0x3F840374AD3BDE3C)]
     public class TkLODComponentData : NMSTemplate
     {
         /* 0x10 */ public List<TkLODModelResource> LODModel;

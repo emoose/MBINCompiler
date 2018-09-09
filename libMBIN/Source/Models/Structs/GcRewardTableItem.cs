@@ -1,6 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
-    [NMS(Alignment = 0x8)]
+	[NMS(Alignment = 0x8, GUID = 0x0E66752866A9C2380)]
     public class GcRewardTableItem : NMSTemplate        // size: 0x90
     {
         /* 0x00 */ public float PercentageChance;

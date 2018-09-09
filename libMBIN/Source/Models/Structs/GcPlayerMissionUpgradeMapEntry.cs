@@ -2,6 +2,7 @@
 
 namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x4A9DE083678EC5C2)]
     public class GcPlayerMissionUpgradeMapEntry : NMSTemplate       // size: 0x38
     {
         [NMS(Size = 0x10)]

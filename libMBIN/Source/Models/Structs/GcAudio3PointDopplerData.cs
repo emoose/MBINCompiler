@@ -1,6 +1,6 @@
 namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0xC)]
+	[NMS(Size = 0xC, GUID = 0x12CAE7C5B1936243)]
     public class GcAudio3PointDopplerData : NMSTemplate
     {
         /* 0x0 */ public float Front;

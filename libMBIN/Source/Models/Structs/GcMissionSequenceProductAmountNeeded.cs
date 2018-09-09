@@ -1,5 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x8BB6B50446320098)]
     public class GcMissionSequenceProductAmountNeeded : NMSTemplate
     {
         [NMS(Size = 0x80)]

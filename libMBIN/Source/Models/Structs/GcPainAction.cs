@@ -1,6 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x20)]
+	[NMS(Size = 0x20, GUID = 0x9A9D9B667592CEE8)]
     public class GcPainAction : NMSTemplate
     {
         [NMS(Size = 0x10)]

@@ -1,6 +1,6 @@
 namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x158)]
+	[NMS(Size = 0x158, GUID = 0x0DA003053BA5CD479)]
     public class GcBiomeListPerStarType : NMSTemplate
     {
         [NMS(Size = 4, EnumValue = new[] { "Yellow", "Green", "Blue", "Red" })]

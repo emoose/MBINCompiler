@@ -1,6 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x80)]
+	[NMS(Size = 0x80, GUID = 0x7411BFD5B5031BED)]
     public class TkShearWindData : NMSTemplate
     {
         [NMS(Size = 0x10)]

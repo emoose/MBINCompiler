@@ -2,7 +2,7 @@
 
 namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x38)]
+	[NMS(Size = 0x38, GUID = 0x5463DC26901A4655)]
     public class GcCustomisationRace : NMSTemplate
     {
         [NMS(Size = 0x10)]

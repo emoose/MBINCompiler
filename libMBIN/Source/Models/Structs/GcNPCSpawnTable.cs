@@ -2,6 +2,7 @@
 
 namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x94C4D7878A60E1BA)]
     public class GcNPCSpawnTable : NMSTemplate      // size: 0x3C0
     {
         [NMS(Size = 7, EnumValue = new[] { "Traders", "Warriors", "Explorers", "Robots", "Atlas", "Diplomats", "None" })]

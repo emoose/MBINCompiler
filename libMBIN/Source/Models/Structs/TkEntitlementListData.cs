@@ -1,6 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x50)]
+	[NMS(Size = 0x50, GUID = 0x18203ECAB461D679)]
     public class TkEntitlementListData : NMSTemplate
     {
         [NMS(Size = 0x10)]

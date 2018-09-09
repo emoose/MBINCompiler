@@ -2,6 +2,7 @@
 
 namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x928C87F25BF4300A)]
     public class GcMaintenanceGroupEntry : NMSTemplate      // size: 0x20
     {
         /* 0x00 */ public GcInventoryType Type;

@@ -2,6 +2,7 @@
 
 namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x0ED9D01EDEE998FDB)]
     public class GcTestMetadata : NMSTemplate // size = 0x6A4
     {
         public bool TestBool;

@@ -1,6 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x20)]
+	[NMS(Size = 0x20, GUID = 0x827AF33FF68FE05F)]
     public class GcCostProduct : NMSTemplate
     {
         /* 0x00 */ public GcDefaultMissionProductEnum Default;

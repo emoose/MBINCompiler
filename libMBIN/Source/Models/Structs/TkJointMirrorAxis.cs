@@ -1,5 +1,6 @@
 namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x11E5EDDC4A44DF65)]
     public class TkJointMirrorAxis : NMSTemplate
     {
         public float TransMirrorAxisX;

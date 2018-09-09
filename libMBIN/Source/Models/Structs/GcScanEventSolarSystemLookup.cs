@@ -2,6 +2,7 @@
 
 namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x8246371C1D8ECBA2)]
     public class GcScanEventSolarSystemLookup : NMSTemplate      // size: 0x1C
     {
         public bool UseStarType;

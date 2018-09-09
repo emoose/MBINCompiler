@@ -1,5 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x1B655E6ECEF95A07)]
     public class GcMissionSequenceWaitForFreighterPods : NMSTemplate        // size: 0x104
     {
         [NMS(Size = 0x80)]

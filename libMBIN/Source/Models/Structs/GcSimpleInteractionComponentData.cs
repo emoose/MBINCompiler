@@ -2,7 +2,7 @@
 
 namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x130)]
+	[NMS(Size = 0x130, GUID = 0x3FEE1E8B18E47CEB)]
     public class GcSimpleInteractionComponentData : NMSTemplate
     {
 		public enum SimpleInteractionTypeEnum { Interact, Treasure, Beacon, Scan, Save, CallShip, CallVehicle, Word, Tech, GenericReward, Feed, Ladder, ClaimBase, TeleportStartPoint, TeleportEndPoint, Portal, Chest, ResourceHarvester, BaseCapsule, Hologram, NPCTerminalMessage, VehicleBoot, BiomeHarvester, FreighterGalacticMap }
@@ -39,8 +39,8 @@ namespace libMBIN.Models.Structs
         /* 0x100 */ public GcDiscoveryTypes ScanIcon;
         [NMS(Size = 0x4, Ignore = true)]
         /* 0x104 */ public byte[] Padding104;
-        /* 0x108 */ public List<GcBaseBuildingTriggerAction> BaseBuildingTriggerActions;
-        /* 0x118 */ public List<int> RewardOverrideTable;       // I don't know...
+        /* 0x108 */ public List<GcActionTrigger> BaseBuildingTriggerActions;        // a guess
+        /* 0x118 */ public List<GcRewardTableItem> RewardOverrideTable;       // I don't know...
         /* 0x128 */ public bool UsePersonalPersistentBuffer;
         [NMS(Size = 0x7, Ignore = true)]
         /* 0x129 */ public byte[] EndPadding;

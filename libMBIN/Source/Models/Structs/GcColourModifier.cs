@@ -1,5 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x114B7C2B8D22F51)]
     public class GcColourModifier : NMSTemplate
     {
         public bool ForceColour;

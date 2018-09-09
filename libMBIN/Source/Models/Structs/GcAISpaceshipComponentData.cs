@@ -1,5 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x0E89965A1A5F0BECA)]
     public class GcAISpaceshipComponentData : NMSTemplate       // size: 0x94;
     {
         /* 0x00 */ public GcAISpaceshipTypes Type;

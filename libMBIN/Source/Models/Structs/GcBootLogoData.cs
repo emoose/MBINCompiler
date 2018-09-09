@@ -1,5 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x8B913442E7E83049)]
     public class GcBootLogoData : NMSTemplate
     {
         [NMS(Size = 0x100)]

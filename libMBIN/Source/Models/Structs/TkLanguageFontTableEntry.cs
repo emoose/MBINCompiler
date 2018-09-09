@@ -1,5 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x0C77EEE2A066CE101)]
     public class TkLanguageFontTableEntry : NMSTemplate     // size: 0x184
     {
         public TkLanguages Language;

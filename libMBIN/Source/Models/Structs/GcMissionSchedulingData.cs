@@ -2,7 +2,7 @@
 
 namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x88)]
+	[NMS(Size = 0x88, GUID = 0x0EA811EE090A41A87)]
     public class GcMissionSchedulingData : NMSTemplate
     {
         /* 0x00 */ public NMSTemplate RecurrenceType;

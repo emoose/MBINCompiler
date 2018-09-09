@@ -1,6 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x60)]
+	[NMS(Size = 0x60, GUID = 0x0CEBBAB8E576F1B96)]
     public class TkAnimBlendTree : NMSTemplate
     {
         [NMS(Size = 0x10)]

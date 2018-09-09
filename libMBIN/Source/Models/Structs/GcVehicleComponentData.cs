@@ -1,5 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x83655D33DC843EE4)]
     public class GcVehicleComponentData : NMSTemplate
     {
         /* 0x00 */ public GcVehicleType Class;

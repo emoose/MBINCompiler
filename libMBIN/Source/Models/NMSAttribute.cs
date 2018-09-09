@@ -11,5 +11,6 @@ namespace libMBIN.Models
         public string[] EnumValue { get; set; }
         public int Padding { get; set; }
         public int Alignment { get; set; } = 4;
+        public ulong GUID { get; set; }
     }
 }

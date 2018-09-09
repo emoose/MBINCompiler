@@ -1,6 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x10)]
+	[NMS(Size = 0x10, GUID = 0x3F1C3B8071A30A5D)]
     public class GcRewardMissionSeeded : NMSTemplate
     {
         [NMS(Size = 0x10)]

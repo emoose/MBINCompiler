@@ -1,6 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0xDC)]
+	[NMS(Size = 0xDC, GUID = 0x541CE72CF07274D2)]
     public class GcFogProperties : NMSTemplate
     {
         /* 0x00 */ public float FogStrength;

@@ -1,6 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x1D0)]
+	[NMS(Size = 0x1D0, GUID = 0x0AE2027400EC63932)]
     public class GcAtlasSendSubmitMonument : NMSTemplate
     {
         /* 0x000 */ public ulong ClientUserData;

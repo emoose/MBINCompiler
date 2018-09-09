@@ -1,6 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x40, Alignment = 0x8)]
+	[NMS(Size = 0x40, Alignment = 0x8, GUID = 0x0E2F5A0E5BEC5AA01)]
     public class GcMissionConditionBasePartBuilt : NMSTemplate
     {
         [NMS(Size = 0x10)]

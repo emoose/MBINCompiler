@@ -1,6 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x30)]
+	[NMS(Size = 0x30, GUID = 0x15E8BBC4FDB928FE)]
     public class GcSubstanceAmount : NMSTemplate
     {
         public int AmountMin;

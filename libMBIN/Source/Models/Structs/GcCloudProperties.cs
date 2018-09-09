@@ -1,6 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0xF0)]
+	[NMS(Size = 0xF0, GUID = 0x61834312DCADA196)]
     public class GcCloudProperties : NMSTemplate
     {
         /* 0x00 */ public Vector2f CoverageOffset;

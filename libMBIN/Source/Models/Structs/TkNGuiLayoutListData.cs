@@ -1,5 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x7621C399D9CFCEE)]
     public class TkNGuiLayoutListData : NMSTemplate
     {
         [NMS(Size = 0x80)]

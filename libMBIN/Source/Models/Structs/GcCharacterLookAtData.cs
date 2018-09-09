@@ -1,6 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x34)]
+	[NMS(Size = 0x34, GUID = 0x45FE3137E90587F4)]
     public class GcCharacterLookAtData : NMSTemplate
     {
         public float InteractionLookAtRadius;

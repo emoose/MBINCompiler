@@ -1,6 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x50)]
+	[NMS(Size = 0x50, GUID = 0x146B5D54B914672D)]
     public class TkNGuiTextStyleData : NMSTemplate
     {
         /* 0x00 */ public Colour Colour;

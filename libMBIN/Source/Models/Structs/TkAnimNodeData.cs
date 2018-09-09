@@ -5,7 +5,7 @@ using System.Reflection;
 
 namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x50)]
+	[NMS(Size = 0x50, GUID = 0x14C032849E45EE8D)]
     public class TkAnimNodeData : NMSTemplate
     {
         [NMS(Size = 0x40)]

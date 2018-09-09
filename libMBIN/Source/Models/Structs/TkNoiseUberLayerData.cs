@@ -1,6 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x88)]
+	[NMS(Size = 0x88, GUID = 0x0F674532EDBBCAFB5)]
     public class TkNoiseUberLayerData : NMSTemplate
     {
         /* 0x00 */ public TkNoiseUberData NoiseData;

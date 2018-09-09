@@ -1,5 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x159F70DC858BFEB9)]
     public class TkImGuiWindowData : NMSTemplate
     {
         [NMS(Size = 0x80)]

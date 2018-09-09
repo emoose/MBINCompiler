@@ -1,6 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x40)]
+	[NMS(Size = 0x40, GUID = 0x5F0D049CCD180588)]
     public class TkEngineSettingsMapping : NMSTemplate
     {
         public float ShadowMultiplierLow;

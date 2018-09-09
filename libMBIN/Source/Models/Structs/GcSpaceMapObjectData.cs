@@ -2,6 +2,7 @@
 
 namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x0E58BBB2467C4A948)]
     public class GcSpaceMapObjectData : NMSTemplate     // size: 0x30
     {
         /* 0x00 */ public Colour Colour;

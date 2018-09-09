@@ -1,5 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x4117A6369803D90B)]
     public class TkModelRendererCameraData : NMSTemplate // 0x40 bytes
     {
         public float Distance;

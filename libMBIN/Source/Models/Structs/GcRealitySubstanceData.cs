@@ -1,6 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x240)]
+	[NMS(Size = 0x240, GUID = 0x2CF9B807BDE62278)]
     public class GcRealitySubstanceData : NMSTemplate
     {
         [NMS(Size = 0x20)]

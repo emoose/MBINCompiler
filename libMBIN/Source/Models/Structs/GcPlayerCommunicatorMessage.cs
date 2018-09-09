@@ -1,6 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x50)]
+	[NMS(Size = 0x50, GUID = 0x0C0B64BD7B895172A)]
     public class GcPlayerCommunicatorMessage : NMSTemplate
     {
         [NMS(Size = 0x20)]

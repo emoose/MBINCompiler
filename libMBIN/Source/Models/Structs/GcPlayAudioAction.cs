@@ -1,5 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x0C30E8192B2598E1A)]
     public class GcPlayAudioAction : NMSTemplate        // size: 0x88
     {
         [NMS(Size = 0x80)]

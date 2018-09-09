@@ -1,5 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x21E266137C8188B8)]
     public class TkAnimPoseExampleElement : NMSTemplate // 0x18 bytes
     {
         [NMS(Size = 0x10)]

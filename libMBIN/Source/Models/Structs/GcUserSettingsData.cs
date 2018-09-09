@@ -1,5 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x10907E0AAEACD31)]
     public class GcUserSettingsData : NMSTemplate
     {
         // this needs to be fixed!! Has a fair few values missing as can be see in the struct and the file itself

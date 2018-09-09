@@ -1,6 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x54)]
+	[NMS(Size = 0x54, GUID = 0x2134F28E3C1FC07E)]
     public class GcCameraWarpSettings : NMSTemplate
     {
         public float FocusPointDist;

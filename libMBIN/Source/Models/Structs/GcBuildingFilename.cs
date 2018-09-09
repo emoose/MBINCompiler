@@ -1,6 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x400)]
+	[NMS(Size = 0x400, GUID = 0x5714540BBB449EE5)]
     public class GcBuildingFilename : NMSTemplate
     {
         [NMS(Size = 0x80)]

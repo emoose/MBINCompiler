@@ -1,6 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x335F8)]
+	[NMS(Size = 0x335F8, GUID = 0x6B611C849F3B2BFC)]
     public class GcBuildingDefinitionTable : NMSTemplate
     {
         [NMS(Size = 7, EnumValue = new string[0x7]{ "Traders", "Warriors", "Explorers", "Robots", "Atlas", "Diplomats", "None" })]

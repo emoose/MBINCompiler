@@ -2,7 +2,7 @@
 
 namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x340)]
+	[NMS(Size = 0x340, GUID = 0x0A6DB59482483CC14)]
     public class GcBiomeData : NMSTemplate
     {
         /* 0x000 */ public GcMiningSubstanceData MiningSubstance1;

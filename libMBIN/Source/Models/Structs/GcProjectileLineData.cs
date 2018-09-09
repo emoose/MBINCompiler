@@ -1,5 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x0E18B6A30E09DD03B)]
     public class GcProjectileLineData : NMSTemplate     // size: 0x28
     {
         /* 0x000 */ public float BulletLength;

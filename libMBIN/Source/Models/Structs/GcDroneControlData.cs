@@ -1,6 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x2C)]
+	[NMS(Size = 0x2C, GUID = 0x33F2238EFBDDCC89)]
     public class GcDroneControlData : NMSTemplate
     {
         public float MaxSpeed;                  // 41A00000h

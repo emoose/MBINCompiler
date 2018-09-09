@@ -2,6 +2,7 @@
 
 namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x0B53BBA0714A089B6)]
     public class GcNPCPlacementComponentData : NMSTemplate // 0x20 bytes
     {
         public bool SearchPlacementFromMaster;

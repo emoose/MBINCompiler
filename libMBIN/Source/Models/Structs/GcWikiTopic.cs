@@ -2,6 +2,7 @@
 
 namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x91E568FA1C5AAF38)]
     public class GcWikiTopic : NMSTemplate       // size: 0xD0
     {
         [NMS(Size = 0x20)]

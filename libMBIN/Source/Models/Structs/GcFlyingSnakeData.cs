@@ -1,5 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x1A17963717B304A1)]
     public class GcFlyingSnakeData : NMSTemplate 
     {
 		  /* 0x00 */ public float CircleSpeed;

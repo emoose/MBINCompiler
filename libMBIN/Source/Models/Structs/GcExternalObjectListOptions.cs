@@ -2,7 +2,7 @@
 
 namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x40)]
+	[NMS(Size = 0x40, GUID = 0x62ECC2A88402F1DD)]
     public class GcExternalObjectListOptions : NMSTemplate
     {
         [NMS(Size = 0x10)]

@@ -1,6 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x40)]
+	[NMS(Size = 0x40, GUID = 0x55BA4726F9A4A05D)]
     public class TkNoiseUberData : NMSTemplate
     {
         /* 0x00 */ public int Octaves;

@@ -2,6 +2,7 @@
 
 namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x7157800CF625C3AF)]
     public class GcVehicleData : NMSTemplate        // size: 0xBB0
     {
         [NMS(Size = 0x10)]

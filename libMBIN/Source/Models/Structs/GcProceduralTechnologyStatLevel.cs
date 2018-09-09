@@ -1,6 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x14)]
+	[NMS(Size = 0x14, GUID = 0x0D99FB49A81830E3)]
     public class GcProceduralTechnologyStatLevel : NMSTemplate
     {
         public GcStatsTypes Stat;

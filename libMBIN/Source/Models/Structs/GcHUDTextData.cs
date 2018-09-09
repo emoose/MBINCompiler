@@ -1,5 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x738CDF94ACD0CC0A)]
     public class GcHUDTextData : NMSTemplate
     {
         public GcHUDComponent Data;

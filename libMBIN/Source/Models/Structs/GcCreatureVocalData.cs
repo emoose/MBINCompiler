@@ -1,5 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x3750322D673A2913)]
     public class GcCreatureVocalData : NMSTemplate
     {
         public float ScaleBias;

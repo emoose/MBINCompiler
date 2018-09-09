@@ -2,7 +2,7 @@
 
 namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x240)]
+	[NMS(Size = 0x240, GUID = 0x419D99411C2B0A01)]
     public class GcMissionSequenceWaitForPhoto : NMSTemplate
     {
         [NMS(Size = 0x80)]

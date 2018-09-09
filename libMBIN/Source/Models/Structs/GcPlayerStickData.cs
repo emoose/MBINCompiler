@@ -1,6 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x1C)]
+	[NMS(Size = 0x1C, GUID = 0x2CE40353E3CAA625)]
     public class GcPlayerStickData : NMSTemplate
     {
         /* 0x000 */ public float AcceleratorStickPoint;     // 3F733333h

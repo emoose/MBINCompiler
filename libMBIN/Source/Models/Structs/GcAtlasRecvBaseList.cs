@@ -2,7 +2,7 @@
 
 namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x30)]
+	[NMS(Size = 0x30, GUID = 0x0CDB8E82C262C528C)]
     public class GcAtlasRecvBaseList : NMSTemplate
     {
         /* 0x00 */ public ulong ClientUserdata;

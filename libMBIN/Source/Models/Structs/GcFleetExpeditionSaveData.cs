@@ -2,7 +2,7 @@
 
 namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x1F0)]
+	[NMS(Size = 0x1F0, GUID = 0x230722D2F2A2F12A)]
     public class GcFleetExpeditionSaveData : NMSTemplate
     {
         /* 0x000 */ public GcSeed ResourceSeed;

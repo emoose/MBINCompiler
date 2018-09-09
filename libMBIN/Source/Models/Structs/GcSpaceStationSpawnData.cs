@@ -1,5 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x1CDF915FBA8D3FEF)]
     public class GcSpaceStationSpawnData : NMSTemplate
     {
 		public enum SpawnModeEnum { None, UseSeed, UseAltID }

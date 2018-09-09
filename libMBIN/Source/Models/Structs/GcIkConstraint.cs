@@ -2,7 +2,7 @@
 
 namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x150)]
+	[NMS(Size = 0x150, GUID = 0x6F1FB34176A068B0)]
     public class GcIkConstraint : NMSTemplate
     {
         [NMS(Size = 0x10)]

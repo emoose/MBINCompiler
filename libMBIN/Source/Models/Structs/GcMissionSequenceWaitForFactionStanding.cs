@@ -1,5 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x30811CE981E010DD)]
     public class GcMissionSequenceWaitForFactionStanding : NMSTemplate      // size: 0x110
     {
         [NMS(Size = 0x80)]

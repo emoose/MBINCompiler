@@ -1,5 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x5B2795E2FEF75E70)]
     public class TkSpeedLineData : NMSTemplate
     {
         [NMS(Size = 0x80)]

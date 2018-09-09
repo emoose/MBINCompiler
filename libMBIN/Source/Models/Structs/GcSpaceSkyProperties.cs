@@ -1,5 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x0C2EBE8CA8AF40DB1)]
     public class GcSpaceSkyProperties : NMSTemplate         // size: 0xA0
     {
           public GcPlanetWeatherColourIndex ColourIndex;        // add + 0x10 to all the next values

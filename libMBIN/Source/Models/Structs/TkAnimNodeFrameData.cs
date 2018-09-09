@@ -5,7 +5,7 @@ using System.Reflection;
 
 namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x30)]
+	[NMS(Size = 0x30, GUID = 0x122A23E7D278667B)]
     public class TkAnimNodeFrameData : NMSTemplate
     {
         public List<Quaternion> Rotations;

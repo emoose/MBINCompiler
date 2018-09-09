@@ -1,6 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x34)]
+	[NMS(Size = 0x34, GUID = 0x0A762E30993D934E3)]
     public class GcResourceCollectEffect : NMSTemplate      // in GcPlayerGlobals
     {
         /* 0x000 */ public float PlayerOffset;

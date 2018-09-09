@@ -1,5 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x50EC0414F698CD9C)]
     public class GcGalaxyAudioSetupData : NMSTemplate       // size: 0x44
     {
         /* 0x00 */ public GcAudioWwiseEvents EventMapEnter;

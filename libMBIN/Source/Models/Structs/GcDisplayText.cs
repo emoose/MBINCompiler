@@ -1,6 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x304)]
+	[NMS(Size = 0x304, GUID = 0x959970D1E4FDF510)]
     public class GcDisplayText : NMSTemplate
     {
 		public enum HUDTextDisplayTypeEnum { Full, Compact, EyeLevel, Prompt, Tooltip }

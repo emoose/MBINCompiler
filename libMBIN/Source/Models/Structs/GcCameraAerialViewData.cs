@@ -1,6 +1,6 @@
 namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x30)]
+	[NMS(Size = 0x30, GUID = 0x135475BEC6A4BDE9)]
     public class GcCameraAerialViewData : NMSTemplate
     {
         /* 0x000 */ public float Time;

@@ -2,7 +2,7 @@
 
 namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x4E0)]
+	[NMS(Size = 0x4E0, GUID = 0x5129C9CAFEEDC1E8)]
     public class GcSceneSettings : NMSTemplate
     {
         [NMS(Size = 0x80)]

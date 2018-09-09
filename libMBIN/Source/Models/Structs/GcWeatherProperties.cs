@@ -2,7 +2,7 @@
 
 namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x610)]
+	[NMS(Size = 0x610, GUID = 0x604FAE2ECBA08F97)]
     public class GcWeatherProperties : NMSTemplate
     {
         [NMS(Size = 0x10)]

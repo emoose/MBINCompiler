@@ -1,6 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x6E0)]
+	[NMS(Size = 0x6E0, GUID = 0x16C8B39049D0C75A)]
     public class GcTradeSettings : NMSTemplate
     {
         public GcTradeData SpaceStation;

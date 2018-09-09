@@ -1,5 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x1A667DA77BED9511)]
     public class GcCostTableEntry : NMSTemplate     // size: 0x60
     {
         [NMS(Size = 0x10)]

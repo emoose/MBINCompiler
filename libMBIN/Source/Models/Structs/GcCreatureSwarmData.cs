@@ -2,7 +2,7 @@
 
 namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x58)]
+	[NMS(Size = 0x58, GUID = 0x5AD1656C01D71836)]
     public class GcCreatureSwarmData : NMSTemplate
     {
         /* 0x00 */ public int MinCount;

@@ -1,6 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x88)]
+	[NMS(Size = 0x88, GUID = 0x9C0682DB63DCCEDE)]
     public class GcDailyRecurrence : NMSTemplate
     {
         public int RecurrenceMinute;

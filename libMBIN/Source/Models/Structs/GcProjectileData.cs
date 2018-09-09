@@ -3,7 +3,7 @@ using System;
 
 namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x3A0)]
+	[NMS(Size = 0x3A0, GUID = 0x2E4C5EEFC700A120)]
     public class GcProjectileData : NMSTemplate
     {
         [NMS(Size = 0x10)]

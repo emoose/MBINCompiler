@@ -1,6 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0xB58)]
+	[NMS(Size = 0xB58, GUID = 0x0EDDBE7AE19612B8F)]
     public class GcGalaxyInfoIcons : NMSTemplate
     {
         [NMS(Size = 0x7, EnumValue = new[] { "Traders", "Warriors", "Explorers", "Robots", "Atlas", "Diplomats", "None" })]

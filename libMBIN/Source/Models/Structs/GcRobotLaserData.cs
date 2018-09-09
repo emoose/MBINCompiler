@@ -2,6 +2,7 @@
 
 namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x0F2A6C64121B1D193)]
     public class GcRobotLaserData : NMSTemplate
     {
         [NMS(Size = 0x10)]

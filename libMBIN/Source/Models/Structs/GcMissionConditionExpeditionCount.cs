@@ -1,6 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0xC)]
+	[NMS(Size = 0xC, GUID = 0x39C089B84169B9D2)]
     public class GcMissionConditionExpeditionCount : NMSTemplate
     {
         public int ExpeditionCount;

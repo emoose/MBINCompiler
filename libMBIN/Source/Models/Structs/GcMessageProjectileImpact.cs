@@ -1,5 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x6E628EFEA4C27F42)]
     public class GcMessageProjectileImpact: NMSTemplate
     {
         [NMS(Size = 0x10)]

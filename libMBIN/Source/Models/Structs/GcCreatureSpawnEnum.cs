@@ -1,5 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x5DFE5E8FA0CB7628)]
     public class GcCreatureSpawnEnum : NMSTemplate
     {
         // 0x1A entries

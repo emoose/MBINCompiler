@@ -1,6 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x14)]
+	[NMS(Size = 0x14, GUID = 0x0FF1A0BCD4F36D412)]
     public class GcRewardWeapon : NMSTemplate
     {
         public GcRarity Rarity;

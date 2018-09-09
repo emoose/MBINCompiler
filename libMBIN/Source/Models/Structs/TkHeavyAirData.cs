@@ -1,5 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x0B55476A1D9E0E509)]
     public class TkHeavyAirData : NMSTemplate
     {
         [NMS(Size = 0x80)]

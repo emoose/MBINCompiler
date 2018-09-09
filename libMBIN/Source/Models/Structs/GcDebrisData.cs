@@ -1,6 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0xA8)]
+	[NMS(Size = 0xA8, GUID = 0x25C7464DF342E314)]
     public class GcDebrisData : NMSTemplate
     {
         /* 0x00 */ public TkModelResource Filename;

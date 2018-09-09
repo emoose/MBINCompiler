@@ -7,7 +7,7 @@ using System.Reflection;
 
 namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0xA0)]
+	[NMS(Size = 0xA0, GUID = 0x990A0508C5DCEEE6)]
     public class TkMeshData : NMSTemplate
     {
         [NMS(Size = 0x80)]

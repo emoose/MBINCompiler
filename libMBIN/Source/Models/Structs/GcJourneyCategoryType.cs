@@ -1,5 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x0B6E944C82ACF13FF)]
     public class GcJourneyCategoryType : NMSTemplate
     {
 		public enum CategoryTypeEnum { Journey, Race, Guild }

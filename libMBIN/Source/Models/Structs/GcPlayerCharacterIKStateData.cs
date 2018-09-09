@@ -2,7 +2,7 @@
 
 namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x40)]
+	[NMS(Size = 0x40, GUID = 0x0AE92E2296A071666)]
     public class GcPlayerCharacterIKStateData : NMSTemplate
     {
         public GcPlayerCharacterStateType State;

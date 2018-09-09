@@ -1,5 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x9E8977C498CF111F)]
     public class TkProceduralInstanceData : NMSTemplate
     {
         [NMS(Size = 0x10)]

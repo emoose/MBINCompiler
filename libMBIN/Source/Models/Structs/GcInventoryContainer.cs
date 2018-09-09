@@ -2,6 +2,7 @@
 
 namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x4C1F6E153DC2E5B6)]
     public class GcInventoryContainer : NMSTemplate // 0x60 bytes
     {
         /* 0x00 */ public List<GcInventoryElement> Slots;

@@ -2,7 +2,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x28)]
+	[NMS(Size = 0x28, GUID = 0x0A829A15F1ECEF45B)]
     public class GcDamageMultiplierLookup : NMSTemplate
     {
 

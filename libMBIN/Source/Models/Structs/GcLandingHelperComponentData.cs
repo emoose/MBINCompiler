@@ -1,5 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x0C9B4A9F531E84B81)]
     public class GcLandingHelperComponentData : NMSTemplate
     {
         public float ActiveDistanceMin;

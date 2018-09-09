@@ -1,5 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x0D5F1AEB0209042C6)]
     public class GcSpawnDensity : NMSTemplate
     {
         [NMS(Size = 0x10)]

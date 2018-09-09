@@ -1,5 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x4CE334B92351578B)]
     public class GcItemCostData : NMSTemplate        // size: 0x20
     {
         [NMS(Size = 0x10)]

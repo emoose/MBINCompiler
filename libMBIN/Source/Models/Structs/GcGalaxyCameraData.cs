@@ -1,6 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x64)]
+	[NMS(Size = 0x64, GUID = 0x7780E13333B207C4)]
     public class GcGalaxyCameraData : NMSTemplate
     {
         /* 0x00 */ public float CameraFOV;                      // 42C80000h

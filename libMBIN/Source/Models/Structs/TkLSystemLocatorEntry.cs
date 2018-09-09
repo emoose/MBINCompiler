@@ -2,6 +2,7 @@
 
 namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x75324406CCCAAABD)]
     public class TkLSystemLocatorEntry : NMSTemplate // 0x98 bytes
     {
         [NMS(Size = 0x80)]

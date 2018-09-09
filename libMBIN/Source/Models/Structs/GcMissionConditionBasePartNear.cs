@@ -1,5 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x6BA9CBE0ED534658)]
     public class GcMissionConditionBasePartNear : NMSTemplate
     {
         [NMS(Size = 0x10)]

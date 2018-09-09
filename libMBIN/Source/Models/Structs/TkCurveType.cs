@@ -1,5 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x1A6FF072DB629119)]
     public class TkCurveType : NMSTemplate
     {
 

@@ -1,6 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x190)]
+	[NMS(Size = 0x190, GUID = 0x70F15FEDCAE3687B)]
     public class TkImGuiSettings : NMSTemplate
     {
         public Colour BackgroundColour;

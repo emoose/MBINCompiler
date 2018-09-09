@@ -1,6 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x10)]
+	[NMS(Size = 0x10, GUID = 0x0CDD1753E3C085C69)]
     public class GcHazardAction : NMSTemplate
     {
         public GcHazardModifiers Hazard;

@@ -1,5 +1,6 @@
 namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x570DB1A0C98C0858)]
     public class TkJointExtentData : NMSTemplate
     {
         [NMS(Size = 3)]

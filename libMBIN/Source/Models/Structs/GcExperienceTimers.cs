@@ -1,5 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x62C7CA383FB44A6C)]
     public class GcExperienceTimers : NMSTemplate      // size: 0x20 // probably used in a global
     {
 	  /* 0x00 */ public int HighChance;         // 0Ah

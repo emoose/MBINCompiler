@@ -2,6 +2,7 @@
 
 namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x0D6C7E7D9E60B1A2B)]
     public class GcExperienceSpawnTable : NMSTemplate       // size: 0xD0
     {
         public List<GcAIShipSpawnData> FlybySpawns;

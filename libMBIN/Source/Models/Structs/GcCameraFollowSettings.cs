@@ -1,6 +1,6 @@
 namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0xE0)]
+	[NMS(Size = 0xE0, GUID = 0x0DC9E99A803F305B)]
     public class GcCameraFollowSettings : NMSTemplate
     {
         [NMS(Size =  0x10)]

@@ -1,5 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x18C90AC3ABEDC7CD)]
     public class GcHUDManagerData : NMSTemplate
     {
         public GcTextPreset TitleFont;

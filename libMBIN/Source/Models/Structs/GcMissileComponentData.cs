@@ -1,5 +1,6 @@
 namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x3084C666AE66E619)]
     public class GcMissileComponentData : NMSTemplate       // size: 0x28
     {
         [NMS(Size = 0x10)]

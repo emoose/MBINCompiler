@@ -2,7 +2,7 @@
 
 namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0xD0)]
+	[NMS(Size = 0xD0, GUID = 0x0FBA26CA9ED88205D)]
     public class GcRewardTable : NMSTemplate
     {
         public List<GcGenericRewardTableEntry> GenericTable;

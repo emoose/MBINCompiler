@@ -1,6 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x1650)]
+	[NMS(Size = 0x1650, GUID = 0x57B37B2F30CA8EBA)]
     public class GcScreenFilterTable : NMSTemplate
     {
         [NMS(Size = 0x22, EnumValue = new string[] { "Default","DefaultStorm","Frozen","FrozenStorm","Toxic","ToxicStorm","Radioactive","RadioactiveStorm",

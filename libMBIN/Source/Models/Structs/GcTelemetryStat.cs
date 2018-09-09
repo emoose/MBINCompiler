@@ -1,6 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x28)]
+	[NMS(Size = 0x28, GUID = 0x4929F19D9BBB8313)]
     public class GcTelemetryStat : NMSTemplate
     {
         [NMS(Size = 0x10)]

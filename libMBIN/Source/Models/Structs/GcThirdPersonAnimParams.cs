@@ -1,6 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x4C)]
+	[NMS(Size = 0x4C, GUID = 0x3F832D940B81BDF7)]
     public class GcThirdPersonAnimParams : NMSTemplate
     {
 		/* 0x00 */ public Vector2f Velocity;

@@ -2,6 +2,7 @@
 
 namespace libMBIN.Models.Structs
 {
+	[NMS(GUID = 0x9F997389CDFC8C8E)]
     public class GcPhotoModeSettings : NMSTemplate      // possibly in a global
     {
         /* 0x00 */ public float Fog;

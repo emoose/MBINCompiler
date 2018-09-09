@@ -2,7 +2,7 @@
 
 namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x28)]
+	[NMS(Size = 0x28, GUID = 0x544936348FE78AAE)]
     public class TkActionButtonMap : NMSTemplate
     {
         [NMS(Size = 0x10)]

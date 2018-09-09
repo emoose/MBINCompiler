@@ -2,7 +2,7 @@
 
 namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0xF0)]
+	[NMS(Size = 0xF0, GUID = 0x0BC7CE3158055993D)]
     public class GcBiomeFileList : NMSTemplate
     {
         [NMS(Size = 0xD, EnumValue = new[] { "Lush", "Toxic", "Scorched", "Radioactive", "Frozen", "Barren", "Dead", "Weird", "Red", "Green", "Blue", "Test", "All" })]

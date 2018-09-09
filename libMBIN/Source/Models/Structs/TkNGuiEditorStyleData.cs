@@ -2,7 +2,7 @@
 
 namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x120)]
+	[NMS(Size = 0x120, GUID = 0x50BEBA95B0A13913)]
     public class TkNGuiEditorStyleData : NMSTemplate
     {
         /* 0x000 */ public List<float> Sizes;

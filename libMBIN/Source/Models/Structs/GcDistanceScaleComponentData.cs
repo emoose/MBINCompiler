@@ -1,6 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x18)]
+	[NMS(Size = 0x18, GUID = 0x1E174AAC81BFAF86)]
     public class GcDistanceScaleComponentData : NMSTemplate
     {
         public bool UseGlobals;

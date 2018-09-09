@@ -1,6 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
-    [NMS(Size = 0x15D0)]
+	[NMS(Size = 0x15D0, GUID = 0x1E376F876EF204A0)]
     public class TkVoxelGeneratorData : NMSTemplate
     {
         /* 0x0000 */ public GcSeed BaseSeed;
