@@ -1,5 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
+    [NMS(Size = 0x110)]
     public class GcMissionSequenceTeleport : NMSTemplate
     {
         [NMS(Size = 0x80)]

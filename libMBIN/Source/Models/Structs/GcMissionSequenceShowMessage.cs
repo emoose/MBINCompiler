@@ -1,7 +1,7 @@
 ﻿namespace libMBIN.Models.Structs
 {
-    [NMS(Alignment = 0x10)]
-    public class GcMissionSequenceShowMessage : NMSTemplate     // size: 0x230
+    [NMS(Size = 0x230, Alignment = 0x10)]
+    public class GcMissionSequenceShowMessage : NMSTemplate
     {
         /* 0x000 */ public GcMissionCategory Category;
         /* 0x004 */ public float Time;

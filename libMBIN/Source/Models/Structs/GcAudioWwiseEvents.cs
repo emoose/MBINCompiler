@@ -2,6 +2,6 @@
 {
     public class GcAudioWwiseEvents : NMSTemplate
     {
-        public uint AkEvent; // something inside the wem files?
+        public uint AkEvent; // should be an enum, but it will be massive...
     }
 }

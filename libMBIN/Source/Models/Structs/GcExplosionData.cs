@@ -2,7 +2,8 @@
 
 namespace libMBIN.Models.Structs
 {
-    public class GcExplosionData : NMSTemplate      // size: 0xC0       // maybe used in a global?
+    [NMS(Size = 0xC0)]
+    public class GcExplosionData : NMSTemplate
     {
         [NMS(Size = 0x10)]
         /* 0x00 */ public string Id;

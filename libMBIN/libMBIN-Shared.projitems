@@ -22,6 +22,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\EXmlMeta.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\EXmlData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\EXmlProperty.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcMissionConditionStatDiff.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\Models\Structs\GcMissionConditionIsScanEventLocalOrNear.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\TemplateException.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\MBINHeader.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Models\NMSAttribute.cs" />

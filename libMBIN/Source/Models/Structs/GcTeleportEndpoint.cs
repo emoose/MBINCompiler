@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace libMBIN.Models.Structs
+﻿namespace libMBIN.Models.Structs
 {
     [NMS(Size = 0x90)]
     public class GcTeleportEndpoint : NMSTemplate
@@ -8,7 +6,7 @@ namespace libMBIN.Models.Structs
         /* 0x00 */ public GcUniverseAddressData UniverseAddress;
         /* 0x20 */ public Vector4f Position;
         /* 0x30 */ public Vector4f Facing;
-		public enum TeleporterTypeEnum { Base, SpaceStation, Atlas, PlanetAwayFromShip, ExternalBase }
+		public enum TeleporterTypeEnum { Base, SpaceStation, Atlas, PlanetAwayFromShip, ExternalBase, EmergencyGalaxyFix }
 		public TeleporterTypeEnum TeleporterType;
         [NMS(Size = 0x40)]
         /* 0x44 */ public string Name;

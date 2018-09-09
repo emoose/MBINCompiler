@@ -29,8 +29,9 @@ namespace libMBIN.Models.Structs
         /* 0xB1 */ public bool UseFreighterNPC;
         /* 0xB2 */ public bool PlaceAtLeastOne;
         /* 0xB3 */ public bool SpawnMoving;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0xB4 */ public byte[] Endpadding;
+        /* 0xB4 */ public bool SpawnInAbandoned;
+        [NMS(Size = 0x3, Ignore = true)]
+        /* 0xB5 */ public byte[] Endpadding;
         
     }
 }
