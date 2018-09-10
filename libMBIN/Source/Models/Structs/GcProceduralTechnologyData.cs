@@ -21,7 +21,8 @@ namespace libMBIN.Models.Structs
         /* 0x1C0 */ public string Description;
         /* 0x240 */ public Colour Colour;
 		public enum QualityEnum { Normal, Rare, Epic, Legendary }
-		public QualityEnum Quality;
+		/* 0x250 */ public QualityEnum Quality;
+        /* 0x254 */ public GcProceduralTechnologyCategory Category;
         /* 0x258 */ public int NumStatsMin;
         /* 0x25C */ public int NumStatsMax;
         /* 0x260 */ public GcWeightingCurve WeightingCurve;
