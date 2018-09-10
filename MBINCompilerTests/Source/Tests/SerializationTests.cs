@@ -75,7 +75,7 @@ namespace libMBIN.UnitTests {
 
         private void LogFileState( StreamWriter logWriter, FileState file ) {
             statusCounters[(int) file.status]++;
-            Logger.LogMessage( logWriter, String.Format( "{0,-8}\t{1,8}\t{2}\t{3,8}\t{4}\t{5}",
+            Logger.LogMessage( logWriter, string.Format( "{0,-8}\t{1,8}\t{2}\t{3,8}\t{4}\t{5}",
                         file.status, file.profileTime, file.Path, file.mbinSize, file.hash, file.errorMessage ) );
         }
 
@@ -138,15 +138,15 @@ namespace libMBIN.UnitTests {
 
         #region Compile
         private static MemoryStream Decompile( Stream stream ) {
-            using (var file = new MBINFile( stream )) {
-                file.Load();
-                var data = file.GetData();
+            using (var mbin = new MBINFile( stream, true )) {
+                mbin.Load();
+                var data = mbin.GetData();
                 if (data == null) throw new APIException( "deserialized data was null" );
 
                 if (data.SerializeEXml( false ) == null) throw new APIException( "xml serialization was null" );
 
                 var xmlString = EXmlFile.WriteTemplate( data );
-                if ( String.IsNullOrEmpty( xmlString ) ) throw new APIException( "xml data is null" );
+                if ( string.IsNullOrEmpty( xmlString ) ) throw new APIException( "xml data is null" );
 
                 MemoryStream memory = new MemoryStream();
                 using (TextWriter writer = new StreamWriter( memory, Encoding.Default, 4096, true )) {
@@ -164,11 +164,7 @@ namespace libMBIN.UnitTests {
             MemoryStream memory = new MemoryStream();
             using (var file = new MBINFile( memory, true )) {
                 file.Header = new MBINHeader();
-                file.Header.SetDefaults();
-
-                // only used by TkGeometryData / .MBIN.PC files, maybe used to signal the file is PC only?
-                if (data.GetType().Name == "TkGeometryData") file.Header.Magic = 0xDDDDDDDD;
-
+                file.Header.SetDefaults( data.GetType() );
                 file.SetData( data );
                 file.Save();
             }
@@ -216,9 +212,9 @@ namespace libMBIN.UnitTests {
 
                     } catch ( FileNotFoundException ) { // missing
                         file.status = FileStatus.Missing;
-                    } catch ( APIException e ) { // fail
+                    } catch ( Exception e ) { // fail
                         file.status = FileStatus.Failed;
-                        file.errorMessage = e.Message;
+                        file.errorMessage = e.GetBaseException().Message;
                     }
 
                     timer.Stop();
@@ -257,11 +253,12 @@ namespace libMBIN.UnitTests {
             for (int i = 0; i < maxThreads; i++) {
                 if ( nextFileIndex >= files.Length ) break;
                 runners[i] = new RecompileThreadRunner( files[nextFileIndex++], OnThreadFinished );
-                new Thread( new ThreadStart( runners[i].Execute ) ).Start();
+                var thread = new Thread( new ThreadStart( runners[i].Execute ) );
+                thread.Name = $"Thread {i}";
+                thread.Start();
             }
 
-            const int waitInterval = 10; // ms
-            while (finished != files.Length) Thread.Sleep( waitInterval );
+            while (finished != files.Length) Thread.Yield();
 
             timer.Stop();
 
