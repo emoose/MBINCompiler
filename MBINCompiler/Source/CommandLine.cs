@@ -19,8 +19,8 @@ namespace MBINCompiler {
         }
 
         public class ForceConsoleOutput : IDisposable {
-            private TextWriter stdout;
-            private TextWriter stderr;
+            private readonly TextWriter stdout;
+            private readonly TextWriter stderr;
 
             public ForceConsoleOutput() {
                 stdout = Console.Out;

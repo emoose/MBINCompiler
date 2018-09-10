@@ -6,21 +6,18 @@ using libMBIN;
 using libMBIN.Models;
 using libMBIN.Models.Structs;
 
-namespace MBINCompiler
-{
+namespace MBINCompiler.Commands {
     using static CommandLineOptions;
 
-    internal static class Convert
-    {
+    internal static class Convert {
 
-        public static ErrorCode ConvertFileList( string inputDir, string outputDir, List<string> fileList, bool force )
-        {
+        public static ErrorCode ConvertFileList( string inputDir, string outputDir, List<string> fileList, bool force ) {
             var failedFiles = new List<string>();
             var exceptions = new List<Exception>();
             var errorCode = ErrorCode.Success;
             foreach ( var fileIn in fileList ) {
                 var path = fileIn;
-                if (outputDir != null) path = fileIn.Substring( inputDir.Length + 1 );
+                if ( outputDir != null ) path = fileIn.Substring( inputDir.Length + 1 );
                 try {
                     string fileOut = fileIn;
                     if ( outputDir != null ) fileOut = fileOut.Replace( inputDir, outputDir );
@@ -49,8 +46,7 @@ namespace MBINCompiler
             return errorCode;
         }
 
-        public static void ConvertFile( string fileIn, string fileOut, FormatType inputFormat, FormatType outputFormat )
-        {
+        public static void ConvertFile( string fileIn, string fileOut, FormatType inputFormat, FormatType outputFormat ) {
             fileOut = ChangeFileExtension( fileOut, outputFormat );
 
             FileMode fileMode = GetFileMode( fileOut );
@@ -71,8 +67,8 @@ namespace MBINCompiler
                         NMSTemplate data = null;
                         try {
                             data = mbin.GetData();
-                            if (data is null) throw new InvalidDataException( "Invalid MBIN data." );
-                        } catch (Exception e) {
+                            if ( data is null ) throw new InvalidDataException( "Invalid MBIN data." );
+                        } catch ( Exception e ) {
                             throw new MbinException( $"Failed to read {mbin.Header.GetXMLTemplateName()} from MBIN.", e, fileIn, mbin );
                         }
 
@@ -80,7 +76,7 @@ namespace MBINCompiler
                             sw.Write( EXmlFile.WriteTemplate( data ) );
                             sw.Flush();
                             if ( ms.Length == 0 ) throw new InvalidDataException( "Invalid EXML data." );
-                        } catch (Exception e) {
+                        } catch ( Exception e ) {
                             throw new MbinException( $"Failed serializing {mbin.Header.GetXMLTemplateName()} to EXML.", e, fileIn, mbin );
                         }
 
@@ -111,15 +107,14 @@ namespace MBINCompiler
 
         }
 
-        private static string ChangeFileExtension( string file, FormatType format )
-        {
+        private static string ChangeFileExtension( string file, FormatType format ) {
             string ext = format.ToString().ToUpper();
             if ( Path.HasExtension( file ) ) {
                 string x = Path.GetExtension( file ).ToUpper();
                 if ( x == ".PC" ) file = Path.ChangeExtension( file, null );
                 x = Path.GetExtension( file ).ToUpper();
-                if (x == ".MBIN") return Path.ChangeExtension( file, ext );
-                if (x == ".EXML") return Path.ChangeExtension( file, ext );
+                if ( x == ".MBIN" ) return Path.ChangeExtension( file, ext );
+                if ( x == ".EXML" ) return Path.ChangeExtension( file, ext );
             }
             return file + $".{ext}";
         }
@@ -131,8 +126,7 @@ namespace MBINCompiler
         /// </summary>
         /// <param name="file">The file path to check.</param>
         /// <returns>A FileMode enum. The value is 0 if the user opted to keep the existing file.</returns>
-        private static FileMode GetFileMode( string file )
-        {
+        private static FileMode GetFileMode( string file ) {
             if ( Overwrite == OverwriteMode.Always ) {
                 return FileMode.Create;
             } else if ( Overwrite == OverwriteMode.Prompt ) {

@@ -60,17 +60,16 @@ namespace MBINCompiler
         }
 
         public bool Parse( string defaultVerb ) {
-            string[] keys = new string[optionMap.Count];
-            optionMap.Keys.CopyTo( keys, 0 );
-            ParseVerb( keys, defaultVerb );
+            ParseVerb( defaultVerb );
 
             var options = optionMap[" COMMON "];
             options.AddRange( optionMap[Verb] );
             return ParseOptions( options );
         }
 
-        public string ParseVerb( string[] verbs, string defaultVerb = "" ) {
+        private string ParseVerb( string defaultVerb = "" ) {
             Verb = defaultVerb;
+            string[] verbs = GetVerbs();
             if ( ( verbs == null ) || ( Args.Count == 0 ) ) { return Verb; }
 
             var arg = Args[0].ToLower();
@@ -85,7 +84,7 @@ namespace MBINCompiler
             return Verb;
         }
 
-        public bool ParseOptions( List<Option> options ) {
+        private bool ParseOptions( List<Option> options ) {
             var aliases = new Dictionary<string, string>();
             foreach ( var opt in options ) {
                 if ( ( opt.shortName != 0 ) && !String.IsNullOrWhiteSpace( opt.longName ) ) {
@@ -187,6 +186,12 @@ namespace MBINCompiler
         public bool GetOptionSwitch( string key ) => ( GetOptionArg( key ) != null );
 
         public List<string> GetFileParams() => fileParams;
+
+        public string[] GetVerbs() {
+            string[] verbs = new string[optionMap.Count];
+            optionMap.Keys.CopyTo( verbs, 0 );
+            return verbs;
+        }
 
     }
 
