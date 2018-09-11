@@ -3,8 +3,8 @@
 namespace MBINCompilerTests.Database.Tables.GameDataMBIN {
     public class Table : AbstractTable<Record> {
 
-        private static string NAME = "GameDataMBIN";
-        private static string[] COLUMN_HEADINGS = new string[] {
+        private static readonly string NAME = "GameDataMBIN";
+        private static readonly string[] COLUMN_HEADINGS = new string[] {
             "Path", "Template Name", "File Size (bytes)", "Header Magic ID", "Header Version", "Build DateTime", "Template GUID", "SHA1"
         };
 

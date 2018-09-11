@@ -43,7 +43,7 @@ namespace libMBIN.UnitTests {
 
         #region Logging
         private class LogFileStream : StreamWriter {
-            string path;
+            readonly string path;
 
             public LogFileStream( string path ) : base( SetReadOnly( Logger.GetLogPath( path ), false ) ) {
                 this.path = path;
@@ -176,7 +176,7 @@ namespace libMBIN.UnitTests {
             private FileState file;
 
             public delegate FileState OnFinishedCallback( FileState file );
-            private OnFinishedCallback onFinished;
+            private readonly OnFinishedCallback onFinished;
 
             public RecompileThreadRunner( FileState file, OnFinishedCallback onFinished ) {
                 this.file = file;
@@ -253,8 +253,9 @@ namespace libMBIN.UnitTests {
             for (int i = 0; i < maxThreads; i++) {
                 if ( nextFileIndex >= files.Length ) break;
                 runners[i] = new RecompileThreadRunner( files[nextFileIndex++], OnThreadFinished );
-                var thread = new Thread( new ThreadStart( runners[i].Execute ) );
-                thread.Name = $"Thread {i}";
+                var thread = new Thread( new ThreadStart( runners[i].Execute ) ) {
+                    Name = $"Thread {i}"
+                };
                 thread.Start();
             }
 
