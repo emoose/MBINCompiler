@@ -43,7 +43,7 @@
         ///     The NMS version that is supported by this assembly.
         ///     (The <see cref="Major"/> and <see cref="Minor"/> components of <see cref="AssemblyVersion"/>)
         /// </summary>
-        public static System.Version NMSVersion => new System.Version( Major, Minor );
+        public static System.Version NMSVersion => new System.Version( Major, Minor, 0, 0 );
 
         /// <summary>
         ///     Returns a human-readable suffix indicating the <see cref="Prerelease"/> version.
