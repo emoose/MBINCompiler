@@ -11,13 +11,24 @@ namespace libMBIN.UnitTests {
         private const ushort FORMAT_V2 = 2;
         private const uint FORMAT_ID = (MBINHeader.MBIN_VERSION & 0xFFFF) | (FORMAT_V2 & 0xFFFF) << 16;
 
-        private static readonly string NMS_VERSION_STRING = Version.NMSVersion.ToString();
-        private static readonly string API_VERSION_STRING = Version.AssemblyVersion.ToString();
+        private static readonly System.Version NMS_VERSION = Version.NMSVersion;
+        private static readonly System.Version API_VERSION = Version.AssemblyVersion;
 
-        private const uint NMS_VERSION_ID = 0x00003B01;
-        private const uint API_VERSION_ID = 0x02003B01;
+        private static readonly string NMS_VERSION_STRING = NMS_VERSION.ToString();
+        private static readonly string API_VERSION_STRING = API_VERSION.ToString();
 
-        private const ulong VERSION_ID = (NMS_VERSION_ID & 0xFFFFFFFF) | (((ulong) API_VERSION_ID & 0xFFFFFFFF) << 32);
+        private static readonly byte[] NMS_VERSION_BYTES = new byte[] {
+            (byte) NMS_VERSION.Major, (byte) NMS_VERSION.Minor, (byte) NMS_VERSION.Build, (byte) NMS_VERSION.Revision
+        };
+
+        private static readonly byte[] API_VERSION_BYTES = new byte[] {
+            (byte) API_VERSION.Major, (byte) API_VERSION.Minor, (byte) API_VERSION.Build, (byte) API_VERSION.Revision
+        };
+
+        private static readonly uint NMS_VERSION_ID = BitConverter.ToUInt32( NMS_VERSION_BYTES, 0 ); // 0x00003B01;
+        private static readonly uint API_VERSION_ID = BitConverter.ToUInt32( API_VERSION_BYTES, 0 ); // 0x02003B01;
+
+        private static readonly ulong VERSION_ID = (NMS_VERSION_ID & 0xFFFFFFFF) | (((ulong) API_VERSION_ID & 0xFFFFFFFF) << 32);
 
         private const ulong  TEMPLATE_GUID = 0x0F1E2D3C4B5A6978;
 
@@ -30,7 +41,7 @@ namespace libMBIN.UnitTests {
         private MBINHeader CreateMockHeader(
                     uint magic        = MBINHeader.MBIN_MAGIC,
                     uint formatID     = FORMAT_ID,
-                    ulong versionID   = VERSION_ID,
+                    ulong versionID   = ~0ul,
                     ulong guid        = TEMPLATE_GUID,
                     string name       = TEMPLATE_NAME,
                     ulong metaOffset  = METAOFFSET
@@ -38,7 +49,7 @@ namespace libMBIN.UnitTests {
             return new MBINHeader() {
                 MagicID       = magic,
                 FormatID      = formatID,
-                VersionID     = versionID,
+                VersionID     = (versionID == ~0ul) ? VERSION_ID : versionID,
                 TemplateGUID  = guid,
                 TemplateName  = name,
                 MetaOffset    = metaOffset

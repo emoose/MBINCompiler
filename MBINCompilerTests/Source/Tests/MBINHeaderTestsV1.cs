@@ -11,9 +11,9 @@ namespace libMBIN.UnitTests {
         private const string NULL_VERSION_STRING = "0.0.0.0";
 
         private static readonly string VERSION_STRING = Version.AssemblyVersion.ToString( 3 );
-        private const ulong  VERSION_ID  = 0x0000302E39352E31;
-
         private static readonly string VERSION_STRING_PADDED = VERSION_STRING.PadRight( 8, '\0' );
+
+        private static readonly ulong  VERSION_ID = MBINHeader.StringToUlong( VERSION_STRING_PADDED );
 
         private const string TEMPLATE_NAME = "templateName";
         private const ulong  END_PADDING   = 0ul;
@@ -26,7 +26,7 @@ namespace libMBIN.UnitTests {
                     uint magic    = MBINHeader.MBIN_MAGIC,
                     uint formatID  = MBINHeader.MBIN_VERSION,
                     ulong tag     = MBINHeader.MBINCVER_TAG,
-                    ulong version = VERSION_ID,
+                    ulong version = ~0ul,
                     string name   = TEMPLATE_NAME,
                     ulong padding = END_PADDING
         ) {
@@ -34,7 +34,7 @@ namespace libMBIN.UnitTests {
                 MagicID         = magic,
                 FormatID      = formatID,
                 Tag           = tag,
-                MbinVersion   = version,
+                MbinVersion   = (version == ~0ul) ? VERSION_ID : version,
                 TemplateName  = name,
                 EndPadding    = padding
             };
