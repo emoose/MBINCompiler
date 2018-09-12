@@ -1,7 +1,7 @@
 ﻿// Source: https://sourceforge.net/projects/csharp-half/
 using System.Runtime.InteropServices;
 
-namespace System
+namespace libMBIN
 {
     /// <summary>
     /// Helper class for Half conversions and some low level operations.

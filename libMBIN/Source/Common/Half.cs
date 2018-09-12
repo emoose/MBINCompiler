@@ -3,7 +3,7 @@ using System.Diagnostics;
 using System.Globalization;
 using System.Runtime.InteropServices;
 
-namespace System
+namespace libMBIN
 {
     /// <summary>
     /// Represents a half-precision floating point number. 
