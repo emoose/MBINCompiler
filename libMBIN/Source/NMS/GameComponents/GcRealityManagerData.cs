@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x9B00, GUID = 0x0FDD26CB244E15C57, Broken = true)]
+	[NMS(Size = 0x9B90, GUID = 0x0FDD26CB244E15C57)]
     public class GcRealityManagerData : NMSTemplate
     {
         /* 0x0000 */ public int RealityIteration;
@@ -40,7 +40,7 @@ namespace libMBIN.NMS.GameComponents
 
         /* 0x06F8 */ public List<NMSString0x80> AlienPuzzlesTables;
 
-        [NMS(Size = 0x4B, EnumValue = new string[]
+        [NMS(Size = 0x4C, EnumValue = new string[]
             {
                 "None", "Shop", "NPC", "NPC_Secondary", "NPC_Anomaly", "NPC_Anomaly_Secondary", "Ship", "Outpost",
                 "SpaceStation", "RadioTower", "Monolith", "Factory", "AbandonedShip", "Harvester", "Observatory", "TradingPost",
@@ -52,11 +52,11 @@ namespace libMBIN.NMS.GameComponents
                 "PortalRunEntry", "PortalActivate", "CrashedFreighter", "GraveInCave", "GlitchyStroyBox", "NetworkPlayer", "NetworkMonument",
                 "AnomalyComputer", "AtlasPlinth", "Epilogue", "GuildEnvoy", "ManageFleet", "ManageExpeditions", "Frigate", "CustomiseCharacter",
                 "CustomiseShip", "CustomiseWeapon", "CustomiseVehicle", "ClaimBaseAnywhere", "FleetNavigator", "FleetCommandPost", "StoryUtility",
-                "MPMissionGiver"
+                "MPMissionGiver", "SpecialsShop"
             })]
         /* 0x0708 */ public bool[] LoopInteractionPuzzles;
 
-        [NMS(Size = 0x4B, EnumValue = new string[]
+        [NMS(Size = 0x4C, EnumValue = new string[]
             {
                 "None", "Shop", "NPC", "NPC_Secondary", "NPC_Anomaly", "NPC_Anomaly_Secondary", "Ship", "Outpost",
                 "SpaceStation", "RadioTower", "Monolith", "Factory", "AbandonedShip", "Harvester", "Observatory", "TradingPost",
@@ -68,15 +68,12 @@ namespace libMBIN.NMS.GameComponents
                 "PortalRunEntry", "PortalActivate", "CrashedFreighter", "GraveInCave", "GlitchyStroyBox", "NetworkPlayer", "NetworkMonument",
                 "AnomalyComputer", "AtlasPlinth", "Epilogue", "GuildEnvoy", "ManageFleet", "ManageExpeditions", "Frigate", "CustomiseCharacter",
                 "CustomiseShip", "CustomiseWeapon", "CustomiseVehicle", "ClaimBaseAnywhere", "FleetNavigator", "FleetCommandPost", "StoryUtility",
-                "MPMissionGiver"
+                "MPMissionGiver", "SpecialsShop"
             })]
         /* 0x0754 */ public int[] InteractionPuzzlesIndexTypes;
 
         [NMS(Size = 0x7, EnumValue = new string[] { "NoWeighting", "MaxIsUncommon", "MaxIsRare", "MaxIsSuperRare", "MinIsUncommon", "MinIsRare", "MinIsSuperRare" })]
-        /* 0x0880 */ public TkCurveType[] WeightingCurves;
-
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x089C */ public byte[] Padding89C;
+        /* 0x0884 */ public TkCurveType[] WeightingCurves;
 
         /* 0x08A0 */ public List<GcDamageMultiplierLookup> DamageTableMultiplier;
 
@@ -137,17 +134,20 @@ namespace libMBIN.NMS.GameComponents
 
         /* 0x1668 */ public GcRealityIconTable Icons;
 
+        [NMS(Size = 0xC, Ignore = true)]
+        /* 0x53F4 */ public byte[] Padding54F4;
+
         [NMS(Size = 6, EnumValue = new string[6] { "None", "NoOxygen", "ExtremeHeat", "ExtremeCold", "ToxicGas", "Radiation" })]
-        /* 0x5370 */ public Colour[] HazardColours;
+        /* 0x5400 */ public Colour[] HazardColours;
 
         [NMS(Size = 3, EnumValue = new string[3] { "Common", "Uncommon", "Rare" })]
-        /* 0x53D0 */ public Colour[] RarityColours;
+        /* 0x5460 */ public Colour[] RarityColours;
 
         [NMS(Size = 9, EnumValue = new string[9] { "Fuel", "Metal", "Catalyst", "Stellar", "Flora", "Earth", "Exotic", "Special", "BuildingPart" })]
-        /* 0x5400 */ public Colour[] SubstanceCategoryColours;
+        /* 0x5490 */ public Colour[] SubstanceCategoryColours;
 
         [NMS(Size = 9, EnumValue = new string[9] { "Fuel", "Metal", "Catalyst", "Stellar", "Flora", "Earth", "Exotic", "Special", "BuildingPart" })]
-        /* 0x5490 */ public TkTextureResource[] SubstanceChargeIcons;
+        /* 0x5520 */ public TkTextureResource[] SubstanceChargeIcons;
 
         [NMS(Size = 0x6E, EnumValue = new string[0x6E]
             {
@@ -175,29 +175,29 @@ namespace libMBIN.NMS.GameComponents
                 "Ship_Launcher_TakeOffCost", "Ship_PulseDrive", "Ship_PulseDrive_MiniJumpFuelSpending", "Ship_Boost", "Ship_Maneuverability",
                 "Ship_BoostManeuverability", "Ship_Teleport", "Freighter_Hyperdrive", "Freighter_Hyperdrive_JumpDistance"
             })]
-        /* 0x5934 */ public TkTextureResource[] StatCategoryIcons;
+        /* 0x59C4 */ public TkTextureResource[] StatCategoryIcons;
 
         [NMS(Size = 4, EnumValue = new string[4] { "Suit", "Weapon", "Ship", "Freighter" })]
-        /* 0x91F0 */ public GcStats[] Stats;
+        /* 0x9280 */ public GcStats[] Stats;
 
-        /* 0x9230 */ public GcTechList StationTechShops;
+        /* 0x92C0 */ public GcTechList StationTechShops;
 
         [NMS(Size = 0xD)]
-        /* 0x9240 */ public GcTechList[] PlanetTechShops;
+        /* 0x92D0 */ public GcTechList[] PlanetTechShops;
 
-        /* 0x9310 */ public GcTradeSettings TradeSettings;
-        /* 0x99F0 */ public GcInventoryLayout SuitStartingSlotLayout;
-        /* 0x9A10 */ public GcInventoryLayout SuitTechOnlyStartingSlotLayout;
-        /* 0x9A30 */ public GcInventoryLayout SuitCargoStartingSlotLayout;
-        /* 0x9A50 */ public GcInventoryLayout ShipStartingLayout;
-        /* 0x9A70 */ public GcInventoryLayout ShipTechOnlyStartingLayout;
-        /* 0x9A90 */ public List<int> SuitUpgradePrices;
-        /* 0x9AA0 */ public List<int> SuitTechOnlyUpgradePrices;
-        /* 0x9AB0 */ public List<int> SuitCargoUpgradePrices;
-        /* 0x9AC0 */ public List<NMSString0x10> NeverSellableItems;
-        /* 0x9AD0 */ public List<NMSString0x10> NeverOfferedForSale;
+        /* 0x93A0 */ public GcTradeSettings TradeSettings;
+        /* 0x9A80 */ public GcInventoryLayout SuitStartingSlotLayout;
+        /* 0x9AA0 */ public GcInventoryLayout SuitTechOnlyStartingSlotLayout;
+        /* 0x9AC0 */ public GcInventoryLayout SuitCargoStartingSlotLayout;
+        /* 0x9AE0 */ public GcInventoryLayout ShipStartingLayout;
+        /* 0x9B00 */ public GcInventoryLayout ShipTechOnlyStartingLayout;
+        /* 0x9B20 */ public List<int> SuitUpgradePrices;
+        /* 0x9B30 */ public List<int> SuitTechOnlyUpgradePrices;
+        /* 0x9B40 */ public List<int> SuitCargoUpgradePrices;
+        /* 0x9B50 */ public List<NMSString0x10> NeverSellableItems;
+        /* 0x9B60 */ public List<NMSString0x10> NeverOfferedForSale;
         [NMS(Size = 5, EnumValue = new string[5] { "Commodity", "Technology", "Fuel", "Tradeable", "Special"})]         // not sure about these values....
-        /* 0x9AE0 */ public float[] NormalizedPriceLimits;
+        /* 0x9B70 */ public float[] NormalizedPriceLimits;
 
         [NMS(Size = 0xC, Ignore = true)]
         public byte[] EndPadding;

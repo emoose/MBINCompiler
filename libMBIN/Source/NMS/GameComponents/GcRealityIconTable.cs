@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x3D08, GUID = 0x5FE52C13EEEBA393, Broken = true)]
+	[NMS(Size = 0x3D90, GUID = 0x5FE52C13EEEBA393)]
     public class GcRealityIconTable : NMSTemplate
     {
         [NMS(Size = 6, EnumValue = new string[6] { "None", "NoOxygen", "ExtremeHeat", "ExtremeCold", "ToxicGas", "Radiation" })]
@@ -37,15 +37,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x2008 */ public List<GcPlanetResourceIconLookup> PlanetResourceIconLookups;
         /* 0x2018 */ public List<TkTextureResource> RepairTechIcons;
 
-        [NMS(Size = 0x38, EnumValue = new string[0x38] { "Stamina", "NoStamina", "EnergyCharge", "Scanner", "NoScanner", "Grave", "Resources",
-                "Inventory", "InventoryFull", "RareItems", "Pirates", "PirateScan", "Drone", "Quad", "Walker", "DroneOff", "Police",
-                "AtlasStation", "BlackHole", "SaveGame", "Jetpack", "VehicleBoost", "VehicleBoostRecharge", "Fuel",
-                "GekStanding", "VykeenStanding", "KorvaxStanding", "GekDiamondStanding", "VykeenDiamondStanding", "KorvaxDiamondStanding",
-                "TradeGuildStanding", "WarGuildStanding", "ExplorationGuildStanding", "TradeGuildDiamondStanding", "WarGuildDiamondStanding",
-                "ExplorationGuildDiamondStanding", "GMPathToCentre", "GMAtlas", "GMBlackHole", "GMUserWaypoint", "GMUserMission",
-                "TransferPersonal", "TransferPersonalCargo", "TransferShip", "TransferBike", "TransferBuggy", "TransferTruck",
-                "TransferFreighter", "TransferBase", "HazardIndicatorHot", "HazardIndicatorCold", "HazardIndicatorRadiation",
-                "HazardIndicatorToxic", "TerrainAdd", "TerrainRemove", "SpacePhone"})]
+        [NMS(Size = 0x39, EnumValue = new string[0x39] { "Stamina", "NoStamina", "EnergyCharge", "Scanner", "NoScanner", "Grave", "Resources", "Inventory", "InventoryFull", "RareItems", "Pirates", "PirateScan", "Drone", "Quad", "Walker", "DroneOff", "Police", "AtlasStation", "BlackHole", "SaveGame", "Jetpack", "JetpackEmpty", "VehicleBoost", "VehicleBoostRecharge", "Fuel", "GekStanding", "VykeenStanding", "KorvaxStanding", "GekDiamondStanding", "VykeenDiamondStanding", "KorvaxDiamondStanding", "TradeGuildStanding", "WarGuildStanding", "ExplorationGuildStanding", "TradeGuildDiamondStanding", "WarGuildDiamondStanding", "ExplorationGuildDiamondStanding", "GMPathToCentre", "GMAtlas", "GMBlackHole", "GMUserWaypoint", "GMUserMission", "TransferPersonal", "TransferPersonalCargo", "TransferShip", "TransferBike", "TransferBuggy", "TransferTruck", "TransferFreighter", "TransferBase", "HazardIndicatorHot", "HazardIndicatorCold", "HazardIndicatorRadiation", "HazardIndicatorToxic", "TerrainAdd", "TerrainRemove", "SpacePhone" })]
         /* 0x2028 */ public TkTextureResource[] GameIcons;
     }
 }

@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Toolkit
 {
-	[NMS(GUID = 0x8F308DA13045525E)]
+	[NMS(Size = 0x84, GUID = 0x8F308DA13045525E)]
     public class TkTextureResource : NMSTemplate
     {
         [NMS(Size = 0x80)]
