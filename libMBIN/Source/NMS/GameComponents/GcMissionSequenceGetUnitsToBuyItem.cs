@@ -1,4 +1,7 @@
-﻿namespace libMBIN.Models.Structs
+﻿using libMBIN.NMS.Toolkit;
+using libMBIN.NMS.GameComponents;
+
+namespace libMBIN.NMS.GameComponents
 {
 	[NMS(GUID = 0x0DF3A7624A71B6C10)]
     public class GcMissionSequenceGetUnitsToBuyItem : NMSTemplate

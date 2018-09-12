@@ -1,4 +1,7 @@
-﻿namespace libMBIN.Models.Structs
+﻿using libMBIN.NMS.Toolkit;
+using libMBIN.NMS.GameComponents;
+
+namespace libMBIN.NMS.GameComponents
 {
 	[NMS(GUID = 0x3041C51DBAC8620E)]
     public class GcAtlasDiscoveryData : NMSTemplate     // size: 0x48

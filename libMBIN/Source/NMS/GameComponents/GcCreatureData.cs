@@ -1,6 +1,9 @@
 ﻿using System.Collections.Generic;
 
-namespace libMBIN.Models.Structs
+using libMBIN.NMS.Toolkit;
+using libMBIN.NMS.GameComponents;
+
+namespace libMBIN.NMS.GameComponents
 {
 	[NMS(Size = 0x60, GUID = 0x0FA9126943E19F338)]
     public class GcCreatureData : NMSTemplate

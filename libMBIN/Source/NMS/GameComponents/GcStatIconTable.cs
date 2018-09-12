@@ -1,4 +1,7 @@
-﻿namespace libMBIN.Models.Structs
+﻿using libMBIN.NMS.Toolkit;
+using libMBIN.NMS.GameComponents;
+
+namespace libMBIN.NMS.GameComponents
 {
 	[NMS(Size = 0x3700, GUID = 0x1E0206B2601F3050)]
     public class GcStatIconTable : NMSTemplate

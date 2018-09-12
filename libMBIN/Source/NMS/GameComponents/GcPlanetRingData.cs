@@ -1,4 +1,7 @@
-﻿namespace libMBIN.Models.Structs
+﻿using libMBIN.NMS.Toolkit;
+using libMBIN.NMS.GameComponents;
+
+namespace libMBIN.NMS.GameComponents
 {
 	[NMS(Size = 0x60, GUID = 0x0BF9AD056B83B4043)]
     public class GcPlanetRingData : NMSTemplate

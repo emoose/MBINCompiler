@@ -1,4 +1,7 @@
-﻿namespace libMBIN.Models.Structs
+﻿using libMBIN.NMS.Toolkit;
+using libMBIN.NMS.GameComponents;
+
+namespace libMBIN.NMS.Toolkit
 {
 	[NMS(Size = 0x44, GUID = 0x306044BC2B6D1590)]
     public class TkNoiseFeatureData : NMSTemplate

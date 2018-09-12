@@ -1,4 +1,7 @@
-﻿namespace libMBIN.Models.Structs
+﻿using libMBIN.NMS.Toolkit;
+using libMBIN.NMS.GameComponents;
+
+namespace libMBIN.NMS.GameComponents
 {
 	[NMS(Size = 0x240, GUID = 0x2CF9B807BDE62278)]
     public class GcRealitySubstanceData : NMSTemplate

@@ -1,4 +1,7 @@
-﻿namespace libMBIN.Models.Structs
+﻿using libMBIN.NMS.Toolkit;
+using libMBIN.NMS.GameComponents;
+
+namespace libMBIN.NMS.GameComponents
 {
 	[NMS(GUID = 0x50EC0414F698CD9C)]
     public class GcGalaxyAudioSetupData : NMSTemplate       // size: 0x44

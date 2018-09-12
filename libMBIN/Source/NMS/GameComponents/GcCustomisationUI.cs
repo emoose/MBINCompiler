@@ -1,6 +1,9 @@
 ﻿using System.Collections.Generic;
 
-namespace libMBIN.Models.Structs
+using libMBIN.NMS.Toolkit;
+using libMBIN.NMS.GameComponents;
+
+namespace libMBIN.NMS.GameComponents
 {
 	[NMS(Size = 0xD3A0, GUID = 0x0D5F68E96C9FD3958)]
     public class GcCustomisationUI : NMSTemplate

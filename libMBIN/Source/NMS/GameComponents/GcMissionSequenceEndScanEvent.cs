@@ -1,4 +1,7 @@
-﻿namespace libMBIN.Models.Structs
+﻿using libMBIN.NMS.Toolkit;
+using libMBIN.NMS.GameComponents;
+
+namespace libMBIN.NMS.GameComponents
 {
 	[NMS(Alignment = 0x8, Size = 0xA0, GUID = 0x7F57711DB208B3F0)]
     public class GcMissionSequenceEndScanEvent : NMSTemplate

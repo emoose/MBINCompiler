@@ -1,4 +1,7 @@
-﻿namespace libMBIN.Models.Structs
+﻿using libMBIN.NMS.Toolkit;
+using libMBIN.NMS.GameComponents;
+
+namespace libMBIN.NMS.Toolkit
 {
 	[NMS(GUID = 0x7AACCA8A1F8AE79F)]
     public class TkNGuiRectanglePulseEffect : NMSTemplate       // size: 0x14

@@ -1,4 +1,7 @@
-﻿namespace libMBIN.Models.Structs
+﻿using libMBIN.NMS.Toolkit;
+using libMBIN.NMS.GameComponents;
+
+namespace libMBIN.NMS.GameComponents
 {
 	[NMS(Alignment = 0x8, GUID = 0x0E66752866A9C2380)]
     public class GcRewardTableItem : NMSTemplate        // size: 0x90

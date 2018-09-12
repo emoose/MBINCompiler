@@ -1,4 +1,7 @@
-﻿namespace libMBIN.Models.Structs
+﻿using libMBIN.NMS.Toolkit;
+using libMBIN.NMS.GameComponents;
+
+namespace libMBIN.NMS.Toolkit
 {
 	[NMS(Size = 0x38, GUID = 0x0CE2D0D8381C37963)]
     public class TkInteractiveControlData : NMSTemplate

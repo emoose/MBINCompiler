@@ -1,6 +1,9 @@
 ﻿using System.Collections.Generic;
 
-namespace libMBIN.Models.Structs
+using libMBIN.NMS.Toolkit;
+using libMBIN.NMS.GameComponents;
+
+namespace libMBIN.NMS.GameComponents
 {
 	[NMS(GUID = 0x0FD90E327F71AB0E7)]
     public class GcPersistentBaseEntry : NMSTemplate        // size: 0x90

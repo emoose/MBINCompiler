@@ -1,4 +1,7 @@
-﻿namespace libMBIN.Models.Structs
+﻿using libMBIN.NMS.Toolkit;
+using libMBIN.NMS.GameComponents;
+
+namespace libMBIN.NMS.GameComponents
 {
 	[NMS(Alignment = 0x8, GUID = 0x740B82B0433D5AD)]
     public class GcRewardSpecificSubstance : NMSTemplate        // size: 0x28

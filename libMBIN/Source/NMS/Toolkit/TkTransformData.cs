@@ -1,4 +1,7 @@
-﻿namespace libMBIN.Models.Structs
+﻿using libMBIN.NMS.Toolkit;
+using libMBIN.NMS.GameComponents;
+
+namespace libMBIN.NMS.Toolkit
 {
 	[NMS(GUID = 0x183EF44FE92F3F19)]
     public class TkTransformData : NMSTemplate      // size: 0x24

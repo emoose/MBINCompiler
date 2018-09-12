@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
 
-namespace libMBIN.Models.Structs
+using libMBIN.NMS.Toolkit;
+using libMBIN.NMS.GameComponents;
+
+namespace libMBIN.NMS.Toolkit
 {
 	[NMS(Size = 0x30, GUID = 0x122A23E7D278667B)]
     public class TkAnimNodeFrameData : NMSTemplate

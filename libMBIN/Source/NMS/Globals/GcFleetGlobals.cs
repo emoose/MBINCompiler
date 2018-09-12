@@ -1,4 +1,7 @@
-﻿namespace libMBIN.Models.Structs
+﻿using libMBIN.NMS.Toolkit;
+using libMBIN.NMS.GameComponents;
+
+namespace libMBIN.NMS.Globals
 {
     [NMS( GUID = 0x5B44806E8B658952 )]
     public class GcFleetGlobals : NMSTemplate

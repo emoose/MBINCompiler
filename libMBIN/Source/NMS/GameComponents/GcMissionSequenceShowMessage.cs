@@ -1,4 +1,7 @@
-﻿namespace libMBIN.Models.Structs
+﻿using libMBIN.NMS.Toolkit;
+using libMBIN.NMS.GameComponents;
+
+namespace libMBIN.NMS.GameComponents
 {
 	[NMS(Size = 0x230, Alignment = 0x10, GUID = 0x0D06560EA8B0CC850)]
     public class GcMissionSequenceShowMessage : NMSTemplate

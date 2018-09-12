@@ -1,4 +1,7 @@
-﻿namespace libMBIN.Models.Structs
+﻿using libMBIN.NMS.Toolkit;
+using libMBIN.NMS.GameComponents;
+
+namespace libMBIN.NMS.Globals
 {
     [NMS( GUID = 0x131A257CD72A878F )]
     public class GcSimulationGlobals : NMSTemplate

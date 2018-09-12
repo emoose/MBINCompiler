@@ -1,10 +1,8 @@
 ﻿using System;
 using System.Reflection;
-using System.Linq;
 using System.Text;
-using libMBIN.Models.Structs;
 
-namespace libMBIN.Models
+namespace libMBIN
 {
     [NMS(Size = 0x60)]
     public class MBINHeader : NMSTemplate
@@ -205,14 +203,14 @@ namespace libMBIN.Models
 
         public void SetDefaultsV0( Type type = null ) {
             // MBIN_MAGIC_PC is only used by TkGeometryData (*.MBIN.PC)
-            MagicID      = (type == typeof( TkGeometryData )) ? MBIN_MAGIC_PC : MBIN_MAGIC;
+            MagicID      = (type == typeof( NMS.Toolkit.TkGeometryData )) ? MBIN_MAGIC_PC : MBIN_MAGIC;
             FormatID     = MBIN_VERSION;
             Timestamp    = 0;
             TemplateGUID = type?.GetCustomAttribute<NMSAttribute>()?.GUID ?? 0;
             TemplateName = string.Empty;
             EndPadding   = 0;
 
-            if (type == typeof( TkAnimMetadata )) {
+            if (type == typeof( NMS.Toolkit.TkAnimMetadata ) ) {
                 Tag         = TKANIMMETADATA_TAG;
                 MbinVersion = TKANIMMETADATA_VERSION;
                 EndPadding  = TKANIMMETADATA_PADDING;
@@ -221,7 +219,7 @@ namespace libMBIN.Models
 
         public void SetDefaultsV1( Type type = null ) {
             SetDefaultsV0( type );
-            if ( type == typeof( TkAnimMetadata ) ) return;
+            if ( type == typeof( NMS.Toolkit.TkAnimMetadata ) ) return;
 
             Tag = MBINCVER_TAG;
 

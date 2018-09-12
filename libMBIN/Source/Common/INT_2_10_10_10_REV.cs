@@ -1,4 +1,6 @@
-﻿namespace libMBIN
+﻿using System;
+
+namespace libMBIN
 {
     public struct INT_2_10_10_10_REV
     {

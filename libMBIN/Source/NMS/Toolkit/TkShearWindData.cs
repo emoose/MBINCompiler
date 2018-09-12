@@ -1,4 +1,7 @@
-﻿namespace libMBIN.Models.Structs
+﻿using libMBIN.NMS.Toolkit;
+using libMBIN.NMS.GameComponents;
+
+namespace libMBIN.NMS.Toolkit
 {
 	[NMS(Size = 0x80, GUID = 0x7411BFD5B5031BED)]
     public class TkShearWindData : NMSTemplate

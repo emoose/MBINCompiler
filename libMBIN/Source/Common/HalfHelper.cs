@@ -1,4 +1,5 @@
 ﻿// Source: https://sourceforge.net/projects/csharp-half/
+using System;
 using System.Runtime.InteropServices;
 
 namespace libMBIN

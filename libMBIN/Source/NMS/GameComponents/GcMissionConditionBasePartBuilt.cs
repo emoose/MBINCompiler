@@ -1,4 +1,7 @@
-﻿namespace libMBIN.Models.Structs
+﻿using libMBIN.NMS.Toolkit;
+using libMBIN.NMS.GameComponents;
+
+namespace libMBIN.NMS.GameComponents
 {
 	[NMS(Size = 0x40, Alignment = 0x8, GUID = 0x0E2F5A0E5BEC5AA01)]
     public class GcMissionConditionBasePartBuilt : NMSTemplate

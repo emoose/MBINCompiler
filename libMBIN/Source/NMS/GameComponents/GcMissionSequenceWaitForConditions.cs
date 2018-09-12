@@ -1,6 +1,9 @@
 ﻿using System.Collections.Generic;
 
-namespace libMBIN.Models.Structs
+using libMBIN.NMS.Toolkit;
+using libMBIN.NMS.GameComponents;
+
+namespace libMBIN.NMS.GameComponents
 {
 	[NMS(Alignment = 0x8, GUID = 0x79180494573CEF7E)]
     public class GcMissionSequenceWaitForConditions : NMSTemplate

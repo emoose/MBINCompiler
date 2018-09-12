@@ -1,6 +1,9 @@
 ﻿using System.Collections.Generic;
 
-namespace libMBIN.Models.Structs
+using libMBIN.NMS.Toolkit;
+using libMBIN.NMS.GameComponents;
+
+namespace libMBIN.NMS.GameComponents
 {
 	[NMS(Size = 0x4E0, Alignment = 0x8, GUID = 0x0EAAEC442D069715D)]
     public class GcAlienPuzzleEntry : NMSTemplate

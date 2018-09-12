@@ -1,4 +1,7 @@
-namespace libMBIN.Models.Structs
+using libMBIN.NMS.Toolkit;
+using libMBIN.NMS.GameComponents;
+
+namespace libMBIN.NMS.Toolkit
 {
 	[NMS(Size = 0x20, GUID = 0x56D2CFD1D4DB01F3)]
     public class TkVertexElement : NMSTemplate

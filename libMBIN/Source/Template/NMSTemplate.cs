@@ -24,7 +24,7 @@ using System.Diagnostics;
 using System.Reflection;
 using System.Runtime.InteropServices;
 
-namespace libMBIN.Models
+namespace libMBIN
 {
     public class NMSTemplate
     {
@@ -245,7 +245,7 @@ namespace libMBIN.Models
                 int stringLength = reader.ReadInt32();
                 int unkC = reader.ReadInt32();
                 reader.BaseStream.Position = templatePosition + stringPos;
-                ((Structs.VariableSizeString) obj).Value = reader.ReadString(Encoding.UTF8, stringLength).TrimEnd('\x00');
+                ((NMS.VariableSizeString) obj).Value = reader.ReadString(Encoding.UTF8, stringLength).TrimEnd('\x00');
                 reader.BaseStream.Position = templatePosition + 0x10;
                 return obj;
             }
@@ -482,7 +482,7 @@ namespace libMBIN.Models
                         writer.Write( (Int32) 0 ); // listCount
                         writer.Write( listEnding );
 
-                        var fieldValue = (Structs.VariableSizeString) fieldData;
+                        var fieldValue = (NMS.VariableSizeString) fieldData;
                         additionalData.Insert( addtDataIndex++, new Tuple<long, object>( fieldPos, fieldValue ) );
 
                     } else if ( fieldType.IsArray ) {
@@ -687,7 +687,7 @@ namespace libMBIN.Models
                 SerializeValue( writer, entry.GetType(), entry, null, null, ref additionalData, ref addtDataIndexThis );
             }
 
-            if ( list.GetType().GetGenericArguments()[0] == typeof( Structs.TkAnimNodeFrameData ) ) {
+            if ( list.GetType().GetGenericArguments()[0] == typeof( NMS.Toolkit.TkAnimNodeFrameData ) ) {
                 writer.Write( 0xFEFEFEFEFEFEFEFE );
             }
         }
@@ -699,7 +699,7 @@ namespace libMBIN.Models
 
                 UInt32 listEnding = 0xAAAAAA01;
 
-                if ( GetType() == typeof( Structs.TkAnimMetadata ) ) {
+                if ( GetType() == typeof( NMS.Toolkit.TkAnimMetadata ) ) {
                     listEnding = 0xFEFEFE01;
                 }
 
@@ -733,11 +733,11 @@ namespace libMBIN.Models
                             writer.Align( alignment, 0 );
                         }
 
-                        if ( data.Item2.GetType() == typeof( Structs.VariableSizeString ) ) {
+                        if ( data.Item2.GetType() == typeof( NMS.VariableSizeString ) ) {
                             //DebugLog(alignment);
                             writer.BaseStream.Position = origPos; // no alignment for dynamicstrings
 
-                            var str = (Structs.VariableSizeString) data.Item2;
+                            var str = (NMS.VariableSizeString) data.Item2;
 
                             var stringPos = writer.BaseStream.Position;
                             writer.WriteString( str.Value, Encoding.UTF8, null, true );
@@ -1002,7 +1002,7 @@ namespace libMBIN.Models
                             DebugLogComment( ((EXmlMeta) innerXmlData).Comment );
                         }
 
-                        if ( element == null) throw new libMBIN.TemplateException( "element == null ??!" );
+                        if ( element == null) throw new TemplateException( "element == null ??!" );
 
                         list.Add(element);
                     }
@@ -1056,7 +1056,7 @@ namespace libMBIN.Models
             }
         }
 
-        public static NMSTemplate DeserializeEXml(EXmlBase xmlData)      // this is the inital code that is run when converting exml to mbin.
+        public static NMSTemplate DeserializeEXml( EXmlBase xmlData )      // this is the inital code that is run when converting exml to mbin.
         // this code is run to parse over the exml file and put it into a data structure that is processed by SerializeValue() (I think...)
         {
             NMSTemplate template = null;

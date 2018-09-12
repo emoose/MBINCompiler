@@ -1,4 +1,7 @@
-﻿namespace libMBIN.Models.Structs
+﻿using libMBIN.NMS.Toolkit;
+using libMBIN.NMS.GameComponents;
+
+namespace libMBIN.NMS.GameComponents
 {
 	[NMS(Size = 0x335F8, GUID = 0x6B611C849F3B2BFC)]
     public class GcBuildingDefinitionTable : NMSTemplate

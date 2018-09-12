@@ -1,4 +1,7 @@
-﻿namespace libMBIN.Models.Structs
+﻿using libMBIN.NMS.Toolkit;
+using libMBIN.NMS.GameComponents;
+
+namespace libMBIN.NMS.GameComponents
 {
     [NMS(GUID = 0x51259A972B6D8CFB)]
     public class GcTechnologyTableEnum : NMSTemplate

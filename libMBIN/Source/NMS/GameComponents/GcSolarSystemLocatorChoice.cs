@@ -1,4 +1,7 @@
-﻿namespace libMBIN.Models.Structs
+﻿using libMBIN.NMS.Toolkit;
+using libMBIN.NMS.GameComponents;
+
+namespace libMBIN.NMS.GameComponents
 {
 	[NMS(GUID = 0x9876B949FCE1EA5B)]
     public class GcSolarSystemLocatorChoice : NMSTemplate       // size: 0x2C

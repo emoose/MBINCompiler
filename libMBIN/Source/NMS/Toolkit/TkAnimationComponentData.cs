@@ -1,6 +1,9 @@
 ﻿using System.Collections.Generic;
 
-namespace libMBIN.Models.Structs
+using libMBIN.NMS.Toolkit;
+using libMBIN.NMS.GameComponents;
+
+namespace libMBIN.NMS.Toolkit
 {
 	[NMS(Size = 0x160, Alignment = 0x8, GUID = 0x0D3398F3DA0C26BD5)]
     public class TkAnimationComponentData : NMSTemplate

@@ -1,4 +1,7 @@
-﻿namespace libMBIN.Models.Structs.Unfinished
+﻿using libMBIN.NMS.Toolkit;
+using libMBIN.NMS.GameComponents;
+
+namespace libMBIN.NMS.Globals
 {
     [NMS( GUID = 0x909213CA197AC1CB )]
     public class GcAudioGlobals : NMSTemplate

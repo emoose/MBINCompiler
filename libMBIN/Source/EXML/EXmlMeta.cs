@@ -1,6 +1,6 @@
 ﻿using System.Xml.Serialization;
 
-namespace libMBIN.Models
+namespace libMBIN
 {
     [XmlType("Meta")]
     public class EXmlMeta : EXmlBase

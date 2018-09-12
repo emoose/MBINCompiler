@@ -1,4 +1,7 @@
-﻿namespace libMBIN.Models.Structs
+﻿using libMBIN.NMS.Toolkit;
+using libMBIN.NMS.GameComponents;
+
+namespace libMBIN.NMS.GameComponents
 {
 	[NMS(Size = 0x580, Alignment = 0x10, GUID = 0x7C5AEA370EA4C2D0)]
     public class GcNGuiTextData : NMSTemplate

@@ -1,4 +1,7 @@
-﻿namespace libMBIN.Models.Structs
+﻿using libMBIN.NMS.Toolkit;
+using libMBIN.NMS.GameComponents;
+
+namespace libMBIN.NMS.GameComponents
 {
 	[NMS(GUID = 0x9C076D6012D84D8)]
     public class GcGalaxySolarSystemOrbitParams : NMSTemplate       // size: 0x1C       // used in global?

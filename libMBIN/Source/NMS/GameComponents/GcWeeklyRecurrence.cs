@@ -1,4 +1,7 @@
-﻿namespace libMBIN.Models.Structs
+﻿using libMBIN.NMS.Toolkit;
+using libMBIN.NMS.GameComponents;
+
+namespace libMBIN.NMS.GameComponents
 {
 	[NMS(Size = 0x8C, GUID = 0x0E475AF3D8A81BB1F)]
     public class GcWeeklyRecurrence : NMSTemplate

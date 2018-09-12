@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace libMBIN.Models
+namespace libMBIN
 {
     [AttributeUsage(AttributeTargets.Property | AttributeTargets.Field | AttributeTargets.GenericParameter | AttributeTargets.Class)]
     public class NMSAttribute : Attribute

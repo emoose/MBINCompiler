@@ -1,4 +1,7 @@
-﻿namespace libMBIN.Models.Structs
+﻿using libMBIN.NMS.Toolkit;
+using libMBIN.NMS.GameComponents;
+
+namespace libMBIN.NMS.GameComponents
 {
 	[NMS(Size = 0x30, GUID = 0x1FA54D54FA89D565)]
     public class GcAtmosphereEntryComponentData : NMSTemplate

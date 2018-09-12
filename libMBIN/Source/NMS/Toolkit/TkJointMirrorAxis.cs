@@ -1,4 +1,7 @@
-namespace libMBIN.Models.Structs
+using libMBIN.NMS.Toolkit;
+using libMBIN.NMS.GameComponents;
+
+namespace libMBIN.NMS.Toolkit
 {
 	[NMS(GUID = 0x11E5EDDC4A44DF65)]
     public class TkJointMirrorAxis : NMSTemplate

@@ -1,4 +1,7 @@
-﻿namespace libMBIN.Models.Structs
+﻿using libMBIN.NMS.Toolkit;
+using libMBIN.NMS.GameComponents;
+
+namespace libMBIN.NMS.GameComponents
 {
 	[NMS(Size = 0x121, GUID = 0x417C3F79FC136943)]
     public class GcMissionSequenceWaitForPortalWarp : NMSTemplate

@@ -1,4 +1,7 @@
-﻿namespace libMBIN.Models.Structs
+﻿using libMBIN.NMS.Toolkit;
+using libMBIN.NMS.GameComponents;
+
+namespace libMBIN.NMS.Toolkit
 {
 	[NMS(Size = 0x10A4, GUID = 0x72F5B7416AB51616)]
     public class TkNGuiWindowLayoutData : NMSTemplate

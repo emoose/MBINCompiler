@@ -1,4 +1,7 @@
-﻿namespace libMBIN.Models.Structs
+﻿using libMBIN.NMS.Toolkit;
+using libMBIN.NMS.GameComponents;
+
+namespace libMBIN.NMS.GameComponents
 {
 	[NMS(Size = 0x24, GUID = 0x0BD8A11BC4589CBE8)]
     public class GcExpeditionDebriefPunctuation : NMSTemplate

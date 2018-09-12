@@ -1,4 +1,7 @@
-﻿namespace libMBIN.Models.Structs.Unfinished
+﻿using libMBIN.NMS.Toolkit;
+using libMBIN.NMS.GameComponents;
+
+namespace libMBIN.NMS.Globals
 {
     [NMS( GUID = 0xB16E5213AD3DEF96 )]
     public class GcEnvironmentGlobals : NMSTemplate

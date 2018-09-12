@@ -3,10 +3,9 @@ using System.Collections.Generic;
 using System.IO;
 
 using libMBIN;
-using libMBIN.Models;
-using libMBIN.Models.Structs;
 
 namespace MBINCompiler.Commands {
+
     using static CommandLineOptions;
 
     internal static class Convert {
@@ -85,7 +84,7 @@ namespace MBINCompiler.Commands {
                         try {
                             data = EXmlFile.ReadTemplateFromStream( fIn );
                             if ( data is null ) throw new InvalidDataException( $"Failed to deserialize EXML." );
-                            if ( data is TkGeometryData ) fileOut += ".PC";
+                            if ( data is libMBIN.NMS.Toolkit.TkGeometryData ) fileOut += ".PC";
                             var mbin = new MBINFile( ms ) { Header = new MBINHeader() };
                             mbin.Header.SetDefaults( data.GetType() );
                             mbin.SetData( data );

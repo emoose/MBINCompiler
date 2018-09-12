@@ -1,7 +1,10 @@
 ﻿using System.Collections.Generic;
 using System;
 
-namespace libMBIN.Models.Structs
+using libMBIN.NMS.Toolkit;
+using libMBIN.NMS.GameComponents;
+
+namespace libMBIN.NMS.GameComponents
 {
 	[NMS(Size = 0x3A0, GUID = 0x2E4C5EEFC700A120)]
     public class GcProjectileData : NMSTemplate

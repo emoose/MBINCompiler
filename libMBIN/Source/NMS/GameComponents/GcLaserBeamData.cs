@@ -1,6 +1,9 @@
 ﻿using System.Collections.Generic;
 
-namespace libMBIN.Models.Structs
+using libMBIN.NMS.Toolkit;
+using libMBIN.NMS.GameComponents;
+
+namespace libMBIN.NMS.GameComponents
 {
 	[NMS(Size = 0x1B0, Alignment = 0x10, GUID = 0x47B43C6C2AEB9FEE)]
     public class GcLaserBeamData : NMSTemplate

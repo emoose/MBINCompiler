@@ -1,4 +1,7 @@
-﻿namespace libMBIN.Models.Structs
+﻿using libMBIN.NMS.Toolkit;
+using libMBIN.NMS.GameComponents;
+
+namespace libMBIN.NMS.GameComponents
 {
 	[NMS(Alignment = 0x8, Size = 0x220, GUID = 0x36CC0CF9D3A92382)]
     public class GcMissionSequenceFreighterEngage : NMSTemplate      // size: 0x180

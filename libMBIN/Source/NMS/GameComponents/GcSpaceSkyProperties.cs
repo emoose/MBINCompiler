@@ -1,4 +1,7 @@
-﻿namespace libMBIN.Models.Structs
+﻿using libMBIN.NMS.Toolkit;
+using libMBIN.NMS.GameComponents;
+
+namespace libMBIN.NMS.GameComponents
 {
 	[NMS(GUID = 0x0C2EBE8CA8AF40DB1)]
     public class GcSpaceSkyProperties : NMSTemplate         // size: 0xA0

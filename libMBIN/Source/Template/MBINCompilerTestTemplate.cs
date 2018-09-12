@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace libMBIN.Models.Structs
+namespace libMBIN
 {
     public class MBINCompilerTestTemplate : NMSTemplate
     {
@@ -15,8 +15,8 @@ namespace libMBIN.Models.Structs
         public int TestEnumNo;
         [NMS(Size = 0x10)]
         public string TestString;
-        public VariableSizeString TestDynamicString;
-        public List<NMSString0x80> Test0x80ByteStringList;
+        public NMS.VariableSizeString TestDynamicString;
+        public List<NMS.NMSString0x80> Test0x80ByteStringList;
         public List<int> TestListInt;
         // todo: public List<NMSTemplate> TestGenericList
     }

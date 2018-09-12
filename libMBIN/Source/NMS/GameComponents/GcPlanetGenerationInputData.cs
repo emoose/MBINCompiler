@@ -1,4 +1,7 @@
-﻿namespace libMBIN.Models.Structs
+﻿using libMBIN.NMS.Toolkit;
+using libMBIN.NMS.GameComponents;
+
+namespace libMBIN.NMS.GameComponents
 {
 	[NMS(Size = 0x48, GUID = 0x0CA4B078251BAF8BE)]
     public class GcPlanetGenerationInputData : NMSTemplate

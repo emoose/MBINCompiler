@@ -1,4 +1,7 @@
-﻿namespace libMBIN.Models.Structs
+﻿using libMBIN.NMS.Toolkit;
+using libMBIN.NMS.GameComponents;
+
+namespace libMBIN.NMS.Toolkit
 {
 	[NMS(GUID = 0x0A5204789BF9D0341)]
     public class TkNoiseSuperPrimitiveData : NMSTemplate        // size: 0x1C       // also maybe part of a global?

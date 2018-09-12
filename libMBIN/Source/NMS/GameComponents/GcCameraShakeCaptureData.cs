@@ -1,4 +1,7 @@
-﻿namespace libMBIN.Models.Structs
+﻿using libMBIN.NMS.Toolkit;
+using libMBIN.NMS.GameComponents;
+
+namespace libMBIN.NMS.GameComponents
 {
     [NMS(GUID = 0x1B2372A3A018B4AD)]
     public class GcCameraShakeCapturedData : NMSTemplate

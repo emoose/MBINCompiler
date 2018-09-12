@@ -1,6 +1,6 @@
 ﻿using System.Xml.Serialization;
 
-namespace libMBIN.Models
+namespace libMBIN
 {
     [XmlType("Data")]
     public class EXmlData : EXmlBase

@@ -1,4 +1,7 @@
-﻿namespace libMBIN.Models.Structs
+﻿using libMBIN.NMS.Toolkit;
+using libMBIN.NMS.GameComponents;
+
+namespace libMBIN.NMS.GameComponents
 {
 	[NMS(GUID = 0x62C7CA383FB44A6C)]
     public class GcExperienceTimers : NMSTemplate      // size: 0x20 // probably used in a global

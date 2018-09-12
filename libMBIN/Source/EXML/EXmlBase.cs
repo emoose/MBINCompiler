@@ -2,7 +2,7 @@
 using System.Xml.Serialization;
 using System.Xml;
 
-namespace libMBIN.Models
+namespace libMBIN
 {
     [XmlInclude(typeof(EXmlData))]
     [XmlInclude(typeof(EXmlProperty))]

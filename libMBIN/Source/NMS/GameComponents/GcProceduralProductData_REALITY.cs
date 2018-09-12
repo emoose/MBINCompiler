@@ -5,7 +5,10 @@
 /// It has been constructed by looking at the mbin and piecing it together with other structs...
 /// HG what you doing?!
 /// </summary>
-namespace libMBIN.Models.Structs
+using libMBIN.NMS.Toolkit;
+using libMBIN.NMS.GameComponents;
+
+namespace libMBIN.NMS.GameComponents
 {
     [NMS(Size = 0x3D0)]
     public class GcProceduralProductData_REALITY : NMSTemplate

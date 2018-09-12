@@ -1,4 +1,7 @@
-﻿namespace libMBIN.Models.Structs
+﻿using libMBIN.NMS.Toolkit;
+using libMBIN.NMS.GameComponents;
+
+namespace libMBIN.NMS.GameComponents
 {
 	[NMS(GUID = 0x1B655E6ECEF95A07)]
     public class GcMissionSequenceWaitForFreighterPods : NMSTemplate        // size: 0x104

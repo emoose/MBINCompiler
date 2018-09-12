@@ -1,4 +1,7 @@
-﻿namespace libMBIN.Models.Structs
+﻿using libMBIN.NMS.Toolkit;
+using libMBIN.NMS.GameComponents;
+
+namespace libMBIN.NMS.GameComponents
 {
 	[NMS(Size = 0x50, GUID = 0x0E7B910E9C497C58E)]
     public class GcCameraAmbientBuildingData : NMSTemplate

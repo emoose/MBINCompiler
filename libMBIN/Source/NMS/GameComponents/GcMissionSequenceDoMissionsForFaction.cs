@@ -1,4 +1,7 @@
-﻿namespace libMBIN.Models.Structs
+﻿using libMBIN.NMS.Toolkit;
+using libMBIN.NMS.GameComponents;
+
+namespace libMBIN.NMS.GameComponents
 {
 	[NMS(GUID = 0x7201A77CBA1AD625)]
     public class GcMissionSequenceDoMissionsForFaction : NMSTemplate      // size: 0x110

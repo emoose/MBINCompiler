@@ -1,6 +1,9 @@
 using System.Collections.Generic;
 
-namespace libMBIN.Models.Structs
+using libMBIN.NMS.Toolkit;
+using libMBIN.NMS.GameComponents;
+
+namespace libMBIN.NMS.GameComponents
 {
 	[NMS(GUID = 0x3D6C19C581BD238A)]
     public class GcInventoryCostDataEntry : NMSTemplate     // size: 0x28        maybe in global??

@@ -5,7 +5,10 @@ using System.Diagnostics;
 using System.IO;
 using System.Reflection;
 
-namespace libMBIN.Models.Structs
+using libMBIN.NMS.Toolkit;
+using libMBIN.NMS.GameComponents;
+
+namespace libMBIN.NMS.Toolkit
 {
 	[NMS(Size = 0xA0, GUID = 0x990A0508C5DCEEE6)]
     public class TkMeshData : NMSTemplate

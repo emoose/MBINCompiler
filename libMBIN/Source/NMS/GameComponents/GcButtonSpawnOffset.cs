@@ -1,4 +1,7 @@
-﻿namespace libMBIN.Models.Structs
+﻿using libMBIN.NMS.Toolkit;
+using libMBIN.NMS.GameComponents;
+
+namespace libMBIN.NMS.GameComponents
 {
 	[NMS(GUID = 0x46CE100A699D46BF)]
     public class GcButtonSpawnOffset : NMSTemplate        // size: 0x20       // in a global?

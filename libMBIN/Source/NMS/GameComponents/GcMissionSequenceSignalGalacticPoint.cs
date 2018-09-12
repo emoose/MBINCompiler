@@ -1,4 +1,7 @@
-﻿namespace libMBIN.Models.Structs
+﻿using libMBIN.NMS.Toolkit;
+using libMBIN.NMS.GameComponents;
+
+namespace libMBIN.NMS.GameComponents
 {
 	[NMS(GUID = 0x0D77B64DA9352885D)]
     public class GcMissionSequenceSignalGalacticPoint : NMSTemplate     // size: 0x104

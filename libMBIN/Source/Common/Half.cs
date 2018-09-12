@@ -1,7 +1,7 @@
 ﻿// Source: https://sourceforge.net/projects/csharp-half/
+using System;
 using System.Diagnostics;
 using System.Globalization;
-using System.Runtime.InteropServices;
 
 namespace libMBIN
 {

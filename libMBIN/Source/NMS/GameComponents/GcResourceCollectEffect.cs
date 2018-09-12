@@ -1,4 +1,7 @@
-﻿namespace libMBIN.Models.Structs
+﻿using libMBIN.NMS.Toolkit;
+using libMBIN.NMS.GameComponents;
+
+namespace libMBIN.NMS.GameComponents
 {
 	[NMS(Size = 0x34, GUID = 0x0A762E30993D934E3)]
     public class GcResourceCollectEffect : NMSTemplate      // in GcPlayerGlobals
