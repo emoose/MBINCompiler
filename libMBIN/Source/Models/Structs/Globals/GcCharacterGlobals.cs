@@ -1,5 +1,6 @@
 ﻿namespace libMBIN.Models.Structs.Unfinished
 {
+    [NMS( GUID = 0xDEED930A462BA07D )]
     public class GcCharacterGlobals : NMSTemplate
     {
         [NMS(Size = 0x80)]

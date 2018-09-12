@@ -1,5 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
+    [NMS( GUID = 0x7B7808BA51FCC81E )]
     public class GcTerrainGlobals : NMSTemplate
     {
         /* 0x0 */ public float RegisterTerrainMinDistance;

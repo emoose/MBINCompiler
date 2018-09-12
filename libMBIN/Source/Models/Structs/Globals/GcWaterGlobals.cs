@@ -1,5 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
+    [NMS( GUID = 0x1E1FC5B279A0B148 )]
     public class GcWaterGlobals : NMSTemplate
     {
         /* 0x0 */ public bool RenderReflections;

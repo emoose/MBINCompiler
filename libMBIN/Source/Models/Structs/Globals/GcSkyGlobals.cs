@@ -1,5 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
+    [NMS( GUID = 0x18B789779D43057A )]
     public class GcSkyGlobals : NMSTemplate
     {
         /* 0x0 */ public float NightThreshold;

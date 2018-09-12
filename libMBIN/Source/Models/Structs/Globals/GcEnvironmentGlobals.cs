@@ -1,5 +1,6 @@
 ﻿namespace libMBIN.Models.Structs.Unfinished
 {
+    [NMS( GUID = 0xB16E5213AD3DEF96 )]
     public class GcEnvironmentGlobals : NMSTemplate
     {
         /* 0x0 */ public Vector2f SpaceBuildingTemperature;

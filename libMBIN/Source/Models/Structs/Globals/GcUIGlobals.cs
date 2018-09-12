@@ -1,5 +1,6 @@
 namespace libMBIN.Models.Structs
 {
+    [NMS( GUID = 0xD25256FB1959D22E )]
     public class GcUIGlobals : NMSTemplate
     {
         /* 0x0 */ public bool LoadPagesFromMetadataCache;

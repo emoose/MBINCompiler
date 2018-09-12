@@ -1,5 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
+    [NMS( GUID = 0x502EBB7F4210574D )]
     public class GcDebugOptions : NMSTemplate
     {
         /* 0x0 */ public bool ThirdPersonIsDefaultCamera;

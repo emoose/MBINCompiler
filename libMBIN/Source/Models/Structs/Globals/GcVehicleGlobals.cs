@@ -2,6 +2,7 @@
 
 namespace libMBIN.Models.Structs
 {
+    [NMS( GUID = 0x078B0CCA680B81F2 )]
     public class GcVehicleGlobals : NMSTemplate
     {
         /* 0x0 */ public bool ShowAllCheckpoints;

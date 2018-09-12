@@ -1,5 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
+    [NMS( GUID = 0xA2DA9C2716FA1F2E )]
     public class GcAISpaceshipGlobals : NMSTemplate
     {
         /* 0x0 */ public bool TradersAttackPirates;

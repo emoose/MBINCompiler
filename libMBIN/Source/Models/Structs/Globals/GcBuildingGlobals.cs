@@ -1,5 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
+    [NMS( GUID = 0x6ABE798B8E148B68 )]
     public class GcBuildingGlobals : NMSTemplate
     {
         /* 0x0 */ public bool AllowBuildingUsingIntermediates;

@@ -1,5 +1,6 @@
 ﻿namespace libMBIN.Models.Structs.Unfinished
 {
+    [NMS( GUID = 0xE631F099F9410CAB )]
     public class GcSceneOptions : NMSTemplate // doesn't seem like any of this is used by the game..
     {
         /* 0x0 */ public int RecentToolboxIndex;

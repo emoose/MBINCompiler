@@ -1,5 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
+    [NMS( GUID = 0x37A021DF6D707809 )]
     public class GcRichPresenceGlobals : NMSTemplate
     {
         /* 0x0 */ public bool ShowOnScreen;

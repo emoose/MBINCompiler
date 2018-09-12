@@ -1,5 +1,6 @@
 ﻿namespace libMBIN.Models.Structs.Unfinished
 {
+    [NMS( GUID = 0x464813EEC6B590AD )]
     public class GcRobotGlobals : NMSTemplate
     {
         /* 0x0 */ public float GrenadeLaunchFlightTime;

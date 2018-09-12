@@ -1,5 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
+    [NMS( GUID = 0xDCAB0C3E206A1349 )]
     public class GcMultiplayerGlobals : NMSTemplate
     {
         /* 0x0 */ public float FullSimUpdateInterval;

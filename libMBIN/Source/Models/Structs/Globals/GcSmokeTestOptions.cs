@@ -1,5 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
+    [NMS( GUID = 0x4E4FDD440BD74765 )]
     public class GcSmokeTestOptions : NMSTemplate
     {
         /* 0x0 */ public float InitialPause;

@@ -1,5 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
+    [NMS( GUID = 0x9854B8F038DDFED8 )]
     public class GcSpaceshipGlobals : NMSTemplate
     {
         /* 0x0 */ public bool AltControls;

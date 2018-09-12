@@ -1,5 +1,6 @@
 namespace libMBIN.Models.Structs
 {
+    [NMS( GUID = 0x5F5376CA63F67F3E )]
     public class GcCameraGlobals : NMSTemplate
     {
         /* 0x0000 */ public float TogglePerspectiveBlendTime;

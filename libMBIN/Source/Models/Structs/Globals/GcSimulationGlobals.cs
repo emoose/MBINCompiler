@@ -1,5 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
+    [NMS( GUID = 0x131A257CD72A878F )]
     public class GcSimulationGlobals : NMSTemplate
     {
         [NMS(Size = 0x80)]

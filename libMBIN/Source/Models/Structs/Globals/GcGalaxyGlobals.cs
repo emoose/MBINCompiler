@@ -1,5 +1,6 @@
 namespace libMBIN.Models.Structs
 {
+    [NMS( GUID = 0x33D4CD42BBAD8784 )]
     public class GcGalaxyGlobals : NMSTemplate
     {
         /* 0x0 */ public float PathUIWidth;

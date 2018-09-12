@@ -1,5 +1,6 @@
 ﻿namespace libMBIN.Models.Structs.Unfinished
 {
+    [NMS( GUID = 0x909213CA197AC1CB )]
     public class GcAudioGlobals : NMSTemplate
     {
         /* 0x0 */ public GcAudioNPCDoppler NPCEngines;

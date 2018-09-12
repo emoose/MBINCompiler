@@ -1,5 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
+    [NMS( GUID = 0x835A9EE0AC007013 )]
     public class GcPlacementGlobals : NMSTemplate
     {
         /* 0x0 */ public float MinFrequency;

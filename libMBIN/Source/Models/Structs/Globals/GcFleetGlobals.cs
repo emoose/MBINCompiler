@@ -1,5 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
+    [NMS( GUID = 0x5B44806E8B658952 )]
     public class GcFleetGlobals : NMSTemplate
     {
         [NMS(Size = 0x20)]

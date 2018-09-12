@@ -1,5 +1,6 @@
 namespace libMBIN.Models.Structs // 0x690
 {
+    [NMS( GUID = 0x92D2C8359B09D026 )]
     public class GcCreatureGlobals : NMSTemplate
     {
         /* 0x0 */ public bool IsHurtingCreaturesACrime;

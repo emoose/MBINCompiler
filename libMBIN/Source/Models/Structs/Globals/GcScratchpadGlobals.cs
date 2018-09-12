@@ -1,5 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
+    [NMS( GUID = 0xC14472951E47BFF8 )]
     public class GcScratchpadGlobals : NMSTemplate
     {
         [NMS(Size = 0xE)]

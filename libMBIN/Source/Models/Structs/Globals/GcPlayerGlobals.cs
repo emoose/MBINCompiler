@@ -1,5 +1,6 @@
 ﻿namespace libMBIN.Models.Structs
 {
+    [NMS( GUID = 0xA93A225F11D69DE6 )]
     public class GcPlayerGlobals : NMSTemplate
     {
         /* 0x0 */ public bool InteractNearbyRadiusEnabled;
