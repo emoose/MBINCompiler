@@ -1,7 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-using libMBIN.Models.Structs;
-
 namespace libMBIN.UnitTests {
 
     [TestClass]

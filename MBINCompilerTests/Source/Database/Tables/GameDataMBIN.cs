@@ -40,7 +40,7 @@ namespace MBINCompilerTests.Database.Tables.GameDataMBIN {
             this.SHA1          = sha1;
         }
 
-        public Record( string path, long fileSize, string sha1, libMBIN.Models.MBINHeader header )
+        public Record( string path, long fileSize, string sha1, libMBIN.MBINHeader header )
             : this( path, fileSize, sha1, header.MagicID, header.FormatID, header.Tag, header.MbinVersion, header.GetXMLTemplateName() ) { }
 
         //public GameDataFileRecord( string[] fields ) : this() { SetFields( fields ); }

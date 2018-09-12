@@ -1,7 +1,4 @@
-﻿using System;
-using libMBIN.Models;
-using libMBIN.Models.Structs;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace libMBIN.UnitTests {
 
@@ -145,7 +142,7 @@ namespace libMBIN.UnitTests {
         [TestMethod]
         public void TestSetDefaultsV1TkGeometry() {
             var header = new MBINHeader();
-            header.SetDefaultsV1( typeof( TkGeometryData ) );
+            header.SetDefaultsV1( typeof( NMS.Toolkit.TkGeometryData ) );
 
             Assert.AreEqual( MBINHeader.MBIN_MAGIC_PC, header.MagicID );
             Assert.AreEqual( MBINHeader.MBIN_VERSION,  header.FormatID );
@@ -160,7 +157,7 @@ namespace libMBIN.UnitTests {
         [TestMethod]
         public void TestSetDefaultsV1TkAnimMetadata() {
             var header = new MBINHeader();
-            header.SetDefaultsV1( typeof( TkAnimMetadata ) );
+            header.SetDefaultsV1( typeof( NMS.Toolkit.TkAnimMetadata ) );
 
             Assert.AreEqual( MBINHeader.MBIN_MAGIC,             header.MagicID );
             Assert.AreEqual( MBINHeader.MBIN_VERSION,           header.FormatID );
@@ -190,7 +187,7 @@ namespace libMBIN.UnitTests {
         [TestMethod]
         public void TestSetDefaultsTkGeometry() {
             var header = new MBINHeader();
-            header.SetDefaults( typeof( TkGeometryData ), MBINHeader.Format.V1 );
+            header.SetDefaults( typeof( NMS.Toolkit.TkGeometryData ), MBINHeader.Format.V1 );
 
             Assert.AreEqual( MBINHeader.MBIN_MAGIC_PC, header.MagicID );
             Assert.AreEqual( MBINHeader.MBIN_VERSION,  header.FormatID );
@@ -205,7 +202,7 @@ namespace libMBIN.UnitTests {
         [TestMethod]
         public void TestSetDefaultsTkAnimMetadata() {
             var header = new MBINHeader();
-            header.SetDefaults( typeof( TkAnimMetadata ), MBINHeader.Format.V1 );
+            header.SetDefaults( typeof( NMS.Toolkit.TkAnimMetadata ), MBINHeader.Format.V1 );
 
             Assert.AreEqual( MBINHeader.MBIN_MAGIC,             header.MagicID );
             Assert.AreEqual( MBINHeader.MBIN_VERSION,           header.FormatID );

@@ -9,8 +9,6 @@ using System.Threading;
 
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-using libMBIN.Models;
-
 using MBINCompilerTests;
 
 namespace libMBIN.UnitTests {

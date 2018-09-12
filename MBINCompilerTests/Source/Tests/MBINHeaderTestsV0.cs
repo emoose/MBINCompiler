@@ -1,7 +1,4 @@
-﻿using System;
-using libMBIN.Models;
-using libMBIN.Models.Structs;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace libMBIN.UnitTests {
 
@@ -15,7 +12,7 @@ namespace libMBIN.UnitTests {
         private const string TEMPLATE_NAME = "templateName";
         private const ulong  END_PADDING   = 0ul;
 
-        private static readonly NMSAttribute[] attrTkGeometryData = (NMSAttribute[]) typeof( TkGeometryData ).GetCustomAttributes( typeof( NMSAttribute ), false );
+        private static readonly NMSAttribute[] attrTkGeometryData = (NMSAttribute[]) typeof( NMS.Toolkit.TkGeometryData ).GetCustomAttributes( typeof( NMSAttribute ), false );
         private static readonly ulong TKGEOMETRYDATA_GUID = ((attrTkGeometryData?.Length ?? 0) != 0) ? attrTkGeometryData[0].GUID : 0;
 
         private static MBINHeader CreateMockHeader(
@@ -132,7 +129,7 @@ namespace libMBIN.UnitTests {
         [TestMethod]
         public void TestSetDefaultsV0TkGeometry() {
             var header = new MBINHeader();
-            header.SetDefaultsV0( typeof( TkGeometryData ) );
+            header.SetDefaultsV0( typeof( NMS.Toolkit.TkGeometryData ) );
 
             Assert.AreEqual( MBINHeader.MBIN_MAGIC_PC, header.MagicID );
             Assert.AreEqual( MBINHeader.MBIN_VERSION,  header.FormatID );
@@ -147,7 +144,7 @@ namespace libMBIN.UnitTests {
         [TestMethod]
         public void TestSetDefaultsV0TkAnimMetadata() {
             var header = new MBINHeader();
-            header.SetDefaultsV0( typeof( TkAnimMetadata ) );
+            header.SetDefaultsV0( typeof( NMS.Toolkit.TkAnimMetadata ) );
 
             Assert.AreEqual( MBINHeader.MBIN_MAGIC,             header.MagicID );
             Assert.AreEqual( MBINHeader.MBIN_VERSION,           header.FormatID );
@@ -177,7 +174,7 @@ namespace libMBIN.UnitTests {
         [TestMethod]
         public void TestSetDefaultsTkGeometry() {
             var header = new MBINHeader();
-            header.SetDefaults( typeof( TkGeometryData ), MBINHeader.Format.V0 );
+            header.SetDefaults( typeof( NMS.Toolkit.TkGeometryData ), MBINHeader.Format.V0 );
 
             Assert.AreEqual( MBINHeader.MBIN_MAGIC_PC, header.MagicID );
             Assert.AreEqual( MBINHeader.MBIN_VERSION,  header.FormatID );
@@ -192,7 +189,7 @@ namespace libMBIN.UnitTests {
         [TestMethod]
         public void TestSetDefaultsTkAnimMetadata() {
             var header = new MBINHeader();
-            header.SetDefaults( typeof( TkAnimMetadata ), MBINHeader.Format.V0 );
+            header.SetDefaults( typeof( NMS.Toolkit.TkAnimMetadata ), MBINHeader.Format.V0 );
 
             Assert.AreEqual( MBINHeader.MBIN_MAGIC,             header.MagicID );
             Assert.AreEqual( MBINHeader.MBIN_VERSION,           header.FormatID );

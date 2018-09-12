@@ -3,8 +3,6 @@ using System.IO;
 
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-using libMBIN.Models;
-
 using MBINCompilerTests;
 using Database = MBINCompilerTests.Database;
 
