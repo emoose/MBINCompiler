@@ -125,7 +125,7 @@ namespace MBINCompiler
             sw.Append( "\nUsage:\n\n" +
                    $"    {exe} help\n" +
                    $"    {exe} version [(-q | --quiet)] [<File>]\n" +
-                   $"    {exe} [convert] [<Option>...] [<Path>...]\n" );
+                   $"    {exe} [convert] [<Option>...] <Path> [<Path>...]\n" );
 
             sw.Append( "\n\nModes:\n\n" +
                     FormatWrapped( "  help", 20, "Show this help info.", true ) +
@@ -148,7 +148,7 @@ namespace MBINCompiler
                 foreach ( var option in OPTIONS_VERSION ) { sw.Append(option ); sw.AppendLine(); }
             }
 
-            sw.Append( FormatWrapped( "\n\n[convert] [<Option>...] [<Path>...]\n\n", 4,
+            sw.Append( FormatWrapped( "\n\n[convert] [<Option>...] <Path> [<Path>...]\n\n", 4,
                     "    This mode is the default. The convert keyword is optional.\n" +
                     "    For each <Path>, convert all files between MBIN and EXML formats." ) );
 
