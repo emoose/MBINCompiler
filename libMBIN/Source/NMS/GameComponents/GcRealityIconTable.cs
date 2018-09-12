@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x3D08, GUID = 0x96E825D1704CADF8)]
+	[NMS(Size = 0x3D08, GUID = 0x5FE52C13EEEBA393, Broken = true)]
     public class GcRealityIconTable : NMSTemplate
     {
         [NMS(Size = 6, EnumValue = new string[6] { "None", "NoOxygen", "ExtremeHeat", "ExtremeCold", "ToxicGas", "Radiation" })]

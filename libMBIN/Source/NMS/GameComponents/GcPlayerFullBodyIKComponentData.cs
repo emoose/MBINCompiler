@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x1E0, GUID = 0x1B33340BFA4E23B8)]
+	[NMS(Size = 0x1E0, GUID = 0x1AC501CA8F8E4CB0, Broken = true)]
     public class GcPlayerFullBodyIKComponentData : NMSTemplate
     {
         /* 0x000 */ public bool Enabled;

@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x90, GUID = 0x11891F774A8DDA2)]
+	[NMS(Size = 0x90, GUID = 0x8EFB720F2049EC27, Broken = true)]
     public class GcRepairTechData : NMSTemplate
     {
         public GcMaintenanceContainer MaintenanceContainer;

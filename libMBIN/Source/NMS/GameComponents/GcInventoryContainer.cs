@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0x4C1F6E153DC2E5B6)]
+	[NMS(GUID = 0x191124BEAF09E4AA, Broken = true)]
     public class GcInventoryContainer : NMSTemplate // 0x60 bytes
     {
         /* 0x00 */ public List<GcInventoryElement> Slots;

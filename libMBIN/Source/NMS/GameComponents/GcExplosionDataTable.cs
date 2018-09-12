@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0x0C160C2ACF140D66A)]
+	[NMS(GUID = 0x0DEDA7346DB4AEC7F, Broken = true)]
     public class GcExplosionDataTable : NMSTemplate
     {
         public List<GcExplosionData> Table;

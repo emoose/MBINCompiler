@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0x29EC8F0047EB7B10)]
+	[NMS(GUID = 0x3FEB12DC7AB9E2EC, Broken = true)]
     public class GcMaintenanceContainer : NMSTemplate       // size: 0x80
     {
         /* 0x00 */ public GcInventoryContainer InventoryContainer;

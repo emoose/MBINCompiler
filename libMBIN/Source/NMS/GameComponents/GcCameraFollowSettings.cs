@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0xE0, GUID = 0x0DC9E99A803F305B)]
+	[NMS(Size = 0xE0, GUID = 0x4E2690CEAD268DDB, Broken = true)]
     public class GcCameraFollowSettings : NMSTemplate
     {
         [NMS(Size =  0x10)]

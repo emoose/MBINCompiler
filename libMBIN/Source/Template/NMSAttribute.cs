@@ -12,5 +12,6 @@ namespace libMBIN
         public int Padding { get; set; }
         public int Alignment { get; set; } = 4;
         public ulong GUID { get; set; }
+        public bool Broken { get; set; }
     }
 }

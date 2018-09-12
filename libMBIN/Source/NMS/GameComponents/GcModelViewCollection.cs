@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0xDC0, GUID = 0x1F5ADAD030236CE9)]
+	[NMS(Size = 0xDC0, GUID = 0x0ED7005EA41AD765D, Broken = true)]
     public class GcModelViewCollection : NMSTemplate
     {
         [NMS(Size = 0x14, EnumValue = new string[0x14] {"Exosuit", "Weapon", "Ship", "Exocraft", "Animal", "AnimalThumbnails",
