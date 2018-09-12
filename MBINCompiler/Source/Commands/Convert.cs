@@ -33,7 +33,7 @@ namespace MBINCompiler.Commands {
                 }
             }
 
-            Logger.LogInfo( $"\n\n{fileList.Count - failedFiles.Count} files successfully converted." );
+            Logger.LogInfo( $"\n{fileList.Count - failedFiles.Count} files successfully converted." );
             if ( failedFiles.Count > 0 ) {
                 Logger.LogInfo( $"{failedFiles.Count} FILES FAILED.\n" );
                 for ( int i = 0; i < failedFiles.Count; i++ ) {

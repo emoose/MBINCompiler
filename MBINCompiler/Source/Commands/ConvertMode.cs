@@ -56,7 +56,7 @@ namespace MBINCompiler.Commands {
             if ( !GetFileList( paths, out var fileList ) ) return (int) ErrorCode.CommandLine;
 
             // auto detect the input format if necessary
-            if ( autoFormat && !AutoDetectFormat( fileList ) ) return (int) ErrorCode.Unknown;
+            if ( autoFormat && !AutoDetectFormat( ref fileList ) ) return (int) ErrorCode.Unknown;
 
             return (int) Convert.ConvertFileList( inputDir, outputDir, fileList, force );
         }
@@ -149,17 +149,21 @@ namespace MBINCompiler.Commands {
             return new string[] { };
         }
 
-        private static bool AutoDetectFormat( List<string> fileList ) {
+        private static string DetectFormat( string file, ref bool foundMBIN, ref bool foundEXML ) {
+            if ( Path.HasExtension( file ) ) {
+                var ext = Path.GetExtension( file ).ToUpper();
+                foundMBIN |= (ext == ".MBIN") || (ext == ".PC");
+                foundEXML |= (ext == ".EXML");
+            }
+            return file;
+        }
+
+        private static bool AutoDetectFormat( ref List<string> fileList ) {
             // detect what types of file formats are found
             bool foundMBIN = false;
             bool foundEXML = false;
-            foreach ( var file in fileList ) {
-                if ( Path.HasExtension( file ) ) {
-                    var ext = Path.GetExtension( file ).ToUpper();
-                    foundMBIN |= (ext == ".MBIN") || (ext == ".PC");
-                    foundEXML |= (ext == ".EXML");
-                }
-            }
+
+            foreach ( var file in fileList ) DetectFormat( file, ref foundMBIN, ref foundEXML );
 
             // TODO: this should be handled better
             if ( !foundMBIN && !foundEXML ) {
@@ -186,12 +190,12 @@ namespace MBINCompiler.Commands {
                 CommandLine.ShowWarning( msg );
                 Console.Out.WriteLine( "Both MBIN and EXML file types were detected!\n" );
                 InputFormat = Utils.PromptInputFormat();
-                Console.Out.WriteLine();
+                Console.WriteLine();
             } else if ( foundMBIN ) {
-                Logger.LogInfo( "Auto-Detected --input-format=MBIN\n" );
+                Logger.LogInfo( "Auto-Detected --input-format=MBIN" );
                 InputFormat = FormatType.MBIN;
             } else if ( foundEXML ) {
-                Logger.LogInfo( "Auto-Detected --input-format=EXML\n" );
+                Logger.LogInfo( "Auto-Detected --input-format=EXML" );
                 InputFormat = FormatType.EXML;
             } else {
                 CommandLine.ShowError( "No valid files found!" );
@@ -199,7 +203,14 @@ namespace MBINCompiler.Commands {
             }
 
             OutputFormat = (InputFormat == FormatType.MBIN) ? FormatType.EXML : FormatType.MBIN;
-            Logger.LogDebug( $"--input-format={InputFormat} --output-format={OutputFormat}\n" );
+            Logger.LogMessage( "INFO", $"--input-format={InputFormat} --output-format={OutputFormat}" );
+
+            // exclude any files that don't match InputFormat
+            for (int i = fileList.Count-1; i >= 0; i--) {
+                var ext = Path.GetExtension( fileList[i] ).ToUpper().Substring( 1 );
+                if (ext == "PC") ext = Path.GetExtension( fileList[i] ).ToUpper().Substring( 1 );
+                if (ext != InputFormat.ToString()) fileList.RemoveAt( i );
+            }
 
             return true;
         }
