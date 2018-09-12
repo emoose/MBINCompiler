@@ -51,7 +51,7 @@ namespace MBINCompiler {
 
         public static int ShowException( Exception e ) {
             string msg = ( e.GetType() == typeof( CompilerException ) ) ? e.InnerException.Message : null;
-            ShowError( $"[{e.GetType().Name}]: {msg ?? e.Message}", wait: false );
+            ShowError( $"[{e.GetType().Name}]: {msg ?? e.Message}" );
             using ( var indent = new Logger.IndentScope() ) {
                 var b = e;
                 bool once = true;
