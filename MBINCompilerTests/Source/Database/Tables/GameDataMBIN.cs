@@ -20,7 +20,7 @@ namespace MBINCompilerTests.Database.Tables.GameDataMBIN {
         public long   FileSize { get; set; }
         public string SHA1 { get; set; }
         public uint   HeaderMagicID { get; set; }
-        public int    HeaderVersion { get; set; }
+        public uint   HeaderVersion { get; set; }
         public ulong  BuildDateTime { get; set; }
         public ulong  TemplateGUID { get; set; }
         public string TemplateName { get; set; }
@@ -28,7 +28,7 @@ namespace MBINCompilerTests.Database.Tables.GameDataMBIN {
         public Record() { }
 
         public Record(  string path, long fileSize, string sha1,
-                        uint headerMagicID, int headerVersion, ulong buildDateTime, ulong templateGUID, string templateName
+                        uint headerMagicID, uint headerVersion, ulong buildDateTime, ulong templateGUID, string templateName
         ) : this() {
             this.Path          = path;
             this.TemplateName  = templateName;
@@ -41,7 +41,7 @@ namespace MBINCompilerTests.Database.Tables.GameDataMBIN {
         }
 
         public Record( string path, long fileSize, string sha1, libMBIN.Models.MBINHeader header )
-            : this( path, fileSize, sha1, header.Magic, header.Version, header.Tag, header.MbinVersion, header.GetXMLTemplateName() ) { }
+            : this( path, fileSize, sha1, header.MagicID, header.FormatID, header.Tag, header.MbinVersion, header.GetXMLTemplateName() ) { }
 
         //public GameDataFileRecord( string[] fields ) : this() { SetFields( fields ); }
 
@@ -51,7 +51,7 @@ namespace MBINCompilerTests.Database.Tables.GameDataMBIN {
             this.TemplateName  = fields[i++];
             this.FileSize      = ParseLong(  fields[i++] );
             this.HeaderMagicID = ParseUint(  fields[i++] );
-            this.HeaderVersion = ParseInt(   fields[i++] );
+            this.HeaderVersion = ParseUint(  fields[i++] );
             this.BuildDateTime = ParseUlong( fields[i++] );
             this.TemplateGUID  = ParseUlong( fields[i++] );
             this.SHA1          = ParseHex(   fields[i++] );

@@ -65,6 +65,9 @@
     <Compile Include="Source\Database\Tables\TemplateSize.cs" />
     <Compile Include="Source\Tests\GameDataMBINAnalysis.cs" />
     <Compile Include="Source\Tests\GameDataFileAnalysis.cs" />
+    <Compile Include="Source\Tests\MBINHeaderTestsV2.cs" />
+    <Compile Include="Source\Tests\MBINHeaderTestsV1.cs" />
+    <Compile Include="Source\Tests\MBINHeaderTestsV0.cs" />
     <Compile Include="Source\Tests\TemplateSizeAnalysis.cs" />
     <Compile Include="Source\Utils.cs" />
     <Compile Include="Source\Logger.cs" />
