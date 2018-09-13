@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0x0CAF4275C40A91D9C)]
+	[NMS(GUID = 0xCAF4275C40A91D9C)]
     public class GcRewardDestructTable : NMSTemplate
     {
         [NMS(Size = 9)]
