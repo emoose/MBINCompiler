@@ -5,14 +5,16 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Toolkit
 {
-	[NMS(GUID = 0x1345863FBC0832FF, Broken = true)]
+	[NMS(Size = 0xA8, GUID = 0x1345863FBC0832FF)]
     public class TkAudioComponentData : NMSTemplate
     {
         [NMS(Size = 0x80)]
-        public string Ambient;
-
-        public int MaxDistance;
-
-        public List<TkAudioAnimTrigger> AnimTriggers;
+        /* 0x00 */ public string Ambient;
+        [NMS(Size = 0x10)]
+        /* 0x80 */ public string AmbientState;
+        /* 0x90 */ public int MaxDistance;
+        [NMS(Size = 0x4, Ignore = true)]
+        /* 0x94 */ public byte[] Padding94;
+        /* 0x98 */ public List<TkAudioAnimTrigger> AnimTriggers;
     }
 }

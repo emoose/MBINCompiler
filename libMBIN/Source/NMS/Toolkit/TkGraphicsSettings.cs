@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Toolkit
 {
-	[NMS(Size = 0x90, GUID = 0x0D6DA8D9BCBAC1DBB, Broken = true)]
+	[NMS(Size = 0x88, GUID = 0x0D6DA8D9BCBAC1DBB)]
     public class TkGraphicsSettings : NMSTemplate
     {
         /* 0x00 */ public int Version;
@@ -48,20 +48,19 @@ namespace libMBIN.NMS.Toolkit
 		/* 0x6C */ public int NumLowThreads;
 		public enum TextureStreamingExEnum { Off, On, Auto, NonDynamic }
 		public TextureStreamingExEnum TextureStreamingEx;
-		/* 0x74 */ public int TexturePageSizeKb;
-		/* 0x78 */ public bool ShowRequirementsWarnings;
-		/* 0x79 */ public bool RemoveBaseBuildingRestrictions;
+		/* 0x74 */ public bool ShowRequirementsWarnings;
+		/* 0x75 */ public bool RemoveBaseBuildingRestrictions;
 		[NMS(Size = 3, Ignore = true)]
-		/* 0x7A */ public byte[] Padding7A;
-        /* 0x7C */ public float MouseClickSpeedMultiplier;
+		/* 0x76 */ public byte[] Padding76;
+        /* 0x78 */ public float MouseClickSpeedMultiplier;
 		public enum AmbientOcclusionEnum { SSAO, HBAO, Off }
-		public AmbientOcclusionEnum AmbientOcclusion;
-        /* 0x84 */ public bool UseTerrainTextureCache;
-        /* 0x85 */ public bool UseArbSparseTexture;
-        /* 0x86 */ public bool EnableTessellation;
-        /* 0x87 */ public bool UseHDR;
-        /* 0x88 */ public bool UseLightShafts;
-        [NMS(Size = 0x7, Ignore = true)]
-        /* 0x89 */ public byte[] EndPadding;
+		/* 0x7C */ public AmbientOcclusionEnum AmbientOcclusion;
+        /* 0x80 */ public bool UseTerrainTextureCache;
+        /* 0x81 */ public bool UseArbSparseTexture;
+        /* 0x82 */ public bool EnableTessellation;
+        /* 0x83 */ public bool UseHDR;
+        /* 0x84 */ public bool UseLightShafts;
+        [NMS(Size = 0x3, Ignore = true)]
+        /* 0x85 */ public byte[] EndPadding;
     }
 }

@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x24A50, GUID = 0x2A5440696ACAC062, Broken = true)]
+	[NMS(Size = 0x24F10, GUID = 0x2A5440696ACAC062)]
     public class GcPlayerStateData : NMSTemplate
     {
         /* 0x00000 */ public GcUniverseAddressData UniverseAddress;
@@ -240,7 +240,7 @@ namespace libMBIN.NMS.GameComponents
         [NMS(Size = 0x4, Ignore = true)]
         /* 0x245A4 */ public byte[] Padding245A4;
         /* 0x245A8 */ public List<GcTradingSupplyData> TradingSupplyData;
-        /* 0x245B8 */ public List<GcPortalData> LastPortal;     // just a guess...
+        /* 0x245B8 */ public List<GcPortalData> LastPortal;
         /* 0x245C8 */ public GcPortalSaveData VisitedPortal;
         /* 0x245E0 */ public int KnownPortalRunes;
         /* 0x245E4 */ public bool OnOtherSideOfPortal;
@@ -271,7 +271,11 @@ namespace libMBIN.NMS.GameComponents
         /* 0x249B0 */ public GcPlayerSpawnStateData MultiplayerSpawn;
         /* 0x24A30 */ public List<GcRepairTechData> RepairTechBuffer;
         /* 0x24A40 */ public ulong MultiplayerPrivileges;
+        [NMS(Size = 0x3, EnumValue = new[] { "OnFoot", "InShip", "InExocraft" })]
+        /* 0x24A48 */ public GcHotActionsSaveData[] HotActions;
+        /* 0x24EF8 */ public ulong LastUABeforePortalWarp;
+        /* 0x24F00 */ public ulong StoryPortalSeed;
         [NMS(Size = 0x8, Ignore = true)]
-        /* 0x24A48 */ public byte[] EndPadding;
+        /* 0x24F08 */ public byte[] EndPadding;
     }
 }

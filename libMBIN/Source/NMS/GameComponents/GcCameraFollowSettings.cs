@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0xE0, GUID = 0x4E2690CEAD268DDB, Broken = true)]
+	[NMS(Size = 0xE0, GUID = 0x4E2690CEAD268DDB)]
     public class GcCameraFollowSettings : NMSTemplate
     {
         [NMS(Size =  0x10)]
@@ -61,8 +61,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0xD8 */ public bool AvoidCollisionUDUseStickDelay;
         /* 0xD9 */ public bool AvoidCollisionLRUseStickDelay;
         /* 0xDA */ public bool UseSpeedBasedSpring;
-
-        [NMS(Size = 0x5, Ignore = true)]
-        public byte[] EndPadding;
+        /* 0xDB */ public bool UseCustomBlendTime;
+        /* 0xDC */ public float CustomBlendTime;
     }
 }

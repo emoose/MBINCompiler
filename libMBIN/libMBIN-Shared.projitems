@@ -23,6 +23,11 @@
     <Compile Include="$(MSBuildThisFileDirectory)Source\EXML\EXmlData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\EXML\EXmlProperty.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcAtlasRecvBaseList.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcQuickMenuActionSaveData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcQuickMenuActions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcMessageProjectileLaunch.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcHotActionsSaveData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcHotActionMenuTypes.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Toolkit\TkEntitlementListData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcPersistentTerrainEdits.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcDoShipClearCommunication.cs" />

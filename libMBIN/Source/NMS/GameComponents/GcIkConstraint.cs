@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x150, GUID = 0x9A90B15AED7B75AE, Broken = true)]
+	[NMS(Size = 0x150, GUID = 0x9A90B15AED7B75AE)]
     public class GcIkConstraint : NMSTemplate
     {
         [NMS(Size = 0x10)]

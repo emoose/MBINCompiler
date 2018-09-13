@@ -12,7 +12,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x08 */ public int NumberOfbases;
         [NMS(Size = 0x4, Ignore = true)]
         /* 0x0C */ public byte[] PaddingC;
-        public List<GcAtlasBase> Bases;
-        public List<GcTerrainEditsBuffer> BaseTerrainEdits;     // just a guess...
+        public List<GcPersistentBase> Bases;
+        public List<GcTerrainEditsBuffer> BaseTerrainEdits;     // probably GcAtlasRecvBlob
     }
 }
