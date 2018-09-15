@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x210, GUID = 0x0BE898E2CA0F0F87)]
+	[NMS(Size = 0x210, GUID = 0xBE898E2CA0F0F87)]
     public class GcGeneratorUnitComponentData : NMSTemplate
     {
 		public enum GeneratorUnitTypeEnum { MiningUnit, GasHarvester }

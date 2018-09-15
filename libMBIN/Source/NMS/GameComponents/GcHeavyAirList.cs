@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0x0F6D68847AB6B3C0F)]
+	[NMS(GUID = 0xF6D68847AB6B3C0F)]
     public class GcHeavyAirList : NMSTemplate
     {
         public List<NMSString0x80> Options;

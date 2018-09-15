@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0x0BBCFC24EB018B5F3)]
+	[NMS(GUID = 0xBBCFC24EB018B5F3)]
     public class GcPlayerHazardData : NMSTemplate
     {
         public float ProtectionInitialTime;

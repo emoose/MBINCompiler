@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0x0D5F1AEB0209042C6)]
+	[NMS(GUID = 0xD5F1AEB0209042C6)]
     public class GcSpawnDensity : NMSTemplate
     {
         [NMS(Size = 0x10)]

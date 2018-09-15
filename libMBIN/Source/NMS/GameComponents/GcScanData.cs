@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x14, GUID = 0x0AF8C623DBEFEC570)]
+	[NMS(Size = 0x14, GUID = 0xAF8C623DBEFEC570)]
     public class GcScanData : NMSTemplate
     {
 		public enum ScanTypeEnum { Tool, Beacon, RadioTower, Observatory, DistressSignal, Waypoint, Ship, DebugPlanet, DebugSpace, VisualOnly }

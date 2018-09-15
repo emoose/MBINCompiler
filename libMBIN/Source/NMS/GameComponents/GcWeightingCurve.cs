@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0x0C3B3509D53536EAB)]
+	[NMS(GUID = 0xC3B3509D53536EAB)]
     public class GcWeightingCurve : NMSTemplate
     {
 

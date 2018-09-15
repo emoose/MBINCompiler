@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0x0B53BBA0714A089B6)]
+	[NMS(GUID = 0xB53BBA0714A089B6)]
     public class GcNPCPlacementComponentData : NMSTemplate // 0x20 bytes
     {
         public bool SearchPlacementFromMaster;

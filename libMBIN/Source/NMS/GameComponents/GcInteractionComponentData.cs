@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x1E0, GUID = 0x0A1B11503216EE29)]
+	[NMS(Size = 0x1E0, GUID = 0xA1B11503216EE29)]
     public class GcInteractionComponentData : NMSTemplate
     {
 		public enum InteractionActionEnum { PressButton, HoldButton, Shoot }

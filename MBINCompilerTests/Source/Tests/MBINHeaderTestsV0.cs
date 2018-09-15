@@ -8,7 +8,7 @@ namespace libMBIN.UnitTests {
         private const string VERSION_STRING = "0.0.0.0";
 
         private const ulong  TIMESTAMP     = 201809071631;
-        private const ulong  TEMPLATE_GUID = 0x0F1E2D3C4B5A6978;
+        private const ulong  TEMPLATE_GUID = 0xF1E2D3C4B5A6978;
         private const string TEMPLATE_NAME = "templateName";
         private const ulong  END_PADDING   = 0ul;
 

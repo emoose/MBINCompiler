@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0x0D878AA359F11F44D)]
+	[NMS(GUID = 0xD878AA359F11F44D)]
     public class GcMissionSequenceGatherForRefuel : NMSTemplate
     {
         [NMS(Size = 0x80)]

@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0x0A8879B14156D70FE)]
+	[NMS(GUID = 0xA8879B14156D70FE)]
     public class GcInventoryLayoutGenerationData : NMSTemplate     // size: 0x1C0
     {
         [NMS(Size = 0x1C, EnumValue = new[] { "SciSmall", "SciMedium", "SciLarge", "FgtSmall", "FgtMedium", "FgtLarge", "ShtSmall", "ShtMedium", "ShtLarge",

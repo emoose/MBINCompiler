@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0x0E7FEDC1213C888C7)]
+	[NMS(GUID = 0xE7FEDC1213C888C7)]
     public class GcSpaceSkyColours : NMSTemplate        // size: 0xE0
     {
 	  /* 0x00 */ public Colour CloudColour;

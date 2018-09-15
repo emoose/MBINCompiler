@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0x0A0814A4C94B662F6)]
+	[NMS(GUID = 0xA0814A4C94B662F6)]
     public class GcScanEventTriggers : NMSTemplate      // size: 0x20
     {
         public float Range;

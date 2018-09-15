@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Alignment = 0x8, GUID = 0x0F4171603FA4303CD)]
+	[NMS(Alignment = 0x8, GUID = 0xF4171603FA4303CD)]
     public class GcRewardMissionMessage : NMSTemplate
     {
         [NMS(Size = 0x10)]

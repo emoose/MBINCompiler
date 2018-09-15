@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0x0DF284C3967A7FFBC)]
+	[NMS(GUID = 0xDF284C3967A7FFBC)]
     public class GcNumberedTextList : NMSTemplate
     {
         [NMS(Size = 0x20)]

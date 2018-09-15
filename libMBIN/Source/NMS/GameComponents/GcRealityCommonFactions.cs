@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0x0EAA4DBFE9DCC9844)]
+	[NMS(GUID = 0xEAA4DBFE9DCC9844)]
     public class GcRealityCommonFactions : NMSTemplate
     {
 		public enum AIFactionEnum { FactionA, FactionB, FactionC, FactionD, Pirate, Police }

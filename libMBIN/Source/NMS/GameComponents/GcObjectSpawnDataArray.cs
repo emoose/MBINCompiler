@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x18, GUID = 0x0BC0EE957E29F834C)]
+	[NMS(Size = 0x18, GUID = 0xBC0EE957E29F834C)]
     public class GcObjectSpawnDataArray : NMSTemplate
     {
         public GcTerrainTileType TileType;

@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Toolkit
 {
-	[NMS(GUID = 0x0B5F73B43F19328BA)]
+	[NMS(GUID = 0xB5F73B43F19328BA)]
     public class TkVertexLayout : NMSTemplate
     {
         public int ElementCount;

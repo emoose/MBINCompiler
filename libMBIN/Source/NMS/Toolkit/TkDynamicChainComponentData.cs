@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Toolkit
 {
-	[NMS(GUID = 0x0AE882B312D5F93D5)]
+	[NMS(GUID = 0xAE882B312D5F93D5)]
     public class TkDynamicChainComponentData : NMSTemplate      // possibly in a global...
     {
         public float AngularLimit;

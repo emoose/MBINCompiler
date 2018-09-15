@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Toolkit
 {
-	[NMS(GUID = 0x0E1B108BEAEA9229C)]
+	[NMS(GUID = 0xE1B108BEAEA9229C)]
     public class TkRagdollData : NMSTemplate
     {
         public float Density;

@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0x0F10DCBCA48632B34)]
+	[NMS(GUID = 0xF10DCBCA48632B34)]
     public class GcBuildingClassification : NMSTemplate
     {
 		public enum BuildingClassEnum { None, TerrainResource, Shelter, Abandoned, Terminal, Shop, Outpost, Waypoint, Beacon, RadioTower, Observatory, Depot, Factory, Harvester,

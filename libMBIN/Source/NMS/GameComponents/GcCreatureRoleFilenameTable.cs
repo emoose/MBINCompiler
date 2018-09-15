@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x130, GUID = 0x0C36AF007B149AFB6)]
+	[NMS(Size = 0x130, GUID = 0xC36AF007B149AFB6)]
     public class GcCreatureRoleFilenameTable : NMSTemplate
     {
         [NMS(Size = 0xD, EnumValue = new[] { "Lush", "Toxic", "Scorched", "Radioactive", "Frozen", "Barren", "Dead", "Weird", "Red", "Green", "Blue", "Test", "All" })]

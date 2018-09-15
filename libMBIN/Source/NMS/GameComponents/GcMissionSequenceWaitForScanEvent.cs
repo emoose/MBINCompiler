@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x228, Alignment = 0x8, GUID = 0x0F199BEEADD7DD970)]
+	[NMS(Size = 0x228, Alignment = 0x8, GUID = 0xF199BEEADD7DD970)]
     public class GcMissionSequenceWaitForScanEvent : NMSTemplate
     {
         [NMS(Size = 0x80)]

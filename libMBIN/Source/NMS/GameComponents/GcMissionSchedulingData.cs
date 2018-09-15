@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x88, GUID = 0x0EA811EE090A41A87)]
+	[NMS(Size = 0x88, GUID = 0xEA811EE090A41A87)]
     public class GcMissionSchedulingData : NMSTemplate
     {
         /* 0x00 */ public NMSTemplate RecurrenceType;

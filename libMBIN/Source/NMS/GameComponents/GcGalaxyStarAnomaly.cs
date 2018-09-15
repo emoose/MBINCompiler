@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0x0D930090CE3C00E66)]
+	[NMS(GUID = 0xD930090CE3C00E66)]
     public class GcGalaxyStarAnomaly : NMSTemplate
     {
 		public enum GalaxyStarAnomalyEnum { None, AtlasStation, AtlasStationFinal, BlackHole, MiniStation }

@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0x0F28FCA1E3D439CD9)]
+	[NMS(GUID = 0xF28FCA1E3D439CD9)]
     public class GcCreatureGroupDescription : NMSTemplate       // size: 0x20
     {
         [NMS(Size = 0x10)]

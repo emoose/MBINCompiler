@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x118, GUID = 0x0CE724D5DF7B4C68E)]
+	[NMS(Size = 0x118, GUID = 0xCE724D5DF7B4C68E)]
     public class GcPlanetResourceIconLookup : NMSTemplate
     {
         [NMS(Size = 0x10)]

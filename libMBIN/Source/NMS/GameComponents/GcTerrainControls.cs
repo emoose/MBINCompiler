@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x74, GUID = 0x0E9658EF1531C595E)]
+	[NMS(Size = 0x74, GUID = 0xE9658EF1531C595E)]
     public class GcTerrainControls : NMSTemplate
     {
         [NMS(Size = 8, EnumValue = new[] { "Base", "Hill", "Mountain", "Rock", "UnderWater", "Texture", "Elevation", "Continent" })]

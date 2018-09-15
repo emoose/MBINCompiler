@@ -28,7 +28,7 @@ namespace libMBIN.UnitTests {
 
         private static readonly ulong VERSION_ID = (NMS_VERSION_ID & 0xFFFFFFFF) | (((ulong) API_VERSION_ID & 0xFFFFFFFF) << 32);
 
-        private const ulong  TEMPLATE_GUID = 0x0F1E2D3C4B5A6978;
+        private const ulong  TEMPLATE_GUID = 0xF1E2D3C4B5A6978;
 
         private const string TEMPLATE_NAME = "templateName";
         private const ulong  METAOFFSET    = 0ul;

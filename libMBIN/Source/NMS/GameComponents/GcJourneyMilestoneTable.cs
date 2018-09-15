@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0x0A4768229DACCC1)]
+	[NMS(GUID = 0xA4768229DACCC1)]
     public class GcJourneyMilestoneTable : NMSTemplate
     {
         public List<GcJourneyMilestoneData> Table; // called GcJourneyMilestoneTable in the exe

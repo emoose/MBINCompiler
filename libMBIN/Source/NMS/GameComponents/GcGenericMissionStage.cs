@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x58, GUID = 0x0E47DADDDF1545211)]
+	[NMS(Size = 0x58, GUID = 0xE47DADDDF1545211)]
     public class GcGenericMissionStage : NMSTemplate
     {
         public List<GcGenericMissionVersionProgress> Versions;

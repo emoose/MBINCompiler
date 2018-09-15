@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0xD340, GUID = 0x0D30F287F6E810E96)]
+	[NMS(Size = 0xD340, GUID = 0xD30F287F6E810E96)]
     public class GcPaletteList : NMSTemplate
     {
         [NMS(Size = 0x34, EnumValue = new[]

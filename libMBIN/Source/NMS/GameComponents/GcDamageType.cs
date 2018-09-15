@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0x0F03F99B8CA594022)]
+	[NMS(GUID = 0xF03F99B8CA594022)]
     public class GcDamageType : NMSTemplate
     {
 		public enum DamageTypeEnum { Gun, Laser, Shotgun, Burst, Rail, Explosion, Melee, ShipGun, ShipLaser, ShipShotgun, ShipMinigun, ShipRockets,

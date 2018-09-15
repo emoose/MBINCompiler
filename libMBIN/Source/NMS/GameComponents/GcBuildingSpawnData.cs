@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x5D0, GUID = 0x0EF1082AD7621BF52)]
+	[NMS(Size = 0x5D0, GUID = 0xEF1082AD7621BF52)]
     public class GcBuildingSpawnData : NMSTemplate
     {
         /* 0x000 */ public float Density;

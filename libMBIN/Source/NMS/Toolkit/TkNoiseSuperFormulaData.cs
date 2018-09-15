@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Toolkit
 {
-	[NMS(GUID = 0x0EC4BF01D005973A3)]
+	[NMS(GUID = 0xEC4BF01D005973A3)]
     public class TkNoiseSuperFormulaData : NMSTemplate
     {
         public float Form_m;

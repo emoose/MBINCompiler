@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x20, GUID = 0x0CCFE6B3996CFA666)]
+	[NMS(Size = 0x20, GUID = 0xCCFE6B3996CFA666)]
     public class GcExpeditionHologramComponentData : NMSTemplate
     {
         public float HologramRotationSpeedDegPerSec;

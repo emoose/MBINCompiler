@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Toolkit
 {
-	[NMS(Size = 0x78, GUID = 0x0FF0643125795309F)]
+	[NMS(Size = 0x78, GUID = 0xFF0643125795309F)]
     public class TkTrophyEntry : NMSTemplate
     {
         [NMS(Size = 0x10)]

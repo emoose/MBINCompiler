@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x18, GUID = 0x0FECDFAAE257D62DC)]
+	[NMS(Size = 0x18, GUID = 0xFECDFAAE257D62DC)]
     public class GcNPCProbabilityAnimationData : NMSTemplate
     {
         [NMS(Size = 0x10)]

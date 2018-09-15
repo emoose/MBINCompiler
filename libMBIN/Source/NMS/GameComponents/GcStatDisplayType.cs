@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0x0F373CC74C47A4AF)]
+	[NMS(GUID = 0xF373CC74C47A4AF)]
     public class GcStatDisplayType : NMSTemplate
     {
 		public enum StatDisplayTypeEnum { None, Sols, Distance }

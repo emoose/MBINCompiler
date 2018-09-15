@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Toolkit
 {
-	[NMS(GUID = 0x0E2FDB3256F6FF4CD)]
+	[NMS(GUID = 0xE2FDB3256F6FF4CD)]
     public class TkPlatformButtonPair : NMSTemplate
     {
         [NMS(Size = 0x10)]

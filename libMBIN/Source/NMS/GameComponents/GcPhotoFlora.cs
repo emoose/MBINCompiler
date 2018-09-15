@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x8, GUID = 0x0CE1A64B4EE12B085)]
+	[NMS(Size = 0x8, GUID = 0xCE1A64B4EE12B085)]
     public class GcPhotoFlora : NMSTemplate
     {
         public short AmountMin;

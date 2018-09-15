@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0x0D78F3098C042D8F8)]
+	[NMS(GUID = 0xD78F3098C042D8F8)]
     public class GcInputActionMapping : NMSTemplate
     {
         public int RemappedKey = -1;

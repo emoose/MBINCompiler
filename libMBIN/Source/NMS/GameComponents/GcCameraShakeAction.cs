@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0x0A5442BD7F600755C)]
+	[NMS(GUID = 0xA5442BD7F600755C)]
     public class GcCameraShakeAction : NMSTemplate
     {
         [NMS(Size = 0x10)]

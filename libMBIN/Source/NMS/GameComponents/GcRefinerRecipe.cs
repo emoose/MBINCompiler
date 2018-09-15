@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0xB0, GUID = 0x0F361385BC37AE809)]
+	[NMS(Size = 0xB0, GUID = 0xF361385BC37AE809)]
     public class GcRefinerRecipe : NMSTemplate
     {
         [NMS(Size = 0x80)]

@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0x0BCC12AC4DCFC035C)]
+	[NMS(GUID = 0xBCC12AC4DCFC035C)]
     public class GcTradeCategory : NMSTemplate
     {
 		public enum TradingClassEnum { Mineral, Tech, Commodity, Component, Alloy, Exotic, Energy, None }

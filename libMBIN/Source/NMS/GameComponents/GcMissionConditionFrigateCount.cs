@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0x0C9FFFC7A5A173EEC)]
+	[NMS(GUID = 0xC9FFFC7A5A173EEC)]
     public class GcMissionConditionFrigateCount : NMSTemplate
     {
         public int FrigateCount;

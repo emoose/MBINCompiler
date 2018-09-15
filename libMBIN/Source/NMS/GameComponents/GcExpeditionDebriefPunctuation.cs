@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x24, GUID = 0x0BD8A11BC4589CBE8)]
+	[NMS(Size = 0x24, GUID = 0xBD8A11BC4589CBE8)]
     public class GcExpeditionDebriefPunctuation : NMSTemplate
     {
         [NMS(Size = 0x20)]

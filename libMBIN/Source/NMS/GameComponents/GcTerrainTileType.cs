@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0x0AFB195227CDEA6E2)]
+	[NMS(GUID = 0xAFB195227CDEA6E2)]
     public class GcTerrainTileType : NMSTemplate
     {
 

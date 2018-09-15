@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x220, GUID = 0x0CAC1FA679C6CB798)]
+	[NMS(Size = 0x220, GUID = 0xCAC1FA679C6CB798)]
     public class GcBaseBuildingEntry : NMSTemplate
     {
         [NMS(Size = 0x10)]
