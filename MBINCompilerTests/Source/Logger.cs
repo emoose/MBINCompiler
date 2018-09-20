@@ -8,7 +8,7 @@ namespace MBINCompilerTests {
         public enum DebugLevel { None, Error, Info }
         public static DebugLevel Level { get; set; }
 
-        public static void DebugLog( string msg )      { if ( (int) Level != (int) DebugLevel.None  ) Debug.WriteLine( msg ); }
+        public static void DebugLog( string msg )      { if ( (int) Level != (int) DebugLevel.None  ) System.Console.WriteLine( msg ); }
         public static void DebugLogError( string msg ) { if ( (int) Level >= (int) DebugLevel.Error ) DebugLog( msg ); }
         public static void DebugLogInfo( string msg )  { if ( (int) Level >= (int) DebugLevel.Info  ) DebugLog( msg ); }
 

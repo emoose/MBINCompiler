@@ -72,7 +72,6 @@ namespace libMBIN.UnitTests {
         }
 
         private void LogFileState( StreamWriter logWriter, FileState file ) {
-            statusCounters[(int) file.status]++;
             Logger.LogMessage( logWriter, string.Format( "{0,-8}\t{1,8}\t{2}\t{3,8}\t{4}\t{5}",
                         file.status, file.profileTime, file.Path, file.mbinSize, file.hash, file.errorMessage ) );
         }
@@ -147,7 +146,7 @@ namespace libMBIN.UnitTests {
                 if ( string.IsNullOrEmpty( xmlString ) ) throw new APIException( "xml data is null" );
 
                 MemoryStream memory = new MemoryStream();
-                using (TextWriter writer = new StreamWriter( memory, Encoding.Default, 4096, true )) {
+                using (TextWriter writer = new StreamWriter( memory, Encoding.UTF8, 65536, true )) {
                     writer.Write( xmlString );
                 }
                 memory.Position = 0;
@@ -225,10 +224,14 @@ namespace libMBIN.UnitTests {
 
         private FileState OnThreadFinished( FileState file ) {
             lock ( this ) {
-                finished++;
+                statusCounters[(int) file.status]++;
+
+                LogFileState( streamOut, file );
+
                 maxTime = Math.Max( maxTime, file.profileTime );
                 summedTime += file.profileTime;
-                LogFileState( streamOut, file );
+
+                finished++;
 
                 if (nextFileIndex < files.Length) return files[nextFileIndex++];
             }
