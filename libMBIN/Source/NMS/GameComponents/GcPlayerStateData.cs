@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x24F10, GUID = 0x2A5440696ACAC062)]
+	[NMS(Size = 0x24F10, GUID = 0x1A853B4578E013E2)]
     public class GcPlayerStateData : NMSTemplate
     {
         /* 0x00000 */ public GcUniverseAddressData UniverseAddress;
@@ -275,7 +275,8 @@ namespace libMBIN.NMS.GameComponents
         /* 0x24A48 */ public GcHotActionsSaveData[] HotActions;
         /* 0x24EF8 */ public ulong LastUABeforePortalWarp;
         /* 0x24F00 */ public ulong StoryPortalSeed;
-        [NMS(Size = 0x8, Ignore = true)]
-        /* 0x24F08 */ public byte[] EndPadding;
+        /* 0x24F08 */ public int ShopNumber;
+        [NMS(Size = 0x4, Ignore = true)]
+        /* 0x24F0C */ public byte[] EndPadding;
     }
 }
