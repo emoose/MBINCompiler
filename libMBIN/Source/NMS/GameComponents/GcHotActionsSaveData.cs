@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x190, GUID = 0x72F44F3981CD5CF0)]
+	[NMS(Size = 0x190, GUID = 0x524A5E0775670390, Broken = true)]
     public class GcHotActionsSaveData : NMSTemplate
     {
         [NMS(Size = 0xA)]

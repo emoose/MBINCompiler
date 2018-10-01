@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0xF40F5CEB6396ACF4)]
+	[NMS(GUID = 0x8F1C9CDF19E76136, Broken = true)]
     public class GcMissionConditionTechnologyKnown : NMSTemplate
     {
         public GcTechnologyTableEnum Technology;

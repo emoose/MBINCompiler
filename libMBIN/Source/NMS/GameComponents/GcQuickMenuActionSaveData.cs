@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x28, GUID = 0xBFB9A8C7171C99E9)]
+	[NMS(Size = 0x28, GUID = 0xAC1359FCD544582B, Broken = true)]
     public class GcQuickMenuActionSaveData : NMSTemplate
     {
         /* 0x00 */ public GcQuickMenuActions Action;

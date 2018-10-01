@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0x5204C4C01793DBAB)]
+	[NMS(GUID = 0xBE20B8323918D049, Broken = true)]
     public class GcInventoryBaseStatBonus : NMSTemplate     // size: 0x8
     {
         public GcStatsTypes StatType;

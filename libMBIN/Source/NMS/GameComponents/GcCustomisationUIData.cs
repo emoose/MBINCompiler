@@ -3,10 +3,10 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x770A0, GUID = 0xEB88B31198BC5E82)]
+	[NMS(Size = 0x3E20, GUID = 0x2E5394FAA803E803)]
     public class GcCustomisationUIData : NMSTemplate
     {
-        [NMS(Size = 0x9)]
+        [NMS(Size = 0xE)]
         public GcCustomisationUI[] CustomisationUIData;
     }
 }

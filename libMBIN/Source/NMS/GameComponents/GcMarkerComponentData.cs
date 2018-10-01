@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x30, GUID = 0xFEC5BA8EA718B369)]
+	[NMS(Size = 0x30, GUID = 0x562CFE81EB5C57F7, Broken = true)]
     public class GcMarkerComponentData : NMSTemplate
     {
         /* 0x00 */ public GcGenericIconTypes GenericIconType;

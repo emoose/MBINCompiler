@@ -6,7 +6,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x3A0, GUID = 0xBEE3C50EA7BCCF86, Broken = true)]
+	[NMS(Size = 0x3A0, GUID = 0xDE16B9606EB3FA26, Broken = true)]
     public class GcProjectileData : NMSTemplate
     {
         [NMS(Size = 0x10)]

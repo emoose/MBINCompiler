@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x9B90, GUID = 0xFDD26CB244E15C57)]
+	[NMS(Size = 0x9B90, GUID = 0xF55F6D34AB2EB58C, Broken = true)]
     public class GcRealityManagerData : NMSTemplate
     {
         /* 0x0000 */ public int RealityIteration;
