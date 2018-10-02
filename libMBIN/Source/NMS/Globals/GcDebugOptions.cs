@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS( GUID = 0x502EBB7F4210574D )]
+    [NMS(GUID = 0xB74B21AE3DAA306B)]
     public class GcDebugOptions : NMSTemplate
     {
         /* 0x0 */ public bool ThirdPersonIsDefaultCamera;
@@ -28,7 +28,8 @@ namespace libMBIN.NMS.Globals
         /* 0x13 */ public bool SkipTutorial;
         /* 0x14 */ public bool IgnoreFreighterSpawnWarpRequirement;
         /* 0x15 */ public bool DisableSaveSlotSorting;
-        /* 0x16 */ public bool UseDebugScreenSettings;
+		/* 0x16 */ public bool DisableSaving;
+		/* 0x17 */ public bool UseDebugScreenSettings;
         /* 0x18 */ public int ScreenWidth;
         /* 0x1C */ public int ScreenHeight;
         /* 0x20 */ public bool DisableVSync;
@@ -79,17 +80,18 @@ namespace libMBIN.NMS.Globals
         /* 0x3E5 */ public bool InstanceCollision;
         /* 0x3E6 */ public bool MPMissions;
         /* 0x3E7 */ public bool SpecialsShop;
-        /* 0x3E8 */ public bool MouseLookEnabled;
-        /* 0x3E9 */ public bool StartPaused;
-        /* 0x3EA */ public bool DisableDebugControls;
-        /* 0x3EB */ public bool DisableAsserts;
-        /* 0x3EC */ public bool FixedFramerate;
-        /* 0x3ED */ public bool ScreenshotMode;
-        /* 0x3EE */ public bool RenderHud;
-        /* 0x3EF */ public bool DisableDiscoveryNaming;
-        /* 0x3F0 */ public bool DebugDrawPlayerInteract;
-        /* 0x3F1 */ public bool ForceInteractionToSettings;
-        /* 0x3F4 */ public int ForceInteractionIndex;
+		/* 0x3E8 */ public bool MultiplePlayerFreightersInASystem;
+		/* 0x3E9 */ public bool MouseLookEnabled;
+		/* 0x3EA */ public bool StartPaused;
+		/* 0x3EB */ public bool DisableDebugControls;
+		/* 0x3EC */ public bool DisableAsserts;
+		/* 0x3ED */ public bool FixedFramerate;
+		/* 0x3EE */ public bool ScreenshotMode;
+		/* 0x3EF */ public bool RenderHud;
+		/* 0x3F0 */ public bool DisableDiscoveryNaming;
+		/* 0x3F1 */ public bool DebugDrawPlayerInteract;
+		/* 0x3F2 */ public bool ForceInteractionToSettings;
+		/* 0x3F4 */ public int ForceInteractionIndex;
         /* 0x3F8 */ public bool InteractionsAllwaysGivesTech;
         /* 0x3F9 */ public bool InfiniteInteractions;
         /* 0x3FA */ public bool StopSwitchingToSecondaryInteractions;

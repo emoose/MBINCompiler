@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS( GUID = 0x2FE6D21D40A03D04)]
+    [NMS( GUID = 0xF239EC0A912FB902)]
     public class GcCreatureGlobals : NMSTemplate
     {
         /* 0x0 */ public bool IsHurtingCreaturesACrime;
@@ -256,59 +256,62 @@ namespace libMBIN.NMS.Globals
 		[NMS(Size = 0x10)]
 		/* 0x520 */ public string CreatureDeathEffectBig;
 		/* 0x530 */ public float FootParticleTime;
-		/* 0x534 */ public float FollowPlayerDistance;
-		/* 0x538 */ public float FollowRunPlayerDistance;
-		/* 0x53C */ public float FollowRange;
-		/* 0x540 */ public float SearchItemDistance;
-		/* 0x544 */ public float SearchItemFrequency;
-		/* 0x548 */ public float SearchItemGiveUpDistance;
-		/* 0x54C */ public float SearchItemGiveUpTime;
-		/* 0x550 */ public float SearchItemNotifyTime;
-		/* 0x554 */ public float SearchSpawnRandomItemProbability;
-		/* 0x558 */ public float MiningRandomProbability;
-		/* 0x55C */ public bool DebugSearch;
-		/* 0x560 */ public int FriendlyCreatureLimit;
-		/* 0x564 */ public int FeedingTaskAmount;
-		/* 0x568 */ public float FeedingFollowTime;
-		/* 0x56C */ public float FeedingNoticeTime;
-		/* 0x570 */ public float FeedingNoticeDistance;
-		/* 0x574 */ public float AnimChangeCoolDown;
-		/* 0x578 */ public float GroupRunProbability;
-		/* 0x57C */ public float GroupBabyRunProbability;
-		/* 0x580 */ public float GroupRunStormProbability;
-		/* 0x584 */ public float GroupLookAtProbability;
-		/* 0x588 */ public float GroupLookAtDurationMin;
-		/* 0x58C */ public float GroupLookAtDurationMax;
-		/* 0x590 */ public float GroupRunDurationMin;
-		/* 0x594 */ public float GroupRunDurationMax;
-		/* 0x598 */ public float GroupFemaleProportion;
-		/* 0x59C */ public float GroupBabyProportion;
-		/* 0x5A0 */ public float GroupBabyScale;
-		/* 0x5A4 */ public float GroupBabyHealthMultiplier;
-		/* 0x5A8 */ public float MaxBirdsProportion;
-		/* 0x5AC */ public float HerdGroupSizeMultiplier;
-		/* 0x5B0 */ public bool DrawRoutineFollowDebug;
-		/* 0x5B4 */ public float AdultCorrelationValue;
-		/* 0x5B8 */ public float GrassPushRadius;
-		/* 0x5BC */ public float GrassPushStrength;
-		/* 0x5C0 */ public float GrassPushMaxSize;
-		/* 0x5C4 */ public bool DrawGrassPushRadius;
-		[NMS(Size = 0x80)]
-		/* 0x5C5 */ public string DefaultCreatureSettings;
-		[NMS(Size = 0x80)]
-		/* 0x645 */ public string DefaultAirCreatureSettings;
-		[NMS(Size = 0x80)]
-		/* 0x6C5 */ public string DefaultWaterCreatureSettings;
-		/* 0x748 */ public float CreatureSpeedMultiplier;
-        /* 0x74C */ public float PredatorSpeedMultiplier;
+        /* 0x534 */ public bool PiedPiper;
+        /* 0x538 */ public float FollowPlayerDistance;
+        /* 0x53C */ public float FollowRunPlayerDistance;
+        /* 0x540 */ public float FollowRange;
+        /* 0x544 */ public float SearchItemDistance;
+        /* 0x548 */ public float SearchItemFrequency;
+        /* 0x54C */ public float SearchItemGiveUpDistance;
+        /* 0x550 */ public float SearchItemGiveUpTime;
+        /* 0x554 */ public float SearchItemNotifyTime;
+        /* 0x558 */ public float SearchSpawnRandomItemProbability;
+        /* 0x55C */ public float MiningRandomProbability;
+        /* 0x560 */ public bool DebugSearch;
+        /* 0x564 */ public int FriendlyCreatureLimit;
+        /* 0x568 */ public int FeedingTaskAmount;
+        /* 0x56C */ public float FeedingFollowTime;
+        /* 0x570 */ public float FeedingNoticeTime;
+        /* 0x574 */ public float FeedingNoticeDistance;
+        /* 0x578 */ public float AnimChangeCoolDown;
+        /* 0x57C */ public float GroupRunProbability;
+        /* 0x580 */ public float GroupBabyRunProbability;
+        /* 0x584 */ public float GroupRunStormProbability;
+        /* 0x588 */ public float GroupLookAtProbability;
+        /* 0x58C */ public float GroupLookAtDurationMin;
+        /* 0x590 */ public float GroupLookAtDurationMax;
+        /* 0x594 */ public float GroupRunDurationMin;
+        /* 0x598 */ public float GroupRunDurationMax;
+        /* 0x59C */ public float GroupFemaleProportion;
+        /* 0x5A0 */ public float GroupBabyProportion;
+        /* 0x5A4 */ public float GroupBabyScale;
+        /* 0x5A8 */ public float GroupBabyHealthMultiplier;
+        /* 0x5AC */ public float MaxBirdsProportion;
+        /* 0x5B0 */ public float HerdGroupSizeMultiplier;
+        /* 0x5B4 */ public bool DrawRoutineFollowDebug;
+        /* 0x5B8 */ public float AdultCorrelationValue;
+        /* 0x5BC */ public float GrassPushRadius;
+        /* 0x5C0 */ public float GrassPushStrength;
+        /* 0x5C4 */ public float GrassPushMaxSize;
+        /* 0x5C8 */ public bool DrawGrassPushRadius;
+        [NMS(Size = 0x80)]
+        /* 0x5C9 */ public string DefaultCreatureSettings;
+        [NMS(Size = 0x80)]
+        /* 0x649 */ public string DefaultAirCreatureSettings;
+        [NMS(Size = 0x80)]
+        /* 0x6C9 */ public string DefaultWaterCreatureSettings;
+        /* 0x74C */ public float CreatureSpeedMultiplier;
+        /* 0x750 */ public float PredatorSpeedMultiplier;
+        [NMS(Size = 0x4, Ignore = true)]
+        /* 0x754 */ public byte[] Padding754;
         [NMS(Size = 0x3)]
-        /* 0x750 */ public NMSString0x10 FeedingSubstances;
+        /* 0x758 */ public NMSString0x10[] FeedingSubstances;
         [NMS(Size = 0x3)]
-        /* 0x780 */ public NMSString0x10 KillingSubstances;
+        /* 0x788 */ public NMSString0x10[] KillingSubstances;
         [NMS(Size = 0x3)]
-        /* 0x7B0 */ public NMSString0x10 LootItems;
-        /* 0x7E0 */ public int PauseBetweenCreatureSpawnRequests;
-        [NMS(Size = 0xC, Ignore = true)]
-        /* 0x7E4 */ public byte[] EndPadding;
+        /* 0x7B8 */ public NMSString0x10[] LootItems;
+        /* 0x7E8 */ public int PauseBetweenCreatureSpawnRequests;
+        [NMS(Size = 0x4, Ignore = true)]
+        /* 0x7EC */ public byte[] EndPadding;
     }
 }

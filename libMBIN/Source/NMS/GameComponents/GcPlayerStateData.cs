@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x24F10, GUID = 0x52E5C1129599DA31, Broken = true)]
+	[NMS(Size = 0x25C30, GUID = 0x52E5C1129599DA31)]
     public class GcPlayerStateData : NMSTemplate
     {
         /* 0x00000 */ public GcUniverseAddressData UniverseAddress;
@@ -219,64 +219,63 @@ namespace libMBIN.NMS.GameComponents
         [NMS(Size = 0x8, Ignore = true)]
         /* 0x222D8 */ public byte[] Padding222D8;
 
-        [NMS(Size = 0x3)]
+        // enum struct: GcVehicleType
+        [NMS(Size = 0x6, EnumValue = new[] { "Buggy", "Bike", "Truck", "WheeledBike", "Hovercraft", "Submarine" })]
         /* 0x222E0 */ public GcPlayerOwnershipData[] VehicleOwnership;
-        /* 0x22E50 */ public int PrimaryVehicle;
+        /* 0x239C0 */ public int PrimaryVehicle;
         [NMS(Size = 0xC, Ignore = true)]
-        /* 0x22E54 */ public byte[] Padding22E54;
+        /* 0x239C4 */ public byte[] Padding239C4;
         [NMS(Size = 0x6)]
-        /* 0x22E60 */ public GcPlayerOwnershipData[] ShipOwnership;
-        /* 0x24540 */ public int PrimaryShip;
+        /* 0x239D0 */ public GcPlayerOwnershipData[] ShipOwnership;
+        /* 0x250B0 */ public int PrimaryShip;
 
-        /* 0x24544 */ public bool MultiShipEnabled;
+        /* 0x250B4 */ public bool MultiShipEnabled;
         [NMS(Size = 0x20)]
-        /* 0x24545 */ public string PlayerWeaponName;
+        /* 0x250B5 */ public string PlayerWeaponName;
         [NMS(Size = 0x20)]
-        /* 0x24565 */ public string PlayerFreighterName;
+        /* 0x250D5 */ public string PlayerFreighterName;
         [NMS(Size = 0xB, Ignore = true)]
-        /* 0x24585 */ public byte[] Padding24585;
-        /* 0x24590 */ public Vector4f StartGameShipPosition;
-        /* 0x245A0 */ public int TradingSupplyDataIndex;
+        /* 0x250F5 */ public byte[] Padding250F5;
+        /* 0x25100 */ public Vector4f StartGameShipPosition;
+        /* 0x25110 */ public int TradingSupplyDataIndex;
         [NMS(Size = 0x4, Ignore = true)]
-        /* 0x245A4 */ public byte[] Padding245A4;
-        /* 0x245A8 */ public List<GcTradingSupplyData> TradingSupplyData;
-        /* 0x245B8 */ public List<GcPortalData> LastPortal;
-        /* 0x245C8 */ public GcPortalSaveData VisitedPortal;
-        /* 0x245E0 */ public int KnownPortalRunes;
-        /* 0x245E4 */ public bool OnOtherSideOfPortal;
+        /* 0x25114 */ public byte[] Padding25114;
+        /* 0x25118 */ public List<GcTradingSupplyData> TradingSupplyData;
+        /* 0x25128 */ public List<GcPortalData> LastPortal;
+        /* 0x25138 */ public GcPortalSaveData VisitedPortal;
+        /* 0x25150 */ public int KnownPortalRunes;
+        /* 0x25154 */ public bool OnOtherSideOfPortal;
         [NMS(Size = 0xB, Ignore = true)]
-        /* 0xFEE5 */ public byte[] PaddingFEE5;
-        /* 0x245F0 */ public Vector4f PortalMarkerPosition_Local;
-        /* 0x24600 */ public Vector4f PortalMarkerPosition_Offset;
-        /* 0x24610 */ public GcPlayerWeapons StartingPrimaryWeapon;
-        /* 0x24614 */ public GcPlayerWeapons StartingSecondaryWeapon;
-        [NMS(Size = 0x9)]
-        /* 0x24618 */ public GcCharacterCustomisationSaveData[] CharacterCustomisationData;
+        /* 0x25155 */ public byte[] Padding25155;
+        /* 0x25160 */ public Vector4f PortalMarkerPosition_Local;
+        /* 0x25170 */ public Vector4f PortalMarkerPosition_Offset;
+        /* 0x25180 */ public GcPlayerWeapons StartingPrimaryWeapon;
+        /* 0x25184 */ public GcPlayerWeapons StartingSecondaryWeapon;
+        [NMS(Size = 0xE)]       // maybe has GcCustomisationComponentData as struct enum?
+        /* 0x25188 */ public GcCharacterCustomisationSaveData[] CharacterCustomisationData;
         [NMS(Size = 0x6)]
-        /* 0x24930 */ public bool[] ShipUsesLegacyColours;
+        /* 0x25658 */ public bool[] ShipUsesLegacyColours;
 
         [NMS(Size = 0x2, Ignore = true)]
-        /* 0x24936 */ public byte[] Padding24936;
+        /* 0x2565E */ public byte[] Padding2565E;
 
-        /* 0x24938 */ public GcSeed FleetSeed;
-        /* 0x24948 */ public List<GcFleetFrigateSaveData> FleetFrigates;
-        /* 0x24958 */ public List<GcFleetExpeditionSaveData> FleetExpeditions;
-        /* 0x24968 */ public List<long> ExpeditionSeedsSelectedToday;
-        /* 0x24978 */ public ulong LastKnownDay;
-        /* 0x24980 */ public ulong SunTimer;
-        /* 0x24988 */ public ulong MultiplayerLobbyID;
-        /* 0x24990 */ public GcUniverseAddressData MultiplayerUA;
-        [NMS(Size = 0x8, Ignore = true)]
-        /* 0x249A8 */ public byte[] Padding249A8;
-        /* 0x249B0 */ public GcPlayerSpawnStateData MultiplayerSpawn;
-        /* 0x24A30 */ public List<GcRepairTechData> RepairTechBuffer;
-        /* 0x24A40 */ public ulong MultiplayerPrivileges;
+        /* 0x25660 */ public GcSeed FleetSeed;
+        /* 0x25670 */ public List<GcFleetFrigateSaveData> FleetFrigates;
+        /* 0x25680 */ public List<GcFleetExpeditionSaveData> FleetExpeditions;
+        /* 0x25690 */ public List<long> ExpeditionSeedsSelectedToday;
+        /* 0x256A0 */ public ulong LastKnownDay;
+        /* 0x256A8 */ public ulong SunTimer;
+        /* 0x256B0 */ public ulong MultiplayerLobbyID;
+        /* 0x256B8 */ public GcUniverseAddressData MultiplayerUA;
+        /* 0x256D0 */ public GcPlayerSpawnStateData MultiplayerSpawn;
+        /* 0x25750 */ public List<GcRepairTechData> RepairTechBuffer;
+        /* 0x25760 */ public ulong MultiplayerPrivileges;
         [NMS(Size = 0x3, EnumValue = new[] { "OnFoot", "InShip", "InExocraft" })]
-        /* 0x24A48 */ public GcHotActionsSaveData[] HotActions;
-        /* 0x24EF8 */ public ulong LastUABeforePortalWarp;
-        /* 0x24F00 */ public ulong StoryPortalSeed;
-        /* 0x24F08 */ public int ShopNumber;
+        /* 0x25768 */ public GcHotActionsSaveData[] HotActions;
+        /* 0x25C18 */ public ulong LastUABeforePortalWarp;
+        /* 0x25C20 */ public ulong StoryPortalSeed;
+        /* 0x25C28 */ public uint ShopNumber;
         [NMS(Size = 0x4, Ignore = true)]
-        /* 0x24F0C */ public byte[] EndPadding;
+        /* 0x25C2C */ public byte[] EndPadding;
     }
 }

@@ -5,8 +5,8 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0xC53FEDE00D44F5BF, Broken = true)]
-    public class GcProjectileDataTable : NMSTemplate        // size: 0x20
+	[NMS(Size = 0x20, GUID = 0xC53FEDE00D44F5BF)]
+    public class GcProjectileDataTable : NMSTemplate
     {
         public List<GcProjectileData> Table;
         public List<GcLaserBeamData> Lasers;

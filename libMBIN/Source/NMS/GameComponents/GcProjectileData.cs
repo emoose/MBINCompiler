@@ -6,7 +6,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x3A0, GUID = 0xDE16B9606EB3FA26, Broken = true)]
+	[NMS(Size = 0x3A0, GUID = 0xDE16B9606EB3FA26)]
     public class GcProjectileData : NMSTemplate
     {
         [NMS(Size = 0x10)]
@@ -15,7 +15,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x2B8 */ public GcAudioWwiseEvents FireAudioEvent;
         /* 0x2BC */ public GcAudioWwiseEvents OverheatAudioEvent;
         /* 0x2C0 */ public float Scale;
-        /* 0x2C4 */ public bool isAutonomous;
+        /* 0x2C4 */ public bool IsAutonomous;
         /* 0x2C8 */ public float Radius;
         /* 0x2CC */ public float Speed;
         /* 0x2D0 */ public float Gravity;

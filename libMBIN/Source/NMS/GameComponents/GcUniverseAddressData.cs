@@ -3,8 +3,8 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0xAF3FFA464A170D62)]
-    public class GcUniverseAddressData : NMSTemplate // 0x18 bytes
+	[NMS(Size = 0x18, GUID = 0xAF3FFA464A170D62)]
+    public class GcUniverseAddressData : NMSTemplate
     {
         public int RealityIndex;
 

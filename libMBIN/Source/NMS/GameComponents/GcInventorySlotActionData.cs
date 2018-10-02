@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x1C, GUID = 0xFD920194C02A5656, Broken = true)]
+	[NMS(Size = 0x1C, GUID = 0xFD920194C02A5656)]
     public class GcInventorySlotActionData : NMSTemplate
     {
         /* 0x00 */ public bool Loops;                       // 0

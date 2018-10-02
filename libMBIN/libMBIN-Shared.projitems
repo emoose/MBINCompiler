@@ -23,6 +23,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Source\EXML\EXmlData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\EXML\EXmlProperty.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcAtlasRecvBaseList.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcRealityGameIcons.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcMissionCommunityData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcPurchaseableSpecial.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcQuickMenuActionSaveData.cs" />
@@ -30,6 +31,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcMessageProjectileLaunch.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcHotActionsSaveData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcHotActionMenuTypes.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Toolkit\TkIDArray.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Toolkit\TkEntitlementListData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcPersistentTerrainEdits.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcDoShipClearCommunication.cs" />
@@ -887,8 +889,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcShipFlareComponentData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcShipHUDTargetData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcShipHUDTargetIconData.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcShipWeaponData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcShipWeapons.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcShipWeaponData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcShootableComponentData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcSimpleInteractionComponentData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Globals\GcSimulationGlobals.cs" />
@@ -1170,6 +1172,5 @@
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Source\EXML\" />
     <Folder Include="$(MSBuildThisFileDirectory)Source\MBIN\" />
-    <Folder Include="$(MSBuildThisFileDirectory)Source\NMS\" />
   </ItemGroup>
 </Project>

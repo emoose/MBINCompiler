@@ -263,8 +263,8 @@ namespace libMBIN
                 {
                     field.SetValue(obj, DeserializeValue(reader, field.FieldType, settings, templatePosition, field, obj));
                 }
-                //DebugLog("Gk Hack: " + templateName + " Deserialized Value: " + field.Name + " value: " + field.GetValue(obj));
-                //DebugLog($"{templateName} position: 0x{reader.BaseStream.Position:X}");
+                //Logger.LogDebug("Gk Hack: " + templateName + " Deserialized Value: " + field.Name + " value: " + field.GetValue(obj));
+                //Logger.LogDebug($"{templateName} position: 0x{reader.BaseStream.Position:X}");
                 /*using (System.IO.StreamWriter file =
                     new System.IO.StreamWriter(@"D:\mbincompiler_debug.txt", true))
                 {

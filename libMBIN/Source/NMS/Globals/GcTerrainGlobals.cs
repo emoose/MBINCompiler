@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS( GUID = 0x7B7808BA51FCC81E )]
+    [NMS(GUID = 0x544924CC0A70DE9B)]
     public class GcTerrainGlobals : NMSTemplate
     {
         /* 0x0 */ public float RegisterTerrainMinDistance;
@@ -65,7 +65,14 @@ namespace libMBIN.NMS.Globals
         /* 0x288 */ public GcTerrainOverlayColours SaturationOverlay;
         /* 0x2A0 */ public GcTerrainOverlayColours ValueOverlay;
         /* 0x2B8 */ public GcTerrainEditing TerrainEditing;
-        [NMS(Size = 0x8, Ignore = true)]
-        /* 0x338 */ public byte[] EndPadding;
+		/* 0x34C */ public float TerrainUndoCubesRange;
+		/* 0x350 */ public float TerrainUndoCubesAlpha;
+		/* 0x354 */ public float TerrainUndoCubesNoiseThreshold;
+		/* 0x358 */ public float TerrainUndoCubesNoiseFactor;
+		/* 0x35C */ public float TerrainUndoFadeDepthConstant;
+		/* 0x360 */ public float TerrainUndoFadeDepthScalar;
+		/* 0x364 */ public bool TerrainEditUndosEnabled;
+        [NMS(Size = 0xB, Ignore = true)]
+        /* 0x365 */ public byte[] EndPadding;
     }
 }
