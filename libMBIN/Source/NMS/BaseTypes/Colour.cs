@@ -3,6 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS
 {
+    [NMS(Alignment = 0x10)]
     public class Colour : NMSTemplate
     {
         public float R;

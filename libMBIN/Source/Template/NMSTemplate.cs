@@ -263,8 +263,8 @@ namespace libMBIN
                 {
                     field.SetValue(obj, DeserializeValue(reader, field.FieldType, settings, templatePosition, field, obj));
                 }
-                //Logger.LogDebug("Gk Hack: " + templateName + " Deserialized Value: " + field.Name + " value: " + field.GetValue(obj));
-                //Logger.LogDebug($"{templateName} position: 0x{reader.BaseStream.Position:X}");
+                Logger.LogDebug("Gk Hack: " + templateName + " Deserialized Value: " + field.Name + " value: " + field.GetValue(obj));
+                Logger.LogDebug($"{templateName} position: 0x{reader.BaseStream.Position:X}");
                 /*using (System.IO.StreamWriter file =
                     new System.IO.StreamWriter(@"D:\mbincompiler_debug.txt", true))
                 {
@@ -365,14 +365,14 @@ namespace libMBIN
             return list;
         }
 
-        public void SerializeValue( BinaryWriter writer, Type fieldType, object fieldData, NMSAttribute settings, FieldInfo field, ref List<Tuple<long, object>> additionalData, ref int addtDataIndex, int structLength = 0, UInt32 listEnding = 0xAAAAAA01 ) {
+        public void SerializeValue( BinaryWriter writer, Type fieldType, object fieldData, NMSAttribute settings, FieldInfo field, long startStructPos, ref List<Tuple<long, object>> additionalData, ref int addtDataIndex, int structLength = 0, UInt32 listEnding = 0xAAAAAA01 ) {
             DebugLogFieldName( $"{field?.DeclaringType.Name}.{field?.Name}\ttype:\t{fieldType.Name}\tadditionalData.Count:\t{additionalData?.Count ?? 0}\taddtDataIndex:\t{addtDataIndex}" );
 
             if (CustomSerialize(writer, fieldType, fieldData, settings, field, ref additionalData, ref addtDataIndex))
                 return;
 
             if ( settings?.DefaultValue != null ) fieldData = settings.DefaultValue;
-
+            Logger.LogDebug($"startStructPos: 0x{startStructPos:X}");
             switch ( fieldType.Name ) {
                 case "String":
                 case "Byte[]":
@@ -392,7 +392,7 @@ namespace libMBIN
                     writer.Write( (Byte) fieldData );
                     break;
                 case "Single":
-                    writer.Align( 4, 0 );
+                    writer.Align( 4, startStructPos);
                     writer.Write( (Single) fieldData );
                     break;
                 case "Boolean":
@@ -401,7 +401,7 @@ namespace libMBIN
                     break;
                 case "Int16":
                 case "UInt16":
-                    writer.Align( 2, 0 );
+                    writer.Align( 2, startStructPos);
                     if ( fieldType.Name == "Int16" ) {
                         writer.Write( (Int16) fieldData );
                     } else {
@@ -410,7 +410,7 @@ namespace libMBIN
                     break;
                 case "Int32":
                 case "UInt32":
-                    writer.Align( 4, 0 );
+                    writer.Align( 4, startStructPos);
                     if ( fieldType.Name == "Int32" ) {
                         writer.Write( (Int32) fieldData );
                     } else {
@@ -419,7 +419,7 @@ namespace libMBIN
                     break;
                 case "Int64":
                 case "UInt64":
-                    writer.Align( 8, 0 );
+                    writer.Align( 8, startStructPos);
                     if ( fieldType.Name == "Int64" ) {
                         writer.Write( (Int64) fieldData );
                     } else {
@@ -427,7 +427,7 @@ namespace libMBIN
                     }
                     break;
                 case "List`1":
-                    writer.Align( 8, 0 );
+                    writer.Align( 8, startStructPos);
                     if ( field != null && field.FieldType.IsGenericType && field.FieldType.GetGenericTypeDefinition() == typeof( List<> ) ) {
                         // write empty list header
                         long listPos = writer.BaseStream.Position;
@@ -449,7 +449,7 @@ namespace libMBIN
                     break;
 
                 case "NMSTemplate":
-                    writer.Align( 8, 0 );
+                    writer.Align( 8, startStructPos);
                     long refPos = writer.BaseStream.Position;
 
                     var template = (NMSTemplate) fieldData;
@@ -468,11 +468,12 @@ namespace libMBIN
                         // addtDataIndex++; // should this be incremented regardless of insert or add?
                     }
                     break;
+                // TODO: remove
                 case "Dictionary`2":
                     // have something defined so that it just ignores it
                     break;
                 default:
-                    if ( fieldType.Name == "Colour" ) writer.Align( 0x10, 0 ); // unsure if this is needed?
+                    //if ( fieldType.Name == "Colour" ) writer.Align( 0x10, startStructPos); // TODO: make an attribute
 
                     // todo: align for VariableSizeString?
                     if ( fieldType.Name == "VariableSizeString" ) {
@@ -491,19 +492,23 @@ namespace libMBIN
                         if ( array == null ) array = Array.CreateInstance( arrayType, (int) settings.Size );
 
                         foreach ( var obj in array ) {
+                            long fieldPos = writer.BaseStream.Position;
                             var realObj = obj;
                             if ( realObj == null ) realObj = Activator.CreateInstance( arrayType );
 
-                            SerializeValue( writer, realObj.GetType(), realObj, settings, field, ref additionalData, ref addtDataIndex );
+                            SerializeValue( writer, realObj.GetType(), realObj, settings, field, fieldPos, ref additionalData, ref addtDataIndex );
                         }
                     } else if ( fieldType.IsEnum ) {
-                        writer.Align( 4, 0 );
+                        writer.Align( 4, startStructPos);
                         writer.Write( (UInt32) Array.IndexOf( Enum.GetNames( field.FieldType ), fieldData.ToString() ) );
 
                     } else if ( fieldType.BaseType == typeof( NMSTemplate ) ) {
+                        int alignment = settings?.Alignment ?? 0x4;     // this isn't 0x10 for Colour's??
+                        Logger.LogDebug($"Aligning by {alignment}");
+                        writer.Align(alignment, startStructPos);
                         var realData = (NMSTemplate) fieldData;
                         if ( realData == null ) realData = (NMSTemplate) Activator.CreateInstance( fieldType );
-
+                        Logger.LogDebug("Entering into a struct...");
                         realData.AppendToWriter( writer, ref additionalData, ref addtDataIndex, GetType(), listEnding );
 
                     } else {
@@ -532,17 +537,14 @@ namespace libMBIN
             if ( type.Name != "EmptyNode" ) {
                 foreach ( var field in fields ) {
                     var fieldAddr = writer.BaseStream.Position - templatePosition;
+                    Logger.LogDebug($" fieldAddr: 0x{fieldAddr:X}, templatePos: 0x{templatePosition:X}, name: {field.FieldType.Name}");
                     var fieldData = field.GetValue( this );
-                    if ( field.FieldType.Name == "NMSTemplate" ) {
-                        NMSAttribute settings = field.GetCustomAttribute<NMSAttribute>();
-                        SerializeValue( writer, field.FieldType, fieldData, settings, field, ref additionalData, ref addtDataIndex, structLength );
-                    } else {
-                        NMSAttribute settings = field.GetCustomAttribute<NMSAttribute>();
-                        SerializeValue( writer, field.FieldType, fieldData, settings, field, ref additionalData, ref addtDataIndex, structLength );
-                    }
+                    NMSAttribute settings = field.GetCustomAttribute<NMSAttribute>();
+                    Logger.LogDebug($"alignment: {settings?.Alignment}");
+                    SerializeValue( writer, field.FieldType, fieldData, settings, field, templatePosition, ref additionalData, ref addtDataIndex, structLength );
                 }
             } else {
-                SerializeValue( writer, type, null, null, null, ref additionalData, ref addtDataIndex, structLength );
+                SerializeValue( writer, type, null, null, null, templatePosition, ref additionalData, ref addtDataIndex, structLength );
             }
 
             //foreach ( var entry in entryOffsetNamePairs ) {
@@ -621,7 +623,7 @@ namespace libMBIN
                         writer.BaseStream.Position = origPos;
                         var GenericObject = data.Item2;
                         int newDataIndex = i + 1;
-                        SerializeValue( writer, GenericObject.GetType(), GenericObject, null, null, ref listObjects, ref newDataIndex );
+                        SerializeValue( writer, GenericObject.GetType(), GenericObject, null, null, 0, ref listObjects, ref newDataIndex );     // !FIXME
                     }
                 }
 
@@ -684,7 +686,7 @@ namespace libMBIN
 
             foreach ( var entry in list ) {
                 DebugLogTemplate( $"[C] writing {entry.GetType().Name} to offset 0x{writer.BaseStream.Position:X}" );
-                SerializeValue( writer, entry.GetType(), entry, null, null, ref additionalData, ref addtDataIndexThis );
+                SerializeValue( writer, entry.GetType(), entry, null, null, 0, ref additionalData, ref addtDataIndexThis );     // !FIXME
             }
 
             if ( list.GetType().GetGenericArguments()[0] == typeof( NMS.Toolkit.TkAnimNodeFrameData ) ) {
@@ -704,6 +706,7 @@ namespace libMBIN
                 }
 
                 int i = 0;
+                Logger.LogDebug(writer.BaseStream.Position);
                 // write primary template + any embedded templates
                 AppendToWriter( writer, ref additionalData, ref i, GetType(), listEnding );
 
@@ -953,6 +956,7 @@ namespace libMBIN
                     return ushort.Parse(xmlProperty.Value);
                 case "Int32":
                     var valuesMethod = templateType.GetMethod(field.Name + "Values");
+                    // TODO: remove this dictionary stuff
                     var dictData = templateType.GetMethod(field.Name + "Dict");
 
                     if ( dictData != null ) {

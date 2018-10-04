@@ -3,8 +3,8 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0xE18B6A30E09DD03B)]
-    public class GcProjectileLineData : NMSTemplate     // size: 0x28
+	[NMS(Size = 0x28, GUID = 0xE18B6A30E09DD03B)]
+    public class GcProjectileLineData : NMSTemplate
     {
         /* 0x000 */ public float BulletLength;
         /* 0x004 */ public float BulletGlowWidthTime;
