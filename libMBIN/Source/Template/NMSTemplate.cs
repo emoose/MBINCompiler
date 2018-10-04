@@ -504,8 +504,10 @@ namespace libMBIN
 
                     } else if ( fieldType.BaseType == typeof( NMSTemplate ) ) {
                         int alignment = settings?.Alignment ?? 0x4;     // this isn't 0x10 for Colour's??
+                        Logger.LogDebug($"write location: 0x{writer.BaseStream.Position:X}");
                         Logger.LogDebug($"Aligning by {alignment}");
                         writer.Align(alignment, startStructPos);
+                        Logger.LogDebug($"write location: 0x{writer.BaseStream.Position:X}");
                         var realData = (NMSTemplate) fieldData;
                         if ( realData == null ) realData = (NMSTemplate) Activator.CreateInstance( fieldType );
                         Logger.LogDebug("Entering into a struct...");
@@ -529,6 +531,7 @@ namespace libMBIN
             // todo: remove struct length?? Not needed any more I think...
             NMSAttribute attribute = type.GetCustomAttribute<NMSAttribute>();
             // If the class has no size associate with it, just ignore it
+            // int structLength = attribute?.Size ?? 0;     // <- better than code a line below if needed...?
             int structLength = (attribute != null) ? attribute.Size : 0;
 
             //var entryOffsetNamePairs = new Dictionary<long, string>();
@@ -536,7 +539,7 @@ namespace libMBIN
 
             if ( type.Name != "EmptyNode" ) {
                 foreach ( var field in fields ) {
-                    var fieldAddr = writer.BaseStream.Position - templatePosition;
+                    var fieldAddr = writer.BaseStream.Position - templatePosition;      // location of the data within the struct
                     Logger.LogDebug($" fieldAddr: 0x{fieldAddr:X}, templatePos: 0x{templatePosition:X}, name: {field.FieldType.Name}");
                     var fieldData = field.GetValue( this );
                     NMSAttribute settings = field.GetCustomAttribute<NMSAttribute>();
@@ -685,6 +688,7 @@ namespace libMBIN
             int addtDataIndexThis = addtDataIndex;
 
             foreach ( var entry in list ) {
+                Logger.LogDebug($"[C] writing {entry.GetType().Name} to offset 0x{writer.BaseStream.Position:X}");
                 DebugLogTemplate( $"[C] writing {entry.GetType().Name} to offset 0x{writer.BaseStream.Position:X}" );
                 SerializeValue( writer, entry.GetType(), entry, null, null, 0, ref additionalData, ref addtDataIndexThis );     // !FIXME
             }
