@@ -40,13 +40,10 @@ namespace libMBIN.NMS.GameComponents
         /* 0x340 */ public float DamageImpactMergeTime;
         /* 0x344 */ public float DamageImpactTimeBetweenNumbers;
         /* 0x348 */ public float DamageImpactMinDistance;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x34C */ public byte[] Padding33C;
         /* 0x350 */ public Colour Colour;
 
         [Flags]
-        public enum BehaviourFlagsEnum { None = 0x00, DestroyTerrain = 0x01, DestroyAsteroids = 0x02, GatherResources = 0x04, Homing = 0x08, HomingLaser = 0x10,
-                                         ScareCreatures = 0x20, ExplosionForce = 0x40}
+        public enum BehaviourFlagsEnum { None = 0x00, DestroyTerrain = 0x01, DestroyAsteroids = 0x02, GatherResources = 0x04, Homing = 0x08, HomingLaser = 0x10, ScareCreatures = 0x20, ExplosionForce = 0x40}
         /* 0x360 */ public BehaviourFlagsEnum BehaviourFlags;
 
 		public enum ClassEnum { Player, PlayerShip, Ship, Robot }
