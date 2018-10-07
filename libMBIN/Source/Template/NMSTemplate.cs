@@ -367,7 +367,7 @@ namespace libMBIN
         }
 
         public void SerializeValue( BinaryWriter writer, Type fieldType, object fieldData, NMSAttribute settings, FieldInfo field, long startStructPos, ref List<Tuple<long, object>> additionalData, ref int addtDataIndex, int structLength = 0, UInt32 listEnding = 0xAAAAAA01 ) {
-            DebugLogFieldName( $"{field?.DeclaringType.Name}.{field?.Name}\ttype:\t{fieldType.Name}\tadditionalData.Count:\t{additionalData?.Count ?? 0}\taddtDataIndex:\t{addtDataIndex}" );
+            Logger.LogDebug( $"{field?.DeclaringType.Name}.{field?.Name}\ttype:\t{fieldType.Name}\tadditionalData.Count:\t{additionalData?.Count ?? 0}\taddtDataIndex:\t{addtDataIndex}" );
 
             if (CustomSerialize(writer, fieldType, fieldData, settings, field, ref additionalData, ref addtDataIndex))
                 return;
@@ -434,14 +434,21 @@ namespace libMBIN
                         writer.Write( (Int64) 0 ); // listPosition
                         writer.Write( (Int32) 0 ); // listCount
                         writer.Write( listEnding );
-
-                        var data = new Tuple<long, object>( listPos, (IList) fieldData );
-                        if ( addtDataIndex >= additionalData.Count ) {
-                            additionalData.Add( data );
-                        } else {
-                            additionalData.Insert( addtDataIndex, data );
+                        IList listData = (IList)fieldData;
+                        if (listData.Count != 0)
+                        {
+                            var data = new Tuple<long, object>(listPos, listData);
+                            if (addtDataIndex >= additionalData.Count)
+                            {
+                                additionalData.Add(data);
+                            }
+                            else
+                            {
+                                additionalData.Insert(addtDataIndex, data);
+                            }
+                            addtDataIndex++;
                         }
-                        addtDataIndex++;
+
                     }
 
                     break;
@@ -596,9 +603,9 @@ namespace libMBIN
                         Type itemType = data.Item2.GetType().GetGenericArguments()[0];
 
                         if ( itemType == typeof( NMSTemplate ) ) {
-                            SerializeGenericList( writer, (IList) data.Item2, data.Item1, ref listObjects, i, listEnding );
+                            SerializeGenericList( writer, (IList) data.Item2, data.Item1, ref listObjects, i + 1, listEnding );
                         } else {
-                            SerializeList( writer, (IList) data.Item2, data.Item1, ref listObjects, i, listEnding );
+                            SerializeList( writer, (IList) data.Item2, data.Item1, ref listObjects, i + 1, listEnding );
                         }
                     } else {
                         //DebugLog("this is it!!!");

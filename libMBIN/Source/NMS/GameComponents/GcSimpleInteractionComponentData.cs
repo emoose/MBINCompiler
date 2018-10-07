@@ -42,7 +42,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x100 */ public GcDiscoveryTypes ScanIcon;
         [NMS(Size = 0x4, Ignore = true)]
         /* 0x104 */ public byte[] Padding104;
-        /* 0x108 */ public List<GcActionTrigger> BaseBuildingTriggerActions;        // a guess
+        /* 0x108 */ public List<GcInteractionBaseBuildingState> BaseBuildingTriggerActions;
         /* 0x118 */ public List<GcRewardTableItem> RewardOverrideTable;       // I don't know...
         /* 0x128 */ public bool UsePersonalPersistentBuffer;
         [NMS(Size = 0x7, Ignore = true)]

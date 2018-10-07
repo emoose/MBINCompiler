@@ -13,6 +13,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x28 */ public float CompassRangeMultiplier;
         /* 0x2C */ public float AlwaysShowRange;
         /* 0x30 */ public bool CantagIcon;
+        /* 0x31 */ public bool ClearTagOnArrival;
 
         /* 0x34 */ public GcScannerIconTypes IconType;
 		public enum ScannableTypeEnum { Binoculars, Scanner, Marker, None }
