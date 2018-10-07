@@ -48,8 +48,6 @@ namespace MBINCompiler.Commands {
         public static void ConvertFile( string fileIn, string fileOut, FormatType inputFormat, FormatType outputFormat ) {
             fileOut = ChangeFileExtension( fileOut, outputFormat );
 
-            FileMode fileMode = GetFileMode( fileOut );
-
             Directory.CreateDirectory( Path.GetDirectoryName( fileOut ) );
 
             try {
@@ -84,7 +82,7 @@ namespace MBINCompiler.Commands {
                         try {
                             data = EXmlFile.ReadTemplateFromStream( fIn );
                             if ( data is null ) throw new InvalidDataException( $"Failed to deserialize EXML." );
-                            if ( data is libMBIN.NMS.Toolkit.TkGeometryData ) fileOut += ".PC";
+                            if ( data is libMBIN.NMS.Toolkit.TkGeometryData | data is libMBIN.NMS.Toolkit.TkGeometryStreamData ) fileOut += ".PC";
                             var mbin = new MBINFile( ms ) { Header = new MBINHeader() };
                             mbin.Header.SetDefaults( data.GetType() );
                             mbin.SetData( data );
@@ -96,10 +94,10 @@ namespace MBINCompiler.Commands {
                     }
 
                     ms.Flush();
+                    FileMode fileMode = GetFileMode(fileOut);
                     using ( var fOut = new FileStream( fileOut, fileMode, FileAccess.Write ) ) ms.WriteTo( fOut );
                 }
             } catch ( Exception e ) {
-                File.Delete( fileOut );
                 if ( e is CompilerException ) throw;
                 throw new CompilerException( e, fileIn );
             }

@@ -695,8 +695,6 @@ namespace libMBIN
                 }
 
                 int i = 0;
-                Logger.LogDebug(writer.BaseStream.Position);
-                Logger.LogDebug("hi");
                 // write primary template + any embedded templates
                 AppendToWriter( writer, ref additionalData, ref i, GetType(), listEnding );
 

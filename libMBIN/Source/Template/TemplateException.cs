@@ -49,4 +49,14 @@ namespace libMBIN {
                     "(arrays can't be shortened or extended as they're a fixed size set by the game)";
         }
     }
+
+    public class MbinException : TemplateException
+    {
+        public MbinException(string fieldName, Exception innerException, string fileName) : base(GetString(fieldName, fileName), innerException) {}
+
+        private static string GetString( string fieldName, string fileName)
+        {
+            return $"Failed to read {fieldName} from {fileName}";
+        }
+    }
 }

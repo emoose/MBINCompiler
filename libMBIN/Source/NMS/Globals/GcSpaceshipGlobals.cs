@@ -119,6 +119,8 @@ namespace libMBIN.NMS.Globals
         /* 0x22C */ public float TestShieldEffect;
         /* 0x230 */ public float ShieldEffectHitTime;
         /* 0x234 */ public TkCurveType ShieldEffectHitCurve;
+        [NMS(Size = 0x8, Ignore = true)]
+        /* 0x238 */ public byte[] Padding238;
         /* 0x240 */ public GcScanEffectData ShieldEffectScanData;
         /* 0x290 */ public float _3rdPersonUpOffsetRollChangeSpeed;
         /* 0x294 */ public float _3rdPersonRollAngle;

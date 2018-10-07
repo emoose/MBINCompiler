@@ -70,6 +70,11 @@ namespace libMBIN
             Header.TemplateName = "c" + template.GetType().Name;
         }
 
+        public static explicit operator NMSTemplate(MBINFile mbin)
+        {
+            return mbin.GetData();
+        }
+
         public void Dispose()
         {
             if (_io != null && _keepOpen == false) _io.Dispose();
