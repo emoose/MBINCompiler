@@ -377,14 +377,19 @@ namespace libMBIN
                 case "String":
                 case "Byte[]":
                     int size = settings?.Size ?? 0;
+                    byte stringPadding = settings?.Padding ?? 0;
                     MarshalAsAttribute legacySettings = field?.GetCustomAttribute<MarshalAsAttribute>();
                     if ( legacySettings != null ) size = legacySettings.SizeConst;
 
                     if ( fieldType.Name == "String" ) {
-                        writer.WriteString( (string) fieldData, Encoding.UTF8, size );
+                        writer.WriteString( (string) fieldData, Encoding.UTF8, size, false, stringPadding );
                     } else {
                         byte[] bytes = (byte[]) fieldData;
-                        Array.Resize( ref bytes, size );
+                        if (bytes.Length != 0)
+                        {
+                            size = bytes.Length;
+                        }
+                        Array.Resize( ref bytes, size);
                         writer.Write( bytes );
                     }
                     break;
@@ -700,6 +705,10 @@ namespace libMBIN
                 if ( GetType() == typeof( NMS.Toolkit.TkAnimMetadata ) ) {
                     listEnding = 0xFEFEFE01;
                 }
+                else if (GetType() == typeof(NMS.Toolkit.TkGeometryStreamData))
+                {
+                    listEnding = 0x00000001;
+                }
 
                 int i = 0;
                 // write primary template + any embedded templates
@@ -712,60 +721,86 @@ namespace libMBIN
                     //DebugLog(data);
                     //writer.BaseStream.Position = additionalDataOffset; // addtDataOffset gets updated by child templates
                     long origPos = writer.BaseStream.Position;
-                    //DebugLog(origPos);
-                    Logger.LogDebug(data.Item2.GetType());
 
                     // get the custom alignment value from the class if it has one
                     // If the class has no alignment value associated with it, just set as default value of 4
-                    int alignment = data.Item2?.GetType().GetCustomAttribute<NMSAttribute>()?.Alignment ?? 0x4;
+                    NMSAttribute settings = data.Item2?.GetType().GetCustomAttribute<NMSAttribute>();
+                    int alignment = settings?.Alignment ?? 0x4;
 
                     if ( data.Item2 != null ) {
-                        // if we have an empty list we do not want to do alignment otherwise it can put off other things
-                        if ( data.Item2.GetType().IsGenericType && data.Item2.GetType().GetGenericTypeDefinition() == typeof( List<> ) ) {
-                            IList lst = (IList) data.Item2;
-                            if ( lst.Count != 0 ) writer.Align( alignment, 0 );
-                        } else {
-                            writer.Align( alignment, 0 );
+                        // we don't want alignment if the data is purely byte[] data
+                        if (data.Item2.GetType() != typeof(byte[]))
+                        {
+                            // if we have an empty list we do not want to do alignment otherwise it can put off other things
+                            if (data.Item2.GetType().IsGenericType && data.Item2.GetType().GetGenericTypeDefinition() == typeof(List<>))
+                            {
+                                IList lst = (IList)data.Item2;
+                                if (lst.Count != 0) writer.Align(alignment, 0);
+                            }
+                            else
+                            {
+                                writer.Align(alignment, 0);
+                            }
                         }
 
-                        if ( data.Item2.GetType() == typeof( NMS.VariableSizeString ) ) {
+                        if (data.Item2.GetType() == typeof(NMS.VariableSizeString))
+                        {
                             //DebugLog(alignment);
                             writer.BaseStream.Position = origPos; // no alignment for dynamicstrings
 
-                            var str = (NMS.VariableSizeString) data.Item2;
+                            var str = (NMS.VariableSizeString)data.Item2;
 
                             var stringPos = writer.BaseStream.Position;
-                            writer.WriteString( str.Value, Encoding.UTF8, null, true );
+                            writer.WriteString(str.Value, Encoding.UTF8, null, true);
                             var stringEndPos = writer.BaseStream.Position;
 
                             writer.BaseStream.Position = data.Item1;
-                            writer.Write( stringPos - data.Item1 );
-                            writer.Write( (Int32) (stringEndPos - stringPos) );
-                            writer.Write( listEnding );
+                            writer.Write(stringPos - data.Item1);
+                            writer.Write((Int32)(stringEndPos - stringPos));
+                            writer.Write(listEnding);
 
                             writer.BaseStream.Position = stringEndPos;
-                        } else if ( data.Item2.GetType().BaseType == typeof( NMSTemplate ) ) {
+                        }
+                        else if (data.Item2.GetType().BaseType == typeof(NMSTemplate))
+                        {
                             var pos = writer.BaseStream.Position;
-                            var template = (NMSTemplate) data.Item2;
+                            var template = (NMSTemplate)data.Item2;
                             int i2 = i + 1;
-                            template.AppendToWriter( writer, ref additionalData, ref i2, GetType(), listEnding );
+                            template.AppendToWriter(writer, ref additionalData, ref i2, GetType(), listEnding);
                             var endPos = writer.BaseStream.Position;
                             writer.BaseStream.Position = data.Item1;
-                            writer.Write( pos - data.Item1 );
-                            writer.WriteString( "c" + template.GetType().Name, Encoding.UTF8, 0x40 );
+                            writer.Write(pos - data.Item1);
+                            writer.WriteString("c" + template.GetType().Name, Encoding.UTF8, 0x40);
                             writer.BaseStream.Position = endPos;
-                        } else if ( data.Item2.GetType().IsGenericType && data.Item2.GetType().GetGenericTypeDefinition() == typeof( List<> ) ) {
+                        }
+                        else if (data.Item2.GetType().IsGenericType && data.Item2.GetType().GetGenericTypeDefinition() == typeof(List<>))
+                        {
                             // this will serialise a dynamic length list of either a generic type, or a specific type
                             Type itemType = data.Item2.GetType().GetGenericArguments()[0];
-                            if ( itemType == typeof( NMSTemplate ) ) {
+                            if (itemType == typeof(NMSTemplate))
+                            {
                                 // this is serialising a list of generic type
-                                SerializeGenericList( writer, (IList) data.Item2, data.Item1, ref additionalData, i + 1, listEnding );
-                            } else {
-                                // this is serialising a list if a particular type
-                                SerializeList( writer, (IList) data.Item2, data.Item1, ref additionalData, i + 1, listEnding );
+                                SerializeGenericList(writer, (IList)data.Item2, data.Item1, ref additionalData, i + 1, listEnding);
                             }
-                        } else
-                            throw new UnknownTypeException( data.Item2.GetType() );
+                            else
+                            {
+                                // this is serialising a list if a particular type
+                                SerializeList(writer, (IList)data.Item2, data.Item1, ref additionalData, i + 1, listEnding);
+                            }
+                        }
+                        else if (data.Item2.GetType() == typeof(byte[]))
+                        {
+                            // write the offset in the list header
+                            long dataPosition = writer.BaseStream.Position;
+                            writer.BaseStream.Position = data.Item1;
+                            writer.Write(dataPosition - data.Item1);
+                            writer.BaseStream.Position = dataPosition;
+                            SerializeValue(writer, data.Item2.GetType(), data.Item2, settings, null, 0, ref additionalData, ref i);     // passing i here *should* be fine as we will only be writing bytes which can't affect i
+                        }
+                        else
+                        {
+                            throw new UnknownTypeException(data.Item2.GetType());
+                        }
                     } else {
                         writer.Align( alignment, 0 );
                         SerializeList( writer, new List<int>(), data.Item1, ref additionalData, i + 1, listEnding );  // pass an empty list. Data type doesn't matter...

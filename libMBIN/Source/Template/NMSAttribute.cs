@@ -9,7 +9,7 @@ namespace libMBIN
         public bool Ignore { get; set; }
         public object DefaultValue { get; set; }
         public string[] EnumValue { get; set; }
-        public int Padding { get; set; }
+        public byte Padding { get; set; }
         public int Alignment { get; set; } = 4;
         public ulong GUID { get; set; }
         public bool Broken { get; set; }

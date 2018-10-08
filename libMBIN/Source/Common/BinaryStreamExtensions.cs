@@ -35,7 +35,7 @@ namespace libMBIN {
             return stringValue;
         }
 
-        public static void WriteString( this BinaryWriter writer, string str, Encoding encoding = null, int? size = null, bool nullTerminated = false ) {
+        public static void WriteString( this BinaryWriter writer, string str, Encoding encoding = null, int? size = null, bool nullTerminated = false, byte padding = 0 ) {
             encoding = encoding ?? Encoding.ASCII;
             str = str ?? String.Empty;
 
@@ -47,7 +47,18 @@ namespace libMBIN {
             if (nullTerminated && size == null) bufferSize += 1; // add space for null terminator
 
             byte[] stringBytes = encoding.GetBytes( str );
-            Array.Resize( ref stringBytes, bufferSize );
+            if (padding != 0 && size != null)
+            {
+                // extend the array by a single byte (null padding) then add the difference between the size and the buffer size of the padding bytes
+                Array.Resize(ref stringBytes, stringBytes.Length + 1);
+                byte[] paddingArray = Enumerable.Repeat(padding, (size ?? default(int)) - stringBytes.Length - 1).ToArray();    // I don't like the null-coalescence here, but it won't ever be default(int) because of the check beforehand...
+                stringBytes = stringBytes.Concat(paddingArray).ToArray();
+            }
+            else
+            {
+                Array.Resize(ref stringBytes, bufferSize);
+            }
+            
 
             if (nullTerminated && bufferSize > 0) {
                 var trimmedStringBytes = encoding.GetBytes( encoding.GetString( stringBytes ) );

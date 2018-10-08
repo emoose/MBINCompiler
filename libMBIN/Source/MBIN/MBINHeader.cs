@@ -8,8 +8,8 @@ namespace libMBIN
     public class MBINHeader : NMSTemplate
     {
         internal const uint  MBIN_MAGIC    = 0xCCCCCCCC;         // MBIN format ID
-        internal const uint  MBIN_MAGIC_PC = 0xDDDDDDDD;         // only used by TkGeometryData (*.MBIN.PC)
-        internal const uint  MBIN_VERSION  = 2500;               // vanilla version (why not uint?)
+        internal const uint  MBIN_MAGIC_PC = 0xDDDDDDDD;         // only used by TkGeometryData and TkGeometryStreamData (*.MBIN.PC)
+        internal const uint  MBIN_VERSION  = 2500;               // vanilla version
 
         // used for format V1
         internal const ulong MBINCVER_TAG  = 0x726576434E49424D; // "revCNIBM" ("MBINCver")
@@ -18,6 +18,10 @@ namespace libMBIN
         internal const ulong TKANIMMETADATA_TAG     = 0xFFFFFFFFFFFFFFFF; // only used for TkAnimMetadata
         internal const ulong TKANIMMETADATA_VERSION = 0x9B251350AE1ABCA7; // only used for TkAnimMetadata
         internal const ulong TKANIMMETADATA_PADDING = 0xFEFEFEFEFEFEFEFE; // only used for TkAnimMetadata
+
+        // used for format V2
+        internal const ulong TKGEOMETRYDATA_TAG     = 0xFFFFFFFFFFFFFFFF; // used by TkGeometryData and TkGeometryStreamData
+        internal const ulong TKGEOMETRYDATA_PADDING = 0xFEFEFEFEFEFEFEFE; // used by TkGeometryData and TkGeometryStreamData
 
         public enum Format { V0, V1, V2 }
 
@@ -203,7 +207,7 @@ namespace libMBIN
 
         public void SetDefaultsV0( Type type = null ) {
             // MBIN_MAGIC_PC is only used by TkGeometryData (*.MBIN.PC)
-            MagicID      = (type == typeof( NMS.Toolkit.TkGeometryData )) ? MBIN_MAGIC_PC : MBIN_MAGIC;
+            MagicID      = (type == typeof(NMS.Toolkit.TkGeometryData) | type == typeof(NMS.Toolkit.TkGeometryStreamData)) ? MBIN_MAGIC_PC : MBIN_MAGIC;
             FormatID     = MBIN_VERSION;
             Timestamp    = 0;
             TemplateGUID = type?.GetCustomAttribute<NMSAttribute>()?.GUID ?? 0;
@@ -215,11 +219,16 @@ namespace libMBIN
                 MbinVersion = TKANIMMETADATA_VERSION;
                 EndPadding  = TKANIMMETADATA_PADDING;
             }
+            else if (type == typeof(NMS.Toolkit.TkGeometryData) | type == typeof(NMS.Toolkit.TkGeometryStreamData))
+            {
+                Tag        = TKGEOMETRYDATA_TAG;
+                EndPadding = TKGEOMETRYDATA_PADDING;
+            }
         }
 
         public void SetDefaultsV1( Type type = null ) {
             SetDefaultsV0( type );
-            if ( type == typeof( NMS.Toolkit.TkAnimMetadata ) ) return;
+            if ( type == typeof( NMS.Toolkit.TkAnimMetadata ) | type == typeof(NMS.Toolkit.TkGeometryData) | type == typeof(NMS.Toolkit.TkGeometryStreamData)) return;
 
             Tag = MBINCVER_TAG;
 
@@ -231,6 +240,7 @@ namespace libMBIN
 
         public void SetDefaultsV2( Type type = null ) {
             SetDefaultsV0( type );
+            if (type == typeof(NMS.Toolkit.TkAnimMetadata) | type == typeof(NMS.Toolkit.TkGeometryData) | type == typeof(NMS.Toolkit.TkGeometryStreamData)) return;
 
             FormatAPI = 2;
             VersionNMS = Version.NMSVersion;

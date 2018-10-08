@@ -13,7 +13,7 @@ namespace libMBIN.NMS.Toolkit
 	[NMS(Size = 0xA0, GUID = 0x990A0508C5DCEEE6)]
     public class TkMeshData : NMSTemplate
     {
-        [NMS(Size = 0x80)]
+        [NMS(Size = 0x80, Padding = 0xFE)]
         /* 0x00 */ public string IdString;
         /* 0x80 */ public ulong Hash;
         /* 0x88 */ public int VertexDataSize;
@@ -27,7 +27,6 @@ namespace libMBIN.NMS.Toolkit
             {
                 case nameof(MeshDataStream):
                     long listPosition = reader.BaseStream.Position;
-                    //DebugLog($"TkGeometryData.CustomDeserialize({fieldName}) start 0x{listPosition:X}");
 
                     long listStartOffset = reader.ReadInt64();
                     int numEntries = reader.ReadInt32();
@@ -42,6 +41,27 @@ namespace libMBIN.NMS.Toolkit
                     return data;
             }
             return null;
+        }
+
+        public override bool CustomSerialize(BinaryWriter writer, Type field, object fieldData, NMSAttribute settings, FieldInfo fieldInfo, ref List<Tuple<long, object>> additionalData, ref int addtDataIndex)
+        {
+            var fieldName = fieldInfo.Name;
+            switch (fieldName)
+            {
+                case nameof(MeshDataStream):
+                    writer.Align(8, 0);
+
+                    // write empty list header
+                    long listPos = writer.BaseStream.Position;
+                    writer.Write((Int64)0); // listPosition
+                    writer.Write((Int32)MeshDataStream.Length); // size of data chunk in bytes
+                    writer.Write((UInt32)0xFEFEFE01);
+
+                    additionalData.Insert(addtDataIndex, new Tuple<long, object>(listPos, fieldData));
+                    addtDataIndex++;
+                    return true;
+            }
+            return false;
         }
     }
 
