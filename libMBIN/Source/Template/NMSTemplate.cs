@@ -378,6 +378,7 @@ namespace libMBIN
                 case "Byte[]":
                     int size = settings?.Size ?? 0;
                     byte stringPadding = settings?.Padding ?? 0;
+                    bool ignore = settings?.Ignore ?? true;
                     MarshalAsAttribute legacySettings = field?.GetCustomAttribute<MarshalAsAttribute>();
                     if ( legacySettings != null ) size = legacySettings.SizeConst;
 
@@ -385,7 +386,7 @@ namespace libMBIN
                         writer.WriteString( (string) fieldData, Encoding.UTF8, size, false, stringPadding );
                     } else {
                         byte[] bytes = (byte[]) fieldData;
-                        if (bytes.Length != 0)
+                        if (ignore != true)//(bytes.Length != 0)
                         {
                             size = bytes.Length;
                         }
@@ -585,17 +586,17 @@ namespace libMBIN
             //var entryOffsetNamePairs = new Dictionary<long, string>();
             List<KeyValuePair<long, String>> entryOffsetNamePairs = new List<KeyValuePair<long, String>>();
             foreach ( var entry in list ) {
-                int alignment = entry.GetType().GetCustomAttribute<NMSAttribute>()?.Alignment ?? 0x4;
+                int alignment = entry.GetType().GetCustomAttribute<NMSAttribute>()?.Alignment ?? 0x8;       // this will generally return 4 because it is the default...
 
-                writer.Align( alignment, 0 );
-                //DebugLog($"pos 0x{writer.BaseStream.Position:X}");
-                //DebugLog(entry.GetType().Name);
+                writer.Align( 8, 0 );
+                //Logger.LogDebug($"pos 0x{writer.BaseStream.Position:X}");
+                //Logger.LogDebug(entry.GetType().Name);
                 entryOffsetNamePairs.Add( new KeyValuePair<long, string>( writer.BaseStream.Position, entry.GetType().Name ) );
 
                 var template = (NMSTemplate) entry;
                 var listObjects = new List<Tuple<long, object>>();     // new list of objects so that this data is serialised first
                 var addtData = new Dictionary<long, object>();
-                DebugLogTemplate( $"[C] writing {template.GetType().Name} to offset 0x{writer.BaseStream.Position:X}" );
+                Logger.LogDebug( $"[C] writing {template.GetType().Name} to offset 0x{writer.BaseStream.Position:X}" );
                 // pass the new listObject object in place of additionalData so that this branch is serialised before the whole layer
                 template.AppendToWriter( writer, ref listObjects, ref addtDataIndexThis, GetType() );
                 for ( int i = 0; i < listObjects.Count; i++ ) {
@@ -660,7 +661,6 @@ namespace libMBIN
             if ( list.Count != 0 ) {
                 // if the class has no alignment value associated with it, set a default value
                 int alignment = alignment = list[0].GetType().GetCustomAttribute<NMSAttribute>()?.Alignment ?? 0x8;
-
                 writer.Align( alignment, 0 );
             }
 

@@ -40,9 +40,11 @@ namespace libMBIN.NMS.GameComponents
         /* 0x070 */ public string GivesReward;
 		/* 0x080 */ public float HardModeSubstanceMultiplier;
 
-        /* 0x084 */ public bool RemoveModel;
-        [NMS(Size = 0x3, Ignore = true)]
-        /* 0x085 */ public byte[] Padding85;
+        /* 0x084 */ public bool UseSystemColorsForTexture;
+        /* 0x085 */ public bool RemoveModel;
+        /* 0x086 */ public bool HideModel;
+        [NMS(Size = 0x1, Ignore = true)]
+        /* 0x087 */ public byte[] Padding87;
         [NMS(Size = 0x80)]
         /* 0x088 */ public TkTextureResource DestroyedModel;
         /* 0x10C */ public bool DestroyedModelUsesScale;
@@ -56,9 +58,10 @@ namespace libMBIN.NMS.GameComponents
         /* 0x128 */ public string DestroyEffectPoint;
         /* 0x138 */ public float DestroyEffectTime;
 
-        /* 0x13C */ public bool ShowInteract;
-        [NMS(Size = 0x3, Ignore = true)]
-        /* 0x13D */ public byte[] Padding13D;
+        /* 0x13C */ public bool DestroyEffectMatrices;
+        /* 0x13D */ public bool ShowInteract;
+        [NMS(Size = 0x2, Ignore = true)]
+        /* 0x13E */ public byte[] Padding13E;
         /* 0x140 */ public float ShowInteractRange;
         /* 0x144 */ public bool GrenadeSingleHit;
 
