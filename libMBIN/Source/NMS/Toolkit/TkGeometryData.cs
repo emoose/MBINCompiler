@@ -42,7 +42,7 @@ namespace libMBIN.NMS.Toolkit
         ///* 0x130 */ public List<float> VertexStream;        // this is just here so that the code compiles
         ///* 0x140 */ public List<float> SmallVertexStream;   // this is just here so that the code compiles
 
-
+        // TODO: add the list ending to this??
         public override bool CustomSerialize(BinaryWriter writer, Type field, object fieldData, NMSAttribute settings, FieldInfo fieldInfo, ref List<Tuple<long, object>> additionalData, ref int addtDataIndex)
         {
             if (field == null || fieldInfo == null)
@@ -60,7 +60,7 @@ namespace libMBIN.NMS.Toolkit
                     long listPos = writer.BaseStream.Position;
                     writer.Write((Int64)0); // listPosition
                     writer.Write((Int32)0); // listCount
-                    writer.Write((UInt32)0xAAAAAA01);
+                    writer.Write((UInt32)0x00000001);
 
                     IList data = (IList)fieldData;
 

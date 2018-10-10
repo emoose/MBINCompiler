@@ -8,7 +8,7 @@ namespace libMBIN.NMS.GameComponents
     {
         public int InteractionCameraIndex;
         [NMS(Size = 0x20)]
-        public string InteracttionCameraFocusJoint;
+        public string InteractionCameraFocusJoint;
         public float MinPitch;
         public float MaxPitch;
         public float MinYaw;

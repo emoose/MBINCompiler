@@ -6,7 +6,7 @@ namespace libMBIN.NMS.Toolkit
 	[NMS(Size = 0x98, GUID = 0x5EF3F6747F243082)]
     public class TkMeshMetaData : NMSTemplate
     {
-        [NMS(Size = 0x80)]
+        [NMS(Size = 0x80, Padding = 0xFE)]
         /* 0x00 */ public string IdString;
         /* 0x80 */ public ulong Hash;
         /* 0x88 */ public int VertexDataSize;

@@ -15,7 +15,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x30 */ public GcCustomisationCameraData CameraData;
         [NMS(Size = 0x4, Ignore = true)]
         /* 0x64 */ public byte[] Padding64;
-        /* 0x68 */ public GcCustomisationDescriptorGroups DescriptorOptions;
+        /* 0x68 */ public List<GcCustomisationDescriptorGroupOptions> DescriptorOptions;
         /* 0x78 */ public List<GcCustomisationTextureGroup> TextureGroups;
         /* 0x88 */ public List<GcCustomisationColourGroup> ColourGroups;
         /* 0x98 */ public List<GcCustomisationBoneScales> BoneScales;

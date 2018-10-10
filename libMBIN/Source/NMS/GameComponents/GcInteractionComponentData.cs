@@ -9,7 +9,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcInteractionComponentData : NMSTemplate
     {
 		public enum InteractionActionEnum { PressButton, HoldButton, Shoot }
-		public InteractionActionEnum InteractionAction;
+		/* 0x000 */ public InteractionActionEnum InteractionAction;
 
         /* 0x004 */ public GcInteractionType InteractionType;
         [NMS(Size = 8, Ignore = true)]
@@ -21,6 +21,8 @@ namespace libMBIN.NMS.GameComponents
         /* 0x0C9 */ public bool UseInteractCamera;
         /* 0x0CC */ public float BlendToCameraTime;
         /* 0x0D0 */ public float BlendFromCameraTime;
+        [NMS(Size = 0x4, Ignore = true)]
+        /* 0x0D4 */ public byte[] PaddingD4;
         /* 0x0D8 */ public GcInteractionActivationCost ActivationCost;
 
         [NMS(Size = 0x10)]
@@ -30,7 +32,9 @@ namespace libMBIN.NMS.GameComponents
         /* 0x124 */ public float InteractAngle;
         /* 0x128 */ public float InteractDistance;
         /* 0x12C */ public bool InteractInvertFace;
-        /* 00130 */ public GcInteractionType SecondaryInteractionType;
+        [NMS(Size = 0x3, Ignore = true)]
+        /* 0x12D */ public byte[] Padding12D;
+        /* 0x130 */ public GcInteractionType SecondaryInteractionType;
         [NMS(Size = 4, Ignore = true)]
         /* 0x134 */ public byte[] Padding134;
         /* 0x138 */ public GcInteractionActivationCost SecondaryActivationCost;
