@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x450, GUID = 0x6EB4F8994F155AC2, Broken = true)]
+	[NMS(Size = 0x450, GUID = 0x45C9489C73EC858D)]
     public class GcGenericMissionSequence : NMSTemplate
     {
         [NMS(Size = 0x10)]
@@ -52,14 +52,14 @@ namespace libMBIN.NMS.GameComponents
         [NMS(Size = 0x10)]
         /* 0x368 */ public string NextMissionHint;
 		public enum MessageCompleteEnum { Default, Always, Never }
-		public MessageCompleteEnum MessageComplete;
+		/* 0x378 */ public MessageCompleteEnum MessageComplete;
 		public enum MessageStartEnum { Default, Always, Never }
-		public MessageStartEnum MessageStart;
+		/* 0x37C */ public MessageStartEnum MessageStart;
 
         /* 0x380 */ public GcMissionBoardOptions MissionBoardOptions;
 
 		public enum AutoStartEnum { None, AllModes, NotCreative, Survival, Creative, OnSelected }
-		public AutoStartEnum AutoStart;
+		/* 0x3B0 */ public AutoStartEnum AutoStart;
         /* 0x3B4 */ public bool RestartOnCompletion;
         /* 0x3B5 */ public bool CancelSetsComplete;
         [NMS(Size = 0x2, Ignore = true)]

@@ -8,8 +8,10 @@ namespace libMBIN.NMS.GameComponents
 	[NMS(Size = 0x130, GUID = 0x5CF8C4676B4A867A)]
     public class GcSimpleInteractionComponentData : NMSTemplate
     {
-		public enum SimpleInteractionTypeEnum { Interact, Treasure, Beacon, Scan, Save, CallShip, CallVehicle, Word, Tech, GenericReward, Feed, Ladder, ClaimBase, TeleportStartPoint, TeleportEndPoint, Portal, Chest, ResourceHarvester, BaseCapsule, Hologram, NPCTerminalMessage, VehicleBoot, BiomeHarvester, FreighterGalacticMap, FreighterChest }
-		public SimpleInteractionTypeEnum SimpleInteractionType;
+		public enum SimpleInteractionTypeEnum { Interact, Treasure, Beacon, Scan, Save, CallShip, CallVehicle, Word, Tech, GenericReward, Feed, Ladder,
+            ClaimBase, TeleportStartPoint, TeleportEndPoint, Portal, Chest, ResourceHarvester, BaseCapsule, Hologram, NPCTerminalMessage, VehicleBoot,
+            BiomeHarvester, FreighterGalacticMap, FreighterChest }
+		/* 0x00 */ public SimpleInteractionTypeEnum SimpleInteractionType;
 
         /* 0x04 */ public float InteractDistance;
         [NMS(Size = 0x10)]
@@ -43,7 +45,7 @@ namespace libMBIN.NMS.GameComponents
         [NMS(Size = 0x4, Ignore = true)]
         /* 0x104 */ public byte[] Padding104;
         /* 0x108 */ public List<GcInteractionBaseBuildingState> BaseBuildingTriggerActions;
-        /* 0x118 */ public List<GcRewardTableItem> RewardOverrideTable;       // I don't know...
+        /* 0x118 */ public List<GcRewardMissionOverride> RewardOverrideTable;
         /* 0x128 */ public bool UsePersonalPersistentBuffer;
         [NMS(Size = 0x7, Ignore = true)]
         /* 0x129 */ public byte[] EndPadding;

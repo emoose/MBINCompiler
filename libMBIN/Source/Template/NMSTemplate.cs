@@ -661,7 +661,7 @@ namespace libMBIN
             if ( list.Count != 0 ) {
                 // if the class has no alignment value associated with it, set a default value
                 int alignment = alignment = list[0].GetType().GetCustomAttribute<NMSAttribute>()?.Alignment ?? 0x8;
-                writer.Align( alignment, 0 );
+                writer.Align( 8, 0 );
             }
 
             long listPosition = writer.BaseStream.Position;

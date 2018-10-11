@@ -5,13 +5,13 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x4E0, Alignment = 0x8, GUID = 0xF1C79CD6C223E979, Broken = true)]
+	[NMS(Size = 0x500, Alignment = 0x8, GUID = 0x4A5D06C34000246A)]
     public class GcAlienPuzzleEntry : NMSTemplate
     {
         [NMS(Size = 0x20)]
         /* 0x000 */ public string Id;
 
-        /* 0x020 */ public GcAlienRace AlienRace;
+        /* 0x020 */ public GcAlienRace Race;
         /* 0x024 */ public GcInteractionType Type;
         /* 0x028 */ public GcAlienPuzzleCategory Category;
 
@@ -29,8 +29,10 @@ namespace libMBIN.NMS.GameComponents
         /* 0x4AE */ public bool ProgressiveDialogue;
         [NMS(Size = 0x1, Ignore = true)]
         /* 0x4AF */ public byte[] Padding4AF;
-        /* 0x4B0 */ public List<GcAlienPuzzleOption> Options;
-        /* 0x4C0 */ public List<NMSString0x20> AdditionalText;
-        /* 0x4D0 */ public List<NMSString0x20> AdditionalTextAlien;
+        [NMS(Size = 0x20)]
+        /* 0x4B0 */ public string RequiresScanEvent;
+        /* 0x4D0 */ public List<GcAlienPuzzleOption> Options;
+        /* 0x4E0 */ public List<NMSString0x20> AdditionalText;
+        /* 0x4F0 */ public List<NMSString0x20> AdditionalTextAlien;
     }
 }
