@@ -1218,6 +1218,23 @@ namespace libMBIN
             File.WriteAllText(outputpath, data);
         }
 
+        public string GetID()
+        {
+            string ID = null;
+            var type = GetType();
+            var fields = type.GetFields();
+            foreach (var field in fields)
+            {
+                NMSAttribute settings = field.GetCustomAttribute<NMSAttribute>();
+                if (settings?.IDField ?? false)
+                {
+                    ID = field.GetValue(this).ToString();
+                    return ID;
+                }
+            }
+            return ID;
+        }
+        
         // func thats run after template is deserialized, can be used for checks etc
         public void FinishDeserialize()
         {

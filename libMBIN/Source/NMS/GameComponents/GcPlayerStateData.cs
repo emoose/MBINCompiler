@@ -52,7 +52,7 @@ namespace libMBIN.NMS.GameComponents
         [NMS(Size = 0x4, Ignore = true)]
         /* 0x006B4 */ public byte[] Padding6B4;
         /* 0x006B8 */ public List<GcMissionIDEpochPair> MissionRecurrences;
-        [NMS(Size = 0x4, Ignore = true)]
+        [NMS(Size = 0x8, Ignore = true)]
         /* 0x006C8 */ public byte[] Padding6C8;
         /* 0x006D0 */ public GcInteractionData HoloExplorerInteraction;
         /* 0x006F0 */ public GcInteractionData HoloScepticInteraction;

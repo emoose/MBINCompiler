@@ -14,7 +14,7 @@ namespace libMBIN.NMS.GameComponents
             TechShop, VehicleRaseStart, BuildingShop, MissionGiver, HoloHub, HoloExplorer, HoloSceptic, HoloNoone, PortalRunEntry, PortalActivate, CrashedFreighter,
             GraveInCave, GlitchyStroyBox, NetworkPlayer, NetworkMonument, AnomalyComputer, AtlasPlinth, Epilogue, GuildEnvoy, ManageFleet, ManageExpeditions,
             Frigate, CustomiseCharacter, CustomiseShip, CustomiseWeapon, CustomiseVehicle, ClaimBaseAnywhere, FleetNavigator, FleetCommandPost, StoryUtility,
-            MPMissionGiver, SpecialsShop }
+            MPMissionGiver, SpecialsShop, CUSTOMINTERACTION1, CUSTOMINTERACTION2, CUSTOMINTERACTION3, CUSTOMINTERACTION4, CUSTOMINTERACTION5 }
 		public InteractionTypeEnum InteractionType;
     }
 }

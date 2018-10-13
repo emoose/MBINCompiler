@@ -14,7 +14,7 @@ namespace libMBIN.NMS.Toolkit
         /* 0x010 */ public string Filename;
 
 		public enum AnimTypeEnum { Loop, OneShot, Control }
-		public AnimTypeEnum AnimType;
+		/* 0x090 */ public AnimTypeEnum AnimType;
 
         /* 0x094 */ public int FrameStart;
         /* 0x098 */ public int FrameEnd;
@@ -34,7 +34,7 @@ namespace libMBIN.NMS.Toolkit
         /* 0x104 */ public float ActionFrameStart;
         /* 0x108 */ public float ActionFrame;
 		public enum ControlCreatureSizeEnum { AllSizes, SmallOnly, LargeOnly }
-		public ControlCreatureSizeEnum ControlCreatureSize;
+		/* 0x10C */ public ControlCreatureSizeEnum ControlCreatureSize;
 
         /* 0x110 */ public bool Additive;
         /* 0x111 */ public bool Mirrored;
