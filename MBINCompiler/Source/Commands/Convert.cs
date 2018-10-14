@@ -28,7 +28,8 @@ namespace MBINCompiler.Commands {
                     if ( !force ) throw;
                     failedFiles.Add( path );
                     exceptions.Add( e );
-                    errorCode = (ErrorCode) CommandLine.ShowException( e );
+                    errorCode = (ErrorCode) CommandLine.ShowException( e, false );
+                    if ( !Quiet ) Console.Out.WriteLine();
                 }
             }
 
