@@ -1,11 +1,15 @@
-﻿using System;
+﻿#define USE_THREADS
+
+using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Threading;
 
 using libMBIN;
 
 namespace MBINCompiler.Commands {
-
+    using System.Diagnostics;
+    using System.Threading.Tasks;
     using static CommandLineOptions;
 
     internal static class Convert {
@@ -14,24 +18,31 @@ namespace MBINCompiler.Commands {
             var failedFiles = new List<string>();
             var exceptions = new List<Exception>();
             var errorCode = ErrorCode.Success;
+            var tasks = new List<Task>();
+            var timer = new Stopwatch();
+            timer.Start();
             foreach ( var fileIn in fileList ) {
                 var path = fileIn;
                 if ( outputDir != null ) path = fileIn.Substring( inputDir.Length + 1 );
-                try {
-                    string fileOut = fileIn;
-                    if ( outputDir != null ) fileOut = fileOut.Replace( inputDir, outputDir );
+                string fileOut = fileIn;
+                if ( outputDir != null ) fileOut = fileOut.Replace( inputDir, outputDir );
+                RunTask( tasks, () => {
+                    try {
+                        Console.Out.WriteLine( $"Converting {path}" );
+                        ConvertFile( fileIn, fileOut, InputFormat, OutputFormat );
 
-                    Console.Out.WriteLine( $"Converting {path}" );
-                    ConvertFile( fileIn, fileOut, InputFormat, OutputFormat );
-
-                } catch ( System.Exception e ) {
-                    if ( !force ) throw;
-                    failedFiles.Add( path );
-                    exceptions.Add( e );
-                    errorCode = (ErrorCode) CommandLine.ShowException( e, false );
-                    if ( !Quiet ) Console.Out.WriteLine();
-                }
+                    } catch ( System.Exception e ) {
+                        if ( !force ) throw;
+                        lock ( failedFiles ) {
+                            failedFiles.Add( path );
+                            exceptions.Add( e );
+                            errorCode = (ErrorCode) CommandLine.ShowException( e, false );
+                        }
+                        if ( !Quiet ) Console.Out.WriteLine();
+                    }
+                } );
             }
+            WaitForTasks( tasks );
 
             Logger.LogInfo( $"\n{fileList.Count - failedFiles.Count} files successfully converted." );
             if ( failedFiles.Count > 0 ) {
@@ -43,8 +54,20 @@ namespace MBINCompiler.Commands {
                 }
             }
 
+            Logger.LogInfo( "\nTIME: {0} seconds", timer.ElapsedMilliseconds / 1e3f );
             return errorCode;
         }
+
+        private static void RunTask( List<Task> tasks, Action action ) {
+            #if USE_THREADS
+                tasks.Add( Task.Factory.StartNew( action ) );
+            #else
+                action();
+            #endif
+        }
+
+        [Conditional( "USE_THREADS" )]
+        private static void WaitForTasks( List<Task> tasks ) { Task.WaitAll( tasks.ToArray() ); }
 
         public static void ConvertFile( string fileIn, string fileOut, FormatType inputFormat, FormatType outputFormat ) {
             fileOut = ChangeFileExtension( fileOut, outputFormat );
@@ -52,7 +75,7 @@ namespace MBINCompiler.Commands {
             Directory.CreateDirectory( Path.GetDirectoryName( fileOut ) );
 
             try {
-                using ( var indentScope = new Logger.IndentScope() )
+                //using ( var indentScope = new Logger.IndentScope() ) // not thread-safe
                 using ( var fIn = new FileStream( fileIn, FileMode.Open, FileAccess.Read ) )
                 using ( var ms = new MemoryStream() ) {
 
