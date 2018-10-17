@@ -49,15 +49,13 @@ namespace MBINCompiler.Commands {
 
             var defaultExclude = @"LANGUAGE\*;*.GEOMETRY.*";
 
-            #if DEBUG
-            defaultExclude = "";
-            #endif
+            //#if DEBUG
+            //defaultExclude = "";
+            //#endif
 
             IncludeFilters = new List<string>((optIncludes?.value ?? defaultInclude).Split(';'));
             ExcludeFilters = new List<string>((optExcludes?.value ?? defaultExclude).Split(';'));
 
-            //IncludeFilters = new List<string>( (optIncludes?.value ?? defaultInclude).Split( ';' ) );
-            //ExcludeFilters = new List<string>( (optExcludes?.value ?? @"LANGUAGE\*;*.GEOMETRY.*").Split( ';' ) );
             // if not auto-detecting then OutputFormat can be excluded
             if ( !autoFormat ) ExcludeFilters.Add( $"*.{OutputFormat}" );
 
@@ -215,11 +213,9 @@ namespace MBINCompiler.Commands {
             Logger.LogMessage( "INFO", $"--input-format={InputFormat} --output-format={OutputFormat}" );
 
             // exclude any files that don't match InputFormat
-            for (int i = fileList.Count - 1; i >= 0; i--)
-            {
+            for (int i = fileList.Count - 1; i >= 0; i--) {
                 var ext = Path.GetExtension(fileList[i]).ToUpper();
-                if (ext == ".PC")
-                {
+                if (ext == ".PC") {
                     ext = Path.GetExtension(Path.ChangeExtension(fileList[i], null)).ToUpper();
                 }
                 if (ext.Substring(1) != InputFormat.ToString()) fileList.RemoveAt(i);
