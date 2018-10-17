@@ -93,7 +93,7 @@ namespace libMBIN
 
         #region // Indent
         private static int _indentSize = 2;
-        private static int _indentLevel = 0;
+        [ThreadStatic] private static int _indentLevel = 0;
 
         private static Stack<int> indentStack = new Stack<int>();
 

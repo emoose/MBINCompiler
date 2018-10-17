@@ -14,6 +14,8 @@ namespace MBINCompiler.Commands {
 
     internal static class Convert {
 
+        private static int currentIndent = 0;
+
         public static ErrorCode ConvertFileList( string inputDir, string outputDir, List<string> fileList, bool force ) {
             var failedFiles = new List<string>();
             var exceptions = new List<Exception>();
@@ -26,9 +28,11 @@ namespace MBINCompiler.Commands {
                 if ( outputDir != null ) path = fileIn.Substring( inputDir.Length + 1 );
                 string fileOut = fileIn;
                 if ( outputDir != null ) fileOut = fileOut.Replace( inputDir, outputDir );
+                currentIndent = Logger.IndentLevel;
                 RunTask( tasks, () => {
                     try {
                         Console.Out.WriteLine( $"Converting {path}" );
+                        Logger.IndentLevel = currentIndent; // we need to reset the indent level for each thread otherwise it will accumulate
                         ConvertFile( fileIn, fileOut, InputFormat, OutputFormat );
 
                     } catch ( System.Exception e ) {
@@ -47,14 +51,18 @@ namespace MBINCompiler.Commands {
             Logger.LogInfo( $"\n{fileList.Count - failedFiles.Count} files successfully converted." );
             if ( failedFiles.Count > 0 ) {
                 Logger.LogInfo( $"{failedFiles.Count} FILES FAILED.\n" );
-                for ( int i = 0; i < failedFiles.Count; i++ ) {
-                    Logger.LogInfo( "FILE: {0}", failedFiles[i] );
-                    if ( exceptions[i].GetType() == typeof( CompilerException ) ) exceptions[i] = exceptions[i].InnerException;
-                    Logger.LogInfo( "ERROR: {0}\n", exceptions[i].Message );
+                using ( var indentScope = new Logger.IndentScope() ) {
+                    for ( int i = 0; i < failedFiles.Count; i++ ) {
+                        Logger.LogInfo( "FILE: {0}", failedFiles[i] );
+                        if ( exceptions[i].GetType() == typeof( CompilerException ) ) exceptions[i] = exceptions[i].InnerException;
+                        Logger.LogInfo( "ERROR: {0}\n", exceptions[i].Message );
+                    }
                 }
             }
 
-            Logger.LogInfo( "\nTIME: {0} seconds", timer.ElapsedMilliseconds / 1e3f );
+            #if DEBUG
+                Logger.LogInfo( "\nTIME: {0} seconds", timer.ElapsedMilliseconds / 1e3f );
+            #endif
             return errorCode;
         }
 
@@ -75,7 +83,7 @@ namespace MBINCompiler.Commands {
             Directory.CreateDirectory( Path.GetDirectoryName( fileOut ) );
 
             try {
-                //using ( var indentScope = new Logger.IndentScope() ) // not thread-safe
+                using ( var indentScope = new Logger.IndentScope() )
                 using ( var fIn = new FileStream( fileIn, FileMode.Open, FileAccess.Read ) )
                 using ( var ms = new MemoryStream() ) {
 
