@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
+using System.Text;
 
 namespace libMBIN
 {
@@ -87,7 +88,7 @@ namespace libMBIN
             set {
                 if ( consoleListener != null ) Debug.Listeners.Remove( consoleListener );
                 consoleListener = value ? (consoleListener ?? new ConsoleTraceListener()) : null;
-                if ( value ) Debug.Listeners.Add( new ConsoleTraceListener() );
+                if ( value ) Debug.Listeners.Add( consoleListener );
             }
         }
 
@@ -127,7 +128,8 @@ namespace libMBIN
             }
         }
 
-        private static string IndentPadding { get; set; } = "";
+        [ThreadStatic] private static string _indentPadding = "";
+        private static string IndentPadding { get => _indentPadding; set => _indentPadding = value;}
 
         /// <summary>Apply an indent to <paramref name="txt"/> using the Logger indentation.</summary>
         /// <param name="txt">The string to indent.</param>
@@ -516,12 +518,17 @@ namespace libMBIN
             label = !string.IsNullOrWhiteSpace( label ) ? $"[{label}]: " : "";
 
             string[] lines = string.Format( format, args ).Replace( "\r\n", "\n" ).Split( new char[] { '\n' } );
+            StringBuilder sbLine = new StringBuilder();
+            StringBuilder sbLog  = new StringBuilder();
 
             bool first = true;
             int last = lines.Length - 1;
             for ( int i = 0; i < lines.Length; i++ ) {
-                WriteLine( tee, lines[i], GetLabelledLine( label, lines[i], ref first, (i == last) ) );
+                sbLine.AppendLine( IndentString( lines[i] ) );
+                sbLog.AppendLine( IndentString( GetLabelledLine( label, lines[i], ref first, (i == last) ) ) );
             }
+            WriteLine( tee, sbLine.ToString(), sbLog.ToString() );
+
         }
 
         private static string GetLabelledLine( string label, string line, ref bool first, bool last ) {
@@ -531,8 +538,8 @@ namespace libMBIN
         }
 
         private static void WriteLine( TextWriter tee, string line, string logLine ) {
-            tee?.WriteLine( IndentString( (tee == Console.Out) ? line : logLine ) );
-            LogStream?.WriteLine( IndentString( logLine ) );
+            tee?.Write( (tee == Console.Out) ? line : logLine );
+            LogStream?.Write( logLine );
         }
 
     }

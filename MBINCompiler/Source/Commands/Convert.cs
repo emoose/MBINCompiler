@@ -1,15 +1,30 @@
-﻿#define USE_THREADS
+﻿// Configure conditional compilation symbols in the Project properties Build page.
+//
+// Debug configurations default to DISABLE_THREADS.
+// Add ENABLE_THREADS to the compilation symbols to enable threading.
+//
+// Release configurations default to ENABLE_THREADS.
+// Add DISABLE_THREADS to the compilation symbols to disable threading.
+
+// don't change
+#if !ENABLE_MODS && !DISABLE_MODS
+    #if DEBUG
+        #define DISABLE_THREADS
+    #else
+        #define ENABLE_THREADS
+    #endif
+#endif
 
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
-using System.Threading;
+using System.Threading.Tasks;
 
 using libMBIN;
 
 namespace MBINCompiler.Commands {
-    using System.Diagnostics;
-    using System.Threading.Tasks;
+
     using static CommandLineOptions;
 
     internal static class Convert {
@@ -17,32 +32,34 @@ namespace MBINCompiler.Commands {
         private static int currentIndent = 0;
 
         public static ErrorCode ConvertFileList( string inputDir, string outputDir, List<string> fileList, bool force ) {
+            var locked = new object(); // for syncing thread access to volatile data
+
             var failedFiles = new List<string>();
             var exceptions = new List<Exception>();
             var errorCode = ErrorCode.Success;
             var tasks = new List<Task>();
             var timer = new Stopwatch();
             timer.Start();
+            currentIndent = Logger.IndentLevel;
             foreach ( var fileIn in fileList ) {
                 var path = fileIn;
                 if ( outputDir != null ) path = fileIn.Substring( inputDir.Length + 1 );
                 string fileOut = fileIn;
                 if ( outputDir != null ) fileOut = fileOut.Replace( inputDir, outputDir );
-                currentIndent = Logger.IndentLevel;
                 RunTask( tasks, () => {
                     try {
-                        Console.Out.WriteLine( $"Converting {path}" );
                         Logger.IndentLevel = currentIndent; // we need to reset the indent level for each thread otherwise it will accumulate
+                        Console.WriteLine( $"Converting {path}" );
                         ConvertFile( fileIn, fileOut, InputFormat, OutputFormat );
 
                     } catch ( System.Exception e ) {
                         if ( !force ) throw;
-                        lock ( failedFiles ) {
+                        lock ( locked ) {
                             failedFiles.Add( path );
                             exceptions.Add( e );
                             errorCode = (ErrorCode) CommandLine.ShowException( e, false );
+                            Console.WriteLine();
                         }
-                        if ( !Quiet ) Console.Out.WriteLine();
                     }
                 } );
             }
@@ -51,30 +68,32 @@ namespace MBINCompiler.Commands {
             Logger.LogInfo( $"\n{fileList.Count - failedFiles.Count} files successfully converted." );
             if ( failedFiles.Count > 0 ) {
                 Logger.LogInfo( $"{failedFiles.Count} FILES FAILED.\n" );
-                using ( var indentScope = new Logger.IndentScope() ) {
-                    for ( int i = 0; i < failedFiles.Count; i++ ) {
-                        Logger.LogInfo( "FILE: {0}", failedFiles[i] );
-                        if ( exceptions[i].GetType() == typeof( CompilerException ) ) exceptions[i] = exceptions[i].InnerException;
-                        Logger.LogInfo( "ERROR: {0}\n", exceptions[i].Message );
+                #if !DEBUG
+                    using ( var indentScope = new Logger.IndentScope() ) {
+                        for ( int i = 0; i < failedFiles.Count; i++ ) {
+                            Console.WriteLine( Logger.IndentString( string.Format( "FILE: {0}", failedFiles[i] ) ) );
+                            if ( exceptions[i].GetType() == typeof( CompilerException ) ) exceptions[i] = exceptions[i].InnerException;
+                            Console.WriteLine( Logger.IndentString( string.Format( "ERROR: {0}\n", exceptions[i].Message ) ) );
+                        }
                     }
-                }
+                #endif
             }
 
-            #if DEBUG
-                Logger.LogInfo( "\nTIME: {0} seconds", timer.ElapsedMilliseconds / 1e3f );
-            #endif
+            //#if DEBUG
+                Logger.LogInfo( "TIME: {0} seconds", timer.ElapsedMilliseconds / 1e3f );
+            //#endif
             return errorCode;
         }
 
         private static void RunTask( List<Task> tasks, Action action ) {
-            #if USE_THREADS
+            #if ENABLE_THREADS
                 tasks.Add( Task.Factory.StartNew( action ) );
             #else
                 action();
             #endif
         }
 
-        [Conditional( "USE_THREADS" )]
+        [Conditional( "ENABLE_THREADS" )]
         private static void WaitForTasks( List<Task> tasks ) { Task.WaitAll( tasks.ToArray() ); }
 
         public static void ConvertFile( string fileIn, string fileOut, FormatType inputFormat, FormatType outputFormat ) {
@@ -83,7 +102,7 @@ namespace MBINCompiler.Commands {
             Directory.CreateDirectory( Path.GetDirectoryName( fileOut ) );
 
             try {
-                using ( var indentScope = new Logger.IndentScope() )
+                using ( var indentScope = new Logger.IndentScope() ) // not thread-safe? :/
                 using ( var fIn = new FileStream( fileIn, FileMode.Open, FileAccess.Read ) )
                 using ( var ms = new MemoryStream() ) {
 
