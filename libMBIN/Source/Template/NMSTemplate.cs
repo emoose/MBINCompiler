@@ -111,7 +111,7 @@ namespace libMBIN
 
         public static object DeserializeValue(BinaryReader reader, Type field, NMSAttribute settings, long templatePosition, FieldInfo fieldInfo, NMSTemplate parent)
         {
-            Logger.LogDebug( $"{fieldInfo?.DeclaringType.Name}.{fieldInfo?.Name}\ttype:\t{field.Name}\tpos:\t0x{templatePosition:X}" );
+            //Logger.LogDebug( $"{fieldInfo?.DeclaringType.Name}.{fieldInfo?.Name}\ttype:\t{field.Name}\tpos:\t0x{templatePosition:X}" );
 
             var template = parent.CustomDeserialize(reader, field, settings, templatePosition, fieldInfo);
             if (template != null)
@@ -264,8 +264,8 @@ namespace libMBIN
                 {
                     field.SetValue(obj, DeserializeValue(reader, field.FieldType, settings, templatePosition, field, obj));
                 }
-                Logger.LogDebug("Gk Hack: " + templateName + " Deserialized Value: " + field.Name + " value: " + field.GetValue(obj));
-                Logger.LogDebug($"{templateName} position: 0x{reader.BaseStream.Position:X}");
+                //Logger.LogDebug("Gk Hack: " + templateName + " Deserialized Value: " + field.Name + " value: " + field.GetValue(obj));
+                //Logger.LogDebug($"{templateName} position: 0x{reader.BaseStream.Position:X}");
                 /*using (System.IO.StreamWriter file =
                     new System.IO.StreamWriter(@"D:\mbincompiler_debug.txt", true))
                 {
@@ -367,7 +367,7 @@ namespace libMBIN
         }
 
         public void SerializeValue( BinaryWriter writer, Type fieldType, object fieldData, NMSAttribute settings, FieldInfo field, long startStructPos, ref List<Tuple<long, object>> additionalData, ref int addtDataIndex, int structLength = 0, UInt32 listEnding = 0xAAAAAA01 ) {
-            Logger.LogDebug( $"{field?.DeclaringType.Name}.{field?.Name}\ttype:\t{fieldType.Name}\tadditionalData.Count:\t{additionalData?.Count ?? 0}\taddtDataIndex:\t{addtDataIndex}" );
+            //Logger.LogDebug( $"{field?.DeclaringType.Name}.{field?.Name}\ttype:\t{fieldType.Name}\tadditionalData.Count:\t{additionalData?.Count ?? 0}\taddtDataIndex:\t{addtDataIndex}" );
 
             if (CustomSerialize(writer, fieldType, fieldData, settings, field, ref additionalData, ref addtDataIndex))
                 return;
@@ -596,7 +596,7 @@ namespace libMBIN
                 var template = (NMSTemplate) entry;
                 var listObjects = new List<Tuple<long, object>>();     // new list of objects so that this data is serialised first
                 var addtData = new Dictionary<long, object>();
-                Logger.LogDebug( $"[C] writing {template.GetType().Name} to offset 0x{writer.BaseStream.Position:X}" );
+                //Logger.LogDebug( $"[C] writing {template.GetType().Name} to offset 0x{writer.BaseStream.Position:X}" );
                 // pass the new listObject object in place of additionalData so that this branch is serialised before the whole layer
                 template.AppendToWriter( writer, ref listObjects, ref addtDataIndexThis, GetType() );
                 for ( int i = 0; i < listObjects.Count; i++ ) {
@@ -665,7 +665,7 @@ namespace libMBIN
             }
 
             long listPosition = writer.BaseStream.Position;
-            Logger.LogDebug( $"SerializeList\tstart:\t{$"0x{listPosition:X},",-10}\theader:\t{$"0x{listHeaderPosition:X},",-10}\tcount:\t{list.Count}" );
+            //Logger.LogDebug( $"SerializeList\tstart:\t{$"0x{listPosition:X},",-10}\theader:\t{$"0x{listHeaderPosition:X},",-10}\tcount:\t{list.Count}" );
 
             writer.BaseStream.Position = listHeaderPosition;
 
@@ -685,7 +685,6 @@ namespace libMBIN
             int addtDataIndexThis = addtDataIndex;
 
             foreach ( var entry in list ) {
-                Logger.LogDebug($"[C] writing {entry.GetType().Name} to offset 0x{writer.BaseStream.Position:X}");
                 DebugLogTemplate( $"[C] writing {entry.GetType().Name} to offset 0x{writer.BaseStream.Position:X}" );
                 SerializeValue( writer, entry.GetType(), entry, null, null, listPosition, ref additionalData, ref addtDataIndexThis, 0, listEnding );
             }
