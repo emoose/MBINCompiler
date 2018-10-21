@@ -49,7 +49,11 @@ namespace MBINCompiler.Commands {
                 RunTask( tasks, () => {
                     try {
                         Logger.IndentLevel = currentIndent; // we need to reset the indent level for each thread otherwise it will accumulate
-                        Console.WriteLine( $"Converting {path}" );
+                        #if DEBUG
+                            Logger.LogInfo( $"Converting {path}" );
+                        #else
+                            Console.WriteLine( $"Converting {path}" );
+                        #endif
                         ConvertFile( fileIn, fileOut, InputFormat, OutputFormat );
 
                     } catch ( System.Exception e ) {
