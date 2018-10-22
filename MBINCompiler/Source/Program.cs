@@ -59,6 +59,10 @@ namespace MBINCompiler {
             // now we can emit an error if we need to
             if ( invalidArguments ) return CommandLine.ShowInvalidCommandLineArg( options );
 
+            // initialize remaining global options
+            DebugMode = options.GetOptionSwitch( "debug" );
+
+            // execute the appropriate mode
             try {
                 switch (options.Verb) {
                     case "help":    return HelpCommand.Execute( options );

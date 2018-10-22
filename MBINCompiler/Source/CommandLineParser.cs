@@ -12,6 +12,7 @@ namespace MBINCompiler
 
             public string param;
 
+            public bool isHidden;
             public bool isRequired;
             public bool allowMultiple;
 

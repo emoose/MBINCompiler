@@ -91,14 +91,13 @@ namespace MBINCompiler.Commands {
 
         private static void RunTask( List<Task> tasks, Action action ) {
             #if ENABLE_THREADS
-                tasks.Add( Task.Factory.StartNew( action ) );
-            #else
-                action();
+                if (UseThreads) { tasks.Add( Task.Factory.StartNew( action ) ); return; }
             #endif
+            action();
         }
 
         [Conditional( "ENABLE_THREADS" )]
-        private static void WaitForTasks( List<Task> tasks ) { Task.WaitAll( tasks.ToArray() ); }
+        private static void WaitForTasks( List<Task> tasks ) { if (UseThreads) Task.WaitAll( tasks.ToArray() ); }
 
         public static void ConvertFile( string fileIn, string fileOut, FormatType inputFormat, FormatType outputFormat ) {
             fileOut = ChangeFileExtension( fileOut, outputFormat );
