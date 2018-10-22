@@ -221,62 +221,44 @@ namespace libMBIN
 
         public static NMSTemplate DeserializeBinaryTemplate(BinaryReader reader, string templateName)
         {
-            if (templateName.StartsWith("c") && templateName.Length > 1)
-                templateName = templateName.Substring(1);
+            if (templateName.StartsWith("c") && templateName.Length > 1) templateName = templateName.Substring(1);
 
             NMSTemplate obj = TemplateFromName(templateName);
             
-            /*using (System.IO.StreamWriter file =
-                new System.IO.StreamWriter(@"T:\mbincompiler_debug.txt", true))
-            {
-                file.WriteLine("Deserializing Template: " + templateName);
-            }*/
-
             //DebugLog("Gk Hack: " + "Deserializing Template: " + templateName);
             
-            if (obj == null)
-                return null;
+            if (obj == null) return null;
 
             long templatePosition = reader.BaseStream.Position;
-            DebugLogTemplate($"{templateName}\tposition:\t0x{templatePosition:X}");
+            DebugLogTemplate($"{templateName}\t0x{templatePosition:X4}");
+            using ( var indentScope = new Logger.IndentScope() ) {
 
-            if (templateName == "VariableSizeString")
-            {
-                long stringPos = reader.ReadInt64();
-                int stringLength = reader.ReadInt32();
-                int unkC = reader.ReadInt32();
-                reader.BaseStream.Position = templatePosition + stringPos;
-                ((NMS.VariableSizeString) obj).Value = reader.ReadString(Encoding.UTF8, stringLength).TrimEnd('\x00');
-                reader.BaseStream.Position = templatePosition + 0x10;
-                return obj;
-            }
-
-            var type = obj.GetType();
-            var fields = type.GetFields().OrderBy(field => field.MetadataToken); // hack to get fields in order of declaration (todo: use something less hacky, this might break mono?)
-            foreach (var field in fields)
-            {
-                NMSAttribute settings = field.GetCustomAttribute<NMSAttribute>();
-                if (field.FieldType.IsEnum)
-                {
-                    field.SetValue(obj, Enum.ToObject(field.FieldType, DeserializeValue(reader, field.FieldType, settings, templatePosition, field, obj)));
+                if ( templateName == "VariableSizeString" ) {
+                    long stringPos = reader.ReadInt64();
+                    int stringLength = reader.ReadInt32();
+                    int unkC = reader.ReadInt32();
+                    reader.BaseStream.Position = templatePosition + stringPos;
+                    ((NMS.VariableSizeString) obj).Value = reader.ReadString( Encoding.UTF8, stringLength ).TrimEnd( '\x00' );
+                    reader.BaseStream.Position = templatePosition + 0x10;
+                    return obj;
                 }
-                else
-                {
-                    field.SetValue(obj, DeserializeValue(reader, field.FieldType, settings, templatePosition, field, obj));
+
+                var type = obj.GetType();
+                var fields = type.GetFields().OrderBy( field => field.MetadataToken ); // hack to get fields in order of declaration (todo: use something less hacky, this might break mono?)
+                foreach ( var field in fields ) {
+                    NMSAttribute settings = field.GetCustomAttribute<NMSAttribute>();
+                    if ( field.FieldType.IsEnum ) {
+                        field.SetValue( obj, Enum.ToObject( field.FieldType, DeserializeValue( reader, field.FieldType, settings, templatePosition, field, obj ) ) );
+                    } else {
+                        field.SetValue( obj, DeserializeValue( reader, field.FieldType, settings, templatePosition, field, obj ) );
+                    }
+                    DebugLogFieldName( $"{templateName}\t0x{reader.BaseStream.Position:X4}\t{field.Name}\t{field.GetValue( obj )}" );
                 }
-                //Logger.LogDebug("Gk Hack: " + templateName + " Deserialized Value: " + field.Name + " value: " + field.GetValue(obj));
-                //Logger.LogDebug($"{templateName} position: 0x{reader.BaseStream.Position:X}");
-                /*using (System.IO.StreamWriter file =
-                    new System.IO.StreamWriter(@"D:\mbincompiler_debug.txt", true))
-                {
-                    file.WriteLine(" Deserialized Value: " + field.Name + " value: " + field.GetValue(obj));
-                    file.WriteLine($"{templateName} position: 0x{reader.BaseStream.Position:X}");
-                }*/
+
+                obj.FinishDeserialize();
+
             }
-
-            obj.FinishDeserialize();
-
-            DebugLogTemplate($"{templateName}\tend position:\t0x{reader.BaseStream.Position:X}");
+            DebugLogTemplate($"{templateName}\t0x{reader.BaseStream.Position:X4}");
 
             return obj;
         }
@@ -1122,39 +1104,34 @@ namespace libMBIN
                 if (settings?.DefaultValue != null) templateField.SetValue(template, settings.DefaultValue);
             }
 
-            foreach (var xmlElement in xmlData.Elements)
-            {
-                if (xmlElement.GetType() == typeof(EXmlProperty))
-                {
-                    EXmlProperty xmlProperty = (EXmlProperty)xmlElement;
-                    FieldInfo field = templateType.GetField(xmlProperty.Name);
-                    object fieldValue = null;
-                    DebugLogPropertyName(xmlProperty.Name);
-                    if (field.FieldType == typeof(NMSTemplate) || field.FieldType.BaseType == typeof(NMSTemplate))
-                    {
-                        fieldValue = DeserializeEXml(xmlProperty);
+            using ( var indentScope = new Logger.IndentScope() ) {
+
+                foreach ( var xmlElement in xmlData.Elements ) {
+                    if ( xmlElement.GetType() == typeof( EXmlProperty ) ) {
+                        EXmlProperty xmlProperty = (EXmlProperty) xmlElement;
+                        FieldInfo field = templateType.GetField( xmlProperty.Name );
+                        object fieldValue = null;
+                        DebugLogPropertyName( xmlProperty.Name );
+                        if ( field.FieldType == typeof( NMSTemplate ) || field.FieldType.BaseType == typeof( NMSTemplate ) ) {
+                            fieldValue = DeserializeEXml( xmlProperty );
+                        } else {
+                            Type fieldType = field.FieldType;
+                            NMSAttribute settings = field.GetCustomAttribute<NMSAttribute>();
+                            fieldValue = DeserializeEXmlValue( template, fieldType, field, xmlProperty, templateType, settings );
+                        }
+                        field.SetValue( template, fieldValue );
+                    } else if ( xmlElement.GetType() == typeof( EXmlData ) ) {
+                        EXmlData innerXmlData = (EXmlData) xmlElement;
+                        FieldInfo field = templateType.GetField( innerXmlData.Name );
+                        NMSTemplate innerTemplate = DeserializeEXml( innerXmlData );
+                        field.SetValue( template, innerTemplate );
+                    } else if ( xmlElement.GetType() == typeof( EXmlMeta ) ) {
+                        EXmlMeta xmlMeta = (EXmlMeta) xmlElement;
+                        string comment = xmlMeta.Comment;
+                        DebugLogComment( comment );
                     }
-                    else
-                    {
-                        Type fieldType = field.FieldType;
-                        NMSAttribute settings = field.GetCustomAttribute<NMSAttribute>();
-                        fieldValue = DeserializeEXmlValue(template, fieldType, field, xmlProperty, templateType, settings);
-                    }
-                    field.SetValue(template, fieldValue);
                 }
-                else if (xmlElement.GetType() == typeof(EXmlData))
-                {
-                    EXmlData innerXmlData = (EXmlData)xmlElement;
-                    FieldInfo field = templateType.GetField(innerXmlData.Name);
-                    NMSTemplate innerTemplate = DeserializeEXml(innerXmlData);
-                    field.SetValue(template, innerTemplate);
-                }
-                else if (xmlElement.GetType() == typeof(EXmlMeta))
-                {
-                    EXmlMeta xmlMeta = (EXmlMeta)xmlElement;
-                    string comment = xmlMeta.Comment;
-                    DebugLogComment(comment);
-                }
+
             }
             /*
             foreach (var xmlProperty in xmlData.Elements.OfType<EXmlProperty>())
