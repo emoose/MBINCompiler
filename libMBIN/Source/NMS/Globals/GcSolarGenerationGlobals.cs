@@ -97,6 +97,8 @@ namespace libMBIN.NMS.Globals
         [NMS(Size = 0x7)]
         /* 0x1C4 */ public GcAISpaceshipWeightingData[] SpaceshipWeightings;
         /* 0x288 */ public float PlanetRingProbability;
+        [NMS(Size = 0x4, Ignore = true)]
+        /* 0x28C */ public byte[] Padding28C;
         /* 0x290 */ public GcPlanetRingData PlanetRingsMin;
         /* 0x2F0 */ public GcPlanetRingData PlanetRingsMax;
     }

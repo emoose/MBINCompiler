@@ -117,6 +117,7 @@ namespace libMBIN
             if (template != null)
                 return template;
 
+            // TODO: change fieldType to fieldName...
             var fieldType = field.Name;
             switch (fieldType)
             {
@@ -212,7 +213,8 @@ namespace libMBIN
                     }
                     else
                     {
-                        reader.Align(0x4, templatePosition);
+                        int alignment = field.GetCustomAttribute<NMSAttribute>()?.Alignment ?? 0x4;
+                        reader.Align(alignment, templatePosition);
                         var data = DeserializeBinaryTemplate(reader, fieldType);
                         return data;
                     }
@@ -444,7 +446,16 @@ namespace libMBIN
                     break;
 
                 case "NMSTemplate":
-                    writer.Align( 8, startStructPos);
+                    int template_alignment = settings?.Alignment ?? 0x4;
+                    
+                    if (template_alignment == 0x4)
+                    {
+                        writer.Align(8, startStructPos);
+                    }
+                    else
+                    {
+                        writer.Align(template_alignment, startStructPos);
+                    }
                     long refPos = writer.BaseStream.Position;
 
                     var template = (NMSTemplate) fieldData;
@@ -491,17 +502,17 @@ namespace libMBIN
                             var realObj = obj;
                             if ( realObj == null ) realObj = Activator.CreateInstance( arrayType );
 
-                            SerializeValue( writer, realObj.GetType(), realObj, settings, field, fieldPos, ref additionalData, ref addtDataIndex, structLength, listEnding );
+                            SerializeValue( writer, realObj.GetType(), realObj, realObj.GetType().GetCustomAttribute<NMSAttribute>(), field, startStructPos, ref additionalData, ref addtDataIndex, structLength, listEnding );
                         }
                     } else if ( fieldType.IsEnum ) {
                         writer.Align(4, startStructPos);
                         writer.Write((int)Enum.Parse(field.FieldType, fieldData.ToString()));
 
                     } else if ( fieldType.BaseType == typeof( NMSTemplate ) ) {
-                        int alignment = settings?.Alignment ?? 0x4;     // this isn't 0x10 for Colour's??
-                        writer.Align(alignment, startStructPos);
                         var realData = (NMSTemplate) fieldData;
                         if ( realData == null ) realData = (NMSTemplate) Activator.CreateInstance( fieldType );
+                        int alignment = realData.GetType().GetCustomAttribute<NMSAttribute>()?.Alignment ?? 0x4;
+                        writer.Align(alignment, startStructPos);
                         realData.AppendToWriter( writer, ref additionalData, ref addtDataIndex, GetType(), listEnding );
 
                     } else {
@@ -668,6 +679,8 @@ namespace libMBIN
 
             foreach ( var entry in list ) {
                 DebugLogTemplate( $"[C] writing {entry.GetType().Name} to offset 0x{writer.BaseStream.Position:X}" );
+                int alignment = entry.GetType().GetCustomAttribute<NMSAttribute>()?.Alignment ?? 0x4;
+                writer.Align(alignment, 0);
                 SerializeValue( writer, entry.GetType(), entry, null, null, listPosition, ref additionalData, ref addtDataIndexThis, 0, listEnding );
             }
 

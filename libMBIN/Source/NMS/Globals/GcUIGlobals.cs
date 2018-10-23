@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS( GUID = 0xD25256FB1959D22E )]
+    [NMS( GUID = 0x6657BC76B6378C31)]
     public class GcUIGlobals : NMSTemplate
     {
         /* 0x0 */ public bool LoadPagesFromMetadataCache;
@@ -204,25 +204,26 @@ namespace libMBIN.NMS.Globals
         /* 0x7BC */ public float ConsoleTextTimeMin;
         /* 0x7C0 */ public float ConsoleTextTimeMax;
         /* 0x7C4 */ public float HoverOffscreenBorder;
-        /* 0x7C8 */ public float TimedEventLookTime;
-        /* 0x7CC */ public float DamageImpactMergeTime;
-        /* 0x7D0 */ public float DamageImpactTimeBetweenNumbers;
-        /* 0x7D4 */ public float DamageImpactMinDistance;
-        /* 0x7D8 */ public float DamagePerSecondSampleTime;
-        /* 0x7DC */ public float DamageNumberTime;
-        /* 0x7E0 */ public float DamageNumberSizeInShip;
-        /* 0x7E4 */ public float DamageNumberSize;
-        /* 0x7E8 */ public float DamageNumberSizeCritMultiplier;
-        /* 0x7EC */ public float DamageNumberBlackAlpha;
-        /* 0x7F0 */ public float DamageNumberOutline;
-        /* 0x7F4 */ public float DamageNumberOutline2;
-        /* 0x7F8 */ public float DamageNumberOffsetX;
-        /* 0x7FC */ public float DamageNumberOffsetY;
-        /* 0x800 */ public Vector2f DamageNumberSideSpeed;
-        /* 0x808 */ public float DamageNumberFadeIn;
-        /* 0x80C */ public float DamageNumberFadeOut;
-        /* 0x810 */ public float DamageNumberUpOffset;
-        /* 0x814 */ public TkCurveType DamageNumberUpCurve;
+        /* 0x7C8 */ public float TransferSendOffscreenBorder;
+        /* 0x7CC */ public float TimedEventLookTime;
+        /* 0x7D0 */ public float DamageImpactMergeTime;
+        /* 0x7D4 */ public float DamageImpactTimeBetweenNumbers;
+        /* 0x7D8 */ public float DamageImpactMinDistance;
+        /* 0x7DC */ public float DamagePerSecondSampleTime;
+        /* 0x7E0 */ public float DamageNumberTime;
+        /* 0x7E4 */ public float DamageNumberSizeInShip;
+        /* 0x7E8 */ public float DamageNumberSize;
+        /* 0x7EC */ public float DamageNumberSizeCritMultiplier;
+        /* 0x7F0 */ public float DamageNumberBlackAlpha;
+        /* 0x7F4 */ public float DamageNumberOutline;
+        /* 0x7F8 */ public float DamageNumberOutline2;
+        /* 0x7FC */ public float DamageNumberOffsetX;
+        /* 0x800 */ public float DamageNumberOffsetY;
+        /* 0x804 */ public Vector2f DamageNumberSideSpeed;
+        /* 0x80C */ public float DamageNumberFadeIn;
+        /* 0x810 */ public float DamageNumberFadeOut;
+        /* 0x814 */ public float DamageNumberUpOffset;
+        /* 0x818 */ public TkCurveType DamageNumberUpCurve;
         /* 0x820 */ public Colour DamageNumberCriticalColour;
 
         /* 0x830 */ public Colour DamageNumberIneffectiveColour;
