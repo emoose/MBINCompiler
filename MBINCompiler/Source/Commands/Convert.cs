@@ -7,7 +7,7 @@
 // Add DISABLE_THREADS to the compilation symbols to disable threading.
 
 // don't change
-#if !ENABLE_MODS && !DISABLE_MODS
+#if !ENABLE_THREADS && !DISABLE_THREADS
     #if DEBUG
         #define DISABLE_THREADS
     #else
@@ -30,6 +30,9 @@ namespace MBINCompiler.Commands {
     internal static class Convert {
 
         private static int currentIndent = 0;
+    #if ENABLE_THREADS
+        private static Task fileModeTask = null;
+    #endif
 
         public static ErrorCode ConvertFileList( string inputDir, string outputDir, List<string> fileList, bool force ) {
             var locked = new object(); // for syncing thread access to volatile data
@@ -47,6 +50,9 @@ namespace MBINCompiler.Commands {
                 string fileOut = fileIn;
                 if ( outputDir != null ) fileOut = fileOut.Replace( inputDir, outputDir );
                 RunTask( tasks, () => {
+                    #if ENABLE_THREADS
+                        fileModeTask?.Wait(); // block tasks while waiting for overwrite prompt.
+                    #endif
                     try {
                         Logger.IndentLevel = currentIndent; // we need to reset the indent level for each thread otherwise it will accumulate
                         #if DEBUG
@@ -102,8 +108,6 @@ namespace MBINCompiler.Commands {
         public static void ConvertFile( string fileIn, string fileOut, FormatType inputFormat, FormatType outputFormat ) {
             fileOut = ChangeFileExtension( fileOut, outputFormat );
 
-            Directory.CreateDirectory( Path.GetDirectoryName( fileOut ) );
-
             try {
                 using ( var indentScope = new Logger.IndentScope() ) // not thread-safe? :/
                 using ( var fIn = new FileStream( fileIn, FileMode.Open, FileAccess.Read ) )
@@ -148,7 +152,9 @@ namespace MBINCompiler.Commands {
                     }
 
                     ms.Flush();
-                    FileMode fileMode = GetFileMode(fileOut);
+
+                    FileMode fileMode = GetFileMode( fileOut );
+                    Directory.CreateDirectory( Path.GetDirectoryName( fileOut ) );
                     using ( var fOut = new FileStream( fileOut, fileMode, FileAccess.Write ) ) ms.WriteTo( fOut );
                 }
             } catch ( Exception e ) {
@@ -176,17 +182,29 @@ namespace MBINCompiler.Commands {
         /// how to handle the file.
         /// </summary>
         /// <param name="file">The file path to check.</param>
-        /// <returns>A FileMode enum. The value is 0 if the user opted to keep the existing file.</returns>
+        /// <returns>A FileMode enum.</returns>
         private static FileMode GetFileMode( string file ) {
-            if ( Overwrite == OverwriteMode.Always ) {
-                return FileMode.Create;
-            } else if ( Overwrite == OverwriteMode.Prompt ) {
-                if ( File.Exists( file ) ) {
-                    if ( Utils.PromptOverwrite( file, ref OptionBackers.optOverwrite ) ) return FileMode.Create;
-                    throw new IOException( "The destination file already exists!" );
+            FileMode mode = FileMode.CreateNew; // OverwriteMode.Never or file doesn't exist
+#if ENABLE_THREADS
+            fileModeTask?.Wait();
+            fileModeTask = new Task( () => {
+#endif
+                if ( Overwrite == OverwriteMode.Always ) {
+                    mode = FileMode.Create;
+                } else if ( Overwrite == OverwriteMode.Prompt ) {
+                    if ( File.Exists( file ) ) {
+                        bool overwrite = Utils.PromptOverwrite( file, ref OptionBackers.optOverwrite );
+                        if ( !overwrite ) throw new IOException( "The destination file already exists!" );
+                        mode = FileMode.Create;
+                    }
                 }
-            }
-            return FileMode.CreateNew; // OverwriteMode.Never or file doesn't exist
+#if ENABLE_THREADS
+            } );
+            fileModeTask?.Start();
+            fileModeTask?.Wait();
+            fileModeTask = null;
+#endif
+            return mode;
         }
 
     }
