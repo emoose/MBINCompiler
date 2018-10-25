@@ -5,8 +5,9 @@ using System.IO;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace libMBIN
-{
+namespace libMBIN {
+
+    using Common;
 
     /// <summary>
     /// Handles logging messages to a log stream.
@@ -95,7 +96,10 @@ namespace libMBIN
 
         #region // Indent
         private static int _indentSize = 2;
-        [ThreadStatic] private static int _indentLevel = 0;
+#if (DEBUG && ENABLE_THREADS) || (!DEBUG && !DISABLE_THREADS)
+        [ThreadStatic]
+#endif
+        private static int _indentLevel = 0;
 
         private static Stack<int> indentStack = new Stack<int>();
 
@@ -129,8 +133,16 @@ namespace libMBIN
             }
         }
 
-        [ThreadStatic] private static string _indentPadding = "";
-        private static string IndentPadding { get => _indentPadding; set => _indentPadding = value;}
+#if (DEBUG && ENABLE_THREADS) || (!DEBUG && !DISABLE_THREADS)
+        [ThreadStatic]
+#endif
+        private static string _indentPadding = "";
+        private static string IndentPadding {
+            get {
+                return _indentPadding;
+            }
+            set => _indentPadding = value;
+        }
 
         /// <summary>Apply an indent to <paramref name="txt"/> using the Logger indentation.</summary>
         /// <param name="txt">The string to indent.</param>
@@ -138,7 +150,9 @@ namespace libMBIN
         /// <seealso cref="IndentSize"/><seealso cref="IndentLevel"/>
         /// <seealso cref="Indent"/><seealso cref="Unindent"/>
         /// <seealso cref="PushIndent(int)"/><seealso cref="PopIndent"/><seealso cref="IndentScope"/>
-        public static string IndentString( string txt ) => $"{IndentPadding}{txt}";
+        public static string IndentString( string txt ) {
+            return $"{IndentPadding}{txt}";
+        }
 
         /// <summary>Increment <see cref="IndentLevel"/></summary>
         /// <seealso cref="Unindent"/>
@@ -450,7 +464,7 @@ namespace libMBIN
         /// </summary>
         /// <param name="obj">Any object. The data to output.</param>
         /// <seealso cref="LogError(string, object[])"/>
-        public static void LogError( object obj ) => LogMessage( Console.Error, "ERROR", "\n{0}", obj );
+        public static void LogError( object obj ) => LogMessage( Console.Error, "ERROR", "{0}", obj );
         /// <summary>
         /// Output an error message to the log and additionally to Console.Error.
         /// The message will be prepended with an ERROR label.
@@ -463,7 +477,7 @@ namespace libMBIN
         /// <seealso cref="LogMessage(TextWriter, string, string, object[])"/>
         /// <seealso cref="LogDebug(string, string, string, object[])"/>
         /// <seealso cref="LogTrace(string, string, string, object[])"/>
-        public static void LogError( string format, params object[] args ) => LogMessage( Console.Error, "ERROR", $"\n{format}", args );
+        public static void LogError( string format, params object[] args ) => LogMessage( Console.Error, "ERROR", $"{format}", args );
 
 
         /// <summary>Output a general message to <see cref="LogStream"/>.</summary>
@@ -517,7 +531,7 @@ namespace libMBIN
         public static void LogMessage( TextWriter tee, string label, string format, params object[] args ) => LogMessage( true, tee, label, format, args );
 
         private static object logMessageLock = new object();
-        private static Task logMessageTask = null;
+        private static Task   logMessageTask = null;
 
         /// <summary>Output a general message to <see cref="LogStream"/> and <paramref name="tee"/>.</summary>
         /// <param name="log">True if the message should output to log file as well as tee. False if the message should  only be output to tee.</param>
@@ -527,28 +541,24 @@ namespace libMBIN
         /// <param name="args">The arguments to be formatted.</param>
         /// <seealso cref="LogMessage(TextWriter, string, string, object[])"/>
         public static void LogMessage( bool log, TextWriter tee, string label, string format, params object[] args ) {
-            lock ( logMessageLock ) {
-                logMessageTask?.Wait();
-                logMessageTask = new Task( () => {
-                    label = !string.IsNullOrWhiteSpace( label ) ? $"[{label}]: " : "";
+            Async.SynchronizeTask( logMessageLock, ref logMessageTask, () => {
+                label = !string.IsNullOrWhiteSpace( label ) ? $"[{label}]: " : "";
 
-                    string[] lines = string.Format( format, args ).Replace( "\r\n", "\n" ).Split( new char[] { '\n' } );
-                    StringBuilder sbLine = new StringBuilder();
-                    StringBuilder sbLog = new StringBuilder();
+                string[] lines = string.Format( format, args ).Replace( "\r\n", "\n" ).Split( new char[] { '\n' } );
+                StringBuilder sbLine = new StringBuilder();
+                StringBuilder sbLog = new StringBuilder();
 
-                    bool first = true;
-                    int last = lines.Length - 1;
-                    for ( int i = 0; i < lines.Length; i++ ) {
-                        sbLine.AppendLine( IndentString( lines[i] ) );
-                        sbLog.AppendLine( IndentString( GetLabelledLine( label, lines[i], ref first, (i == last) ) ) );
-                    }
-                    WriteLine( log, tee, sbLine.ToString(), sbLog.ToString() );
-                } );
-                logMessageTask?.Start();
-                logMessageTask?.Wait();
-                logMessageTask = null;
-            }
+                bool first = true;
+                int last = lines.Length - 1;
+                for ( int i = 0; i < lines.Length; i++ ) {
+                    sbLine.AppendLine( IndentString( lines[i] ) );
+                    sbLog.AppendLine( IndentString( GetLabelledLine( label, lines[i], ref first, (i == last) ) ) );
+                }
+                WriteLine( log, tee, sbLine.ToString(), sbLog.ToString() );
+            } );
         }
+
+
 
         private static string GetLabelledLine( string label, string line, ref bool first, bool last ) {
             if ( !first ) return line;

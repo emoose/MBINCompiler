@@ -49,8 +49,11 @@ namespace MBINCompiler {
             return (int) code;
         }
 
+        private static long lastPosition = 0;
+
         public static int ShowException( Exception e, bool wait=true ) {
-            string msg = ( e.GetType() == typeof( CompilerException ) ) ? e.InnerException.Message : null;
+            string msg = ( e.GetType() == typeof( CompilerException ) ) ? e.InnerException?.Message : null;
+            if ( Logger.LogStream.BaseStream.Position != lastPosition ) Logger.LogMessage( "" ); // new line, log only
             ShowError( $"[{e.GetType().Name}]: {msg ?? e.Message}", wait: wait );
             using ( var indent = new Logger.IndentScope() ) {
                 var b = e;
@@ -68,14 +71,19 @@ namespace MBINCompiler {
                     Logger.LogMessage( "INFO", $"\n{((CompilerException) e).FileName}" );
                     if ( e is MbinException ) {
                         var mbin = ((MbinException) e).Mbin;
-                        Logger.LogMessage( "INFO", $"MBIN\tversion:\t{mbin.Header.GetMBINVersion()}\tguid:\t{mbin.Header.TemplateGUID:X}\ttemplate:\t{mbin.Header.TemplateName}" );
+                        Logger.LogMessage( "INFO", GetFileInfo( mbin ) );
                     }
                     e = e.InnerException;
                 }
 
-                if ( !(e is System.IO.EndOfStreamException) ) Logger.LogMessage( $"\n{b.StackTrace}\n" );
+                Logger.LogMessage( (e is System.IO.EndOfStreamException) ? "" : $"\n{b.StackTrace}\n" );
             }
+            lastPosition = Logger.LogStream.BaseStream.Position;
             return (int) ErrorCode.Unknown;
+        }
+
+        public static string GetFileInfo( MBINFile mbin ) {
+            return $"MBIN\tversion:\t{mbin.Header.GetMBINVersion()}\tguid:\t{mbin.Header.TemplateGUID:X}\ttemplate:\t{mbin.Header.TemplateName}";
         }
 
         /// <summary>

@@ -16,45 +16,59 @@ namespace libMBIN
         private static XmlReaderSettings readerSettings = new XmlReaderSettings();
 
 
-        public static NMSTemplate ReadTemplate(string filePath)
-        {
-            using (var input = File.OpenRead(filePath))
-                return ReadTemplateFromStream(input);
+        public static NMSTemplate ReadTemplate( string filePath ) {
+            string templateName;
+            return ReadTemplate( filePath, out templateName );
         }
 
-        public static NMSTemplate ReadTemplateFromString(string xml)
-        {
+        public static NMSTemplate ReadTemplate(string filePath, out string templateName ) {
+            using ( var input = File.OpenRead( filePath ) ) return ReadTemplateFromStream( input, out templateName );
+        }
+
+        public static NMSTemplate ReadTemplateFromString( string xml ) {
+            string templateName;
+            return ReadTemplateFromString( xml, out templateName );
+        }
+
+        public static NMSTemplate ReadTemplateFromString( string xml, out string templateName ) {
             var origCulture = Thread.CurrentThread.CurrentCulture;
             Thread.CurrentThread.CurrentCulture = CultureInfo.InvariantCulture;
             readerSettings.IgnoreComments = false;
 
-            using (var reader = new StringReader(xml))
-            using (var xmlReader = XmlReader.Create(reader, readerSettings))
-            {
-                var template = ReadTemplateFromXmlReader(xmlReader);
+            using ( var reader = new StringReader( xml ) )
+            using ( var xmlReader = XmlReader.Create( reader, readerSettings ) ) {
+                var template = ReadTemplateFromXmlReader( xmlReader, out templateName );
                 Thread.CurrentThread.CurrentCulture = origCulture;
                 return template;
             }
         }
 
-        public static NMSTemplate ReadTemplateFromStream(Stream input)
-        {
+        public static NMSTemplate ReadTemplateFromStream(Stream input) {
+            string templateName;
+            return ReadTemplateFromStream( input, out templateName );
+        }
+
+        public static NMSTemplate ReadTemplateFromStream( Stream input, out string templateName ) {
             var origCulture = Thread.CurrentThread.CurrentCulture;
             Thread.CurrentThread.CurrentCulture = CultureInfo.InvariantCulture;
             readerSettings.IgnoreComments = false;
 
-            using (var reader = XmlReader.Create(input, readerSettings))
-            {
-                var template = ReadTemplateFromXmlReader(reader);
+            using ( var reader = XmlReader.Create( input, readerSettings ) ) {
+                var template = ReadTemplateFromXmlReader( reader, out templateName );
                 Thread.CurrentThread.CurrentCulture = origCulture;
                 return template;
             }
         }
 
-        private static NMSTemplate ReadTemplateFromXmlReader(XmlReader reader)
-        {
-            EXmlData root = (EXmlData)Serializer.Deserialize(reader);
-            NMSTemplate rootTemplate = NMSTemplate.DeserializeEXml(root);
+        private static NMSTemplate ReadTemplateFromXmlReader(XmlReader reader) {
+            string templateName;
+            return ReadTemplateFromXmlReader( reader, out templateName );
+        }
+
+        private static NMSTemplate ReadTemplateFromXmlReader( XmlReader reader, out string templateName ) {
+            EXmlData root = (EXmlData) Serializer.Deserialize( reader );
+            templateName = root?.Template;
+            NMSTemplate rootTemplate = NMSTemplate.DeserializeEXml( root );
             return rootTemplate;
         }
 
