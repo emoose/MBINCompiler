@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace libMBIN
 {
@@ -513,22 +514,40 @@ namespace libMBIN
         /// <seealso cref="LogError(string, object[])"/>
         /// <seealso cref="LogDebug(string, string, string, object[])"/>
         /// <seealso cref="LogTrace(string, string, string, object[])"/>
-        public static void LogMessage( TextWriter tee, string label, string format, params object[] args ) {
+        public static void LogMessage( TextWriter tee, string label, string format, params object[] args ) => LogMessage( true, tee, label, format, args );
 
-            label = !string.IsNullOrWhiteSpace( label ) ? $"[{label}]: " : "";
+        private static object logMessageLock = new object();
+        private static Task logMessageTask = null;
 
-            string[] lines = string.Format( format, args ).Replace( "\r\n", "\n" ).Split( new char[] { '\n' } );
-            StringBuilder sbLine = new StringBuilder();
-            StringBuilder sbLog  = new StringBuilder();
+        /// <summary>Output a general message to <see cref="LogStream"/> and <paramref name="tee"/>.</summary>
+        /// <param name="log">True if the message should output to log file as well as tee. False if the message should  only be output to tee.</param>
+        /// <param name="tee">A secondary stream to tee the message to. If tee is Console.Out then no label will be prepended to the tee message.</param>
+        /// <param name="label">A label to prepend to the log message.</param>
+        /// <param name="format">A format string that the message will be composed from.</param>
+        /// <param name="args">The arguments to be formatted.</param>
+        /// <seealso cref="LogMessage(TextWriter, string, string, object[])"/>
+        public static void LogMessage( bool log, TextWriter tee, string label, string format, params object[] args ) {
+            lock ( logMessageLock ) {
+                logMessageTask?.Wait();
+                logMessageTask = new Task( () => {
+                    label = !string.IsNullOrWhiteSpace( label ) ? $"[{label}]: " : "";
 
-            bool first = true;
-            int last = lines.Length - 1;
-            for ( int i = 0; i < lines.Length; i++ ) {
-                sbLine.AppendLine( IndentString( lines[i] ) );
-                sbLog.AppendLine( IndentString( GetLabelledLine( label, lines[i], ref first, (i == last) ) ) );
+                    string[] lines = string.Format( format, args ).Replace( "\r\n", "\n" ).Split( new char[] { '\n' } );
+                    StringBuilder sbLine = new StringBuilder();
+                    StringBuilder sbLog = new StringBuilder();
+
+                    bool first = true;
+                    int last = lines.Length - 1;
+                    for ( int i = 0; i < lines.Length; i++ ) {
+                        sbLine.AppendLine( IndentString( lines[i] ) );
+                        sbLog.AppendLine( IndentString( GetLabelledLine( label, lines[i], ref first, (i == last) ) ) );
+                    }
+                    WriteLine( log, tee, sbLine.ToString(), sbLog.ToString() );
+                } );
+                logMessageTask?.Start();
+                logMessageTask?.Wait();
+                logMessageTask = null;
             }
-            WriteLine( tee, sbLine.ToString(), sbLog.ToString() );
-
         }
 
         private static string GetLabelledLine( string label, string line, ref bool first, bool last ) {
@@ -537,9 +556,9 @@ namespace libMBIN
             return !first ? $"{label}{line}" : line;
         }
 
-        private static void WriteLine( TextWriter tee, string line, string logLine ) {
+        private static void WriteLine( bool log, TextWriter tee, string line, string logLine ) {
             tee?.Write( (tee == Console.Out) ? line : logLine );
-            LogStream?.Write( logLine );
+            if (log) LogStream?.Write( logLine );
         }
 
     }

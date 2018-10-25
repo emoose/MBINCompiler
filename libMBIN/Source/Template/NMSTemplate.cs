@@ -74,13 +74,16 @@ namespace libMBIN
 
         #endregion
 
-        public static NMSTemplate TemplateFromName(string templateName)
-        {
-            Type type;
-            if (!NMSTemplateMap.TryGetValue(templateName, out type))
-                return null; // Template type doesn't exist
+        public static Type GetTemplateType(string name) {
+            Type type = null;
+            if ( NMSTemplateMap.TryGetValue( name, out type ) ) return type;
+            return null;
+        }
 
-            return Activator.CreateInstance(type) as NMSTemplate;
+        public static NMSTemplate TemplateFromName(string templateName) {
+            Type type = GetTemplateType( templateName );
+            if ( type != null) return Activator.CreateInstance( type ) as NMSTemplate;
+            return null; // Template type doesn't exist
         }
 
         public int GetDataSize()

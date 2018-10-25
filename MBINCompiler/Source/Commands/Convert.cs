@@ -30,9 +30,9 @@ namespace MBINCompiler.Commands {
     internal static class Convert {
 
         private static int currentIndent = 0;
-    #if ENABLE_THREADS
+
         private static Task fileModeTask = null;
-    #endif
+        private static object fileModeLock = new object();
 
         public static ErrorCode ConvertFileList( string inputDir, string outputDir, List<string> fileList, bool force ) {
             var locked = new object(); // for syncing thread access to volatile data
@@ -50,16 +50,10 @@ namespace MBINCompiler.Commands {
                 string fileOut = fileIn;
                 if ( outputDir != null ) fileOut = fileOut.Replace( inputDir, outputDir );
                 RunTask( tasks, () => {
-                    #if ENABLE_THREADS
-                        fileModeTask?.Wait(); // block tasks while waiting for overwrite prompt.
-                    #endif
+                    fileModeTask?.Wait(); // block tasks while waiting for overwrite prompt. if not threaded, this is a nop
                     try {
                         Logger.IndentLevel = currentIndent; // we need to reset the indent level for each thread otherwise it will accumulate
-                        #if DEBUG
-                            Logger.LogInfo( $"Converting {path}" );
-                        #else
-                            Console.WriteLine( $"Converting {path}" );
-                        #endif
+                        EmitInfo( $"Converting {path}" );
                         ConvertFile( fileIn, fileOut, InputFormat, OutputFormat );
 
                     } catch ( System.Exception e ) {
@@ -68,7 +62,7 @@ namespace MBINCompiler.Commands {
                             failedFiles.Add( path );
                             exceptions.Add( e );
                             errorCode = (ErrorCode) CommandLine.ShowException( e, false );
-                            Console.WriteLine();
+                            Logger.LogMessage( false, Console.Out, null, "" );
                         }
                     }
                 } );
@@ -105,6 +99,14 @@ namespace MBINCompiler.Commands {
         [Conditional( "ENABLE_THREADS" )]
         private static void WaitForTasks( List<Task> tasks ) { if (UseThreads) Task.WaitAll( tasks.ToArray() ); }
 
+        private static void EmitInfo( string text ) {
+            #if DEBUG
+                Logger.LogInfo( text );
+            #else
+                Logger.LogMessage( false, Console.Out, null, text );
+            #endif
+        }
+        
         public static void ConvertFile( string fileIn, string fileOut, FormatType inputFormat, FormatType outputFormat ) {
             fileOut = ChangeFileExtension( fileOut, outputFormat );
 
@@ -114,43 +116,10 @@ namespace MBINCompiler.Commands {
                 using ( var ms = new MemoryStream() ) {
 
                     if ( inputFormat == FormatType.MBIN ) {
-                        var mbin = new MBINFile( fIn );
-                        if ( !mbin.Load() || !mbin.Header.IsValid ) throw new InvalidDataException( "Not a valid MBIN file!" );
-
-                        var sw = new StreamWriter( ms );
-
-                        NMSTemplate data = null;
-                        try {
-                            data = mbin.GetData();
-                            if ( data is null ) throw new InvalidDataException( "Invalid MBIN data." );
-                        } catch ( Exception e ) {
-                            throw new MbinException( $"Failed to read {mbin.Header.GetXMLTemplateName()} from MBIN.", e, fileIn, mbin );
-                        }
-
-                        try {
-                            sw.Write( EXmlFile.WriteTemplate( data ) );
-                            sw.Flush();
-                            if ( ms.Length == 0 ) throw new InvalidDataException( "Invalid EXML data." );
-                        } catch ( Exception e ) {
-                            throw new MbinException( $"Failed serializing {mbin.Header.GetXMLTemplateName()} to EXML.", e, fileIn, mbin );
-                        }
-
+                        fileOut = ConvertMBIN( fIn, ms, fileOut );
                     } else if ( inputFormat == FormatType.EXML ) {
-                        NMSTemplate data = null;
-                        try {
-                            data = EXmlFile.ReadTemplateFromStream( fIn );
-                            if ( data is null ) throw new InvalidDataException( $"Failed to deserialize EXML." );
-                            if ( data is libMBIN.NMS.Toolkit.TkGeometryData | data is libMBIN.NMS.Toolkit.TkGeometryStreamData ) fileOut += ".PC";
-                            var mbin = new MBINFile( ms ) { Header = new MBINHeader() };
-                            mbin.Header.SetDefaults( data.GetType() );
-                            mbin.SetData( data );
-                            mbin.Save();
-                        } catch ( Exception e ) {
-                            throw new ExmlException( e, fileIn, data );
-                        }
-
+                        fileOut = ConvertEXML( fIn, ms, fileOut );
                     }
-
                     ms.Flush();
 
                     FileMode fileMode = GetFileMode( fileOut );
@@ -162,6 +131,58 @@ namespace MBINCompiler.Commands {
                 throw new CompilerException( e, fileIn );
             }
 
+        }
+
+        /// <summary>Convert MBIN to EXML</summary>
+        /// <param name="fIn">Source file</param>
+        /// <param name="msOut">Output stream</param>
+        /// <param name="fileOut">Output file path. Passed through as the return value. Not actually used.</param>
+        /// <returns>fileOut</returns>
+        private static string ConvertMBIN( FileStream fIn, MemoryStream msOut, string fileOut ) {
+            var mbin = new MBINFile( fIn );
+            if ( !mbin.Load() || !mbin.Header.IsValid ) throw new InvalidDataException( "Not a valid MBIN file!" );
+
+            var sw = new StreamWriter( msOut );
+
+            NMSTemplate data = null;
+            try {
+                data = mbin.GetData();
+                if ( data is null ) throw new InvalidDataException( "Invalid MBIN data." );
+            } catch ( Exception e ) {
+                throw new MbinException( $"Failed to read {mbin.Header.GetXMLTemplateName()} from MBIN.", e, fIn.Name, mbin );
+            }
+
+            try {
+                sw.Write( EXmlFile.WriteTemplate( data ) );
+                sw.Flush();
+                if ( msOut.Length == 0 ) throw new InvalidDataException( "Invalid EXML data." );
+            } catch ( Exception e ) {
+                throw new MbinException( $"Failed serializing {mbin.Header.GetXMLTemplateName()} to EXML.", e, fIn.Name, mbin );
+            }
+
+            return fileOut;
+        }
+
+        /// <summary>Convert EXML to MBIN</summary>
+        /// <param name="fIn">Source file</param>
+        /// <param name="msOut">Output stream</param>
+        /// <param name="fileOut">Output file path. Passed through as the return value. For geometry files, ".PC" will be appended.</param>
+        /// <returns>fileOut</returns>
+        private static string ConvertEXML( FileStream fIn, MemoryStream msOut, string fileOut ) {
+            NMSTemplate data = null;
+            try {
+                data = EXmlFile.ReadTemplateFromStream( fIn );
+                if ( data is null ) throw new InvalidDataException( $"Failed to deserialize EXML." );
+                if ( data is libMBIN.NMS.Toolkit.TkGeometryData | data is libMBIN.NMS.Toolkit.TkGeometryStreamData ) fileOut += ".PC";
+                var mbin = new MBINFile( msOut ) { Header = new MBINHeader() };
+                mbin.Header.SetDefaults( data.GetType() );
+                mbin.SetData( data );
+                mbin.Save();
+            } catch ( Exception e ) {
+                throw new ExmlException( e, fIn.Name, data );
+            }
+
+            return fileOut;
         }
 
         private static string ChangeFileExtension( string file, FormatType format ) {
@@ -185,25 +206,25 @@ namespace MBINCompiler.Commands {
         /// <returns>A FileMode enum.</returns>
         private static FileMode GetFileMode( string file ) {
             FileMode mode = FileMode.CreateNew; // OverwriteMode.Never or file doesn't exist
-#if ENABLE_THREADS
-            fileModeTask?.Wait();
-            fileModeTask = new Task( () => {
-#endif
-                if ( Overwrite == OverwriteMode.Always ) {
-                    mode = FileMode.Create;
-                } else if ( Overwrite == OverwriteMode.Prompt ) {
-                    if ( File.Exists( file ) ) {
-                        bool overwrite = Utils.PromptOverwrite( file, ref OptionBackers.optOverwrite );
-                        if ( !overwrite ) throw new IOException( "The destination file already exists!" );
+            // If threaded, we need to synchronize so that the user doesn't get prompted multiple times.
+            // If not then the fileModeTask and fileModeLock stuff here is redundant, so it doesn't need to be guarded.
+            lock ( fileModeLock ) {
+                fileModeTask?.Wait();
+                fileModeTask = new Task( () => {
+                    if ( Overwrite == OverwriteMode.Always ) {
                         mode = FileMode.Create;
+                    } else if ( Overwrite == OverwriteMode.Prompt ) {
+                        if ( File.Exists( file ) ) {
+                            bool overwrite = Utils.PromptOverwrite( file, ref OptionBackers.optOverwrite );
+                            if ( !overwrite ) throw new IOException( "The destination file already exists!" );
+                            mode = FileMode.Create;
+                        }
                     }
-                }
-#if ENABLE_THREADS
-            } );
-            fileModeTask?.Start();
-            fileModeTask?.Wait();
-            fileModeTask = null;
-#endif
+                } );
+                fileModeTask?.Start();
+                fileModeTask?.Wait();
+                fileModeTask = null;
+            }
             return mode;
         }
 
