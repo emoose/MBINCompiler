@@ -8,6 +8,8 @@ namespace MBINCompiler
     using static CommandLineParser;
     using static Utils;
 
+    using HeaderFormat = libMBIN.MBINHeader.Format;
+
     internal static class CommandLineOptions
     {
 
@@ -21,6 +23,7 @@ namespace MBINCompiler
             public static FormatType optOutputFormat     = FormatType.Unknown;
             public static List<string> optIncludeFilters = null;
             public static List<string> optExcludeFilters = null;
+            public static HeaderFormat optFormatVersion  = HeaderFormat.V2;
             public static bool optUseThreads             = true;
         }
 
@@ -56,6 +59,9 @@ namespace MBINCompiler
 
         // --exclude
         public static List<string> ExcludeFilters { get => optExcludeFilters; internal set => optExcludeFilters = value; }
+
+        // --format-version
+        public static HeaderFormat FormatVersion { get => optFormatVersion; internal set => optFormatVersion = value; }
 
         // --no-threads
         public static bool UseThreads { get => optUseThreads; internal set => optUseThreads = value; }
@@ -123,7 +129,11 @@ namespace MBINCompiler
                                         "The default is --exclude=\"LANGUAGE\\*;*.GEOMETRY.*\".\n" +
                                         "The --exclude filter is applied after --include." },
 
-            new Option { longName = "no-threads", isHidden = true, description = "Disable multi-threading." }
+            new Option { shortName = 'V', longName = "format-version", param = "[0|1|2]", isHidden = true,
+                            description = "\nOutput using the specified MBIN format version.\n" +
+                                          "Default is version 2." },
+
+            new Option { longName = "no-threads", isHidden = true, description = "Disable multi-threading." },
         };
 
 
