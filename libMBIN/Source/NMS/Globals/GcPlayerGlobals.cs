@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS( GUID = 0x229B325674CE447F)]
+    [NMS( GUID = 0xBE6EDCC0794AD189)]
     public class GcPlayerGlobals : NMSTemplate
     {
         /* 0x0 */ public bool InteractNearbyRadiusEnabled;

@@ -2,7 +2,7 @@
 // They will always be disabled/ignored in Release builds.
 
 // Uncomment to enable debug logging of the template de/serialization.
-//#define DEBUG_TEMPLATE
+#define DEBUG_TEMPLATE
 
 // Uncomment to enable debug logging of XML comments
 //#define DEBUG_COMMENTS
@@ -217,7 +217,7 @@ namespace libMBIN
                     else
                     {
                         int alignment = field.GetCustomAttribute<NMSAttribute>()?.Alignment ?? 0x4;
-                        reader.Align(alignment, templatePosition);
+                        reader.Align(alignment, 0); // templatePosition when not in list??
                         var data = DeserializeBinaryTemplate(reader, fieldType);
                         return data;
                     }
@@ -515,7 +515,8 @@ namespace libMBIN
                         var realData = (NMSTemplate) fieldData;
                         if ( realData == null ) realData = (NMSTemplate) Activator.CreateInstance( fieldType );
                         int alignment = realData.GetType().GetCustomAttribute<NMSAttribute>()?.Alignment ?? 0x4;
-                        writer.Align(alignment, startStructPos);
+                        //DebugLogTemplate(alignment.ToString());
+                        writer.Align(alignment, 0);     // startStructPos if not in list maybe??
                         realData.AppendToWriter( writer, ref additionalData, ref addtDataIndex, GetType(), listEnding );
 
                     } else {
@@ -657,7 +658,7 @@ namespace libMBIN
             if ( list.Count != 0 ) {
                 // if the class has no alignment value associated with it, set a default value
                 int alignment = alignment = list[0].GetType().GetCustomAttribute<NMSAttribute>()?.Alignment ?? 0x8;
-                writer.Align( 8, 0 );
+                writer.Align(alignment, 0 );
             }
 
             long listPosition = writer.BaseStream.Position;

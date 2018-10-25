@@ -5,15 +5,15 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Toolkit
 {
-	[NMS(GUID = 0x3CD7D2192958BA6C)]
-    public class TkAnimMetadata : NMSTemplate       // size: 0x58
+	[NMS(Size = 0x58, GUID = 0x3CD7D2192958BA6C)]
+    public class TkAnimMetadata : NMSTemplate
     {
-        public int FrameCount;
-        public int NodeCount;
+        /* 0x00 */ public int FrameCount;
+        /* 0x04 */ public int NodeCount;
 
-        public List<TkAnimNodeData> NodeData;
-        public List<TkAnimNodeFrameData> AnimFrameData;
+        /* 0x08 */ public List<TkAnimNodeData> NodeData;
+        /* 0x18 */ public List<TkAnimNodeFrameData> AnimFrameData;
 
-        public TkAnimNodeFrameData StillFrameData;
+        /* 0x28 */ public TkAnimNodeFrameData StillFrameData;
     }
 }

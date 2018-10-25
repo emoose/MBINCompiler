@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(GUID = 0x49843E9480857ED0)]
+    [NMS(GUID = 0x73229FEB0E6954BF)]
     public class GcSpaceshipGlobals : NMSTemplate
     {
 		/* 0x0 */ public float MaximumShipHeightWhenExiting;
