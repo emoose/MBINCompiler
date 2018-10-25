@@ -2,7 +2,7 @@
 // They will always be disabled/ignored in Release builds.
 
 // Uncomment to enable debug logging of the template de/serialization.
-#define DEBUG_TEMPLATE
+//#define DEBUG_TEMPLATE
 
 // Uncomment to enable debug logging of XML comments
 //#define DEBUG_COMMENTS
