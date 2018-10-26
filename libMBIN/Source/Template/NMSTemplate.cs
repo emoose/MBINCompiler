@@ -929,7 +929,12 @@ namespace libMBIN
 
                         return arrayProperty;
                     } else if ( fieldType.IsEnum ) {
-                        valueString = value?.ToString();
+                        // output MaterialFlagEnum as UberFlagEnum
+                        if ( field.FieldType == typeof( NMS.Toolkit.TkMaterialFlags.MaterialFlagEnum ) ) {
+                            valueString = ((NMS.Toolkit.TkMaterialFlags.UberFlagEnum) value).ToString();
+                        } else {
+                            valueString = value?.ToString();
+                        }
                         break;
                     } else {
                         throw new UnknownTypeException( field.FieldType, field.Name );
@@ -1077,11 +1082,21 @@ namespace libMBIN
                         }
 
                         return array;
-                    } else if (field.FieldType.IsEnum)
-                    {
-                        return (int)Enum.Parse(field.FieldType, xmlProperty.Value);
-                    }
-                    else {
+                    } else if (field.FieldType.IsEnum) {
+                        try {
+                            return (int) Enum.Parse(field.FieldType, xmlProperty.Value);
+                        } catch {
+                            // material flags can have a custom suffix
+                            if ( field.FieldType == typeof( libMBIN.NMS.Toolkit.TkMaterialFlags.MaterialFlagEnum ) ) {
+                                // if we got here, then we know that Value is an identifier and not an integer
+                                // trim the custom suffix
+                                return (int) Enum.Parse( field.FieldType, xmlProperty.Value.Substring( 0, 5 ) ); // "_FXX_"
+                            } else {
+                                throw;
+                            }
+                        }
+
+                    } else {
                         return fieldType.IsValueType ? Activator.CreateInstance(fieldType) : null;
                     }
             }
