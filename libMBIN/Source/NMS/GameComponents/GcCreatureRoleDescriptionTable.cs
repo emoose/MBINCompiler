@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0xD2C6B913CD1676C7)]
+	[NMS(Size = 0x20, GUID = 0x729B83415895F94)]
     public class GcCreatureRoleDescriptionTable : NMSTemplate
     {
         public List<GcCreatureRoleDescription> RoleDescription;
@@ -15,6 +15,6 @@ namespace libMBIN.NMS.GameComponents
         public GcTerrainTileType TileType;
 
         [NMS(Size = 4, Ignore = true)]
-        public byte[] Padding1C;
+        public byte[] EndPadding;
     }
 }

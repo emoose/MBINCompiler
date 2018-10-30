@@ -3,40 +3,41 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(GUID = 0x73229FEB0E6954BF)]
+    [NMS(GUID = 0x66AC873168265BDE)]
     public class GcSpaceshipGlobals : NMSTemplate
     {
-		/* 0x0 */ public float MaximumShipHeightWhenExiting;
-		/* 0x4 */ public float DistanceFromShipToAllowSpawningOnFreighter;
-		/* 0x8 */ public bool AltControls;
-		/* 0x9 */ public bool SpaceMapInWorld;
-		/* 0xA */ public bool _3rdPersonShipEnabled;
-		/* 0xB */ public bool AimZoomAuto;
-		/* 0xC */ public bool EnableDepthTestedCrosshairSections;
-		/* 0xD */ public bool CritsFromBehind;
-		/* 0xE */ public bool DrawLineLockTarget;
-		/* 0xF */ public bool ApplyHeightForce;
-		/* 0x10 */ public bool ApplyHeightAlign;
-		/* 0x11 */ public bool DoPreCollision;
-		/* 0x12 */ public bool SpeedTrackModeEnabled;
-		/* 0x14 */ public int TrailMaxNumPointsPerFrameOverride;
-		/* 0x18 */ public float TestTrailSpeed;
-		/* 0x1C */ public float TestTrailRadius;
-		/* 0x20 */ public float CockpitExitAnimTime;
-		/* 0x24 */ public float CockpitExitAnimOffset;
-		/* 0x28 */ public TkCurveType CockpitExitAnimCurve;
-		/* 0x2C */ public float LandingHoverOffset;
-		/* 0x30 */ public float LandingMaxSpeed;
-		/* 0x34 */ public float LandingMargin;
-		/* 0x38 */ public float LandingTooManyLowPointsFraction;
-		/* 0x3C */ public float WingmanSpeedTrackForceMax;
-		/* 0x40 */ public float WingmanSpeedTrackForceMin;
-		/* 0x44 */ public float WingmanSpeedTrackDistance;
-		/* 0x48 */ public float WingmanSpeedTrackOffset;
-		/* 0x4C */ public float WingmanSpeedApproachSpeed;
-		/* 0x50 */ public float WingmanSpeedApproachSpeedSpace;
-        [NMS(Size = 0xC, Ignore = true)]
-        /* 0x54 */ public byte[] Padding54;
+		/* 0x0 */ public float MaximumDistanceFromShipWhenExiting;
+		/* 0x4 */ public float MaximumHeightWhenExitingShip;
+		/* 0x8 */ public float DistanceFromShipToAllowSpawningOnFreighter;
+		/* 0xC */ public bool AltControls;
+		/* 0xD */ public bool SpaceMapInWorld;
+		/* 0xE */ public bool _3rdPersonShipEnabled;
+		/* 0xF */ public bool AimZoomAuto;
+		/* 0x10 */ public bool EnableDepthTestedCrosshairSections;
+		/* 0x11 */ public bool CritsFromBehind;
+		/* 0x12 */ public bool DrawLineLockTarget;
+		/* 0x13 */ public bool ApplyHeightForce;
+		/* 0x14 */ public bool ApplyHeightAlign;
+		/* 0x15 */ public bool DoPreCollision;
+		/* 0x16 */ public bool SpeedTrackModeEnabled;
+		/* 0x18 */ public int TrailMaxNumPointsPerFrameOverride;
+		/* 0x1C */ public float TestTrailSpeed;
+		/* 0x20 */ public float TestTrailRadius;
+		/* 0x24 */ public float CockpitExitAnimTime;
+		/* 0x28 */ public float CockpitExitAnimOffset;
+		/* 0x2C */ public TkCurveType CockpitExitAnimCurve;
+		/* 0x30 */ public float LandingHoverOffset;
+		/* 0x34 */ public float LandingMaxSpeed;
+		/* 0x38 */ public float LandingMargin;
+		/* 0x3C */ public float LandingTooManyLowPointsFraction;
+		/* 0x40 */ public float WingmanSpeedTrackForceMax;
+		/* 0x44 */ public float WingmanSpeedTrackForceMin;
+		/* 0x48 */ public float WingmanSpeedTrackDistance;
+		/* 0x4C */ public float WingmanSpeedTrackOffset;
+		/* 0x50 */ public float WingmanSpeedApproachSpeed;
+		/* 0x54 */ public float WingmanSpeedApproachSpeedSpace;
+        [NMS(Size = 0x8, Ignore = true)]
+        /* 0x58 */ public byte[] Padding58;
         /* 0x60 */ public Vector4f DebugShipSpawnPos;
         /* 0x70 */ public Vector4f DebugShipSpawnFacing;
         /* 0x80 */ public Vector4f DebugShipSpawnUp;

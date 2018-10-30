@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x40, GUID = 0xFB244025F9941C1A)]
+	[NMS(Size = 0x40, GUID = 0x6A260782356F9611)]
     public class GcCreatureRoleDescription : NMSTemplate
     {
         public GcCreatureRoles CreatureRole;
@@ -23,6 +23,6 @@ namespace libMBIN.NMS.GameComponents
         public float IncreasedSpawnDistance;
     
         [NMS(Ignore = true)]
-        public int Padding;
+        public int EndPadding;
     }
 }

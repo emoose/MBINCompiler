@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x220, GUID = 0xCAC1FA679C6CB798)]
+	[NMS(Size = 0x228, GUID = 0xF89AF867F7A4497F)]
     public class GcBaseBuildingEntry : NMSTemplate
     {
         [NMS(Size = 0x10)]
@@ -22,21 +22,22 @@ namespace libMBIN.NMS.GameComponents
         /* 0x1B0 */ public bool BuildableOnBase;
         /* 0x1B1 */ public bool BuildableOnFreighter;
         /* 0x1B2 */ public bool BuildableOnPlanet;
-        /* 0x1B2 */ public bool BuildableUnderwater;
+        /* 0x1B3 */ public bool BuildableUnderwater;
+        /* 0x1B4 */ public bool BuildableAboveWater;
 
-        /* 0x1B4 */ public int GlobalLimit;
-        /* 0x1B8 */ public int SystemLimit;
-        /* 0x1BC */ public int PlanetLimit;
-        /* 0x1C0 */ public int RegionLimit;
-        /* 0x1C4 */ public int PlanetBaseLimit;
-        /* 0x1C8 */ public int FreighterBaseLimit;
-        /* 0x1CC */ public float BaseLayoutRadius;
-        /* 0x1D0 */ public bool CheckCollision;
-        /* 0x1D4 */ public float CollisionScale;
-        /* 0x1D8 */ public bool CollidesWithPlayer;
-        /* 0x1D9 */ public bool CanPlaceOnItself;
-        [NMS(Size = 6, Ignore = true)]
-        /* 0x1DA */ public byte[] Padding1DA;
+        /* 0x1B8 */ public int GlobalLimit;
+        /* 0x1BC */ public int SystemLimit;
+        /* 0x1C0 */ public int PlanetLimit;
+        /* 0x1C4 */ public int RegionLimit;
+        /* 0x1C8 */ public int PlanetBaseLimit;
+        /* 0x1CC */ public int FreighterBaseLimit;
+        /* 0x1D0 */ public float BaseLayoutRadius;
+        /* 0x1D4 */ public bool CheckCollision;
+        /* 0x1D8 */ public float CollisionScale;
+        /* 0x1DC */ public bool CollidesWithPlayer;
+        /* 0x1DD */ public bool CanPlaceOnItself;
+        [NMS(Size = 2, Ignore = true)]
+        /* 0x1DE */ public byte[] Padding1DE;
 
         [NMS(Size = 0x10)]
         /* 0x1E0 */ public string Group;
@@ -54,10 +55,13 @@ namespace libMBIN.NMS.GameComponents
         /* 0x20D */ public bool EditsTerrain;
 
 		public enum BaseTerrainEditShapeEnum { Cube, Cylinder }
-		public BaseTerrainEditShapeEnum BaseTerrainEditShape;
+		/* 0x210 */ public BaseTerrainEditShapeEnum BaseTerrainEditShape;
 
         /* 0x214 */ public float TerrainEditBaseYOffset;
         /* 0x218 */ public float TerrainEditTopYOffset;
         /* 0x21C */ public float TerrainEditBoundsScalar;
+        /* 0x220 */ public bool IsSealed;
+        [NMS(Size = 0x7, Ignore = true)]
+        /* 0x221 */ public byte[] EndPadding;
     }
 }

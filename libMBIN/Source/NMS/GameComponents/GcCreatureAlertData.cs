@@ -3,8 +3,8 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0xD96E3A3A21F98E23)]
-    public class GcCreatureAlertData : NMSTemplate          // in creature global?
+	[NMS(Size = 0x18, GUID = 0x7CF87460A028935E)]
+    public class GcCreatureAlertData : NMSTemplate
     {
         /* 0x000 */ public GcCreatureTypes AlertTarget;
 		/* 0x004 */ public GcCreatureTypes AlertInitiator;

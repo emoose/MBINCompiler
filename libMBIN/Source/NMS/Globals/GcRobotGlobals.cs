@@ -3,32 +3,33 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS( GUID = 0x464813EEC6B590AD )]
+    [NMS( GUID = 0x969C956F2EE2958C)]
     public class GcRobotGlobals : NMSTemplate
     {
-        /* 0x0 */ public float GrenadeLaunchFlightTime;
-        /* 0x4 */ public int AttackSentinelWantedValue;
-        /* 0x8 */ public int MaxNumPatrolDrones;
-        /* 0xC */ public bool DronePatrolScanPlayer;
-        /* 0x10 */ public float DroneSearchPickNearbyTime;
-        /* 0x14 */ public float DroneSearchPickNearbyAngleMin;
-        /* 0x18 */ public float DroneSearchPickNearbyAngleMax;
-        /* 0x1C */ public float DroneInvestigateMinWitnessRange;
-        /* 0x20 */ public float DroneInvestigateMinWitnessTime;
-        /* 0x24 */ public float DroneInvestigateSpeedBoost;
-        /* 0x28 */ public float DroneInvestigateSpeedBoostStartDistance;
-        /* 0x2C */ public float DroneInvestigateSpeedBoostRange;
-        /* 0x30 */ public float DroneCrimePostInvestigateWaitTime;
-        /* 0x34 */ public float DroneAttackPlayerHeightOffset;
-        /* 0x38 */ public float DroneSpawnTime;
-        /* 0x3C */ public float DroneSpawnFadeTime;
-        /* 0x40 */ public float LineOfSightReturnCheckMinDistance;
-        /* 0x44 */ public float LineOfSightReturnCheckRadius;
-        /* 0x48 */ public float LineOfSightReturnRange;
-        /* 0x4C */ public float FakeQuadGuard;
-        /* 0x50 */ public float RobotSightAngle;
-        [NMS(Size = 0xC, Ignore = true)]
-        /* 0x54 */ public byte[] Padding54;
+		/* 0x0 */ public float GrenadeLaunchFlightTime;
+		/* 0x4 */ public int AttackSentinelWantedValue;
+		/* 0x8 */ public int MaxNumPatrolDrones;
+		/* 0xC */ public float UnderwaterPerceptionMargin;
+		/* 0x10 */ public bool DronePatrolScanPlayer;
+		/* 0x14 */ public float DroneSearchPickNearbyTime;
+		/* 0x18 */ public float DroneSearchPickNearbyAngleMin;
+		/* 0x1C */ public float DroneSearchPickNearbyAngleMax;
+		/* 0x20 */ public float DroneInvestigateMinWitnessRange;
+		/* 0x24 */ public float DroneInvestigateMinWitnessTime;
+		/* 0x28 */ public float DroneInvestigateSpeedBoost;
+		/* 0x2C */ public float DroneInvestigateSpeedBoostStartDistance;
+		/* 0x30 */ public float DroneInvestigateSpeedBoostRange;
+		/* 0x34 */ public float DroneCrimePostInvestigateWaitTime;
+		/* 0x38 */ public float DroneAttackPlayerHeightOffset;
+		/* 0x3C */ public float DroneSpawnTime;
+		/* 0x40 */ public float DroneSpawnFadeTime;
+		/* 0x44 */ public float LineOfSightReturnCheckMinDistance;
+		/* 0x48 */ public float LineOfSightReturnCheckRadius;
+		/* 0x4C */ public float LineOfSightReturnRange;
+		/* 0x50 */ public float FakeQuadGuard;
+		/* 0x54 */ public float RobotSightAngle;
+        [NMS(Size = 0x8, Ignore = true)]
+        /* 0x58 */ public byte[] Padding58;
         /* 0x60 */ public Vector4f DroneRepairOffset;
         /* 0x70 */ public float QuadLookAngleMin;
         /* 0x74 */ public float QuadLookAngleMax;

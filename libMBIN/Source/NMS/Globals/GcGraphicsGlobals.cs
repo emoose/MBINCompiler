@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS( GUID = 0xA308C69BDD3DA959)]
+    [NMS( GUID = 0x615FDC2561AACED1)]
     public class GcGraphicsGlobals : NMSTemplate
     {
         /* 0x0 */ public float LUTDistanceFlightMultiplier;
@@ -206,77 +206,73 @@ namespace libMBIN.NMS.Globals
         /* 0x578 */ public float WaterHueShift;
         /* 0x57C */ public float WaterSaturation;
         /* 0x580 */ public float WaterValue;
-        [NMS(Size = 0xC, Ignore = true)]
-        /* 0x584 */ public byte[] Padding584;
-        /* 0x590 */ public GcPlanetWaterData WaterDataMin;
-        /* 0x760 */ public GcPlanetWaterData WaterDataMax;
-        /* 0x930 */ public float MaxParticleRenderRange;
-        /* 0x934 */ public float MaxParticleRenderRangeSpace;
-        /* 0x938 */ public float MotionBlurShutterSpeed;
-        /* 0x93C */ public float MotionBlurShutterAngle;
-        /* 0x940 */ public float TaaLowFreqConstant;
-        /* 0x944 */ public float TaaHighFreqConstant;
-        /* 0x948 */ public float TaaAccumDelay;
-        /* 0x94C */ public float FrustumJitterAmount;
-        /* 0x950 */ public bool EnableFxaa;
-        /* 0x951 */ public bool EnableMblur;
-        /* 0x952 */ public bool UseTaaResolve;
-        /* 0x953 */ public bool ApplyTaa;
-        /* 0x954 */ public bool ApplyTaaCheap;
-        /* 0x955 */ public bool ApplyTaaTest;
-        /* 0x956 */ public bool ShowTaaBuf;
-        /* 0x957 */ public bool TonemapInLuminance;
-        /* 0x958 */ public bool ShowTaaVarianceBuf;
-        /* 0x959 */ public bool ShowTaaNVarianceBuf;
-        /* 0x95A */ public bool ShowTaaCVarianceBuf;
-        [NMS(Size = 0x5, Ignore = true)]
-        /* 0x95B */ public byte[] Padding95B;
-        /* 0x960 */ public Vector4f TaaSettings;
-        /* 0x970 */ public Vector4f TessSettingsMed;
-        /* 0x980 */ public Vector4f TessSettingsHi;
-        /* 0x990 */ public Vector4f TessSettingsUlt;
-        /* 0x9A0 */ public int TerrainAnisoLow;
-        /* 0x9A4 */ public int TerrainAnisoMed;
-        /* 0x9A8 */ public int TerrainAnisoHi;
-        /* 0x9AC */ public int TerrainAnisoUlt;
-        /* 0x9B0 */ public int TerrainDroppedMipsLow;
-        /* 0x9B4 */ public int TerrainDroppedMipsMed;
-        /* 0x9B8 */ public float TerrainMipBiasLow;
-        /* 0x9BC */ public float TerrainMipBiasMed;
-        /* 0x9C0 */ public int TerrainBlocksPerFrameLow;
-        /* 0x9C4 */ public int TerrainBlocksPerFrameMed;
-        /* 0x9C8 */ public int TerrainBlocksPerFrameHi;
-        /* 0x9CC */ public int TerrainBlocksPerFrameUlt;
-        /* 0x9D0 */ public int TerrainBlocksPerFramePs430;
-        /* 0x9D4 */ public int TerrainBlocksPerFramePs460;
-        /* 0x9D8 */ public int TerrainBlocksPerFrameXb130;
-		/* 0x9DC */ public int TerrainBlocksPerFrameXb160;
-		/* 0x9E0 */ public bool EnableTerrainCachePs4Base;
-		/* 0x9E1 */ public bool EnableTerrainCachePs4Pro;
-		/* 0x9E2 */ public bool EnableTerrainCacheXb1Base;
-		/* 0x9E3 */ public bool EnableTerrainCacheXb1X;
-		/* 0x9E4 */ public bool ForceCachedTerrain;
-		/* 0x9E5 */ public bool ForceUncachedTerrain;
-		/* 0x9E8 */ public float MinPixelSizeOfObjectsInShadowsSpace;
-		/* 0x9EC */ public float MinPixelSizeOfObjectsInShadowsPlanet;
-		/* 0x9F0 */ public float MinPixelSizeOfObjectsInShadowsCockpitOnPlanet;
-		/* 0x9F4 */ public bool AllowPartialCascadeRender;
+		/* 0x584 */ public float MaxParticleRenderRange;
+		/* 0x588 */ public float MaxParticleRenderRangeSpace;
+		/* 0x58C */ public float MotionBlurShutterSpeed;
+		/* 0x590 */ public float MotionBlurShutterAngle;
+		/* 0x594 */ public float TaaLowFreqConstant;
+		/* 0x598 */ public float TaaHighFreqConstant;
+		/* 0x59C */ public float TaaAccumDelay;
+		/* 0x5A0 */ public float FrustumJitterAmount;
+		/* 0x5A4 */ public bool EnableFxaa;
+		/* 0x5A5 */ public bool EnableMblur;
+		/* 0x5A6 */ public bool UseTaaResolve;
+		/* 0x5A7 */ public bool ApplyTaa;
+		/* 0x5A8 */ public bool ApplyTaaCheap;
+		/* 0x5A9 */ public bool ApplyTaaTest;
+		/* 0x5AA */ public bool ShowTaaBuf;
+		/* 0x5AB */ public bool TonemapInLuminance;
+		/* 0x5AC */ public bool ShowTaaVarianceBuf;
+		/* 0x5AD */ public bool ShowTaaNVarianceBuf;
+		/* 0x5AE */ public bool ShowTaaCVarianceBuf;
+        [NMS(Size = 0x1, Ignore = true)]
+        /* 0x5AF */ public byte[] Padding5AF;
+        /* 0x5B0 */ public Vector4f TaaSettings;
+        /* 0x5C0 */ public Vector4f TessSettingsMed;
+        /* 0x5D0 */ public Vector4f TessSettingsHi;
+        /* 0x5E0 */ public Vector4f TessSettingsUlt;
+		/* 0x5F0 */ public int TerrainAnisoLow;
+		/* 0x5F4 */ public int TerrainAnisoMed;
+		/* 0x5F8 */ public int TerrainAnisoHi;
+		/* 0x5FC */ public int TerrainAnisoUlt;
+		/* 0x600 */ public int TerrainDroppedMipsLow;
+		/* 0x604 */ public int TerrainDroppedMipsMed;
+		/* 0x608 */ public float TerrainMipBiasLow;
+		/* 0x60C */ public float TerrainMipBiasMed;
+		/* 0x610 */ public int TerrainBlocksPerFrameLow;
+		/* 0x614 */ public int TerrainBlocksPerFrameMed;
+		/* 0x618 */ public int TerrainBlocksPerFrameHi;
+		/* 0x61C */ public int TerrainBlocksPerFrameUlt;
+		/* 0x620 */ public int TerrainBlocksPerFramePs430;
+		/* 0x624 */ public int TerrainBlocksPerFramePs460;
+		/* 0x628 */ public int TerrainBlocksPerFrameXb130;
+		/* 0x62C */ public int TerrainBlocksPerFrameXb160;
+		/* 0x630 */ public bool EnableTerrainCachePs4Base;
+		/* 0x631 */ public bool EnableTerrainCachePs4Pro;
+		/* 0x632 */ public bool EnableTerrainCacheXb1Base;
+		/* 0x633 */ public bool EnableTerrainCacheXb1X;
+		/* 0x634 */ public bool ForceCachedTerrain;
+		/* 0x635 */ public bool ForceUncachedTerrain;
+		/* 0x638 */ public float MinPixelSizeOfObjectsInShadowsSpace;
+		/* 0x63C */ public float MinPixelSizeOfObjectsInShadowsPlanet;
+		/* 0x640 */ public float MinPixelSizeOfObjectsInShadowsCockpitOnPlanet;
+		/* 0x644 */ public bool AllowPartialCascadeRender;
         [NMS(Size = 0x4)]
-		/* 0x9F8 */ public int[] CascadeRenderSequence;
-		/* 0xA08 */ public int SupersamplingLevel;
-		/* 0xA0C */ public bool EnableTextureStreaming;
-		/* 0xA0D */ public bool ForceStreamAllTextures;
-		/* 0xA0E */ public bool ForceEvictAllTextures;
-		/* 0xA10 */ public int TargetTextureMemUsageMB;
-		/* 0xA14 */ public float MotionBlurThresholdOnFoot;
-		/* 0xA18 */ public float MotionBlurThresholdInVehicle;
-		/* 0xA1C */ public float MotionBlurThresholdSpace;
-		/* 0xA20 */ public float MotionBlurThresholdDefault;
-		/* 0xA24 */ public float SpaceIBLBlendStart;
-		/* 0xA28 */ public float SpaceIBLBlendDistance;
-		/* 0xA2C */ public float NoFocusMaxFPS;
-		/* 0xA30 */ public bool EnableCrossPipeSharing;
+		/* 0x648 */ public int[] CascadeRenderSequence;
+		/* 0x658 */ public int SupersamplingLevel;
+		/* 0x65C */ public bool EnableTextureStreaming;
+		/* 0x65D */ public bool ForceStreamAllTextures;
+		/* 0x65E */ public bool ForceEvictAllTextures;
+		/* 0x660 */ public int TargetTextureMemUsageMB;
+		/* 0x664 */ public float MotionBlurThresholdOnFoot;
+		/* 0x668 */ public float MotionBlurThresholdInVehicle;
+		/* 0x66C */ public float MotionBlurThresholdSpace;
+		/* 0x670 */ public float MotionBlurThresholdDefault;
+		/* 0x674 */ public float SpaceIBLBlendStart;
+		/* 0x678 */ public float SpaceIBLBlendDistance;
+		/* 0x67C */ public float NoFocusMaxFPS;
+		/* 0x680 */ public bool EnableCrossPipeSharing;
         [NMS(Size = 0xF, Ignore = true)]
-        /* 0xA31 */ public byte[] EndPadding;
+        /* 0x681 */ public byte[] EndPadding;
     }
 }

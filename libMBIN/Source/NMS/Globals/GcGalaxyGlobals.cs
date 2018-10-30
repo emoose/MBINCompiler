@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(GUID = 0xF24315C7821A1B8C)]
+    [NMS(GUID = 0x1DAE54BABB48A1B5)]
     public class GcGalaxyGlobals : NMSTemplate
     {
         /* 0x0 */ public float PathUIWidth;

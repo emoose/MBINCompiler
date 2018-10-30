@@ -25,6 +25,11 @@
     <Compile Include="$(MSBuildThisFileDirectory)Source\EXML\EXmlData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\EXML\EXmlProperty.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcAtlasRecvBaseList.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcGrabPlayerComponentData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcFiendCrimeSpawnData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcFiendCrimeSpawnTable.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcFiendCrimeAction.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcReplacementEffectData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcMissionConditionNearScanEvent.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcRealityGameIcons.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcMissionCommunityData.cs" />
@@ -34,6 +39,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcMessageProjectileLaunch.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcHotActionsSaveData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcHotActionMenuTypes.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcFiendCrime.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Toolkit\TkIDArray.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Toolkit\TkEntitlementListData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcPersistentTerrainEdits.cs" />
@@ -42,6 +48,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcMissionConditionStatDiff.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcMissionConditionIsScanEventLocalOrNear.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcCreatureSpawnEnum.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Toolkit\TkNoiseFlattenFixedPosition.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Toolkit\TkNoiseLayerData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Template\TemplateException.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\MBIN\MBINHeader.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Template\NMSAttribute.cs" />

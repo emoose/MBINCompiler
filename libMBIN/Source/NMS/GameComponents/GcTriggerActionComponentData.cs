@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x30, GUID = 0x530AB19BD349A230)]
+	[NMS(Size = 0x38, GUID = 0x56EA2AB09A126A9C)]
     public class GcTriggerActionComponentData : NMSTemplate
     {
         /* 0x00 */ public bool HideModel;
@@ -18,5 +18,8 @@ namespace libMBIN.NMS.GameComponents
         /* 0x19 */ public byte[] Padding19;
         [NMS(Size = 0x10)]
         /* 0x20 */ public string PersistentState;
+        /* 0x30 */ public bool ResetShotTimeOnStateChange;
+        [NMS(Size = 7, Ignore = true)]
+        /* 0x31 */ public byte[] EndPadding;
     }
 }

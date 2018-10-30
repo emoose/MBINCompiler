@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS( GUID = 0x6657BC76B6378C31)]
+    [NMS( GUID = 0xE46D956D0BBEE8B1)]
     public class GcUIGlobals : NMSTemplate
     {
         /* 0x0 */ public bool LoadPagesFromMetadataCache;
@@ -65,7 +65,6 @@ namespace libMBIN.NMS.Globals
         /* 0x130 */ public float MarkerRingInnerRadius;
         /* 0x134 */ public float MarkerRingOuterRadius;
         /* 0x140 */ public Colour MarkerRingBGColour;
-
         /* 0x150 */ public float RepairTechRepairedWaitTime1;
         /* 0x154 */ public float RepairTechRepairedWaitTime2;
         /* 0x158 */ public float RepairTechRepairedMessageTime;
@@ -79,8 +78,6 @@ namespace libMBIN.NMS.Globals
         /* 0x178 */ public float RepairTechLabelOffset;
         /* 0x17C */ public float MaintenanceIconFadeStart;
         /* 0x180 */ public float MaintenanceIconFadeTime;
-
-
         [NMS(Size = 0xC, Ignore = true)]
         /* 0x184 */ public byte[] Padding184;
         /* 0x190 */ public TkModelRendererData RepairCamera;
@@ -89,7 +86,6 @@ namespace libMBIN.NMS.Globals
         /* 0x3A0 */ public TkModelRendererData RepairShipCamera;
         /* 0x450 */ public Vector2f BinocularsDiscoveryPos;
         /* 0x460 */ public Colour InteractionLabelCostColour;
-
         /* 0x470 */ public Colour InteractionLabelPickupColour;
         /* 0x480 */ public Colour InteractionLabelPickupFillColour;
         /* 0x490 */ public float RefinerPadStartTime;
@@ -108,7 +104,6 @@ namespace libMBIN.NMS.Globals
         /* 0x4EC */ public float HUDPlayerPhonePulseScanFreq;
         /* 0x4F0 */ public float RefinerAutoCloseTime;
         /* 0x500 */ public Colour RefinerBackgroundColour;
-
         /* 0x510 */ public Colour RefinerErrorBackgroundColour;
         /* 0x520 */ public Colour TransferSendPopupColour;
         /* 0x530 */ public float BountyMarkerOffset;
@@ -135,7 +130,6 @@ namespace libMBIN.NMS.Globals
         /* 0x5B0 */ public float MissionStartEndOSDTimeProcedural;
         /* 0x5B4 */ public float StandingRewardOSDTime;
         /* 0x5C0 */ public Colour MissionOSDMessageBarColour;
-
         /* 0x5D0 */ public Colour NotificationDefaultColour;
         /* 0x5E0 */ public Colour NotificationDangerColour;
         /* 0x5F0 */ public Colour NotificationInfoColour;
@@ -149,8 +143,6 @@ namespace libMBIN.NMS.Globals
         /* 0x62C */ public int MissionSpecificMissionPercent;
         /* 0x630 */ public int MissionLoopCount;
         /* 0x634 */ public int MissionSeedOffset;
-
-
         [NMS(Size = 0x8, Ignore = true)]
         /* 0x638 */ public byte[] Padding638;
         /* 0x640 */ public Vector4f SpaceMapCockpitOffset;
@@ -161,15 +153,12 @@ namespace libMBIN.NMS.Globals
         [NMS(Size = 0x10)]
         /* 0x660 */ public string TargetDisplayShipOffset;
         /* 0x670 */ public float TargetDisplayDamageFlashTime;
-
-
         [NMS(Size = 0xC, Ignore = true)]
         /* 0x674 */ public byte[] Padding674;
         /* 0x680 */ public GcScanEffectData TargetDisplayScanEffect;
         /* 0x6D0 */ public bool ProgressiveDialogStyle;
         /* 0x6D4 */ public float CommunicatorMessageTime;
         /* 0x6E0 */ public Colour CommunicatorMessageColour;
-
         /* 0x6F0 */ public float GridFlickerBaseAlpha;
         /* 0x6F4 */ public float GridFlickerFreq;
         /* 0x6F8 */ public float GridFlickerAmp;
@@ -225,7 +214,6 @@ namespace libMBIN.NMS.Globals
         /* 0x814 */ public float DamageNumberUpOffset;
         /* 0x818 */ public TkCurveType DamageNumberUpCurve;
         /* 0x820 */ public Colour DamageNumberCriticalColour;
-
         /* 0x830 */ public Colour DamageNumberIneffectiveColour;
         /* 0x840 */ public Colour PhotoModeSelectedColour;
         /* 0x850 */ public Colour PhotoModeUnselectedColour;
@@ -272,30 +260,30 @@ namespace libMBIN.NMS.Globals
         /* 0x970 */ public float AlwaysShowIconFadeDistance;
         /* 0x974 */ public float AlwaysShowIconFadeRange;
         /* 0x978 */ public float FrigatePurchaseNotificationResetDistanceMultiplier;
-        /* 0x97C */ public float FreighterLeaderIconDistance;
-        /* 0x980 */ public float FreighterEntranceOffset;
-        /* 0x984 */ public float ShipHeadsUpDisplayDistance;
-        /* 0x988 */ public float ShipHeadsUpLineFadeTime;
-        /* 0x98C */ public float CrosshairAimTime;
-        /* 0x990 */ public float CrosshairAimOffTime;
-        /* 0x994 */ public float CrosshairInnerMinFade;
-        /* 0x998 */ public float CrosshairInnerMinFadeRange;
-        /* 0x99C */ public float CrosshairLeadScaleIn;
-        /* 0x9A0 */ public float CrosshairLeadInDelay;
-        /* 0x9A4 */ public float CrosshairLeadInTime;
-        /* 0x9A8 */ public float CrosshairLeadCornerOffset;
-        /* 0x9AC */ public float CrosshairLeadTopOffset;
-        /* 0x9B0 */ public float CrosshairLeadTopLock;
-        /* 0x9B4 */ public float CrosshairLeadPulseSize;
-        /* 0x9B8 */ public TkCurveType CrosshairLeadScaleCurve;
-        /* 0x9BC */ public float CrosshairSpringTime;
-        /* 0x9C0 */ public float CrosshairSpringAimTime;
-        /* 0x9C4 */ public float CrosshairLeadSpring;
-        /* 0x9C8 */ public float CrosshairLeadSpringOff;
-        /* 0x9CC */ public float CrosshairLeadFadeRange;
-        /* 0x9D0 */ public float CrosshairLeadFadeSize;
+		/* 0x97C */ public float FrigateDamageIconVisibilityDistance;
+		/* 0x980 */ public float FreighterLeaderIconDistance;
+		/* 0x984 */ public float FreighterEntranceOffset;
+		/* 0x988 */ public float ShipHeadsUpDisplayDistance;
+		/* 0x98C */ public float ShipHeadsUpLineFadeTime;
+		/* 0x990 */ public float CrosshairAimTime;
+		/* 0x994 */ public float CrosshairAimOffTime;
+		/* 0x998 */ public float CrosshairInnerMinFade;
+		/* 0x99C */ public float CrosshairInnerMinFadeRange;
+		/* 0x9A0 */ public float CrosshairLeadScaleIn;
+		/* 0x9A4 */ public float CrosshairLeadInDelay;
+		/* 0x9A8 */ public float CrosshairLeadInTime;
+		/* 0x9AC */ public float CrosshairLeadCornerOffset;
+		/* 0x9B0 */ public float CrosshairLeadTopOffset;
+		/* 0x9B4 */ public float CrosshairLeadTopLock;
+		/* 0x9B8 */ public float CrosshairLeadPulseSize;
+		/* 0x9BC */ public TkCurveType CrosshairLeadScaleCurve;
+		/* 0x9C0 */ public float CrosshairSpringTime;
+		/* 0x9C4 */ public float CrosshairSpringAimTime;
+		/* 0x9C8 */ public float CrosshairLeadSpring;
+		/* 0x9CC */ public float CrosshairLeadSpringOff;
+		/* 0x9D0 */ public float CrosshairLeadFadeRange;
+		/* 0x9D4 */ public float CrosshairLeadFadeSize;
         /* 0x9E0 */ public Colour CrosshairLeadThreatColour;
-
         /* 0x9F0 */ public Colour CrosshairLeadPassiveColour;
         /* 0xA00 */ public float CrosshairInterceptSize;
         /* 0xA04 */ public float CrosshairInterceptBaseSize;
@@ -307,15 +295,11 @@ namespace libMBIN.NMS.Globals
         /* 0xA1C */ public TkCurveType CrosshairTargetLockCurve;
         /* 0xA20 */ public TkCurveType CrosshairTargetLockAlphaCurve;
         /* 0xA30 */ public Colour CrosshairColour;
-
-
         /* 0xA40 */ public TkHitCurveData CrosshairLeadHitCurve;
-
         /* 0xA50 */ public TkHitCurveData ShootableHitCurve;
         /* 0xA60 */ public int ControlScrollSteps;
         /* 0xA64 */ public float ControlScrollDistance;
         /* 0xA70 */ public Colour SelectedControlColour;
-
         /* 0xA80 */ public Colour RemappedControlColour;
         /* 0xA90 */ public float CreatureRoutineMarkerTime;
         /* 0xA94 */ public int CreatureRoutineRegionsPerFrame;
@@ -389,7 +373,6 @@ namespace libMBIN.NMS.Globals
         /* 0xBB4 */ public TkNGuiRectanglePulseEffect PulseBarData;
         /* 0xBC8 */ public TkNGuiRectanglePulseEffect PulseIconData;
         /* 0xBE0 */ public Colour PulseDamageColour;
-
         /* 0xBF0 */ public Colour PulseAlertColour;
         /* 0xC00 */ public float TechDisplayDelayTime;
         /* 0xC04 */ public float CriticalMessageTime;
@@ -414,7 +397,6 @@ namespace libMBIN.NMS.Globals
         /* 0xC64 */ public float HUDPlayerTrackArrowArrowSize;
         /* 0xC68 */ public float HUDPlayerTrackArrowDotSize;
         /* 0xC70 */ public Colour HUDPlayerTrackArrowDotColour;
-
         /* 0xC80 */ public Colour HUDPlayerTrackArrowDotColourPolice;
         /* 0xC90 */ public Colour HUDPlayerTrackArrowDotColourPirate;
         /* 0xCA0 */ public Colour HUDWarningColour;
@@ -431,7 +413,6 @@ namespace libMBIN.NMS.Globals
         [NMS(Size = 0x37)]
         /* 0xCE4 */ public NMSString0x80[] StatIcons;
         /* 0x2864 */ public bool ShowJetpackNotificationForNonTerrain;
-
         /* 0x2868 */ public float StatsMessageDelayTime;
         /* 0x286C */ public int NotificationsResourceExtractHintCount;
         /* 0x2870 */ public float NotificationStaminaHintDistanceWalked;
@@ -482,7 +463,6 @@ namespace libMBIN.NMS.Globals
         /* 0x2930 */ public float DeathMessageSwitchTime;
         /* 0x2934 */ public float DeathMessageTotalTime;
         /* 0x2940 */ public Colour DeathMessageColour;
-
         /* 0x2950 */ public Colour PinnedRecipeBorder;
         [NMS(Size = 0x20)]
         /* 0x2960 */ public string DistanceUnitM;
@@ -499,13 +479,11 @@ namespace libMBIN.NMS.Globals
         /* 0x29E4 */ public float PlanetLabelTime;
         /* 0x29E8 */ public float PlanetLabelAngle;
         /* 0x29F0 */ public Colour ItemSlotColourSubstance;
-
         /* 0x2A00 */ public Colour ItemSlotColourTech;
         /* 0x2A10 */ public Colour ItemSlotColourTechCharge;
         /* 0x2A20 */ public Colour ItemSlotColourTechDamage;
         /* 0x2A30 */ public float ItemSlotColourTechChargeRate;
         /* 0x2A40 */ public Colour ItemSlotColourProduct;
-
         /* 0x2A50 */ public Colour ItemSlotTextColourSubstance;
         /* 0x2A60 */ public Colour ItemSlotTextColourTech;
         /* 0x2A70 */ public Colour ItemSlotTextColourProduct;
@@ -535,7 +513,6 @@ namespace libMBIN.NMS.Globals
         [NMS(Size = 0x4)]
         /* 0x2B00 */ public Colour[] ShipHUDTargetArrowsColour;
         /* 0x2B40 */ public Colour ShipHUDAimTargetColour;
-
         /* 0x2B50 */ public Colour ShipHUDAimTargetCritColour;
         /* 0x2B60 */ public float ShipHUDHitPointTime;
         /* 0x2B64 */ public float ShipHUDHitPointSize;
@@ -552,7 +529,6 @@ namespace libMBIN.NMS.Globals
         [NMS(Size = 0x20)]
         /* 0x2BA3 */ public string HUDTimeSunset;
         /* 0x2BC4 */ public float HeatSpringTime;
-
         /* 0x2BC8 */ public float HeatAlertTime;
         /* 0x2BCC */ public float HeatAlertFixedTime;
         /* 0x2BD0 */ public float HeatAlertSpringTime;
@@ -579,18 +555,11 @@ namespace libMBIN.NMS.Globals
         [NMS(Size = 0x6, EnumValue = new string[6] { "None", "NoOxygen", "ExtremeHeat", "ExtremeCold", "ToxicGas", "Radiation" })]
         /* 0x2C24 */ public NMSString0x80[] HazardTextures;
         [NMS(Size = 0x6, EnumValue = new string[6] { "None", "NoOxygen", "ExtremeHeat", "ExtremeCold", "ToxicGas", "Radiation" })]
-
-
         /* 0x2F24 */ public NMSString0x80[] HazardNormalMaps;
         [NMS(Size = 0x6, EnumValue = new string[6] { "None", "NoOxygen", "ExtremeHeat", "ExtremeCold", "ToxicGas", "Radiation" })]
-
-
-
-
         /* 0x3224 */ public NMSString0x80[] HazardHeightmaps;
         /* 0x3524 */ public float IconPulseRate;
         /* 0x3530 */ public Colour EnergyBgColour;
-
         /* 0x3540 */ public Colour EnergyBgPulseColour;
         /* 0x3550 */ public Colour HazardBgPulseColour;
         /* 0x3560 */ public Colour HazardDamagePulseColour;
@@ -611,255 +580,243 @@ namespace libMBIN.NMS.Globals
         /* 0x35E8 */ public float InteractionLabelPixelHeightMax;
         /* 0x35EC */ public float ScanTime;
         /* 0x35F0 */ public GcModelViewCollection ModelViews;
-        /* 0x43B0 */ public Colour CursorColour;
-        /* 0x43C0 */ public Colour CursorConfirmColour;
-        /* 0x43D0 */ public Colour CursorDeleteColour;
-        /* 0x43E0 */ public float CursorHoverSlowFactor;
-        /* 0x43E4 */ public float FrontendBGAlpha;
-        /* 0x43E8 */ public float FrontendConfirmTimeMouseMultiplier;
-        /* 0x43EC */ public float FrontendConfirmTimeFast;
-        /* 0x43F0 */ public float FrontendConfirmTime;
-        /* 0x43F4 */ public TkCurveType FrontendConfirmCurve;
-        /* 0x43F8 */ public float FrontendCursorSize;
-        /* 0x43FC */ public float FrontendCursorOffset;
-        /* 0x4400 */ public float PopupXClampOffset;
-        /* 0x4404 */ public float PopupSlotWidthOffset;
-        /* 0x4408 */ public float FrontendCursorWidth;
-        /* 0x440C */ public float FrontendDeactivateTime;
-        /* 0x4410 */ public float FrontendDeactivateSplit;
-        /* 0x4414 */ public float FrontendActivateTime;
-        /* 0x4418 */ public float FrontendActivateSplit;
-        /* 0x441C */ public float FrontendStatCircleWidth;
-        /* 0x4420 */ public float FrontendStatCircleWidthExtra;
-        /* 0x4424 */ public float FrontendBootTime;
-        /* 0x4428 */ public float FrontendBootBarTime;
-        /* 0x442C */ public TkCurveType FrontendBootBarCurve;
-        /* 0x4430 */ public float PopupDebounceTime;
-        /* 0x4434 */ public float PopupActivateTime;
-        /* 0x4438 */ public float PopupDeactivateTime;
-        /* 0x443C */ public TkCurveType PopupActivateCurve1;
-        /* 0x4440 */ public TkCurveType PopupActivateCurve2;
-        /* 0x4444 */ public float HatchPulseSpeed;
-        /* 0x4448 */ public float HatchPulseWidth;
-        /* 0x444C */ public float HatchPulsePauseTime;
-        /* 0x4450 */ public int HatchCount;
-        /* 0x4454 */ public float HatchCursorRadius;
-        /* 0x4458 */ public float HatchAlphaMain;
-        /* 0x445C */ public float HatchAlphaBase;
-        /* 0x4460 */ public float HatchAlphaCursor;
-        /* 0x4464 */ public float FrontendDoFNearPlaneMin;
-        /* 0x4468 */ public float FrontendDoFNearPlaneMax;
-        /* 0x446C */ public float FrontendDoFFarPlaneMin;
-        /* 0x4470 */ public float FrontendDoFFarPlaneMax;
-        /* 0x4474 */ public float FrontendDoFFarPlaneFadeMin;
-        /* 0x4478 */ public float FrontendDoFFarPlaneFadeMax;
-        /* 0x447C */ public float FrontendDoFBlurMultiplier;
-        /* 0x4480 */ public bool FrontendDoFEnableBokeh;
-        /* 0x4484 */ public TkCurveType FrontendDoFCurve;
-        /* 0x4488 */ public float FrontendShineSpeed;
-        /* 0x448C */ public float FrontendToolbarTextHeight;
-        /* 0x4490 */ public float FrontendToolbarTextHeightSelected;
-        /* 0x4494 */ public float FrontendTitleFontSpacing;
-        /* 0x4498 */ public float NGuiPadSensitivity;
-        /* 0x449C */ public float NGuiMouseSensitivity;
-        /* 0x44A0 */ public Vector2f NGuiTouchPadSensitivity;
-        /* 0x44B0 */ public Colour TargetMarkerColour;
-
-        /* 0x44C0 */ public Colour TargetMarkerHighlightColour;
-        /* 0x44D0 */ public float TargetMarkerScaleStart;
-        /* 0x44D4 */ public float TargetMarkerScaleEnd;
-        /* 0x44D8 */ public float TargetMarkerFadeAngleMin;
-        /* 0x44DC */ public float TargetMarkerFadeAngleRange;
-        /* 0x44E0 */ public float HitMarkerPulseSize;
-        /* 0x44E4 */ public float HitMarkerPulseTime;
-        /* 0x44F0 */ public Colour WantedColour;
-
-        /* 0x4500 */ public float PlanetPoleMaxDotProduct;
-        /* 0x4504 */ public float SpaceMapFoV;
-        /* 0x4508 */ public float SpaceMapAspectRatio;
-        /* 0x450C */ public float SpaceMapDistanceScale;
-        /* 0x4510 */ public float SpaceMapDistanceLogScaler;
-        /* 0x4514 */ public float SpaceMapScaleMin;
-        /* 0x4518 */ public float SpaceMapScaleRangeMin;
-        /* 0x451C */ public float SpaceMapScaleRangeMax;
-        /* 0x4520 */ public float SpaceMapObjectScale;
-        /* 0x4524 */ public float SpaceMapFreighterScale;
-        /* 0x4528 */ public float SpaceMapStationScale;
-        /* 0x452C */ public float SpaceMapPlanetScale;
-        /* 0x4530 */ public float SpaceMapMoonScale;
-        /* 0x4534 */ public float SpaceMapShipScale;
-        /* 0x4538 */ public float SpaceMapOtherPlayerScale;
-        /* 0x453C */ public float SpaceMapActionScale;
-        /* 0x4540 */ public float SpaceMapPlayerScale;
-        /* 0x4544 */ public float SpaceMapMarkerScale;
-        /* 0x4548 */ public float SpaceMapDistance;
-        /* 0x454C */ public float SpaceMapDistanceMultiplier;
-        /* 0x4550 */ public float SpaceMapHorizonThickness;
-        /* 0x4554 */ public float SpaceMapFadeAngleMin;
-        /* 0x4558 */ public float SpaceMapFadeAngleMax;
-        /* 0x455C */ public float SpaceMapCamHeight;
-        /* 0x4560 */ public float SpaceMapCamAngle;
-        /* 0x4564 */ public float SpaceMapCamDistance;
-        /* 0x4568 */ public float SpaceMapShipScaleMin;
-        /* 0x456C */ public float SpaceMapLightPitch;
-        /* 0x4570 */ public float SpaceMapLightYaw;
-
-
+        /* 0x4510 */ public Colour CursorColour;
+        /* 0x4520 */ public Colour CursorConfirmColour;
+        /* 0x4530 */ public Colour CursorDeleteColour;
+        /* 0x4540 */ public float CursorHoverSlowFactor;
+        /* 0x4544 */ public float FrontendBGAlpha;
+        /* 0x4548 */ public float FrontendConfirmTimeMouseMultiplier;
+        /* 0x454C */ public float FrontendConfirmTimeFast;
+        /* 0x4550 */ public float FrontendConfirmTime;
+        /* 0x4554 */ public TkCurveType FrontendConfirmCurve;
+        /* 0x4558 */ public float FrontendCursorSize;
+        /* 0x455C */ public float FrontendCursorOffset;
+        /* 0x4560 */ public float PopupXClampOffset;
+        /* 0x4564 */ public float PopupSlotWidthOffset;
+        /* 0x4568 */ public float FrontendCursorWidth;
+        /* 0x456C */ public float FrontendDeactivateTime;
+        /* 0x4570 */ public float FrontendDeactivateSplit;
+        /* 0x4574 */ public float FrontendActivateTime;
+        /* 0x4578 */ public float FrontendActivateSplit;
+        /* 0x457C */ public float FrontendStatCircleWidth;
+        /* 0x4580 */ public float FrontendStatCircleWidthExtra;
+        /* 0x4584 */ public float FrontendBootTime;
+        /* 0x4588 */ public float FrontendBootBarTime;
+        /* 0x458C */ public TkCurveType FrontendBootBarCurve;
+        /* 0x4590 */ public float PopupDebounceTime;
+        /* 0x4594 */ public float PopupActivateTime;
+        /* 0x4598 */ public float PopupDeactivateTime;
+        /* 0x459C */ public TkCurveType PopupActivateCurve1;
+        /* 0x45A0 */ public TkCurveType PopupActivateCurve2;
+        /* 0x45A4 */ public float HatchPulseSpeed;
+        /* 0x45A8 */ public float HatchPulseWidth;
+        /* 0x45AC */ public float HatchPulsePauseTime;
+        /* 0x45B0 */ public int HatchCount;
+        /* 0x45B4 */ public float HatchCursorRadius;
+        /* 0x45B8 */ public float HatchAlphaMain;
+        /* 0x45BC */ public float HatchAlphaBase;
+        /* 0x45C0 */ public float HatchAlphaCursor;
+        /* 0x45C4 */ public float FrontendDoFNearPlaneMin;
+        /* 0x45C8 */ public float FrontendDoFNearPlaneMax;
+        /* 0x45CC */ public float FrontendDoFFarPlaneMin;
+        /* 0x45D0 */ public float FrontendDoFFarPlaneMax;
+        /* 0x45D4 */ public float FrontendDoFFarPlaneFadeMin;
+        /* 0x45D8 */ public float FrontendDoFFarPlaneFadeMax;
+        /* 0x45DC */ public float FrontendDoFBlurMultiplier;
+        /* 0x45E0 */ public bool FrontendDoFEnableBokeh;
+        /* 0x45E4 */ public TkCurveType FrontendDoFCurve;
+        /* 0x45E8 */ public float FrontendShineSpeed;
+        /* 0x45EC */ public float FrontendToolbarTextHeight;
+        /* 0x45F0 */ public float FrontendToolbarTextHeightSelected;
+        /* 0x45F4 */ public float FrontendTitleFontSpacing;
+        /* 0x45F8 */ public float NGuiPadSensitivity;
+        /* 0x45FC */ public float NGuiMouseSensitivity;
+        /* 0x4600 */ public Vector2f NGuiTouchPadSensitivity;
+        /* 0x4610 */ public Colour TargetMarkerColour;
+        /* 0x4620 */ public Colour TargetMarkerHighlightColour;
+        /* 0x4630 */ public float TargetMarkerScaleStart;
+        /* 0x4634 */ public float TargetMarkerScaleEnd;
+        /* 0x4638 */ public float TargetMarkerFadeAngleMin;
+        /* 0x463C */ public float TargetMarkerFadeAngleRange;
+        /* 0x4640 */ public float HitMarkerPulseSize;
+        /* 0x4644 */ public float HitMarkerPulseTime;
+        /* 0x4650 */ public Colour WantedColour;
+        /* 0x4660 */ public float PlanetPoleMaxDotProduct;
+        /* 0x4664 */ public float SpaceMapFoV;
+        /* 0x4668 */ public float SpaceMapAspectRatio;
+        /* 0x466C */ public float SpaceMapDistanceScale;
+        /* 0x4670 */ public float SpaceMapDistanceLogScaler;
+        /* 0x4674 */ public float SpaceMapScaleMin;
+        /* 0x4678 */ public float SpaceMapScaleRangeMin;
+        /* 0x467C */ public float SpaceMapScaleRangeMax;
+        /* 0x4680 */ public float SpaceMapObjectScale;
+        /* 0x4684 */ public float SpaceMapFreighterScale;
+        /* 0x4688 */ public float SpaceMapStationScale;
+        /* 0x468C */ public float SpaceMapPlanetScale;
+        /* 0x4690 */ public float SpaceMapMoonScale;
+        /* 0x4694 */ public float SpaceMapShipScale;
+        /* 0x4698 */ public float SpaceMapOtherPlayerScale;
+        /* 0x469C */ public float SpaceMapActionScale;
+        /* 0x46A0 */ public float SpaceMapPlayerScale;
+        /* 0x46A4 */ public float SpaceMapMarkerScale;
+        /* 0x46A8 */ public float SpaceMapDistance;
+        /* 0x46AC */ public float SpaceMapDistanceMultiplier;
+        /* 0x46B0 */ public float SpaceMapHorizonThickness;
+        /* 0x46B4 */ public float SpaceMapFadeAngleMin;
+        /* 0x46B8 */ public float SpaceMapFadeAngleMax;
+        /* 0x46BC */ public float SpaceMapCamHeight;
+        /* 0x46C0 */ public float SpaceMapCamAngle;
+        /* 0x46C4 */ public float SpaceMapCamDistance;
+        /* 0x46C8 */ public float SpaceMapShipScaleMin;
+        /* 0x46CC */ public float SpaceMapLightPitch;
+        /* 0x46D0 */ public float SpaceMapLightYaw;
         [NMS(Size = 0xC, Ignore = true)]
-        /* 0x4574 */ public byte[] Padding4574;
-        /* 0x4580 */ public Vector4f SpaceMapPosScaler;
-        /* 0x4590 */ public Colour SpaceMapAttackColour;
-        /* 0x45A0 */ public Colour SpaceMapOtherPlayerColour;
-        /* 0x45B0 */ public Colour SpaceMapThreatColour;
-        /* 0x45C0 */ public Colour SpaceMapNeutralColour;
-        /* 0x45D0 */ public Colour SpaceMapDeathPointColour;
-        /* 0x45E0 */ public GcSpaceMapObjectData SpaceMapMarkerData;
-        /* 0x4610 */ public GcSpaceMapObjectData SpaceMapPlanetData;
-        /* 0x4640 */ public GcSpaceMapObjectData SpaceMapStationData;
-        /* 0x4670 */ public GcSpaceMapObjectData SpaceMapShipData;
-        /* 0x46A0 */ public GcSpaceMapObjectData SpaceMapFreighterData;
-        /* 0x46D0 */ public Vector2f HUDTargetHealthOffset;
-        /* 0x46D8 */ public Vector2f HUDTargetHealthSize;
-        /* 0x46E0 */ public Vector2f HUDTargetHealthIconOffset;
-        /* 0x46E8 */ public float HUDTargetHealthIconSize;
-        /* 0x46EC */ public float HUDTargetHealthDangerTime;
-        /* 0x46F0 */ public float HUDTargetMarkerOffset;
-        /* 0x46F4 */ public float HUDTargetMarkerSize;
-        /* 0x46F8 */ public float HUDTargetIconOffset;
-        /* 0x46FC */ public float HUDTargetIconSize;
-        /* 0x4700 */ public float HUDMarkerOffset;
-        /* 0x4710 */ public Colour HUDMarkerColour;
-
-        /* 0x4720 */ public Colour HUDSpaceshipColour;
-        /* 0x4730 */ public Colour HUDRelicMarkerColourDiscovered;
-        /* 0x4740 */ public Colour HUDRelicMarkerColourUnknown;
-        /* 0x4750 */ public Colour HUDOutpostColour;
-        /* 0x4760 */ public Vector2f HUDMarkerPrimaryIndicatorOffset;
-        /* 0x4768 */ public Vector2f HUDMarkerCompassPrimaryIndicatorOffset;
+        /* 0x46D4 */ public byte[] Padding46D4;
+        /* 0x46E0 */ public Vector4f SpaceMapPosScaler;
+        /* 0x46F0 */ public Colour SpaceMapAttackColour;
+        /* 0x4700 */ public Colour SpaceMapOtherPlayerColour;
+        /* 0x4710 */ public Colour SpaceMapThreatColour;
+        /* 0x4720 */ public Colour SpaceMapNeutralColour;
+        /* 0x4730 */ public Colour SpaceMapDeathPointColour;
+        /* 0x4740 */ public GcSpaceMapObjectData SpaceMapMarkerData;
+        /* 0x4770 */ public GcSpaceMapObjectData SpaceMapPlanetData;
+        /* 0x47A0 */ public GcSpaceMapObjectData SpaceMapStationData;
+        /* 0x47D0 */ public GcSpaceMapObjectData SpaceMapShipData;
+        /* 0x4800 */ public GcSpaceMapObjectData SpaceMapFreighterData;
+        /* 0x4830 */ public Vector2f HUDTargetHealthOffset;
+        /* 0x4838 */ public Vector2f HUDTargetHealthSize;
+        /* 0x4840 */ public Vector2f HUDTargetHealthIconOffset;
+        /* 0x4848 */ public float HUDTargetHealthIconSize;
+        /* 0x484C */ public float HUDTargetHealthDangerTime;
+        /* 0x4850 */ public float HUDTargetMarkerOffset;
+        /* 0x4854 */ public float HUDTargetMarkerSize;
+        /* 0x4858 */ public float HUDTargetIconOffset;
+        /* 0x485C */ public float HUDTargetIconSize;
+        /* 0x4860 */ public float HUDMarkerOffset;
+        /* 0x4870 */ public Colour HUDMarkerColour;
+        /* 0x4880 */ public Colour HUDSpaceshipColour;
+        /* 0x4890 */ public Colour HUDRelicMarkerColourDiscovered;
+        /* 0x48A0 */ public Colour HUDRelicMarkerColourUnknown;
+        /* 0x48B0 */ public Colour HUDOutpostColour;
+        /* 0x48C0 */ public Vector2f HUDMarkerPrimaryIndicatorOffset;
+        /* 0x48C8 */ public Vector2f HUDMarkerCompassPrimaryIndicatorOffset;
         [NMS(Size = 0x100)]
-        /* 0x4770 */ public string HUDMarkerIcon;
+        /* 0x48D0 */ public string HUDMarkerIcon;
         [NMS(Size = 0x100)]
-        /* 0x4870 */ public string HUDMarkerPrimaryIndicatorIcon;
+        /* 0x49D0 */ public string HUDMarkerPrimaryIndicatorIcon;
         [NMS(Size = 0x100)]
-        /* 0x4970 */ public string HUDMarkerColourIcon;
+        /* 0x4AD0 */ public string HUDMarkerColourIcon;
         [NMS(Size = 0x100)]
-        /* 0x4A70 */ public string HUDPointIcon;
+        /* 0x4BD0 */ public string HUDPointIcon;
         [NMS(Size = 0x100)]
-        /* 0x4B70 */ public string HUDSpaceshipIcon;
+        /* 0x4CD0 */ public string HUDSpaceshipIcon;
         [NMS(Size = 0x100)]
-        /* 0x4C70 */ public string HUDSaveIcon;
+        /* 0x4DD0 */ public string HUDSaveIcon;
         [NMS(Size = 0x100)]
-        /* 0x4D70 */ public string HUDDeathPointIcon;
+        /* 0x4ED0 */ public string HUDDeathPointIcon;
         [NMS(Size = 0x100)]
-        /* 0x4E70 */ public string HUDHexAnimIcon;
+        /* 0x4FD0 */ public string HUDHexAnimIcon;
         [NMS(Size = 0x100)]
-        /* 0x4F70 */ public string HUDCircleAnimIcon;
-        /* 0x5070 */ public float HUDMarkerAnimSpeed;
-        /* 0x5074 */ public float HUDMarkerAnimScale;
-        /* 0x5078 */ public float HUDMarkerAnimOffset;
-        /* 0x507C */ public float HUDMarkerAnimLoopTime;
-        /* 0x5080 */ public TkCurveType HUDMarkerAnimAlphaCurve;
-        /* 0x5084 */ public float HUDMarkerAnimCurve;
-        /* 0x5088 */ public float HUDMarkerPrimaryIndicatorSize;
-
-        /* 0x508C */ public float HUDMarkerHoverAngleTest;
-        /* 0x5090 */ public float HUDMarkerWideHoverAngleTest;
-        /* 0x5094 */ public float HUDMarkerHoverAngleTestShip;
-		/* 0x5098 */ public float HUDMarkerShipOffsetMaxDist;
-		/* 0x509C */ public float HUDMarkerShipOffsetMinDist;
-		/* 0x50A0 */ public float HUDMarkerNearFadeDistance;
-		/* 0x50A4 */ public float HUDMarkerNearFadeRange;
-		/* 0x50A8 */ public float HUDMarkerFarDistance;
-		/* 0x50AC */ public float HUDMarkerFarFadeRange;
-		/* 0x50B0 */ public float HUDMarkerScalerMin;
-		/* 0x50B4 */ public float HUDMarkerScalerRange;
-		/* 0x50B8 */ public float HUDMarkerScalerSizeMin;
-		/* 0x50BC */ public float HUDMarkerScalerSizeMax;
-		/* 0x50C0 */ public float HUDMarkerHorizonBlendRange;
-		/* 0x50C4 */ public float HUDMarkerAlpha;
-		/* 0x50C8 */ public float HUDMarkerModelFadeRange;
-		/* 0x50CC */ public float HUDMarkerModelFadeMinHeight;
-		/* 0x50D0 */ public float HUDMarkerShowActualIconDistance;
-		/* 0x50D4 */ public float HUDMarkerShowActualSpaceIconDistance;
-		/* 0x50D8 */ public float HUDMarkerActiveTime;
-        /* 0x50DC */ public TkCurveType HUDMarkerActiveCurve;
-        /* 0x50E0 */ public float AltimeterResolution;
-        /* 0x50E4 */ public float AltimeterLineSpacing;
-        /* 0x50E8 */ public float AltimeterWidth;
-        /* 0x50EC */ public float AltimeterMin;
-        /* 0x50F0 */ public float AltimeterMax;
-        /* 0x50F4 */ public float AltimeterTextSize;
-        /* 0x50F8 */ public float AltimeterMinValue;
-        /* 0x5100 */ public Colour AltimeterBandColour1;
-
-        /* 0x5110 */ public Colour AltimeterBandColour2;
-        /* 0x5120 */ public Colour AltimeterColour1;
-        /* 0x5130 */ public Colour AltimeterColour2;
-        /* 0x5140 */ public float LockOnMarkerSize;
-        /* 0x5144 */ public float LockOnMarkerSizeLock;
-        /* 0x5150 */ public Colour LockOnMarkerActiveColour;
-
-        /* 0x5160 */ public float MissileIconAttackPulseTime;
-        /* 0x5164 */ public float MissileIconAttackPulseAmount;
-        /* 0x5168 */ public float NGuiModelRotationDegreesX;
-        /* 0x516C */ public float NGuiModelRotationDegreesY;
-        /* 0x5170 */ public float NGuiModelRotationDegreesZ;
-        /* 0x5174 */ public float NGuiModelViewDistanceGlobal;
-        /* 0x5178 */ public float NGuiModelViewDistanceSuitPage;
-        /* 0x517C */ public float NGuiModelViewDistanceWeaponPage;
-        /* 0x5180 */ public float NGuiModelViewDistanceShipPage;
-        /* 0x5184 */ public float NGuiModelViewDistanceDiscoveryPage;
-        /* 0x5188 */ public float NGuiModelViewFov;
-        /* 0x518C */ public float NGuiModelViewCdSmoothTime;
-        /* 0x5190 */ public float NGuiAltPlacementDistanceScrollSpeed;
-        /* 0x5194 */ public float NGuiPlacementAngleScrollSpeed;
-        /* 0x5198 */ public float NGuiModelViewFractionOfBBHeightAboveReflectivePlane;
-
-
+        /* 0x50D0 */ public string HUDCircleAnimIcon;
+        /* 0x51D0 */ public float HUDMarkerAnimSpeed;
+        /* 0x51D4 */ public float HUDMarkerAnimScale;
+        /* 0x51D8 */ public float HUDMarkerAnimOffset;
+        /* 0x51DC */ public float HUDMarkerAnimLoopTime;
+        /* 0x51E0 */ public TkCurveType HUDMarkerAnimAlphaCurve;
+        /* 0x51E4 */ public float HUDMarkerAnimCurve;
+        /* 0x51E8 */ public float HUDMarkerPrimaryIndicatorSize;
+        /* 0x51EC */ public float HUDMarkerHoverAngleTest;
+        /* 0x51F0 */ public float HUDMarkerWideHoverAngleTest;
+        /* 0x51F4 */ public float HUDMarkerHoverAngleTestShip;
+		/* 0x51F8 */ public float HUDMarkerShipOffsetMaxDist;
+		/* 0x51FC */ public float HUDMarkerShipOffsetMinDist;
+		/* 0x5200 */ public float HUDMarkerNearFadeDistance;
+		/* 0x5204 */ public float HUDMarkerNearFadeRange;
+		/* 0x5208 */ public float HUDMarkerFarDistance;
+		/* 0x520C */ public float HUDMarkerFarFadeRange;
+		/* 0x5210 */ public float HUDMarkerScalerMin;
+		/* 0x5214 */ public float HUDMarkerScalerRange;
+		/* 0x5218 */ public float HUDMarkerScalerSizeMin;
+		/* 0x521C */ public float HUDMarkerScalerSizeMax;
+		/* 0x5220 */ public float HUDMarkerHorizonBlendRange;
+		/* 0x5224 */ public float HUDMarkerAlpha;
+		/* 0x5228 */ public float HUDMarkerModelFadeRange;
+		/* 0x522C */ public float HUDMarkerModelFadeMinHeight;
+		/* 0x5230 */ public float HUDMarkerShowActualIconDistance;
+		/* 0x5234 */ public float HUDMarkerShowActualSpaceIconDistance;
+		/* 0x5238 */ public float HUDMarkerActiveTime;
+        /* 0x523C */ public TkCurveType HUDMarkerActiveCurve;
+        /* 0x5240 */ public float AltimeterResolution;
+        /* 0x5244 */ public float AltimeterLineSpacing;
+        /* 0x5248 */ public float AltimeterWidth;
+        /* 0x524C */ public float AltimeterMin;
+        /* 0x5250 */ public float AltimeterMax;
+        /* 0x5254 */ public float AltimeterTextSize;
+        /* 0x5258 */ public float AltimeterMinValue;
+        /* 0x5260 */ public Colour AltimeterBandColour1;
+        /* 0x5270 */ public Colour AltimeterBandColour2;
+        /* 0x5280 */ public Colour AltimeterColour1;
+        /* 0x5290 */ public Colour AltimeterColour2;
+        /* 0x52A0 */ public float LockOnMarkerSize;
+        /* 0x52A4 */ public float LockOnMarkerSizeLock;
+        /* 0x52B0 */ public Colour LockOnMarkerActiveColour;
+        /* 0x52C0 */ public float MissileIconAttackPulseTime;
+        /* 0x52C4 */ public float MissileIconAttackPulseAmount;
+        /* 0x52C8 */ public float NGuiModelRotationDegreesX;
+        /* 0x52CC */ public float NGuiModelRotationDegreesY;
+        /* 0x52D0 */ public float NGuiModelRotationDegreesZ;
+        /* 0x52D4 */ public float NGuiModelViewDistanceGlobal;
+        /* 0x52D8 */ public float NGuiModelViewDistanceSuitPage;
+        /* 0x52DC */ public float NGuiModelViewDistanceWeaponPage;
+        /* 0x52E0 */ public float NGuiModelViewDistanceShipPage;
+        /* 0x52E4 */ public float NGuiModelViewDistanceDiscoveryPage;
+        /* 0x52E8 */ public float NGuiModelViewFov;
+        /* 0x52EC */ public float NGuiModelViewCdSmoothTime;
+        /* 0x52F0 */ public float NGuiAltPlacementDistanceScrollSpeed;
+        /* 0x52F4 */ public float NGuiPlacementAngleScrollSpeed;
+        /* 0x52F8 */ public float NGuiModelViewFractionOfBBHeightAboveReflectivePlane;
         [NMS(Size = 0x4, Ignore = true)]
-        /* 0x519C */ public byte[] Padding519C;
-        /* 0x51A0 */ public Vector4f NGuiModelTranslationFactors;
-        /* 0x51B0 */ public Vector4f NGuiModelTranslationFactorsInteraction;
-        /* 0x51C0 */ public Vector4f NGuiThumbnailModelTranslationFactors;
-        /* 0x51D0 */ public float NGuiThumbnailModelRotationDegreesY;
-        /* 0x51D4 */ public float NGuiThumbnailModelViewDistance;
-        /* 0x51D8 */ public float NGuiCursorOffsetMultiplier;
-        /* 0x51DC */ public float NGuiActiveAreaOffsetTime;
-        /* 0x51E0 */ public Vector2f NGuiMin2DParallax;
-        /* 0x51E8 */ public Vector2f NGuiMax2DParallax;
-        /* 0x51F0 */ public Vector2f NGuiModelParallax;
-        /* 0x51F8 */ public Vector2f NGuiShipInteractParallax;
-        /* 0x5200 */ public Vector2f InteractionWorldParallax;
-        /* 0x5208 */ public float TargetParallaxMouseMultiplier;
-        /* 0x520C */ public float TargetParallaxMaintenancePageMultiplier;
-        /* 0x5210 */ public float NGuiModelViewFadeInAfterRenderTime;
-        /* 0x5214 */ public TkCurveType NGuiModelViewFadeInAfterRenderCurve;
-        /* 0x5218 */ public bool NGuiUseSeparateLayersForModelAndReflection;
-
-
+        /* 0x52FC */ public byte[] Padding52FC;
+        /* 0x5300 */ public Vector4f NGuiModelTranslationFactors;
+        /* 0x5310 */ public Vector4f NGuiModelTranslationFactorsInteraction;
+        /* 0x5320 */ public Vector4f NGuiThumbnailModelTranslationFactors;
+        /* 0x5330 */ public float NGuiThumbnailModelRotationDegreesY;
+        /* 0x5334 */ public float NGuiThumbnailModelViewDistance;
+        /* 0x5338 */ public float NGuiCursorOffsetMultiplier;
+        /* 0x533C */ public float NGuiActiveAreaOffsetTime;
+        /* 0x5340 */ public Vector2f NGuiMin2DParallax;
+        /* 0x5348 */ public Vector2f NGuiMax2DParallax;
+        /* 0x5350 */ public Vector2f NGuiModelParallax;
+        /* 0x5358 */ public Vector2f NGuiShipInteractParallax;
+        /* 0x5360 */ public Vector2f InteractionWorldParallax;
+        /* 0x5368 */ public float TargetParallaxMouseMultiplier;
+        /* 0x536C */ public float TargetParallaxMaintenancePageMultiplier;
+        /* 0x5370 */ public float NGuiModelViewFadeInAfterRenderTime;
+        /* 0x5374 */ public TkCurveType NGuiModelViewFadeInAfterRenderCurve;
+        /* 0x5378 */ public bool NGuiUseSeparateLayersForModelAndReflection;
         [NMS(Size = 0x3, Ignore = true)]
-        /* 0x5219 */ public byte[] Padding5219;
-        /* 0x521C */ public GcDiscoveryHelperTimings DiscoveryHelperTimings;
-        /* 0x5228 */ public GcHUDStartupTable IntroTiming;
-        /* 0x52A8 */ public GcInventorySlotActionData InstallTechSlotAction;
-        /* 0x52C4 */ public GcInventorySlotActionData BuildProductSlotAction;
-        /* 0x52E0 */ public GcInventorySlotActionData ChargeSlotAction;
-        /* 0x52FC */ public GcInventorySlotActionData RepairSlotAction;
-        /* 0x5318 */ public GcInventorySlotActionData NewSlotRevealAction;
-        /* 0x5334 */ public GcInventorySlotActionData NewSlotPulseAction;
-        /* 0x5350 */ public float ReportBaseFlashTime;
-        /* 0x5354 */ public float ReportBaseFlashIntensity;
-        /* 0x5358 */ public float ReportBaseFlashDelay;
-        /* 0x535C */ public int ReportBaseTexWidth;
-        /* 0x5360 */ public int ReportBaseTexHeight;
-        /* 0x5364 */ public float ReportCameraSpeed;
-        /* 0x5368 */ public float AmbientModeFadeTime;
-        /* 0x536C */ public bool HideQuickMenuControls;
-        /* 0x536D */ public bool QuickMenuAllowCycle;
-        /* 0x5370 */ public float TextChatMaxDisplayTime;
-        /* 0x5374 */ public float TextChatStayBigAfterTextInput;
-        /* 0x5378 */ public int BuildingShopMaxItems;
+        /* 0x5379 */ public byte[] Padding5379;
+        /* 0x537C */ public GcDiscoveryHelperTimings DiscoveryHelperTimings;
+        /* 0x5388 */ public GcHUDStartupTable IntroTiming;
+        /* 0x5408 */ public GcInventorySlotActionData InstallTechSlotAction;
+        /* 0x5424 */ public GcInventorySlotActionData BuildProductSlotAction;
+        /* 0x5440 */ public GcInventorySlotActionData ChargeSlotAction;
+        /* 0x545C */ public GcInventorySlotActionData RepairSlotAction;
+        /* 0x5478 */ public GcInventorySlotActionData NewSlotRevealAction;
+        /* 0x5494 */ public GcInventorySlotActionData NewSlotPulseAction;
+        /* 0x54B0 */ public float ReportBaseFlashTime;
+        /* 0x54B4 */ public float ReportBaseFlashIntensity;
+        /* 0x54B8 */ public float ReportBaseFlashDelay;
+        /* 0x54BC */ public int ReportBaseTexWidth;
+        /* 0x54C0 */ public int ReportBaseTexHeight;
+        /* 0x54C4 */ public float ReportCameraSpeed;
+        /* 0x54C8 */ public float AmbientModeFadeTime;
+        /* 0x54CC */ public bool HideQuickMenuControls;
+        /* 0x54CD */ public bool QuickMenuAllowCycle;
+        /* 0x54D0 */ public float TextChatMaxDisplayTime;
+        /* 0x54D4 */ public float TextChatStayBigAfterTextInput;
+        /* 0x54D8 */ public int BuildingShopMaxItems;
         [NMS(Size = 0x4, Ignore = true)]
-        /* 0x537C */ public byte[] EndPadding;
+        /* 0x54DC */ public byte[] EndPadding;
     }
 }

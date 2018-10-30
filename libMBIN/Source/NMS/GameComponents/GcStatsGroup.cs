@@ -5,8 +5,8 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0xEA3BCF2E77894A81)]
-    public class GcStatsGroup : NMSTemplate     // size: 0xA8
+	[NMS(Size = 0xA8, GUID = 0x44804AEC156CC55D)]
+    public class GcStatsGroup : NMSTemplate
     {
         [NMS(Size = 0x10)]
         /* 0x00 */ public string Id;

@@ -5,14 +5,14 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x58, GUID = 0x5AD1656C01D71836)]
+	[NMS(Size = 0x58, GUID = 0x67C05DCF8F3F183E)]
     public class GcCreatureSwarmData : NMSTemplate
     {
         /* 0x00 */ public int MinCount;
         /* 0x04 */ public int MaxCount;
         /* 0x08 */ public float SwarmMovementSpeed;
         /* 0x0C */ public float SwarmMovementRadius;
-		public enum SwarmMovementTypeEnum { None, Circle, Random, Search }
+		public enum SwarmMovementTypeEnum { None, Circle, Random, Search, FollowPlayer }
 		public SwarmMovementTypeEnum SwarmMovementType;
 
         /* 0x14 */ public float Coherence;

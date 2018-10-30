@@ -1,12 +1,13 @@
 ﻿using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
+using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0xE550096D7C607FFF)]
-    public class GcCreatureNearbyEvent : NMSTemplate      // size: 0x18
+	[NMS(Size = 0x18, GUID = 0x58F586616F3A94D8)]
+    public class GcCreatureNearbyEvent : NMSTemplate
     {
-        public GcCreatureAlertData AlertTable;
+        public List<GcCreatureAlertData> AlertTable;
         public bool Inverse;
         [NMS(Size = 0x7, Ignore = true)]
         public byte[] EndPadding;

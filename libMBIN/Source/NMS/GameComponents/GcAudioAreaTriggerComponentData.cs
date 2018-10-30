@@ -3,8 +3,8 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0xADAA37EE32C64812, Broken = true)]
-    public class GcAudioAreaTriggerComponentData : NMSTemplate      // size: 0x10
+	[NMS(Size = 0x10, GUID = 0x67F2BCE2FF2CFE9)]
+    public class GcAudioAreaTriggerComponentData : NMSTemplate
     {
         public GcAudioWwiseEvents EventEnter;
         public GcAudioWwiseEvents EventExit;

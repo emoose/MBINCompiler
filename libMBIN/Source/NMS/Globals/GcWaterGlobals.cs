@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS( GUID = 0x1E1FC5B279A0B148 )]
+    [NMS( GUID = 0xAA718BE0CA49B299)]
     public class GcWaterGlobals : NMSTemplate
     {
         /* 0x0 */ public bool RenderReflections;
@@ -22,5 +22,7 @@ namespace libMBIN.NMS.Globals
         /* 0x30 */ public Colour WaterColourBase;
         /* 0x40 */ public Colour WaterColourAdd;
         /* 0x50 */ public Colour WaterHeavyAirColour;
+        /* 0x60 */ public GcPlanetWaterData WaterDataDay;
+        /* 0x230 */ public GcPlanetWaterData WaterDataNight;
     }
 }

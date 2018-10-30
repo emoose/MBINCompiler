@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x148, GUID = 0xA0677E130E5551A6)]
+	[NMS(Size = 0x160, GUID = 0x9C67CB22ECD72C8F)]
     public class GcDestructableComponentData : NMSTemplate
     {
         [NMS(Size = 0x10)]
@@ -21,8 +21,9 @@ namespace libMBIN.NMS.GameComponents
         [NMS(Size = 0x10)]
         /* 0x028 */ public string TriggerAction;
         /* 0x038 */ public int IncreaseWanted;
-        [NMS(Size = 4, Ignore = true)]
-        /* 0x03C */ public byte[] Padding3C;
+        /* 0x03C */ public bool IncreaseFiendWanted;
+        [NMS(Size = 3, Ignore = true)]
+        /* 0x03D */ public byte[] Padding3D;
 
         [NMS(Size = 0x10)]
         /* 0x040 */ public string LootReward;
@@ -40,32 +41,39 @@ namespace libMBIN.NMS.GameComponents
         /* 0x070 */ public string GivesReward;
 		/* 0x080 */ public float HardModeSubstanceMultiplier;
 
-        /* 0x084 */ public bool UseSystemColorsForTexture;
-        /* 0x085 */ public bool RemoveModel;
-        /* 0x086 */ public bool HideModel;
-        [NMS(Size = 0x1, Ignore = true)]
-        /* 0x087 */ public byte[] Padding87;
-        [NMS(Size = 0x80)]
-        /* 0x088 */ public TkTextureResource DestroyedModel;
-        /* 0x10C */ public bool DestroyedModelUsesScale;
-        [NMS(Size = 0x3, Ignore = true)]
-        /* 0x10D */public byte[] Padding10D;
-        /* 0x110 */ public float DestroyForce;
-        /* 0x114 */ public float DestroyForceRadius;
-        [NMS(Size = 0x10)]
-        /* 0x118 */ public string DestroyEffect;
-        [NMS(Size = 0x10)]
-        /* 0x128 */ public string DestroyEffectPoint;
-        /* 0x138 */ public float DestroyEffectTime;
+        [NMS(Size = 0x4, Ignore = true)]
+        /* 0x084 */ public byte[] Padding84;
 
-        /* 0x13C */ public bool DestroyEffectMatrices;
-        /* 0x13D */ public bool ShowInteract;
+        /* 0x088 */ public List<GcRewardMissionOverride> RewardOverrideTable;
+
+        /* 0x098 */ public bool UseSystemColorsForTexture;
+        /* 0x099 */ public bool RemoveModel;
+        /* 0x09A */ public bool HideModel;
+        [NMS(Size = 0x1, Ignore = true)]
+        /* 0x09B */ public byte[] Padding9B;
+        [NMS(Size = 0x80)]
+        /* 0x09C */ public TkTextureResource DestroyedModel;
+        /* 0x120 */ public bool DestroyedModelUsesScale;
+        [NMS(Size = 0x3, Ignore = true)]
+        /* 0x121 */public byte[] Padding121;
+        /* 0x124 */ public float DestroyForce;
+        /* 0x128 */ public float DestroyForceRadius;
+        [NMS(Size = 0x4, Ignore = true)]
+        /* 0x12C */ public byte[] Padding12C;
+        [NMS(Size = 0x10)]
+        /* 0x130 */ public string DestroyEffect;
+        [NMS(Size = 0x10)]
+        /* 0x140 */ public string DestroyEffectPoint;
+        /* 0x150 */ public float DestroyEffectTime;
+
+        /* 0x154 */ public bool DestroyEffectMatrices;
+        /* 0x155 */ public bool ShowInteract;
         [NMS(Size = 0x2, Ignore = true)]
-        /* 0x13E */ public byte[] Padding13E;
-        /* 0x140 */ public float ShowInteractRange;
-        /* 0x144 */ public bool GrenadeSingleHit;
+        /* 0x156 */ public byte[] Padding156;
+        /* 0x158 */ public float ShowInteractRange;
+        /* 0x15C */ public bool GrenadeSingleHit;
 
         [NMS(Size = 3, Ignore = true)]
-        /* 0x145 */ public byte[] Padding145;
+        /* 0x15D */ public byte[] EndPadding;
     }
 }

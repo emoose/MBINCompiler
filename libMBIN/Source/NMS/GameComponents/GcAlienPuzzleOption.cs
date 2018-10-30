@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x2A8, GUID = 0xBED68A32A126717C, Broken = true)]
+	[NMS(Size = 0x2A8, GUID = 0x6AE806D1BCC2673B)]
     public class GcAlienPuzzleOption : NMSTemplate
     {
         [NMS(Size = 0x20)]
@@ -23,7 +23,7 @@ namespace libMBIN.NMS.GameComponents
 
         /* 0x238 */ public List<NMSString0x10> Rewards;
 		public enum MoodEnum { Positive, Negative, Neutral, Pity, Dead }
-		public MoodEnum Mood;
+		/* 0x248 */ public MoodEnum Mood;
 
         /* 0x24C */ public bool KeepOpen;
         /* 0x24D */ public bool MarkInteractionComplete;
