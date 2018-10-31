@@ -9,9 +9,10 @@ namespace libMBIN.NMS.GameComponents
 		/* 0x00 */ public GcCreatureTypes Type;
         /* 0x04 */ public float MinDist;
         /* 0x08 */ public float MaxDist;
-        [NMS(Size = 0x6)]
+        // I *think* these are the enums...
+        [NMS(Size = 0x6, EnumValue = new string[] { "None", "EggDamaged", "EggDestroyed", "EggCollected", "UnderwaterPropDamaged", "UnderwaterPropCollected" })]
         /* 0x0C */ public int[] MinNum;
-        [NMS(Size = 0x6)]
+        [NMS(Size = 0x6, EnumValue = new string[] { "None", "EggDamaged", "EggDestroyed", "EggCollected", "UnderwaterPropDamaged", "UnderwaterPropCollected" })]
         /* 0x24 */ public int[] MaxNum;
     }
 }

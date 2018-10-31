@@ -3,10 +3,12 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x618, GUID = 0x1AF5AACC7C3221AB)]
+	[NMS(Size = 0x690, GUID = 0xA444343A8262A49C)]
     public class GcPlayerCharacterStateTable : NMSTemplate
     {
-        [NMS(Size = 0xA, EnumValue = new[] { "Idle", "Jog", "JogUphill", "JogDownhill", "SteepSlope", "Sliding", "Run", "Airborne", "JetpackBoost", "RocketBoost", "Swimming", "Death", "FullBodyOverride" })]
+        // enum struct: GcPlayerCharacterStateType
+        [NMS(Size = 0xB, EnumValue = new[] { "Idle", "Jog", "JogUphill", "JogDownhill", "SteepSlope", "Sliding", "Run", "Airborne", "JetpackBoost",
+            "RocketBoost", "Swimming", "SwimmingJetpack", "Death", "FullBodyOverride" })]
         public GcPlayerCharacterState[] CharacterStates;
     }
 }
