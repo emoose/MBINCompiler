@@ -62,6 +62,8 @@ namespace libMBIN.NMS.Globals
 		/* 0x198 */ public float GrabPlayerCooldownTime;
 		/* 0x19C */ public float TapInteractionIncreaseAmount;
 		/* 0x1A0 */ public float TapInteractionDecay;
+        [NMS(Size = 0xC, Ignore = true)]
+        /* 0x1A4 */ public byte[] Padding1A4;
         /* 0x1B0 */ public GcScanEffectData DeconstructEffect;
         /* 0x200 */ public GcScanEffectData HitEffect;
         /* 0x250 */ public GcScanEffectData HitEffectCritical;
@@ -83,8 +85,8 @@ namespace libMBIN.NMS.Globals
         /* 0x37C */ public float InteractionDescriptionTextTime;
         /* 0x380 */ public float InteractionMinTimeForResponseText;
         /* 0x384 */ public bool InteractionOverride;
-        /* 0x388 */ public int InteractionOverrideFrom;     // GcInteractionType ?
-        /* 0x38C */ public int InteractionOverrideTo;       // GcInteractionType ?
+        /* 0x388 */ public GcInteractionType InteractionOverrideFrom;
+        /* 0x38C */ public GcInteractionType InteractionOverrideTo;
         /* 0x390 */ public float DestroyEffectHeight;
         /* 0x394 */ public float DestroyEffectMaxScale;
         /* 0x398 */ public float EventTargetSpeed;
