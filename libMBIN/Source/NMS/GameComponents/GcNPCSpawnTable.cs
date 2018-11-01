@@ -5,8 +5,8 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0x94C4D7878A60E1BA)]
-    public class GcNPCSpawnTable : NMSTemplate      // size: 0x3C0
+	[NMS(Size = 0x3C0, GUID = 0xA0227D35EC592CE6)]
+    public class GcNPCSpawnTable : NMSTemplate
     {
         [NMS(Size = 7, EnumValue = new[] { "Traders", "Warriors", "Explorers", "Robots", "Atlas", "Diplomats", "None" })]
         /* 0x000 */ public NMSString0x80[] NPCModelNames;

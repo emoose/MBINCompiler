@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x10, GUID = 0x41D2B747BA8E5D04)]
+	[NMS(Size = 0x10, GUID = 0xA8C9EEB7A0BFEBA6)]
     public class GcProceduralProductTable : NMSTemplate
     {
         public List<GcProceduralProductData> Table;

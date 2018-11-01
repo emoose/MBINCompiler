@@ -3,11 +3,11 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x8, GUID = 0xDF5541EE134C5839)]
+	[NMS(Size = 0xC, GUID = 0x2659C9C28DF6AFB3)]
     public class GcPhotoBuildings : NMSTemplate
     {
-        public short AmountMin;
-        public short AmountMax;
+        public int AmountMin;
+        public int AmountMax;
         public GcPhotoBuilding BuildingType;
     }
 }

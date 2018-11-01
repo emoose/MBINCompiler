@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x5BF0, GUID = 0x71F109309F124312)]
+	[NMS(Size = 0x5C70, GUID = 0x666EA19D56A98953)]
     public class GcScannerIcons : NMSTemplate
     {
         /* 0x0000 */ public TkTextureResource TaggedBuilding;
@@ -85,7 +85,9 @@ namespace libMBIN.NMS.GameComponents
         
         /* 0x5B60 */ public TkTextureResource PortalMarker;
 
-        [NMS(Size = 0xC, Ignore = true)]
-        /* 0x5BE4 */ public byte[] EndPadding;
+        /* 0x5BE4 */ public TkTextureResource BlackHole;
+
+        [NMS(Size = 0x8, Ignore = true)]
+        /* 0x5C68 */ public byte[] EndPadding;
     }
 }

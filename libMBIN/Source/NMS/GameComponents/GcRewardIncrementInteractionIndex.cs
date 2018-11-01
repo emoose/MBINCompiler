@@ -5,10 +5,10 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0xC077DBEECAE0D84B)]
+	[NMS(GUID = 0xB60585FD5E994CB8)]
     public class GcRewardIncrementInteractionIndex : NMSTemplate
     {
-        public int InteractionToIncrement;
+        public GcInteractionType InteractionToIncrement;
         public GcAlienRace Race;
     }
 }

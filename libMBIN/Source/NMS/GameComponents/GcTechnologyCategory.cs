@@ -3,10 +3,11 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0x3797D16E9397A243)]
+	[NMS(GUID = 0x293AC97E1FE22B39)]
     public class GcTechnologyCategory : NMSTemplate
     {
-		public enum TechnologyCategoryEnum { Ship, Weapon, Suit, Personal, All, None, Freighter, Vehicle, Maintenance }
+        // size: 0xB
+		public enum TechnologyCategoryEnum { Ship, Weapon, Suit, Personal, All, None, Freighter, Maintenance, Exocraft, Submarine, AllVehicles }
 		public TechnologyCategoryEnum TechnologyCategory;
     }
 }

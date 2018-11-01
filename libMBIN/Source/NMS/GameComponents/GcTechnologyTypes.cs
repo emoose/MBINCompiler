@@ -5,9 +5,9 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0x864F2894AB6F76AE)]
-    public class GcProductTable : NMSTemplate
+	[NMS(GUID = 0x5E6BE7E3DECC7A5E)]
+    public class GcTechnologyTypes : NMSTemplate
     {
-        public List<GcProductData> Table;
+        public List<GcTechnology> Technology;
     }
 }

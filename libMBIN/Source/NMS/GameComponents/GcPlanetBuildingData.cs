@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x70, GUID = 0x8F5A54DD6AE951D4)]
+	[NMS(Size = 0x70, GUID = 0xE79AC40CC07EF8CB)]
     public class GcPlanetBuildingData : NMSTemplate
     {
         /* 0x00 */ public List<GcBuildingSpawnSlot> BuildingSlots;
@@ -18,11 +18,13 @@ namespace libMBIN.NMS.GameComponents
         /* 0x40 */ public int VoronoiPointSeed;
         [NMS(Size = 0x3)]
         /* 0x44 */ public float[] ClusterProbability;
-        /* 0x54 */ public int WaypointIndex;
-        /* 0x58 */ public int LandingPadIndex;
-        /* 0x5C */ public float AddShelterChance;
+        /* 0x50 */ public int WaypointIndex;
+        /* 0x54 */ public int LandingPadIndex;
+        /* 0x58 */ public float AddShelterChance;
         [NMS(Size = 0x3)]
-        /* 0x60 */ public int[] ShelterIndices;
-        /* 0x6C */ public int NumShelters;
+        /* 0x5C */ public int[] ShelterIndices;
+        /* 0x68 */ public int NumShelters;
+        [NMS(Size = 0x4, Ignore = true)]
+        /* 0x6C */ public byte[] EndPadding;
     }
 }

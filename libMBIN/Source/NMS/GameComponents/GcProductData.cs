@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x3E0, GUID = 0xE1B4A7FE02030BCF)]
+	[NMS(Size = 0x3E0, GUID = 0x6F735C63BC17FFA8)]
     public class GcProductData : NMSTemplate
     {
         [NMS(Size = 0x10)]
@@ -27,7 +27,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x270 */ public TkModelResource HeroIcon;
         /* 0x300 */ public Colour Colour;
         /* 0x310 */ public GcRealitySubstanceCategory SubstanceCategory;
-        /* 0x314 */ public GcProductCategory Type;      // I think??
+        /* 0x314 */ public GcProductCategory Type;
         /* 0x318 */ public GcProceduralProductCategory ProceduralType;
         /* 0x31C */ public GcRarity Rarity;
         /* 0x320 */ public GcLegality Legality;

@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x350, GUID = 0xC99934F1DB8A5CBD, Broken = true)]
+	[NMS(Size = 0x350, GUID = 0x3F4F9F81DEEC95F6)]
     public class GcTechnology : NMSTemplate
     {
         [NMS(Size = 0x10)]
@@ -74,7 +74,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x2F0 */ public Colour LinkColour;
 
         [NMS(Size = 0x10)]
-        /* 0x3000 */ public string RewardGroup;
+        /* 0x300 */ public string RewardGroup;
 
         /* 0x310 */ public int BaseValue;
         /* 0x314 */ public GcItemPriceModifiers Cost;

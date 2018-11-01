@@ -3,25 +3,24 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0x87DB4E0216224E8F)]
-    public class GcScanEventSave : NMSTemplate // 0x50 bytes
+	[NMS(Size = 0x80, GUID = 0x90011A6BD0FC168)]
+    public class GcScanEventSave : NMSTemplate
     {
-        public int Table;
+        /* 0x00 */ public int Table;
         [NMS(Size = 4, Ignore = true)]
-        public byte[] Padding4;
-
+        /* 0x04 */ public byte[] Padding4;
+        [NMS(Size = 0x20)]
+        /* 0x08 */ public string Event;
+        /* 0x28 */ public ulong GalacticAddress;
+        /* 0x30 */ public GcSeed BuildingSeed;
+        /* 0x40 */ public Vector4f BuildingLocation;
+        /* 0x50 */ public GcBuildingClassification BuildingClass;
+        /* 0x54 */ public float Time;
         [NMS(Size = 0x10)]
-        public string Event;
-
-        public ulong GalacticAddress;
-
-        public GcSeed BuildingSeed;
-
-        public Vector4f BuildingLocation;
-
-        public GcBuildingClassification BuildingClass;
-
+        /* 0x58 */ public string MissionID;
+        /* 0x68 */ public ulong MissionSeed;
+        /* 0x70 */ public GcPlayerMissionParticipantType ParticipantType;
         [NMS(Size = 0xC, Ignore = true)]
-        public byte[] Padding44;
+        /* 0x74 */ public byte[] EndPadding;
     }
 }
