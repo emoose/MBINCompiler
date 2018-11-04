@@ -353,11 +353,17 @@ namespace libMBIN
             return list;
         }
 
-        public void SerializeValue( BinaryWriter writer, Type fieldType, object fieldData, NMSAttribute settings, FieldInfo field, long startStructPos, ref List<Tuple<long, object>> additionalData, ref int addtDataIndex, int structLength = 0, UInt32 listEnding = 0xAAAAAA01 ) {
+        public void SerializeValue( BinaryWriter writer, Type fieldType, object fieldData, NMSAttribute settings, FieldInfo field, long startStructPos, ref List<Tuple<long, object>> additionalData, ref int addtDataIndex, int structLength = 0, UInt32 listEnding = 0xAAAAAA01, bool inList = false ) {
             //Logger.LogDebug( $"{field?.DeclaringType.Name}.{field?.Name}\ttype:\t{fieldType.Name}\tadditionalData.Count:\t{additionalData?.Count ?? 0}\taddtDataIndex:\t{addtDataIndex}" );
 
             if (CustomSerialize(writer, fieldType, fieldData, settings, field, ref additionalData, ref addtDataIndex))
                 return;
+
+            long baseOffset = startStructPos;
+            if (inList)
+            {
+                baseOffset = 0;
+            }
 
             if ( settings?.DefaultValue != null ) fieldData = settings.DefaultValue;
             switch ( fieldType.Name ) {
@@ -450,14 +456,14 @@ namespace libMBIN
 
                 case "NMSTemplate":
                     int template_alignment = settings?.Alignment ?? 0x4;
-                    
+
                     if (template_alignment == 0x4)
                     {
-                        writer.Align(8, startStructPos);
+                        writer.Align(8, baseOffset);
                     }
                     else
                     {
-                        writer.Align(template_alignment, startStructPos);
+                        writer.Align(template_alignment, baseOffset);
                     }
                     long refPos = writer.BaseStream.Position;
 
@@ -482,7 +488,7 @@ namespace libMBIN
                     // have something defined so that it just ignores it
                     break;
                 default:
-                    if ( fieldType.Name == "Colour" ) writer.Align( 0x10, startStructPos); // TODO: make an attribute
+                    if ( fieldType.Name == "Colour" ) writer.Align( 0x10, baseOffset); // TODO: make an attribute
 
                     // todo: align for VariableSizeString?
                     if ( fieldType.Name == "VariableSizeString" ) {
@@ -516,7 +522,7 @@ namespace libMBIN
                         if ( realData == null ) realData = (NMSTemplate) Activator.CreateInstance( fieldType );
                         int alignment = realData.GetType().GetCustomAttribute<NMSAttribute>()?.Alignment ?? 0x4;
                         //DebugLogTemplate(alignment.ToString());
-                        writer.Align(alignment, 0);     // startStructPos if not in list maybe??
+                        writer.Align(alignment, baseOffset);     // startStructPos if not in list maybe??
                         realData.AppendToWriter( writer, ref additionalData, ref addtDataIndex, GetType(), listEnding );
 
                     } else {
@@ -556,7 +562,7 @@ namespace libMBIN
         public void SerializeGenericList( BinaryWriter writer, IList list, long listHeaderPosition, ref List<Tuple<long, object>> additionalData, int addtDataIndex, UInt32 listEnding )
         // This serialises a List of NMSTemplate objects
         {
-            writer.Align( 0x8, 0 );       // Make sure that all c~ names are offset at 0x8.     // make rel to listHeaderPosition?
+            writer.Align( 0x8, listHeaderPosition );       // Make sure that all c~ names are offset at 0x8.     // make rel to listHeaderPosition?
             long listPosition = writer.BaseStream.Position;
 
             DebugLogTemplate( $"SerializeList\tstart:\t{$"0x{listPosition:X},",-10}\theader:\t{$"0x{listHeaderPosition:X},",-10}\tcount:\t{list.Count}");
@@ -585,7 +591,7 @@ namespace libMBIN
             foreach ( var entry in list ) {
                 int alignment = entry.GetType().GetCustomAttribute<NMSAttribute>()?.Alignment ?? 0x8;       // this will generally return 4 because it is the default...
 
-                writer.Align(8, 0);
+                writer.Align(alignment, 0);
                 //Logger.LogDebug($"pos 0x{writer.BaseStream.Position:X}");
                 //Logger.LogDebug(entry.GetType().Name);
                 entryOffsetNamePairs.Add( new KeyValuePair<long, string>( writer.BaseStream.Position, entry.GetType().Name ) );
@@ -621,7 +627,7 @@ namespace libMBIN
                         writer.BaseStream.Position = origPos;
                         var GenericObject = data.Item2;
                         int newDataIndex = i + 1;
-                        SerializeValue( writer, GenericObject.GetType(), GenericObject, null, null, origPos, ref listObjects, ref newDataIndex, 0, listEnding );
+                        SerializeValue( writer, GenericObject.GetType(), GenericObject, null, null, origPos, ref listObjects, ref newDataIndex, 0, listEnding, true );
                     }
                 }
 
@@ -657,7 +663,12 @@ namespace libMBIN
             // first thing we want to do is align the writer with the location of the first element of the list
             if ( list.Count != 0 ) {
                 // if the class has no alignment value associated with it, set a default value
-                int alignment = alignment = list[0].GetType().GetCustomAttribute<NMSAttribute>()?.Alignment ?? 0x8;
+                int alignment_default = 0x4;
+                if (list[0].GetType().BaseType == typeof(NMSTemplate))
+                {
+                    alignment_default = 0x8;
+                }
+                int alignment = alignment = list[0].GetType().GetCustomAttribute<NMSAttribute>()?.Alignment ?? alignment_default;
                 writer.Align(alignment, 0 );
             }
 

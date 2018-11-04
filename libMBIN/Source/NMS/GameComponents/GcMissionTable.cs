@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0x3F26458651227966)]
+	[NMS(GUID = 0xE0D041447E418A64)]
     public class GcMissionTable : NMSTemplate
     {
         public List<GcGenericMissionSequence> Missions;

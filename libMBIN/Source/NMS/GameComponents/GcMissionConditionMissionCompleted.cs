@@ -7,6 +7,6 @@ namespace libMBIN.NMS.GameComponents
     public class GcMissionConditionMissionCompleted : NMSTemplate
     {
         [NMS(Size = 0x10)]
-        /* 0x00 */public string MissionID;
+        /* 0x00 */ public string MissionID;
     }
 }

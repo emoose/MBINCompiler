@@ -1,13 +1,12 @@
-﻿using libMBIN.NMS.Toolkit;
+﻿using System.Collections.Generic;
+using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0x10907E0AAEACD31)]
+	[NMS(Size = 0x38F0, GUID = 0xD47EFD17DEE02E3E)]
     public class GcUserSettingsData : NMSTemplate
     {
-        // this needs to be fixed!! Has a fair few values missing as can be see in the struct and the file itself
-
         /* 0x0000 */ public bool InvertLookControls;
         /* 0x0001 */ public bool InvertFlightControls;
         /* 0x0002 */ public bool HUDHidden;
@@ -22,7 +21,28 @@ namespace libMBIN.NMS.GameComponents
         /* 0x386C */ public int MotionBlurAmount;
         /* 0x3870 */ public int Filter;
         /* 0x3874 */ public bool DamageNumbers;
-		public enum BaseSharingModeEnum { Undecided, On, Off }
-		public BaseSharingModeEnum BaseSharingMode;
+        public enum PS4FixedFPSEnum { Invalid, False, True}
+        /* 0x3878 */ public PS4FixedFPSEnum PS4FixedFPS;
+        /* 0x387C */ public float PS4FOVFoot;
+        /* 0x3880 */ public float PS4FOVShip;
+        /* 0x3884 */ public bool XboxOneXHighResolutionMode;
+        public enum BaseSharingModeEnum { Undecided, On, Off }
+		/* 0x3888 */ public BaseSharingModeEnum BaseSharingMode;
+        [NMS(Size = 0x4, Ignore = true)]
+        /* 0x388C */ public byte[] Padding380C;
+        /* 0x3890 */ public List<NMSString0x10> SeenSubstances;
+        /* 0x38A0 */ public List<NMSString0x10> SeenTechnologies;
+        /* 0x38B0 */ public List<NMSString0x10> SeenProducts;
+        /* 0x38C0 */ public List<NMSString0x20> SeenWikiTopics;
+        /* 0x38D0 */ public List<NMSString0x20> UnlockedWikiTopics;
+        /* 0x38E0 */ public bool SeenOthers;
+        /* 0x38E1 */ public bool NetworkPlay;
+        /* 0x38E2 */ public bool VoiceChat;
+        /* 0x38E3 */ public bool AmbientMultiplayer;
+        public enum TemperatureUnitEnum { Invalid, C, F, K }
+        /* 0x38E4 */ public TemperatureUnitEnum TemperatureUnit;
+        /* 0x38E8 */ public bool UseOldMouseFlight;
+        [NMS(Size = 0x7, Ignore = true)]
+        /* 0x38E9 */ public byte[] EndPadding;
     }
 }

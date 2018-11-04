@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x3BB0, GUID = 0x1B2C9B6B65AF551E)]
+	[NMS(Size = 0x3BB0, GUID = 0xCA84F1A5B3EA1B7)]
     public class GcPlanetData : NMSTemplate
     {
         [NMS(Size = 0x80)]

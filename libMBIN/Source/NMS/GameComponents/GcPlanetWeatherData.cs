@@ -7,7 +7,6 @@ namespace libMBIN.NMS.GameComponents
     public class GcPlanetWeatherData : NMSTemplate
     {
         public GcWeatherOptions WeatherOptions;     // weather type?
-        //public GcPlanetWeatherColourData NightColours;
         [NMS(Size = 0xC, Ignore = true)]
         public byte[] Padding4;
         /* 0x010 */ public GcPlanetHeavyAirData HeavyAir;

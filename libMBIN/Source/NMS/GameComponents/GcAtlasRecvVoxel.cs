@@ -3,11 +3,14 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0x35A289BA96E36B5)]
+	[NMS(Size = 0x50, GUID = 0x35A289BA96E36B5)]
     public class GcAtlasRecvVoxel : NMSTemplate
     {
         public ulong ClientUserdata;
         public int NumberOfThings;
-        // public 140321A90 ThingsFound // length 0x8
+        [NMS(Size = 0x4, Ignore = true)]
+        public byte[] PaddingC;
+        [NMS(Size = 0x8)]
+        public ulong[] ThingsFound;
     }
 }

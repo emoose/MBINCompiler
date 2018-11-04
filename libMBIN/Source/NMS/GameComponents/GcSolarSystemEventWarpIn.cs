@@ -15,7 +15,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x3C */ public bool InvertDirection;
         /* 0x3D */ public bool InstantWarpIn;
         [NMS(Size = 0x20)]
-        /* 0x3E */ public  string SquadName;
+        /* 0x3E */ public string SquadName;
         [NMS(Size = 0x2, Ignore = true)]
         /* 0x60 */ public GcSeed Seed;
         /* 0x70 */ public GcRealityCommonFactions Faction;

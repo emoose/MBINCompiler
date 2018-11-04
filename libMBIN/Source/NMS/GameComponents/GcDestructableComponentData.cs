@@ -16,7 +16,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x015 */ public byte[] Padding15;
 
         [NMS(Size = 0x10)]
-        /* 0x018 */public string VehicleDestroyEffect;
+        /* 0x018 */ public string VehicleDestroyEffect;
 
         [NMS(Size = 0x10)]
         /* 0x028 */ public string TriggerAction;
@@ -55,7 +55,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x09C */ public TkTextureResource DestroyedModel;
         /* 0x120 */ public bool DestroyedModelUsesScale;
         [NMS(Size = 0x3, Ignore = true)]
-        /* 0x121 */public byte[] Padding121;
+        /* 0x121 */ public byte[] Padding121;
         /* 0x124 */ public float DestroyForce;
         /* 0x128 */ public float DestroyForceRadius;
         [NMS(Size = 0x4, Ignore = true)]

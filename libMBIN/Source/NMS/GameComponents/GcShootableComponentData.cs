@@ -31,9 +31,9 @@ namespace libMBIN.NMS.GameComponents
         /* 0x57 */ public byte[] Padding57;
 
 		[NMS(Size = 0x10)]
-		/* 0x58 */	public string RequiredTech;
+		/* 0x58 */ public string RequiredTech;
         [NMS(Size = 0x10)]
-		/* 0x68 */	public string DamageMultiplier;
+		/* 0x68 */ public string DamageMultiplier;
 
     }
 }
