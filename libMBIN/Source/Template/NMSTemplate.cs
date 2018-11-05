@@ -668,6 +668,10 @@ namespace libMBIN
                 {
                     alignment_default = 0x8;
                 }
+                if (list[0].GetType() == typeof(UInt16))
+                {
+                    alignment_default = 0x2;
+                }
                 int alignment = alignment = list[0].GetType().GetCustomAttribute<NMSAttribute>()?.Alignment ?? alignment_default;
                 writer.Align(alignment, 0 );
             }
@@ -695,12 +699,12 @@ namespace libMBIN
             foreach ( var entry in list ) {
                 DebugLogTemplate( $"[C] writing {entry.GetType().Name} to offset 0x{writer.BaseStream.Position:X}" );
                 int alignment = entry.GetType().GetCustomAttribute<NMSAttribute>()?.Alignment ?? 0x4;
+                if (entry.GetType() == typeof(UInt16))
+                {
+                    alignment = 0x2;
+                }
                 writer.Align(alignment, 0);
                 SerializeValue( writer, entry.GetType(), entry, null, null, listPosition, ref additionalData, ref addtDataIndexThis, 0, listEnding );
-            }
-
-            if ( list.GetType().GetGenericArguments()[0] == typeof( NMS.Toolkit.TkAnimNodeFrameData ) ) {
-                writer.Write( 0xFEFEFEFEFEFEFEFE );
             }
         }
 

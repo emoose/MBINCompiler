@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS
 {
-    [NMS(Alignment = 0x10)]
+    [NMS(Alignment = 0x2)]
     public class Quaternion : NMSTemplate
     {
         public float x;
