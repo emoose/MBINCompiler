@@ -5,8 +5,8 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0x52ECDFFDB4B7B1CD)]
-    public class GcNGuiSpecialTextStyleData : NMSTemplate       // size: 0x38
+	[NMS(Size = 0x38, GUID = 0x52ECDFFDB4B7B1CD)]
+    public class GcNGuiSpecialTextStyleData : NMSTemplate
     {
         [NMS(Size = 0x10)]
         public string Name;

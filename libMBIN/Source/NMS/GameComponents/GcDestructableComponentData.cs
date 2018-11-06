@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x160, GUID = 0x9C67CB22ECD72C8F)]
+	[NMS(Size = 0x160, Alignment = 0x8, GUID = 0x9C67CB22ECD72C8F)]
     public class GcDestructableComponentData : NMSTemplate
     {
         [NMS(Size = 0x10)]

@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0x5B969A12800050F)]
+	[NMS(Size = 0x28, GUID = 0x5B969A12800050F)]
     public class GcCreatureMovementData : NMSTemplate
     {
         public List<GcCreatureMoveAnimData> Anims;
@@ -15,8 +15,9 @@ namespace libMBIN.NMS.GameComponents
         public float HeightMin;
         public float HeightMax;
         public float HeightTime;
+        public bool Herd;
 
-        [NMS(Size = 4, Ignore = true)]
-        public byte[] Padding24;
+        [NMS(Size = 3, Ignore = true)]
+        public byte[] EndPadding;
     }
 }

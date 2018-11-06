@@ -605,7 +605,8 @@ namespace libMBIN
                 for ( int i = 0; i < listObjects.Count; i++ ) {
                     var data = listObjects[i];
                     //writer.BaseStream.Position = additionalDataOffset; // addtDataOffset gets updated by child templates
-                    writer.Align( 0x8, 0 ); // todo: check if this alignment is correct
+                    int alignment2 = entry.GetType().GetCustomAttribute<NMSAttribute>()?.Alignment ?? 0x8;
+                    writer.Align( alignment2, 0 ); // todo: check if this alignment is correct
                     long origPos = writer.BaseStream.Position;
                     if ( data.Item2.GetType().IsGenericType && data.Item2.GetType().GetGenericTypeDefinition() == typeof( List<> ) ) {
                         //DebugLog("blahblah");
@@ -672,7 +673,7 @@ namespace libMBIN
                 {
                     alignment_default = 0x2;
                 }
-                int alignment = alignment = list[0].GetType().GetCustomAttribute<NMSAttribute>()?.Alignment ?? alignment_default;
+                int alignment = list[0].GetType().GetCustomAttribute<NMSAttribute>()?.Alignment ?? alignment_default;
                 writer.Align(alignment, 0 );
             }
 

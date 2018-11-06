@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Toolkit
 {
-	[NMS(GUID = 0x7621C399D9CFCEE)]
+	[NMS(Size = 0x181, Alignment = 0x1, GUID = 0x7621C399D9CFCEE)]
     public class TkNGuiLayoutListData : NMSTemplate
     {
         [NMS(Size = 0x80)]
@@ -12,5 +12,6 @@ namespace libMBIN.NMS.Toolkit
         public string Filename;
         [NMS(Size = 0x80)]
         public string Default;
+        public bool Autosave;
     }
 }

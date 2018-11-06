@@ -8,6 +8,6 @@ namespace libMBIN.NMS.Toolkit
 	[NMS(GUID = 0xE93C2378DF7E8FFE)]
     public class TkEntitlementList : NMSTemplate
     {
-        public List<NMSString0x20> Entitlements;
+        public List<TkEntitlementListData> Entitlements;
     }
 }

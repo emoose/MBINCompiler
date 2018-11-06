@@ -5,8 +5,8 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0x91E568FA1C5AAF38)]
-    public class GcWikiTopic : NMSTemplate       // size: 0xD0
+	[NMS(Size = 0xD0, GUID = 0x91E568FA1C5AAF38)]
+    public class GcWikiTopic : NMSTemplate
     {
         [NMS(Size = 0x20)]
         /* 0x00 */ public string TopicID;
@@ -15,7 +15,8 @@ namespace libMBIN.NMS.GameComponents
         [NMS(Size = 0x10)]
         /* 0xB8 */ public string Mission;
         /* 0xC8 */ public bool Seen;
-        [NMS(Size = 0x7, Ignore = true)]
+        /* 0xC9 */ public bool Unlocked;
+        [NMS(Size = 0x6, Ignore = true)]
         public byte[] EndPadding;
     }
 }

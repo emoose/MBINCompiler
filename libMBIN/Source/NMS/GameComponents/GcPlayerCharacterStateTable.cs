@@ -7,7 +7,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcPlayerCharacterStateTable : NMSTemplate
     {
         // enum struct: GcPlayerCharacterStateType
-        [NMS(Size = 0xB, EnumValue = new[] { "Idle", "Jog", "JogUphill", "JogDownhill", "SteepSlope", "Sliding", "Run", "Airborne", "JetpackBoost",
+        [NMS(Size = 0xE, EnumValue = new[] { "Idle", "Jog", "JogUphill", "JogDownhill", "SteepSlope", "Sliding", "Run", "Airborne", "JetpackBoost",
             "RocketBoost", "Swimming", "SwimmingJetpack", "Death", "FullBodyOverride" })]
         public GcPlayerCharacterState[] CharacterStates;
     }

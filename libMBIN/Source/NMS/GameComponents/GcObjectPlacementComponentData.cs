@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0x3D75143BE008F7FF)]
+	[NMS(Size = 0x34, GUID = 0x3D75143BE008F7FF)]
     public class GcObjectPlacementComponentData : NMSTemplate
     {
         [NMS(Size = 0x20)]
@@ -15,8 +15,9 @@ namespace libMBIN.NMS.GameComponents
         public int MaxNodesActivated;
         public int MaxGroupsActivated;
         public bool UseRaycast;
+        public bool UseNodeParent;
 
-        [NMS(Size = 3, Ignore = true)]
-        public byte[] Padding31;
+        [NMS(Size = 2, Ignore = true)]
+        public byte[] EndPadding;
     }
 }
