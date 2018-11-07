@@ -60,7 +60,7 @@ namespace libMBIN
             {
                 throw new MbinException($"Failed to read {mbin.Header.GetXMLTemplateName()} from MBIN.", e, path);
             }
-
+            mbin.Dispose();
             return data;
         }
 
