@@ -9,6 +9,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcTestMetadata : NMSTemplate // size = 0x6A4
     {
         public bool TestBool;
+        public byte TestByte;
         public int TestInt;
         public short TestInt16;
         public ushort TestUInt16;
