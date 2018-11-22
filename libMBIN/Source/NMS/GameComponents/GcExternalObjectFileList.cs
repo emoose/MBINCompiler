@@ -5,25 +5,27 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x38, GUID = 0xB9AC8248B97BE97F)]
+	[NMS(Size = 0x38, GUID = 0x8DD8A6B4B649C764)]
     public class GcExternalObjectFileList : NMSTemplate
     {
         [NMS(Size = 0x10)]
-        public string Id;
+        /* 0x00 */ public string Id;
 
-        public bool OnlyOnExtremeWeather;
-        public bool OnlyOnExtremeSentinels;
-        public bool OnlyOnDeepWater;
-        public bool NotOnExtremePlanets;
-        public bool NotOnStartPlanets;
+        /* 0x10 */ public bool OnlyOnExtremeWeather;
+        /* 0x11 */ public bool OnlyOnExtremeSentinels;
+        /* 0x12 */ public bool OnlyOnDeepWater;
+        /* 0x13 */ public bool NotOnExtremePlanets;
+        /* 0x14 */ public bool NotOnStartPlanets;
+        /* 0x15 */ public bool NotOnWeirdPlanets;
 
-        public GcBiomeType OnlyOnBiome;
 
-        public float ProbabilityOfBeingActive;
-        public int MinFilesToChoose;
-        public int MaxFilesToChoose;
+        /* 0x18 */ public GcBiomeType OnlyOnBiome;
 
-        public List<GcExternalObjectListOptions> ExternalObjectFiles;
+        /* 0x1C */ public float ProbabilityOfBeingActive;
+        /* 0x00 */ public int MinFilesToChoose;
+        /* 0x00 */ public int MaxFilesToChoose;
+
+        /* 0x00 */ public List<GcExternalObjectListOptions> ExternalObjectFiles;
 
     }
 }

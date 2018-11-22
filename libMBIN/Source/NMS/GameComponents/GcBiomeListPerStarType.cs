@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x158, GUID = 0xDA003053BA5CD479)]
+	[NMS(Size = 0x15C, GUID = 0xC41550066972A7DF)]
     public class GcBiomeListPerStarType : NMSTemplate
     {
         [NMS(Size = 4, EnumValue = new[] { "Yellow", "Green", "Blue", "Red" })]
@@ -17,5 +17,7 @@ namespace libMBIN.NMS.GameComponents
 
         [NMS(Size = 4, EnumValue = new[] { "Yellow", "Green", "Blue", "Red" })]
         /* 0x148 */ public float[] AbandonedLifeChance;
+
+        /* 0x158 */ public float ConvertDeadToWeird;
     }
 }

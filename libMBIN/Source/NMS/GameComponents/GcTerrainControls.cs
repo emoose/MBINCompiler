@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x74, GUID = 0xE9658EF1531C595E)]
+	[NMS(Size = 0x78, GUID = 0x1E15DB90CA3FBF5B)]
     public class GcTerrainControls : NMSTemplate
     {
         [NMS(Size = 8, EnumValue = new[] { "Base", "Hill", "Mountain", "Rock", "UnderWater", "Texture", "Elevation", "Continent" })]
@@ -18,5 +18,8 @@ namespace libMBIN.NMS.GameComponents
         /* 0x68 */ public float HighWaterActiveFrequency;   // 3E800000h
         /* 0x6C */ public float RockTileFrequency;          // 3E800000h
         /* 0x70 */ public float SubstanceTileFrequency;     // 3E800000h
+        /* 0x74 */ public bool ForceContinentalNoise;
+        [NMS(Size = 0x3, Ignore = true)]
+        /* 0x75 */ public byte[] EndPadding;
     }
 }

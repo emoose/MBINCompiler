@@ -5,25 +5,31 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x340, GUID = 0xA6DB59482483CC14)]
+	[NMS(Size = 0x4F0, GUID = 0xF0E5EFEAA98B886C)]
     public class GcBiomeData : NMSTemplate
     {
-        /* 0x000 */ public GcMiningSubstanceData MiningSubstance1;
-        /* 0x00C */ public GcMiningSubstanceData MiningSubstance2;
-        /* 0x018 */ public GcMiningSubstanceData MiningSubstance3;
+        [NMS(Size = 0x80)]
+        /* 0x000 */ public string TextureFile;
+        [NMS(Size = 0x80)]
+        /* 0x080 */ public string TileTypesFile;
+        [NMS(Size = 0x80)]
+        /* 0x100 */ public string ColourPaletteFile;
+        [NMS(Size = 0x80)]
+        /* 0x180 */ public string LegacyColourPaletteFile;
+        /* 0x200 */ public GcMiningSubstanceData MiningSubstance1;
+        /* 0x20C */ public GcMiningSubstanceData MiningSubstance2;
+        /* 0x218 */ public GcMiningSubstanceData MiningSubstance3;
         [NMS(Size = 0xC, Ignore = true)]
-        /* 0x024 */ public byte[] Padding24;
-        /* 0x030 */ public GcPlanetWaterData Water;
+        /* 0x224 */ public byte[] Padding224;
+        /* 0x230 */ public GcPlanetWaterData Water;
 
-        /* 0x200 */ public List<GcExternalObjectListOptions> ExternalObjectLists;
+        /* 0x3B0 */ public List<GcExternalObjectListOptions> ExternalObjectLists;
 
         [NMS(Size = 0x4)]       // probably an enum of the life level
-        /* 0x210 */ public GcWeatherWeightings[] WeatherOptions;
+        /* 0x3C0 */ public GcWeatherWeightings[] WeatherOptions;
 
-        /* 0x2B0 */ public Vector2f WeatherChangeTime;
-        /* 0x2B8 */ public GcTerrainControls Terrain;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x32C */ public byte[] Padding32C;
-        /* 0x330 */ public List<GcScreenFilters> FilterOptions;
+        /* 0x460 */ public Vector2f WeatherChangeTime;
+        /* 0x468 */ public GcTerrainControls Terrain;
+        /* 0x4E0 */ public List<GcScreenFilters> FilterOptions;
     }
 }

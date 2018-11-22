@@ -5,13 +5,11 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Toolkit
 {
-	[NMS(GUID = 0x35960ABC2FC00124)]
-    public class TkMaterialMetaData : NMSTemplate       // size: 0x420;
+	[NMS(Size = 0x430, GUID = 0xF111D25A1967E8F3, Broken = true)]
+    public class TkMaterialMetaData : NMSTemplate
     {
-        [NMS(Size = 0x80)]
-        /* 0x000 */ public string ExternalMaterial;
 		public enum ShaderEnum { UberShader, Sky, Screen, UberHack }
-		public ShaderEnum Shader;
+		/* 0x000 */ public ShaderEnum Shader;
         /* 0x084 */ public bool Transaprent;
         /* 0x088 */ public int TransparencyLayerID;
         /* 0x08C */ public bool Additive;

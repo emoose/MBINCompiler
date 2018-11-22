@@ -198,7 +198,7 @@ namespace libMBIN.NMS.Toolkit
                 }
             }
 
-            return max_loc;     // invert to match way it is stored in the binary data
+            return max_loc;
         }
 
         private UInt16 ConvertQuat(float qi)
