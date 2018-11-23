@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x228, GUID = 0xF89AF867F7A4497F)]
+	[NMS(Size = 0x220, GUID = 0xAB745621068EB93B)]
     public class GcBaseBuildingEntry : NMSTemplate
     {
         [NMS(Size = 0x10)]
@@ -42,26 +42,26 @@ namespace libMBIN.NMS.GameComponents
         [NMS(Size = 0x10)]
         /* 0x1E0 */ public string Group;
 
-        /* 0x1F0 */ public bool DontStore;
-        /* 0x1F4 */ public int ComplexityCost;
-        /* 0x1F8 */ public int InactiveComplexityCost;
-        /* 0x1FC */ public int ForceExtraIdx;
-        /* 0x200 */ public int GroupSnappingLimit;
-        /* 0x204 */ public bool CanChangeColour;
-        /* 0x205 */ public bool CanChangeMaterial;
-        /* 0x206 */ public bool CanPickUp;
-        /* 0x208 */ public float ScanRadius;
-        /* 0x20C */ public bool RemovesAttachedDecoration;
-        /* 0x20D */ public bool EditsTerrain;
+        /* 0x1F0 */ public int ComplexityCost;
+        /* 0x1F4 */ public int InactiveComplexityCost;
+        /* 0x1F8 */ public int ForceExtraIdx;
+        /* 0x1FC */ public int GroupSnappingLimit;
+        /* 0x200 */ public bool CanChangeColour;
+        /* 0x201 */ public bool CanChangeMaterial;
+        /* 0x202 */ public bool CanPickUp;
+        /* 0x204 */ public float ScanRadius;
+        /* 0x208 */ public bool RemovesAttachedDecoration;
+        /* 0x209 */ public bool EditsTerrain;
 
 		public enum BaseTerrainEditShapeEnum { Cube, Cylinder }
-		/* 0x210 */ public BaseTerrainEditShapeEnum BaseTerrainEditShape;
+		/* 0x20C */ public BaseTerrainEditShapeEnum BaseTerrainEditShape;
 
-        /* 0x214 */ public float TerrainEditBaseYOffset;
-        /* 0x218 */ public float TerrainEditTopYOffset;
-        /* 0x21C */ public float TerrainEditBoundsScalar;
-        /* 0x220 */ public bool IsSealed;
-        [NMS(Size = 0x7, Ignore = true)]
-        /* 0x221 */ public byte[] EndPadding;
+        /* 0x210 */ public float TerrainEditBaseYOffset;
+        /* 0x214 */ public float TerrainEditTopYOffset;
+        /* 0x218 */ public float TerrainEditBoundsScalar;
+        /* 0x21C */ public bool IsSealed;
+        /* 0x21D */ public bool CloseMenuAfterBuild;
+        [NMS(Size = 0x2, Ignore = true)]
+        /* 0x21E */ public byte[] EndPadding;
     }
 }

@@ -3,9 +3,14 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0xE76B6906556B42D6)]
+	[NMS(GUID = 0x58C7698795121554)]
     public class GcDestroyAction : NMSTemplate
     {
-        public bool DestroyAll;
+        /* 0x00 */ public bool DestroyAll;
+        /* 0x01 */ public bool UseDestructables;
+        [NMS(Size = 0x6, Ignore = true)]
+        /* 0x02 */ public byte[] Padding2;
+        [NMS(Size = 0x10)]
+        /* 0x08 */ public string PlayEffect;
     }
 }

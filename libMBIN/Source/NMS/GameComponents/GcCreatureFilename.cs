@@ -3,12 +3,14 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0xA083E304078B40F3)]
+	[NMS(Size = 0x110, GUID = 0x941C900F4BF1D0B)]
     public class GcCreatureFilename : NMSTemplate
     {
         [NMS(Size = 0x10)]
         public string ID;
         [NMS(Size = 0x80)]
         public string Filename;
+        [NMS(Size = 0x80)]
+        public string ExtraFilename;
     }
 }
