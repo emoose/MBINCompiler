@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(GUID = 0x19780BE359B3994D)]
+    [NMS(GUID = 0x21676C20AFF3CCB8)]
     public class GcDebugOptions : NMSTemplate
     {
         /* 0x0 */ public bool ThirdPersonIsDefaultCamera;
@@ -179,105 +179,108 @@ namespace libMBIN.NMS.Globals
 		/* 0x98D */ public string PipelineFileEditor;
 		/* 0xA0D */ public bool RenderLowFramerate;
 		/* 0xA0E */ public bool EnableComputePost;
-		/* 0xA0F */ public bool SimulateNoNetworkConnection;
+        /* 0xA0F */ public bool EnableEvenOddRender;
+		/* 0xA10 */ public bool SimulateNoNetworkConnection;
 		public enum ProxyTypeEnum { None, ManualURI, InetProxy }
-		/* 0xA10 */ public ProxyTypeEnum ProxyType;
+		/* 0xA14 */ public ProxyTypeEnum ProxyType;
         [NMS(Size = 0x80)]
-        /* 0xA14 */ public string ProxyURI;
+        /* 0xA18 */ public string ProxyURI;
 		public enum ServerEnvEnum { Default, dev, qa, prodqa, prod, custom, pentest }
-		/* 0xA94 */ public ServerEnvEnum ServerEnv;
+		/* 0xA98 */ public ServerEnvEnum ServerEnv;
         [NMS(Size = 0x80)]
-        /* 0xA98 */ public string AuthBaseUrl;
-        /* 0xB18 */ public bool CertificateSecurityBypass;
+        /* 0xA9C */ public string AuthBaseUrl;
+        /* 0xB1C */ public bool CertificateSecurityBypass;
         [NMS(Size = 0x20)]
-        /* 0xB19 */ public string OverrideUsernameForDev;
-        /* 0xB3C */ public int DiscoveryAutoSyncIntervalSeconds;
-        /* 0xB40 */ public bool DisableSpaceStationSpawnOnJoin;
-        /* 0xB41 */ public bool AutoJoinUserEnabled;
+        /* 0xB1D */ public string OverrideUsernameForDev;
+        /* 0xB40 */ public int DiscoveryAutoSyncIntervalSeconds;
+        /* 0xB44 */ public bool DisableSpaceStationSpawnOnJoin;
+        /* 0xB45 */ public bool AutoJoinUserEnabled;
         [NMS(Size = 8)]
-        /* 0xB42 */ public NMSString0x100[] AutoJoinUserNames;      // this is isn't own struct now but this should work...
-        /* 0x1342 */ public bool AlwaysSaveGameAsClient;
-        /* 0x1343 */ public bool DisableMonumentDownloads;
-        /* 0x1344 */ public bool UsePadOnUnfocusedWindow;
-        /* 0x1348 */ public int OverrideMatchmakingVersion;
-        /* 0x134C */ public bool IgnoreTransactionTimeouts;
-        /* 0x134D */ public bool EnableSynergy;
+        /* 0xB46 */ public NMSString0x100[] AutoJoinUserNames;      // this is isn't own struct now but this should work...
+        /* 0x1346 */ public bool AlwaysSaveGameAsClient;
+        /* 0x1347 */ public bool DisableMonumentDownloads;
+        /* 0x1348 */ public bool UsePadOnUnfocusedWindow;
+        /* 0x134C */ public int OverrideMatchmakingVersion;
+        /* 0x1350 */ public bool IgnoreTransactionTimeouts;
+        /* 0x1351 */ public bool EnableSynergy;
         [NMS(Size = 0x20)]
-        /* 0x134E */ public string SynergyServer;
-        /* 0x1370 */ public int SynergyPort;
-        /* 0x1374 */ public bool ShowEditorPlacementPreview;
-        /* 0x1378 */ public int MaxNumDebugMessages;
-        /* 0x137C */ public bool PreloadToolbox;
-        /* 0x1380 */ public int DebugTextureSize;
-        /* 0x1384 */ public bool UseProcTextureDebugger;
-        /* 0x1388 */ public int ProceduralModelsShown;
-        /* 0x138C */ public int ProceduralModelBatchSize;
+        /* 0x1352 */ public string SynergyServer;
+        /* 0x1374 */ public int SynergyPort;
+        /* 0x1378 */ public bool ShowEditorPlacementPreview;
+        /* 0x137C */ public int MaxNumDebugMessages;
+        /* 0x1380 */ public bool PreloadToolbox;
+        /* 0x1384 */ public int DebugTextureSize;
+        /* 0x1388 */ public bool UseProcTextureDebugger;
+        /* 0x138C */ public int ProceduralModelsShown;
+        /* 0x1390 */ public int ProceduralModelBatchSize;
         [NMS(Size = 0x80)]
-        /* 0x1390 */ public string DebugFont;
+        /* 0x1394 */ public string DebugFont;
         [NMS(Size = 0x80)]
-        /* 0x1410 */ public string DebugFontTexture;
+        /* 0x1414 */ public string DebugFontTexture;
         [NMS(Size = 0x80)]
-        /* 0x1490 */ public string CursorTexture;
+        /* 0x1494 */ public string CursorTexture;
         [NMS(Size = 0x80)]
-        /* 0x1510 */ public string PauseTexture;
+        /* 0x1514 */ public string PauseTexture;
         [NMS(Size = 0x80)]
-        /* 0x1590 */ public string PlayTexture;
+        /* 0x1594 */ public string PlayTexture;
         [NMS(Size = 0x80)]
-        /* 0x1610 */ public string StepTexture;
+        /* 0x1614 */ public string StepTexture;
         [NMS(Size = 0x80)]
-        /* 0x1690 */ public string RenderToTexture;
-        /* 0x1710 */ public bool HmdEnable;
-        /* 0x1711 */ public bool HmdOutput;
-        /* 0x1712 */ public bool HmdTracking;
-        /* 0x1713 */ public bool HmdStereoRender;
-        /* 0x1714 */ public bool HmdDistortionPassthru;
-        /* 0x1718 */ public int HmdMonitor;
-        /* 0x171C */ public int HmdEyeBufferWidth;
-        /* 0x1720 */ public int HmdEyeBufferHeight;
-        /* 0x1724 */ public float HmdEyeScalePos;
-        /* 0x1728 */ public float HmdHeadScalePos;
-        /* 0x172C */ public float HmdImmersionFactor;
-        /* 0x1730 */ public bool ForceExtremeWeather;
-        /* 0x1731 */ public bool ForceExtremeSentinels;
-        /* 0x1732 */ public bool ForceStarType;
-        /* 0x1734 */ public GcGalaxyStarTypes ForceStarTypeTo;
-        /* 0x1738 */ public bool ForceBiome;
-        /* 0x173C */ public GcBiomeType ForceBiomeTo;
-        /* 0x1740 */ public int ForceBiomeFileIndex;
-        /* 0x1744 */ public bool ForceBuildingRace;
-        /* 0x1748 */ public GcAlienRace ForceBuildingRaceTo;
-        /* 0x174C */ public bool ForceLifeLevel;
-        /* 0x1750 */ public GcPlanetLife ForceLifeLevelTo;
-        /* 0x1754 */ public bool ForceCreatureLifeLevel;
-        /* 0x1755 */ public bool ForceDefaultCreatureFile;
-        /* 0x1758 */ public GcPlanetLife ForceCreatureLifeLevelTo;
-        /* 0x175C */ public int ForceTerrainSettings;                   // there will be an enum/struct
-        /* 0x1760 */ public bool ForceTerrainType;
-        /* 0x1764 */ public int ForceTerranTypeTo;                      // there will be an enum/struct
+        /* 0x1694 */ public string RenderToTexture;
+        /* 0x1714 */ public bool HmdEnable;
+        /* 0x1715 */ public bool HmdOutput;
+        /* 0x1716 */ public bool HmdTracking;
+        /* 0x1717 */ public bool HmdStereoRender;
+        /* 0x1718 */ public bool HmdDistortionPassthru;
+        /* 0x171C */ public int HmdMonitor;
+        /* 0x1720 */ public int HmdEyeBufferWidth;
+        /* 0x1724 */ public int HmdEyeBufferHeight;
+        /* 0x1728 */ public float HmdEyeScalePos;
+        /* 0x172C */ public float HmdHeadScalePos;
+        /* 0x1730 */ public float HmdImmersionFactor;
+        /* 0x1734 */ public bool ForceExtremeWeather;
+        /* 0x1735 */ public bool ForceExtremeSentinels;
+        /* 0x1736 */ public bool ForceStarType;
+        /* 0x1738 */ public GcGalaxyStarTypes ForceStarTypeTo;
+
+        /* 0x173C */ public bool ForceBiome;
+        /* 0x1740 */ public GcBiomeType ForceBiomeTo;
+        /* 0x1744 */ public int ForceBiomeFileIndex;
+        /* 0x1748 */ public bool ForceBuildingRace;
+        /* 0x174C */ public GcAlienRace ForceBuildingRaceTo;
+        /* 0x1750 */ public bool ForceLifeLevel;
+        /* 0x1754 */ public GcPlanetLife ForceLifeLevelTo;
+        /* 0x1758 */ public bool ForceCreatureLifeLevel;
+        /* 0x1759 */ public bool ForceDefaultCreatureFile;
+        /* 0x175C */ public GcPlanetLife ForceCreatureLifeLevelTo;
+        /* 0x1760 */ public int ForceTerrainSettings;                   // there will be an enum/struct
+        /* 0x1764 */ public bool ForceTerrainType;
+        /* 0x1768 */ public int ForceTerranTypeTo;                      // there will be an enum/struct
 		public enum ForceAnomalyToEnum { None, AtlasType1, AtlasType2, Blackhole, Anomaly, Spacewalk }
-		/* 0x1768 */ public ForceAnomalyToEnum ForceAnomalyTo;
-        /* 0x176C */ public bool ForcePlanetsToHaveWater;
-        /* 0x176D */ public bool DisableLimits;
-        /* 0x176E */ public bool LimitPerRegionInstances;
-        /* 0x176F */ public bool LimitPerRegionBodies;
-        /* 0x1770 */ public bool LimitGlobalInstances;
-        /* 0x1771 */ public bool LimitGlobalBodies;
-        /* 0x1774 */ public int GenerateFarLodBuildingDist;
-        /* 0x1778 */ public bool DeferRegionBodies;
-        /* 0x177C */ public float GenerateCostDistance;
-        /* 0x1780 */ public float GenerateCostAngle;
-        /* 0x1784 */ public float GenerateCostLOD;
-        /* 0x1788 */ public float GenerateCostWait;
-        /* 0x178C */ public bool DChecksEnabled;
-        /* 0x178D */ public bool DChecksOutputJson;
-        /* 0x178E */ public bool DChecksOutputBinary;
-        /* 0x178F */ public bool DChecksOutputFileLine;
-        /* 0x1790 */ public int FrameFlipRateDefault;
-        /* 0x1794 */ public int FrameFlipRateLoad;
-        /* 0x1798 */ public int FrameFlipRateGame;
-        /* 0x179C */ public float MaxFrameRate;
-        /* 0x17A0 */ public bool DisableBaseBuilding;
-        /* 0x17A1 */ public bool DisableBaseBuildingLimits;
-        /* 0x17A4 */ public float BaseDownloadTimeout;
+		/* 0x176C */ public ForceAnomalyToEnum ForceAnomalyTo;
+        /* 0x1770 */ public bool ForcePlanetsToHaveWater;
+        /* 0x1771 */ public bool ModifyPlanetsInInitialSystems;
+        /* 0x1772 */ public bool DisableLimits;
+        /* 0x1773 */ public bool LimitPerRegionInstances;
+        /* 0x1774 */ public bool LimitPerRegionBodies;
+        /* 0x1775 */ public bool LimitGlobalInstances;
+        /* 0x1776 */ public bool LimitGlobalBodies;
+        /* 0x1778 */ public int GenerateFarLodBuildingDist;
+        /* 0x177C */ public bool DeferRegionBodies;
+        /* 0x1780 */ public float GenerateCostDistance;
+        /* 0x1784 */ public float GenerateCostAngle;
+        /* 0x1788 */ public float GenerateCostLOD;
+        /* 0x178C */ public float GenerateCostWait;
+        /* 0x1790 */ public bool DChecksEnabled;
+        /* 0x1791 */ public bool DChecksOutputJson;
+        /* 0x1792 */ public bool DChecksOutputBinary;
+        /* 0x1793 */ public bool DChecksOutputFileLine;
+        /* 0x1794 */ public int FrameFlipRateDefault;
+        /* 0x1798 */ public int FrameFlipRateLoad;
+        /* 0x179C */ public int FrameFlipRateGame;
+        /* 0x17A0 */ public float MaxFrameRate;
+        /* 0x17A4 */ public bool DisableBaseBuilding;
+        /* 0x17A5 */ public bool DisableBaseBuildingLimits;
+        /* 0x17A8 */ public float BaseDownloadTimeout;
     }
 }

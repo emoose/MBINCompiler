@@ -3,26 +3,25 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS( GUID = 0xAA718BE0CA49B299)]
+    [NMS( GUID = 0xF5BC9F27DFFC1970)]
     public class GcWaterGlobals : NMSTemplate
     {
-        /* 0x0 */ public bool RenderReflections;
-        /* 0x1 */ public bool UseNewWater;
-        /* 0x4 */ public float WaveHeight;
-        /* 0x8 */ public float WaveFrequency;
-        /* 0xC */ public float WaveChoppiness;
-        /* 0x10 */ public float WaveCutoff;
-        /* 0x14 */ public float Epsilon;
-        /* 0x18 */ public float FresnelPow;
-        /* 0x1C */ public float FresnelMul;
-        /* 0x20 */ public float FresnelAlpha;
-        /* 0x24 */ public float FresnelBelowPow;
-        /* 0x28 */ public float FresnelBelowMul;
-        /* 0x2C */ public float FresnelBelowAlpha;
-        /* 0x30 */ public Colour WaterColourBase;
-        /* 0x40 */ public Colour WaterColourAdd;
-        /* 0x50 */ public Colour WaterHeavyAirColour;
-        /* 0x60 */ public GcPlanetWaterData WaterDataDay;
-        /* 0x230 */ public GcPlanetWaterData WaterDataNight;
+        /* 0x0000 */ public bool RenderReflections;
+        /* 0x0001 */ public bool UseNewWater;
+        /* 0x0004 */ public float WaveHeight;
+        /* 0x0008 */ public float WaveFrequency;
+        /* 0x000C */ public float WaveChoppiness;
+        /* 0x0010 */ public float WaveCutoff;
+        /* 0x0014 */ public float Epsilon;
+        /* 0x0018 */ public float FresnelPow;
+        /* 0x001C */ public float FresnelMul;
+        /* 0x0020 */ public float FresnelAlpha;
+        /* 0x0024 */ public float FresnelBelowPow;
+        /* 0x0028 */ public float FresnelBelowMul;
+        /* 0x002C */ public float FresnelBelowAlpha;
+        /* 0x0030 */ public Colour WaterHeavyAirColour;
+        /* 0x0040 */ public GcPlanetWaterData WaterDataDay;
+        /* 0x01C0 */ public GcPlanetWaterColourData WaterColourNight;
+        /* 0x0210 */
     }
 }
