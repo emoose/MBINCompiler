@@ -3,9 +3,10 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0x947696F2527572A3)]
+	[NMS(GUID = 0x3B27FE5DC612D9FB)]
     public class GcInteractionType : NMSTemplate
     {
+        // size: 0x4D + 5 customs...
 		public enum InteractionTypeEnum { None, Shop, NPC, NPC_Secondary, NPC_Anomaly, NPC_Anomaly_Secondary, Ship, Outpost, SpaceStation,
             RadioTower, Monolith, Factory, AbandonedShip, Harvester, Observatory, TradingPost, DistressBeacon, Portal, Plaque, AtlasStation,
             AbandonedBuildings, WeaponTerminal, SuitTerminal, SignalScanner, Teleporter_Base, Teleporter_Station, ClaimBase, NPC_Freighter_Captain,
@@ -15,7 +16,7 @@ namespace libMBIN.NMS.GameComponents
             HoloSceptic, HoloNoone, PortalRuneEntry, PortalActivate, CrashedFreighter, GraveInCave, GlitchyStoryBox, NetworkPlayer,
             NetworkMonument, AnomalyComputer, AtlasPlinth, Epilogue, GuildEnvoy, ManageFleet, ManageExpeditions, Frigate, CustomiseCharacter,
             CustomiseShip, CustomiseWeapon, CustomiseVehicle, ClaimBaseAnywhere, FleetNavigator, FleetCommandPost, StoryUtility, MPMissionGiver,
-            SpecialsShop, WaterRuin, CUSTOMINTERACTION1, CUSTOMINTERACTION2, CUSTOMINTERACTION3, CUSTOMINTERACTION4, CUSTOMINTERACTION5 }
+            SpecialsShop, WaterRuin, PowerMeter, CUSTOMINTERACTION1, CUSTOMINTERACTION2, CUSTOMINTERACTION3, CUSTOMINTERACTION4, CUSTOMINTERACTION5 }
 		public InteractionTypeEnum InteractionType;
     }
 }

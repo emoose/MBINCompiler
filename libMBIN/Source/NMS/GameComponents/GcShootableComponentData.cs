@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x78, Alignment = 0x8, GUID = 0xF881A2909310842F)]
+	[NMS(Size = 0x80, Alignment = 0x8, GUID = 0x14A50F19D60AD726)]
     public class GcShootableComponentData : NMSTemplate
     {
         /* 0x00 */ public int Health;
@@ -25,15 +25,17 @@ namespace libMBIN.NMS.GameComponents
 		/* 0x34 */ public bool StaticUntilShot;
         /* 0x35 */ public bool HitEffectEnabled;
         /* 0x36 */ public bool HitEffectEntireModel;
+        /* 0x37 */ public bool IsArmoured;
+        /* 0x38 */ public bool IgnoreTerrainEditKill;
         [NMS(Size = 0x20)]
-        /* 0x37 */ public string NameOverride;
-        [NMS(Size = 0x1, Ignore = true)]
-        /* 0x57 */ public byte[] Padding57;
+        /* 0x39 */ public string NameOverride;
+        [NMS(Size = 0x7, Ignore = true)]
+        /* 0x59 */ public byte[] Padding59;
 
 		[NMS(Size = 0x10)]
-		/* 0x58 */ public string RequiredTech;
+		/* 0x60 */ public string RequiredTech;
         [NMS(Size = 0x10)]
-		/* 0x68 */ public string DamageMultiplier;
+		/* 0x70 */ public string DamageMultiplier;
 
     }
 }

@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x50, GUID = 0x8ABF8AF5472E941C)]
+	[NMS(Size = 0x58, GUID = 0x55B27ACF9CD7B77B)]
     public class GcThirdPersonAnimParams : NMSTemplate
     {
 		/* 0x00 */ public Vector2f Velocity;
@@ -15,12 +15,14 @@ namespace libMBIN.NMS.GameComponents
         /* 0x24 */ public Vector2f AimDirection;
         /* 0x2C */ public float Speed;
         /* 0x30 */ public float Foot;
-        /* 0x34 */ public float AimPitch;
-        /* 0x38 */ public float AimYaw;
-        /* 0x3C */ public float TurnAngle;
-        /* 0x40 */ public float DistanceFromGround;
-        /* 0x44 */ public float Uphill;
-        /* 0x48 */ public float SlopeAngle;
-        /* 0x4C */ public float TimeSinceJetpackEngaged;
+        /* 0x34 */ public float HitLR;
+        /* 0x38 */ public float HitFB;
+        /* 0x3C */ public float AimPitch;
+        /* 0x40 */ public float AimYaw;
+        /* 0x44 */ public float TurnAngle;
+        /* 0x48 */ public float DistanceFromGround;
+        /* 0x4C */ public float Uphill;
+        /* 0x50 */ public float SlopeAngle;
+        /* 0x54 */ public float TimeSinceJetpackEngaged;
     }
 }

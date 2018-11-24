@@ -3,12 +3,16 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x88, GUID = 0x39BC2F266DED2C79)]
+	[NMS(Size = 0x30, GUID = 0xC2EECD23AFF2DBC4)]
     public class GcMissionConditionRefinerActive : NMSTemplate
     {
-        public bool HasFuel;
-        [NMS(Size = 0x80)]
-        public string ActiveRecipe;
-        public int AmountToMake;
+        /* 0x00 */ public bool HasFuel;
+        [NMS(Size = 0x7, Ignore = true)]
+        /* 0x01 */ public byte[] Padding1;
+        [NMS(Size = 0x20)]
+        /* 0x08 */ public string ActiveRecipe;
+        /* 0x28 */ public int AmountToMake;
+        [NMS(Size = 0x4, Ignore = true)]
+        /* 0x2C */ public byte[] EndPadding;
     }
 }

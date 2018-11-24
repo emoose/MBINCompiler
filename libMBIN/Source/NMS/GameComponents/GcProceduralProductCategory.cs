@@ -3,11 +3,11 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0xD9271B3AD338246A)]
+	[NMS(GUID = 0xF9F81B6AD39F86F3)]
     public class GcProceduralProductCategory : NMSTemplate
     {
-        // size: 0x9
-		public enum ProceduralProductCategoryEnum { Loot, Document, BioSample, Fossil, Plant, Tool, Farm, SeaLoot, SeaHorror }
+        // size: 0xB
+		public enum ProceduralProductCategoryEnum { Loot, Document, BioSample, Fossil, Plant, Tool, Farm, SeaLoot, SeaHorror, Salvage, Bones }
 		public ProceduralProductCategoryEnum ProceduralProductCategory;
     }
 }

@@ -22,10 +22,10 @@ namespace libMBIN.NMS.GameComponents
         /* 0x18 */ public GcBiomeType OnlyOnBiome;
 
         /* 0x1C */ public float ProbabilityOfBeingActive;
-        /* 0x00 */ public int MinFilesToChoose;
-        /* 0x00 */ public int MaxFilesToChoose;
+        /* 0x20 */ public int MinFilesToChoose;
+        /* 0x24 */ public int MaxFilesToChoose;
 
-        /* 0x00 */ public List<GcExternalObjectListOptions> ExternalObjectFiles;
+        /* 0x28 */ public List<GcExternalObjectListOptions> ExternalObjectFiles;
 
     }
 }

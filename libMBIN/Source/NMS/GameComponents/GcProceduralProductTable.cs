@@ -5,9 +5,10 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x10, GUID = 0xA8C9EEB7A0BFEBA6)]
+	[NMS(Size = 0x5A10, GUID = 0xA445AFD8463EAB2)]
     public class GcProceduralProductTable : NMSTemplate
     {
-        public List<GcProceduralProductData> Table;
+        [NMS(Size = 0xB, EnumValue = new[] { "Loot", "Document", "BioSample", "Fossil", "Plant", "Tool", "Farm", "SeaLoot", "SeaHorror", "Salvage", "Bones" })]
+        public GcProceduralProductData[] Table;
     }
 }

@@ -5,12 +5,12 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x138, GUID = 0x373A2CB133B33962)]
+	[NMS(Size = 0x168, GUID = 0xD1F6EF24C10C40CC)]
     public class GcSimpleInteractionComponentData : NMSTemplate
     {
 		public enum SimpleInteractionTypeEnum { Interact, Treasure, Beacon, Scan, Save, CallShip, CallVehicle, Word, Tech, GenericReward, Feed, Ladder,
             ClaimBase, TeleportStartPoint, TeleportEndPoint, Portal, Chest, ResourceHarvester, BaseCapsule, Hologram, NPCTerminalMessage, VehicleBoot,
-            BiomeHarvester, FreighterGalacticMap, FreighterChest }
+            BiomeHarvester, FreighterGalacticMap, FreighterChest, Collectable }
 		/* 0x00 */ public SimpleInteractionTypeEnum SimpleInteractionType;
 
         /* 0x04 */ public float InteractDistance;
@@ -34,8 +34,9 @@ namespace libMBIN.NMS.GameComponents
         /* 0x80 */ public GcStatsEnum StatToTrack;
         /* 0x84 */ public bool StartsBuried;
         /* 0x85 */ public bool MustBeVisibleToInteract;
-        [NMS(Size = 0x2, Ignore = true)]
-        /* 0x86 */ public byte[] Padding86;
+        /* 0x86 */ public bool NeedsStorm;
+        [NMS(Size = 0x1, Ignore = true)]
+        /* 0x87 */ public byte[] Padding87;
 
         [NMS(Size = 0x20)]
         /* 0x88 */ public string Name;
@@ -46,12 +47,15 @@ namespace libMBIN.NMS.GameComponents
         [NMS(Size = 0x20)]
         /* 0xE8 */ public string ScanData;
         /* 0x108 */ public GcDiscoveryTypes ScanIcon;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x10C */ public byte[] Padding10C;
-        /* 0x110 */ public List<GcInteractionBaseBuildingState> BaseBuildingTriggerActions;
-        /* 0x120 */ public List<GcRewardMissionOverride> RewardOverrideTable;
-        /* 0x130 */ public bool UsePersonalPersistentBuffer;
+        /* 0x10C */ public bool ActivateLocatorsFromRarity;
+        [NMS(Size = 0x3, Ignore = true)]
+        /* 0x10D */ public byte[] Padding10D;
+        [NMS(Size = 0x3)]
+        /* 0x110 */ public NMSString0x10[] RarityLocators;
+        /* 0x140 */ public List<GcInteractionBaseBuildingState> BaseBuildingTriggerActions;
+        /* 0x150 */ public List<GcRewardMissionOverride> RewardOverrideTable;
+        /* 0x160 */ public bool UsePersonalPersistentBuffer;
         [NMS(Size = 0x7, Ignore = true)]
-        /* 0x131 */ public byte[] EndPadding;
+        /* 0x161 */ public byte[] EndPadding;
     }
 }

@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x3E0, GUID = 0x6F735C63BC17FFA8)]
+	[NMS(Size = 0x3E0, GUID = 0x4408162C9D554F85)]
     public class GcProductData : NMSTemplate
     {
         [NMS(Size = 0x10)]
@@ -28,36 +28,35 @@ namespace libMBIN.NMS.GameComponents
         /* 0x300 */ public Colour Colour;
         /* 0x310 */ public GcRealitySubstanceCategory SubstanceCategory;
         /* 0x314 */ public GcProductCategory Type;
-        /* 0x318 */ public GcProceduralProductCategory ProceduralType;
-        /* 0x31C */ public GcRarity Rarity;
-        /* 0x320 */ public GcLegality Legality;
-        /* 0x324 */ public bool Consumable;
-        /* 0x328 */ public int ChargeValue;
-        /* 0x32C */ public int StackMultiplier;
-        /* 0x330 */ public int DefaultCraftAmount;
-        /* 0x334 */ public int CraftAmountStepSize;
-        /* 0x338 */ public int CraftAmountMultiplier;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x33C */ public byte[] Padding33C;
-        /* 0x340 */ public List<GcTechnologyRequirement> Requirements;
-        /* 0x350 */ public List<GcTechnologyRequirement> AltRequirements;
-        /* 0x360 */ public GcItemPriceModifiers Cost;
-        /* 0x374 */ public bool SpecificChargeOnly;
-        /* 0x378 */ public float NormalisedValueOnWorld;
-        /* 0x37C */ public float NormalisedValueOffWorld;
-        /* 0x380 */ public GcTradeCategory TradeCategory;
-        /* 0x384 */ public bool WikiEnabled;
-        /* 0x385 */ public bool IsCraftable;
+        /* 0x318 */ public GcRarity Rarity;
+        /* 0x31C */ public GcLegality Legality;
+        /* 0x320 */ public bool Consumable;
+        /* 0x324 */ public int ChargeValue;
+        /* 0x328 */ public int StackMultiplier;
+        /* 0x32C */ public int DefaultCraftAmount;
+        /* 0x330 */ public int CraftAmountStepSize;
+        /* 0x334 */ public int CraftAmountMultiplier;
+        /* 0x338 */ public List<GcTechnologyRequirement> Requirements;
+        /* 0x348 */ public List<GcTechnologyRequirement> AltRequirements;
+        /* 0x358 */ public GcItemPriceModifiers Cost;
+        /* 0x36C */ public bool SpecificChargeOnly;
+        /* 0x370 */ public float NormalisedValueOnWorld;
+        /* 0x374 */ public float NormalisedValueOffWorld;
+        /* 0x378 */ public GcTradeCategory TradeCategory;
+        /* 0x37C */ public bool WikiEnabled;
+        /* 0x37D */ public bool IsCraftable;
         [NMS(Size = 0x2, Ignore = true)]
-        /* 0x386 */ public byte[] Padding386;
+        /* 0x37E */ public byte[] Padding37E;
         [NMS(Size = 0x10)]
-        /* 0x388 */ public string DeploysInto;
-        /* 0x398 */ public float EconomyInfluenceMultiplier;
+        /* 0x380 */ public string DeploysInto;
+        /* 0x390 */ public float EconomyInfluenceMultiplier;
         [NMS(Size = 0x4, Ignore = true)]
-        /* 0x39C */ public byte[] Padding39C;
+        /* 0x394 */ public byte[] Padding39C;
         [NMS(Size = 0x20)]
-        /* 0x3A0 */ public string PinObjeective;
+        /* 0x398 */ public string PinObjeective;
         [NMS(Size = 0x20)]
-        /* 0x3C0 */ public string PinObjeectiveTip;
+        /* 0x3B8 */ public string PinObjeectiveTip;
+        [NMS(Size = 0x8, Ignore = true)]
+        /* 0x3D8 */ public byte[] EndPadding;
     }
 }

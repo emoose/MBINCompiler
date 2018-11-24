@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x78, GUID = 0x1AEE30F647B71877)]
+	[NMS(Size = 0xA8, GUID = 0xFAC1A85D2BC41DE)]
     public class GcPlayerCharacterState : NMSTemplate
     {
         [NMS(Size = 0x10)]
@@ -20,6 +20,12 @@ namespace libMBIN.NMS.GameComponents
         public string AimTree2HPitch;
         [NMS(Size = 0x10)]
         public string AimTree2HYaw;
+        [NMS(Size = 0x10)]
+        public string HitReact0H;
+        [NMS(Size = 0x10)]
+        public string HitReac1H;
+        [NMS(Size = 0x10)]
+        public string HitReac2H;
         public bool KeepHeadForward;
         [NMS(Size = 0x7, Ignore = true)]
         public byte[] EndPadding;

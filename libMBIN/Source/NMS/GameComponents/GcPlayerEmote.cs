@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x100, GUID = 0x841CEF70EF53F678)]
+	[NMS(Size = 0x128, GUID = 0xAF5616FFEC6C1D13)]
     public class GcPlayerEmote : NMSTemplate
     {
         [NMS(Size = 0x20)]
@@ -24,9 +24,17 @@ namespace libMBIN.NMS.GameComponents
         /* 0x0E8 */ public string LoopAnimUntilMov;
 
         /* 0x0F8 */ public bool CloseMenuOnSelect;
-        /* 0x0F9 */ public bool AvailableUnderwater;
+        [NMS(Size = 0x7, Ignore = true)]
+        /* 0x0F9 */ public byte[] PaddingF9;
 
-        [NMS(Size = 0x6, Ignore = true)]
-        /* 0x0FA */ public byte[] Endpadding;
+        [NMS(Size = 0x10)]
+        /* 0x100 */ public string GekAnimationName;
+        [NMS(Size = 0x10)]
+        /* 0x110 */ public string GekLoopAnimUntilMove;
+
+        /* 0x120 */ public bool AvailableUnderwater;
+
+        [NMS(Size = 0x7, Ignore = true)]
+        /* 0x121 */ public byte[] Endpadding;
     }
 }

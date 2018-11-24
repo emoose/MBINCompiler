@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x690, GUID = 0xA444343A8262A49C)]
+	[NMS(Size = 0x930, GUID = 0xA444343A8262A49C)]
     public class GcPlayerCharacterStateTable : NMSTemplate
     {
         // enum struct: GcPlayerCharacterStateType

@@ -3,23 +3,23 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x150, GUID = 0xCC6637353420A3ED)]
+	[NMS(Size = 0x150, GUID = 0xF03B9BCEB3DF5278)]
     public class GcPlanetWeatherData : NMSTemplate
     {
-        public GcWeatherOptions WeatherOptions;     // weather type?
+        public GcWeatherOptions WeatherType;     // weather type?
         [NMS(Size = 0xC, Ignore = true)]
         public byte[] Padding4;
         /* 0x010 */ public GcPlanetHeavyAirData HeavyAir;
 		public enum WeatherIntensityEnum { Default, Extreme }
-		public WeatherIntensityEnum WeatherIntensity;
+		/* 0x130 */ public WeatherIntensityEnum WeatherIntensity;
 		public enum StormFrequencyEnum { None, Low, High }
-		public StormFrequencyEnum StormFrequency;
+		/* 0x134 */ public StormFrequencyEnum StormFrequency;
 		public enum AtmosphereTypeEnum { None, Normal }
-		public AtmosphereTypeEnum AtmosphereType;
+		/* 0x138 */ public AtmosphereTypeEnum AtmosphereType;
         /* 0x13C */ public int DayColourIndex;
         /* 0x140 */ public int DuskColourIndex;
-
-        [NMS(Size = 0xC, Ignore = true)]
-        /* 0x144 */ public byte[] EndPadding;
+        /* 0x144 */ public GcScreenFilters ScreenFilter;
+        /* 0x148 */ public GcScreenFilters StormScreenFilter;
+        /* 0x14C */ public GcRainbowType RainbowType;
     }
 }

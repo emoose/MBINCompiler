@@ -1,13 +1,12 @@
-﻿using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
+﻿using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0xBCD20028E0E7169F)]
-    public class GcPerformanceGuard : NMSTemplate       // size: 0x4       in global??
+	[NMS(Size = 0x8, GUID = 0x39A24470DAF09705)]
+    public class GcPerformanceGuard : NMSTemplate
     {
         public float Radius;            // 42480000h
+        public GcSizeIndicator Encounter;
     }
 }
