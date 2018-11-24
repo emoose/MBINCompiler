@@ -1588,15 +1588,15 @@ namespace libMBIN.NMS.Globals
         /* 0x4A00 */ public Colour HUDOutpostColour;
         /* 0x4A10 */ public Vector2f HUDMarkerPrimaryIndicatorOffset;
         /* 0x4A18 */ public Vector2f HUDMarkerCompassPrimaryIndicatorOffset;
-        /* 0x4A20 */ public string HUDMarkerIcon;
-        /* 0x4B20 */ public string HUDMarkerPrimaryIndicatorIcon;
-        /* 0x4C20 */ public string HUDMarkerColourIcon;
-        /* 0x4D20 */ public string HUDPointIcon;
-        /* 0x4E20 */ public string HUDSpaceshipIcon;
-        /* 0x4F20 */ public string HUDSaveIcon;
-        /* 0x5020 */ public string HUDDeathPointIcon;
-        /* 0x5120 */ public string HUDHexAnimIcon;
-        /* 0x5220 */ public string HUDCircleAnimIcon;
+        /* 0x4A20 */ public NMSString0x100 HUDMarkerIcon;
+        /* 0x4B20 */ public NMSString0x100 HUDMarkerPrimaryIndicatorIcon;
+        /* 0x4C20 */ public NMSString0x100 HUDMarkerColourIcon;
+        /* 0x4D20 */ public NMSString0x100 HUDPointIcon;
+        /* 0x4E20 */ public NMSString0x100 HUDSpaceshipIcon;
+        /* 0x4F20 */ public NMSString0x100 HUDSaveIcon;
+        /* 0x5020 */ public NMSString0x100 HUDDeathPointIcon;
+        /* 0x5120 */ public NMSString0x100 HUDHexAnimIcon;
+        /* 0x5220 */ public NMSString0x100 HUDCircleAnimIcon;
         /* 0x5320 */ public float HUDMarkerAnimSpeed;
         /* 0x5324 */ public float HUDMarkerAnimScale;
         /* 0x5328 */ public float HUDMarkerAnimOffset;
@@ -1701,5 +1701,7 @@ namespace libMBIN.NMS.Globals
         /* 0x5620 */ public float TextChatMaxDisplayTime;
         /* 0x5624 */ public float TextChatStayBigAfterTextInput;
         /* 0x5628 */ public int BuildingShopMaxItems;
+                     [NMS(Size = 0x04, Ignore = true)]
+        /* 0x562C */ public byte[] Padding562C;
     }
 }

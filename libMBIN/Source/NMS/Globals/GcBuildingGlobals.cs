@@ -124,5 +124,7 @@ namespace libMBIN.NMS.Globals
         /* 0x0240 */ public float BaseBuildingTerrainEditBaseYOffset;
         /* 0x0244 */ public float BaseBuildingTerrainEditTopYOffset;
         /* 0x0248 */ public float BaseBuildingTerrainEditBoundsScalar;
+                     [NMS(Size = 0x04, Ignore = true)]
+        /* 0x024C */ public byte[] Padding24C;
     }
 }

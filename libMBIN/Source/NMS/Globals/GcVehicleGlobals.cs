@@ -47,7 +47,7 @@ namespace libMBIN.NMS.Globals
                      [NMS(Size = 0x08, Ignore = true)]
         /* 0x00B8 */ public byte[] PaddingB8;
                      [NMS(Size = 0x04)]
-        /* 0x00C0 */ public Vector3f[] UnderwaterBubbleOffset;
+        /* 0x00C0 */ public Vector4f[] UnderwaterBubbleOffset;
         /* 0x0100 */ public float VehicleBoostSpeedMultiplierPercent;
         /* 0x0104 */ public float VehicleGarageHologramMinFadeRange;
         /* 0x0108 */ public float VehicleGarageHologramFadeRange;

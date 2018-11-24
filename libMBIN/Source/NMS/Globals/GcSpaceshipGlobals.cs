@@ -300,7 +300,7 @@ namespace libMBIN.NMS.Globals
         /* 0x0930 */ public float TurnRudderStrength;
         /* 0x0934 */ public float MuzzleLightIntensity;
         /* 0x0938 */ public float MuzzleAnimSpeed;
-        /* 0x093C */ public TkCurveType MuzzleLightCurve;
+        /* 0x093C */ public TkHitCurveData MuzzleLightCurve;
                      [NMS(Size = 0x04, Ignore = true)]
         /* 0x094C */ public byte[] Padding94C;
         /* 0x0950 */ public Colour MuzzleLightColour;
@@ -308,7 +308,7 @@ namespace libMBIN.NMS.Globals
         /* 0x0970 */ public Vector4f DamageLightOffsetLeft;
         /* 0x0980 */ public Vector4f DamageLightOffsetRight;
         /* 0x0990 */ public float DamageLightIntensity;
-        /* 0x0994 */ public TkCurveType DamageLightCurve;
+        /* 0x0994 */ public TkHitCurveData DamageLightCurve;
                      [NMS(Size = 0x0C, Ignore = true)]
         /* 0x09A4 */ public byte[] Padding9A4;
         /* 0x09B0 */ public Colour DamageLightColourShield;
@@ -546,5 +546,5 @@ namespace libMBIN.NMS.Globals
         /* 0x1084 */ public float SpeedUpVelocityCoeff;
         /* 0x1088 */ public float MaxSpeedUpDistance;
         /* 0x108C */ public float MaxSpeedUpVelocity;
-    }
+  }
 }

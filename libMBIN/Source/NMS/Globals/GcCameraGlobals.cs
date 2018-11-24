@@ -258,5 +258,7 @@ namespace libMBIN.NMS.Globals
                      [NMS(Size = 0x04)]
         /* 0x3910 */ public Vector4f[] SavedCameraFacing;
         /* 0x3950 */ public GcCameraWarpSettings WarpSettings;
+                     [NMS(Size = 0x0C, Ignore = true)]
+        /* 0x3950 */ public byte[] Padding3950;
     }
 }

@@ -79,5 +79,7 @@ namespace libMBIN.NMS.Globals
         /* 0x037C */ public float TerrainUndoFadeDepthConstant;
         /* 0x0380 */ public float TerrainUndoFadeDepthScalar;
         /* 0x0384 */ public bool TerrainEditUndosEnabled;
+                     [NMS(Size = 0x0B, Ignore = true)]
+        /* 0x0385 */ public byte[] Padding385;
     }
 }
