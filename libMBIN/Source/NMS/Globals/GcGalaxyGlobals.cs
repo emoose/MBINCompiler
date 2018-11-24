@@ -3,54 +3,54 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(GUID = 0x1DAE54BABB48A1B5)]
+    [NMS( GUID = 0xE44F8EA503FCA519 )]
     public class GcGalaxyGlobals : NMSTemplate
     {
-        /* 0x0 */ public float PathUIWidth;
-        /* 0x4 */ public float StarPathUIWidth;
-        /* 0x8 */ public float FadeGameOutTimeCentreJourney;
-        /* 0xC */ public float FadeMapInTimeCentreJourney;
-        /* 0x10 */ public float PathUIAlpha;
-        /* 0x14 */ public float PathUIDotLength;
-        /* 0x18 */ public float PathUIGapLength;
-        /* 0x1C */ public float PathUISelectionMultiplierPad;
-        /* 0x20 */ public float PathUISelectionMultiplierMouse;
-        /* 0x24 */ public float PathUISelectionMultiplierPushing;
-        /* 0x28 */ public float PathUISelectionGenerosity;
-        /* 0x2C */ public float PathUISelectionMouseSmoothRate;
-        /* 0x30 */ public float PathUISelectionMouseDeadZone;
-        /* 0x34 */ public float PathUIHeight;
-        /* 0x38 */ public float PathUIXOffset;
-        /* 0x3C */ public float PathUIYOffset;
-        /* 0x40 */ public float PathUISlotSpacing;
-        /* 0x44 */ public float PathUISlotRadiusInner;
-        /* 0x48 */ public float PathUISlotRadiusOuter;
-        /* 0x4C */ public float PathUISlotRadiusRing;
-        /* 0x50 */ public float PathUISlotWidthRing;
-        /* 0x54 */ public float MarkerDropShadowSize;
-        /* 0x58 */ public float MarkerDropShadowMult;
-        /* 0x5C */ public float PlanetUIIconLargeScale;
-        /* 0x60 */ public float PlanetUIIconMediumScale;
-        /* 0x64 */ public float PlanetUIIconSmallScale;
-        /* 0x68 */ public float ShowPopupAtCameraMinDistance;
-        /* 0x6C */ public float GalacticPathMaximumJumpDistanceLightyears;
-        /* 0x70 */ public float GalacticPathPreferGuideStarsTillJump;
-        /* 0x74 */ public float ShowUIHelpDuration;
-        /* 0x78 */ public float SystemInfoPanelGeneralAlpha;
-        /* 0x7C */ public TkCurveType MarkerPulseStartCurve;
-        /* 0x80 */ public TkCurveType MarkerPulseEndCurve;
-        [NMS(Size = 0xC, Ignore = true)]
-        /* 0x84 */ public byte[] Padding84;
-        [NMS(Size = 0x6)]
-        /* 0x90 */ public Colour[] GalacticWaypointColours;
-        [NMS(Size = 0x7)]
-        /* 0xF0 */ public Colour[] RaceFilterColours;
-        [NMS(Size = 0x7)]
-        /* 0x160 */ public Colour[] EconomyFilterColours;
-        [NMS(Size = 0x3)]
-        /* 0x1D0 */ public Colour[] ConflictFilterColours;
-        [NMS(Size = 0xD)]
-        /* 0x200 */ public GcGalaxyMarkerSettings[] MarkerSettings;
+        /* 0x0000 */ public float PathUIWidth;
+        /* 0x0004 */ public float StarPathUIWidth;
+        /* 0x0008 */ public float FadeGameOutTimeCentreJourney;
+        /* 0x000C */ public float FadeMapInTimeCentreJourney;
+        /* 0x0010 */ public float PathUIAlpha;
+        /* 0x0014 */ public float PathUIDotLength;
+        /* 0x0018 */ public float PathUIGapLength;
+        /* 0x001C */ public float PathUISelectionMultiplierPad;
+        /* 0x0020 */ public float PathUISelectionMultiplierMouse;
+        /* 0x0024 */ public float PathUISelectionMultiplierPushing;
+        /* 0x0028 */ public float PathUISelectionGenerosity;
+        /* 0x002C */ public float PathUISelectionMouseSmoothRate;
+        /* 0x0030 */ public float PathUISelectionMouseDeadZone;
+        /* 0x0034 */ public float PathUIHeight;
+        /* 0x0038 */ public float PathUIXOffset;
+        /* 0x003C */ public float PathUIYOffset;
+        /* 0x0040 */ public float PathUISlotSpacing;
+        /* 0x0044 */ public float PathUISlotRadiusInner;
+        /* 0x0048 */ public float PathUISlotRadiusOuter;
+        /* 0x004C */ public float PathUISlotRadiusRing;
+        /* 0x0050 */ public float PathUISlotWidthRing;
+        /* 0x0054 */ public float MarkerDropShadowSize;
+        /* 0x0058 */ public float MarkerDropShadowMult;
+        /* 0x005C */ public float PlanetUIIconLargeScale;
+        /* 0x0060 */ public float PlanetUIIconMediumScale;
+        /* 0x0064 */ public float PlanetUIIconSmallScale;
+        /* 0x0068 */ public float ShowPopupAtCameraMinDistance;
+        /* 0x006C */ public float GalacticPathMaximumJumpDistanceLightyears;
+        /* 0x0070 */ public float GalacticPathPreferGuideStarsTillJump;
+        /* 0x0074 */ public float ShowUIHelpDuration;
+        /* 0x0078 */ public float SystemInfoPanelGeneralAlpha;
+        /* 0x007C */ public TkCurveType MarkerPulseStartCurve;
+        /* 0x0080 */ public TkCurveType MarkerPulseEndCurve;
+                     [NMS(Size = 0x0C, Ignore = true)]
+        /* 0x0084 */ public byte[] Padding84;
+                     [NMS(Size = 0x06)]
+        /* 0x0090 */ public Colour[] GalacticWaypointColours;
+                     [NMS(Size = 0x07)]
+        /* 0x00F0 */ public Colour[] RaceFilterColours;
+                     [NMS(Size = 0x07)]
+        /* 0x0160 */ public Colour[] EconomyFilterColours;
+                     [NMS(Size = 0x03)]
+        /* 0x01D0 */ public Colour[] ConflictFilterColours;
+                     [NMS(Size = 0x0D)]
+        /* 0x0200 */ public GcGalaxyMarkerSettings[] MarkerSettings;
         /* 0x10A0 */ public float IntroFadeInRate;
         /* 0x10A4 */ public float IntroTitleFadeTrigger;
         /* 0x10A8 */ public float IntroTitleHoldTime;
@@ -58,7 +58,7 @@ namespace libMBIN.NMS.Globals
         /* 0x10B0 */ public float IntroCameraLookSmoothRate;
         /* 0x10B4 */ public float IntroTitleTextureScale;
         /* 0x10B8 */ public float TransitionTime;
-        /* 0x10BC */ public float TransitionOutCurve;
+        /* 0x10BC */ public TkCurveType TransitionOutCurve;
         /* 0x10C0 */ public float FinalHoldTime;
         /* 0x10C4 */ public float FinalFadedTime;
         /* 0x10C8 */ public float FinalHoldTowardsCenterTime;
@@ -84,14 +84,16 @@ namespace libMBIN.NMS.Globals
         /* 0x1118 */ public float AnostreakAlpha;
         /* 0x111C */ public TkCurveType AnostreakAlphaCurve;
         /* 0x1120 */ public TkCurveType AnostreakValueCurve;
-        [NMS(Size = 0xC, Ignore = true)]
+                     [NMS(Size = 0x0C, Ignore = true)]
         /* 0x1124 */ public byte[] Padding1124;
         /* 0x1130 */ public GcGalaxyRenderAnostreakData AnostreakAway;
         /* 0x1160 */ public GcGalaxyRenderAnostreakData AnostreakFacing;
         /* 0x1190 */ public float SelectionTreeAlpha;
+                     [NMS(Size = 0x0C, Ignore = true)]
+        /* 0x1194 */ public byte[] Padding1194;
         /* 0x11A0 */ public Colour SelectionTreeColour;
         /* 0x11B0 */ public Vector2f GoalDistanceRange;
-        [NMS(Size = 0x8, Ignore = true)]
+                     [NMS(Size = 0x08, Ignore = true)]
         /* 0x11B8 */ public byte[] Padding11B8;
         /* 0x11C0 */ public GcGalaxyStarColours BaseStarColours;
         /* 0x1200 */ public GcGalaxyCameraData Camera;
@@ -101,14 +103,12 @@ namespace libMBIN.NMS.Globals
         /* 0x12B0 */ public float FadeMapOutTime;
         /* 0x12B4 */ public float FadeGameInTime;
         /* 0x12B8 */ public float LargeAreaColourScale;
-        [NMS(Size = 0x4, Ignore = true)]
+                     [NMS(Size = 0x04, Ignore = true)]
         /* 0x12BC */ public byte[] Padding12BC;
         /* 0x12C0 */ public GcGalaxyRenderSetupData DefaultRenderSetup;
         /* 0x14D0 */ public GcGalaxyGenerationSetupData DefaultGeneration;
         /* 0x1650 */ public GcGalaxyRenderSetupData FinalAnimationRenderSetup;
         /* 0x1860 */ public GcGalaxyGenerationSetupData FinalAnimationGeneration;
         /* 0x19E0 */ public GcGalaxySolarSystemParams SolarSystemParameters;
-        [NMS(Size = 0x8, Ignore = true)]
-        /* 0x1A38 */ public byte[] EndPadding;
     }
 }

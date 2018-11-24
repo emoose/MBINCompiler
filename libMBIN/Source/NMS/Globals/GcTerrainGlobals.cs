@@ -3,76 +3,81 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(GUID = 0x544924CC0A70DE9B)]
+    [NMS(GUID = 0xD5017D9BF917053E)]
     public class GcTerrainGlobals : NMSTemplate
     {
-        /* 0x0 */ public float RegisterTerrainMinDistance;
-        /* 0x4 */ public float TerrainBeamUndoRangeFromLastAdd;
-        /* 0x8 */ public float TerrainBeamHologramTimeout;
-        /* 0xC */ public float MouseWheelRotatePlaneSensitivity;
-        /* 0x10 */ public float SubtractEditOffset;
-        /* 0x14 */ public float SubtractEditLength;
-        /* 0x18 */ public float SubtractEditFrequency;
-        /* 0x1C */ public float TerrainBeamDefaultRadius;
-        /* 0x20 */ public float TerrainBeamLightIntensity;
-        [NMS(Size = 0xC, Ignore = true)]
-        /* 0x24 */ public byte[] Padding24;
-        /* 0x30 */ public Colour TerrainBeamLightColour;
-        /* 0x40 */ public float UseMax;
-        /* 0x44 */ public float TextureFadeDistance;
-        /* 0x48 */ public float TextureFadePower;
-        /* 0x4C */ public float TextureScaleMultiplier;
-        /* 0x50 */ public float TextureScalePower;
-        [NMS(Size = 0x8)]
-        /* 0x54 */ public float[] TextureScales;
-        [NMS(Size = 0x8)]
-        /* 0x74 */ public float[] TextureDistances;
-        /* 0x94 */ public float HeightBlend;
-        /* 0x98 */ public float SmoothStepBelow;
-        /* 0x9C */ public float SmoothStepAbove;
-        /* 0xA0 */ public float SmoothStepStrength;
-        /* 0xA4 */ public float TileBlendMultiplier;
-        /* 0xA8 */ public bool DebugFlattenAllTerrain;
-        /* 0xA9 */ public bool DebugNoFlattenForBuildings;
-        /* 0xAA */ public bool DebugLockTerrainSettingsIndex;
-        /* 0xAC */ public int NumGeneratorCalls;
-        /* 0xB0 */ public int NumPolygoniseCalls;
-        /* 0xB4 */ public int NumPostPolygoniseCalls;
-        /* 0xB8 */ public float MinHighWaterLevel;
-        /* 0xBC */ public float MaxHighWaterLevel;
-        /* 0xC0 */ public float MinHighWaterRegionRatio;
-        /* 0xC4 */ public float MinHighWaterRatio;
-        /* 0xC8 */ public float MaxHighWaterRatio;
-        /* 0xCC */ public float MinWaterRatio;
-        /* 0xD0 */ public float MaxWaterRatio;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0xD4 */ public byte[] PaddingD4;
-        [NMS(Size = 0xB, EnumValue = new string[] { "Lush", "Toxic", "Scorched", "Radioactive", "Frozen", "Barren", "Dead", "Weird", "Red", "Green", "Blue" })]
-        /* 0xD8 */ public NMSString0x10[] MiningSubstanceBiome;
-        [NMS(Size = 0x4, EnumValue = new string[] { "Yellow", "Green", "Blue", "Red" })]
-        /* 0x188 */ public NMSString0x10[] MiningSubstanceStar;
-        [NMS(Size = 0x4, EnumValue = new string[] { "Yellow", "Green", "Blue", "Red" })]
-        /* 0x1C8 */ public NMSString0x10[] MiningSubstanceStarExtreme;
-        [NMS(Size = 0x5)]
-        /* 0x208 */ public NMSString0x10[] MiningSubstanceRare;
-        /* 0x258 */ public float TextureBlendScale0;
-        /* 0x25C */ public float TextureBlendScale1;
-        /* 0x260 */ public float TextureBlendScale2;
-        /* 0x264 */ public float TextureBlendOffset;
-        /* 0x268 */ public float BaseSlopePower;
-        /* 0x26C */ public float MountainSlopePower;
-        /* 0x270 */ public GcTerrainOverlayColours HueOverlay;
-        /* 0x288 */ public GcTerrainOverlayColours SaturationOverlay;
-        /* 0x2A0 */ public GcTerrainOverlayColours ValueOverlay;
-        /* 0x2B8 */ public GcTerrainEditing TerrainEditing;
-		/* 0x34C */ public float TerrainUndoCubesRange;
-		/* 0x350 */ public float TerrainUndoCubesAlpha;
-		/* 0x354 */ public float TerrainUndoCubesNoiseThreshold;
-		/* 0x358 */ public float TerrainUndoCubesNoiseFactor;
-		/* 0x35C */ public float TerrainUndoFadeDepthConstant;
-		/* 0x360 */ public float TerrainUndoFadeDepthScalar;
-		/* 0x364 */ public bool TerrainEditUndosEnabled;
-        [NMS(Size = 0xB, Ignore = true)]
-        /* 0x365 */ public byte[] EndPadding;
+        /* 0x0000 */ public float RegisterTerrainMinDistance;
+        /* 0x0004 */ public float TerrainBeamUndoRangeFromLastAdd;
+        /* 0x0008 */ public float TerrainBeamHologramTimeout;
+        /* 0x000C */ public float MouseWheelRotatePlaneSensitivity;
+        /* 0x0010 */ public float SubtractEditOffset;
+        /* 0x0014 */ public float SubtractEditLength;
+        /* 0x0018 */ public float SubtractEditFrequency;
+        /* 0x001C */ public float TerrainBeamDefaultRadius;
+        /* 0x0020 */ public float TerrainBeamLightIntensity;
+                     [NMS(Size = 0x0C, Ignore = true)]
+        /* 0x0024 */ public byte[] Padding24;
+        /* 0x0030 */ public Colour TerrainBeamLightColour;
+        /* 0x0040 */ public float UseMax;
+        /* 0x0044 */ public float TextureFadeDistance;
+        /* 0x0048 */ public float TextureFadePower;
+        /* 0x004C */ public float TextureScaleMultiplier;
+        /* 0x0050 */ public float TextureScalePower;
+                     [NMS(Size = 0x08)]
+        /* 0x0054 */ public float[] TextureScales;
+                     [NMS(Size = 0x08)]
+        /* 0x0074 */ public float[] TextureDistances;
+        /* 0x0094 */ public float HeightBlend;
+        /* 0x0098 */ public float SmoothStepBelow;
+        /* 0x009C */ public float SmoothStepAbove;
+        /* 0x00A0 */ public float SmoothStepStrength;
+        /* 0x00A4 */ public float TileBlendMultiplier;
+        /* 0x00A8 */ public bool DebugFlattenAllTerrain;
+        /* 0x00A9 */ public bool DebugNoFlattenForBuildings;
+        /* 0x00AA */ public bool DebugLockTerrainSettingsIndex;
+                     [NMS(Size = 0x01, Ignore = true)]
+        /* 0x00AB */ public byte[] PaddingAB;
+        /* 0x00AC */ public int NumGeneratorCalls;
+        /* 0x00B0 */ public int NumPolygoniseCalls;
+        /* 0x00B4 */ public int NumPostPolygoniseCalls;
+        /* 0x00B8 */ public float MinHighWaterLevel;
+        /* 0x00BC */ public float MaxHighWaterLevel;
+        /* 0x00C0 */ public float MinHighWaterRegionRatio;
+        /* 0x00C4 */ public float MinHighWaterRatio;
+        /* 0x00C8 */ public float MaxHighWaterRatio;
+        /* 0x00CC */ public float MinWaterRatio;
+        /* 0x00D0 */ public float MaxWaterRatio;
+
+                     [NMS(Size = 0x04, Ignore = true)]
+        /* 0x00D4 */ public byte[] PaddingD4;
+
+                     [NMS(Size = 0x0D, EnumValue = new string[] { "Lush", "Toxic", "Scorched", "Radioactive", "Frozen", "Barren", "Dead", "Weird", "Red", "Green", "Blue", "Test", "All" })]
+        /* 0x00D8 */ public NMSString0x10[] MiningSubstanceBiome;
+
+                     [NMS(Size = 0x04, EnumValue = new string[] { "Yellow", "Green", "Blue", "Red" })]
+        /* 0x01A8 */ public NMSString0x10[] MiningSubstanceStar;
+
+                     [NMS(Size = 0x04, EnumValue = new string[] { "Yellow", "Green", "Blue", "Red" })]
+        /* 0x01E8 */ public NMSString0x10[] MiningSubstanceStarExtreme;
+
+                     [NMS(Size = 0x05)]
+        /* 0x0228 */ public NMSString0x10[] MiningSubstanceRare;
+        /* 0x0278 */ public float TextureBlendScale0;
+        /* 0x027C */ public float TextureBlendScale1;
+        /* 0x0280 */ public float TextureBlendScale2;
+        /* 0x0284 */ public float TextureBlendOffset;
+        /* 0x0288 */ public float BaseSlopePower;
+        /* 0x028C */ public float MountainSlopePower;
+        /* 0x0290 */ public GcTerrainOverlayColours HueOverlay;
+        /* 0x02A8 */ public GcTerrainOverlayColours SaturationOverlay;
+        /* 0x02C0 */ public GcTerrainOverlayColours ValueOverlay;
+        /* 0x02D8 */ public GcTerrainEditing TerrainEditing;
+        /* 0x036C */ public float TerrainUndoCubesRange;
+        /* 0x0370 */ public float TerrainUndoCubesAlpha;
+        /* 0x0374 */ public float TerrainUndoCubesNoiseThreshold;
+        /* 0x0378 */ public float TerrainUndoCubesNoiseFactor;
+        /* 0x037C */ public float TerrainUndoFadeDepthConstant;
+        /* 0x0380 */ public float TerrainUndoFadeDepthScalar;
+        /* 0x0384 */ public bool TerrainEditUndosEnabled;
     }
 }
