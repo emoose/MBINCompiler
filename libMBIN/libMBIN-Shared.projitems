@@ -26,6 +26,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Source\EXML\EXmlProperty.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcAtlasRecvBaseList.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcBaseBuildingEntryLinkGridData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcHUDEffectRewardData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcPlanetWaterColourData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcWaterColourSettingList.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcBiomeFileListOption.cs" />
