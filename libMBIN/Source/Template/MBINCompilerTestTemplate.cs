@@ -2,6 +2,7 @@
 
 namespace libMBIN
 {
+    [NMS( GUID = 0x0000000000000000 )]
     public class MBINCompilerTestTemplate : NMSTemplate
     {
         public bool TestBoolTrue;

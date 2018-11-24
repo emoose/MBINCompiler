@@ -1279,7 +1279,7 @@ namespace libMBIN
                 string[] values = (string[]) valuesMethod.Invoke(this, null);
                 try {
                     string valueStr = values[(int) value];
-                } catch (IndexOutOfRangeException e){
+                } catch (IndexOutOfRangeException){
                     throw new IndexOutOfRangeException("Values index out of Range. Struct: " + GetType() + " field: " + field.Name);
                 }
                 
