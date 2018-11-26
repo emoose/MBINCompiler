@@ -844,13 +844,9 @@ namespace libMBIN
 
                     IList templates = (IList)value;
                     if ( templates != null ) {
-                        // If not an EnumArray, all names will be null.
-                        string[] names = GetEnumNames( field.Name, templates.Count, settings );
-
                         i = 0;
                         foreach ( var template in templates ) {
                             EXmlBase data = SerializeEXmlValue( listType, field, settings, template );
-                            data.Name = names[i++];
 
                             listProperty.Elements.Add( data );
                         }
@@ -950,7 +946,7 @@ namespace libMBIN
             }
 
             if ( (length == 0) && (arrayLength == 0) ) { // invalid, can't determine array size
-                throw new APIException( "An array must have an NMSAttribute with a Size or EnumType setting" );
+                throw new APIException( $"The array {fieldName} must have an NMSAttribute with a Size or EnumType setting" );
 
             } else if ( length != 0 ) { // is EnumArray
                 // validate that length matches, unless arrayLength is 0 (auto/don't care)
