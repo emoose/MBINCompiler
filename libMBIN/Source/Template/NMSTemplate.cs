@@ -86,8 +86,7 @@ namespace libMBIN
             return null; // Template type doesn't exist
         }
 
-        public int GetDataSize()
-        {
+        public int GetDataSize() {
             using (var ms = new MemoryStream())
             using (var bw = new BinaryWriter(ms))
             {
@@ -103,46 +102,31 @@ namespace libMBIN
             }
         }
 
-        public static int GetTemplateDataSize(string templateName)
-        {
+        public static int GetTemplateDataSize(string templateName) {
             var template = TemplateFromName(templateName);
-            if (template == null)
-                return 0;
+            if (template == null) return 0;
 
             return template.GetDataSize();
         }
 
-        public static object DeserializeValue(BinaryReader reader, Type field, NMSAttribute settings, long templatePosition, FieldInfo fieldInfo, NMSTemplate parent)
-        {
+        public static object DeserializeValue(BinaryReader reader, Type field, NMSAttribute settings, long templatePosition, FieldInfo fieldInfo, NMSTemplate parent) {
             //Logger.LogDebug( $"{fieldInfo?.DeclaringType.Name}.{fieldInfo?.Name}\ttype:\t{field.Name}\tpos:\t0x{templatePosition:X}" );
 
-            var template = parent.CustomDeserialize(reader, field, settings, templatePosition, fieldInfo);
-            if (template != null)
-                return template;
+            object template = parent.CustomDeserialize(reader, field, settings, templatePosition, fieldInfo);
+            if (template != null) return template;
 
             // TODO: change fieldType to fieldName...
             var fieldType = field.Name;
-            switch (fieldType)
-            {
+            switch (fieldType) {
                 case "String":
                 case "Byte[]":
                     int size = settings?.Size ?? 0;
-                    MarshalAsAttribute legacySettings = fieldInfo.GetCustomAttribute<MarshalAsAttribute>();
-                    if (legacySettings != null)
-                    {
-                        size = legacySettings.SizeConst;
-                    }
 
-                    if (fieldType == "String")
-                    {
+                    if (fieldType == "String") {
                         // reader.Align(0x4, templatePosition);
-                        var str = reader.ReadString(Encoding.UTF8, size, true);
-                        return str;
-                    }
-                    else
-                    {
-                        var str = reader.ReadBytes(size);
-                        return str;
+                        return reader.ReadString(Encoding.UTF8, size, true);
+                    } else {
+                        return reader.ReadBytes(size);
                     }
                 case "Single":
                     reader.Align(4, templatePosition);
@@ -163,17 +147,15 @@ namespace libMBIN
                     return fieldType == "Int64" ? (object)reader.ReadInt64() : (object)reader.ReadUInt64();
                 case "List`1":
                     reader.Align(8, templatePosition);
-                    if (field.IsGenericType && field.GetGenericTypeDefinition() == typeof(List<>))
-                    {
+                    if (field.IsGenericType && field.GetGenericTypeDefinition() == typeof(List<>)) {
                         Type itemType = field.GetGenericArguments()[0];
-                        if (itemType == typeof(NMSTemplate))
-                            return DeserializeGenericList(reader, templatePosition, parent);
-                        else
-                        {
+                        if ( itemType == typeof( NMSTemplate ) ) {
+                            return DeserializeGenericList( reader, templatePosition, parent );
+                        } else {
                             // todo: get rid of this nastiness
-                            MethodInfo method = typeof(NMSTemplate).GetMethod("DeserializeList", BindingFlags.Static | BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic)
-                                                         .MakeGenericMethod(new Type[] { itemType });
-                            var list = method.Invoke(null, new object[] { reader, fieldInfo, settings, templatePosition, parent });
+                            MethodInfo method = typeof( NMSTemplate ).GetMethod( "DeserializeList", BindingFlags.Static | BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic )
+                                                         .MakeGenericMethod( new Type[] { itemType } );
+                            var list = method.Invoke( null, new object[] { reader, fieldInfo, settings, templatePosition, parent } );
                             return list;
                         }
                     }
@@ -184,42 +166,42 @@ namespace libMBIN
                     long offset = reader.ReadInt64();
                     string name = reader.ReadString(Encoding.ASCII, 0x40, true);
                     long endPos = reader.BaseStream.Position;
-                    NMSTemplate val = null;
-                    if (offset != 0 && !String.IsNullOrEmpty(name))
-                    {
+                    template = null;
+                    if (offset != 0 && !String.IsNullOrEmpty(name)) {
                         reader.BaseStream.Position = startPos + offset;
-                        val = DeserializeBinaryTemplate(reader, name);
-                        if (val == null) throw new DeserializeTemplateException( name );
+                        template = DeserializeBinaryTemplate(reader, name);
+                        if (template == null) throw new DeserializeTemplateException( name );
                     }
                     reader.BaseStream.Position = endPos;
-                    return val;
+                    return template;
                 default:
-                    if (fieldType == "Colour") // unsure if this is needed?
-                        reader.Align(0x10, templatePosition);
-                    if (fieldType == "VariableStringSize" || fieldType == "GcRewardProduct")    // TODO: I don't think we need to specify GcRewardProduct here explicitly...
-                        reader.Align(0x4, templatePosition);
+                    if ( fieldType == "Colour" ) { // unsure if this is needed?
+                        reader.Align( 0x10, templatePosition );
+                    }
+
+                    if ( fieldType == "VariableStringSize" || fieldType == "GcRewardProduct" ) { // TODO: I don't think we need to specify GcRewardProduct here explicitly...
+                        reader.Align( 0x4, templatePosition );
+                    }
+
                     // todo: align for VariableSizeString?
-                    if (field.IsEnum)
-                    {
+                    if (field.IsEnum) {
                         reader.Align(4, templatePosition);
                         return fieldType == "Int32" ? (object)reader.ReadInt32() : (object)reader.ReadUInt32();
                     }
-                    if (field.IsArray)
-                    {
+
+                    if (field.IsArray) {
                         var arrayType = field.GetElementType();
-                        Array array = Array.CreateInstance(arrayType, settings.Size);
-                        for (int i = 0; i < settings.Size; ++i)
-                        {
-                            array.SetValue(DeserializeValue(reader, field.GetElementType(), settings, templatePosition, fieldInfo, parent), i);
+                        var length = GetEnumNames( fieldInfo.Name, settings ).Length;
+                        Array array = Array.CreateInstance(arrayType, length);
+                        for (int i = 0; i < length; ++i) {
+                            object val = DeserializeValue( reader, field.GetElementType(), settings, templatePosition, fieldInfo, parent );
+                            array.SetValue(val, i);
                         }
                         return array;
-                    }
-                    else
-                    {
+                    } else {
                         int alignment = field.GetCustomAttribute<NMSAttribute>()?.Alignment ?? 0x4;
                         reader.Align(alignment, 0); // templatePosition when not in list??
-                        var data = DeserializeBinaryTemplate(reader, fieldType);
-                        return data;
+                        return DeserializeBinaryTemplate(reader, fieldType);
                     }
             }
         }
@@ -292,15 +274,10 @@ namespace libMBIN
                     long templateOffset = reader.ReadInt64();
                     var name = reader.ReadString(Encoding.UTF8, 0x40, true);
 
-                    if (templateOffset == 0)
-                    {
-                        // sometimes there are lists which have n values, but less than n actual structs in them. We replace the empty thing with EmptyNode
-                        templates.Add(new KeyValuePair<long, string>(nameOffset + templateOffset, "EmptyNode"));
-                    }
-                    else
-                    {
-                        templates.Add(new KeyValuePair<long, string>(nameOffset + templateOffset, name));
-                    }
+                    // sometimes there are lists which have n values, but less than n actual structs in them. We replace the empty thing with EmptyNode
+                    name = (templateOffset == 0) ? "EmptyNode" : name;
+
+                    templates.Add(new KeyValuePair<long, string>(nameOffset + templateOffset, name));
                 }
 
                 long pos = reader.BaseStream.Position;
@@ -353,7 +330,7 @@ namespace libMBIN
             return list;
         }
 
-        public void SerializeValue( BinaryWriter writer, Type fieldType, object fieldData, NMSAttribute settings, FieldInfo field, long startStructPos, ref List<Tuple<long, object>> additionalData, ref int addtDataIndex, int structLength = 0, UInt32 listEnding = 0xAAAAAA01, bool inList = false ) {
+        public void SerializeValue( BinaryWriter writer, Type fieldType, object fieldData, NMSAttribute settings, FieldInfo field, long startStructPos, ref List<Tuple<long, object>> additionalData, ref int addtDataIndex, UInt32 listEnding = 0xAAAAAA01, bool inList = false ) {
             //Logger.LogDebug( $"{field?.DeclaringType.Name}.{field?.Name}\ttype:\t{fieldType.Name}\tadditionalData.Count:\t{additionalData?.Count ?? 0}\taddtDataIndex:\t{addtDataIndex}" );
 
             if (CustomSerialize(writer, fieldType, fieldData, settings, field, ref additionalData, ref addtDataIndex))
@@ -372,8 +349,6 @@ namespace libMBIN
                     int size = settings?.Size ?? 0;
                     byte stringPadding = settings?.Padding ?? 0;
                     bool ignore = settings?.Ignore ?? true;
-                    MarshalAsAttribute legacySettings = field?.GetCustomAttribute<MarshalAsAttribute>();
-                    if ( legacySettings != null ) size = legacySettings.SizeConst;
 
                     if ( fieldType.Name == "String" ) {
                         writer.WriteString( (string) fieldData, Encoding.UTF8, size, false, stringPadding );
@@ -504,14 +479,15 @@ namespace libMBIN
                     } else if ( fieldType.IsArray ) {
                         var arrayType = fieldType.GetElementType();
                         Array array = (Array) fieldData;
-                        if ( array == null ) array = Array.CreateInstance( arrayType, (int) settings.Size );
+                        int length = GetEnumNames( field.Name, settings ).Length;
+                        if ( array == null ) array = Array.CreateInstance( arrayType, length );
 
                         foreach ( var obj in array ) {
                             long fieldPos = writer.BaseStream.Position;
                             var realObj = obj;
                             if ( realObj == null ) realObj = Activator.CreateInstance( arrayType );
 
-                            SerializeValue( writer, realObj.GetType(), realObj, realObj.GetType().GetCustomAttribute<NMSAttribute>(), field, startStructPos, ref additionalData, ref addtDataIndex, structLength, listEnding );
+                            SerializeValue( writer, realObj.GetType(), realObj, realObj.GetType().GetCustomAttribute<NMSAttribute>(), field, startStructPos, ref additionalData, ref addtDataIndex, listEnding );
                         }
                     } else if ( fieldType.IsEnum ) {
                         writer.Align(4, startStructPos);
@@ -538,11 +514,6 @@ namespace libMBIN
             var type = GetType();
             var fields = type.GetFields().OrderBy( field => field.MetadataToken ); // hack to get fields in order of declaration (todo: use something less hacky, this might break mono?)
 
-            // todo: remove struct length?? Not needed any more I think...
-            NMSAttribute attribute = type.GetCustomAttribute<NMSAttribute>();
-            // If the class has no size associate with it, just ignore it
-            int structLength = attribute?.Size ?? 0;
-
             //var entryOffsetNamePairs = new Dictionary<long, string>();
             //List<KeyValuePair<long, String>> entryOffsetNamePairs = new List<KeyValuePair<long, String>>();
 
@@ -552,10 +523,10 @@ namespace libMBIN
                     //Logger.LogDebug($"fieldAddr: 0x{fieldAddr:X}, templatePos: 0x{templatePosition:X}, name: {field.FieldType.Name}, value: {field.GetValue(this)}");
                     NMSAttribute settings = field.GetCustomAttribute<NMSAttribute>();
                     var fieldData = field.GetValue(this);
-                    SerializeValue( writer, field.FieldType, fieldData, settings, field, templatePosition, ref additionalData, ref addtDataIndex, structLength, listEnding );
+                    SerializeValue( writer, field.FieldType, fieldData, settings, field, templatePosition, ref additionalData, ref addtDataIndex, listEnding );
                 }
             } else {
-                SerializeValue( writer, type, null, null, null, templatePosition, ref additionalData, ref addtDataIndex, structLength, listEnding );
+                SerializeValue( writer, type, null, null, null, templatePosition, ref additionalData, ref addtDataIndex, listEnding );
             }
         }
 
@@ -628,7 +599,7 @@ namespace libMBIN
                         writer.BaseStream.Position = origPos;
                         var GenericObject = data.Item2;
                         int newDataIndex = i + 1;
-                        SerializeValue( writer, GenericObject.GetType(), GenericObject, null, null, origPos, ref listObjects, ref newDataIndex, 0, listEnding, true );
+                        SerializeValue( writer, GenericObject.GetType(), GenericObject, null, null, origPos, ref listObjects, ref newDataIndex, listEnding, true );
                     }
                 }
 
@@ -705,7 +676,7 @@ namespace libMBIN
                     alignment = 0x2;
                 }
                 writer.Align(alignment, 0);
-                SerializeValue( writer, entry.GetType(), entry, null, null, listPosition, ref additionalData, ref addtDataIndexThis, 0, listEnding );
+                SerializeValue( writer, entry.GetType(), entry, null, null, listPosition, ref additionalData, ref addtDataIndexThis, listEnding );
             }
         }
 
@@ -846,28 +817,15 @@ namespace libMBIN
                 case "Int64":
                 case "UInt64":
                     valueString = value?.ToString() ?? "";
-                    if (fieldType.Name != "Int32")
-                        break;
-                    
-                    var valuesMethod = GetType().GetMethod(field.Name + "Values"); // if we have an "xxxValues()" method in the struct, use that to get the value name
+                    if (fieldType.Name != "Int32") break;
+
+                    if ((int) value == -1 ) break;
                     var dictData = GetType().GetMethod(field.Name + "Dict");
-                    if (dictData != null)
-                    {
-                        if (((int)value) == -1)
-                            valueString = "";
-                        else
-                        {
-                            Dictionary<int, string> dataDict = (Dictionary<int, string>)dictData.Invoke(this, null);
-                            valueString = dataDict[(int)value];
-                        }
+                    if ( dictData != null ) {
+                        Dictionary<int, string> dataDict = (Dictionary<int, string>) dictData.Invoke( this, null );
+                        valueString = dataDict[(int) value];
                     }
-                    if ( valuesMethod != null ) {
-                        valueString = "";
-                        if ( ((int) value) != -1 ) {
-                            string[] values = (string[]) valuesMethod.Invoke( this, null );
-                            valueString = values[(int) value];
-                        }
-                    }
+
                     break;
                 case "Single":
                     valueString = ((float)value).ToString(System.Globalization.CultureInfo.InvariantCulture);
@@ -885,16 +843,14 @@ namespace libMBIN
                     };
 
                     IList templates = (IList)value;
-                    i = 0;
                     if ( templates != null ) {
+                        // If not an EnumArray, all names will be null.
+                        string[] names = GetEnumNames( field.Name, templates.Count, settings );
+
+                        i = 0;
                         foreach ( var template in templates ) {
                             EXmlBase data = SerializeEXmlValue( listType, field, settings, template );
-                            if ( settings?.EnumValue != null ) {
-                                data.Name = settings.EnumValue[i];
-                                i++;
-                            } else {
-                                data.Name = null;
-                            }
+                            data.Name = names[i++];
 
                             listProperty.Elements.Add( data );
                         }
@@ -931,14 +887,12 @@ namespace libMBIN
                         };
 
                         Array array = (Array) value;
+                        string[] names = GetEnumNames( field.Name, array.Length, settings );
+
                         i = 0;
                         foreach ( var template in array ) {
                             EXmlBase data = SerializeEXmlValue( arrayType, field, settings, template );
-                            if ( settings?.EnumValue != null ) {
-                                data.Name = settings.EnumValue[i];
-                                i++;
-                            } else
-                                data.Name = null;
+                            data.Name = names[i++];
 
                             arrayProperty.Elements.Add( data );
                         }
@@ -963,8 +917,58 @@ namespace libMBIN
             };
         }
 
-        public EXmlBase SerializeEXml(bool isChildTemplate)
-        {
+        /// <summary>
+        /// Gets an array of named indices for an EnumArray.
+        /// If the field is not an EnumArray, the names of the indices will be null.
+        /// </summary>
+        private static string[] GetEnumNames( string fieldName, NMSAttribute settings ) {
+            return GetEnumNames( fieldName, settings?.Size ?? 0, settings );
+        }
+
+        /// <summary>
+        /// Gets an array of named indices for an EnumArray.
+        /// If the field is not an EnumArray, the names of the indices will be null.
+        /// </summary>
+        private static string[] GetEnumNames( string fieldName, int arrayLength, NMSAttribute settings ) {
+            // handle EnumArray names
+            string[] names = new string[arrayLength]; // default is all nulls
+
+            Type enumType = settings?.EnumType;
+            int length = settings?.EnumValue?.Length ?? 0; // TODO: deprecated
+            if ( enumType != null ) { // has EnumType setting
+                if ( !enumType.IsEnum ) {
+                    throw new APIException( $"Invalid type: {enumType}\n" +
+                                            $"The EnumType attribute for {fieldName} must be an Enum type!" );
+                }
+                names = Enum.GetNames( enumType );
+                length = names.Length;
+
+            // TODO: deprecated
+            } else if ( length != 0 ) { // has EnumValue setting
+                length = Math.Min( names.Length, length ); // make sure we don't go out of bounds
+                for ( int i = 0; i < length; i++ ) names[i] = settings.EnumValue[i];
+            }
+
+            if ( (length == 0) && (arrayLength == 0) ) { // invalid, can't determine array size
+                throw new APIException( "An array must have an NMSAttribute with a Size or EnumType setting" );
+
+            } else if ( length != 0 ) { // is EnumArray
+                // validate that length matches, unless arrayLength is 0 (auto/don't care)
+                if ( (arrayLength != 0) && (arrayLength != length) ) {
+                    string enumTypeName = enumType?.ToString() ?? "EnumValue";
+                    throw new APIException( $"The defined Size for {fieldName} does not match the length of {enumTypeName}!\n" +
+                                            $"{arrayLength} != {length}" );
+                }
+            }
+
+            return names;
+        }
+
+        private static int GetArrayLength( string fieldName, NMSAttribute settings ) {
+            return GetEnumNames( fieldName, settings ).Length;
+        }
+
+        public EXmlBase SerializeEXml(bool isChildTemplate) {
             Type type = GetType();
             EXmlBase xmlData = new EXmlProperty { Value = type.Name + ".xml" };
 
@@ -1059,7 +1063,8 @@ namespace libMBIN
                     return list;
                 default:
                     if (field.FieldType.IsArray && field.FieldType.GetElementType().BaseType.Name == "NMSTemplate") {
-                        Array array = Array.CreateInstance(field.FieldType.GetElementType(), settings.Size);
+                        int length = GetArrayLength( field.Name, settings );
+                        Array array = Array.CreateInstance(field.FieldType.GetElementType(), length);
                         //var data = xmlProperty.Elements.OfType<EXmlProperty>().ToList();
                         List<EXmlBase> data = xmlProperty.Elements.ToList();
                         int numMeta = 0;
@@ -1067,9 +1072,9 @@ namespace libMBIN
                             if (entry.GetType() == typeof(EXmlMeta)) numMeta++;
                         }
 
-                        if (data.Count - numMeta != settings.Size) {
+                        if ( (data.Count - numMeta) != length ) {
                             // todo: add a comment in the XML to indicate arrays (+ their size), also need to do the same for showing valid enum values
-                            throw new ArraySizeException( field.Name, (data.Count - numMeta), settings.Size );
+                            throw new ArraySizeException( field.Name, (data.Count - numMeta), length );
                         }
 
                         for (int i = 0; i < data.Count; ++i) {
@@ -1083,7 +1088,8 @@ namespace libMBIN
 
                         return array;
                     } else if (field.FieldType.IsArray) {
-                        Array array = Array.CreateInstance(field.FieldType.GetElementType(), settings.Size);
+                        int length = GetArrayLength( field.Name, settings );
+                        Array array = Array.CreateInstance(field.FieldType.GetElementType(), length);
                         //List<EXmlProperty> data = xmlProperty.Elements.OfType<EXmlProperty>().ToList();
                         List<EXmlBase> data = xmlProperty.Elements.ToList();
                         int numMeta = 0;
@@ -1118,9 +1124,9 @@ namespace libMBIN
             }
         }
 
-        public static NMSTemplate DeserializeEXml( EXmlBase xmlData )      // this is the inital code that is run when converting exml to mbin.
+        public static NMSTemplate DeserializeEXml( EXmlBase xmlData ) {    // this is the inital code that is run when converting exml to mbin.
         // this code is run to parse over the exml file and put it into a data structure that is processed by SerializeBytes() (I think...)
-        {
+
             NMSTemplate template = null;
 
             //DebugLog(xmlData.Name);
@@ -1262,29 +1268,6 @@ namespace libMBIN
         // func thats run after template is deserialized, can be used for checks etc
         public void FinishDeserialize()
         {
-#if DEBUG
-            // check enums are valid
-            var fields = GetType().GetFields().OrderBy(field => field.MetadataToken); // hack to get fields in order of declaration (todo: use something less hacky, this might break mono?)
-            foreach (var field in fields)
-            {
-                var fieldType = field.FieldType.Name;
-                if (fieldType != "Int32") continue;
-
-                var valuesMethod = GetType().GetMethod(field.Name + "Values"); // if we have an "xxxValues()" method in the struct, use that to get the value name
-                if (valuesMethod == null) continue;
-
-                int value = (int)field.GetValue(this);
-                if (value == -1) continue;
-
-                string[] values = (string[]) valuesMethod.Invoke(this, null);
-                try {
-                    string valueStr = values[(int) value];
-                } catch (IndexOutOfRangeException){
-                    throw new IndexOutOfRangeException("Values index out of Range. Struct: " + GetType() + " field: " + field.Name);
-                }
-                
-            }
-#endif
         }
 
         public virtual object CustomDeserialize(BinaryReader reader, Type field, NMSAttribute settings, long templatePosition, FieldInfo fieldInfo)
