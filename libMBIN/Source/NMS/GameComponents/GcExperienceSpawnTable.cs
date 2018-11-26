@@ -5,8 +5,8 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0xD6C7E7D9E60B1A2B)]
-    public class GcExperienceSpawnTable : NMSTemplate       // size: 0xD0
+	[NMS(Size = 0xD0, GUID = 0x7BE33229BF7C53AA)]
+    public class GcExperienceSpawnTable : NMSTemplate
     {
         public List<GcAIShipSpawnData> FlybySpawns;
         public List<GcAIShipSpawnData> OutpostSpawns;

@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0xA8, Alignment = 0x8, GUID = 0x235121335E78C3EF)]
+	[NMS(Size = 0xA8, Alignment = 0x8, GUID = 0xFD03DF836E7D27C9)]
     public class GcAIShipSpawnData : NMSTemplate
     {
         [NMS(Size = 0x20)]
@@ -15,7 +15,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x24 */ public bool WarpIn;
         [NMS(Size = 0x3, Ignore = true)]
         /* 0x25 */ public byte[] Padding25;
-        /* 0x28 */ public GcAISpaceshipRoles ShipRole;
+        /* 0x28 */ public GcAISpaceshipRoles Role;
         /* 0x2C */ public float MinRange;
         /* 0x30 */ public Vector2f Scale;
         [NMS(Size = 0x10)]

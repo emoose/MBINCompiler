@@ -1,13 +1,14 @@
-﻿using libMBIN.NMS.Toolkit;
+using libMBIN.NMS.Toolkit;
+using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS( GUID = 0x78E22E9728E307D2 )]
+	[NMS(Size = 0x20, GUID = 0x78E22E9728E307D2)]
     public class GcPlanetDataResourceHint : NMSTemplate
     {
-                     [NMS(Size = 0x10)]
-        /* 0x0000 */ public string Hint;
-                     [NMS(Size = 0x10)]
-        /* 0x0010 */ public string Icon;
+        [NMS(Size = 0x10)]
+        public string Hint;
+        [NMS(Size = 0x10)]
+        public string Icon;
     }
 }

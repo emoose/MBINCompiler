@@ -3,8 +3,8 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0x58FBEFB63A146EB6)]
-    public class GcButtonSpawn : NMSTemplate        // size: 0x28       // in a global?
+	[NMS(Size = 0x28, GUID = 0x77F262AF87D87FAF)]
+    public class GcButtonSpawn : NMSTemplate
     {
         /* 0x00 */ public TkInputEnum Button;
 		public enum EventEnum { None, Pirates, Police, Traders, Walker }

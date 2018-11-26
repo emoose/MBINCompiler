@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Toolkit
 {
-	[NMS(GUID = 0x874F5BC7E66EB51F)]
+	[NMS(GUID = 0x6A901CD00C8B3BBF)]
     public class TkActionButtonLookup : NMSTemplate
     {
         public List<TkActionButtonMap> Lookup;

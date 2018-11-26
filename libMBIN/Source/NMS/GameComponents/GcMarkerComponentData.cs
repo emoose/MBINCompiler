@@ -3,10 +3,10 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x38, GUID = 0x562CFE81EB5C57F7, Broken = true)]
+	[NMS(Size = 0x38, GUID = 0x45AA7B4042BDC4D9)]
     public class GcMarkerComponentData : NMSTemplate
     {
-        /* 0x00 */ public GcGenericIconTypes GenericIconType;
+        /* 0x00 */ public GcGenericIconTypes Icon;
         /* 0x04 */ public float Radius;
 		public enum DisplayModeEnum { Always, SpaceOnly, PlanetOnly }
 		/* 0x08 */ public DisplayModeEnum DisplayMode;

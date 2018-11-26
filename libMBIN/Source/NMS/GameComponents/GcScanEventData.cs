@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x1F8, GUID = 0x4ED1BD78E7417C04)]
+	[NMS(Size = 0x1F8, GUID = 0xA7FD6DC2D2C673AC)]
     public class GcScanEventData : NMSTemplate
     {
         [NMS(Size = 0x20)]
@@ -51,7 +51,7 @@ namespace libMBIN.NMS.GameComponents
         [NMS(Size = 0x20)]
         /* 0x0A8 */ public string NextOption;
         /* 0x0C8 */ public GcScanEventTriggers TriggerActions;
-        /* 0x0E8 */ public List<NMSString0x100> UAsList;        //maybe??
+        /* 0x0E8 */ public List<NMSString0x100> UAsList;
         [NMS(Size = 0x20)]
         /* 0x0F8 */ public string OSDMessage;
         [NMS(Size = 0x20)]

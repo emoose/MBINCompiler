@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x610, GUID = 0x604FAE2ECBA08F97)]
+	[NMS(Size = 0x620, GUID = 0xBF89A1534A8662A1)]
     public class GcWeatherProperties : NMSTemplate
     {
         [NMS(Size = 0x10)]
@@ -19,35 +19,38 @@ namespace libMBIN.NMS.GameComponents
         /* 0x2A4 */ public byte[] Padding2A4;
 
         /* 0x2B0 */ public GcWeatherColourModifiers ExtremeColourModifiers;
-        /* 0x520 */ public List<GcStormProperties> Storms;
+        // enum struct: GcRainbowType
+        [NMS(Size = 0x4, EnumValue = new[] { "Always", "Occasional", "Storm", "None" })]
+        /* 0x520 */ public float[] RainbowChance;
+        /* 0x530 */ public List<GcStormProperties> Storms;
 
-        /* 0x530 */ public List<NMSString0x80> HeavyAir;
+        /* 0x540 */ public List<NMSString0x80> HeavyAir;
 
-        /* 0x540 */ public float LowStormsChance;
-        /* 0x544 */ public float HighStormsChance;
-        /* 0x548 */ public float ExtremeWeatherChance;
+        /* 0x550 */ public float LowStormsChance;
+        /* 0x554 */ public float HighStormsChance;
+        /* 0x558 */ public float ExtremeWeatherChance;
 
-        /* 0x54C */ public bool OverrideTemperature;
+        /* 0x55C */ public bool OverrideTemperature;
         [NMS(Size = 0x3, Ignore = true)]
-        /* 0x54D */ public byte[] Padding54D;
+        /* 0x55D */ public byte[] Padding55D;
         [NMS(Size = 0x5)]
-        /* 0x550 */ public GcHazardValues[] Temperature;
+        /* 0x560 */ public GcHazardValues[] Temperature;
 
-        /* 0x578 */ public bool OverrideToxicity;
+        /* 0x588 */ public bool OverrideToxicity;
         [NMS(Size = 0x3, Ignore = true)]
-        /* 0x579 */ public byte[] Padding579;
+        /* 0x589 */ public byte[] Padding589;
         [NMS(Size = 0x5)]
-        /* 0x57C */ public GcHazardValues[] Toxicity;
+        /* 0x58C */ public GcHazardValues[] Toxicity;
 
-        /* 0x5A4 */ public bool OverrideRadiation;
+        /* 0x5B4 */ public bool OverrideRadiation;
         [NMS(Size = 0x3, Ignore = true)]
-        /* 0x5A5 */ public byte[] Padding5A5;
+        /* 0x5B5 */ public byte[] Padding5B5;
         [NMS(Size = 0x5)]
-        /* 0x5A8 */ public GcHazardValues[] Radiation;
+        /* 0x5B8 */ public GcHazardValues[] Radiation;
         [NMS(Size = 0x5)]
-        /* 0x5D0 */ public GcHazardValues[] LifeSupportDrain;
-        /* 0x5F8 */ public List<GcScreenFilters> StormFilterOptions;        // dummy variable
+        /* 0x5E0 */ public GcHazardValues[] LifeSupportDrain;
+        /* 0x608 */ public List<GcScreenFilters> StormFilterOptions;
         [NMS(Size = 0x8, Ignore = true)]
-        /* 0x608 */ public byte[] EndPadding;
+        /* 0x618 */ public byte[] EndPadding;
     }
 }

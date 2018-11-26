@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x3BB0, GUID = 0xCA84F1A5B3EA1B7)]
+	[NMS(Size = 0x3BE0, GUID = 0xB66E8264B53F0C36)]
     public class GcPlanetData : NMSTemplate
     {
         [NMS(Size = 0x80)]
@@ -26,7 +26,7 @@ namespace libMBIN.NMS.GameComponents
         [NMS(Size = 0x10)]
         /* 0x0100 */ public string RareSubstanceID;
         
-        /* 0x0110 */ public List<NMSString0x10> ExtraResourceHints;
+        /* 0x0110 */ public List<GcPlanetDataResourceHint> ExtraResourceHints;
         /* 0x0120 */ public GcPlanetColourData Colours;
 
         [NMS(Size = 0x17)]
@@ -37,27 +37,27 @@ namespace libMBIN.NMS.GameComponents
         /* 0x1AC8 */ public byte[] Padding1AC8; 
         /* 0x1AD0 */ public GcPlanetWaterData Water;
         [NMS(Size = 0x80)]
-        /* 0x1CA0 */ public string TerrainFile;
-        /* 0x1D20 */ public TkVoxelGeneratorData Terrain;
-        /* 0x32F0 */ public int TileTypeSet;
+        /* 0x1C50 */ public string TerrainFile;
+        /* 0x1CD0 */ public TkVoxelGeneratorData Terrain;
+        /* 0x32A0 */ public int TileTypeSet;
         [NMS(Size = 0x4, Ignore = true)]
-        /* 0x32F4 */ public byte[] Padding32F4; 
-        /* 0x32F8 */ public List<int> TileTypeIndices;
-        /* 0x3308 */ public GcEnvironmentSpawnData SpawnData;
-        /* 0x3368 */ public GcAlienRace InhabitingRace;
+        /* 0x32A4 */ public byte[] Padding32A4; 
+        /* 0x32A8 */ public List<int> TileTypeIndices;
+        /* 0x32B8 */ public GcEnvironmentSpawnData SpawnData;
+        /* 0x3318 */ public GcAlienRace InhabitingRace;
         [NMS(Size = 0x4, Ignore = true)]
-        /* 0x336C */ public byte[] Padding336C; 
-        /* 0x3370 */ public GcPlanetBuildingData BuildingData;
-        /* 0x33E0 */ public GcPlanetGenerationIntermediateData GenerationData;
-        /* 0x37B0 */ public Vector2f SentinelTimer;
-        /* 0x37B8 */ public Vector2f FlybyTimer;
-        /* 0x37C0 */ public GcPlanetInfo PlanetInfo;
+        /* 0x331C */ public byte[] Padding331C; 
+        /* 0x3320 */ public GcPlanetBuildingData BuildingData;
+        /* 0x3390 */ public GcPlanetGenerationIntermediateData GenerationData;
+        /* 0x37E0 */ public Vector2f SentinelTimer;
+        /* 0x37E8 */ public Vector2f FlybyTimer;
+        /* 0x37F0 */ public GcPlanetInfo PlanetInfo;
         [NMS(Size = 0x2, Ignore = true)]
-        /* 0x3B42 */ public byte[] Padding3B42; 
-        /* 0x3B44 */ public GcPlanetSentinelData SentinelData;
+        /* 0x3B72 */ public byte[] Padding3B72; 
+        /* 0x3B74 */ public GcPlanetSentinelData SentinelData;
         [NMS(Size = 0x4, Ignore = true)]
-        /* 0x3B4C */ public byte[] Padding3B4C; 
-        /* 0x3B50 */ public GcPlanetRingData Rings;
+        /* 0x3B7C */ public byte[] Padding3B7C; 
+        /* 0x3B80 */ public GcPlanetRingData Rings;
 
     }
 }

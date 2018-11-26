@@ -6,7 +6,7 @@ namespace libMBIN.NMS.GameComponents
 	[NMS(GUID = 0x3B27FE5DC612D9FB)]
     public class GcInteractionType : NMSTemplate
     {
-        // size: 0x4D + 5 customs...
+        // size: 0x4E + 5 customs...
 		public enum InteractionTypeEnum { None, Shop, NPC, NPC_Secondary, NPC_Anomaly, NPC_Anomaly_Secondary, Ship, Outpost, SpaceStation,
             RadioTower, Monolith, Factory, AbandonedShip, Harvester, Observatory, TradingPost, DistressBeacon, Portal, Plaque, AtlasStation,
             AbandonedBuildings, WeaponTerminal, SuitTerminal, SignalScanner, Teleporter_Base, Teleporter_Station, ClaimBase, NPC_Freighter_Captain,

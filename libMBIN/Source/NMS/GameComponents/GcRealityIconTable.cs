@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x4230, GUID = 0xC70A517728774310)]
+	[NMS(Size = 0x42B8, GUID = 0xC70A517728774310)]
     public class GcRealityIconTable : NMSTemplate
     {
         [NMS(Size = 6, EnumValue = new string[6] { "None", "NoOxygen", "ExtremeHeat", "ExtremeCold", "ToxicGas", "Radiation" })]
@@ -38,7 +38,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x2018 */ public List<TkTextureResource> RepairTechIcons;
 
         // enum struct: GcRealityGameIcons
-        [NMS(Size = 0x42, EnumValue = new string[0x42] { "Stamina", "NoStamina", "EnergyCharge", "Scanner", "NoScanner", "Grave", "Resources",
+        [NMS(Size = 0x43, EnumValue = new string[0x43] { "Stamina", "NoStamina", "EnergyCharge", "Scanner", "NoScanner", "Grave", "Resources",
             "Inventory", "InventoryFull", "RareItems", "Pirates", "PirateScan", "Drone", "Quad", "Walker", "DroneOff", "Police", "AtlasStation",
             "BlackHole", "SaveGame", "Jetpack", "JetpackEmpty", "VehicleBoost", "VehicleBoostRecharge", "Fuel", "GekStanding", "VykeenStanding",
             "KorvaxStanding", "GekDiamondStanding", "VykeenDiamondStanding", "KorvaxDiamondStanding", "TradeGuildStanding", "WarGuildStanding",
@@ -46,7 +46,10 @@ namespace libMBIN.NMS.GameComponents
             "GMAtlas", "GMBlackHole", "GMUserWaypoint", "GMUserMission", "TransferPersonal", "TransferPersonalCargo", "TransferShip", "TransferBike",
             "TransferBuggy", "TransferTruck", "TransferWheeledBike", "TransferHovercraft", "TransferSubmarine", "TransferFreighter", "TransferBase",
             "HazardIndicatorHot", "HazardIndicatorCold", "HazardIndicatorRadiation", "HazardIndicatorToxic", "TerrainAdd", "TerrainRemove", "TerrainUndo",
-            "SpacePhone", "GarageMarkerBuggy", "GarageMarkerBike", "GarageMarkerTruck", "GarageMarkerWheeledBike", "GarageMarkerHovercraft"})]
+            "SpacePhone", "GarageMarkerBuggy", "GarageMarkerBike", "GarageMarkerTruck", "GarageMarkerWheeledBike", "GarageMarkerHovercraft", "CorruptedDrone"})]
         /* 0x2028 */ public TkTextureResource[] GameIcons;
+
+        [NMS(Size = 0x4, Ignore = true)]
+        /* 0x42B4 */ public byte[] EndPadding;
     }
 }
