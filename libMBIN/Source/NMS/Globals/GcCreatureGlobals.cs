@@ -354,8 +354,7 @@ namespace libMBIN.NMS.Globals
         /* 0x07D0 */ public NMSString0x10[] FeedingSubstances;
                      [NMS(Size = 0x03)]
         /* 0x0800 */ public NMSString0x10[] KillingSubstances;
-                     [NMS(Size = 0x014)]
-        /* 0x0830 */ public NMSString0x10[] WeirdKillingRewards;
+        /* 0x0830 */ public GcWeirdCreatureRewardList WeirdKillingRewards;
                      [NMS(Size = 0x03)]
         /* 0x0970 */ public NMSString0x10[] LootItems;
         /* 0x09A0 */ public float RockTransformGlobalChance;
