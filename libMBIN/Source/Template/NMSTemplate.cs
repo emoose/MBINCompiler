@@ -847,6 +847,7 @@ namespace libMBIN
                         i = 0;
                         foreach ( var template in templates ) {
                             EXmlBase data = SerializeEXmlValue( listType, field, settings, template );
+                            data.Name = null;
 
                             listProperty.Elements.Add( data );
                         }
