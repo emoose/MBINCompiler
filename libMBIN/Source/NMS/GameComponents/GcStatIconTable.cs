@@ -6,7 +6,7 @@ namespace libMBIN.NMS.GameComponents
 	[NMS(Size = 0x3700, GUID = 0x1E0206B2601F3050)]
     public class GcStatIconTable : NMSTemplate
     {
-        [NMS(Size = 0x6E, EnumValue = new string[0x6E] { "Unspecified", "Weapon_Laser", "Weapon_Laser_Damage", "Weapon_Laser_Mining_Speed", "Weapon_Laser_HeatTime",
+        [NMS(Size = 0x6E, EnumValue = new[] { "Unspecified", "Weapon_Laser", "Weapon_Laser_Damage", "Weapon_Laser_Mining_Speed", "Weapon_Laser_HeatTime",
                 "Weapon_Laser_Bounce", "Weapon_Laser_ReloadTime", "Weapon_Laser_Recoil", "Weapon_Laser_Drain", "Weapon_Laser_StrongLaser",
                 "Weapon_Laser_ChargeTime", "Weapon_Projectile", "Weapon_Projectile_Damage", "Weapon_Projectile_Range", "Weapon_Projectile_Rate",
                 "Weapon_Projectile_ClipSize", "Weapon_Projectile_ReloadTime", "Weapon_Projectile_Recoil", "Weapon_Projectile_Bounce",

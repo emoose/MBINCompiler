@@ -51,13 +51,13 @@ namespace libMBIN.NMS.Globals
                      [NMS(Size = 0x04, Ignore = true)]
         /* 0x00D4 */ public byte[] PaddingD4;
 
-                     [NMS(Size = 0x0D, EnumValue = new string[] { "Lush", "Toxic", "Scorched", "Radioactive", "Frozen", "Barren", "Dead", "Weird", "Red", "Green", "Blue", "Test", "All" })]
+                     [NMS(Size = 0x0D, EnumValue = new[] { "Lush", "Toxic", "Scorched", "Radioactive", "Frozen", "Barren", "Dead", "Weird", "Red", "Green", "Blue", "Test", "All" })]
         /* 0x00D8 */ public NMSString0x10[] MiningSubstanceBiome;
 
-                     [NMS(Size = 0x04, EnumValue = new string[] { "Yellow", "Green", "Blue", "Red" })]
+                     [NMS(Size = 0x04, EnumValue = new[] { "Yellow", "Green", "Blue", "Red" })]
         /* 0x01A8 */ public NMSString0x10[] MiningSubstanceStar;
 
-                     [NMS(Size = 0x04, EnumValue = new string[] { "Yellow", "Green", "Blue", "Red" })]
+                     [NMS(Size = 0x04, EnumValue = new[] { "Yellow", "Green", "Blue", "Red" })]
         /* 0x01E8 */ public NMSString0x10[] MiningSubstanceStarExtreme;
 
                      [NMS(Size = 0x05)]

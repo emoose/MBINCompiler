@@ -552,11 +552,11 @@ namespace libMBIN.NMS.Globals
 //        /* 0x2C18 */ public float AlwaysOnHazardMultiplierRad;
 //        /* 0x2C1C */ public float AlwaysOnHazardMultiplierCold;
 //        /* 0x2C20 */ public float HazardPulseRate;
-//        [NMS(Size = 0x6, EnumValue = new string[6] { "None", "NoOxygen", "ExtremeHeat", "ExtremeCold", "ToxicGas", "Radiation" })]
+//        [NMS(Size = 0x6, EnumValue = new[] { "None", "NoOxygen", "ExtremeHeat", "ExtremeCold", "ToxicGas", "Radiation" })]
 //        /* 0x2C24 */ public NMSString0x80[] HazardTextures;
-//        [NMS(Size = 0x6, EnumValue = new string[6] { "None", "NoOxygen", "ExtremeHeat", "ExtremeCold", "ToxicGas", "Radiation" })]
+//        [NMS(Size = 0x6, EnumValue = new[] { "None", "NoOxygen", "ExtremeHeat", "ExtremeCold", "ToxicGas", "Radiation" })]
 //        /* 0x2F24 */ public NMSString0x80[] HazardNormalMaps;
-//        [NMS(Size = 0x6, EnumValue = new string[6] { "None", "NoOxygen", "ExtremeHeat", "ExtremeCold", "ToxicGas", "Radiation" })]
+//        [NMS(Size = 0x6, EnumValue = new[] { "None", "NoOxygen", "ExtremeHeat", "ExtremeCold", "ToxicGas", "Radiation" })]
 //        /* 0x3224 */ public NMSString0x80[] HazardHeightmaps;
 //        /* 0x3524 */ public float IconPulseRate;
 //        /* 0x3530 */ public Colour EnergyBgColour;
@@ -1427,11 +1427,11 @@ namespace libMBIN.NMS.Globals
         /* 0x2D58 */ public float AlwaysOnHazardMultiplierRad;
         /* 0x2D5C */ public float AlwaysOnHazardMultiplierCold;
         /* 0x2D60 */ public float HazardPulseRate;
-                     [NMS(Size = 0x06, EnumValue = new string[6] { "None", "NoOxygen", "ExtremeHeat", "ExtremeCold", "ToxicGas", "Radiation" })]
+                     [NMS(Size = 0x06, EnumValue = new[] { "None", "NoOxygen", "ExtremeHeat", "ExtremeCold", "ToxicGas", "Radiation" })]
         /* 0x2D64 */ public NMSString0x80[] HazardTextures;
-                     [NMS(Size = 0x06, EnumValue = new string[6] { "None", "NoOxygen", "ExtremeHeat", "ExtremeCold", "ToxicGas", "Radiation" })]
+                     [NMS(Size = 0x06, EnumValue = new[] { "None", "NoOxygen", "ExtremeHeat", "ExtremeCold", "ToxicGas", "Radiation" })]
         /* 0x3064 */ public NMSString0x80[] HazardNormalMaps;
-                     [NMS(Size = 0x06, EnumValue = new string[6] { "None", "NoOxygen", "ExtremeHeat", "ExtremeCold", "ToxicGas", "Radiation" })]
+                     [NMS(Size = 0x06, EnumValue = new[] { "None", "NoOxygen", "ExtremeHeat", "ExtremeCold", "ToxicGas", "Radiation" })]
         /* 0x3364 */ public NMSString0x80[] HazardHeightmaps;
         /* 0x3664 */ public float IconPulseRate;
                      [NMS(Size = 0x08, Ignore = true)]
