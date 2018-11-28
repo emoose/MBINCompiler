@@ -927,11 +927,14 @@ namespace libMBIN
         /// If the field is not an EnumArray, the names of the indices will be null.
         /// </summary>
         private static string[] GetEnumNames( string fieldName, int arrayLength, NMSAttribute settings ) {
+            // TODO: refactor this once EnumValue is no longer used.
+
             // handle EnumArray names
             string[] names = new string[arrayLength]; // default is all nulls
 
             Type enumType = settings?.EnumType;
-            int length = settings?.EnumValue?.Length ?? 0; // TODO: deprecated
+            string[] enumValues = settings?.EnumValue;
+            int length = enumValues?.Length ?? 0; // TODO: deprecated
             if ( enumType != null ) { // has EnumType setting
                 if ( !enumType.IsEnum ) {
                     throw new APIException( $"Invalid type: {enumType}\n" +
@@ -943,7 +946,7 @@ namespace libMBIN
             // TODO: deprecated
             } else if ( length != 0 ) { // has EnumValue setting
                 length = Math.Min( names.Length, length ); // make sure we don't go out of bounds
-                for ( int i = 0; i < length; i++ ) names[i] = settings.EnumValue[i];
+                for ( int i = 0; i < length; i++ ) names[i] = enumValues[i];
             }
 
             if ( (length == 0) && (arrayLength == 0) ) { // invalid, can't determine array size
@@ -953,12 +956,36 @@ namespace libMBIN
                 // validate that length matches, unless arrayLength is 0 (auto/don't care)
                 if ( (arrayLength != 0) && (arrayLength != length) ) {
                     string enumTypeName = enumType?.ToString() ?? "EnumValue";
-                    throw new APIException( $"The defined Size for {fieldName} does not match the length of {enumTypeName}!\n" +
+                    EmitWarning( $"The defined Size for {fieldName} does not match the length of {enumTypeName}!\n" +
                                             $"{arrayLength} != {length}" );
+                }
+
+                // if the field has both an EnumType and EnumValue setting, then make sure they match
+                if ( (enumType != null) && (enumValues != null)) {
+                    var enumTypeNames  = Enum.GetNames( enumType );
+                    if ( enumTypeNames.Length != enumValues.Length ) {
+                        EmitWarning( $"{fieldName}: The length of EnumType != EnumValue.Length!" );
+#if DEBUG
+                    } else {
+                        throw new APIException( $"{fieldName}: EnumType and EnumValue match. Remove EnumValue" );
+#endif
+                    }
+
+                    for ( int i = 0; i < enumValues.Length; i++ ) {
+                        if ( enumTypeNames[i] != enumValues[i] ) EmitWarning( $"{fieldName}: EnumType does not match EnumValue!" );
+                    }
                 }
             }
 
             return names;
+        }
+
+        private static void EmitWarning( string msg ) {
+            #if DEBUG
+                throw new APIException( msg );
+            #else
+                Logger.LogWarning( msg + "\nThis is NOT an issue with your MBIN or EXML file and can be ignored.\nIf you are seeing this message however, please report it.");
+            #endif
         }
 
         private static int GetArrayLength( string fieldName, NMSAttribute settings ) {
