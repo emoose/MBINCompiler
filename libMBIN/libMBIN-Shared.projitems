@@ -909,7 +909,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcScannerIconTypes.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcScareCreaturesAction.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcSceneSettings.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcSeed.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\BaseTypes\GcSeed.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcSelectableObjectData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcSelectableObjectList.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcSelectableObjectSpawnData.cs" />
@@ -1116,7 +1116,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Toolkit\TkLanguageFontTableEntry.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Toolkit\TkLanguages.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Toolkit\TkLanguagesAllowedData.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Toolkit\TkListedPaletteTexture.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Toolkit\TkLocalisationEntry.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Toolkit\TkLocalisationTable.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Toolkit\TkLSystemGlobalRestriction.cs" />
@@ -1208,8 +1207,5 @@
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Source\EXML\" />
     <Folder Include="$(MSBuildThisFileDirectory)Source\MBIN\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="$(MSBuildThisFileDirectory)Source\StructDiagram.cd" />
   </ItemGroup>
 </Project>
