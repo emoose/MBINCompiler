@@ -136,6 +136,8 @@ namespace MBINCompiler
             new Option { longName = "no-threads", isHidden = true, description = "Disable multi-threading." },
         };
 
+        public static readonly List<Option> OPTIONS_LIST = new List<Option> {
+        };
 
         private static string FormatWrapped( string prefix, int padleft, string txt, bool trim = false )
         {
@@ -188,6 +190,16 @@ namespace MBINCompiler
             if ( OPTIONS_CONVERT.Count > 0 ) {
                 sb.Append( "\nconvert Options:\n" );
                 foreach ( var option in OPTIONS_CONVERT ) AppendOption( sb, option );
+            }
+
+            if ( DebugMode ) {
+                sb.Append( FormatWrapped( "\n\n[list] [<Option>...]\n\n", 4,
+                        "    List metadata for all supported MBIN structs." ) );
+
+                if (OPTIONS_LIST.Count > 0) {
+                    sb.Append( "\nlist Options:\n" );
+                    foreach ( var option in OPTIONS_LIST ) AppendOption( sb, option );
+                }
             }
 
             return sb.ToString();

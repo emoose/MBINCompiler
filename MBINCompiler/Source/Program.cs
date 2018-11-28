@@ -45,6 +45,7 @@ namespace MBINCompiler {
             options.AddOptions( "help",    OPTIONS_HELP    );
             options.AddOptions( "version", OPTIONS_VERSION );
             options.AddOptions( "convert", OPTIONS_CONVERT );
+            options.AddOptions( "list",    OPTIONS_LIST    );
 
             // save the error state
             bool invalidArguments = !options.Parse( "convert" );
@@ -67,6 +68,7 @@ namespace MBINCompiler {
                 switch (options.Verb) {
                     case "help":    return HelpCommand.Execute( options );
                     case "version": return VersionCommand.Execute( options );
+                    case "list":    return ListCommand.Execute( options );
                     default:        return ConvertCommand.Execute( options );
                 }
             } catch ( System.Exception e ) {
