@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x5C70, GUID = 0x666EA19D56A98953)]
+	[NMS(Size = 0x5FC0, GUID = 0x666EA19D56A98953)]
     public class GcScannerIcons : NMSTemplate
     {
         /* 0x0000 */ public TkTextureResource TaggedBuilding;
@@ -47,47 +47,47 @@ namespace libMBIN.NMS.GameComponents
         [NMS(Size = 0x11)]
         /* 0x228C */ public TkTextureResource[] BuildingIconsHuge;
 
-        [NMS(Size = 0x22)]
+        [NMS(Size = 0x25)]
         /* 0x2B50 */ public TkTextureResource[] ScannableIcons;
 
-        [NMS(Size = 0x22)]
-        /* 0x3CD8 */ public TkTextureResource[] ScannableIconsBinocs;
+        [NMS(Size = 0x25)]
+        /* 0x3E64 */ public TkTextureResource[] ScannableIconsBinocs;
 
-        [NMS(Size = 0x22)]
-        /* 0x4E60 */ public Colour[] ScannableColours;
+        [NMS(Size = 0x25)]
+        /* 0x5180 */ public Colour[] ScannableColours;
 
-        /* 0x5080 */ public Colour BuildingColour;
-        /* 0x5090 */ public Colour GenericColour;
-        /* 0x50A0 */ public Colour RelicColour;
-        /* 0x50B0 */ public Colour SignalColour;
-        /* 0x50C0 */ public Colour UnknownColour;
+        /* 0x53D0 */ public Colour BuildingColour;
+        /* 0x53E0 */ public Colour GenericColour;
+        /* 0x53F0 */ public Colour RelicColour;
+        /* 0x5400 */ public Colour SignalColour;
+        /* 0x5410 */ public Colour UnknownColour;
 
-        /* 0x50D0 */ public TkTextureResource CreatureDiscovered;
-        /* 0x5154 */ public TkTextureResource CreatureUndiscovered;
-        /* 0x51D8 */ public TkTextureResource CreatureUnknown;
-        /* 0x525C */ public TkTextureResource MessageBeacon;
-        /* 0x52E0 */ public TkTextureResource MessageBeaconSmall;
-        /* 0x5364 */ public TkTextureResource BaseBuildingMarker;
+        /* 0x5420 */ public TkTextureResource CreatureDiscovered;
+        /* 0x54A4 */ public TkTextureResource CreatureUndiscovered;
+        /* 0x5528 */ public TkTextureResource CreatureUnknown;
+        /* 0x55AC */ public TkTextureResource MessageBeacon;
+        /* 0x5630 */ public TkTextureResource MessageBeaconSmall;
+        /* 0x56B4 */ public TkTextureResource BaseBuildingMarker;
         
-        /* 0x53E8 */ public TkTextureResource PlanetNorthPole;
-        /* 0x546C */ public TkTextureResource PlanetSouthPole;
-        /* 0x54F0 */ public TkTextureResource MonumentMarker;
-        /* 0x5574 */ public TkTextureResource NetworkPlayerMarker;
-        /* 0x55F8 */ public TkTextureResource NetworkPlayerMarkerShip;
-        /* 0x567C */ public TkTextureResource NetworkPlayerMarkerVehicle;
+        /* 0x5738 */ public TkTextureResource PlanetNorthPole;
+        /* 0x57BC */ public TkTextureResource PlanetSouthPole;
+        /* 0x5840 */ public TkTextureResource MonumentMarker;
+        /* 0x58C4 */ public TkTextureResource NetworkPlayerMarker;
+        /* 0x5948 */ public TkTextureResource NetworkPlayerMarkerShip;
+        /* 0x59CC */ public TkTextureResource NetworkPlayerMarkerVehicle;
         
         [NMS(Size = 0x4)]
-        /* 0x5700 */ public TkTextureResource[] NetworkFSPlayerMarkers;
+        /* 0x5A50 */ public TkTextureResource[] NetworkFSPlayerMarkers;
         [NMS(Size = 0x4)]
-        /* 0x5910 */ public Colour[] NetworkFSPlayerColours;
+        /* 0x5C60 */ public Colour[] NetworkFSPlayerColours;
         [NMS(Size = 0x4)]
-        /* 0x5950 */ public TkTextureResource[] NetworkPlayerFreighter;
+        /* 0x5CA0 */ public TkTextureResource[] NetworkPlayerFreighter;
         
-        /* 0x5B60 */ public TkTextureResource PortalMarker;
+        /* 0x5EB0 */ public TkTextureResource PortalMarker;
 
-        /* 0x5BE4 */ public TkTextureResource BlackHole;
+        /* 0x5F34 */ public TkTextureResource BlackHole;
 
         [NMS(Size = 0x8, Ignore = true)]
-        /* 0x5C68 */ public byte[] EndPadding;
+        /* 0x5FB8 */ public byte[] EndPadding;
     }
 }

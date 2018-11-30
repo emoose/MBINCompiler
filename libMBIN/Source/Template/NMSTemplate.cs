@@ -349,7 +349,7 @@ namespace libMBIN
                 case "Byte[]":
                     int size = settings?.Size ?? 0;
                     byte stringPadding = settings?.Padding ?? 0;
-                    bool ignore = settings?.Ignore ?? true;
+                    bool ignore = settings?.Ignore ?? false;
 
                     if ( fieldType.Name == "String" ) {
                         writer.WriteString( (string) fieldData, Encoding.UTF8, size, false, stringPadding );

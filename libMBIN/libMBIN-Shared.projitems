@@ -24,6 +24,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)Source\EXML\EXmlMeta.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\EXML\EXmlData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\EXML\EXmlProperty.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcAtlasSendRequestTotalContribution.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcAtlasRecvTotalContribution.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcSimpleIkRecoilComponentData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcMessageFiendCrime.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcCustomisationColourPalettes.cs" />

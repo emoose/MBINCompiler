@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0x9108CA5BEA846FD8)]
+	[NMS(GUID = 0x9108CA5BEA846FD8, Alignment = 0x8)]
     public class GcNGuiStyleAnimationKeyframeData : NMSTemplate
     {
         public float Position;
