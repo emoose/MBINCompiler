@@ -31,7 +31,7 @@ namespace libMBIN.NMS.Toolkit
                     long listStartOffset = reader.ReadInt64();
                     int numEntries = reader.ReadInt32()/3;
                     uint listMagic = reader.ReadUInt32();
-                    if ((listMagic & 0xFF) != 1) throw new InvalidListException( listMagic );
+                    if ((listMagic & 0xFF) != 1) throw new InvalidListException( listMagic, reader.BaseStream.Position );
 
                     long listEndPosition = reader.BaseStream.Position;
 

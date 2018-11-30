@@ -18,26 +18,23 @@ namespace libMBIN.NMS.Toolkit
 		/* 0x20 */ public bool UseScreenResolution;
         /* 0x24 */ public int ResolutionWidth;
         /* 0x28 */ public int ResolutionHeight;
-        /* 0x2C */ public int VSyncEx;
 		public enum VsyncExEnum { Off, On, Adaptive }
-		public VsyncExEnum VsyncEx;
+        /* 0x2C */ public VsyncExEnum VsyncEx;
         /* 0x30 */ public bool GSync;
 		public enum ShadowDetailEnum { Low, Normal, High, Ultra }
-		public ShadowDetailEnum ShadowDetail;
+		/* 0x34 */ public ShadowDetailEnum ShadowDetail;
 		public enum TextureDetailEnum { Low, Normal, High }
-		public TextureDetailEnum TextureDetail;
+		/* 0x38 */ public TextureDetailEnum TextureDetail;
 		public enum GenerationDetailEnum { Low, Normal, High }
-		public GenerationDetailEnum GenerationDetail;
+		/* 0x3C */ public GenerationDetailEnum GenerationDetail;
 		public enum ReflectionsQualityEnum { Low, Normal, High }
-		public ReflectionsQualityEnum ReflectionsQuality;
-        /* 0x44 */ public int AntiAliasingEx2;
-		public enum AntiAliasingEX2Enum { Auto, None, FXAA, TAA_LOW, TAA, TAA_FXAA, SSAA4 }
-		public AntiAliasingEX2Enum AntiAliasingEX2;
-		/* 0x48 */ public int MotionBlurQuality;
-		public enum MotionBlueQualityEnum { Auto, Off, Normal, High, Ultra }
-		public MotionBlueQualityEnum MotionBlueQuality;
+		/* 0x40 */ public ReflectionsQualityEnum ReflectionsQuality;
+		public enum AntiAliasingEnum { Auto, None, FXAA, TAA_LOW, TAA, TAA_FXAA, SSAA4 }
+        /* 0x44 */ public AntiAliasingEnum AntiAliasingEx2;
+		public enum MotionBlurQualityEnum { Auto, Off, Normal, High, Ultra }
+		/* 0x48 */ public MotionBlurQualityEnum MotionBlurQuality;
 		public enum TerrainQualityExEnum { Auto, Low, Normal, High, Ultra }
-		public TerrainQualityExEnum TerrainQualityEx;
+		/* 0x4C */ public TerrainQualityExEnum TerrainQualityEx;
 		/* 0x50 */ public float MotionBlurStrength;
         /* 0x54 */ public int AnisotropyLevel;
         /* 0x58 */ public float FoVOnFoot;
@@ -47,11 +44,9 @@ namespace libMBIN.NMS.Toolkit
 		/* 0x68 */ public int NumHighThreads;
 		/* 0x6C */ public int NumLowThreads;
 		public enum TextureStreamingExEnum { Off, On, Auto, NonDynamic }
-		public TextureStreamingExEnum TextureStreamingEx;
+		/* 0x70 */ public TextureStreamingExEnum TextureStreamingEx;
 		/* 0x74 */ public bool ShowRequirementsWarnings;
 		/* 0x75 */ public bool RemoveBaseBuildingRestrictions;
-		[NMS(Size = 3, Ignore = true)]
-		/* 0x76 */ public byte[] Padding76;
         /* 0x78 */ public float MouseClickSpeedMultiplier;
 		public enum AmbientOcclusionEnum { SSAO, HBAO, Off }
 		/* 0x7C */ public AmbientOcclusionEnum AmbientOcclusion;

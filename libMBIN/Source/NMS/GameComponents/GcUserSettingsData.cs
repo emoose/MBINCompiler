@@ -4,7 +4,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x38F0, GUID = 0xD47EFD17DEE02E3E)]
+	[NMS(Size = 0x38F8, GUID = 0x16AF75AD89EF15F2)]
     public class GcUserSettingsData : NMSTemplate
     {
         /* 0x0000 */ public bool InvertLookControls;
@@ -42,7 +42,9 @@ namespace libMBIN.NMS.GameComponents
         public enum TemperatureUnitEnum { Invalid, C, F, K }
         /* 0x38E4 */ public TemperatureUnitEnum TemperatureUnit;
         /* 0x38E8 */ public bool UseOldMouseFlight;
-        [NMS(Size = 0x7, Ignore = true)]
-        /* 0x38E9 */ public byte[] EndPadding;
+        /* 0x38EC */ public int LastSeenCommunityMission;
+        /* 0x38F0 */ public int LastSeenCommunityMissionTier;
+        [NMS(Size = 0x4, Ignore = true)]
+        /* 0x38F4 */ public byte[] EndPadding;
     }
 }

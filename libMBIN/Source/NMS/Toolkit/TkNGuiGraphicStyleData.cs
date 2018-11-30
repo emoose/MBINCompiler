@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Toolkit
 {
-	[NMS(Size = 0x80, GUID = 0x5A84B1136A0377E0)]
+	[NMS(Size = 0x80, GUID = 0x5A84B1136A0377E0, Alignment = 0x10)]
     public class TkNGuiGraphicStyleData : NMSTemplate
     {
         /* 0x00 */ public float PaddingX;

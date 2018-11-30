@@ -81,18 +81,17 @@ namespace libMBIN.NMS.GameComponents
         [NMS(Size = 0x4, EnumValue = new[] { "Default", "Option1", "Option2", "Option3" })]
         public float[] TestEnumArray;
 
-        [NMS(Size = 0x16, EnumValue = new[] // EnumValue taken from GcBuildingClassification.BuildingClass
+        [NMS(Size = 0x21, EnumValue = new[] // EnumValue taken from GcBuildingClassification.BuildingClass
             {
                 "None", "TerrainResource", "Shelter", "Abandoned", "Terminal", "Shop", "Outpost", "Waypoint",
                 "Beacon", "RadioTower", "Observatory", "Depot", "Factory", "Harvester", "Plaque", "Monolith",
-                "Portal", "Ruin", "Debris", "DamagedMachine", "DistressSignal", "LandingPad"
+                "Portal", "Ruin", "Debris", "DamagedMachine", "DistressSignal", "LandingPad", "Base",
+                "MissionTower", "CrashedFreighter", "GraveInCave", "StoryGlitch", "TreasureRuins", "GameStartSpawn",
+                "WaterCrashedFreighter", "WaterTreasureRuins", "WaterAbandoned", "WaterDistressSignal"
             })]
         public float[] TestExternalEnumArray; // external probably means it gets enum values from outside the GcTestMetadata source file
 
 		public enum TestFlagsEnum { Null, Flag1, Flag2 }
 		public TestFlagsEnum TestFlags;
-
-        [NMS(Size = 0xC, Ignore = true)]
-        public byte[] Padding6A4;
     }
 }

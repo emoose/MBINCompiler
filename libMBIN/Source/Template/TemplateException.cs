@@ -24,7 +24,7 @@ namespace libMBIN {
     }
 
     public class InvalidListException : TemplateException {
-        public InvalidListException( uint magic ) : base( $"Invalid list read, magic {magic:X8} expected xxxxxx01" ) { }
+        public InvalidListException( uint magic, long pos ) : base( $"Invalid list read, magic {magic:X8} expected xxxxxx01 at 0x{pos:X}" ) { }
     }
 
     public class DeserializeTemplateException : TemplateException {

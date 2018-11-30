@@ -133,6 +133,8 @@ namespace libMBIN
                     return reader.ReadSingle();
                 case "Boolean":
                     return reader.ReadByte() != 0;
+                case "Byte":
+                    return reader.ReadByte();
                 case "Int16":
                 case "UInt16":
                     reader.Align(2, templatePosition);
@@ -258,7 +260,7 @@ namespace libMBIN
             long templateNamesOffset = reader.ReadInt64();
             int numTemplates = reader.ReadInt32();
             uint listMagic = reader.ReadUInt32();
-            if ( (listMagic & 0xFF) != 1 ) throw new InvalidListException( listMagic );
+            if ( (listMagic & 0xFF) != 1 ) throw new InvalidListException( listMagic, reader.BaseStream.Position );
 
             long listEndPosition = reader.BaseStream.Position;
 
@@ -306,7 +308,7 @@ namespace libMBIN
             long listStartOffset = reader.ReadInt64();
             int numEntries = reader.ReadInt32();
             uint listMagic = reader.ReadUInt32();
-            if ( (listMagic & 0xFF) != 1 ) throw new InvalidListException( listMagic );
+            if ( (listMagic & 0xFF) != 1 ) throw new InvalidListException( listMagic, reader.BaseStream.Position );
 
             long listEndPosition = reader.BaseStream.Position;
 
@@ -360,20 +362,20 @@ namespace libMBIN
                         writer.Write( bytes );
                     }
                     break;
-                case "Byte":
-                    writer.Write( (Byte) fieldData );
-                    break;
                 case "Single":
-                    writer.Align( 4, startStructPos, field.Name );
+                    writer.Align( 4, startStructPos, field?.Name ?? fieldType.Name );
                     writer.Write( (Single) fieldData );
                     break;
                 case "Boolean":
                     var value = (bool) fieldData;
                     writer.Write( value ? (byte) 1 : (byte) 0 );
                     break;
+                case "Byte":
+                    writer.Write( (Byte) fieldData );
+                    break;
                 case "Int16":
                 case "UInt16":
-                    writer.Align( 2, startStructPos, field.Name );
+                    writer.Align( 2, startStructPos, field?.Name ?? fieldType.Name );
                     if ( fieldType.Name == "Int16" ) {
                         writer.Write( (Int16) fieldData );
                     } else {
@@ -382,7 +384,7 @@ namespace libMBIN
                     break;
                 case "Int32":
                 case "UInt32":
-                    writer.Align( 4, startStructPos, field.Name );
+                    writer.Align( 4, startStructPos, field?.Name ?? fieldType.Name );
                     if ( fieldType.Name == "Int32" ) {
                         writer.Write( (Int32) fieldData );
                     } else {
@@ -391,7 +393,7 @@ namespace libMBIN
                     break;
                 case "Int64":
                 case "UInt64":
-                    writer.Align( 8, startStructPos, field.Name );
+                    writer.Align( 8, startStructPos, field?.Name ?? fieldType.Name );
                     if ( fieldType.Name == "Int64" ) {
                         writer.Write( (Int64) fieldData );
                     } else {
@@ -399,7 +401,7 @@ namespace libMBIN
                     }
                     break;
                 case "List`1":
-                    writer.Align( 8, startStructPos, field.Name );
+                    writer.Align( 8, startStructPos, field?.Name ?? fieldType.Name );
                     if ( field != null && field.FieldType.IsGenericType && field.FieldType.GetGenericTypeDefinition() == typeof( List<> ) ) {
                         // write empty list header
                         long listPos = writer.BaseStream.Position;
@@ -428,9 +430,9 @@ namespace libMBIN
 
                     if ( template_alignment == 0x4 ) {
                         Logger.LogDebug( $"{field.Name}: Expected alignment == 0x8, not {template_alignment}?" );
-                        writer.Align( 8, baseOffset, field.Name );
+                        writer.Align( 8, baseOffset, field?.Name ?? fieldType.Name );
                     } else {
-                        writer.Align( template_alignment, baseOffset, field.Name );
+                        writer.Align( template_alignment, baseOffset, field?.Name ?? fieldType.Name );
                     }
                     long refPos = writer.BaseStream.Position;
 
@@ -455,7 +457,7 @@ namespace libMBIN
                     // have something defined so that it just ignores it
                     break;
                 default:
-                    if ( fieldType.Name == "Colour" ) writer.Align( 0x10, baseOffset, field.Name ); // TODO: make an attribute
+                    if ( fieldType.Name == "Colour" ) writer.Align( 0x10, baseOffset, field?.Name ?? fieldType.Name ); // TODO: make an attribute
 
                     // todo: align for VariableSizeString?
                     if ( fieldType.Name == "VariableSizeString" ) {
@@ -482,7 +484,7 @@ namespace libMBIN
                             SerializeValue( writer, realObj.GetType(), realObj, realObj.GetType().GetCustomAttribute<NMSAttribute>(), field, startStructPos, ref additionalData, ref addtDataIndex, listEnding );
                         }
                     } else if ( fieldType.IsEnum ) {
-                        writer.Align(4, startStructPos, field.Name );
+                        writer.Align(4, startStructPos, field?.Name ?? fieldType.Name );
                         writer.Write((int)Enum.Parse(field.FieldType, fieldData.ToString()));
 
                     } else if ( fieldType.BaseType == typeof( NMSTemplate ) ) {
@@ -788,6 +790,7 @@ namespace libMBIN
             {
                 case "String":
                 case "Boolean":
+                case "Byte":
                 case "Int16":
                 case "UInt16":
                 case "Int32":
@@ -1002,6 +1005,8 @@ namespace libMBIN
                     return float.Parse(xmlProperty.Value);
                 case "Boolean":
                     return bool.Parse(xmlProperty.Value);
+                case "Byte":
+                    return byte.Parse(xmlProperty.Value);
                 case "Int16":
                     return short.Parse(xmlProperty.Value);
                 case "UInt16":
