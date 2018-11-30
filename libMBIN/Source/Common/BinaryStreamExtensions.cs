@@ -16,10 +16,21 @@ namespace libMBIN {
             if (mod != 0) reader.BaseStream.Position += (alignBy - mod);
         }
 
-        public static void Align( this BinaryWriter writer, int alignBy, long templateStartOffset ) {
+        public static void Align( this BinaryWriter writer, int alignBy, long templateStartOffset, string name ) {
             long offset = writer.BaseStream.Position - templateStartOffset;
+
+            // This is not correct but it will have to do for now.
+            // The struct is being aligned using the alignment for the first field
+            // when we should be aligning the struct using the largest field alignment.
+            if ( templateStartOffset == writer.BaseStream.Position ) { // start of struct
+                offset = templateStartOffset;
+            }
+
             long mod = offset % alignBy;
-            if (mod != 0) writer.Write( new byte[alignBy - mod] ); // :)
+            if ( mod != 0 ) {
+                writer.Write( new byte[alignBy - mod] ); // :)
+                NMSTemplate.DebugLogTemplate( $"[C] aligned {name} to offset 0x{writer.BaseStream.Position:X}" );
+            }
         }
 
         public static string ReadString( this BinaryReader reader, Encoding encoding, int size, bool nullTerminated = false ) {
