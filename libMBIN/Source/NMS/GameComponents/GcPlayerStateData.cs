@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x25C50, GUID = 0xAA97AB5C8FE2F135)]
+	[NMS(Size = 0x25C50, GUID = 0x1DBE9D4D42BBD74B)]
     public class GcPlayerStateData : NMSTemplate
     {
         /* 0x00000 */ public GcUniverseAddressData UniverseAddress;
@@ -78,7 +78,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x00798 */ public List<GcPlayerStatsGroup> Stats;
         /* 0x007A8 */ public List<GcTelemetryStat> TelemetryStats;
 
-        [NMS(Size = 0xA, EnumValue = new[] { "Distress_Signal", "Crate", "Destructable", "Terrain", "Cost", "Building", "Creature", "Maintenance", "Personal", "Personal_Maintenance" })]
+        [NMS(Size = 0xA, EnumType = typeof(GcInteractionBufferType))]
         /* 0x007B8 */ public GcInteractionBuffer[] StoredInteractions;
 
         /* 0x00858 */ public List<GcMaintenanceContainer> MaintenanceInteractions;
@@ -95,19 +95,7 @@ namespace libMBIN.NMS.GameComponents
 
         /* 0x008B0 */ public Vector4f FirstSpawnPosition;
 
-        // enum struct: GcInteractionType
-        [NMS(Size = 0x4E, EnumValue = new[] {
-                "None", "Shop", "NPC", "NPC_Secondary", "NPC_Anomaly", "NPC_Anomaly_Secondary", "Ship", "Outpost",
-                "SpaceStation", "RadioTower", "Monolith", "Factory", "AbandonedShip", "Harvester", "Observatory", "TradingPost",
-                "DistressBeacon", "Portal", "Plaque", "AtlasStation", "AbandonedBuildings", "WeaponTerminal", "SuitTerminal", "SignalScanner",
-                "Teleporter_Base", "Teleporter_Station", "ClaimBase", "NPC_Freighter_Captain", "NPC_HIRE_Weapons", "NPC_HIRE_Weapons_Wait",
-                "NPC_HIRE_Farmer", "NPC_HIRE_Farmer_Wait", "NPC_HIRE_Builder", "NPC_HIRE_Builder_Wait", "NPC_HIRE_Vehicles", "NPC_HIRE_Vehicles_Wait",
-                "MessageBeacon", "NPC_HIRE_Scientist", "NPC_HIRE_Scientist_Wait", "NPC_Recruit", "NPC_Freighter_Captain_Secondary", "NPC_Recruit_Secondary",
-                "Vehicle", "MessageModule", "TechShop", "VehicleRaseStart", "BuildingShop", "MissionGiver", "HoloHub", "HoloExplorer", "HoloSceptic", "HoloNoone",
-                "PortalRunEntry", "PortalActivate", "CrashedFreighter", "GraveInCave", "GlitchyStroyBox", "NetworkPlayer", "NetworkMonument",
-                "AnomalyComputer", "AtlasPlinth", "Epilogue", "GuildEnvoy", "ManageFleet", "ManageExpeditions", "Frigate", "CustomiseCharacter",
-                "CustomiseShip", "CustomiseWeapon", "CustomiseVehicle", "ClaimBaseAnywhere", "FleetNavigator", "FleetCommandPost", "StoryUtility",
-                "MPMissionGiver", "SpecialsShop", "WaterRuin", "PowerMeter" })]
+        [NMS(Size = 0x4E, EnumType = typeof(GcInteractionType))]
         /* 0x008C0 */ public GcSavedInteractionRaceData[] SavedInteractionIndicies;
 
         /* 0x01148 */ public List<GcSavedInteractionDialogData> SavedInteractionDialogTable;
@@ -219,7 +207,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x22318 */ public byte[] Padding22318;
 
         // enum struct: GcVehicleType
-        [NMS(Size = 0x6, EnumValue = new[] { "Buggy", "Bike", "Truck", "WheeledBike", "Hovercraft", "Submarine" })]
+        [NMS(Size = 0x6, EnumType = typeof(GcVehicleType))]
         /* 0x22320 */ public GcPlayerOwnershipData[] VehicleOwnership;
         /* 0x23A00 */ public int PrimaryVehicle;
         [NMS(Size = 0xC, Ignore = true)]
@@ -274,7 +262,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x25C58 */ public ulong LastUABeforePortalWarp;
         /* 0x25C60 */ public ulong StoryPortalSeed;
         /* 0x25C68 */ public uint ShopNumber;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x25C6C */ public byte[] EndPadding;
+        /* 0x25C6C */ public uint ShopTier;
     }
 }

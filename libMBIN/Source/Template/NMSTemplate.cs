@@ -430,9 +430,9 @@ namespace libMBIN
 
                     if ( template_alignment == 0x4 ) {
                         Logger.LogDebug( $"{field.Name}: Expected alignment == 0x8, not {template_alignment}?" );
-                        writer.Align( 8, baseOffset, field?.Name ?? fieldType.Name );
+                        writer.Align( 8, 0, field?.Name ?? fieldType.Name );
                     } else {
-                        writer.Align( template_alignment, baseOffset, field?.Name ?? fieldType.Name );
+                        writer.Align( template_alignment, 0, field?.Name ?? fieldType.Name );
                     }
                     long refPos = writer.BaseStream.Position;
 

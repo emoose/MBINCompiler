@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS( GUID = 0x969C956F2EE2958C)]
+    [NMS( GUID = 0xC627821CA004983E)]
     public class GcRobotGlobals : NMSTemplate
     {
 		/* 0x0 */ public float GrenadeLaunchFlightTime;
@@ -49,23 +49,22 @@ namespace libMBIN.NMS.Globals
         /* 0xB4 */ public int DroneSeriousCrimeStep;
         /* 0xB8 */ public bool DroneChatter;
         /* 0xBC */ public int DroneHealth;
-        /* 0xC0 */ public int QuadHealth;
-        /* 0xC4 */ public int WalkerHealth;
-        /* 0xC8 */ public float WalkerEnergyLength;
-        /* 0xCC */ public float WalkerEnergySpeedMin;
-        /* 0xD0 */ public float WalkerEnergySpeedMax;
-        /* 0xD4 */ public float WalkerEnergyRadiusStartMin;
-        /* 0xD8 */ public float WalkerEnergyRadiusStartMax;
-        /* 0xDC */ public float WalkerEnergyMinAlpha;
-        /* 0xE0 */ public float WalkerEnergyMaxAlpha;
-        /* 0xE4 */ public float CriticalHitSizeDrone;
-        /* 0xE8 */ public float CriticalHitSizeQuad;
-        /* 0xEC */ public float CriticalHitSizeWalker;
-        /* 0xF0 */ public float LabelOffsetDrone;
-        /* 0xF4 */ public float LabelOffsetQuad;
-        /* 0xF8 */ public float LabelOffsetWalker;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0xFC */ public byte[] PaddingFC;
+		/* 0xC0 */ public int CorruptedDroneHealth;
+		/* 0xC4 */ public int QuadHealth;
+		/* 0xC8 */ public int WalkerHealth;
+		/* 0xCC */ public float WalkerEnergyLength;
+		/* 0xD0 */ public float WalkerEnergySpeedMin;
+		/* 0xD4 */ public float WalkerEnergySpeedMax;
+		/* 0xD8 */ public float WalkerEnergyRadiusStartMin;
+		/* 0xDC */ public float WalkerEnergyRadiusStartMax;
+		/* 0xE0 */ public float WalkerEnergyMinAlpha;
+		/* 0xE4 */ public float WalkerEnergyMaxAlpha;
+		/* 0xE8 */ public float CriticalHitSizeDrone;
+		/* 0xEC */ public float CriticalHitSizeQuad;
+		/* 0xF0 */ public float CriticalHitSizeWalker;
+		/* 0xF4 */ public float LabelOffsetDrone;
+		/* 0xF8 */ public float LabelOffsetQuad;
+        /* 0xFC */ public float LabelOffsetWalker;
         /* 0x100 */ public Vector4f QuadCriticalOffset;
         /* 0x110 */ public Vector4f DroneCriticalOffset;
         /* 0x120 */ public Vector4f WalkerGunOffset1;

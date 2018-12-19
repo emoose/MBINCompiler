@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x20, GUID = 0xAFF60C2283B69ADA)]
+	[NMS(Size = 0x30, GUID = 0xA9721E588E7A8FC2)]
     public class GcScanEventSolarSystemLookup : NMSTemplate
     {
         public bool UseStarType;
@@ -18,6 +18,8 @@ namespace libMBIN.NMS.GameComponents
         public GcPlanetTradingData TradingData;
         public bool NeedsWaterPlanet;
         [NMS(Size = 0x3, Ignore = true)]
-        public byte[] EndPadding;
+        public byte[] Padding1D;
+        [NMS(Size = 0x10)]
+        public string NeedsResourceHint;
     }
 }

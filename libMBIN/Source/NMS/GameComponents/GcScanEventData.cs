@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x1F8, GUID = 0xA7FD6DC2D2C673AC)]
+	[NMS(Size = 0x208, Alignment = 0x8, GUID = 0x49A9C567F1869B0D)]
     public class GcScanEventData : NMSTemplate
     {
         [NMS(Size = 0x20)]
@@ -43,31 +43,31 @@ namespace libMBIN.NMS.GameComponents
 		/* 0x06C */ public SolarSystemLocationEnum SolarSystemLocation;
 
         /* 0x070 */ public GcScanEventSolarSystemLookup SolarSystemAttributes;
-        /* 0x090 */ public bool ForceRestartInteraction;
+        /* 0x0A0 */ public bool ForceRestartInteraction;
         [NMS(Size = 7, Ignore = true)]
-        /* 0x091 */ public byte[] Padding91;
+        /* 0x0A1 */ public byte[] PaddingA1;
         [NMS(Size = 0x10)]
-        /* 0x098 */ public string HasReward;
+        /* 0x0A8 */ public string HasReward;
         [NMS(Size = 0x20)]
-        /* 0x0A8 */ public string NextOption;
-        /* 0x0C8 */ public GcScanEventTriggers TriggerActions;
-        /* 0x0E8 */ public List<NMSString0x100> UAsList;
+        /* 0x0B8 */ public string NextOption;
+        /* 0x0D8 */ public GcScanEventTriggers TriggerActions;
+        /* 0x0F8 */ public List<NMSString0x100> UAsList;
         [NMS(Size = 0x20)]
-        /* 0x0F8 */ public string OSDMessage;
+        /* 0x108 */ public string OSDMessage;
         [NMS(Size = 0x20)]
-        /* 0x118 */ public string MarkerLabel;
-        /* 0x138 */ public TkTextureResource MarkerIcon;
-        /* 0x1BC */ public float StartTime;
-        /* 0x1C0 */ public float MessageTime;
-        /* 0x1C4 */ public float MessageDisplayTime;
-        /* 0x1C8 */ public GcAudioWwiseEvents MessageAudio;
-        /* 0x1CC */ public float IconTime;
-        /* 0x1D0 */ public float TooltipTime;
-        /* 0x1D4 */ public bool TooltipRepeats;
-        /* 0x1D5 */ public bool ShowEndTooltip;
+        /* 0x128 */ public string MarkerLabel;
+        /* 0x148 */ public TkTextureResource MarkerIcon;
+        /* 0x1CC */ public float StartTime;
+        /* 0x1D0 */ public float MessageTime;
+        /* 0x1D4 */ public float MessageDisplayTime;
+        /* 0x1D8 */ public GcAudioWwiseEvents MessageAudio;
+        /* 0x1DC */ public float IconTime;
+        /* 0x1E0 */ public float TooltipTime;
+        /* 0x1E4 */ public bool TooltipRepeats;
+        /* 0x1E5 */ public bool ShowEndTooltip;
         [NMS(Size = 0x20)]
-        /* 0x1D6 */ public string TooltipMessage;
+        /* 0x1E6 */ public string TooltipMessage;
         [NMS(Size = 0x2, Ignore = true)]
-        /* 0x1F6 */ public byte[] EndPadding;
+        /* 0x206 */ public byte[] EndPadding;
     }
 }

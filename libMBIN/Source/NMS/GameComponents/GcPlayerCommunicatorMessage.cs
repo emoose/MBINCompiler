@@ -3,13 +3,13 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x50, GUID = 0xC0B64BD7B895172A)]
+	[NMS(Size = 0x50, GUID = 0x15AF1642940088D9)]
     public class GcPlayerCommunicatorMessage : NMSTemplate
     {
         [NMS(Size = 0x20)]
         /* 0x00 */ public string Dialog;
         /* 0x20 */ public bool ShowHologram;
-		public enum CommunicatorTypeEnum { HoloExplorer, HoloSceptic, HoloNoone, Generic, PlayerFreighterCaptain, Polo, Nada }
+		public enum CommunicatorTypeEnum { HoloExplorer, HoloSceptic, HoloNoone, Generic, PlayerFreighterCaptain, Polo, Nada, QuicksilverBot }
 		public CommunicatorTypeEnum CommunicatorType;
         /* 0x28 */ public GcAlienRace RaceOverride;
         [NMS(Size = 0x4, Ignore = true)]
