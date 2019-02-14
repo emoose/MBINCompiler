@@ -78,7 +78,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x00798 */ public List<GcPlayerStatsGroup> Stats;
         /* 0x007A8 */ public List<GcTelemetryStat> TelemetryStats;
 
-        [NMS(Size = 0xA, EnumType = typeof(GcInteractionBufferType))]
+        [NMS(Size = 0xA, EnumType = typeof(GcInteractionBufferType.InterationBufferTypeEnum))]
         /* 0x007B8 */ public GcInteractionBuffer[] StoredInteractions;
 
         /* 0x00858 */ public List<GcMaintenanceContainer> MaintenanceInteractions;
@@ -95,7 +95,7 @@ namespace libMBIN.NMS.GameComponents
 
         /* 0x008B0 */ public Vector4f FirstSpawnPosition;
 
-        [NMS(Size = 0x4E, EnumType = typeof(GcInteractionType))]
+        [NMS(Size = 0x4E, EnumType = typeof(GcInteractionType.InteractionTypeEnum))]
         /* 0x008C0 */ public GcSavedInteractionRaceData[] SavedInteractionIndicies;
 
         /* 0x01148 */ public List<GcSavedInteractionDialogData> SavedInteractionDialogTable;
@@ -207,7 +207,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x22318 */ public byte[] Padding22318;
 
         // enum struct: GcVehicleType
-        [NMS(Size = 0x6, EnumType = typeof(GcVehicleType))]
+        [NMS(Size = 0x6, EnumType = typeof(GcVehicleType.VehicleTypeEnum))]
         /* 0x22320 */ public GcPlayerOwnershipData[] VehicleOwnership;
         /* 0x23A00 */ public int PrimaryVehicle;
         [NMS(Size = 0xC, Ignore = true)]
