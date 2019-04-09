@@ -62,6 +62,7 @@
     <Compile Include="Source\CommandLine.cs" />
     <Compile Include="Source\Commands\Command.cs" />
     <Compile Include="Source\Commands\ConvertMode.cs" />
+    <Compile Include="Source\Commands\RegisterMode.cs" />
     <Compile Include="Source\Commands\ListMode.cs" />
     <Compile Include="Source\CompilerException.cs" />
     <Compile Include="Source\Commands\Convert.cs" />

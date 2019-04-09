@@ -41,11 +41,12 @@ namespace MBINCompiler {
             }
 
             var options = new CommandLineParser( args );
-            options.AddOptions( null,      OPTIONS_GENERAL );
-            options.AddOptions( "help",    OPTIONS_HELP    );
-            options.AddOptions( "version", OPTIONS_VERSION );
-            options.AddOptions( "convert", OPTIONS_CONVERT );
-            options.AddOptions( "list",    OPTIONS_LIST    );
+            options.AddOptions( null,       OPTIONS_GENERAL );
+            options.AddOptions( "help",     OPTIONS_HELP    );
+            options.AddOptions( "version",  OPTIONS_VERSION );
+            options.AddOptions( "convert",  OPTIONS_CONVERT );
+            options.AddOptions( "list",     OPTIONS_LIST    );
+            options.AddOptions( "register", OPTIONS_REGISTER);
 
             // save the error state
             bool invalidArguments = !options.Parse( "convert" );
@@ -66,10 +67,11 @@ namespace MBINCompiler {
             // execute the appropriate mode
             try {
                 switch (options.Verb) {
-                    case "help":    return HelpCommand.Execute( options );
-                    case "version": return VersionCommand.Execute( options );
-                    case "list":    return ListCommand.Execute( options );
-                    default:        return ConvertCommand.Execute( options );
+                    case "help":     return HelpCommand.Execute( options );
+                    case "version":  return VersionCommand.Execute( options );
+                    case "list":     return ListCommand.Execute( options );
+                    case "register": return RegisterCommand.Execute( options );
+                    default:         return ConvertCommand.Execute( options );
                 }
             } catch ( System.Exception e ) {
                 return CommandLine.ShowException( e );

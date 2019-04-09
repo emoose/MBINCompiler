@@ -49,6 +49,17 @@ namespace MBINCompiler {
             return (int) code;
         }
 
+        public static int ShowSuccess(ErrorCode code = ErrorCode.Success)
+        {
+            if (Console.IsOutputRedirected) return (int)code;
+            using (var forceConsole = new ForceConsoleOutput())
+            {
+                Console.Out.Write("MBINCompiler registered to the system path.");
+            }
+            WaitForKeypress();
+            return (int)code;
+        }
+
         private static long lastPosition = 0;
 
         public static int ShowException( Exception e, bool wait=true ) {

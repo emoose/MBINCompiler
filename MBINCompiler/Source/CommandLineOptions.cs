@@ -139,6 +139,10 @@ namespace MBINCompiler
         public static readonly List<Option> OPTIONS_LIST = new List<Option> {
         };
 
+        public static readonly List<Option> OPTIONS_REGISTER = new List<Option>
+        {
+        };
+
         private static string FormatWrapped( string prefix, int padleft, string txt, bool trim = false )
         {
             txt = CommandLine.WrapLine( txt, padleft );
@@ -160,12 +164,14 @@ namespace MBINCompiler
             sb.Append( "\nUsage:\n\n" +
                    $"    {exe} help [<Option>...]\n" +
                    $"    {exe} version [<Option>...] [<File>]\n" +
+                   $"    {exe} register [<Option>...] \n" +
                    $"    {exe} [convert] [<Option>...] <Path> [<Path>...]\n" );
 
             sb.Append( "\n\nModes:\n\n" +
-                    FormatWrapped( "  help",    20, "Show this help info.", true ) +
-                    FormatWrapped( "  version", 20, "Show version info.", true ) +
-                    FormatWrapped( "  convert", 20, "Convert files between MBIN and EXML formats.", true ) );
+                    FormatWrapped( "  help",     20, "Show this help info.", true ) +
+                    FormatWrapped( "  version",  20, "Show version info.", true ) +
+                    FormatWrapped( "  convert",  20, "Convert files between MBIN and EXML formats.", true ) +
+                    FormatWrapped( "  register", 20, "Add MBINCompiler to your systems PATH variable.", true) );
 
             if ( OPTIONS_GENERAL.Count > 0 ) {
                 sb.Append( "\n\nGeneral Options:\n" );
