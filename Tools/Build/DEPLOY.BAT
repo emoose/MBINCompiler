@@ -25,7 +25,7 @@ if "%GITHUB_TOKEN%" == "" goto INVALID_TOKEN
 set REPO=%GITHUB_USER%/%GITHUB_REPO%
 
 REM back out of .\BuildTools
-set PROJECT_PATH=%SCRIPT_PATH%\..
+set PROJECT_PATH=%SCRIPT_PATH%\..\..
 set BUILD_PATH=%PROJECT_PATH%\Build\Release
 
 set EXE_ARTIFACT=%BUILD_PATH%\MBINCompiler.exe

@@ -7,7 +7,7 @@ set SCRIPT_NAME=%~n0
 REM ----------------------------------------
 
 REM Back out of BuildTools\_lib
-set PROJECT_PATH=%SCRIPT_PATH%\..\..
+set PROJECT_PATH=%SCRIPT_PATH%\..\..\..
 
 REM Relative to PROJECT_PATH
 set VERSION_PATH=libMBIN\Source\Version.cs
