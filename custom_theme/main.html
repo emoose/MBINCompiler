@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block libs %}
+    {{ super() }}
+    <script type='text/javascript' src="{{ base_url }}/js/get_version.js"></script>
+    <script type='text/javascript' src="{{ base_url }}/js/jquery-1.10.2.min.js"></script>
+    <script type='text/javascript'> 
+        GetVersion();
+    </script>
+    <script type="text/javascript" src="{{ base_url }}/js/download.js"></script>
+{% endblock %}
+
+{% block site_nav %}
+    {{ super() }}
+    <span class="caption-text">Downloads</span>
+    <ul class="subnav">
+        <li>
+            <a onclick="GetReleases(1)" href="#" id="direct_dl">Recent Release</a>
+        </li>
+        <li>
+            <a href="https://github.com/monkeyman192/MBINCompiler">Source code (GitHub)</a>
+        </li>
+    </ul>
+{% endblock %}
