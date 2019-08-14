@@ -3,8 +3,8 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Toolkit
 {
-	[NMS(GUID = 0x183EF44FE92F3F19)]
-    public class TkTransformData : NMSTemplate      // size: 0x24
+	[NMS(GUID = 0x183EF44FE92F3F19, Size = 0x24)]
+    public class TkTransformData : NMSTemplate
     {
         public float TransX;
         public float TransY;

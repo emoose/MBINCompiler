@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0xC8, GUID = 0xE02205656427F42D)]
+	[NMS(Size = 0xD8, GUID = 0xAB8AE788F4CBAFF9)]
     public class GcBaseBuildingGroup : NMSTemplate
     {
         [NMS(Size = 0x10)]
@@ -13,6 +13,8 @@ namespace libMBIN.NMS.GameComponents
         [NMS(Size = 0x20)]
         /* 0x20 */ public string Name;
         /* 0x40 */ public TkTextureResource Icon;
-        /* 0x94 */ public int ColourIdx;
+        /* 0xC4 */ public int DefaultColourIdx;
+        [NMS(Size = 0x10)]
+        /* 0xC8 */ public string DefaultItem;
     }
 }

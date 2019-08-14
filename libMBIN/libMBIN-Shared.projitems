@@ -24,6 +24,14 @@
     <Compile Include="$(MSBuildThisFileDirectory)Source\EXML\EXmlMeta.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\EXML\EXmlData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\EXML\EXmlProperty.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcBaseLinkGridConnectionDependency.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcBaseLinkGridConnectionData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcLinkNetworkTypes.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcNPCPropTypes.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcWordCategoryTableEnum.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcPuzzleTextFlow.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcNPCPropInfo.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcAlienMood.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcAtlasSendRequestTotalContribution.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcAtlasRecvTotalContribution.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcMissionConditionPlanetResourceHint.cs" />
@@ -39,7 +47,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcNameGeneratorSectorTypes.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcNameGeneratorTypes.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcAtlasRecvBaseList.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcBaseBuildingEntryLinkGridData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcBaseLinkGridData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcPlanetDataResourceHint.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcHUDEffectRewardData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcNameGeneratorWord.cs" />
@@ -70,6 +78,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcFiendCrime.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcTechnologyTypes.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcWeirdCreatureRewardList.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Toolkit\TkMaterialResource.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Toolkit\TkEngineSettingTypes.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Toolkit\TkFeaturesEnum.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Toolkit\TkIDArray.cs" />

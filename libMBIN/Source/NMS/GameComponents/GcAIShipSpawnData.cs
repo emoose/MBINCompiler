@@ -5,32 +5,33 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0xA8, Alignment = 0x8, GUID = 0xFD03DF836E7D27C9)]
+	[NMS(Size = 0xC8, Alignment = 0x8, GUID = 0x7D2B5DE918C61CF1)]
     public class GcAIShipSpawnData : NMSTemplate
     {
         [NMS(Size = 0x20)]
         /* 0x00 */ public string Message;
-
-        /* 0x20 */ public int Shortcut;     // should be TkInputEnum I think...
-        /* 0x24 */ public bool WarpIn;
-        [NMS(Size = 0x3, Ignore = true)]
-        /* 0x25 */ public byte[] Padding25;
-        /* 0x28 */ public GcAISpaceshipRoles Role;
-        /* 0x2C */ public float MinRange;
-        /* 0x30 */ public Vector2f Scale;
-        [NMS(Size = 0x10)]
-        /* 0x38 */ public string Reward;
         [NMS(Size = 0x20)]
-        /* 0x48 */ public string RewardMessage;
-        /* 0x68 */ public bool AttackFreighter;
-        /* 0x6C */ public Vector2f Spread;
-        /* 0x74 */ public Vector2f Count;
-        /* 0x7C */ public Vector2f StartTime;
+        /* 0x00 */ public string OSDMessage;
+        /* 0x40 */ public int Shortcut;     // should be TkInputEnum I think...
+        /* 0x44 */ public bool WarpIn;
+        [NMS(Size = 0x3, Ignore = true)]
+        /* 0x45 */ public byte[] Padding45;
+        /* 0x48 */ public GcAISpaceshipRoles Role;
+        /* 0x4C */ public float MinRange;
+        /* 0x50 */ public Vector2f Scale;
+        [NMS(Size = 0x10)]
+        /* 0x58 */ public string Reward;
+        [NMS(Size = 0x20)]
+        /* 0x68 */ public string RewardMessage;
+        /* 0x88 */ public bool AttackFreighter;
+        /* 0x8C */ public Vector2f Spread;
+        /* 0x94 */ public Vector2f Count;
+        /* 0x9C */ public Vector2f StartTime;
 		public enum SpawnShapeEnum { Sphere, Cone }
-		public SpawnShapeEnum SpawnShape;
+		/* 0xA4 */ public SpawnShapeEnum SpawnShape;
 
-        /* 0x88 */ public GcShipAIPerformanceArray Performances;
+        /* 0xA8 */ public GcShipAIPerformanceArray Performances;
 
-        /* 0x98 */ public List<GcAIShipSpawnData> ChildSpawns;
+        /* 0xB8 */ public List<GcAIShipSpawnData> ChildSpawns;
     }
 }

@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0xFEAF1D567D35E0EB)]
+	[NMS(GUID = 0xB3485FD5E06AFA5D)]
     public class GcAlienPuzzleTable : NMSTemplate
     {
         public List<GcAlienPuzzleEntry> Table;

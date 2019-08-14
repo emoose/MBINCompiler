@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x2A8, GUID = 0xFEAF1D567D35E0EB)]
+	[NMS(Size = 0x2B8, GUID = 0xEB0432651A6E5A8)]
     public class GcAlienPuzzleOption : NMSTemplate
     {
         [NMS(Size = 0x20)]
@@ -22,21 +22,23 @@ namespace libMBIN.NMS.GameComponents
         /* 0x228 */ public string Cost;
 
         /* 0x238 */ public List<NMSString0x10> Rewards;
-		public enum MoodEnum { Positive, Negative, Neutral, Pity, Dead }
-		/* 0x248 */ public MoodEnum Mood;
-
-        /* 0x24C */ public bool KeepOpen;
-        /* 0x24D */ public bool MarkInteractionComplete;
-
-        [NMS(Size = 2, Ignore = true)]
-        /* 0x24E */ public byte[] Padding24E;
-
+		/* 0x248 */ public GcAlienMood Mood;
+        /* 0x24C */ public GcNPCPropTypes Prop;
+        /* 0x250 */ public bool KeepOpen;
+        /* 0x251 */ public bool DisplayCost;
+        /* 0x252 */ public bool TruncateCost;
+        /* 0x253 */ public bool MarkInteractionComplete;
+        [NMS(Size = 4, Ignore = true)]
+        /* 0x254 */ public byte[] Padding254;
         [NMS(Size = 0x20)]
-        /* 0x250 */ public string NextInteraction;
-        /* 0x270 */ public GcAudioWwiseEvents AudioEvent;
-        /* 0x274 */ public GcMissionConditionTest EnablingConditionTest;
-        /* 0x278 */ public List<NMSTemplate> EnablingConditions;
+        /* 0x258 */ public string NextInteraction;
+        /* 0x278 */ public GcAudioWwiseEvents AudioEvent;
+        /* 0x27C */ public GcMissionConditionTest EnablingConditionTest;
+        /* 0x280 */ public List<NMSTemplate> EnablingConditions;
         [NMS(Size = 0x20)]
-        /* 0x288 */ public string EnablingConditionId;
+        /* 0x290 */ public string EnablingConditionId;
+        /* 0x2B0 */ public GcWordCategoryTableEnum WordCategory;
+        [NMS(Size = 4, Ignore = true)]
+        /* 0x2B4 */ public byte[] EndPadding;
     }
 }

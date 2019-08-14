@@ -3,10 +3,12 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Toolkit
 {
-	[NMS(GUID = 0x12D45A89840E0777)]
+	[NMS(GUID = 0x700B1442D965A7F5)]
     public class TkVolumeTriggerType : NMSTemplate
     {
-		public enum VolumeTriggerTypeEnum { Open, GenericInterior, GenericGlassInterior, Corridor, SmallRoom, LargeRoom, OpenCovered, HazardProtection, FieldBoundary, Custom_Biodome, Portal, VehicleBoost }
+        // 0xF entries
+		public enum VolumeTriggerTypeEnum { Open, GenericInterior, GenericGlassInterior, Corridor, SmallRoom, LargeRoom, OpenCovered, HazardProtection,
+                                            FieldBoundary, Custom_Biodome, Portal, VehicleBoost, NexusPlaza, NexusCommunityHub, NexusHangar }
 		public VolumeTriggerTypeEnum VolumeTriggerType;
     }
 }

@@ -3,10 +3,10 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0x17C1F3DED0C039C3)]
+	[NMS(GUID = 0xBDBC1D153DBE787)]
     public class GcAlienRace : NMSTemplate
     {
-        public enum AlienRaceEnum { Traders, Warriors, Explorers, Robots, Atlas, Diplomats, None }
+        public enum AlienRaceEnum { Traders, Warriors, Explorers, Robots, Atlas, Diplomats, Exotics, None }
         public AlienRaceEnum AlienRace;
     }
 }

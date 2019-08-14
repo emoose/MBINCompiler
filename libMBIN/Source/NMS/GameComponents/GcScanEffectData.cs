@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x50, GUID = 0x2427F1DD0BFC8AE1)]
+	[NMS(Size = 0x50, GUID = 0x14E69D97BE09FE17)]
     public class GcScanEffectData : NMSTemplate
     {
         [NMS(Size = 0x10)]
@@ -22,6 +22,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x44 */ public bool WaveActive;
         /* 0x45 */ public bool FixedUpAxis;
         /* 0x46 */ public bool Transparent;
+        /* 0x47 */ public bool ModelFade;
 		/* 0x48 */ public float FadeInTime;
 		/* 0x4C */ public float FadeOutTime;
     }

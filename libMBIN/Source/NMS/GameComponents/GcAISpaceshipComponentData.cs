@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x94, GUID = 0xE89965A1A5F0BECA)]
+	[NMS(Size = 0x94, GUID = 0xD0D3DF28AB69CAAF)]
     public class GcAISpaceshipComponentData : NMSTemplate
     {
         /* 0x00 */ public GcAISpaceshipTypes Type;
