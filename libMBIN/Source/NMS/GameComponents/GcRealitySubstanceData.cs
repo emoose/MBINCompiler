@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x240, GUID = 0x2CF9B807BDE62278)]
+	[NMS(Size = 0x260, GUID = 0xBA74DC5EDAB1114C, SubGUID = 0xD811F4C9E014843E)]
     public class GcRealitySubstanceData : NMSTemplate
     {
         [NMS(Size = 0x20)]
@@ -38,5 +38,10 @@ namespace libMBIN.NMS.GameComponents
         /* 0x200 */ public string PinObjective;
         [NMS(Size = 0x20)]
         /* 0x220 */ public string PinObjectiveTip;
+        [NMS(Size = 0x10)]
+        /* 0x240 */ public string WikiMissionID;
+        /* 0x250 */ public bool CookingIngredient;
+        [NMS(Size = 0xF, Ignore = true)]
+        /* 0x251 */ public byte[] EndPadding;
     }
 }

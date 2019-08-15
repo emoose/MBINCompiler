@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0x29048923566B58D7)]
+	[NMS(GUID = 0x526D5D37C63119D9)]
     public class GcTechnologyTable : NMSTemplate
     {
         public List<GcTechnology> Table;

@@ -3,14 +3,16 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0x943A716913810596)]
-    public class GcWikiPage : NMSTemplate       // size: 0x168
+	[NMS(Size = 0x1A8, GUID = 0x7A2164A5AF820818, SubGUID = 0x8762991A70BCCE8C)]
+    public class GcWikiPage : NMSTemplate
     {
         [NMS(Size = 0x20)]
         /* 0x000 */ public string PageID;
         /* 0x020 */ public TkTextureResource Icon;
         [NMS(Size = 0x40)]
         /* 0x0A4 */ public string Content;
-        /* 0x0E4 */ public TkTextureResource ContentImage;
+        [NMS(Size = 0x40)]
+        /* 0x0E4 */ public string VRContent;
+        /* 0x124 */ public TkTextureResource ContentImage;
     }
 }

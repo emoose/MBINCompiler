@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x350, GUID = 0x3F4F9F81DEEC95F6)]
+	[NMS(Size = 0x350, GUID = 0x6FC0C0D119914E5B, SubGUID = 0x9F1CE8466638E767)]
     public class GcTechnology : NMSTemplate
     {
         [NMS(Size = 0x10)]
@@ -38,10 +38,11 @@ namespace libMBIN.NMS.GameComponents
 
         /* 0x23C */ public GcRealitySubstanceCategory ChargeType;
         /* 0x240 */ public List<NMSString0x10> ChargeBy;
-        /* 0x250 */ public bool BuildFullyCharged;
-        /* 0x251 */ public bool UsesAmmo;
-        [NMS(Size = 0x6, Ignore = true)]
-        /* 0x252 */ public byte[] Padding252;
+        /* 0x250 */ public float ChargeMultiplier;
+        /* 0x254 */ public bool BuildFullyCharged;
+        /* 0x255 */ public bool UsesAmmo;
+        [NMS(Size = 0x2, Ignore = true)]
+        /* 0x256 */ public byte[] Padding256;
         [NMS(Size = 0x10)]
         /* 0x258 */ public string AmmoId;
         /* 0x268 */ public bool Upgrade;

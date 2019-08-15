@@ -5,10 +5,11 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0xDFD59E4AAF9945E7)]
+	[NMS(GUID = 0x2B57F979912C5819, SubGUID = 0x1E20A14918514C43)]
     public class GcPersistentBaseTypes : NMSTemplate
     {
-		public enum PersistentBaseTypesEnum { HomePlanetBase, FreighterBase, ExternalPlanetBase, CivilianFreighterBase, FriendsPlanetBase, FriendsFreighterBase }
+        // 0x7 entries
+		public enum PersistentBaseTypesEnum { HomePlanetBase, FreighterBase, ExternalPlanetBase, CivilianFreighterBase, FriendsPlanetBase, FriendsFreighterBase, SpaceBase }
 		public PersistentBaseTypesEnum PersistentBaseTypes;
     }
 }

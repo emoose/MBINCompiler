@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0xCA9782C4E180BB)]
+	[NMS(GUID = 0xD26166A021B8DA0A)]
     public class GcSubstanceTable : NMSTemplate
     {
         public List<GcRealitySubstanceData> Table;

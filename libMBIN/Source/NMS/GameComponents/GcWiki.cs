@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0xE134803BA9DF6A6F)]
+	[NMS(GUID = 0xA4EF7703759EF9C7)]
     public class GcWiki : NMSTemplate
     {
         public List<GcWikiCategory> Categories;
