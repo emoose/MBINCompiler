@@ -3,19 +3,20 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0x5165572FA852C8DD)]
+	[NMS(Size = 0x30, GUID = 0x13F68F082CC6D5AE, SubGUID = 0xF6B3A96F7D4F7967)]
     public class GcInventoryElement : NMSTemplate
     {
-        public GcInventoryType Type;
-        [NMS(Ignore = true)]
-        public int EmptyNode1;
+        /* 0x00 */ public GcInventoryType Type;
+        [NMS(Size = 0x4, Ignore = true)]
+        /* 0x04 */ public byte[] padding4;
         [NMS(Size = 0x10)]
-        public string Id;
-        public int Amount;
-        public int MaxAmount;
-        public float DamageFactor;
-        public GcInventoryIndex Index;
-        [NMS(Ignore = true)]
-        public int EmptyNode2;
+        /* 0x08 */ public string Id;
+        /* 0x18 */ public int Amount;
+        /* 0x1C */ public int MaxAmount;
+        /* 0x20 */ public float DamageFactor;
+        /* 0x24 */ public bool FullyInstalled;
+        [NMS(Size = 0x3, Ignore = true)]
+        /* 0x25 */ public byte[] Padding25;
+        /* 0x28 */ public GcInventoryIndex Index;
     }
 }

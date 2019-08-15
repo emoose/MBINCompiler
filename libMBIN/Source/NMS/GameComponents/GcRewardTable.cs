@@ -5,22 +5,22 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0xD0, GUID = 0x24D7860FFE72A918)]
+	[NMS(Size = 0xE0, GUID = 0x29B7DFCC7CC18D82, SubGUID = 0x2ECD4E3663FDB26F)]
     public class GcRewardTable : NMSTemplate
     {
-        public List<GcGenericRewardTableEntry> GenericTable;
-        public List<GcGenericRewardTableEntry> DestructionTable;
-        public List<GcGenericRewardTableEntry> InteractionTable;
-        public List<GcGenericRewardTableEntry> OldInteractionTable;
-        public List<GcGenericRewardTableEntry> SpecialRewardTable;
-        public List<GcGenericRewardTableEntry> MissionBoardTable;
-        public List<GcGenericRewardTableEntry> FleetTable;
-        public List<GcGenericRewardTableEntry> WikiProgressTable;
-        public List<GcRewardTableEntitlementItem> EntitlementTable;
-        public List<GcRewardTableEntry> Table;
-        public List<NMSString0x10> TechRewardOrder;
-        public List<NMSString0x10> ProductRewardOrder;
-        public List<GcGenericRewardTableEntry> MixerRewardTable;
-
+        /* 0x00 */ public List<GcGenericRewardTableEntry> GenericTable;
+        /* 0x10 */ public List<GcGenericRewardTableEntry> DestructionTable;
+        /* 0x20 */ public List<GcGenericRewardTableEntry> InteractionTable;
+        /* 0x30 */ public List<GcGenericRewardTableEntry> OldInteractionTable;
+        /* 0x40 */ public List<GcGenericRewardTableEntry> SpecialRewardTable;
+        /* 0x50 */ public List<GcGenericRewardTableEntry> MissionBoardTable;
+        /* 0x60 */ public List<GcGenericRewardTableEntry> FleetTable;
+        /* 0x70 */ public List<GcGenericRewardTableEntry> WikiProgressTable;
+        /* 0x80 */ public List<GcRewardTableEntitlementItem> EntitlementTable;
+        /* 0x90 */ public List<GcRewardTableEntry> Table;
+        /* 0xA0 */ public List<NMSString0x10> TechRewardOrder;
+        /* 0xB0 */ public List<NMSString0x10> ProductRewardOrder;
+        /* 0xC0 */ public List<GcGenericRewardTableEntry> MixerRewardTable;
+        /* 0xC0 */ public List<GcGenericRewardTableEntry> NPCPlanetSiteTable;
     }
 }

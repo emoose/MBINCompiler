@@ -3,22 +3,26 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x24, Alignment = 0x4, GUID = 0x3BD123ED9F9C4AAE)]
+	[NMS(Size = 0x28, Alignment = 0x4, GUID = 0x55EE6105B113335F)]
     public class GcPlayerNearbyEvent : NMSTemplate
     {
 		public enum RequirePlayerActionEnum { None, Fire, InShip, OnFoot, OnFootOutside, Upload }
-		public RequirePlayerActionEnum RequirePlayerAction;
-        public float Distance;
-        public float Angle;
-        public bool AnglePlayerRelative;
-        public float AngleOffset;
-        public bool AngleReflected;
-        public float AngleMinDistance;
+		/* 0x00 */ public RequirePlayerActionEnum RequirePlayerAction;
+        /* 0x04 */ public float Distance;
+        /* 0x08 */ public float Angle;
+        /* 0x0C */ public bool AnglePlayerRelative;
+        /* 0x10 */ public float AngleOffset;
+        /* 0x14 */ public bool AngleReflected;
+        /* 0x18 */ public float AngleMinDistance;
 		public enum DistanceCheckTypeEnum { Radius, BoundingBox }
-		public DistanceCheckTypeEnum DistanceCheckType;
-        public bool Inverse;
+		/* 0x1C */ public DistanceCheckTypeEnum DistanceCheckType;
+        /* 0x20 */ public bool Inverse;
+        /* 0x21 */ public bool OnlyForLocalPlayer;
+        /* 0x22 */ public bool IncludeAllPhysics;
+        /* 0x23 */ public bool IncludeMobileNPCs;
+        /* 0x24 */ public bool TeleporterCountsAsPlayer;
 
         [NMS(Size = 3, Ignore = true)]
-        public byte[] Padding21;
+        /* 0x25 */ public byte[] EndPadding;
     }
 }

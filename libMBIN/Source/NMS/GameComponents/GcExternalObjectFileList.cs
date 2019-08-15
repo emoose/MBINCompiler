@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x38, GUID = 0x8DD8A6B4B649C764)]
+	[NMS(Size = 0x38, GUID = 0x7246666613C9CE50, SubGUID = 0x76D3572C2A9662D2)]
     public class GcExternalObjectFileList : NMSTemplate
     {
         [NMS(Size = 0x10)]
@@ -17,6 +17,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x13 */ public bool NotOnExtremePlanets;
         /* 0x14 */ public bool NotOnStartPlanets;
         /* 0x15 */ public bool NotOnWeirdPlanets;
+        /* 0x16 */ public bool NotOnDeadPlanets;
 
 
         /* 0x18 */ public GcBiomeType OnlyOnBiome;

@@ -5,8 +5,8 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0x9F997389CDFC8C8E)]
-    public class GcPhotoModeSettings : NMSTemplate      // possibly in a global
+	[NMS(Size = 0x40, GUID = 0x9F997389CDFC8C8E)]
+    public class GcPhotoModeSettings : NMSTemplate
     {
         /* 0x00 */ public float Fog;
         /* 0x04 */ public float CloudAmount;
@@ -17,7 +17,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x24 */ public float FoV;
         /* 0x28 */ public bool FoVSet;
 		public enum DepthOfFieldEnum { Off, Automatic, Manual }
-		public DepthOfFieldEnum DepthOfField;
+		/* 0x2C */ public DepthOfFieldEnum DepthOfField;
         /* 0x30 */ public float DepthOfFieldAmount;
         /* 0x34 */ public float Vignette;
         /* 0x38 */ public int Filter;

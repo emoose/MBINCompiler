@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x38, GUID = 0xD7404F5F69F6404)]
+	[NMS(Size = 0x50, GUID = 0x5184B44469E17BE1, SubGUID = 0x28E8DAB19EC55198)]
     public class GcCreatureComponentData : NMSTemplate
     {
         [NMS(Size = 0x10)]
@@ -14,5 +14,9 @@ namespace libMBIN.NMS.GameComponents
         [NMS(Size = 0x10)]
         /* 0x18 */ public string DeathEffect;
         /* 0x28 */ public List<GcReplacementEffectData> ReplacementImpacts;
+        /* 0x38 */ public float DiscoveryUIScaler;
+        [NMS(Size = 0x4, Ignore = true)]
+        /* 0x3C */ public byte[] Padding3C;
+        /* 0x40 */ public Vector3f DiscoveryUIOffset;
     }
 }

@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x3E0, GUID = 0x4408162C9D554F85)]
+	[NMS(Size = 0x3F0, GUID = 0xCC2F959595215D47, SubGUID = 0xE831C8A241FD8276)]
     public class GcProductData : NMSTemplate
     {
         [NMS(Size = 0x10)]
@@ -39,24 +39,28 @@ namespace libMBIN.NMS.GameComponents
         /* 0x338 */ public List<GcTechnologyRequirement> Requirements;
         /* 0x348 */ public List<GcTechnologyRequirement> AltRequirements;
         /* 0x358 */ public GcItemPriceModifiers Cost;
-        /* 0x36C */ public bool SpecificChargeOnly;
-        /* 0x370 */ public float NormalisedValueOnWorld;
-        /* 0x374 */ public float NormalisedValueOffWorld;
-        /* 0x378 */ public GcTradeCategory TradeCategory;
-        /* 0x37C */ public bool WikiEnabled;
-        /* 0x37D */ public bool IsCraftable;
-        [NMS(Size = 0x2, Ignore = true)]
-        /* 0x37E */ public byte[] Padding37E;
+        /* 0x36C */ public int RecipeCost;
+        /* 0x370 */ public bool SpecificChargeOnly;
+        /* 0x374 */ public float NormalisedValueOnWorld;
+        /* 0x378 */ public float NormalisedValueOffWorld;
+        /* 0x37C */ public GcTradeCategory TradeCategory;
+        public enum WikiCategoryEnum { NotEnabled, Crafting, Tech, Construction, Trade, Curio, Cooking }
+        /* 0x380 */ public WikiCategoryEnum WikiCategory;
+        /* 0x384 */ public bool IsCraftable;
+        [NMS(Size = 0x3, Ignore = true)]
+        /* 0x385 */ public byte[] Padding385;
         [NMS(Size = 0x10)]
-        /* 0x380 */ public string DeploysInto;
-        /* 0x390 */ public float EconomyInfluenceMultiplier;
+        /* 0x388 */ public string DeploysInto;
+        /* 0x398 */ public float EconomyInfluenceMultiplier;
         [NMS(Size = 0x4, Ignore = true)]
-        /* 0x394 */ public byte[] Padding39C;
+        /* 0x39C */ public byte[] Padding39C;
         [NMS(Size = 0x20)]
-        /* 0x398 */ public string PinObjeective;
+        /* 0x3A0 */ public string PinObjeective;
         [NMS(Size = 0x20)]
-        /* 0x3B8 */ public string PinObjeectiveTip;
+        /* 0x3C0 */ public string PinObjeectiveTip;
+        /* 0x3E0 */ public bool CookingIngredient;
+        /* 0x3E4 */ public float CookingValue;
         [NMS(Size = 0x8, Ignore = true)]
-        /* 0x3D8 */ public byte[] EndPadding;
+        /* 0x3E8 */ public byte[] EndPadding;
     }
 }

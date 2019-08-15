@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x90, Alignment = 0x8, GUID = 0xE66752866A9C2380)]
+	[NMS(Size = 0x98, Alignment = 0x8, GUID = 0xE66752866A9C2380, SubGUID = 0x743B54DBF617C58D)]
     public class GcRewardTableItem : NMSTemplate
     {
         /* 0x00 */ public float PercentageChance;
@@ -11,6 +11,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x04 */ public byte[] Padding4;
         /* 0x08 */ public NMSTemplate Reward;
         [NMS(Size = 0x40)]
-        /* 0x50 */ public string LabelID;
+        /* 0x58 */ public string LabelID;
     }
 }

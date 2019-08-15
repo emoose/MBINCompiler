@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0x69BD8AFBEEB526B7)]
+	[NMS(GUID = 0x1CD6DCBB1281E502, SubGUID = 0x29C1A8399A70F9A7)]
     public class GcRewardTableEntry : NMSTemplate
     {
         [NMS(Size = 0x10)]
