@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x42B8, GUID = 0xC70A517728774310)]
+	[NMS(Size = 0x4768, GUID = 0x2AD346B04A54A12F, SubGUID = 0x2A28407EECDFA4CC)]
     public class GcRealityIconTable : NMSTemplate
     {
         [NMS(Size = 6, EnumValue = new[] { "None", "NoOxygen", "ExtremeHeat", "ExtremeCold", "ToxicGas", "Radiation" })]
@@ -17,39 +17,33 @@ namespace libMBIN.NMS.GameComponents
         [NMS(Size = 8, EnumValue = new[] { "Component", "Consumable", "Tradeable", "Curiousity", "BuildingPart", "Procedural", "Emote", "CustomisationPart" })]
         /* 0x07BC */ public TkTextureResource[] ProductCategoryIcons;
 
-        [NMS(Size = 0x7, EnumValue = new[] { "Gek", "Korvax", "Vykeen", "TradeGuild", "WarriorGuild", "ExplorerGuild", "None" })]
+        [NMS(Size = 0x8, EnumValue = new[] { "Gek", "Korvax", "Vykeen", "TradeGuild", "WarriorGuild", "ExplorerGuild", "None" })]
         /* 0x0BDC */ public TkTextureResource[] MissionFactionIcons;
 
-        [NMS(Size = 0xF, EnumValue = new[] { "Unknown", "SolarSystem", "Planet", "Animal", "Flora", "Mineral", "Sector", "Building",
-                                                       "Interactable", "Sentinel", "Starship", "Artifact", "Mystery", "Treasure", "Control"})]
-        /* 0x0F78 */ public TkTextureResource[] BinocularDiscoveryIcons;
+        [NMS(Size = 0x10, EnumType = typeof(GcDiscoveryTypes.DiscoveryTypeEnum))]
+        /* 0x0FFC */ public TkTextureResource[] BinocularDiscoveryIcons;
 
         [NMS(Size = 0x7, EnumValue = new[] { "Mining", "HighTech", "Trading", "Manufacturing", "Fusion", "Scientific", "PowerGeneration" })]
-        /* 0x1734 */ public TkTextureResource[] DiscoveryPageTradingIcons;
+        /* 0x183C */ public TkTextureResource[] DiscoveryPageTradingIcons;
 
         [NMS(Size = 0x3, EnumValue = new[] { "Low", "Default", "High" })]
-        /* 0x1AD0 */ public TkTextureResource[] DiscoveryPageConflictIcons;
+        /* 0x1BD8 */ public TkTextureResource[] DiscoveryPageConflictIcons;
 
-        [NMS(Size = 0x7, EnumValue = new[] { "Traders", "Warriors", "Explorers", "Robots", "Atlas", "Diplomats", "None" })]
-        /* 0x1C5C */ public TkTextureResource[] DiscoveryPageRaceIcons;
+        [NMS(Size = 0x8, EnumType = typeof(GcAlienRace.AlienRaceEnum))]
+        /* 0x1D64 */ public TkTextureResource[] DiscoveryPageRaceIcons;
 
-        /* 0x1FF8 */ public List<GcPlanetResourceIconLookup> TerrainIconLookups;
-        /* 0x2008 */ public List<GcPlanetResourceIconLookup> PlanetResourceIconLookups;
-        /* 0x2018 */ public List<TkTextureResource> RepairTechIcons;
+        /* 0x2184 */ public TkTextureResource DiscoveryPageTradingUnknown;
+        /* 0x2208 */ public TkTextureResource DiscoveryPageConflictUnknown;
+        /* 0x228C */ public TkTextureResource DiscoveryPageRaceUnknown;
+
+        /* 0x2310 */ public List<GcPlanetResourceIconLookup> TerrainIconLookups;
+        /* 0x2320 */ public List<GcPlanetResourceIconLookup> PlanetResourceIconLookups;
+        /* 0x2330 */ public List<TkTextureResource> RepairTechIcons;
 
         // enum struct: GcRealityGameIcons
-        [NMS(Size = 0x43, EnumValue = new[] { "Stamina", "NoStamina", "EnergyCharge", "Scanner", "NoScanner", "Grave", "Resources",
-            "Inventory", "InventoryFull", "RareItems", "Pirates", "PirateScan", "Drone", "Quad", "Walker", "DroneOff", "Police", "AtlasStation",
-            "BlackHole", "SaveGame", "Jetpack", "JetpackEmpty", "VehicleBoost", "VehicleBoostRecharge", "Fuel", "GekStanding", "VykeenStanding",
-            "KorvaxStanding", "GekDiamondStanding", "VykeenDiamondStanding", "KorvaxDiamondStanding", "TradeGuildStanding", "WarGuildStanding",
-            "ExplorationGuildStanding", "TradeGuildDiamondStanding", "WarGuildDiamondStanding", "ExplorationGuildDiamondStanding", "GMPathToCentre",
-            "GMAtlas", "GMBlackHole", "GMUserWaypoint", "GMUserMission", "TransferPersonal", "TransferPersonalCargo", "TransferShip", "TransferBike",
-            "TransferBuggy", "TransferTruck", "TransferWheeledBike", "TransferHovercraft", "TransferSubmarine", "TransferFreighter", "TransferBase",
-            "HazardIndicatorHot", "HazardIndicatorCold", "HazardIndicatorRadiation", "HazardIndicatorToxic", "TerrainAdd", "TerrainRemove", "TerrainUndo",
-            "SpacePhone", "GarageMarkerBuggy", "GarageMarkerBike", "GarageMarkerTruck", "GarageMarkerWheeledBike", "GarageMarkerHovercraft", "CorruptedDrone"})]
-        /* 0x2028 */ public TkTextureResource[] GameIcons;
+        [NMS(Size = 0x46, EnumType = typeof(GcRealityGameIcons.GameIconsEnum))]
+        /* 0x2340 */ public TkTextureResource[] GameIcons;
 
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x42B4 */ public byte[] EndPadding;
+        /* 0x4758 */ public List<GcRealityIcon> MissionDetailIcons;
     }
 }

@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0x7A4D434E17BA457F)]
+	[NMS(Size = 0x48, GUID = 0x9CF176CBCC77BDC6, SubGUID = 0x50CC62720AB69C5)]
     public class GcCreatureMoveAnimData : NMSTemplate
     {
         [NMS(Size = 0x10)]
@@ -17,5 +17,9 @@ namespace libMBIN.NMS.GameComponents
         public float MinSpeedScale;
         public float MaxSpeedScale;
         public float MaxPredatorSpeedScale;
+        public float AnimMoveSpeed;
+        public bool AnimMoveSpeedCached;
+        [NMS(Size = 0x3, Ignore = true)]
+        public byte[] EndPadding;
     }
 }

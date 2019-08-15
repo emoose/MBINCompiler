@@ -5,214 +5,165 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0xABC0, GUID = 0x892501428CFD27EC)]
+	[NMS(Size = 0xBAB0, GUID = 0x8EB2E3488302F51C, SubGUID = 0x5930542B7B565329)]
     public class GcRealityManagerData : NMSTemplate
     {
-        /* 0x0000 */ public int RealityIteration;
+        /* 0x0000 */ public ushort HomeRealityIteration;
+        /* 0x0002 */ public ushort RealityIteration;
 
-        [NMS(Size = 0xF)]
+        [NMS(Size = 0x10)]
         /* 0x0004 */ public GcDiscoveryWorth[] DiscoveryWorth;
 
         [NMS(Size = 0x4)]
-        /* 0x01A8 */ public float[] CreatureDiscoverySizeMultiplier;
+        /* 0x01C4 */ public float[] CreatureDiscoverySizeMultiplier;
 
-        /* 0x01B8 */ public List<GcSubstanceSecondaryLookup> SubstanceSecondaryLookups;
+        [NMS(Size = 0x4, Ignore = true)]
+        /* 0x1D4 */ public byte[] Padding1D4;
 
-        /* 0x01C8 */ public GcSubstanceSecondaryBiome SubstanceSecondaryBiome;
+        /* 0x01D8 */ public List<GcSubstanceSecondaryLookup> SubstanceSecondaryLookups;
 
-        [NMS(Size = 0x80)]
-        /* 0x0368 */ public string TechnologyTable;
-        [NMS(Size = 0x80)]
-        /* 0x03E8 */ public string SubstanceTable;
-        [NMS(Size = 0x80)]
-        /* 0x0468 */ public string ProductTable;
-        [NMS(Size = 0x80)]
-        /* 0x04E8 */ public string ProceduralProductTable;
-        [NMS(Size = 0x80)]
-        /* 0x0568 */ public string ProceduralTechnologyTable;
-        [NMS(Size = 0x80)]
-        /* 0x05E8 */ public string LegacyItemConversionTable;
-
-        /* 0x0668 */ public List<TkRawID> LegacyRepairTable;
+        /* 0x01E8 */ public GcSubstanceSecondaryBiome SubstanceSecondaryBiome;
 
         [NMS(Size = 0x80)]
-        /* 0x0678 */ public string AlienWordsTable;
+        /* 0x0388 */ public string TechnologyTable;
+        [NMS(Size = 0x80)]
+        /* 0x0408 */ public string SubstanceTable;
+        [NMS(Size = 0x80)]
+        /* 0x0488 */ public string ProductTable;
+        [NMS(Size = 0x80)]
+        /* 0x0508 */ public string ProceduralProductTable;
+        [NMS(Size = 0x80)]
+        /* 0x0588 */ public string ProceduralTechnologyTable;
+        [NMS(Size = 0x80)]
+        /* 0x0608 */ public string LegacyItemConversionTable;
 
-        /* 0x06F8 */ public List<NMSString0x80> AlienPuzzlesTables;
+        /* 0x0688 */ public List<TkRawID> LegacyRepairTable;
 
-        // enum struct: GcInteractionType
-        [NMS(Size = 0x4E, EnumValue = new[]
-            {
-                "None", "Shop", "NPC", "NPC_Secondary", "NPC_Anomaly", "NPC_Anomaly_Secondary", "Ship", "Outpost",
-                "SpaceStation", "RadioTower", "Monolith", "Factory", "AbandonedShip", "Harvester", "Observatory", "TradingPost",
-                "DistressBeacon", "Portal", "Plaque", "AtlasStation", "AbandonedBuildings", "WeaponTerminal", "SuitTerminal", "SignalScanner",
-                "Teleporter_Base", "Teleporter_Station", "ClaimBase", "NPC_Freighter_Captain", "NPC_HIRE_Weapons", "NPC_HIRE_Weapons_Wait",
-                "NPC_HIRE_Farmer", "NPC_HIRE_Farmer_Wait", "NPC_HIRE_Builder", "NPC_HIRE_Builder_Wait", "NPC_HIRE_Vehicles", "NPC_HIRE_Vehicles_Wait",
-                "MessageBeacon", "NPC_HIRE_Scientist", "NPC_HIRE_Scientist_Wait", "NPC_Recruit", "NPC_Freighter_Captain_Secondary", "NPC_Recruit_Secondary",
-                "Vehicle", "MessageModule", "TechShop", "VehicleRaseStart", "BuildingShop", "MissionGiver", "HoloHub", "HoloExplorer", "HoloSceptic", "HoloNoone",
-                "PortalRunEntry", "PortalActivate", "CrashedFreighter", "GraveInCave", "GlitchyStroyBox", "NetworkPlayer", "NetworkMonument",
-                "AnomalyComputer", "AtlasPlinth", "Epilogue", "GuildEnvoy", "ManageFleet", "ManageExpeditions", "Frigate", "CustomiseCharacter",
-                "CustomiseShip", "CustomiseWeapon", "CustomiseVehicle", "ClaimBaseAnywhere", "FleetNavigator", "FleetCommandPost", "StoryUtility",
-                "MPMissionGiver", "SpecialsShop", "WaterRuin", "PowerMeter"
-            })]
-        /* 0x0708 */ public bool[] LoopInteractionPuzzles;
+        [NMS(Size = 0x80)]
+        /* 0x0698 */ public string ConsumableItemTable;
 
-        [NMS(Size = 0x4E, EnumValue = new[]
-            {
-                "None", "Shop", "NPC", "NPC_Secondary", "NPC_Anomaly", "NPC_Anomaly_Secondary", "Ship", "Outpost",
-                "SpaceStation", "RadioTower", "Monolith", "Factory", "AbandonedShip", "Harvester", "Observatory", "TradingPost",
-                "DistressBeacon", "Portal", "Plaque", "AtlasStation", "AbandonedBuildings", "WeaponTerminal", "SuitTerminal", "SignalScanner",
-                "Teleporter_Base", "Teleporter_Station", "ClaimBase", "NPC_Freighter_Captain", "NPC_HIRE_Weapons", "NPC_HIRE_Weapons_Wait",
-                "NPC_HIRE_Farmer", "NPC_HIRE_Farmer_Wait", "NPC_HIRE_Builder", "NPC_HIRE_Builder_Wait", "NPC_HIRE_Vehicles", "NPC_HIRE_Vehicles_Wait",
-                "MessageBeacon", "NPC_HIRE_Scientist", "NPC_HIRE_Scientist_Wait", "NPC_Recruit", "NPC_Freighter_Captain_Secondary", "NPC_Recruit_Secondary",
-                "Vehicle", "MessageModule", "TechShop", "VehicleRaseStart", "BuildingShop", "MissionGiver", "HoloHub", "HoloExplorer", "HoloSceptic", "HoloNoone",
-                "PortalRunEntry", "PortalActivate", "CrashedFreighter", "GraveInCave", "GlitchyStroyBox", "NetworkPlayer", "NetworkMonument",
-                "AnomalyComputer", "AtlasPlinth", "Epilogue", "GuildEnvoy", "ManageFleet", "ManageExpeditions", "Frigate", "CustomiseCharacter",
-                "CustomiseShip", "CustomiseWeapon", "CustomiseVehicle", "ClaimBaseAnywhere", "FleetNavigator", "FleetCommandPost", "StoryUtility",
-                "MPMissionGiver", "SpecialsShop", "WaterRuin", "PowerMeter"
-            })]
-        /* 0x0758 */ public int[] InteractionPuzzlesIndexTypes;
+        [NMS(Size = 0x80)]
+        /* 0x0718 */ public string RecipeTable;
+
+        [NMS(Size = 0x80)]
+        /* 0x0798 */ public string AlienWordsTable;
+
+        /* 0x0818 */ public List<NMSString0x80> AlienPuzzlesTables;
+
+        [NMS(Size = 0x63, EnumType = typeof(GcInteractionType.InteractionTypeEnum))]
+        /* 0x0828 */ public bool[] LoopInteractionPuzzles;
+
+        [NMS(Size = 0x63, EnumType = typeof(GcInteractionType.InteractionTypeEnum))]
+        /* 0x088C */ public int[] InteractionPuzzlesIndexTypes;
 
         [NMS(Size = 0x7, EnumValue = new[] { "NoWeighting", "MaxIsUncommon", "MaxIsRare", "MaxIsSuperRare", "MinIsUncommon", "MinIsRare", "MinIsSuperRare" })]
-        /* 0x0890 */ public TkCurveType[] WeightingCurves;
+        /* 0x0A18 */ public TkCurveType[] WeightingCurves;
 
         [NMS(Size = 0x4, Ignore = true)]
-        /* 0x08AC */ public byte[] Padding8AC;
+        /* 0x0A34 */ public byte[] Padding834;
 
-        /* 0x08B0 */ public List<GcDamageMultiplierLookup> DamageTableMultiplier;
+        /* 0x0A38 */ public List<GcDamageMultiplierLookup> DamageMultiplierTable;
 
         [NMS(Size = 0x80)]
-        /* 0x08C0 */ public string RewardTable;
+        /* 0x0A48 */ public string RewardTable;
         [NMS(Size = 0x80)]
-        /* 0x0940 */ public string DiscoveryRewardTable;
+        /* 0x0AC8 */ public string DiscoveryRewardTable;
         [NMS(Size = 0x80)]
-        /* 0x09C0 */ public string InventoryTable;
+        /* 0x0B48 */ public string InventoryTable;
         [NMS(Size = 0x80)]
-        /* 0x0A40 */ public string DamageTable;
+        /* 0x0BC8 */ public string DamageTable;
         [NMS(Size = 0x80)]
-        /* 0x0AC0 */ public string PurchaseableBuildingBlueprintsTable;
+        /* 0x0C48 */ public string PurchaseableBuildingBlueprintsTable;
         [NMS(Size = 0x80)]
-        /* 0x0B40 */ public string PurchaseableSpecialsTable;
+        /* 0x0CC8 */ public string PurchaseableSpecialsTable;
         [NMS(Size = 0x80)]
-        /* 0x0BC0 */ public string CostTable;
+        /* 0x0D48 */ public string CostTable;
         [NMS(Size = 0x80)]
-        /* 0x0C40 */ public string TradingCostTable;
+        /* 0x0DC8 */ public string TradingCostTable;
         [NMS(Size = 0x80)]
-        /* 0x0CC0 */ public string TradingClassDataTable;
+        /* 0x0E48 */ public string TradingClassDataTable;
         [NMS(Size = 0x80)]
-        /* 0x0D40 */ public string MaintenanceGroupsTable;
+        /* 0x0EC8 */ public string MaintenanceGroupsTable;
+        [NMS(Size = 0x80)]
+        /* 0x0F48 */ public string UnlockableItemTrees;
 
-        /* 0x0DC0 */ public List<GcRefinerRecipe> RefinerRecipeTable1Input;
-        /* 0x0DD0 */ public List<GcRefinerRecipe> RefinerRecipeTable2Input;
-        /* 0x0DE0 */ public List<GcRefinerRecipe> RefinerRecipeTable3Input;
-        /* 0x0DF0 */ public List<GcRefinerRecipe> CookingRecipeTable;
+        /* 0x0FC8 */ public List<GcFreighterCargoOption> FreighterCargoOptions;
 
-        // enum struct: GcShipWeapons
-        [NMS(Size = 0x7, EnumValue = new[] { "Laser", "Projectile", "Shotgun", "Minigun", "Plasma", "Missile", "Rocket"})]
-        /* 0x0E00 */ public GcShipWeaponData[] ShipWeapons;
+        [NMS(Size = 0x7, EnumType = typeof(GcShipWeapons.ShipWeaponEnum))]
+        /* 0x0FD8 */ public GcShipWeaponData[] ShipWeapons;
 
         [NMS(Size = 0xA, EnumValue = new[] { "Bolt", "Shotgun", "Burst", "Laser", "Rail", "Grenade", "MineGrenade", "Scope", "FrontShield", "TerrainEdit" })]
-        /* 0x0FC0 */ public GcPlayerWeaponData[] PlayerWeapons;
+        /* 0x1198 */ public GcPlayerWeaponData[] PlayerWeapons;
 
-        // enum struct: GcVehicleType
-        [NMS(Size = 0x6, EnumValue = new[] { "Buggy", "Bike", "Truck", "WheeledBike", "Hovercraft", "Submarine" })]
-        /* 0x1060 */ public TkIDArray[] DefaultVehicleLoadout;
+        [NMS(Size = 0x6, EnumType = typeof(GcVehicleType.VehicleTypeEnum))]
+        /* 0x1238 */ public TkIDArray[] DefaultVehicleLoadout;
 
-        [NMS(Size = 0x7, EnumValue = new[] { "Gek", "Korvax", "Vykeen", "TradeGuild", "WarriorGuild", "ExplorerGuild", "None" })]
-        /* 0x10C0 */ public NMSString0x10[] FactionStandingIDs;
+        [NMS(Size = 0x8, EnumType = typeof(GcAlienRace.AlienRaceEnum))]
+        /* 0x1298 */ public NMSString0x10[] FactionStandingIDs;
 
-        [NMS(Size = 0x7, EnumValue = new[] { "Gek", "Korvax", "Vykeen", "TradeGuild", "WarriorGuild", "ExplorerGuild", "None" })]
-        /* 0x1130 */ public NMSString0x20[] FactionNames;
+        [NMS(Size = 0x8, EnumType = typeof(GcAlienRace.AlienRaceEnum))]
+        /* 0x1318 */ public NMSString0x20[] FactionNames;
 
-        [NMS(Size = 0x7, EnumValue = new[] { "Gek", "Korvax", "Vykeen", "TradeGuild", "WarriorGuild", "ExplorerGuild", "None" })]
-        /* 0x1210 */ public GcNumberedTextList[] FactionClients;
+        [NMS(Size = 0x8, EnumType = typeof(GcAlienRace.AlienRaceEnum))]
+        /* 0x1418 */ public GcNumberedTextList[] FactionClients;
 
-        [NMS(Size = 0x9, EnumValue = new[] { "SpaceCombat", "GroundCombat", "Research", "MissingPerson", "Repair", "Cargo", "Piracy", "Photo", "Feeding" })]
-        /* 0x130C */ public GcNumberedTextList[] MissionNameFormats;
+        [NMS(Size = 0xB, EnumValue = new[] { "SpaceCombat", "GroundCombat", "Research", "MissingPerson", "Repair", "Cargo", "Piracy", "Photo", "Feeding", "Planting", "Construction" })]
+        /* 0x1538 */ public GcNumberedTextList[] MissionNameFormats;
 
-        [NMS(Size = 0x9, EnumValue = new[] { "SpaceCombat", "GroundCombat", "Research", "MissingPerson", "Repair", "Cargo", "Piracy", "Photo", "Feeding" })]
-        /* 0x1450 */ public GcNumberedTextList[] MissionNameAdjectives;
+        [NMS(Size = 0xB, EnumValue = new[] { "SpaceCombat", "GroundCombat", "Research", "MissingPerson", "Repair", "Cargo", "Piracy", "Photo", "Feeding", "Planting", "Construction" })]
+        /* 0x16C4 */ public GcNumberedTextList[] MissionNameAdjectives;
 
-        [NMS(Size = 0x9, EnumValue = new[] { "SpaceCombat", "GroundCombat", "Research", "MissingPerson", "Repair", "Cargo", "Piracy", "Photo", "Feeding" })]
-        /* 0x1594 */ public GcNumberedTextList[] MissionNameNouns;
+        [NMS(Size = 0xB, EnumValue = new[] { "SpaceCombat", "GroundCombat", "Research", "MissingPerson", "Repair", "Cargo", "Piracy", "Photo", "Feeding", "Planting", "Construction" })]
+        /* 0x1850 */ public GcNumberedTextList[] MissionNameNouns;
 
         [NMS(Size = 0x3)]
-        /* 0x16D8 */ public float[] WeightedTextWeights;
+        /* 0x19DC */ public float[] WeightedTextWeights;
 
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x16E4 */ public byte[] Padding16D4;
-
-        /* 0x16E8 */ public GcRealityIconTable Icons;
+        /* 0x19E8 */ public GcRealityIconTable Icons;
 
         [NMS(Size = 6, EnumValue = new[] { "None", "NoOxygen", "ExtremeHeat", "ExtremeCold", "ToxicGas", "Radiation" })]
-        /* 0x59A0 */ public Colour[] HazardColours;
+        /* 0x6150 */ public Colour[] HazardColours;
 
-        [NMS(Size = 3, EnumValue = new[] { "Common", "Uncommon", "Rare" })]
-        /* 0x5A00 */ public Colour[] RarityColours;
-
-        [NMS(Size = 9, EnumValue = new[] { "Fuel", "Metal", "Catalyst", "Stellar", "Flora", "Earth", "Exotic", "Special", "BuildingPart" })]
-        /* 0x5A30 */ public Colour[] SubstanceCategoryColours;
+        [NMS(Size = 3, EnumType = typeof(GcRarity.RarityEnum))]
+        /* 0x61B0 */ public Colour[] RarityColours;
 
         [NMS(Size = 9, EnumValue = new[] { "Fuel", "Metal", "Catalyst", "Stellar", "Flora", "Earth", "Exotic", "Special", "BuildingPart" })]
-        /* 0x5AC0 */ public TkTextureResource[] SubstanceChargeIcons;
+        /* 0x61E0 */ public Colour[] SubstanceCategoryColours;
 
-        // enum struct: GcStatsTypes
-        [NMS(Size = 0x81, EnumValue = new[]
-            {
-                "Unspecified", "Weapon_Laser", "Weapon_Laser_Damage", "Weapon_Laser_Mining_Speed", "Weapon_Laser_HeatTime", "Weapon_Laser_Bounce",
-                "Weapon_Laser_ReloadTime", "Weapon_Laser_Recoil", "Weapon_Laser_Drain", "Weapon_Laser_StrongLaser", "Weapon_Laser_ChargeTime",
-                "Weapon_Projectile", "Weapon_Projectile_Damage", "Weapon_Projectile_Range", "Weapon_Projectile_Rate", "Weapon_Projectile_ClipSize",
-                "Weapon_Projectile_ReloadTime", "Weapon_Projectile_Recoil", "Weapon_Projectile_Bounce", "Weapon_Projectile_Homing",
-                "Weapon_Projectile_Dispersion", "Weapon_Projectile_BulletsPerShot", "Weapon_Projectile_MaximumCharge", "Weapon_Rail",
-                "Weapon_Shotgun", "Weapon_Burst", "Weapon_Grenade", "Weapon_Grenade_Damage", "Weapon_Grenade_Radius", "Weapon_Grenade_Speed",
-                "Weapon_Grenade_Bounce", "Weapon_Grenade_Homing", "Weapon_Grenade_Clusterbomb", "Weapon_TerrainEdit", "Weapon_MineGrenade",
-                "Weapon_FrontShield", "Weapon_Scope", "Weapon_Scan", "Weapon_Scan_Radius", "Weapon_Scan_Recharge_Time", "Weapon_Scan_Types",
-                "Weapon_Scan_Binoculars", "Weapon_Scan_Discovery_Creature", "Weapon_Scan_Discovery_Flora", "Weapon_Scan_Secondary",
-                "Weapon_Scan_Terrain_Resource", "Suit_Armour_Health", "Suit_Armour_Shield", "Suit_Armour_Shield_Strength", "Suit_Energy",
-                "Suit_Energy_Regen", "Suit_Protection", "Suit_Protection_Cold", "Suit_Protection_Heat", "Suit_Protection_Toxic",
-                "Suit_Protection_Radiation", "Suit_Underwater", "Suit_UnderwaterLifeSupport", "Suit_DamageReduce_Cold", "Suit_DamageReduce_Heat",
-                "Suit_DamageReduce_Toxic", "Suit_DamageReduce_Radiation", "Suit_Stamina_Strength", "Suit_Stamina_Speed", "Suit_Jetpack",
-                "Suit_Jetpack_Tank", "Suit_Jetpack_Drain", "Suit_Jetpack_Ignition", "Suit_Jetpack_DoubleJump", "Suit_Jetpack_WaterEfficiency",
-                "Suit_Utility", "Ship_Weapons_Guns", "Ship_Weapons_Guns_Damage", "Ship_Weapons_Guns_Rate", "Ship_Weapons_Guns_HeatTime",
-                "Ship_Weapons_Guns_CoolTime", "Ship_Weapons_Guns_Scale", "Ship_Weapons_Guns_BulletsPerShot", "Ship_Weapons_Guns_Dispersion",
-                "Ship_Weapons_Guns_Range", "Ship_Weapons_Guns_Damage_Radius", "Ship_Weapons_Lasers", "Ship_Weapons_Lasers_Damage",
-                "Ship_Weapons_Lasers_HeatTime", "Ship_Weapons_Missiles", "Ship_Weapons_Missiles_NumPerShot", "Ship_Weapons_Missiles_Speed",
-                "Ship_Weapons_Missiles_Damage", "Ship_Weapons_Missiles_Size", "Ship_Weapons_Shotgun", "Ship_Weapons_MiniGun", "Ship_Weapons_Plasma",
-                "Ship_Weapons_Rockets", "Ship_Armour_Shield", "Ship_Armour_Shield_Strength", "Ship_Armour_Health", "Ship_Scan",
-                "Ship_Scan_EconomyFilter", "Ship_Scan_ConflictFilter", "Ship_Hyperdrive", "Ship_Hyperdrive_JumpDistance",
-                "Ship_Hyperdrive_JumpsPerCell", "Ship_Launcher", "Ship_Launcher_TakeOffCost", "Ship_PulseDrive", "Ship_PulseDrive_MiniJumpFuelSpending",
-                "Ship_Boost", "Ship_Maneuverability", "Ship_BoostManeuverability", "Ship_Teleport", "Freighter_Hyperdrive",
-                "Freighter_Hyperdrive_JumpDistance", "Vehicle_Boost", "Vehicle_Engine", "Vehicle_Scan", "Vehicle_EngineFuelUse", "Vehicle_EngineTopSpeed",
-                "Vehicle_BoostSpeed", "Vehicle_BoostTanks", "Vehicle_Grip", "Vehicle_SkidGrip", "Vehicle_Laser", "Vehicle_LaserDamage",
-                "Vehicle_LaserHeatTime", "Vehicle_LaserStrongLaser", "Vehicle_Gun", "Vehicle_GunDamage", "Vehicle_GunHeatTime", "Vehicle_GunRate"
-            })]
-        /* 0x5F64 */ public TkTextureResource[] StatCategoryIcons;
+        [NMS(Size = 9, EnumValue = new[] { "Fuel", "Metal", "Catalyst", "Stellar", "Flora", "Earth", "Exotic", "Special", "BuildingPart" })]
+        /* 0x6270 */ public TkTextureResource[] SubstanceChargeIcons;
+
+        [NMS(Size = 0x8B, EnumType = typeof(GcStatsTypes.StatsTypeEnum))]
+        /* 0x6714 */ public TkTextureResource[] StatCategoryIcons;
 
         [NMS(Size = 5, EnumValue = new[] { "Suit", "Weapon", "Ship", "Freighter", "Vehicle" })]
-        /* 0xA1E8 */ public GcStats[] Stats;
+        /* 0xAEC0 */ public GcStats[] Stats;
 
-        /* 0xA238 */ public GcTechList StationTechShops;
+        /* 0xAF10 */ public GcTechList StationTechShops;
 
         [NMS(Size = 0xD)]
-        /* 0xA248 */ public GcTechList[] PlanetTechShops;
+        /* 0xAF20 */ public GcTechList[] PlanetTechShops;
 
-        /* 0xA318 */ public GcTradeSettings TradeSettings;
-        /* 0xAAA8 */ public GcInventoryLayout SuitStartingSlotLayout;
-        /* 0xAAC8 */ public GcInventoryLayout SuitTechOnlyStartingSlotLayout;
-        /* 0xAAE8 */ public GcInventoryLayout SuitCargoStartingSlotLayout;
-        /* 0xAB08 */ public GcInventoryLayout ShipStartingLayout;
-        /* 0xAB28 */ public GcInventoryLayout ShipTechOnlyStartingLayout;
-        /* 0xAB48 */ public List<int> SuitUpgradePrices;
-        /* 0xAB58 */ public List<int> SuitTechOnlyUpgradePrices;
-        /* 0xAB68 */ public List<int> SuitCargoUpgradePrices;
-        /* 0xAB78 */ public List<NMSString0x10> NeverSellableItems;
-        /* 0xAB88 */ public List<NMSString0x10> NeverOfferedForSale;
+        /* 0xAFF0 */ public GcTradeSettings TradeSettings;
+        /* 0xB990 */ public GcInventoryLayout SuitStartingSlotLayout;
+        /* 0xB9B0 */ public GcInventoryLayout SuitTechOnlyStartingSlotLayout;
+        /* 0xB9D0 */ public GcInventoryLayout SuitCargoStartingSlotLayout;
+        /* 0xB9F0 */ public GcInventoryLayout ShipStartingLayout;
+        /* 0xBA10 */ public GcInventoryLayout ShipTechOnlyStartingLayout;
+        /* 0xBA30 */ public List<int> SuitUpgradePrices;
+        /* 0xBA40 */ public List<int> SuitTechOnlyUpgradePrices;
+        /* 0xBA50 */ public List<int> SuitCargoUpgradePrices;
+        /* 0xBA60 */ public List<NMSString0x10> NeverSellableItems;
+        /* 0xBA70 */ public List<NMSString0x10> NeverOfferedForSale;
         [NMS(Size = 5, EnumValue = new[] { "Commodity", "Technology", "Fuel", "Tradeable", "Special"})]         // not sure about these values....
-        /* 0xAB98 */ public float[] NormalizedPriceLimits;
+        /* 0xBA80 */ public float[] NormalizedPriceLimits;
 
         [NMS(Size = 0x4, Ignore = true)]
-        /* 0xABAC */ public byte[] PaddingABAC;
+        /* 0xBA94 */ public byte[] PaddingBA94;
 
-        /* 0xABB0 */ public List<GcFiendCrimeSpawnTable> FiendCrimeSpawnTable;
+        /* 0xBA98 */ public List<GcFiendCrimeSpawnTable> FiendCrimeSpawnTable;
+
+        [NMS(Size = 0x8, Ignore = true)]
+        /* 0xBAA8 */ public byte[] EndPadding;
     }
 }

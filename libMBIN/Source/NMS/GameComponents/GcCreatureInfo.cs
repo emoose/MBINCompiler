@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x498, GUID = 0xC2F25F7BCF665267)]
+	[NMS(Size = 0x518, GUID = 0x6D659BA90940078D, SubGUID = 0xE85F02E30BDAB35D)]
     public class GcCreatureInfo : NMSTemplate
     {
 		public enum AgeEnum { Regular, Weird }
@@ -35,5 +35,14 @@ namespace libMBIN.NMS.GameComponents
         public string Notes;
 
         public GcRarity Rarity;
+
+        [NMS(Size = 0x20)]
+        public string BiomeDesc;
+        [NMS(Size = 0x20)]
+        public string TempermentDesc;
+        [NMS(Size = 0x20)]
+        public string DietDesc;
+        [NMS(Size = 0x20)]
+        public string NotesDesc;
     }
 }

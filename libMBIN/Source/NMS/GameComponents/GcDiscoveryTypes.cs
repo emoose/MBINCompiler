@@ -3,10 +3,11 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0xA7ED10ECEA3158A)]
+	[NMS(GUID = 0x8EA57E3BE2F39EE6, SubGUID = 0x822DDBC250BAB267)]
     public class GcDiscoveryTypes : NMSTemplate
     {
-		public enum DiscoveryTypeEnum { Unknown, SolarSystem, Planet, Animal, Flora, Mineral, Sector, Building, Interactable, Sentinel, Starship, Artifact, Mystery, Treasure, Control }
+        // 0x10 entries
+		public enum DiscoveryTypeEnum { Unknown, SolarSystem, Planet, Animal, Flora, Mineral, Sector, Building, Interactable, Sentinel, Starship, Artifact, Mystery, Treasure, Control, HarvestPlant }
 		public DiscoveryTypeEnum DiscoveryType;
     }
 }

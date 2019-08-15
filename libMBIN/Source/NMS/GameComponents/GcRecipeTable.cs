@@ -5,9 +5,9 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0x80F2CAFEE19EEA2D)]
-    public class GcCreatureRoleDataTable : NMSTemplate
+	[NMS(GUID = 0xC1AB7E7C81D23326, SubGUID = 0xB05B3758665D56DE)]
+    public class GcRecipeTable : NMSTemplate
     {
-        public List<GcCreatureRoleData> AvailableRoles;
+        public List<GcRefinerRecipe> Table;
     }
 }

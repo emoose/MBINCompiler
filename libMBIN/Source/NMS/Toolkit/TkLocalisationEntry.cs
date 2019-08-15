@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Toolkit
 {
-	[NMS(GUID = 0xBDF1E47D45616C77)]
+	[NMS(Size = 0x130, GUID = 0x38832725CE598FFB, SubGUID = 0xBCFA2AE11CD16318)]
     public class TkLocalisationEntry : NMSTemplate
     {
         [NMS(Size = 0x20)]
@@ -22,6 +22,7 @@ namespace libMBIN.NMS.Toolkit
         public VariableSizeString BrazilianPortuguese;
         public VariableSizeString SimplifiedChinese;
         public VariableSizeString TraditionalChinese;
+        public VariableSizeString TencentChinese;
         public VariableSizeString Korean;
         public VariableSizeString Japanese;
         public VariableSizeString USEnglish;

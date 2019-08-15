@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x550, GUID = 0xBD1B2070692ABD58)]
+	[NMS(Size = 0x5D0, GUID = 0x89E7C93578512271, SubGUID = 0x3330409D2B3F48C1)]
     public class GcCreatureRoleData : NMSTemplate
     {
         /* 0x000 */ public GcSeed Seed;
@@ -15,13 +15,12 @@ namespace libMBIN.NMS.GameComponents
         /* 0x018 */ public string CreatureId;
         /* 0x028 */ public GcCreatureRoleDescription Description;
         /* 0x088 */ public GcCreatureInfo Info;
-        /* 0x520 */ public GcTerrainTileType TileType;
-		public enum DietEnum { Carnivore, Omnivore, Herbivore }
-		/* 0x524 */ public DietEnum Diet;
-        /* 0x528 */ public float BaseScale;
+        /* 0x5A0 */ public GcTerrainTileType TileType;
+		/* 0x5A4 */ public GcCreatureDiet Diet;
+        /* 0x5A8 */ public float BaseScale;
         [NMS(Size = 0x4, Ignore = true)]
-        /* 0x52C */ public byte[] Padding52C;
+        /* 0x5AC */ public byte[] Padding52C;
         [NMS(Size = 0x20)]
-        /* 0x530 */ public string Filter;
+        /* 0x5B0 */ public string Filter;
     }
 }
