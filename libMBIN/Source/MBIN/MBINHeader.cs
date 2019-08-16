@@ -162,7 +162,7 @@ namespace libMBIN
         }
 
         /// <summary><b><i>Format V2:</i></b>
-        ///     Stores the offset fromt he start of the file to the location where
+        ///     Stores the offset from the start of the file to the location where
         ///     (libMBIN exclusive) custom metadata may be stored.
         ///     If 0, there is no metadata.
         /// </summary>

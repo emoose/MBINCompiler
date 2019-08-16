@@ -3,8 +3,8 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Toolkit
 {
-	[NMS(GUID = 0xC77EEE2A066CE101)]
-    public class TkLanguageFontTableEntry : NMSTemplate     // size: 0x184
+	[NMS(Size = 0x204, GUID = 0x31EF165D0298C2F1, SubGUID = 0x5D212FC5B6A065A4)]
+    public class TkLanguageFontTableEntry : NMSTemplate
     {
         public TkLanguages Language;
         [NMS(Size = 0x80)]
@@ -13,5 +13,7 @@ namespace libMBIN.NMS.Toolkit
         public string GameFont2;
         [NMS(Size = 0x80)]
         public string ConsoleFont;
+        [NMS(Size = 0x80)]
+        public string ConsoleFont2;
     }
 }

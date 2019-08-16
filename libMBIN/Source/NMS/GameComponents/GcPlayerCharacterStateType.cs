@@ -3,11 +3,12 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0x891E4FD66AF8A242)]
+	[NMS(GUID = 0xBFF28650472EBD3C, SubGUID = 0xDACE1F471447B685)]
     public class GcPlayerCharacterStateType : NMSTemplate
     {
-		public enum CharacterStateEnum { Idle, Jog, JogUphill, JogDownhill, SteepSlope, Sliding, Run, Airborne, JetpackBoost, RocketBoost,
-            Swimming, SwimmingJetpack, Death, FullBodyOverride }
+        // 0x10 entries
+		public enum CharacterStateEnum { Idle, Jog, JogUphill, JogDownhill, SteepSlope, Sliding, Run, Airborne, JetpackBoost, RocketBoots, Riding, Swimming,
+            SwimmingJetpack, Death, FullBodyOverride, InSpace }
 		public CharacterStateEnum CharacterState;
     }
 }

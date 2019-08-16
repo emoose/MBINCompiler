@@ -5,15 +5,15 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x3C0, GUID = 0x9DE4BACE6CA69877)]
+	[NMS(Size = 0x440, GUID = 0x9EC59C8CD40008B9, SubGUID = 0xEF1AB4FE11FCFA6D)]
     public class GcNPCSpawnTable : NMSTemplate
     {
-        [NMS(Size = 7, EnumValue = new[] { "Traders", "Warriors", "Explorers", "Robots", "Atlas", "Diplomats", "None" })]
+        [NMS(Size = 8, EnumType = typeof(GcAlienRace.AlienRaceEnum))]
         /* 0x000 */ public NMSString0x80[] NPCModelNames;
-        [NMS(Size = 7, EnumValue = new[] { "Traders", "Warriors", "Explorers", "Robots", "Atlas", "Diplomats", "None" })]
-        /* 0x380 */ public float[] NPCRaceScale;
+        [NMS(Size = 8, EnumType = typeof(GcAlienRace.AlienRaceEnum))]
+        /* 0x400 */ public float[] NPCRaceScale;
 
-        /* 0x3A0 */ public List<GcUniqueNPCSpawnData> UniqueNPCs;
-        /* 0x3B0 */ public List<GcNPCPlacementInfo> PlacementInfos;
+        /* 0x420 */ public List<GcUniqueNPCSpawnData> UniqueNPCs;
+        /* 0x430 */ public List<GcNPCPlacementInfo> PlacementInfos;
     }
 }

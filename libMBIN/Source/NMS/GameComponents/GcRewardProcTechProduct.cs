@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x30, Alignment = 0x8, GUID = 0x89A0651B13A26E32)]
+	[NMS(Size = 0x38, Alignment = 0x8, GUID = 0xDC9DA4C51D20A130, SubGUID = 0x6D88488E4483F056)]
     public class GcRewardProcTechProduct : NMSTemplate
     {
         [NMS(Size = 0x20)]
@@ -12,5 +12,9 @@ namespace libMBIN.NMS.GameComponents
         public int WeightedChanceRare;
         public int WeightedChanceEpic;
         public int WeightedChanceLegendary;
+        public bool ForceRelevant;
+        public bool ForceQualityRelevant;
+        [NMS(Size = 0x6, Ignore = true)]
+        public byte[] EndPadding;
     }
 }

@@ -11,10 +11,10 @@ namespace libMBIN.NMS.GameComponents
         [NMS(Size = 6, EnumValue = new[] { "None", "NoOxygen", "ExtremeHeat", "ExtremeCold", "ToxicGas", "Radiation" })]
         /* 0x0000 */ public TkTextureResource[] HazardIcons;
 
-        [NMS(Size = 9, EnumValue = new[] { "Fuel", "Metal", "Catalyst", "Stellar", "Flora", "Earth", "Exotic", "Special", "BuildingPart" })]
+        [NMS(Size = 9, EnumType = typeof(GcRealitySubstanceCategory.SubstanceCategoryEnum))]
         /* 0x0318 */ public TkTextureResource[] SubstanceCategoryIcons;
 
-        [NMS(Size = 8, EnumValue = new[] { "Component", "Consumable", "Tradeable", "Curiousity", "BuildingPart", "Procedural", "Emote", "CustomisationPart" })]
+        [NMS(Size = 8, EnumType = typeof(GcProductCategory.ProductCategoryEnum))]
         /* 0x07BC */ public TkTextureResource[] ProductCategoryIcons;
 
         [NMS(Size = 0x8, EnumValue = new[] { "Gek", "Korvax", "Vykeen", "TradeGuild", "WarriorGuild", "ExplorerGuild", "None" })]
@@ -40,7 +40,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x2320 */ public List<GcPlanetResourceIconLookup> PlanetResourceIconLookups;
         /* 0x2330 */ public List<TkTextureResource> RepairTechIcons;
 
-        // enum struct: GcRealityGameIcons
         [NMS(Size = 0x46, EnumType = typeof(GcRealityGameIcons.GameIconsEnum))]
         /* 0x2340 */ public TkTextureResource[] GameIcons;
 

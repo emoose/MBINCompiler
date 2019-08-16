@@ -5,12 +5,16 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0xB53BBA0714A089B6)]
-    public class GcNPCPlacementComponentData : NMSTemplate // 0x20 bytes
+	[NMS(Size = 0x20, GUID = 0xB5451F053EE27AA, SubGUID = 0x8047BE4D11BB54C8)]
+    public class GcNPCPlacementComponentData : NMSTemplate
     {
-        public bool SearchPlacementFromMaster;
+        /* 0x00 */ public bool SearchPlacementFromMaster;
+        /* 0x01 */ public bool PlaceInAbandonedSystems;
+        [NMS(Size = 0x6, Ignore = true)]
+        /* 0x02 */ public byte[] Padding2;
+        /* 0x08 */ public List<NMSString0x10> PlacementInfosToApply;
+        /* 0x18 */ public bool WaitToPlace;
         [NMS(Size = 0x7, Ignore = true)]
-        public byte[] Padding0x1;
-        public List<NMSString0x10> PlacementInfosToApply;
+        /* 0x19 */ public byte[] EndPadding;
     }
 }

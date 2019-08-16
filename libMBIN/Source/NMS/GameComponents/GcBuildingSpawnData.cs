@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x5D0, GUID = 0xC309665111FCF493)]
+	[NMS(Size = 0x5D0, GUID = 0xA735660F276BFF60, SubGUID = 0x2FE28DE7841506AF)]
     public class GcBuildingSpawnData : NMSTemplate
     {
         /* 0x000 */ public float Density;
@@ -32,9 +32,8 @@ namespace libMBIN.NMS.GameComponents
         /* 0x594 */ public float MaxXZRotation;
         /* 0x598 */ public float Radius;
         /* 0x59C */ public int InstanceID;
-
-        /* 0x5A0 */ public Vector4f AABBMin;
-        /* 0x5B0 */ public Vector4f AABBMax;
+        /* 0x5A0 */ public Vector3f AABBMin;
+        /* 0x5B0 */ public Vector3f AABBMax;
         /* 0x5C0 */ public bool BuildingSizeCalculated;
         [NMS(Size = 0xF, Ignore = true)]
         /* 0x5C1 */ public byte[] Padding5C1;

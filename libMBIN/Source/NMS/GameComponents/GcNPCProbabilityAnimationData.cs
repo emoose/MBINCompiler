@@ -1,15 +1,18 @@
 ﻿using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
+using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x18, GUID = 0xFECDFAAE257D62DC)]
+	[NMS(Size = 0x38, GUID = 0x9ADBD39AC80BA7EA, SubGUID = 0x6ECD1E12A5E7A194)]
     public class GcNPCProbabilityAnimationData : NMSTemplate
     {
         [NMS(Size = 0x10)]
-        public string Name;
-        public float Probability;
-        [NMS(Size = 0x4, Ignore = true)]
-        public byte[] EndPadding;
+        /* 0x00 */ public string Name;
+        /* 0x10 */ public float Probability;
+        public enum AnimationIntensityEnum { Low, Medium, High, None }
+        /* 0x14 */ public AnimationIntensityEnum AnimationIntensity;
+        /* 0x18 */ public List<GcAlienRace> ExcludeRace;
+        /* 0x28 */ public List<NMSString0x10> Tags;
     }
 }

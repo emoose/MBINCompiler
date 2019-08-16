@@ -3,12 +3,13 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x140, GUID = 0x8590A9E648CD8322)]
+	[NMS(Size = 0x250, GUID = 0xF81C3B236D24416E, SubGUID = 0xD2A73F296D17A20)]
     public class GcRefinerUnitComponentData : NMSTemplate
     {
         public GcMaintenanceComponentData MaintenanceData;
         public int NumInputs;
-        [NMS(Size = 0x8, Ignore = true)]
+        public bool IsCooker;
+        [NMS(Size = 0xB, Ignore = true)]
         public byte[] EndPadding;
     }
 }

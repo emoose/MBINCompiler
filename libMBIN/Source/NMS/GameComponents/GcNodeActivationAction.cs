@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x10C, GUID = 0x2BF6DBCC38AC3B78)]
+	[NMS(Size = 0x10C, GUID = 0x2DFA382EE6F5DFC8, SubGUID = 0xB2C5F1A083F1473A)]
     public class GcNodeActivationAction : NMSTemplate
     {
 		public enum NodeActiveStateEnum { Activate, Deactivate, Toggle, Add, Remove, RemoveChildren }
@@ -18,7 +18,8 @@ namespace libMBIN.NMS.GameComponents
         /* 0x106 */ public bool UseMasterModel;
         /* 0x107 */ public bool UseLocalNode;
         /* 0x108 */ public bool RestartEmitters;
-        [NMS(Size = 0x3, Ignore = true)]
-        /* 0x109 */ public byte[] EndPadding;
+        /* 0x109 */ public bool AffectModels;
+        [NMS(Size = 0x2, Ignore = true)]
+        /* 0x10A */ public byte[] EndPadding;
     }
 }

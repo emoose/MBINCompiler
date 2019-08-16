@@ -23,6 +23,20 @@ namespace libMBIN {
         }
     }
 
+    public class InvalidGUIDException : TemplateException {
+        public InvalidGUIDException(NMSTemplate template) : base($"The template {template.GetType().Name} has no provided SubGUID. Please raise an issue on GitHub!") { }
+    }
+
+    public class GUIDMismatchException : TemplateException {
+        public GUIDMismatchException(ulong readGUID, ulong expectedGUID, NMSTemplate template) : base( GetString(readGUID, expectedGUID, template) ) { }
+
+        private static string GetString (ulong readGUID, ulong expectedGUID, NMSTemplate template)
+        {
+            return $"Mismatch between GUID for struct {template.GetType().Name}.\n" +
+                   $"GUID read: {readGUID.ToString()}, expected GUID: {expectedGUID.ToString()}.";
+        }
+    }
+
     public class InvalidListException : TemplateException {
         public InvalidListException( uint magic, long pos ) : base( $"Invalid list read, magic {magic:X8} expected xxxxxx01 at 0x{pos:X}" ) { }
     }

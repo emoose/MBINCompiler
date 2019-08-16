@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Toolkit
 {
-	[NMS(Size = 0x50, GUID = 0x146B5D54B914672D)]
+	[NMS(Size = 0x60, GUID = 0x8B2E43B87941769B, SubGUID = 0x91FBF976CBE15B5F)]
     public class TkNGuiTextStyleData : NMSTemplate
     {
         /* 0x00 */ public Colour Colour;
@@ -15,13 +15,13 @@ namespace libMBIN.NMS.Toolkit
         /* 0x30 */ public float DropShadowAngle;
         /* 0x34 */ public float DropShadowOffset;
         /* 0x38 */ public bool HasOutline;
-
         /* 0x3C */ public float OutlineSize;
-        /* 0x40 */ public bool IsParagraph;
-        /* 0x41 */ public bool AllowScroll;
-        /* 0x42 */ public bool ForceUpperCase;
-        /* 0x43 */ public bool AutoAdjustHeight;
-        /* 0x44 */ public int FontIndex;
-        /* 0x48 */ public TkNGuiAlignment Align;
+        /* 0x40 */ public Colour OutlineColour;
+        /* 0x50 */ public bool IsParagraph;
+        /* 0x51 */ public bool AllowScroll;
+        /* 0x52 */ public bool ForceUpperCase;
+        /* 0x53 */ public bool AutoAdjustHeight;
+        /* 0x54 */ public int FontIndex;
+        /* 0x58 */ public TkNGuiAlignment Align;
     }
 }

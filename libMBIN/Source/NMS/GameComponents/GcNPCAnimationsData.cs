@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x1C0, GUID = 0x754C3A88EF346A75)]
+	[NMS(Size = 0x5C0, GUID = 0xE5204A65B19E74E3, SubGUID = 0x5344C3D579450D7B)]
     public class GcNPCAnimationsData : NMSTemplate
     {
         public GcNPCAnimationSetData StandingAnimatons;

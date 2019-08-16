@@ -3,8 +3,16 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0xE30B374723957FD2)]
+	[NMS(Size = 0x1C, GUID = 0x8D72B0118FE37410, SubGUID = 0x0B4FC959D6A910DEB)]
     public class GcNPCNavigationAreaComponentData : NMSTemplate
     {
+        public enum NavAreaTypeEnum { Normal, BuildingWithExterior , Debris, Ship }
+        public NavAreaTypeEnum GetNavAreaType;
+        public float MinRadius;
+        public float MaxRadius;
+        public float SphereCastHeightClearance;
+        public float NeighbourCandidateDistance;
+        public float MaxNeighbourSlope;
+        public float ConnectionLengthFactor;
     }
 }

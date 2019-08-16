@@ -167,6 +167,8 @@ namespace libMBIN
                     long startPos = reader.BaseStream.Position;
                     long offset = reader.ReadInt64();
                     string name = reader.ReadString(Encoding.ASCII, 0x40, true);
+                    long subGUID = reader.ReadInt64();
+                    // potentially check to see if the SubGUID matches and log message if it doesn't...
                     long endPos = reader.BaseStream.Position;
                     template = null;
                     if (offset != 0 && !String.IsNullOrEmpty(name)) {
@@ -275,6 +277,7 @@ namespace libMBIN
                     long nameOffset = reader.BaseStream.Position;
                     long templateOffset = reader.ReadInt64();
                     var name = reader.ReadString(Encoding.UTF8, 0x40, true);
+                    long subGUID = reader.ReadInt64();
 
                     // sometimes there are lists which have n values, but less than n actual structs in them. We replace the empty thing with EmptyNode
                     name = (templateOffset == 0) ? "EmptyNode" : name;
@@ -440,9 +443,17 @@ namespace libMBIN
                     if ( template == null || template.GetType().Name == "EmptyNode" ) {
                         writer.Write( (Int64) 0 ); // listPosition
                         writer.WriteString( "", Encoding.UTF8, 0x40 );
+                        writer.Write((Int64)0); // SubGUID
                     } else {
                         writer.Write( (Int64) 0 );      // default value to be overridden later anyway
                         writer.WriteString( "c" + template.GetType().Name, Encoding.UTF8, 0x40 );
+                        ulong subGUID = settings?.SubGUID ?? 0;
+                        if (subGUID != 0) {
+                            writer.Write(subGUID);
+                        } else {
+                            throw new InvalidGUIDException(template);
+                        }
+
                         var data = new Tuple<long, object>( refPos, template );
                         if ( addtDataIndex >= additionalData.Count ) {
                             additionalData.Add( data );
@@ -545,9 +556,9 @@ namespace libMBIN
             writer.Write( (Int32) list.Count );
             writer.Write( listEnding );
 
-            // reserve space for list offsets+names
+            // reserve space for list offsets+names + SubGUID's
             writer.BaseStream.Position = listPosition;
-            writer.Write( new byte[list.Count * 0x48] );              // this seems to need to be reserved even if there are no elements (check?)
+            writer.Write( new byte[list.Count * 0x50] );              // this seems to need to be reserved even if there are no elements (check?)
 
             int addtDataIndexThis = 0;
 
@@ -614,11 +625,19 @@ namespace libMBIN
                     writer.Write( offset );
                     //DebugLog(kvp.Value);
                     writer.WriteString( "c" + kvp.Value, Encoding.UTF8, 0x40 );
+                    // Get the subGUID
+                    ulong subGUID = GetTemplateType(kvp.Value).GetCustomAttribute<NMSAttribute>()?.SubGUID ?? 0;
+                    if (subGUID != 0) {
+                        writer.Write(subGUID);
+                    }
+                    else {
+                        throw new InvalidGUIDException(TemplateFromName(kvp.Value));
+                    }
                     //DebugLog(kvp.Value);
                     //DebugLog(offset);
                 } else {
-                    // this is called when the header 0x48 bytes is empty because it is an empty node.
-                    writer.WriteString( "", Encoding.UTF8, 0x48 );
+                    // this is called when the header 0x50 bytes is empty because it is an empty node.
+                    writer.WriteString( "", Encoding.UTF8, 0x50 );
                 }
             }
 
@@ -745,6 +764,13 @@ namespace libMBIN
                         writer.BaseStream.Position = data.Item1;
                         writer.Write( pos - data.Item1 );
                         writer.WriteString( "c" + template.GetType().Name, Encoding.UTF8, 0x40 );
+                        ulong subGUID = settings?.SubGUID ?? 0;
+                        if (subGUID != 0) {
+                            writer.Write(subGUID);
+                        }
+                        else {
+                            throw new InvalidGUIDException(template);
+                        }
                         writer.BaseStream.Position = endPos;
 
                     } else if ( data.Item2.GetType().IsGenericType && data.Item2.GetType().GetGenericTypeDefinition() == typeof( List<> ) ) {

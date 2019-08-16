@@ -4,19 +4,19 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x830, GUID = 0xBB6A74EA89F6BCC)]
+	[NMS(Size = 0x840, GUID = 0x979E4D023E9A5424, SubGUID = 0xC449167C8DE081CD)]
     public class GcProceduralProductData : NMSTemplate
     {
         /* 0x000 */ public GcNameGeneratorWord NameGeneratorBase;
-        /* 0x028 */ public List<GcNameGeneratorWord> NameGeneratorWordList;     // a guess for now...
+        /* 0x028 */ public List<GcNameGeneratorWord> NameGeneratorWordList;
         /* 0x038 */ public int NameGeneratorLegacyRolls;
         [NMS(Size = 0x4, Ignore = true)]
         /* 0x03C */ public byte[] Padding3C;
         /* 0x040 */ public GcProductData Product;
         [NMS(Size = 0x3)]
-        /* 0x420 */ public GcProductProceduralOnlyData[] ProceduralData;
-        /* 0x7F8 */ public GcBiomeList PerBiomeDropWeights;
+        /* 0x430 */ public GcProductProceduralOnlyData[] ProceduralData;
+        /* 0x808 */ public GcBiomeList PerBiomeDropWeights;
         [NMS(Size = 0x4, Ignore = true)]
-        /* 0x82C */ public byte[] EndPadding;
+        /* 0x83C */ public byte[] EndPadding;
     }
 }

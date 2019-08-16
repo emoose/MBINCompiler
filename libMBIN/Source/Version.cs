@@ -25,7 +25,7 @@
         //      the Prerelease version should be reset to 1
         // When the Release version is incremented:
         //      the Prerelease version should be reset to 0
-        internal const string VERSION_STRING = "2.0.4.2";
+        internal const string VERSION_STRING = "2.0.4.3";
 
         /// <summary>Shorthand for AssemblyVersion.Major</summary>
         public static int Major      => AssemblyVersion.Major;
@@ -41,9 +41,9 @@
 
         /// <summary>
         ///     The NMS version that is supported by this assembly.
-        ///     (The <see cref="Major"/> and <see cref="Minor"/> components of <see cref="AssemblyVersion"/>)
+        ///     (The <see cref="Major"/>, <see cref="Minor"/> and <see cref="Release"/> components of <see cref="AssemblyVersion"/>)
         /// </summary>
-        public static System.Version NMSVersion => new System.Version( Major, Minor, 0, 0 );
+        public static System.Version NMSVersion => new System.Version( Major, Minor, Release, 0 );
 
         /// <summary>
         ///     Returns a human-readable suffix indicating the <see cref="Prerelease"/> version.

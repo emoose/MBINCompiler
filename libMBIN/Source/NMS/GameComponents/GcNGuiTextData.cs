@@ -1,23 +1,25 @@
 ﻿using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
+using System.Collections.Generic;
+
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x580, Alignment = 0x10, GUID = 0x7C5AEA370EA4C2D0)]
+	[NMS(Size = 0x640, Alignment = 0x10, GUID = 0x44AB5BB03524A36, SubGUID = 0x4C5F02B93CB08B1A)]
     public class GcNGuiTextData : NMSTemplate
     {
         /* 0x000 */ public GcNGuiElementData Data;
-        /* 0x050 */ public TkNGuiTextStyle Style;
-        /* 0x140 */ public TkNGuiGraphicStyle GraphicStyle;
-
+        [NMS(Size = 0x8, Ignore = true)]
+        /* 0x068 */ public byte[] Padding68;
+        /* 0x070 */ public TkNGuiTextStyle Style;
+        /* 0x190 */ public TkNGuiGraphicStyle GraphicStyle;
         [NMS(Size = 0x80)]
-        /* 0x2F0 */ public string Image;
-
+        /* 0x3A0 */ public string Image;
         [NMS(Size = 0x200)]
-        /* 0x370 */ public string Text;
-
-        /* 0x570 */ public bool Special;
-        [NMS(Size = 0xF, Ignore = true)]
-        public byte[] EndPadding;
+        /* 0x420 */ public string Text;
+        /* 0x620 */ public bool Special;
+        [NMS(Size = 0x7, Ignore = true)]
+        /* 0x621 */ public byte[] Padding621;
+        /* 0x628 */ public List<GcVROverride_Text> VROverrides;
     }
 }

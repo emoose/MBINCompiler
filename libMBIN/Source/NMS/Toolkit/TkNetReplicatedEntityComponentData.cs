@@ -5,11 +5,11 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Toolkit
 {
-	[NMS(Size = 0x18, GUID = 0x376A8AFDA5EF60B4)]
+	[NMS(Size = 0x18, GUID = 0xF9EBAB99C51AB35F, SubGUID = 0xDB0FD87A0597E5FD)]
     public class TkNetReplicatedEntityComponentData : NMSTemplate
     {
         public List<NMSString0x80> ReplicaComponentMask;
-		public enum ReplicationRangeEnum { Universal, System, Planet, Space, PlanetLocal }
+		public enum ReplicationRangeEnum { NotSet, Universal, System, Systemlocal, Planet, PlanetLocal, Space, SpaceStation, Nexus }
 		public ReplicationRangeEnum ReplicationRange;
 		public enum SpawnTypeEnum { Basic, Creature }
 		public SpawnTypeEnum SpawnType;

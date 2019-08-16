@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Toolkit
 {
-	[NMS(GUID = 0xA066D8CE7219A118)]
+	[NMS(GUID = 0xB7D3E07377C672EF)]
     public class TkLanguageFontTable : NMSTemplate
     {
         public List<TkLanguageFontTableEntry> Table;

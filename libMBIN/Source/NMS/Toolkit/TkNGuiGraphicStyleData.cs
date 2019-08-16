@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Toolkit
 {
-	[NMS(Size = 0x80, GUID = 0x5A84B1136A0377E0, Alignment = 0x10)]
+	[NMS(Size = 0xA0, GUID = 0x5A308E9F9F73E5EC, Alignment = 0x10, SubGUID = 0x250B60FD6373D170)]
     public class TkNGuiGraphicStyleData : NMSTemplate
     {
         /* 0x00 */ public float PaddingX;
@@ -15,7 +15,7 @@ namespace libMBIN.NMS.Toolkit
         /* 0x30 */ public Colour StrokeColour;
 
 		public enum ShapeEnum { Rectangle, Ellipse }
-		public ShapeEnum Shape;
+		/* 0x40 */ public ShapeEnum Shape;
 
 
         /* 0x44 */ public bool SolidColour;
@@ -23,8 +23,8 @@ namespace libMBIN.NMS.Toolkit
         /* 0x46 */ public bool HasOuterGradient;
         /* 0x47 */ public bool HasInnerGradient;
 
-		public enum GradientEnum { None, Vertical, Horizontal, HorizontalBounce }
-		public GradientEnum Gradient;
+		public enum GradientEnum { None, Vertical, Horizontal, HorizontalBounce, Radial, Box }
+		/* 0x48 */ public GradientEnum Gradient;
 
 
         /* 0x4C */ public float GradientStartOffset;
@@ -39,5 +39,11 @@ namespace libMBIN.NMS.Toolkit
         /* 0x74 */ public float StrokeSize;
         /* 0x78 */ public int Image;
         /* 0x7C */ public int Icon;
+        /* 0x80 */ public bool StrokeGradient;
+        /* 0x84 */ public float StrokeGradientOffset;
+        /* 0x88 */ public float StrokeGradientFeather;
+        [NMS(Size = 0x4, Ignore = true)]
+        /* 0x8C */ public byte[] Padding8C;
+        /* 0x90 */ public Colour StrokeGradientColour;
     }
 }

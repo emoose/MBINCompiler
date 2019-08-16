@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x80, Alignment = 0x8, GUID = 0x14A50F19D60AD726)]
+	[NMS(Size = 0x80, Alignment = 0x8, GUID = 0xF6888349F90C44AD, SubGUID = 0x387AC5FC8E642A15)]
     public class GcShootableComponentData : NMSTemplate
     {
         /* 0x00 */ public int Health;
@@ -23,14 +23,15 @@ namespace libMBIN.NMS.GameComponents
 		/* 0x2C */ public float RepairTime;
 		/* 0x30 */ public int MinDamage;
 		/* 0x34 */ public bool StaticUntilShot;
-        /* 0x35 */ public bool HitEffectEnabled;
-        /* 0x36 */ public bool HitEffectEntireModel;
-        /* 0x37 */ public bool IsArmoured;
-        /* 0x38 */ public bool IgnoreTerrainEditKill;
+        /* 0x35 */ public bool IgnoreHitPush;
+        /* 0x36 */ public bool HitEffectEnabled;
+        /* 0x37 */ public bool HitEffectEntireModel;
+        /* 0x38 */ public bool IsArmoured;
+        /* 0x39 */ public bool IgnoreTerrainEditKill;
         [NMS(Size = 0x20)]
-        /* 0x39 */ public string NameOverride;
-        [NMS(Size = 0x7, Ignore = true)]
-        /* 0x59 */ public byte[] Padding59;
+        /* 0x3A */ public string NameOverride;
+        [NMS(Size = 0x6, Ignore = true)]
+        /* 0x5A */ public byte[] Padding5A;
 
 		[NMS(Size = 0x10)]
 		/* 0x60 */ public string RequiredTech;
