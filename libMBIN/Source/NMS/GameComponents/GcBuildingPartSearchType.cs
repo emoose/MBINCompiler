@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x20, GUID = 0x5F076FE1D69F1B0B)]
+	[NMS(Size = 0x20, GUID = 0x59231321C9A913A8, SubGUID = 0xAEBE0762190D9B2)]
     public class GcBuildingPartSearchType : NMSTemplate
     {
 		public enum BuildPartSearchTypeEnum { Base, Freighter, AllPlayerOwned, OtherPlayerBase }

@@ -3,16 +3,10 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x8400, GUID = 0x4DF76B86F24FAEC)]
+	[NMS(Size = 0x8C00, GUID = 0x4DF76B86F24FAEC, SubGUID = 0xC9E2EEA2B81DBE00)]
     public class GcBuildingFilenameList : NMSTemplate
     {
-        [NMS(Size = 0x21, EnumValue = new[] {
-                "None", "TerrainResource", "Shelter", "Abandoned", "Terminal", "Shop", "Outpost", "Waypoint",
-                "Beacon", "RadioTower", "Observatory", "Depot", "Factory", "Harvester", "Plaque", "Monolith",
-                "Portal", "Ruin", "Debris", "DamagedMachine", "DistressSignal", "LandingPad", "Base", "MissionTower",
-                "CrashedFreighter", "GraveInCave", "StoryGlitch", "TreasureRuins", "GameStartSpawn", "WaterCrashedFreighter",
-                "WaterTreasureRuins", "WaterAbandoned", "WaterDistressSignal"
-            })]
+        [NMS(Size = 0x23, EnumType = typeof(GcBuildingClassification.BuildingClassEnum))]
         public GcBuildingFilename[] BuildingFiles;
     }
 }

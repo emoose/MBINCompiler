@@ -1,10 +1,12 @@
-﻿using libMBIN.NMS.Toolkit;
+﻿using System.Collections.Generic;
+
+using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0xA8, GUID = 0xFAC1A85D2BC41DE)]
-    public class GcPlayerCharacterState : NMSTemplate
+	[NMS(Size = 0xA8, GUID = 0x1A2D297CF203200D, SubGUID = 0xCCEE5C02303ACEC6)]
+    public class GcPlayerCharacterStateData : NMSTemplate
     {
         [NMS(Size = 0x10)]
         public string Locomotion0H;

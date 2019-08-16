@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x80, GUID = 0x90011A6BD0FC168)]
+	[NMS(Size = 0x80, GUID = 0x1DCFBFCE99155C88, SubGUID = 0x434C17159AF37265)]
     public class GcScanEventSave : NMSTemplate
     {
         /* 0x00 */ public int Table;
@@ -13,7 +13,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x08 */ public string Event;
         /* 0x28 */ public ulong GalacticAddress;
         /* 0x30 */ public GcSeed BuildingSeed;
-        /* 0x40 */ public Vector4f BuildingLocation;
+        /* 0x40 */ public Vector3f BuildingLocation;
         /* 0x50 */ public GcBuildingClassification BuildingClass;
         /* 0x54 */ public float Time;
         [NMS(Size = 0x10)]

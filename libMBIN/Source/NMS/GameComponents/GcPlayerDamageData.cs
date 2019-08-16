@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x130, GUID = 0x53406B443DE8066D)]
+	[NMS(Size = 0x130, GUID = 0xDEA4227E4E2B707F, SubGUID = 0x5F9BF82F9925D932)]
     public class GcPlayerDamageData : NMSTemplate
     {
         [NMS(Size = 0x10)]
@@ -26,7 +26,8 @@ namespace libMBIN.NMS.GameComponents
         [NMS(Size = 0x10)]
         /* 0x118 */ public string CameraShakeNoShield;
         /* 0x128 */ public bool ShowTrackicon;
+        /* 0x129 */ public bool ForceDamageInInteraction;
 		public enum PlayerDamageTypeEnum { Normal, Toxic, Radioactive, Freeze, Scorch }
-		public PlayerDamageTypeEnum PlayerDamageType;
+		/* 0x12C */ public PlayerDamageTypeEnum PlayerDamageType;
     }
 }

@@ -3,11 +3,10 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0xCFD91697CCC3D372)]
+	[NMS(GUID = 0x281F7CD00AE9BE55, SubGUID = 0x512506C3685B14E6)]
     public class GcCostMoney : NMSTemplate
     {
         public int Cost;
-		public enum CostCurrencyEnum { Units, Nanites, Specials }
-		public CostCurrencyEnum CostCurrency;
+		public GcCurrency CostCurrency;
     }
 }

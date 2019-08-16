@@ -3,20 +3,13 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x3A758, GUID = 0x2880E385D1BB265C)]
+	[NMS(Size = 0x46C08, GUID = 0x2880E385D1BB265C, SubGUID = 0x9808AB95D152F880)]
     public class GcBuildingDefinitionTable : NMSTemplate
     {
-        [NMS(Size = 7, EnumValue = new[]{ "Traders", "Warriors", "Explorers", "Robots", "Atlas", "Diplomats", "None" })]
+        [NMS(Size = 8, EnumType = typeof(GcAlienRace.AlienRaceEnum))]
         /* 0x00000 */ public GcBuildingFilenameList[] BuildingFiles;
 
-        // enum: GcBuildingClassification
-        [NMS(Size = 0x21, EnumValue = new[] {
-                "None", "TerrainResource", "Shelter", "Abandoned", "Terminal", "Shop", "Outpost", "Waypoint",
-                "Beacon", "RadioTower", "Observatory", "Depot", "Factory", "Harvester", "Plaque", "Monolith",
-                "Portal", "Ruin", "Debris", "DamagedMachine", "DistressSignal", "LandingPad", "Base", "MissionTower",
-                "CrashedFreighter", "GraveInCave", "StoryGlitch", "TreasureRuins", "GameStartSpawn", "WaterCrashedFreighter",
-                "WaterTreasureRuins", "WaterAbandoned", "WaterDistressSignal"
-            })]
-        /* 0x39C00 */ public GcBuildingDefinitionData[] BuildingPlacement;
+        [NMS(Size = 0x23, EnumType = typeof(GcBuildingClassification.BuildingClassEnum))]
+        /* 0x46000 */ public GcBuildingDefinitionData[] BuildingPlacement;
     }
 }

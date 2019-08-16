@@ -3,10 +3,11 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0x662544D8FEF1E355)]
+	[NMS(GUID = 0xDEE7950A004B0616, SubGUID = 0x233DD65A730CE9DF)]
     public class GcPlayerMissionParticipantType : NMSTemplate
     {
-		public enum ParticipantTypeEnum { None, MissionGiver, Primary, Secondary1, Secondary2, Secondary3, Secondary4, Secondary5, Secondary6, Secondary7, Secondary8, Secondary9 }
+		public enum ParticipantTypeEnum { None, MissionGiver, MissionGiverReference, Primary, Secondary1, Secondary2, Secondary3, Secondary4, Secondary5, Secondary6, Secondary7,
+            Secondary8, Secondary9 }
 		public ParticipantTypeEnum ParticipantType;
     }
 }

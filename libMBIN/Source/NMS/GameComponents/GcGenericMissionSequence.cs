@@ -5,13 +5,13 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x450, GUID = 0x309BAB056F19BB39)]
+	[NMS(Size = 0x4A0, GUID = 0xA470431D2BF9D769, SubGUID = 0xFAE86B2801335B6D)]
     public class GcGenericMissionSequence : NMSTemplate
     {
         [NMS(Size = 0x10)]
         /* 0x000 */ public string MissionID;
-		public enum MissionClassEnum { Primary, Secondary, ChainedSecondary, Guide }
-		public MissionClassEnum MissionClass;
+		public enum MissionClassEnum { Primary, Secondary, ChainedSecondary, Guide, Wiki }
+		/* 0x010 */ public MissionClassEnum MissionClass;
 
         /* 0x014 */ public bool MissionIsCritical;
         [NMS(Size = 0x20)]
@@ -25,7 +25,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x0A4 */ public GcNumberedTextList MissionProcDescriptionHeader;
         /* 0x0C8 */ public GcNumberedTextList MissionProcDescriptionA;
         /* 0x0EC */ public GcNumberedTextList MissionProcDescriptionB;
-        /* 0x110 */ public GcNumberedTextList MissionProcDescriptionCs;
+        /* 0x110 */ public GcNumberedTextList MissionProcDescriptionC;
 
         /* 0x134 */ public TkTextureResource MissionIcon;
         /* 0x1B8 */ public TkTextureResource MissionIconSelected;
@@ -59,34 +59,36 @@ namespace libMBIN.NMS.GameComponents
         /* 0x380 */ public GcMissionBoardOptions MissionBoardOptions;
 
 		public enum AutoStartEnum { None, AllModes, NotCreative, Survival, Creative, OnSelected }
-		/* 0x3B0 */ public AutoStartEnum AutoStart;
-        /* 0x3B4 */ public bool RestartOnCompletion;
-        /* 0x3B5 */ public bool CancelSetsComplete;
+		/* 0x400 */ public AutoStartEnum AutoStart;
+        /* 0x404 */ public bool RestartOnCompletion;
+        /* 0x405 */ public bool CancelSetsComplete;
         [NMS(Size = 0x2, Ignore = true)]
-        /* 0x386 */ public byte[] Padding386;
+        /* 0x3D6 */ public byte[] Padding3D6;
 
-        /* 0x3B8 */ public List<GcAlienPuzzleEntry> Dialog;
-        /* 0x3C8 */ public List<GcScanEventData> ScanEvents;
-        /* 0x3D8 */ public List<GcGenericRewardTableEntry> Rewards;
-        /* 0x3E8 */ public List<GcCostTableEntry> Costs;
+        /* 0x408 */ public List<GcAlienPuzzleEntry> Dialog;
+        /* 0x418 */ public List<GcScanEventData> ScanEvents;
+        /* 0x428 */ public List<GcGenericRewardTableEntry> Rewards;
+        /* 0x438 */ public List<GcCostTableEntry> Costs;
 
-        /* 0x3F8 */ public GcMissionConditionTest StartConditionTest;
-        /* 0x3FC */ public GcMissionConditionTest CancelConditionTest;
-        /* 0x400 */ public bool StartIsCancel;
+        /* 0x448 */ public GcMissionConditionTest StartConditionTest;
+        /* 0x44C */ public GcMissionConditionTest CancelConditionTest;
+        /* 0x450 */ public bool StartIsCancel;
         [NMS(Size = 0x7, Ignore = true)]
-        /* 0x401 */ public byte[] Padding401;
+        /* 0x451 */ public byte[] Padding451;
 
-        /* 0x408 */ public List<NMSTemplate> StartingConditions;
-        /* 0x418 */ public List<NMSTemplate> CancelingConditions;
-        /* 0x428 */ public List<GcGenericMissionVersionProgress> FinalStageVersions;
-        /* 0x438 */ public List<GcGenericMissionStage> Stages;
-        /* 0x448 */ public bool ForcesPageHint;
-        /* 0x449 */ public bool ForcesBuildMenuHint;
-        /* 0x44A */ public bool IsProceduralAllowed;
-        /* 0x44B */ public bool IsRecurring;
-        /* 0x44C */ public bool IsLegacy;
+        /* 0x458 */ public List<NMSTemplate> StartingConditions;
+        /* 0x468 */ public List<NMSTemplate> CancelingConditions;
+        /* 0x478 */ public List<GcGenericMissionVersionProgress> FinalStageVersions;
+        /* 0x488 */ public List<GcGenericMissionStage> Stages;
+        /* 0x498 */ public bool ForcesPageHint;
+        /* 0x499 */ public bool ForcesBuildMenuHint;
+        /* 0x49A */ public bool IsProceduralAllowed;
+        /* 0x49B */ public bool IsRecurring;
+        /* 0x49C */ public bool IsLegacy;
+        /* 0x49D */ public bool BlocksPinning;
+        /* 0x49E */ public bool TelemetryUpload;
 
-        [NMS(Size = 0x3, Ignore = true)]
-        /* 0x44D */ public byte[] EndPadding;
+        [NMS(Size = 0x1, Ignore = true)]
+        /* 0x49F */ public byte[] EndPadding;
     }
 }

@@ -7,6 +7,6 @@ namespace libMBIN.NMS.GameComponents
     public class GcPlayerCharacterStateTable : NMSTemplate
     {
         [NMS(Size = 0x10, EnumType = typeof(GcPlayerCharacterStateType.CharacterStateEnum))]
-        public GcPlayerCharacterState[] CharacterStates;
+        public GcPlayerCharacterStateData[] CharacterStates;
     }
 }

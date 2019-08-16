@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x1B0, Alignment = 0x10, GUID = 0x85EE8A13FE8A3505)]
+	[NMS(Size = 0x1B0, Alignment = 0x10, GUID = 0xDD4F633FDDDF29ED, SubGUID = 0x1AA966F8BA4E3153)]
     public class GcLaserBeamData : NMSTemplate
     {
         [NMS(Size = 0x10)]
@@ -35,12 +35,13 @@ namespace libMBIN.NMS.GameComponents
         /* 0x170 */ public float HitRate;
         /* 0x174 */ public bool SingleHit;
         /* 0x178 */ public float RagdollPush;
-        /* 0x17C */ public float MiningHitRate;
-        /* 0x180 */ public bool HasLight;
-        /* 0x181 */ public bool CanMine;
-        /* 0x184 */ public float LightScale;
-        [NMS(Size = 0x8, Ignore = true)]
-        /* 0x188 */ public byte[] Padding188;
+        /* 0x17C */ public float PhysicsPush;
+        /* 0x180 */ public float MiningHitRate;
+        /* 0x184 */ public bool HasLight;
+        /* 0x185 */ public bool CanMine;
+        /* 0x188 */ public float LightScale;
+        [NMS(Size = 0x4, Ignore = true)]
+        /* 0x18C */ public byte[] Padding18C;
         /* 0x190 */ public Colour LightColour;
         /* 0x1A0 */ public Colour Colour;
     }

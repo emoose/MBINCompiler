@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x320, GUID = 0x44311A411BF5EAE7)]
+	[NMS(Size = 0x320, GUID = 0x2FF1E599BD13463B, SubGUID = 0xDE6FCE33E294F619)]
     public class GcGrabPlayerComponentData : NMSTemplate
     {
         [NMS(Size = 0x100)]
@@ -37,7 +37,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x290 */ public float EjectImpulse;
         [NMS(Size = 0xC, Ignore = true)]
         /* 0x294 */ public byte[] Padding294;
-        /* 0x2A0 */ public Vector4f GrabOffset;
+        /* 0x2A0 */ public Vector3f GrabOffset;
         /* 0x2B0 */ public float HoldTime;
         /* 0x2B4 */ public float CooldownTime;
         /* 0x2B8 */ public float RestTime;

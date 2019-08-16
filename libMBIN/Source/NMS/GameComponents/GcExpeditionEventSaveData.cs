@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x90, GUID = 0xA845F9597A99A847)]
+	[NMS(Size = 0xA0, GUID = 0xA49F85CEFDDB1020, SubGUID = 0xA95CE4EF897F62B2)]
     public class GcExpeditionEventSaveData : NMSTemplate
     {
         /* 0x00 */ public GcSeed Seed;
@@ -17,10 +17,12 @@ namespace libMBIN.NMS.GameComponents
         /* 0x48 */ public string EventID;
         [NMS(Size = 0x20)]
         /* 0x68 */ public string InterventionEventID;
-        /* 0x88 */ public bool Success;
-        /* 0x89 */ public bool IsInterventionEvent;
-        /* 0x8A */ public bool AvoidedIntervention;
+        [NMS(Size = 0x10)]
+        /* 0x88 */ public string OverriddenDescription;
+        /* 0x98 */ public bool Success;
+        /* 0x99 */ public bool IsInterventionEvent;
+        /* 0x9A */ public bool AvoidedIntervention;
         [NMS(Size = 0x5, Ignore = true)]
-        /* 0x8B */ public byte[] EndPadding;
+        /* 0x9B */ public byte[] EndPadding;
     }
 }
