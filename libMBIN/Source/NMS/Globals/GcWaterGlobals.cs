@@ -22,6 +22,5 @@ namespace libMBIN.NMS.Globals
         /* 0x0030 */ public Colour WaterHeavyAirColour;
         /* 0x0040 */ public GcPlanetWaterData WaterDataDay;
         /* 0x01C0 */ public GcPlanetWaterColourData WaterColourNight;
-        /* 0x0210 */
     }
 }

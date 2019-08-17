@@ -3,12 +3,11 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0xC, GUID = 0x304763E55680D650)]
+	[NMS(Size = 0xC, GUID = 0x9DC54E9B68B7648, SubGUID = 0x2B59E601DE0BDEF9)]
     public class GcRewardMoney : NMSTemplate
     {
         public int AmountMin;
         public int AmountMax;
-		public enum CurrencyEnum { Units, Nanites, Specials }
-		public CurrencyEnum Currency;
+		public GcCurrency Currency;
     }
 }

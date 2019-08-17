@@ -3,8 +3,8 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0xC30E8192B2598E1A)]
-    public class GcPlayAudioAction : NMSTemplate        // size: 0x88
+	[NMS(Size = 0x88, GUID = 0xC30E8192B2598E1A, SubGUID = 0x7C82C5EBE3916386)]
+    public class GcPlayAudioAction : NMSTemplate
     {
         [NMS(Size = 0x80)]
         public string Sound;

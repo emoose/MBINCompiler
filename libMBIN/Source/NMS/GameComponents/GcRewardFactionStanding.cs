@@ -2,7 +2,7 @@
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents {
-	[NMS(GUID = 0xBC49B47A2E8920B6)]
+	[NMS(GUID = 0x8063288CE90A48D3, SubGUID = 0x8B79DF642602985A)]
     public class GcRewardFactionStanding : NMSTemplate
     {
         public GcMissionFaction Faction;

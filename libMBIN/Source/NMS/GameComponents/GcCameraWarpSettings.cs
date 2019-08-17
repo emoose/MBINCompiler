@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x54, GUID = 0x2134F28E3C1FC07E)]
+	[NMS(Size = 0x54, GUID = 0x2134F28E3C1FC07E, SubGUID = 0x72EE2F7B202E1811)]
     public class GcCameraWarpSettings : NMSTemplate
     {
         public float FocusPointDist;
@@ -26,6 +26,6 @@ namespace libMBIN.NMS.GameComponents
         public float OffsetXRange;
         public TkCurveType OffsetXCurve;
         public float RollRange;
-        public float YawnRange;
+        public float YawnRange;     // typo???
     }
 }

@@ -3,14 +3,15 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0x3E9B7B304DFC301C)]
+	[NMS(GUID = 0x9BBD56EFA4E311E3, SubGUID = 0xC04EFF3E2A378ED7)]
     public class GcRewardDisplayTechWindow : NMSTemplate
     {
         [NMS(Size = 0x10)]
         public string TechID;
         public bool Damaged;
+        public bool NeedsInstall;
         public bool FullBox;
-        [NMS(Size = 0x6)]
+        [NMS(Size = 0x5)]
         public byte[] EndPadding;
     }
 }

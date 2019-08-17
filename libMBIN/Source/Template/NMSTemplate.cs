@@ -167,8 +167,14 @@ namespace libMBIN
                     long startPos = reader.BaseStream.Position;
                     long offset = reader.ReadInt64();
                     string name = reader.ReadString(Encoding.ASCII, 0x40, true);
-                    long subGUID = reader.ReadInt64();
-                    // potentially check to see if the SubGUID matches and log message if it doesn't...
+                    ulong subGUID = reader.ReadUInt64();
+                    if (template != null) {
+                        ulong expected_subGUID = template.GetType().GetCustomAttribute<NMSAttribute>()?.SubGUID ?? 0;
+                        if (subGUID != expected_subGUID && template != null) {
+                            Logger.LogMessage("SubGUID", $"{template.GetType().Name} has the wrong SubGUID");
+                        }
+                    }
+
                     long endPos = reader.BaseStream.Position;
                     template = null;
                     if (offset != 0 && !String.IsNullOrEmpty(name)) {
@@ -277,7 +283,20 @@ namespace libMBIN
                     long nameOffset = reader.BaseStream.Position;
                     long templateOffset = reader.ReadInt64();
                     var name = reader.ReadString(Encoding.UTF8, 0x40, true);
-                    long subGUID = reader.ReadInt64();
+                    ulong subGUID = reader.ReadUInt64();
+                    // Make sure we have a valid template name
+                    if (name.Length > 0) {
+                        var templateName = name;
+                        if (name.StartsWith("c") && name.Length > 1)
+                        {
+                            templateName = name.Substring(1);
+                        }
+                        ulong expected_subGUID = GetTemplateType(templateName).GetCustomAttribute<NMSAttribute>()?.SubGUID ?? 0;
+                        if (subGUID != expected_subGUID)
+                        {
+                            Logger.LogMessage("SubGUID", $"{templateName} has the wrong SubGUID");
+                        }
+                    }
 
                     // sometimes there are lists which have n values, but less than n actual structs in them. We replace the empty thing with EmptyNode
                     name = (templateOffset == 0) ? "EmptyNode" : name;
@@ -447,7 +466,7 @@ namespace libMBIN
                     } else {
                         writer.Write( (Int64) 0 );      // default value to be overridden later anyway
                         writer.WriteString( "c" + template.GetType().Name, Encoding.UTF8, 0x40 );
-                        ulong subGUID = settings?.SubGUID ?? 0;
+                        ulong subGUID = template.GetType().GetCustomAttribute<NMSAttribute>()?.SubGUID ?? 0;
                         if (subGUID != 0) {
                             writer.Write(subGUID);
                         } else {

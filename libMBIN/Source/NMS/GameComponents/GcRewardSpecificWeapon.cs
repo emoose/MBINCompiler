@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x130, Alignment = 0x8, GUID = 0x8095D6CDD4CBCD03)]
+	[NMS(Size = 0x130, Alignment = 0x8, GUID = 0xB0AF508BEC3D9809, SubGUID = 0xF3710AB8A6F40A88)]
     public class GcRewardSpecificWeapon : NMSTemplate
     {
         public GcInventoryContainer WeaponInventory;

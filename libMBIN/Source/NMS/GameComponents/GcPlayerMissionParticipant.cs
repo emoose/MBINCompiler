@@ -3,13 +3,14 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x20, GUID = 0xB53F95A9735E8282)]
+	[NMS(Size = 0x40, GUID = 0x6B43B59D0BE1F53C, SubGUID = 0xB223E7785971518B)]
     public class GcPlayerMissionParticipant : NMSTemplate
     {
-        public ulong UA;
-        public GcSeed BuildingSeed;
-        public GcPlayerMissionParticipantType ParticipantType;
-        [NMS(Size = 0x4, Ignore = true)]
-        public byte[] EndPadding;
+        /* 0x00 */ public ulong UA;
+        /* 0x08 */ public GcSeed BuildingSeed;
+        /* 0x20 */ public Vector3f BuildingLocation;
+        /* 0x30 */ public GcPlayerMissionParticipantType ParticipantType;
+        [NMS(Size = 0xC, Ignore = true)]
+        /* 0x34 */ public byte[] EndPadding;
     }
 }
