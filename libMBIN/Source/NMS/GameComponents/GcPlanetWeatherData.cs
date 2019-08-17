@@ -3,10 +3,10 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x150, GUID = 0xF03B9BCEB3DF5278, SubGUID = 0xEBF08BE1E3CAE3AC)]
+	[NMS(Size = 0x150, GUID = 0x3500669C56035A7D, SubGUID = 0xEBF08BE1E3CAE3AC)]
     public class GcPlanetWeatherData : NMSTemplate
     {
-        public GcWeatherOptions WeatherType;     // weather type?
+        public GcWeatherOptions WeatherType;
         [NMS(Size = 0xC, Ignore = true)]
         public byte[] Padding4;
         /* 0x010 */ public GcPlanetHeavyAirData HeavyAir;

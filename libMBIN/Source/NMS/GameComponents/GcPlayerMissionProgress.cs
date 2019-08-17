@@ -3,18 +3,20 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0xAA38C3418BB16A5F, SubGUID = 0x1611798444BC0C13)]
-    public class GcPlayerMissionProgress : NMSTemplate // 0x148 bytes
+	[NMS(Size = 0x370, GUID = 0xD2740B9C47F05A27, SubGUID = 0x1611798444BC0C13)]
+    public class GcPlayerMissionProgress : NMSTemplate
     {
         [NMS(Size = 0x10)]
-        /* 0x000 */ public string Mission;
-        /* 0x010 */ public int Progress;
+        /* 0x00 */ public string Mission;
+        /* 0x10 */ public int Progress;
         [NMS(Size = 0x4, Ignore = true)]
-        /* 0x014 */ public byte[] Padding14;
-        /* 0x018 */ public ulong Seed;
-        /* 0x020 */ public ulong Data;
-        [NMS(Size = 0xC)]
-        /* 0x028 */ public GcPlayerMissionParticipant[] Participants;
+        /* 0x14 */ public byte[] Padding14;
+        /* 0x18 */ public ulong Seed;
+        /* 0x20 */ public ulong Data;
+        [NMS(Size = 0x8, Ignore = true)]
+        /* 0x28 */ public byte[] Padding28;
+        [NMS(Size = 0xD)]
+        /* 0x30 */ public GcPlayerMissionParticipant[] Participants;
 
     }
 }

@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x528, GUID = 0x3190441302E11BA2, SubGUID = 0x987EE8E8873AED6B)]
+	[NMS(Size = 0x528, GUID = 0x7028D9A0A4FD3F8, SubGUID = 0x987EE8E8873AED6B)]
     public class GcLeveledStatData : NMSTemplate
     {
         [NMS(Size = 0x10)]
@@ -27,7 +27,8 @@ namespace libMBIN.NMS.GameComponents
         [NMS(Size = 0xB)]
         /* 0x100 */ public GcStatLevelData[] StatLevels;
         /* 0x520 */ public bool UseRankNotStats;
-        [NMS(Size = 0x7, Ignore = true)]
-        /* 0x521 */ public byte[] EndPadding;
+        /* 0x521 */ public bool TelemetryUpload;
+        [NMS(Size = 0x6, Ignore = true)]
+        /* 0x522 */ public byte[] EndPadding;
     }
 }

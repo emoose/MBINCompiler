@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x620, GUID = 0xBF89A1534A8662A1, SubGUID = 0xD216CE8E772352C)]
+	[NMS(Size = 0x620, GUID = 0x19C3716EE76DF0A6, SubGUID = 0xD216CE8E772352C)]
     public class GcWeatherProperties : NMSTemplate
     {
         [NMS(Size = 0x10)]
@@ -19,8 +19,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x2A4 */ public byte[] Padding2A4;
 
         /* 0x2B0 */ public GcWeatherColourModifiers ExtremeColourModifiers;
-        // enum struct: GcRainbowType
-        [NMS(Size = 0x4, EnumValue = new[] { "Always", "Occasional", "Storm", "None" })]
+        [NMS(Size = 0x4, EnumType = typeof(GcRainbowType.RainbowTypeEnum))]
         /* 0x520 */ public float[] RainbowChance;
         /* 0x530 */ public List<GcStormProperties> Storms;
 

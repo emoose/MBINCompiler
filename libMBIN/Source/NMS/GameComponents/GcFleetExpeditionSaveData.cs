@@ -5,13 +5,13 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x1F0, GUID = 0x230722D2F2A2F12A, SubGUID = 0x1CD96DF6BD8E239C)]
+	[NMS(Size = 0x1F0, GUID = 0x4CB3ED5D550DACB8, SubGUID = 0x1CD96DF6BD8E239C)]
     public class GcFleetExpeditionSaveData : NMSTemplate
     {
         /* 0x000 */ public GcSeed ResourceSeed;
         /* 0x010 */ public ulong UA;
-        /* 0x020 */ public Vector4f SpawnPosition;
-        /* 0x030 */ public Vector4f TerminalPosition;
+        /* 0x020 */ public Vector3f SpawnPosition;
+        /* 0x030 */ public Vector3f TerminalPosition;
         /* 0x040 */ public float SpeedMultiplier;
         [NMS(Size = 0x4, Ignore = true)]
         /* 0x044 */ public byte[] Padding44;

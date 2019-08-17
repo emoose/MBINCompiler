@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0xC30, GUID = 0xB702C4921DBEDD52, SubGUID = 0x904DB42CF570F4BB)]
+	[NMS(Size = 0xC30, GUID = 0xC9B497E87BA7F0F, SubGUID = 0x904DB42CF570F4BB)]
     public class GcVehicleData : NMSTemplate
     {
         [NMS(Size = 0x10)]
@@ -24,8 +24,8 @@ namespace libMBIN.NMS.GameComponents
         /* 0x03C */ public float UnderwaterAlignUp;
         /* 0x040 */ public float VisualRollAmount;
         /* 0x044 */ public float VisualRollOffsetY;
-        [NMS(Size = 0x8, Ignore = true)]
-        /* 0x048 */ public byte[] Padding48;
+        /* 0x048 */ public float SteeringWheelSpringMultiplier;
+        /* 0x04C */ public float SteeringWheelPushRange;
         [NMS(Size = 0xA)]
         /* 0x050 */ public Vector4f[] WheelLocs;
         [NMS(Size = 0xA)]
@@ -41,10 +41,10 @@ namespace libMBIN.NMS.GameComponents
         /* 0x460 */ public bool CustomCollision;
         [NMS(Size = 0xF, Ignore = true)]
         /* 0x461 */ public byte[] Padding461;
-        /* 0x470 */ public Vector4f CollOffset;
-        /* 0x480 */ public Vector4f ExtraCollOffset;
-        /* 0x490 */ public Vector4f CollDimensions;
-        /* 0x4A0 */ public Vector4f InertiaDimensions;
+        /* 0x470 */ public Vector3f CollOffset;
+        /* 0x480 */ public Vector3f ExtraCollOffset;
+        /* 0x490 */ public Vector3f CollDimensions;
+        /* 0x4A0 */ public Vector3f InertiaDimensions;
 
         /* 0x4B0 */ public float CollRadius;
         /* 0x4B4 */ public float InertiaMull;
@@ -73,28 +73,29 @@ namespace libMBIN.NMS.GameComponents
         /* 0x510 */ public float WheelSideFrictionStatic;
         /* 0x514 */ public float WheelSideFrictionStaticThreshold;
         /* 0x518 */ public float TurningWheelForce;
-        /* 0x51C */ public float TurningWheelFrictionOmega;
-        /* 0x520 */ public float TurningWheelFrictionNonBraking;
-        /* 0x524 */ public float TurningWheelFrictionBraking;
+        /* 0x51C */ public float TurningWheelForceVR;
+        /* 0x520 */ public float TurningWheelFrictionOmega;
+        /* 0x524 */ public float TurningWheelFrictionNonBraking;
+        /* 0x528 */ public float TurningWheelFrictionBraking;
 
-        [NMS(Size = 0x8, Ignore = true)]
-        /* 0x528 */ public byte[] Padding528;
+        [NMS(Size = 0x4, Ignore = true)]
+        /* 0x52C */ public byte[] Padding52C;
 
-        /* 0x530 */ public Vector4f WheelForwardAngularFactor;
-        /* 0x540 */ public Vector4f WheelTurnAngularFactor;
-        /* 0x550 */ public Vector4f WheelSuspensionAngularFactor;
-        /* 0x560 */ public Vector4f WheelSideAngularFactor;
+        /* 0x530 */ public Vector3f WheelForwardAngularFactor;
+        /* 0x540 */ public Vector3f WheelTurnAngularFactor;
+        /* 0x550 */ public Vector3f WheelSuspensionAngularFactor;
+        /* 0x560 */ public Vector3f WheelSideAngularFactor;
         /* 0x570 */ public float VehicleGravity;
         /* 0x574 */ public float VehicleGravityWater;
         /* 0x578 */ public float VehicleJumpForce;
         /* 0x57C */ public float VehicleJumpAirControlForce;
         /* 0x580 */ public float VehicleBoostForce;
         /* 0x584 */ public float VehicleBoostMaxSpeed;
-        /* 0x584 */ public float VehicleBoostExtraMaxSpeedAir;
+        /* 0x588 */ public float VehicleBoostExtraMaxSpeedAir;
         /* 0x58C */ public float VehicleBoostSpeedFalloff;
         /* 0x590 */ public float VehicleBoostTime;
         /* 0x594 */ public float VehicleBoostRechargeTime;
-        /* 0x598 */ public float VehicleJumpAirRotatexAmount;
+        /* 0x598 */ public float VehicleJumpAirRotateXAmount;
         /* 0x59C */ public float VehicleJumpAirRotateZAmount;
         /* 0x5A0 */ public float VehicleJumpAirRotateTimeMin;
         /* 0x5A4 */ public float VehicleJumpAirRotateTimeMax;

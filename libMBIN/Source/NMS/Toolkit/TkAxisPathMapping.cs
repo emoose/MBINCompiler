@@ -1,12 +1,14 @@
-﻿using libMBIN.NMS.Toolkit;
+﻿using System.Collections.Generic;
+
+using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Toolkit
 {
-	[NMS(Size = 0x1D0, GUID = 0xA3E33D9219EC2A6F, SubGUID = 0xBC97B5A50FBB25EA)]
-    public class TkButtonPathMapping : NMSTemplate
+	[NMS(Size = 0x1D0, GUID = 0xDE6106990EAB9F7A, SubGUID = 0x19C4AA7DA3B42958)]
+    public class TkAxisPathMapping : NMSTemplate
     {
-        /* 0x000 */ public TkInputEnum Id;
+        /* 0x000 */ public TkInputAxisEnum Id;
         [NMS(Size = 0x4, Ignore = true)]
         /* 0x004 */ public byte[] Padding4;
         [NMS(Size = 0x20)]

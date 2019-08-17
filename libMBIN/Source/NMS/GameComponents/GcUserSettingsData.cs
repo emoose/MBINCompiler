@@ -4,7 +4,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x38F8, GUID = 0x16AF75AD89EF15F2, SubGUID = 0x3A50D683FD1CF4BF)]
+	[NMS(Size = 0x3900, GUID = 0xFC8D3D2AF9863912, SubGUID = 0x3A50D683FD1CF4BF)]
     public class GcUserSettingsData : NMSTemplate
     {
         /* 0x0000 */ public bool InvertLookControls;
@@ -26,6 +26,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x387C */ public float PS4FOVFoot;
         /* 0x3880 */ public float PS4FOVShip;
         /* 0x3884 */ public bool XboxOneXHighResolutionMode;
+        /* 0x3884 */ public bool PS4VignetteAndScanlines;
         public enum BaseSharingModeEnum { Undecided, On, Off }
 		/* 0x3888 */ public BaseSharingModeEnum BaseSharingMode;
         [NMS(Size = 0x4, Ignore = true)]
@@ -35,16 +36,21 @@ namespace libMBIN.NMS.GameComponents
         /* 0x38B0 */ public List<NMSString0x10> SeenProducts;
         /* 0x38C0 */ public List<NMSString0x20> SeenWikiTopics;
         /* 0x38D0 */ public List<NMSString0x20> UnlockedWikiTopics;
-        /* 0x38E0 */ public bool SeenOthers;
-        /* 0x38E1 */ public bool NetworkPlay;
-        /* 0x38E2 */ public bool VoiceChat;
-        /* 0x38E3 */ public bool AmbientMultiplayer;
+        /* 0x38E0 */ public bool VoiceChat;
+        /* 0x38E1 */ public bool Multiplayer;
+        /* 0x38E2 */ public bool InstantUIInputs;
         public enum TemperatureUnitEnum { Invalid, C, F, K }
         /* 0x38E4 */ public TemperatureUnitEnum TemperatureUnit;
         /* 0x38E8 */ public bool UseOldMouseFlight;
         /* 0x38EC */ public int LastSeenCommunityMission;
         /* 0x38F0 */ public int LastSeenCommunityMissionTier;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x38F4 */ public byte[] EndPadding;
+        public enum MovementModeEnum { Teleporter, Smooth }
+        /* 0x38F4 */ public MovementModeEnum MovementMode;
+        public enum TurnModeEnum { Smooth, Snap }
+        /* 0x38F8 */ public TurnModeEnum TurnMode;
+        /* 0x38FC */ public bool UseVrVignette;
+        /* 0x38FD */ public bool UseShipAutoControlVignette;
+        [NMS(Size = 0x2, Ignore = true)]
+        /* 0x38FE */ public byte[] EndPadding;
     }
 }

@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x3BE0, GUID = 0xB66E8264B53F0C36, SubGUID = 0x25EDFA0EC4C3AF0A)]
+	[NMS(Size = 0x3BF0, GUID = 0xEA135C851740A564, SubGUID = 0x25EDFA0EC4C3AF0A)]
     public class GcPlanetData : NMSTemplate
     {
         [NMS(Size = 0x80)]
@@ -52,12 +52,15 @@ namespace libMBIN.NMS.GameComponents
         /* 0x37E0 */ public Vector2f SentinelTimer;
         /* 0x37E8 */ public Vector2f FlybyTimer;
         /* 0x37F0 */ public GcPlanetInfo PlanetInfo;
-        [NMS(Size = 0x2, Ignore = true)]
-        /* 0x3B72 */ public byte[] Padding3B72; 
+        [NMS(Size = 0x1, Ignore = true)]
+        /* 0x3B73 */ public byte[] Padding3B73; 
         /* 0x3B74 */ public GcPlanetSentinelData SentinelData;
         [NMS(Size = 0x4, Ignore = true)]
         /* 0x3B7C */ public byte[] Padding3B7C; 
         /* 0x3B80 */ public GcPlanetRingData Rings;
+        /* 0x3BE0 */ public bool InEmptySystem;
+        [NMS(Size = 0xF, Ignore = true)]
+        /* 0x3BE1 */ public byte[] EndPadding;
 
     }
 }

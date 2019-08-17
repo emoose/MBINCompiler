@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x1C0, GUID = 0x8D44346EFC4FD0AC, SubGUID = 0xC42B2790FC61E0A9)]
+	[NMS(Size = 0x1C0, GUID = 0xD225125E5C97B384, SubGUID = 0xC42B2790FC61E0A9)]
     public class GcDroneData : NMSTemplate
     {
         /* 0x000 */ public GcDroneControlData Patrol;
@@ -25,10 +25,9 @@ namespace libMBIN.NMS.GameComponents
         /* 0x0DC */ public float DronePatrolHonkRadius;
         /* 0x0E0 */ public float DronePatrolHonkTime;
         /* 0x0E4 */ public int DronePatrolHonkProbability;
-
         /* 0x0E8 */ public float DroneAlertTime;
-        /* 0x0EC */ public float AttackTimeout;
-        /* 0x0F0 */ public float AttackFireRate;
+        /* 0x0EC */ public float AttackFireRate;
+        /* 0x0F0 */ public float AttackTimeout;
         /* 0x0F4 */ public int AttackNumShotsMin;
         /* 0x0F8 */ public int AttackNumShotsMax;
         /* 0x0FC */ public float AttackFireTimeMin;
@@ -50,33 +49,30 @@ namespace libMBIN.NMS.GameComponents
         [NMS(Size = 4, Ignore = true)]
         public byte[] Padding13C;
 
-        public Colour EyeColourAlert;
-        public Colour EyeColourSearch;
-        public Colour EyeColourPatrol;
+        /* 0x140 */ public Colour EyeColourAlert;
+        /* 0x150 */ public Colour EyeColourSearch;
+        /* 0x160 */ public Colour EyeColourPatrol;
 
-        public float DroneSearchTime;
-        public float DroneSearchRadius;
-        public float DroneSearchPauseTime;
-        public float DroneSearchCriminalScanRadius;
+        /* 0x170 */ public float DroneSearchTime;
+        /* 0x174 */ public float DroneSearchRadius;
+        /* 0x178 */ public float DroneSearchPauseTime;
+        /* 0x17C */ public float DroneSearchCriminalScanRadius;
+        /* 0x180 */ public float DroneSearchCriminalScanRadiusInShip;
+        /* 0x184 */ public float DroneScanPlayerTime;
+        /* 0x188 */ public float LeanAmount;
+        /* 0x18C */ public float LeanSpeedMin;
+        /* 0x190 */ public float LeanSpeedRange;
+        /* 0x194 */ public float EyeOffset;
+        /* 0x198 */ public float EyeFocusTime;
+        /* 0x19C */ public int EyeNumRandomsMin;
+        /* 0x1A0 */ public int EyeNumRandomsMax;
+        /* 0x1A4 */ public float EyeTimeMin;
+        /* 0x1A8 */ public float EyeTimeMax;
+        /* 0x1AC */ public float EyeAngleMax;
+        /* 0x1B0 */ public float EngineDirSpeedMin;
+        /* 0x1B4 */ public float EngineDirAngleMax;
 
-        public float DroneScanPlayerTime;
-
-        public float LeanAmount;
-        public float LeanSpeedMin;
-        public float LeanSpeedRange;
-
-        public float EyeOffset;
-        public float EyeFocusTime;
-        public int EyeNumRandomsMin;
-        public int EyeNumRandomsMax;
-        public float EyeTimeMin;
-        public float EyeTimeMax;
-        public float EyeAngleMax;
-
-        public float EngineDirSpeedMin;
-        public float EngineDirAngleMax;
-
-        [NMS(Size = 0xC, Ignore = true)]
-        public byte[] Padding1B4;
+        [NMS(Size = 0x8, Ignore = true)]
+        /* 0x1B8 */ public byte[] EndPadding;
     }
 }

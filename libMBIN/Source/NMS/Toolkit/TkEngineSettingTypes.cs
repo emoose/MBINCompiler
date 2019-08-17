@@ -1,13 +1,14 @@
 ﻿namespace libMBIN.NMS.Toolkit
 {
-    [NMS( GUID = 0xF859EBED47A81E0A, SubGUID = 0x943946549DEC2216)]
-    public class TkEngineSettingTypes : NMSTemplate {
-
-        public enum EngineSettingEnum { FullScreen, Borderless, ResolutionWidth, ResolutionHeight, Monitor, FoVOnFoot, FoVInShip, VSync, GSync, ShadowDetail,
-                                        TextureDetail, GenerationDetail, ReflectionsQuality, AntiAliasing, MotionBlurQuality, AnisotropyLevel, Brightness,
-                                        AvailableMonitors, FrameRate, NumLowThreads, NumHighThreads, NumGraphicsThreads, TextureStreaming, TexturePageSizeKb,
-                                        MotionBlurStrength, ShowRequirementsWarnings, AmbientOcclusion, UseLightshafts, MaxTextureMemoryMb, FixedTextureMemory,
-                                        EnableTessellation, UseArbSparseTexture, TerrainQuality, UseTerrainTextureCache, AdapterIndex, UseHDR }
+    [NMS( GUID = 0x311FE8DB345C8B3F, SubGUID = 0x943946549DEC2216)]
+    public class TkEngineSettingTypes : NMSTemplate
+    {
+        // 0x27 entries
+        public enum EngineSettingEnum { FullScreen, Borderless, ResolutionWidth, ResolutionHeight, Monitor, FoVOnFoot, FoVInShip, VSync, TextureQuality,
+            AnimationQuality, ShadowQuality, ReflectionsMultiplier, PostProcessingEffects, VolumetricsQuality, TerrainTessellation, PlanetQuality,
+            BaseQuality, EnableTessellation, AntiAliasing, AnisotropyLevel, Brightness, VignetteAndScanlines, AvailableMonitors, MaxFrameRate, NumLowThreads,
+            NumHighThreads, NumGraphicsThreads, TextureStreaming, TexturePageSizeKb, MotionBlurStrength, ShowRequirementsWarnings, AmbientOcclusion, MaxTextureMemoryMb,
+            FixedTextureMemory, UseArbSparseTexture, UseTerrainTextureCache, AdapterIndex, UseHDR, MinGPUMode }
         public EngineSettingEnum EngineSetting;
     }
 }
