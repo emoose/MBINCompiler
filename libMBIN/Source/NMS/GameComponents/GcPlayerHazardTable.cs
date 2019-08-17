@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0x234DE601620B66D9)]
+	[NMS(GUID = 0x234DE601620B66D9, SubGUID = 0xCC978CCE3CFE915B)]
     public class GcPlayerHazardTable : NMSTemplate
     {
         [NMS(Size = 6)]

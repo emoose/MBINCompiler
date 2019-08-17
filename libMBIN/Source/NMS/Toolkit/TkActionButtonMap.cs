@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Toolkit
 {
-	[NMS(Size = 0x28, GUID = 0xD0BF3BAF4263B9DA)]
+	[NMS(Size = 0x28, GUID = 0xD0BF3BAF4263B9DA, SubGUID = 0xC1A3BA40B3A88476)]
     public class TkActionButtonMap : NMSTemplate
     {
         [NMS(Size = 0x10)]

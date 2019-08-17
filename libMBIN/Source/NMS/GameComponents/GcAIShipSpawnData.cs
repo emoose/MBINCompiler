@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0xC8, Alignment = 0x8, GUID = 0x7D2B5DE918C61CF1)]
+	[NMS(Size = 0xC8, Alignment = 0x8, GUID = 0x7D2B5DE918C61CF1, SubGUID = 0x35C91009067A6431)]
     public class GcAIShipSpawnData : NMSTemplate
     {
         [NMS(Size = 0x20)]

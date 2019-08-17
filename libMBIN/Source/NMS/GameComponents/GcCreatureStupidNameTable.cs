@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0xC9DD036CB59D969D)]
+	[NMS(GUID = 0xC9DD036CB59D969D, SubGUID = 0x4992418A4C059481)]
     public class GcCreatureStupidNameTable : NMSTemplate
     {
         [NMS(Size = 0x80)]

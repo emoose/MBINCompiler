@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0x30811CE981E010DD)]
+	[NMS(GUID = 0x30811CE981E010DD, SubGUID = 0x10BF10453E33157C)]
     public class GcMissionSequenceWaitForFactionStanding : NMSTemplate      // size: 0x110
     {
         [NMS(Size = 0x80)]

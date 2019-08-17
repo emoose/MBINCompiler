@@ -3,9 +3,9 @@
 using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
-namespace libMBIN.NMS.Toolkit {
-
-	[NMS(Size = 0x430, Alignment = 0x10, GUID = 0xF111D25A1967E8F3)]
+namespace libMBIN.NMS.Toolkit
+{
+	[NMS(Size = 0x430, Alignment = 0x10, GUID = 0xF111D25A1967E8F3, SubGUID = 0x0E39CB7AA4D818260)]
     public class TkMaterialMetaData : NMSTemplate {
 
         [NMS(Size = 0x80)]

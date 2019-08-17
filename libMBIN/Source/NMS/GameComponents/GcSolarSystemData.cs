@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
-namespace libMBIN.NMS.GameComponents {
-
-	[NMS(Size = 0x1DA0, Alignment = 0x10, GUID = 0xE5A2E6412933D6B3)]
+namespace libMBIN.NMS.GameComponents
+{
+	[NMS(Size = 0x1DA0, Alignment = 0x10, GUID = 0xE5A2E6412933D6B3, SubGUID = 0x9B09276BB2795541)]
     public class GcSolarSystemData : NMSTemplate {
 
         /* 0x0000 */ public GcSeed Seed;

@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0xF1BABCCA84CF0AD5)]
+	[NMS(GUID = 0xF1BABCCA84CF0AD5, SubGUID = 0x47C4BE1F468F66AA)]
     public class GcMissionSequenceWait : NMSTemplate
     {
         /* 0x0 */ public float Time;

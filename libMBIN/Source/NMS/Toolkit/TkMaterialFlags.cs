@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
 
-namespace libMBIN.NMS.Toolkit {
-
-    [NMS(GUID = 0xB23908E7B2B205DF)]
+namespace libMBIN.NMS.Toolkit
+{
+    [NMS(GUID = 0xB23908E7B2B205DF, SubGUID = 0x71610F70BA400437)]
     public class TkMaterialFlags : NMSTemplate
     {
         /// <summary>

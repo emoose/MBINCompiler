@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0xEB1DFB8AFF12B189)]
+	[NMS(GUID = 0xEB1DFB8AFF12B189, SubGUID = 0x4452780AB55C81D6)]
     public class GcWeatherTable : NMSTemplate
     {
         [NMS(Size = 10, EnumValue = new[] { "Clear", "Dust", "Humid", "Snow", "Toxic", "Scorched", "Radioactive", "RedWeather", "GreenWeather", "BlueWeather" })]

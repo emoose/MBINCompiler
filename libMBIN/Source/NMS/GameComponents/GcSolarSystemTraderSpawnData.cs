@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0x460A5242E45C4AF8)]
+	[NMS(GUID = 0x460A5242E45C4AF8, SubGUID = 0x436337B25B8F877E)]
     public class GcSolarSystemTraderSpawnData : NMSTemplate     // in global?
     {
         public int MaxToSpawn;                      // 3

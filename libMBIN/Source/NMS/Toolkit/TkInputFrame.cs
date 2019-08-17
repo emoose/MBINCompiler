@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Toolkit
 {
-	[NMS(GUID = 0x46FE92211FE98307)]
+	[NMS(GUID = 0x46FE92211FE98307, SubGUID = 0xF3DC604B80A24AD)]
     public class TkInputFrame : NMSTemplate // 0x1C bytes
     {
         public Vector2f LeftStick;

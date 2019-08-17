@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x15C, GUID = 0xC41550066972A7DF)]
+	[NMS(Size = 0x15C, GUID = 0xC41550066972A7DF, SubGUID = 0xFABB438AC71DAB8D)]
     public class GcBiomeListPerStarType : NMSTemplate
     {
         [NMS(Size = 4, EnumValue = new[] { "Yellow", "Green", "Blue", "Red" })]

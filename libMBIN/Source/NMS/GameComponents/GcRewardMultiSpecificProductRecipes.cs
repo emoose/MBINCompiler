@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0x66F519D76005DDAF)]
+	[NMS(GUID = 0x66F519D76005DDAF, SubGUID = 0x3FF01CECDEAECD1D)]
     public class GcRewardMultiSpecificProductRecipes : NMSTemplate
     {
         public List<NMSString0x10> ProductIds;

@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x3700, GUID = 0x1E0206B2601F3050)]
+	[NMS(Size = 0x3700, GUID = 0x1E0206B2601F3050, SubGUID = 0x266F5269ED2C5661)]
     public class GcStatIconTable : NMSTemplate
     {
         [NMS(Size = 0x6E, EnumValue = new[] { "Unspecified", "Weapon_Laser", "Weapon_Laser_Damage", "Weapon_Laser_Mining_Speed", "Weapon_Laser_HeatTime",
