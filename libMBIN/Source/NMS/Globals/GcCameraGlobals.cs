@@ -8,9 +8,9 @@ namespace libMBIN.NMS.Globals
     {
         /* 0x0000 */ public GcCameraFollowSettings VehicleCamHmd;
         /* 0x00E0 */ public float HmdEyeLookAngle;
-        /* 0x00E0 */ public float HmdEyeExtraTurnAngle;
-        /* 0x00E0 */ public float HmdEyeExtraTurnMinHeadAngle;
-        /* 0x00E0 */ public float HmdEyeExtraTurnHeadAngleRange;
+        /* 0x00E4 */ public float HmdEyeExtraTurnAngle;
+        /* 0x00E8 */ public float HmdEyeExtraTurnMinHeadAngle;
+        /* 0x00EC */ public float HmdEyeExtraTurnHeadAngleRange;
         /* 0x00F0 */ public bool PauseThirdPersonCamInPause;
         /* 0x00F4 */ public float DebugPlanetJumpNearHeight;
         /* 0x00F8 */ public float DebugPlanetJumpFarHeight;
@@ -44,6 +44,8 @@ namespace libMBIN.NMS.Globals
         /* 0x0178 */ public float MinFirstPersonCameraPitch;
         /* 0x017C */ public float MaxFirstPersonCameraPitch;
         /* 0x0180 */ public float MaxCreatureRidingYaw;
+        [NMS(Size = 0x4, Ignore = true)]
+        /* 0x0184 */ public byte[] Padding184;
         /* 0x0188 */ public GcCameraFollowSettings CharacterUnarmedCam;
         /* 0x0268 */ public GcCameraFollowSettings CharacterRunCam;
         /* 0x0348 */ public GcCameraFollowSettings CharacterCombatCam;

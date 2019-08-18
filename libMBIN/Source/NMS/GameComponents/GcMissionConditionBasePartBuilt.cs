@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x40, Alignment = 0x8, GUID = 0xE2F5A0E5BEC5AA01, SubGUID = 0x75A4AF2BCC689FD2)]
+	[NMS(Size = 0x40, Alignment = 0x8, GUID = 0x6F99E641DA91FA97, SubGUID = 0x75A4AF2BCC689FD2)]
     public class GcMissionConditionBasePartBuilt : NMSTemplate
     {
         [NMS(Size = 0x10)]
@@ -13,6 +13,8 @@ namespace libMBIN.NMS.GameComponents
         /* 0x14 */ public byte[] Padding14;
         /* 0x18 */ public GcBuildingPartSearchType Type;
 		public enum PartInCurrentBaseEnum { DontCare, YesAllPlayerOwned }
-		public PartInCurrentBaseEnum PartInCurrentBase;
+		/* 0x38 */ public PartInCurrentBaseEnum PartInCurrentBase;
+        [NMS(Size = 0x4, Ignore = true)]
+        /* 0x3C */ public byte[] EndPadding;
     }
 }

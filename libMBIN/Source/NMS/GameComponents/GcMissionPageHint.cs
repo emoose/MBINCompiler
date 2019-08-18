@@ -5,10 +5,11 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0x10BF34C1048FA823, SubGUID = 0xBC45706D394C0853)]
+	[NMS(GUID = 0xAB554B2864B42A1D, SubGUID = 0xBC45706D394C0853)]
     public class GcMissionPageHint : NMSTemplate
     {
-		public enum MissionPageHintEnum { None, Suit, Ship, Weapon, Vehicle, Freighter, Wiki, MissionLog, Discovery, Journey }
+        // 0xB entries
+		public enum MissionPageHintEnum { None, Suit, Ship, Weapon, Vehicle, Freighter, Wiki, Catalogue, MissionLog, Discovery, Journey }
 		public MissionPageHintEnum MissionPageHint;
     }
 }

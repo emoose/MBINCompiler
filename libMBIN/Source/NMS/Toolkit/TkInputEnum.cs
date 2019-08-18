@@ -1,14 +1,29 @@
-﻿using System;
-using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
+﻿using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Toolkit
 {
-	[NMS(Alignment = 0x4, GUID = 0x10A4E3A290B656F6, SubGUID = 0x8C2EDCD50FA3956F, Broken = true)]
+	[NMS(Alignment = 0x4, GUID = 0x10A4E3A290B656F6, SubGUID = 0x8C2EDCD50FA3956F)]
     public class TkInputEnum : NMSTemplate
     {
-        public int InputButton;
+        // 0x94 entries
+        public enum InputButtonEnum { None = 0x20, Space = 0x21, Exclamation = 0x22, Quotes = 0x23, Hash = 0x24, Dollar = 0x25, Percent = 0x26, Ampersand = 0x27,
+            Apostrophe = 0x28, LeftBracket = 0x29, RightBracket = 0x2a, Asterisk = 0x2b, Plus = 0x2c, Comma = 0x2d, Hyphen = 0x2e, Period = 0x2f, Slash = 0x30,
+            Key0 = 0x31, Key1 = 0x32, Key2 = 0x33, Key3 = 0x34, Key4 = 0x35, Key5 = 0x36, Key6 = 0x37, Key7 = 0x38, Key8 = 0x39, Key9 = 0x3a, Colon = 0x3b,
+            Semicolon = 0x3c, LessThan = 0x3d, Equals = 0x3e, GreaterThan = 0x3f, QuestionMark = 0x40, At = 0x41, KeyA = 0x42, KeyB = 0x43, KeyC = 0x44,
+            KeyD = 0x45, KeyE = 0x46, KeyF = 0x47, KeyG = 0x48, KeyH = 0x49, KeyI = 0x4a, KeyJ = 0x4b, KeyK = 0x4c, KeyL = 0x4d, KeyM = 0x4e, KeyN = 0x4f,
+            KeyO = 0x50, KeyP = 0x51, KeyQ = 0x52, KeyR = 0x53, KeyS = 0x54, KeyT = 0x55, KeyU = 0x56, KeyV = 0x57, KeyW = 0x58, KeyX = 0x59, KeyY = 0x5a,
+            KeyZ = 0x5b, LeftSquare = 0x5c, BackSlash = 0x5d, RightSquare = 0x5e, Caret = 0x5f, Underscode = 0x60, Grave = 0x7b, LeftCurly = 0x7c, Bar = 0x7d,
+            RightCurly = 0x7e, Tilde = 0x100, Escape = 0x101, Enter = 0x102, Backspace = 0x103, Delete = 0x104, Home = 0x105, End = 0x106, PageUp = 0x107,
+            PageDown = 0x108, F1 = 0x109, F2 = 0x10a, F3 = 0x10b, F4 = 0x10c, F5 = 0x10d, F6 = 0x10e, F7 = 0x10f, F8 = 0x110, F9 = 0x111, F10 = 0x112, F11 = 0x113,
+            F12 = 0x114, Tab = 0x115, Shift = 0x116, LShift = 0x117, RShift = 0x118, Alt = 0x119, LAlt = 0x11a, RAlt = 0x11b, Ctrl = 0x11c, LCtrl = 0x11d,
+            RCtrl = 0x11e, Up = 0x11f, Down = 0x120, Left = 0x121, Right = 0x122, Mouse1 = 0x123, Mouse2 = 0x124, Mouse3 = 0x125, Mouse4 = 0x126, Mouse5 = 0x127,
+            Mouse6 = 0x128, Mouse7 = 0x129, Mouse8 = 0x12a, MouseWheelUp = 0x12b, MouseWheelDown = 0x12c, PadA = 0x12d, PadB = 0x12e, PadC = 0x12f, PadD = 0x130,
+            PadStart = 0x131, PadSelect = 0x132, PadLeftShoulder1 = 0x133, PadRightShoulder1 = 0x134, PadLeftShoulder2 = 0x135, PadRightShoulder2 = 0x136,
+            PadLeftTrigger = 0x137, PadRightTrigger = 0x138, PadLeftThumb = 0x139, PadRightThumb = 0x13a, PadUp = 0x13b, PadDown = 0x13c, PadLeft = 0x13d,
+            PadRight = 0x13e, PadSpecial1 = 0x13f, PadSpecial2 = 0x140, LeftHandA = 0x141, LeftHandB = 0x142, LeftHandC = 0x143, LeftHandD = 0x144,
+            ChordBothShoulders = 0x145, Gesture = 0x146, GestureLeftWrist = 0x147, GestureRightWrist = 0x148, GestureBinoculars = 0x149, GestureBackpack = 0x14a,
+            GestureExitVehicle = 0x14b, GestureThrottle = 0x14c, GestureFlightStick = 0x14d, GestureTeleport = 0x14e };
+        public InputButtonEnum InputButton;
     }
 }
