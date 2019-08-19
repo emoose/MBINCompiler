@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS( GUID = 0x796B976A7C9297E9 )]
+    [NMS(GUID = 0x1AA0E0DA0E623F9D)]
     public class GcSkyGlobals : NMSTemplate
     {
         /* 0x0000 */ public float RainbowDistance;
@@ -18,9 +18,8 @@ namespace libMBIN.NMS.Globals
         /* 0x004C */ public GcPhotoModeAdjustData VignetteAdjust;
         /* 0x0064 */ public TkCurveType DoFAdjustMagnitudeMaxCurve;
         /* 0x0068 */ public int DayLength;
-        /* 0x006C */ public bool EnableDayNightCycle;
-                     [NMS(Size = 0x03, Ignore = true)]
-        /* 0x006D */ public byte[] Padding6D;
+        [NMS(Size = 0x04, Ignore = true)]
+        /* 0x006C */ public byte[] Padding6D;
         /* 0x0070 */ public Vector4f SunRotationAxis;
         /* 0x0080 */ public int SafeSkyMinIndex;
         /* 0x0084 */ public int SafeSkyMaxIndex;
@@ -30,7 +29,7 @@ namespace libMBIN.NMS.Globals
         /* 0x0094 */ public float PhotoModeSunSpeed;
         /* 0x0098 */ public float FreshStartTimeOfDay;
         /* 0x009C */ public bool ForceStormSetting;
-                     [NMS(Size = 0x03, Ignore = true)]
+        [NMS(Size = 0x03, Ignore = true)]
         /* 0x009D */ public byte[] Padding9D;
         /* 0x00A0 */ public float ForceStormStrength;
         /* 0x00A4 */ public float StormScreenFilterFadeTime;
@@ -48,7 +47,7 @@ namespace libMBIN.NMS.Globals
         /* 0x00D4 */ public float StormWarningTime;
         /* 0x00D8 */ public float StormTransitionTime;
         /* 0x00DC */ public bool ForceFlightSetting;
-                     [NMS(Size = 0x03, Ignore = true)]
+        [NMS(Size = 0x03, Ignore = true)]
         /* 0x00DD */ public byte[] PaddingDD;
         /* 0x00E0 */ public float ForceFlightStrength;
         /* 0x00E4 */ public float ToFootFadeTime;
@@ -59,7 +58,7 @@ namespace libMBIN.NMS.Globals
         /* 0x00F8 */ public float ExtremeAudioLevel;
         /* 0x00FC */ public float StormAudioLevel;
         /* 0x0100 */ public bool SleepSunFromSettings;
-                     [NMS(Size = 0x0F, Ignore = true)]
+        [NMS(Size = 0x0F, Ignore = true)]
         /* 0x0101 */ public byte[] Padding101;
         /* 0x0110 */ public Vector4f SleepSunFromSettingsPos;
         /* 0x0120 */ public Vector4f SunPosition;
@@ -119,7 +118,7 @@ namespace libMBIN.NMS.Globals
         /* 0x024C */ public float NightLightBlendMin;
         /* 0x0250 */ public float NightLightBlendMax;
         /* 0x0254 */ public bool ForceNightBlend;
-                     [NMS(Size = 0x03, Ignore = true)]
+        [NMS(Size = 0x03, Ignore = true)]
         /* 0x0255 */ public byte[] Padding255;
         /* 0x0258 */ public float ForceNightBlendValue;
         /* 0x025C */ public float NoAtmosphereFogStrength;
@@ -134,13 +133,13 @@ namespace libMBIN.NMS.Globals
         /* 0x0534 */ public GcFogProperties PlanetFlightFog;
         /* 0x0610 */ public GcSpaceSkyProperties SpaceSkyMin;
         /* 0x06B0 */ public GcSpaceSkyProperties SpaceSkyMax;
-                     [NMS(Size = 0x04)]
+        [NMS(Size = 0x04)]
         /* 0x0750 */ public GcSpaceSkyColours[] SpaceSkyColours;
         /* 0x0AD0 */ public GcPlanetWeatherColourData NightSkyColours;
         /* 0x0B80 */ public float HackSpaceInterp1;
         /* 0x0B84 */ public float HackSpaceInterp2;
         /* 0x0B88 */ public int HackSpaceColourIndex;
-                     [NMS(Size = 0x04, Ignore = true)]
+        [NMS(Size = 0x04, Ignore = true)]
         /* 0x0B8C */ public byte[] PaddingB8C;
         /* 0x0B90 */ public Colour HeavyAirColour1;
         /* 0x0BA0 */ public Colour HeavyAirColour2;

@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x60, GUID = 0x20371E4A6795DF08, SubGUID = 0xE523CFAD6AFB4BB6)]
+	[NMS(Alignment = 0x4, Size = 0x60, GUID = 0x20371E4A6795DF08, SubGUID = 0xE523CFAD6AFB4BB6)]
     public class GcScanEventSolarSystemLookup : NMSTemplate
     {
         /* 0x00 */ public bool UseStarType;
@@ -30,7 +30,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x38 */ public bool NeedsHighCreatureLevel;
         /* 0x39 */ public bool AllowUnsafeMatches;
         /* 0x3A */ public bool NeverAllowEmpty;
-        [NMS(Size = 0x6, Ignore = true)]
+        [NMS(Size = 0x5, Ignore = true)]
         /* 0x3B */ public byte[] Padding3B;
         [NMS(Size = 0x20)]
         /* 0x40 */ public string SamePlanetAsEvent;
