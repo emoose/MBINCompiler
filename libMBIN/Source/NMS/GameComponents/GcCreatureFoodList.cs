@@ -8,9 +8,9 @@ namespace libMBIN.NMS.GameComponents
     {
         [NMS(Size = 0x10)]
         /* 0x00 */ public string FoodProduct;
-        [NMS(Size = 0x80)]
-        /* 0x80 */ public string ResourceFile;
         [NMS(Size = 0x10)]
+        /* 0x80 */ public string ResourceFile;
+        [NMS(Size = 0x80)]
         /* 0x90 */ public string DebrisEffect;
     }
 }
