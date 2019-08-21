@@ -6,7 +6,5 @@ namespace libMBIN.NMS.GameComponents
 	[NMS(GUID = 0x8DFED20468FD9F01, SubGUID = 0x4A7C4360BD65C715)]
     public class GcMissionConditionHasActiveDetailMessage : NMSTemplate
     {
-		public enum MissionCategoryEnum { Info, Mission, Danger, Urgent }
-		public MissionCategoryEnum MissionCategory;
     }
 }

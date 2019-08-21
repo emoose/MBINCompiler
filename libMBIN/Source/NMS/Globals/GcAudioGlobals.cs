@@ -3,10 +3,10 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS( GUID = 0x909213CA197AC1CB )]
+    [NMS( GUID = 0x4671E972C5C0AB5F)]
     public class GcAudioGlobals : NMSTemplate
     {
-        /* 0x0 */ public GcAudioNPCDoppler NPCEngines;
+        /* 0x00 */ public GcAudioNPCDoppler NPCEngines;
         /* 0x3C */ public GcAudio3PointDopplerData DroneDoppler;
         /* 0x48 */ public float AuxSendCaveRampDistance;
         /* 0x4C */ public float AuxSendOutdoorsRampDistance;
@@ -38,7 +38,11 @@ namespace libMBIN.NMS.Globals
         /* 0xC0 */ public float ObstructionAuxControlWhenHidden;
         /* 0xC4 */ public bool PulseMusicEnabled;
         /* 0xC5 */ public bool LockListenerMatrix;
-        /* 0xC8 */ public Vector2f CommsChatterFalloffFreighers;
-        /* 0xD0 */ public Vector2f CommsChatterFalloffShips;
+        /* 0xC6 */ public bool Unknown0xC6;
+        /* 0xC8 */ public float Unknown0xC8;
+        /* 0xCC */ public float Unknown0xCC;
+        /* 0xD0 */ public float Unknown0xD0;
+        /* 0xD4 */ public Vector2f CommsChatterFalloffFreighers;
+        /* 0xDC */ public Vector2f CommsChatterFalloffShips;
     }
 }
