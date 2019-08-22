@@ -604,7 +604,6 @@ namespace libMBIN
                     writer.Align( alignment2, 0, entry.GetType().Name ); // todo: check if this alignment is correct
                     long origPos = writer.BaseStream.Position;
                     if ( data.Item2.GetType().IsGenericType && data.Item2.GetType().GetGenericTypeDefinition() == typeof( List<> ) ) {
-                        //DebugLog("blahblah");
                         Type itemType = data.Item2.GetType().GetGenericArguments()[0];
 
                         if ( itemType == typeof( NMSTemplate ) ) {
@@ -1166,10 +1165,9 @@ namespace libMBIN
                                 // trim the custom suffix
                                 return (int) Enum.Parse( field.FieldType, xmlProperty.Value.Substring( 0, 5 ) ); // "_FXX_"
                             } else {
-                                throw;
+                                throw new InvalidEnumValueException(xmlProperty.Value.ToString(), field);
                             }
                         }
-
                     } else {
                         return fieldType.IsValueType ? Activator.CreateInstance(fieldType) : null;
                     }

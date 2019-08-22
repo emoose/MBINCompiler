@@ -8,7 +8,7 @@ namespace libMBIN.NMS.Toolkit
     {
         [NMS(Size = 0x80)]
         public string Filename;
-        [NMS(Ignore = true)]
-        public int EmptyNode1;
+        [NMS(Size = 0x4, Ignore = true)]
+        public byte[] EndPadding;
     }
 }

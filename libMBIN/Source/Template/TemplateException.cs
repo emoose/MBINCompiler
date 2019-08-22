@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Reflection;
 
 namespace libMBIN {
 
@@ -21,6 +22,11 @@ namespace libMBIN {
         private static string GetString( Type type = null, string name = null ) {
             return $"Unknown type {((type != null) ? $" {type}" : "")}{(( ( name ?? "" ) != "" ) ? $" for {name}" : "")}.";
         }
+    }
+
+    public class InvalidEnumValueException : TemplateException
+    {
+        public InvalidEnumValueException(string badValue, FieldInfo field) : base($"The enum value \"{badValue}\" is not a valid value for {field.Name}.") { }
     }
 
     public class InvalidGUIDException : TemplateException {

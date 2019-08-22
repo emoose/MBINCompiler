@@ -36,8 +36,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x1C44 */ public GcScannerIcon ArrowSmall;
         /* 0x1D50 */ public GcScannerIcon ArrowLarge;
 
-        // enum: GcScannerIconHighlightTypes ???
-        [NMS(Size = 5)]
+        [NMS(Size = 6)]
         /* 0x1E5C */ public GcScannerIcon[] GenericIcons;
 
         [NMS(Size = 0x12)]
@@ -54,6 +53,9 @@ namespace libMBIN.NMS.GameComponents
 
         [NMS(Size = 0x2B, EnumType = typeof(GcScannerIconTypes.ScanIconTypeEnum))]
         /* 0x8A30 */ public GcScannerIcon[] ScannableIconsBinocs;
+
+        [NMS(Size = 0xC, Ignore = true)]
+        /* 0xB734 */ public byte[] PaddingB734;
 
         [NMS(Size = 0x2B, EnumType = typeof(GcScannerIconTypes.ScanIconTypeEnum))]
         /* 0xB740 */ public Colour[] ScannableColours;
