@@ -78,7 +78,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x00780 */ public ulong TotalPlayTime;
 
         /* 0x00788 */ public List<GcScanEventSave> MarkerStack;
-        /* 0x00798 */ public List<GcScanEventData> NewMPMarkerStack;    // this and the above are the same...
+        /* 0x00798 */ public List<GcScanEventSave> NewMPMarkerStack;
 
         /* 0x007A8 */ public List<GcPlayerStatsGroup> Stats;
         /* 0x007B8 */ public List<GcTelemetryStat> TelemetryStats;
