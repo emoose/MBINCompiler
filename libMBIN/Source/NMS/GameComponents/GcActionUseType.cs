@@ -5,10 +5,10 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0xB78FB36EFD7C22DA, SubGUID = 0x498BFDCD029948EF)]
+	[NMS(GUID = 0xC3032469C522EC7B, SubGUID = 0x498BFDCD029948EF)]
     public class GcActionUseType : NMSTemplate
     {
-        public enum ActionUseTypeEnum { Active, Hidden, Debug, Obsolete }
+        public enum ActionUseTypeEnum { Active, ActiveVR, ActiveXbox, Hidden, Debug, Obsolete }
         public ActionUseTypeEnum ActionUseType;
     }
 }

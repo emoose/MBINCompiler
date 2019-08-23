@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x70, GUID = 0x116261B17D1DA685, SubGUID = 0x184558FBF0A370E2)]
+	[NMS(Size = 0x68, GUID = 0x7B02CE1010B72306, SubGUID = 0x184558FBF0A370E2)]
     public class GcOutpostComponentData : NMSTemplate
     {
         /* 0x00 */ public bool Anomaly;
@@ -19,24 +19,21 @@ namespace libMBIN.NMS.GameComponents
         [NMS(Size = 0x10)]
         /* 0x08 */ public string Door;
         /* 0x18 */ public bool CheckLandingAreaClear;
-        /* 0x1C */ public int MagicDockIndex;
-        /* 0x20 */ public float CircleRadius;
-        /* 0x24 */ public float ApproachRange;
-        /* 0x28 */ public float ApproachAngle;
-        /* 0x2C */ public float ApproachSpeed;
-        /* 0x30 */ public float PlayerAutoLandRange;
-        /* 0x34 */ public float LandingSpeed;
-        /* 0x38 */ public float LandingHeight;
-        /* 0x3C */ public bool RotateToDock;
-        /* 0x40 */ public float TakeOffHeight;
-        /* 0x44 */ public float TakeOffFwdDist;
-        /* 0x48 */ public float TakeOffTime;
-        /* 0x4C */ public float TakeOffAlignTime;
-        /* 0x50 */ public float TakeOffSpeed;
-        /* 0x54 */ public float TakeOffBoost;
-        /* 0x58 */ public float TakeOffExtraAIHeight;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x5C */ public byte[] Padding5C;
-        /* 0x60 */ public List<GcOutpostLSystemPair> LSystems;
+        /* 0x1C */ public float CircleRadius;
+        /* 0x20 */ public float ApproachRange;
+        /* 0x24 */ public float ApproachAngle;
+        /* 0x28 */ public float ApproachSpeed;
+        /* 0x2C */ public float PlayerAutoLandRange;
+        /* 0x30 */ public float LandingSpeed;
+        /* 0x34 */ public float LandingHeight;
+        /* 0x38 */ public bool RotateToDock;
+        /* 0x3C */ public float TakeOffHeight;
+        /* 0x40 */ public float TakeOffFwdDist;
+        /* 0x44 */ public float TakeOffTime;
+        /* 0x48 */ public float TakeOffAlignTime;
+        /* 0x4C */ public float TakeOffSpeed;
+        /* 0x50 */ public float TakeOffBoost;
+        /* 0x54 */ public float TakeOffExtraAIHeight;
+        /* 0x58 */ public List<GcOutpostLSystemPair> LSystems;
     }
 }

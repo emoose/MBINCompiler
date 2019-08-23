@@ -17,7 +17,7 @@ namespace libMBIN.NMS.GameComponents
         [NMS(Size = 8, EnumType = typeof(GcProductCategory.ProductCategoryEnum))]
         /* 0x07BC */ public TkTextureResource[] ProductCategoryIcons;
 
-        [NMS(Size = 0x8, EnumValue = new[] { "Gek", "Korvax", "Vykeen", "TradeGuild", "WarriorGuild", "ExplorerGuild", "None" })]
+        [NMS(Size = 0x8, EnumType = typeof(GcMissionFaction.MissionFactionEnum))]
         /* 0x0BDC */ public TkTextureResource[] MissionFactionIcons;
 
         [NMS(Size = 0x10, EnumType = typeof(GcDiscoveryTypes.DiscoveryTypeEnum))]

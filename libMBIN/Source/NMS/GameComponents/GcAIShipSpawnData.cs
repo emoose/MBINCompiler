@@ -5,14 +5,14 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0xC8, Alignment = 0x8, GUID = 0x7D2B5DE918C61CF1, SubGUID = 0x35C91009067A6431)]
+	[NMS(Size = 0xC8, Alignment = 0x8, GUID = 0xAD5369C7C7863571, SubGUID = 0x35C91009067A6431)]
     public class GcAIShipSpawnData : NMSTemplate
     {
         [NMS(Size = 0x20)]
         /* 0x00 */ public string Message;
         [NMS(Size = 0x20)]
         /* 0x00 */ public string OSDMessage;
-        /* 0x40 */ public int Shortcut;     // should be TkInputEnum I think...
+        /* 0x40 */ public TkInputEnum Shortcut;
         /* 0x44 */ public bool WarpIn;
         [NMS(Size = 0x3, Ignore = true)]
         /* 0x45 */ public byte[] Padding45;

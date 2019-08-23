@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x10, GUID = 0xDA4CA889E9A8A216, SubGUID = 0xFECA26D94DE68300)]
+	[NMS(Size = 0x10, GUID = 0x1C47DED1D3AC2C96, SubGUID = 0xFECA26D94DE68300)]
     public class GcButtonSpawnTable : NMSTemplate
     {
         public List<GcButtonSpawn> ButtonSpawns;
