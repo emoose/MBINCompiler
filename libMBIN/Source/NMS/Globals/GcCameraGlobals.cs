@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(GUID = 0x474F213BFDCD936)]
+    [NMS(GUID = 0xDE99AEF371395759)]
     public class GcCameraGlobals : NMSTemplate
     {
         /* 0x0000 */ public GcCameraFollowSettings VehicleCamHmd;
@@ -237,7 +237,7 @@ namespace libMBIN.NMS.Globals
         /* 0x3D24 */ public float FirstPersonCamHeight;
         [NMS(Size = 0x8, Ignore = true)]
         /* 0x3D28 */ public byte[] Padding3D28;
-        [NMS(Size = 0x08)]
+        [NMS(Size = 0x8)]
         /* 0x3D30 */ public Vector4f[] FirstPersonCamOffset;
         /* 0x3DB0 */ public Vector3f FirstPersonInShipCamOffset;
         /* 0x3DC0 */ public float FirstPersonFoV;

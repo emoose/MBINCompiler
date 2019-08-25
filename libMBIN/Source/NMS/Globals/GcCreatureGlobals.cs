@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS( GUID = 0xAF30E186F39D6B18)]
+    [NMS( GUID = 0x4763656969C261A2)]
     public class GcCreatureGlobals : NMSTemplate
     {
         [NMS(Size = 0x5B)]
@@ -378,43 +378,43 @@ namespace libMBIN.NMS.Globals
         /* 0x013C8 */ public float PredatorSpeedMultiplier;
         [NMS(Size = 0x04, Ignore = true)]
         /* 0x013CC */ public byte[] Padding13CC;
-        [NMS(Size = 0x03)]
+        [NMS(Size = 0x4)]
         /* 0x013D0 */ public NMSString0x10[] KillingSubstances;
 
-        /* 0x01400 */ public int UnknownInt0x1400;
-        /* 0x01404 */ public int UnknownInt0x1404;
-        /* 0x01408 */ public int UnknownInt0x1408;
-        /* 0x0140C */ public int UnknownInt0x140C;
+        /* 0x01410 */ public int UnknownInt0x1410;
+        /* 0x01414 */ public int UnknownInt0x1414;
+        /* 0x01418 */ public int UnknownInt0x1418;
+        /* 0x0141C */ public int UnknownInt0x141C;
         [NMS(Size = 0x1A, EnumValue = new string[0x1A] { "Fish", "Antelope", "Bird", "Butterfly", "FlyingSnake", "FlyingLizard", "Diplo", "Triceratops", "Rodent", "Cow", "Cat", "Strider",
                                                          "Trex", "Shark", "TwoLegAntelope", "SixLegCat", "SixLegCow", "Grunt", "Blob", "Spider", "FloatSpider", "SwimCow", "SwimRodent",
                                                          "Jellyfish", "Crab", "RockCreature" })]
-        /* 0x01410 */ public GcCreatureSubstanceList[] CreatureSubstanceLists;
+        /* 0x01420 */ public GcCreatureSubstanceList[] CreatureSubstanceLists;
         [NMS(Size = 0x1A, EnumValue = new string[0x1A] { "Fish", "Antelope", "Bird", "Butterfly", "FlyingSnake", "FlyingLizard", "Diplo", "Triceratops", "Rodent", "Cow", "Cat", "Strider",
                                                          "Trex", "Shark", "TwoLegAntelope", "SixLegCat", "SixLegCow", "Grunt", "Blob", "Spider", "FloatSpider", "SwimCow", "SwimRodent",
                                                          "Jellyfish", "Crab", "RockCreature" })]
-        /* 0x01750 */ public GcCreatureHarvestSubstanceList[] CreatureHarvestSubstanceLists;
-        /* 0x02790 */ public int UnknownInt0x2790;
-        /* 0x02794 */ public int UnknownInt0x2794;
-        /* 0x02798 */ public int UnknownInt0x2798;
-        /* 0x0279C */ public int UnknownInt0x279C;
+        /* 0x01760 */ public GcCreatureHarvestSubstanceList[] CreatureHarvestSubstanceLists;
         /* 0x027A0 */ public int UnknownInt0x27A0;
-        /* 0x027A4 */ public float Unknown0x27A4;
-        /* 0x027A8 */ public float Unknown0x27A8;
+        /* 0x027A4 */ public int UnknownInt0x27A4;
+        /* 0x027A8 */ public int UnknownInt0x27A8;
+        /* 0x027AC */ public int UnknownInt0x27AC;
+        /* 0x027B0 */ public int UnknownInt0x27B0;
+        /* 0x027B4 */ public float Unknown0x27B4;
+        /* 0x027B8 */ public float Unknown0x27B8;
         [NMS(Size = 0x4, Ignore = true)]
-        /* 0x027AC */ public byte[] Padding27AC;
+        /* 0x027BC */ public byte[] Padding27BC;
         [NMS(Size = 0x8)]
-        /* 0x027B0 */ public GcCreatureFoodList[] CreatureFoodLists;
+        /* 0x027C0 */ public GcCreatureFoodList[] CreatureFoodLists;
         [NMS(Size = 0x10)]
-        /* 0x027C0 */ public string Unknown0x27C0;
-        /* 0x02CC0 */ public GcWeirdCreatureRewardList WeirdKillingRewards;
+        /* 0x02CC0 */ public string Unknown0x2CC0;
+        /* 0x02CD0 */ public GcWeirdCreatureRewardList WeirdKillingRewards;
         [NMS(Size = 0x03)]
-        /* 0x02E00 */ public NMSString0x10[] LootItems;
-        /* 0x02E30 */ public float RockTransformGlobalChance;
+        /* 0x02E10 */ public NMSString0x10[] LootItems;
+        /* 0x02E40 */ public float RockTransformGlobalChance;
         [NMS(Size = 0x04)]
-        /* 0x02E34 */ public float[] RockTransformChanceModifiers;
-        /* 0x02E44 */ public int PauseBetweenCreatureSpawnRequests;
+        /* 0x02E44 */ public float[] RockTransformChanceModifiers;
+        /* 0x02E54 */ public int PauseBetweenCreatureSpawnRequests;
         [NMS(Size = 0x08, Ignore = true)]
-        /* 0x02E48 */ public byte[] Padding2E48;
+        /* 0x02E58 */ public byte[] Padding2E58;
 
     }
 }
