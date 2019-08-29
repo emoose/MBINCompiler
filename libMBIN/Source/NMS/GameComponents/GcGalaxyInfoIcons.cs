@@ -8,7 +8,7 @@ namespace libMBIN.NMS.GameComponents
     {
         [NMS(Size = 0x8, EnumType = typeof(GcAlienRace.AlienRaceEnum))]
         /* 0x000 */ public TkTextureResource[] RaceIcons;
-        [NMS(Size = 0x7, EnumValue = new[] { "Mining", "HighTech", "Trading", "Manufacturing", "Fusion", "Scientific", "PowerGeneration" })]
+        [NMS(Size = 0x7, EnumType = typeof(GcTradingClass.TradingClassEnum))]
         /* 0x420 */ public TkTextureResource[] EconomyIcons;
         /* 0x7BC */ public TkTextureResource EconomyTechNotInstalledIcon;
         [NMS(Size = 0x3, EnumType = typeof(GcWealthClass.WealthClassEnum))]

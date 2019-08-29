@@ -3,8 +3,8 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0x7035F702191A0370, SubGUID = 0xB0C75D0F1E252081)]
-    public class GcTradingClassData : NMSTemplate       // size: 0x9C
+	[NMS(Size = 0x9C, GUID = 0x7035F702191A0370, SubGUID = 0xB0C75D0F1E252081)]
+    public class GcTradingClassData : NMSTemplate
     {
         /* 0x00 */ public GcTradeCategory Sells;
         /* 0x04 */ public GcTradeCategory Needs;
