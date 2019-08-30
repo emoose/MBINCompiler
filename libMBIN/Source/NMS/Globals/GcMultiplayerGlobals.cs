@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS( GUID = 0x11FEB32DF350C1FA)]
+    [NMS( GUID = 0xBBAA9ACCC1931093)]
     public class GcMultiplayerGlobals : NMSTemplate
     {
         /* 0x000 */ public float Unknown0x0;
@@ -33,12 +33,12 @@ namespace libMBIN.NMS.Globals
         /* 0x05C */ public float VehicleStickLerpModifier;
         /* 0x060 */ public float VehicleThrottleLerpModifier;
         /* 0x064 */ public float PlayerMarkerScreenOffsetY;
-        /* 0x068 */ public float PlayerMarkerLargeIconDist;
-        /* 0x06C */ public float PlayerMarkerLargeIconSize;
-        /* 0x070 */ public float PlayerMarkerSmallIconSize;
-        /* 0x074 */ public float PlayerMarkerMinShowDistance;
-        /* 0x078 */ public bool PlayerMarkerCenteredName;
-        /* 0x07C */ public float Unknown0x7C;               // not sure if this is used...
+        /* 0x068 */ public float Unknown0x68;
+        /* 0x06C */ public float PlayerMarkerLargeIconDist;
+        /* 0x070 */ public float PlayerMarkerLargeIconSize;
+        /* 0x074 */ public float PlayerMarkerSmallIconSize;
+        /* 0x078 */ public float PlayerMarkerMinShowDistance;
+        /* 0x07C */ public bool PlayerMarkerCenteredName;
         /* 0x080 */ public int AbandonedEntityWaitPeriod_A;
         /* 0x084 */ public int AbandonedEntityWaitPeriod_B;
         /* 0x088 */ public float HostOnConnectedTimeout;
