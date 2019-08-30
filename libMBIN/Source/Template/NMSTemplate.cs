@@ -515,7 +515,13 @@ namespace libMBIN
                         }
                     } else if ( fieldType.IsEnum ) {
                         writer.Align(4, startStructPos, field?.Name ?? fieldType.Name );
-                        writer.Write((int)Enum.Parse(field.FieldType, fieldData.ToString()));
+                        Type enumType = Enum.GetUnderlyingType(field.FieldType);
+                        if (enumType.Name == "UInt32") {
+                            writer.Write((uint)Enum.Parse(field.FieldType, fieldData.ToString()));
+                        }
+                        else {
+                            writer.Write((int)Enum.Parse(field.FieldType, fieldData.ToString()));
+                        }
 
                     } else if ( fieldType.BaseType == typeof( NMSTemplate ) ) {
                         var realData = (NMSTemplate) fieldData;
@@ -1157,8 +1163,13 @@ namespace libMBIN
                         return array;
                     } else if (field.FieldType.IsEnum) {
                         try {
-                            return (int) Enum.Parse(field.FieldType, xmlProperty.Value);
-                        } catch {
+                            Type enumType = Enum.GetUnderlyingType(field.FieldType);
+                            if (enumType.Name == "UInt32") {
+                                return (uint)Enum.Parse(field.FieldType, xmlProperty.Value);
+                            } else {
+                                return (int)Enum.Parse(field.FieldType, xmlProperty.Value);
+                            }
+                        } catch (ArgumentException) {
                             // material flags can have a custom suffix
                             if ( field.FieldType == typeof( libMBIN.NMS.Toolkit.TkMaterialFlags.MaterialFlagEnum ) ) {
                                 // if we got here, then we know that Value is an identifier and not an integer
