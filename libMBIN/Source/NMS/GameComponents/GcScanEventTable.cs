@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0xE0B8910BC3F4136A, SubGUID = 0xD550A58E83EA253)]
+	[NMS(GUID = 0xBA34C321EF0C5B1A, SubGUID = 0xD550A58E83EA253)]
     public class GcScanEventTable : NMSTemplate
     {
         public List<GcScanEventData> Events;

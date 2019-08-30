@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x50, GUID = 0xE7B910E9C497C58E, SubGUID = 0xDF9F37F8504FFE4D)]
+	[NMS(Size = 0x58, GUID = 0xE7B910E9C497C58E, SubGUID = 0xDF9F37F8504FFE4D)]
     public class GcCameraAmbientBuildingData : NMSTemplate
     {
         [NMS(Size = 0x10)]
@@ -13,17 +13,11 @@ namespace libMBIN.NMS.GameComponents
         /* 0x20 */ public float Offset;
         /* 0x24 */ public bool UseLookAt;
         /* 0x25 */ public bool AvoidTerrain;
-        [NMS(Size = 0x1D, EnumValue = new[] {
-                "None", "TerrainResource", "Shelter", "Abandoned", "Terminal", "Shop", "Outpost", "Waypoint",
-                "Beacon", "RadioTower", "Observatory", "Depot", "Factory", "Harvester", "Plaque", "Monolith",
-                "Portal", "Ruin", "Debris", "DamagedMachine", "DistressSignal", "LandingPad", "Base", "MissionTower",
-                "CrashedFreighter", "GraveInCave", "StoryGlitch", "TreasureRuins", "GameStartSpawn"
-            })]
+        [NMS(Size = 0x23, EnumType = typeof(GcBuildingClassification.BuildingClassEnum))]
         /* 0x26 */ public bool[] AvailableBuildings;
-        [NMS(Size = 0x7, EnumValue = new[] { "Traders", "Warriors", "Explorers", "Robots", "Atlas", "Diplomats", "None" })]
-        /* 0x43 */ public bool[] AvailableRaces;
-
-        [NMS(Size = 0x6, Ignore = true)]
-        /* 0x4A */ public byte[] EndPadding;
+        [NMS(Size = 0x8, EnumType = typeof(GcAlienRace.AlienRaceEnum))]
+        /* 0x49 */ public bool[] AvailableRaces;
+        [NMS(Size = 0x7, Ignore = true)]
+        /* 0x51 */ public byte[] EndPadding;
     }
 }

@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0xD850, GUID = 0x155C54AA69A2A526, SubGUID = 0x392CEA8FE98D0F4)]
+	[NMS(Size = 0xDA70, GUID = 0x4921EE559326A5D7, SubGUID = 0x392CEA8FE98D0F4)]
     public class GcScannerIcons : NMSTemplate
     {
         /* 0x0000 */ public GcScannerIcon TaggedBuilding;
@@ -92,10 +92,12 @@ namespace libMBIN.NMS.GameComponents
         /* 0xD294 */ public GcScannerIcon CreatureAction;
         /* 0xD3A0 */ public GcScannerIcon CreatureTame;
         /* 0xD4AC */ public GcScannerIcon CreatureDanger;
+        /* 0xD5B8 */ public GcScannerIcon CreatureFiend;
+        /* 0xD6C4 */ public GcScannerIcon CreatureMilk;
         [NMS(Size = 0x5, EnumType = typeof(GcScannerIconHighlightTypes.ScannerIconHighlightTypeEnum))]
-        /* 0xD5B8 */ public TkTextureResource[] HighlighIcons;
+        /* 0xD7D0 */ public TkTextureResource[] HighlighIcons;
 
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0xD84C */ public byte[] EndPadding;
+        [NMS(Size = 0xC, Ignore = true)]
+        /* 0xDA64 */ public byte[] EndPadding;
     }
 }
