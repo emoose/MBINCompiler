@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x350, GUID = 0x6FC0C0D119914E5B, SubGUID = 0x9F1CE8466638E767)]
+	[NMS(Size = 0x350, GUID = 0x36849C3AB2719329, SubGUID = 0x9F1CE8466638E767)]
     public class GcTechnology : NMSTemplate
     {
         [NMS(Size = 0x10)]
@@ -45,38 +45,32 @@ namespace libMBIN.NMS.GameComponents
         /* 0x256 */ public byte[] Padding256;
         [NMS(Size = 0x10)]
         /* 0x258 */ public string AmmoId;
-        /* 0x268 */ public bool Upgrade;
-        /* 0x269 */ public bool Core;
-        /* 0x26A */ public bool RepairTech;
-        /* 0x26B */ public bool Procedural;
-        /* 0x26C */ public GcTechnologyCategory TechnologyCategory;
-
-        /* 0x270 */ public GcTechnologyRarity TechnologyRarity;
-
-        /* 0x274 */ public float Value;
-        /* 0x278 */ public List<GcTechnologyRequirement> Requirements;
-        /* 0x288 */ public GcStatsTypes BaseStat;
+        /* 0x268 */ public bool PrimaryItem;
+        /* 0x269 */ public bool Upgrade;
+        /* 0x26A */ public bool Core;
+        /* 0x26B */ public bool RepairTech;
+        /* 0x26C */ public bool Procedural;
+        /* 0x270 */ public GcTechnologyCategory TechnologyCategory;
+        /* 0x274 */ public GcTechnologyRarity TechnologyRarity;
+        /* 0x278 */ public float Value;
         [NMS(Size = 0x4, Ignore = true)]
-        /* 0x28C */ public byte[] Padding28C;
-        /* 0x290 */ public List<GcStatsBonus> StatBonuses;
-
+        /* 0x27C */ public byte[] Padding27C;
+        /* 0x280 */ public List<GcTechnologyRequirement> Requirements;
+        /* 0x290 */ public GcStatsTypes BaseStat;
+        [NMS(Size = 0x4, Ignore = true)]
+        /* 0x294 */ public byte[] Padding294;
+        /* 0x298 */ public List<GcStatsBonus> StatBonuses;
         [NMS(Size = 0x10)]
-        /* 0x2A0 */ public string RequiredTech;
-
-        /* 0x2B0 */ public int RequiredLevel;
-
+        /* 0x2A8 */ public string RequiredTech;
+        /* 0x2B8 */ public int RequiredLevel;
         [NMS(Size = 0x4, Ignore = true)]
-        /* 0x2B4 */ public byte[] Padding2B4;
-
+        /* 0x2BC */ public byte[] Padding2BC;
         [NMS(Size = 0x20)]
-        /* 0x2B8 */ public string FocusLocator;
-
+        /* 0x2C0 */ public string FocusLocator;
         /* 0x2E0 */ public Colour UpgradeColour;
         /* 0x2F0 */ public Colour LinkColour;
-
         [NMS(Size = 0x10)]
         /* 0x300 */ public string RewardGroup;
-
         /* 0x310 */ public int BaseValue;
         /* 0x314 */ public GcItemPriceModifiers Cost;
         /* 0x328 */ public int RequiredRank;
