@@ -178,13 +178,18 @@ namespace MBINCompiler.Commands {
             var type = NMSTemplate.GetTemplateType( mbin.Header.GetXMLTemplateName() );
             var nms = (NMSAttribute) (type.GetCustomAttributes( typeof( NMSAttribute ), false )?[0] ?? null);
             var broken = nms.Broken;
+            // GUID's for the old files
+            ulong[] UnsupportedGUIDs = new ulong[] { };
             var mismatch = (mbin.Header.TemplateGUID != nms.GUID);
+            bool unsupported = (UnsupportedGUIDs.Contains(mbin.Header.TemplateGUID));
 
             //if ( broken && mismatch ) {
             //    FileIsUnsupported( fIn.Name, mbin );
             //} else
-            if ( broken ) {
-                FileIsBroken( inputPath, mbin );
+            if (broken) {
+                FileIsBroken(inputPath, mbin);
+            } else if ( unsupported ) {
+                FileIsUnused(inputPath, mbin);
             } else if ( mismatch ) {
                 FileIsUnrecognized( inputPath, mbin );
             }
@@ -245,6 +250,11 @@ namespace MBINCompiler.Commands {
         private static void FileIsUnrecognized( string filePath, MBINFile mbin ) {
             WarnBroken( "File not recognized. You may need to use an older version of MBINCompiler."
                       , filePath, mbin );
+        }
+        private static void FileIsUnused(string filePath, MBINFile mbin)
+        {
+            WarnBroken("This file is not supported by MBINCompiler as it is no longer used by the game. Do not report issues decompiling this file anywhere as it is not expected to."
+                      , filePath, mbin);
         }
         private static void  FileIsBroken( string filePath, MBINFile mbin    ) => _FileIsBroken( filePath, mbin, null );
         private static void  FileIsBroken( string filePath, NMSTemplate data ) => _FileIsBroken( filePath, null, data );
