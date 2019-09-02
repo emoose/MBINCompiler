@@ -89,8 +89,8 @@ namespace libMBIN.NMS.Globals
         /* 0x13C */ public float Unknown0x13C;
         /* 0x140 */ public int UnknownInt0x140;
         /* 0x144 */ public int UnknownInt0x144;
-        /* 0x148 */ public int UnknownInt0x148;
-        /* 0x14C */ public int UnknownInt0x14C;
+        /* 0x148 */ public int CookingSpeedMultiplier; // Increase value for faster cooking
+        /* 0x14C */ public int RefiningSpeedMultiplier; // Increase value for faster refining
         /* 0x150 */ public int UnknownInt0x150;
         /* 0x154 */ public int UnknownInt0x154;
         [NMS(Size = 0x03)]
