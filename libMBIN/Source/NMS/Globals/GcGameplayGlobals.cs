@@ -100,7 +100,7 @@ namespace libMBIN.NMS.Globals
         /* 0x01B8 */ public float Unknown0x1B8;
         /* 0x01BC */ public float Unknown0x1BC;
         /* 0x01C0 */ public float Unknown0x1C0;
-        /* 0x01C4 */ public bool Unknown0x1C4;
+        /* 0x01C4 */ public bool AllowPreInstallTechnologies; // Set to False to revert to legacy method of installing technologies and upgrades
         /* 0x01C8 */ public bool FreighterRequiresRGBHyperdriveUpgrades;
         /* 0x01C9 */ public bool AllowTeleportItemsToFreighter;
         /* 0x01CA */ public bool DisableAnomalyAmbientSpawn;
