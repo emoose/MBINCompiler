@@ -347,7 +347,7 @@ namespace libMBIN.NMS.Globals
         /* 0x1A38 */ public bool DisableBaseBuilding;
         /* 0x1A39 */ public bool DisableBaseBuildingLimits;
         /* 0x1A3C */ public float BaseDownloadTimeout;
-        /* 0x1A40 */ public bool Unknown0x1A40;
+        /* 0x1A40 */ public bool BaseBuildingPartsRequirePower;
         /* 0x1A41 */ public bool Unknown0x1A41;
         /* 0x1A42 */ public bool Unknown0x1A42;
         /* 0x1A43 */ public bool Unknown0x1A43;         // probably not used...
