@@ -20,7 +20,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x048 */ public bool ClearForcedInteractionOnCompletion;
         /* 0x049 */ public bool AlwaysShow;
         /* 0x04A */ public bool NeverShow;
-        [NMS(Size = 0x6, Ignore = true)]
+        [NMS(Size = 0x5, Ignore = true)]
         /* 0x04B */ public byte[] Padding4B;
         [NMS(Size = 0x20)]
         /* 0x050 */ public string PlanetLabelText;
@@ -46,6 +46,9 @@ namespace libMBIN.NMS.GameComponents
 
 		public enum SolarSystemLocationEnum { Local, Near, LocalOrNear, NearWithNoExpeditions, FromList }
 		/* 0x090 */ public SolarSystemLocationEnum SolarSystemLocation;
+
+        [NMS(Size = 0x4, Ignore = true)]
+        /* 0x094 */ public byte[] Padding94;
 
         /* 0x098 */ public GcScanEventSolarSystemLookup SolarSystemAttributes;
         /* 0x0F8 */ public GcScanEventSolarSystemLookup SolarSystemAttributesFallback;

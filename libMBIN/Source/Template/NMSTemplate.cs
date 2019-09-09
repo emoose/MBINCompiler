@@ -210,7 +210,7 @@ namespace libMBIN
                         return array;
                     } else {
                         int alignment = field.GetCustomAttribute<NMSAttribute>()?.Alignment ?? 0x4;
-                        reader.Align(alignment, 0); // templatePosition when not in list??
+                        reader.Align(alignment, templatePosition); // templatePosition when not in list??
                         return DeserializeBinaryTemplate(reader, fieldType);
                     }
             }

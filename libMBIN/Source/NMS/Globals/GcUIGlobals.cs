@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(GUID = 0xF2C3ED10DF5572D3)]
+    [NMS(GUID = 0x3A8B475481E073A2)]
     public class GcUIGlobals : NMSTemplate
     {
         /*
@@ -59,9 +59,9 @@ namespace libMBIN.NMS.Globals
         /* 0xA8 */ public float Unknown0xA8;
         /* 0xAC */ public float Unknown0xAC;
         /* 0xB0 */ public float Unknown0xB0;
-        /* 0xB4 */ public bool Unknown0xB4;
-        /* 0xB5 */ public bool Unknown0xB5;
-        /* 0xB8 */ public float Unknown0xB8;
+        /* 0xB4 */ public float Unknown0xB4;
+        /* 0xB8 */ public bool Unknown0xB8;
+        /* 0xB9 */ public bool Unknown0xB9;
         /* 0xBC */ public float Unknown0xBC;
         /* 0xC0 */ public float Unknown0xC0;
         /* 0xC4 */ public float Unknown0xC4;
@@ -659,8 +659,7 @@ namespace libMBIN.NMS.Globals
         /* 0x01230 */ public float HUDPlayerTrackArrowIconSize;
         /* 0x01234 */ public float HUDPlayerTrackArrowArrowSize;
         /* 0x01238 */ public float HUDPlayerTrackArrowDotSize;
-        [NMS(Size = 0x04, Ignore = true)]
-        /* 0x0123C */ public byte[] Padding123C;
+        /* 0x0123C */ public float Unknown0x123C;
         /* 0x01240 */ public Colour HUDPlayerTrackArrowDotColour;
         /* 0x01250 */ public Colour HUDPlayerTrackArrowDotColourPolice;
         /* 0x01260 */ public Colour HUDPlayerTrackArrowDotColourPirate;
