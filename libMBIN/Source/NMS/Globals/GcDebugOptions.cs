@@ -96,12 +96,12 @@ namespace libMBIN.NMS.Globals
         /* 0x3FF */ public bool Unknown0x3FF;
         /* 0x400 */ public bool Unknown0x400;
         /* 0x401 */ public bool UseLegacyFreighters;
-        /* 0x402 */ public bool SpawnPirates;
-        /* 0x403 */ public bool SpawnRobots;
-        /* 0x404 */ public bool SpawnShips;
-        /* 0x405 */ public bool InstanceCollision;
-        /* 0x406 */ public bool MPMissions;
-        /* 0x407 */ public bool Unknown0x407;
+        /* 0x402 */ public bool Unknown0x402;
+        /* 0x403 */ public bool SpawnPirates;
+        /* 0x404 */ public bool SpawnRobots;
+        /* 0x405 */ public bool SpawnShips;
+        /* 0x406 */ public bool InstanceCollision;
+        /* 0x407 */ public bool MPMissions;
         /* 0x408 */ public bool Unknown0x408;
         /* 0x409 */ public bool SpecialsShop;
 		/* 0x40A */ public bool MultiplePlayerFreightersInASystem;
