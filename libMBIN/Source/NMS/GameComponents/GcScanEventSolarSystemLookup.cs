@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Alignment = 0x4, Size = 0x60, GUID = 0x20371E4A6795DF08, SubGUID = 0xE523CFAD6AFB4BB6)]
+	[NMS(Alignment = 0x4, Size = 0x68, GUID = 0xA11B1D7F918865AB, SubGUID = 0xE523CFAD6AFB4BB6)]
     public class GcScanEventSolarSystemLookup : NMSTemplate
     {
         /* 0x00 */ public bool UseStarType;
@@ -18,21 +18,22 @@ namespace libMBIN.NMS.GameComponents
         /* 0x14 */ public GcPlanetTradingData TradingData;
         /* 0x1C */ public bool NeedsWaterPlanet;
         /* 0x1D */ public bool NeedsExtremeSentinelPlanet;
-        /* 0x1E */ public bool NeedsBiome;
-        /* 0x1F */ public bool AnyRGBBiome;
-        /* 0x20 */ public GcBiomeType NeedsBiomeType;
-        /* 0x24 */ public bool NeedsEmptySystem;
-        /* 0x25 */ public bool NeedsAbandonedSystem;
-        [NMS(Size = 0x2, Ignore = true)]
-        /* 0x26 */ public byte[] Padding26;
+        /* 0x1E */ public bool NeedsExtremeWeatherPlanet;
+        /* 0x1F */ public bool NeedsBiome;
+        /* 0x20 */ public bool AnyRGBBiome;
+        /* 0x24 */ public GcBiomeType NeedsBiomeType;
+        /* 0x28 */ public bool NeedsEmptySystem;
+        /* 0x29 */ public bool NeedsAbandonedSystem;
+        [NMS(Size = 0x6, Ignore = true)]
+        /* 0x2A */ public byte[] Padding2A;
         [NMS(Size = 0x10)]
-        /* 0x28 */ public string NeedsResourceHint;
-        /* 0x38 */ public bool NeedsHighCreatureLevel;
-        /* 0x39 */ public bool AllowUnsafeMatches;
-        /* 0x3A */ public bool NeverAllowEmpty;
+        /* 0x30 */ public string NeedsResourceHint;
+        /* 0x40 */ public bool NeedsHighCreatureLevel;
+        /* 0x41 */ public bool AllowUnsafeMatches;
+        /* 0x42 */ public bool NeverAllowEmpty;
         [NMS(Size = 0x5, Ignore = true)]
-        /* 0x3B */ public byte[] Padding3B;
+        /* 0x43 */ public byte[] Padding43;
         [NMS(Size = 0x20)]
-        /* 0x40 */ public string SamePlanetAsEvent;
+        /* 0x48 */ public string SamePlanetAsEvent;
     }
 }

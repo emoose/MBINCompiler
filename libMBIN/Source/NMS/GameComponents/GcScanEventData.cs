@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x2E8, Alignment = 0x8, GUID = 0x70DF4F4F19F096A4, SubGUID = 0x7BBBCE7D7BC0F1F4)]
+	[NMS(Size = 0x2F8, Alignment = 0x8, GUID = 0xCFB90ED6E2063076, SubGUID = 0x7BBBCE7D7BC0F1F4)]
     public class GcScanEventData : NMSTemplate
     {
         [NMS(Size = 0x20)]
@@ -51,35 +51,35 @@ namespace libMBIN.NMS.GameComponents
         /* 0x094 */ public byte[] Padding94;
 
         /* 0x098 */ public GcScanEventSolarSystemLookup SolarSystemAttributes;
-        /* 0x0F8 */ public GcScanEventSolarSystemLookup SolarSystemAttributesFallback;
-        /* 0x158 */ public bool ForceRestartInteraction;
+        /* 0x100 */ public GcScanEventSolarSystemLookup SolarSystemAttributesFallback;
+        /* 0x168 */ public bool ForceRestartInteraction;
         [NMS(Size = 7, Ignore = true)]
-        /* 0x159 */ public byte[] Padding159;
+        /* 0x169 */ public byte[] Padding169;
         [NMS(Size = 0x10)]
-        /* 0x160 */ public string HasReward;
+        /* 0x170 */ public string HasReward;
         [NMS(Size = 0x20)]
-        /* 0x170 */ public string NextOption;
-        /* 0x190 */ public GcScanEventTriggers TriggerActions;
-        /* 0x1B0 */ public List<NMSString0x100> UAsList;
-        /* 0x1C0 */ public GcTechnologyCategory TechShopType;
+        /* 0x180 */ public string NextOption;
+        /* 0x1A0 */ public GcScanEventTriggers TriggerActions;
+        /* 0x1C0 */ public List<NMSString0x100> UAsList;
+        /* 0x1D0 */ public GcTechnologyCategory TechShopType;
         [NMS(Size = 0x20)]
-        /* 0x1C4 */ public string OSDMessage;
+        /* 0x1D4 */ public string OSDMessage;
         [NMS(Size = 0x20)]
-        /* 0x1E4 */ public string InterstellarOSDMessage;
+        /* 0x1F4 */ public string InterstellarOSDMessage;
         [NMS(Size = 0x20)]
-        /* 0x204 */ public string MarkerLabel;
-        /* 0x224 */ public TkTextureResource MarkerIcon;
-        /* 0x2A8 */ public float StartTime;
-        /* 0x2AC */ public float MessageTime;
-        /* 0x2B0 */ public float MessageDisplayTime;
-        /* 0x2B4 */ public GcAudioWwiseEvents MessageAudio;
-        /* 0x2B8 */ public float IconTime;
-        /* 0x2BC */ public float TooltipTime;
-        /* 0x2C0 */ public bool TooltipRepeats;
-        /* 0x2C1 */ public bool ShowEndTooltip;
+        /* 0x214 */ public string MarkerLabel;
+        /* 0x234 */ public TkTextureResource MarkerIcon;
+        /* 0x2B8 */ public float StartTime;
+        /* 0x2BC */ public float MessageTime;
+        /* 0x2C0 */ public float MessageDisplayTime;
+        /* 0x2C4 */ public GcAudioWwiseEvents MessageAudio;
+        /* 0x2C8 */ public float IconTime;
+        /* 0x2CC */ public float TooltipTime;
+        /* 0x2D0 */ public bool TooltipRepeats;
+        /* 0x2D1 */ public bool ShowEndTooltip;
         [NMS(Size = 0x20)]
-        /* 0x2C2 */ public string TooltipMessage;
+        /* 0x2D2 */ public string TooltipMessage;
         [NMS(Size = 0x6, Ignore = true)]
-        /* 0x2D2 */ public byte[] EndPadding;
+        /* 0x2E2 */ public byte[] EndPadding;
     }
 }
