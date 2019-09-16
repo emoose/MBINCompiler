@@ -24,7 +24,7 @@ if "%GITHUB_TOKEN%" == "" goto INVALID_TOKEN
 
 set REPO=%GITHUB_USER%/%GITHUB_REPO%
 
-REM back out of .\BuildTools
+REM back out of .\Tools\Build
 set PROJECT_PATH=%SCRIPT_PATH%\..\..
 set BUILD_PATH=%PROJECT_PATH%\Build\Release
 
@@ -34,7 +34,7 @@ set DLL_ARTIFACT=%BUILD_PATH%\libMBIN.dll
 set OPT_PRERELEASE=-prerelease
 set BRANCH=%PRE_BRANCH%
 
-for /f "tokens=1,2,3,4,5,6" %%I in ('call "_lib\libMBIN-VERSION.BAT"') do (
+for /f "tokens=1,2,3,4,5,6" %%I in ('call "lib\libMBIN-VERSION.BAT"') do (
     set TAG=%%I
     set VERSION=%%J
     set MAJOR=%%K
@@ -52,7 +52,7 @@ if %PRERELEASE% == 0 (
 echo TAG=%TAG%
 echo VERSION=%VERSION%
 
-REM Check that the build artifacts exist
+REM Check that the build artifacts exists
 if not exist "%EXE_ARTIFACT%" goto NOT_COMPILED
 if not exist "%DLL_ARTIFACT%" goto NOT_COMPILED
 
@@ -75,7 +75,7 @@ md "%STAGING_PATH%"
 copy "%EXE_ARTIFACT%" "%STAGING_PATH%\" > nul 2>&1
 copy "%DLL_ARTIFACT%" "%STAGING_PATH%\" > nul 2>&1
 
-_bin\github-release %OPT_PRERELEASE% "%REPO%" "v%TAG%" "%BRANCH%" "%MSG%" "%STAGING_PATH%\*"
+bin\github-release %OPT_PRERELEASE% "%REPO%" "v%TAG%" "%BRANCH%" "%MSG%" "%STAGING_PATH%\*"
 
 REM CLEANUP: delete the staging folder and it's contents
 rd /s /q "%STAGING_PATH%" > nul 2>&1

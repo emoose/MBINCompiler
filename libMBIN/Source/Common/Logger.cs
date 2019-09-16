@@ -84,16 +84,6 @@ namespace libMBIN {
             Trace.Listeners.Remove( TraceListener );
         }
 
-        private static TextWriterTraceListener consoleListener = null;
-        public static bool LogToConsole {
-            get => (consoleListener != null);
-            set {
-                if ( consoleListener != null ) Debug.Listeners.Remove( consoleListener );
-                consoleListener = value ? (consoleListener ?? new ConsoleTraceListener()) : null;
-                if ( value ) Debug.Listeners.Add( consoleListener );
-            }
-        }
-
         #region // Indent
         private static int _indentSize = 2;
 #if (DEBUG && ENABLE_THREADS) || (!DEBUG && !DISABLE_THREADS)
@@ -279,7 +269,7 @@ namespace libMBIN {
         /// Default is true.
         /// If true, then the existing logStream will be disposed when <see cref="Open(StreamWriter, bool, bool)"/>
         /// or <see cref="Close"/> is called.
-        /// If false, then <see cref="Stream.Dispose"/> must be manually called on logStream.
+        /// If false, then <see cref="Stream.Dispose()"/> must be manually called on logStream.
         /// </param>
         /// <returns>stream</returns>
         /// <seealso cref="Open(string, bool, bool)"/>
@@ -301,7 +291,7 @@ namespace libMBIN {
 
         /// <summary>
         /// Release any resources the Logger is using.
-        /// If <see cref="DisposeWhenClosed"/> is true then call <see cref="Stream.Dispose"/> on <see cref="LogStream"/>.</summary>
+        /// If <see cref="DisposeWhenClosed"/> is true then call <see cref="Stream.Dispose()"/> on <see cref="LogStream"/>.</summary>
         /// <seealso cref="Open(string, bool, bool)"/>
         /// <seealso cref="Open(Stream, bool, bool)"/>
         /// <seealso cref="Open(StreamWriter, bool, bool)"/>
@@ -557,8 +547,6 @@ namespace libMBIN {
                 WriteLine( log, tee, sbLine.ToString(), sbLog.ToString() );
             } );
         }
-
-
 
         private static string GetLabelledLine( string label, string line, ref bool first, bool last ) {
             if ( !first ) return line;

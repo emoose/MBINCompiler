@@ -28,10 +28,6 @@ namespace MBINCompiler {
             Logger.Open( Path.ChangeExtension( Utils.GetExecutablePath(), ".log" ) );
             Logger.EnableTraceLogging = true;
 
-#if DEBUG_STDOUT
-            Logger.LogToConsole = true;
-#endif
-
             Logger.LogMessage( "VERSION", $"MBINCompiler v{Version.GetVersionStringCompact()}" );
             Logger.LogMessage( "ARGS", $"\"{string.Join( "\" \"", args )}\"\n" );
             using ( var indent = new Logger.IndentScope() ) {

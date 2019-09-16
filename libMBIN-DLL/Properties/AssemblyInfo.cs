@@ -6,11 +6,11 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("libMBIN")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("A modding tool for the game: No Man's Sky that converts the game's MBIN data files (binary) into human-readable EXML files (text) that can be edited with any text editor and then converted back again for use in a modded game.")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("libMBIN")]
-[assembly: AssemblyCopyright("Copyright ©  2017")]
+[assembly: AssemblyCopyright("Copyright © 2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -38,5 +38,8 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyVersion( libMBIN.Version.VERSION_STRING )]
 [assembly: AssemblyFileVersion( libMBIN.Version.VERSION_STRING )]
 
-// Unit tests need access to internals
-[assembly: InternalsVisibleTo( "MBINCompilerTests" )] 
+// MBINCompiler needs access to libMBIN.Version.VERSION_STRING
+[assembly: InternalsVisibleTo( "MBINCompiler" )]
+
+// Unit tests needs access to internals
+[assembly: InternalsVisibleTo( "MBINCompilerTests" )]
