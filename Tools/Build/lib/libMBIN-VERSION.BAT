@@ -6,7 +6,7 @@ set SCRIPT_PATH=%SCRIPT_PATH:~0,-1%
 set SCRIPT_NAME=%~n0
 REM ----------------------------------------
 
-REM Back out of BuildTools\_lib
+REM Back out of BuildTools\lib
 set PROJECT_PATH=%SCRIPT_PATH%\..\..\..
 
 REM Relative to PROJECT_PATH

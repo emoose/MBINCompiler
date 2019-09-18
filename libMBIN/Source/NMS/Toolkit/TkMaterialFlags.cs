@@ -24,7 +24,7 @@ namespace libMBIN.NMS.Toolkit
         /// Generic material flags enum. Any suffix can be used in EXML files and it will be stripped away.
         /// This conforms to the documented behaviour for the Horde3D engine. ( http://www.horde3d.org/docs/html/_pipeline.html Shaders/Code Section ):
         /// <code>
-        /// The shader flags have a special naming convention: _F<digit><digit>_<name>.
+        /// The shader flags have a special naming convention: _F&lt;digit&gt;&lt;digit&gt;_&lt;name&gt;.
         /// The following would be a valid flag: _F06_MyFlag.
         /// The flag must have a number between 01 and 32 (note the leading zero).
         /// This number is exclusively used to identify the flag.

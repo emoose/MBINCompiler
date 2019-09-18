@@ -65,7 +65,7 @@ namespace MBINCompiler {
         public static int ShowException( Exception e, bool wait=true ) {
             string msg = ( e.GetType() == typeof( CompilerException ) ) ? e.InnerException?.Message : null;
             if ( Logger.LogStream.BaseStream.Position != lastPosition ) Logger.LogMessage( "" ); // new line, log only
-            ShowError( $"[{e.GetType().Name}]: {msg ?? e.Message}", wait: wait );
+            ShowError( $"[{e.GetType().Name}]: {msg ?? e.Message}", wait: false );
             using ( var indent = new Logger.IndentScope() ) {
                 var b = e;
                 bool once = true;
@@ -90,6 +90,7 @@ namespace MBINCompiler {
                 Logger.LogMessage( (e is System.IO.EndOfStreamException) ? "" : $"\n{b.StackTrace}\n" );
             }
             lastPosition = Logger.LogStream.BaseStream.Position;
+            WaitForKeypress( wait );
             return (int) ErrorCode.Unknown;
         }
 

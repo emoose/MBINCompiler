@@ -34,7 +34,7 @@ namespace MBINCompilerTests {
         public static void Initialize( TestContext context ) {
             // ( back out of bin\[Debug|Release] directories )
             ProjectDir = Path.GetFullPath( Path.Combine( Directory.GetCurrentDirectory(), "..", ".." ) );
-            LogResultsDir = Path.Combine( context.TestRunDirectory, ".." );
+            LogResultsDir = Path.Combine( ProjectDir, "TestLogs" ); // context.TestRunDirectory, ".." );
 
             Logger.Level = GetEnumProperty<DebugLevel>( context, OPT_LOG_LEVEL, DebugLevel.Info );
 
