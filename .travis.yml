@@ -1,0 +1,58 @@
+language: csharp
+solution: MBINCompiler.sln
+mono: latest
+dotnet: 2.2.109
+install:
+    - export FrameworkPathOverride=$(dirname $(which mono))/../lib/mono/4.6.1/
+script:
+    - dotnet restore
+    - dotnet build -r win-x64 -p:Configuration=Release
+    #- msbuild /p:Configuration=Release MBINCompiler.sln
+    #- dotnet test
+
+before_deploy:
+    # Set up git user name and tag this commit
+    - export LIBMBIN_VERSION="$(cat libMBIN/Source/Version.cs | grep -P 'const[[:space:]]+string[[:space:]]+VERSION_STRING' | grep -oP '(?<=\")(.*)(?<\")')"
+    - "echo \"LIBMBIN_VERSION: $LIBMBIN_VERSION\""
+    - "[[ \"$TRAVIS_TAG\" =~ ^v([[:digit:]]+)[.]([[:digit:]]+)[.]([[:digit:]]+)(-pre([[:digit:]]+)|[.]([[:digit:]])+) ]] && export MATCH_TAG=${BASH_REMATCH[1]}.${BASH_REMATCH[2]}.${BASH_REMATCH[3]}.${BASH_REMATCH[5]}${BASH_REMATCH[6]}"
+    - "echo \"Tag: $TRAVIS_TAG -> $MATCH_TAG\""
+    - "[[ \"$MATCH_TAG\" == \"$LIBMBIN_VERSION\" ]] || echo \"Error: The version tag $TRAVIS_TAG must match the LIBMBIN_VERSION defined in Version.cs\" && set -e"
+    - "echo \"$TRAVIS_TAG matches LIBMBIN_VERSION.\""
+    #- export TRAVIS_TAG=v$LIBMBIN_VERSION-$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)
+    #- git config --local user.name "Travis-CI"
+    #- git config --local user.email "noreply@email.com"
+    #- git tag $TRAVIS_TAG
+
+# see https://docs.travis-ci.com/user/deployment/releases/
+deploy:
+    provider: releases
+    prerelease: true
+    api_key:
+        # You must create a Personal Access Token from your Github User Settings. It must have the 'pub_repo' scope enabled.
+        # No other scope is required. Do not store your token as plain-text in a public repo or github will detect
+        # and invalidate the token for your own security.
+        # The token must be encrypted so that it can be safely stored in your public repository.
+        # To encrypt, use https://travis-encrypt.github.io/
+        secure: "Your encrypted github public access token."
+    file:
+        - "Build/Release/libMBIN.dll"
+        - "Build/Release/win-x64/MBINCompiler.exe"
+    skip_cleanup: true
+    on:
+        branch: development
+        tags: true
+        condition: "$TRAVIS_TAG =~ ^v[[:digit:]]"
+
+deploy:
+    provider: releases
+    api_key:
+        # same as above
+        secure: "Your encrypted github public access token."
+    file:
+        - "Build/Release/libMBIN.dll"
+        - "Build/Release/win-x64/MBINCompiler.exe"
+    skip_cleanup: true
+    on:
+        branch: master
+        tags: true
+        condition: "$TRAVIS_TAG =~ ^v[[:digit:]]"
