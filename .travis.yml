@@ -27,13 +27,7 @@ before_deploy:
 deploy:
     provider: releases
     prerelease: true
-    api_key:
-        # You must create a Personal Access Token from your Github User Settings. It must have the 'pub_repo' scope enabled.
-        # No other scope is required. Do not store your token as plain-text in a public repo or github will detect
-        # and invalidate the token for your own security.
-        # The token must be encrypted so that it can be safely stored in your public repository.
-        # To encrypt, use https://travis-encrypt.github.io/
-        secure: "Your encrypted github public access token."
+    github_token: $GITHUB_TOKEN
     file:
         - "Build/Release/libMBIN.dll"
         - "Build/Release/win-x64/MBINCompiler.exe"
@@ -45,9 +39,7 @@ deploy:
 
 deploy:
     provider: releases
-    api_key:
-        # same as above
-        secure: "Your encrypted github public access token."
+    github_token: $GITHUB_TOKEN
     file:
         - "Build/Release/libMBIN.dll"
         - "Build/Release/win-x64/MBINCompiler.exe"
