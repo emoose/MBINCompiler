@@ -6,7 +6,7 @@ install:
     - export FrameworkPathOverride=$(dirname $(which mono))/../lib/mono/4.6.1/
 script:
     - dotnet restore
-    - dotnet build -r win-x64 -p:Configuration=Release
+    - dotnet build -r win-x64 -p:Configuration=Release /nowarn:cs0618
     #- msbuild /p:Configuration=Release MBINCompiler.sln
     #- dotnet test
 
