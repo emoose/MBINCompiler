@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(GUID = 0x3A8B475481E073A2)]
+    [NMS(GUID = 0x1ECD9DB164F7F6D6)]
     public class GcUIGlobals : NMSTemplate
     {
         /*

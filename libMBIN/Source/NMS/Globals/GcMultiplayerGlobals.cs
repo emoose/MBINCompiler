@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS( GUID = 0xBBAA9ACCC1931093)]
+    [NMS( GUID = 0x56B7FE57C430C131)]
     public class GcMultiplayerGlobals : NMSTemplate
     {
         /* 0x000 */ public float Unknown0x0;
@@ -72,11 +72,19 @@ namespace libMBIN.NMS.Globals
         /* 0x0F8 */ public float Unknown0xF8;
         /* 0x0FC */ public int UnknownInt0xFC;
         /* 0x100 */ public float Unknown0x100;
-        /* 0x104 */ public float Unknown0x104;
-        /* 0x108 */ public float Unknown0x108;
-        /* 0x10C */ public float Unknown0x10C;
-        /* 0x110 */ public float Unknown0x110;
+        /* 0x104 */ public float Unknown0x104;      // Encrypted mission chance?
+        [NMS(Size = 0x4)]
+        /* 0x108 */ public NMSString0x10[] MissionRewards;      // Encrypted mission rewards
+
+        /* 0x148 */ public TkTextureResource Unknown0x148;      // "Hide and seek" icons?
+        /* 0x1CC */ public TkTextureResource Unknown0x1CC;
+        /* 0x250 */ public TkTextureResource Unknown0x250;
+
+        /* 0x2D4 */ public float Unknown0x2D4;
+        /* 0x2D8 */ public float Unknown0x2D8;
+        /* 0x2DC */ public float Unknown0x2DC;
+        /* 0x2E0 */ public float Unknown0x2E0;
         [NMS(Size = 0x4, Ignore = true)]
-        /* 0x114 */ public byte[] EndPadding;
+        /* 0x2E4 */ public byte[] EndPadding;
     }
 }

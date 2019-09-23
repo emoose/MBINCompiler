@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(GUID = 0x159C0E5911EAE030)]
+    [NMS(GUID = 0xFFC2B5EDF619C689)]
     public class GcGalaxyGlobals : NMSTemplate
     {
         /* 0x0000 */ public bool Unknown0x0;
