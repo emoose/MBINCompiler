@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(GUID = 0x3235F67C0A712F2)]
+    [NMS(GUID = 0xA54782E1F4C2A95B)]
     public class GcDebugOptions : NMSTemplate
     {
         /* 0x0 */ public bool ThirdPersonIsDefaultCamera;

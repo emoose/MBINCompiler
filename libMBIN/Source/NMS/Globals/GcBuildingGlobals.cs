@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(GUID = 0x1F6E0B85A9ECF7CC)]
+    [NMS(GUID = 0xE4F0A89484368BC5)]
     public class GcBuildingGlobals : NMSTemplate
     {
         /* 0x0 */ public float Unknown0x0;
@@ -166,18 +166,19 @@ namespace libMBIN.NMS.Globals
         /* 0x2F8 */ public float Unknown0x2F8;
         /* 0x2FC */ public float Unknown0x2FC;
         /* 0x300 */ public float Unknown0x300;
-        /* 0x304 */ public float StartCrashSiteMinDistance;
-        /* 0x308 */ public float StartCrashSiteMaxDistance;
-        /* 0x30C */ public float StartShelterMinDistance;
-        /* 0x310 */ public float StartShelterMaxDistance;
+        /* 0x304 */ public float Unknown0x304;
+        /* 0x308 */ public float StartCrashSiteMinDistance;
+        /* 0x30C */ public float StartCrashSiteMaxDistance;
+        /* 0x310 */ public float StartShelterMinDistance;
+        /* 0x314 */ public float StartShelterMaxDistance;
         [NMS(Size = 0x80)]
-        /* 0x314 */ public string FreighterBaseSpawnOverride;
-        /* 0x394 */ public bool BaseBuildingTerrainEditBoundsOverride;
-        /* 0x398 */ public float BaseBuildingTerrainEditBaseYOffset;
-        /* 0x39C */ public float BaseBuildingTerrainEditTopYOffset;
-        /* 0x3A0 */ public float BaseBuildingTerrainEditBoundsScalar;
-        /* 0x3A4 */ public bool Unknown0x3A4;
-        [NMS(Size = 0xB, Ignore = true)]
-        /* 0x3A5 */ public byte[] EndPadding;
+        /* 0x318 */ public string FreighterBaseSpawnOverride;
+        /* 0x398 */ public bool BaseBuildingTerrainEditBoundsOverride;
+        /* 0x39C */ public float BaseBuildingTerrainEditBaseYOffset;
+        /* 0x3A0 */ public float BaseBuildingTerrainEditTopYOffset;
+        /* 0x3A4 */ public float BaseBuildingTerrainEditBoundsScalar;
+        /* 0x3A8 */ public bool Unknown0x3A8;
+        [NMS(Size = 0x7, Ignore = true)]
+        /* 0x3A9 */ public byte[] EndPadding;
     }
 }
