@@ -78,7 +78,7 @@ namespace libMBIN.NMS.GameComponents
 
         public List<float> TestDynamicArray;
 
-        [NMS(Size = 0x4, EnumValue = new[] { "Default", "Option1", "Option2", "Option3" })]
+        [NMS(Size = 0x4, EnumValue = new[] { "Default", "Option1", "Option2", "Option3" })]   //Wbertro: matches TestEnumEnum above
         public float[] TestEnumArray;
 
         [NMS(Size = 0x23, EnumType = typeof(GcBuildingClassification.BuildingClassEnum))]
