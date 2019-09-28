@@ -28,7 +28,7 @@ namespace libMBIN.NMS.GameComponents
                 "Ship_Armour_Shield", "Ship_Armour_Shield_Strength", "Ship_Armour_Health", "Ship_Scan", "Ship_Scan_EconomyFilter",
                 "Ship_Scan_ConflictFilter", "Ship_Hyperdrive", "Ship_Hyperdrive_JumpDistance", "Ship_Hyperdrive_JumpsPerCell", "Ship_Launcher",
                 "Ship_Launcher_TakeOffCost", "Ship_PulseDrive", "Ship_PulseDrive_MiniJumpFuelSpending", "Ship_Boost", "Ship_Maneuverability",
-                "Ship_BoostManeuverability", "Ship_Teleport", "Freighter_Hyperdrive", "Freighter_Hyperdrive_JumpDistance" })]
+                "Ship_BoostManeuverability", "Ship_Teleport", "Freighter_Hyperdrive", "Freighter_Hyperdrive_JumpDistance" })]          // Wbertro: no matching EnumType (less entries than GcStatsTypes)
         public NMSString0x80[] StatIcons;
     }
 }
