@@ -12,19 +12,15 @@ namespace libMBIN.NMS.GameComponents
         /* 0x010 */ public GcInventoryLayoutGenerationData GenerationData;
         /* 0x1D0 */ public GcInventoryCostData ShipCostData;
         [NMS(Size = 0x4, EnumType = typeof(GcWeaponClasses.WeaponClassEnum))]
-        /* 0x2E8 */
-        public GcInventoryCostDataEntry[] WeaponCostData;
+        /* 0x2E8 */ public GcInventoryCostDataEntry[] WeaponCostData;
         /* 0x388 */ public GcInventoryCostDataEntry VehicleCostData;
         [NMS(Size = 0x3, EnumType = typeof(GcWealthClass.WealthClassEnum))]
-        /* 0x3B0 */
-        public GcInventoryClassProbabilities[] ClassProbabilityData;
+        /* 0x3B0 */ public GcInventoryClassProbabilities[] ClassProbabilityData;
         /* 0x3E0 */ public GcInventoryGenerationBaseStatData VehicleBaseStatsData;
         [NMS(Size = 0x7, EnumType = typeof(GcSpaceshipClasses.ShipClassEnum))]
-        /* 0x420 */
-        public GcInventoryGenerationBaseStatData[] ShipBaseStatsData;
+        /* 0x420 */ public GcInventoryGenerationBaseStatData[] ShipBaseStatsData;
         [NMS(Size = 0x4, EnumType = typeof(GcWeaponClasses.WeaponClassEnum))]
-        /* 0x5E0 */
-        public GcInventoryGenerationBaseStatData[] WeaponBaseStatsData;
+        /* 0x5E0 */ public GcInventoryGenerationBaseStatData[] WeaponBaseStatsData;
         /* 0x6E0 */ public List<GcInventoryBaseStat> BaseStats;
     }
 }

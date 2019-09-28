@@ -264,8 +264,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x25C90 */ public List<GcRepairTechData> RepairTechBuffer;
         /* 0x25CA0 */ public ulong MultiplayerPrivileges;
         [NMS(Size = 0x3, EnumType = typeof(GcHotActionMenuTypes.HotActionMenuTypesEnum))]
-        /* 0x25CA8 */
-        public GcHotActionsSaveData[] HotActions;
+        /* 0x25CA8 */ public GcHotActionsSaveData[] HotActions;
         /* 0x26158 */ public ulong LastUABeforePortalWarp;
         /* 0x26160 */ public ulong StoryPortalSeed;
         /* 0x26168 */ public uint ShopNumber;

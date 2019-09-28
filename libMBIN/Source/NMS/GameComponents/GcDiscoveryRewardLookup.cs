@@ -14,7 +14,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x10 */ public string Secondary;
 
         [NMS(Size = 0xD, EnumType = typeof(GcBiomeType.BiomeEnum))]
-        /* 0x20 */
-        public NMSString0x10[] BiomeSpecific;
+        /* 0x20 */ public NMSString0x10[] BiomeSpecific;
     }
 }

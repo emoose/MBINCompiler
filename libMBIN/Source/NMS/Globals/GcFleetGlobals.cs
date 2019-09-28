@@ -17,8 +17,7 @@ namespace libMBIN.NMS.Globals
         /* 0x38 */ public float PostCombatSpawnDelay;
         /* 0x3C */ public float CombatSpawnDelay;
         [NMS(Size = 0x4, EnumType = typeof(GcInventoryClass.InventoryClassEnum))]
-        /* 0x40 */
-        public float[] CombatSpawnDelayIncreaseByInventoryClass;
+        /* 0x40 */ public float[] CombatSpawnDelayIncreaseByInventoryClass;
         /* 0x50 */ public int ExplorationPointsRequiredForScan;
         /* 0x54 */ public GcInteractionDof FleetInteractionDepthOfField;
         /* 0x68 */ public int PercentChangeOfFrigateBeingPurchasable;
@@ -37,8 +36,7 @@ namespace libMBIN.NMS.Globals
         /* 0xB0 */ public float CameraPauseAfterStartingExpedition;
         /* 0xB4 */ public float UITraitLinesAngle;
         [NMS(Size = 0x5, EnumType = typeof(GcFrigateClass.FrigateClassEnum))]
-        /* 0xB8 */
-        public GcFrigateUITraitLines[] UITraitLineLengths;
+        /* 0xB8 */ public GcFrigateUITraitLines[] UITraitLineLengths;
         [NMS(Size = 0x8, EnumType = typeof(GcAlienRace.AlienRaceEnum))]
         /* 0x11C */ public NMSString0x20[] RacialTermForCaptain;
         /* 0x21C */ public float TimeBeforeShowingHangar;

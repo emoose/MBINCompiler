@@ -7,6 +7,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcFrigateStatsByClass : NMSTemplate
     {
         [NMS(Size = 0x5, EnumType = typeof(GcFrigateClass.FrigateClassEnum))]
+
         public GcFrigateStats[] FrigateClass;
     }
 }

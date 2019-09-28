@@ -93,8 +93,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x0FD8 */ public GcShipWeaponData[] ShipWeapons;
 
         [NMS(Size = 0xA, EnumType = typeof(GcPlayerWeapons.WeaponModeEnum))]
-        /* 0x1198 */
-        public GcPlayerWeaponData[] PlayerWeapons;
+        /* 0x1198 */ public GcPlayerWeaponData[] PlayerWeapons;
 
         [NMS(Size = 0x6, EnumType = typeof(GcVehicleType.VehicleTypeEnum))]
         /* 0x1238 */ public TkIDArray[] DefaultVehicleLoadout;
@@ -157,8 +156,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0xBA60 */ public List<NMSString0x10> NeverSellableItems;
         /* 0xBA70 */ public List<NMSString0x10> NeverOfferedForSale;
         [NMS(Size = 0x5, EnumValue = new[] { "Commodity", "Technology", "Fuel", "Tradeable", "Special"})]         // not sure about these values.... // Wbertro: no matching EnumType
-        /* 0xBA80 */
-        public float[] NormalizedPriceLimits;
+        /* 0xBA80 */ public float[] NormalizedPriceLimits;
 
         [NMS(Size = 0x4, Ignore = true)]
         /* 0xBA94 */ public byte[] PaddingBA94;

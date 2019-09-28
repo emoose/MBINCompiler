@@ -9,8 +9,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcBiomeFileList : NMSTemplate
     {
         [NMS(Size = 0xD, EnumType = typeof(GcBiomeType.BiomeEnum))]
-        /* 0x00 */
-        public GcBiomeFileListOptions[] BiomeFiles;
+        /* 0x00 */ public GcBiomeFileListOptions[] BiomeFiles;
 
         /* 0xD0 */ public List<GcExternalObjectListOptions> CommonExternalObjectLists;
         /* 0xE0 */ public List<GcExternalObjectFileList> OptionalExternalObjectLists;

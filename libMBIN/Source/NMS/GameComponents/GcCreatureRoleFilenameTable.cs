@@ -7,8 +7,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcCreatureRoleFilenameTable : NMSTemplate
     {
         [NMS(Size = 0xD, EnumType = typeof(GcBiomeType.BiomeEnum))]
-        /* 0x000 */
-        public GcCreatureRoleFilenameList[] BiomeFiles;
+        /* 0x000 */ public GcCreatureRoleFilenameList[] BiomeFiles;
 
         /* 0x0D0 */ public GcCreatureRoleFilenameList UnderwaterFiles;
         /* 0x0E0 */ public GcCreatureRoleFilenameList UnderwaterFilesExtra;
@@ -20,8 +19,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x120 */ public GcCreatureRoleFilenameList[] WeirdBiomeFiles;
 
         [NMS(Size = 0x4, EnumType = typeof(GcPlanetLife.LifeSettingEnum))]
-        /* 0x260 */
-        public float[] LifeChance;
+        /* 0x260 */ public float[] LifeChance;
 
         [NMS(Size = 4)]
         /* 0x270 */ public float[] RoleFrequencyModifiers;
