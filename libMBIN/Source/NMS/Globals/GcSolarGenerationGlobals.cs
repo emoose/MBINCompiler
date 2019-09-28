@@ -18,8 +18,9 @@ namespace libMBIN.NMS.Globals
         /* 0x34 */ public Vector2f PerPlanetGenerationAngleChangeDegreesRange;
         /* 0x3C */ public Vector2f PerPlanetGenerationElevationChangeDegreesRange;
         /* 0x44 */ public Vector2f SpawnPointStationToPlanetInterpRange;
-        [NMS(Size = 0x4, EnumValue = new[] { "Yellow", "Green", "Blue", "Red" })]
-        /* 0x4C */ public float[] ExtremePlanetChance;
+        [NMS(Size = 0x4, EnumType = typeof(GcGalaxyStarTypes.GalaxyStarTypeEnum))]
+        /* 0x4C */
+        public float[] ExtremePlanetChance;
         /* 0x5C */ public float StationSpawnAvoidRadius;
         /* 0x60 */ public int LocatorScatterMinCount;
         /* 0x64 */ public int LocatorScatterMaxCount;
@@ -97,10 +98,12 @@ namespace libMBIN.NMS.Globals
         /* 0x1B0 */ public float AsteroidSpaceStationAvoidRadius;
         /* 0x1B4 */ public float AsteroidAnomalyAvoidRadius;
         /* 0x1B8 */ public float AsteroidWarpInAreaAvoidRadius;
-        [NMS(Size = 0x4, EnumValue = new[] { "Yellow", "Green", "Blue", "Red" })]
-        /* 0x1BC */ public float[] AbandonedSystemProbability;
-        [NMS(Size = 0x4, EnumValue = new[] { "Yellow", "Green", "Blue", "Red" })]
-        /* 0x1CC */ public float[] EmptySystemProbability;
+        [NMS(Size = 0x4, EnumType = typeof(GcGalaxyStarTypes.GalaxyStarTypeEnum))]
+        /* 0x1BC */
+        public float[] AbandonedSystemProbability;
+        [NMS(Size = 0x4, EnumType = typeof(GcGalaxyStarTypes.GalaxyStarTypeEnum))]
+        /* 0x1CC */
+        public float[] EmptySystemProbability;
         /* 0x1DC */ public int CivilianTraderSpaceshipsCacheCount;
         [NMS(Size = 0x3)]
         /* 0x1E0 */ public float[] SpaceshipSpawnFreqMultipliers;

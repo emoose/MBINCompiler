@@ -387,11 +387,11 @@ namespace libMBIN.NMS.Globals
         /* 0x0141C */ public int UnknownInt0x141C;
         [NMS(Size = 0x1A, EnumValue = new string[0x1A] { "Fish", "Antelope", "Bird", "Butterfly", "FlyingSnake", "FlyingLizard", "Diplo", "Triceratops", "Rodent", "Cow", "Cat", "Strider",
                                                          "Trex", "Shark", "TwoLegAntelope", "SixLegCat", "SixLegCow", "Grunt", "Blob", "Spider", "FloatSpider", "SwimCow", "SwimRodent",
-                                                         "Jellyfish", "Crab", "RockCreature" })]
+                                                         "Jellyfish", "Crab", "RockCreature" })]   // Wbertro this is not equal to GcCreatureTypes (but close)
         /* 0x01420 */ public GcCreatureSubstanceList[] CreatureSubstanceLists;
         [NMS(Size = 0x1A, EnumValue = new string[0x1A] { "Fish", "Antelope", "Bird", "Butterfly", "FlyingSnake", "FlyingLizard", "Diplo", "Triceratops", "Rodent", "Cow", "Cat", "Strider",
                                                          "Trex", "Shark", "TwoLegAntelope", "SixLegCat", "SixLegCow", "Grunt", "Blob", "Spider", "FloatSpider", "SwimCow", "SwimRodent",
-                                                         "Jellyfish", "Crab", "RockCreature" })]
+                                                         "Jellyfish", "Crab", "RockCreature" })]   // Wbertro this is not equal to GcCreatureTypes (but close)
         /* 0x01760 */ public GcCreatureHarvestSubstanceList[] CreatureHarvestSubstanceLists;
         /* 0x02870 */ public int UnknownInt0x2870;
         /* 0x02874 */ public int UnknownInt0x2874;
