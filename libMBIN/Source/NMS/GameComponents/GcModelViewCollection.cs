@@ -8,7 +8,7 @@ namespace libMBIN.NMS.GameComponents
     {
         [NMS(Size = 0x17, EnumValue = new[] { "Suit", "Weapon", "Ship", "Vehicle", "DiscoveryMain", "DiscoveryThumbnail", "ToolboxMain",
             "ToolboxThumbnail", "TradeSuit", "TradeShip", "TradeCompareShips", "TradeCompareWeapons", "HUDThumbnail", "Interaction", "Freighter",
-            "TradeFreighter", "TradeChest", "TradeCapsule", "TradeFrigate", "TerrainBall", "FreighterChest", "Submarine", "TradeCooker" })]
+            "TradeFreighter", "TradeChest", "TradeCapsule", "TradeFrigate", "TerrainBall", "FreighterChest", "Submarine", "TradeCooker" })]          // Wbertro: no matching EnumType
         public TkModelRendererData[] ModelViews;
     }
 }
