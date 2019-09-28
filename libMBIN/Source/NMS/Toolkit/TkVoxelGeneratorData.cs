@@ -13,13 +13,13 @@ namespace libMBIN.NMS.Toolkit
         /* 0x001C */ public TkNoiseVoxelTypeEnum BuildingVoxelType;
         /* 0x0020 */ public TkNoiseVoxelTypeEnum ResourceVoxelType;
 
-        [NMS(Size = 8, EnumValue = new[] { "Base", "Hill", "Mountain", "Rock", "UnderWater", "Texture", "Elevation", "Continent" })]
+        [NMS(Size = 8, EnumValue = new[] { "Base", "Hill", "Mountain", "Rock", "UnderWater", "Texture", "Elevation", "Continent" })]          // Wbertro: no matching EnumType
         /* 0x0024 */ public TkNoiseUberLayerData[] NoiseLayers;
-        [NMS(Size = 9, EnumValue = new[] { "Small", "Large", "Resources_Heridium", "Resources_Iridium", "Resources_Copper", "Resources_Nickel", "Resources_Aluminium", "Resources_Gold", "Resources_Emeril" })]
+        [NMS(Size = 9, EnumValue = new[] { "Small", "Large", "Resources_Heridium", "Resources_Iridium", "Resources_Copper", "Resources_Nickel", "Resources_Aluminium", "Resources_Gold", "Resources_Emeril" })]          // Wbertro: no matching EnumType
         /* 0x0464 */ public TkNoiseGridData[] GridLayers;
-        [NMS(Size = 7, EnumValue = new[] { "River", "Crater", "Arches", "ArchesSmall", "Blobs", "BlobsSmall", "Substance" })]
+        [NMS(Size = 0x7, EnumType = typeof(TkFeaturesEnum.FeatureTypesEnum))]
         /* 0x134C */ public TkNoiseFeatureData[] Features;
-        [NMS(Size = 1, EnumValue = new[] { "Underground" })]
+        [NMS(Size = 1, EnumValue = new[] { "Underground" })]          // Wbertro: no matching EnumType
         /* 0x1528 */ public TkNoiseCaveData[] CavesUnderground;
         /* 0x15B0 */ public float MinimumCaveDepth;
         /* 0x15B4 */ public float CaveRoofSmoothingDist;
