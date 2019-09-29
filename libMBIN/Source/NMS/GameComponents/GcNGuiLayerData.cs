@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Alignment = 0x10, Size = 0x3A0, GUID = 0x1B3AA098A55CE6CF, SubGUID = 0x585832A31F4C2EA1)]
+	[NMS(Alignment = 0x10, Size = 0x3A0, GUID = 0x4B7E457B03E3DAA6, SubGUID = 0x585832A31F4C2EA1)]
     public class GcNGuiLayerData : NMSTemplate
     {
         /* 0x000 */ public GcNGuiElementData ElementData;

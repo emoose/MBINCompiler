@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x528, Alignment = 0x8, GUID = 0xB49CB795ED591435, SubGUID = 0xDE1F17CE7E01A8C2)]
+	[NMS(Size = 0x108, Alignment = 0x8, GUID = 0xB8B9DEF392FA498, SubGUID = 0xDE1F17CE7E01A8C2)]
     public class GcAlienPuzzleEntry : NMSTemplate
     {
         /* 0x000 */ public int ProgressionIndex;
@@ -20,27 +20,27 @@ namespace libMBIN.NMS.GameComponents
         public enum AdditionalOptionsEnum { None, LearnWord, SayWord }
         /* 0x034 */ public AdditionalOptionsEnum AdditionalOptions;
 
-        [NMS(Size = 0x80)]
+        [NMS(Size = 0x20)]
         /* 0x038 */ public string Title;
 
-        [NMS(Size = 0x200)]
-        /* 0x0B8 */ public string Text;
-
-        [NMS(Size = 0x200)]
-        /* 0x2B8 */ public string TextAlien;
-
-        /* 0x4B8 */ public bool TranslateAlienText;
-        /* 0x4B9 */ public bool TranslationBrackets;
-        /* 0x4BA */ public bool ProgressiveDialogue;
-        [NMS(Size = 0x5, Ignore = true)]
-        /* 0x4BB */ public byte[] Padding4BB;
         [NMS(Size = 0x20)]
-        /* 0x4C0 */ public string RequiresScanEvent;
-        /* 0x4E0 */ public List<GcAlienPuzzleOption> Options;
-        /* 0x4F0 */ public List<NMSString0x20> AdditionalText;
-        /* 0x500 */ public List<NMSString0x20> AdditionalTextAlien;
-        /* 0x510 */ public GcAlienMood Mood;
-        /* 0x514 */ public GcNPCPropTypes Prop;
-        /* 0x518 */ public List<GcPuzzleTextFlow> AdvancedInteractionFlow;
+        /* 0x058 */ public string Text;
+
+        [NMS(Size = 0x20)]
+        /* 0x078 */ public string TextAlien;
+
+        /* 0x098 */ public bool TranslateAlienText;
+        /* 0x099 */ public bool TranslationBrackets;
+        /* 0x09A */ public bool ProgressiveDialogue;
+        [NMS(Size = 0x5, Ignore = true)]
+        /* 0x09B */ public byte[] Padding9B;
+        [NMS(Size = 0x20)]
+        /* 0x0A0 */ public string RequiresScanEvent;
+        /* 0x0C0 */ public List<GcAlienPuzzleOption> Options;
+        /* 0x0D0 */ public List<NMSString0x20> AdditionalText;
+        /* 0x0E0 */ public List<NMSString0x20> AdditionalTextAlien;
+        /* 0x0F0 */ public GcAlienMood Mood;
+        /* 0x0F4 */ public GcNPCPropTypes Prop;
+        /* 0x0F8 */ public List<GcPuzzleTextFlow> AdvancedInteractionFlow;
     }
 }

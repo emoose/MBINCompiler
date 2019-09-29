@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x260, GUID = 0x3E185DD96ED17BCD, SubGUID = 0x732552199A3AE45E)]
+	[NMS(Size = 0x2A0, GUID = 0xDE2329C1FE8BE41F, SubGUID = 0x732552199A3AE45E)]
     public class GcPersistentBase : NMSTemplate
     {
         /* 0x000 */ public int BaseVersion;
@@ -28,6 +28,10 @@ namespace libMBIN.NMS.GameComponents
         [NMS(Size = 0x40)]
         /* 0x218 */ public string LastEditedByUsername;
         [NMS(Size = 0x8, Ignore = true)]
-        /* 0x258 */ public byte[] EndPadding;
+        /* 0x258 */ public byte[] Padding0x258;
+        /* 0x260 */ public Vector3f ScreenshotRight;
+        /* 0x270 */ public Vector3f ScreenshotUp;
+        /* 0x280 */ public Vector3f ScreenshotAt;
+        /* 0x290 */ public Vector3f ScreenshotPs;
     }
 }

@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0xDA70, GUID = 0x4921EE559326A5D7, SubGUID = 0x392CEA8FE98D0F4)]
+	[NMS(Size = 0xDEA0, GUID = 0xAA67829A2A9BCC87, SubGUID = 0x392CEA8FE98D0F4)]
     public class GcScannerIcons : NMSTemplate
     {
         /* 0x0000 */ public GcScannerIcon TaggedBuilding;
@@ -82,22 +82,24 @@ namespace libMBIN.NMS.GameComponents
         [NMS(Size = 0x4)]
         /* 0xC6D0 */ public GcScannerIcon[] NetworkFSPlayerMarkers;
         [NMS(Size = 0x4)]
-        /* 0xCB00 */ public Colour[] NetworkFSPlayerColours;
+        /* 0xCB00 */ public GcScannerIcon[] NetworkFSPlayerMarkersShip;
         [NMS(Size = 0x4)]
-        /* 0xCB40 */ public GcScannerIcon[] NetworkPlayerFreighter;
+        /* 0xCF30 */ public Colour[] NetworkFSPlayerColours;
+        [NMS(Size = 0x4)]
+        /* 0xCF70 */ public GcScannerIcon[] NetworkPlayerFreighter;
         
-        /* 0xCF70 */ public GcScannerIcon PortalMarker;
-        /* 0xD07C */ public GcScannerIcon BlackHole;
-        /* 0xD188 */ public GcScannerIcon CreatureCurious;
-        /* 0xD294 */ public GcScannerIcon CreatureAction;
-        /* 0xD3A0 */ public GcScannerIcon CreatureTame;
-        /* 0xD4AC */ public GcScannerIcon CreatureDanger;
-        /* 0xD5B8 */ public GcScannerIcon CreatureFiend;
-        /* 0xD6C4 */ public GcScannerIcon CreatureMilk;
+        /* 0xD3A0 */ public GcScannerIcon PortalMarker;
+        /* 0xD4AC */ public GcScannerIcon BlackHole;
+        /* 0xD5B8 */ public GcScannerIcon CreatureCurious;
+        /* 0xD6C4 */ public GcScannerIcon CreatureAction;
+        /* 0xD7D0 */ public GcScannerIcon CreatureTame;
+        /* 0xD8DC */ public GcScannerIcon CreatureDanger;
+        /* 0xD9E8 */ public GcScannerIcon CreatureFiend;
+        /* 0xDAF4 */ public GcScannerIcon CreatureMilk;
         [NMS(Size = 0x5, EnumType = typeof(GcScannerIconHighlightTypes.ScannerIconHighlightTypeEnum))]
-        /* 0xD7D0 */ public TkTextureResource[] HighlighIcons;
+        /* 0xDC00 */ public TkTextureResource[] HighlighIcons;
 
         [NMS(Size = 0xC, Ignore = true)]
-        /* 0xDA64 */ public byte[] EndPadding;
+        /* 0xDE94 */ public byte[] EndPadding;
     }
 }

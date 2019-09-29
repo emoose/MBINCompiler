@@ -4,7 +4,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x3900, GUID = 0xFC8D3D2AF9863912, SubGUID = 0x3A50D683FD1CF4BF)]
+	[NMS(Size = 0x3908, GUID = 0xA5978ADBA3DA1EF6, SubGUID = 0x3A50D683FD1CF4BF)]
     public class GcUserSettingsData : NMSTemplate
     {
         /* 0x0000 */ public bool InvertLookControls;
@@ -26,7 +26,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x387C */ public float PS4FOVFoot;
         /* 0x3880 */ public float PS4FOVShip;
         /* 0x3884 */ public bool XboxOneXHighResolutionMode;
-        /* 0x3884 */ public bool PS4VignetteAndScanlines;
+        /* 0x3885 */ public bool PS4VignetteAndScanlines;
         public enum BaseSharingModeEnum { Undecided, On, Off }
 		/* 0x3888 */ public BaseSharingModeEnum BaseSharingMode;
         [NMS(Size = 0x4, Ignore = true)]
@@ -50,7 +50,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x38F8 */ public TurnModeEnum TurnMode;
         /* 0x38FC */ public bool UseVrVignette;
         /* 0x38FD */ public bool UseShipAutoControlVignette;
-        [NMS(Size = 0x2, Ignore = true)]
-        /* 0x38FE */ public byte[] EndPadding;
+        /* 0x3900 */ public float HUDZoom;
+        /* 0x3904 */ public float FrontendZoom;
     }
 }
