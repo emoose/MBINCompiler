@@ -136,7 +136,8 @@ namespace libMBIN.NMS.GameComponents
         [NMS(Size = 0x8B, EnumType = typeof(GcStatsTypes.StatsTypeEnum))]
         /* 0x6714 */ public TkTextureResource[] StatCategoryIcons;
 
-        [NMS(Size = 0x5, EnumValue = new[] { "Suit", "Weapon", "Ship", "Freighter", "Vehicle" })]          // Wbertro: no matching EnumType
+        public enum PossessionEnum { Suit, Weapon, Ship, Freighter, Vehicle }
+        [NMS(Size = 0x5, EnumType = typeof(PossessionEnum))]
         /* 0xAEC0 */ public GcStats[] Stats;
 
         /* 0xAF10 */ public GcTechList StationTechShops;
@@ -155,7 +156,9 @@ namespace libMBIN.NMS.GameComponents
         /* 0xBA50 */ public List<int> SuitCargoUpgradePrices;
         /* 0xBA60 */ public List<NMSString0x10> NeverSellableItems;
         /* 0xBA70 */ public List<NMSString0x10> NeverOfferedForSale;
-        [NMS(Size = 0x5, EnumValue = new[] { "Commodity", "Technology", "Fuel", "Tradeable", "Special"})]         // not sure about these values.... // Wbertro: no matching EnumType
+
+        public enum GoodsTypeEnum { Commodity, Technology, Fuel, Tradeable, Special }
+        [NMS(Size = 0x5, EnumType = typeof(GoodsTypeEnum))]         // TODO: not sure about these values....
         /* 0xBA80 */ public float[] NormalizedPriceLimits;
 
         [NMS(Size = 0x4, Ignore = true)]
