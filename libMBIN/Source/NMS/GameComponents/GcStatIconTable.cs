@@ -6,6 +6,7 @@ namespace libMBIN.NMS.GameComponents
 	[NMS(Size = 0x3700, GUID = 0x1E0206B2601F3050, SubGUID = 0x266F5269ED2C5661)]
     public class GcStatIconTable : NMSTemplate
     {
+        // near match to GcStatsTypes.StatsTypeEnum
         [NMS(Size = 0x6E, EnumValue = new[] { "Unspecified", "Weapon_Laser", "Weapon_Laser_Damage", "Weapon_Laser_Mining_Speed", "Weapon_Laser_HeatTime",
                 "Weapon_Laser_Bounce", "Weapon_Laser_ReloadTime", "Weapon_Laser_Recoil", "Weapon_Laser_Drain", "Weapon_Laser_StrongLaser",
                 "Weapon_Laser_ChargeTime", "Weapon_Projectile", "Weapon_Projectile_Damage", "Weapon_Projectile_Range", "Weapon_Projectile_Rate",
@@ -28,7 +29,7 @@ namespace libMBIN.NMS.GameComponents
                 "Ship_Armour_Shield", "Ship_Armour_Shield_Strength", "Ship_Armour_Health", "Ship_Scan", "Ship_Scan_EconomyFilter",
                 "Ship_Scan_ConflictFilter", "Ship_Hyperdrive", "Ship_Hyperdrive_JumpDistance", "Ship_Hyperdrive_JumpsPerCell", "Ship_Launcher",
                 "Ship_Launcher_TakeOffCost", "Ship_PulseDrive", "Ship_PulseDrive_MiniJumpFuelSpending", "Ship_Boost", "Ship_Maneuverability",
-                "Ship_BoostManeuverability", "Ship_Teleport", "Freighter_Hyperdrive", "Freighter_Hyperdrive_JumpDistance" })]          // Wbertro: no matching EnumType (less entries than GcStatsTypes)
+                "Ship_BoostManeuverability", "Ship_Teleport", "Freighter_Hyperdrive", "Freighter_Hyperdrive_JumpDistance" })]
         public NMSString0x80[] StatIcons;
     }
 }
