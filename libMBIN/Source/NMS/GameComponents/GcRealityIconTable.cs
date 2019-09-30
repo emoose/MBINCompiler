@@ -8,7 +8,7 @@ namespace libMBIN.NMS.GameComponents
 	[NMS(Size = 0x4768, GUID = 0x2AD346B04A54A12F, SubGUID = 0x2A28407EECDFA4CC)]
     public class GcRealityIconTable : NMSTemplate
     {
-        [NMS(Size = 6, EnumValue = new[] { "None", "NoOxygen", "ExtremeHeat", "ExtremeCold", "ToxicGas", "Radiation" })]
+        [NMS(Size = 0x6, EnumType = typeof(GcPlayerHazardType.HazardEnum))]
         /* 0x0000 */ public TkTextureResource[] HazardIcons;
 
         [NMS(Size = 9, EnumType = typeof(GcRealitySubstanceCategory.SubstanceCategoryEnum))]
@@ -23,10 +23,10 @@ namespace libMBIN.NMS.GameComponents
         [NMS(Size = 0x10, EnumType = typeof(GcDiscoveryTypes.DiscoveryTypeEnum))]
         /* 0x0FFC */ public TkTextureResource[] BinocularDiscoveryIcons;
 
-        [NMS(Size = 0x7, EnumValue = new[] { "Mining", "HighTech", "Trading", "Manufacturing", "Fusion", "Scientific", "PowerGeneration" })]
+        [NMS(Size = 0x7, EnumType = typeof(GcTradingClass.TradingClassEnum))]
         /* 0x183C */ public TkTextureResource[] DiscoveryPageTradingIcons;
 
-        [NMS(Size = 0x3, EnumValue = new[] { "Low", "Default", "High" })]
+        [NMS(Size = 0x3, EnumType = typeof(GcPlayerConflictData.ConflictLevelEnum))]
         /* 0x1BD8 */ public TkTextureResource[] DiscoveryPageConflictIcons;
 
         [NMS(Size = 0x8, EnumType = typeof(GcAlienRace.AlienRaceEnum))]

@@ -7,7 +7,10 @@ namespace libMBIN.NMS.GameComponents
     public class GcBuildingDensity : NMSTemplate
     {
         public float BuildingSpacing;
-        [NMS(Size = 0x3, EnumValue = new[] { "Cluster", "Large", "Small"})]     // need to check
+
+        public enum ClusterChanceEnum { Cluster, Large, Small }     // TODO: need to check
+
+        [NMS(Size = 0x3, EnumType = typeof(ClusterChanceEnum))]
         public float[] BuildingClusterChance;
     }
 }

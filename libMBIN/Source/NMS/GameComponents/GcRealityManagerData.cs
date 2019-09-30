@@ -56,7 +56,7 @@ namespace libMBIN.NMS.GameComponents
         [NMS(Size = 0x63, EnumType = typeof(GcInteractionType.InteractionTypeEnum))]
         /* 0x088C */ public int[] InteractionPuzzlesIndexTypes;
 
-        [NMS(Size = 0x7, EnumValue = new[] { "NoWeighting", "MaxIsUncommon", "MaxIsRare", "MaxIsSuperRare", "MinIsUncommon", "MinIsRare", "MinIsSuperRare" })]
+        [NMS(Size = 0x7, EnumType = typeof(GcWeightingCurve.WeightingCurveEnum))]
         /* 0x0A18 */ public TkCurveType[] WeightingCurves;
 
         [NMS(Size = 0x4, Ignore = true)]
@@ -92,7 +92,7 @@ namespace libMBIN.NMS.GameComponents
         [NMS(Size = 0x7, EnumType = typeof(GcShipWeapons.ShipWeaponEnum))]
         /* 0x0FD8 */ public GcShipWeaponData[] ShipWeapons;
 
-        [NMS(Size = 0xA, EnumValue = new[] { "Bolt", "Shotgun", "Burst", "Laser", "Rail", "Grenade", "MineGrenade", "Scope", "FrontShield", "TerrainEdit" })]
+        [NMS(Size = 0xA, EnumType = typeof(GcPlayerWeapons.WeaponModeEnum))]
         /* 0x1198 */ public GcPlayerWeaponData[] PlayerWeapons;
 
         [NMS(Size = 0x6, EnumType = typeof(GcVehicleType.VehicleTypeEnum))]
@@ -107,13 +107,13 @@ namespace libMBIN.NMS.GameComponents
         [NMS(Size = 0x8, EnumType = typeof(GcAlienRace.AlienRaceEnum))]
         /* 0x1418 */ public GcNumberedTextList[] FactionClients;
 
-        [NMS(Size = 0xB, EnumValue = new[] { "SpaceCombat", "GroundCombat", "Research", "MissingPerson", "Repair", "Cargo", "Piracy", "Photo", "Feeding", "Planting", "Construction" })]
+        [NMS(Size = 0xB, EnumType = typeof(GcMissionType.MissionTypeEnum))]
         /* 0x1538 */ public GcNumberedTextList[] MissionNameFormats;
 
-        [NMS(Size = 0xB, EnumValue = new[] { "SpaceCombat", "GroundCombat", "Research", "MissingPerson", "Repair", "Cargo", "Piracy", "Photo", "Feeding", "Planting", "Construction" })]
+        [NMS(Size = 0xB, EnumType = typeof(GcMissionType.MissionTypeEnum))]
         /* 0x16C4 */ public GcNumberedTextList[] MissionNameAdjectives;
 
-        [NMS(Size = 0xB, EnumValue = new[] { "SpaceCombat", "GroundCombat", "Research", "MissingPerson", "Repair", "Cargo", "Piracy", "Photo", "Feeding", "Planting", "Construction" })]
+        [NMS(Size = 0xB, EnumType = typeof(GcMissionType.MissionTypeEnum))]
         /* 0x1850 */ public GcNumberedTextList[] MissionNameNouns;
 
         [NMS(Size = 0x3)]
@@ -121,22 +121,23 @@ namespace libMBIN.NMS.GameComponents
 
         /* 0x19E8 */ public GcRealityIconTable Icons;
 
-        [NMS(Size = 6, EnumValue = new[] { "None", "NoOxygen", "ExtremeHeat", "ExtremeCold", "ToxicGas", "Radiation" })]
+        [NMS(Size = 0x6, EnumType = typeof(GcPlayerHazardType.HazardEnum))]
         /* 0x6150 */ public Colour[] HazardColours;
 
-        [NMS(Size = 3, EnumType = typeof(GcRarity.RarityEnum))]
+        [NMS(Size = 0x3, EnumType = typeof(GcRarity.RarityEnum))]
         /* 0x61B0 */ public Colour[] RarityColours;
 
-        [NMS(Size = 9, EnumValue = new[] { "Fuel", "Metal", "Catalyst", "Stellar", "Flora", "Earth", "Exotic", "Special", "BuildingPart" })]
+        [NMS(Size = 0x9, EnumType = typeof(GcRealitySubstanceCategory.SubstanceCategoryEnum))]
         /* 0x61E0 */ public Colour[] SubstanceCategoryColours;
 
-        [NMS(Size = 9, EnumValue = new[] { "Fuel", "Metal", "Catalyst", "Stellar", "Flora", "Earth", "Exotic", "Special", "BuildingPart" })]
+        [NMS(Size = 0x9, EnumType = typeof(GcRealitySubstanceCategory.SubstanceCategoryEnum))]
         /* 0x6270 */ public TkTextureResource[] SubstanceChargeIcons;
 
         [NMS(Size = 0x8B, EnumType = typeof(GcStatsTypes.StatsTypeEnum))]
         /* 0x6714 */ public TkTextureResource[] StatCategoryIcons;
 
-        [NMS(Size = 5, EnumValue = new[] { "Suit", "Weapon", "Ship", "Freighter", "Vehicle" })]
+        public enum PossessionEnum { Suit, Weapon, Ship, Freighter, Vehicle }
+        [NMS(Size = 0x5, EnumType = typeof(PossessionEnum))]
         /* 0xAEC0 */ public GcStats[] Stats;
 
         /* 0xAF10 */ public GcTechList StationTechShops;
@@ -155,7 +156,9 @@ namespace libMBIN.NMS.GameComponents
         /* 0xBA50 */ public List<int> SuitCargoUpgradePrices;
         /* 0xBA60 */ public List<NMSString0x10> NeverSellableItems;
         /* 0xBA70 */ public List<NMSString0x10> NeverOfferedForSale;
-        [NMS(Size = 5, EnumValue = new[] { "Commodity", "Technology", "Fuel", "Tradeable", "Special"})]         // not sure about these values....
+
+        public enum GoodsTypeEnum { Commodity, Technology, Fuel, Tradeable, Special }
+        [NMS(Size = 0x5, EnumType = typeof(GoodsTypeEnum))]         // TODO: not sure about these values....
         /* 0xBA80 */ public float[] NormalizedPriceLimits;
 
         [NMS(Size = 0x4, Ignore = true)]

@@ -13,7 +13,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x7BC */ public TkTextureResource EconomyTechNotInstalledIcon;
         [NMS(Size = 0x3, EnumType = typeof(GcWealthClass.WealthClassEnum))]
         /* 0x840 */ public TkTextureResource[] WealthIcons;
-        [NMS(Size = 0x3, EnumValue = new[] { "Low", "Default", "High" })]
+        [NMS(Size = 0x3, EnumType = typeof(GcPlayerConflictData.ConflictLevelEnum))]
         /* 0x9CC */ public TkTextureResource[] ConflictIcons;
         /* 0xB58 */ public TkTextureResource ConflictTechNotInstalledIcon;
         /* 0xBDC */ public TkTextureResource Warpicon;

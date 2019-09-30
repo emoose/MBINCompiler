@@ -385,10 +385,12 @@ namespace libMBIN.NMS.Globals
         /* 0x01414 */ public int UnknownInt0x1414;
         /* 0x01418 */ public int UnknownInt0x1418;
         /* 0x0141C */ public int UnknownInt0x141C;
+        // near match to GcCreatureTypes.CreatureTypeEnum
         [NMS(Size = 0x1A, EnumValue = new string[0x1A] { "Fish", "Antelope", "Bird", "Butterfly", "FlyingSnake", "FlyingLizard", "Diplo", "Triceratops", "Rodent", "Cow", "Cat", "Strider",
                                                          "Trex", "Shark", "TwoLegAntelope", "SixLegCat", "SixLegCow", "Grunt", "Blob", "Spider", "FloatSpider", "SwimCow", "SwimRodent",
                                                          "Jellyfish", "Crab", "RockCreature" })]
         /* 0x01420 */ public GcCreatureSubstanceList[] CreatureSubstanceLists;
+        // near match to GcCreatureTypes.CreatureTypeEnum
         [NMS(Size = 0x1A, EnumValue = new string[0x1A] { "Fish", "Antelope", "Bird", "Butterfly", "FlyingSnake", "FlyingLizard", "Diplo", "Triceratops", "Rodent", "Cow", "Cat", "Strider",
                                                          "Trex", "Shark", "TwoLegAntelope", "SixLegCat", "SixLegCow", "Grunt", "Blob", "Spider", "FloatSpider", "SwimCow", "SwimRodent",
                                                          "Jellyfish", "Crab", "RockCreature" })]

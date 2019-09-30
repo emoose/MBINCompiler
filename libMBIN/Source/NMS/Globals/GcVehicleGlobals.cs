@@ -159,7 +159,7 @@ namespace libMBIN.NMS.Globals
         /* 0x02E8 */ public GcScanData VehicleLocalScan;
                      [NMS(Size = 0x04, Ignore = true)]
         /* 0x02FC */ public byte[] Padding2FC;
-                     [NMS(Size = 0x06, EnumValue = new[] { "Bike", "Buggy", "Truck", "WheeledBike", "Hovercraft", "Submarine" })]
+                     [NMS(Size = 0x06, EnumType = typeof(GcVehicleType.VehicleTypeEnum))]
         /* 0x0300 */ public GcVehicleData[] VehicleDataTable;
     }
 }
