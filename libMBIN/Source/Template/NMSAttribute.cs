@@ -17,5 +17,6 @@ namespace libMBIN
         public ulong SubGUID { get; set; }
         public bool Broken { get; set; }
         public bool IDField { get; set; } = false;
+        public bool alignRelative { get; set; } = true;
     }
 }

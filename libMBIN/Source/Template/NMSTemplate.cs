@@ -109,11 +109,17 @@ namespace libMBIN
             return template.GetDataSize();
         }
 
-        public static object DeserializeValue(BinaryReader reader, Type field, NMSAttribute settings, long templatePosition, FieldInfo fieldInfo, NMSTemplate parent) {
+        public static object DeserializeValue(BinaryReader reader, Type field, NMSAttribute settings, long templatePosition, FieldInfo fieldInfo, NMSTemplate parent, bool alignRelative) {
             //Logger.LogDebug( $"{fieldInfo?.DeclaringType.Name}.{fieldInfo?.Name}\ttype:\t{field.Name}\tpos:\t0x{templatePosition:X}" );
 
             object template = parent.CustomDeserialize(reader, field, settings, templatePosition, fieldInfo);
             if (template != null) return template;
+
+
+            long relativeOffset = templatePosition;
+            if (!alignRelative) {
+                relativeOffset = 0;
+            }
 
             // TODO: change fieldType to fieldName...
             var fieldType = field.Name;
@@ -129,7 +135,7 @@ namespace libMBIN
                         return reader.ReadBytes(size);
                     }
                 case "Single":
-                    reader.Align(4, templatePosition);
+                    reader.Align(4, relativeOffset);
                     return reader.ReadSingle();
                 case "Boolean":
                     return reader.ReadByte() != 0;
@@ -137,33 +143,33 @@ namespace libMBIN
                     return reader.ReadByte();
                 case "Int16":
                 case "UInt16":
-                    reader.Align(2, templatePosition);
+                    reader.Align(2, relativeOffset);
                     return fieldType == "Int16" ? (object)reader.ReadInt16() : (object)reader.ReadUInt16();
                 case "Int32":
                 case "UInt32":
-                    reader.Align(4, templatePosition);
+                    reader.Align(4, relativeOffset);
                     return fieldType == "Int32" ? (object)reader.ReadInt32() : (object)reader.ReadUInt32();
                 case "Int64":
                 case "UInt64":
-                    reader.Align(8, templatePosition);
+                    reader.Align(8, relativeOffset);
                     return fieldType == "Int64" ? (object)reader.ReadInt64() : (object)reader.ReadUInt64();
                 case "List`1":
-                    reader.Align(8, templatePosition);
+                    reader.Align(8, relativeOffset);
                     if (field.IsGenericType && field.GetGenericTypeDefinition() == typeof(List<>)) {
                         Type itemType = field.GetGenericArguments()[0];
                         if ( itemType == typeof( NMSTemplate ) ) {
-                            return DeserializeGenericList( reader, templatePosition, parent );
+                            return DeserializeGenericList( reader, relativeOffset, parent, alignRelative );
                         } else {
                             // todo: get rid of this nastiness
                             MethodInfo method = typeof( NMSTemplate ).GetMethod( "DeserializeList", BindingFlags.Static | BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic )
                                                          .MakeGenericMethod( new Type[] { itemType } );
-                            var list = method.Invoke( null, new object[] { reader, fieldInfo, settings, templatePosition, parent } );
+                            var list = method.Invoke( null, new object[] { reader, fieldInfo, settings, relativeOffset, parent, alignRelative } );
                             return list;
                         }
                     }
                     return null;
                 case "NMSTemplate":
-                    reader.Align(8, templatePosition);
+                    reader.Align(8, relativeOffset);
                     long startPos = reader.BaseStream.Position;
                     long offset = reader.ReadInt64();
                     string name = reader.ReadString(Encoding.ASCII, 0x40, true);
@@ -179,23 +185,23 @@ namespace libMBIN
                     template = null;
                     if (offset != 0 && !String.IsNullOrEmpty(name)) {
                         reader.BaseStream.Position = startPos + offset;
-                        template = DeserializeBinaryTemplate(reader, name);
+                        template = DeserializeBinaryTemplate(reader, name, alignRelative);
                         if (template == null) throw new DeserializeTemplateException( name );
                     }
                     reader.BaseStream.Position = endPos;
                     return template;
                 default:
                     if ( fieldType == "Colour" ) { // unsure if this is needed?
-                        reader.Align( 0x10, templatePosition );
+                        reader.Align( 0x10, relativeOffset);
                     }
 
                     if ( fieldType == "VariableStringSize" || fieldType == "GcRewardProduct" ) { // TODO: I don't think we need to specify GcRewardProduct here explicitly...
-                        reader.Align( 0x4, templatePosition );
+                        reader.Align( 0x4, relativeOffset);
                     }
 
                     // todo: align for VariableSizeString?
                     if (field.IsEnum) {
-                        reader.Align(4, templatePosition);
+                        reader.Align(4, relativeOffset);
                         return fieldType == "Int32" ? (object)reader.ReadInt32() : (object)reader.ReadUInt32();
                     }
 
@@ -204,19 +210,19 @@ namespace libMBIN
                         var length = GetEnumNames( fieldInfo.Name, settings ).Length;
                         Array array = Array.CreateInstance(arrayType, length);
                         for (int i = 0; i < length; ++i) {
-                            object val = DeserializeValue( reader, field.GetElementType(), settings, templatePosition, fieldInfo, parent );
+                            object val = DeserializeValue( reader, field.GetElementType(), settings, relativeOffset, fieldInfo, parent, alignRelative);
                             array.SetValue(val, i);
                         }
                         return array;
                     } else {
                         int alignment = field.GetCustomAttribute<NMSAttribute>()?.Alignment ?? 0x4;
-                        reader.Align(alignment, templatePosition); // templatePosition when not in list??
-                        return DeserializeBinaryTemplate(reader, fieldType);
+                        reader.Align(alignment, relativeOffset); // templatePosition when not in list??
+                        return DeserializeBinaryTemplate(reader, fieldType, alignRelative);
                     }
             }
         }
 
-        public static NMSTemplate DeserializeBinaryTemplate(BinaryReader reader, string templateName)
+        public static NMSTemplate DeserializeBinaryTemplate(BinaryReader reader, string templateName, bool parentAlignRelative = true)
         {
             if (templateName.StartsWith("c") && templateName.Length > 1) templateName = templateName.Substring(1);
 
@@ -225,6 +231,13 @@ namespace libMBIN
             //DebugLog("Gk Hack: " + "Deserializing Template: " + templateName);
             
             if (obj == null) return null;
+
+            // determine if the template uses relative asignment or not
+            NMSAttribute templateSettings = obj.GetType().GetCustomAttribute<NMSAttribute>();
+            bool alignRelative = templateSettings?.alignRelative ?? true;
+            // Apply the parent relative alignment state so if it becomes false all children have false
+            // TODO: check this is true...
+            alignRelative &= parentAlignRelative;
 
             long templatePosition = reader.BaseStream.Position;
             DebugLogTemplate($"{templateName}\t0x{templatePosition:X4}");
@@ -245,9 +258,9 @@ namespace libMBIN
                 foreach ( var field in fields ) {
                     NMSAttribute settings = field.GetCustomAttribute<NMSAttribute>();
                     if ( field.FieldType.IsEnum ) {
-                        field.SetValue( obj, Enum.ToObject( field.FieldType, DeserializeValue( reader, field.FieldType, settings, templatePosition, field, obj ) ) );
+                        field.SetValue( obj, Enum.ToObject( field.FieldType, DeserializeValue( reader, field.FieldType, settings, templatePosition, field, obj, alignRelative) ) );
                     } else {
-                        field.SetValue( obj, DeserializeValue( reader, field.FieldType, settings, templatePosition, field, obj ) );
+                        field.SetValue( obj, DeserializeValue( reader, field.FieldType, settings, templatePosition, field, obj, alignRelative) );
                     }
                     DebugLogFieldName( $"{templateName}\t0x{reader.BaseStream.Position:X4}\t{field.Name}\t{field.GetValue( obj )}" );
                 }
@@ -260,7 +273,7 @@ namespace libMBIN
             return obj;
         }
 
-        public static List<NMSTemplate> DeserializeGenericList(BinaryReader reader, long templateStartOffset, NMSTemplate parent)
+        public static List<NMSTemplate> DeserializeGenericList(BinaryReader reader, long templateStartOffset, NMSTemplate parent, bool alignRelative)
         {
             long listPosition = reader.BaseStream.Position;
             DebugLogTemplate($"DeserializeGenericList\tstart\t0x{listPosition:X}");
@@ -309,7 +322,7 @@ namespace libMBIN
                 foreach (KeyValuePair<long, string> templateInfo in templates)
                 {
                     reader.BaseStream.Position = templateInfo.Key;
-                    var template = DeserializeBinaryTemplate(reader, templateInfo.Value);
+                    var template = DeserializeBinaryTemplate(reader, templateInfo.Value, alignRelative);
                     if (template == null) throw new DeserializeTemplateException( templateInfo.Value );
 
                     list.Add(template);
@@ -322,7 +335,7 @@ namespace libMBIN
             return list;
         }
 
-        public static List<T> DeserializeList<T>(BinaryReader reader, FieldInfo field, NMSAttribute settings, long templateStartOffset, NMSTemplate parent)
+        public static List<T> DeserializeList<T>(BinaryReader reader, FieldInfo field, NMSAttribute settings, long templateStartOffset, NMSTemplate parent, bool alignRelative)
         {
             long listPosition = reader.BaseStream.Position;
             DebugLogTemplate($"DeserializeList\tstart\t0x{listPosition:X}");
@@ -339,7 +352,7 @@ namespace libMBIN
             for (int i = 0; i < numEntries; i++)
             {
                 // todo: get rid of DeserializeGenericList? this seems like it would work fine with List<NMSTemplate>
-                var template = DeserializeValue(reader, field.FieldType.GetGenericArguments()[0], settings, templateStartOffset, field, parent);
+                var template = DeserializeValue(reader, field.FieldType.GetGenericArguments()[0], settings, templateStartOffset, field, parent, alignRelative);
                 if (template == null) throw new DeserializeTypeException( typeof(T) );
 
                 var type = template.GetType().BaseType;
