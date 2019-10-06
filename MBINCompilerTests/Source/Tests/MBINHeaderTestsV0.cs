@@ -24,9 +24,9 @@ namespace libMBIN.UnitTests {
                     ulong padding   = END_PADDING
         ) {
             return new MBINHeader() {
-                MagicID         = magic,
+                MagicID       = magic,
                 FormatID      = formatID,
-                Timestamp = timestamp,
+                Timestamp     = timestamp,
                 TemplateGUID  = guid,
                 TemplateName  = name,
                 EndPadding    = padding
@@ -34,7 +34,12 @@ namespace libMBIN.UnitTests {
         }
 
         private MBINHeader HeaderCommon => CreateMockHeader();
-        private MBINHeader HeaderTkGeometryData => CreateMockHeader( magic: MBINHeader.MBIN_MAGIC_PC );
+        private MBINHeader HeaderTkGeometryData => CreateMockHeader(
+                    magic:     MBINHeader.MBIN_MAGIC_PC,
+                    timestamp: MBINHeader.TKGEOMETRYDATA_TAG,
+                    guid:      TKGEOMETRYDATA_GUID,
+                    padding:   MBINHeader.TKGEOMETRYDATA_PADDING
+        );
         private MBINHeader HeaderTkAnimMetadata => CreateMockHeader(
                     timestamp: MBINHeader.TKANIMMETADATA_TAG,
                     guid:      MBINHeader.TKANIMMETADATA_VERSION,
@@ -89,12 +94,12 @@ namespace libMBIN.UnitTests {
 
         [TestMethod]
         public void TestCreateHeaderTkGeometryData() {
-            Assert.AreEqual( MBINHeader.MBIN_MAGIC_PC, HeaderTkGeometryData.MagicID );
-            Assert.AreEqual( MBINHeader.MBIN_VERSION,  HeaderTkGeometryData.FormatID );
-            Assert.AreEqual( TIMESTAMP,                HeaderTkGeometryData.Timestamp );
-            Assert.AreEqual( TEMPLATE_GUID,            HeaderTkGeometryData.TemplateGUID );
-            Assert.AreEqual( TEMPLATE_NAME,            HeaderTkGeometryData.TemplateName );
-            Assert.AreEqual( END_PADDING,              HeaderTkGeometryData.EndPadding );
+            Assert.AreEqual( MBINHeader.MBIN_MAGIC_PC,      HeaderTkGeometryData.MagicID );
+            Assert.AreEqual( MBINHeader.MBIN_VERSION,       HeaderTkGeometryData.FormatID );
+            Assert.AreEqual( MBINHeader.TKGEOMETRYDATA_TAG, HeaderTkGeometryData.Timestamp );
+            Assert.AreEqual( TKGEOMETRYDATA_GUID,           HeaderTkGeometryData.TemplateGUID );
+            Assert.AreEqual( TEMPLATE_NAME,                 HeaderTkGeometryData.TemplateName );
+            Assert.AreEqual( MBINHeader.TKGEOMETRYDATA_PADDING, HeaderTkGeometryData.EndPadding );
 
             Assert.AreEqual( VERSION_STRING,           HeaderTkGeometryData.GetMBINVersion().ToString() );
         }
@@ -131,12 +136,12 @@ namespace libMBIN.UnitTests {
             var header = new MBINHeader();
             header.SetDefaultsV0( typeof( NMS.Toolkit.TkGeometryData ) );
 
-            Assert.AreEqual( MBINHeader.MBIN_MAGIC_PC, header.MagicID );
-            Assert.AreEqual( MBINHeader.MBIN_VERSION,  header.FormatID );
-            Assert.AreEqual( 0ul,                      header.Timestamp );
-            Assert.AreEqual( TKGEOMETRYDATA_GUID,      header.TemplateGUID );
-            Assert.AreEqual( "",                       header.TemplateName );
-            Assert.AreEqual( 0ul,                      header.EndPadding );
+            Assert.AreEqual( MBINHeader.MBIN_MAGIC_PC,          header.MagicID );
+            Assert.AreEqual( MBINHeader.MBIN_VERSION,           header.FormatID );
+            Assert.AreEqual( MBINHeader.TKGEOMETRYDATA_TAG,     header.Timestamp );
+            Assert.AreEqual( TKGEOMETRYDATA_GUID,               header.TemplateGUID );
+            Assert.AreEqual( "",                                header.TemplateName );
+            Assert.AreEqual( MBINHeader.TKGEOMETRYDATA_PADDING, header.EndPadding );
 
             Assert.AreEqual( VERSION_STRING,           header.GetMBINVersion().ToString() );
         }
@@ -176,12 +181,12 @@ namespace libMBIN.UnitTests {
             var header = new MBINHeader();
             header.SetDefaults( typeof( NMS.Toolkit.TkGeometryData ), MBINHeader.Format.V0 );
 
-            Assert.AreEqual( MBINHeader.MBIN_MAGIC_PC, header.MagicID );
-            Assert.AreEqual( MBINHeader.MBIN_VERSION,  header.FormatID );
-            Assert.AreEqual( 0ul,                      header.Timestamp );
-            Assert.AreEqual( TKGEOMETRYDATA_GUID,      header.TemplateGUID );
-            Assert.AreEqual( "",                       header.TemplateName );
-            Assert.AreEqual( 0ul,                      header.EndPadding );
+            Assert.AreEqual( MBINHeader.MBIN_MAGIC_PC,          header.MagicID );
+            Assert.AreEqual( MBINHeader.MBIN_VERSION,           header.FormatID );
+            Assert.AreEqual( MBINHeader.TKGEOMETRYDATA_TAG,     header.Timestamp );
+            Assert.AreEqual( TKGEOMETRYDATA_GUID,               header.TemplateGUID );
+            Assert.AreEqual( "",                                header.TemplateName );
+            Assert.AreEqual( MBINHeader.TKGEOMETRYDATA_PADDING, header.EndPadding );
 
             Assert.AreEqual( VERSION_STRING,           header.GetMBINVersion().ToString() );
         }
