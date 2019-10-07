@@ -844,10 +844,10 @@ namespace libMBIN
 
                     break;
                 case "Single":
-                    valueString = ((float)value).ToString(System.Globalization.CultureInfo.InvariantCulture);
+                    valueString = ((float) value).ToString( "G9", System.Globalization.CultureInfo.InvariantCulture);
                     break;
                 case "Double":
-                    valueString = ((double)value).ToString(System.Globalization.CultureInfo.InvariantCulture);
+                    valueString = ((double) value).ToString( "G17", System.Globalization.CultureInfo.InvariantCulture);
                     break;
                 case "Byte[]":
                     valueString = value == null ? null : Convert.ToBase64String((byte[])value);
