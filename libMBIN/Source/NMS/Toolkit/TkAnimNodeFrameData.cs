@@ -18,8 +18,7 @@ namespace libMBIN.NMS.Toolkit
         public List<Vector4f> Scales;
 
         
-        public override object CustomDeserialize(BinaryReader reader, Type field, NMSAttribute settings, long templatePosition, FieldInfo fieldInfo)
-        {
+        public override object CustomDeserialize( BinaryReader reader, Type field, NMSAttribute settings, FieldInfo fieldInfo ) {
             var fieldName = fieldInfo.Name;
 
             switch (fieldName)
@@ -129,6 +128,8 @@ namespace libMBIN.NMS.Toolkit
                     writer.Write((Int64)0); // listPosition
                     writer.Write((Int32)0); // listCount
                     writer.Write((UInt32)0x00000001);
+
+                    if ( data == null ) return true;
 
                     foreach (Quaternion q in data)
                     {

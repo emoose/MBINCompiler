@@ -20,8 +20,7 @@ namespace libMBIN.NMS.Toolkit
         /* 0x8C */ public int IndexDataSize;
         /* 0x90 */ public byte[] MeshDataStream;
 
-        public override object CustomDeserialize(BinaryReader reader, Type field, NMSAttribute settings, long templatePosition, FieldInfo fieldInfo)
-        {
+        public override object CustomDeserialize( BinaryReader reader, Type field, NMSAttribute settings, FieldInfo fieldInfo ) {
             var fieldName = fieldInfo.Name;
             switch (fieldName)
             {
@@ -49,13 +48,13 @@ namespace libMBIN.NMS.Toolkit
             switch (fieldName)
             {
                 case nameof(MeshDataStream):
-                    writer.Align(8, 0, fieldName );
+                    writer.Align(8, fieldName );
 
                     // write empty list header
                     long listPos = writer.BaseStream.Position;
-                    writer.Write((Int64)0); // listPosition
-                    writer.Write((Int32)MeshDataStream.Length); // size of data chunk in bytes
-                    writer.Write((UInt32)0xFEFEFE01);
+                    writer.Write((Int64) 0); // listPosition
+                    writer.Write((Int32) (MeshDataStream?.Length ?? 0)); // size of data chunk in bytes
+                    writer.Write((UInt32) 0xFEFEFE01);
 
                     additionalData.Insert(addtDataIndex, new Tuple<long, object>(listPos, fieldData));
                     addtDataIndex++;

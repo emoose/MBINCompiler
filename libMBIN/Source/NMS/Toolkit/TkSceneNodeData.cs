@@ -23,8 +23,7 @@ namespace libMBIN.NMS.Toolkit
         /* 0xC0 */ public List<TkSceneNodeAttributeData> Attributes;
         /* 0xD0 */ public List<TkSceneNodeData> Children;
 
-        public override object CustomDeserialize(BinaryReader reader, Type field, NMSAttribute settings, long templatePosition, FieldInfo fieldInfo)
-        {
+        public override object CustomDeserialize( BinaryReader reader, Type field, NMSAttribute settings, FieldInfo fieldInfo ) {
             var fieldName = fieldInfo.Name;
             switch (fieldName)
             {

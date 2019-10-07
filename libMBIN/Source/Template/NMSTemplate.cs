@@ -109,17 +109,11 @@ namespace libMBIN
             return template.GetDataSize();
         }
 
-        public static object DeserializeValue(BinaryReader reader, Type field, NMSAttribute settings, long templatePosition, FieldInfo fieldInfo, NMSTemplate parent, bool alignRelative) {
+        public static object DeserializeValue(BinaryReader reader, Type field, NMSAttribute settings, long templatePosition, FieldInfo fieldInfo, NMSTemplate parent) {
             //Logger.LogDebug( $"{fieldInfo?.DeclaringType.Name}.{fieldInfo?.Name}\ttype:\t{field.Name}\tpos:\t0x{templatePosition:X}" );
 
-            object template = parent.CustomDeserialize(reader, field, settings, templatePosition, fieldInfo);
+            object template = parent.CustomDeserialize( reader, field, settings, fieldInfo );
             if (template != null) return template;
-
-
-            long relativeOffset = templatePosition;
-            if (!alignRelative) {
-                relativeOffset = 0;
-            }
 
             // TODO: change fieldType to fieldName...
             var fieldType = field.Name;
@@ -135,7 +129,7 @@ namespace libMBIN
                         return reader.ReadBytes(size);
                     }
                 case "Single":
-                    reader.Align(4, relativeOffset);
+                    reader.Align( 4 );
                     return reader.ReadSingle();
                 case "Boolean":
                     return reader.ReadByte() != 0;
@@ -143,33 +137,33 @@ namespace libMBIN
                     return reader.ReadByte();
                 case "Int16":
                 case "UInt16":
-                    reader.Align(2, relativeOffset);
+                    reader.Align( 2 );
                     return fieldType == "Int16" ? (object)reader.ReadInt16() : (object)reader.ReadUInt16();
                 case "Int32":
                 case "UInt32":
-                    reader.Align(4, relativeOffset);
+                    reader.Align( 4 );
                     return fieldType == "Int32" ? (object)reader.ReadInt32() : (object)reader.ReadUInt32();
                 case "Int64":
                 case "UInt64":
-                    reader.Align(8, relativeOffset);
+                    reader.Align( 8 );
                     return fieldType == "Int64" ? (object)reader.ReadInt64() : (object)reader.ReadUInt64();
                 case "List`1":
-                    reader.Align(8, relativeOffset);
+                    reader.Align( 8 );
                     if (field.IsGenericType && field.GetGenericTypeDefinition() == typeof(List<>)) {
                         Type itemType = field.GetGenericArguments()[0];
                         if ( itemType == typeof( NMSTemplate ) ) {
-                            return DeserializeGenericList( reader, relativeOffset, parent, alignRelative );
+                            return DeserializeGenericList( reader, parent );
                         } else {
                             // todo: get rid of this nastiness
                             MethodInfo method = typeof( NMSTemplate ).GetMethod( "DeserializeList", BindingFlags.Static | BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic )
                                                          .MakeGenericMethod( new Type[] { itemType } );
-                            var list = method.Invoke( null, new object[] { reader, fieldInfo, settings, relativeOffset, parent, alignRelative } );
+                            var list = method.Invoke( null, new object[] { reader, fieldInfo, settings, templatePosition, parent } );
                             return list;
                         }
                     }
                     return null;
                 case "NMSTemplate":
-                    reader.Align(8, relativeOffset);
+                    reader.Align( 8 );
                     long startPos = reader.BaseStream.Position;
                     long offset = reader.ReadInt64();
                     string name = reader.ReadString(Encoding.ASCII, 0x40, true);
@@ -185,23 +179,23 @@ namespace libMBIN
                     template = null;
                     if (offset != 0 && !String.IsNullOrEmpty(name)) {
                         reader.BaseStream.Position = startPos + offset;
-                        template = DeserializeBinaryTemplate(reader, name, alignRelative);
+                        template = DeserializeBinaryTemplate(reader, name);
                         if (template == null) throw new DeserializeTemplateException( name );
                     }
                     reader.BaseStream.Position = endPos;
                     return template;
                 default:
-                    if ( fieldType == "Colour" ) { // unsure if this is needed?
-                        reader.Align( 0x10, relativeOffset);
+                    if ( fieldType == "Colour" ) { // TODO: not needed
+                        reader.Align( 0x10 );
                     }
 
                     if ( fieldType == "VariableStringSize" || fieldType == "GcRewardProduct" ) { // TODO: I don't think we need to specify GcRewardProduct here explicitly...
-                        reader.Align( 0x4, relativeOffset);
+                        reader.Align( 0x4 );
                     }
 
                     // todo: align for VariableSizeString?
                     if (field.IsEnum) {
-                        reader.Align(4, relativeOffset);
+                        reader.Align( 4 );
                         return fieldType == "Int32" ? (object)reader.ReadInt32() : (object)reader.ReadUInt32();
                     }
 
@@ -210,19 +204,19 @@ namespace libMBIN
                         var length = GetEnumNames( fieldInfo.Name, settings ).Length;
                         Array array = Array.CreateInstance(arrayType, length);
                         for (int i = 0; i < length; ++i) {
-                            object val = DeserializeValue( reader, field.GetElementType(), settings, relativeOffset, fieldInfo, parent, alignRelative);
+                            object val = DeserializeValue( reader, field.GetElementType(), settings, templatePosition, fieldInfo, parent );
                             array.SetValue(val, i);
                         }
                         return array;
                     } else {
                         int alignment = field.GetCustomAttribute<NMSAttribute>()?.Alignment ?? 0x4;
-                        reader.Align(alignment, relativeOffset); // templatePosition when not in list??
-                        return DeserializeBinaryTemplate(reader, fieldType, alignRelative);
+                        reader.Align( alignment ); // templatePosition when not in list??
+                        return DeserializeBinaryTemplate(reader, fieldType);
                     }
             }
         }
 
-        public static NMSTemplate DeserializeBinaryTemplate(BinaryReader reader, string templateName, bool parentAlignRelative = true)
+        public static NMSTemplate DeserializeBinaryTemplate(BinaryReader reader, string templateName)
         {
             if (templateName.StartsWith("c") && templateName.Length > 1) templateName = templateName.Substring(1);
 
@@ -231,13 +225,6 @@ namespace libMBIN
             //DebugLog("Gk Hack: " + "Deserializing Template: " + templateName);
             
             if (obj == null) return null;
-
-            // determine if the template uses relative asignment or not
-            NMSAttribute templateSettings = obj.GetType().GetCustomAttribute<NMSAttribute>();
-            bool alignRelative = templateSettings?.alignRelative ?? true;
-            // Apply the parent relative alignment state so if it becomes false all children have false
-            // TODO: check this is true...
-            alignRelative &= parentAlignRelative;
 
             long templatePosition = reader.BaseStream.Position;
             DebugLogTemplate($"{templateName}\t0x{templatePosition:X4}");
@@ -258,9 +245,9 @@ namespace libMBIN
                 foreach ( var field in fields ) {
                     NMSAttribute settings = field.GetCustomAttribute<NMSAttribute>();
                     if ( field.FieldType.IsEnum ) {
-                        field.SetValue( obj, Enum.ToObject( field.FieldType, DeserializeValue( reader, field.FieldType, settings, templatePosition, field, obj, alignRelative) ) );
+                        field.SetValue( obj, Enum.ToObject( field.FieldType, DeserializeValue( reader, field.FieldType, settings, templatePosition, field, obj ) ) );
                     } else {
-                        field.SetValue( obj, DeserializeValue( reader, field.FieldType, settings, templatePosition, field, obj, alignRelative) );
+                        field.SetValue( obj, DeserializeValue( reader, field.FieldType, settings, templatePosition, field, obj ) );
                     }
                     DebugLogFieldName( $"{templateName}\t0x{reader.BaseStream.Position:X4}\t{field.Name}\t{field.GetValue( obj )}" );
                 }
@@ -273,10 +260,9 @@ namespace libMBIN
             return obj;
         }
 
-        public static List<NMSTemplate> DeserializeGenericList(BinaryReader reader, long templateStartOffset, NMSTemplate parent, bool alignRelative)
-        {
+        public static List<NMSTemplate> DeserializeGenericList( BinaryReader reader, NMSTemplate parent ) {
             long listPosition = reader.BaseStream.Position;
-            DebugLogTemplate($"DeserializeGenericList\tstart\t0x{listPosition:X}");
+            DebugLogTemplate( $"DeserializeGenericList\tstart\t0x{listPosition:X}" );
 
             long templateNamesOffset = reader.ReadInt64();
             int numTemplates = reader.ReadInt32();
@@ -287,58 +273,52 @@ namespace libMBIN
 
             reader.BaseStream.Position = listPosition + templateNamesOffset;
             var list = new List<NMSTemplate>();
-            if (numTemplates > 0)
-            {
+            if ( numTemplates > 0 ) {
                 //Dictionary<long, string> templates = new Dictionary<long, string>();
-                List < KeyValuePair < long, String >> templates = new List<KeyValuePair<long, String>>();
-                for (int i = 0; i < numTemplates; i++)
-                {
+                List<KeyValuePair<long, String>> templates = new List<KeyValuePair<long, String>>();
+                for ( int i = 0; i < numTemplates; i++ ) {
                     long nameOffset = reader.BaseStream.Position;
                     long templateOffset = reader.ReadInt64();
-                    var name = reader.ReadString(Encoding.UTF8, 0x40, true);
+                    var name = reader.ReadString( Encoding.UTF8, 0x40, true );
                     ulong NameHash = reader.ReadUInt64();
                     // Make sure we have a valid template name
-                    if (name.Length > 0) {
+                    if ( name.Length > 0 ) {
                         var templateName = name;
-                        if (name.StartsWith("c") && name.Length > 1)
-                        {
-                            templateName = name.Substring(1);
+                        if ( name.StartsWith( "c" ) && name.Length > 1 ) {
+                            templateName = name.Substring( 1 );
                         }
-                        ulong expected_NameHash = GetTemplateType(templateName).GetCustomAttribute<NMSAttribute>()?.NameHash ?? 0;
-                        if (NameHash != expected_NameHash)
-                        {
-                            Logger.LogMessage("NameHash", $"{templateName} has the wrong NameHash");
+                        ulong expected_NameHash = GetTemplateType( templateName ).GetCustomAttribute<NMSAttribute>()?.NameHash ?? 0;
+                        if ( NameHash != expected_NameHash ) {
+                            Logger.LogMessage( "NameHash", $"{templateName} has the wrong NameHash" );
                         }
                     }
 
                     // sometimes there are lists which have n values, but less than n actual structs in them. We replace the empty thing with EmptyNode
                     name = (templateOffset == 0) ? "EmptyNode" : name;
 
-                    templates.Add(new KeyValuePair<long, string>(nameOffset + templateOffset, name));
+                    templates.Add( new KeyValuePair<long, string>( nameOffset + templateOffset, name ) );
                 }
 
                 long pos = reader.BaseStream.Position;
 
-                foreach (KeyValuePair<long, string> templateInfo in templates)
-                {
+                foreach ( KeyValuePair<long, string> templateInfo in templates ) {
                     reader.BaseStream.Position = templateInfo.Key;
-                    var template = DeserializeBinaryTemplate(reader, templateInfo.Value, alignRelative);
-                    if (template == null) throw new DeserializeTemplateException( templateInfo.Value );
+                    var template = DeserializeBinaryTemplate( reader, templateInfo.Value );
+                    if ( template == null ) throw new DeserializeTemplateException( templateInfo.Value );
 
-                    list.Add(template);
+                    list.Add( template );
                 }
             }
 
             reader.BaseStream.Position = listEndPosition;
-            reader.Align(0x8, 0);
+            reader.Align( 0x8 );
 
             return list;
         }
 
-        public static List<T> DeserializeList<T>(BinaryReader reader, FieldInfo field, NMSAttribute settings, long templateStartOffset, NMSTemplate parent, bool alignRelative)
-        {
+        public static List<T> DeserializeList<T>( BinaryReader reader, FieldInfo field, NMSAttribute settings, long templateStartOffset, NMSTemplate parent ) {
             long listPosition = reader.BaseStream.Position;
-            DebugLogTemplate($"DeserializeList\tstart\t0x{listPosition:X}");
+            DebugLogTemplate( $"DeserializeList\tstart\t0x{listPosition:X}" );
 
             long listStartOffset = reader.ReadInt64();
             int numEntries = reader.ReadInt32();
@@ -349,34 +329,27 @@ namespace libMBIN
 
             reader.BaseStream.Position = listPosition + listStartOffset;
             var list = new List<T>();
-            for (int i = 0; i < numEntries; i++)
-            {
+            for ( int i = 0; i < numEntries; i++ ) {
                 // todo: get rid of DeserializeGenericList? this seems like it would work fine with List<NMSTemplate>
-                var template = DeserializeValue(reader, field.FieldType.GetGenericArguments()[0], settings, templateStartOffset, field, parent, alignRelative);
-                if (template == null) throw new DeserializeTypeException( typeof(T) );
+                var template = DeserializeValue( reader, field.FieldType.GetGenericArguments()[0], settings, templateStartOffset, field, parent );
+                if ( template == null ) throw new DeserializeTypeException( typeof( T ) );
 
                 var type = template.GetType().BaseType;
                 if ( type == typeof( NMSTemplate ) ) ((NMSTemplate) template).FinishDeserialize();
 
-                list.Add((T)template);
+                list.Add( (T) template );
             }
 
             reader.BaseStream.Position = listEndPosition;
-            reader.Align(0x8, 0);
+            reader.Align( 0x8 );
 
             return list;
         }
 
-        public void SerializeValue( BinaryWriter writer, Type fieldType, object fieldData, NMSAttribute settings, FieldInfo field, long startStructPos, ref List<Tuple<long, object>> additionalData, ref int addtDataIndex, UInt32 listEnding = 0xAAAAAA01, bool inList = false ) {
+        public void SerializeValue( BinaryWriter writer, Type fieldType, object fieldData, NMSAttribute settings, FieldInfo field, ref List<Tuple<long, object>> additionalData, ref int addtDataIndex, UInt32 listEnding = 0xAAAAAA01 ) {
             //Logger.LogDebug( $"{field?.DeclaringType.Name}.{field?.Name}\ttype:\t{fieldType.Name}\tadditionalData.Count:\t{additionalData?.Count ?? 0}\taddtDataIndex:\t{addtDataIndex}" );
 
-            if (CustomSerialize(writer, fieldType, fieldData, settings, field, ref additionalData, ref addtDataIndex))
-                return;
-
-            long baseOffset = startStructPos;
-            if ( inList ) {
-                baseOffset = 0;
-            }
+            if (CustomSerialize(writer, fieldType, fieldData, settings, field, ref additionalData, ref addtDataIndex)) return;
 
             if ( settings?.DefaultValue != null ) fieldData = settings.DefaultValue;
             switch ( fieldType.Name ) {
@@ -390,15 +363,13 @@ namespace libMBIN
                         writer.WriteString( (string) fieldData, Encoding.UTF8, size, false, stringPadding );
                     } else {
                         byte[] bytes = (byte[]) fieldData;
-                        if (ignore != true) { //(bytes.Length != 0)
-                            size = bytes.Length;
-                        }
+                        if (ignore != true) size = bytes?.Length ?? 0;
                         Array.Resize( ref bytes, size);
                         writer.Write( bytes );
                     }
                     break;
                 case "Single":
-                    writer.Align( 4, startStructPos, field?.Name ?? fieldType.Name );
+                    writer.Align( 4, field?.Name ?? fieldType.Name );
                     writer.Write( (Single) fieldData );
                     break;
                 case "Boolean":
@@ -410,7 +381,7 @@ namespace libMBIN
                     break;
                 case "Int16":
                 case "UInt16":
-                    writer.Align( 2, startStructPos, field?.Name ?? fieldType.Name );
+                    writer.Align( 2, field?.Name ?? fieldType.Name );
                     if ( fieldType.Name == "Int16" ) {
                         writer.Write( (Int16) fieldData );
                     } else {
@@ -419,7 +390,7 @@ namespace libMBIN
                     break;
                 case "Int32":
                 case "UInt32":
-                    writer.Align( 4, startStructPos, field?.Name ?? fieldType.Name );
+                    writer.Align( 4, field?.Name ?? fieldType.Name );
                     if ( fieldType.Name == "Int32" ) {
                         writer.Write( (Int32) fieldData );
                     } else {
@@ -428,7 +399,7 @@ namespace libMBIN
                     break;
                 case "Int64":
                 case "UInt64":
-                    writer.Align( 8, startStructPos, field?.Name ?? fieldType.Name );
+                    writer.Align( 8, field?.Name ?? fieldType.Name );
                     if ( fieldType.Name == "Int64" ) {
                         writer.Write( (Int64) fieldData );
                     } else {
@@ -436,23 +407,25 @@ namespace libMBIN
                     }
                     break;
                 case "List`1":
-                    writer.Align( 8, startStructPos, field?.Name ?? fieldType.Name );
+                    writer.Align( 8, field?.Name ?? fieldType.Name );
                     if ( field != null && field.FieldType.IsGenericType && field.FieldType.GetGenericTypeDefinition() == typeof( List<> ) ) {
                         // write empty list header
                         long listPos = writer.BaseStream.Position;
                         writer.Write( (Int64) 0 ); // listPosition
                         writer.Write( (Int32) 0 ); // listCount
                         writer.Write( listEnding );
-                        IList listData = (IList)fieldData;
-                        if ( listData.Count != 0 ) {
-                            var data = new Tuple<long, object>( listPos, listData );
-                            if ( addtDataIndex >= additionalData.Count ) {
-                                additionalData.Add( data );
-                            } else {
-                                additionalData.Insert( addtDataIndex, data );
-                            }
-                            addtDataIndex++;
+                        IList listData = (IList) fieldData;
+
+                        if ( listData == null ) break;
+                        if ( listData.Count == 0 ) break;
+
+                        var data = new Tuple<long, object>( listPos, listData );
+                        if ( addtDataIndex >= additionalData.Count ) {
+                            additionalData.Add( data );
+                        } else {
+                            additionalData.Insert( addtDataIndex, data );
                         }
+                        addtDataIndex++;
 
                     }
 
@@ -465,9 +438,9 @@ namespace libMBIN
 
                     if ( template_alignment == 0x4 ) {
                         Logger.LogDebug( $"{field.Name}: Expected alignment == 0x8, not {template_alignment}?" );
-                        writer.Align( 8, 0, field?.Name ?? fieldType.Name );
+                        writer.Align( 8, field?.Name ?? fieldType.Name );
                     } else {
-                        writer.Align( template_alignment, 0, field?.Name ?? fieldType.Name );
+                        writer.Align( template_alignment, field?.Name ?? fieldType.Name );
                     }
                     long refPos = writer.BaseStream.Position;
 
@@ -500,7 +473,7 @@ namespace libMBIN
                     // have something defined so that it just ignores it
                     break;
                 default:
-                    if ( fieldType.Name == "Colour" ) writer.Align( 0x10, baseOffset, field?.Name ?? fieldType.Name ); // TODO: make an attribute
+                    if ( fieldType.Name == "Colour" ) writer.Align( 0x10, field?.Name ?? fieldType.Name ); // TODO: should not be needed
 
                     // todo: align for VariableSizeString?
                     if ( fieldType.Name == "VariableSizeString" ) {
@@ -524,10 +497,10 @@ namespace libMBIN
                             var realObj = obj;
                             if ( realObj == null ) realObj = Activator.CreateInstance( arrayType );
 
-                            SerializeValue( writer, realObj.GetType(), realObj, realObj.GetType().GetCustomAttribute<NMSAttribute>(), field, startStructPos, ref additionalData, ref addtDataIndex, listEnding );
+                            SerializeValue( writer, realObj.GetType(), realObj, realObj.GetType().GetCustomAttribute<NMSAttribute>(), field, ref additionalData, ref addtDataIndex, listEnding );
                         }
                     } else if ( fieldType.IsEnum ) {
-                        writer.Align(4, startStructPos, field?.Name ?? fieldType.Name );
+                        writer.Align(4, field?.Name ?? fieldType.Name );
                         Type enumType = Enum.GetUnderlyingType(field.FieldType);
                         if (enumType.Name == "UInt32") {
                             writer.Write((uint)Enum.Parse(field.FieldType, fieldData.ToString()));
@@ -541,7 +514,7 @@ namespace libMBIN
                         if ( realData == null ) realData = (NMSTemplate) Activator.CreateInstance( fieldType );
                         int alignment = realData.GetType().GetCustomAttribute<NMSAttribute>()?.Alignment ?? 0x4;
                         //DebugLogTemplate(alignment.ToString());
-                        writer.Align(alignment, baseOffset, field?.Name ?? fieldType.Name );     // startStructPos if not in list maybe??
+                        writer.Align(alignment, field?.Name ?? fieldType.Name );     // startStructPos if not in list maybe??
                         realData.AppendToWriter( writer, ref additionalData, ref addtDataIndex, GetType(), listEnding );
 
                     } else {
@@ -566,17 +539,17 @@ namespace libMBIN
                     //Logger.LogDebug($"fieldAddr: 0x{fieldAddr:X}, templatePos: 0x{templatePosition:X}, name: {field.FieldType.Name}, value: {field.GetValue(this)}");
                     NMSAttribute settings = field.GetCustomAttribute<NMSAttribute>();
                     var fieldData = field.GetValue(this);
-                    SerializeValue( writer, field.FieldType, fieldData, settings, field, templatePosition, ref additionalData, ref addtDataIndex, listEnding );
+                    SerializeValue( writer, field.FieldType, fieldData, settings, field, ref additionalData, ref addtDataIndex, listEnding );
                 }
             } else {
-                SerializeValue( writer, type, null, null, null, templatePosition, ref additionalData, ref addtDataIndex, listEnding );
+                SerializeValue( writer, type, null, null, null, ref additionalData, ref addtDataIndex, listEnding );
             }
         }
 
         public void SerializeGenericList( BinaryWriter writer, IList list, long listHeaderPosition, ref List<Tuple<long, object>> additionalData, int addtDataIndex, UInt32 listEnding )
         // This serialises a List of NMSTemplate objects
         {
-            writer.Align( 0x8, listHeaderPosition, list.GetType().Name );       // Make sure that all c~ names are offset at 0x8.     // make rel to listHeaderPosition?
+            writer.Align( 0x8, list.GetType().Name );       // Make sure that all c~ names are offset at 0x8.     // make rel to listHeaderPosition?
             long listPosition = writer.BaseStream.Position;
 
             DebugLogTemplate( $"SerializeList\tstart:\t{$"0x{listPosition:X},",-10}\theader:\t{$"0x{listHeaderPosition:X},",-10}\tcount:\t{list.Count}");
@@ -605,7 +578,7 @@ namespace libMBIN
             foreach ( var entry in list ) {
                 int alignment = entry.GetType().GetCustomAttribute<NMSAttribute>()?.Alignment ?? 0x8;       // this will generally return 4 because it is the default...
 
-                writer.Align(alignment, 0, entry.GetType().Name );
+                writer.Align(alignment, entry.GetType().Name );
                 //Logger.LogDebug($"pos 0x{writer.BaseStream.Position:X}");
                 //Logger.LogDebug(entry.GetType().Name);
                 entryOffsetNamePairs.Add( new KeyValuePair<long, string>( writer.BaseStream.Position, entry.GetType().Name ) );
@@ -620,7 +593,7 @@ namespace libMBIN
                     var data = listObjects[i];
                     //writer.BaseStream.Position = additionalDataOffset; // addtDataOffset gets updated by child templates
                     int alignment2 = entry.GetType().GetCustomAttribute<NMSAttribute>()?.Alignment ?? 0x8;
-                    writer.Align( alignment2, 0, entry.GetType().Name ); // todo: check if this alignment is correct
+                    writer.Align( alignment2, entry.GetType().Name ); // todo: check if this alignment is correct
                     long origPos = writer.BaseStream.Position;
                     if ( data.Item2.GetType().IsGenericType && data.Item2.GetType().GetGenericTypeDefinition() == typeof( List<> ) ) {
                         Type itemType = data.Item2.GetType().GetGenericArguments()[0];
@@ -641,7 +614,7 @@ namespace libMBIN
                         writer.BaseStream.Position = origPos;
                         var GenericObject = data.Item2;
                         int newDataIndex = i + 1;
-                        SerializeValue( writer, GenericObject.GetType(), GenericObject, null, null, origPos, ref listObjects, ref newDataIndex, listEnding, true );
+                        SerializeValue( writer, GenericObject.GetType(), GenericObject, null, null, ref listObjects, ref newDataIndex, listEnding );
                     }
                 }
 
@@ -654,7 +627,7 @@ namespace libMBIN
                 // Iterate through the list headers and write the correct data
                 if ( kvp.Value != "EmptyNode" ) {
                     //long tempPos = writer.BaseStream.Position;
-                    writer.Align( 0x8, 0, kvp.Value.GetType().Name );
+                    writer.Align( 0x8, kvp.Value.GetType().Name );
                     //long correction = writer.BaseStream.Position - tempPos;
                     // in this case, we have an actual non-empty header.
                     long position = writer.BaseStream.Position;
@@ -664,11 +637,10 @@ namespace libMBIN
                     writer.WriteString( "c" + kvp.Value, Encoding.UTF8, 0x40 );
                     // Get the NameHash
                     ulong NameHash = GetTemplateType(kvp.Value).GetCustomAttribute<NMSAttribute>()?.NameHash ?? 0;
-                    if (NameHash != 0) {
-                        writer.Write(NameHash);
-                    }
-                    else {
-                        throw new InvalidGUIDException(TemplateFromName(kvp.Value));
+                    if ( NameHash != 0 ) {
+                        writer.Write( NameHash );
+                    } else {
+                        throw new InvalidGUIDException( TemplateFromName( kvp.Value ) );
                     }
                     //DebugLog(kvp.Value);
                     //DebugLog(offset);
@@ -692,7 +664,7 @@ namespace libMBIN
                     alignment_default = 0x2;
                 }
                 int alignment = list[0].GetType().GetCustomAttribute<NMSAttribute>()?.Alignment ?? alignment_default;
-                writer.Align(alignment, 0, list[0].GetType().Name );
+                writer.Align(alignment, list[0].GetType().Name );
             }
 
             long listPosition = writer.BaseStream.Position;
@@ -722,8 +694,8 @@ namespace libMBIN
                 {
                     alignment = 0x2;
                 }
-                writer.Align(alignment, 0, entry.GetType().Name );
-                SerializeValue( writer, entry.GetType(), entry, null, null, listPosition, ref additionalData, ref addtDataIndexThis, listEnding );
+                writer.Align(alignment, entry.GetType().Name );
+                SerializeValue( writer, entry.GetType(), entry, null, null, ref additionalData, ref addtDataIndexThis, listEnding );
             }
         }
 
@@ -758,7 +730,7 @@ namespace libMBIN
                     int alignment = settings?.Alignment ?? 0x4;
 
                     if ( data.Item2 == null ) {
-                        writer.Align( alignment, 0, "List<null>" );
+                        writer.Align( alignment, "List<null>" );
                         SerializeList( writer, new List<int>(), data.Item1, ref additionalData, i + 1, listEnding );  // pass an empty list. Data type doesn't matter...
                         continue;
                     }
@@ -773,7 +745,7 @@ namespace libMBIN
 
                     }
 
-                    writer.Align( alignment, 0, data.Item2.GetType().Name );
+                    writer.Align( alignment, data.Item2.GetType().Name );
 
                     if ( data.Item2.GetType() == typeof( NMS.VariableSizeString ) ) {
                         //DebugLog(alignment);
@@ -827,7 +799,7 @@ namespace libMBIN
                         writer.BaseStream.Position = data.Item1;
                         writer.Write( dataPosition - data.Item1 );
                         writer.BaseStream.Position = dataPosition;
-                        SerializeValue( writer, data.Item2.GetType(), data.Item2, settings, null, 0, ref additionalData, ref i );     // passing i here *should* be fine as we will only be writing bytes which can't affect i
+                        SerializeValue( writer, data.Item2.GetType(), data.Item2, settings, null, ref additionalData, ref i );     // passing i here *should* be fine as we will only be writing bytes which can't affect i
 
                     } else {
                         throw new UnknownTypeException( data.Item2.GetType() );
@@ -1338,14 +1310,11 @@ namespace libMBIN
             }
             return ID;
         }
-        
-        // func thats run after template is deserialized, can be used for checks etc
-        public void FinishDeserialize()
-        {
-        }
 
-        public virtual object CustomDeserialize(BinaryReader reader, Type field, NMSAttribute settings, long templatePosition, FieldInfo fieldInfo)
-        {
+        // func thats run after template is deserialized, can be used for checks etc
+        public void FinishDeserialize() { }
+
+        public virtual object CustomDeserialize( BinaryReader reader, Type field, NMSAttribute settings, FieldInfo fieldInfo ) {
             return null;
         }
 

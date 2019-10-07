@@ -41,163 +41,155 @@ namespace libMBIN.NMS.Toolkit
         /* 0x130 */ public List<TkMeshMetaData> StreamMetaDataArray;
 
         // TODO: add the list ending to this??
-        public override bool CustomSerialize(BinaryWriter writer, Type field, object fieldData, NMSAttribute settings, FieldInfo fieldInfo, ref List<Tuple<long, object>> additionalData, ref int addtDataIndex)
-        {
-            if (field == null || fieldInfo == null)
-                return false;
+        public override bool CustomSerialize( BinaryWriter writer, Type field, object fieldData, NMSAttribute settings, FieldInfo fieldInfo, ref List<Tuple<long, object>> additionalData, ref int addtDataIndex ) {
+            if ( field == null || fieldInfo == null ) return false;
 
             Dictionary<int, int> TypeMap = new Dictionary<int, int> { { 5131, 8 }, { 36255, 4 }, { 5121, 4 } };
 
             var fieldName = fieldInfo.Name;
-            switch(fieldName)
-            {
-                case nameof(IndexBuffer):
-                    writer.Align(8, 0, fieldName );
+            switch ( fieldName ) {
+                case nameof( IndexBuffer ):
+                    writer.Align( 8, fieldName );
 
                     // write empty list header
                     long listPos = writer.BaseStream.Position;
-                    writer.Write((Int64)0); // listPosition
-                    writer.Write((Int32)0); // listCount
-                    writer.Write((UInt32)0x00000001);
+                    writer.Write( (Int64) 0 ); // listPosition
+                    writer.Write( (Int32) 0 ); // listCount
+                    writer.Write( (UInt32) 0x00000001 );
 
-                    IList data = (IList)fieldData;
+                    IList data = (IList) fieldData;
 
-                    if(Indices16Bit != 1) // if 32bit indices, we can just pass it directly
-                        additionalData.Insert(addtDataIndex, new Tuple<long, object>(listPos, data)); 
-                    else
-                    {
+                    if ( Indices16Bit != 1 ) { // if 32bit indices, we can just pass it directly
+                        additionalData.Insert( addtDataIndex, new Tuple<long, object>( listPos, data ) );
+                    } else {
                         // otherwise we have to create 32bit indices from the 16bit ones
                         var list32Bit = new List<uint>();
                         int effective_count = (data.Count / 2) * 2;
 
-                        for (int i = 0; i < effective_count; i += 2)
-                        {
-                            uint val32Bit = (uint)((int)data[i + 1] << 16 | (int) data[i]);
-                            list32Bit.Add(val32Bit);
+                        for ( int i = 0; i < effective_count; i += 2 ) {
+                            uint val32Bit = (uint) ((int) data[i + 1] << 16 | (int) data[i]);
+                            list32Bit.Add( val32Bit );
                         }
 
                         //Handle odd cases
-                        if (data.Count % 2 == 1)
-                        {
+                        if ( data.Count % 2 == 1 ) {
                             //uint val32Bit = (uint)((int)data[data.Count - 1] << 16);
-                            uint val32Bit = (uint)((int)data[data.Count - 1]);
-                            list32Bit.Add(val32Bit);
+                            uint val32Bit = (uint) ((int) data[data.Count - 1]);
+                            list32Bit.Add( val32Bit );
                         }
 
-                        additionalData.Insert(addtDataIndex, new Tuple<long, object>(listPos, list32Bit));
+                        additionalData.Insert( addtDataIndex, new Tuple<long, object>( listPos, list32Bit ) );
                     }
                     addtDataIndex++;
 
                     return true;
 
-                /*
-                case nameof(VertexStream):
-                case nameof(SmallVertexStream):
-                    writer.Align(8, 0);
+                    /*
+                    case nameof(VertexStream):
+                    case nameof(SmallVertexStream):
+                        writer.Align(8, 0);
 
-                    List<int> LayoutTypes = new List<int>();
-                    TkVertexLayout layout;
+                        List<int> LayoutTypes = new List<int>();
+                        TkVertexLayout layout;
 
-                    if (fieldName == nameof(VertexStream))
-                        layout = VertexLayout;
-                    else
-                        layout = SmallVertexLayout;
+                        if (fieldName == nameof(VertexStream))
+                            layout = VertexLayout;
+                        else
+                            layout = SmallVertexLayout;
 
-                    foreach (TkVertexElement ve in layout.VertexElements)
-                    {
-                        int type = ve.Type;
-                        LayoutTypes.Add(type);
-                    }
-                    int stride = 4 * LayoutTypes.Count;
-
-                    // write empty list header
-                    long listPos2 = writer.BaseStream.Position;
-                    writer.Write((Int64)0); // listPosition
-                    writer.Write((Int32)0); // listCount
-                    writer.Write((UInt32)0xAAAAAA01);
-
-                    IList vertexData = (IList)fieldData;
-
-                    // list size field for VertexStream/SmallVertexSteam is the number of bytes, so we'll have to use a List<byte> in the additionalData
-                    byte[] streamData = null;
-                    using (var ms = new MemoryStream())
-                    using (var writer2 = new BinaryWriter(ms))
-                    {
-                        if (vertexData != null)
+                        foreach (TkVertexElement ve in layout.VertexElements)
                         {
-                            for (int v = 0; v < VertexCount; v++)
-                            {
-                                for (int i = 0; i < LayoutTypes.Count; i++)
-                                {
-                                    if (LayoutTypes[i] == 5131)
-                                    {
-                                        // half-float
-                                        for (int j = 0; j < 4; j++)
-                                        {
-                                            var floatVertex = (float)vertexData[v * stride + 4 * i + j];
-                                            var halfVertex = (Half)floatVertex;
-                                            writer2.Write(halfVertex.value);
-                                        }
-                                    }
-                                    else if (LayoutTypes[i] == 5121)
-                                    {
-                                        // Unsigned bytes
-                                        for (int j = 0; j < 4; j++)
-                                        {
-                                            byte ubyteVertex = (byte)vertexData[v * stride + 4 * i + j];
-                                            writer2.Write(ubyteVertex);
-                                        }
-                                    }
-                                    else if (LayoutTypes[i] == 36255)
-                                    {
-                                        // INT_2_10_10_10_REV
-                                        float[] vertexes = new float[4] {(float)vertexData[v * stride + 4 * i],
-                                                                         (float)vertexData[v * stride + 4 * i + 1],
-                                                                         (float)vertexData[v * stride + 4 * i + 2],
-                                                                         (float)vertexData[v * stride + 4 * i + 3] };
-                                        int val = INT_2_10_10_10_REV.FromVerts(vertexes);
-                                        writer2.Write((UInt32)val);
-                                    }
-                                }
-                            }
+                            int type = ve.Type;
+                            LayoutTypes.Add(type);
                         }
-                        streamData = ms.ToArray();
+                        int stride = 4 * LayoutTypes.Count;
 
-                    }
-                        
+                        // write empty list header
+                        long listPos2 = writer.BaseStream.Position;
+                        writer.Write((Int64)0); // listPosition
+                        writer.Write((Int32)0); // listCount
+                        writer.Write((UInt32)0xAAAAAA01);
+
+                        IList vertexData = (IList)fieldData;
+
+                        // list size field for VertexStream/SmallVertexSteam is the number of bytes, so we'll have to use a List<byte> in the additionalData
+                        byte[] streamData = null;
                         using (var ms = new MemoryStream())
                         using (var writer2 = new BinaryWriter(ms))
                         {
-                            if(vertexData != null)
-                                foreach (var vertex in vertexData)
+                            if (vertexData != null)
+                            {
+                                for (int v = 0; v < VertexCount; v++)
                                 {
-                                    var floatVertex = (float)vertex;
-                                    var halfVertex = (Half)floatVertex;
-                                    writer2.Write(halfVertex.value);
+                                    for (int i = 0; i < LayoutTypes.Count; i++)
+                                    {
+                                        if (LayoutTypes[i] == 5131)
+                                        {
+                                            // half-float
+                                            for (int j = 0; j < 4; j++)
+                                            {
+                                                var floatVertex = (float)vertexData[v * stride + 4 * i + j];
+                                                var halfVertex = (Half)floatVertex;
+                                                writer2.Write(halfVertex.value);
+                                            }
+                                        }
+                                        else if (LayoutTypes[i] == 5121)
+                                        {
+                                            // Unsigned bytes
+                                            for (int j = 0; j < 4; j++)
+                                            {
+                                                byte ubyteVertex = (byte)vertexData[v * stride + 4 * i + j];
+                                                writer2.Write(ubyteVertex);
+                                            }
+                                        }
+                                        else if (LayoutTypes[i] == 36255)
+                                        {
+                                            // INT_2_10_10_10_REV
+                                            float[] vertexes = new float[4] {(float)vertexData[v * stride + 4 * i],
+                                                                             (float)vertexData[v * stride + 4 * i + 1],
+                                                                             (float)vertexData[v * stride + 4 * i + 2],
+                                                                             (float)vertexData[v * stride + 4 * i + 3] };
+                                            int val = INT_2_10_10_10_REV.FromVerts(vertexes);
+                                            writer2.Write((UInt32)val);
+                                        }
+                                    }
                                 }
+                            }
                             streamData = ms.ToArray();
+
                         }
 
-                    var listBytes = new List<byte>(streamData);
-                    additionalData.Insert(addtDataIndex, new Tuple<long, object>(listPos2, listBytes));
-                    addtDataIndex++;
+                            using (var ms = new MemoryStream())
+                            using (var writer2 = new BinaryWriter(ms))
+                            {
+                                if(vertexData != null)
+                                    foreach (var vertex in vertexData)
+                                    {
+                                        var floatVertex = (float)vertex;
+                                        var halfVertex = (Half)floatVertex;
+                                        writer2.Write(halfVertex.value);
+                                    }
+                                streamData = ms.ToArray();
+                            }
 
-                    return true*/
+                        var listBytes = new List<byte>(streamData);
+                        additionalData.Insert(addtDataIndex, new Tuple<long, object>(listPos2, listBytes));
+                        addtDataIndex++;
+
+                        return true*/
             }
 
             return false;
         }
 
-        public override object CustomDeserialize(BinaryReader reader, Type field, NMSAttribute settings, long templatePosition, FieldInfo fieldInfo)
-        {
+        public override object CustomDeserialize( BinaryReader reader, Type field, NMSAttribute settings, FieldInfo fieldInfo ) {
             var fieldName = fieldInfo.Name;
 
             Dictionary<int, int> TypeMap = new Dictionary<int, int> { { 5131, 8 }, { 36255, 4 }, { 5121, 4 } };
 
-            switch (fieldName)
-            {
-                case nameof(IndexBuffer):
-                    reader.Align(8, 0);
+            switch ( fieldName ) {
+                case nameof( IndexBuffer ):
+                    reader.Align( 0x08 );
                     long listPosition = reader.BaseStream.Position;
                     //DebugLog($"TkGeometryData.CustomDeserialize({fieldName}) start 0x{listPosition:X}");
 
@@ -210,89 +202,84 @@ namespace libMBIN.NMS.Toolkit
 
                     reader.BaseStream.Position = listPosition + listStartOffset;
                     var indices = new List<int>();
-                    for (int i = 0; i < numEntries; i++)
-                    {
-                        if (Indices16Bit == 1)
-                        {
-                            indices.Add((int)reader.ReadUInt16());
-                        }
-                        else
-                        {
-                            indices.Add((int)reader.ReadUInt32());
+                    for ( int i = 0; i < numEntries; i++ ) {
+                        if ( Indices16Bit == 1 ) {
+                            indices.Add( (int) reader.ReadUInt16() );
+                        } else {
+                            indices.Add( (int) reader.ReadUInt32() );
                         }
                     }
 
                     reader.BaseStream.Position = listEndPosition;
-                    reader.Align(0x8, 0);
+                    reader.Align( 0x08 );
 
                     return indices;
-                /*
-                case nameof(VertexStream):
-                case nameof(SmallVertexStream):
-
-                    List<int> LayoutTypes = GetTypeLayouts(fieldName, reader);
-                    int StreamBlockSize = 0;
-                    foreach (int vert_type in LayoutTypes)
-                    {
-                        StreamBlockSize += TypeMap[vert_type];
-                    }
-                    reader.Align(8, 0);
-                    listPosition = reader.BaseStream.Position;
-                    //DebugLog($"TkGeometryData.CustomDeserialize({fieldName}) start 0x{listPosition:X}");
-
-                    listStartOffset = reader.ReadInt64();
-                    numEntries = reader.ReadInt32()/StreamBlockSize;   // the number of blocks of data
-                    listMagic = reader.ReadUInt32();
-                    if ((listMagic & 0xFF) != 1)
-                        throw new Exception($"Invalid list read, magic {listMagic:X8} expected xxxxxx01");
-
-                    listEndPosition = reader.BaseStream.Position;
-
-                    reader.BaseStream.Position = listPosition + listStartOffset;
-                    List<float> vertices = new List<float>();
-                    int curr_block = 0;
-                    while (curr_block < numEntries)
-                    {
-                        foreach (int ltype in LayoutTypes)
-                        {
-                            if (ltype == 5131)
-                            // Half floats
-                            {
-                                // read in the half-float data
-                                for (int i = 0; i < 4; i++)
-                                {
-                                    ushort vertex = reader.ReadUInt16();
-                                    vertices.Add((float)Half.ToHalf(vertex));
-                                }
-                            }
-                            else if (ltype == 5121)
-                            // Unsigned bytes
-                            {
-                                for (int i = 0; i < 4; i++)
-                                {
-                                    byte num = reader.ReadByte();
-                                    vertices.Add((float)(int)num);
-                                }
-                            }
-                            else if (ltype == 36255)
-                            {
-                                int vert_data = reader.ReadInt32();
-                                vertices.AddRange(INT_2_10_10_10_REV.FromBytes(vert_data));
-                            }
-                        }
-                        curr_block += 1;
-                    }
                     /*
-                    while (reader.BaseStream.Position < (listPosition + listStartOffset + numEntries))
-                    {
-                        ushort vertex = reader.ReadUInt16();
-                        vertices.Add((float)Half.ToHalf(vertex));
-                    }
+                    case nameof(VertexStream):
+                    case nameof(SmallVertexStream):
 
-                    reader.BaseStream.Position = listEndPosition;
-                    reader.Align(0x8, 0);
+                        List<int> LayoutTypes = GetTypeLayouts(fieldName, reader);
+                        int StreamBlockSize = 0;
+                        foreach (int vert_type in LayoutTypes) {
+                            StreamBlockSize += TypeMap[vert_type];
+                        }
+                        reader.Align(8, 0);
+                        listPosition = reader.BaseStream.Position;
+                        //DebugLog($"TkGeometryData.CustomDeserialize({fieldName}) start 0x{listPosition:X}");
 
-                    return vertices;*/
+                        listStartOffset = reader.ReadInt64();
+                        numEntries = reader.ReadInt32()/StreamBlockSize;   // the number of blocks of data
+                        listMagic = reader.ReadUInt32();
+                        if ((listMagic & 0xFF) != 1)
+                            throw new Exception($"Invalid list read, magic {listMagic:X8} expected xxxxxx01");
+
+                        listEndPosition = reader.BaseStream.Position;
+
+                        reader.BaseStream.Position = listPosition + listStartOffset;
+                        List<float> vertices = new List<float>();
+                        int curr_block = 0;
+                        while (curr_block < numEntries)
+                        {
+                            foreach (int ltype in LayoutTypes)
+                            {
+                                if (ltype == 5131)
+                                // Half floats
+                                {
+                                    // read in the half-float data
+                                    for (int i = 0; i < 4; i++)
+                                    {
+                                        ushort vertex = reader.ReadUInt16();
+                                        vertices.Add((float)Half.ToHalf(vertex));
+                                    }
+                                }
+                                else if (ltype == 5121)
+                                // Unsigned bytes
+                                {
+                                    for (int i = 0; i < 4; i++)
+                                    {
+                                        byte num = reader.ReadByte();
+                                        vertices.Add((float)(int)num);
+                                    }
+                                }
+                                else if (ltype == 36255)
+                                {
+                                    int vert_data = reader.ReadInt32();
+                                    vertices.AddRange(INT_2_10_10_10_REV.FromBytes(vert_data));
+                                }
+                            }
+                            curr_block += 1;
+                        }
+                        /*
+                        while (reader.BaseStream.Position < (listPosition + listStartOffset + numEntries))
+                        {
+                            ushort vertex = reader.ReadUInt16();
+                            vertices.Add((float)Half.ToHalf(vertex));
+                        }
+
+                        reader.BaseStream.Position = listEndPosition;
+                        reader.Align(0x8, 0);
+
+                        return vertices;*/
             }
 
             return null;
