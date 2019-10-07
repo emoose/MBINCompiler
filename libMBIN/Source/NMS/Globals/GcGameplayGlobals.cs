@@ -3,13 +3,13 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(GUID = 0x397E231F547EC919)]
+    [NMS(GUID = 0xBA717F6698767175)]
     public class GcGameplayGlobals : NMSTemplate
     {
         /* 0x0 */ public float Unknown0x0;
         /* 0x4 */ public float Unknown0x4;
-        /* 0x8 */ public float Unknown0x8;
-        /* 0xC */ public float Unknown0xC;
+        [NMS(Size = 0x8, Ignore = true)]
+        /* 0x8 */ public byte[] Padding0x8;
         [NMS(Size = 0x10)]
         /* 0x10 */ public string Unknown0x10;
         /* 0x20 */ public float Unknown0x20;

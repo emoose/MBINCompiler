@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x26220, GUID = 0xF1FA910C4B15D651, NameHash = 0x6C4510BB243EFA64)]
+	[NMS(Size = 0x26220, GUID = 0x289FC0556C0D079A, NameHash = 0x6C4510BB243EFA64)]
     public class GcPlayerStateData : NMSTemplate
     {
         /* 0x00000 */ public GcUniverseAddressData UniverseAddress;
@@ -229,9 +229,8 @@ namespace libMBIN.NMS.GameComponents
         [NMS(Size = 0xB, Ignore = true)]
         /* 0x255A5 */ public byte[] Padding255A5;
         /* 0x255B0 */ public Vector4f StartGameShipPosition;
-        /* 0x255C0 */ public int TradingSupplyDataIndex;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x255C4 */ public byte[] Padding255C4;
+        /* 0x255C0 */ public bool ShipNeedsTerrainPositioning;
+        /* 0x255C4 */ public int TradingSupplyDataIndex;
         /* 0x255C8 */ public List<GcTradingSupplyData> TradingSupplyData;
         /* 0x255D8 */ public List<GcPortalData> LastPortal;
         /* 0x255E8 */ public GcPortalSaveData VisitedPortal;
