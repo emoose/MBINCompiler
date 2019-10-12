@@ -31,6 +31,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcAtlasSendQueryBaseImages.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcAtlasRecvBaseQueryList.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcAtlasRecvBlob.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcAtlasSendSubmitBaseWithImage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcMissionCommunityMissionData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcPlayerHazardType.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcBuildingPlacementErrorTypes.cs" />
@@ -240,6 +241,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcFiendCrime.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcTechnologyTypes.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcWeirdCreatureRewardList.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Toolkit\TkMetadataFilenameList.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Toolkit\TkEmitterData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Toolkit\TkAxisImageLookup.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Toolkit\TkAxisPathMapping.cs" />

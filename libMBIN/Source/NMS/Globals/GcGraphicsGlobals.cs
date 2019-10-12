@@ -301,5 +301,7 @@ namespace libMBIN.NMS.Globals
         /* 0x6DC */ public float Unknown0x6DC;
         [NMS(Size = 0xA)]
         /* 0x6E0 */ public TkGraphicsDetailPreset[] GraphicsDetailPresets;
+        [NMS(Size = 0x8, Ignore = true)]
+        /* 0x898 */ public byte[] EndPadding;
     }
 }

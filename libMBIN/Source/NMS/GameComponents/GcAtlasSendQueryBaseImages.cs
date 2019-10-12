@@ -9,6 +9,6 @@ namespace libMBIN.NMS.GameComponents
     public class GcAtlasSendQueryBaseImages : NMSTemplate
     {
         /* 0x0 */ public ulong ClientUserdata;
-        ///* 0x8 */ public List<Unknown> BaseQueries;
+        /* 0x8 */ public List<GcAtlasBaseQuery> BaseQueries;
     }
 }
