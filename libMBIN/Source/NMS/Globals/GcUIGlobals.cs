@@ -39,8 +39,8 @@ namespace libMBIN.NMS.Globals
         /* 0x84 */ public float Unknown0x84;
         /* 0x88 */ public float Unknown0x88;
         /* 0x8C */ public float Unknown0x8C;
-        /* 0x90 */ public bool Unknown0x90;
-        /* 0x94 */ public float Unknown0x94;
+        /* 0x90 */ public float Unknown0x90;
+        /* 0x94 */ public bool Unknown0x94;
         /* 0x98 */ public float Unknown0x98;
         /* 0x9C */ public float Unknown0x9C;
         /* 0xA0 */ public float Unknown0xA0;
@@ -877,7 +877,7 @@ namespace libMBIN.NMS.Globals
         /* 0x4CF8 */ public float FrontendConfirmTimeMouseMultiplier;
         /* 0x4CFC */ public float FrontendConfirmTimeFast;
         /* 0x4D00 */ public float FrontendConfirmTime;
-        /* 0x4D04 */ public float Unknown0x4D04;
+        /* 0x4D04 */ public float FrontendConfirmSalvageTime;       // middle button time to scrap an item
         /* 0x4D08 */ public TkCurveType FrontendConfirmCurve;
         /* 0x4D0C */ public float FrontendCursorSize;
         /* 0x4D10 */ public float FrontendCursorOffset;
