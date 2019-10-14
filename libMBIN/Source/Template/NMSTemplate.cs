@@ -739,6 +739,9 @@ namespace libMBIN
                     if ( data.Item2.GetType() == typeof( byte[] ) ) {
                         alignment = 1;
 
+                    } else if ( data.Item2.GetType() == typeof( List<ushort> ) ) {
+                        alignment = 2;
+
                     // if we have an empty list we do not want to do alignment otherwise it can put off other things
                     } else if ( data.Item2.GetType().IsGenericType && data.Item2.GetType().GetGenericTypeDefinition() == typeof( List<> ) ) {
                         if ( ((IList) data.Item2).Count == 0 ) alignment = 1;
