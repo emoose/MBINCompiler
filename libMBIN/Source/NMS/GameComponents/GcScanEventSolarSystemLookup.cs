@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Alignment = 0x4, Size = 0x68, GUID = 0xA11B1D7F918865AB, NameHash = 0xE523CFAD6AFB4BB6)]
+	[NMS(Alignment = 0x4, Size = 0x68, GUID = 0xB43DA88C9A6169DF, NameHash = 0xE523CFAD6AFB4BB6)]
     public class GcScanEventSolarSystemLookup : NMSTemplate
     {
         /* 0x00 */ public bool UseStarType;
@@ -20,7 +20,8 @@ namespace libMBIN.NMS.GameComponents
         /* 0x1D */ public bool NeedsExtremeSentinelPlanet;
         /* 0x1E */ public bool NeedsExtremeWeatherPlanet;
         /* 0x1F */ public bool NeedsBiome;
-        /* 0x20 */ public bool AnyRGBBiome;
+        /* 0x20 */ public bool AnyBiomeNotWeirdOrDead;
+        /* 0x21 */ public bool AnyRGBBiome;
         /* 0x24 */ public GcBiomeType NeedsBiomeType;
         /* 0x28 */ public bool NeedsEmptySystem;
         /* 0x29 */ public bool NeedsAbandonedSystem;

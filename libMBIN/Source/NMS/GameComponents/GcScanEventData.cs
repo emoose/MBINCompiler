@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x2F8, Alignment = 0x8, GUID = 0xCFB90ED6E2063076, NameHash = 0x7BBBCE7D7BC0F1F4)]
+	[NMS(Size = 0x300, Alignment = 0x8, GUID = 0xA1E07BDDA45DF2ED, NameHash = 0x7BBBCE7D7BC0F1F4)]
     public class GcScanEventData : NMSTemplate
     {
         [NMS(Size = 0x20)]
@@ -18,68 +18,69 @@ namespace libMBIN.NMS.GameComponents
         /* 0x046 */ public bool ForceOverridesAll;
         /* 0x047 */ public bool IsCommunityPortalOverride;
         /* 0x048 */ public bool ClearForcedInteractionOnCompletion;
-        /* 0x049 */ public bool AlwaysShow;
-        /* 0x04A */ public bool NeverShow;
-        [NMS(Size = 0x5, Ignore = true)]
-        /* 0x04B */ public byte[] Padding4B;
+        /* 0x04C */ public float BuildingPreventionRadius;
+        /* 0x050 */ public bool AlwaysShow;
+        /* 0x051 */ public bool NeverShow;
+        [NMS(Size = 0x6, Ignore = true)]
+        /* 0x052 */ public byte[] Padding52;
         [NMS(Size = 0x20)]
-        /* 0x050 */ public string PlanetLabelText;
+        /* 0x058 */ public string PlanetLabelText;
 
         public enum EventStartTypeEnum { None, Special, Discovered, Timer, ObjectScan, LeaveBuilding }
-		/* 0x070 */ public EventStartTypeEnum EventStartType;
+		/* 0x078 */ public EventStartTypeEnum EventStartType;
 		public enum EventEndTypeEnum { None, Proximity, Interact, EnterBuilding, TimedInteract }
-		/* 0x074 */ public EventEndTypeEnum EventEndType;
+		/* 0x07C */ public EventEndTypeEnum EventEndType;
 		public enum EventPriorityEnum { Regular, High }
-		/* 0x078 */ public EventPriorityEnum EventPriority;
+		/* 0x080 */ public EventPriorityEnum EventPriority;
 
-        /* 0x07C */ public bool CanEndFromOutsideMission;
-        /* 0x07D */ public bool DisableMultiplayerSync;
-        /* 0x07E */ public bool ReplaceEventIfAlreadyActive;
+        /* 0x084 */ public bool CanEndFromOutsideMission;
+        /* 0x085 */ public bool DisableMultiplayerSync;
+        /* 0x086 */ public bool ReplaceEventIfAlreadyActive;
 
         public enum BuildingLocationEnum { Nearest, AllNearest, Random, RandomOnNearPlanet, RandomOnFarPlanet, PlanetSearch }
-		/* 0x080 */ public BuildingLocationEnum BuildingLocation;
+		/* 0x088 */ public BuildingLocationEnum BuildingLocation;
 		public enum BuildingTypeEnum { Any, AnyShelter, AnyNPC, BuildingClass, SpaceStation, SpaceAnomaly, Atlas, Freighter, FreighterBase,
             ExternalPlanetBase, PlanetBaseTerminal, Expedition, TutorialShelter, MPMissionFreighter, Nexus, InitialDistressSignal }
-		/* 0x084 */ public BuildingTypeEnum BuildingType;
-        /* 0x088 */ public GcBuildingClassification BuildingClass;
-        /* 0x08C */ public bool AllowFriendBases;
+		/* 0x08C */ public BuildingTypeEnum BuildingType;
+        /* 0x090 */ public GcBuildingClassification BuildingClass;
+        /* 0x094 */ public bool AllowFriendBases;
 
 		public enum SolarSystemLocationEnum { Local, Near, LocalOrNear, NearWithNoExpeditions, FromList }
-		/* 0x090 */ public SolarSystemLocationEnum SolarSystemLocation;
+		/* 0x098 */ public SolarSystemLocationEnum SolarSystemLocation;
 
         [NMS(Size = 0x4, Ignore = true)]
-        /* 0x094 */ public byte[] Padding94;
+        /* 0x09C */ public byte[] Padding9C;
 
-        /* 0x098 */ public GcScanEventSolarSystemLookup SolarSystemAttributes;
-        /* 0x100 */ public GcScanEventSolarSystemLookup SolarSystemAttributesFallback;
-        /* 0x168 */ public bool ForceRestartInteraction;
+        /* 0x0A0 */ public GcScanEventSolarSystemLookup SolarSystemAttributes;
+        /* 0x108 */ public GcScanEventSolarSystemLookup SolarSystemAttributesFallback;
+        /* 0x170 */ public bool ForceRestartInteraction;
         [NMS(Size = 7, Ignore = true)]
-        /* 0x169 */ public byte[] Padding169;
+        /* 0x171 */ public byte[] Padding171;
         [NMS(Size = 0x10)]
-        /* 0x170 */ public string HasReward;
+        /* 0x178 */ public string HasReward;
         [NMS(Size = 0x20)]
-        /* 0x180 */ public string NextOption;
-        /* 0x1A0 */ public GcScanEventTriggers TriggerActions;
-        /* 0x1C0 */ public List<NMSString0x100> UAsList;
-        /* 0x1D0 */ public GcTechnologyCategory TechShopType;
+        /* 0x188 */ public string NextOption;
+        /* 0x1A8 */ public GcScanEventTriggers TriggerActions;
+        /* 0x1C8 */ public List<NMSString0x100> UAsList;
+        /* 0x1D8 */ public GcTechnologyCategory TechShopType;
         [NMS(Size = 0x20)]
-        /* 0x1D4 */ public string OSDMessage;
+        /* 0x1DC */ public string OSDMessage;
         [NMS(Size = 0x20)]
-        /* 0x1F4 */ public string InterstellarOSDMessage;
+        /* 0x1FC */ public string InterstellarOSDMessage;
         [NMS(Size = 0x20)]
-        /* 0x214 */ public string MarkerLabel;
-        /* 0x234 */ public TkTextureResource MarkerIcon;
-        /* 0x2B8 */ public float StartTime;
-        /* 0x2BC */ public float MessageTime;
-        /* 0x2C0 */ public float MessageDisplayTime;
-        /* 0x2C4 */ public GcAudioWwiseEvents MessageAudio;
-        /* 0x2C8 */ public float IconTime;
-        /* 0x2CC */ public float TooltipTime;
-        /* 0x2D0 */ public bool TooltipRepeats;
-        /* 0x2D1 */ public bool ShowEndTooltip;
+        /* 0x21C */ public string MarkerLabel;
+        /* 0x23C */ public TkTextureResource MarkerIcon;
+        /* 0x2C0 */ public float StartTime;
+        /* 0x2C4 */ public float MessageTime;
+        /* 0x2C8 */ public float MessageDisplayTime;
+        /* 0x2CC */ public GcAudioWwiseEvents MessageAudio;
+        /* 0x2D0 */ public float IconTime;
+        /* 0x2D4 */ public float TooltipTime;
+        /* 0x2D8 */ public bool TooltipRepeats;
+        /* 0x2D9 */ public bool ShowEndTooltip;
         [NMS(Size = 0x20)]
-        /* 0x2D2 */ public string TooltipMessage;
+        /* 0x2DA */ public string TooltipMessage;
         [NMS(Size = 0x6, Ignore = true)]
-        /* 0x2E2 */ public byte[] EndPadding;
+        /* 0x2EA */ public byte[] EndPadding;
     }
 }

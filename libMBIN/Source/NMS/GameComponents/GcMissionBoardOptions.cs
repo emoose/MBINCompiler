@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x80, GUID = 0xD57CD8F90F903FA9, NameHash = 0xDD272E15749CCDF5)]
+	[NMS(Size = 0x80, GUID = 0x4C591D47CCA6F35A, NameHash = 0xDD272E15749CCDF5)]
     public class GcMissionBoardOptions : NMSTemplate
     {
         /* 0x00 */ public GcMissionType Type;
@@ -14,8 +14,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x0C */ public bool CloseMissionGiver;
         /* 0x0D */ public bool IsGuildShopMission;
         /* 0x0E */ public bool IsPlanetProcMission;
-        [NMS(Size = 0x1, Ignore = true)]
-        /* 0x0F */ public byte[] PaddingF;
+        /* 0x0F */ public bool IsMultiplayerEventMission;
         [NMS(Size = 0x10)]
         /* 0x10 */ public string RewardPenaltyOnAbandon;
         /* 0x20 */ public List<GcMissionFaction> Faction;

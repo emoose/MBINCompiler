@@ -25,7 +25,7 @@ namespace libMBIN.NMS.GameComponents
         [NMS(Size = 0x10, Ignore = true)]
         public byte[] Padding30;
 
-        public Vector4f TestVector; // actually Vector3, but it's 0x10 bytes so we read it as Vector4
+        public Vector3f TestVector;
         public Vector2f TestVector2;
         [NMS(Size = 8, Ignore = true)]
         public byte[] Padding58;
@@ -59,7 +59,7 @@ namespace libMBIN.NMS.GameComponents
         [NMS(Size = 8, Ignore = true)]
         public byte[] Padding568;
 
-        public Vector4f DocOptionalVector;
+        public Vector3f DocOptionalVector;
         [NMS(Size = 0x40)]
         public string DocRenamedString64;
         [NMS(Size = 0x20)]

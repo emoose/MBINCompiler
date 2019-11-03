@@ -33,7 +33,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x1A0 */ public Colour ColourOverride;
         /* 0x1B0 */ public bool PrefixTitle;
         [NMS(Size = 0x7, Ignore = true)]
-        /* 0x1B1 */ public byte[] Padding1A1;
+        /* 0x1B1 */ public byte[] Padding1B1;
         [NMS(Size = 0x20)]
         /* 0x1B8 */ public string PrefixTitleText;
         /* 0x1D8 */ public GcMissionConditionTest ConditionTest;
