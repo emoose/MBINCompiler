@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x26230, GUID = 0x191FF63EB0D67233, NameHash = 0x6C4510BB243EFA64)]
+	[NMS(Size = 0x26230, GUID = 0x64568831AF310BE2, NameHash = 0x6C4510BB243EFA64)]
     public class GcPlayerStateData : NMSTemplate
     {
         /* 0x00000 */ public GcUniverseAddressData UniverseAddress;
@@ -62,7 +62,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x006E8 */ public byte[] Padding6E8;
         /* 0x006F0 */ public GcInteractionData HoloExplorerInteraction;
         /* 0x00710 */ public GcInteractionData HoloScepticInteraction;
-        /* 0x00700 */ public GcInteractionData HoloNooneInteraction;
+        /* 0x00730 */ public GcInteractionData HoloNooneInteraction;
         /* 0x00750 */ public int Health;
 		/* 0x00754 */ public int ShipHealth;
         /* 0x00758 */ public int Shield;
