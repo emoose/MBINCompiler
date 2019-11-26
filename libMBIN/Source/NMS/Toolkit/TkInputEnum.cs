@@ -38,7 +38,7 @@ namespace libMBIN.NMS.Toolkit
             PadSpecial1 = 0x141, PadSpecial2 = 0x142, LeftHandA = 0x143, LeftHandB = 0x144, LeftHandC = 0x145,
             LeftHandD = 0x146, ChordBothShoulders = 0x147, PadUnbound = 0x148, Gesture = 0x149, GestureLeftWrist = 0x14A,
             GestureRightWrist = 0x14B, GestureBinoculars = 0x14C, GestureBackpack = 0x14D, GestureExitVehicle = 0x14E, GestureThrottle = 0x14F,
-            GestureFlightStick = 0x150, GestureTeleport = 0x151, MaxEnumValue = 0x1521
+            GestureFlightStick = 0x150, GestureTeleport = 0x151, MaxEnumValue = 0x152
         };
         public InputButtonEnum InputButton;
     }
