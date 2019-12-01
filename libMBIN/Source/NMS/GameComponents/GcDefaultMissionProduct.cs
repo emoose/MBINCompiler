@@ -3,7 +3,8 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0x885509E0369149C)]
+	[NMS(GUID = 0xFD08A6BC605EA73B, NameHash = 0x1F78606838C7F310)]
+    // Note: This is called "GcDefaulMissionProduct", so I fixed the spelling mistake...
     public class GcDefaultMissionProduct : NMSTemplate
     {
         public GcProductTableEnum Product;

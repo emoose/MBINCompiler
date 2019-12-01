@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x440, GUID = 0x9EC59C8CD40008B9, NameHash = 0xEF1AB4FE11FCFA6D)]
+	[NMS(Size = 0x440, GUID = 0xD553F8EA70AC6DD1, NameHash = 0xEF1AB4FE11FCFA6D)]
     public class GcNPCSpawnTable : NMSTemplate
     {
         [NMS(Size = 8, EnumType = typeof(GcAlienRace.AlienRaceEnum))]
