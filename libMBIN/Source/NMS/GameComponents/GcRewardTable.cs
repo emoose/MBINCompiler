@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0xE0, GUID = 0x29B7DFCC7CC18D82, NameHash = 0x2ECD4E3663FDB26F)]
+	[NMS(Size = 0xF0, GUID = 0xA81469E1E461F02D, NameHash = 0x2ECD4E3663FDB26F)]
     public class GcRewardTable : NMSTemplate
     {
         /* 0x00 */ public List<GcGenericRewardTableEntry> GenericTable;
@@ -16,11 +16,12 @@ namespace libMBIN.NMS.GameComponents
         /* 0x50 */ public List<GcGenericRewardTableEntry> MissionBoardTable;
         /* 0x60 */ public List<GcGenericRewardTableEntry> FleetTable;
         /* 0x70 */ public List<GcGenericRewardTableEntry> WikiProgressTable;
-        /* 0x80 */ public List<GcRewardTableEntitlementItem> EntitlementTable;
-        /* 0x90 */ public List<GcRewardTableEntry> Table;
-        /* 0xA0 */ public List<NMSString0x10> TechRewardOrder;
-        /* 0xB0 */ public List<NMSString0x10> ProductRewardOrder;
-        /* 0xC0 */ public List<GcGenericRewardTableEntry> MixerRewardTable;
-        /* 0xC0 */ public List<GcGenericRewardTableEntry> NPCPlanetSiteTable;
+        /* 0x80 */ public List<GcGenericRewardTableEntry> ShipSalvageTable;
+        /* 0x90 */ public List<GcRewardTableEntitlementItem> EntitlementTable;
+        /* 0xA0 */ public List<GcRewardTableEntry> Table;
+        /* 0xB0 */ public List<NMSString0x10> TechRewardOrder;
+        /* 0xC0 */ public List<NMSString0x10> ProductRewardOrder;
+        /* 0xD0 */ public List<GcGenericRewardTableEntry> MixerRewardTable;
+        /* 0xE0 */ public List<GcGenericRewardTableEntry> NPCPlanetSiteTable;
     }
 }

@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x1C00, GUID = 0xF056EC1A2B667861, NameHash = 0x69B43206529CA591)]
+	[NMS(Size = 0x1B70, GUID = 0x8CE732ED40015480, NameHash = 0x69B43206529CA591)]
     public class GcBaseBuildingTable : NMSTemplate
     {
         /* 0x0000 */ public TkModelResource LegModel;
@@ -15,26 +15,17 @@ namespace libMBIN.NMS.GameComponents
         /* 0x0210 */ public TkModelResource RotateScaleGizmo;
         /* 0x0294 */ public TkModelResource WiringFirefly;
         /* 0x0318 */ public TkModelResource WiringSnapPoint;
-        /* 0x039C */ public TkModelResource WiringSnapUsed;
-        /* 0x0420 */ public TkModelResource WiringSnapSelected;
-
-        [NMS(Size = 4, Ignore = true)]
-        /* 0x04A4 */ public byte[] Padding4A4;
-
-        /* 0x04A8 */ public List<GcBaseBuildingEntry> Objects;
-        /* 0x04B8 */ public List<GcBaseBuildingGroup> Groups;
-
-        [NMS(Size = 8, Ignore = true)]
-        /* 0x04C8 */ public byte[] Padding4C8;
-
+        /* 0x039C */ public TkModelResource WiringSnapSelected;
+        /* 0x0420 */ public List<GcBaseBuildingEntry> Objects;
+        /* 0x0430 */ public List<GcBaseBuildingGroup> Groups;
         [NMS(Size = 0x10)]
-        /* 0x04D0 */ public GcBaseBuildingPalette[] Palettes;
+        /* 0x0440 */ public GcBaseBuildingPalette[] Palettes;
         [NMS(Size = 0x4)]
-        /* 0x08D0 */ public GcBaseBuildingMaterial[] Materials;
-        /* 0x1BD0 */ public string DefaultInBaseObject;
+        /* 0x0840 */ public GcBaseBuildingMaterial[] Materials;
+        /* 0x1B40 */ public string DefaultInBaseObject;
         [NMS(Size = 0x10)]
-        /* 0x1BE0 */ public string DefaultOnTerrainObject;
+        /* 0x1B50 */ public string DefaultOnTerrainObject;
         [NMS(Size = 0x10)]
-        /* 0x1BF0 */ public string DefaultInFreighterObject;
+        /* 0x1B60 */ public string DefaultInFreighterObject;
     }
 }

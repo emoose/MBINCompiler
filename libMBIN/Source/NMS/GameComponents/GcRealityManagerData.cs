@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0xBAB0, GUID = 0x8EB2E3488302F51C, NameHash = 0x5930542B7B565329)]
+	[NMS(Size = 0xC1A0, GUID = 0xE7C91AF455FFD5A3, NameHash = 0x5930542B7B565329)]
     public class GcRealityManagerData : NMSTemplate
     {
         /* 0x0000 */ public ushort HomeRealityIteration;
@@ -47,23 +47,14 @@ namespace libMBIN.NMS.GameComponents
 
         [NMS(Size = 0x80)]
         /* 0x0798 */ public string AlienWordsTable;
-
         /* 0x0818 */ public List<NMSString0x80> AlienPuzzlesTables;
-
-        [NMS(Size = 0x63, EnumType = typeof(GcInteractionType.InteractionTypeEnum))]
+        [NMS(Size = 0x64, EnumType = typeof(GcInteractionType.InteractionTypeEnum))]
         /* 0x0828 */ public bool[] LoopInteractionPuzzles;
-
-        [NMS(Size = 0x63, EnumType = typeof(GcInteractionType.InteractionTypeEnum))]
+        [NMS(Size = 0x64, EnumType = typeof(GcInteractionType.InteractionTypeEnum))]
         /* 0x088C */ public int[] InteractionPuzzlesIndexTypes;
-
         [NMS(Size = 0x7, EnumType = typeof(GcWeightingCurve.WeightingCurveEnum))]
-        /* 0x0A18 */ public TkCurveType[] WeightingCurves;
-
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x0A34 */ public byte[] Padding834;
-
+        /* 0x0A1C */ public TkCurveType[] WeightingCurves;
         /* 0x0A38 */ public List<GcDamageMultiplierLookup> DamageMultiplierTable;
-
         [NMS(Size = 0x80)]
         /* 0x0A48 */ public string RewardTable;
         [NMS(Size = 0x80)]
@@ -86,7 +77,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x0EC8 */ public string MaintenanceGroupsTable;
         [NMS(Size = 0x80)]
         /* 0x0F48 */ public string UnlockableItemTrees;
-
         /* 0x0FC8 */ public List<GcFreighterCargoOption> FreighterCargoOptions;
 
         [NMS(Size = 0x7, EnumType = typeof(GcShipWeapons.ShipWeaponEnum))]
@@ -116,57 +106,57 @@ namespace libMBIN.NMS.GameComponents
         [NMS(Size = 0xB, EnumType = typeof(GcMissionType.MissionTypeEnum))]
         /* 0x1850 */ public GcNumberedTextList[] MissionNameNouns;
 
-        [NMS(Size = 0x3)]
+        [NMS(Size = 0x3, EnumType = typeof(GcRarity.RarityEnum))]
         /* 0x19DC */ public float[] WeightedTextWeights;
 
         /* 0x19E8 */ public GcRealityIconTable Icons;
 
         [NMS(Size = 0x6, EnumType = typeof(GcPlayerHazardType.HazardEnum))]
-        /* 0x6150 */ public Colour[] HazardColours;
+        /* 0x63F0 */ public Colour[] HazardColours;
 
         [NMS(Size = 0x3, EnumType = typeof(GcRarity.RarityEnum))]
-        /* 0x61B0 */ public Colour[] RarityColours;
+        /* 0x6450 */ public Colour[] RarityColours;
 
         [NMS(Size = 0x9, EnumType = typeof(GcRealitySubstanceCategory.SubstanceCategoryEnum))]
-        /* 0x61E0 */ public Colour[] SubstanceCategoryColours;
+        /* 0x6480 */ public Colour[] SubstanceCategoryColours;
 
         [NMS(Size = 0x9, EnumType = typeof(GcRealitySubstanceCategory.SubstanceCategoryEnum))]
-        /* 0x6270 */ public TkTextureResource[] SubstanceChargeIcons;
+        /* 0x6510 */ public TkTextureResource[] SubstanceChargeIcons;
 
-        [NMS(Size = 0x8B, EnumType = typeof(GcStatsTypes.StatsTypeEnum))]
-        /* 0x6714 */ public TkTextureResource[] StatCategoryIcons;
+        [NMS(Size = 0x92, EnumType = typeof(GcStatsTypes.StatsTypeEnum))]
+        /* 0x69B4 */ public TkTextureResource[] StatCategoryIcons;
 
         public enum PossessionEnum { Suit, Weapon, Ship, Freighter, Vehicle }
         [NMS(Size = 0x5, EnumType = typeof(PossessionEnum))]
-        /* 0xAEC0 */ public GcStats[] Stats;
+        /* 0xB500 */ public GcStats[] Stats;
 
-        /* 0xAF10 */ public GcTechList StationTechShops;
+        /* 0xB550 */ public GcTechList StationTechShops;
 
         [NMS(Size = 0xD)]
-        /* 0xAF20 */ public GcTechList[] PlanetTechShops;
+        /* 0xB560 */ public GcTechList[] PlanetTechShops;
 
-        /* 0xAFF0 */ public GcTradeSettings TradeSettings;
-        /* 0xB990 */ public GcInventoryLayout SuitStartingSlotLayout;
-        /* 0xB9B0 */ public GcInventoryLayout SuitTechOnlyStartingSlotLayout;
-        /* 0xB9D0 */ public GcInventoryLayout SuitCargoStartingSlotLayout;
-        /* 0xB9F0 */ public GcInventoryLayout ShipStartingLayout;
-        /* 0xBA10 */ public GcInventoryLayout ShipTechOnlyStartingLayout;
-        /* 0xBA30 */ public List<int> SuitUpgradePrices;
-        /* 0xBA40 */ public List<int> SuitTechOnlyUpgradePrices;
-        /* 0xBA50 */ public List<int> SuitCargoUpgradePrices;
-        /* 0xBA60 */ public List<NMSString0x10> NeverSellableItems;
-        /* 0xBA70 */ public List<NMSString0x10> NeverOfferedForSale;
+        /* 0xB630 */ public GcTradeSettings TradeSettings;
+        /* 0xC080 */ public GcInventoryLayout SuitStartingSlotLayout;
+        /* 0xC0A0 */ public GcInventoryLayout SuitTechOnlyStartingSlotLayout;
+        /* 0xC0C0 */ public GcInventoryLayout SuitCargoStartingSlotLayout;
+        /* 0xC0E0 */ public GcInventoryLayout ShipStartingLayout;
+        /* 0xC100 */ public GcInventoryLayout ShipTechOnlyStartingLayout;
+        /* 0xC120 */ public List<int> SuitUpgradePrices;
+        /* 0xC130 */ public List<int> SuitTechOnlyUpgradePrices;
+        /* 0xC140 */ public List<int> SuitCargoUpgradePrices;
+        /* 0xC150 */ public List<NMSString0x10> NeverSellableItems;
+        /* 0xC160 */ public List<NMSString0x10> NeverOfferedForSale;
 
         public enum GoodsTypeEnum { Commodity, Technology, Fuel, Tradeable, Special }
         [NMS(Size = 0x5, EnumType = typeof(GoodsTypeEnum))]         // TODO: not sure about these values....
-        /* 0xBA80 */ public float[] NormalizedPriceLimits;
+        /* 0xC170 */ public float[] NormalizedPriceLimits;
 
         [NMS(Size = 0x4, Ignore = true)]
-        /* 0xBA94 */ public byte[] PaddingBA94;
+        /* 0xC184 */ public byte[] PaddingC184;
 
-        /* 0xBA98 */ public List<GcFiendCrimeSpawnTable> FiendCrimeSpawnTable;
+        /* 0xC188 */ public List<GcFiendCrimeSpawnTable> FiendCrimeSpawnTable;
 
         [NMS(Size = 0x8, Ignore = true)]
-        /* 0xBAA8 */ public byte[] EndPadding;
+        /* 0xC198 */ public byte[] EndPadding;
     }
 }

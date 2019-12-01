@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x2A0, GUID = 0xA588B42C1FA803DE, Alignment = 0x10, NameHash = 0xDAB0554EA36957B5)]
+	[NMS(Size = 0x2C0, Alignment = 0x10, GUID = 0x974DD0911081AF60, NameHash = 0xDAB0554EA36957B5)]
     public class GcInteractionComponentData : NMSTemplate
     {
 		public enum InteractionActionEnum { PressButton, HoldButton, Shoot }
@@ -28,24 +28,30 @@ namespace libMBIN.NMS.GameComponents
 
         [NMS(Size = 0x10)]
         /* 0x1C0 */ public string TriggerAction;
-        /* 0x1D0 */ public bool BroadcastTriggerAction;
-        /* 0x1D4 */ public float InteractAngle;
-        /* 0x1D8 */ public float InteractDistance;
-        /* 0x1DC */ public bool InteractInvertFace;
+        [NMS(Size = 0x10)]
+        /* 0x1D0 */ public string TriggerActionOnPrepare;
+        /* 0x1E0 */ public bool BroadcastTriggerAction;
+        /* 0x1E4 */ public float InteractAngle;
+        /* 0x1E8 */ public float InteractDistance;
+        /* 0x1EC */ public bool InteractInvertFace;
         [NMS(Size = 0x3, Ignore = true)]
-        /* 0x1DD */ public byte[] Padding1DD;
-        /* 0x1E0 */ public GcInteractionType SecondaryInteractionType;
+        /* 0x1ED */ public byte[] Padding1ED;
+        /* 0x1F0 */ public GcInteractionType SecondaryInteractionType;
         [NMS(Size = 4, Ignore = true)]
-        /* 0x1E4 */ public byte[] Padding1E4;
-        /* 0x1E8 */ public GcInteractionActivationCost SecondaryActivationCost;
-        /* 0x220 */ public List<TkModelRendererData> EventRenderers;
-        /* 0x220 */ public List<TkModelRendererData> EventRenderersAlt;
-        /* 0x240 */ public float SecondaryCameraTransitionTime;
-        /* 0x244 */ public GcInteractionDof DepthOfField;
-        /* 0x258 */ public List<GcAlienPuzzleMissionOverride> PuzzleMissionOverrideTable;
-        /* 0x268 */ public GcStoryUtilityOverride StoryUtilityOverrideData;
-        /* 0x298 */ public bool ReseedAfterRewardSuccess;
-        /* 0x299 */ public bool UsePersonalPersistentBuffer;
-        /* 0x29C */ public float InWorldUIScaler;
+        /* 0x1F4 */ public byte[] Padding1F4;
+        /* 0x1F8 */ public GcInteractionActivationCost SecondaryActivationCost;
+        /* 0x230 */ public List<TkModelRendererData> EventRenderers;
+        /* 0x240 */ public List<TkModelRendererData> EventRenderersAlt;
+        /* 0x250 */ public float SecondaryCameraTransitionTime;
+        /* 0x254 */ public GcInteractionDof DepthOfField;
+        /* 0x268 */ public List<GcAlienPuzzleMissionOverride> PuzzleMissionOverrideTable;
+        /* 0x278 */ public GcStoryUtilityOverride StoryUtilityOverrideData;
+        public enum OverrideInteriorExteriorMarkerEnum { Interior, Exterior }
+        /* 0x2A8 */ public OverrideInteriorExteriorMarkerEnum OverrideInteriorExteriorMarker;
+        /* 0x2AC */ public bool ReseedAfterRewardSuccess;
+        /* 0x2AD */ public bool UsePersonalPersistentBuffer;
+        /* 0x2B0 */ public float InWorldUIScaler;
+        [NMS(Size = 0xC, Ignore = true)]
+        /* 0x2B4 */ public byte[] EndPadding;
     }
 }

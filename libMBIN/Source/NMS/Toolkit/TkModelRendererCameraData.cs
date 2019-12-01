@@ -3,21 +3,16 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Toolkit
 {
-	[NMS(GUID = 0x4117A6369803D90B, NameHash = 0xE2B8850DAEBB8F74)]
-    public class TkModelRendererCameraData : NMSTemplate // 0x40 bytes
+	[NMS(Size = 0x40, GUID = 0xDD354EFDC27E555, NameHash = 0xE2B8850DAEBB8F74)]
+    public class TkModelRendererCameraData : NMSTemplate
     {
         public float Distance;
-        [NMS(Size = 0xC, Ignore = true)]
-        public byte[] Padding4;
-
-        public Vector4f Offset;
+        public Vector3f Offset;
+        public float Roll;
         public float Pitch;
         public float Rotate;
         public float LightPitch;
         public float LightRotate;
         public TkCameraWanderData Wander;
-
-        [NMS(Size = 4, Ignore = true)]
-        public byte[] Padding3C;
     }
 }

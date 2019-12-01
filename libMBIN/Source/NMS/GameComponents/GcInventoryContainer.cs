@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x60, GUID = 0xB2E9704C888954D0, NameHash = 0xAF875892F81EDE11)]
+	[NMS(Size = 0x160, GUID = 0x2F97654090258A71, NameHash = 0xAF875892F81EDE11)]
     public class GcInventoryContainer : NMSTemplate
     {
         /* 0x00 */ public List<GcInventoryElement> Slots;
@@ -20,6 +20,8 @@ namespace libMBIN.NMS.GameComponents
         /* 0x50 */ public int Width;
         /* 0x54 */ public int Height;
         /* 0x58 */ public bool IsCool;
-        /* 0x5C */ public int Version;
+        [NMS(Size = 0x100)]
+        /* 0x59 */ public string Name;
+        /* 0x15C */ public int Version;
     }
 }

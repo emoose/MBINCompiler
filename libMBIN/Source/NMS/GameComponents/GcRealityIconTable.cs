@@ -5,16 +5,16 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x4768, GUID = 0x2AD346B04A54A12F, NameHash = 0x2A28407EECDFA4CC)]
+	[NMS(Size = 0x4A00, GUID = 0x2AD346B04A54A12F, NameHash = 0x2A28407EECDFA4CC)]
     public class GcRealityIconTable : NMSTemplate
     {
         [NMS(Size = 0x6, EnumType = typeof(GcPlayerHazardType.HazardEnum))]
         /* 0x0000 */ public TkTextureResource[] HazardIcons;
 
-        [NMS(Size = 9, EnumType = typeof(GcRealitySubstanceCategory.SubstanceCategoryEnum))]
+        [NMS(Size = 0x9, EnumType = typeof(GcRealitySubstanceCategory.SubstanceCategoryEnum))]
         /* 0x0318 */ public TkTextureResource[] SubstanceCategoryIcons;
 
-        [NMS(Size = 8, EnumType = typeof(GcProductCategory.ProductCategoryEnum))]
+        [NMS(Size = 0x8, EnumType = typeof(GcProductCategory.ProductCategoryEnum))]
         /* 0x07BC */ public TkTextureResource[] ProductCategoryIcons;
 
         [NMS(Size = 0x8, EnumType = typeof(GcMissionFaction.MissionFactionEnum))]
@@ -40,9 +40,10 @@ namespace libMBIN.NMS.GameComponents
         /* 0x2320 */ public List<GcPlanetResourceIconLookup> PlanetResourceIconLookups;
         /* 0x2330 */ public List<TkTextureResource> RepairTechIcons;
 
-        [NMS(Size = 0x46, EnumType = typeof(GcRealityGameIcons.GameIconsEnum))]
+        [NMS(Size = 0x4B, EnumType = typeof(GcRealityGameIcons.GameIconsEnum))]
         /* 0x2340 */ public TkTextureResource[] GameIcons;
-
-        /* 0x4758 */ public List<GcRealityIcon> MissionDetailIcons;
+        [NMS(Size = 0x4, Ignore = true)]
+        /* 0x49EC */ public byte[] Padding49EC;
+        /* 0x49F0 */ public List<GcRealityIcon> MissionDetailIcons;
     }
 }

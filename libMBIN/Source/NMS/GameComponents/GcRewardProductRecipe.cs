@@ -10,9 +10,7 @@ namespace libMBIN.NMS.GameComponents
         public GcRarity Rarity;
         public bool IgnoreRarity;
         public int ItemLevel;
-        // enum struct: GcProductCategory
-        // near match to GcProductCategory
-        [NMS(Size = 8, EnumValue = new[] { "Component", "Device", "Consumable", "Curiosity", "BuildingPart", "Procedural", "Emote", "CustomisationPart" })]          // Wbertro: no matching EnumType
+        [NMS(Size = 8, EnumType = typeof(GcProductCategory.ProductCategoryEnum))]
         public bool[] AllowedProductTypes;
     }
 }

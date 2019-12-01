@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x1F1C0, GUID = 0x183F1992F92E1E33, NameHash = 0x28A143D89E217108)]
+	[NMS(Size = 0x1F2C0, GUID = 0x437F3DD67FC0547F, NameHash = 0x28A143D89E217108)]
     public class GcTerrainEditsBuffer : NMSTemplate
     {
         [NMS(Size = 0x100)]
@@ -14,7 +14,9 @@ namespace libMBIN.NMS.GameComponents
         /* 0x0C00 */ public byte[] BufferAges;
         [NMS(Size = 0x100)]
         /* 0x0D00 */ public Vector4f[] BufferAnchors;
+        [NMS(Size = 0x100)]
+        /* 0x1D00 */ public bool[] BufferProtected;
         [NMS(Size = 0x3A98)]
-        /* 0x1D00 */ public GcTerrainEdit[] Edits;
+        /* 0x1E00 */ public GcTerrainEdit[] Edits;
     }
 }

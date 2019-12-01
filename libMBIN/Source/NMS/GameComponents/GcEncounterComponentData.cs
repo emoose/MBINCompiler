@@ -3,10 +3,10 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0x52049EC71382D2EC, NameHash = 0x1BAD68301EABDA5C)]
+	[NMS(GUID = 0x2674E9298A78C2F2, NameHash = 0x1BAD68301EABDA5C)]
     public class GcEncounterComponentData : NMSTemplate
     {
-		public enum EncounterTypeEnum { FactoryGuards, HarvesterGuards, ScrapHeap }
+		public enum EncounterTypeEnum { FactoryGuards, HarvesterGuards, ScrapHeap, CorruptedDroneReward }
 		public EncounterTypeEnum EncounterType;
     }
 }

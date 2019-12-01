@@ -6,10 +6,10 @@ namespace libMBIN.NMS.GameComponents
 	[NMS(Size = 0x98, GUID = 0xCD251BC3E44C0AB8, NameHash = 0x4686D0FAC0A1B9EC)]
     public class GcTerrainEditing : NMSTemplate
     {
-        /* 0x0 */ public float EditPlaneMaxAdditiveOffsetFactor;
-        /* 0x4 */ public float EditPlaneMinAdditiveOffsetFactor;
-        /* 0x8 */ public float EditPlaneMaxSubtractiveOffsetFactor;
-        /* 0xC */ public float EditPlaneMinSubtractiveOffsetFactor;
+        /* 0x00 */ public float EditPlaneMaxAdditiveOffsetFactor;
+        /* 0x04 */ public float EditPlaneMinAdditiveOffsetFactor;
+        /* 0x08 */ public float EditPlaneMaxSubtractiveOffsetFactor;
+        /* 0x0C */ public float EditPlaneMinSubtractiveOffsetFactor;
         /* 0x10 */ public float TerrainEditBeamMaxRange;
         /* 0x14 */ public float TerrainEditBeamSpherecastRadius;
         /* 0x18 */ public float TerrainEditBeamAddInterpolationStepFactor;
@@ -35,9 +35,11 @@ namespace libMBIN.NMS.GameComponents
         [NMS(Size = 0x3)]
         /* 0x74 */ public float[] SubtractSizes;
         [NMS(Size = 0x2)]
-        /* 0x80 */ public float[] BaseEditSize;
-        [NMS(Size = 0x3)]
-        /* 0x88 */ public float[] UndoEditSize;
+        /* 0x80 */ public float[] BaseEditSizes;
+        [NMS(Size = 0x2)]
+        /* 0x88 */ public float[] UndoEditSizes;
+        [NMS(Size = 0x1)]
+        /* 0x90 */ public float[] FlatteningSizes;
         /* 0x94 */ public float EditEffectScale;
 
     }

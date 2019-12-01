@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Toolkit
 {
-	[NMS(Size = 0xB0, GUID = 0x2015DA3261EF9DB2, NameHash = 0x53EC68060BE631FB)]
+	[NMS(Size = 0xB0, GUID = 0xA017550C35F2FA8F, NameHash = 0x53EC68060BE631FB)]
     public class TkModelRendererData : NMSTemplate
     {
         /* 0x00 */ public TkModelRendererCameraData Camera;
@@ -27,7 +27,8 @@ namespace libMBIN.NMS.Toolkit
         /* 0xA0 */ public float HeightOffset;
         /* 0xA4 */ public bool UsePlayerCameraInHmd;
         /* 0xA5 */ public bool UseSensibleCameraFocusNodeIsNowOffsetNode;
-        [NMS(Size = 0xA, Ignore = true)]
-        /* 0xA6 */ public byte[] EndPadding;
+        /* 0xA6 */ public bool LookForFocusInMasterModel;
+        [NMS(Size = 0x9, Ignore = true)]
+        /* 0xA7 */ public byte[] EndPadding;
     }
 }

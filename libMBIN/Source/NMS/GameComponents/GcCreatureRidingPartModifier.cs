@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x290, GUID = 0xEAE224822F8AC71F, NameHash = 0xB9A3955D41C87D67)]
+	[NMS(Size = 0x2A0, GUID = 0x3C344C32A2437BC0, NameHash = 0xB9A3955D41C87D67)]
     public class GcCreatureRidingPartModifier : NMSTemplate
     {
         [NMS(Size = 0x20)]
@@ -19,15 +19,16 @@ namespace libMBIN.NMS.GameComponents
         /* 0x221 */ public byte[] Padding221;
         /* 0x230 */ public Vector3f Offset;
         /* 0x240 */ public Vector3f RotationOffset;
-        /* 0x250 */ public float LegSpreadOffset;
-        /* 0x254 */ public float HeadPitch;
-        /* 0x258 */ public bool OverrideAnims;
+        /* 0x250 */ public Vector3f VROffset;
+        /* 0x260 */ public float LegSpreadOffset;
+        /* 0x264 */ public float HeadPitch;
+        /* 0x268 */ public bool OverrideAnims;
         [NMS(Size = 0x7, Ignore = true)]
-        /* 0x259 */ public byte[] Padding259;
+        /* 0x269 */ public byte[] Padding269;
         [NMS(Size = 0x10)]
-        /* 0x260 */ public string IdleRidingAnim;
+        /* 0x270 */ public string IdleRidingAnim;
         [NMS(Size = 0x10)]
-        /* 0x270 */ public string DefaultRidingAnim;
-        /* 0x280 */ public List<GcCreatureRidingAnimation> RidingAnims;
+        /* 0x280 */ public string DefaultRidingAnim;
+        /* 0x290 */ public List<GcCreatureRidingAnimation> RidingAnims;
     }
 }

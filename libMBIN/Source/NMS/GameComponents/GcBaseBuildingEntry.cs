@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x280, GUID = 0xE78CEC94DACC7560, NameHash = 0xA6F7B710166F6076)]
+	[NMS(Size = 0x278, GUID = 0x13FB22AF5A5A22C, NameHash = 0xA6F7B710166F6076)]
     public class GcBaseBuildingEntry : NMSTemplate
     {
         [NMS(Size = 0x10)]
@@ -30,44 +30,40 @@ namespace libMBIN.NMS.GameComponents
         /* 0x1B4 */ public bool BuildableOnPlanetWithProduct;
         /* 0x1B5 */ public bool BuildableUnderwater;
         /* 0x1B6 */ public bool BuildableAboveWater;
-        /* 0x1B8 */ public int GlobalLimit;
-        /* 0x1BC */ public int SystemLimit;
-        /* 0x1C0 */ public int PlanetLimit;
-        /* 0x1C4 */ public int RegionLimit;
-        /* 0x1C8 */ public int PlanetBaseLimit;
-        /* 0x1CC */ public int FreighterBaseLimit;
-        /* 0x1D0 */ public bool CheckPlaceholderCollision;
-        /* 0x1D4 */ public float CollisionScale;
-        /* 0x1D8 */ public bool EnableCollision;
-        /* 0x1D9 */ public bool CanPlaceOnItself;
-        /* 0x1DA */ public bool CanRotate3D;
-        /* 0x1DB */ public bool CanScale;
+        /* 0x1B8 */ public int PlanetLimit;
+        /* 0x1BC */ public int RegionLimit;
+        /* 0x1C0 */ public int PlanetBaseLimit;
+        /* 0x1C4 */ public int FreighterBaseLimit;
+        /* 0x1C8 */ public bool CheckPlaceholderCollision;
+        /* 0x1CC */ public float CollisionScale;
+        /* 0x1D0 */ public bool EnableCollision;
+        /* 0x1D1 */ public bool CanPlaceOnItself;
+        /* 0x1D2 */ public bool CanRotate3D;
+        /* 0x1D3 */ public bool CanScale;
         [NMS(Size = 4, Ignore = true)]
-        /* 0x1DC */ public byte[] Padding1DC;
-        /* 0x1E0 */ public List<NMSString0x10> Groups;
-        /* 0x1F0 */ public int StorageContainerIndex;
-        /* 0x1F4 */ public bool CanChangeColour;
-        /* 0x1F5 */ public bool CanChangeMaterial;
-        /* 0x1F6 */ public bool CanPickUp;
-        /* 0x1F8 */ public float ScanRadius;
-        /* 0x1FC */ public bool RemovesAttachedDecoration;
-        /* 0x1FD */ public bool EditsTerrain;
-
+        /* 0x1D4 */ public byte[] Padding1D4;
+        /* 0x1D8 */ public List<NMSString0x10> Groups;
+        /* 0x1E8 */ public int StorageContainerIndex;
+        /* 0x1EC */ public bool CanChangeColour;
+        /* 0x1ED */ public bool CanChangeMaterial;
+        /* 0x1EE */ public bool CanPickUp;
+        /* 0x1F0 */ public float ScanRadius;
+        /* 0x1F4 */ public bool RemovesAttachedDecoration;
+        /* 0x1F5 */ public bool EditsTerrain;
 		public enum BaseTerrainEditShapeEnum { Cube, Cylinder }
-		/* 0x200 */ public BaseTerrainEditShapeEnum BaseTerrainEditShape;
-
-        /* 0x204 */ public float TerrainEditBaseYOffset;
-        /* 0x208 */ public float TerrainEditTopYOffset;
-        /* 0x20C */ public float TerrainEditBoundsScalar;
-        /* 0x210 */ public bool IsSealed;
-        /* 0x211 */ public bool CloseMenuAfterBuild;
+		/* 0x1F8 */ public BaseTerrainEditShapeEnum BaseTerrainEditShape;
+        /* 0x1FC */ public float TerrainEditBaseYOffset;
+        /* 0x200 */ public float TerrainEditTopYOffset;
+        /* 0x204 */ public float TerrainEditBoundsScalar;
+        /* 0x208 */ public bool IsSealed;
+        /* 0x209 */ public bool CloseMenuAfterBuild;
         [NMS(Size = 0x6, Ignore = true)]
-        /* 0x212 */ public byte[] Padding212;
-        /* 0x218 */ public GcBaseLinkGridData LinkGridData;
-        /* 0x270 */ public int GhostsCountOverride;
-        /* 0x274 */ public float SnappingDistanceOverride;
-        /* 0x278 */ public int RegionSpawnLOD;
+        /* 0x20A */ public byte[] Padding20A;
+        /* 0x210 */ public GcBaseLinkGridData LinkGridData;
+        /* 0x268 */ public int GhostsCountOverride;
+        /* 0x26C */ public float SnappingDistanceOverride;
+        /* 0x270 */ public int RegionSpawnLOD;
         [NMS(Size = 0x4, Ignore = true)]
-        /* 0x27C */ public byte[] EndPadding;
+        /* 0x274 */ public byte[] EndPadding;
     }
 }

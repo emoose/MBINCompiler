@@ -5,14 +5,13 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0xE7A224F2DA386498, NameHash = 0xC2EE53901B0156DE)]
+	[NMS(GUID = 0xE558523281E02943, NameHash = 0xC2EE53901B0156DE)]
     public class GcBuildingPlacementErrorTypes : NMSTemplate
     {
-        // 0x13 entries
+        // 0x14 entries
         public enum InvalidPlacementReasonEnum {
-            Offline, InvalidBiome, InvalidAboveWater, InvalidUnderwater, InvalidOverlappingBase, OutOfBaseRange, LimitReached, OutOfConnectionRange,
-            LinkGridMismatch, InsufficientResources, ComplexityLimitReached, SubstanceOnly, RoomLimitReached, InvalidPosition, InvalidSnap, MustPlaceOnTerrain, Collision,
-            ShipInside, PlayerInside
+            Offline, InvalidBiome, InvalidAboveWater, InvalidUnderwater, PlanetLimitReached, BaseLimitReached, RegionLimitReached, InvalidOverlappingBase, OutOfBaseRange, OutOfConnectionRange,
+            LinkGridMismatch, InsufficientResources, ComplexityLimitReached, SubstanceOnly, InvalidPosition, InvalidSnap, MustPlaceOnTerrain, Collision, ShipInside, PlayerInside
         }
         public InvalidPlacementReasonEnum InvalidPlacementReason;
     }

@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x98, GUID = 0x1D38968F5DD96A5, NameHash = 0x8D18F9F6D2A592B3)]
+	[NMS(Size = 0xA0, GUID = 0x31ACFD1014283D9A, NameHash = 0x8D18F9F6D2A592B3)]
     public class GcNPCInteractiveObjectState : NMSTemplate
     {
         [NMS(Size = 0x10)]
@@ -25,10 +25,13 @@ namespace libMBIN.NMS.GameComponents
         /* 0x60 */ public float BlendTime;
         /* 0x64 */ public float EarlyOutTime;
         /* 0x68 */ public List<GcNPCProbabilityAnimationData> Animations;
-        /* 0x78 */ public int MinAnims;
-        /* 0x7C */ public int MaxAnims;
-        /* 0x80 */ public float MinTime;
-        /* 0x84 */ public float MaxTime;
-        /* 0x88 */ public List<GcNPCInteractiveObjectStateTransition> Transitions;
+        /* 0x78 */ public float SpineAdjustAmount;
+        /* 0x7C */ public int MinAnims;
+        /* 0x80 */ public int MaxAnims;
+        /* 0x84 */ public float MinTime;
+        /* 0x88 */ public float MaxTime;
+        [NMS(Size = 0x4, Ignore = true)]
+        /* 0x8C */ public byte[] Padding8C;
+        /* 0x90 */ public List<GcNPCInteractiveObjectStateTransition> Transitions;
     }
 }

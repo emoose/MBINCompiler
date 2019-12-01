@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x270, GUID = 0x2F4B34FA7EE903D8, NameHash = 0x793BE7AABA010DFF)]
+	[NMS(Size = 0x290, GUID = 0x800C6BACE678BE27, NameHash = 0x793BE7AABA010DFF)]
     public class GcInputActionInfo : NMSTemplate
     {
         /* 0x000 */ public bool Analogue;
@@ -24,9 +24,11 @@ namespace libMBIN.NMS.GameComponents
         /* 0x228 */ public string ExternalId;
         [NMS(Size = 0x20)]
         /* 0x248 */ public string ExternalLoc;
+        [NMS(Size = 0x20)]
+        /* 0x268 */ public string ExternalDigitalAliasId;
         public enum InputActionInfoFlagsEnum { None = 0x0, HideInControlsPage = 0x1, OnlyVR = 0x2, OnlyNonVR = 0x4 }
-        /* 0x268 */ public InputActionInfoFlagsEnum InputActionInfoFlags;
+        /* 0x288 */ public InputActionInfoFlagsEnum InputActionInfoFlags;
         [NMS(Size = 0x4, Ignore = true)]
-        /* 0x26C */ public byte[] EndPadding;
+        /* 0x28C */ public byte[] EndPadding;
     }
 }
