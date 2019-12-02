@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Toolkit
 {
-	[NMS(Size = 0xA8, GUID = 0xCF088FA57DEB5687, NameHash = 0x6A1494CD3EC019B6)]
+	[NMS(Size = 0x10, GUID = 0xCA2BAAB3036EAD9E, NameHash = 0x6A1494CD3EC019B6)]
     public class TkAxisImageLookup : NMSTemplate
     {
         public List<TkAxisPathMapping> Lookup;

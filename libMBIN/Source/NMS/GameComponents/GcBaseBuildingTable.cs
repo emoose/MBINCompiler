@@ -22,6 +22,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x0440 */ public GcBaseBuildingPalette[] Palettes;
         [NMS(Size = 0x4)]
         /* 0x0840 */ public GcBaseBuildingMaterial[] Materials;
+        [NMS(Size = 0x10)]
         /* 0x1B40 */ public string DefaultInBaseObject;
         [NMS(Size = 0x10)]
         /* 0x1B50 */ public string DefaultOnTerrainObject;

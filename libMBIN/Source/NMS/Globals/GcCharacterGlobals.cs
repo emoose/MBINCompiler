@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS( GUID = 0x72E67855FFA1A753)]
+    [NMS( GUID = 0x1E3BB15A8FC3BAF6)]
     public class GcCharacterGlobals : NMSTemplate
     {
 		/* 0x0 */ public float PitchTest;
@@ -119,7 +119,7 @@ namespace libMBIN.NMS.Globals
         /* 0x270 */ public float Unknown0x270;
         /* 0x274 */ public float Unknown0x274;
         /* 0x278 */ public float Unknown0x278;
-        /* 0x27C */ public float Unknown0x27C;
+        /* 0x27C */ public bool Unknown0x27C;
         /* 0x280 */ public float Unknown0x280;
         /* 0x284 */ public float Unknown0x284;
         /* 0x288 */ public float Unknown0x288;
@@ -165,7 +165,11 @@ namespace libMBIN.NMS.Globals
         /* 0x328 */ public float Unknown0x328;
         /* 0x32C */ public float Unknown0x32C;
         /* 0x330 */ public float Unknown0x330;
+        /* 0x334 */ public float Unknown0x334;
+        /* 0x338 */ public float Unknown0x338;
+        /* 0x33C */ public float Unknown0x33C;
+        /* 0x340 */ public float Unknown0x340;
         [NMS(Size = 0x4, Ignore = true)]
-        /* 0x334 */ public byte[] EndPadding;
+        /* 0x344 */ public byte[] EndPadding;
     }
 }

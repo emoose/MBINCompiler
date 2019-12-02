@@ -132,7 +132,7 @@ namespace libMBIN.NMS.Globals
         /* 0x270 */ public float MinRadiusForBases;
         /* 0x274 */ public float BaseRadiusExtension;
         /* 0x278 */ public float MaxRadiusForBases;
-        /* 0x27C */ public float Unknown0x27C;          // possibly BuildingPlacementMaxDistance
+        /* 0x27C */ public float Unknown0x27C;
         /* 0x280 */ public float Unknown0x280;
         /* 0x284 */ public float Unknown0x284;
         /* 0x288 */ public float Unknown0x288;
@@ -146,15 +146,15 @@ namespace libMBIN.NMS.Globals
         /* 0x2A8 */ public float Unknown0x2A8;
         /* 0x2AC */ public float Unknown0x2AC;
         /* 0x2B0 */ public float Unknown0x2B0;
-        /* 0x2B4 */ public int UnknownInt0x2B4;
-        /* 0x2B8 */ public float Unknown0x2B8;
+        /* 0x2B4 */ public float Unknown0x2B4;
+        /* 0x2B8 */ public int UnknownInt0x2B8;
         /* 0x2BC */ public float Unknown0x2BC;
         /* 0x2C0 */ public float Unknown0x2C0;
         /* 0x2C4 */ public float Unknown0x2C4;
         /* 0x2C8 */ public float Unknown0x2C8;
         /* 0x2CC */ public float Unknown0x2CC;
-        /* 0x2D0 */ public bool Unknown0x2D0;
-        /* 0x2D4 */ public float Unknown0x2D4;
+        /* 0x2D0 */ public float Unknown0x2D0;
+        /* 0x2D4 */ public bool Unknown0x2D4;
         /* 0x2D8 */ public float Unknown0x2D8;
         /* 0x2DC */ public float Unknown0x2DC;
         /* 0x2E0 */ public float Unknown0x2E0;
@@ -168,18 +168,19 @@ namespace libMBIN.NMS.Globals
         /* 0x300 */ public float Unknown0x300;
         /* 0x304 */ public float Unknown0x304;
         /* 0x308 */ public float Unknown0x308;
-        /* 0x30C */ public float StartCrashSiteMinDistance;
-        /* 0x310 */ public float StartCrashSiteMaxDistance;
-        /* 0x314 */ public float StartShelterMinDistance;
-        /* 0x318 */ public float StartShelterMaxDistance;
+        /* 0x30C */ public float Unknown0x30C;
+        /* 0x310 */ public float StartCrashSiteMinDistance;
+        /* 0x314 */ public float StartCrashSiteMaxDistance;
+        /* 0x318 */ public float StartShelterMinDistance;
+        /* 0x31C */ public float StartShelterMaxDistance;
         [NMS(Size = 0x80)]
-        /* 0x31C */ public string FreighterBaseSpawnOverride;
-        /* 0x39C */ public bool BaseBuildingTerrainEditBoundsOverride;
-        /* 0x3A0 */ public float BaseBuildingTerrainEditBaseYOffset;
-        /* 0x3A4 */ public float BaseBuildingTerrainEditTopYOffset;
-        /* 0x3A8 */ public float BaseBuildingTerrainEditBoundsScalar;
-        /* 0x3AC */ public bool Unknown0x3AC;
-        [NMS(Size = 0x3, Ignore = true)]
-        /* 0x3AD */ public byte[] EndPadding;
+        /* 0x320 */ public string FreighterBaseSpawnOverride;
+        /* 0x3A0 */ public bool BaseBuildingTerrainEditBoundsOverride;
+        /* 0x3A4 */ public float BaseBuildingTerrainEditBaseYOffset;
+        /* 0x3A8 */ public float BaseBuildingTerrainEditTopYOffset;
+        /* 0x3AC */ public float BaseBuildingTerrainEditBoundsScalar;
+        /* 0x3B0 */ public bool Unknown0x3B0;
+        [NMS(Size = 0xF, Ignore = true)]
+        /* 0x3B1 */ public byte[] EndPadding;
     }
 }
