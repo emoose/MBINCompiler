@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS( GUID = 0xEDA96D246A6671D9)]
+    [NMS( GUID = 0x48C8164C603F537A)]
     public class GcFleetGlobals : NMSTemplate
     {
         [NMS(Size = 0x20)]
@@ -66,8 +66,10 @@ namespace libMBIN.NMS.Globals
         /* 0x260 */ public float TimeBeforePlayerAlertedToDamagedFrigates;
         /* 0x264 */ public float DamagedListEntryPulseRate;
         /* 0x268 */ public float NonUrgentDamagedListEntryAlpha;
-        /* 0x26C */ public float LowDamageNumberOfExpeditions;
-        /* 0x270 */ public int RampDamageNumberOfExpeditions;
+        /* 0x26C */ public int UnknownInt0x26C;
+        /* 0x270 */ public int UnknownInt0x270;
+        ///* 0x26C */ public float LowDamageNumberOfExpeditions;
+        ///* 0x270 */ public int RampDamageNumberOfExpeditions;
         /* 0x274 */ public Vector2f PercentChanceOfDamageOnFailedEvent;
         /* 0x27C */ public int PercentChanceOfGenericEventDescription;
         /* 0x280 */ public int PercentChanceOfPrimaryDescriptionForBalancedEvent;
