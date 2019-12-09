@@ -259,3 +259,7 @@ paket-files/
 /MBINCompilerTests/Config/*
 **/launchSettings.json
 /.nuget/
+
+# python-related files
+*.pyc
+.pytest_cache/
