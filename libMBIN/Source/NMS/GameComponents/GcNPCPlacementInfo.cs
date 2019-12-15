@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0xB8, GUID = 0xC5AFAB452380DA74, NameHash = 0xA12AC584067DF8E0)]
+	[NMS(Size = 0xB8, GUID = 0xAB3083A7F2F7D85, NameHash = 0xA12AC584067DF8E0)]
     public class GcNPCPlacementInfo : NMSTemplate
     {
         [NMS(Size = 0x10)]

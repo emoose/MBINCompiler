@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0xE0, GUID = 0x4E2690CEAD268DDB, NameHash = 0x200FDA306DC86654)]
+	[NMS(Size = 0xE8, GUID = 0x4550EA39EC836543, NameHash = 0x200FDA306DC86654)]
     public class GcCameraFollowSettings : NMSTemplate
     {
         [NMS(Size =  0x10)]
@@ -12,56 +12,59 @@ namespace libMBIN.NMS.GameComponents
         /* 0x14 */ public float SpeedRange;
         /* 0x18 */ public float OffsetX;
         /* 0x1C */ public float OffsetY;
-        /* 0x20 */ public float OffsetZFlat;
-        /* 0x24 */ public float BackMinDistance;
-        /* 0x28 */ public float UpMinDistance;
-        /* 0x2C */ public float BackMaxDistance;
-        /* 0x30 */ public float UpMaxDistance;
-        /* 0x34 */ public float PanNear;
-        /* 0x38 */ public float PanFar;
-        /* 0x3C */ public float UpGamma;
-        /* 0x40 */ public float HorizRotationAngleMaxPerFrame;
-        /* 0x44 */ public float VertRotationSpeed;
-        /* 0x48 */ public float VertRotationMin;
-        /* 0x4C */ public float VertRotationMax;
-        /* 0x50 */ public float VertRotationOffset;
-        /* 0x54 */ public float VertRotationOffsetMinAngle;
-        /* 0x58 */ public float VertRotationOffsetMaxAngle;
-        /* 0x5C */ public bool VertStartLookingDown;
-        /* 0x60 */ public float DistSpeed;
-        /* 0x64 */ public float DistSpeedOutsideMainRange;
-        /* 0x68 */ public float DistStiffness;
-        /* 0x6C */ public float SpringSpeed;
-        /* 0x70 */ public bool LockToObjectOnIdle;
-        /* 0x74 */ public float CenterStartTime;
-        /* 0x78 */ public float CenterBlendTime;
-        /* 0x7C */ public float CenterMaxSpring;
-        /* 0x80 */ public float CenterMaxSpeed;
-        /* 0x84 */ public float VelocityAnticipate;
-        /* 0x88 */ public float VelocityAnticipateSpringSpeed;
-        /* 0x8C */ public float VertMaxSpring;
-        /* 0x90 */ public float CenterStartSpeed;
-        /* 0x94 */ public float MinClose;
-        /* 0x98 */ public float MaxClose;
-        /* 0x9C */ public float CloseSpring;
-        /* 0xA0 */ public float LookStickLimitAngle;
-        /* 0xA4 */ public bool EnableCollisionDetection;
-        /* 0xA8 */ public int NumLRProbes;
-        /* 0xAC */ public float LRProbesRange;
-        /* 0xB0 */ public float LRProbesRadius;
-        /* 0xB4 */ public int NumUDProbes;
-        /* 0xB8 */ public float UDProbesRange;
-        /* 0xBC */ public float ProbeCenterX;
-        /* 0xC0 */ public float ProbeCenterY;
-        /* 0xC4 */ public float PushForwardDropoffLR;
-        /* 0xC8 */ public float PushForwardDropoffUD;
-        /* 0xCC */ public float AvoidCollisionLRSpeed;
-        /* 0xD0 */ public float AvoidCollisionUDSpeed;
-        /* 0xD4 */ public float AvoidCollisionPushSpeed;
-        /* 0xD8 */ public bool AvoidCollisionUDUseStickDelay;
-        /* 0xD9 */ public bool AvoidCollisionLRUseStickDelay;
-        /* 0xDA */ public bool UseSpeedBasedSpring;
-        /* 0xDB */ public bool UseCustomBlendTime;
-        /* 0xDC */ public float CustomBlendTime;
+        /* 0x20 */ public float OffsetYAlt;
+        /* 0x24 */ public float OffsetZFlat;
+        /* 0x28 */ public float BackMinDistance;
+        /* 0x2C */ public float UpMinDistance;
+        /* 0x30 */ public float BackMaxDistance;
+        /* 0x34 */ public float UpMaxDistance;
+        /* 0x38 */ public float PanNear;
+        /* 0x3C */ public float PanFar;
+        /* 0x40 */ public float UpGamma;
+        /* 0x44 */ public float HorizRotationAngleMaxPerFrame;
+        /* 0x48 */ public float VertRotationSpeed;
+        /* 0x4C */ public float VertRotationMin;
+        /* 0x50 */ public float VertRotationMax;
+        /* 0x54 */ public float VertRotationOffset;
+        /* 0x58 */ public float VertRotationOffsetMinAngle;
+        /* 0x5C */ public float VertRotationOffsetMaxAngle;
+        /* 0x60 */ public bool VertStartLookingDown;
+        /* 0x64 */ public float DistSpeed;
+        /* 0x68 */ public float DistSpeedOutsideMainRange;
+        /* 0x6C */ public float DistStiffness;
+        /* 0x70 */ public float SpringSpeed;
+        /* 0x74 */ public bool LockToObjectOnIdle;
+        /* 0x78 */ public float CenterStartTime;
+        /* 0x7C */ public float CenterBlendTime;
+        /* 0x80 */ public float CenterMaxSpring;
+        /* 0x84 */ public float CenterMaxSpeed;
+        /* 0x88 */ public float VelocityAnticipate;
+        /* 0x8C */ public float VelocityAnticipateSpringSpeed;
+        /* 0x90 */ public float VertMaxSpring;
+        /* 0x94 */ public float CenterStartSpeed;
+        /* 0x98 */ public float MinClose;
+        /* 0x9C */ public float MaxClose;
+        /* 0xA0 */ public float CloseSpring;
+        /* 0xA4 */ public float LookStickLimitAngle;
+        /* 0xA8 */ public bool EnableCollisionDetection;
+        /* 0xAC */ public int NumLRProbes;
+        /* 0xB0 */ public float LRProbesRange;
+        /* 0xB4 */ public float LRProbesRadius;
+        /* 0xB8 */ public int NumUDProbes;
+        /* 0xBC */ public float UDProbesRange;
+        /* 0xC0 */ public float ProbeCenterX;
+        /* 0xC4 */ public float ProbeCenterY;
+        /* 0xC8 */ public float PushForwardDropoffLR;
+        /* 0xCC */ public float PushForwardDropoffUD;
+        /* 0xD0 */ public float AvoidCollisionLRSpeed;
+        /* 0xD4 */ public float AvoidCollisionUDSpeed;
+        /* 0xD8 */ public float AvoidCollisionPushSpeed;
+        /* 0xDC */ public bool AvoidCollisionUDUseStickDelay;
+        /* 0xDD */ public bool AvoidCollisionLRUseStickDelay;
+        /* 0xDE */ public bool UseSpeedBasedSpring;
+        /* 0xDF */ public bool UseCustomBlendTime;
+        /* 0xE0 */ public float CustomBlendTime;
+        [NMS(Size = 0x4, Ignore = true)]
+        /* 0xE4 */ public byte[] EndPadding;
     }
 }

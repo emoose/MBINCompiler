@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS( GUID = 0xC65F013DA61CEAC6)]
+    [NMS( GUID = 0x2F1219C1CF4D69F8)]
     public class GcAISpaceshipGlobals : NMSTemplate
     {
         /* 0x00 */ public float Unknown0x0;
