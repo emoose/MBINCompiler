@@ -8,7 +8,7 @@
 //#define DEBUG_COMMENTS
 
 // Uncomment to enable debug logging of MBIN field names
-#define DEBUG_FIELD_NAMES
+//#define DEBUG_FIELD_NAMES
 
 // Uncomment to enable debug logging of XML property names
 //#define DEBUG_PROPERTY_NAMES

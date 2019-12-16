@@ -44,4 +44,4 @@ def test_globals_compare(MBINCompiler):
             converted = convert_mbin(fpath, MBINCompiler)
             assert compare_mbins(fpath, converted)
         else:
-            print('ignoring %s' % str(fname))
+            print(f'ignoring {fname}')

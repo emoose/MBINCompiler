@@ -13,11 +13,11 @@ def fail_comparison(file, loc):
     in verbose mode.
     """
     os.remove(file)
-    print('An error occured comparing %s:' % str(op.basename(file)))
+    print(f'An error occured comparing {op.basename(file)}:')
     if loc == SIZE_MISMATCH:
         print('Files are a different size.')
     else:
-        print('Byte-wise comparison fails at %s' % hex(loc))
+        print(f'Byte-wise comparison fails at 0x{(loc - 0x60):x} (adjusted)')
     return False
 
 
@@ -43,6 +43,7 @@ def compare_mbins(left_path, right_path):
     if size != os.stat(right_path).st_size:
         return fail_comparison(right_path, SIZE_MISMATCH)
     # Do a byte-wise comparison of the files.
+    bad_loc = None
     with open(left_path, 'rb') as f_left:
         with open(right_path, 'rb') as f_right:
             left_bytes = f_left.read()
@@ -50,11 +51,14 @@ def compare_mbins(left_path, right_path):
             # Skip over the ignored bytes... (0x6 -> 0xF)
             for i in range(0, 0x6):
                 if left_bytes[i] != right_bytes[i]:
-                    return fail_comparison(right_path, i)
+                    bad_loc = i
+                    break
             for i in range(0x10, size):
                 if left_bytes[i] != right_bytes[i]:
-                    return fail_comparison(right_path, i)
-
+                    bad_loc = i
+                    break
+    if bad_loc is not None:
+        return fail_comparison(right_path, bad_loc)
     # If we got this far then the files are good!
     os.remove(right_path)
     return True

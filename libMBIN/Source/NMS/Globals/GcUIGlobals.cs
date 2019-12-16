@@ -196,8 +196,7 @@ namespace libMBIN.NMS.Globals
         /* 0x500 */ public float Unknown0x500;
         /* 0x504 */ public float Unknown0x504;
         /* 0x508 */ public float Unknown0x508;
-        /* 0x50C */ public bool Unknown0x50C;
-        /* 0x50D */ public bool Unknown0x50D;
+        /* 0x50C */ public float Unknown0x50C;
         /* 0x510 */ public float Unknown0x510;
         /* 0x514 */ public float Unknown0x514;
         /* 0x518 */ public float Unknown0x518;
@@ -208,7 +207,6 @@ namespace libMBIN.NMS.Globals
         /* 0x550 */ public Colour Unknown0x550;
         /* 0x560 */ public Colour Unknown0x560;
         /* 0x570 */ public Colour Unknown0x570;
-
         ///* 0x0580 */ public bool LoadPagesFromMetadataCache;          // I think this may be the one removed but not sure
         /* 0x0580 */ public bool AlwaysCloseQuickMenu;
         /* 0x0581 */ public bool UseWorldNodesForRepair;
@@ -267,33 +265,32 @@ namespace libMBIN.NMS.Globals
         /* 0x0764 */ public float CompassWidth;
         /* 0x0768 */ public float CompassDistanceScaleMin;
         /* 0x076C */ public float CompassDistanceScaleRange;
-        /* 0x0770 */ public float CompassDistanceScale;
-        /* 0x0774 */ public float CompassDistanceMaxAngle;
-        /* 0x0778 */ public float CompassDistanceYOffset;
-        /* 0x077C */ public float CompassAngleClamp;
-        /* 0x0780 */ public float CompassAngleFade;
-        /* 0x0784 */ public TkCurveType CompassCurve;
-        /* 0x0788 */ public float BaseComplexityDangerFactor;
-        /* 0x078C */ public float BaseComplexityWarningFactor;
-        /* 0x0790 */ public Colour BaseComplexityDefaultColour;
-        /* 0x07A0 */ public Colour BaseComplexityWarningColour;
-        /* 0x07B0 */ public Colour BaseComplexityDangerColour;
-        /* 0x07C0 */ public float MarkerRingInnerRadius;
-        /* 0x07C4 */ public float MarkerRingOuterRadius;
+        /* 0x0770 */ public float Unknown0x770;
+        /* 0x0774 */ public float Unknown0x774;
+        /* 0x0778 */ public float CompassDistanceScale;
+        /* 0x077C */ public float CompassDistanceMaxAngle;
+        /* 0x0780 */ public float CompassDistanceYOffset;
+        /* 0x0784 */ public float CompassAngleClamp;
+        /* 0x0788 */ public float CompassAngleFade;
+        /* 0x078C */ public TkCurveType CompassCurve;
+        /* 0x0790 */ public float Unknown0x798;
+        /* 0x0794 */ public float BaseComplexityDangerFactor;
+        /* 0x0798 */ public float BaseComplexityWarningFactor;
+        /* 0x07A0 */ public Colour BaseComplexityDefaultColour;
+        /* 0x07B0 */ public Colour BaseComplexityWarningColour;
+        /* 0x07C0 */ public Colour BaseComplexityDangerColour;
+        /* 0x07D0 */ public float MarkerRingInnerRadius;
+        /* 0x07D4 */ public float MarkerRingOuterRadius;
         [NMS(Size = 0x8, Ignore = true)]
-        /* 0x07C8 */ public byte[] Padding7C8;
-        /* 0x07D0 */ public Colour MarkerRingBGColour;
-        /* 0x07E0 */ public float RepairTechRepairedWaitTime1;
-        /* 0x07E4 */ public float RepairTechRepairedWaitTime2;
-        /* 0x07E8 */ public float RepairTechRepairedMessageTime;
-        /* 0x07EC */ public float TechPopupRepairLayerHeight;
-        /* 0x07F0 */ public float TechPopupBuildLayerHeight;
-        /* 0x07F4 */ public float TechPopupRequirementHeight;
-        /* 0x07F8 */ public float DamageTrackArrowTime;
-        /* 0x07FC */ public float Unknown0x7FC;         // 4 dummy values for now
-        /* 0x07FC */ public float Unknown0x800;
-        /* 0x07FC */ public float Unknown0x804;
-        /* 0x07FC */ public float Unknown0x808;
+        /* 0x07D8 */ public byte[] Padding7C8;
+        /* 0x07E0 */ public Colour MarkerRingBGColour;
+        /* 0x07F0 */ public float RepairTechRepairedWaitTime1;
+        /* 0x07F4 */ public float RepairTechRepairedWaitTime2;
+        /* 0x07F8 */ public float RepairTechRepairedMessageTime;
+        /* 0x07FC */ public float TechPopupRepairLayerHeight;
+        /* 0x0800 */ public float TechPopupBuildLayerHeight;
+        /* 0x0804 */ public float TechPopupRequirementHeight;
+        /* 0x0808 */ public float DamageTrackArrowTime;
         /* 0x080C */ public bool Unknown0x80C;
         /* 0x0810 */ public float HUDMarkerObjectMinScreenDistance;
         /* 0x0814 */ public float HUDMarkerDistanceOrTimeDistance;
@@ -313,15 +310,15 @@ namespace libMBIN.NMS.Globals
         /* 0x0B00 */ public Colour InteractionLabelCostColour;
         /* 0x0B10 */ public Colour InteractionLabelPickupColour;
         /* 0x0B20 */ public Colour InteractionLabelPickupFillColour;
-        /* 0x0B30 */ public float RefinerPadStartTime;
-        /* 0x0B34 */ public float RefinerPadStartDecayTime;
-        /* 0x0B38 */ public float RefinerBeginDialInnerRadius;
-        /* 0x0B3C */ public float RefinerProgressDialInnerRadius;
+        /* 0x0B30 */ public float Unknown0xB30;
+        /* 0x0B34 */ public float Unknown0xB34;
+        /* 0x0B38 */ public float Unknown0xB38;
+        /* 0x0B3C */ public float Unknown0xB3C;
         /* 0x0B40 */ public TkMaterialResource Unknown0xB40;
-        /* 0x0BC4 */ public float Unknown0xBC4;         // won't be a vector4f as it isn't aligned correctly
-        /* 0x0BC8 */ public float Unknown0xBC8;
-        /* 0x0BCC */ public float Unknown0xBCC;
-        /* 0x0BD0 */ public float Unknown0xBD0;
+        /* 0x0BC4 */ public float RefinerPadStartTime;
+        /* 0x0BC8 */ public float RefinerPadStartDecayTime;
+        /* 0x0BCC */ public float RefinerBeginDialInnerRadius;
+        /* 0x0BD0 */ public float RefinerProgressDialInnerRadius;
         /* 0x0BE0 */ public Vector4f DefaultRefinerOffsetIn;
         /* 0x0BF0 */ public Vector4f DefaultRefinerOffsetOut;
         /* 0x0C00 */ public Vector2f RefinerParallax;
@@ -919,6 +916,7 @@ namespace libMBIN.NMS.Globals
         /* 0x50F4 */ public TkCurveType PopupActivateCurve1;
         /* 0x50F8 */ public TkCurveType PopupActivateCurve2;
         // surely there is a struct somewhere in this giant chunk of new unknowns...
+        // Also, more of the following are likely to be Colour or Vector3/4f's
         /* 0x50FC */ public float Unknown0x50FC;
         /* 0x5100 */ public float Unknown0x5100;
         /* 0x5104 */ public float Unknown0x5104;
@@ -976,46 +974,16 @@ namespace libMBIN.NMS.Globals
         /* 0x51D4 */ public float Unknown0x51D4;
         /* 0x51D8 */ public float Unknown0x51D8;
         /* 0x51DC */ public float Unknown0x51DC;
-        /* 0x51E0 */ public float Unknown0x51E0;
-        /* 0x51E4 */ public float Unknown0x51E4;
-        /* 0x51E8 */ public float Unknown0x51E8;
-        /* 0x51EC */ public float Unknown0x51EC;
-        /* 0x51F0 */ public float Unknown0x51F0;
-        /* 0x51F4 */ public float Unknown0x51F4;
-        /* 0x51F8 */ public float Unknown0x51F8;
-        /* 0x51FC */ public float Unknown0x51FC;
-        /* 0x5200 */ public float Unknown0x5200;
-        /* 0x5204 */ public float Unknown0x5204;
-        /* 0x5208 */ public float Unknown0x5208;
-        /* 0x520C */ public float Unknown0x520C;
-        /* 0x5210 */ public float Unknown0x5210;
-        /* 0x5214 */ public float Unknown0x5214;
-        /* 0x5218 */ public float Unknown0x5218;
-        /* 0x521C */ public float Unknown0x521C;
-        /* 0x5220 */ public float Unknown0x5220;
-        /* 0x5224 */ public float Unknown0x5224;
-        /* 0x5228 */ public float Unknown0x5228;
-        /* 0x522C */ public float Unknown0x522C;
-        /* 0x5230 */ public float Unknown0x5230;
-        /* 0x5234 */ public float Unknown0x5234;
-        /* 0x5238 */ public float Unknown0x5238;
-        /* 0x523C */ public float Unknown0x523C;
-        /* 0x5240 */ public float Unknown0x5240;
-        /* 0x5244 */ public float Unknown0x5244;
-        /* 0x5248 */ public float Unknown0x5248;
-        /* 0x524C */ public float Unknown0x524C;
-        /* 0x5250 */ public float Unknown0x5250;
-        /* 0x5254 */ public float Unknown0x5254;
-        /* 0x5258 */ public float Unknown0x5258;
-        /* 0x525C */ public float Unknown0x525C;
-        /* 0x5260 */ public float Unknown0x5260;
-        /* 0x5264 */ public float Unknown0x5264;
-        /* 0x5268 */ public float Unknown0x5268;
-        /* 0x526C */ public float Unknown0x526C;
-        /* 0x5270 */ public float Unknown0x5270;
-        /* 0x5274 */ public float Unknown0x5274;
-        /* 0x5278 */ public float Unknown0x5278;
-        /* 0x527C */ public float Unknown0x527C;
+        /* 0x51E0 */ public Colour Unknown0x51E0;
+        /* 0x51F0 */ public Colour Unknown0x51F0;
+        /* 0x5200 */ public Colour Unknown0x5200;
+        /* 0x5210 */ public Colour Unknown0x5210;
+        /* 0x5220 */ public Colour Unknown0x5220;
+        /* 0x5230 */ public Colour Unknown0x5230;
+        /* 0x5240 */ public Colour Unknown0x5240;
+        /* 0x5250 */ public Colour Unknown0x5250;
+        /* 0x5260 */ public Colour Unknown0x5260;
+        /* 0x5270 */ public Colour Unknown0x5270;
         /* 0x5280 */ public float Unknown0x5280;
         /* 0x5284 */ public float Unknown0x5284;
         /* 0x5288 */ public float Unknown0x5288;
@@ -1091,10 +1059,11 @@ namespace libMBIN.NMS.Globals
         /* 0x53AC */ public bool Unknown0x53AC;
         /* 0x53AD */ public bool Unknown0x53AD;
         /* 0x53B0 */ public float SpaceMapFoV;
+        // This whole next section is a bit of a mess and may be inaccurate...
         /* 0x53B4 */ public float SpaceMapAspectRatio;
         /* 0x53B8 */ public float SpaceMapDistanceScale;
         /* 0x53BC */ public float SpaceMapDistanceLogScaler;
-        /* 0x53C0 */ public float SpaceMapScaleMin;
+        /* 0x53C0 */ public TkCurveType Unknown0x53C0;
         /* 0x53C4 */ public float SpaceMapScaleRangeMin;
         /* 0x53C8 */ public float SpaceMapScaleRangeMax;
         /* 0x53CC */ public float SpaceMapObjectScale;
@@ -1109,6 +1078,7 @@ namespace libMBIN.NMS.Globals
         /* 0x53F0 */ public float SpaceMapMarkerScale;
         /* 0x53F4 */ public float SpaceMapDistance;
         /* 0x53F8 */ public float Unknown0x53F8;
+        // Up to here...
         /* 0x53FC */ public float SpaceMapDistanceMultiplier;
         /* 0x5400 */ public float SpaceMapHorizonThickness;
         /* 0x5404 */ public float SpaceMapFadeAngleMin;
@@ -1121,14 +1091,16 @@ namespace libMBIN.NMS.Globals
         /* 0x5420 */ public float SpaceMapLightYaw;
         [NMS(Size = 0xC, Ignore = true)]
         /* 0x5424 */ public byte[] Padding5424;
-        /* 0x5430 */ public Vector4f SpaceMapPosScaler;
-        /* 0x5440 */ public Colour SpaceMapAttackColour;
-        /* 0x5450 */ public Colour SpaceMapOtherPlayerColour;
-        /* 0x5460 */ public Colour SpaceMapThreatColour;
-        /* 0x5470 */ public Colour SpaceMapNeutralColour;
-        /* 0x5480 */ public Colour SpaceMapDeathPointColour;
-        /* 0x5490 */ public Colour Unknown0x5490;
-        /* 0x54A0 */ public Colour Unknown0x54A0;
+        /* 0x5430 */ public Colour SpaceMapOtherPlayerColour;
+        /* 0x5440 */ public Colour SpaceMapThreatColour;
+        /* 0x5450 */ public Vector4f SpaceMapPosScaler;
+        /* 0x5460 */ public Colour SpaceMapAttackColour;
+        // The order from here...
+        /* 0x5470 */ public Colour Unknown0x5470;
+        /* 0x5480 */ public Colour Unknown0x5480;
+        /* 0x5490 */ public Colour SpaceMapNeutralColour;
+        /* 0x54A0 */ public Colour SpaceMapDeathPointColour;
+        // To here... Mayb be a bit off...
         /* 0x54B0 */ public GcSpaceMapObjectData SpaceMapMarkerData;
         /* 0x54E0 */ public GcSpaceMapObjectData SpaceMapPlanetData;
         /* 0x5510 */ public GcSpaceMapObjectData SpaceMapStationData;
