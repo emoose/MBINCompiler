@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x20, GUID = 0x4ABD0759676FBD77, NameHash = 0x88C56A28F5F9BFDA, Broken = true)]
+    [NMS(Size = 0x20, GUID = 0x4ABD0759676FBD77, NameHash = 0x88C56A28F5F9BFDA)]
     public class GcAtlasRecvFeaturedBasesQueryList : NMSTemplate
     {
         /* 0x00 */ public ulong ClientUserdata;
