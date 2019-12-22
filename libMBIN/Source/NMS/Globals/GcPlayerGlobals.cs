@@ -375,8 +375,8 @@ namespace libMBIN.NMS.Globals
         /* 0x0A90 */ public Colour DefaultMuzzleColour;
         /* 0x0AA0 */ public Colour TerrainEditorMuzzleColourSubtract;
         /* 0x0AB0 */ public Colour TerrainEditorMuzzleColourAdd;
-        /* 0x0AC0 */ public Colour TerrainEditorMuzzleColourUndo;
-        /* 0x0AD0 */ public Colour TerrainEditorMuzzleColourUnknown;        // Flattening?
+        /* 0x0AC0 */ public Colour TerrainEditorMuzzleColourFlattening;     // This has no affect. HG has a bug in their code to use this value.
+        /* 0x0AD0 */ public Colour TerrainEditorMuzzleColourUndo;
         /* 0x0AE0 */ public Colour DefaultMuzzleLaserColour;
         /* 0x0AF0 */ public float FreeJetpackRange;
         /* 0x0AF4 */ public float FreeJetpackRangeNonTerrain;
@@ -568,12 +568,12 @@ namespace libMBIN.NMS.Globals
         /* 0x0DFC */ public float MeleeDistance;
         /* 0x0E00 */ public float MeleeDistance3P;
         /* 0x0E04 */ public float MeleeRadius;
-        /* 0x0E08 */ public float MeleeHitTime;
+        /* 0x0E08 */ public float MeleeHitTimeDelay;
         /* 0x0E0C */ public float MeleeSpeedBoost;
         /* 0x0E10 */ public float MeleeSpeedDamageBoost;
         /* 0x0E14 */ public float MeleeSpeedBoostRangeMultiplier;
         /* 0x0E18 */ public float MeleeStaminaDrain;
-        /* 0x0E1C */ public float Unknown0xE1C;
+        /* 0x0E1C */ public float Unknown0xE1C;     // These aren't related to melee it seems
         /* 0x0E20 */ public float Unknown0xE20;
         /* 0x0E24 */ public float Unknown0xE24;
         /* 0x0E28 */ public float Unknown0xE28;

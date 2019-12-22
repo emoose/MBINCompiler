@@ -16,7 +16,7 @@ namespace libMBIN.NMS.Toolkit
         public TkGraphicsDetailTypes TerrainTessellation;
         public TkGraphicsDetailTypes PlanetQuality;
         public TkGraphicsDetailTypes BaseQuality;
-        public enum AmbientOcclusionEnum { Off, GTAO_Low, GTAO_Medium, GTAO_High, HBAO_Low, HBAO_High }
+        public enum AmbientOcclusionEnum { Off, GTAO_Low, GTAO_Medium, GTAO_High, GTAO_Ultra, HBAO_Low, HBAO_High }
         public AmbientOcclusionEnum AmbientOcclusion;
         public enum AnisotropyLevelEnum { _1, _2, _4, _8, _16 }
         public AnisotropyLevelEnum AnisotropyLevel;

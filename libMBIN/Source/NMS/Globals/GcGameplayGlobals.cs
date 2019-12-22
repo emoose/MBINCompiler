@@ -268,11 +268,11 @@ namespace libMBIN.NMS.Globals
         /* 0x0A3C */ public int ResourceCommonMinAmount;
         /* 0x0A40 */ public int ResourceCommonMaxAmount;
         // I assume these have something to do with the mining of the ground...
-        /* 0x0A44 */ public int UnknownInt0xA44;            // ResourceGroundReducer
-        /* 0x0A48 */ public int UnknownInt0xA48;            // ResourceGroundMin
-        /* 0x0A4C */ public int UnknownInt0xA4C;            // ResourceGroundMax
+        /* 0x0A44 */ public int GroundResourceReducer;            // Do not set to 0
+        /* 0x0A48 */ public int GroundResourceMin;
+        /* 0x0A4C */ public int GroundResourceMax;
         [NMS(Size = 0x10)]
-        /* 0x0A50 */ public string GroundResource;      // just guessing from the data
+        /* 0x0A50 */ public string GroundResourceSubstance;
         [NMS(Size = 0x20)]
         /* 0x0A60 */ public string RobotResource;
         [NMS(Size = 0x20)]
@@ -428,11 +428,11 @@ namespace libMBIN.NMS.Globals
         /* 0x1974 */ public float TorchOffsetX;
         /* 0x1978 */ public float TorchOffsetY;
         /* 0x197C */ public float TorchOffsetZ;
-        /* 0x1980 */ public float TorchRotation;
+        /* 0x1980 */ public float Unknown0x1980;            // VR offsets?
         /* 0x1984 */ public float Unknown0x1984;
         /* 0x1988 */ public float Unknown0x1988;
-        /* 0x198C */ public bool Unknown0x198C;
-        /* 0x1990 */ public float Unknown0x1990;
+        /* 0x198C */ public bool Unknown0x198C;     // Something to do with the torch. Toggling doesn't seem to have an affect on anything...
+        /* 0x1990 */ public float TorchRotation;
         [NMS(Size = 0xC, Ignore = true)]
         /* 0x1994 */ public byte[] Padding1994;
         /* 0x19A0 */ public Colour TorchColour;

@@ -12,7 +12,9 @@ namespace libMBIN.NMS.GameComponents
         /* 0x0D */ public bool AddShelter;
         /* 0x0E */ public bool AddLandingPad;
 
-        [NMS(Size = 5)]
+        // Note: I am not 100% this enum type is correct as the exe has no associated enum, however the name would seem
+        // to indicate that the enum type should be right.
+        [NMS(Size = 5, EnumType = typeof(GcBuildingDensityLevels.BuildingDensityEnum))]
         /* 0x10 */ public float[] Density;
 
         /* 0x24 */ public int NumOverridesToGenerate;
