@@ -1,24 +1,20 @@
+from io import BytesIO
 import os
 import os.path as op
 import tempfile
+import shutil
 import subprocess
+import zipfile
+
+import requests
 
 
 IGNORE_FNAME = '_ignore.txt'
 SIZE_MISMATCH = 'size_mismatch'
 
-
-def fail_comparison(file, loc):
-    """ A simple function to do some cleanup and error reporting when running
-    in verbose mode.
-    """
-    os.remove(file)
-    print(f'An error occured comparing {op.basename(file)}:')
-    if loc == SIZE_MISMATCH:
-        print('Files are a different size.')
-    else:
-        print(f'Byte-wise comparison fails at 0x{(loc - 0x60):x} (adjusted)')
-    return False
+GIT_API = 'https://api.github.com'
+# The data folder should be unpacked into the same folder as this file
+DATA_PATH = op.dirname(__file__)
 
 
 def compare_mbins(left_path, right_path):
@@ -94,8 +90,42 @@ def convert_mbin(fpath, MBINCompiler_command):
         subprocess.run(cmd)
         # Move the file back to the original directory but renamed
         new_fname = op.join(op.dirname(fpath), '%s-recompiled.MBIN' % fname)
-        os.rename(op.join(temp_dir, '%s.MBIN' % fname), new_fname)
+        shutil.move(op.join(temp_dir, '%s.MBIN' % fname), new_fname)
         return new_fname
+
+
+def download_data():
+    """ Download the test data and unpack into the appropriate folder. """
+    owner = 'monkeyman192'
+    repo = 'MBINCompiler-test-data'
+    cmd = '/repos/{0}/{1}/releases/latest'.format(owner, repo)
+    r = requests.get(GIT_API + cmd)
+    data = r.json()
+
+    assets = data.get('assets', [None])[0]
+    if assets is not None:
+        # Download the zip
+        url = assets['browser_download_url']
+        r = requests.get(url)
+        data = BytesIO(r.content)
+        # Make sure to remove the old test data folder
+        if op.exists(op.join(DATA_PATH, 'data')):
+            shutil.rmtree(op.join(DATA_PATH, 'data'))
+        with zipfile.ZipFile(data) as data_zip:
+            data_zip.extractall(DATA_PATH)
+
+
+def fail_comparison(file, loc):
+    """ A simple function to do some cleanup and error reporting when running
+    in verbose mode.
+    """
+    os.remove(file)
+    print(f'An error occured comparing {op.basename(file)}:')
+    if loc == SIZE_MISMATCH:
+        print('Files are a different size.')
+    else:
+        print(f'Byte-wise comparison fails at 0x{(loc - 0x60):x} (adjusted)')
+    return False
 
 
 def ignore_list(fpath):

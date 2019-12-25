@@ -263,3 +263,6 @@ paket-files/
 # python-related files
 *.pyc
 .pytest_cache/
+
+# test data
+tests/data/
