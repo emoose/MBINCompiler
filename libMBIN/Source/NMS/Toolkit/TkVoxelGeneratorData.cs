@@ -13,13 +13,13 @@ namespace libMBIN.NMS.Toolkit
         /* 0x001C */ public TkNoiseVoxelTypeEnum BuildingVoxelType;
         /* 0x0020 */ public TkNoiseVoxelTypeEnum ResourceVoxelType;
 
-        [NMS(Size = 8, EnumType = typeof(GcTerrainControls.TerrainEnum))]
+        [NMS(Size = 8, EnumType = typeof(TkNoiseLayersEnum.NoiseLayerTypesEnum))]
         /* 0x0024 */ public TkNoiseUberLayerData[] NoiseLayers;
-        [NMS(Size = 9, EnumType = typeof(GcTerrainControls.ResourcesEnum))]
+        [NMS(Size = 9, EnumType = typeof(TkGridLayersEnum.GridLayerTypesEnum))]
         /* 0x0464 */ public TkNoiseGridData[] GridLayers;
         [NMS(Size = 0x7, EnumType = typeof(TkFeaturesEnum.FeatureTypesEnum))]
         /* 0x134C */ public TkNoiseFeatureData[] Features;
-        [NMS(Size = 1, EnumType = typeof(GcTerrainControls.UndergroundEnum))]
+        [NMS(Size = 1, EnumType = typeof(TkCavesEnum.CavesTypesEnum))]
         /* 0x1528 */ public TkNoiseCaveData[] CavesUnderground;
         /* 0x15B0 */ public float MinimumCaveDepth;
         /* 0x15B4 */ public float CaveRoofSmoothingDist;
