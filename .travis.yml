@@ -8,7 +8,7 @@ before_install:
     - pyenv global 3.6.3
 install:
     - export FrameworkPathOverride=$(dirname $(which mono))/../lib/mono/4.6.1/
-    - python3.6 -m pip install --user pytest
+    - python3.6 -m pip install --user pytest requests
 script:
     - dotnet restore
     - dotnet build -r win-x64 -p:Configuration=Release /nowarn:cs0618
