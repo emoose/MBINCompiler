@@ -10,7 +10,9 @@ import requests
 
 
 IGNORE_FNAME = '_ignore.txt'
-SIZE_MISMATCH = 'size_mismatch'
+SIZE_MISMATCH = 'Size mismatch'
+TO_EXML_FAIL = 'Failed conversion to EXML'
+TO_MBIN_FAIL = 'Failed conversion to MBIN'
 
 GIT_API = 'https://api.github.com'
 # The data folder should be unpacked into the same folder as this file
@@ -86,11 +88,20 @@ def convert_mbin(fpath, MBINCompiler_command):
         # Now we want to convert the exml back to mbin
         cmd = list(MBINCompiler_command)
         cmd.append('--output-dir=%s' % temp_dir)
-        cmd.append(op.join(temp_dir, '%s.EXML' % fname))
+        exml_fname = op.join(temp_dir, '%s.EXML' % fname)
+        # If the conversion fails to exml return an error value
+        if not op.exists(exml_fname):
+            return TO_EXML_FAIL
+        cmd.append(exml_fname)
         subprocess.run(cmd)
         # Move the file back to the original directory but renamed
         new_fname = op.join(op.dirname(fpath), '%s-recompiled.MBIN' % fname)
-        shutil.move(op.join(temp_dir, '%s.MBIN' % fname), new_fname)
+        # If the new files doesn't exist (ie. reconversion failed) return an
+        # error value
+        recompiled_fname = op.join(temp_dir, '%s.MBIN' % fname)
+        if not op.exists(recompiled_fname):
+            return TO_MBIN_FAIL
+        shutil.move(recompiled_fname, new_fname)
         return new_fname
 
 
@@ -120,12 +131,44 @@ def fail_comparison(file, loc):
     in verbose mode.
     """
     os.remove(file)
-    print(f'An error occured comparing {op.basename(file)}:')
+    fname_fixed = file.replace('-recompiled', '')
     if loc == SIZE_MISMATCH:
-        print('Files are a different size.')
+        err = SIZE_MISMATCH
     else:
-        print(f'Byte-wise comparison fails at 0x{(loc - 0x60):x} (adjusted)')
+        err = f'Difference at 0x{(loc - 0x60):x}'
+    print(f'{fname_fixed},{err}')
     return False
+
+
+def format_err_results(results):
+    table = []
+    fnames = []
+    errs = []
+    max_fname_len = 0
+    max_err_len = 0
+    for fname, err in results:
+        fnames.append(fname)
+        errs.append(err)
+        max_fname_len = max(len(fname), max_fname_len)
+        max_err_len = max(len(err), max_err_len)
+    # Add the table header
+    table.append(
+        'Filename:'
+        + ' ' * (max_fname_len - 9)
+        + ' | '
+        + 'Reason:' + ' ' * max(0, max_err_len - 7))
+    # Add the first row of hyphens
+    table.append(
+        '-' * max_fname_len
+        + ' | '
+        + '-' * max(7, max_err_len))
+    # Now for each row, add the info
+    for i in range(len(fnames)):
+        table.append(
+            fnames[i] + ' ' * (max_fname_len - len(fnames[i]))
+            + ' | '
+            + errs[i] + ' ' * max(0, max_err_len - len(errs[i])))
+    return table
 
 
 def ignore_list(fpath):
@@ -141,7 +184,9 @@ def ignore_list(fpath):
         List of filenames within the folder that aren't to be tested.
     """
     ignored_files = []
-    with open(op.join(fpath, IGNORE_FNAME)) as f:
-        for line in f:
-            ignored_files.append(line.strip('\n'))
+    ignore_file = op.join(fpath, IGNORE_FNAME)
+    if op.exists(ignore_file):
+        with open(ignore_file) as f:
+            for line in f:
+                ignored_files.append(line.strip('\n'))
     return ignored_files

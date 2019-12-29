@@ -7,6 +7,8 @@ from utils import compare_mbins, convert_mbin, ignore_list
 
 DATA_PATH = op.join(op.dirname(__file__), 'data')
 BASE_PATH = op.join("Build", "Release")
+TO_EXML_FAIL = 'Failed conversion to EXML'
+TO_MBIN_FAIL = 'Failed conversion to MBIN'
 
 
 def pytest_generate_tests(metafunc):
@@ -56,6 +58,10 @@ def test_compare(datapath, MBINCompiler, ignored_files, fname):
     if fname not in ignored_files:
         fpath = op.join(_datapath, fname)
         converted = convert_mbin(fpath, MBINCompiler)
-        assert compare_mbins(fpath, converted)
+        if converted not in (TO_EXML_FAIL, TO_MBIN_FAIL):
+            assert compare_mbins(fpath, converted)
+        else:
+            print(f'{fname},{converted}')
+            pytest.fail()
     else:
         pytest.skip()
