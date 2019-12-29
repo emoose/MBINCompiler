@@ -67,6 +67,23 @@ Include:
 - the MBINCompiler version you are using
 - the NMS version of the MBIN file
 
+## TESTING INSTRUCTIONS
+
+For anyone helping to develop MBINCompiler, if you are contributing new structs or updating existing ones, it is good to ensure that the tests that are run on the CI service that builds and tests MBINCompiler will pass.
+
+### Requirements
+
+To run the tests you will need python installed and on the path. It is recommended you get a recent version (3.7 or above).
+The required dependencies are `pytest` and `requests`. These can be installed by entering `python -m pytest -U pytest requests` in your favorite command line program.
+Before running the tests, you need to have built a `Release` version of MBINCompiler locally.
+
+### Running the tests
+
+Open a command line window in the root MBINCompiler directory and enter `python -m pytest`.
+This will pull the latest test data into the directory `./tests/data`.
+Once this data has been retieved, to avoid having to re-download the test data every time the `--use_cached` argument can be used.
+This should only be done if you are 100% sure that the local data is up to date with the external test data as the tests run on the CI will pull the external test data every time.
+One final command line argument that can be used is `--datapath` which allows you to provide an absolute or relative path to a folder containing files to be tested. This is primarily used for running tests on folder of data files to test which files pass or fail for the updating of the `MBINCompiler-test-data` repository. This option can however be used to point the tests at any other directory (such as an unpacked PCBANKS directory or sub-folder to run the tests on any of the games' files.)
 
 ## CREDITS
 Original project thanks to Emoose: https://github.com/emoose/MBINCompiler
