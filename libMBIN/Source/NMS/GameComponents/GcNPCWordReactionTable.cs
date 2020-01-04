@@ -9,6 +9,6 @@ namespace libMBIN.NMS.GameComponents
     public class GcNPCWordReactionTable : NMSTemplate
     {
         [NMS(Size = 0x8, EnumType = typeof(GcAlienRace.AlienRaceEnum))]
-        public GcNPCWordReactionCategory Races;
+        public GcNPCWordReactionCategory[] Races;
     }
 }

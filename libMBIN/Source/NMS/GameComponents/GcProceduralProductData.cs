@@ -8,7 +8,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcProceduralProductData : NMSTemplate
     {
         /* 0x000 */ public GcNameGeneratorWord NameGeneratorBase;
-        /* 0x028 */ public List<GcNameGeneratorWord> NameGeneratorWordList;
+        /* 0x028 */ public List<GcProceduralProductWord> NameGeneratorWordList;
         /* 0x038 */ public int NameGeneratorLegacyRolls;
         [NMS(Size = 0x4, Ignore = true)]
         /* 0x03C */ public byte[] Padding3C;

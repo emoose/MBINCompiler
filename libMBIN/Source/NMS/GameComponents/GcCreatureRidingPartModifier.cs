@@ -12,16 +12,19 @@ namespace libMBIN.NMS.GameComponents
         /* 0x000 */ public string Partname;
         [NMS(Size = 0x100)]
         /* 0x020 */ public string JointName;
+        /* 0x120 */ public float MinScale;
+        /* 0x124 */ public float MaxScale;
         [NMS(Size = 0x100)]
-        /* 0x120 */ public string AdditionalScaleJoint;
-        /* 0x220 */ public bool RelativeOffset;
-        [NMS(Size = 0xF, Ignore = true)]
-        /* 0x221 */ public byte[] Padding221;
+        /* 0x128 */ public string AdditionalScaleJoint;
+        /* 0x229 */ public bool BreakIfNotSelected;
+        /* 0x229 */ public bool RelativeOffset;
+        [NMS(Size = 0x6, Ignore = true)]
+        /* 0x22A */ public byte[] Padding22A;
         /* 0x230 */ public Vector3f Offset;
         /* 0x240 */ public Vector3f RotationOffset;
         /* 0x250 */ public Vector3f VROffset;
-        /* 0x260 */ public float LegSpreadOffset;
-        /* 0x264 */ public float HeadPitch;
+        /* 0x260 */ public float HeadCounterRotation;
+        /* 0x264 */ public float LegSpreadOffset;
         /* 0x268 */ public bool OverrideAnims;
         [NMS(Size = 0x7, Ignore = true)]
         /* 0x269 */ public byte[] Padding269;
