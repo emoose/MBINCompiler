@@ -64,7 +64,8 @@ def pytest_terminal_summary(terminalreporter):
         # Fix the filename to be relative to the test data directory
         fname = op.relpath(fname, datapath)
         results.append((fname, err.replace('\n', '')))
-    results = format_err_results(results)
-    print('\n')
-    for result in results:
-        print(result)
+    if results != []:
+        results = format_err_results(results)
+        print('\n')
+        for result in results:
+            print(result)
