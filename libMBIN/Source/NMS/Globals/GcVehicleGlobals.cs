@@ -48,9 +48,9 @@ namespace libMBIN.NMS.Globals
         /* 0x094 */ public float Unknown0x94;
         /* 0x098 */ public float Unknown0x98;
         /* 0x09C */ public float Unknown0x9C;
-        /* 0x0A0 */ public float Unknown0xA0;
-        /* 0x0A4 */ public float Unknown0xA4;
-        /* 0x0A8 */ public float Unknown0xA8;
+        /* 0x0A0 */ public float VehicleCamOffsetX;
+        /* 0x0A4 */ public float VehicleCamOffsetY;
+        /* 0x0A8 */ public float VehicleCamOffsetZ;
         /* 0x0AC */ public float Unknown0xAC;
         /* 0x00B0 */ public float UnderwaterBuoyancySurfaceOffset;
         /* 0x00B4 */ public float UnderwaterBuoyancyRange;
