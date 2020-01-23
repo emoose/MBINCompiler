@@ -10,6 +10,7 @@ import requests
 
 
 IGNORE_FNAME = '_ignore.txt'
+FAILED_FNAME = '_failed.txt'
 SIZE_MISMATCH = 'Size mismatch'
 TO_EXML_FAIL = 'Failed conversion to EXML'
 TO_MBIN_FAIL = 'Failed conversion to MBIN'
@@ -140,6 +141,27 @@ def fail_comparison(file, loc):
     return False
 
 
+def failed_files(fpath):
+    """ Gets the list of files that failed on a previous test run.
+
+    Parmaeters
+    ----------
+    fpath : str
+        Absolute path to a directory containing files and a _failed.txt file.
+
+    Returns
+    files : list
+        List of filenames within the folder that failed the previous test run.
+    """
+    files = []
+    failed_file = op.join(fpath, FAILED_FNAME)
+    if op.exists(failed_file):
+        with open(failed_file) as f:
+            for line in f:
+                files.append(line.strip('\n'))
+    return files
+
+
 def format_err_results(results):
     table = []
     fnames = []
@@ -171,22 +193,22 @@ def format_err_results(results):
     return table
 
 
-def ignore_list(fpath):
+def ignored_files(fpath):
     """ Gets the list of files to be ignored within a given directory.
 
     Parmaeters
     ----------
     fpath : str
-        Absolute path to a directory containing files and an ignore.txt file.
+        Absolute path to a directory containing files and an _ignore.txt file.
 
     Returns
-    ignored_files : list
+    files : list
         List of filenames within the folder that aren't to be tested.
     """
-    ignored_files = []
+    files = []
     ignore_file = op.join(fpath, IGNORE_FNAME)
     if op.exists(ignore_file):
         with open(ignore_file) as f:
             for line in f:
-                ignored_files.append(line.strip('\n'))
-    return ignored_files
+                files.append(line.strip('\n'))
+    return files

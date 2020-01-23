@@ -81,9 +81,27 @@ Before running the tests, you need to have built a `Release` version of MBINComp
 
 Open a command line window in the root MBINCompiler directory and enter `python -m pytest`.
 This will pull the latest test data into the directory `./tests/data`.
-Once this data has been retieved, to avoid having to re-download the test data every time the `--use_cached` argument can be used.
-This should only be done if you are 100% sure that the local data is up to date with the external test data as the tests run on the CI will pull the external test data every time.
-One final command line argument that can be used is `--datapath` which allows you to provide an absolute or relative path to a folder containing files to be tested. This is primarily used for running tests on folder of data files to test which files pass or fail for the updating of the `MBINCompiler-test-data` repository. This option can however be used to point the tests at any other directory (such as an unpacked PCBANKS directory or sub-folder to run the tests on any of the games' files.)
+
+#### Command line arguments:
+
+- `--datapath`: "The relative or absolute path to a folder containing .MBIN files to be tested. If not provided, the test data will be downloaded from the MBINCompiler-test-data repository."
+- `--use_cache` (bool): "Whether or not to use cached data that was downloaded by running the tests with no additional arguments."
+  Defaults to `False`.
+- `--rerun`: "If tests are failing, you can chose to just re-run the ones that have failed."
+
+  **Choices**:
+
+    `all` (Default) - Run all tests again, ignoring any `_failed.txt` file in the directory.
+
+    `failed` - Run only the failed tests again. Names are retrieved from a `_failed.txt` file in the same directory.
+
+- `--report` (bool): "Whether to output a report of the failure to the local directory."
+  Defaults to `False`.
+
+**Notes:**
+Use of `--use_cache=True` should only be done if you are 100% sure that the local data is up to date with the external test data as the tests run on the CI will pull the external test data every time.
+
+`--datapath` is primarily used for running tests on folder of data files to test which files pass or fail for the updating of the `MBINCompiler-test-data` repository. This option can however be used to point the tests at any other directory (such as an unpacked PCBANKS directory or sub-folder to run the tests on any of the games' files.)
 
 ## CREDITS
 Original project thanks to Emoose: https://github.com/emoose/MBINCompiler
