@@ -265,4 +265,6 @@ paket-files/
 .pytest_cache/
 
 # test data
-tests/data/
+tests/**/*.MBIN
+tests/**/.version
+tests/**/_*.txt
