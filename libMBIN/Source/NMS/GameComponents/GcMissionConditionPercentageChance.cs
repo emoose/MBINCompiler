@@ -3,12 +3,13 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0xA18791E073723FD, NameHash = 0xA420A86F131CF88)]
+	[NMS(Size = 0x8, GUID = 0x5B63D336145942E4, NameHash = 0xA420A86F131CF88)]
     public class GcMissionConditionPercentageChance : NMSTemplate
     {
-        public int Percent;
-        public bool Seeded;
-        [NMS(Size = 0x3, Ignore = true)]
-        public byte[] EndPadding;
+        /* 0x0 */ public int Percent;
+        /* 0x4 */ public bool Seeded;
+        /* 0x5 */ public bool OverrideZeroSeed;
+        [NMS(Size = 0x2, Ignore = true)]
+        /* 0x6 */ public byte[] EndPadding;
     }
 }

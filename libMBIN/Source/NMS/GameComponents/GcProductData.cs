@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x3F0, GUID = 0x54C74168B519A9CF, NameHash = 0xE831C8A241FD8276)]
+	[NMS(Size = 0x400, GUID = 0xFF00FFEE7B6EA198, NameHash = 0xE831C8A241FD8276)]
     public class GcProductData : NMSTemplate
     {
         [NMS(Size = 0x10)]
@@ -62,6 +62,8 @@ namespace libMBIN.NMS.GameComponents
         /* 0x3E4 */ public float CookingValue;
         /* 0x3E8 */ public bool GoodForSelling;
         [NMS(Size = 0x7, Ignore = true)]
-        /* 0x3E9 */ public byte[] EndPadding;
+        /* 0x3E9 */ public byte[] Padding3E9;
+        [NMS(Size = 0x10)]
+        /* 0x3F0 */ public string GiveRewardOnSpecialPurchase;
     }
 }

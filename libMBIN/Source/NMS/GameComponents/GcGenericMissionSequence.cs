@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x4A0, GUID = 0x2049E185A42BE585, NameHash = 0xFAE86B2801335B6D)]
+	[NMS(Size = 0x4A0, GUID = 0xE3FF881770CE38AD, NameHash = 0xFAE86B2801335B6D)]
     public class GcGenericMissionSequence : NMSTemplate
     {
         [NMS(Size = 0x10)]
@@ -63,7 +63,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x404 */ public bool RestartOnCompletion;
         /* 0x405 */ public bool CancelSetsComplete;
         [NMS(Size = 0x2, Ignore = true)]
-        /* 0x3D6 */ public byte[] Padding3D6;
+        /* 0x406 */ public byte[] Padding406;
 
         /* 0x408 */ public List<GcAlienPuzzleEntry> Dialog;
         /* 0x418 */ public List<GcScanEventData> ScanEvents;

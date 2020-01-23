@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Toolkit
 {
-	[NMS(Size = 0x440, Alignment = 0x10, GUID = 0x5D3A372D8396458E, NameHash = 0xE39CB7AA4D818260)]
+	[NMS(Size = 0x440, Alignment = 0x10, GUID = 0x1B78E1E827F846D4, NameHash = 0xE39CB7AA4D818260)]
     public class TkMaterialMetaData : NMSTemplate {
 
         [NMS(Size = 0x80)]
@@ -26,7 +26,7 @@ namespace libMBIN.NMS.Toolkit
         /* 0x098 */ public bool RoughnessMask;
         /* 0x099 */ public bool Metallic;
         /* 0x09A */ public bool MetallicMask;
-        /* 0x09B */ public bool SubSurfaceMask;
+        /* 0x09B */ public bool SubsurfaceMask;
         /* 0x09C */ public bool ParallaxMapped;
         /* 0x09D */ public bool RefractionMap;
         [NMS(Size = 0x80)]
@@ -52,7 +52,7 @@ namespace libMBIN.NMS.Toolkit
         /* 0x341 */ public bool CameraRelative;
         /* 0x342 */ public bool Colourisable;
         /* 0x343 */ public bool ColourMask;
-        /* 0x344 */ public bool MultiTexture;
+        /* 0x344 */ public bool Multitexture;
         /* 0x345 */ public bool AlphaCutout;
         /* 0x346 */ public bool DetailedAlphaCutout;
         /* 0x347 */ public bool Wind;
@@ -71,7 +71,6 @@ namespace libMBIN.NMS.Toolkit
         /* 0x35E */ public bool MergedMeshBillboard;
         /* 0x360 */ public float BillboardSphereFactor;
         /* 0x364 */ public bool Imposter;
-
         /* 0x365 */ public bool ScanEffect;
         /* 0x366 */ public bool WriteLogZ;
         /* 0x367 */ public bool DisableAmbient;
@@ -101,6 +100,7 @@ namespace libMBIN.NMS.Toolkit
         /* 0x3B4 */ public float UVNumTilesX;
         /* 0x3B8 */ public float UVNumTilesY;
         /* 0x3BC */ public bool DisplacementWave;
+        /* 0x3BD */ public bool DisplacementPositionOffset;
         /* 0x3C0 */ public float WaveOneSpeed;
         /* 0x3D0 */ public Vector3f WaveOneAmplitude;
         /* 0x3E0 */ public Vector3f WaveOneFrequency;
@@ -109,7 +109,6 @@ namespace libMBIN.NMS.Toolkit
         /* 0x410 */ public Vector3f WaveTwoAmplitude;
         /* 0x420 */ public Vector3f WaveTwoFrequency;
         /* 0x430 */ public Vector3f WaveTwoFallOff;
-
     }
 
 }

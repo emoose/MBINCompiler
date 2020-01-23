@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x29680, GUID = 0xE93A66060D7F21DA, NameHash = 0x6C4510BB243EFA64)]
+	[NMS(Size = 0x29690, GUID = 0x78BEB4F749C9098B, NameHash = 0x6C4510BB243EFA64)]
     public class GcPlayerStateData : NMSTemplate
     {
         /* 0x00000 */ public GcUniverseAddressData UniverseAddress;
@@ -256,40 +256,41 @@ namespace libMBIN.NMS.GameComponents
 
         [NMS(Size = 0x3)]
         /* 0x28F20 */ public GcCharacterCustomisationData[] Outfits;
-
-        /* 0x28FF8 */ public GcSeed FleetSeed;
-        /* 0x29008 */ public List<GcFleetFrigateSaveData> FleetFrigates;
-        /* 0x29018 */ public List<GcFleetExpeditionSaveData> FleetExpeditions;
-        /* 0x29028 */ public List<long> ExpeditionSeedsSelectedToday;
-        /* 0x29038 */ public ulong LastKnownDay;
-        /* 0x29040 */ public ulong SunTimer;
-        /* 0x29048 */ public ulong MultiplayerLobbyID;
-        /* 0x29050 */ public GcUniverseAddressData MultiplayerUA;
+        [NMS(Size = 0x10)]
+        /* 0x28FF8 */ public string JetpackEffect;
+        /* 0x29008 */ public GcSeed FleetSeed;
+        /* 0x29018 */ public List<GcFleetFrigateSaveData> FleetFrigates;
+        /* 0x29028 */ public List<GcFleetExpeditionSaveData> FleetExpeditions;
+        /* 0x29038 */ public List<long> ExpeditionSeedsSelectedToday;
+        /* 0x29048 */ public ulong LastKnownDay;
+        /* 0x29050 */ public ulong SunTimer;
+        /* 0x29058 */ public ulong MultiplayerLobbyID;
+        /* 0x29060 */ public GcUniverseAddressData MultiplayerUA;
         [NMS(Size = 0x8, Ignore = true)]
-        /* 0x29068 */ public byte[] Padding29068;
-        /* 0x29070 */ public GcPlayerSpawnStateData MultiplayerSpawn;
-        /* 0x290F0 */ public List<GcRepairTechData> RepairTechBuffer;
-        /* 0x29100 */ public ulong MultiplayerPrivileges;
+        /* 0x29078 */ public byte[] Padding29078;
+        /* 0x29080 */ public GcPlayerSpawnStateData MultiplayerSpawn;
+        /* 0x29100 */ public List<GcRepairTechData> RepairTechBuffer;
+        /* 0x29110 */ public ulong MultiplayerPrivileges;
         [NMS(Size = 0x3, EnumType = typeof(GcHotActionMenuTypes.HotActionMenuTypesEnum))]
-        /* 0x29108 */ public GcHotActionsSaveData[] HotActions;
-        /* 0x295B8 */ public ulong LastUABeforePortalWarp;
-        /* 0x295C0 */ public ulong StoryPortalSeed;
-        /* 0x295C8 */ public uint ShopNumber;
-        /* 0x295CA */ public uint ShopTier;
-        /* 0x295CC */ public bool HasAccessToNexus;
+        /* 0x29118 */ public GcHotActionsSaveData[] HotActions;
+        /* 0x295C8 */ public ulong LastUABeforePortalWarp;
+        /* 0x295D0 */ public ulong StoryPortalSeed;
+        /* 0x295D8 */ public uint ShopNumber;
+        /* 0x295DA */ public uint ShopTier;
+        /* 0x295DC */ public bool HasAccessToNexus;
         [NMS(Size = 0x3, Ignore = true)]
-        /* 0x295CD */ public byte[] Padding295CD;
-        /* 0x295D0 */ public GcUniverseAddressData NexusUniverseAddress;
-        /* 0x295F0 */ public Vector3f NexusMatrixAt;
-        /* 0x29600 */ public Vector3f NexusMatrixUp;
-        /* 0x29610 */ public Vector3f NexusMatrixPos;
-        /* 0x29620 */ public GcPhotoModeSettings PhotoModeSettings;
-        /* 0x29660 */ public int BannerIcon;
-        /* 0x29664 */ public int BannerMainColour;
-        /* 0x29668 */ public int BannerBackgroundColour;
-        /* 0x2966C */ public int TelemetryUploadVersion;
-        /* 0x29670 */ public bool UsesThirdPersonVehicleCam;
+        /* 0x295DD */ public byte[] Padding295DD;
+        /* 0x295E0 */ public GcUniverseAddressData NexusUniverseAddress;
+        /* 0x29600 */ public Vector3f NexusMatrixAt;
+        /* 0x29610 */ public Vector3f NexusMatrixUp;
+        /* 0x29620 */ public Vector3f NexusMatrixPos;
+        /* 0x29630 */ public GcPhotoModeSettings PhotoModeSettings;
+        /* 0x29670 */ public int BannerIcon;
+        /* 0x29674 */ public int BannerMainColour;
+        /* 0x29678 */ public int BannerBackgroundColour;
+        /* 0x2967C */ public int TelemetryUploadVersion;
+        /* 0x29680 */ public bool UsesThirdPersonVehicleCam;
         [NMS(Size = 0xF, Ignore = true)]
-        /* 0x29671 */ public byte[] EndPadding;
+        /* 0x29681 */ public byte[] EndPadding;
     }
 }

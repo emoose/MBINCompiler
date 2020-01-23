@@ -5,11 +5,11 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x830, GUID = 0x777852BAA3CC8EEA, NameHash = 0xD679E7C47BC9313C)]
+	[NMS(Size = 0x830, GUID = 0x931EDF27CED6F670, NameHash = 0xD679E7C47BC9313C)]
     public class GcCustomisationBannerGroup : NMSTemplate
     {
-        public List<TkTextureResource> BannerImages;
-        public GcPaletteData MainColours;
-        public GcPaletteData BackgroundColours;
+        /* 0x000 */ public List<GcCustomisationBannerImageData> BannerImages;
+        /* 0x010 */ public GcPaletteData MainColours;
+        /* 0x420 */ public GcPaletteData BackgroundColours;
     }
 }
