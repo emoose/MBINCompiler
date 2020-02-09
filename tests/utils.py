@@ -11,7 +11,6 @@ import requests
 
 IGNORE_FNAME = '_ignore.txt'
 FAILED_FNAME = '_failed.txt'
-SIZE_MISMATCH = 'Size mismatch'
 TO_EXML_FAIL = 'Failed conversion to EXML'
 TO_MBIN_FAIL = 'Failed conversion to MBIN'
 
@@ -36,11 +35,7 @@ def compare_mbins(left_path, right_path):
         Whether or not the two MBIN files are identical (up to a difference in
         the header due to the addition of an MBINCompiler version)
     """
-    # We can do a quick check to make sure the files are the same size,
-    # otherwise immediately return False.
     size = os.stat(left_path).st_size
-    if size != os.stat(right_path).st_size:
-        return fail_comparison(right_path, SIZE_MISMATCH)
     # Do a byte-wise comparison of the files.
     bad_loc = None
     with open(left_path, 'rb') as f_left:
@@ -133,10 +128,7 @@ def fail_comparison(file, loc):
     """
     os.remove(file)
     fname_fixed = file.replace('-recompiled', '')
-    if loc == SIZE_MISMATCH:
-        err = SIZE_MISMATCH
-    else:
-        err = f'Difference at 0x{(loc - 0x60):x}'
+    err = f'Difference at 0x{(loc - 0x60):x}'
     print(f'{fname_fixed},{err}')
     return False
 

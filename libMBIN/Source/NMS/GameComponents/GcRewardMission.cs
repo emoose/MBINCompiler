@@ -3,13 +3,13 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0x4D18939438BD086D, NameHash = 0xFCFEF60947A44802)]
+	[NMS(Size = 0x18, Alignment = 0x8, GUID = 0x4D18939438BD086D, NameHash = 0xFCFEF60947A44802)]
     public class GcRewardMission : NMSTemplate
     {
         [NMS(Size = 0x10)]
-        public string Mission;
-        public bool SetAsSelected;
+        /* 0x00 */ public string Mission;
+        /* 0x10 */ public bool SetAsSelected;
         [NMS(Size = 0x7, Ignore = true)]
-        public byte[] EndPadding;
+        /* 0x11 */ public byte[] EndPadding;
     }
 }

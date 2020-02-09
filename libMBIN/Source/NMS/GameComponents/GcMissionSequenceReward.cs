@@ -10,8 +10,8 @@ namespace libMBIN.NMS.GameComponents
         /* 0x000 */ public string Message;
         [NMS(Size = 0x10)]
         /* 0x080 */ public string Reward;
-        [NMS(Size = 0x80)]
         /* 0x090 */ public bool CanOverride;
+        [NMS(Size = 0x80)]
         /* 0x091 */ public string DebugText;
         [NMS(Size = 0x7, Ignore = true)]
         /* 0x111 */ public byte[] EndPadding;

@@ -11,6 +11,7 @@ namespace libMBIN.NMS.GameComponents
         [NMS(Size = 0x80)]
         /* 0x080 */ public string DebugText;
         /* 0x100 */ public bool WarpToSpace;
-        /* 0x101 */ public NMSString0x20 OverrideUA;
+        [NMS(Size = 0x20)]
+        /* 0x101 */ public string OverrideUA;
     }
 }
