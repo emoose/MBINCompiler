@@ -5,14 +5,13 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x30, GUID = 0x15D9B1C6608A7093, NameHash = 0xD04C1E382833D93A)]
-    // In global??
+    [NMS(Size = 0x38, GUID = 0x15D9B1C6608A7093, NameHash = 0xD04C1E382833D93A)]
     public class GcModelExplosionRules : NMSTemplate
     {
-        public List<GcModelExplosionRule> Rules;
-        [NMS(Size = 0x7, EnumType = typeof(GcSpaceshipClasses.ShipClassEnum))]
-        public float[] ShipSalvageDisplayScales;
-        [NMS(Size = 0x4, Ignore = true)]
-        public byte[] EndPadding;
+        /* 0x00 */ public List<GcModelExplosionRule> Rules;
+        [NMS(Size = 0x8, EnumType = typeof(GcSpaceshipClasses.ShipClassEnum))]
+        /* 0x10 */ public bool[] UseRules;
+        [NMS(Size = 0x8, EnumType = typeof(GcSpaceshipClasses.ShipClassEnum))]
+        /* 0x18 */ public float[] ShipSalvageDisplayScales;
     }
 }

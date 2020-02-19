@@ -3,11 +3,15 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0xD770B94678C7662A, NameHash = 0x9537448E73030512)]
+	[NMS(Size = 0x10, GUID = 0xDFFE983F14A63402, NameHash = 0x9537448E73030512)]
     public class GcMissionConditionHasProduct : NMSTemplate
     {
-        public GcDefaultMissionProductEnum Default;
-        public GcProductTableEnum Product;
-        public int Amount;
+        /* 0x0 */ public GcDefaultMissionProductEnum Default;
+        /* 0x4 */ public GcProductTableEnum Product;
+        /* 0x8 */ public int Amount;
+        /* 0xC */ public bool ForceSearchFreighterAndChests;
+        /* 0xD */ public bool SearchEveryShip;
+        [NMS(Size = 0x2, Ignore = true)]
+        /* 0xE */ public byte[] EndPadding;
     }
 }

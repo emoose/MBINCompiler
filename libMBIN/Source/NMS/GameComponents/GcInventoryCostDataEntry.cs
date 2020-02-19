@@ -5,8 +5,8 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0x3D6C19C581BD238A, NameHash = 0xD9472E9B798FC3B5)]
-    public class GcInventoryCostDataEntry : NMSTemplate     // size: 0x28        maybe in global??
+	[NMS(Size = 0x28, GUID = 0x3D6C19C581BD238A, NameHash = 0xD9472E9B798FC3B5)]
+    public class GcInventoryCostDataEntry : NMSTemplate     // maybe in global??
     {
         /* 0x00 */ public int MinSlots;                 // 0Fh
         /* 0x04 */ public float MinValueInMillions;     // 41200000h

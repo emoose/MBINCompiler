@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Toolkit
 {
-	[NMS(GUID = 0x9777486713E25BA7, NameHash = 0x949DC1DF3C62FC0A)]
+	[NMS(Size = 0x10, GUID = 0x8578DEEF68E7D98C, NameHash = 0x949DC1DF3C62FC0A)]
     public class TkProceduralTextureChosenOptionSampler : NMSTemplate
     {
         public List<TkProceduralTextureChosenOption> Options;

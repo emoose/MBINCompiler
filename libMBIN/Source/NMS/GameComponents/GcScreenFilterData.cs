@@ -3,16 +3,17 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0xA8, GUID = 0x7C4CB3CB26C66166, NameHash = 0xFFDCD21B79EE81DE)]
+	[NMS(Size = 0xB0, GUID = 0x129967321DE298AA, NameHash = 0xFFDCD21B79EE81DE)]
     public class GcScreenFilterData : NMSTemplate
     {
         [NMS(Size = 0x20)]
-        public string LocText;
+        /* 0x00 */ public string LocText;
         [NMS(Size = 0x80)]
-        public string Filename;
-        public float FadeDistance;
-        public bool SelectableInPhotoMode;
-        [NMS(Size = 0x3, Ignore = true)]
-        public byte[] EndPadding;
+        /* 0x20 */ public string Filename;
+        /* 0xA0 */ public float FadeDistance;
+        /* 0xA4 */ public bool SelectableInPhotoMode;
+        /* 0xA8 */ public float HdrAreaAdjust;
+        [NMS(Size = 0x4, Ignore = true)]
+        /* 0xAC */ public byte[] EndPadding;
     }
 }

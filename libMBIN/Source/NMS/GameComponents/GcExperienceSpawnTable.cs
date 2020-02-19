@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0xD0, GUID = 0x6CCB7780D32F37F7, NameHash = 0x5F4CA33999F0D259)]
+	[NMS(Size = 0xE0, GUID = 0x40B3FC2ADCC3B1F0, NameHash = 0x5F4CA33999F0D259)]
     public class GcExperienceSpawnTable : NMSTemplate
     {
         public List<GcAIShipSpawnData> FlybySpawns;
@@ -21,5 +21,6 @@ namespace libMBIN.NMS.GameComponents
         public List<GcAIShipSpawnData> BattleInitialPirateSpawns;
         public List<GcAIShipSpawnData> BattleSecondaryPirateSpawns;
         public List<GcBountySpawnInfo> PirateBountySpawns;
+        public List<GcPulseEncounterInfo> PulseEncounters;
     }
 }
