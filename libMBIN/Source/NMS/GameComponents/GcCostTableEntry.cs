@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x68, Alignment = 0x8, GUID = 0xF9946461E0CCADDA, NameHash = 0x5923C0EE4B9AD427)]
+	[NMS(Size = 0x68, Alignment = 0x8, GUID = 0x280D4347D75088D9, NameHash = 0x5923C0EE4B9AD427)]
     public class GcCostTableEntry : NMSTemplate
     {
         [NMS(Size = 0x10)]
@@ -12,8 +12,9 @@ namespace libMBIN.NMS.GameComponents
         /* 0x11 */ public bool DontCharge;
         /* 0x12 */ public bool HideOptionAndDisplayCostOnly;
         /* 0x13 */ public bool RemoveOptionIfCantAfford;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x14 */ public byte[] Padding14;
+        /* 0x14 */ public bool MustAffordInCreative;
+        [NMS(Size = 0x3, Ignore = true)]
+        /* 0x15 */ public byte[] Padding15;
         /* 0x18 */ public NMSTemplate Cost;
     }
 }

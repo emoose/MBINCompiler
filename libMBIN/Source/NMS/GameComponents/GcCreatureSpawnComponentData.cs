@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x390, GUID = 0x5C45360A79CFEBB8, NameHash = 0xCC070D1A8B81739E)]
+	[NMS(Size = 0x390, GUID = 0xCCD7D14A20B9A103, NameHash = 0xCC070D1A8B81739E)]
     public class GcCreatureSpawnComponentData : NMSTemplate
     {
         [NMS(Size = 0x10)]
@@ -25,7 +25,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x0C8 */ public float StartTimeMax;
         /* 0x0CC */ public bool SpawnAlert;
 		public enum SpawnerModeEnum { Hidden, Visible, HideOnSpawn, HiddenTimer }
-		public SpawnerModeEnum SpawnerMode;
+		/* 0x0D0 */ public SpawnerModeEnum SpawnerMode;
 
         [NMS(Size = 4, Ignore = true)]
         /* 0x0D4 */ public byte[] PaddingD4;

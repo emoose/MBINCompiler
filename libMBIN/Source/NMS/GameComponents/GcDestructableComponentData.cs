@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x198, Alignment = 0x8, GUID = 0x54C989BE7DFF4078, NameHash = 0xE24B3D78ED0634BD)]
+	[NMS(Size = 0x1C0, Alignment = 0x8, GUID = 0xB5D1776FD909924C, NameHash = 0xE24B3D78ED0634BD)]
     public class GcDestructableComponentData : NMSTemplate
     {
         [NMS(Size = 0x10)]
@@ -34,53 +34,53 @@ namespace libMBIN.NMS.GameComponents
 
         /* 0x058 */ public List<GcSubstanceAmount> GivesSubstances;
 
-        /* 0x68 */ public GcStatsEnum StatsToTrack;
+        /* 0x068 */ public GcStatsEnum StatsToTrack;
         [NMS(Size = 0x4, Ignore = true)]
-        /* 0x6C */ public byte[] Padding6C;
+        /* 0x06C */ public byte[] Padding6C;
 
         [NMS(Size = 0x10)]
         /* 0x070 */ public string GivesReward;
-		/* 0x080 */ public float HardModeSubstanceMultiplier;
-
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x084 */ public byte[] Padding84;
-
-        /* 0x088 */ public List<GcRewardMissionOverride> RewardOverrideTable;
-
-        /* 0x098 */ public bool ActivateLocatorsFromRarity;
+        /* 0x080 */ public bool HideReward;
         [NMS(Size = 0x7, Ignore = true)]
-        /* 0x099 */ public byte[] Padding99;
-        [NMS(Size = 0x3)]
-        /* 0x0A0 */ public NMSString0x10[] RarityLocators;
+        /* 0x081 */ public byte[] Padding81;
+        [NMS(Size = 0x20)]
+        /* 0x088 */ public string OverrideRewardLoc;
+		/* 0x0A8 */ public float HardModeSubstanceMultiplier;
 
-        /* 0x0D0 */ public bool UseSystemColorsForTexture;
-        /* 0x0D1 */ public bool RemoveModel;
-        /* 0x0D2 */ public bool HideModel;
-        [NMS(Size = 0x1, Ignore = true)]
-        /* 0x0D3 */ public byte[] PaddingD3;
-        [NMS(Size = 0x80)]
-        /* 0x0D4 */ public TkTextureResource DestroyedModel;
-        /* 0x158 */ public bool DestroyedModelUsesScale;
-        [NMS(Size = 0x3, Ignore = true)]
-        /* 0x159 */ public byte[] Padding159;
-        /* 0x15C */ public float DestroyForce;
-        /* 0x160 */ public float DestroyForceRadius;
         [NMS(Size = 0x4, Ignore = true)]
-        /* 0x164 */ public byte[] Padding164;
-        [NMS(Size = 0x10)]
-        /* 0x168 */ public string DestroyEffect;
-        [NMS(Size = 0x10)]
-        /* 0x178 */ public string DestroyEffectPoint;
-        /* 0x188 */ public float DestroyEffectTime;
+        /* 0x0AC */ public byte[] PaddingAC;
 
-        /* 0x18C */ public bool DestroyEffectMatrices;
-        /* 0x18D */ public bool ShowInteract;
-        [NMS(Size = 0x2, Ignore = true)]
-        /* 0x18E */ public byte[] Padding18E;
-        /* 0x190 */ public float ShowInteractRange;
-        /* 0x194 */ public bool GrenadeSingleHit;
+        /* 0x0B0 */ public List<GcRewardMissionOverride> RewardOverrideTable;
+
+        /* 0x0C0 */ public bool ActivateLocatorsFromRarity;
+        [NMS(Size = 0x7, Ignore = true)]
+        /* 0x0C1 */ public byte[] PaddingC1;
+        [NMS(Size = 0x3)]
+        /* 0x0C8 */ public NMSString0x10[] RarityLocators;
+
+        /* 0x0F8 */ public bool UseSystemColorsForTexture;
+        /* 0x0F9 */ public bool RemoveModel;
+        /* 0x0FA */ public bool HideModel;
+        [NMS(Size = 0x1, Ignore = true)]
+        /* 0x0FB */ public byte[] PaddingFB;
+        [NMS(Size = 0x80)]
+        /* 0x0FC */ public TkTextureResource DestroyedModel;
+        /* 0x180 */ public bool DestroyedModelUsesScale;
+        /* 0x184 */ public float DestroyForce;
+        /* 0x188 */ public float DestroyForceRadius;
+        [NMS(Size = 0x4, Ignore = true)]
+        /* 0x18C */ public byte[] Padding18C;
+        [NMS(Size = 0x10)]
+        /* 0x190 */ public string DestroyEffect;
+        [NMS(Size = 0x10)]
+        /* 0x1A0 */ public string DestroyEffectPoint;
+        /* 0x1B0 */ public float DestroyEffectTime;
+        /* 0x1B4 */ public bool DestroyEffectMatrices;
+        /* 0x1B5 */ public bool ShowInteract;
+        /* 0x1B8 */ public float ShowInteractRange;
+        /* 0x1BC */ public bool GrenadeSingleHit;
 
         [NMS(Size = 3, Ignore = true)]
-        /* 0x195 */ public byte[] EndPadding;
+        /* 0x1BD */ public byte[] EndPadding;
     }
 }
