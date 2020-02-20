@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Toolkit
 {
-	[NMS(Size = 0xA0, GUID = 0x5A308E9F9F73E5EC, Alignment = 0x10, NameHash = 0x250B60FD6373D170)]
+	[NMS(Size = 0xA0, GUID = 0x45240D7A5E9C693B, Alignment = 0x10, NameHash = 0x250B60FD6373D170)]
     public class TkNGuiGraphicStyleData : NMSTemplate
     {
         /* 0x00 */ public float PaddingX;
@@ -14,7 +14,7 @@ namespace libMBIN.NMS.Toolkit
         /* 0x20 */ public Colour IconColour;
         /* 0x30 */ public Colour StrokeColour;
 
-		public enum ShapeEnum { Rectangle, Ellipse }
+		public enum ShapeEnum { Rectangle, Ellipse, Line, LineInverted, Bezier, BezierInverted }
 		/* 0x40 */ public ShapeEnum Shape;
 
 

@@ -56,7 +56,7 @@ def test_compare(datapath, MBINCompiler, _ignored_files, fname):
     This test is parameterised by fpath which will contain the paths of all
     .MBIN files in the ./data directory.
     """
-    if fname not in _ignored_files:
+    if op.basename(fname) not in _ignored_files:
         converted = convert_mbin(fname, MBINCompiler)
         if converted not in (TO_EXML_FAIL, TO_MBIN_FAIL):
             assert compare_mbins(fname, converted)

@@ -3,8 +3,8 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0xC90ED7639F9E378A, NameHash = 0xBA68F4D576FCF49E)]
-    public class GcInventoryTableEntry : NMSTemplate        // size: 0x20
+	[NMS(Size = 0x20, GUID = 0x569D04D5958E8953, NameHash = 0xBA68F4D576FCF49E)]
+    public class GcInventoryTableEntry : NMSTemplate
     {
         [NMS(Size = 0x10)]
         /* 0x00 */ public string Id;
