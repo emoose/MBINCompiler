@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x220, Alignment = 0x10, GUID = 0x75BD397E55423509, NameHash = 0x51B3554FFBEBED66)]
+	[NMS(Size = 0x220, Alignment = 0x10, GUID = 0xACAE973C5302E516, NameHash = 0x51B3554FFBEBED66)]
     public class GcMissionSequenceGroup : NMSTemplate
     {
         /* 0x000 */ public bool Silent;
@@ -36,17 +36,18 @@ namespace libMBIN.NMS.GameComponents
         /* 0x1B1 */ public byte[] Padding1B1;
         [NMS(Size = 0x20)]
         /* 0x1B8 */ public string PrefixTitleText;
-        /* 0x1D8 */ public GcMissionConditionTest ConditionTest;
+        /* 0x1D8 */ public bool BlockPinning;
+        /* 0x1DC */ public GcMissionConditionTest ConditionTest;
 
 		public enum RepeatLogicEnum { None, Loop, RestartOnConditionFail }
-		/* 0x1DC */ public RepeatLogicEnum RepeatLogic;
+		/* 0x1E0 */ public RepeatLogicEnum RepeatLogic;
         public enum IconStyleEnum { Default, Large }
-		/* 0x1E0 */ public IconStyleEnum IconStyle;
-        /* 0x1E4 */ public TkInputEnum SpecialButtonIcon;
-        /* 0x1E8 */ public List<NMSTemplate> Conditions;
-        /* 0x1F8 */ public List<NMSTemplate> Consequences;
-        /* 0x208 */ public List<GcGenericMissionStage> Stages;
-        [NMS(Size = 0x8, Ignore = true)]
-        /* 0x218 */ public byte[] EndPadding;
+		/* 0x1E4 */ public IconStyleEnum IconStyle;
+        /* 0x1E8 */ public TkInputEnum SpecialButtonIcon;
+        [NMS(Size = 0x4, Ignore = true)]
+        /* 0x1EC */ public byte[] Padding1EC;
+        /* 0x1F0 */ public List<NMSTemplate> Conditions;
+        /* 0x200 */ public List<NMSTemplate> Consequences;
+        /* 0x210 */ public List<GcGenericMissionStage> Stages;
     }
 }

@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x178, GUID = 0x0B35D05C4D201EC29, NameHash = 0x657592AF71342449)]
+    [NMS(Size = 0x178, GUID = 0x75E9444B2695486A, NameHash = 0x657592AF71342449)]
     public class GcPulseEncounterInfo : NMSTemplate
     {
         [NMS(Size = 0x10)]
@@ -14,7 +14,7 @@ namespace libMBIN.NMS.GameComponents
         [NMS(Size = 0x4, Ignore = true)]
         /* 0x0B4 */ public byte[] PaddingB4;
         /* 0x0B8 */ public GcPulseEncounterSpawnConditions SpawnCondition;
-        /* 0x118 */ public float Chance;
+        /* 0x118 */ public float SpawnChance;
         /* 0x11C */ public float SpawnDistance;
         /* 0x120 */ public GcAudioWwiseEvents AudioEvent;
         [NMS(Size = 0x4, Ignore = true)]

@@ -3,14 +3,16 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x60, GUID = 0x0F8578ADA4A226CB5, NameHash = 0x662E605B574D59AB)]
+    [NMS(Size = 0x60, GUID = 0x1DF09CAF01E518B, NameHash = 0x662E605B574D59AB)]
     public class GcPulseEncounterSpawnConditions : NMSTemplate
     {
         /* 0x00 */ public bool AllowedInCreative;
         /* 0x01 */ public bool AllowedInEmptySystem;
         /* 0x02 */ public bool AllowedDuringTutorial;
-        [NMS(Size = 0x5, Ignore = true)]
-        /* 0x03 */ public byte[] Padding3;
+        /* 0x03 */ public bool AllowedBeyondPortals;
+        /* 0x04 */ public bool AllowedWhileOnMPMission;
+        [NMS(Size = 0x3, Ignore = true)]
+        /* 0x05 */ public byte[] Padding3;
         [NMS(Size = 0x10)]
         /* 0x08 */ public string RequiresProduct;
         [NMS(Size = 0x10)]

@@ -6,7 +6,7 @@ using System;
 
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(Size = 0x218, GUID = 0xAFD746486AD5A103, NameHash = 0xB62E6456DFE47836)]
+    [NMS(Size = 0x218, GUID = 0x3BD5B163E6D81E47, NameHash = 0xB62E6456DFE47836)]
     public class TkGlobals : NMSTemplate
     {
         public enum AssertsLevelsEnum { DIsabled, Ignored, Skipped, Enabled }
@@ -27,7 +27,8 @@ namespace libMBIN.NMS.Toolkit
         /* 0x210 */ public int VRLoadBalanceTimeoutMS;
         /* 0x214 */ public bool LogInputSetup;
         /* 0x215 */ public bool LogInputChanges;
-        [NMS(Size = 0x2, Ignore = true)]
-        /* 0x216 */ public byte[] EndPadding;
+        /* 0x216 */ public bool DisableResScaling;
+        [NMS(Size = 0x1, Ignore = true)]
+        /* 0x217 */ public byte[] EndPadding;
     }
 }

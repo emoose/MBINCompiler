@@ -11,7 +11,8 @@ namespace libMBIN.NMS.GameComponents
         [NMS(Size = 0x20)]
         /* 0x00 */ public string Event;
         /* 0x20 */ public float Distance;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x24 */ public byte[] EndPadding;
+        /* 0x24 */ public bool AllowInShip;
+        [NMS(Size = 0x3, Ignore = true)]
+        /* 0x25 */ public byte[] EndPadding;
     }
 }
