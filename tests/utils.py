@@ -13,6 +13,7 @@ IGNORE_FNAME = '_ignore.txt'
 FAILED_FNAME = '_failed.txt'
 TO_EXML_FAIL = 'Failed conversion to EXML'
 TO_MBIN_FAIL = 'Failed conversion to MBIN'
+SIZE_MISMATCH = 'Size mismatch'
 
 GIT_API = 'https://api.github.com'
 # The data folder should be unpacked into the same folder as this file
@@ -53,6 +54,10 @@ def compare_mbins(left_path, right_path):
                     break
     if bad_loc is not None:
         return fail_comparison(right_path, bad_loc)
+    # We will also ensure that the files are the same length to make sure we
+    # have compared all of each file.
+    if size != os.stat(right_path).st_size:
+        return fail_comparison(right_path, SIZE_MISMATCH)
     # If we got this far then the files are good!
     os.remove(right_path)
     return True
@@ -128,7 +133,10 @@ def fail_comparison(file, loc):
     """
     os.remove(file)
     fname_fixed = file.replace('-recompiled', '')
-    err = f'Difference at 0x{(loc - 0x60):x}'
+    if loc == SIZE_MISMATCH:
+        err = SIZE_MISMATCH
+    else:
+        err = f'Difference at 0x{(loc - 0x60):x}'
     print(f'{fname_fixed},{err}')
     return False
 

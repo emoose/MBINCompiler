@@ -16,6 +16,6 @@ namespace libMBIN.NMS.GameComponents
         [NMS(Size = 0x100)]
         /* 0x204 */ public string Subtitle2;
         /* 0x304 */ public GcAlienRace UseAlienLanguage;
-        /* 0x308 */ List<NMSString0x20> ChooseRandomTextOptions;
+        /* 0x308 */ public List<NMSString0x20> ChooseRandomTextOptions;
     }
 }

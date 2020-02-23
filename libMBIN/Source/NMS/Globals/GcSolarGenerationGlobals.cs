@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(GUID = 0xF9EA8C7607E34AB8)]
+    [NMS(GUID = 0x715C1592CCDFB8CA)]
     public class GcSolarGenerationGlobals : NMSTemplate
     {
         /* 0x0 */ public bool MassiveSolarSystems;
@@ -106,8 +106,8 @@ namespace libMBIN.NMS.Globals
         /* 0x1E0 */ public float[] SpaceshipSpawnFreqMultipliers;
         [NMS(Size = 0x8, EnumType = typeof(GcAlienRace.AlienRaceEnum))]     // I think this is the enum type...
         /* 0x1EC */ public GcAISpaceshipWeightingData[] SpaceshipWeightings;
-        /* 0x2CC */ public float PlanetRingProbability;
-        /* 0x2D0 */ public GcPlanetRingData PlanetRingsMin;
-        /* 0x330 */ public GcPlanetRingData PlanetRingsMax;
+        /* 0x2EC */ public float PlanetRingProbability;
+        /* 0x2F0 */ public GcPlanetRingData PlanetRingsMin;
+        /* 0x350 */ public GcPlanetRingData PlanetRingsMax;
     }
 }
