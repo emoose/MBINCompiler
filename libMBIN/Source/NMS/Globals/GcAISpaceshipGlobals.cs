@@ -7,12 +7,11 @@ namespace libMBIN.NMS.Globals
     public class GcAISpaceshipGlobals : NMSTemplate
     {
         /* 0x00 */ public float Unknown0x0;
-        /* 0x04 */ public bool TradersAttackPirates;
-        /* 0x05 */ public bool TraderHailingEnabled;
-        /* 0x06 */ public bool FreightersAlwaysAttackPlayer;
-        /* 0x07 */ public bool GroundEffectEnabled;
-        /* 0x08 */ public bool AtmosphereEffectEnabled;
-        /* 0x09 */ public bool FillUpOutposts;
+        /* 0x04 */ public bool TraderHailingEnabled;
+        /* 0x05 */ public bool FreightersAlwaysAttackPlayer;
+        /* 0x06 */ public bool GroundEffectEnabled;
+        /* 0x07 */ public bool AtmosphereEffectEnabled;
+        /* 0x08 */ public bool FillUpOutposts;
         /* 0x0C */ public float Unknown0xC;
         /* 0x10 */ public float Unknown0x10;
         /* 0x14 */ public float Unknown0x14;

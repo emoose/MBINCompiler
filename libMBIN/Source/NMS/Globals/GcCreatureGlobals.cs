@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(Size = 0x32A0, GUID = 0x34C07C80A60AB755)]
+    [NMS(Size = 0x32A0, GUID = 0xFF62BD70C8231C78)]
     public class GcCreatureGlobals : NMSTemplate
     {
         [NMS(Size = 0x75)]
@@ -393,41 +393,38 @@ namespace libMBIN.NMS.Globals
         /* 0x01740 */ public float PredatorSpeedMultiplier;
         [NMS(Size = 0x04, Ignore = true)]
         /* 0x01744 */ public byte[] Padding1744;
-        [NMS(Size = 0x4)]
+        [NMS(Size = 0x6)]
         /* 0x01748 */ public NMSString0x10[] KillingSubstances;
 
-        /* 0x01788 */ public int UnknownInt0x1788;
-        /* 0x0178C */ public int UnknownInt0x178C;
-        /* 0x01790 */ public int UnknownInt0x1790;
-        /* 0x01794 */ public int UnknownInt0x1794;
-        // near match to GcCreatureTypes.CreatureTypeEnum
-        [NMS(Size = 0x1A, EnumValue = new string[0x1A] { "Fish", "Antelope", "Bird", "Butterfly", "FlyingSnake", "FlyingLizard", "Diplo", "Triceratops", "Rodent", "Cow", "Cat", "Strider",
-                                                         "Trex", "Shark", "TwoLegAntelope", "SixLegCat", "SixLegCow", "Grunt", "Blob", "Spider", "FloatSpider", "SwimCow", "SwimRodent",
-                                                         "Jellyfish", "Crab", "RockCreature" })]
-        /* 0x01798 */ public GcCreatureSubstanceList[] CreatureSubstanceLists;
-        // near match to GcCreatureTypes.CreatureTypeEnum
-        [NMS(Size = 0x1A, EnumValue = new string[0x1A] { "Fish", "Antelope", "Bird", "Butterfly", "FlyingSnake", "FlyingLizard", "Diplo", "Triceratops", "Rodent", "Cow", "Cat", "Strider",
-                                                         "Trex", "Shark", "TwoLegAntelope", "SixLegCat", "SixLegCow", "Grunt", "Blob", "Spider", "FloatSpider", "SwimCow", "SwimRodent",
-                                                         "Jellyfish", "Crab", "RockCreature" })]
-        /* 0x01AD8 */ public GcCreatureHarvestSubstanceList[] CreatureHarvestSubstanceLists;
-        /* 0x02BE8 */ public int UnknownInt0x2BE8;
-        /* 0x02BEC */ public int UnknownInt0x2BEC;
-        /* 0x02BF0 */ public int UnknownInt0x2BF0;
-        /* 0x02BF4 */ public int UnknownInt0x2BF4;
-        /* 0x02BF8 */ public float Unknown0x2884;
-        /* 0x02BFC */ public float Unknown0x2888;
+        /* 0x017A8 */ public int UnknownInt0x17A8;
+        /* 0x017AC */ public int UnknownInt0x17AC;
+        /* 0x017B0 */ public int UnknownInt0x17B0;
+        /* 0x017B4 */ public int UnknownInt0x17B4;
+        // This enum is the GcCreatureTypes.CreatureTypeEnum with a few entries removed.
+        public enum CreatureTypesEnum  { Fish, Antelope, Bird, Butterfly, FlyingSnake, FlyingLizard, Diplo, Triceratops, Rodent, Cow, Cat, Strider,
+            Trex, Shark, TwoLegAntelope, SixLegCat, SixLegCow, Grunt, Blob, Spider, FloatSpider, SwimCow, SwimRodent, Jellyfish, Crab, RockCreature };
+        [NMS(Size = 0x1A, EnumType = typeof(CreatureTypesEnum))]
+        /* 0x017B8 */ public GcCreatureSubstanceList[] CreatureSubstanceLists;
+        [NMS(Size = 0x1A, EnumType = typeof(CreatureTypesEnum))]
+        /* 0x1AF8 */ public GcCreatureHarvestSubstanceList[] CreatureHarvestSubstanceLists;
+        /* 0x2C08 */ public int UnknownInt0x2C08;
+        /* 0x2C0C */ public int UnknownInt0x2C0C;
+        /* 0x2C10 */ public int UnknownInt0x2C10;
+        /* 0x2C14 */ public int UnknownInt0x2C14;
+        /* 0x2C18 */ public float Unknown0x2884;
+        /* 0x2C1C */ public float Unknown0x2888;
         [NMS(Size = 0x8)]
-        /* 0x02C00 */ public GcCreatureFoodList[] CreatureFoodLists;
+        /* 0x2C20 */ public GcCreatureFoodList[] CreatureFoodLists;
         [NMS(Size = 0x10)]
-        /* 0x03100 */ public string Unknown0x2D90;
-        /* 0x03110 */ public GcWeirdCreatureRewardList WeirdKillingRewards;
+        /* 0x3120 */ public string Unknown0x2D90;
+        /* 0x3130 */ public GcWeirdCreatureRewardList WeirdKillingRewards;
         [NMS(Size = 0x3)]
-        /* 0x03250 */ public NMSString0x10[] LootItems;
-        /* 0x03280 */ public float RockTransformGlobalChance;
+        /* 0x3270 */ public NMSString0x10[] LootItems;
+        /* 0x32A0 */ public float RockTransformGlobalChance;
         [NMS(Size = 0x4)]
-        /* 0x03284 */ public float[] RockTransformChanceModifiers;
-        /* 0x03294 */ public int PauseBetweenCreatureSpawnRequests;
+        /* 0x32A4 */ public float[] RockTransformChanceModifiers;
+        /* 0x32B4 */ public int PauseBetweenCreatureSpawnRequests;
         [NMS(Size = 0x8, Ignore = true)]
-        /* 0x3298 */ public byte[] EndPadding;
+        /* 0x32B8 */ public byte[] EndPadding;
     }
 }

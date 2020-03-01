@@ -7,7 +7,6 @@ namespace libMBIN.NMS.GameComponents
     public class GcFrigateTraitStrengthByType : NMSTemplate
     {
         [NMS(Size = 0xA, EnumType = typeof(GcFrigateStatType.FrigateStatTypeEnum))]
-
         public GcFrigateTraitStrengthValues[] FrigateStatType;
     }
 }

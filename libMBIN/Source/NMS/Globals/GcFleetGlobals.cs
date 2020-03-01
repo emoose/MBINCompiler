@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS( GUID = 0x48C8164C603F537A)]
+    [NMS( GUID = 0xCF018F0813D3ED3C)]
     public class GcFleetGlobals : NMSTemplate
     {
         [NMS(Size = 0x20)]
@@ -162,21 +162,22 @@ namespace libMBIN.NMS.Globals
         /* 0x1300 */ public GcFrigateTraitIcons NegativeTraitIcons;
         /* 0x1800 */ public GcScanEffectData FrigateScanEffect;
         /* 0x1850 */ public GcScanEffectData FrigateHologramScanEffect;
-        /* 0x18A0 */ public GcScanEffectData DamagedFrigateHologramScanEffect;
-        /* 0x18F0 */ public GcScanEffectData DestroyedFrigateHologramScanEffect;
-        /* 0x1940 */ public GcExpeditionEventOccurrenceRate EventTypeOccurrenceChance;
+        /* 0x18A0 */ public GcScanEffectData Unknown0x18A0;
+        /* 0x18F0 */ public GcScanEffectData DamagedFrigateHologramScanEffect;
+        /* 0x1940 */ public GcScanEffectData DestroyedFrigateHologramScanEffect;
+        /* 0x1990 */ public GcExpeditionEventOccurrenceRate EventTypeOccurrenceChance;
         [NMS(Size = 0x5, EnumType = typeof(GcFrigateClass.FrigateClassEnum))]
-        /* 0x19A4 */ public NMSString0x80[] FrigateHologramModels;
+        /* 0x19F4 */ public NMSString0x80[] FrigateHologramModels;
         [NMS(Size = 0x5, EnumType = typeof(GcFrigateClass.FrigateClassEnum))]
-        /* 0x1C24 */ public NMSString0x80[] FrigateLODModels;
+        /* 0x1C74 */ public NMSString0x80[] FrigateLODModels;
         [NMS(Size = 0x4)]
-        /* 0x1EA4 */ public int[] ExpeditionRankBoundaries;
+        /* 0x1EF4 */ public int[] ExpeditionRankBoundaries;
         [NMS(Size = 0xA)]
-        /* 0x1EB4 */ public int[] FrigateLevelVictoriesRequired;
+        /* 0x1F04 */ public int[] FrigateLevelVictoriesRequired;
         [NMS(Size = 0x5)]
-        /* 0x1EDC */ public GcExpeditionDifficultyKeyframe[] ExpeditionDifficultyKeyframes;
+        /* 0x1F2C */ public GcExpeditionDifficultyKeyframe[] ExpeditionDifficultyKeyframes;
         [NMS(Size = 0xA)]
-        /* 0x1F04 */ public NMSString0x80[] FrigateInteriorsToCache;
+        /* 0x1F54 */ public NMSString0x80[] FrigateInteriorsToCache;
         [NMS(Size = 0xC, Ignore = true)]
         public byte[] EndPadding;
     }
