@@ -18,7 +18,7 @@ script:
     # cwd: /home/travis/build/monkeyman192/MBINCompiler
     - sudo chmod +x Build/Release/ubuntu.16.04-x64/MBINCompiler.exe
     # Run the tests
-    - python3.6 -m pytest --platform ubuntu.16.04-x64 --tb=no
+    - python3.6 -m pytest --platform ubuntu.16.04-x64 --tb=no --report
 
     #- msbuild /p:Configuration=Release MBINCompiler.sln
     #- dotnet test
@@ -48,6 +48,7 @@ deploy:
     file:
         - "Build/Release/libMBIN.dll"
         - "Build/Release/win-x64/MBINCompiler.exe"
+        - "report.json"
     on:
         branch: development
         tags: true
@@ -62,6 +63,7 @@ deploy:
     file:
         - "Build/Release/libMBIN.dll"
         - "Build/Release/win-x64/MBINCompiler.exe"
+        - "report.json"
     on:
         branch: master
         tags: true
