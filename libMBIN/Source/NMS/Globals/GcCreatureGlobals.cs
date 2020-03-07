@@ -18,7 +18,6 @@ namespace libMBIN.NMS.Globals
         /* 0x0EB7 */ public bool Unknown0xEB7;
         /* 0x0EB8 */ public bool Unknown0xEB8;
         /* 0x0EB9 */ public bool Unknown0xEB9;
-        /* 0x0EBA */ public bool Unknown0xEBA;
         /* 0x0EBC */ public float Unknown0xEBC;
         /* 0x0EC0 */ public float Unknown0xEC0;
         /* 0x0EC4 */ public float Unknown0xEC4;
@@ -205,7 +204,7 @@ namespace libMBIN.NMS.Globals
         /* 0x012F4 */ public float PredatorRunAwayHealthPercent;
         /* 0x012F8 */ public float PredatorEnergyRecoverRate;
         /* 0x012FC */ public float PredatorEnergyUseChasing;
-        /* 0x01300 */ public float Unknown0x1300;
+        /* 0x01300 */ public bool Unknown0x1300;
         /* 0x01304 */ public float Unknown0x1304;
         /* 0x01308 */ public bool AggressiveSharks;
         /* 0x01309 */ public bool FiendsCanAttack;

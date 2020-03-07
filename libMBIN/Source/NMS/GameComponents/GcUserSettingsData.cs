@@ -4,7 +4,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x3908, GUID = 0xA5978ADBA3DA1EF6, NameHash = 0x3A50D683FD1CF4BF)]
+	[NMS(Size = 0x3910, GUID = 0x20DB3E26EE0951AC, NameHash = 0x3A50D683FD1CF4BF)]
     public class GcUserSettingsData : NMSTemplate
     {
         /* 0x0000 */ public bool InvertLookControls;
@@ -52,5 +52,8 @@ namespace libMBIN.NMS.GameComponents
         /* 0x38FD */ public bool UseShipAutoControlVignette;
         /* 0x3900 */ public float HUDZoom;
         /* 0x3904 */ public float FrontendZoom;
+        /* 0x3908 */ public bool UseAutoTorch;
+        [NMS(Size = 0x7, Ignore = true)]
+        /* 0x3909 */ public byte EndPadding;
     }
 }

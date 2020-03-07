@@ -268,3 +268,5 @@ paket-files/
 tests/**/*.MBIN
 tests/**/.version
 tests/**/_*.txt
+report.json
+results.txt
