@@ -2,7 +2,7 @@ import pytest
 import os.path as op
 import os
 
-from utils import compare_mbins, convert_mbin, ignored_files, failed_files
+from utils import compare_mbins, convert_mbin, failed_files
 
 
 DATA_PATH = op.join(op.dirname(__file__), 'data')
@@ -29,16 +29,6 @@ def pytest_generate_tests(metafunc):
     metafunc.parametrize("fname", fpaths)
 
 
-@pytest.fixture(scope='session')
-def _ignored_files(pytestconfig):
-    """ Return a list of files that we want to ignore when testing.
-    This will ideally be an empty list, but it's good to be able to exclude
-    some files if need be.
-    """
-    _datapath = pytestconfig.getoption('datapath') or DATA_PATH
-    return ignored_files(_datapath)
-
-
 @pytest.fixture()
 def MBINCompiler(platform):
     if platform == 'ubuntu.16.04-x64':
@@ -51,17 +41,14 @@ def MBINCompiler(platform):
     return cmd
 
 
-def test_compare(datapath, MBINCompiler, _ignored_files, fname):
+def test_compare(datapath, MBINCompiler, fname):
     """ Run the comparison test on a file.
     This test is parameterised by fpath which will contain the paths of all
     .MBIN files in the ./data directory.
     """
-    if op.basename(fname) not in _ignored_files:
-        converted = convert_mbin(fname, MBINCompiler)
-        if converted not in (TO_EXML_FAIL, TO_MBIN_FAIL):
-            assert compare_mbins(fname, converted)
-        else:
-            print(f'{fname},{converted}')
-            pytest.fail()
+    converted = convert_mbin(fname, MBINCompiler)
+    if converted not in (TO_EXML_FAIL, TO_MBIN_FAIL):
+        assert compare_mbins(fname, converted)
     else:
-        pytest.skip()
+        print(f'{fname},{converted}')
+        pytest.fail()

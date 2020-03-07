@@ -1,4 +1,5 @@
 from io import BytesIO
+import json
 import os
 import os.path as op
 import tempfile
@@ -9,7 +10,6 @@ import zipfile
 import requests
 
 
-IGNORE_FNAME = '_ignore.txt'
 FAILED_FNAME = '_failed.txt'
 TO_EXML_FAIL = 'Failed conversion to EXML'
 TO_MBIN_FAIL = 'Failed conversion to MBIN'
@@ -193,22 +193,41 @@ def format_err_results(results):
     return table
 
 
-def ignored_files(fpath):
-    """ Gets the list of files to be ignored within a given directory.
+def generate_report(input_fname, output_fname):
+    """ Generate a .json file which contains info about the test.
 
-    Parmaeters
+    Parameters
     ----------
-    fpath : str
-        Absolute path to a directory containing files and an _ignore.txt file.
-
-    Returns
-    files : list
-        List of filenames within the folder that aren't to be tested.
+    input_fname : str
+        The path to the input file to be read.
+        This file MUST be space separated with rows in the format:
+        <file name> <result>
+    output_fname: str
+        The path to write the json formatted data to.
     """
-    files = []
-    ignore_file = op.join(fpath, IGNORE_FNAME)
-    if op.exists(ignore_file):
-        with open(ignore_file) as f:
+
+    if op.exists(input_fname):
+        data = {'passed_count': 0,
+                'failed_count': 0,
+                'total_count': 0,
+                'result': '?/?',
+                'passed': [],
+                'failed': [],
+                'skipped': []}
+        with open(input_fname, 'r') as f:
             for line in f:
-                files.append(line.strip('\n'))
-    return files
+                try:
+                    fname, result = line.replace('\n', '').split(' ')
+                    data[result].append(fname)
+                    data['total_count'] += 1
+                    if result == 'passed':
+                        data['passed_count'] += 1
+                    elif result == 'failed':
+                        data['failed_count'] += 1
+                except ValueError:
+                    # This may happen on the blank final line
+                    pass
+            # Now that we have done every line. Determine the result value
+            data['result'] = f"{data['passed_count']}/{data['total_count']}"
+        with open(output_fname, 'w') as f:
+            json.dump(data, f, indent=4)
