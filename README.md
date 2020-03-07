@@ -1,7 +1,7 @@
 # MBINCompiler
 **Project Owner**: monkeyman192
 
-## DOWNLOAD ![Github Total Downloads](https://img.shields.io/github/downloads-pre/monkeyman192/MBINCompiler/total.svg) ![GitHub Latest Pre-Release Version](https://img.shields.io/github/release/monkeyman192/MBINCompiler/all.svg) ![GitHub Latest Release Version](https://img.shields.io/github/release/monkeyman192/MBINCompiler.svg)
+## DOWNLOAD ![Github Total Downloads](https://img.shields.io/github/downloads-pre/monkeyman192/MBINCompiler/total.svg) ![GitHub Latest Pre-Release Version](https://img.shields.io/github/release/monkeyman192/MBINCompiler/all.svg) ![GitHub Latest Release Version](https://img.shields.io/github/release/monkeyman192/MBINCompiler.svg) [![MBIN test file coverage](https://img.shields.io/badge/dynamic/json?color=blueviolet&label=test%20file%20coverage&query=result&url=https%3A%2F%2Fgithub.com%2Fmonkeyman192%2FMBINCompiler%2Freleases%2Flatest%2Fdownload%2Freport.json)](https://github.com/monkeyman192/MBINCompiler/releases/latest/download/report.json)
 
 _**For Modders:** You only need to download MBINCompiler.exe_  
 _**For Developers:** You can download a precompiled DLL or get the libMBIN source and integrate with your own NMS modding tools._
