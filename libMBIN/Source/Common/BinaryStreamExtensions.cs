@@ -44,7 +44,15 @@ namespace libMBIN {
             str = str ?? String.Empty;
 
             int bufferSize = encoding.GetBytes( str ).Length;
-            if (size != null) bufferSize = size.Value;
+
+            if (size != null) {
+                if (size.Value - bufferSize < 0) {
+                    Logger.LogMessage($@"The provided string '{str}' is too long (0x{bufferSize:X}). " +
+                                      $"It will be shortened to a length of 0x{size.Value:X}. " +
+                                      "This may have unintended size effects.");
+                }
+                bufferSize = size.Value;
+            }
 
             int encodingSize = encoding.GetMaxByteCount( 1 );
 
