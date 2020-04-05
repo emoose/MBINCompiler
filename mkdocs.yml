@@ -1,6 +1,9 @@
 theme:
   name: readthedocs
-  custom_dir: 'custom_theme/'
+  custom_dir: 'docs/custom_theme/'
+  highlightjs: true
+  hljs_languages:
+    - c#
 site_name: MBINCompiler
 site_dir: html_docs/site/
 nav:

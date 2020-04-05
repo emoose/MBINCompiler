@@ -4,8 +4,11 @@
     {{ super() }}
     <script type='text/javascript' src="{{ base_url }}/js/get_version.js"></script>
     <script type='text/javascript' src="{{ base_url }}/js/jquery-1.10.2.min.js"></script>
-    <script type='text/javascript'> 
-        GetVersion();
+    <script type='text/javascript'>
+        window.onload = function(){
+            var mbinc_version = GetVersion();
+            document.getElementById('minc_version').innerHTML = mbinc_version;
+        }
     </script>
     <script type="text/javascript" src="{{ base_url }}/js/download.js"></script>
 {% endblock %}
@@ -15,7 +18,7 @@
     <span class="caption-text">Downloads</span>
     <ul class="subnav">
         <li>
-            <a onclick="GetReleases(1)" href="#" id="direct_dl">Recent Release</a>
+            <a onclick="GetReleases(1)" href="#" id="direct_dl">Download</a>
         </li>
         <li>
             <a href="https://github.com/monkeyman192/MBINCompiler">Source code (GitHub)</a>

@@ -8,9 +8,6 @@ function GetVersion()
         }
         var version = release.tag_name;
 
-        var asset_standard = release.assets[0];
-        var asset_complete = release.assets[1];
-
-        document.getElementById("direct_dl").innerText = "Download (" + version + ")";
+        document.getElementById("direct_dl").innerText = "Download latest .exe (" + version + ")";
     });
 }
