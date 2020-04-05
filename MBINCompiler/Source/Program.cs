@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Diagnostics;
 
 using libMBIN;
 
@@ -25,7 +26,19 @@ namespace MBINCompiler {
 
             CommandLine.Initialize();
 
-            Logger.Open( Path.ChangeExtension( Utils.GetExecutablePath(), ".log" ) );
+            Process running_proc = Process.GetCurrentProcess();
+            Process[] mbinc_procs = Process.GetProcessesByName("MBINCompiler");
+
+            // If we only have one instance of MBINCompiler running create the usual log.
+            // If a process starts and there is already a running MBINCompiler process, then
+            // add the PID to the log file name so that there is no issue with two processes
+            // attempting to write to the same log file.
+            if (mbinc_procs.Length == 1) {
+                Logger.Open(Path.ChangeExtension(Utils.GetExecutablePath(), ".log"));
+            } else {
+                Logger.Open(Path.ChangeExtension(Utils.GetExecutablePath(), $".{running_proc.Id}.log"));
+            }
+            
             Logger.EnableTraceLogging = true;
 
             Logger.LogMessage( "VERSION", $"MBINCompiler v{Version.GetVersionStringCompact()}" );
