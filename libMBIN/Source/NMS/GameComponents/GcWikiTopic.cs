@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0xD0, GUID = 0xCFB68F7E2241F07A, NameHash = 0x55D566D2C6EFD1C1)]
+	[NMS(Size = 0xF0, GUID = 0x7EA1EEF36039128B, NameHash = 0x55D566D2C6EFD1C1)]
     public class GcWikiTopic : NMSTemplate
     {
         [NMS(Size = 0x20)]
@@ -14,10 +14,12 @@ namespace libMBIN.NMS.GameComponents
         /* 0xA8 */ public List<GcWikiPage>  Pages;
         [NMS(Size = 0x10)]
         /* 0xB8 */ public string Mission;
-        /* 0xC8 */ public bool Seen;
-        /* 0xC9 */ public bool Unlocked;
+        [NMS(Size = 0x20)]
+        /* 0xC8 */ public string MissionButtonText;
+        /* 0xE8 */ public bool Seen;
+        /* 0xE9 */ public bool Unlocked;
         [NMS(Size = 0x2, Ignore = true)]
-        /* 0xCA */ public byte[] PaddingCA;
-        /* 0xCC */ public GcActionSetType ActionSet;
+        /* 0xEA */ public byte[] PaddingEA;
+        /* 0xEC */ public GcActionSetType ActionSet;
     }
 }

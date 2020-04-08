@@ -4,7 +4,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x3910, GUID = 0x20DB3E26EE0951AC, NameHash = 0x3A50D683FD1CF4BF)]
+	[NMS(Size = 0x3910, GUID = 0x30BD6ACB2AA264E4, NameHash = 0x3A50D683FD1CF4BF)]
     public class GcUserSettingsData : NMSTemplate
     {
         /* 0x0000 */ public bool InvertLookControls;
@@ -39,21 +39,24 @@ namespace libMBIN.NMS.GameComponents
         /* 0x38E0 */ public bool VoiceChat;
         /* 0x38E1 */ public bool Multiplayer;
         /* 0x38E2 */ public bool InstantUIInputs;
+        /* 0x38E3 */ public bool SpeechToText;
+        /* 0x38E4 */ public bool Translate;
         public enum TemperatureUnitEnum { Invalid, C, F, K }
-        /* 0x38E4 */ public TemperatureUnitEnum TemperatureUnit;
-        /* 0x38E8 */ public bool UseOldMouseFlight;
-        /* 0x38EC */ public int LastSeenCommunityMission;
-        /* 0x38F0 */ public int LastSeenCommunityMissionTier;
+        /* 0x38E8 */ public TemperatureUnitEnum TemperatureUnit;
+        /* 0x38EC */ public bool UseOldMouseFlight;
+        /* 0x38F0 */ public int LastSeenCommunityMission;
+        /* 0x38F4 */ public int LastSeenCommunityMissionTier;
         public enum MovementModeEnum { Teleporter, Smooth }
-        /* 0x38F4 */ public MovementModeEnum MovementMode;
+        /* 0x38F8 */ public MovementModeEnum MovementMode;
         public enum TurnModeEnum { Smooth, Snap }
-        /* 0x38F8 */ public TurnModeEnum TurnMode;
-        /* 0x38FC */ public bool UseVrVignette;
-        /* 0x38FD */ public bool UseShipAutoControlVignette;
-        /* 0x3900 */ public float HUDZoom;
-        /* 0x3904 */ public float FrontendZoom;
-        /* 0x3908 */ public bool UseAutoTorch;
-        [NMS(Size = 0x7, Ignore = true)]
-        /* 0x3909 */ public byte EndPadding;
+        /* 0x38FC */ public TurnModeEnum TurnMode;
+        /* 0x3900 */ public bool UseVrVignette;
+        /* 0x3901 */ public bool UseShipAutoControlVignette;
+        /* 0x3904 */ public float HUDZoom;
+        /* 0x3908 */ public float FrontendZoom;
+        /* 0x390C */ public bool UseAutoTorch;
+        /* 0x390D */ public bool BaseComplexityLimitsEnabled;
+        [NMS(Size = 0x2, Ignore = true)]
+        /* 0x390E */ public byte EndPadding;
     }
 }

@@ -3,10 +3,10 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0xBCC31AD0357D4610, NameHash = 0x3E6292A999E2A6)]
+	[NMS(Size = 0x4, GUID = 0x8486D458342169FC, NameHash = 0x3E6292A999E2A6)]
     public class GcStatsTypes : NMSTemplate
     {
-        // size: 0x94
+        // size: 0x96
 		public enum StatsTypeEnum {
             Unspecified, Weapon_Laser, Weapon_Laser_Damage, Weapon_Laser_Mining_Speed, Weapon_Laser_HeatTime, Weapon_Laser_Bounce, Weapon_Laser_ReloadTime, Weapon_Laser_Recoil, Weapon_Laser_Drain, Weapon_Laser_StrongLaser,
             Weapon_Laser_ChargeTime, Weapon_Laser_MiningBonus, Weapon_Projectile, Weapon_Projectile_Damage, Weapon_Projectile_Range, Weapon_Projectile_Rate, Weapon_Projectile_ClipSize, Weapon_Projectile_ReloadTime, Weapon_Projectile_Recoil, Weapon_Projectile_Bounce,
@@ -22,7 +22,7 @@ namespace libMBIN.NMS.GameComponents
             Ship_Scan, Ship_Scan_EconomyFilter, Ship_Scan_ConflictFilter, Ship_Hyperdrive, Ship_Hyperdrive_JumpDistance, Ship_Hyperdrive_JumpsPerCell, Ship_Hyperdrive_QuickWarp, Ship_Launcher, Ship_Launcher_TakeOffCost, Ship_Launcher_AutoCharge,
             Ship_PulseDrive, Ship_PulseDrive_MiniJumpFuelSpending, Ship_PulseDrive_MiniJumpSpeed, Ship_Boost, Ship_Maneuverability, Ship_BoostManeuverability, Ship_Teleport, Freighter_Hyperdrive, Freighter_Hyperdrive_JumpDistance, Freighter_Teleport,
             Vehicle_Boost, Vehicle_Engine, Vehicle_Scan, Vehicle_EngineFuelUse, Vehicle_EngineTopSpeed, Vehicle_BoostSpeed, Vehicle_BoostTanks, Vehicle_Grip, Vehicle_SkidGrip, Vehicle_SubBoostSpeed,
-            Vehicle_Laser, Vehicle_LaserDamage, Vehicle_LaserHeatTime, Vehicle_LaserStrongLaser, Vehicle_Gun, Vehicle_GunDamage, Vehicle_GunHeatTime, Vehicle_GunRate
+            Vehicle_Laser, Vehicle_LaserDamage, Vehicle_LaserHeatTime, Vehicle_LaserStrongLaser, Vehicle_Gun, Vehicle_GunDamage, Vehicle_GunHeatTime, Vehicle_GunRate, Vehicle_TerrainEdit, Vehicle_FuelRegen,
         }
         public StatsTypeEnum StatsType;
     }

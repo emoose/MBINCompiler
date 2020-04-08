@@ -6,10 +6,10 @@ using System;
 
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(Size = 0x218, GUID = 0x3BD5B163E6D81E47, NameHash = 0xB62E6456DFE47836)]
+    [NMS(Size = 0x218, GUID = 0x91C5DA0BA77BCD3B, NameHash = 0xB62E6456DFE47836)]
     public class TkGlobals : NMSTemplate
     {
-        public enum AssertsLevelsEnum { DIsabled, Ignored, Skipped, Enabled }
+        public enum AssertsLevelsEnum { Disabled, Ignored, Skipped, Enabled }
         /* 0x000 */ public AssertsLevelsEnum AssertsLevels;
         /* 0x004 */ public bool DefaultSelectIgnoreAsserts;
         [Flags]

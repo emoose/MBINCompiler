@@ -14,9 +14,7 @@ namespace libMBIN.NMS.Toolkit
         public float[] IKFullBodyIterations;
 
         // boolean describing whether or not the game needs to restant when the specific setting has been changed... I think...
-        [NMS(Size = 0x27, EnumType = typeof(TkEngineSettingTypes.EngineSettingEnum))]
+        [NMS(Size = 0x28, EnumType = typeof(TkEngineSettingTypes.EngineSettingEnum))]
         public bool[] NeedsGameRestart;
-        [NMS(Size = 0x1, Ignore = true)]
-        public byte[] EndPadding;
     }
 }

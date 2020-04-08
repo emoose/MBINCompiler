@@ -5,22 +5,18 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0xD8, Alignment = 0x8, GUID = 0x9B3B99197A4F4CDD, NameHash = 0x3FE862FE8570BE69)]
+	[NMS(Size = 0xD8, Alignment = 0x8, GUID = 0x225E7B835A1AAA17, NameHash = 0x3FE862FE8570BE69)]
     public class GcAlienPuzzleOption : NMSTemplate
     {
         [NMS(Size = 0x20)]
         /* 0x00 */ public string Name;
-
         [NMS(Size = 0x20)]
         /* 0x20 */ public string Text;
-
         /* 0x40 */ public bool IsAlien;
         [NMS(Size = 0x7, Ignore = true)]
         /* 0x41 */ public byte[] padding41;
-
         [NMS(Size = 0x10)]
         /* 0x48 */ public string Cost;
-
         /* 0x58 */ public List<NMSString0x10> Rewards;
 		/* 0x68 */ public GcAlienMood Mood;
         /* 0x6C */ public GcNPCPropTypes Prop;

@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0xC30, GUID = 0xC9B497E87BA7F0F, NameHash = 0x904DB42CF570F4BB)]
+	[NMS(Size = 0x1030, GUID = 0x7BDA83B1F4CC9A6E, NameHash = 0x904DB42CF570F4BB)]
     public class GcVehicleData : NMSTemplate
     {
         [NMS(Size = 0x10)]
@@ -167,8 +167,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0xAD5 */ public string AudioJump;
 
         /* 0xB55 */ public bool DriveOnTopOfWater;
-        [NMS(Size = 0x2, Ignore = true)]
-        /* 0xB56 */ public byte[] PaddingB56;
         /* 0xB58 */ public float VehicleUnderwaterRotateTime;
         /* 0xB5C */ public float VehicleAudioSuspensionThreshold;
         /* 0xB60 */ public float VehicleAudioSuspensionScale;
@@ -182,7 +180,12 @@ namespace libMBIN.NMS.GameComponents
         [NMS(Size = 0xA)]
         /* 0xB80 */ public Vector4f[] WheelGrassPushers;
         /* 0xC20 */ public float CreatureMassScale;
-        [NMS(Size = 0xC, Ignore = true)]
-        /* 0xC24 */ public byte[] EndPadding;
+        [NMS(Size = 0x2)]
+        /* 0xC24 */ public NMSString0x100[] HeadlightNames;
+        [NMS(Size = 0x2)]
+        /* 0xE24 */ public NMSString0x100[] CockpitHeadlightNames;
+        /* 0x1024 */ public float HeadlightIntensity;
+        [NMS(Size = 0x8, Ignore = true)]
+        /* 0x1028 */ public byte[] EndPadding;
     }
 }

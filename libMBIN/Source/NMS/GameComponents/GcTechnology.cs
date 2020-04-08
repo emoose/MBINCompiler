@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x350, GUID = 0x8FE513CD484DB1BA, NameHash = 0x9F1CE8466638E767)]
+	[NMS(Size = 0x350, GUID = 0xF32011DB72EDEEAB, NameHash = 0x9F1CE8466638E767)]
     public class GcTechnology : NMSTemplate
     {
         [NMS(Size = 0x10)]
@@ -50,8 +50,8 @@ namespace libMBIN.NMS.GameComponents
         /* 0x26A */ public bool Core;
         /* 0x26B */ public bool RepairTech;
         /* 0x26C */ public bool Procedural;
-        /* 0x270 */ public GcTechnologyCategory TechnologyCategory;
-        /* 0x274 */ public GcTechnologyRarity TechnologyRarity;
+        /* 0x270 */ public GcTechnologyCategory Category;
+        /* 0x274 */ public GcTechnologyRarity Rarity;
         /* 0x278 */ public float Value;
         [NMS(Size = 0x4, Ignore = true)]
         /* 0x27C */ public byte[] Padding27C;

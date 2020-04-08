@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0xA8, GUID = 0x8A33356FBCF71149, NameHash = 0xB5A01AE676FD46D)]
+	[NMS(Size = 0xA8, GUID = 0x166B345F8735C8D1, NameHash = 0xB5A01AE676FD46D)]
     public class GcCustomisationGroup : NMSTemplate
     {
         [NMS(Size = 0x10)]
@@ -13,6 +13,7 @@ namespace libMBIN.NMS.GameComponents
         [NMS(Size = 0x20)]
         /* 0x10 */ public string GroupTitle;
         /* 0x30 */ public bool IsBannerGroup;
+        /* 0x31 */ public bool ForceShowAllColourOptions;
         /* 0x34 */ public GcCustomisationCameraData CameraData;
         /* 0x68 */ public List<GcCustomisationDescriptorGroupOptions> DescriptorOptions;
         /* 0x78 */ public List<GcCustomisationTextureGroup> TextureGroups;

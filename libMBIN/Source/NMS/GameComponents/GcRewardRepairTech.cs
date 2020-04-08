@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0x7CCDE164FB24F726, NameHash = 0xE3043951C9DF31BE)]
+	[NMS(Size = 0x4, GUID = 0xD1CB6B7412C8BD0, NameHash = 0xE3043951C9DF31BE)]
     public class GcRewardRepairTech : NMSTemplate
     {
         public GcTechnologyCategory Category;

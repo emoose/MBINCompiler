@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x2C0, Alignment = 0x10, GUID = 0xF5E77354A57C365B, NameHash = 0xDAB0554EA36957B5)]
+	[NMS(Size = 0x2D0, Alignment = 0x10, GUID = 0xFBD61FEAD53524EF, NameHash = 0xDAB0554EA36957B5)]
     public class GcInteractionComponentData : NMSTemplate
     {
 		public enum InteractionActionEnum { PressButton, HoldButton, Shoot }
@@ -46,12 +46,12 @@ namespace libMBIN.NMS.GameComponents
         /* 0x254 */ public GcInteractionDof DepthOfField;
         /* 0x268 */ public List<GcAlienPuzzleMissionOverride> PuzzleMissionOverrideTable;
         /* 0x278 */ public GcStoryUtilityOverride StoryUtilityOverrideData;
-        public enum OverrideInteriorExteriorMarkerEnum { Interior, Exterior }
-        /* 0x2A8 */ public OverrideInteriorExteriorMarkerEnum OverrideInteriorExteriorMarker;
-        /* 0x2AC */ public bool ReseedAfterRewardSuccess;
-        /* 0x2AD */ public bool UsePersonalPersistentBuffer;
-        /* 0x2B0 */ public float InWorldUIScaler;
+        public enum OverrideInteriorExteriorMarkerEnum { No, Interior, Exterior }
+        /* 0x2B8 */ public OverrideInteriorExteriorMarkerEnum OverrideInteriorExteriorMarker;
+        /* 0x2BC */ public bool ReseedAfterRewardSuccess;
+        /* 0x2BD */ public bool UsePersonalPersistentBuffer;
+        /* 0x2C0 */ public float InWorldUIScaler;
         [NMS(Size = 0xC, Ignore = true)]
-        /* 0x2B4 */ public byte[] EndPadding;
+        /* 0x2C4 */ public byte[] EndPadding;
     }
 }

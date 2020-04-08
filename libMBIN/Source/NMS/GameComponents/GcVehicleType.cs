@@ -3,10 +3,10 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0xB05429E14A6EE274, NameHash = 0x46812D05ED43A48D)]
+	[NMS(Size = 0x4, GUID = 0xD3947F166802A50B, NameHash = 0x46812D05ED43A48D)]
     public class GcVehicleType : NMSTemplate
     {
-		public enum VehicleTypeEnum { Bike, Buggy, Truck, WheeledBike, Hovercraft, Submarine }
+		public enum VehicleTypeEnum { Bike, Buggy, Truck, WheeledBike, Hovercraft, Submarine, Mech }
 		public VehicleTypeEnum VehicleType;
     }
 }

@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Alignment = 0x8, Size = 0x1B8, GUID = 0xA071AC732FC7F531, NameHash = 0xEAE36C86E1479AF5)]
+	[NMS(Alignment = 0x8, Size = 0x1B8, GUID = 0x97EE57B6530F892, NameHash = 0xEAE36C86E1479AF5)]
     public class GcSimpleInteractionComponentData : NMSTemplate
     {
         // 0x1E entries
@@ -64,7 +64,8 @@ namespace libMBIN.NMS.GameComponents
         /* 0x1A0 */ public List<GcPersistencyMissionOverride> PersistencyBufferOverride;
         /* 0x1B0 */ public bool UsePersonalPersistentBuffer;
         /* 0x1B1 */ public bool ReseedOnRewardSuccess;
-        [NMS(Size = 0x6, Ignore = true)]
-        /* 0x1B2 */ public byte[] EndPadding;
+        /* 0x1B2 */ public bool CanCollectInMech;
+        [NMS(Size = 0x5, Ignore = true)]
+        /* 0x1B3 */ public byte[] EndPadding;
     }
 }
