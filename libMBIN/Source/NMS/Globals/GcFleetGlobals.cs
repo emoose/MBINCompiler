@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS( GUID = 0xCF018F0813D3ED3C)]
+    [NMS(Size = 0x2460, GUID = 0xAD8C55694A65F6C5)]
     public class GcFleetGlobals : NMSTemplate
     {
         [NMS(Size = 0x20)]
@@ -179,6 +179,6 @@ namespace libMBIN.NMS.Globals
         [NMS(Size = 0xA)]
         /* 0x1F54 */ public NMSString0x80[] FrigateInteriorsToCache;
         [NMS(Size = 0xC, Ignore = true)]
-        public byte[] EndPadding;
+        /* 0x2454 */ public byte[] EndPadding;
     }
 }

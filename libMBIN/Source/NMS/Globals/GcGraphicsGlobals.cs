@@ -3,18 +3,19 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS( GUID = 0x4672BEB5DDAA78CA)]
+    [NMS(Size = 0x8C0, GUID = 0x92D7F4BEEA8582C2)]
     public class GcGraphicsGlobals : NMSTemplate
     {
         /* 0x0 */ public float LUTDistanceFlightMultiplier;
         /* 0x4 */ public float SunLightIntensity;
-        /* 0x8 */ public float HBAOBias;
-        /* 0xC */ public float HBAORadius;
-        /* 0x10 */ public float HBAOIntensity;
-        /* 0x14 */ public float LightShaftScattering;
-        /* 0x18 */ public float LightShaftStrength;
-        /* 0x1C */ public float LightShaftBottom;
-        /* 0x20 */ public float LightShaftTop;
+        /* 0x8 */ public float Unknown0x8;
+        /* 0xC */ public float HBAOBias;
+        /* 0x10 */ public float HBAORadius;
+        /* 0x14 */ public float HBAOIntensity;
+        /* 0x18 */ public float LightShaftScattering;
+        /* 0x1C */ public float LightShaftStrength;
+        /* 0x20 */ public float LightShaftBottom;
+        /* 0x24 */ public float LightShaftTop;
         /* 0x30 */ public Colour LightShaftColourBottom;
         /* 0x40 */ public Colour LightShaftColourTop;
         /* 0x50 */ public float SunRayDensity;

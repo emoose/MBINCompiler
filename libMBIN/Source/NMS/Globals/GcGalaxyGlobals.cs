@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(GUID = 0x2DBF548DD669D779)]
+    [NMS(Size = 0x1D80, GUID = 0xAE3B512EEB51E84A)]
     public class GcGalaxyGlobals : NMSTemplate
     {
         /* 0x0000 */ public bool Unknown0x0;
@@ -197,7 +197,7 @@ namespace libMBIN.NMS.Globals
         /* 0x14D4 */ public byte[] Padding14D4;
         /* 0x14E0 */ public Colour SelectionTreeColour;
         /* 0x14F0 */ public Vector2f GoalDistanceRange;
-        [NMS(Size = 0x08, Ignore = true)]
+        [NMS(Size = 0x8, Ignore = true)]
         /* 0x14F8 */ public byte[] Padding14F8;
         /* 0x1500 */ public GcGalaxyStarColours BaseStarColours;
         /* 0x1540 */ public GcGalaxyCameraData Camera;
@@ -212,7 +212,7 @@ namespace libMBIN.NMS.Globals
         /* 0x1990 */ public GcGalaxyRenderSetupData FinalAnimationRenderSetup;
         /* 0x1BA0 */ public GcGalaxyGenerationSetupData FinalAnimationGeneration;
         /* 0x1D20 */ public GcGalaxySolarSystemParams SolarSystemParameters;
-        [NMS(Size = 0x08, Ignore = true)]
+        [NMS(Size = 0x8, Ignore = true)]
         /* 0x1D78 */ public byte[] Padding1D78;
     }
 }

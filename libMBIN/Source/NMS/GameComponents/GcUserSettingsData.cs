@@ -57,6 +57,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x390C */ public bool UseAutoTorch;
         /* 0x390D */ public bool BaseComplexityLimitsEnabled;
         [NMS(Size = 0x2, Ignore = true)]
-        /* 0x390E */ public byte EndPadding;
+        /* 0x390E */ public byte[] EndPadding;
     }
 }

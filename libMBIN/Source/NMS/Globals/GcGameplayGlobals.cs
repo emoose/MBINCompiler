@@ -3,16 +3,15 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(GUID = 0xB00A84AF169CE225)]
+    [NMS(Size = 0x1CC0, GUID = 0x54B11D18DB2AD70B)]
     public class GcGameplayGlobals : NMSTemplate
     {
-        /* 0x000 */ public int UnknownInt0x0;
+        /* 0x000 */ public float Unknown0x0;
         /* 0x004 */ public int UnknownInt0x4;
         /* 0x008 */ public int UnknownInt0x8;
-        /* 0x00C */ public float Unknown0xC;
-        /* 0x010 */ public int UnknownInt0x10;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x014 */ public byte[] Padding14;
+        /* 0x00C */ public int UnknownInt0xC;
+        /* 0x010 */ public float Unknown0x10;
+        /* 0x014 */ public int UnknownInt0x14;
         [NMS(Size = 0x2D)]
         /* 0x018 */ public NMSString0x10[] SalvageStrings;     // TODO: categorise better...
         /* 0x2E8 */ public bool Unknown0x2E8;

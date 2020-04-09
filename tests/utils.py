@@ -49,7 +49,11 @@ def compare_mbins(left_path, right_path):
                     bad_loc = i
                     break
             for i in range(0x10, size):
-                if left_bytes[i] != right_bytes[i]:
+                try:
+                    if left_bytes[i] != right_bytes[i]:
+                        bad_loc = i
+                        break
+                except IndexError:
                     bad_loc = i
                     break
     if bad_loc is not None:
