@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS( GUID = 0x835A9EE0AC007013 )]
+    [NMS(Size = 0x30, GUID = 0x835A9EE0AC007013 )]
     public class GcPlacementGlobals : NMSTemplate
     {
         /* 0x0 */ public float MinFrequency;

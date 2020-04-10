@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS( GUID = 0x48CC76496D394BEC)]
+    [NMS(Size = 0x640, GUID = 0x48CC76496D394BEC)]
     public class GcRobotGlobals : NMSTemplate
     {
 		/* 0x0 */ public float GrenadeLaunchFlightTime;

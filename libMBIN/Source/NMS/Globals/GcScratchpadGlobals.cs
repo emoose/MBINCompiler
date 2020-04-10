@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS( GUID = 0xC14472951E47BFF8 )]
+    [NMS(Size = 0x27D0, GUID = 0xC14472951E47BFF8 )]
     public class GcScratchpadGlobals : NMSTemplate
     {
         [NMS(Size = 0xE)]
