@@ -5,8 +5,8 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Toolkit
 {
-	[NMS(GUID = 0xC3D61DFE9D3AB5CD, NameHash = 0xE09F11724D654285)]
-    public class TkLSystemRule : NMSTemplate // 0xB8 bytes
+	[NMS(Size = 0xB8, Alignment = 0x8, GUID = 0xC3D61DFE9D3AB5CD, NameHash = 0xE09F11724D654285)]
+    public class TkLSystemRule : NMSTemplate
     {
         [NMS(Size = 0x20)]
         public string Name;

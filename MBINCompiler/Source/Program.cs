@@ -27,7 +27,7 @@ namespace MBINCompiler {
             CommandLine.Initialize();
 
             Process running_proc = Process.GetCurrentProcess();
-            Process[] mbinc_procs = Process.GetProcessesByName("MBINCompiler");
+            Process[] mbinc_procs = Process.GetProcessesByName(running_proc.ProcessName);
 
             // If we only have one instance of MBINCompiler running create the usual log.
             // If a process starts and there is already a running MBINCompiler process, then
