@@ -132,12 +132,12 @@ namespace libMBIN.NMS.Globals
         /* 0x270 */ public float MinRadiusForBases;
         /* 0x274 */ public float BaseRadiusExtension;
         /* 0x278 */ public float MaxRadiusForBases;
-        /* 0x27C */ public float Unknown0x27C;
+        /* 0x27C */ public float MaximumPipeSegmentLength;
         /* 0x280 */ public float Unknown0x280;
-        /* 0x284 */ public float Unknown0x284;
-        /* 0x288 */ public float Unknown0x288;
-        /* 0x28C */ public float Unknown0x28C;
-        /* 0x290 */ public float Unknown0x290;
+        /* 0x284 */ public float MaximumWireSegmentLength;
+        /* 0x288 */ public float BuildItemFreePlacementDistance;
+        /* 0x28C */ public float InvalidSkyPlacementVerticleOffset;
+        /* 0x290 */ public float MinimumHorizontalSnapDistance;
         /* 0x294 */ public float Unknown0x294;
         /* 0x298 */ public float Unknown0x298;
         /* 0x29C */ public float Unknown0x29C;

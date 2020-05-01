@@ -17,6 +17,7 @@ namespace MBINCompiler
         {
             public static bool optDebugMode              = false;
             public static bool optQuiet                  = false;
+            public static bool optNoLog                  = false;
             public static OverwriteMode optOverwrite     = OverwriteMode.Prompt;
             public static bool optIgnoreErrors           = false;
             public static FormatType optInputFormat      = FormatType.Unknown;
@@ -41,6 +42,9 @@ namespace MBINCompiler
 
         // --quiet
         public static bool Quiet { get => optQuiet; internal set => optQuiet = value; }
+
+        // --nolog
+        public static bool NoLog { get => optNoLog; internal set => optNoLog = value; }
 
         // --overwrite and --keep
         public static OverwriteMode Overwrite { get => optOverwrite; internal set => optOverwrite = value; }
@@ -71,6 +75,8 @@ namespace MBINCompiler
                             description = "Do not display any console messages.\n" +
                                         "(Except requested help or version info.)\n" +
                                         "Do not wait for key press." },
+            new Option { shortName = 'Q', longName = "nolog",
+                            description = "Do not generate a log for the conversion."},
 
             new Option { longName = "debug", isHidden = true,
                             description = "Unhide the help info for hidden debug options." }

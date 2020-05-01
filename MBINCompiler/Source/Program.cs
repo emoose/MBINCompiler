@@ -26,29 +26,6 @@ namespace MBINCompiler {
 
             CommandLine.Initialize();
 
-            Process running_proc = Process.GetCurrentProcess();
-            Process[] mbinc_procs = Process.GetProcessesByName(running_proc.ProcessName);
-
-            // If we only have one instance of MBINCompiler running create the usual log.
-            // If a process starts and there is already a running MBINCompiler process, then
-            // add the PID to the log file name so that there is no issue with two processes
-            // attempting to write to the same log file.
-            if (mbinc_procs.Length == 1) {
-                Logger.Open(Path.ChangeExtension(Utils.GetExecutablePath(), ".log"));
-            } else {
-                Logger.Open(Path.ChangeExtension(Utils.GetExecutablePath(), $".{running_proc.Id}.log"));
-            }
-            
-            Logger.EnableTraceLogging = true;
-
-            Logger.LogMessage( "VERSION", $"MBINCompiler v{Version.GetVersionStringCompact()}" );
-            Logger.LogMessage( "ARGS", $"\"{string.Join( "\" \"", args )}\"\n" );
-            using ( var indent = new Logger.IndentScope() ) {
-                Logger.LogMessage( "If you encounter any errors, please submit a bug report and include this log file.\n" +
-                                   "Please check that there isn't already a similar issue open before creating a new one.\n" +
-                                   "https://github.com/monkeyman192/MBINCompiler/issues\n" );
-            }
-
             var options = new CommandLineParser( args );
             options.AddOptions( null,       OPTIONS_GENERAL );
             options.AddOptions( "help",     OPTIONS_HELP    );
@@ -65,6 +42,33 @@ namespace MBINCompiler {
             if ( Quiet ) {
                 Console.SetOut( new StreamWriter( Stream.Null ) );
                 Console.SetError( Console.Out );
+            }
+
+            NoLog = options.GetOptionSwitch( "nolog" );
+            if ( !NoLog ) {
+                Process running_proc = Process.GetCurrentProcess();
+                Process[] mbinc_procs = Process.GetProcessesByName(running_proc.ProcessName);
+
+                // If we only have one instance of MBINCompiler running create the usual log.
+                // If a process starts and there is already a running MBINCompiler process, then
+                // add the PID to the log file name so that there is no issue with two processes
+                // attempting to write to the same log file.
+                if (mbinc_procs.Length == 1) {
+                    Logger.Open(Path.ChangeExtension(Utils.GetExecutablePath(), ".log"));
+                }
+                else {
+                    Logger.Open(Path.ChangeExtension(Utils.GetExecutablePath(), $".{running_proc.Id}.log"));
+                }
+
+                Logger.EnableTraceLogging = true;
+
+                Logger.LogMessage("VERSION", $"MBINCompiler v{Version.GetVersionStringCompact()}");
+                Logger.LogMessage("ARGS", $"\"{string.Join("\" \"", args)}\"\n");
+                using (var indent = new Logger.IndentScope()) {
+                    Logger.LogMessage("If you encounter any errors, please submit a bug report and include this log file.\n" +
+                                      "Please check that there isn't already a similar issue open before creating a new one.\n" +
+                                      "https://github.com/monkeyman192/MBINCompiler/issues\n");
+                }
             }
 
             // now we can emit an error if we need to
