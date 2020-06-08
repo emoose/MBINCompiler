@@ -6,17 +6,17 @@ namespace libMBIN.NMS.Globals
     [NMS(Size = 0x11B0, GUID = 0x2F4BEC32F62B6D31)]
     public class GcAISpaceshipGlobals : NMSTemplate
     {
-        /* 0x00 */ public float Unknown0x0;
-        /* 0x04 */ public float Unknown0x4;
-        /* 0x08 */ public float Unknown0x8;
-        /* 0x0C */ public bool TraderHailingEnabled;
+        /* 0x00 */ public float MinimumCircleTimeBeforeLanding;
+        /* 0x04 */ public float MinimumTimeBetweenOutpostLandings;
+        /* 0x08 */ public float VisibleDistance;
+        /* 0x0C */ public bool TradersAttackPirates;
         /* 0x0D */ public bool FreightersAlwaysAttackPlayer;
         /* 0x0E */ public bool GroundEffectEnabled;
         /* 0x0F */ public bool AtmosphereEffectEnabled;
-        /* 0x010 */ public bool FillUpOutposts;
-        /* 0x014 */ public float Unknown0x14;
-        /* 0x18 */ public float Unknown0x18;
-        /* 0x1C */ public float Unknown0x1C;
+        /* 0x10 */ public bool FillUpOutposts;
+        /* 0x14 */ public float SalvageTime;
+        /* 0x18 */ public float SalvageRemovalTime;
+        /* 0x1C */ public float SalvageValueMultiplier;
         /* 0x20 */ public float DockingWaitDistance;
         /* 0x24 */ public int MaxNumActiveTraders;
         /* 0x28 */ public float MaxNumActiveTraderRadius;
@@ -240,7 +240,7 @@ namespace libMBIN.NMS.Globals
         /* 0x978 */ public float WitnessSightAngle;
         /* 0x97C */ public float FreighterImpactScale;
         /* 0x980 */ public float FreighterAlertThreshold;
-        /* 0x984 */ public float Unknown0x984;
+        /* 0x984 */ public float FreighterAttackDisengageDistance;
         /* 0x988 */ public float FreighterAttackAlertThreshold;
         /* 0x98C */ public float FreighterAlertTimeOutRate;
         /* 0x990 */ public float FreighterAlertTimeOutMinTime;
@@ -370,9 +370,7 @@ namespace libMBIN.NMS.Globals
         /* 0xC18 */ public GcShipAIAttackData AttackPlanet;
         /* 0xCE8 */ public GcShipAIAttackData TraderAttack;
         /* 0xDB8 */ public GcShipAIPlanetPatrolData WingmanPathData;
-        /* 0xDF0 */ public GcAIShipDebugSpawnData Unknown0xDF0;
-        /* 0xEE0 */ public GcAIShipDebugSpawnData Unknown0xEE0;
-        /* 0xFD0 */ public GcAIShipDebugSpawnData Unknown0xFD0;
-        /* 0x10C0 */ public GcAIShipDebugSpawnData Unknown0x10C0;
+        [NMS(Size = 0x4)]
+        /* 0xDF0 */ public GcAIShipDebugSpawnData[] DebugShipSpawns;
     }
 }

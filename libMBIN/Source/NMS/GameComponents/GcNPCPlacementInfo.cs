@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0xB8, GUID = 0xC9D609E2460ADBFA, NameHash = 0xA12AC584067DF8E0)]
+	[NMS(Size = 0xC8, GUID = 0xC6A54783F2BF958E, NameHash = 0xA12AC584067DF8E0)]
     public class GcNPCPlacementInfo : NMSTemplate
     {
         [NMS(Size = 0x10)]
@@ -34,7 +34,8 @@ namespace libMBIN.NMS.GameComponents
         /* 0xB3 */ public bool SpawnMoving;
         /* 0xB4 */ public bool SpawnInAbandoned;
         [NMS(Size = 0x3, Ignore = true)]
-        /* 0xB5 */ public byte[] Endpadding;
+        /* 0xB5 */ public byte[] PaddingB5;
+        /* 0xB8 */ public List<NMSString0x10> HideDuringMissions;
         
     }
 }

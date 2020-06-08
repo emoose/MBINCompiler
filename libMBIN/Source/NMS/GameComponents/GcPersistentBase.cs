@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x2B0, GUID = 0x724F968605EF0D45, NameHash = 0x732552199A3AE45E)]
+	[NMS(Size = 0x2B0, GUID = 0x5E0E25484FBF35DB, NameHash = 0x732552199A3AE45E)]
     public class GcPersistentBase : NMSTemplate
     {
         /* 0x000 */ public int BaseVersion;
