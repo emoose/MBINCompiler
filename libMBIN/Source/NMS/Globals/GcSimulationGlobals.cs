@@ -53,7 +53,7 @@ namespace libMBIN.NMS.Globals
         /* 0x1188 */ public NMSString0x80[] PlanetTerrainMaterials;
         [NMS(Size = 0x10)]
         /* 0x1488 */ public NMSString0x80[] PrefetchTextureResources;
-        /* 0x1C88 */ public float Unknown0x1C88;
+        /* 0x1C88 */ public float WarpTunnelScale;
         [NMS(Size = 0x80)]
         /* 0x1C8C */ public string WarpTunnelFile;
         [NMS(Size = 0x80)]

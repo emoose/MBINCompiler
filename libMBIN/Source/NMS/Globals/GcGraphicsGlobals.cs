@@ -8,7 +8,7 @@ namespace libMBIN.NMS.Globals
     {
         /* 0x0 */ public float LUTDistanceFlightMultiplier;
         /* 0x4 */ public float SunLightIntensity;
-        /* 0x8 */ public float Unknown0x8;
+        /* 0x8 */ public float SunLightBlendTime;
         /* 0xC */ public float HBAOBias;
         /* 0x10 */ public float HBAORadius;
         /* 0x14 */ public float HBAOIntensity;
@@ -121,7 +121,7 @@ namespace libMBIN.NMS.Globals
 		/* 0x3E4 */ public float LensDirtCave;
 		/* 0x3E8 */ public float DOFNearPlane;
 		/* 0x3EC */ public float DOFFarPlane;
-        /* 0x3F0 */ public float Unknown0x3F0;                  // this value and next value may be swapped
+        /* 0x3F0 */ public float DOFAmountManual;
 		/* 0x3F4 */ public float DOFNearFadeDistance;
 		/* 0x3F8 */ public float DOFNearFadeDistanceManual;
 		/* 0x3FC */ public float DOFFarFadeDistance;
@@ -141,24 +141,24 @@ namespace libMBIN.NMS.Globals
 		/* 0x434 */ public bool DOFEnableBokeh;
 		/* 0x438 */ public float VignetteStart;
 		/* 0x43C */ public float VignetteEnd;
-        /* 0x440 */ public float Unknown0x440;
-        /* 0x444 */ public float Unknown0x444;
-        /* 0x448 */ public float Unknown0x448;
-        /* 0x44C */ public float Unknown0x44C;
-        /* 0x450 */ public float Unknown0x450;
-        /* 0x454 */ public float Unknown0x454;
-        /* 0x458 */ public float Unknown0x458;
-        /* 0x45C */ public float Unknown0x45C;
-        /* 0x460 */ public float Unknown0x460;
-        /* 0x464 */ public float Unknown0x464;
-        /* 0x468 */ public float Unknown0x468;
-        /* 0x46C */ public float Unknown0x46C;
-        /* 0x470 */ public float Unknown0x470;
-        /* 0x474 */ public float Unknown0x474;
-        /* 0x478 */ public float Unknown0x478;
-        /* 0x47C */ public float Unknown0x47C;
-        /* 0x480 */ public float Unknown0x480;
-        /* 0x484 */ public float Unknown0x484;
+		/* 0x440 */ public float VignetteStartTurnVR;
+		/* 0x444 */ public float VignetteEndTurnVR;
+		/* 0x448 */ public float VignetteStartMoveVR;
+		/* 0x44C */ public float VignetteEndMoveVR;
+		/* 0x450 */ public float VignetteVRTurnInterpTime;
+		/* 0x454 */ public float VignetteVRMoveInterpTime;
+		/* 0x458 */ public float VignetteStartMoveVRShip;
+		/* 0x45C */ public float VignetteEndMoveVRShip;
+		/* 0x460 */ public float VignetteVRMoveInterpTimeShip;
+		/* 0x464 */ public float VignetteStartTurnVRShip;
+		/* 0x468 */ public float VignetteEndTurnVRShip;
+		/* 0x46C */ public float VignetteVRTurnInterpTimeShip;
+		/* 0x470 */ public float VignetteStartTurnRidingVR;
+		/* 0x474 */ public float VignetteEndTurnRidingVR;
+		/* 0x478 */ public float VignetteVRTurnRidingInterpTime;
+		/* 0x47C */ public float VignetteStartRidingVR;
+		/* 0x480 */ public float VignetteEndRidingVR;
+		/* 0x484 */ public float VignetteVRRidingInterpTime;
 		/* 0x488 */ public float LowHealthVignetteStart;
 		/* 0x48C */ public float LowHealthVignetteEnd;
 		/* 0x490 */ public float LowHealthDesaturationIntensity;
@@ -236,27 +236,17 @@ namespace libMBIN.NMS.Globals
 		/* 0x5F8 */ public float TaaHighFreqConstant;
 		/* 0x5FC */ public float TaaAccumDelay;
 		/* 0x600 */ public float FrustumJitterAmount;
-        // 7 of the following variables below are used... No idea how to figure out which...
-		//* 0x604 */ public bool EnableFxaa;
-		//* 0x606 */ public bool UseTaaResolve;
-		//* 0x608 */ public bool ApplyTaaCheap;
-		//* 0x609 */ public bool ApplyTaaTest;
-		//* 0x60A */ public bool ShowTaaBuf;
-		//* 0x60B */ public bool TonemapInLuminance;
-		//* 0x60C */ public bool ShowTaaVarianceBuf;
-		//* 0x60D */ public bool ShowTaaNVarianceBuf;
-		//* 0x60E */ public bool ShowTaaCVarianceBuf;
-        /* 0x604 */ public bool Unknown0x604;
-        /* 0x605 */ public bool Unknown0x605;
-        /* 0x606 */ public bool Unknown0x606;
-        /* 0x607 */ public bool Unknown0x607;
-        /* 0x608 */ public bool Unknown0x608;
-        /* 0x609 */ public bool Unknown0x609;
-        /* 0x60A */ public bool Unknown0x60A;
+		/* 0x604 */ public bool UseTaaResolve;
+		/* 0x605 */ public bool ApplyTaaTest;
+		/* 0x606 */ public bool ShowTaaBuf;
+		/* 0x607 */ public bool TonemapInLuminance;
+		/* 0x608 */ public bool ShowTaaVarianceBuf;
+		/* 0x609 */ public bool ShowTaaNVarianceBuf;
+		/* 0x60A */ public bool ShowTaaCVarianceBuf;
         [NMS(Size = 0x5, Ignore = true)]
         /* 0x60B */ public byte[] Padding60B;
         /* 0x610 */ public Vector4f TaaSettings;
-        /* 0x620 */ public Vector4f Unknown0x620;
+        /* 0x620 */ public Vector4f TessSettingsNone;
         /* 0x630 */ public Vector4f TessSettingsMed;
         /* 0x640 */ public Vector4f TessSettingsHi;
         /* 0x650 */ public Vector4f TessSettingsUlt;
@@ -301,11 +291,17 @@ namespace libMBIN.NMS.Globals
 		/* 0x6E8 */ public float SpaceIBLBlendDistance;
 		/* 0x6EC */ public float NoFocusMaxFPS;
 		/* 0x6F0 */ public bool EnableCrossPipeSharing;
-        /* 0x6F4 */ public float Unknown0x6F4;
-        /* 0x6F8 */ public float Unknown0x6F8;
-        /* 0x6FC */ public float Unknown0x6FC;
-        [NMS(Size = 0xA)]
-        /* 0x700 */ public TkGraphicsDetailPreset[] GraphicsDetailPresets;
+        /* 0x6F4 */ public float SharpenFilterAmount;
+        /* 0x6F8 */ public float SharpenFilterDepthFactorStart;
+        /* 0x6FC */ public float SharpenFilterDepthFactorEnd;
+        [NMS(Size = 0x4)]
+        /* 0x700 */ public TkGraphicsDetailPreset[] GraphicsDetailPresetsPC;
+        /* 0x7B0 */ public TkGraphicsDetailPreset GraphicsDetailPresetPS4;
+        /* 0x7DC */ public TkGraphicsDetailPreset GraphicsDetailPresetPS4VR;
+        /* 0x808 */ public TkGraphicsDetailPreset GraphicsDetailPresetPS4Pro;
+        /* 0x834 */ public TkGraphicsDetailPreset GraphicsDetailPresetPS4ProVR;
+        /* 0x860 */ public TkGraphicsDetailPreset GraphicsDetailPresetXB1;
+        /* 0x88C */ public TkGraphicsDetailPreset GraphicsDetailPresetXB1X;
         [NMS(Size = 0x8, Ignore = true)]
         /* 0x8B8 */ public byte[] EndPadding;
     }

@@ -3,18 +3,16 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(Size = 0x300, GUID = 0x6A32789113B9B41D)]
+    [NMS(Size = 0x310, GUID = 0x471C421AC7E960BD)]
     public class GcMultiplayerGlobals : NMSTemplate
     {
-        /* 0x000 */ public float Unknown0x0;
-        /* 0x004 */ public float Unknown0x4;
-        /* 0x008 */ public float Unknown0x8;
-        /* 0x00C */ public float Unknown0xC;
-        /* 0x010 */ public float Unknown0x10;
-        /* 0x014 */ public float Unknown0x14;
+        /* 0x000 */ public Vector2f FullSimHandUpdateDistance;
+        /* 0x008 */ public Vector2f FullSimHandUpdateInterval;
+        /* 0x010 */ public float DistanceBetweenTeleportMovementEffects;
+        /* 0x014 */ public float FullSimHandUpdateDisabledDistance;
         /* 0x018 */ public float FullSimUpdateInterval;
-        /* 0x01C */ public float Unknown0x1C;
-        /* 0x020 */ public float Unknown0x20;
+        /* 0x01C */ public float JoinInteractionTimeout;
+        /* 0x020 */ public float InviteInteractionTimeout;
         /* 0x024 */ public int MaxDownloadableBases;
         /* 0x028 */ public float BlobHeightOffset;
         /* 0x02C */ public int TransactionTimeout;
@@ -30,63 +28,72 @@ namespace libMBIN.NMS.Globals
         /* 0x050 */ public float VoiceUpdatePeriodSteam;
         /* 0x054 */ public float UpdateSlerpModifier;
         /* 0x058 */ public float ShipDirectionLerpModifier;
-        /* 0x05C */ public float CharacterDirectionLerpModifier;
-        /* 0x060 */ public float ShipSyncConvervengeMultiplier;
-        /* 0x064 */ public float VehicleStickLerpModifier;
-        /* 0x068 */ public float VehicleThrottleLerpModifier;
-        /* 0x06C */ public float PlayerMarkerScreenOffsetY;
-        /* 0x070 */ public float Unknown0x70;
-        /* 0x074 */ public float PlayerMarkerLargeIconDist;
-        /* 0x078 */ public float PlayerMarkerLargeIconSize;
-        /* 0x07C */ public float PlayerMarkerSmallIconSize;
-        /* 0x080 */ public float PlayerMarkerMinShowDistance;
-        /* 0x084 */ public bool PlayerMarkerCenteredName;
-        /* 0x088 */ public int AbandonedEntityWaitPeriod_A;
-        /* 0x08C */ public int AbandonedEntityWaitPeriod_B;
-        /* 0x090 */ public float HostOnConnectedTimeout;
-        /* 0x094 */ public int MaxSyncResponsesPerHash;
-        /* 0x098 */ public float MinScore;
-        /* 0x09C */ public float HostBiasScore;
-        /* 0x0A0 */ public float UsefulSyncResponseScore;
-        /* 0x0A4 */ public float UselessSyncResponseScore;
-        /* 0x0A8 */ public float ConstantScoreDepletionRate;
-        /* 0x0AC */ public float FactorScoreDepletionRate;
-        /* 0x0B0 */ public float HashCheckMessageInterval;
-        /* 0x0B4 */ public float SyncMessageInterval;
-        /* 0x0B8 */ public float EditMessageInterval;
-        /* 0x0BC */ public float NewBlockMessageInterval;
-        /* 0x0C0 */ public float EditMessageSentSyncBackOffTime;
-        /* 0x0C4 */ public float EditMessageReceivedSyncBackOffTime;
-        /* 0x0C8 */ public float NewBlockMessageOverdueDistanceDivisor;
-        /* 0x0CC */ public float HashCheckMessageOverdueDistanceDivisor;
-        /* 0x0D0 */ public int NewBlockMessageSentCooldown;
-        /* 0x0D4 */ public int HashReceivedCooldown;
-        /* 0x0D8 */ public int HashMessageSentCooldown;
-        /* 0x0DC */ public int UsefulSyncResponseCooldown;
-        /* 0x0E0 */ public int UselessSyncResponseCooldown;
-        /* 0x0E4 */ public int NewerHashReceivedCooldown;
-        /* 0x0E8 */ public float BaseHeaderBroadcastInterval;
-        /* 0x0EC */ public float PlaceholderBroadcastInterval;
-        /* 0x0F0 */ public float StatSyncRadiusPlanet;
-        /* 0x0F4 */ public float StatSyncRadiusSpace;
-        /* 0x0F8 */ public float Unknown0xF8;
-        /* 0x0FC */ public float Unknown0xFC;
-        /* 0x0100 */ public float Unknown0x100;
-        /* 0x0104 */ public int UnknownInt0x104;
-        /* 0x108 */ public float Unknown0x108;
-        /* 0x10C */ public float Unknown0x10C;      // Encrypted mission chance?
-        [NMS(Size = 0x5)]
-        /* 0x110 */ public NMSString0x10[] EncryptedMissionRewards;
-
-        /* 0x160 */ public TkTextureResource HideNSeekShopIcon;
-        /* 0x1E4 */ public TkTextureResource HideNSeekOnIcon;
-        /* 0x268 */ public TkTextureResource HideNSeekOffIcon;
-
-        /* 0x2EC */ public float Unknown0x2DC;
-        /* 0x2F0 */ public float Unknown0x2E0;
-        /* 0x2F4 */ public float Unknown0x2E4;
-        /* 0x2F8 */ public float Unknown0x2E8;
+		/* 0x5C */ public float CharacterDirectionLerpModifier;
+		/* 0x60 */ public float ShipSyncConvervengeMultiplier;
+		/* 0x64 */ public float ShipLandShakeMaxDist;
+		/* 0x68 */ public float VehicleStickLerpModifier;
+		/* 0x6C */ public float VehicleThrottleLerpModifier;
+		/* 0x70 */ public float PlayerMarkerScreenOffsetY;
+		/* 0x74 */ public float PlayerMarkerSmallIconSize;
+		/* 0x78 */ public float PlayerMarkerLargeIconDist;
+		/* 0x7C */ public float PlayerMarkerLargeIconFarSize;
+		/* 0x80 */ public float PlayerMarkerLargeIconCloseSize;
+		/* 0x84 */ public float PlayerMarkerMinShowDistance;
+		/* 0x88 */ public bool PlayerMarkerCenteredName;
+		/* 0x90 */ public ulong AbandonedEntityWaitPeriod;
+		/* 0x98 */ public float HostOnConnectedTimeout;
+		/* 0x9C */ public int MaxSyncResponsesPerHash;
+		/* 0xA0 */ public float MinScore;
+		/* 0xA4 */ public float HostBiasScore;
+		/* 0xA8 */ public float UsefulSyncResponseScore;
+		/* 0xAC */ public float UselessSyncResponseScore;
+        /* 0xB0 */ public float ConstantScoreDepletionRate;
+		/* 0xB4 */ public float FactorScoreDepletionRate;
+		/* 0xB8 */ public float HashCheckMessageInterval;
+		/* 0xBC */ public float SyncMessageInterval;
+		/* 0xC0 */ public float EditMessageInterval;
+		/* 0xC4 */ public float NewBlockMessageInterval;
+		/* 0xC8 */ public float EditMessageSentSyncBackOffTime;
+		/* 0xCC */ public float EditMessageReceivedSyncBackOffTime;
+		/* 0xD0 */ public float NewBlockMessageOverdueDistanceDivisor;
+		/* 0xD4 */ public float HashCheckMessageOverdueDistanceDivisor;
+		/* 0xD8 */ public int NewBlockMessageSentCooldown;
+		/* 0xDC */ public int HashReceivedCooldown;
+		/* 0xE0 */ public int HashMessageSentCooldown;
+		/* 0xE4 */ public int UsefulSyncResponseCooldown;
+		/* 0xE8 */ public int UselessSyncResponseCooldown;
+		/* 0xEC */ public int NewerHashReceivedCooldown;
+		/* 0xF0 */ public float BaseHeaderBroadcastInterval;
+		/* 0xF4 */ public float PlaceholderBroadcastInterval;
+		/* 0xF8 */ public float StatSyncRadiusPlanet;
+		/* 0xFC */ public float StatSyncRadiusSpace;
+		/* 0x100 */ public float NPCInteractionTimeout;
+		/* 0x104 */ public float NPCReplicateStartDistance;
+		/* 0x108 */ public float NPCReplicateEndDistance;
+		/* 0x10C */ public int MissionRecurrenceTime;
+		/* 0x110 */ public float MissionWaitOnceAllPlayersReadyTime;
+		/* 0x114 */ public float ChanceMissionEpic;
+		/* 0x118 */ public float RemoveDuplicateChatMessageTime;
         [NMS(Size = 0x4, Ignore = true)]
-        /* 0x2FC */ public byte[] EndPadding;
+        /* 0x11C */ public byte[] Padding11C;
+        [NMS(Size = 0x10)]
+        /* 0x120 */ public string StandardMissionSecondReward;
+        [NMS(Size = 0x10)]
+        /* 0x130 */ public string QuicksilverMissionSecondReward;
+        [NMS(Size = 0x10)]
+        /* 0x140 */ public string EpicMissionSecondReward;
+        [NMS(Size = 0x10)]
+        /* 0x150 */ public string WeekendMissionSecondReward;
+        [NMS(Size = 0x10)]
+        /* 0x160 */ public string EpicMissionRewardOverride;
+        /* 0x170 */ public TkTextureResource EpicMissionIcon;
+        /* 0x1F4 */ public TkTextureResource EpicMissionIconSelected;
+        /* 0x278 */ public TkTextureResource EpicMissionIconNotSelected;
+        /* 0x2FC */ public float PlanetLocalEnitityInterestStart;
+        /* 0x300 */ public float PlanetLocalEnitityInterestEnd;
+        /* 0x304 */ public float EntityUpdateMaxRateDist;
+        /* 0x308 */ public float EntityUpdateMinRateDist;
+        [NMS(Size = 0x4, Ignore = true)]
+        /* 0x30C */ public byte[] EndPadding;
     }
 }

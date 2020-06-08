@@ -5,47 +5,63 @@ namespace libMBIN.NMS.Globals
     [NMS(Size = 0x32A0, GUID = 0xFF62BD70C8231C78)]
     public class GcCreatureGlobals : NMSTemplate
     {
-        [NMS(Size = 0x75)]
-        /* 0x0000 */ public NMSString0x20[] Unknown0x0;     // TODO: categorise better
-        /* 0x0EA0 */ public bool Unknown0xEA0;
-        /* 0x0EA4 */ public float Unknown0xEA4;
-        /* 0x0EA8 */ public float Unknown0xEA8;
-        /* 0x0EAC */ public float Unknown0xEAC;
-        /* 0x0EB0 */ public float Unknown0xEB0;
-        /* 0x0EB4 */ public bool IsHurtingCreaturesACrime;
-        /* 0x0EB5 */ public bool EnableFlyingSnakeTails;
-        /* 0x0EB6 */ public bool EnableNewStuff;
-        /* 0x0EB7 */ public bool Unknown0xEB7;
-        /* 0x0EB8 */ public bool Unknown0xEB8;
-        /* 0x0EB9 */ public bool Unknown0xEB9;
-        /* 0x0EBC */ public float Unknown0xEBC;
-        /* 0x0EC0 */ public float Unknown0xEC0;
-        /* 0x0EC4 */ public float Unknown0xEC4;
-        /* 0x0EC8 */ public float Unknown0xEC8;
-        /* 0x0ECC */ public float Unknown0xECC;
-        /* 0x0ED0 */ public float Unknown0xED0;
-        /* 0x0ED4 */ public bool Unknown0xED4;
-        /* 0x0ED5 */ public bool Unknown0xED5;
-        /* 0x0ED8 */ public float Unknown0xED8;
-        /* 0x0EDC */ public float Unknown0xEDC;
-        /* 0x0EE0 */ public float Unknown0xEE0;
-        /* 0x0EE4 */ public float Unknown0xEE4;
-        /* 0x0EE8 */ public float Unknown0xEE8;
-        /* 0x0EEC */ public float Unknown0xEEC;
-        /* 0x0EF0 */ public float Unknown0xEF0;
-        /* 0x0EF4 */ public float Unknown0xEF4;
-        /* 0x0EF8 */ public float Unknown0xEF8;
-        /* 0x0EFC */ public float Unknown0xEFC;
-        /* 0x0F00 */ public float Unknown0xF00;
-        /* 0x0F04 */ public float Unknown0xF04;
-        /* 0x0F08 */ public float Unknown0xF08;
-        /* 0x0F0C */ public float Unknown0xF0C;
-        /* 0x0F10 */ public float Unknown0xF10;
-        /* 0x0F14 */ public float Unknown0xF14;
-        /* 0x0F18 */ public float Unknown0xF18;
-        /* 0x0F1C */ public int CreatureSeed;
-        /* 0x0F20 */ public int MaxEcosystemCreatures;
-        /* 0x0F24 */ public int UnknownInt0xF24;
+        [NMS(Size = 0xA)]
+        /* 0x0000 */ public NMSString0x20[] Temperments;
+        [NMS(Size = 0xA)]
+        /* 0x0140 */ public NMSString0x20[] TempermentDescriptions;
+        [NMS(Size = 0x3)]
+        /* 0x0280 */ public NMSString0x20[] Diets;
+        [NMS(Size = 0x3)]
+        /* 0x02E0 */ public NMSString0x20[] WaterDiets;
+        [NMS(Size = 0xD)]
+        /* 0x0340 */ public NMSString0x20[] DietMeat;
+        [NMS(Size = 0xD)]
+        /* 0x04E0 */ public NMSString0x20[] DietVeg;
+        [NMS(Size = 0x3)]
+        /* 0x0680 */ public NMSString0x20[] DietDescriptions;
+        [NMS(Size = 0x3)]
+        /* 0x06E0 */ public NMSString0x20[] WaterDietDescriptions;
+        [NMS(Size = 0xD)]
+        /* 0x0740 */ public NMSString0x20[] BiomeDescriptions;
+        [NMS(Size = 0xD)]
+        /* 0x08E0 */ public NMSString0x20[] BiomeWaterDescriptions;
+        [NMS(Size = 0xD)]
+        /* 0x0A80 */ public NMSString0x20[] BiomeAirDescriptions;
+        [NMS(Size = 0x14)]
+        /* 0x0C20 */ public NMSString0x20[] WeirdBiomeDescriptions;
+        /* 0xEA0 */ public bool OverrideIKParams;
+        /* 0xEA4 */ public float BodyMassWeight;
+        /* 0xEA8 */ public float Omega;
+        /* 0xEAC */ public float OmegaDropOff;
+        /* 0xEB0 */ public float MovementDamp;
+        /* 0xEB4 */ public bool IsHurtingCreaturesACrime;
+        /* 0xEB5 */ public bool EnableFlyingSnakeTails;
+        /* 0xEB6 */ public bool EnableNewStuff;
+        /* 0xEB7 */ public bool InstantCreatureRide;
+        /* 0xEB8 */ public bool EnableVRCreatureRide;
+        /* 0xEB9 */ public bool EnableMPCreatureRide;
+        /* 0xEBC */ public float RidingReplicationRangeMultiplier;
+        /* 0xEC0 */ public float RidingRollAdjustMaxAngle;
+        /* 0xEC4 */ public float RidingRollMaxAngleAt;
+        /* 0xEC8 */ public float RidingFirstPersonOffsetFwd;
+        /* 0xECC */ public float RidingFirstPersonOffsetUp;
+        /* 0xED0 */ public float CreatureScaleMangle;
+        /* 0xED4 */ public bool CreatureRideDirectControl;
+        /* 0xED5 */ public bool StaticCreatureRide;
+        /* 0xED8 */ public float RideSpeedSlow;
+        /* 0xEDC */ public float RideSpeedFast;
+        /* 0xEE0 */ public float RideSpeedChangeTime;
+        /* 0xEE4 */ public float RiderLeanTime;
+        /* 0xEE8 */ public float PostRideMoveTime;
+        /* 0xEEC */ public float RideIdleTime;
+        /* 0xEF0 */ public float MinRideSize;
+        /* 0xEF4 */ public float MaxRideLeanCounterRotate;
+        /* 0xEF8 */ public float PlayerDamageTransferScale;
+        /* 0xEFC */ public int CreatureSeed;
+        [NMS(Size = 0x20)]
+        /* 0xF00 */ public string CreatureFilter;
+        /* 0x0F20 */ public int MaxEcosystemCreaturesNormal;
+        /* 0x0F24 */ public int MaxEcosystemCreaturesLow;
         /* 0x0F28 */ public bool UncapSpawningforVideo;
         /* 0x0F29 */ public bool AllowSpawningOnscreen;
         /* 0x0F2C */ public float ResourceSpawnTime;
@@ -63,7 +79,7 @@ namespace libMBIN.NMS.Globals
         /* 0x0F5C */ public float CreatureMinRunTime;
         /* 0x0F60 */ public float CreatureHearingRange;
         /* 0x0F64 */ public float CreatureSightRange;
-        /* 0x0F68 */ public float CreatureMoveIdle;         // this value may be swapped with the following two as the order looks wrong now...
+        /* 0x0F68 */ public float CreatureMoveIdle;
         /* 0x0F6C */ public float CreatureTurnMin;
         /* 0x0F70 */ public float CreatureTurnMax;
         /* 0x0F74 */ public float CreatureBrakeForce;
@@ -133,9 +149,9 @@ namespace libMBIN.NMS.Globals
         /* 0x01130 */ public float WaterSpawnOffset;
         /* 0x01134 */ public float SpawnDistanceModifierForUnderwater;
         /* 0x01138 */ public float FootDustGroundTintStrength;
-        /* 0x0113C */ public float Unknown0x113C;
-        /* 0x01140 */ public float Unknown0x1140;
-        /* 0x01144 */ public float Unknown0x1144;
+        /* 0x0113C */ public float StickToGroundSpeed;
+        /* 0x01140 */ public float StickToGroundCastBegin;
+        /* 0x01144 */ public float StickToGroundCastEnd;
         /* 0x01148 */ public GcFlyingSnakeData FlyingSnakeData;
         [NMS(Size = 0x04)]
         /* 0x01188 */ public GcCreatureAlertData[] AlertTable;
@@ -143,12 +159,12 @@ namespace libMBIN.NMS.Globals
         /* 0x011EC */ public float CreatureMedMinSize;
         /* 0x011F0 */ public float CreatureLargeMinSize;
         /* 0x011F4 */ public float CreatureHugeMinSize;
-        /* 0x011F8 */ public float Unknown0x11F8;
-        /* 0x011FC */ public float Unknown0x11FC;
-        /* 0x01200 */ public float Unknown0x1200;
-        /* 0x01204 */ public float Unknown0x1204;
-        /* 0x01208 */ public float Unknown0x1208;
-        /* 0x0120C */ public float Unknown0x120C;
+		/* 0x11F8 */ public float CreatureRidingMedMinSize;
+		/* 0x11FC */ public float CreatureRidingLargeMinSize;
+		/* 0x1200 */ public float CreatureRidingHugeMinSize;
+		/* 0x1204 */ public float CreatureBlobRidingMedMinSize;
+		/* 0x1208 */ public float CreatureBlobRidingLargeMinSize;
+		/* 0x120C */ public float CreatureBlobRidingHugeMinSize;
         /* 0x01210 */ public int CreatureSmallHealth;
         /* 0x01214 */ public int CreatureMedHealth;
         /* 0x01218 */ public int CreatureLargeHealth;
@@ -186,7 +202,7 @@ namespace libMBIN.NMS.Globals
         /* 0x012AC */ public int PredatorMedHealth;
         /* 0x012B0 */ public int PredatorLargeHealth;
         /* 0x012B4 */ public int PredatorHugeHealth;
-        /* 0x012B8 */ public float Unknown0x12B8;
+        /* 0x012B8 */ public float PlayerPredatorHealthModifier;
         /* 0x012BC */ public float PredatorApproachTime;
         /* 0x012C0 */ public float PredatorNoticePauseTime;
         /* 0x012C4 */ public float PredatorStealthDist;
@@ -204,10 +220,10 @@ namespace libMBIN.NMS.Globals
         /* 0x012F4 */ public float PredatorRunAwayHealthPercent;
         /* 0x012F8 */ public float PredatorEnergyRecoverRate;
         /* 0x012FC */ public float PredatorEnergyUseChasing;
-        /* 0x01300 */ public bool Unknown0x1300;
-        /* 0x01304 */ public float Unknown0x1304;
-        /* 0x01308 */ public bool AggressiveSharks;
-        /* 0x01309 */ public bool FiendsCanAttack;
+        /* 0x01300 */ public bool AggressiveSharks;
+        /* 0x01304 */ public float DelayAfterRespawnBeforeAttackable;
+        /* 0x01308 */ public bool FiendsCanAttack;
+        /* 0x01309 */ public bool FiendOnscreenMarkers;
         /* 0x0130C */ public int FiendHealth;
         /* 0x01310 */ public float FiendPerceptionDistance;
         /* 0x01314 */ public float FiendSpawnDistance;
@@ -230,9 +246,9 @@ namespace libMBIN.NMS.Globals
         /* 0x01358 */ public float FiendAggroIncreaseDestroyEgg;
         /* 0x0135C */ public float FiendAggroDecreasePerSpawn;
         /* 0x01360 */ public float FiendCritAreaSize;
-        /* 0x01364 */ public float Unknown0x1364;
-        /* 0x01368 */ public float Unknown0x1368;
-        /* 0x0136C */ public float Unknown0x136C;
+        /* 0x01364 */ public float FiendDistToConsiderTargetSwtich;
+        /* 0x01368 */ public float FiendDistReduceForBeingShot;
+        /* 0x0136C */ public float FiendBeingShotMemoryTime;
         /* 0x01370 */ public int MaxFishFiends;
         /* 0x01374 */ public int FishFiendSmallHealth;
         /* 0x01378 */ public int FishFiendBigHealth;
@@ -252,9 +268,9 @@ namespace libMBIN.NMS.Globals
         /* 0x013B0 */ public float RagdollMotorFadeEnd;
         /* 0x013B4 */ public int MaxRagdollsBeforeDespawnOffscreen;
         /* 0x013B8 */ public int MaxRagdollsBeforeDespawnOnscreen;
-        /* 0x013BC */ public float TurnRadiusMultiplier;
-        /* 0x013C0 */ public float Unknown0x13C0;          // TODO: determine if this value or the one above is the unknown/known
-        /* 0x013C4 */ public float Unknown0x13C4;          // Probably the later one so two new unkowns are together... Would still be good to have confirmation 
+        /* 0x013BC */ public float RidingTurnRadiusMultiplier;
+        /* 0x013C0 */ public float TurnRadiusMultiplier;
+        /* 0x013C4 */ public float MaxTurnRadius;
         /* 0x013C8 */ public float TurnSlowAreaCos;
         /* 0x013CC */ public float BadTurnPercent;
         /* 0x013D0 */ public float BadTurnWeight;
@@ -269,13 +285,13 @@ namespace libMBIN.NMS.Globals
         /* 0x013F4 */ public float BrakingForceY;
         /* 0x013F8 */ public float FlowFieldWeight;
         /* 0x013FC */ public float FollowWeight;
-        /* 0x01400 */ public float Unknown0x1400;       // TODO: determine if this value or the one above is the unknown/known
+        /* 0x01400 */ public float RidingSteerWeight;
         /* 0x01404 */ public float AvoidCreaturesWeight;
         /* 0x01408 */ public float AvoidImpassableWeight;
-        /* 0x0140C */ public float FollowLeaderAlignWeight;
-        /* 0x01410 */ public float Unknown0x1410;       // TODO: determine if this value or the one above is the unknown/known
+        /* 0x0140C */ public float BaseAndTerrainModImpassableStrength;
+        /* 0x01410 */ public float FollowLeaderAlignWeight;
         /* 0x01414 */ public float FollowLeaderCohereWeight;
-        /* 0x01418 */ public float Unknown0x1418;
+        /* 0x01418 */ public float SoftenAvoidanceRadiusMod;
         /* 0x0141C */ public float DefaultSwimSpeed;
         /* 0x01420 */ public float FastSwimSpeed;
         /* 0x01424 */ public float DefaultWalkMoveSpeed;
@@ -351,10 +367,10 @@ namespace libMBIN.NMS.Globals
         /* 0x0154C */ public float FeedingFollowTime;
         /* 0x01550 */ public float FeedingNoticeTime;
         /* 0x01554 */ public float FeedingNoticeDistance;
-        /* 0x01558 */ public float Unknown0x1558;
-        /* 0x0155C */ public float Unknown0x155C;
-        /* 0x01560 */ public float Unknown0x1560;
-        /* 0x01564 */ public float Unknown0x1564;
+        /* 0x01558 */ public float AttractedMinAvoidCreaturesStrength;
+        /* 0x0155C */ public float AttractedMinAvoidCreaturesDist;
+        /* 0x01560 */ public float AttractedMaxAvoidCreaturesStrength;
+        /* 0x01564 */ public float AttractedMaxAvoidCreaturesDist;
         /* 0x01568 */ public float AnimChangeCoolDown;
         /* 0x0156C */ public float GroupRunProbability;
         /* 0x01570 */ public float GroupBabyRunProbability;
@@ -395,27 +411,30 @@ namespace libMBIN.NMS.Globals
         [NMS(Size = 0x6)]
         /* 0x01748 */ public NMSString0x10[] KillingSubstances;
 
-        /* 0x017A8 */ public int UnknownInt0x17A8;
-        /* 0x017AC */ public int UnknownInt0x17AC;
-        /* 0x017B0 */ public int UnknownInt0x17B0;
-        /* 0x017B4 */ public int UnknownInt0x17B4;
+        /* 0x017A8 */ public int CreatureKillRewardAmountSmall;
+        /* 0x017AC */ public int CreatureKillRewardAmountMed;
+        /* 0x017B0 */ public int CreatureKillRewardAmountLarge;
+        /* 0x017B4 */ public int CreatureKillRewardAmountHuge;
         // This enum is the GcCreatureTypes.CreatureTypeEnum with a few entries removed.
         public enum CreatureTypesEnum  { Fish, Antelope, Bird, Butterfly, FlyingSnake, FlyingLizard, Diplo, Triceratops, Rodent, Cow, Cat, Strider,
             Trex, Shark, TwoLegAntelope, SixLegCat, SixLegCow, Grunt, Blob, Spider, FloatSpider, SwimCow, SwimRodent, Jellyfish, Crab, RockCreature };
         [NMS(Size = 0x1A, EnumType = typeof(CreatureTypesEnum))]
-        /* 0x017B8 */ public GcCreatureSubstanceList[] CreatureSubstanceLists;
+        /* 0x017B8 */ public GcCreatureSubstanceList[] KillingProducts;
         [NMS(Size = 0x1A, EnumType = typeof(CreatureTypesEnum))]
-        /* 0x1AF8 */ public GcCreatureHarvestSubstanceList[] CreatureHarvestSubstanceLists;
-        /* 0x2C08 */ public int UnknownInt0x2C08;
-        /* 0x2C0C */ public int UnknownInt0x2C0C;
-        /* 0x2C10 */ public int UnknownInt0x2C10;
-        /* 0x2C14 */ public int UnknownInt0x2C14;
-        /* 0x2C18 */ public float Unknown0x2884;
-        /* 0x2C1C */ public float Unknown0x2888;
-        [NMS(Size = 0x8)]
-        /* 0x2C20 */ public GcCreatureFoodList[] CreatureFoodLists;
+        /* 0x1AF8 */ public GcCreatureHarvestSubstanceList[] HarvestingProducts;
+        /* 0x2C08 */ public int CreatureHarvestAmountSmall;
+        /* 0x2C0C */ public int CreatureHarvestAmountMed;
+        /* 0x2C10 */ public int CreatureHarvestAmountLarge;
+        /* 0x2C14 */ public int CreatureHarvestAmountHuge;
+        /* 0x2C18 */ public float HarvestCooldownMin;
+        /* 0x2C1C */ public float HarvestCooldownMax;
+        // NOTE: In the exe the "BasicFeedingProduct" is listed first, however this doesn't match the file so...
+        [NMS(Size = 0x4)]
+        /* 0x2C20 */ public GcCreatureFoodList[] HerbivoreFeedingProducts;
+        [NMS(Size = 0x4)]
+        /* 0x2EA0 */ public GcCreatureFoodList[] CarnivoreFeedingProducts;
         [NMS(Size = 0x10)]
-        /* 0x3120 */ public string Unknown0x2D90;
+        /* 0x3120 */ public string BasicFeedingProduct;
         /* 0x3130 */ public GcWeirdCreatureRewardList WeirdKillingRewards;
         [NMS(Size = 0x3)]
         /* 0x3270 */ public NMSString0x10[] LootItems;

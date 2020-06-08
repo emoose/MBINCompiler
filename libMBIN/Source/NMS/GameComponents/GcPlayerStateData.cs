@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x29D10, GUID = 0xE7092F53F23C2BAF, NameHash = 0x6C4510BB243EFA64)]
+	[NMS(Size = 0x29DF0, GUID = 0x8112B8CE763BD83E, NameHash = 0x6C4510BB243EFA64)]
     public class GcPlayerStateData : NMSTemplate
     {
         /* 0x00000 */ public GcUniverseAddressData UniverseAddress;
@@ -288,7 +288,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x29CF8 */ public int BannerBackgroundColour;
         /* 0x29CFC */ public int TelemetryUploadVersion;
         /* 0x29D00 */ public bool UsesThirdPersonVehicleCam;
-        [NMS(Size = 0xF, Ignore = true)]
-        /* 0x29D01 */ public byte[] EndPadding;
+        /* 0x29D04 */ public float VRCameraOffset;
+        /* 0x29D08 */ public GcSeasonalGameModeData SeasonalData;
     }
 }

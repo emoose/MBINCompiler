@@ -42,34 +42,25 @@ namespace libMBIN.NMS.Globals
         /* 0x21C */ public float TimeBeforeShowingHangar;
         /* 0x220 */ public float TimeBeforeHidingHangar;
         /* 0x224 */ public int NumberOfShipsInInitialFleet;
-
-        // Not sure where to place the following chunk as they are all zeros... Going to put at the front but some experimentation may be needed...
         /* 0x228 */ public bool NewFrigatesStartDamaged;
         /* 0x229 */ public bool ExpeditionsCompleteInstantly;
         /* 0x22A */ public bool ShowSeeds;
         /* 0x22B */ public bool DisablePlayerFleets;
-        /* 0x22C */ public float ForceDebriefEntryType;
-        /* 0x230 */ public int ForcedSequentialEventsStartingIndex;
-        /* 0x234 */ public float NextDebriefDescriptionOffset;
-        /* 0x238 */ public float Unknown0x238;
-        /* 0x23C */ public float Unknown0x23C;
-        /* 0x240 */ public float Unknown0x240;
-        /* 0x244 */ public float Unknown0x244;
-        /* 0x248 */ public float Unknown0x248;
-        /* 0x24C */ public float Unknown0x24C;
-        /* 0x250 */ public float Unknown0x250;
-        /* 0x254 */ public float Unknown0x254;
-        /* 0x258 */ public float Unknown0x258;
-        // End of unknown chunk...
-
+        [NMS(Size = 0x4, Ignore = true)]
+        /* 0x22C */ public byte[] Padding22C;
+        [NMS(Size = 0x20)]
+        /* 0x230 */ public string DebugInterventionEvent;
+        public enum ForceDebriefEntryTypeEnum { None, PrimarySuccess, PrimaryFailure, PrimaryDamage,
+            SecondarySuccess, SecondaryFailure, SecondaryDamage, GenericSuccess, GenericFailure };
+        /* 0x250 */ public ForceDebriefEntryTypeEnum ForceDebriefEntryType;
+        /* 0x254 */ public int ForcedSequentialEventsStartingIndex;
+        /* 0x258 */ public float NextDebriefDescriptionOffset;
         /* 0x25C */ public float LevelupProgressRequiredToNotBeSadAboutDamage;
         /* 0x260 */ public float TimeBeforePlayerAlertedToDamagedFrigates;
         /* 0x264 */ public float DamagedListEntryPulseRate;
         /* 0x268 */ public float NonUrgentDamagedListEntryAlpha;
-        /* 0x26C */ public int UnknownInt0x26C;
-        /* 0x270 */ public int UnknownInt0x270;
-        ///* 0x26C */ public float LowDamageNumberOfExpeditions;
-        ///* 0x270 */ public int RampDamageNumberOfExpeditions;
+        /* 0x26C */ public int LowDamageNumberOfExpeditions;
+        /* 0x270 */ public int RampDamageNumberOfExpeditions;
         /* 0x274 */ public Vector2f PercentChanceOfDamageOnFailedEvent;
         /* 0x27C */ public int PercentChanceOfGenericEventDescription;
         /* 0x280 */ public int PercentChanceOfPrimaryDescriptionForBalancedEvent;
@@ -162,7 +153,7 @@ namespace libMBIN.NMS.Globals
         /* 0x1300 */ public GcFrigateTraitIcons NegativeTraitIcons;
         /* 0x1800 */ public GcScanEffectData FrigateScanEffect;
         /* 0x1850 */ public GcScanEffectData FrigateHologramScanEffect;
-        /* 0x18A0 */ public GcScanEffectData Unknown0x18A0;
+        /* 0x18A0 */ public GcScanEffectData CompletedFrigateHologramScanEffect;
         /* 0x18F0 */ public GcScanEffectData DamagedFrigateHologramScanEffect;
         /* 0x1940 */ public GcScanEffectData DestroyedFrigateHologramScanEffect;
         /* 0x1990 */ public GcExpeditionEventOccurrenceRate EventTypeOccurrenceChance;

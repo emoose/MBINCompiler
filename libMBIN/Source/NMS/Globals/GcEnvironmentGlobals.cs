@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(Size = 0x660, GUID = 0x946A3DFE87C61F77)]
+    [NMS(Size = 0x660, GUID = 0xF90DDBBA746CAAB4)]
     public class GcEnvironmentGlobals : NMSTemplate
     {
         [NMS(Size = 0x4)]
@@ -39,7 +39,8 @@ namespace libMBIN.NMS.Globals
         /* 0x330 */ public float ShipToxicity;
         /* 0x334 */ public bool MatchPlantPalettes;
         /* 0x338 */ public float DuplicateColourThreshold;
-        /* 0x33C */ public int SwitchType;
+        public enum SwitchTypeEnum { None, Debug, Enabled };
+        /* 0x33C */ public SwitchTypeEnum SwitchType;
         /* 0x340 */ public float GrassNormalUpright;
         /* 0x344 */ public float GrassNormalOffset;
         /* 0x348 */ public float GrassNormalSpherify;
@@ -130,11 +131,11 @@ namespace libMBIN.NMS.Globals
         /* 0x4BD */ public byte[] Padding4BD;
         [NMS(Size = 0x3)]
         /* 0x4C0 */ public TkShearWindData[] ShearWindSettings;
-        /* 0x640 */ public int UnknownInt0x640;
-        /* 0x644 */ public float Unknown0x644;
-        /* 0x648 */ public float Unknown0x648;
-        /* 0x64C */ public float Unknown0x64C;
-        /* 0x650 */ public float Unknown0x650;
+        /* 0x640 */ public int HotspotsLOD;
+        /* 0x644 */ public float RegionHotspotProbability;
+        /* 0x648 */ public float MaxHotspotOffsetDistance;
+        /* 0x64C */ public float MinHotspotFalloffDistance;
+        /* 0x650 */ public float MaxHotspotFalloffDistance;
         [NMS(Size = 0xC, Ignore = true)]
         /* 0x654 */ public byte[] EndPadding;
     }

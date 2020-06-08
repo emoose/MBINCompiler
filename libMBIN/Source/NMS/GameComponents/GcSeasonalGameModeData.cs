@@ -21,6 +21,14 @@ namespace libMBIN.NMS.GameComponents
         /* 0x74 */ public string SeasonalUAOverride;
         [NMS(Size = 0x4, Ignore = true)]
         /* 0x94 */ public byte[] Padding94;
-        /* 0x98 */ public unknown UAOverrideValue;
+        /* 0x98 */ public ulong UAOverrideValue;
+        /* 0xA0 */ public GcSeed WeaponSeed;
+        /* 0xB0 */ public GcSeed ShipSeed;
+        /* 0xC0 */ public GcSpaceshipClasses ShipType;
+        /* 0xC4 */ public bool StartNextToShip;
+        /* 0xC5 */ public bool ShipStartsDamaged;
+        /* 0xC6 */ public bool AllowMissionDetailMessages;
+        /* 0xC8 */ public List<GcSeasonalMilestone> Milestones;
+        /* 0xD8 */ public List<NMSString0x10> SecondaryStats;
     }
 }

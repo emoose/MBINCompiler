@@ -23,7 +23,8 @@ namespace libMBIN.NMS.Globals
         /* 0x20C */ public bool OverrideAtmosphere;
         [NMS(Size = 0x80)]
         /* 0x20D */ public string AtmosphereFile;
-        /* 0x290 */ public Vector4f ForceResource;     // dunno what this is... Dummy for now...
+        [NMS(Size = 0x1)]
+        /* 0x290 */ public Vector4f[] ForceResource;
         /* 0x2A0 */ public float ForceResourceSize;
         [NMS(Size = 0xC, Ignore = true)]
         /* 0x2A4 */ public byte[] EndPadding;

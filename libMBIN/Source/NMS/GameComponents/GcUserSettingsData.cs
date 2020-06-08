@@ -4,7 +4,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x3910, GUID = 0x30BD6ACB2AA264E4, NameHash = 0x3A50D683FD1CF4BF)]
+	[NMS(Size = 0x3918, GUID = 0xA9B060BD1B503D, NameHash = 0x3A50D683FD1CF4BF)]
     public class GcUserSettingsData : NMSTemplate
     {
         /* 0x0000 */ public bool InvertLookControls;
@@ -41,6 +41,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x38E2 */ public bool InstantUIInputs;
         /* 0x38E3 */ public bool SpeechToText;
         /* 0x38E4 */ public bool Translate;
+        /* 0x38E5 */ public bool CrossPlatform;
         public enum TemperatureUnitEnum { Invalid, C, F, K }
         /* 0x38E8 */ public TemperatureUnitEnum TemperatureUnit;
         /* 0x38EC */ public bool UseOldMouseFlight;
@@ -55,8 +56,11 @@ namespace libMBIN.NMS.GameComponents
         /* 0x3904 */ public float HUDZoom;
         /* 0x3908 */ public float FrontendZoom;
         /* 0x390C */ public bool UseAutoTorch;
-        /* 0x390D */ public bool BaseComplexityLimitsEnabled;
-        [NMS(Size = 0x2, Ignore = true)]
-        /* 0x390E */ public byte[] EndPadding;
+        /* 0x390D */ public bool VRHeadBob;
+        /* 0x390E */ public bool VRShowBody;
+        /* 0x390F */ public bool BaseComplexityLimitsEnabled;
+        /* 0x3910 */ public bool EnableLargeLobbies;
+        [NMS(Size = 0x7, Ignore = true)]
+        /* 0x3911 */ public byte[] EndPadding;
     }
 }

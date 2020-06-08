@@ -3,83 +3,91 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(Size = 0x1CC0, GUID = 0x54B11D18DB2AD70B)]
+    [NMS(Size = 0x1CE0, GUID = 0x54ACD3B81DA8ED08)]
     public class GcGameplayGlobals : NMSTemplate
     {
-        /* 0x000 */ public float Unknown0x0;
-        /* 0x004 */ public int UnknownInt0x4;
-        /* 0x008 */ public int UnknownInt0x8;
-        /* 0x00C */ public int UnknownInt0xC;
-        /* 0x010 */ public float Unknown0x10;
-        /* 0x014 */ public int UnknownInt0x14;
-        [NMS(Size = 0x2D)]
-        /* 0x018 */ public NMSString0x10[] SalvageStrings;     // TODO: categorise better...
-        /* 0x2E8 */ public bool Unknown0x2E8;
-        /* 0x2EC */ public float Unknown0x2EC;
-        /* 0x2F0 */ public float Unknown0x2F0;
+        /* 0x000 */ public float VehicleAllIconScanTime;
+        /* 0x004 */ public int GPSRandomChangeTimeWide;
+        /* 0x008 */ public int GPSRandomChangeTimeMid;
+        /* 0x00C */ public int GPSRandomChangeTimeNarrow;
+        /* 0x010 */ public float SalvageValueAsProds;
+        /* 0x014 */ public int SalvageSubstanceValueThreshold;
+        [NMS(Size = 0x4)]
+        /* 0x018 */ public NMSString0x10[] SalvageRewardsShuttle;
+        [NMS(Size = 0x4)]
+        /* 0x058 */ public NMSString0x10[] SalvageRewardsDropship;
+        [NMS(Size = 0x4)]
+        /* 0x098 */ public NMSString0x10[] SalvageRewardsFighter;
+        [NMS(Size = 0x4)]
+        /* 0x0D8 */ public NMSString0x10[] SalvageRewardsScience;
+        [NMS(Size = 0xA)]
+        /* 0x118 */ public NMSString0x10[] SalvageTechList;
+        [NMS(Size = 0xC)]
+        /* 0x1B8 */ public NMSString0x10[] SalvageProdsList;
+        [NMS(Size = 0x7)]
+        /* 0x278 */ public NMSString0x10[] SalvageSubstancesList;
+        /* 0x2E8 */ public bool AlwaysSpaceBattle;
+        /* 0x2EC */ public float MultidimensionalFadeTime;
+        /* 0x2F0 */ public float TeleporterDistanceTravelledMultiplier;
         [NMS(Size = 0xC, Ignore = true)]
-        /* 0x2F4 */ public byte[] Padding0x2F4;
-        /* 0x300 */ public GcScanEffectData Unknown0x300;
-        /* 0x350 */ public Colour Unknown0x350;
-        /* 0x360 */ public Colour Unknown0x360;
-        /* 0x370 */ public float Unknown0x370;
-        /* 0x374 */ public float Unknown0x374;
-        /* 0x378 */ public float Unknown0x378;
-        /* 0x37C */ public float Unknown0x37C;
-        /* 0x380 */ public float Unknown0x380;
-        /* 0x384 */ public float Unknown0x384;
-        /* 0x388 */ public float Unknown0x388;
-        /* 0x38C */ public float Unknown0x38C;
-        /* 0x390 */ public float Unknown0x390;
-        /* 0x394 */ public float HotspotScanSweepTime;
-        /* 0x398 */ public float Unknown0x398;
-        /* 0x39C */ public float Unknown0x39C;
-        /* 0x3A0 */ public float Unknown0x3A0;
-        /* 0x3A4 */ public float HotspotScanRange;
-        /* 0x3A8 */ public int UnknownInt0x3A8;
-        /* 0x3AC */ public int UnknownInt0x3AC;
-        /* 0x3B0 */ public bool Unknown0x3B0;
-        /* 0x3B1 */ public bool Unknown0x3B1;
-        /* 0x3B2 */ public bool Unknown0x3B2;
-        /* 0x3B3 */ public bool Unknown0x3B3;
-        /* 0x3B4 */ public bool Unknown0x3B4;
-        /* 0x3B8 */ public float Unknown0x3B8;
-        /* 0x3BC */ public float Unknown0x3BC;
-        /* 0x3C0 */ public float Unknown0x3C0;
-        /* 0x3C4 */ public float Unknown0x3C4;
-        /* 0x3C8 */ public float Unknown0x3C8;
-        /* 0x3CC */ public float Unknown0x3CC;
-        /* 0x3D0 */ public float Unknown0x3D0;
-        /* 0x3D4 */ public float Unknown0x3D4;
-        /* 0x3D8 */ public float Unknown0x3D8;
-        /* 0x3DC */ public float Unknown0x3DC;
-        /* 0x3E0 */ public float Unknown0x3E0;
-        /* 0x3E4 */ public float Unknown0x3E4;
-        /* 0x3E8 */ public int UnknownInt0x3E8;
-        /* 0x3EC */ public int UnknownInt0x3EC;
-        /* 0x3F0 */ public bool Unknown0x3F0;
-        /* 0x3F4 */ public float Unknown0x3F4;
-        /* 0x3F8 */ public float Unknown0x3F8;
-        /* 0x3FC */ public float Unknown0x3FC;
-        /* 0x400 */ public Colour Unknown0x400;
-        /* 0x410 */ public Colour Unknown0x410;
-        /* 0x420 */ public Colour Unknown0x420;
-        /* 0x430 */ public int UnknownInt0x430;
-        /* 0x434 */ public int UnknownInt0x434;
-        /* 0x438 */ public int CookingSpeedMultiplier; // Increase value for faster cooking
-        /* 0x43C */ public int RefiningSpeedMultiplier; // Increase value for faster refining
-        /* 0x440 */ public int UnknownInt0x440;
-        /* 0x444 */ public int UnknownInt0x444;
+        /* 0x2F4 */ public byte[] Padding2F4;
+        /* 0x300 */ public GcScanEffectData BinocularSelectedEffect;
+		/* 0x350 */ public Colour BinocularSelectedColour;
+		/* 0x360 */ public Colour BinocularSelectedUnknownColour;
+		/* 0x370 */ public float CockpitScale;
+		/* 0x374 */ public float MaxDistanceForLadderTeleport;
+		/* 0x378 */ public float AngleFromBaseComputerWhenTeleporting;
+		/* 0x37C */ public float DistanceFromBaseComputerWhenTeleporting;
+		/* 0x380 */ public float AutoTranslateWordChance;
+		/* 0x384 */ public float SurveyBeginScanPercentage;
+		/* 0x388 */ public float SurveyScanMinSpeed;
+		/* 0x38C */ public float SurveyScanMaxSpeed;
+		/* 0x390 */ public float SurveySonarPulseSpeedBandCount;
+		/* 0x394 */ public float SurveySonarMinPulseSpeed;
+		/* 0x398 */ public float SurveySonarMaxPulseSpeed;
+		/* 0x39C */ public float SurveySonarMiddleRangeMin;
+		/* 0x3A0 */ public float SurveySonarMiddleRangeMax;
+		/* 0x3A4 */ public float SurveyMaxDistance;
+		/* 0x3A8 */ public int CreaturesToBaitForTutorial;
+		/* 0x3AC */ public int CreaturesToFeedForTutorial;
+		/* 0x3B0 */ public bool DisableGalaxyMapInQuickMenu;
+		/* 0x3B1 */ public bool DisableNexusInQuickMenu;
+		/* 0x3B2 */ public bool EnableTeleporters;
+		/* 0x3B3 */ public bool AllowSpaceScanEvents;
+		/* 0x3B4 */ public bool CanMoveTechnology;
+		/* 0x3B8 */ public float NormalModeHeatBonus;
+		/* 0x3BC */ public float BaseLaserHeatTime;
+		/* 0x3C0 */ public float HeatAlertTime;
+		/* 0x3C4 */ public float HeatAlertTimeSurvival;
+		/* 0x3C8 */ public float HeatDamageBoost;
+		/* 0x3CC */ public float HeatWidthBoost;
+		/* 0x3D0 */ public float HeatWidthBoostAlt;
+		/* 0x3D4 */ public float OverheatGenerosity;
+		/* 0x3D8 */ public float HeatMaxPowerPoint;
+		/* 0x3DC */ public float HeatMaxPowerPointSurvival;
+		/* 0x3E0 */ public float OverheatDecay;
+		/* 0x3E4 */ public float OverheatDecaySurvival;
+		/* 0x3E8 */ public TkCurveType OverheatCurve;
+		/* 0x3EC */ public TkCurveType OverheatCurveSurvival;
+		/* 0x3F0 */ public bool UseOverheatColour;
+		/* 0x400 */ public Colour OverHeatColour;
+		/* 0x410 */ public Colour OverHeatBarColour;
+		/* 0x420 */ public Colour OverHeatColourSurvival;
+		/* 0x430 */ public TkCurveType OverheatColourCurve;
+		/* 0x434 */ public TkCurveType OverheatColourCurveSurvival;
+		/* 0x438 */ public int RefinerProductsMadeInTime;
+		/* 0x43C */ public int RefinerSubsMadeInTime;
+		/* 0x440 */ public int RefinerProductsMadeInTimeSurvival;
+		/* 0x444 */ public int RefinerSubsMadeInTimeSurvival;
         [NMS(Size = 0x3)]
         /* 0x0448 */ public NMSString0x10[] HyperdriveAccess;
         [NMS(Size = 0x3)]
         /* 0x0478 */ public NMSString0x10[] FreighterHyperdriveAccess;
-        /* 0x04A8 */ public float Unknown0x4A8;
-        /* 0x04AC */ public float Unknown0x4AC;
-        /* 0x04B0 */ public float Unknown0x4B0;
-        /* 0x04B4 */ public bool AllowPreInstallTechnologies; // Set to False to revert to legacy method of installing technologies and upgrades
-        ///* 0x04B5 */ public bool FreighterRequiresRGBHyperdriveUpgrades;      // Not 100% this is the one that was removed...
-        /* 0x04B5 */ public bool AllowTeleportItemsToFreighter;
+        /* 0x04A8 */ public float HmdInteractionRangeMinRange;
+        /* 0x04AC */ public float HmdInteractionRangeMinDistance;
+        /* 0x04B0 */ public float HmdInteractionRangeMultiplier;
+        /* 0x04B4 */ public bool InstallTechWithInteraction; // Set to False to revert to legacy method of installing technologies and upgrades
+        /* 0x04B5 */ public bool FreighterRequiresRGBHyperdriveUpgrades;
         /* 0x04B6 */ public bool DisableAnomalyAmbientSpawn;
         /* 0x04B7 */ public bool AllowDeconstruct;
         /* 0x04B8 */ public bool AllowBinocularMarker;
@@ -102,7 +110,7 @@ namespace libMBIN.NMS.Globals
         /* 0x051C */ public TkCurveType AtmosphereEntryCurve;
         /* 0x0520 */ public float TerrainResourceScanTime;
         /* 0x0524 */ public float TerrainResourceScanRange;
-        /* 0x0528 */ public float Unknown0x528;
+        /* 0x0528 */ public float TerrainResourceCompassRange;
         /* 0x052C */ public bool BinocsDisplayUnknownCreatures;
         /* 0x0530 */ public float BinocularScanTargetMinHeight;
         /* 0x0534 */ public float BinocularScanTargetHeightRange;
@@ -167,11 +175,13 @@ namespace libMBIN.NMS.Globals
         /* 0x07F4 */ public int HardModeTechDamageMidNum;
         /* 0x07F8 */ public int HardModeTechDamageMidPercent;
         /* 0x07FC */ public int HardModeTechDamageHighPercent;
-        /* 0x0800 */ public int UnknownInt0x800;
+        /* 0x0800 */ public int EarlyPiratesToBeKilled;
         /* 0x0804 */ public int PirateInterestOverride;
         /* 0x0808 */ public float PirateInterestDistance;
-        [NMS(Size = 0x06)]
-        /* 0x080C */ public int[] PirateInterestLevels;     // maybe 2 separate int[0x3]'s?
+        [NMS(Size = 0x3)]
+        /* 0x080C */ public int[] PirateInterestLevels;
+        [NMS(Size = 0x3)]
+        /* 0x0818 */ public int[] PirateInterestLevelsSurvival;
         /* 0x0824 */ public float SpaceCombatRadius;
         /* 0x0828 */ public int WarpsBetweenBattles;
         /* 0x082C */ public float HoursBetweenBattles;
@@ -212,19 +222,19 @@ namespace libMBIN.NMS.Globals
         /* 0x08B8 */ public float EmergencyBuildingScanEventTime;
         /* 0x08BC */ public float ProjectileLightIntensity;
         /* 0x08C0 */ public float AggressiveSentinelProbability;
-        /* 0x08C4 */ public float Unknown0x8C4;
-        /* 0x08C8 */ public float Unknown0x8C8;
-        /* 0x08CC */ public float Unknown0x8CC;
-        /* 0x08D0 */ public float Unknown0x8D0;
-        /* 0x08D4 */ public int UnknownInt0x8D4;
-        /* 0x08D8 */ public int UnknownInt0x8D8;
-        /* 0x08DC */ public int UnknownInt0x8DC;
-        /* 0x08E0 */ public int UnknownInt0x8E0;
-        /* 0x08E4 */ public int UnknownInt0x8E4;
-        /* 0x08E8 */ public int UnknownInt0x8E8;
-        /* 0x08EC */ public GcExperienceTimers Unknown0x8EC;
-        /* 0x090C */ public GcExperienceTimers Unknown0x90C;
-        /* 0x092C */ public GcExperienceTimers Unknown0x92C;
+        /* 0x08C4 */ public float AggressiveSentinelProbabilitySurvival;
+        /* 0x08C8 */ public float LowSentinelProbability;
+        /* 0x08CC */ public float LowSentinelProbabilitySurvival;
+        /* 0x08D0 */ public float NonAggressiveLushSurvivalProbabability;
+        /* 0x08D4 */ public int MaxDronesLow;
+        /* 0x08D8 */ public int MaxDronesLowSurvival;
+        /* 0x08DC */ public int MaxDronesNormal;
+        /* 0x08E0 */ public int MaxDronesNormalSurvival;
+        /* 0x08E4 */ public int MaxDronesAggressive;
+        /* 0x08E8 */ public int MaxDronesAggressiveSurvival;
+        /* 0x08EC */ public GcExperienceTimers SentinelTimersLow;
+        /* 0x090C */ public GcExperienceTimers SentinelTimersNormal;
+        /* 0x092C */ public GcExperienceTimers SentinelTimersSurvival;
         /* 0x094C */ public int FreighterStartPecent;
         /* 0x0950 */ public GcExperienceTimers FreighterTimers;
         /* 0x0970 */ public GcExperienceTimers PirateTimers;
@@ -255,14 +265,13 @@ namespace libMBIN.NMS.Globals
         /* 0x0A48 */ public int ResourceCommonReducer;
         /* 0x0A4C */ public int ResourceCommonMinAmount;
         /* 0x0A50 */ public int ResourceCommonMaxAmount;
-        // I assume these have something to do with the mining of the ground...
-        /* 0x0A54 */ public int GroundResourceReducer;            // Do not set to 0
-        /* 0x0A58 */ public int GroundResourceMin;
-        /* 0x0A5C */ public int GroundResourceMax;
+        /* 0x0A54 */ public int ResourceDirtReducer;            // Do not set to 0
+        /* 0x0A58 */ public int ResourceDirtMinAmount;
+        /* 0x0A5C */ public int ResourceDirtMaxAmount;
         [NMS(Size = 0x10)]
-        /* 0x0A60 */ public string GroundResourceSubstance;
+        /* 0x0A60 */ public string ResourceDirtSubstanceID;
         [NMS(Size = 0x10)]
-        /* 0x0A70 */ public string Unknown0xA70;        // "SUNGOLD" -> Liquid Sun substance
+        /* 0x0A70 */ public string BioShipTerrainResource;        // "SUNGOLD" -> Liquid Sun substance
         [NMS(Size = 0x20)]
         /* 0x0A80 */ public string RobotResource;
         [NMS(Size = 0x20)]
@@ -292,28 +301,28 @@ namespace libMBIN.NMS.Globals
         /* 0x0BF4 */ public GcZoomData[] ZoomLevels;
         [NMS(Size = 0xC, Ignore = true)]
         /* 0x0C64 */ public byte[] PaddingC64;
-        /* 0x0C70 */ public GcScanEffectData PassiveScanEffect;
-        /* 0x0CC0 */ public GcScanEffectData BuildingScanEffect;
-        /* 0x0D10 */ public GcScanEffectData TargetShipScanEffect;
-        /* 0x0D60 */ public GcScanEffectData HUDShipScanEffect;
-        /* 0x0DB0 */ public GcScanEffectData CreatureScanEffect;
-        /* 0x0E00 */ public GcScanEffectData ObjectsScanEffect;
-        /* 0x0E50 */ public GcScanEffectData BaseBuildingScanEffect;
-        /* 0x0EA0 */ public GcScanEffectData BaseBuildingBlockedScanEffect;
-        /* 0x0EF0 */ public GcScanEffectData BaseBuildingFreighterScanEffect;
-        /* 0x0F40 */ public GcScanEffectData BaseBuildingFreighterBlockedScanEffect;
-        /* 0x0F90 */ public GcScanEffectData BaseBuildingSelectionScanEffect;
-        /* 0x0FE0 */ public GcScanEffectData BaseBuildingRemotePlayerScanEffect;
-        /* 0x1030 */ public GcScanEffectData BaseBuildingRemotePlayerBlockedScanEffect;
-        /* 0x1080 */ public GcScanEffectData BaseBuildingRemotePlayerFreighterScanEffect;
-        /* 0x10D0 */ public GcScanEffectData BaseBuildingRemotePlayerFreighterBlockedScanEffect;
-        /* 0x1120 */ public GcScanEffectData BaseBuildingRemotePlayerSelectionScanEffect;
-        /* 0x1170 */ public GcScanEffectData Unknown0x1170;              // some of these unknowns *may* be one of the above unknowns but swapped places...
-        /* 0x11C0 */ public GcScanEffectData Unknown0x11C0;
-        /* 0x1210 */ public GcScanEffectData Unknown0x1210;
-        /* 0x1260 */ public GcScanEffectData Unknown0x1260;
-        /* 0x12B0 */ public GcScanEffectData Unknown0x12B0;
-        /* 0x1300 */ public float Unknown0x1300;
+		/* 0x0C70 */ public GcScanEffectData PassiveScanEffect;
+		/* 0x0CC0 */ public GcScanEffectData BuildingScanEffect;
+		/* 0x0D10 */ public GcScanEffectData TargetShipScanEffect;
+		/* 0x0D60 */ public GcScanEffectData HUDShipScanEffect;
+		/* 0x0DB0 */ public GcScanEffectData CreatureScanEffect;
+		/* 0x0E00 */ public GcScanEffectData ObjectsScanEffect;
+		/* 0x0E50 */ public GcScanEffectData VRGhostScanEffect;
+		/* 0x0EA0 */ public GcScanEffectData BaseBuildingValidScanEffect;
+		/* 0x0EF0 */ public GcScanEffectData BaseBuildingPreviewSelectionScanEffect;
+		/* 0x0F40 */ public GcScanEffectData BaseBuildingSelectionScanEffect;
+		/* 0x0F90 */ public GcScanEffectData BaseBuildingDeleteScanEffect;
+		/* 0x0FE0 */ public GcScanEffectData BaseBuildingGhostScanEffect;
+		/* 0x1030 */ public GcScanEffectData BaseBuildingSpawnStaticEffect;
+		/* 0x1080 */ public GcScanEffectData BaseBuildingErrorInsideScanEffect;
+		/* 0x10D0 */ public GcScanEffectData BaseBuildingErrorCollisionScanEffect;
+		/* 0x1120 */ public GcScanEffectData BaseBuildingErrorImpossibleScanEffect;
+		/* 0x1170 */ public GcScanEffectData BaseBuildingErrorUnaffordableScanEffect;
+		/* 0x11C0 */ public GcScanEffectData BaseBuildingErrorAboveWaterScanEffect;
+		/* 0x1210 */ public GcScanEffectData BaseBuildingErrorBelowWaterScanEffect;
+		/* 0x1260 */ public GcScanEffectData BaseBuildingRemotePlayerValidScanEffect;
+		/* 0x12B0 */ public GcScanEffectData BaseBuildingRemotePlayerSelectionScanEffect;
+		/* 0x1300 */ public float BaseBuildingRemotePlayerErrorAlphaScanEffect;
         /* 0x1304 */ public bool UseDebugScan;
         /* 0x1305 */ public bool DebugScanForceBuilding;
         [NMS(Size = 0x02, Ignore = true)]
@@ -391,7 +400,7 @@ namespace libMBIN.NMS.Globals
         /* 0x18F0 */ public float HUDReticuleMoveAim;
         /* 0x18F4 */ public float MouseSensitivity;
         /* 0x18F8 */ public float MouseSensitivityShip;
-        /* 0x18FC */ public float Unknown0x18FC;        // maybe a VR sensitivity? Or 3rd person mouse sensitivity
+        /* 0x18FC */ public float MouseSensitivityVehicle;
         /* 0x1900 */ public float PainTime;
         /* 0x1904 */ public TkCurveType PainCurve;
         [NMS(Size = 0x8, Ignore = true)]
@@ -418,13 +427,11 @@ namespace libMBIN.NMS.Globals
         /* 0x1994 */ public float TorchOffsetX;
         /* 0x1998 */ public float TorchOffsetY;
         /* 0x199C */ public float TorchOffsetZ;
-        /* 0x19A0 */ public float Unknown0x19A0;            // VR offsets?
-        /* 0x19A4 */ public float Unknown0x19A4;
-        /* 0x19A8 */ public float Unknown0x19A8;
-        /* 0x19AC */ public bool Unknown0x19AC;     // Something to do with the torch. Toggling doesn't seem to have an affect on anything...
+        /* 0x19A0 */ public float TorchHandOffsetX;
+        /* 0x19A4 */ public float TorchHandOffsetY;
+        /* 0x19A8 */ public float TorchHandOffsetZ;
+        /* 0x19AC */ public bool TorchDisabledInTheDay;
         /* 0x19B0 */ public float TorchRotation;
-        [NMS(Size = 0xC, Ignore = true)]
-        /* 0x19B4 */ public byte[] Padding19B4;
         /* 0x19C0 */ public Colour TorchColour;
         /* 0x19D0 */ public float SimpleInteractionPickupAngle;
         /* 0x19D4 */ public float SimpleInteractionPickupRadius;
@@ -457,7 +464,7 @@ namespace libMBIN.NMS.Globals
         /* 0x1BA8 */ public ulong NPCWorkerInteractionCooldown;
         /* 0x1BB0 */ public float LightStrength;
         /* 0x1BB4 */ public float AirLockDoorRange;
-        /* 0x1BB8 */ public bool Unknown0x1BB8;                     // this value may be swapped with next value?
+        /* 0x1BB8 */ public bool DisableBasePowerHUDOverlay;
         /* 0x1BB9 */ public bool KeepAttackingMaxWantedLevel;
         /* 0x1BBA */ public bool UseMultiplierBonus;
         /* 0x1BBC */ public float ShipDisplayDamageMultiplier;
@@ -470,39 +477,39 @@ namespace libMBIN.NMS.Globals
         /* 0x1BD0 */ public int SubstanceItemStockReplenishTime;
         /* 0x1BD4 */ public GcPortalData Portal;
         /* 0x1BDC */ public int FourthRaceSpawnPercentage;
-        /* 0x1BE0 */ public int UnknownInt0x1BE0;
+        /* 0x1BE0 */ public int NonDominantRaceSpawnPercentage;
         /* 0x1BE4 */ public float ViciousSentinelProbability;
         /* 0x1BE8 */ public float ViciousStormProbability;
         /* 0x1BEC */ public float ViciousWeatherProbability;
         /* 0x1BF0 */ public float ScrapDroneProbability;
-        /* 0x1BF4 */ public float Unknown0x1BF4;
-        /* 0x1BF8 */ public float Unknown0x1BF8;
+        /* 0x1BF4 */ public float MaxRespawnOnGroundHeight;
+        /* 0x1BF8 */ public float DeadPlanetGravityFactor;
         [NMS(Size = 0x4, Ignore = true)]
         /* 0x1BFC */ public byte[] Padding1BFC;
-        /* 0x1C00 */ public GcScanEffectData Unknown0x1C00;         // Maybe scavenged stuff scan effect data?
-        /* 0x1C50 */ public float Unknown0x1C50;
-        /* 0x1C54 */ public float Unknown0x1C54;
-        /* 0x1C58 */ public float Unknown0x1C58;
-        /* 0x1C5C */ public float Unknown0x1C5C;
-        /* 0x1C60 */ public float Unknown0x1C60;
-        /* 0x1C64 */ public float Unknown0x1C64;
-        /* 0x1C68 */ public float Unknown0x1C68;
+        /* 0x1C00 */ public GcScanEffectData ShipSalvageScanEffect;
+		/* 0x1C50 */ public float SalvageShipPitch;
+		/* 0x1C54 */ public float SalvageShipHeightOffset;
+		/* 0x1C58 */ public float SalvageShipExplodeSpeed;
+		/* 0x1C5C */ public float SalvageShipShowShipSpeed;
+		/* 0x1C60 */ public float SalvageShipShowShipDistance;
+		/* 0x1C64 */ public float SalvageShipExplodeShipDistance;
+		/* 0x1C68 */ public float SalvageShipOneRevolutionTime;
         [NMS(Size = 0x4, Ignore = true)]
-        /* 0x1C6C */ public byte[] Padding0x1C6C;
+        /* 0x1C6C */ public byte[] Padding1C6C;
         [NMS(Size = 0x20)]
-        /* 0x1C70 */ public string Unknown0x1C70;
-        /* 0x1C90 */ public float Unknown0x1C90;
-        /* 0x1C94 */ public float Unknown0x1C94;
-        /* 0x1C98 */ public float Unknown0x1C98;
-        /* 0x1C9C */ public float Unknown0x1C9C;
-        /* 0x1CA0 */ public float Unknown0x1CA0;
-        /* 0x1CA4 */ public float Unknown0x1CA4;
-        /* 0x1CA8 */ public float Unknown0x1CA8;
-        /* 0x1CAC */ public float Unknown0x1CAC;
-        /* 0x1CB0 */ public int UnknownInt0x1CB0;
-        /* 0x1CB4 */ public int UnknownInt0x1CB4;
-        /* 0x1CB8 */ public int UnknownInt0x1CB8;
-        /* 0x1CBC */ public int UnknownInt0x1CBC;
+		/* 0x1C70 */ public string CommunicatorFireteamNexusExitDialog;
+        [NMS(Size = 0x20)]
+		/* 0x1C90 */ public string CommunicatorNexusExitAbandonWarningDialog;
+		/* 0x1CB0 */ public float PulseEncounterCheckTimer;
+		/* 0x1CB4 */ public float PulseEncounterChance;
+		/* 0x1CB8 */ public float PulseEncounterChanceStandard;
+		/* 0x1CBC */ public float PulseEncounterChanceRed;
+		/* 0x1CC0 */ public float PulseEncounterChanceGreen;
+		/* 0x1CC4 */ public float PulseEncounterChanceBlue;
+		/* 0x1CC8 */ public float PulseEncounterStopPower;
+		/* 0x1CCC */ public float PulseEncounterStopSpeed;
+        [NMS(Size = 0x4)]
+        /* 0x1CD0 */ public float[] AlienShipEvolveCosts;
     }
 }
 

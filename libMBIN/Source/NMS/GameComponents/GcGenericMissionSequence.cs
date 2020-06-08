@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x4A0, GUID = 0xCE9666FDA09FE054, NameHash = 0xFAE86B2801335B6D)]
+	[NMS(Size = 0x4A0, GUID = 0x77CE466A6C65822F, NameHash = 0xFAE86B2801335B6D)]
     public class GcGenericMissionSequence : NMSTemplate
     {
         [NMS(Size = 0x10)]
@@ -58,7 +58,7 @@ namespace libMBIN.NMS.GameComponents
 
         /* 0x380 */ public GcMissionBoardOptions MissionBoardOptions;
 
-		public enum AutoStartEnum { None, AllModes, NotCreative, Survival, Creative, OnSelected }
+		public enum AutoStartEnum { None, AllModes, NotCreative, Survival, Creative, Seasonal, OnSelected }
 		/* 0x400 */ public AutoStartEnum AutoStart;
         /* 0x404 */ public bool RestartOnCompletion;
         /* 0x405 */ public bool CancelSetsComplete;

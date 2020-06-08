@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0xC460, GUID = 0xD26F1D7BB5EB87D1, NameHash = 0x5930542B7B565329)]
+	[NMS(Size = 0xC510, GUID = 0x1291DFA00939C634, NameHash = 0x5930542B7B565329)]
     public class GcRealityManagerData : NMSTemplate
     {
         /* 0x0000 */ public ushort HomeRealityIteration;
@@ -108,21 +108,21 @@ namespace libMBIN.NMS.GameComponents
         [NMS(Size = 0xD)]
         /* 0xB820 */ public GcTechList[] PlanetTechShops;
         /* 0xB8F0 */ public GcTradeSettings TradeSettings;
-        /* 0xC340 */ public GcInventoryLayout SuitStartingSlotLayout;
-        /* 0xC360 */ public GcInventoryLayout SuitTechOnlyStartingSlotLayout;
-        /* 0xC380 */ public GcInventoryLayout SuitCargoStartingSlotLayout;
-        /* 0xC3A0 */ public GcInventoryLayout ShipStartingLayout;
-        /* 0xC3C0 */ public GcInventoryLayout ShipTechOnlyStartingLayout;
-        /* 0xC3E0 */ public List<int> SuitUpgradePrices;
-        /* 0xC3F0 */ public List<int> SuitTechOnlyUpgradePrices;
-        /* 0xC400 */ public List<int> SuitCargoUpgradePrices;
-        /* 0xC410 */ public List<NMSString0x10> NeverSellableItems;
-        /* 0xC420 */ public List<NMSString0x10> NeverOfferedForSale;
+        /* 0xC3F0 */ public GcInventoryLayout SuitStartingSlotLayout;
+        /* 0xC410 */ public GcInventoryLayout SuitTechOnlyStartingSlotLayout;
+        /* 0xC430 */ public GcInventoryLayout SuitCargoStartingSlotLayout;
+        /* 0xC450 */ public GcInventoryLayout ShipStartingLayout;
+        /* 0xC470 */ public GcInventoryLayout ShipTechOnlyStartingLayout;
+        /* 0xC490 */ public List<int> SuitUpgradePrices;
+        /* 0xC4A0 */ public List<int> SuitTechOnlyUpgradePrices;
+        /* 0xC4B0 */ public List<int> SuitCargoUpgradePrices;
+        /* 0xC4C0 */ public List<NMSString0x10> NeverSellableItems;
+        /* 0xC4D0 */ public List<NMSString0x10> NeverOfferedForSale;
         public enum GoodsTypeEnum { Commodity, Technology, Fuel, Tradeable, Special }
         [NMS(Size = 0x5, EnumType = typeof(GoodsTypeEnum))]         // TODO: not sure about these values....
-        /* 0xC430 */ public float[] NormalizedPriceLimits;
+        /* 0xC4E0 */ public float[] NormalizedPriceLimits;
         [NMS(Size = 0x4, Ignore = true)]
-        /* 0xC444 */ public byte[] PaddingC444;
-        /* 0xC448 */ public List<GcFiendCrimeSpawnTable> FiendCrimeSpawnTable;
+        /* 0xC4F4 */ public byte[] PaddingC4F4;
+        /* 0xC4F8 */ public List<GcFiendCrimeSpawnTable> FiendCrimeSpawnTable;
     }
 }
