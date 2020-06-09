@@ -191,7 +191,7 @@ namespace MBINCompiler.Commands {
             } else if ( unsupported ) {
                 FileIsUnused(inputPath, mbin);
             } else if ( mismatch ) {
-                FileIsUnrecognized( inputPath, mbin );
+                FileIsUnrecognized( inputPath, mbin, nms.GUID );
             }
 
             var sw = new StreamWriter( msOut );
@@ -247,9 +247,9 @@ namespace MBINCompiler.Commands {
             WarnBroken( "File not supported."
                       , filePath, mbin );
         }
-        private static void FileIsUnrecognized( string filePath, MBINFile mbin ) {
+        private static void FileIsUnrecognized( string filePath, MBINFile mbin, ulong expectedGUID = 0L ) {
             WarnBroken( "File not recognized. You may need to use an older version of MBINCompiler."
-                      , filePath, mbin );
+                      , filePath, mbin, null, expectedGUID );
         }
         private static void FileIsUnused(string filePath, MBINFile mbin)
         {
@@ -265,7 +265,7 @@ namespace MBINCompiler.Commands {
 
         private static long lastPosition = 0;
 
-        private static void WarnBroken( string msg, string filePath, MBINFile mbin, NMSTemplate data = null ) {
+        private static void WarnBroken( string msg, string filePath, MBINFile mbin, NMSTemplate data = null, ulong expectedGUID = 0L ) {
             #if ERROR_ON_BROKEN
                 if (mbin != null) throw new MbinException( msg, filePath, mbin );
                 throw new ExmlException( msg, filePath, data );
@@ -281,7 +281,10 @@ namespace MBINCompiler.Commands {
                     Logger.LogMessage( Console.Out, $"[INFO]: {filePath}" );
                     if ( mbin != null ) {
                         Logger.LogMessage( false, Console.Out, null, "" ); // newline, console only
-                        Logger.LogMessage( null, "INFO", $"{CommandLine.GetFileInfo( mbin )}\n" );
+                        Logger.LogMessage( null, "INFO", $"{CommandLine.GetFileInfo( mbin )}" );
+                        if (expectedGUID != 0L) {
+                            Logger.LogMessage(null, "EXPECTED INFO", $"GUID: {expectedGUID:X}\n");
+                        }
                     }
                     //Logger.LogMessage( true, Console.Out, null, "" ); // newline, console and log
                 }

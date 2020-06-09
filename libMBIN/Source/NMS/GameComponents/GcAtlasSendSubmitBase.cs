@@ -5,14 +5,16 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x300, GUID = 0x1E3A3511CBD73A40, NameHash = 0xF6415333939D5563)]
+	[NMS(Size = 0x310, GUID = 0xAB84214205BC3F36, NameHash = 0xF6415333939D5563)]
     public class GcAtlasSendSubmitBase : NMSTemplate
     {
         /* 0x000 */ public ulong ClientUserdata;
-        /* 0x008 */ public GcGameMode GameMode;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x00C */ public byte[] PaddingC;
-        /* 0x010 */ public GcPersistentBase BaseData;
-        /* 0x2C0 */ public GcAtlasRecvBlob TerrainData;
+        [NMS(Size = 0x8, Ignore = true)]
+        /* 0x008 */ public byte[] Padding8;
+        /* 0x010 */ public GcGameMode GameMode;
+        [NMS(Size = 0xC, Ignore = true)]
+        /* 0x014 */ public byte[] Padding14;
+        /* 0x020 */ public GcPersistentBase BaseData;
+        /* 0x2D0 */ public GcAtlasRecvBlob TerrainData;
     }
 }

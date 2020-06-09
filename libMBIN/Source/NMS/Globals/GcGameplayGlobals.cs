@@ -509,7 +509,7 @@ namespace libMBIN.NMS.Globals
 		/* 0x1CC8 */ public float PulseEncounterStopPower;
 		/* 0x1CCC */ public float PulseEncounterStopSpeed;
         [NMS(Size = 0x4)]
-        /* 0x1CD0 */ public float[] AlienShipEvolveCosts;
+        /* 0x1CD0 */ public int[] AlienShipEvolveCosts;
     }
 }
 
