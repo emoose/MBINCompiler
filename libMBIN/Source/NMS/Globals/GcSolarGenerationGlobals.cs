@@ -7,9 +7,7 @@ namespace libMBIN.NMS.Globals
     public class GcSolarGenerationGlobals : NMSTemplate
     {
         /* 0x0 */ public bool MassiveSolarSystems;
-        [NMS(Size = 0xF, Ignore = true)]
-        /* 0x1 */ public byte[] Padding2;
-        /* 0x10 */ public Vector4f SolarSystemSize;
+        /* 0x10 */ public Vector3f SolarSystemSize;
         /* 0x20 */ public float SolarSystemMaximumRadius;
         /* 0x24 */ public float SolarSystemMaximumRadiusMassive;
         /* 0x28 */ public bool GenerateMaximumSolarSystem;
@@ -42,13 +40,10 @@ namespace libMBIN.NMS.Globals
         /* 0xA8 */ public float AsteroidFadeTime;
         /* 0xAC */ public Vector2f AsteroidNoiseRange;
         /* 0xB4 */ public Vector2f LargeAsteroidNoiseRange;
-
-        /* 0xBC */ public Vector2f RareAsteroidNoiseRangeSomeRares;
-        /* 0xC4 */ public Vector2f RareAsteroidNoiseRangeLotsOfRares;
-        /* 0xCC */ public float AsteroidNoRaresNoisePoint;
-        /* 0xD0 */ public float AsteroidSomeRaresNoisePoint;
-        /* 0xD4 */ public float AsteroidLotsOfRaresNoisePoint;
-        ///* 0xD8 */ public float AsteroidSomeRaresOdds;    // I think of the few values around here this is the one removed...
+        /* 0xBC */ public Vector2f RareAsteroidNoiseRangeFewRares;
+        /* 0xC4 */ public Vector2f RareAsteroidNoiseRangeSomeRares;
+        /* 0xCC */ public Vector2f RareAsteroidNoiseRangeLotsOfRares;
+        /* 0xD4 */ public float AsteroiSomeRaresOdds;
         /* 0xD8 */ public float AsteroidLotsOfRaresOdds;
         /* 0xDC */ public float AsteroidFadeRangeMin;
         /* 0xE0 */ public float AsteroidFadeRangeMax;
@@ -70,18 +65,17 @@ namespace libMBIN.NMS.Globals
         [NMS(Size = 0x10)]
         /* 0x120 */ public string CommonAsteroidResourceFuel;
         [NMS(Size = 0x10)]
-        /* 0x130 */ public string Unknown0x130;     // GEODE_SPACE          Proposed name: GeodeSpaceResource
+        /* 0x130 */ public string RareAsteroidResourceFuel;     // GEODE_SPACE
         [NMS(Size = 0x10)]
-        /* 0x140 */ public string Unknown0x140;     // GEODE_ASTEROID       Proposed name: GeodeAsteroidResource
+        /* 0x140 */ public string CommonAsteroidResourceProduct;     // GEODE_ASTEROID
         [NMS(Size = 0x10)]
         /* 0x150 */ public string CommonAsteroidResourceMain;
         [NMS(Size = 0x10)]
         /* 0x160 */ public string CommonAsteroidResourceSecondary;
-
         /* 0x170 */ public float CommonAsteroidResourceFuelOdds;
-        /* 0x174 */ public float CommonAsteroidResourceSecondaryOdds;
-        /* 0x178 */ public float Unknown0x178;                           // Proposed name: GeodeSpaceOdds           (NOTE: this and following value names may be swapped...?)
-        /* 0x17C */ public float Unknown0x17C;                           // Proposed name: GeodeAsteroidOdds
+        /* 0x174 */ public float RareAsteroidResourceFuelOdds;
+        /* 0x178 */ public float CommonAsteroidResourceProductOdds;
+        /* 0x17C */ public float CommonAsteroidResourceSecondaryOdds;
         /* 0x180 */ public int CommonAsteroidHealth;
         /* 0x184 */ public float LargeAsteroidSpacing;
         /* 0x188 */ public float LargeAsteroidFadeTime;
