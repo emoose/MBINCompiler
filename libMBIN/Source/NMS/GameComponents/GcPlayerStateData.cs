@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x29DF0, GUID = 0x8112B8CE763BD83E, NameHash = 0x6C4510BB243EFA64)]
+	[NMS(Size = 0x29DF0, GUID = 0x7F144E183A5EF79F, NameHash = 0x6C4510BB243EFA64)]
     public class GcPlayerStateData : NMSTemplate
     {
         /* 0x00000 */ public GcUniverseAddressData UniverseAddress;

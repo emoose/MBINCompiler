@@ -3,31 +3,30 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(Size = 0x310, GUID = 0x471C421AC7E960BD)]
+    [NMS(Size = 0x310, GUID = 0x20B74531D4B36C5)]
     public class GcMultiplayerGlobals : NMSTemplate
     {
-        /* 0x000 */ public Vector2f FullSimHandUpdateDistance;
-        /* 0x008 */ public Vector2f FullSimHandUpdateInterval;
-        /* 0x010 */ public float DistanceBetweenTeleportMovementEffects;
-        /* 0x014 */ public float FullSimHandUpdateDisabledDistance;
-        /* 0x018 */ public float FullSimUpdateInterval;
-        /* 0x01C */ public float JoinInteractionTimeout;
-        /* 0x020 */ public float InviteInteractionTimeout;
-        /* 0x024 */ public int MaxDownloadableBases;
-        /* 0x028 */ public float BlobHeightOffset;
-        /* 0x02C */ public int TransactionTimeout;
-        /* 0x030 */ public int MessageQueueSize;
-        /* 0x034 */ public int MessageQueueSizeDropUnreliable;
-        /* 0x038 */ public float PlayerMarkerDisplayDistance;
-        /* 0x03C */ public bool VoiceChatEnabled;
-        /* 0x03D */ public bool FullSimHostMigration;
-        /* 0x040 */ public float DisconnectionDisplayTime;
-        /* 0x044 */ public float UpdatePeriod;
-        /* 0x048 */ public float UpdatePeriodSteam;
-        /* 0x04C */ public float VoiceUpdatePeriod;
-        /* 0x050 */ public float VoiceUpdatePeriodSteam;
-        /* 0x054 */ public float UpdateSlerpModifier;
-        /* 0x058 */ public float ShipDirectionLerpModifier;
+        /* 0x0 */ public Vector2f FullSimHandUpdateDistance;
+		/* 0x8 */ public Vector2f FullSimHandUpdateInterval;
+		/* 0x10 */ public float DistanceBetweenTeleportMovementEffects;
+		/* 0x14 */ public float FullSimHandUpdateDisabledDistance;
+		/* 0x18 */ public float FullSimUpdateInterval;
+		/* 0x1C */ public float JoinInteractionTimeout;
+		/* 0x20 */ public float InviteInteractionTimeout;
+		/* 0x24 */ public int MaxDownloadableBases;
+		/* 0x28 */ public float BlobHeightOffset;
+		/* 0x2C */ public int TransactionTimeout;
+		/* 0x30 */ public int MessageQueueSize;
+		/* 0x34 */ public int MessageQueueSizeDropUnreliable;
+		/* 0x38 */ public float PlayerMarkerDisplayDistance;
+		/* 0x3C */ public bool VoiceChatEnabled;
+		/* 0x40 */ public float DisconnectionDisplayTime;
+		/* 0x44 */ public float UpdatePeriod;
+		/* 0x48 */ public float UpdatePeriodSteam;
+		/* 0x4C */ public float VoiceUpdatePeriod;
+		/* 0x50 */ public float VoiceUpdatePeriodSteam;
+		/* 0x54 */ public float UpdateSlerpModifier;
+        /* 0x58 */ public float ShipDirectionLerpModifier;
 		/* 0x5C */ public float CharacterDirectionLerpModifier;
 		/* 0x60 */ public float ShipSyncConvervengeMultiplier;
 		/* 0x64 */ public float ShipLandShakeMaxDist;
@@ -40,6 +39,7 @@ namespace libMBIN.NMS.Globals
 		/* 0x80 */ public float PlayerMarkerLargeIconCloseSize;
 		/* 0x84 */ public float PlayerMarkerMinShowDistance;
 		/* 0x88 */ public bool PlayerMarkerCenteredName;
+		/* 0x8C */ public float PlayerInteractCooldown;
 		/* 0x90 */ public ulong AbandonedEntityWaitPeriod;
 		/* 0x98 */ public float HostOnConnectedTimeout;
 		/* 0x9C */ public int MaxSyncResponsesPerHash;
@@ -47,7 +47,7 @@ namespace libMBIN.NMS.Globals
 		/* 0xA4 */ public float HostBiasScore;
 		/* 0xA8 */ public float UsefulSyncResponseScore;
 		/* 0xAC */ public float UselessSyncResponseScore;
-        /* 0xB0 */ public float ConstantScoreDepletionRate;
+		/* 0xB0 */ public float ConstantScoreDepletionRate;
 		/* 0xB4 */ public float FactorScoreDepletionRate;
 		/* 0xB8 */ public float HashCheckMessageInterval;
 		/* 0xBC */ public float SyncMessageInterval;
