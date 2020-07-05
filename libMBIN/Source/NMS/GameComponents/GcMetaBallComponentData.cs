@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0x1D1348AD9F68E484, NameHash = 0xDA00E84E26C162C5)]
+	[NMS(Size = 0xD0, GUID = 0x1D1348AD9F68E484, NameHash = 0xDA00E84E26C162C5)]
     public class GcMetaBallComponentData : NMSTemplate
     {
         [NMS(Size = 0x80)]

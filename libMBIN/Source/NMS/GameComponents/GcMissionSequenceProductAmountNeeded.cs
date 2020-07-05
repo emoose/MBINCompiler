@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0x8BB6B50446320098, NameHash = 0x49B1F2E8A11B19B6)]
+	[NMS(Size = 0x128, GUID = 0x8BB6B50446320098, NameHash = 0x49B1F2E8A11B19B6)]
     public class GcMissionSequenceProductAmountNeeded : NMSTemplate
     {
         [NMS(Size = 0x80)]
