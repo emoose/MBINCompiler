@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0x8159D3D6B6276FF1, NameHash = 0x5035CC19B55D3442)]
+	[NMS(Size = 0x28, GUID = 0x8159D3D6B6276FF1, NameHash = 0x5035CC19B55D3442)]
     public class GcSelectableObjectList : NMSTemplate
     {
         [NMS(Size = 0x10)]

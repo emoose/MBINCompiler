@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0xFEC2385BD37C76F6, NameHash = 0xCFC064FBFD501A40)]
+	[NMS(Size = 0x20, GUID = 0xFEC2385BD37C76F6, NameHash = 0xCFC064FBFD501A40)]
     public class GcRewardMissionOverride : NMSTemplate
     {
         [NMS(Size = 0x10)]

@@ -5,7 +5,7 @@ using System.Reflection;
 
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0xC4EC539630150F6A, NameHash = 0x71610F70BA400437)]
+    [NMS(Size = 0x4, GUID = 0xC4EC539630150F6A, NameHash = 0x71610F70BA400437)]
     public class TkMaterialFlags : NMSTemplate
     {
         /// <summary>

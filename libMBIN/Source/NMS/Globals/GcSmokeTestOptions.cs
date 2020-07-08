@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS( GUID = 0x4E4FDD440BD74765 )]
+    [NMS(Size = 0xA0, GUID = 0x4E4FDD440BD74765 )]
     public class GcSmokeTestOptions : NMSTemplate
     {
         /* 0x0 */ public float InitialPause;

@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS( GUID = 0xE631F099F9410CAB )]
+    [NMS(Size = 0x310, GUID = 0xE631F099F9410CAB )]
     public class GcSceneOptions : NMSTemplate // doesn't seem like any of this is used by the game..
     {
         /* 0x0 */ public int RecentToolboxIndex;

@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0xE558523281E02943, NameHash = 0xC2EE53901B0156DE)]
+	[NMS(Size = 0x4, GUID = 0xE558523281E02943, NameHash = 0xC2EE53901B0156DE)]
     public class GcBuildingPlacementErrorTypes : NMSTemplate
     {
         // 0x14 entries
