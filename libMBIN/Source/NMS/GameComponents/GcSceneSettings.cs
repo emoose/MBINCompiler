@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x4E0, GUID = 0x8CE8D4DDE8AC0F11, NameHash = 0xF75874C269CFFEA3)]
+	[NMS(Size = 0x510, GUID = 0x7CA24430493DA074, NameHash = 0xF75874C269CFFEA3)]
     public class GcSceneSettings : NMSTemplate
     {
         [NMS(Size = 0x80)]
@@ -31,10 +31,10 @@ namespace libMBIN.NMS.GameComponents
 
         /* 0x430 */ public GcPlayerSpawnStateData PlayerState;
 
-        /* 0x4B0 */ public List<NMSTemplate> Events;
-        /* 0x4C0 */ public List<NMSTemplate> PostWarpEvents;
+        /* 0x4E0 */ public List<NMSTemplate> Events;
+        /* 0x4F0 */ public List<NMSTemplate> PostWarpEvents;
 
         [NMS(Size = 0x10)]
-        /* 0x4D0 */ public string SpawnerOptionId;
+        /* 0x500 */ public string SpawnerOptionId;
     }
 }

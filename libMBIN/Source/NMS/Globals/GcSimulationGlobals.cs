@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(Size = 0x1F10, GUID = 0x64CF5D726CE7144A)]
+    [NMS(Size = 0x1F90, GUID = 0x49EEE64199B4DFF2)]
     public class GcSimulationGlobals : NMSTemplate
     {
         [NMS(Size = 0x80)]
@@ -33,38 +33,40 @@ namespace libMBIN.NMS.Globals
         /* 0xB08 */ public string HeavyAirCave;
         [NMS(Size = 0x80)]
         /* 0xB88 */ public string HeavyAirUnderwater;
+        [NMS(Size = 0x80)]
+        /* 0xB88 */ public string HeavyAirAbandonedFreighter;
         [NMS(Size = 3)]
-        /* 0xC08 */ public NMSString0x80[] PrefetchScenegraphResources;
+        /* 0xC88 */ public NMSString0x80[] PrefetchScenegraphResources;
         [NMS(Size = 2)]
-        /* 0xD88 */ public NMSString0x80[] PrefetchMaterialResources;
+        /* 0xE08 */ public NMSString0x80[] PrefetchMaterialResources;
         [NMS(Size = 0x80)]
-        /* 0xE88 */ public string PlanetAtmosphereFile;
+        /* 0xF08 */ public string PlanetAtmosphereFile;
         [NMS(Size = 0x80)]
-        /* 0xF08 */ public string PlanetAtmosphereMaterialFile;
+        /* 0xF88 */ public string PlanetAtmosphereMaterialFile;
         [NMS(Size = 0x80)]
-        /* 0xF88 */ public string PlanetRingFile;
+        /* 0x1008 */ public string PlanetRingFile;
         [NMS(Size = 0x80)]
-        /* 0x1008 */ public string PlanetRingMaterialFile;
+        /* 0x1088 */ public string PlanetRingMaterialFile;
         [NMS(Size = 0x80)]
-        /* 0x1088 */ public string PlanetMaterialFile;
+        /* 0x1108 */ public string PlanetMaterialFile;
         [NMS(Size = 0x80)]
-        /* 0x1108 */ public string PlaterWaterMaterialFile;
+        /* 0x1188 */ public string PlaterWaterMaterialFile;
         [NMS(Size = 6)]
-        /* 0x1188 */ public NMSString0x80[] PlanetTerrainMaterials;
+        /* 0x1208 */ public NMSString0x80[] PlanetTerrainMaterials;
         [NMS(Size = 0x10)]
-        /* 0x1488 */ public NMSString0x80[] PrefetchTextureResources;
-        /* 0x1C88 */ public float WarpTunnelScale;
+        /* 0x1508 */ public NMSString0x80[] PrefetchTextureResources;
+        /* 0x1D08 */ public float WarpTunnelScale;
         [NMS(Size = 0x80)]
-        /* 0x1C8C */ public string WarpTunnelFile;
+        /* 0x1D0C */ public string WarpTunnelFile;
         [NMS(Size = 0x80)]
-        /* 0x1D0C */ public string BlackHoleTunnelFile;
+        /* 0x1D8C */ public string BlackHoleTunnelFile;
         [NMS(Size = 0x80)]
-        /* 0x1D8C */ public string TeleportTunnelFile;
+        /* 0x1E0C */ public string TeleportTunnelFile;
         [NMS(Size = 0x80)]
-        /* 0x1E0C */ public string PortalTunnelFile;
+        /* 0x1E8C */ public string PortalTunnelFile;
         [NMS(Size = 0x80)]
-        /* 0x1E8C */ public string PortalStoryTunnelFile;
+        /* 0x1F0C */ public string PortalStoryTunnelFile;
         [NMS(Size = 0x4, Ignore = true)]
-        public byte[] EndPadding;
+        /* 0x1F8C */ public byte[] EndPadding;
     }
 }

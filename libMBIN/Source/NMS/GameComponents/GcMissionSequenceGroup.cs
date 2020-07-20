@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x220, Alignment = 0x10, GUID = 0xACAE973C5302E516, NameHash = 0x51B3554FFBEBED66)]
+	[NMS(Size = 0x280, Alignment = 0x10, GUID = 0x6378248A2B3F6794, NameHash = 0x51B3554FFBEBED66)]
     public class GcMissionSequenceGroup : NMSTemplate
     {
         /* 0x000 */ public bool Silent;
@@ -46,8 +46,14 @@ namespace libMBIN.NMS.GameComponents
         /* 0x1E8 */ public TkInputEnum SpecialButtonIcon;
         [NMS(Size = 0x4, Ignore = true)]
         /* 0x1EC */ public byte[] Padding1EC;
-        /* 0x1F0 */ public List<NMSTemplate> Conditions;
-        /* 0x200 */ public List<NMSTemplate> Consequences;
-        /* 0x210 */ public List<GcGenericMissionStage> Stages;
+        /* 0x1F0 */ public GcObjectiveTextFormatOptions ObjectiveFormatting;
+        /* 0x238 */ public GcCustomNotifyTimerOptions CustomNotifyTimers;
+        [NMS(Size = 0x4, Ignore = true)]
+        /* 0x244 */ public byte[] Padding244;
+        /* 0x248 */ public List<NMSTemplate> Conditions;
+        /* 0x258 */ public List<NMSTemplate> Consequences;
+        /* 0x268 */ public List<GcGenericMissionStage> Stages;
+        [NMS(Size = 0x8, Ignore = true)]
+        /* 0x278 */ public byte[] EndPadding;
     }
 }

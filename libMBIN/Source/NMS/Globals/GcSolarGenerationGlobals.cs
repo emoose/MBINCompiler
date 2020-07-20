@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(Size = 0x3B0, GUID = 0x715C1592CCDFB8CA)]
+    [NMS(Size = 0x3D0, GUID = 0x7ED61A640709B8D8)]
     public class GcSolarGenerationGlobals : NMSTemplate
     {
         /* 0x0 */ public bool MassiveSolarSystems;
@@ -11,7 +11,7 @@ namespace libMBIN.NMS.Globals
         /* 0x20 */ public float SolarSystemMaximumRadius;
         /* 0x24 */ public float SolarSystemMaximumRadiusMassive;
         /* 0x28 */ public bool GenerateMaximumSolarSystem;
-        /* 0x2C */ public int GenerateForcedNumberPlanets;          // I assume from the name
+        /* 0x2C */ public int GenerateForcedNumberPlanets;
         /* 0x30 */ public bool UseSingleRacePerSystem;
         /* 0x34 */ public Vector2f PerPlanetGenerationAngleChangeDegreesRange;
         /* 0x3C */ public Vector2f PerPlanetGenerationElevationChangeDegreesRange;
@@ -72,36 +72,41 @@ namespace libMBIN.NMS.Globals
         /* 0x150 */ public string CommonAsteroidResourceMain;
         [NMS(Size = 0x10)]
         /* 0x160 */ public string CommonAsteroidResourceSecondary;
-        /* 0x170 */ public float CommonAsteroidResourceFuelOdds;
-        /* 0x174 */ public float RareAsteroidResourceFuelOdds;
-        /* 0x178 */ public float CommonAsteroidResourceProductOdds;
-        /* 0x17C */ public float CommonAsteroidResourceSecondaryOdds;
-        /* 0x180 */ public int CommonAsteroidHealth;
-        /* 0x184 */ public float LargeAsteroidSpacing;
-        /* 0x188 */ public float LargeAsteroidFadeTime;
-        /* 0x18C */ public float LargeAsteroidFadeRangeMin;
-        /* 0x190 */ public float LargeAsteroidFadeRangeMax;
-        /* 0x194 */ public float LargeAsteroidMoveFadeTime;
-        /* 0x198 */ public float RingAsteroidScale;
-        /* 0x19C */ public float RingAsteroidSpacing;
-        /* 0x1A0 */ public float RingAsteroidFadeRangeMin;
-        /* 0x1A4 */ public float RingAsteroidFadeRangeMax;
-        /* 0x1A8 */ public int AsteroidMaxNumGenerates;
-        /* 0x1AC */ public int AsteroidMaxNumGeneratesPulseJump;
-        /* 0x1B0 */ public float AsteroidSpaceStationAvoidRadius;
-        /* 0x1B4 */ public float AsteroidAnomalyAvoidRadius;
-        /* 0x1B8 */ public float AsteroidWarpInAreaAvoidRadius;
+        [NMS(Size = 0x10)]
+        /* 0x170 */ public string RareAsteroidDataProduct;
+        /* 0x180 */ public float CommonAsteroidResourceFuelOdds;
+        /* 0x184 */ public float RareAsteroidResourceFuelOdds;
+        /* 0x188 */ public float CommonAsteroidResourceProductOdds;
+        /* 0x18C */ public float RareAsteroidDataProductOdds;
+        /* 0x190 */ public float CommonAsteroidResourceSecondaryOdds;
+        /* 0x194 */ public int CommonAsteroidHealth;
+        /* 0x198 */ public float LargeAsteroidSpacing;
+        /* 0x19C */ public float LargeAsteroidFadeTime;
+        /* 0x1A0 */ public float LargeAsteroidFadeRangeMin;
+        /* 0x1A4 */ public float LargeAsteroidFadeRangeMax;
+        /* 0x1A8 */ public float LargeAsteroidMoveFadeTime;
+        /* 0x1AC */ public float RingAsteroidScale;
+        /* 0x1B0 */ public float RingAsteroidSpacing;
+        /* 0x1B4 */ public float RingAsteroidFadeRangeMin;
+        /* 0x1B8 */ public float RingAsteroidFadeRangeMax;
+        /* 0x1BC */ public int AsteroidMaxNumGenerates;
+        /* 0x1C0 */ public int AsteroidMaxNumGeneratesPulseJump;
+        /* 0x1C4 */ public float AsteroidSpaceStationAvoidRadius;
+        /* 0x1C8 */ public float AsteroidAnomalyAvoidRadius;
+        /* 0x1CC */ public float AsteroidWarpInAreaAvoidRadius;
         [NMS(Size = 0x4, EnumType = typeof(GcGalaxyStarTypes.GalaxyStarTypeEnum))]
-        /* 0x1BC */ public float[] AbandonedSystemProbability;
+        /* 0x1D0 */ public float[] AbandonedSystemProbability;
         [NMS(Size = 0x4, EnumType = typeof(GcGalaxyStarTypes.GalaxyStarTypeEnum))]
-        /* 0x1CC */ public float[] EmptySystemProbability;
-        /* 0x1DC */ public int CivilianTraderSpaceshipsCacheCount;
+        /* 0x1E0 */ public float[] EmptySystemProbability;
+        /* 0x1F0 */ public int CivilianTraderSpaceshipsCacheCount;
         [NMS(Size = 0x3)]
-        /* 0x1E0 */ public float[] SpaceshipSpawnFreqMultipliers;
+        /* 0x1F4 */ public float[] SpaceshipSpawnFreqMultipliers;
         [NMS(Size = 0x8, EnumType = typeof(GcAlienRace.AlienRaceEnum))]     // I think this is the enum type...
-        /* 0x1EC */ public GcAISpaceshipWeightingData[] SpaceshipWeightings;
-        /* 0x2EC */ public float PlanetRingProbability;
-        /* 0x2F0 */ public GcPlanetRingData PlanetRingsMin;
-        /* 0x350 */ public GcPlanetRingData PlanetRingsMax;
+        /* 0x200 */ public GcAISpaceshipWeightingData[] SpaceshipWeightings;
+        /* 0x300 */ public float PlanetRingProbability;
+        [NMS(Size = 0xC, Ignore = true)]
+        /* 0x304 */ public byte[] Padding304;
+        /* 0x310 */ public GcPlanetRingData PlanetRingsMin;
+        /* 0x370 */ public GcPlanetRingData PlanetRingsMax;
     }
 }

@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x110, Alignment = 0x8, GUID = 0xF270B056D4F2CE49, NameHash = 0xDE1F17CE7E01A8C2)]
+	[NMS(Size = 0x110, Alignment = 0x8, GUID = 0x85A62FA23BFC4312, NameHash = 0xDE1F17CE7E01A8C2)]
     public class GcAlienPuzzleEntry : NMSTemplate
     {
         /* 0x000 */ public int ProgressionIndex;
@@ -44,7 +44,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x0F8 */ public List<GcPuzzleTextFlow> AdvancedInteractionFlow;
         public enum PersistancyBufferOverrideEnum { None, AlwaysPersonal, AlwaysFireteam }
         /* 0x108 */ public PersistancyBufferOverrideEnum PersistancyBufferOverride;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x10C */ public byte[] EndPadding;
+        /* 0x10C */ public int CustomFreighterTextIndex;
     }
 }

@@ -99,8 +99,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x6680 */ public TkTextureResource[] SubstanceChargeIcons;
         [NMS(Size = 0xA1, EnumType = typeof(GcStatsTypes.StatsTypeEnum))]
         /* 0x6B24 */ public TkTextureResource[] StatCategoryIcons;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0xB87C */ public byte[] PaddingB87C;
         public enum PossessionEnum { Suit, Weapon, Ship, Freighter, Vehicle }
         [NMS(Size = 0x5, EnumType = typeof(PossessionEnum))]
         /* 0xBE28 */ public GcStats[] Stats;

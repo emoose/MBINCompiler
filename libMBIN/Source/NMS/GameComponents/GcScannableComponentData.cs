@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x44, GUID = 0x1D8328B48879E395, NameHash = 0x74BA808E86F0EC01)]
+	[NMS(Size = 0x70, GUID = 0xCD6A06213A8283AA, NameHash = 0x74BA808E86F0EC01)]
     public class GcScannableComponentData : NMSTemplate
     {
         /* 0x00 */ public float ScanRange;
@@ -22,7 +22,14 @@ namespace libMBIN.NMS.GameComponents
 		public enum ScannableTypeEnum { Binoculars, BinocularsHotspots, Scanner, Marker, None }
 		/* 0x3C */ public ScannableTypeEnum ScannableType;
         /* 0x40 */ public bool IsPlacedMarker;
-        [NMS(Size = 0x3, Ignore = true)]
-        /* 0x41 */ public byte[] EndPadding;
+        /* 0x41 */ public bool ShowInFreighterBranchRoom;
+        /* 0x42 */ public bool TellPlayerIfFreighterObjectUsed;
+        [NMS(Size = 0x5, Ignore = true)]
+        /* 0x43 */ public byte[] Padding43;
+        [NMS(Size = 0x20)]
+        /* 0x48 */ public string FreighterObjectAlreadyUsedLocID;
+        /* 0x68 */ public bool AllowedToMerge;
+        [NMS(Size = 0x7, Ignore = true)]
+        /* 0x69 */ public byte[] EndPadding;
     }
 }

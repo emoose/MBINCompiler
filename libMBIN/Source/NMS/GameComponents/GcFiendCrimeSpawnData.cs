@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x44, GUID = 0x7E08D2891797A237, NameHash = 0x9F76738BACABEAD2)]
+	[NMS(Size = 0x44, GUID = 0x31540D2803FF9F3B, NameHash = 0x9F76738BACABEAD2)]
     public class GcFiendCrimeSpawnData : NMSTemplate
     {
 		/* 0x00 */ public GcCreatureTypes Type;
