@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(Size = 0x7840, GUID = 0xFD3AAA48A6C85232)]
+    [NMS(Size = 0x7840, GUID = 0x943E994E131C09B0)]
     public class GcVehicleGlobals : NMSTemplate
     {
         /* 0x0 */ public float VehicleSolarRegenFactor;
