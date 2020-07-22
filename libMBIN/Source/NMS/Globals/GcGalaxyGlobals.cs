@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(Size = 0x1D80, GUID = 0xAE3B512EEB51E84A)]
+    [NMS(Size = 0x1D80, GUID = 0x30650DB496FEC797)]
     public class GcGalaxyGlobals : NMSTemplate
     {
         /* 0x0 */ public bool NewStyleLookAtCamera;
@@ -156,8 +156,6 @@ namespace libMBIN.NMS.Globals
         /* 0x1470 */ public GcGalaxyRenderAnostreakData AnostreakAway;
         /* 0x14A0 */ public GcGalaxyRenderAnostreakData AnostreakFacing;
         /* 0x14D0 */ public float SelectionTreeAlpha;
-        [NMS(Size = 0x0C, Ignore = true)]
-        /* 0x14D4 */ public byte[] Padding14D4;
         /* 0x14E0 */ public Colour SelectionTreeColour;
         /* 0x14F0 */ public Vector2f GoalDistanceRange;
         [NMS(Size = 0x8, Ignore = true)]

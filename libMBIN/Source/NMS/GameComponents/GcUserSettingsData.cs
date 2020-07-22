@@ -4,7 +4,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x3918, GUID = 0xA9B060BD1B503D, NameHash = 0x3A50D683FD1CF4BF)]
+	[NMS(Size = 0x3928, GUID = 0xB37AFE3A8D9445C0, NameHash = 0x3A50D683FD1CF4BF)]
     public class GcUserSettingsData : NMSTemplate
     {
         /* 0x0000 */ public bool InvertLookControls;
@@ -36,31 +36,31 @@ namespace libMBIN.NMS.GameComponents
         /* 0x38B0 */ public List<NMSString0x10> SeenProducts;
         /* 0x38C0 */ public List<NMSString0x20> SeenWikiTopics;
         /* 0x38D0 */ public List<NMSString0x20> UnlockedWikiTopics;
-        /* 0x38E0 */ public bool VoiceChat;
-        /* 0x38E1 */ public bool Multiplayer;
-        /* 0x38E2 */ public bool InstantUIInputs;
-        /* 0x38E3 */ public bool SpeechToText;
-        /* 0x38E4 */ public bool Translate;
-        /* 0x38E5 */ public bool CrossPlatform;
+        /* 0x38E0 */ public List<NMSString0x10> UnlockedTitles;
+        /* 0x38F0 */ public bool VoiceChat;
+        /* 0x38F1 */ public bool Multiplayer;
+        /* 0x38F2 */ public bool InstantUIInputs;
+        /* 0x38F3 */ public bool SpeechToText;
+        /* 0x38F4 */ public bool Translate;
+        /* 0x38F5 */ public bool CrossPlatform;
         public enum TemperatureUnitEnum { Invalid, C, F, K }
-        /* 0x38E8 */ public TemperatureUnitEnum TemperatureUnit;
-        /* 0x38EC */ public bool UseOldMouseFlight;
-        /* 0x38F0 */ public int LastSeenCommunityMission;
-        /* 0x38F4 */ public int LastSeenCommunityMissionTier;
+        /* 0x38F8 */ public TemperatureUnitEnum TemperatureUnit;
+        /* 0x38FC */ public bool UseOldMouseFlight;
+        /* 0x3900 */ public int LastSeenCommunityMission;
+        /* 0x3904 */ public int LastSeenCommunityMissionTier;
         public enum MovementModeEnum { Teleporter, Smooth }
-        /* 0x38F8 */ public MovementModeEnum MovementMode;
+        /* 0x3908 */ public MovementModeEnum MovementMode;
         public enum TurnModeEnum { Smooth, Snap }
-        /* 0x38FC */ public TurnModeEnum TurnMode;
-        /* 0x3900 */ public bool UseVrVignette;
-        /* 0x3901 */ public bool UseShipAutoControlVignette;
-        /* 0x3904 */ public float HUDZoom;
-        /* 0x3908 */ public float FrontendZoom;
-        /* 0x390C */ public bool UseAutoTorch;
-        /* 0x390D */ public bool VRHeadBob;
-        /* 0x390E */ public bool VRShowBody;
-        /* 0x390F */ public bool BaseComplexityLimitsEnabled;
-        /* 0x3910 */ public bool EnableLargeLobbies;
-        [NMS(Size = 0x7, Ignore = true)]
-        /* 0x3911 */ public byte[] EndPadding;
+        /* 0x390C */ public TurnModeEnum TurnMode;
+        /* 0x3910 */ public bool UseVrVignette;
+        /* 0x3911 */ public bool UseShipAutoControlVignette;
+        /* 0x3914 */ public float HUDZoom;
+        /* 0x3918 */ public float FrontendZoom;
+        /* 0x391C */ public bool UseAutoTorch;
+        /* 0x391D */ public bool VRHeadBob;
+        /* 0x391E */ public bool VRShowBody;
+        /* 0x391F */ public bool BaseComplexityLimitsEnabled;
+        /* 0x3920 */ public bool EnableLargeLobbies;
+        /* 0x3924 */ public int FireteamSessionCount;
     }
 }

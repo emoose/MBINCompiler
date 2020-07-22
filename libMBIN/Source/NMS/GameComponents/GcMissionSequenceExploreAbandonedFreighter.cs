@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x101, GUID = 0xC5CD3D1BAE9B1920, NameHash = 0xDBB793901A29BBD4)]
+	[NMS(Size = 0x101, Alignment = 0x1, GUID = 0xC5CD3D1BAE9B1920, NameHash = 0xDBB793901A29BBD4)]
     public class GcMissionSequenceExploreAbandonedFreighter : NMSTemplate
     {
         [NMS(Size = 0x80)]
