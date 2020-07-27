@@ -21,6 +21,6 @@ namespace libMBIN.NMS.Globals
         /* 0x30 */ public float PlanetFlightTime;
         /* 0x34 */ public float PlanetFlightTimeout;
         /* 0x38 */ public float SmokeBotTurnAngle;
-        /* 0x3C */ public float SmokeBotNumWalksBeforeWarp;
+        /* 0x3C */ public int SmokeBotNumWalksBeforeWarp;
     }
 }
