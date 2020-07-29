@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(Size = 0x6A30, GUID = 0x0CCCC7981A575EAB)]
+    [NMS(Size = 0x6A30, GUID = 0x5F55C0B9CE779283)]
     public class GcUIGlobals : NMSTemplate
     {
         /* 0x0 */ public int ForceOpenHazardProtInventoryThreshold;
@@ -937,7 +937,8 @@ namespace libMBIN.NMS.Globals
         /* 0x5AA8 */ public float TargetMarkerFadeAngleMin;
         /* 0x5AAC */ public float TargetMarkerFadeAngleRange;
         /* 0x5AB0 */ public float HitMarkerPulseSize;
-        /* 0x5AB4 */ public float HitMarkerPulseTime;
+        /* 0x5AB4 */ public float HitMarkerPulseSizeStatic;
+        /* 0x5AB8 */ public float HitMarkerPulseTime;
         /* 0x5AC0 */ public Colour WantedColour;
         /* 0x5AD0 */ public float PlanetPoleMaxDotProduct;
 		/* 0x5AD4 */ public float SpaceMapLineWidth;
