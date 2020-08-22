@@ -2,14 +2,13 @@ theme:
   name: readthedocs
   custom_dir: 'docs/custom_theme/'
   highlightjs: true
-  hljs_languages:
-    - c#
+  extra_css:
+  - css/tables.css
 site_name: MBINCompiler
 site_dir: html_docs/site/
 nav:
     - Home: index.md
     - Installation: installation.md
     - Usage: usage.md
-    - libMBIN:
-      - Usage: libmbin\usage.md
-        
+    - libMBIN: libmbin\usage.md
+    - template: template.md

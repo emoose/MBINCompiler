@@ -1,0 +1,8 @@
+div.enumName {
+    text-decoration: underline;
+    text-decoration-style: dotted;
+}
+
+.wy-nav-content {
+    max-width: 80%;
+}
