@@ -12,6 +12,6 @@ namespace libMBIN.NMS.GameComponents
 		public PageToOpenEnum PageToOpen;
         /* 0x4 */ public bool ReinteractWhenComplete;
         [NMS(Size = 0x3, Ignore = true)]
-        /* 0x5 */ public byte[] Endpadding;
+        /* 0x5 */ public byte[] EndPadding;
     }
 }

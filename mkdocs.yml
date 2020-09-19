@@ -2,8 +2,6 @@ theme:
   name: readthedocs
   custom_dir: 'docs/custom_theme/'
   highlightjs: true
-  extra_css:
-  - css/tables.css
 site_name: MBINCompiler
 site_dir: html_docs/site/
 nav:
@@ -11,4 +9,4 @@ nav:
     - Installation: installation.md
     - Usage: usage.md
     - libMBIN: libmbin\usage.md
-    - template: template.md
+    - Structs: structs\index.md

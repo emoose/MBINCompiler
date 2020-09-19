@@ -16,6 +16,6 @@ namespace libMBIN.NMS.GameComponents
         [NMS(Size = 0x80)]
         /* 0x0A1 */ public string DebugText;
         [NMS(Size = 0x7, Ignore = true)]
-        /* 0x121 */ public byte[] Endpadding;
+        /* 0x121 */ public byte[] EndPadding;
     }
 }

@@ -94,7 +94,8 @@ namespace libMBIN.NMS.Globals
         /* 0x04D8 */ public float HmdInteractionRangeMinRange;
         /* 0x04DC */ public float HmdInteractionRangeMinDistance;
         /* 0x04E0 */ public float HmdInteractionRangeMultiplier;
-        /* 0x04E4 */ public bool InstallTechWithInteraction; // Set to False to revert to legacy method of installing technologies and upgrades
+        [NMSDescription("Set to False to revert to legacy method of installing technologies and upgrades")]
+        /* 0x04E4 */ public bool InstallTechWithInteraction;
         /* 0x04E5 */ public bool FreighterRequiresRGBHyperdriveUpgrades;
         /* 0x04E6 */ public bool DisableAnomalyAmbientSpawn;
         /* 0x04E7 */ public bool AllowDeconstruct;

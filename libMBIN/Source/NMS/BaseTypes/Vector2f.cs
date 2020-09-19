@@ -3,6 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS
 {
+    [NMS(Size = 0x8)]
     public class Vector2f : NMSTemplate
     {
         public float x;

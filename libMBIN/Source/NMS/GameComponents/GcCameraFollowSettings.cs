@@ -10,7 +10,9 @@ namespace libMBIN.NMS.GameComponents
         /* 0x00 */ public string Name;
         /* 0x10 */ public float MinSpeed;
         /* 0x14 */ public float SpeedRange;
+        [NMSDescription("Horizontal offset relative to the center (0). Negative values move the camera left, positive values move it right")]
         /* 0x18 */ public float OffsetX;
+        [NMSDescription("Vertical offset relative to the center (0). Negative values lower the camera, positive values raise it")]
         /* 0x1C */ public float OffsetY;
         /* 0x20 */ public float OffsetYAlt;
         /* 0x24 */ public float OffsetZFlat;
@@ -46,6 +48,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x9C */ public float MaxClose;
         /* 0xA0 */ public float CloseSpring;
         /* 0xA4 */ public float LookStickLimitAngle;
+        [NMSDescription("Specifies whether the camera should collide with the world. Setting to False will make the camera clip through objects and the ground")]
         /* 0xA8 */ public bool EnableCollisionDetection;
         /* 0xAC */ public int NumLRProbes;
         /* 0xB0 */ public float LRProbesRange;

@@ -270,3 +270,6 @@ tests/**/.version
 tests/**/_*.txt
 report.json
 results.txt
+
+# Auto-generate documentation
+docs/structs/

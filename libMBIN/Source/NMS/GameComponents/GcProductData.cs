@@ -8,23 +8,31 @@ namespace libMBIN.NMS.GameComponents
 	[NMS(Size = 0x400, GUID = 0xFF00FFEE7B6EA198, NameHash = 0xE831C8A241FD8276)]
     public class GcProductData : NMSTemplate
     {
+        [NMSDescription("Internal item name. This is the ID that will be used to refer to this product in other files (eg. rewardtable)")]
         [NMS(Size = 0x10)]
         /* 0x000 */ public string Id;
+        [NMSDescription("Uppercase item real name. This name is referenced in each language file for translation")]
         [NMS(Size = 0x80)]
         /* 0x010 */ public string Name;
+        [NMSDescription("Lowercase item real name. This name is referenced in each language file for translation")]
         [NMS(Size = 0x80)]
         /* 0x090 */ public string NameLower;
+        [NMSDescription("Item subtitle. This string is referenced in each language file for translation")]
         /* 0x110 */ public VariableSizeString Subtitle;
+        [NMSDescription("Item description. This string is referenced in each language file for translation")]
         /* 0x120 */ public VariableSizeString Description;
         [NMS(Size = 0x20)]
         /* 0x130 */ public string Hint;
         [NMS(Size = 0x10)]
         /* 0x150 */ public string GroupID;
         /* 0x160 */ public TkModelResource DebrisFile;
+        [NMSDescription("Base item value in units")]
         /* 0x1E4 */ public int BaseValue;
         /* 0x1E8 */ public int Level;
+        [NMSDescription("Item icon texture path")]
         /* 0x1EC */ public TkModelResource Icon;
         /* 0x270 */ public TkModelResource HeroIcon;
+        [NMSDescription("Icon background colour. Applies under icon transparent parts")]
         /* 0x300 */ public Colour Colour;
         /* 0x310 */ public GcRealitySubstanceCategory SubstanceCategory;
         /* 0x314 */ public GcProductCategory Type;
@@ -54,8 +62,10 @@ namespace libMBIN.NMS.GameComponents
         /* 0x398 */ public float EconomyInfluenceMultiplier;
         [NMS(Size = 0x4, Ignore = true)]
         /* 0x39C */ public byte[] Padding39C;
+        [NMSDescription("Notification when this substance has to be crafted. This string is referenced in each language file for translation")]
         [NMS(Size = 0x20)]
         /* 0x3A0 */ public string PinObjeective;
+        [NMSDescription("Notification hints to collect this item. This string is referenced in each language file for translation")]
         [NMS(Size = 0x20)]
         /* 0x3C0 */ public string PinObjeectiveTip;
         /* 0x3E0 */ public bool CookingIngredient;

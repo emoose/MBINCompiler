@@ -11,6 +11,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x08 */ public string TimeOutEffect;
         /* 0x18 */ public bool DeathPoint;
         [NMS(Size = 7, Ignore = true)]
-        /* 0x19 */ public byte[] Endpadding;
+        /* 0x19 */ public byte[] EndPadding;
     }
 }

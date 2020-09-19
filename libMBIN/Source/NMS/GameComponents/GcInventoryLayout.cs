@@ -4,7 +4,7 @@ using libMBIN.NMS.GameComponents;
 namespace libMBIN.NMS.GameComponents
 {
 	[NMS(Size = 0x20, GUID = 0xEB40D4AD4447ECD0, NameHash = 0xF48C7408C8E42922)]
-    public class GcInventoryLayout : NMSTemplate        // size: 0x20
+    public class GcInventoryLayout : NMSTemplate
     {
         /* 0x00 */ public int Slots;
         [NMS(Size = 0x4, Ignore = true)]
@@ -12,6 +12,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x08 */ public GcSeed Seed;
         /* 0x18 */ public int Level;
         [NMS(Size = 0x4, Ignore = true)]
-        /* 0x1C */ public byte[] Endpadding;
+        /* 0x1C */ public byte[] EndPadding;
     }
 }

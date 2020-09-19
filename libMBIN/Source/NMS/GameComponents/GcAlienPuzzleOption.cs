@@ -14,7 +14,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x20 */ public string Text;
         /* 0x40 */ public bool IsAlien;
         [NMS(Size = 0x7, Ignore = true)]
-        /* 0x41 */ public byte[] padding41;
+        /* 0x41 */ public byte[] Padding41;
         [NMS(Size = 0x10)]
         /* 0x48 */ public string Cost;
         /* 0x58 */ public List<NMSString0x10> Rewards;
