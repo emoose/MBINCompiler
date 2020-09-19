@@ -40,15 +40,18 @@ namespace MBINCompilerDocs
 
         static internal void GenerateDirs()
         {
-            foreach (var key in NMS_dir_mapping.Values)
-            {
+            foreach (var key in NMS_dir_mapping.Values) {
                 Directory.CreateDirectory(Path.Combine(basePath, key.ToString()));
             }
         }
 
         static string GetNMSType(Type structType)
         {
-            
+            if (structType == typeof(NMSTemplate)) {
+                // We hard-code this since it's namespace won't map to anything.
+                // TODO: Maybe have 'libmbin' map to nms? Might be risky though...
+                return "nms";
+            }
             var splitname = structType.Namespace.Split('.');
             string last = splitname[splitname.Length - 1];
             if (NMS_dir_mapping.ContainsKey(last)) {
@@ -70,8 +73,7 @@ namespace MBINCompilerDocs
 
         static void export_md(List<Type> classes)
         {
-            foreach (var t in classes)
-            {
+            foreach (var t in classes) {
                 // Create a stringBuilder object to use for the whole md document
                 StringBuilder md = new StringBuilder();
 
@@ -102,6 +104,7 @@ namespace MBINCompilerDocs
                 var fields = t.GetFields().OrderBy(field => field.MetadataToken);
                 foreach (var field in fields) {
                     var field_attrs = field.GetCustomAttribute<NMSAttribute>();
+
                     // For each field in the struct, write a row in the table
                     if (!(field.GetCustomAttribute<NMSAttribute>()?.Ignore ?? false)) {
                         var fieldType = field.FieldType;
@@ -110,8 +113,7 @@ namespace MBINCompilerDocs
 
                         // If the base type is based on NMSTemplate, then we want to create a hyperlink to the page.
                         string structName = $"{ConvertDatatype(fieldType)}";
-                        if (fieldType.BaseType == typeof(NMSTemplate))
-                        {
+                        if (fieldType.BaseType == typeof(NMSTemplate) || fieldType == typeof(NMSTemplate)) {
                             var fieldNMSType = GetNMSType(fieldType);
                             if (fieldNMSType != null) {
                                 structName = $"[{fieldType.Name}](../../../structs/{fieldNMSType}/{fieldType.Name})";
@@ -128,14 +130,16 @@ namespace MBINCompilerDocs
                             md.Append("</ol>");
                         }
                         // For a string, get its size:
-                        else if (fieldType.Equals(typeof(System.String)))
-                        {
-                            int? strSize = field.GetCustomAttribute<NMSAttribute>()?.Size;
-                            md.Append($"String (0x{strSize:X})");
+                        else if (fieldType.Equals(typeof(System.String))) {
+                            if (name == "VariableSizeString") {
+                                md.Append($"String (0x??)");
+                            } else {
+                                int? strSize = field.GetCustomAttribute<NMSAttribute>()?.Size;
+                                md.Append($"String (0x{strSize:X})");
+                            }
                         }
                         // For an array, get it's size and potential enum values:
-                        else if (fieldType.IsArray)
-                        {
+                        else if (fieldType.IsArray) {
                             int? arrSize = field.GetCustomAttribute<NMSAttribute>()?.Size;
                             var arrayEnumType = field.GetCustomAttribute<NMSAttribute>()?.EnumType;
                             structName = structName.Substring(0, structName.Length - 2);
@@ -152,19 +156,13 @@ namespace MBINCompilerDocs
                         }
                         // For a list, get the list type:
                         else if (fieldType.IsGenericType && fieldType.GetGenericTypeDefinition() == typeof(List<>)) {
-                            // TODO: extract the info from within the []'s of fieldType.Name
-                            var refType = field.ReflectedType;
+                            var refType = field.FieldType.GetGenericArguments()[0];
                             string dtypeName = ConvertDatatype(refType);
                             string listStructName = $"{dtypeName}";
-                            if (refType.BaseType == typeof(NMSTemplate)) {
-                                // We need to make sure that the type isn't actually an NMSTemplate itself...
-                                if (refType == typeof(NMSTemplate)) {
-                                    listStructName = $"[NMSTemplate](../../../structs/nms/NMSTemplate)";
-                                } else {
-                                    var listNMSType = GetNMSType(refType);
-                                    if (listNMSType != null) {
-                                        listStructName = $"[{dtypeName}](../../../structs/{listNMSType}/{dtypeName})";
-                                    }
+                            if (refType.BaseType == typeof(NMSTemplate) || refType == typeof(NMSTemplate)) {
+                                var listNMSType = GetNMSType(refType);
+                                if (listNMSType != null) {
+                                    listStructName = $"[{dtypeName}](../../../structs/{listNMSType}/{dtypeName})";
                                 }
                             }
                             md.Append($"List<{listStructName}\\>");
@@ -194,8 +192,7 @@ namespace MBINCompilerDocs
 
             XmlDocument xmlDoc = new XmlDocument();
             XmlElement tkNode = xmlDoc.CreateElement(outName);
-            foreach (var t in classes)
-            {
+            foreach (var t in classes) {
                 string name = t.Name;
                 int? size = t.GetCustomAttribute<NMSAttribute>()?.Size;
 
@@ -208,51 +205,42 @@ namespace MBINCompilerDocs
 
                 // Get fields in order of declaration
                 var fields = t.GetFields().OrderBy(field => field.MetadataToken);
-                foreach (var field in fields)
-                {
-                    if (!field.Name.Contains("Padding"))
-                    {
+                foreach (var field in fields) {
+                    if (!field.Name.Contains("Padding")) {
                         var fieldType = field.FieldType;
                         XmlElement fieldNode = xmlDoc.CreateElement(field.Name);
                         XmlAttribute typeAttr = xmlDoc.CreateAttribute("type");
                         // For enums, get the values it can have:
-                        if (fieldType.IsEnum)
-                        {
-                            foreach (var enumValue in Enum.GetValues(fieldType))
-                            {
+                        if (fieldType.IsEnum) {
+                            foreach (var enumValue in Enum.GetValues(fieldType)) {
                                 XmlElement valNode = xmlDoc.CreateElement(enumValue.ToString());
                                 fieldNode.AppendChild(valNode);
                             }
                         }
                         // For a string, get its size:
-                        if (fieldType.Equals(typeof(System.String)))
-                        {
+                        if (fieldType.Equals(typeof(System.String))) {
                             int? strSize = field.GetCustomAttribute<NMSAttribute>()?.Size;
                             XmlAttribute sizeAttr = xmlDoc.CreateAttribute("size");
                             sizeAttr.Value = $"0x{strSize:X}";
                             fieldNode.Attributes.Append(sizeAttr);
                         }
                         // For an array, get it's size and potential enum values:
-                        if (fieldType.IsArray)
-                        {
+                        if (fieldType.IsArray) {
                             int? strSize = field.GetCustomAttribute<NMSAttribute>()?.Size;
                             XmlAttribute sizeAttr = xmlDoc.CreateAttribute("size");
                             sizeAttr.Value = $"0x{strSize:X}";
                             fieldNode.Attributes.Append(sizeAttr);
                             var arrayEnumType = field.GetCustomAttribute<NMSAttribute>()?.EnumType;
                             // For enums, get the values it can have:
-                            if (arrayEnumType != null && arrayEnumType.IsEnum)
-                            {
-                                foreach (var enumValue in Enum.GetValues(arrayEnumType))
-                                {
+                            if (arrayEnumType != null && arrayEnumType.IsEnum) {
+                                foreach (var enumValue in Enum.GetValues(arrayEnumType)) {
                                     XmlElement valNode = xmlDoc.CreateElement(enumValue.ToString());
                                     fieldNode.AppendChild(valNode);
                                 }
                             }
                         }
                         // For a list, get the list type:
-                        if (fieldType.IsGenericType && fieldType.GetGenericTypeDefinition() == typeof(List<>))
-                        {
+                        if (fieldType.IsGenericType && fieldType.GetGenericTypeDefinition() == typeof(List<>)) {
                             XmlAttribute listTypeAttr = xmlDoc.CreateAttribute("listType");
                             listTypeAttr.Value = field.ReflectedType.Name;
                             fieldNode.Attributes.Append(listTypeAttr);
@@ -271,8 +259,7 @@ namespace MBINCompilerDocs
             }
         }
 
-        static void update_struct_list(List<Type> classes, StringBuilder md, bool includeDir = false)
-        {
+        static void update_struct_list(List<Type> classes, StringBuilder md, bool includeDir = false) {
             foreach (var t in classes) {
                 //Console.WriteLine(t.Name);
                 var classNMSType = GetNMSType(t);
@@ -394,7 +381,7 @@ namespace MBINCompilerDocs
             export_md(gc_classes);
             export_md(globals_classes);
             //export_xml(tk_classes, "Tk");
-            //WaitForKeypress();
+            WaitForKeypress();
         }
     }
 }
