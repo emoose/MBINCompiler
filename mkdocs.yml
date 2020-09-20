@@ -9,4 +9,4 @@ nav:
     - Installation: installation.md
     - Usage: usage.md
     - libMBIN: libmbin\usage.md
-    - Structs: structs\index.md
+    - Classes: classes\index.md

@@ -271,5 +271,6 @@ tests/**/_*.txt
 report.json
 results.txt
 
-# Auto-generate documentation
-docs/structs/
+# Auto-generated documentation
+docs/classes/
+html_docs/
