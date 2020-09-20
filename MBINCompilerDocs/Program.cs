@@ -321,7 +321,7 @@ namespace MBINCompilerDocs
             md.AppendLine();
             md.AppendLine("| Name | Size |");
             md.AppendLine("| ---- | ---- |");
-            md.AppendLine("| [NMSTemplate](nms/NMSTemplate) | 0x48 |");
+            md.AppendLine("| [NMSTemplate](nms/NMSTemplate) | 0x50 |");
             update_class_list(base_classes, md, true);
             md.AppendLine();
             md.AppendLine("### [Globals](globals)");
@@ -351,7 +351,7 @@ namespace MBINCompilerDocs
             md_base.AppendLine();
             md_base.AppendLine("| Name | Size |");
             md_base.AppendLine("| ---- | ---- |");
-            md_base.AppendLine("| [NMSTemplate](NMSTemplate) | 0x48 |");
+            md_base.AppendLine("| [NMSTemplate](NMSTemplate) | 0x50 |");
             update_class_list(base_classes, md_base);
             File.WriteAllText(Path.Combine(basePath, "nms", "index.md"), md_base.ToString());
 
@@ -389,7 +389,16 @@ namespace MBINCompilerDocs
             md_NMSTemplate.AppendLine();
             md_NMSTemplate.AppendLine("This is the base class that all others are subclassed from.");
             md_NMSTemplate.Append("This class also has a number of methods available to it (and be extension, all subclasses) ");
-            md_NMSTemplate.Append("which can be found [here](../../../libmbin/usage/#nmstemplate)");
+            md_NMSTemplate.AppendLine("which can be found [here](../../../libmbin/usage/#nmstemplate)");
+            md_NMSTemplate.AppendLine();
+            md_NMSTemplate.Append("If this is a field type in some other class (either on its own or in a list for example), ");
+            md_NMSTemplate.AppendLine("this can be thought of as a generic type.");
+            md_NMSTemplate.AppendLine();
+            md_NMSTemplate.AppendLine("| Name | Data type | Description |");
+            md_NMSTemplate.AppendLine("| -----| --------- | ----------- |");
+            md_NMSTemplate.AppendLine("| Offset | Int64 | The relative offset from this location to the stored class |");
+            md_NMSTemplate.AppendLine("| ClassName | String (0x40) | The (compiled) name of the class (eg. cTkPhysicsComponentData) |");
+            md_NMSTemplate.AppendLine("| NameHash | UInt64 | A Hash of the name of the class |");
             md_NMSTemplate.AppendLine();
             File.WriteAllText(Path.Combine(basePath, "nms", "NMSTemplate.md"), md_NMSTemplate.ToString());
 
