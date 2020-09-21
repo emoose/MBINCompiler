@@ -79,4 +79,4 @@ deploy:
   keep_history: true
   local_dir: "html_docs/site"
   on:
-    branch: add_docs
+    branch: Feature/add_docs

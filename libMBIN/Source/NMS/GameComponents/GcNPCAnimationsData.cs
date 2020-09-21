@@ -6,9 +6,9 @@ namespace libMBIN.NMS.GameComponents
 	[NMS(Size = 0x5C0, GUID = 0xE5204A65B19E74E3, NameHash = 0x5344C3D579450D7B)]
     public class GcNPCAnimationsData : NMSTemplate
     {
-        public GcNPCAnimationSetData StandingAnimatons;
-        public GcNPCAnimationSetData StandingIPadAnimatons;
-        public GcNPCAnimationSetData SittingAnimatons;
-        public GcNPCAnimationSetData SittingIPadAnimatons;
+        /* 0x000 */ public GcNPCAnimationSetData StandingAnimatons;
+        /* 0x170 */ public GcNPCAnimationSetData StandingIPadAnimatons;
+        /* 0x2E0 */ public GcNPCAnimationSetData SittingAnimatons;
+        /* 0x450 */ public GcNPCAnimationSetData SittingIPadAnimatons;
     }
 }

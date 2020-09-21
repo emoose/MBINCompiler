@@ -9,7 +9,7 @@ namespace libMBIN.NMS
         To convert from the usual representation of a value between 0 and 255, you just need to divide the value
         by 255 to get the floating point representation used by the game."
     )]
-    public partial class Colour : NMSTemplate
+    public class Colour : NMSTemplate
     {
         [NMSDescription("The Red component of the colour")]
         public float R;
