@@ -291,7 +291,7 @@ namespace MBINCompilerDocs
             if (args.Length == 1) {
                 // in this case we have passed an argument to the exe. This will indicate we are running on a CI
                 if (args[0] == "CI") {
-                    basePath = Path.Combine("..", "..", "..", "docs", "classes");
+                    basePath = Path.Combine("docs", "classes");
                 }
             }
             // Load the assembly (will be located in the same directory as this binary)
