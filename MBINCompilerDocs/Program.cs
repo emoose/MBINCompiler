@@ -21,6 +21,7 @@ namespace MBINCompilerDocs
             { "Single", "Float" },
         };
 
+        // When running locally this needs to be one less directory up.
         static string basePath = Path.Combine("..", "..", "docs", "classes");
 
         //Create a mapping between the full names of tk and gc and the short-hands
@@ -287,6 +288,12 @@ namespace MBINCompilerDocs
 
         static void Main(string[] args)
         {
+            if (args.Length == 1) {
+                // in this case we have passed an argument to the exe. This will indicate we are running on a CI
+                if (args[0] == "CI") {
+                    basePath = Path.Combine("..", "..", "..", "docs", "classes");
+                }
+            }
             // Load the assembly (will be located in the same directory as this binary)
             var asm = Assembly.Load("libMBIN");
             // Load all the classes

@@ -8,5 +8,5 @@ nav:
     - Home: index.md
     - Installation: installation.md
     - Usage: usage.md
-    - libMBIN: libmbin\usage.md
-    - Classes: classes\index.md
+    - libMBIN: libmbin/usage.md
+    - Classes: classes/index.md

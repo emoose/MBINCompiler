@@ -8,7 +8,7 @@ before_install:
     - pyenv global 3.6.3
 install:
     - export FrameworkPathOverride=$(dirname $(which mono))/../lib/mono/4.6.1/
-    - python3.6 -m pip install --user pytest requests
+    - python3.6 -m pip install --user pytest requests mkdocs
 script:
     - dotnet restore
     - dotnet build -r win-x64 -p:Configuration=Release /nowarn:cs0618
@@ -22,7 +22,8 @@ script:
     # Run the tests
     - python3.6 -m pytest --platform ubuntu.16.04-x64 --tb=no --report
     # Build the docs
-    - sudo mono Build/Release/ubuntu.16.04-x64/MBINCompilerDocs.exe
+    - sudo mono Build/Release/ubuntu.16.04-x64/MBINCompilerDocs.exe CI
+    - python3.6 -m mkdocs build
     #- msbuild /p:Configuration=Release MBINCompiler.sln
     #- dotnet test
 
