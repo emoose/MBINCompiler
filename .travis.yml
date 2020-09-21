@@ -18,6 +18,7 @@ script:
     # cwd: /home/travis/build/monkeyman192/MBINCompiler
     - sudo chmod +x Build/Release/ubuntu.16.04-x64/MBINCompiler.exe
     - sudo chmod +x Build/Release/ubuntu.16.04-x64/MBINCompilerDocs.exe
+    - sudo chmod +x ./pre_deploy.sh
     # Run the tests
     - python3.6 -m pytest --platform ubuntu.16.04-x64 --tb=no --report
     # Build the docs
@@ -26,11 +27,8 @@ script:
     #- dotnet test
 
 before_deploy:
-    - export LIBMBIN_VERSION="$(cat libMBIN/Source/Version.cs | grep -P 'const[[:space:]]+string[[:space:]]+VERSION_STRING' | grep -oP '[0-9]+[.][0-9]+[.][0-9]+[.][0-9]+')"
-    - "echo \"LIBMBIN_VERSION: $LIBMBIN_VERSION\""
-    - "[[ \"$TRAVIS_TAG\" =~ ^v([[:digit:]]+)[.]([[:digit:]]+)[.]([[:digit:]]+)(-[^[:digit:]]+([[:digit:]]+)|[.]([[:digit:]])+) ]] && export MATCH_TAG=${BASH_REMATCH[1]}.${BASH_REMATCH[2]}.${BASH_REMATCH[3]}.${BASH_REMATCH[5]}${BASH_REMATCH[6]}"
-    - "echo \"Tag: $TRAVIS_TAG -> $MATCH_TAG\""
-    - "[[ \"$MATCH_TAG\" == \"$LIBMBIN_VERSION\" ]] && echo \"$TRAVIS_TAG matches LIBMBIN_VERSION.\" || echo \"Error: The version tag $TRAVIS_TAG must match the LIBMBIN_VERSION defined in Version.cs\" && set -e"
+    # Only want to try and get the version if we have the commit being tagged. Otherwise we can only build docs on tagged builds.
+    - ./pre_deploy.sh
     #
     # Set up git user name and tag this commit
     #
@@ -73,10 +71,10 @@ deploy:
 
 # Deploy the docs
 deploy:
-  provider: pages
-  skip_cleanup: true
-  github_token: $GITHUB_TOKEN
-  keep_history: true
-  local_dir: "html_docs/site"
-  on:
-    branch: Feature/add_docs
+    provider: pages
+    skip_cleanup: true
+    github_token: $GITHUB_TOKEN
+    keep_history: true
+    local_dir: "html_docs/site"
+    on:
+        branch: Feature/add_docs
