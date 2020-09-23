@@ -10,6 +10,6 @@ namespace libMBIN.NMS.GameComponents
         public float MaxDistance;
 
         [NMS(Size = 4, Ignore = true)]
-        public byte[] Endpadding;
+        public byte[] EndPadding;
     }
 }

@@ -270,3 +270,7 @@ tests/**/.version
 tests/**/_*.txt
 report.json
 results.txt
+
+# Auto-generated documentation
+docs/classes/
+html_docs/

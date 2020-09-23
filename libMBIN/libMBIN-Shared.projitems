@@ -471,6 +471,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Toolkit\TkTrophyEnum.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Toolkit\TkVertexStream.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Toolkit\TkVoxelGeneratorSettingsTypes.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\Template\NMSAlignment.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\Template\NMSDescription.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Template\TemplateException.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\MBIN\MBINHeader.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Template\NMSAttribute.cs" />
@@ -1611,7 +1613,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\BaseTypes\VariableSizeString.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\BaseTypes\Vector2f.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\BaseTypes\Vector3f.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\BaseTypes\Vector3i.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\BaseTypes\Quaternion.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\BaseTypes\Vector4f.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\Version.cs" />

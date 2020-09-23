@@ -38,6 +38,6 @@ namespace libMBIN.NMS.GameComponents
         public enum DeathTypeEnum { Explode, Drop}
         /* 0x88 */ public DeathTypeEnum DeathType;
         [NMS(Size = 0x4, Ignore = true)]
-        /* 0x8C */ public byte[] Endpadding;
+        /* 0x8C */ public byte[] EndPadding;
     }
 }

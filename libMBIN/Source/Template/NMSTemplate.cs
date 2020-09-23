@@ -577,11 +577,11 @@ namespace libMBIN
             List<KeyValuePair<long, String>> entryOffsetNamePairs = new List<KeyValuePair<long, String>>();
             foreach ( var entry in list ) {
                 int alignment = entry.GetType().GetCustomAttribute<NMSAttribute>()?.Alignment ?? 0x8;       // this will generally return 4 because it is the default...
-
-                writer.Align(alignment, entry.GetType().Name );
+                string entryName = entry.GetType().Name;
+                writer.Align(alignment, entryName);
                 //Logger.LogDebug($"pos 0x{writer.BaseStream.Position:X}");
                 //Logger.LogDebug(entry.GetType().Name);
-                entryOffsetNamePairs.Add( new KeyValuePair<long, string>( writer.BaseStream.Position, entry.GetType().Name ) );
+                entryOffsetNamePairs.Add( new KeyValuePair<long, string>( writer.BaseStream.Position, entryName) );
 
                 var template = (NMSTemplate) entry;
                 var listObjects = new List<Tuple<long, object>>();     // new list of objects so that this data is serialised first
@@ -593,7 +593,7 @@ namespace libMBIN
                     var data = listObjects[i];
                     //writer.BaseStream.Position = additionalDataOffset; // addtDataOffset gets updated by child templates
                     int alignment2 = entry.GetType().GetCustomAttribute<NMSAttribute>()?.Alignment ?? 0x8;
-                    writer.Align( alignment2, entry.GetType().Name ); // todo: check if this alignment is correct
+                    writer.Align( alignment2, entryName); // todo: check if this alignment is correct
                     long origPos = writer.BaseStream.Position;
                     if ( data.Item2.GetType().IsGenericType && data.Item2.GetType().GetGenericTypeDefinition() == typeof( List<> ) ) {
                         Type itemType = data.Item2.GetType().GetGenericArguments()[0];
@@ -656,7 +656,9 @@ namespace libMBIN
         public void SerializeList( BinaryWriter writer, IList list, long listHeaderPosition, ref List<Tuple<long, object>> additionalData, int addtDataIndex, UInt32 listEnding = (UInt32) 0xAAAAAA01 ) {
             // first thing we want to do is align the writer with the location of the first element of the list
             if ( list.Count != 0 ) {
+                string[] NMSStringNames = { "NMSString0x10", "NMSString0x20", "NMSString0x40", "NMSString0x80", "NMSString0x100" };
                 // if the class has no alignment value associated with it, set a default value
+                // Note: This will not work if the Type has a NMS Attribute defined (it will default to an alignment of 0x4)
                 int alignment_default = 0x4;
                 if (list[0].GetType().BaseType == typeof(NMSTemplate)) {
                     alignment_default = 0x8;
@@ -666,6 +668,10 @@ namespace libMBIN
                     alignment_default = 0x1;
                 }
                 int alignment = list[0].GetType().GetCustomAttribute<NMSAttribute>()?.Alignment ?? alignment_default;
+                // NMSString0xXX will get a default value of 0x4, but we want it to be 0x8 in lists.
+                if (NMSStringNames.Contains(list[0].GetType().Name)) {
+                    alignment = 0x8;
+                }
                 writer.Align(alignment, list[0].GetType().Name );
             }
 

@@ -52,21 +52,29 @@ namespace libMBIN.NMS.Globals
         /* 0x0328 */ public float VehicleThirdPersonShootOffsetBlendOutTime;
         [NMS(Size = 0x4, Ignore = true)]
         /* 0x032C */ public byte[] Padding32C;
+        [NMSDescription("Camera settings for idling/walking player in outdoors")]
         /* 0x0330 */ public GcCameraFollowSettings CharacterUnarmedCam;
+        [NMSDescription("Camera settings for when the player is running")]
         /* 0x0418 */ public GcCameraFollowSettings CharacterRunCam;
+        [NMSDescription("Camera settings for when the player is using weapons")]
         /* 0x0500 */ public GcCameraFollowSettings CharacterCombatCam;
+        [NMSDescription("Camera settings for idling/walking player in indoors")]
         /* 0x05E8 */ public GcCameraFollowSettings CharacterIndoorCam;
         /* 0x06D0 */ public GcCameraFollowSettings CharacterAbandCombatCam;
         /* 0x07B8 */ public GcCameraFollowSettings CharacterAbandCam;
         /* 0x08A0 */ public GcCameraFollowSettings CharacterNexusCam;
+        [NMSDescription("Camera settings for when the player uses the jetpack")]
         /* 0x0988 */ public GcCameraFollowSettings CharacterAirborneCam;
         /* 0x0A70 */ public GcCameraFollowSettings CharacterMeleeBoostCam;
         /* 0x0B58 */ public GcCameraFollowSettings CharacterRocketBootsCam;
         /* 0x0C40 */ public GcCameraFollowSettings CharacterRocketBootsChargeCam;
+        [NMSDescription("Camera settings for when the player is falling. This also includes when the player deactivates the jetpack in mid-air")]
         /* 0x0D28 */ public GcCameraFollowSettings CharacterFallingCam;
         /* 0x0E10 */ public GcCameraFollowSettings CharacterAirborneCombatCam;
         /* 0x0EF8 */ public GcCameraFollowSettings CharacterSpaceCam;
+        [NMSDescription("Camera settings for when the player is climbing or riding a slope")]
         /* 0x0FE0 */ public GcCameraFollowSettings CharacterSteepSlopeCam;
+        [NMSDescription("Camera settings for when the player is underwater")]
         /* 0x10C8 */ public GcCameraFollowSettings CharacterUnderwaterCam;
         /* 0x11B0 */ public GcCameraFollowSettings CharacterUnderwaterCombatCam;
         /* 0x1298 */ public GcCameraFollowSettings CharacterUnderwaterJetpackCam;
@@ -136,9 +144,13 @@ namespace libMBIN.NMS.Globals
         /* 0x27B8 */ public float ThirdPersonCollisionPushOffsetReducerStart;
         /* 0x27BC */ public float ThirdPersonOffsetSpringTime;
         /* 0x27C0 */ public bool MaxBob;
+        [NMSDescription("Speed of the camera when photo mode is active")]
         /* 0x27C4 */ public float PhotoModeMoveSpeed;
+        [NMSDescription("Turning speed of the camera when photo mode is active")]
         /* 0x27C8 */ public float PhotoModeTurnSpeed;
+        [NMSDescription("Boundary distance of the photo camera relative to the player on planet")]
         /* 0x27CC */ public float PhotoModeMaxDistance;
+        [NMSDescription("Boundary distance of the photo camera relative to the player in space")]
         /* 0x27D0 */ public float PhotoModeMaxDistanceSpace;
         /* 0x27D4 */ public float PhotoModeMaxDistanceClampForce;
         /* 0x27D8 */ public float PhotoModeMaxDistanceClampBuffer;
