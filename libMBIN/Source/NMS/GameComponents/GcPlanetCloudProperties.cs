@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x28, GUID = 0xB03EBE7F6DAB192, NameHash = 0x96E42AD217EA55B2)]
+	[NMS(Size = 0x40, GUID = 0x2639B637EB1A04F2, NameHash = 0x96E42AD217EA55B2)]
     public class GcPlanetCloudProperties : NMSTemplate
     {
         /* 0x00 */ public GcSeed Seed;
@@ -13,5 +13,11 @@ namespace libMBIN.NMS.GameComponents
         /* 0x1C */ public float Offset1;
         /* 0x20 */ public float Offset2;
         /* 0x24 */ public float Offset3;
+        /* 0x28 */ public Vector2f CoverExtremes;
+        /* 0x30 */ public float Ratio;
+        /* 0x34 */ public float RateOfChange;
+        /* 0x38 */ public float SecondaryRateOfChange;
+        public enum CloudinessEnum { CloudyWithClearSpells, ClearWithCloudySpells }
+        /* 0x3C */ public CloudinessEnum Cloudiness;
     }
 }

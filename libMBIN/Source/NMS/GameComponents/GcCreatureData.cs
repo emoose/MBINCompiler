@@ -5,29 +5,24 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x60, GUID = 0x9B489B7B8EFB8432, NameHash = 0x132EB7906E53B7A7)]
+	[NMS(Size = 0x58, GUID = 0xC271DD5B240D368B, NameHash = 0x132EB7906E53B7A7)]
     public class GcCreatureData : NMSTemplate
     {
         [NMS(Size = 0x10)]
         /* 0x00 */ public string Id;
         /* 0x10 */ public bool OnlySpawnWhenIdIsForced;
-
-        [NMS(Size = 0x20)]
-        /* 0x11 */ public string Genus;
-
-        [NMS(Size = 0x3, Ignore = true)]
-        /* 0x31 */ public byte[] Padding31;
-
-        /* 0x34 */ public GcCreatureTypes ForceType;
-		public enum MoveAreaEnum { Ground, Water, Air, Space }
-		public MoveAreaEnum MoveArea;
-
-        /* 0x3C */ public float MinScale;
-        /* 0x40 */ public float MaxScale;
-        /* 0x44 */ public GcRarity Rarity;
-        /* 0x48 */ public GcCreatureRoleFrequencyModifier PredatorProbabilityModifier;
-        /* 0x4C */ public GcCreatureRoleFrequencyModifier HerbivoreProbabilityModifier;
-
-        /* 0x50 */ public List<NMSTemplate> Data;
+        /* 0x14 */ public GcCreatureTypes ForceType;
+        /* 0x18 */ public GcCreatureTypes RealType;
+        /* 0x1C */ public bool EcoSystemCreature;
+        /* 0x1D */ public bool CanBeFemale;
+        /* 0x20 */ public List<GcCreatureTagAndRarity> Tags;
+        public enum MoveAreaEnum { Ground, Water, Air, Space }
+		/* 0x30 */ public MoveAreaEnum MoveArea;
+        /* 0x34 */ public float MinScale;
+        /* 0x38 */ public float MaxScale;
+        /* 0x3C */ public GcRarity Rarity;
+        /* 0x40 */ public GcCreatureRoleFrequencyModifier PredatorProbabilityModifier;
+        /* 0x44 */ public GcCreatureRoleFrequencyModifier HerbivoreProbabilityModifier;
+        /* 0x48 */ public List<NMSTemplate> Data;
     }
 }

@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x888, GUID = 0xC17FA430FD39E3A0, NameHash = 0x32822FA2FD268A65)]
+	[NMS(Size = 0x898, GUID = 0xD1D9F6ECE56348E6, NameHash = 0x32822FA2FD268A65)]
     public class GcInventoryTable : NMSTemplate
     {
         /* 0x000 */ public List<GcInventoryTableEntry> Table;
@@ -24,5 +24,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x778 */ public List<GcInventoryBaseStat> BaseStats;
         [NMS(Size = 0x8, EnumType = typeof(GcSpaceshipClasses.ShipClassEnum))]
         /* 0x788 */ public GcShipInventoryMaxUpgradeCapacity[] ShipInventoryMaxUpgradeSize;
+        /* 0x888 */ public GcWeaponInventoryMaxUpgradeCapacity WeaponInventoryMaxUpgradeSize;
     }
 }

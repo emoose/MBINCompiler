@@ -5,15 +5,16 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x278, GUID = 0x53B2038357709CFC, NameHash = 0xA6F7B710166F6076)]
+	[NMS(Size = 0x278, GUID = 0xB39250A918D53C0D, NameHash = 0xA6F7B710166F6076)]
     public class GcBaseBuildingEntry : NMSTemplate
     {
         [NMS(Size = 0x10)]
         /* 0x000 */ public string ID;
         /* 0x010 */ public bool HasProduct;
         /* 0x011 */ public bool IsTemporary;
-        [NMS(Size = 0x2, Ignore = true)]
-        /* 0x012 */ public byte[] Padding12;
+        /* 0x012 */ public bool IsFromMod;
+        [NMS(Size = 0x1, Ignore = true)]
+        /* 0x013 */ public byte[] Padding13;
         /* 0x014 */ public TkModelResource SnapPoints;
         /* 0x098 */ public TkModelResource Model;
         /* 0x11C */ public TkModelResource InactiveModel;

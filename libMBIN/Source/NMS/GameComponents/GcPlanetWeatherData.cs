@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x150, GUID = 0xB3F5506B307B67D1, NameHash = 0xEBF08BE1E3CAE3AC)]
+	[NMS(Size = 0x160, GUID = 0xEBF082DFFF05468F, NameHash = 0xEBF08BE1E3CAE3AC)]
     public class GcPlanetWeatherData : NMSTemplate
     {
         public GcWeatherOptions WeatherType;
@@ -21,5 +21,8 @@ namespace libMBIN.NMS.GameComponents
         /* 0x144 */ public GcScreenFilters ScreenFilter;
         /* 0x148 */ public GcScreenFilters StormScreenFilter;
         /* 0x14C */ public GcRainbowType RainbowType;
+        /* 0x150 */ public int NightColourIndex;
+        [NMS(Size = 0xC, Ignore = true)]
+        /* 0x154 */ public byte[] Endpadding;
     }
 }

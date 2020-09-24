@@ -3,13 +3,13 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x68, GUID = 0xBDD07BD52E596B40, NameHash = 0xE4A9F22B5EB5CBF8)]
+	[NMS(Size = 0x80, GUID = 0x70EF540613FC0A4D, NameHash = 0xE4A9F22B5EB5CBF8)]
     public class GcDroneComponentData : NMSTemplate
     {
         [NMS(Size = 0x10)]
-        public string Id;
-        public GcPrimaryAxis PrimaryAxis;
-        public float Scaler;
-        public GcCreatureHealthData Health;
+        /* 0x00 */ public string Id;
+        /* 0x10 */ public GcPrimaryAxis PrimaryAxis;
+        /* 0x14 */ public float Scaler;
+        /* 0x18 */ public GcCreatureHealthData Health;
     }
 }

@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x290, GUID = 0x79627087CC93BF00, NameHash = 0x6B8472FADE3C492C)]
+	[NMS(Size = 0x290, GUID = 0xEF2EA77780E698D8, NameHash = 0x6B8472FADE3C492C)]
     public class GcProceduralTechnologyData : NMSTemplate
     {
         [NMS(Size = 0x10)]
@@ -23,7 +23,7 @@ namespace libMBIN.NMS.GameComponents
         [NMS(Size = 0x80)]
         /* 0x1C0 */ public string Description;
         /* 0x240 */ public Colour Colour;
-		public enum QualityEnum { Normal, Rare, Epic, Legendary }
+		public enum QualityEnum { Normal, Rare, Epic, Legendary, Illegal }
 		/* 0x250 */ public QualityEnum Quality;
         /* 0x254 */ public GcProceduralTechnologyCategory Category;
         /* 0x258 */ public int NumStatsMin;

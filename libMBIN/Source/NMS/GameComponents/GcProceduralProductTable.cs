@@ -5,10 +5,10 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0xC210, GUID = 0x8DA992F13A2F604A, NameHash = 0x9A0073340429C464)]
+	[NMS(Size = 0xE380, GUID = 0x5533958944B923F3, NameHash = 0x9A0073340429C464)]
     public class GcProceduralProductTable : NMSTemplate
     {
-        [NMS(Size = 0x17, EnumType = typeof(GcProceduralProductCategory.ProceduralProductCategoryEnum))]
+        [NMS(Size = 0x1A, EnumType = typeof(GcProceduralProductCategory.ProceduralProductCategoryEnum))]
         public GcProceduralProductData[] Table;
     }
 }

@@ -3,9 +3,10 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Toolkit
 {
-	[NMS(Size = 0x15D0, GUID = 0x1E376F876EF204A0, NameHash = 0x7A347325F1154095)]
+	[NMS(Size = 0x15D0, GUID = 0xE434B739E9AA8AEB, NameHash = 0x7A347325F1154095)]
     public class TkVoxelGeneratorData : NMSTemplate
     {
+        // what changed?
         /* 0x0000 */ public GcSeed BaseSeed;
         /* 0x0010 */ public float SeaLevel;
         /* 0x0014 */ public float BeachHeight;

@@ -3,10 +3,11 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x4, GUID = 0xFB2F051D3A345062, NameHash = 0xEF306B43D1C79D7F)]
+	[NMS(Size = 0x4, GUID = 0x9718AB53D13CDD7F, NameHash = 0xEF306B43D1C79D7F)]
     public class GcCreatureDiet : NMSTemplate
     {
-        public enum DietEnum { Carnivore, Omnivore, Herbivore }
+        // 0x4 Entries
+        public enum DietEnum { Carnivore, Omnivore, Herbivore, Robot }
         public DietEnum Diet;
     }
 }

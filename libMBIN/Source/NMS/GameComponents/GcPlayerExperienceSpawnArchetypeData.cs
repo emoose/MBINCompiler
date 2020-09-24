@@ -5,26 +5,28 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x70, GUID = 0x98428D092A9B70D9, NameHash = 0x3D6AF30F10DB0EAA)]
+	[NMS(Size = 0x80, GUID = 0x4195C66D915283D7, NameHash = 0x3D6AF30F10DB0EAA)]
     public class GcPlayerExperienceSpawnArchetypeData : NMSTemplate
     {
         [NMS(Size = 0x10)]
         /* 0x00 */ public string Id;
-        /* 0x10 */ public GcCreatureTypes Type;
-        /* 0x14 */ public float Scale;
-        /* 0x18 */ public float ScaleVariation;
+        [NMS(Size = 0x10)]
+        /* 0x10 */ public string GenerateResource;
+        /* 0x20 */ public GcCreatureTypes Type;
+        /* 0x24 */ public float Scale;
+        /* 0x28 */ public float ScaleVariation;
         [NMS(Size = 0x4, Ignore = true)]
-        /* 0x1C */ public byte[] Padding1C;
+        /* 0x2C */ public byte[] Padding2C;
         [NMS(Size = 0x10)]
-        /* 0x20 */ public string AppearAnim;
-        /* 0x30 */ public float SpeedMultiplier;
-        /* 0x34 */ public int HealthOverride;
+        /* 0x30 */ public string AppearAnim;
+        /* 0x40 */ public float SpeedMultiplier;
+        /* 0x44 */ public int HealthOverride;
         [NMS(Size = 0x10)]
-        /* 0x38 */ public string DamageOverride;
+        /* 0x48 */ public string DamageOverride;
         [NMS(Size = 0x10)]
-        /* 0x48 */ public string DamageReceivedMultiplier;
-        /* 0x58 */ public float SpawnDistOverride;
-        /* 0x5C */ public float DespawnDistOverride;
-        /* 0x60 */ public List<NMSTemplate> BehaviourOverrides;
+        /* 0x58 */ public string DamageReceivedMultiplier;
+        /* 0x68 */ public float SpawnDistOverride;
+        /* 0x6C */ public float DespawnDistOverride;
+        /* 0x70 */ public List<NMSTemplate> BehaviourOverrides;
     }
 }

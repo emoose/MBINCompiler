@@ -3,10 +3,11 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x4, GUID = 0x9DD8603DDE3E0BDF, NameHash = 0x2535C1B3F76633D)]
+	[NMS(Size = 0x4, GUID = 0xFA18C6BA7927319B, NameHash = 0x2535C1B3F76633D)]
     public class GcPhotoBuilding : NMSTemplate
     {
-		public enum PhotoBuildingTypeEnum { Shelter, Abandoned, Shop, Outpost, RadioTower, Observatory, Depot, Monolith, Factory, Portal, Ruin, MissionTower }
+        // 0xD entries
+		public enum PhotoBuildingTypeEnum { Shelter, Abandoned, Shop, Outpost, RadioTower, Observatory, Depot, Monolith, Factory, Portal, Ruin, MissionTower, LargeBuilding }
 		public PhotoBuildingTypeEnum PhotoBuildingType;
     }
 }

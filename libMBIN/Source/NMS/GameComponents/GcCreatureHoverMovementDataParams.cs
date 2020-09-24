@@ -5,17 +5,28 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x128, GUID = 0x337A1C3341B718EE, NameHash = 0x2862D9C79079A037)]
+	[NMS(Size = 0x160, GUID = 0xCDCC9259306D4B7B, NameHash = 0x2862D9C79079A037)]
     public class GcCreatureHoverMovementDataParams : NMSTemplate
     {
         /* 0x000 */ public List<NMSString0x20> ValidDescriptors;
+        /* 0x010 */ public float NavOffsetY;
+        /* 0x014 */ public float NavOffsetZ;
+        /* 0x018 */ public float GroundHeightOffset;
         [NMS(Size = 0x100)]
-        /* 0x010 */ public string GroundEffect;
-        /* 0x110 */ public float GroundEffectHeightForMaxAlpha;
-        /* 0x114 */ public float GroundEffectHeightForMinAlpha;
-        /* 0x118 */ public bool GroundAlign;
-        /* 0x11C */ public float HeightForMaxGroundAlign;
-        /* 0x120 */ public float HeightForMinGroundAlign;
-        /* 0x124 */ public float GroundAlignTimeModifier;
+        /* 0x01C */ public string GroundEffect;
+        /* 0x11C */ public float GroundEffectHeightForMaxAlpha;
+        /* 0x120 */ public float GroundEffectHeightForMinAlpha;
+        /* 0x124 */ public float RayCastUp;
+        /* 0x128 */ public float RayCastDown;
+        /* 0x12C */ public bool GroundAlign;
+        /* 0x130 */ public float HeightForMaxGroundAlign;
+        /* 0x134 */ public float HeightForMinGroundAlign;
+        /* 0x138 */ public float GroundAlignTimeModifier;
+        /* 0x13C */ public bool GroundAvoid;
+        /* 0x140 */ public float HeightForMaxGroundAvoid;
+        /* 0x144 */ public float HeightForMinGroundAvoid;
+        /* 0x148 */ public float GroundAvoidTimeModifier;
+        /* 0x14C */ public bool CanJump;
+        /* 0x150 */ public List<GcCreatureHoverTintableEffect> TintableEffects;
     }
 }

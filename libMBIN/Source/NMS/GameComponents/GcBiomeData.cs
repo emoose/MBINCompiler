@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x4F0, GUID = 0xA1D582A62484A3DE, NameHash = 0x2FD5560612237D4D)]
+	[NMS(Size = 0x5C0, GUID = 0xE1057DFD12CBAF47, NameHash = 0x2FD5560612237D4D)]
     public class GcBiomeData : NMSTemplate
     {
         [NMS(Size = 0x80)]
@@ -19,17 +19,20 @@ namespace libMBIN.NMS.GameComponents
         /* 0x200 */ public GcMiningSubstanceData MiningSubstance1;
         /* 0x20C */ public GcMiningSubstanceData MiningSubstance2;
         /* 0x218 */ public GcMiningSubstanceData MiningSubstance3;
-        [NMS(Size = 0xC, Ignore = true)]
-        /* 0x224 */ public byte[] Padding224;
+        /* 0x224 */ public float FuelMultiplier;
         /* 0x230 */ public GcPlanetWaterData Water;
-
         /* 0x3B0 */ public List<GcExternalObjectListOptions> ExternalObjectLists;
-
-        [NMS(Size = 0x4)]       // probably an enum of the life level
+        [NMS(Size = 0x4, EnumType = typeof(GcGalaxyStarTypes.GalaxyStarTypeEnum))]
         /* 0x3C0 */ public GcWeatherWeightings[] WeatherOptions;
-
-        /* 0x460 */ public Vector2f WeatherChangeTime;
-        /* 0x468 */ public GcTerrainControls Terrain;
-        /* 0x4E0 */ public List<GcScreenFilters> FilterOptions;
+        /* 0x4B0 */ public Vector2f WeatherChangeTime;
+        [NMS(Size = 0x8, Ignore = true)]
+        /* 0x4B8 */ public byte[] Padding4B8;
+        /* 0x4C0 */ public GcBiomeCloudSettings CloudSettings;
+        /* 0x510 */ public GcTerrainControls Terrain;
+        /* 0x588 */ public List<GcScreenFilterOption> FilterOptions;
+        [NMS(Size = 0x20)]
+        /* 0x598 */ public string FloraLifeLocID;
+        [NMS(Size = 0x8, Ignore = true)]
+        /* 0x5B8 */ public byte[] EndPadding;
     }
 }

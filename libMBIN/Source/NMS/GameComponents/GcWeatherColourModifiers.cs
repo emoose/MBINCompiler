@@ -3,10 +3,11 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x270, GUID = 0x53C079B61B3FB6A4, NameHash = 0x63BA6E198CA6237E)]
+	[NMS(Size = 0x2A0, GUID = 0x72BB5E0229EA0E0C, NameHash = 0x63BA6E198CA6237E)]
     public class GcWeatherColourModifiers : NMSTemplate
     {
         public GcColourModifier SkyColour;
+        public GcColourModifier SkyUpperColour;
         public GcColourModifier HorizonColour;
         public GcColourModifier SunColour;
         public GcColourModifier FogColour;
@@ -14,7 +15,6 @@ namespace libMBIN.NMS.GameComponents
         public GcColourModifier LightColour;
         public GcColourModifier CloudColour1;
         public GcColourModifier CloudColour2;
-
         [NMS(Size = 5)]
         public GcColourModifier[] HeavyAirColour;
     }

@@ -5,51 +5,59 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x620, GUID = 0xD0AF4265E2A7B6DA, NameHash = 0xD216CE8E772352C)]
+	[NMS(Size = 0x7F0, GUID = 0x48FA935D54F804FC, NameHash = 0xD216CE8E772352C)]
     public class GcWeatherProperties : NMSTemplate
     {
         [NMS(Size = 0x10)]
         /* 0x000 */ public string Name;
-
-        /* 0x010 */ public GcFogProperties Fog;
-        /* 0x0EC */ public GcFogProperties FlightFog;
-        /* 0x1C8 */ public GcFogProperties ExtremeFog;
-
+        /* 0x010 */ public bool UseWeatherFog;
+        [NMS(Size = 0x3, Ignore = true)]
+        /* 0x011 */ public byte[] Padding11;
+        /* 0x014 */ public GcFogProperties Fog;
+        /* 0x0F0 */ public GcFogProperties FlightFog;
+        /* 0x1CC */ public GcFogProperties StormFog;
+        /* 0x2A8 */ public GcFogProperties ExtremeFog;
         [NMS(Size = 0xC, Ignore = true)]
-        /* 0x2A4 */ public byte[] Padding2A4;
-
-        /* 0x2B0 */ public GcWeatherColourModifiers ExtremeColourModifiers;
+        /* 0x384 */ public byte[] Padding384;
+        /* 0x390 */ public GcWeatherColourModifiers ExtremeColourModifiers;
         [NMS(Size = 0x4, EnumType = typeof(GcRainbowType.RainbowTypeEnum))]
-        /* 0x520 */ public float[] RainbowChance;
-        /* 0x530 */ public List<GcStormProperties> Storms;
-
-        /* 0x540 */ public List<NMSString0x80> HeavyAir;
-
-        /* 0x550 */ public float LowStormsChance;
-        /* 0x554 */ public float HighStormsChance;
-        /* 0x558 */ public float ExtremeWeatherChance;
-
-        /* 0x55C */ public bool OverrideTemperature;
+        /* 0x630 */ public float[] RainbowChance;
+        /* 0x640 */ public List<GcStormProperties> Storms;
+        /* 0x650 */ public List<NMSString0x80> HeavyAir;
+        /* 0x660 */ public float LowStormsChance;
+        /* 0x664 */ public float HighStormsChance;
+        /* 0x668 */ public float ExtremeWeatherChance;
+        /* 0x66C */ public bool OverrideTemperature;
         [NMS(Size = 0x3, Ignore = true)]
-        /* 0x55D */ public byte[] Padding55D;
-        [NMS(Size = 0x5)]
-        /* 0x560 */ public GcHazardValues[] Temperature;
-
-        /* 0x588 */ public bool OverrideToxicity;
+        /* 0x66D */ public byte[] Padding66D;
+        [NMS(Size = 0x5, EnumType = typeof(GcHazardValueTypes.GcHazardValueTypesEnum))]
+        /* 0x670 */ public GcHazardValues[] Temperature;
+        /* 0x698 */ public bool OverrideToxicity;
         [NMS(Size = 0x3, Ignore = true)]
-        /* 0x589 */ public byte[] Padding589;
-        [NMS(Size = 0x5)]
-        /* 0x58C */ public GcHazardValues[] Toxicity;
-
-        /* 0x5B4 */ public bool OverrideRadiation;
+        /* 0x699 */ public byte[] Padding699;
+        [NMS(Size = 0x5, EnumType = typeof(GcHazardValueTypes.GcHazardValueTypesEnum))]
+        /* 0x69C */ public GcHazardValues[] Toxicity;
+        /* 0x6C4 */ public bool OverrideRadiation;
         [NMS(Size = 0x3, Ignore = true)]
-        /* 0x5B5 */ public byte[] Padding5B5;
-        [NMS(Size = 0x5)]
-        /* 0x5B8 */ public GcHazardValues[] Radiation;
-        [NMS(Size = 0x5)]
-        /* 0x5E0 */ public GcHazardValues[] LifeSupportDrain;
-        /* 0x608 */ public List<GcScreenFilters> StormFilterOptions;
-        [NMS(Size = 0x8, Ignore = true)]
-        /* 0x618 */ public byte[] EndPadding;
+        /* 0x6C5 */ public byte[] Padding6C5;
+        [NMS(Size = 0x5, EnumType = typeof(GcHazardValueTypes.GcHazardValueTypesEnum))]
+        /* 0x6C8 */ public GcHazardValues[] Radiation;
+        [NMS(Size = 0x5, EnumType = typeof(GcHazardValueTypes.GcHazardValueTypesEnum))]
+        /* 0x6F0 */ public GcHazardValues[] LifeSupportDrain;
+        /* 0x718 */ public List<GcScreenFilters> StormFilterOptions;
+        /* 0x728 */ public bool UseWeatherSky;
+        [NMS(Size = 0x3, Ignore = true)]
+        /* 0x729 */ public byte[] Padding729;
+        /* 0x72C */ public GcSkyProperties Sky;
+        /* 0x75C */ public bool UseLightShaftProperties;
+        [NMS(Size = 0x3, Ignore = true)]
+        /* 0x75D */ public byte[] Padding75D;
+        /* 0x760 */ public GcLightShaftProperties LightShaftProperties;
+        /* 0x790 */ public bool UseStormLightShaftProperties;
+        [NMS(Size = 0xF, Ignore = true)]
+        /* 0x791 */ public byte[] Padding791;
+        /* 0x7A0 */ public GcLightShaftProperties StormLightShaftProperties;
+        /* 0x7D0 */ public List<NMSString0x10> WeatherEffectsIds;
+        /* 0x7E0 */ public List<NMSString0x10> WeatherHazardsIds;
     }
 }

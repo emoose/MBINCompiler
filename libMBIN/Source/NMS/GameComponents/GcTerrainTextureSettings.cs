@@ -5,10 +5,11 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x8, GUID = 0x889A7E6B75959E0E, NameHash = 0x3A5D1C2419669AFF)]
+	[NMS(Size = 0xC, GUID = 0xD6887A15EB973C41, NameHash = 0x3A5D1C2419669AFF)]
     public class GcTerrainTextureSettings : NMSTemplate
     {
         public float Brightness;
         public float Contrast;
+        public float Specular;
     }
 }

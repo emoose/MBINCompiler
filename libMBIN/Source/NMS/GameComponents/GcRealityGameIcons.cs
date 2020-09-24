@@ -3,10 +3,10 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x4, GUID = 0x5C1135AF0D71A0A4, NameHash = 0x878911013D83AEE9)]
+	[NMS(Size = 0x4, GUID = 0x2CBB42C3F842332F, NameHash = 0x878911013D83AEE9)]
     public class GcRealityGameIcons : NMSTemplate
     {
-        // 0x4D entries
+        // 0x4F entries
 		public enum GameIconsEnum {
             Stamina, NoStamina, EnergyCharge, Scanner, NoScanner, Grave, Resources, Inventory, InventoryFull, RareItems,
             Pirates, PirateScan, Drone, Quad, Walker, DroneOff, Police, AtlasStation, BlackHole, SaveGame,
@@ -15,7 +15,7 @@ namespace libMBIN.NMS.GameComponents
             GMBlackHole, GMUserWaypoint, GMUserMission, TransferPersonal, TransferPersonalCargo, TransferShip, TransferBike, TransferBuggy, TransferTruck, TransferWheeledBike,
             TransferHovercraft, TransferSubmarine, TransferMech, TransferFreighter, TransferBase, HazardIndicatorHot, HazardIndicatorCold, HazardIndicatorRadiation, HazardIndicatorToxic, TerrainAdd,
             TerrainRemove, TerrainFlatten, TerrainUndo, SpacePhone, GarageMarkerBuggy, GarageMarkerBike, GarageMarkerTruck, GarageMarkerWheeledBike, GarageMarkerHovercraft, CorruptedDrone,
-            HandHold, ShipThumbnailBG, CClass, BClass, AClass, SClass, NoSaveWarning
+            HandHold, ShipThumbnailBG, CClass, BClass, AClass, SClass, NoSaveWarning, ExploreMissionPlanetIcon, ExploreMissionSystemIcon
         }
 		public GameIconsEnum GameIcons;
     }

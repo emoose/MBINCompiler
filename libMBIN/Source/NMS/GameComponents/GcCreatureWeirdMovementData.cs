@@ -5,17 +5,19 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x120, GUID = 0x495ADF9A25F53FEF, NameHash = 0xBE42E310FC94C8E3)]
+	[NMS(Size = 0x128, GUID = 0xF208518170F7956C, NameHash = 0xBE42E310FC94C8E3)]
     public class GcCreatureWeirdMovementData : NMSTemplate
     {
-        public enum MoveModeEnum { Roll, Float }
+        public enum MoveModeEnum { Roll, Float, Drill }
         /* 0x000 */ public MoveModeEnum MoveMode;
         [NMS(Size = 0x100)]
         /* 0x004 */ public string Node;
         /* 0x104 */ public float BobSpeed;
         /* 0x108 */ public float BobAmount;
+        /* 0x10C */ public float SpinSpeed;
+        /* 0x110 */ public float JumpAngle;
         [NMS(Size = 0x4, Ignore = true)]
-        /* 0x10C */ public byte[] Padding10C;
-        /* 0x110 */ public List<NMSString0x100> FeetNames;
+        /* 0x114 */ public byte[] Padding114;
+        /* 0x118 */ public List<NMSString0x100> FeetNames;
     }
 }

@@ -3,13 +3,12 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x5D0, Alignment = 0x10, GUID = 0x3BA25CB7210100C8, NameHash = 0x2FE28DE7841506AF)]
+	[NMS(Size = 0x5E0, Alignment = 0x10, GUID = 0xFA27257846FDC99F, NameHash = 0x2FE28DE7841506AF)]
     public class GcBuildingSpawnData : NMSTemplate
     {
         /* 0x000 */ public float Density;
         [NMS(Size = 4, Ignore = true)]
         /* 0x004 */ public byte[] Padding4;
-
         /* 0x008 */ public GcResourceElement Resource;
         /* 0x2B0 */ public GcResourceElement UnderwaterResource;
         /* 0x558 */ public int LSystemID;
@@ -17,7 +16,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x560 */ public bool AutoCollision;
         [NMS(Size = 7, Ignore = true)]
         /* 0x561 */ public byte[] Padding561;
-
         /* 0x568 */ public GcSeed Seed;
         /* 0x578 */ public GcBuildingClassification Classification;
         /* 0x57C */ public GcBuildingClusterPlacement Placement;
@@ -31,11 +29,13 @@ namespace libMBIN.NMS.GameComponents
         /* 0x590 */ public float Scale;
         /* 0x594 */ public float MaxXZRotation;
         /* 0x598 */ public float Radius;
-        /* 0x59C */ public int InstanceID;
-        /* 0x5A0 */ public Vector3f AABBMin;
-        /* 0x5B0 */ public Vector3f AABBMax;
-        /* 0x5C0 */ public bool BuildingSizeCalculated;
+        /* 0x59C */ public float MinHeight;
+        /* 0x5A0 */ public float Maxheight;
+        /* 0x5A4 */ public int InstanceID;
+        /* 0x5B0 */ public Vector3f AABBMin;
+        /* 0x5C0 */ public Vector3f AABBMax;
+        /* 0x5D0 */ public bool BuildingSizeCalculated;
         [NMS(Size = 0xF, Ignore = true)]
-        /* 0x5C1 */ public byte[] Padding5C1;
+        /* 0x5D1 */ public byte[] EndPadding;
     }
 }

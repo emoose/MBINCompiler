@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x58, GUID = 0x31C15BE6F5E4D43D, NameHash = 0x59A43238181BB69F)]
+	[NMS(Size = 0x60, GUID = 0x5A5DC054BAA9EE34, NameHash = 0x59A43238181BB69F)]
     public class GcBuildingDefinitionData : NMSTemplate
     {
         /* 0x00 */ public TkNoiseFlattenOptions FlattenType;
@@ -11,24 +11,15 @@ namespace libMBIN.NMS.GameComponents
         /* 0x0C */ public bool AddWaypoint;
         /* 0x0D */ public bool AddShelter;
         /* 0x0E */ public bool AddLandingPad;
-
-        // Note: I am not 100% this enum type is correct as the exe has no associated enum, however the name would seem
-        // to indicate that the enum type should be right.
-        [NMS(Size = 5, EnumType = typeof(GcBuildingDensityLevels.BuildingDensityEnum))]
+        [NMS(Size = 6, EnumType = typeof(GcBuildingDensityLevels.BuildingDensityEnum))]
         /* 0x10 */ public float[] Density;
-
-        /* 0x24 */ public int NumOverridesToGenerate;
-        /* 0x28 */ public int NumModelsToGenerate;
-
-        [NMS(Size = 4, Ignore = true)]
-        /* 0x2C */ public byte[] Padding2C;
-
+        /* 0x28 */ public int NumOverridesToGenerate;
+        /* 0x2C */ public int NumModelsToGenerate;
         [NMS(Size = 0x20)]
         /* 0x30 */ public string TextureNameHint;
         /* 0x50 */ public float OverrideRadius;
         /* 0x54 */ public bool GivesShelter;
-
-        [NMS(Size = 3, Ignore = true)]
-        /* 0x55 */ public byte[] Padding55;
+        /* 0x58 */ public float MinHeight;
+        /* 0x5C */ public float MaxHeight;
     }
 }

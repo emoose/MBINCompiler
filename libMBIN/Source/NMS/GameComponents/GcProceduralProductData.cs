@@ -4,7 +4,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x870, GUID = 0xD6FD959ED50CD875, NameHash = 0xC449167C8DE081CD)]
+	[NMS(Size = 0x8C0, GUID = 0xE3670AE1AA86A1E5, NameHash = 0xC449167C8DE081CD)]
     public class GcProceduralProductData : NMSTemplate
     {
         /* 0x000 */ public GcNameGeneratorWord NameGeneratorBase;
@@ -17,8 +17,8 @@ namespace libMBIN.NMS.GameComponents
         /* 0x440 */ public GcProductProceduralOnlyData[] ProceduralData;
         /* 0x818 */ public GcBiomeList PerBiomeDropWeights;
         [NMS(Size = 0x20)]
-        /* 0x84C */ public string DeployableProductID;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x86C */ public byte[] EndPadding;
+        /* 0x898 */ public string DeployableProductID;
+        [NMS(Size = 0x8, Ignore = true)]
+        /* 0x8B8 */ public byte[] EndPadding;
     }
 }

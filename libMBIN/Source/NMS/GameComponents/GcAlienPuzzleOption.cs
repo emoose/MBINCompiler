@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0xD8, Alignment = 0x8, GUID = 0xFB2DCB556C3D9805, NameHash = 0x3FE862FE8570BE69)]
+	[NMS(Size = 0xE0, Alignment = 0x8, GUID = 0xA24F85C9560B2E25, NameHash = 0x3FE862FE8570BE69)]
     public class GcAlienPuzzleOption : NMSTemplate
     {
         [NMS(Size = 0x20)]
@@ -28,13 +28,16 @@ namespace libMBIN.NMS.GameComponents
         /* 0x74 */ public byte[] Padding74;
         [NMS(Size = 0x20)]
         /* 0x78 */ public string NextInteraction;
-        /* 0x98 */ public GcAudioWwiseEvents AudioEvent;
-        /* 0x9C */ public GcMissionConditionTest EnablingConditionTest;
-        /* 0xA0 */ public List<NMSTemplate> EnablingConditions;
+        /* 0x98 */ public bool SelectedOnBackOut;
+        /* 0x9C */ public GcAudioWwiseEvents AudioEvent;
+        /* 0xA0 */ public GcMissionConditionTest EnablingConditionTest;
+        [NMS(Size = 0x4, Ignore = true)]
+        /* 0xA4 */ public byte[] PaddingA4;
+        /* 0xA8 */ public List<NMSTemplate> EnablingConditions;
         [NMS(Size = 0x20)]
-        /* 0xB0 */ public string EnablingConditionId;
-        /* 0xD0 */ public GcWordCategoryTableEnum WordCategory;
+        /* 0xB8 */ public string EnablingConditionId;
+        /* 0xD8 */ public GcWordCategoryTableEnum WordCategory;
         [NMS(Size = 4, Ignore = true)]
-        /* 0xD4 */ public byte[] EndPadding;
+        /* 0xDC */ public byte[] EndPadding;
     }
 }

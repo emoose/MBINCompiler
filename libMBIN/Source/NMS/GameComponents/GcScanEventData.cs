@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x5B8, Alignment = 0x8, GUID = 0xE47B723DD250A3F9, NameHash = 0x7BBBCE7D7BC0F1F4)]
+	[NMS(Size = 0x5E0, Alignment = 0x8, GUID = 0x165F471395DA30AC, NameHash = 0x7BBBCE7D7BC0F1F4)]
     public class GcScanEventData : NMSTemplate
     {
         [NMS(Size = 0x20)]
@@ -25,66 +25,65 @@ namespace libMBIN.NMS.GameComponents
         /* 0x052 */ public byte[] Padding52;
         [NMS(Size = 0x20)]
         /* 0x058 */ public string PlanetLabelText;
-
+        /* 0x078 */ public float SurveyDistance;
+        [NMS(Size = 0x4, Ignore = true)]
+        /* 0x07C */ public byte[] Padding7C;
+        [NMS(Size = 0x20)]
+        /* 0x080 */ public string SurveyDiscoveryOSDMessage;
         public enum EventStartTypeEnum { None, Special, Discovered, Timer, ObjectScan, LeaveBuilding }
-		/* 0x078 */ public EventStartTypeEnum EventStartType;
+		/* 0x0A0 */ public EventStartTypeEnum EventStartType;
 		public enum EventEndTypeEnum { None, Proximity, Interact, EnterBuilding, TimedInteract }
-		/* 0x07C */ public EventEndTypeEnum EventEndType;
+		/* 0x0A4 */ public EventEndTypeEnum EventEndType;
 		public enum EventPriorityEnum { Regular, High }
-		/* 0x080 */ public EventPriorityEnum EventPriority;
-
-        /* 0x084 */ public bool CanEndFromOutsideMission;
-        /* 0x085 */ public bool DisableMultiplayerSync;
-        /* 0x086 */ public bool ReplaceEventIfAlreadyActive;
-
+		/* 0x0A8 */ public EventPriorityEnum EventPriority;
+        /* 0x0AC */ public bool CanEndFromOutsideMission;
+        /* 0x0AD */ public bool DisableMultiplayerSync;
+        /* 0x0AE */ public bool ReplaceEventIfAlreadyActive;
         public enum BuildingLocationEnum { Nearest, AllNearest, Random, RandomOnNearPlanet, RandomOnFarPlanet, PlanetSearch }
-		/* 0x088 */ public BuildingLocationEnum BuildingLocation;
+		/* 0x0B0 */ public BuildingLocationEnum BuildingLocation;
 		public enum BuildingTypeEnum { Any, AnyShelter, AnyNPC, BuildingClass, SpaceStation, SpaceAnomaly, Atlas, Freighter, FreighterBase,
             ExternalPlanetBase, PlanetBaseTerminal, Expedition, TutorialShelter, MPMissionFreighter, Nexus, InitialDistressSignal }
-		/* 0x08C */ public BuildingTypeEnum BuildingType;
-        /* 0x090 */ public GcBuildingClassification BuildingClass;
-        /* 0x094 */ public bool AllowFriendBases;
-        /* 0x095 */ public bool ForceWideRandom;
-        /* 0x096 */ public bool MustFindSystem;
-        /* 0x097 */ public bool AllowOverriddenBuildings;
-
+		/* 0x0B4 */ public BuildingTypeEnum BuildingType;
+        /* 0x0B8 */ public GcBuildingClassification BuildingClass;
+        /* 0x0BC */ public bool AllowFriendBases;
+        /* 0x0BD */ public bool ForceWideRandom;
+        /* 0x0BE */ public bool MustFindSystem;
+        /* 0x0BF */ public bool AllowOverriddenBuildings;
 		public enum SolarSystemLocationEnum { Local, Near, LocalOrNear, NearWithNoExpeditions, FromList }
-		/* 0x098 */ public SolarSystemLocationEnum SolarSystemLocation;
-
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x09C */ public byte[] Padding9C;
-
-        /* 0x0A0 */ public GcScanEventSolarSystemLookup SolarSystemAttributes;
-        /* 0x110 */ public GcScanEventSolarSystemLookup SolarSystemAttributesFallback;
-        /* 0x180 */ public bool ForceRestartInteraction;
+		/* 0x0C0 */ public SolarSystemLocationEnum SolarSystemLocation;
+        [NMS(Size = 0x8, Ignore = true)]
+        /* 0x0C4 */ public byte[] PaddingC4;
+        /* 0x0C8 */ public GcScanEventSolarSystemLookup SolarSystemAttributes;
+        /* 0x138 */ public GcScanEventSolarSystemLookup SolarSystemAttributesFallback;
+        /* 0x1A8 */ public bool ForceRestartInteraction;
         [NMS(Size = 7, Ignore = true)]
-        /* 0x181 */ public byte[] Padding181;
+        /* 0x1A9 */ public byte[] Padding1A9;
         [NMS(Size = 0x10)]
-        /* 0x188 */ public string HasReward;
+        /* 0x1B0 */ public string HasReward;
         [NMS(Size = 0x20)]
-        /* 0x198 */ public string NextOption;
-        /* 0x1B8 */ public GcScanEventTriggers TriggerActions;
-        /* 0x1D8 */ public List<NMSString0x100> UAsList;
-        /* 0x1E8 */ public GcTechnologyCategory TechShopType;
+        /* 0x1C0 */ public string NextOption;
+        /* 0x1E0 */ public GcScanEventTriggers TriggerActions;
+        /* 0x200 */ public List<NMSString0x100> UAsList;
+        /* 0x210 */ public GcTechnologyCategory TechShopType;
         [NMS(Size = 0x20)]
-        /* 0x1EC */ public string OSDMessage;
+        /* 0x214 */ public string OSDMessage;
         [NMS(Size = 0x20)]
-        /* 0x20C */ public string InterstellarOSDMessage;
+        /* 0x234 */ public string InterstellarOSDMessage;
         [NMS(Size = 0x20)]
-        /* 0x22C */ public string MarkerLabel;
-        /* 0x24C */ public TkTextureResource MarkerIcon;
-        /* 0x2D0 */ public float StartTime;
-        /* 0x2D4 */ public float MessageTime;
-        /* 0x2D8 */ public float MessageDisplayTime;
-        /* 0x2DC */ public GcAudioWwiseEvents MessageAudio;
-        /* 0x2E0 */ public float IconTime;
-        /* 0x2E4 */ public float TooltipTime;
-        /* 0x2E8 */ public bool TooltipRepeats;
-        /* 0x2E9 */ public bool ShowEndTooltip;
+        /* 0x254 */ public string MarkerLabel;
+        /* 0x274 */ public TkTextureResource MarkerIcon;
+        /* 0x2F8 */ public float StartTime;
+        /* 0x2FC */ public float MessageTime;
+        /* 0x300 */ public float MessageDisplayTime;
+        /* 0x304 */ public GcAudioWwiseEvents MessageAudio;
+        /* 0x308 */ public float IconTime;
+        /* 0x30C */ public float TooltipTime;
+        /* 0x310 */ public bool TooltipRepeats;
+        /* 0x311 */ public bool ShowEndTooltip;
         [NMS(Size = 0x20)]
-        /* 0x2EA */ public string TooltipMessage;
+        /* 0x312 */ public string TooltipMessage;
         [NMS(Size = 0x6, Ignore = true)]
-        /* 0x30A */ public byte[] Padding30A;
-        /* 0x310 */ public GcResourceElement ResourceOverride;
+        /* 0x332 */ public byte[] Padding332;
+        /* 0x338 */ public GcResourceElement ResourceOverride;
     }
 }

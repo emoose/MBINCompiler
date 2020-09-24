@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x70, GUID = 0xCD6A06213A8283AA, NameHash = 0x74BA808E86F0EC01)]
+	[NMS(Size = 0x80, GUID = 0xC7CAEEE2884B8E74, NameHash = 0x74BA808E86F0EC01)]
     public class GcScannableComponentData : NMSTemplate
     {
         /* 0x00 */ public float ScanRange;
@@ -17,7 +17,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x32 */ public bool DisableIfBuildingPart;
         /* 0x33 */ public bool DisableIfInBase;
         /* 0x34 */ public bool UseModelNode;
-
         /* 0x38 */ public GcScannerIconTypes IconType;
 		public enum ScannableTypeEnum { Binoculars, BinocularsHotspots, Scanner, Marker, None }
 		/* 0x3C */ public ScannableTypeEnum ScannableType;
@@ -30,6 +29,8 @@ namespace libMBIN.NMS.GameComponents
         /* 0x48 */ public string FreighterObjectAlreadyUsedLocID;
         /* 0x68 */ public bool AllowedToMerge;
         [NMS(Size = 0x7, Ignore = true)]
-        /* 0x69 */ public byte[] EndPadding;
+        /* 0x69 */ public byte[] Padding69;
+        [NMS(Size = 0x10)]
+        /* 0x70 */ public string MissionSurveyId;
     }
 }
