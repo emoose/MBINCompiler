@@ -6,7 +6,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x3B0, GUID = 0x7207BAD0BCF5DA9A, NameHash = 0x98B648B5C054B7F7)]
+	[NMS(Size = 0x3B0, GUID = 0x702BE8ADECCA8D89, NameHash = 0x98B648B5C054B7F7)]
     public class GcProjectileData : NMSTemplate
     {
         [NMS(Size = 0x10)]
@@ -32,7 +32,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x2FC */ public bool HitOnBounce;
         [NMS(Size = 3, Ignore = true)]
         /* 0x2FD */ public byte[] Padding2FD;
-
         [NMS(Size = 0x10)]
         /* 0x300 */ public string PlayerDamage;
         /* 0x310 */ public bool UseCustomBulletData;

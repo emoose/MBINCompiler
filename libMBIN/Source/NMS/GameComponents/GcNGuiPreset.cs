@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x6240, GUID = 0x9C412A48E357013E, NameHash = 0x31B2A19D40422178)]
+	[NMS(Size = 0x6420, GUID = 0x8C639FE8E6E9A6C3, NameHash = 0x31B2A19D40422178)]
     public class GcNGuiPreset : NMSTemplate
     {
         [NMS(Size = 0x80)]
@@ -11,9 +11,9 @@ namespace libMBIN.NMS.GameComponents
         [NMS(Size = 0xA)]
         /* 0x0080 */ public GcNGuiPresetGraphic[] Layer;
         [NMS(Size = 0xA)]
-        /* 0x1D40 */ public GcNGuiPresetGraphic[] Graphic;
+        /* 0x1DE0 */ public GcNGuiPresetGraphic[] Graphic;
         [NMS(Size = 0xA)]
-        /* 0x3A00 */ public GcNGuiPresetText[] Text;
-        /* 0x6200 */ public GcNGuiLayoutData SpacingLayout;
+        /* 0x3B40 */ public GcNGuiPresetText[] Text;
+        /* 0x63E0 */ public GcNGuiLayoutData SpacingLayout;
     }
 }

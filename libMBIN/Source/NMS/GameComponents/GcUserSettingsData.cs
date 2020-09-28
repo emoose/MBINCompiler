@@ -4,7 +4,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x3928, GUID = 0xB37AFE3A8D9445C0, NameHash = 0x3A50D683FD1CF4BF)]
+	[NMS(Size = 0x3930, GUID = 0x838C05025A95A72C, NameHash = 0x3A50D683FD1CF4BF)]
     public class GcUserSettingsData : NMSTemplate
     {
         /* 0x0000 */ public bool InvertLookControls;
@@ -50,17 +50,19 @@ namespace libMBIN.NMS.GameComponents
         /* 0x3904 */ public int LastSeenCommunityMissionTier;
         public enum MovementModeEnum { Teleporter, Smooth }
         /* 0x3908 */ public MovementModeEnum MovementMode;
+        /* 0x390C */ public GcMovementDirection MovementDirectionPad;
+        /* 0x3910 */ public GcMovementDirection MovementDirectionHands;
         public enum TurnModeEnum { Smooth, Snap }
-        /* 0x390C */ public TurnModeEnum TurnMode;
-        /* 0x3910 */ public bool UseVrVignette;
-        /* 0x3911 */ public bool UseShipAutoControlVignette;
-        /* 0x3914 */ public float HUDZoom;
-        /* 0x3918 */ public float FrontendZoom;
-        /* 0x391C */ public bool UseAutoTorch;
-        /* 0x391D */ public bool VRHeadBob;
-        /* 0x391E */ public bool VRShowBody;
-        /* 0x391F */ public bool BaseComplexityLimitsEnabled;
-        /* 0x3920 */ public bool EnableLargeLobbies;
-        /* 0x3924 */ public int FireteamSessionCount;
+        /* 0x3914 */ public TurnModeEnum TurnMode;
+        /* 0x3918 */ public bool UseVrVignette;
+        /* 0x3919 */ public bool UseShipAutoControlVignette;
+        /* 0x391C */ public float HUDZoom;
+        /* 0x3920 */ public float FrontendZoom;
+        /* 0x3924 */ public bool UseAutoTorch;
+        /* 0x3925 */ public bool VRHeadBob;
+        /* 0x3926 */ public bool VRShowBody;
+        /* 0x3927 */ public bool BaseComplexityLimitsEnabled;
+        /* 0x3928 */ public bool EnableLargeLobbies;
+        /* 0x392C */ public int FireteamSessionCount;
     }
 }

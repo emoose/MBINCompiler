@@ -5,12 +5,13 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Toolkit
 {
-	[NMS(Size = 0x88, GUID = 0x455421BA61AB44, NameHash = 0x787641F134B1AFBD)]
+	[NMS(Size = 0x88, GUID = 0x942933E383D5C9C7, NameHash = 0x787641F134B1AFBD)]
     public class TkCreatureTailComponentData : NMSTemplate
     {
         /* 0x00 */ public GcPrimaryAxis LengthAxis;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x04 */ public byte[] Padding4;
+        /* 0x04 */ public bool CanuseDefaultParams;
+        [NMS(Size = 0x3, Ignore = true)]
+        /* 0x05 */ public byte[] Padding5;
         /* 0x08 */ public TkCreatureTailParams DefaultParams;
         /* 0x78 */ public List<TkCreatureTailParams> ParamVariations;
     }

@@ -51,7 +51,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x0BF */ public bool AllowOverriddenBuildings;
 		public enum SolarSystemLocationEnum { Local, Near, LocalOrNear, NearWithNoExpeditions, FromList }
 		/* 0x0C0 */ public SolarSystemLocationEnum SolarSystemLocation;
-        [NMS(Size = 0x8, Ignore = true)]
+        [NMS(Size = 0x4, Ignore = true)]
         /* 0x0C4 */ public byte[] PaddingC4;
         /* 0x0C8 */ public GcScanEventSolarSystemLookup SolarSystemAttributes;
         /* 0x138 */ public GcScanEventSolarSystemLookup SolarSystemAttributesFallback;

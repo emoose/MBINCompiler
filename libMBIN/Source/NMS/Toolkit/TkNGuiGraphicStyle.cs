@@ -3,22 +3,25 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Toolkit
 {
-	[NMS(Size = 0x210, GUID = 0xF4D268C001AB8732, Alignment = 0x10, NameHash = 0xB70875CDF93EECEC)]
+	[NMS(Size = 0x220, GUID = 0xFFA49BE86665206F, Alignment = 0x10, NameHash = 0xB70875CDF93EECEC)]
     public class TkNGuiGraphicStyle : NMSTemplate
     {
         /* 0x000 */ public TkNGuiGraphicStyleData Default;
         /* 0x0A0 */ public TkNGuiGraphicStyleData Highlight;
         /* 0x140 */ public TkNGuiGraphicStyleData Active;
-        /* 0x1E0 */ public float HighlightTime;
-        /* 0x1E4 */ public float HighlightScale;
-        /* 0x1E8 */ public float GlobalFade;
+        /* 0x1E0 */ public bool InheritStyleFromParentLayer;
+        /* 0x1E4 */ public float HighlightTime;
+        /* 0x1E8 */ public float HighlightScale;
+        /* 0x1EC */ public float GlobalFade;
 		public enum AnimateEnum { None, WipeRightToLeft, SimpleWipe, SimpleWipeDown, CustomWipe, CustomWipeAlpha }
-		/* 0x1EC */ public AnimateEnum Animate;
-        /* 0x1F0 */ public float AnimTime;
-        /* 0x1F4 */ public float AnimSplit;
-        /* 0x1F8 */ public TkCurveType AnimCurve1;
-        /* 0x1FC */ public TkCurveType AnimCurve2;
-        /* 0x200 */ public Vector2f CustomMinStart;
-        /* 0x208 */ public Vector2f CustomMaxStart;
+		/* 0x1F0 */ public AnimateEnum Animate;
+        /* 0x1F4 */ public float AnimTime;
+        /* 0x1F8 */ public float AnimSplit;
+        /* 0x1FC */ public TkCurveType AnimCurve1;
+        /* 0x200 */ public TkCurveType AnimCurve2;
+        /* 0x204 */ public Vector2f CustomMinStart;
+        /* 0x20C */ public Vector2f CustomMaxStart;
+        [NMS(Size = 0xC, Ignore = true)]
+        /* 0x214 */ public byte[] EndPadding;
     }
 }

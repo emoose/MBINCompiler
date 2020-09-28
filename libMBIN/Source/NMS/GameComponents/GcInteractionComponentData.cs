@@ -5,12 +5,11 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x2D0, Alignment = 0x10, GUID = 0x871A24EA11FC46D1, NameHash = 0xDAB0554EA36957B5)]
+	[NMS(Size = 0x2D0, Alignment = 0x10, GUID = 0xDA41339AED52BA2D, NameHash = 0xDAB0554EA36957B5)]
     public class GcInteractionComponentData : NMSTemplate
     {
 		public enum InteractionActionEnum { PressButton, HoldButton, Shoot }
 		/* 0x000 */ public InteractionActionEnum InteractionAction;
-
         /* 0x004 */ public GcInteractionType InteractionType;
         [NMS(Size = 8, Ignore = true)]
         /* 0x008 */ public byte[] Padding8;
@@ -25,7 +24,6 @@ namespace libMBIN.NMS.GameComponents
         [NMS(Size = 0x4, Ignore = true)]
         /* 0x184 */ public byte[] Padding184;
         /* 0x188 */ public GcInteractionActivationCost ActivationCost;
-
         [NMS(Size = 0x10)]
         /* 0x1C0 */ public string TriggerAction;
         [NMS(Size = 0x10)]

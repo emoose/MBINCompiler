@@ -5,16 +5,13 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Toolkit
 {
-	[NMS(Size = 0x550, GUID = 0x40719EDB96D1A63E, NameHash = 0x6F26BF19981BB60C)]
+	[NMS(Size = 0x550, GUID = 0x859F72201821A3E0, NameHash = 0x6F26BF19981BB60C)]
     public class TkNGuiEditorStyleData : NMSTemplate
     {
         /* 0x000 */ public List<float> Sizes;
-
         [NMS(Size = 8)]
         /* 0x010 */ public TkNGuiEditorStyleColour[] SkinColours;
-
         /* 0x490 */ public float SkinFontHeight;
-
         [NMS(Size = 0x80)]
         /* 0x494 */ public string Font;
         [NMS(Size = 0x4, Ignore = true)]
@@ -22,7 +19,6 @@ namespace libMBIN.NMS.Toolkit
         /* 0x518 */ public List<TkNGuiGraphicStyle> GraphicStyles;
         /* 0x528 */ public List<TkNGuiTextStyle> TextStyles;
         /* 0x538 */ public List<float> SnapSettings;
-
         [NMS(Size = 8, Ignore = true)]
         /* 0x548 */ public byte[] EndPadding;
     }

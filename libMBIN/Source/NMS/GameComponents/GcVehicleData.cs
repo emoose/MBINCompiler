@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x1030, GUID = 0x7BDA83B1F4CC9A6E, NameHash = 0x904DB42CF570F4BB)]
+	[NMS(Size = 0x1030, GUID = 0xAE76290DFDABEA7, NameHash = 0x904DB42CF570F4BB)]
     public class GcVehicleData : NMSTemplate
     {
         [NMS(Size = 0x10)]
@@ -39,13 +39,10 @@ namespace libMBIN.NMS.GameComponents
         [NMS(Size = 0xA)]
         /* 0x3C0 */ public NMSString0x10[] SuspensionAnimNames;
         /* 0x460 */ public bool CustomCollision;
-        [NMS(Size = 0xF, Ignore = true)]
-        /* 0x461 */ public byte[] Padding461;
         /* 0x470 */ public Vector3f CollOffset;
         /* 0x480 */ public Vector3f ExtraCollOffset;
         /* 0x490 */ public Vector3f CollDimensions;
         /* 0x4A0 */ public Vector3f InertiaDimensions;
-
         /* 0x4B0 */ public float CollRadius;
         /* 0x4B4 */ public float InertiaMull;
         /* 0x4B8 */ public float WheelSuspensionlength;
@@ -72,15 +69,12 @@ namespace libMBIN.NMS.GameComponents
         /* 0x50C */ public float WheelSideFrictionDynamicThreshold;
         /* 0x510 */ public float WheelSideFrictionStatic;
         /* 0x514 */ public float WheelSideFrictionStaticThreshold;
-        /* 0x518 */ public float TurningWheelForce;
-        /* 0x51C */ public float TurningWheelForceVR;
-        /* 0x520 */ public float TurningWheelFrictionOmega;
-        /* 0x524 */ public float TurningWheelFrictionNonBraking;
-        /* 0x528 */ public float TurningWheelFrictionBraking;
-
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x52C */ public byte[] Padding52C;
-
+        /* 0x518 */ public bool LockVehicleAxis;
+        /* 0x51C */ public float TurningWheelForce;
+        /* 0x520 */ public float TurningWheelForceVR;
+        /* 0x524 */ public float TurningWheelFrictionOmega;
+        /* 0x528 */ public float TurningWheelFrictionNonBraking;
+        /* 0x52C */ public float TurningWheelFrictionBraking;
         /* 0x530 */ public Vector3f WheelForwardAngularFactor;
         /* 0x540 */ public Vector3f WheelTurnAngularFactor;
         /* 0x550 */ public Vector3f WheelSuspensionAngularFactor;
@@ -102,17 +96,14 @@ namespace libMBIN.NMS.GameComponents
         /* 0x5A8 */ public float VehicleJumpAirMaxTorque;
         /* 0x5AC */ public bool UseBuggySuspensionHack;
         /* 0x5AD */ public bool UseRoverWheelHack;
-
         [NMS(Size = 0x2, Ignore = true)]
         /* 0x5AE */ public byte[] Padding5AE;
-
         [NMS(Size = 0x10)]
         /* 0x5B0 */ public string SideSkidParticle;
         /* 0x5C0 */ public float SideSkidParticleMinRate;
         /* 0x5C4 */ public float SideSkidParticleMaxRate;
         /* 0x5C8 */ public float SideSkidParticleMinThresh;
         /* 0x5CC */ public float SideSkidParticleMaxThresh;
-
         [NMS(Size = 0x10)]
         /* 0x5D0 */ public string WheelSpinParticle;
         /* 0x5E0 */ public float WheelSpinParticleMinRate;
@@ -165,7 +156,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0xA55 */ public string AudioSuspension;
         [NMS(Size = 0x80)]
         /* 0xAD5 */ public string AudioJump;
-
         /* 0xB55 */ public bool DriveOnTopOfWater;
         /* 0xB58 */ public float VehicleUnderwaterRotateTime;
         /* 0xB5C */ public float VehicleAudioSuspensionThreshold;

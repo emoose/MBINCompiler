@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Alignment = 0x4, Size = 0x70, GUID = 0x9809454F47299CA1, NameHash = 0xE523CFAD6AFB4BB6)]
+	[NMS(Alignment = 0x4, Size = 0x70, GUID = 0x31BE20F5A348DDE0, NameHash = 0xE523CFAD6AFB4BB6)]
     public class GcScanEventSolarSystemLookup : NMSTemplate
     {
         /* 0x00 */ public bool UseStarType;
@@ -18,14 +18,15 @@ namespace libMBIN.NMS.GameComponents
         /* 0x14 */ public GcPlanetTradingData TradingData;
         /* 0x1C */ public bool AllowUnsafeMatches;
         /* 0x1D */ public bool NeverAllowEmpty;
-        /* 0x1E */ public bool NeedsWaterPlanet;
-        /* 0x1F */ public bool NeedsExtremeSentinelPlanet;
-        /* 0x20 */ public bool NeverAllowExtremeSentinelPlanet;
-        /* 0x21 */ public bool NeedsExtremeWeatherPlanet;
-        /* 0x22 */ public bool NeedsExtremeHazardPlanet;
-        /* 0x23 */ public bool AnyBiomeNotWeirdOrDead;
-        /* 0x24 */ public bool AnyRGBBiome;
-        /* 0x25 */ public bool NeedsBiome;
+        /* 0x1E */ public bool NeverAllowAbandoned;
+        /* 0x1F */ public bool NeedsWaterPlanet;
+        /* 0x20 */ public bool NeedsExtremeSentinelPlanet;
+        /* 0x21 */ public bool NeverAllowExtremeSentinelPlanet;
+        /* 0x22 */ public bool NeedsExtremeWeatherPlanet;
+        /* 0x23 */ public bool NeedsExtremeHazardPlanet;
+        /* 0x24 */ public bool AnyBiomeNotWeirdOrDead;
+        /* 0x25 */ public bool AnyRGBBiome;
+        /* 0x26 */ public bool NeedsBiome;
         /* 0x28 */ public GcBiomeType NeedsBiomeType;
         /* 0x2C */ public GcBiomeSubType UseBiomeSubType;
         /* 0x30 */ public bool NeedsEmptySystem;

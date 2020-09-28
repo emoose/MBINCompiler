@@ -3,10 +3,10 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Toolkit
 {
-	[NMS(Size = 0x4, Alignment = 0x4, GUID = 0x2B5B120EBCC3B4D6, NameHash = 0x8C2EDCD50FA3956F)]
+	[NMS(Size = 0x4, Alignment = 0x4, GUID = 0xBE3D3712B6DF1EB8, NameHash = 0x8C2EDCD50FA3956F)]
     public class TkInputEnum : NMSTemplate
     {
-        // 0x99 entries
+        // 0x9B entries
         public enum InputButtonEnum {
             None = 0x0, Space = 0x20, Exclamation = 0x21, Quotes = 0x22, Hash = 0x23,
             Dollar = 0x24, Percent = 0x25, Ampersand = 0x26, Apostrophe = 0x27, LeftBracket = 0x28,
@@ -36,9 +36,9 @@ namespace libMBIN.NMS.Toolkit
             PadLeftShoulder2 = 0x137, PadRightShoulder2 = 0x138, PadLeftTrigger = 0x139, PadRightTrigger = 0x13A, PadLeftThumb = 0x13B,
             PadRightThumb = 0x13C, PadUp = 0x13D, PadDown = 0x13E, PadLeft = 0x13F, PadRight = 0x140,
             PadSpecial1 = 0x141, PadSpecial2 = 0x142, LeftHandA = 0x143, LeftHandB = 0x144, LeftHandC = 0x145,
-            LeftHandD = 0x146, ChordBothShoulders = 0x147, PadUnbound = 0x148, Gesture = 0x149, GestureLeftWrist = 0x14A,
-            GestureRightWrist = 0x14B, GestureBinoculars = 0x14C, GestureBackpack = 0x14D, GestureExitVehicle = 0x14E, GestureThrottle = 0x14F,
-            GestureFlightStick = 0x150, GestureTeleport = 0x151, MaxEnumValue = 0x152
+            LeftHandD = 0x146, ChordBothShoulders = 0x147, PadLeftTriggerSpecial = 0x148, PadRightTriggerSpecial = 0x149, PadUnbound = 0x14A,
+            Gesture = 0x14B, GestureLeftWrist = 0x14C, GestureRightWrist = 0x14D, GestureBinoculars = 0x14E, GestureBackpack = 0x14F,
+            GestureExitVehicle = 0x150, GestureThrottle = 0x151, GestureFlightStick = 0x152, GestureTeleport = 0x153, MaxEnumValue = 0x154
         };
         public InputButtonEnum InputButton;
     }

@@ -9,7 +9,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcCreatureCrystalMovementDataParams : NMSTemplate
     {
         /* 0x00 */ public List<GcBiomeSubType> ValidBiomes;
-        /* 0x10 */ public List<NMSString0x10> ValidDescriptors;
+        /* 0x10 */ public List<NMSString0x20> ValidDescriptors;
         /* 0x20 */ public int NumShards;
         /* 0x24 */ public bool UseTerrainAngle;
         /* 0x25 */ public bool ScaleOnAppear;

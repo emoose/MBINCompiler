@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Toolkit
 {
-	[NMS(Size = 0x4A0, Alignment = 0x10, GUID = 0xB55CC0128EA807DC, NameHash = 0xE39CB7AA4D818260)]
+	[NMS(Size = 0x4B0, Alignment = 0x10, GUID = 0x69E343F5F6665EE4, NameHash = 0xE39CB7AA4D818260)]
     public class TkMaterialMetaData : NMSTemplate {
 
         [NMS(Size = 0x80)]
@@ -116,7 +116,7 @@ namespace libMBIN.NMS.Toolkit
         /* 0x440 */ public Vector3f WaveTwoFallOff;
         /* 0x450 */ public TkMaterialSketchData SketchData;
         [NMS(Size = 0x8, Ignore = true)]
-        /* 0x498 */ public byte[] EndPadding;
+        /* 0x4A8 */ public byte[] EndPadding;
     }
 
 }

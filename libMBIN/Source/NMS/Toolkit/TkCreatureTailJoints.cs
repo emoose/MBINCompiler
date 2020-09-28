@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Toolkit
 {
-	[NMS(Size = 0x54, GUID = 0x982B54282AC0592, NameHash = 0x38D7F8085AD4CE3)]
+	[NMS(Size = 0x60, GUID = 0xFEB421323879E283, NameHash = 0x38D7F8085AD4CE3)]
     public class TkCreatureTailJoints : NMSTemplate
     {
         [NMS(Size = 0x20)]
@@ -14,8 +14,11 @@ namespace libMBIN.NMS.Toolkit
         /* 0x20 */ public string EndJoint;
         /* 0x40 */ public float InterpSpeedHead;
         /* 0x44 */ public float InterpSpeedTail;
-        /* 0x48 */ public float StrengthX;
-        /* 0x4C */ public float StrengthY;
-        /* 0x50 */ public float StrengthZ;
+        /* 0x48 */ public float PullSpeedMin;
+        /* 0x4C */ public float PullSpeedMax;
+        /* 0x50 */ public float StrengthX;
+        /* 0x54 */ public float StrengthY;
+        /* 0x58 */ public float StrengthZ;
+        /* 0x5C */ public float SwimPhaseOffset;
     }
 }

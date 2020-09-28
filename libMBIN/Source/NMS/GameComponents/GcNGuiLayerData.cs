@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Alignment = 0x10, Size = 0x3A0, GUID = 0xAD5FB33CBADB1E23, NameHash = 0x585832A31F4C2EA1)]
+	[NMS(Alignment = 0x10, Size = 0x3B0, GUID = 0xC2B012FCA38A72BF, NameHash = 0x585832A31F4C2EA1)]
     public class GcNGuiLayerData : NMSTemplate
     {
         /* 0x000 */ public GcNGuiElementData ElementData;
@@ -13,13 +13,13 @@ namespace libMBIN.NMS.GameComponents
         /* 0x068 */ public byte[] Padding68;
         /* 0x070 */ public TkNGuiGraphicStyle Style;
         [NMS(Size = 0x80)]
-        /* 0x280 */ public string Image;
-        /* 0x300 */ public List<NMSTemplate> Children;
+        /* 0x290 */ public string Image;
+        /* 0x310 */ public List<NMSTemplate> Children;
         [NMS(Size = 0x80)]
-        /* 0x310 */ public string DataFilename;
+        /* 0x320 */ public string DataFilename;
         public enum AltModeEnum { None, Normal, Alt}
-        /* 0x390 */ public AltModeEnum AltMode;
+        /* 0x3A0 */ public AltModeEnum AltMode;
         [NMS(Size = 0xC, Ignore = true)]
-        /* 0x394 */ public byte[] EndPadding;
+        /* 0x3A4 */ public byte[] EndPadding;
     }
 }

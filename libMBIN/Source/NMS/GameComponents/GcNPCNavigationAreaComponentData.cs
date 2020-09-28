@@ -3,10 +3,10 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x1C, GUID = 0xF52BA83C79ECB661, NameHash = 0xB4FC959D6A910DEB)]
+	[NMS(Size = 0x1C, GUID = 0xB6A2F7B50BCDC166, NameHash = 0xB4FC959D6A910DEB)]
     public class GcNPCNavigationAreaComponentData : NMSTemplate
     {
-        public enum NavAreaTypeEnum { Normal, BuildingWithExterior , Debris, Ship, Mech, PlanetMech }
+        public enum NavAreaTypeEnum { Normal, BuildingWithExterior, Debris, Ship, Mech, PlanetMech, Demo }
         public NavAreaTypeEnum NavAreaType;
         public float MinRadius;
         public float MaxRadius;

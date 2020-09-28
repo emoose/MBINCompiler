@@ -3,12 +3,11 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0xF0, GUID = 0x61834312DCADA196, NameHash = 0x21C58A0DDEF4EC87)]
+	[NMS(Size = 0xE0, GUID = 0xC4AFAE16849B79D3, NameHash = 0x21C58A0DDEF4EC87)]
     public class GcCloudProperties : NMSTemplate
     {
-        /* 0x00 */ public Vector2f CoverageOffset;
-        /* 0x08 */ public float HorizonCoverageStart;
-        /* 0x0C */ public float HorizonCoverageEnd;
+        /* 0x00 */ public float HorizonCoverageStart;
+        /* 0x04 */ public float HorizonCoverageEnd;
         /* 0x10 */ public Colour CloudBaseColour;
         /* 0x20 */ public Colour CloudTopColour;
         /* 0x30 */ public float LightScalar;
@@ -27,8 +26,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x6C */ public float SampleScalar;
         /* 0x70 */ public float SampleThreshold;
         /* 0x74 */ public float CloudBottomFade;
-        [NMS(Size = 0x8, Ignore = true)]
-        /* 0x78 */ public byte[] Padding78;
         /* 0x80 */ public Vector4f CloudHeightGradient1;
         /* 0x90 */ public Vector4f CloudHeightGradient2;
         /* 0xA0 */ public Vector4f CloudHeightGradient3;
@@ -42,10 +39,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0xCC */ public float HorizonFadeStartAlpha;
         /* 0xD0 */ public float HorizonFadeScalar;
         /* 0xD4 */ public float HorizonDistance;
-        /* 0xD8 */ public float AtmosphereStartHeight;
-        /* 0xDC */ public float AtmosphereEndHeight;
-        /* 0xE0 */ public float StratosphereHeight;
-        [NMS(Size = 0xC, Ignore = true)]
-        /* 0xE4 */ public byte[] EndPadding;
+        [NMS(Size = 0x8, Ignore = true)]
+        /* 0xD8 */ public byte[] EndPadding;
     }
 }
