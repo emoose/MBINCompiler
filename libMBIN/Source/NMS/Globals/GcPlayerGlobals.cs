@@ -7,8 +7,6 @@ namespace libMBIN.NMS.Globals
     public class GcPlayerGlobals : NMSTemplate
     {
         /* 0x0000 */ public bool ForceFreighterProcTechRandom;
-        [NMS(Size = 0x3, Ignore = true)]
-        /* 0x0001 */ public byte[] Padding1;
         /* 0x0004 */ public float AlienPodAggroDecay;
         /* 0x0008 */ public float AlienPodAggroSpring;
         /* 0x000C */ public float FoodValueThresholdBest;
@@ -21,8 +19,6 @@ namespace libMBIN.NMS.Globals
         /* 0x0028 */ public bool RecenterViewWhenEnteringShip;
         /* 0x0029 */ public bool UseInitialFacingForMoveDirection;
         /* 0x002A */ public bool EmulateNoHandsForHandScreens;
-        [NMS(Size = 0x1, Ignore = true)]
-        /* 0x002B */ public byte[] Padding2B;
         /* 0x002C */ public float BinocularAimOffset;
         /* 0x0030 */ public float BinocularScopeScale;
         /* 0x0034 */ public float MaxArmExtension;
@@ -45,8 +41,6 @@ namespace libMBIN.NMS.Globals
         /* 0x02E0 */ public GcInWorldUIScreenData FrontendBaseScreenshotVROffset;
         /* 0x0310 */ public float BinocularRayThicknessVR;
         /* 0x0314 */ public float BincoularRayThickness;
-        [NMS(Size = 0x8, Ignore = true)]
-        /* 0x0318 */ public byte[] Padding318;
         /* 0x0320 */ public Vector3f BinocularScopeOffset;
         /* 0x0330 */ public float TeleportMaxTravelDistance;
         /* 0x0334 */ public float TeleportMaxTravelDistanceVertical;
@@ -84,43 +78,29 @@ namespace libMBIN.NMS.Globals
         /* 0x03B8 */ public float HandScreenActivationAngleDown;
         /* 0x03BC */ public float HandScreenPenetration;
         /* 0x03C0 */ public float HandScreenRestingTurnAngle;
-        [NMS(Size = 0xC, Ignore = true)]
-        /* 0x03C4 */ public byte[] Padding3C4;
         /* 0x03D0 */ public Vector3f HandScreenRoboOnScreenOffset;
         /* 0x03E0 */ public GcInWorldUIScreenData InWorldCompass;
         /* 0x0410 */ public float FistClenchBlendInTime;
         /* 0x0414 */ public float FistClenchBlendOutTime;
         /* 0x0418 */ public bool DoPlayerAppearInVehicleEffect;
-        [NMS(Size = 0x3, Ignore = true)]
-        /* 0x0419 */ public byte[] Padding419;
         /* 0x041C */ public float StickYDampingThreshold;
         /* 0x0420 */ public bool RequireHandsOnShipControls;
         /* 0x0421 */ public bool ShowFirstPersonCharacterShadowPCVR;
         /* 0x0422 */ public bool ShowFirstPersonCharacterShadowPSVR;
         /* 0x0423 */ public bool InteractNearbyRadiusEnabled;
         /* 0x0424 */ public bool PassiveLook;
-        [NMS(Size = 0x3, Ignore = true)]
-        /* 0x0425 */ public byte[] Padding425;
         /* 0x0428 */ public float BodyRealignmentDelay;
         /* 0x042C */ public float PointDownToMoveAngle;
         /* 0x0430 */ public float PointDownToMoveBackAngle;
         /* 0x0434 */ public bool EnableLeaning;
         /* 0x0435 */ public bool EnablePointDownToSmoothMove;
         /* 0x0436 */ public bool HmdSmoothTurnAlways;
-        [NMS(Size = 0x1, Ignore = true)]
-        /* 0x0437 */ public byte[] Padding437;
         /* 0x0438 */ public float HmdTurnSpeed;
         /* 0x043C */ public float HmdTurnSpeedPad;
         /* 0x0440 */ public ulong PointingWristAdjustmentTimeMilliseconds;
-        [NMS(Size = 0x8, Ignore = true)]
-        /* 0x0448 */ public byte[] Padding448;
         /* 0x0450 */ public Vector3f PointingWristAngles;
         /* 0x0460 */ public bool HolsterOnHip;
-        [NMS(Size = 0x3, Ignore = true)]
-        /* 0x0461 */ public byte[] Padding461;
         /* 0x0464 */ public float HolsterHeadRotX;
-        [NMS(Size = 0x8, Ignore = true)]
-        /* 0x0468 */ public byte[] Padding468;
         /* 0x0470 */ public Vector3f HolsterHeadOffset;
         /* 0x0480 */ public Vector3f HolsterGunHandOffset;
         /* 0x0490 */ public float GroundWalkForceMultiplier;
@@ -155,8 +135,6 @@ namespace libMBIN.NMS.Globals
         /* 0x0504 */ public float TeleportLineFadeRange;
         /* 0x0508 */ public float TeleportInitiateThreshold;
         /* 0x050C */ public bool TeleportRecentre;
-        [NMS(Size = 0x3, Ignore = true)]
-        /* 0x050D */ public byte[] Padding50D;
         /* 0x0510 */ public float TeleportLineBezierOffset;
         /* 0x0514 */ public float TeleportLineBezierDistanceFactor;
         /* 0x0518 */ public float InteractionLineSplineOffset;
@@ -171,8 +149,6 @@ namespace libMBIN.NMS.Globals
         /* 0x053C */ public float InteractionLineNumCirclesPerMetre;
         /* 0x0540 */ public int WordCategoriesRequiredToConverse;
         /* 0x0544 */ public int MaxWordCategoriesToSayPerNPC;
-        [NMS(Size = 0x8, Ignore = true)]
-        /* 0x0548 */ public byte[] Padding548;
         /* 0x0550 */ public Colour InteractionLineActiveColour;
         /* 0x0560 */ public Colour InteractionLineBaseColour;
         /* 0x0570 */ public GcScanEffectData InteractHighlightEffect;
@@ -185,8 +161,6 @@ namespace libMBIN.NMS.Globals
         /* 0x0624 */ public float HandSwimForce;
         /* 0x0628 */ public float HandSwimMaxForce;
         /* 0x062C */ public bool HandSwimEnabled;
-        [NMS(Size = 0x3, Ignore = true)]
-        /* 0x062D */ public byte[] Padding62D;
         /* 0x0630 */ public float HmdTurnThreshold;
         /* 0x0634 */ public float HmdTurnAngle;
         /* 0x0638 */ public float HmdTurnAnglePad;
@@ -203,15 +177,11 @@ namespace libMBIN.NMS.Globals
         /* 0x06DC */ public float HolsterRotY;
         /* 0x06E0 */ public float HolsterRotZ;
         /* 0x06E4 */ public bool HolsterHold;
-        [NMS(Size = 0xB, Ignore = true)]
-        /* 0x06E5 */ public byte[] Padding6E5;
         /* 0x06F0 */ public Vector3f HolsterOffset;
         /* 0x0700 */ public float HeadBinocularsOffset;
         /* 0x0704 */ public float HeadBinocularsRadius;
         [NMS(Size = 0x10)]
         /* 0x0708 */ public string DebugSearchGroup;
-        [NMS(Size = 0x8, Ignore = true)]
-        /* 0x0718 */ public byte[] Padding718;
         /* 0x0720 */ public Colour SearchGroupIconColour;
         [NMS(Size = 0x80)]
         /* 0x0730 */ public string DefaultShipFilename;
@@ -258,8 +228,6 @@ namespace libMBIN.NMS.Globals
         /* 0x08A8 */ public float CreativeModeDeathFadeInTime;
         /* 0x08AC */ public float CreativeModeDeathFadeOutTime;
         /* 0x08B0 */ public bool CreatureRideFade;
-        [NMS(Size = 0x3, Ignore = true)]
-        /* 0x08B1 */ public byte[] Padding8B1;
         /* 0x08B4 */ public float CreatureRideFadeInTime;
         /* 0x08B8 */ public float CreatureRideFadeOutTime;
         /* 0x08BC */ public float HMDResetFlashTime;
@@ -269,15 +237,11 @@ namespace libMBIN.NMS.Globals
         /* 0x08CC */ public float SpawningSpaceBattleLookOffsetUp;
         /* 0x08D0 */ public bool MultiplayerShareWanted;
         /* 0x08D1 */ public bool ReportAllProjectileDamage;
-        [NMS(Size = 0x2, Ignore = true)]
-        /* 0x08D2 */ public byte[] Padding8D2;
         /* 0x08D4 */ public int DefaultHitPoints;
         /* 0x08D8 */ public int DefaultHealthPips;
         /* 0x08DC */ public int DefaultShipHealthPips;
         /* 0x08E0 */ public int MaxHealthPips;
         /* 0x08E4 */ public bool UseLargeHealthBar;
-        [NMS(Size = 0x3, Ignore = true)]
-        /* 0x08E5 */ public byte[] Padding8E5;
         /* 0x08E8 */ public float DroneSpawnAccelerator;
         /* 0x08EC */ public float TrackArrowStaticTargetOffsetMultiplier;
         /* 0x08F0 */ public float WitnessSenseEnhancementTime;
@@ -308,15 +272,11 @@ namespace libMBIN.NMS.Globals
         /* 0x0954 */ public float GhostbusterAmp3;
         /* 0x0958 */ public bool FireButtonReloadsWeapon;
         /* 0x0959 */ public bool WeaponZoomEnabled;
-        [NMS(Size = 0x2, Ignore = true)]
-        /* 0x095A */ public byte[] Padding95A;
         /* 0x095C */ public float WeaponZoomFOV;
         /* 0x0960 */ public float WeaponZoomRecoilMultiplier;
         /* 0x0964 */ public float WeaponZoomVertRotation;
         /* 0x0968 */ public float WeaponZoomHorzRotation;
         /* 0x096C */ public bool FrontShieldEnabled;
-        [NMS(Size = 0x3, Ignore = true)]
-        /* 0x096D */ public byte[] Padding96D;
         /* 0x0970 */ public float FrontShieldOffsetOff;
         /* 0x0974 */ public float FrontShieldOffsetOn;
         /* 0x0978 */ public float FrontShieldSpeedSlowdown;
@@ -368,8 +328,6 @@ namespace libMBIN.NMS.Globals
         /* 0x0A80 */ public float MaxTimeInMeleeBoost;
         /* 0x0A84 */ public bool RocketBootsEnabled;
         /* 0x0A85 */ public bool RocketBootsUseCustomCamera;
-        [NMS(Size = 0x2, Ignore = true)]
-        /* 0x0A86 */ public byte[] PaddingA86;
         /* 0x0A88 */ public float RocketBootsActivationWindow;
         /* 0x0A8C */ public float RocketBootsDoubleTapTime;
         /* 0x0A90 */ public float RocketBootsImpulse;
@@ -422,9 +380,6 @@ namespace libMBIN.NMS.Globals
         /* 0x0B50 */ public float SpaceJetpackMaxSpeed;
         /* 0x0B54 */ public float SpaceJetpackDrainRate;
         /* 0x0B58 */ public bool EnableHeadMovements;
-        /* 0x0B59 */ public bool ClampPitch;
-        [NMS(Size = 0x2, Ignore = true)]
-        /* 0x0B5A */ public byte[] PaddingB5A;
         /* 0x0B5C */ public float DamageRepairFactor;
         /* 0x0B60 */ public float DamageRepairFactorHardMode;
         /* 0x0B64 */ public float AbandonedFreighterStaminaRecoveryMod;
@@ -461,8 +416,6 @@ namespace libMBIN.NMS.Globals
         /* 0x0BE0 */ public float WeaponCoolFactor;
         /* 0x0BE4 */ public float FreighterCoolFactor;
         /* 0x0BE8 */ public bool MouseCrosshairVisible;
-        [NMS(Size = 0x3, Ignore = true)]
-        /* 0x0BE9 */ public byte[] PaddingBE9;
         /* 0x0BEC */ public float MouseMaxLength;
         /* 0x0BF0 */ public float MouseDeadZone;
         /* 0x0BF4 */ public float MouseMaxLengthVehicle;
@@ -485,8 +438,6 @@ namespace libMBIN.NMS.Globals
         /* 0x0C2F */ public bool PermanantFire;
         /* 0x0C30 */ public bool PermanantAltFire;
         /* 0x0C31 */ public bool LuckyWithTech;
-        [NMS(Size = 0x2, Ignore = true)]
-        /* 0x0C32 */ public byte[] PaddingC32;
         /* 0x0C34 */ public int ChanceHighGradeIllegal;
         /* 0x0C38 */ public int BulletCostReducer;
         /* 0x0C3C */ public int BulletClipMultiplier;
@@ -684,8 +635,6 @@ namespace libMBIN.NMS.Globals
         /* 0x12C8 */ public GcBoidData MissileSwarm;
         /* 0x12F4 */ public GcPlayerStickData StickData;
         /* 0x1310 */ public bool AutoAim;
-        [NMS(Size = 0x3, Ignore = true)]
-        /* 0x1311 */ public byte[] Padding1311;
         /* 0x1314 */ public float AutoAimMaxAccelFactor;
         /* 0x1318 */ public float AutoAimFixedInterceptSpeed;
         /* 0x131C */ public float AutoAimTimeOut;
@@ -776,8 +725,6 @@ namespace libMBIN.NMS.Globals
         /* 0x15F8 */ public float LaserBeamAmmoUseTime;
         /* 0x15FC */ public float ReloadButtonHoldTimeToHolster;
         /* 0x1600 */ public float WeaponChangeModeTime;
-        [NMS(Size = 0xC, Ignore = true)]
-        /* 0x1604 */ public byte[] Padding1604;
         /* 0x1610 */ public Vector3f WeaponBarrelOffset;
         /* 0x1620 */ public Vector3f WeaponOffset;
         /* 0x1630 */ public float WeaponLowerDelay;
@@ -923,11 +870,11 @@ namespace libMBIN.NMS.Globals
         /* 0x19D0 */ public GcPlayerCommunicatorMessage PirateHailMessage;
         /* 0x1A20 */ public GcShipDialogue TraderHailMessages;
         [NMS(Size = 0x4)]
-        /* 0x1C88 */ public GcShipDialogueTreeEnum TraderHailReceiveRegular;
+        /* 0x1C88 */ public GcShipDialogueTreeEnum[] TraderHailReceiveRegular;
         [NMS(Size = 0x2)]
-        /* 0x1C98 */ public GcShipDialogueTreeEnum TraderHailReceiveFight;
+        /* 0x1C98 */ public GcShipDialogueTreeEnum[] TraderHailReceiveFight;
         [NMS(Size = 0x2)]
-        /* 0x1CA0 */ public GcShipDialogueTreeEnum TraderHailSend;
+        /* 0x1CA0 */ public GcShipDialogueTreeEnum[] TraderHailSend;
         [NMS(Size = 0x8, Ignore = true)]
         /* 0x1CA8 */ public byte[] EndPadding;
     }

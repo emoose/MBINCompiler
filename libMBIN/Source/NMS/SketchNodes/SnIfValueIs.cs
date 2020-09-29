@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using libMBIN.NMS.Toolkit;
 
-namespace libMBIN.Source.NMS.SketchNodes
+namespace libMBIN.NMS.SketchNodes
 {
     [NMS(Size = 0x18)]
     class SnIfValueIs

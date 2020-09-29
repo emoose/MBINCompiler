@@ -16,8 +16,6 @@ namespace libMBIN.NMS.Globals
         /* 0x0010 */ public bool ThirdPersonIsDefaultCamera;
         /* 0x0011 */ public bool SkipIntro;
         /* 0x0012 */ public bool SkipLogos;
-        [NMS(Size = 0x1, Ignore = true)]
-        /* 0x0013 */ public byte[] Padding13;
         /* 0x0014 */ public int BootDirectlyIntoSaveSlot;
         /* 0x0018 */ public bool BootDirectlyIntoLastSave;
         [NMS(Size = 0x3, Ignore = true)]
@@ -60,8 +58,6 @@ namespace libMBIN.NMS.Globals
         /* 0x0042 */ public bool AlwaysAllowVehicleOperations;
         /* 0x0043 */ public bool AlwaysAllowFreighterInventoryAccess;
         /* 0x0044 */ public bool UseDebugScreenSettings;
-        [NMS(Size = 0x3, Ignore = true)]
-        /* 0x0045 */ public byte[] Padding45;
         /* 0x0048 */ public int ScreenWidth;
         /* 0x004C */ public int ScreenHeight;
         /* 0x0050 */ public bool DisableVSync;
@@ -98,17 +94,11 @@ namespace libMBIN.NMS.Globals
         /* 0x03FD */ public bool ShaderPreloadListImport;
         /* 0x03FE */ public bool ShaderCaching;
 		public enum BootLoadDelayEnum { LoadAll, WaitForPlanet, WaitForNothing }
-        [NMS(Size = 0x1, Ignore = true)]
-        /* 0x03FF */ public byte[] Padding3FF;
         /* 0x0400 */ public BootLoadDelayEnum BootLoadDelay;
         /* 0x0404 */ public bool MemCsv;
-        [NMS(Size = 0x3, Ignore = true)]
-        /* 0x0405 */ public byte[] Padding405;
         /* 0x0408 */ public float ForceTimeOfDay;
         /* 0x040C */ public float ForceInitialTimeOfDay;
         /* 0x0410 */ public bool ForceSunDirectionFromPhotoMode;
-        [NMS(Size = 0x3, Ignore = true)]
-        /* 0x0411 */ public byte[] Padding411;
         /* 0x0414 */ public float ForceSunAngle;
         /* 0x0418 */ public bool ResetForcedSaveSlotOnLoad;
         /* 0x0419 */ public bool UseParticles;
@@ -145,8 +135,6 @@ namespace libMBIN.NMS.Globals
         /* 0x0438 */ public bool DisableDiscoveryNaming;
         /* 0x0439 */ public bool DebugDrawPlayerInteract;
         /* 0x043A */ public bool ForceInteractionToSettings;
-        [NMS(Size = 0x1, Ignore = true)]
-        /* 0x043B */ public byte[] Padding43B;
         /* 0x043C */ public int ForceInteractionIndex;
         /* 0x0440 */ public bool InteractionsAllwaysGivesTech;
         /* 0x0441 */ public bool InfiniteInteractions;
@@ -173,17 +161,11 @@ namespace libMBIN.NMS.Globals
         /* 0x0598 */ public string DefaultSaveData;
         /* 0x0618 */ public bool FormatDownloadStorageAreaOnBoot;
         /* 0x0619 */ public bool ForceBasicLoadScreen;
-        [NMS(Size = 0x2, Ignore = true)]
-        /* 0x061A */ public byte[] Padding61A;
         /* 0x061C */ public float BootLogoFadeRate;
         /* 0x0620 */ public bool BootMusic;
-        [NMS(Size = 0x3, Ignore = true)]
-        /* 0x0621 */ public byte[] Padding621;
         /* 0x0624 */ public float WeaponScale3P;
         /* 0x0628 */ public bool LogMissingLocalisedText;
         /* 0x0629 */ public bool FleetDirectorAutoMode;
-        [NMS(Size = 0x2, Ignore = true)]
-        /* 0x062A */ public byte[] Padding62A;
         /* 0x062C */ public float _3dTextDistance;
         /* 0x0630 */ public float _3dTextMinScale;
 		public enum RecordSettingEnum { None, Record, Playback }
@@ -216,8 +198,6 @@ namespace libMBIN.NMS.Globals
         [NMS(Size = 0x100)]
         /* 0x070D */ public string ShowUniverseAddressOnGalaxyMap;
         /* 0x080D */ public bool ShowGraphs;
-        [NMS(Size = 0x2, Ignore = true)]
-        /* 0x080E */ public byte[] Padding80E;
         /* 0x0810 */ public int ShowSpecificGraph;
         /* 0x0814 */ public bool GraphCommandBuffer;
         /* 0x0815 */ public bool GraphGeneration;
@@ -225,30 +205,22 @@ namespace libMBIN.NMS.Globals
         /* 0x0817 */ public bool GraphTexStreaming;
         /* 0x0818 */ public bool SmokeTestDumpStatsMode;
 		public enum SmokeTestCycleModeEnum { None, TourSolarSystem, RegeneratePlanet }
-        [NMS(Size = 0x3, Ignore = true)]
-        /* 0x0819 */ public byte[] Padding819;
         /* 0x081C */ public SmokeTestCycleModeEnum SmokeTestCycleMode;
         public enum SmokeTestScenarioEnum { None, TerrainSnapShotFromAltitude, BelowCloudLayerSnapShot, Flying }
         /* 0x0820 */ public SmokeTestScenarioEnum SmokeTestScenario;
         /* 0x0824 */ public bool SmokeTestLegacyOutput;
-        [NMS(Size = 0x3, Ignore = true)]
-        /* 0x0825 */ public byte[] Padding825;
         /* 0x0828 */ public int SmokeTestConfigPlanetPositionCount;
         /* 0x082C */ public float SmokeTestConfigScenarioPreambleLength;
         /* 0x0830 */ public float SmokeTestConfigScenarioLength;
         /* 0x0834 */ public bool SmokeTestCameraFly;
         /* 0x0835 */ public bool SmokeTestOutputOnly;
         /* 0x0836 */ public bool SmokeTestPureFlight;
-        [NMS(Size = 0x1, Ignore = true)]
-        /* 0x0837 */ public byte[] Padding837;
         /* 0x0838 */ public int SmokeTestConfigCaptureCycles;
         /* 0x083C */ public float SmokeTestConfigCaptureDurationInSeconds;
         /* 0x0840 */ public int SmokeTestConfigCaptureFolderNameNumberOffset;
         /* 0x0844 */ public bool SmokeTestConfigRandomizePlanetSeed;
         /* 0x0845 */ public bool SmokeTestSmokeBotEnabled;
         /* 0x0846 */ public bool SmokeTestSmokeBotAutoStart;
-        [NMS(Size = 0x1, Ignore = true)]
-        /* 0x0847 */ public byte[] Padding847;
         /* 0x0848 */ public int SmokeTestSmokeBotTargetWarps;
         /* 0x084C */ public bool SmokeTestPostBandwidthStats;
         /* 0x084D */ public bool CreatureChatter;
@@ -292,8 +264,6 @@ namespace libMBIN.NMS.Globals
         /* 0x0CE4 */ public bool CertificateSecurityBypass;
         [NMS(Size = 0x20)]
         /* 0x0CE5 */ public string OverrideUsernameForDev;
-        [NMS(Size = 0x3, Ignore = true)]
-        /* 0x0D05 */ public byte[] PaddingD05;
         /* 0x0D08 */ public int DiscoveryAutoSyncIntervalSeconds;
         /* 0x0D0C */ public bool DisableSpaceStationSpawnOnJoin;
         /* 0x0D0D */ public bool AutoJoinUserEnabled;
@@ -302,8 +272,6 @@ namespace libMBIN.NMS.Globals
         /* 0x150E */ public bool AlwaysSaveGameAsClient;
         /* 0x150F */ public bool DisableMonumentDownloads;
         /* 0x1510 */ public bool UsePadOnUnfocusedWindow;
-        [NMS(Size = 0x3, Ignore = true)]
-        /* 0x1511 */ public byte[] Padding1511;
         /* 0x1514 */ public int OverrideMatchmakingVersion;
         [NMS(Size = 0x200)]
         /* 0x1518 */ public string LoadToBase;
@@ -348,14 +316,10 @@ namespace libMBIN.NMS.Globals
         [NMS(Size = 0x80)]
         /* 0x1B60 */ public string RenderToTexture;
         /* 0x1BE0 */ public bool HmdEnable;
-        [NMS(Size = 0x3, Ignore = true)]
-        /* 0x1BE1 */ public byte[] Padding1BE1;
         /* 0x1BE4 */ public int HmdPreviewScale;
         /* 0x1BE8 */ public bool HmdTracking;
         /* 0x1BE9 */ public bool HmdStereoRender;
         /* 0x1BEA */ public bool HmdDistortionPassthru;
-        [NMS(Size = 0x1, Ignore = true)]
-        /* 0x1BEB */ public byte[] Padding1BEB;
         /* 0x1BEC */ public int HmdMonitor;
         /* 0x1BF0 */ public int HmdEyeBufferWidth;
         /* 0x1BF4 */ public int HmdEyeBufferHeight;
@@ -364,8 +328,6 @@ namespace libMBIN.NMS.Globals
         /* 0x1C00 */ public bool HmdFrameShiftEnabled;
         /* 0x1C01 */ public bool HmdUseSolidGuiPointer;
         /* 0x1C02 */ public bool BodyTurning;
-        [NMS(Size = 0x1, Ignore = true)]
-        /* 0x1C03 */ public byte[] Padding1C03;
         /* 0x1C04 */ public float HmdImmersionFactor;
         /* 0x1C08 */ public bool ShowHmdHandControllers;
         /* 0x1C09 */ public bool ShowTeleportEffectLocally;
@@ -377,25 +339,15 @@ namespace libMBIN.NMS.Globals
         /* 0x1C0F */ public bool ForceExtremeSentinels;
         /* 0x1C10 */ public bool ForceStarType;
         /* 0x1C11 */ public bool ForceLoadAllWeather;
-        [NMS(Size = 0x2, Ignore = true)]
-        /* 0x1C12 */ public byte[] Padding1C12;
         /* 0x1C14 */ public GcGalaxyStarTypes ForceStarTypeTo;
         /* 0x1C18 */ public bool ForceBiome;
-        [NMS(Size = 0x3, Ignore = true)]
-        /* 0x1C19 */ public byte[] Padding1C19;
         /* 0x1C1C */ public GcBiomeSubType ForceBiomeTo;
         /* 0x1C20 */ public bool ForceScreenFilter;
-        [NMS(Size = 0x3, Ignore = true)]
-        /* 0x1C21 */ public byte[] Padding1C21;
         /* 0x1C24 */ public GcScreenFilters ForceScreenFilterTo;
         /* 0x1C28 */ public GcBiomeSubType ForceBiomeSubTypeTo;
         /* 0x1C2C */ public bool ForceBuildingRace;
-        [NMS(Size = 0x3, Ignore = true)]
-        /* 0x1C2D */ public byte[] Padding1C2D;
         /* 0x1C30 */ public GcAlienRace ForceBuildingRaceTo;
         /* 0x1C34 */ public bool ForceLifeLevel;
-        [NMS(Size = 0x3, Ignore = true)]
-        /* 0x1C35 */ public byte[] Padding1C35;
         /* 0x1C38 */ public GcPlanetLife ForceLifeLevelTo;
         /* 0x1C3C */ public bool ForceCreatureLifeLevel;
         /* 0x1C3D */ public bool ForceDefaultCreatureFile;
@@ -422,8 +374,6 @@ namespace libMBIN.NMS.Globals
         /* 0x1C93 */ public byte[] Padding1C93;
         /* 0x1C94 */ public GcGalaxyStarAnomaly ForceAnomalyTo;
         /* 0x1C98 */ public bool ForcePlanetsToHaveWater;
-        [NMS(Size = 0x3, Ignore = true)]
-        /* 0x1C99 */ public byte[] Padding1C99;
         /* 0x1C9C */ public int ForceWaterObjectFileIndex;
         /* 0x1CA0 */ public int ForceSkyColourIndex;
         /* 0x1CA4 */ public int ForceWaterColourIndex;
@@ -434,12 +384,8 @@ namespace libMBIN.NMS.Globals
         /* 0x1CAF */ public bool LimitPerRegionBodies;
         /* 0x1CB0 */ public bool LimitGlobalInstances;
         /* 0x1CB1 */ public bool LimitGlobalBodies;
-        [NMS(Size = 0x2, Ignore = true)]
-        /* 0x1CB2 */ public byte[] Padding1CB2;
         /* 0x1CB4 */ public int GenerateFarLodBuildingDist;
         /* 0x1CB8 */ public bool DeferRegionBodies;
-        [NMS(Size = 0x3, Ignore = true)]
-        /* 0x1CB9 */ public byte[] Padding1CB9;
         /* 0x1CBC */ public float GenerateCostDistance;
         /* 0x1CC0 */ public float GenerateCostAngle;
         /* 0x1CC4 */ public float GenerateCostLOD;
@@ -454,13 +400,9 @@ namespace libMBIN.NMS.Globals
         /* 0x1CDC */ public float MaxFrameRate;
         /* 0x1CE0 */ public bool DisableBaseBuilding;
         /* 0x1CE1 */ public bool DisableBaseBuildingLimits;
-        [NMS(Size = 0x2, Ignore = true)]
-        /* 0x1CE2 */ public byte[] Padding1CE2;
         /* 0x1CE4 */ public float BaseDownloadTimeout;
         /* 0x1CE8 */ public bool DisableBasePowerRequirements;
         /* 0x1CE9 */ public bool EnableBaseMovingOption;
-        [NMS(Size = 0x2, Ignore = true)]
-        /* 0x1CEA */ public byte[] Padding1CEA;
         /* 0x1CEC */ public int MoveBaseIndex;
         /* 0x1CF0 */ public int AutomaticPartSpawnIndex;
         /* 0x1CF4 */ public bool BaseAdmin;
