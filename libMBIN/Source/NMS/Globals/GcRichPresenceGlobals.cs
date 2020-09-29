@@ -3,13 +3,13 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(Size = 0x24, GUID = 0x37A021DF6D707809 )]
+    [NMS(Size = 0x24, GUID = 0x37A021DF6D707809)]
     public class GcRichPresenceGlobals : NMSTemplate
     {
-        /* 0x0 */ public bool ShowOnScreen;
-        /* 0x4 */ public float IdleThreshold;
-        /* 0x8 */ public float EvaluationPeriod;
-        /* 0xC */ public float PublishPeriod;
+        /* 0x00 */ public bool ShowOnScreen;
+        /* 0x04 */ public float IdleThreshold;
+        /* 0x08 */ public float EvaluationPeriod;
+        /* 0x0C */ public float PublishPeriod;
         /* 0x10 */ public int PlanetLocationPriority;
         /* 0x14 */ public int SpaceLocationPriority;
         /* 0x18 */ public int StormLocationPriority;

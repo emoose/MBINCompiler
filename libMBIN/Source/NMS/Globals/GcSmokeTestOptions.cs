@@ -3,13 +3,13 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(Size = 0xA0, GUID = 0x4E4FDD440BD74765 )]
+    [NMS(Size = 0x40, GUID = 0x4E4FDD440BD74765)]
     public class GcSmokeTestOptions : NMSTemplate
     {
-        /* 0x0 */ public float InitialPause;
-        /* 0x4 */ public float SmokeTestFlashTimeDuration;
-        /* 0x8 */ public float CameraHeight;
-        /* 0xC */ public float CameraFastHeight;
+        /* 0x00 */ public float InitialPause;
+        /* 0x04 */ public float SmokeTestFlashTimeDuration;
+        /* 0x08 */ public float CameraHeight;
+        /* 0x0C */ public float CameraFastHeight;
         /* 0x10 */ public float CameraMoveSpeed;
         /* 0x14 */ public float CameraFastMoveSpeed;
         /* 0x18 */ public float CameraRotateSpeed;

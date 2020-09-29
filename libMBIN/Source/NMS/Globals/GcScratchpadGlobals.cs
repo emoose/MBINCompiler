@@ -3,11 +3,11 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(Size = 0x27D0, GUID = 0xC14472951E47BFF8 )]
+    [NMS(Size = 0x27D0, GUID = 0xC14472951E47BFF8)]
     public class GcScratchpadGlobals : NMSTemplate
     {
         [NMS(Size = 0xE)]
-        /* 0x0 */ public GcPresetTextureData[] IBLMaps;
+        /* 0x0000 */ public GcPresetTextureData[] IBLMaps;
         [NMS(Size = 0xA)]
         /* 0x1500 */ public GcPresetTextureData[] TerrainTextures;
         [NMS(Size = 0x2)]

@@ -7,42 +7,42 @@ namespace libMBIN.NMS.Globals
     public class GcSimulationGlobals : NMSTemplate
     {
         [NMS(Size = 0x80)]
-        /* 0x0 */ public string StartingSceneFile;
+        /* 0x0000 */ public string StartingSceneFile;
         [NMS(Size = 0x80)]
-        /* 0x80 */ public string MultitoolFile;
-        /* 0x100 */ public long ProceduralBuildingsGenerationSeed;
+        /* 0x0080 */ public string MultitoolFile;
+        /* 0x0100 */ public ulong ProceduralBuildingsGenerationSeed;
         [NMS(Size = 0x80)]
-        /* 0x108 */ public string SpaceStationFile;
+        /* 0x0108 */ public string SpaceStationFile;
         [NMS(Size = 0x80)]
-        /* 0x188 */ public string NexusFile;
+        /* 0x0188 */ public string NexusFile;
         [NMS(Size = 0x80)]
-        /* 0x208 */ public string NexusInteriorFile;
+        /* 0x0208 */ public string NexusExteriorFile;
         [NMS(Size = 0x80)]
-        /* 0x288 */ public string PlaceMarkerFile;
+        /* 0x0288 */ public string PlaceMarkerFile;
         [NMS(Size = 0x80)]
-        /* 0x308 */ public string AbandonedSpaceStationFile;
-        [NMS(Size = 0x80)]
-        /* 0x388 */ public string BlackHoleAnomalies;
+        /* 0x0308 */ public string AbandonedSpaceStationFile;
+        [NMS(Size = 0x1)]
+        /* 0x0388 */ public NMSString0x80[] BlackHoleAnomalies;
         [NMS(Size = 0xC)]
-        /* 0x408 */ public NMSString0x80[] AtlasStationAnomalies;
+        /* 0x0408 */ public NMSString0x80[] AtlasStationAnomalies;
         [NMS(Size = 0x80)]
-        /* 0xA08 */ public string None;
+        /* 0x0A08 */ public string None;
         [NMS(Size = 0x80)]
-        /* 0xA88 */ public string PlacementDroneFile;
+        /* 0x0A88 */ public string PlacementDroneFile;
         [NMS(Size = 0x80)]
-        /* 0xB08 */ public string HeavyAirCave;
+        /* 0x0B08 */ public string HeavyAirCave;
         [NMS(Size = 0x80)]
-        /* 0xB88 */ public string HeavyAirUnderwater;
+        /* 0x0B88 */ public string HeavyAirUnderwater;
         [NMS(Size = 0x80)]
-        /* 0xB88 */ public string HeavyAirAbandonedFreighter;
-        [NMS(Size = 3)]
-        /* 0xC88 */ public NMSString0x80[] PrefetchScenegraphResources;
-        [NMS(Size = 2)]
-        /* 0xE08 */ public NMSString0x80[] PrefetchMaterialResources;
+        /* 0x0C08 */ public string HeavyAirAbandonedFreighter;
+        [NMS(Size = 0x3)]
+        /* 0x0C88 */ public NMSString0x80[] PrefetchScenegraphResources;
+        [NMS(Size = 0x2)]
+        /* 0x0E08 */ public NMSString0x80[] PrefetchMaterialResources;
         [NMS(Size = 0x80)]
-        /* 0xF08 */ public string PlanetAtmosphereFile;
+        /* 0x0F08 */ public string PlanetAtmosphereFile;
         [NMS(Size = 0x80)]
-        /* 0xF88 */ public string PlanetAtmosphereMaterialFile;
+        /* 0x0F88 */ public string PlanetAtmosphereMaterialFile;
         [NMS(Size = 0x80)]
         /* 0x1008 */ public string PlanetRingFile;
         [NMS(Size = 0x80)]
@@ -51,7 +51,7 @@ namespace libMBIN.NMS.Globals
         /* 0x1108 */ public string PlanetMaterialFile;
         [NMS(Size = 0x80)]
         /* 0x1188 */ public string PlaterWaterMaterialFile;
-        [NMS(Size = 6)]
+        [NMS(Size = 0x6)]
         /* 0x1208 */ public NMSString0x80[] PlanetTerrainMaterials;
         [NMS(Size = 0x10)]
         /* 0x1508 */ public NMSString0x80[] PrefetchTextureResources;
