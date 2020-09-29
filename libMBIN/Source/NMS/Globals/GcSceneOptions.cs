@@ -3,17 +3,17 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(Size = 0x310, GUID = 0xE631F099F9410CAB )]
+    [NMS(Size = 0x2B0, GUID = 0xE631F099F9410CAB)]
     public class GcSceneOptions : NMSTemplate // doesn't seem like any of this is used by the game..
     {
-        /* 0x0 */ public int RecentToolboxIndex;
-        /* 0x4 */ public int SelectedToolboxIndex;
-        /* 0x8 */ public bool OverrideBiome;
+        /* 0x000 */ public int RecentToolboxIndex;
+        /* 0x004 */ public int SelectedToolboxIndex;
+        /* 0x008 */ public bool OverrideBiome;
         [NMS(Size = 0x80)]
-        /* 0x9 */ public string BiomeFile;
-        /* 0x89 */ public bool OverrideWaterBiome;
+        /* 0x009 */ public string BiomeFile;
+        /* 0x089 */ public bool OverrideWaterBiome;
         [NMS(Size = 0x80)]
-        /* 0x8A */ public string WaterBiomeFile;
+        /* 0x08A */ public string WaterBiomeFile;
         /* 0x10A */ public bool OverrideCaveBiome;
         [NMS(Size = 0x80)]
         /* 0x10B */ public string CaveBiomeFile;
@@ -24,7 +24,7 @@ namespace libMBIN.NMS.Globals
         [NMS(Size = 0x80)]
         /* 0x20D */ public string AtmosphereFile;
         [NMS(Size = 0x1)]
-        /* 0x290 */ public Vector4f[] ForceResource;
+        /* 0x290 */ public Vector3f[] ForceResource;
         /* 0x2A0 */ public float ForceResourceSize;
         [NMS(Size = 0xC, Ignore = true)]
         /* 0x2A4 */ public byte[] EndPadding;

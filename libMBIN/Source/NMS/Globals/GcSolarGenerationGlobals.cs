@@ -3,58 +3,66 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(Size = 0x3D0, GUID = 0x2B25AEAD10F02B5A)]
+    [NMS(Size = 0x3E0, GUID = 0xE5E5B707523C6390)]
     public class GcSolarGenerationGlobals : NMSTemplate
     {
-        /* 0x0 */ public bool MassiveSolarSystems;
-        /* 0x10 */ public Vector3f SolarSystemSize;
-        /* 0x20 */ public float SolarSystemMaximumRadius;
-        /* 0x24 */ public float SolarSystemMaximumRadiusMassive;
-        /* 0x28 */ public bool GenerateMaximumSolarSystem;
-        /* 0x2C */ public int GenerateForcedNumberPlanets;
-        /* 0x30 */ public bool UseSingleRacePerSystem;
-        /* 0x34 */ public Vector2f PerPlanetGenerationAngleChangeDegreesRange;
-        /* 0x3C */ public Vector2f PerPlanetGenerationElevationChangeDegreesRange;
-        /* 0x44 */ public Vector2f SpawnPointStationToPlanetInterpRange;
+        /* 0x000 */ public bool MassiveSolarSystems;
+        [NMS(Size = 0xF, Ignore = true)]
+        /* 0x001 */ public byte[] Padding1;
+        /* 0x010 */ public Vector3f SolarSystemSize;
+        /* 0x020 */ public float SolarSystemMaximumRadius;
+        /* 0x024 */ public float SolarSystemMaximumRadiusMassive;
+        /* 0x028 */ public bool GenerateMaximumSolarSystem;
+        [NMS(Size = 0x3, Ignore = true)]
+        /* 0x029 */ public byte[] Padding29;
+        /* 0x02C */ public int GenerateForcedNumberPlanets;
+        /* 0x030 */ public bool UseSingleRacePerSystem;
+        [NMS(Size = 0x3, Ignore = true)]
+        /* 0x031 */ public byte[] Padding31;
+        /* 0x034 */ public Vector2f PerPlanetGenerationAngleChangeDegreesRange;
+        /* 0x03C */ public Vector2f PerPlanetGenerationElevationChangeDegreesRange;
+        /* 0x044 */ public Vector2f SpawnPointStationToPlanetInterpRange;
         [NMS(Size = 0x4, EnumType = typeof(GcGalaxyStarTypes.GalaxyStarTypeEnum))]
-        /* 0x4C */ public float[] ExtremePlanetChance;
-        /* 0x5C */ public float StationSpawnAvoidRadius;
-        /* 0x60 */ public int LocatorScatterMinCount;
-        /* 0x64 */ public int LocatorScatterMaxCount;
-        /* 0x68 */ public float LocatorScatterMaxDistanceFromPlanet;
-        /* 0x6C */ public int LocatorScatterChanceOfCapitalShips;
-        /* 0x70 */ public int LocatorScatterChanceOfPirates;
-        /* 0x74 */ public float DirectorLocatorBusyDistance;
-        /* 0x78 */ public float DirectorLocatorBusyAngle;
-        /* 0x7C */ public float PlanetInvalidAsteroidZone;
-        /* 0x80 */ public bool AsteroidsEnabled;
-        /* 0x81 */ public bool AsteroidsCheckNoise;
-        /* 0x84 */ public float AsteroidNoiseScale;
-        /* 0x88 */ public float AsteroidDetailNoiseScale;
-        /* 0x8C */ public int AsteroidNoiseOctaves;
-        /* 0x90 */ public float AsteroidNoiseMinCutoff;
-        /* 0x94 */ public float AsteroidNoiseMaxCutoff;
-        /* 0x98 */ public float AsteroidRotateMin;
-        /* 0x9C */ public float AsteroidRotateMax;
-        /* 0xA0 */ public Vector2f AsteroidScaleVariance;
-        /* 0xA8 */ public float AsteroidFadeTime;
-        /* 0xAC */ public Vector2f AsteroidNoiseRange;
-        /* 0xB4 */ public Vector2f LargeAsteroidNoiseRange;
-        /* 0xBC */ public Vector2f RareAsteroidNoiseRangeFewRares;
-        /* 0xC4 */ public Vector2f RareAsteroidNoiseRangeSomeRares;
-        /* 0xCC */ public Vector2f RareAsteroidNoiseRangeLotsOfRares;
-        /* 0xD4 */ public float AsteroiSomeRaresOdds;
-        /* 0xD8 */ public float AsteroidLotsOfRaresOdds;
-        /* 0xDC */ public float AsteroidFadeRangeMin;
-        /* 0xE0 */ public float AsteroidFadeRangeMax;
-        /* 0xE4 */ public float AsteroidSpacing;
-        /* 0xE8 */ public float RareAsteroidScale;
-        /* 0xEC */ public int RareAsteroidMinResources;
-        /* 0xF0 */ public int RareAsteroidMaxResources;
+        /* 0x04C */ public float[] ExtremePlanetChance;
+        /* 0x05C */ public float StationSpawnAvoidRadius;
+        /* 0x060 */ public int LocatorScatterMinCount;
+        /* 0x064 */ public int LocatorScatterMaxCount;
+        /* 0x068 */ public float LocatorScatterMaxDistanceFromPlanet;
+        /* 0x06C */ public int LocatorScatterChanceOfCapitalShips;
+        /* 0x070 */ public int LocatorScatterChanceOfPirates;
+        /* 0x074 */ public float DirectorLocatorBusyDistance;
+        /* 0x078 */ public float DirectorLocatorBusyAngle;
+        /* 0x07C */ public float PlanetInvalidAsteroidZone;
+        /* 0x080 */ public bool AsteroidsEnabled;
+        /* 0x081 */ public bool AsteroidsCheckNoise;
+        [NMS(Size = 0x2, Ignore = true)]
+        /* 0x082 */ public byte[] Padding82;
+        /* 0x084 */ public float AsteroidNoiseScale;
+        /* 0x088 */ public float AsteroidDetailNoiseScale;
+        /* 0x08C */ public int AsteroidNoiseOctaves;
+        /* 0x090 */ public float AsteroidNoiseMinCutoff;
+        /* 0x094 */ public float AsteroidNoiseMaxCutoff;
+        /* 0x098 */ public float AsteroidRotateMin;
+        /* 0x09C */ public float AsteroidRotateMax;
+        /* 0x0A0 */ public Vector2f AsteroidScaleVariance;
+        /* 0x0A8 */ public float AsteroidFadeTime;
+        /* 0x0AC */ public Vector2f AsteroidNoiseRange;
+        /* 0x0B4 */ public Vector2f LargeAsteroidNoiseRange;
+        /* 0x0BC */ public Vector2f RareAsteroidNoiseRangeFewRares;
+        /* 0x0C4 */ public Vector2f RareAsteroidNoiseRangeSomeRares;
+        /* 0x0CC */ public Vector2f RareAsteroidNoiseRangeLotsOfRares;
+        /* 0x0D4 */ public float AsteroidSomeRaresOdds;
+        /* 0x0D8 */ public float AsteroidLotsOfRaresOdds;
+        /* 0x0DC */ public float AsteroidFadeRangeMin;
+        /* 0x0E0 */ public float AsteroidFadeRangeMax;
+        /* 0x0E4 */ public float AsteroidSpacing;
+        /* 0x0E8 */ public float RareAsteroidScale;
+        /* 0x0EC */ public int RareAsteroidMinResources;
+        /* 0x0F0 */ public int RareAsteroidMaxResources;
         [NMS(Size = 0x4, Ignore = true)]
-        /* 0xF4 */ public byte[] PaddingF4;
+        /* 0x0F4 */ public byte[] PaddingF4;
         [NMS(Size = 0x10)]
-        /* 0xF8 */ public string RareAsteroidResource;
+        /* 0x0F8 */ public string RareAsteroidResource;
         /* 0x108 */ public int RareAsteroidHealth;
         /* 0x10C */ public float CommonAsteroidScale;
         /* 0x110 */ public int CommonAsteroidMinResources;
@@ -108,5 +116,8 @@ namespace libMBIN.NMS.Globals
         /* 0x304 */ public byte[] Padding304;
         /* 0x310 */ public GcPlanetRingData PlanetRingsMin;
         /* 0x370 */ public GcPlanetRingData PlanetRingsMax;
+        /* 0x3D0 */ public int PercentChanceExtraPrime;
+        [NMS(Size = 0xC, Ignore = true)]
+        /* 0x3D4 */ public byte[] EndPadding;
     }
 }
