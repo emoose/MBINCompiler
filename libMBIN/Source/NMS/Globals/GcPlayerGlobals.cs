@@ -380,6 +380,7 @@ namespace libMBIN.NMS.Globals
         /* 0x0B50 */ public float SpaceJetpackMaxSpeed;
         /* 0x0B54 */ public float SpaceJetpackDrainRate;
         /* 0x0B58 */ public bool EnableHeadMovements;
+        /* 0x0B59 */ public bool ClampPitch;
         /* 0x0B5C */ public float DamageRepairFactor;
         /* 0x0B60 */ public float DamageRepairFactorHardMode;
         /* 0x0B64 */ public float AbandonedFreighterStaminaRecoveryMod;
