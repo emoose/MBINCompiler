@@ -3,13 +3,11 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(Size = 0x1D80, GUID = 0x87967CC16E8FB729)]
+    [NMS(Size = 0x1D80, GUID = 0x50F49E7F397A645F)]
     public class GcGalaxyGlobals : NMSTemplate
     {
         /* 0x0000 */ public bool NewStyleLookAtCamera;
         /* 0x0001 */ public bool GizmoOnHand;
-        [NMS(Size = 0x2, Ignore = true)]
-        /* 0x0002 */ public byte[] Padding2;
         /* 0x0004 */ public Vector2f ClickToSelectIconOffset;
         /* 0x000C */ public float ClickToSelectIconScale;
         /* 0x0010 */ public float MenuRotateHmd;
@@ -71,8 +69,6 @@ namespace libMBIN.NMS.Globals
         /* 0x0198 */ public float HandGizmoLineThickness;
         /* 0x019C */ public float HandGizmoInnerRadius;
         /* 0x01A0 */ public float HandGizmoInnerThickness;
-        [NMS(Size = 0xC, Ignore = true)]
-        /* 0x01A4 */ public byte[] Padding1A4;
         /* 0x01B0 */ public Colour HandGizmoColourInner;
         /* 0x01C0 */ public GcInWorldUIScreenData HandMenuOffset;
         /* 0x01F0 */ public Vector2f SolarInfoPanelOffset;
@@ -160,8 +156,6 @@ namespace libMBIN.NMS.Globals
         /* 0x1470 */ public GcGalaxyRenderAnostreakData AnostreakAway;
         /* 0x14A0 */ public GcGalaxyRenderAnostreakData AnostreakFacing;
         /* 0x14D0 */ public float SelectionTreeAlpha;
-        [NMS(Size = 0xC, Ignore = true)]
-        /* 0x14D4 */ public byte[] Padding14D4;
         /* 0x14E0 */ public Colour SelectionTreeColour;
         /* 0x14F0 */ public Vector2f GoalDistanceRange;
         [NMS(Size = 0x8, Ignore = true)]
