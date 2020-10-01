@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(Size = 0x1CB0, GUID = 0x5098DB150ECE754E)]
+    [NMS(Size = 0x1CB0, GUID = 0x2179E6586875DDFB)]
     public class GcPlayerGlobals : NMSTemplate
     {
         /* 0x0000 */ public bool ForceFreighterProcTechRandom;
@@ -541,8 +541,6 @@ namespace libMBIN.NMS.Globals
         /* 0x0DFC */ public byte[] PaddingDFC;
         /* 0x0E00 */ public GcScanEffectData MeleeHitEffect;
         /* 0x0E50 */ public float TemperatureDisplaySampleTime;
-        [NMS(Size = 0xC, Ignore = true)]
-        /* 0x0E54 */ public byte[] PaddingE54;
         /* 0x0E60 */ public Colour StarFieldColour;
         /* 0x0E70 */ public float StarFieldRadius;
         /* 0x0E74 */ public float StarFieldDensity;
@@ -854,8 +852,7 @@ namespace libMBIN.NMS.Globals
         /* 0x18BC */ public float[] TechLearningProbabilities;
         /* 0x18D4 */ public int NumTechShopSlots;
         /* 0x18D8 */ public float GrassPushDistance;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x18DC */ public byte[] Padding18DC;
+        /* 0x18DC */ public float GrassPushDistanceFeet;
         /* 0x18E0 */ public GcCameraAnomalySetupData AnomalyBlachHoleSpawnData;
         /* 0x1920 */ public GcCameraAnomalySetupData AnomalyAtlasStationSpawnData;
         /* 0x1960 */ public GcCameraAnomalySetupData AnomalyMiniStationSpawnData;

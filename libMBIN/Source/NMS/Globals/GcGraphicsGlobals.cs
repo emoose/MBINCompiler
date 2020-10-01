@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(Size = 0x9C0, GUID = 0xFAB86A9BD3A6E265)]
+    [NMS(Size = 0x9C0, GUID = 0x6625D546328F9B2B)]
     public class GcGraphicsGlobals : NMSTemplate
     {
         /* 0x000 */ public float LUTDistanceFlightMultiplier;
@@ -24,8 +24,6 @@ namespace libMBIN.NMS.Globals
         /* 0x094 */ public float Contrast;
         /* 0x098 */ public float Saturation;
         /* 0x09C */ public bool Redo_On;
-        [NMS(Size = 0x3, Ignore = true)]
-        /* 0x09D */ public byte[] Padding9D;
         /* 0x0A0 */ public float Redo_LightIntensity;
         /* 0x0A4 */ public float Redo_SkyIntensity;
         /* 0x0A8 */ public float Redo_BounceIntensity;
@@ -57,8 +55,6 @@ namespace libMBIN.NMS.Globals
         /* 0x110 */ public float ScanFresnel;
         /* 0x114 */ public float ScanClamp;
         /* 0x118 */ public float ScanAlpha;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x11C */ public byte[] Padding11C;
         /* 0x120 */ public Colour ScanColour;
         /* 0x130 */ public bool DebugLinesDepthTest;
         /* 0x131 */ public bool CenterRenderSpaceOffset;
@@ -90,8 +86,6 @@ namespace libMBIN.NMS.Globals
         /* 0x340 */ public float ShadowLengthStation;
         /* 0x344 */ public float ShadowLengthFreighterAbandoned;
         /* 0x348 */ public float ShadowLengthCameraView;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x34C */ public byte[] Padding34C;
         /* 0x350 */ public Vector4f ShadowSplit;
         /* 0x360 */ public Vector4f ShadowSplitShip;
         /* 0x370 */ public Vector4f ShadowSplitSpace;
@@ -99,8 +93,6 @@ namespace libMBIN.NMS.Globals
         /* 0x390 */ public Vector4f ShadowSplitCameraView;
         /* 0x3A0 */ public Vector4f ShadowBias;
         /* 0x3B0 */ public bool ShadowQuantized;
-        [NMS(Size = 0x3, Ignore = true)]
-        /* 0x3B1 */ public byte[] Padding3B1;
         /* 0x3B4 */ public float ShadowBillboardOffset;
         /* 0x3B8 */ public float QuantizeTime;
         /* 0x3BC */ public float QuantizeTimeShip;
@@ -155,8 +147,6 @@ namespace libMBIN.NMS.Globals
         /* 0x480 */ public float DOFFarPlaneInteraction;
         /* 0x484 */ public float DOFFarFadeDistanceInteraction;
         /* 0x488 */ public bool DOFEnableBokeh;
-        [NMS(Size = 0x3, Ignore = true)]
-        /* 0x489 */ public byte[] Padding489;
         /* 0x48C */ public float VignetteStart;
         /* 0x490 */ public float VignetteEnd;
         /* 0x494 */ public float VignetteStartTurnVR;
@@ -190,8 +180,6 @@ namespace libMBIN.NMS.Globals
         /* 0x504 */ public float ShieldDownScanlineTime;
         /* 0x508 */ public bool FullscreenScanEffect;
         /* 0x509 */ public bool UseImposters;
-        [NMS(Size = 0x6, Ignore = true)]
-        /* 0x50A */ public byte[] Padding50A;
         /* 0x510 */ public Vector4f MipLevelDebug;
         /* 0x520 */ public Vector4f LensParams;
         /* 0x530 */ public Colour VerticalColourTop;
@@ -263,8 +251,6 @@ namespace libMBIN.NMS.Globals
         /* 0x658 */ public bool ShowTaaVarianceBuf;
         /* 0x659 */ public bool ShowTaaNVarianceBuf;
         /* 0x65A */ public bool ShowTaaCVarianceBuf;
-        [NMS(Size = 0x5, Ignore = true)]
-        /* 0x65B */ public byte[] Padding65B;
         /* 0x660 */ public Vector4f TaaSettings;
         [NMS(Size = 0x4, EnumType = typeof(TkGraphicsDetailTypes.GraphicDetailEnum))]
         /* 0x670 */ public Vector4f[] TessSettings;
@@ -297,22 +283,16 @@ namespace libMBIN.NMS.Globals
         /* 0x777 */ public bool EnableTerrainCacheXb1X;
         /* 0x778 */ public bool ForceCachedTerrain;
         /* 0x779 */ public bool ForceUncachedTerrain;
-        [NMS(Size = 0x2, Ignore = true)]
-        /* 0x77A */ public byte[] Padding77A;
         /* 0x77C */ public float MinPixelSizeOfObjectsInShadowsSpace;
         /* 0x780 */ public float MinPixelSizeOfObjectsInShadowsPlanet;
         /* 0x784 */ public float MinPixelSizeOfObjectsInShadowsCockpitOnPlanet;
         /* 0x788 */ public bool AllowPartialCascadeRender;
-        [NMS(Size = 0x3, Ignore = true)]
-        /* 0x789 */ public byte[] Padding789;
         [NMS(Size = 0x4)]
         /* 0x78C */ public int[] CascadeRenderSequence;
         /* 0x79C */ public int SupersamplingLevel;
         /* 0x7A0 */ public bool EnableTextureStreaming;
         /* 0x7A1 */ public bool ForceStreamAllTextures;
         /* 0x7A2 */ public bool ForceEvictAllTextures;
-        [NMS(Size = 0x1, Ignore = true)]
-        /* 0x7A3 */ public byte[] Padding7A3;
         /* 0x7A4 */ public int TargetTextureMemUsageMB;
         /* 0x7A8 */ public float MotionBlurThresholdOnFoot;
         /* 0x7AC */ public float MotionBlurThresholdInVehicle;
@@ -322,8 +302,6 @@ namespace libMBIN.NMS.Globals
         /* 0x7BC */ public float SpaceIBLBlendDistance;
         /* 0x7C0 */ public float NoFocusMaxFPS;
         /* 0x7C4 */ public bool EnableCrossPipeSharing;
-        [NMS(Size = 0x3, Ignore = true)]
-        /* 0x7C5 */ public byte[] Padding7C5;
         /* 0x7C8 */ public float SharpenFilterAmount;
         /* 0x7CC */ public float SharpenFilterDepthFactorStart;
         /* 0x7D0 */ public float SharpenFilterDepthFactorEnd;

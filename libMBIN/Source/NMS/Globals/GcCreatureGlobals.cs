@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(Size = 0x3910, GUID = 0xAADCCB172B4C6228)]
+    [NMS(Size = 0x3910, GUID = 0x35C1342ED25FD595)]
     public class GcCreatureGlobals : NMSTemplate
     {
         [NMS(Size = 0xA)]
@@ -31,8 +31,8 @@ namespace libMBIN.NMS.Globals
         [NMS(Size = 0x1B)]
         /* 0x0E80 */ public NMSString0x20[] WeirdBiomeDescriptions;
         /* 0x11E0 */ public bool OverrideIKParams;
-        [NMS(Size = 0x3, Ignore = true)]
-        /* 0x11E1 */ public byte[] Padding11E1;
+                                        
+                                               
         /* 0x11E4 */ public float BodyMassWeight;
         /* 0x11E8 */ public float Omega;
         /* 0x11EC */ public float OmegaDropOff;
@@ -43,8 +43,8 @@ namespace libMBIN.NMS.Globals
         /* 0x11F7 */ public bool InstantCreatureRide;
         /* 0x11F8 */ public bool EnableVRCreatureRide;
         /* 0x11F9 */ public bool EnableMPCreatureRide;
-        [NMS(Size = 0x2, Ignore = true)]
-        /* 0x11FA */ public byte[] Padding11FA;
+                                        
+                                               
         /* 0x11FC */ public float RidingReplicationRangeMultiplier;
         /* 0x1200 */ public float RidingRollAdjustMaxAngle;
         /* 0x1204 */ public float RidingRollMaxAngleAt;
@@ -53,8 +53,8 @@ namespace libMBIN.NMS.Globals
         /* 0x1210 */ public float CreatureScaleMangle;
         /* 0x1214 */ public bool CreatureRideDirectControl;
         /* 0x1215 */ public bool StaticCreatureRide;
-        [NMS(Size = 0x2, Ignore = true)]
-        /* 0x1216 */ public byte[] Padding1216;
+                                        
+                                               
         /* 0x1218 */ public float RideSpeedSlow;
         /* 0x121C */ public float RideSpeedFast;
         /* 0x1220 */ public float RideSpeedChangeTime;
@@ -78,8 +78,8 @@ namespace libMBIN.NMS.Globals
         /* 0x1288 */ public float LowPerfFlockReduce;
         /* 0x128C */ public bool UncapSpawningforVideo;
         /* 0x128D */ public bool AllowSpawningOnscreen;
-        [NMS(Size = 0x2, Ignore = true)]
-        /* 0x128E */ public byte[] Padding128E;
+                                        
+                                               
         /* 0x1290 */ public float ResourceSpawnTime;
         /* 0x1294 */ public float TurnInPlaceIdleTime;
         /* 0x1298 */ public float TurnInPlaceMaxAngle;
@@ -180,8 +180,8 @@ namespace libMBIN.NMS.Globals
         [NMS(Size = 0x4)]
         /* 0x1508 */ public GcCreatureAlertData[] AlertTable;
         /* 0x1568 */ public bool ShowScale;
-        [NMS(Size = 0x3, Ignore = true)]
-        /* 0x1569 */ public byte[] Padding1569;
+                                        
+                                               
         /* 0x156C */ public float CreatureMedMinSize;
         /* 0x1570 */ public float CreatureLargeMinSize;
         /* 0x1574 */ public float CreatureHugeMinSize;
@@ -247,8 +247,8 @@ namespace libMBIN.NMS.Globals
         /* 0x1678 */ public float PredatorEnergyRecoverRate;
         /* 0x167C */ public float PredatorEnergyUseChasing;
         /* 0x1680 */ public bool AggressiveSharks;
-        [NMS(Size = 0x3, Ignore = true)]
-        /* 0x1681 */ public byte[] Padding1681;
+                                        
+                                               
         /* 0x1684 */ public float DelayAfterRespawnBeforeAttackable;
         /* 0x1688 */ public float IndoorTurnTime;
         /* 0x168C */ public float IndoorObstacleAvoidStrength;
@@ -258,8 +258,8 @@ namespace libMBIN.NMS.Globals
         /* 0x169C */ public float FreighterSpawnDist;
         /* 0x16A0 */ public float FreighterDespawnDist;
         /* 0x16A4 */ public bool ScuttlersCanAttack;
-        [NMS(Size = 0x3, Ignore = true)]
-        /* 0x16A5 */ public byte[] Padding16A5;
+                                        
+                                               
         /* 0x16A8 */ public int ScuttlerHealth;
         /* 0x16AC */ public float ScuttlerInitialNoAttackTime;
         /* 0x16B0 */ public float ScuttlerMoveTimeMin;
@@ -277,8 +277,8 @@ namespace libMBIN.NMS.Globals
         /* 0x16E0 */ public float MiniDroneShotMaxAngle;
         /* 0x16E4 */ public bool FiendsCanAttack;
         /* 0x16E5 */ public bool FiendOnscreenMarkers;
-        [NMS(Size = 0x2, Ignore = true)]
-        /* 0x16E6 */ public byte[] Padding16E6;
+                                        
+                                               
         /* 0x16E8 */ public int FiendHealth;
         /* 0x16EC */ public float FiendPerceptionDistance;
         /* 0x16F0 */ public float FiendSpawnDistance;
@@ -386,18 +386,18 @@ namespace libMBIN.NMS.Globals
         /* 0x1888 */ public float MinFade;
         /* 0x188C */ public float MaxFade;
         /* 0x1890 */ public bool ProcessPendingSpawnRequests;
-        [NMS(Size = 0x3, Ignore = true)]
-        /* 0x1891 */ public byte[] Padding1891;
+                                        
+                                               
         /* 0x1894 */ public float SpawnsAvoidBaseMultiplier;
         /* 0x1898 */ public int PerceptionUpdateRate;
         /* 0x189C */ public bool AllowSleeping;
         /* 0x189D */ public bool DebugDrawTrails;
-        [NMS(Size = 0x2, Ignore = true)]
-        /* 0x189E */ public byte[] Padding189E;
+                                        
+                                               
         /* 0x18A0 */ public float TrailHalfLife;
         /* 0x18A4 */ public bool EnableTrailIk;
-        [NMS(Size = 0x3, Ignore = true)]
-        /* 0x18A5 */ public byte[] Padding18A5;
+                                        
+                                               
         /* 0x18A8 */ public float DetailAnimBlendInTime;
         /* 0x18AC */ public float DetailAnimBlendOutTime;
         /* 0x18B0 */ public float DetailAnimMinPauseTime;
@@ -415,8 +415,8 @@ namespace libMBIN.NMS.Globals
         /* 0x18F0 */ public string FishDeathEffect;
         /* 0x1900 */ public float FootParticleTime;
         /* 0x1904 */ public bool PiedPiper;
-        [NMS(Size = 0x3, Ignore = true)]
-        /* 0x1905 */ public byte[] Padding1905;
+                                        
+                                               
         /* 0x1908 */ public float FollowPlayerDistance;
         /* 0x190C */ public float FollowRunPlayerDistance;
         /* 0x1910 */ public float FollowRange;
@@ -428,8 +428,8 @@ namespace libMBIN.NMS.Globals
         /* 0x1928 */ public float SearchSpawnRandomItemProbability;
         /* 0x192C */ public float MiningRandomProbability;
         /* 0x1930 */ public bool DebugSearch;
-        [NMS(Size = 0x3, Ignore = true)]
-        /* 0x1931 */ public byte[] Padding1931;
+                                        
+                                               
         /* 0x1934 */ public int FriendlyCreatureLimit;
         /* 0x1938 */ public int FeedingTaskAmount;
         /* 0x193C */ public float FeedingFollowTime;
@@ -456,15 +456,15 @@ namespace libMBIN.NMS.Globals
         /* 0x1990 */ public float HerdGroupSizeMultiplier;
         /* 0x1994 */ public bool DrawRoutineFollowDebug;
         /* 0x1995 */ public bool DrawRoutineInfo;
-        [NMS(Size = 0x2, Ignore = true)]
-        /* 0x1996 */ public byte[] Padding1996;
+                                        
+                                               
         /* 0x1998 */ public float AdultCorrelationValue;
         /* 0x199C */ public float GrassPushRadius;
         /* 0x19A0 */ public float GrassPushStrength;
         /* 0x19A4 */ public float GrassPushMaxSize;
         /* 0x19A8 */ public bool DrawGrassPushRadius;
-        [NMS(Size = 0x3, Ignore = true)]
-        /* 0x19A9 */ public byte[] Padding19A9;
+                                        
+                                               
         /* 0x19AC */ public float CreatureIndoorSpeedMultiplier;
         /* 0x19B0 */ public float CreatureSpeedMultiplier;
         /* 0x19B4 */ public float PredatorSpeedMultiplier;
