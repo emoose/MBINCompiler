@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x70, GUID = 0x941CD1BE6E6A5FAE, NameHash = 0xF6213EDD899A8CAE)]
+	[NMS(Size = 0x70, GUID = 0x8DFB65736A5A1790, NameHash = 0xF6213EDD899A8CAE)]
     public class GcPlanetBuildingData : NMSTemplate
     {
         /* 0x00 */ public List<GcBuildingSpawnSlot> BuildingSlots;
@@ -25,7 +25,8 @@ namespace libMBIN.NMS.GameComponents
         /* 0x5C */ public int[] ShelterIndices;
         /* 0x68 */ public int NumShelters;
         /* 0x6C */ public bool InitialBuildingsPlaced;
-        [NMS(Size = 0x3, Ignore = true)]
-        /* 0x6D */ public byte[] EndPadding;
+        /* 0x6D */ public bool IsPrime;
+        [NMS(Size = 0x2, Ignore = true)]
+        /* 0x6E */ public byte[] EndPadding;
     }
 }

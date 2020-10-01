@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x3D80, GUID = 0x5E2ACA9D52277BA4, NameHash = 0x25EDFA0EC4C3AF0A)]
+	[NMS(Size = 0x3D80, GUID = 0xCAE1F81A3F70BFF7, NameHash = 0x25EDFA0EC4C3AF0A)]
     public class GcPlanetData : NMSTemplate
     {
         [NMS(Size = 0x80)]
@@ -54,6 +54,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x3D04 */ public byte[] Padding3D04; 
         /* 0x3D10 */ public GcPlanetRingData Rings;
         /* 0x3D70 */ public bool InEmptySystem;
+        /* 0x3D71 */ public bool InAbandonedSystem;
         /* 0x3D74 */ public float FuelMultiplier;
         [NMS(Size = 0x8, Ignore = true)]
         /* 0x3D78 */ public byte[] EndPadding;

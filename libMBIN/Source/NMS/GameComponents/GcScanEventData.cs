@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x5E0, Alignment = 0x8, GUID = 0x165F471395DA30AC, NameHash = 0x7BBBCE7D7BC0F1F4)]
+	[NMS(Size = 0x5E0, Alignment = 0x8, GUID = 0xE78966857022C678, NameHash = 0x7BBBCE7D7BC0F1F4)]
     public class GcScanEventData : NMSTemplate
     {
         [NMS(Size = 0x20)]
@@ -56,7 +56,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x0C8 */ public GcScanEventSolarSystemLookup SolarSystemAttributes;
         /* 0x138 */ public GcScanEventSolarSystemLookup SolarSystemAttributesFallback;
         /* 0x1A8 */ public bool ForceRestartInteraction;
-        [NMS(Size = 7, Ignore = true)]
+        [NMS(Size = 0x7, Ignore = true)]
         /* 0x1A9 */ public byte[] Padding1A9;
         [NMS(Size = 0x10)]
         /* 0x1B0 */ public string HasReward;

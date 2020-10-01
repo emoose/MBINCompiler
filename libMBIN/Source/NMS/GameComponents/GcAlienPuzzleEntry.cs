@@ -5,30 +5,24 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x110, Alignment = 0x8, GUID = 0xDC935BE6985F79E, NameHash = 0xDE1F17CE7E01A8C2)]
+	[NMS(Size = 0x110, Alignment = 0x8, GUID = 0x8E2991CC1C3F292B, NameHash = 0xDE1F17CE7E01A8C2)]
     public class GcAlienPuzzleEntry : NMSTemplate
     {
         /* 0x000 */ public int ProgressionIndex;
         /* 0x004 */ public int MinProgressionForSelection;
         [NMS(Size = 0x20, IDField = true)]
         /* 0x008 */ public string Id;
-
         /* 0x028 */ public GcAlienRace Race;
         /* 0x02C */ public GcInteractionType Type;
         /* 0x030 */ public GcAlienPuzzleCategory Category;
-
         public enum AdditionalOptionsEnum { None, LearnWord, SayWord }
         /* 0x034 */ public AdditionalOptionsEnum AdditionalOptions;
-
         [NMS(Size = 0x20)]
         /* 0x038 */ public string Title;
-
         [NMS(Size = 0x20)]
         /* 0x058 */ public string Text;
-
         [NMS(Size = 0x20)]
         /* 0x078 */ public string TextAlien;
-
         /* 0x098 */ public bool TranslateAlienText;
         /* 0x099 */ public bool TranslationBrackets;
         /* 0x09A */ public bool ProgressiveDialogue;

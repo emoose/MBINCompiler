@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x1C, GUID = 0x584681F116B56A7D, NameHash = 0x3DDFD92393C0D347)]
+	[NMS(Size = 0x1C, GUID = 0xC736968D55D1468E, NameHash = 0x3DDFD92393C0D347)]
     public class GcRewardSubstance : NMSTemplate
     {
         /* 0x00 */ public GcRealitySubstanceCategory ItemCategory;
@@ -13,7 +13,9 @@ namespace libMBIN.NMS.GameComponents
         /* 0x10 */ public int AmountMax;
         /* 0x14 */ public float HardModeMultiplier;
         /* 0x18 */ public bool DisableMultiplier;
-        [NMS(Size = 0x3, Ignore = true)]
+        /* 0x19 */ public bool RewardAsBlobs;
+        /* 0x1A */ public bool UseFuelMultiplier;
+        [NMS(Size = 0x1, Ignore = true)]
         public byte[] EndPadding;
     }
 }
