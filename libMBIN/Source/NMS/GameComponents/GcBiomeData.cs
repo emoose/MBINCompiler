@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x5C0, GUID = 0xE1057DFD12CBAF47, NameHash = 0x2FD5560612237D4D)]
+	[NMS(Size = 0x5D0, GUID = 0xE1057DFD12CBAF47, NameHash = 0x2FD5560612237D4D)]
     public class GcBiomeData : NMSTemplate
     {
         [NMS(Size = 0x80)]
@@ -24,15 +24,15 @@ namespace libMBIN.NMS.GameComponents
         /* 0x3B0 */ public List<GcExternalObjectListOptions> ExternalObjectLists;
         [NMS(Size = 0x4, EnumType = typeof(GcGalaxyStarTypes.GalaxyStarTypeEnum))]
         /* 0x3C0 */ public GcWeatherWeightings[] WeatherOptions;
-        /* 0x4B0 */ public Vector2f WeatherChangeTime;
+        /* 0x4C0 */ public Vector2f WeatherChangeTime;
         [NMS(Size = 0x8, Ignore = true)]
-        /* 0x4B8 */ public byte[] Padding4B8;
-        /* 0x4C0 */ public GcBiomeCloudSettings CloudSettings;
-        /* 0x510 */ public GcTerrainControls Terrain;
-        /* 0x588 */ public List<GcScreenFilterOption> FilterOptions;
+        /* 0x4C8 */ public byte[] Padding4B8;
+        /* 0x4D0 */ public GcBiomeCloudSettings CloudSettings;
+        /* 0x520 */ public GcTerrainControls Terrain;
+        /* 0x598 */ public List<GcScreenFilterOption> FilterOptions;
         [NMS(Size = 0x20)]
-        /* 0x598 */ public string FloraLifeLocID;
+        /* 0x5A8 */ public string FloraLifeLocID;
         [NMS(Size = 0x8, Ignore = true)]
-        /* 0x5B8 */ public byte[] EndPadding;
+        /* 0x5C8 */ public byte[] EndPadding;
     }
 }
