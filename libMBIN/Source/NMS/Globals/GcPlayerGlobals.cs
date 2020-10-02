@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(Size = 0x1CB0, GUID = 0x2179E6586875DDFB)]
+    [NMS(Size = 0x1CD0, GUID = 0x442F14DE1CF319F2)]
     public class GcPlayerGlobals : NMSTemplate
     {
         /* 0x0000 */ public bool ForceFreighterProcTechRandom;
@@ -803,77 +803,84 @@ namespace libMBIN.NMS.Globals
         /* 0x1758 */ public float FreeJetpackSlopeAnglePrime;
         /* 0x175C */ public float FullClipReloadSpeedMultiplier;
         /* 0x1760 */ public float ReloadTapButtonSpeedIncrease;
-        /* 0x1764 */ public float ClingBrakeMultiplier;
-        /* 0x1768 */ public float ClingAngleThreshold;
-        /* 0x176C */ public float ClingSpeedThreshold;
-        /* 0x1770 */ public float ClimbableStickinessAngle;
-        /* 0x1774 */ public float MinUpAmount;
-        /* 0x1778 */ public float FootOffset;
-        /* 0x177C */ public float MaxFallSpeed;
-        /* 0x1780 */ public float PushForceDecay;
-        /* 0x1784 */ public float LeanFwdMaxAngle;
-        /* 0x1788 */ public float LeanBackMaxAngle;
-        /* 0x178C */ public float LeanLeftMaxAngle;
-        /* 0x1790 */ public float LeanRightMaxAngle;
-        /* 0x1794 */ public float LeanAmount;
-        /* 0x1798 */ public float LeanAmountFwd;
-        /* 0x179C */ public float HelmetLag;
-        /* 0x17A0 */ public float HelmetMaxLag;
-        /* 0x17A4 */ public float HelmetBob;
-        /* 0x17A8 */ public float JetpackHelmetBob;
-        /* 0x17AC */ public float ShipCameraLag;
-        /* 0x17B0 */ public float MaxResource;
-        /* 0x17B4 */ public float ShieldRestoreSpeed;
-        /* 0x17B8 */ public float ShieldRestoreDelay;
-        /* 0x17BC */ public float TimeHoldDownAccelerateToLaunchFromOutpost;
-        /* 0x17C0 */ public float DeathScreenFadeInThirdPerson;
-        /* 0x17C4 */ public float DeathScreenFadeInUnderwaterThirdPerson;
-        /* 0x17C8 */ public float DeathScreenFadeInTime;
-        /* 0x17CC */ public float DeathScreenShipFadeInTime;
-        /* 0x17D0 */ public float DeathScreenPauseTime;
-        /* 0x17D4 */ public float DeathScreenMaxRegenWaitTime;
-        /* 0x17D8 */ public float DeathScreenMinRegenWaitTime;
-        /* 0x17DC */ public float DeathScreenFadeOutTime;
-        /* 0x17E0 */ public GcPlayerStickData LookStickData;
-        /* 0x17FC */ public GcPlayerStickData AmbientModeLookStickData;
-        /* 0x1818 */ public int LowHealthEffectPips;
-        /* 0x181C */ public int LowHealthEffectShield;
-        /* 0x1820 */ public float CriticalHitTime;
-        /* 0x1824 */ public float CriticalHitDesatTime;
-        /* 0x1828 */ public float CriticalHitDesatFreq;
+        [NMS(Size = 0x4, Ignore = true)]
+        /* 0x1764 */ public byte[] Padding1764;
+        [NMS(Size = 0x10)]
+        /* 0x1768 */ public string FootDustEffect;
+        /* 0x1778 */ public float FootDustScale;
+        /* 0x177C */ public float ClingBrakeMultiplier;
+        /* 0x1780 */ public float ClingAngleThreshold;
+        /* 0x1784 */ public float ClingSpeedThreshold;
+        /* 0x1788 */ public float ClimbableStickinessAngle;
+        /* 0x178C */ public float MinUpAmount;
+        /* 0x1790 */ public float FootOffset;
+        /* 0x1794 */ public float MaxFallSpeed;
+        /* 0x1798 */ public float PushForceDecay;
+        /* 0x179C */ public float LeanFwdMaxAngle;
+        /* 0x17A0 */ public float LeanBackMaxAngle;
+        /* 0x17A4 */ public float LeanLeftMaxAngle;
+        /* 0x17A8 */ public float LeanRightMaxAngle;
+        /* 0x17AC */ public float LeanAmount;
+        /* 0x17B0 */ public float LeanAmountFwd;
+        /* 0x17B4 */ public float HelmetLag;
+        /* 0x17B8 */ public float HelmetMaxLag;
+        /* 0x17BC */ public float HelmetBob;
+        /* 0x17C0 */ public float JetpackHelmetBob;
+        /* 0x17C4 */ public float ShipCameraLag;
+        /* 0x17C8 */ public float MaxResource;
+        /* 0x17CC */ public float ShieldRestoreSpeed;
+        /* 0x17D0 */ public float ShieldRestoreDelay;
+        /* 0x17D4 */ public float TimeHoldDownAccelerateToLaunchFromOutpost;
+        /* 0x17D8 */ public float DeathScreenFadeInThirdPerson;
+        /* 0x17DC */ public float DeathScreenFadeInUnderwaterThirdPerson;
+        /* 0x17E0 */ public float DeathScreenFadeInTime;
+        /* 0x17E4 */ public float DeathScreenShipFadeInTime;
+        /* 0x17E8 */ public float DeathScreenPauseTime;
+        /* 0x17EC */ public float DeathScreenMaxRegenWaitTime;
+        /* 0x17F0 */ public float DeathScreenMinRegenWaitTime;
+        /* 0x17F4 */ public float DeathScreenFadeOutTime;
+        /* 0x17F8 */ public GcPlayerStickData LookStickData;
+        /* 0x1814 */ public GcPlayerStickData AmbientModeLookStickData;
+        /* 0x1830 */ public int LowHealthEffectPips;
+        /* 0x1834 */ public int LowHealthEffectShield;
+        /* 0x1838 */ public float CriticalHitTime;
+        /* 0x183C */ public float CriticalHitDesatTime;
+        /* 0x1840 */ public float CriticalHitDesatFreq;
         [NMS(Size = 0x2)]
-        /* 0x182C */ public GcCameraSpawnSetupData[] FirstSpawnDataTable;
-        /* 0x184C */ public GcInventoryValueData ShipValueData;
-        /* 0x1868 */ public GcInventoryValueData WeaponValueData;
-        /* 0x1884 */ public GcInventoryValueData FreighterValueData;
+        /* 0x1844 */ public GcCameraSpawnSetupData[] FirstSpawnDataTable;
+        /* 0x1864 */ public GcInventoryValueData ShipValueData;
+        /* 0x1880 */ public GcInventoryValueData WeaponValueData;
+        /* 0x189C */ public GcInventoryValueData FreighterValueData;
         [NMS(Size = 0x7)]
-        /* 0x18A0 */ public float[] TechRarityData;
+        /* 0x18B8 */ public float[] TechRarityData;
         [NMS(Size = 0x6)]
-        /* 0x18BC */ public float[] TechLearningProbabilities;
-        /* 0x18D4 */ public int NumTechShopSlots;
-        /* 0x18D8 */ public float GrassPushDistance;
-        /* 0x18DC */ public float GrassPushDistanceFeet;
-        /* 0x18E0 */ public GcCameraAnomalySetupData AnomalyBlachHoleSpawnData;
-        /* 0x1920 */ public GcCameraAnomalySetupData AnomalyAtlasStationSpawnData;
-        /* 0x1960 */ public GcCameraAnomalySetupData AnomalyMiniStationSpawnData;
-        /* 0x19A0 */ public GcJourneyMedalTiers MedalTiers;
-        /* 0x19B0 */ public int LowGuildRank;
-        /* 0x19B4 */ public int MedGuildRank;
-        /* 0x19B8 */ public int HighGuildRank;
-        /* 0x19BC */ public int BestGuildRank;
-        /* 0x19C0 */ public float LaserWeaponRange;
-        /* 0x19C4 */ public float LaserShipRange;
-        /* 0x19C8 */ public float TerrainLaserRange;
-        /* 0x19CC */ public float VehicleLaserRange;
-        /* 0x19D0 */ public GcPlayerCommunicatorMessage PirateHailMessage;
-        /* 0x1A20 */ public GcShipDialogue TraderHailMessages;
-        [NMS(Size = 0x4)]
-        /* 0x1C88 */ public GcShipDialogueTreeEnum[] TraderHailReceiveRegular;
-        [NMS(Size = 0x2)]
-        /* 0x1C98 */ public GcShipDialogueTreeEnum[] TraderHailReceiveFight;
-        [NMS(Size = 0x2)]
-        /* 0x1CA0 */ public GcShipDialogueTreeEnum[] TraderHailSend;
+        /* 0x18D4 */ public float[] TechLearningProbabilities;
+        /* 0x18EC */ public int NumTechShopSlots;
+        /* 0x18F0 */ public float GrassPushDistance;
+        /* 0x18F4 */ public float GrassPushDistanceFeet;
         [NMS(Size = 0x8, Ignore = true)]
-        /* 0x1CA8 */ public byte[] EndPadding;
+        /* 0x18F8 */ public byte[] Padding18F8;
+        /* 0x1900 */ public GcCameraAnomalySetupData AnomalyBlachHoleSpawnData;
+        /* 0x1940 */ public GcCameraAnomalySetupData AnomalyAtlasStationSpawnData;
+        /* 0x1980 */ public GcCameraAnomalySetupData AnomalyMiniStationSpawnData;
+        /* 0x19C0 */ public GcJourneyMedalTiers MedalTiers;
+        /* 0x19D0 */ public int LowGuildRank;
+        /* 0x19D4 */ public int MedGuildRank;
+        /* 0x19D8 */ public int HighGuildRank;
+        /* 0x19DC */ public int BestGuildRank;
+        /* 0x19E0 */ public float LaserWeaponRange;
+        /* 0x19E4 */ public float LaserShipRange;
+        /* 0x19E8 */ public float TerrainLaserRange;
+        /* 0x19EC */ public float VehicleLaserRange;
+        /* 0x19F0 */ public GcPlayerCommunicatorMessage PirateHailMessage;
+        /* 0x1A40 */ public GcShipDialogue TraderHailMessages;
+        [NMS(Size = 0x4)]
+        /* 0x1CA8 */ public GcShipDialogueTreeEnum[] TraderHailReceiveRegular;
+        [NMS(Size = 0x2)]
+        /* 0x1CB8 */ public GcShipDialogueTreeEnum[] TraderHailReceiveFight;
+        [NMS(Size = 0x2)]
+        /* 0x1CC0 */ public GcShipDialogueTreeEnum[] TraderHailSend;
+        [NMS(Size = 0x8, Ignore = true)]
+        /* 0x1CC8 */ public byte[] EndPadding;
     }
 }
