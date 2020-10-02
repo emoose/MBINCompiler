@@ -12,7 +12,7 @@ namespace libMBIN {
     /// <summary>
     /// Handles logging messages to a log stream.
     /// </summary>
-    internal static class Logger {
+    public static class Logger {
 
         private static StreamWriter _logStream = null;
         private static TextWriterTraceListener _traceListener = null;
