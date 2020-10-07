@@ -1,7 +1,7 @@
 # MBINCompiler
 **Project Owner**: monkeyman192
 
-## DOWNLOAD ![Github Total Downloads](https://img.shields.io/github/downloads-pre/monkeyman192/MBINCompiler/total.svg) ![GitHub Latest Pre-Release Version](https://img.shields.io/github/release/monkeyman192/MBINCompiler/all.svg) ![GitHub Latest Release Version](https://img.shields.io/github/release/monkeyman192/MBINCompiler.svg) [![MBIN test file coverage](https://img.shields.io/badge/dynamic/json?color=blueviolet&label=test%20file%20coverage&query=result&url=https%3A%2F%2Fgithub.com%2Fmonkeyman192%2FMBINCompiler%2Freleases%2Flatest%2Fdownload%2Freport.json)](https://github.com/monkeyman192/MBINCompiler/releases/latest/download/report.json)
+## DOWNLOAD ![Github Total Downloads](https://img.shields.io/github/downloads-pre/monkeyman192/MBINCompiler/total.svg) ![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/monkeyman192/MBINCompiler?include_prereleases&label=release%20%28experimental%29) ![GitHub release (latest by date)](https://img.shields.io/github/v/release/monkeyman192/MBINCompiler?label=release%20%28public%29) [![MBIN test file coverage](https://img.shields.io/badge/dynamic/json?color=blueviolet&label=test%20file%20coverage&query=result&url=https%3A%2F%2Fgithub.com%2Fmonkeyman192%2FMBINCompiler%2Freleases%2Flatest%2Fdownload%2Freport.json)](https://github.com/monkeyman192/MBINCompiler/releases/latest/download/report.json)
 
 _**For Modders:** You only need to download MBINCompiler.exe_  
 _**For Developers:** You can download a precompiled DLL or get the libMBIN source and integrate with your own NMS modding tools._
@@ -29,6 +29,8 @@ If you need help, would like to help or just interested in NMS modding, check ou
 ## USAGE INSTRUCTIONS
 
 If you are new to modding in NMS, check out the [NMS Modding Wiki](https://nmsmodding.wikia.com/wiki/No_Man%27s_Sky_Modding_Wiki) for how to get started before you continue with MBINCompiler.  
+
+The version of MBINCompiler you should download will depend on what version of the game you are using. When the experimental version is different to the public version (as can happen shortly after release), make sure to download the appropriate version based on the badges above.
 
 Before you decompile any MBIN files you must know how to unpack the game assets.  
 To use your recompiled MBIN files, you must know how to enable mods, install them and how to repack assets into your own mods.
