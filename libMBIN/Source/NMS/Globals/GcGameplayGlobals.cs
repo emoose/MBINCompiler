@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(Size = 0x1DD0, GUID = 0x6252229622D276C1)]
+    [NMS(Size = 0x1DD0, GUID = 0xC7E9C727B6BEBDB1)]
     public class GcGameplayGlobals : NMSTemplate
     {
         /* 0x0000 */ public GcTechnologyCategory TechnologyOverrideForSmuggler;
@@ -19,8 +19,6 @@ namespace libMBIN.NMS.Globals
         /* 0x0028 */ public GcPlayerHazardType StormBonusMiningAmountWeather;
         /* 0x002C */ public float AlienPodThreshold2;
         /* 0x0030 */ public float AlienPodThreshold1;  // Yes... these are the order in the exe...
-        [NMS(Size = 0xC, Ignore = true)]
-        /* 0x0034 */ public byte[] Padding34;
         /* 0x0040 */ public Colour BulletTraceLineColour;
         /* 0x0050 */ public float BulletTraceLineWidth;
         /* 0x0054 */ public float TracerBeamStart;
@@ -48,8 +46,6 @@ namespace libMBIN.NMS.Globals
         [NMS(Size = 0x7)]
         /* 0x02D8 */ public NMSString0x10[] SalvageSubstancesList;
         /* 0x0348 */ public bool AlwaysSpaceBattle;
-        [NMS(Size = 0x3, Ignore = true)]
-        /* 0x0349 */ public byte[] Padding349;
         /* 0x034C */ public float MultidimensionalFadeTime;
         /* 0x0350 */ public float TeleporterDistanceTravelledMultiplier;
         [NMS(Size = 0xC, Ignore = true)]
@@ -91,8 +87,6 @@ namespace libMBIN.NMS.Globals
         /* 0x0446 */ public bool EnableTeleporters;
         /* 0x0447 */ public bool AllowSpaceScanEvents;
         /* 0x0448 */ public bool CanMoveTechnology;
-        [NMS(Size = 0x3, Ignore = true)]
-        /* 0x0449 */ public byte[] Padding449;
         /* 0x044C */ public float NormalModeHeatBonus;
         /* 0x0450 */ public float BaseLaserHeatTime;
         /* 0x0454 */ public float HeatAlertTime;
@@ -108,8 +102,6 @@ namespace libMBIN.NMS.Globals
         /* 0x047C */ public TkCurveType OverheatCurve;
         /* 0x0480 */ public TkCurveType OverheatCurveSurvival;
         /* 0x0484 */ public bool UseOverheatColour;
-        [NMS(Size = 0xB, Ignore = true)]
-        /* 0x0485 */ public byte[] Padding485;
         /* 0x0490 */ public Colour OverHeatColour;
         /* 0x04A0 */ public Colour OverHeatBarColour;
         /* 0x04B0 */ public Colour OverHeatColourSurvival;
@@ -139,8 +131,6 @@ namespace libMBIN.NMS.Globals
         /* 0x0550 */ public float ShootableArmourHighlightHitTime;
         /* 0x0554 */ public float ShootableAggroMinStartTime;
         /* 0x0558 */ public float ShootableAggroForgetTime;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x055C */ public byte[] Padding55C;
         /* 0x0560 */ public Colour RefinerColour1A;
         /* 0x0570 */ public Colour RefinerColour1B;
         /* 0x0580 */ public Colour RefinerColour1C;
@@ -153,8 +143,6 @@ namespace libMBIN.NMS.Globals
         /* 0x05B4 */ public float TerrainResourceScanRange;
         /* 0x05B8 */ public float TerrainResourceCompassRange;
         /* 0x05BC */ public bool BinocsDisplayUnknownCreatures;
-        [NMS(Size = 0x3, Ignore = true)]
-        /* 0x05BD */ public byte[] Padding5BD;
         /* 0x05C0 */ public float BinocularScanTargetMinHeight;
         /* 0x05C4 */ public float BinocularScanTargetHeightRange;
         /* 0x05C8 */ public float BinocTimeBeforeScan;
@@ -166,8 +154,6 @@ namespace libMBIN.NMS.Globals
         /* 0x05E0 */ public float BinocularScanTargetScaler;
         /* 0x05E4 */ public float BinocularScanTargetLineWidth;
         /* 0x05E8 */ public float BinocularScanTargetFadeTime;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x05EC */ public byte[] Padding5EC;
         /* 0x05F0 */ public Colour BinocularScanTargetColour;
         /* 0x0600 */ public GcScanEffectData BinocularScanEffect;
         /* 0x0650 */ public float ScannerIconsClumpRadius;
@@ -190,8 +176,6 @@ namespace libMBIN.NMS.Globals
         /* 0x0730 */ public GcScanEffectData HitEffectCritical;
         /* 0x0780 */ public float CommunicatorSpawnOffset;
         /* 0x0784 */ public float CommunicatorSpawnHeightOffset;
-        [NMS(Size = 0x8, Ignore = true)]
-        /* 0x0788 */ public byte[] Padding788;
         /* 0x0790 */ public Vector3f CommunicatorShipSpawnOffset;
         /* 0x07A0 */ public float CommunicatorSpawnScale;
         /* 0x07A4 */ public float CommunicatorSpawnRotation;
@@ -206,8 +190,6 @@ namespace libMBIN.NMS.Globals
         /* 0x085C */ public float InteractionDescriptionTextTime;
         /* 0x0860 */ public float InteractionMinTimeForResponseText;
         /* 0x0864 */ public bool InteractionOverride;
-        [NMS(Size = 0x3, Ignore = true)]
-        /* 0x0865 */ public byte[] Padding865;
         /* 0x0868 */ public GcInteractionType InteractionOverrideFrom;
         /* 0x086C */ public GcInteractionType InteractionOverrideTo;
         /* 0x0870 */ public float DestroyEffectHeight;
@@ -258,8 +240,6 @@ namespace libMBIN.NMS.Globals
         /* 0x092C */ public float ScanAngle;
         /* 0x0930 */ public float NewDiscoveryDisplayTime;
         /* 0x0934 */ public bool FailToFindBuildings;
-        [NMS(Size = 0x3, Ignore = true)]
-        /* 0x0935 */ public byte[] Padding935;
         /* 0x0938 */ public float WaterLandingDamageMultiplier;
         /* 0x093C */ public int CritDamage;
         /* 0x0940 */ public float CritScale;
@@ -373,8 +353,6 @@ namespace libMBIN.NMS.Globals
         /* 0x13A0 */ public float BaseBuildingRemotePlayerErrorAlphaScanEffect;
         /* 0x13A4 */ public bool UseDebugScan;
         /* 0x13A5 */ public bool DebugScanForceBuilding;
-        [NMS(Size = 0x2, Ignore = true)]
-        /* 0x13A6 */ public byte[] Padding13A6;
         /* 0x13A8 */ public GcBuildingClassification DebugScanForceBuildingType;
         /* 0x13AC */ public float ShipScanOffset;
         /* 0x13B0 */ public float ShipScanOffsetGap;
@@ -393,8 +371,6 @@ namespace libMBIN.NMS.Globals
         /* 0x13E4 */ public float ScannerTuningSmoothStepAmount;
         /* 0x13E8 */ public float ScannerTuningTrailingEdge;
         /* 0x13EC */ public bool Autolevel;
-        [NMS(Size = 0x3, Ignore = true)]
-        /* 0x13ED */ public byte[] Padding13ED;
         /* 0x13F0 */ public Colour ScannerColour1;
         /* 0x1400 */ public Colour ScannerColour2;
         /* 0x1410 */ public float HUDStoreFlashTime;
@@ -407,8 +383,6 @@ namespace libMBIN.NMS.Globals
         /* 0x142C */ public float OffscreenFadeDistance;
         /* 0x1430 */ public float OffscreenMinDot;
         /* 0x1434 */ public bool HUDUpdateFromData;
-        [NMS(Size = 0x3, Ignore = true)]
-        /* 0x1435 */ public byte[] Padding1435;
         /* 0x1438 */ public float HUDLockOnAudioTime;
         /* 0x143C */ public float HUDArrowPrimaryScaler;
         /* 0x1440 */ public Vector2f HUDDamageSize;
@@ -453,8 +427,6 @@ namespace libMBIN.NMS.Globals
         /* 0x199C */ public float MouseSensitivityVehicle;
         /* 0x19A0 */ public float PainTime;
         /* 0x19A4 */ public TkCurveType PainCurve;
-        [NMS(Size = 0x8, Ignore = true)]
-        /* 0x19A8 */ public byte[] Padding19A8;
         /* 0x19B0 */ public Colour PainColour;
         /* 0x19C0 */ public float GunOffsetX;
         /* 0x19C4 */ public float GunOffsetY;
@@ -470,8 +442,6 @@ namespace libMBIN.NMS.Globals
         [NMS(Size = 0x10)]
         /* 0x1A10 */ public string DefaultAnim;
         /* 0x1A20 */ public bool DebugDrawTriggerBoxes;
-        [NMS(Size = 0x3, Ignore = true)]
-        /* 0x1A21 */ public byte[] Padding1A21;
         /* 0x1A24 */ public float SpeedReadoutMultiplier;
         /* 0x1A28 */ public float SpaceSpeedReadoutMultiplier;
         /* 0x1A2C */ public int TorchCookieIndex;
@@ -487,17 +457,11 @@ namespace libMBIN.NMS.Globals
         /* 0x1A54 */ public float TorchHandOffsetY;
         /* 0x1A58 */ public float TorchHandOffsetZ;
         /* 0x1A5C */ public bool TorchDisabledInTheDay;
-        [NMS(Size = 0x3, Ignore = true)]
-        /* 0x1A5D */ public byte[] Padding1A5D;
         /* 0x1A60 */ public float TorchRotation;
         /* 0x1A64 */ public float TorchFollowCameraPitch;
         /* 0x1A68 */ public float TorchFollowCameraTime;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x1A6C */ public byte[] Padding1A6C;
         /* 0x1A70 */ public Colour TorchColour;
         /* 0x1A80 */ public float PlayerAmbientSpotLightIntensity;
-        [NMS(Size = 0xC, Ignore = true)]
-        /* 0x1A84 */ public byte[] Padding1A84;
         /* 0x1A90 */ public Colour PlayerAmbientSpotLightColour;
         /* 0x1AA0 */ public float PlayerAmbientSpotLightOffsetY;
         /* 0x1AA4 */ public float PlayerAmbientSpotLightOffsetZ;
@@ -535,29 +499,26 @@ namespace libMBIN.NMS.Globals
         /* 0x1C90 */ public bool DisableBasePowerHUDOverlay;
         /* 0x1C91 */ public bool KeepAttackingMaxWantedLevel;
         /* 0x1C92 */ public bool UseMultiplierBonus;
-        [NMS(Size = 0x1, Ignore = true)]
-        /* 0x1C93 */ public byte[] Padding1C93;
         /* 0x1C94 */ public float ShipDisplayDamageMultiplier;
-        /* 0x1C98 */ public bool UseTradingCostTable;
-        /* 0x1C99 */ public bool ChangePricesLocally;
-        /* 0x1C9A */ public bool ShowPriceMarkupsAsPercentages;
-        [NMS(Size = 0x1, Ignore = true)]
-        /* 0x1C9B */ public byte[] Padding1C9B;
-        /* 0x1C9C */ public int ProductItemStockDecayTime;
-        /* 0x1CA0 */ public int ProductItemStockReplenishTime;
-        /* 0x1CA4 */ public int SubstanceItemStockDecayTime;
-        /* 0x1CA8 */ public int SubstanceItemStockReplenishTime;
-        /* 0x1CAC */ public GcPortalData Portal;
-        /* 0x1CB4 */ public int FourthRaceSpawnPercentage;
-        /* 0x1CB8 */ public int NonDominantRaceSpawnPercentage;
-        /* 0x1CBC */ public float ViciousSentinelProbability;
-        /* 0x1CC0 */ public float ViciousStormProbability;
-        /* 0x1CC4 */ public float ViciousWeatherProbability;
-        /* 0x1CC8 */ public float ScrapDroneProbability;
-        /* 0x1CCC */ public float MaxRespawnOnGroundHeight;
-        /* 0x1CD0 */ public float DeadPlanetGravityFactor;
-        [NMS(Size = 0xC, Ignore = true)]
-        /* 0x1CD4 */ public byte[] Padding1CD4;
+        /* 0x1C98 */ public float IllegalProductTradingMod;
+        /* 0x1C9C */ public bool UseTradingCostTable;
+        /* 0x1C9D */ public bool ChangePricesLocally;
+        /* 0x1C9E */ public bool ShowPriceMarkupsAsPercentages;
+        /* 0x1CA0 */ public int ProductItemStockDecayTime;
+        /* 0x1CA4 */ public int ProductItemStockReplenishTime;
+        /* 0x1CA8 */ public int SubstanceItemStockDecayTime;
+        /* 0x1CAC */ public int SubstanceItemStockReplenishTime;
+        /* 0x1CB0 */ public GcPortalData Portal;
+        /* 0x1CB8 */ public int FourthRaceSpawnPercentage;
+        /* 0x1CBC */ public int NonDominantRaceSpawnPercentage;
+        /* 0x1CC0 */ public float ViciousSentinelProbability;
+        /* 0x1CC4 */ public float ViciousStormProbability;
+        /* 0x1CC8 */ public float ViciousWeatherProbability;
+        /* 0x1CCC */ public float ScrapDroneProbability;
+        /* 0x1CD0 */ public float MaxRespawnOnGroundHeight;
+        /* 0x1CD4 */ public float DeadPlanetGravityFactor;
+        [NMS(Size = 0x8, Ignore = true)]
+        /* 0x1CD8 */ public byte[] Padding1CD8;
         /* 0x1CE0 */ public GcScanEffectData ShipSalvageScanEffect;
         /* 0x1D30 */ public float SalvageShipPitch;
         /* 0x1D34 */ public float SalvageShipHeightOffset;

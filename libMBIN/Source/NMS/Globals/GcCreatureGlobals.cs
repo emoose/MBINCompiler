@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(Size = 0x3920, GUID = 0x1086BD95B4E0752E)]
+    [NMS(Size = 0x3920, GUID = 0x6549FE33742DA3F5)]
     public class GcCreatureGlobals : NMSTemplate
     {
         [NMS(Size = 0xA)]

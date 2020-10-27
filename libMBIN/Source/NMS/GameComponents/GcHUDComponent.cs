@@ -7,7 +7,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcHUDComponent : NMSTemplate       // size: 0x28
     {
         [NMS(Size = 0x10)]
-        public string Id;
+        public string ID;
 
         public int PosX;
         public int PosY;

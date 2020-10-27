@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(Size = 0x1CD0, GUID = 0x442F14DE1CF319F2)]
+    [NMS(Size = 0x1CD0, GUID = 0x102986167F5E833B)]
     public class GcPlayerGlobals : NMSTemplate
     {
         /* 0x0000 */ public bool ForceFreighterProcTechRandom;
