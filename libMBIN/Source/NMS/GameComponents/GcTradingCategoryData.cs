@@ -4,7 +4,7 @@ using libMBIN.NMS.GameComponents;
 namespace libMBIN.NMS.GameComponents
 {
 	[NMS(Size = 0xCC, GUID = 0x6EA695AFABAD730F, NameHash = 0x39D1580ABEEE58C3)]
-    public class GcTradingCategoryData : NMSTemplate       // size: 0xCC
+    public class GcTradingCategoryData : NMSTemplate
     {
         [NMS(Size = 0x40)]
         /* 0x00 */ public string Name;

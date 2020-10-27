@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x260, GUID = 0x36F97B09B0F24951, NameHash = 0xD811F4C9E014843E)]
+	[NMS(Size = 0x260, GUID = 0xACC11812107EC0B5, NameHash = 0xD811F4C9E014843E)]
     public class GcRealitySubstanceData : NMSTemplate
     {
         [NMS(Size = 0x20)]
@@ -18,8 +18,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x0F4 */ public TkTextureResource DebrisFile;
         /* 0x178 */ public VariableSizeString Subtitle;
         /* 0x188 */ public VariableSizeString Description;
-        [NMS(Size = 0x8, Ignore = true)]
-        /* 0x198 */ public byte[] Padding198;
         /* 0x1A0 */ public Colour Colour;
         /* 0x1B0 */ public Colour WorldColour;
         /* 0x1C0 */ public int BaseValue;

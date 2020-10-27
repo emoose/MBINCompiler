@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0xF1D0, GUID = 0x1DDE5EBDD5ABFEDC, NameHash = 0x392CEA8FE98D0F4)]
+	[NMS(Size = 0xF3E0, GUID = 0x8F68138760D07B3C, NameHash = 0x392CEA8FE98D0F4)]
     public class GcScannerIcons : NMSTemplate
     {
         /* 0x0000 */ public GcScannerIcon TaggedBuilding;
@@ -35,7 +35,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x1B38 */ public GcScannerIcon DiamondAnimation;
         /* 0x1C44 */ public GcScannerIcon ArrowSmall;
         /* 0x1D50 */ public GcScannerIcon ArrowLarge;
-        [NMS(Size = 6)]
+        [NMS(Size = 6, EnumType = typeof(GcGenericIconTypes.GenericIconTypeEnum))]
         /* 0x1E5C */ public GcScannerIcon[] GenericIcons;
         [NMS(Size = 0x13, EnumType = typeof(GcScannerBuildingIconTypes.ScanBuildingIconTypesEnum))]
         /* 0x24A4 */ public GcScannerIcon[] BuildingIcons;
@@ -89,7 +89,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0xEEA4 */ public GcScannerIcon MissionEnterOrbit;
         /* 0xEFB0 */ public GcScannerIcon MissionEnterBuilding;
         /* 0xF0BC */ public GcScannerIcon MissionEnterStation;
-        [NMS(Size = 0x8, Ignore = true)]
-        /* 0xF1C8 */ public byte[] EndPadding;
+        /* 0xF1C8 */ public GcScannerIcon MissionEnterFreighter;
+        /* 0xF2D4 */ public GcScannerIcon MissionAbandonedFreighter;
     }
 }

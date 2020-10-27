@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x400, GUID = 0xFF00FFEE7B6EA198, NameHash = 0xE831C8A241FD8276)]
+	[NMS(Size = 0x400, GUID = 0x86D4D44384C76751, NameHash = 0xE831C8A241FD8276)]
     public class GcProductData : NMSTemplate
     {
         [NMSDescription("Internal item name. This is the ID that will be used to refer to this product in other files (eg. rewardtable)")]
