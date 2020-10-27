@@ -81,7 +81,7 @@ namespace libMBIN.NMS.GameComponents
         [NMS(Size = 0x4, EnumType = typeof(TestEnumEnum))]
         public float[] TestEnumArray;
 
-        [NMS(Size = 0x23, EnumType = typeof(GcBuildingClassification.BuildingClassEnum))]
+        [NMS(Size = 0x24, EnumType = typeof(GcBuildingClassification.BuildingClassEnum))]
         public float[] TestExternalEnumArray;
 
 		public enum TestFlagsEnum { Null, Flag1, Flag2 }

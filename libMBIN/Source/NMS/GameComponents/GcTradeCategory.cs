@@ -3,10 +3,11 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x4, GUID = 0xBCC12AC4DCFC035C, NameHash = 0xABEDBCE191703616)]
+	[NMS(Size = 0x4, GUID = 0x208C750E2351B660, NameHash = 0xABEDBCE191703616)]
     public class GcTradeCategory : NMSTemplate
     {
-		public enum TradingClassEnum { Mineral, Tech, Commodity, Component, Alloy, Exotic, Energy, None }
-		public TradingClassEnum TradingClass;
+        // 0x9 entries
+		public enum TradeCategoryEnum { Mineral, Tech, Commodity, Component, Alloy, Exotic, Energy, None, SpecialShop }
+		public TradeCategoryEnum TradeCategory;
     }
 }
