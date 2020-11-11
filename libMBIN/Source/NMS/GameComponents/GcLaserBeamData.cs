@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x1C0, Alignment = 0x10, GUID = 0x694A73F5A5010441, NameHash = 0x1AA966F8BA4E3153)]
+	[NMS(Size = 0x1C0, Alignment = 0x10, GUID = 0x570EDB84E997F8B6, NameHash = 0x1AA966F8BA4E3153)]
     public class GcLaserBeamData : NMSTemplate
     {
         [NMS(Size = 0x10)]
@@ -40,8 +40,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x184 */ public bool HasLight;
         /* 0x185 */ public bool CanMine;
         /* 0x188 */ public float LightScale;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x18C */ public byte[] Padding18C;
         /* 0x190 */ public Colour LightColour;
         /* 0x1A0 */ public Colour Colour;
         /* 0x1B0 */ public Vector3f ImpactOffset;

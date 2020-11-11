@@ -6,7 +6,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x3B0, GUID = 0x64A312A424B74341, NameHash = 0x98B648B5C054B7F7)]
+	[NMS(Size = 0x3B0, GUID = 0x6F077A77EF695370, NameHash = 0x98B648B5C054B7F7)]
     public class GcProjectileData : NMSTemplate
     {
         [NMS(Size = 0x10)]
@@ -54,6 +54,6 @@ namespace libMBIN.NMS.GameComponents
         [NMS(Size = 0x10)]
         /* 0x378 */ public string CriticalImpact;
         /* 0x388 */ public List<GcProjectileImpactData> Impacts;
-        /* 0x390 */ public Vector3f ImpactOffset;
+        /* 0x3A0 */ public Vector3f ImpactOffset;
     }
 }

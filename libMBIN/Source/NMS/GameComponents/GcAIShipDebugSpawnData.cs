@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0xF0, GUID = 0x54CE2FC389C54248, NameHash = 0xDFA8A7A9DD3ACC08)]
+	[NMS(Size = 0xF0, GUID = 0xC35F70F8B3C5471E, NameHash = 0xDFA8A7A9DD3ACC08)]
     public class GcAIShipDebugSpawnData : NMSTemplate
     {
         /* 0x00 */ public Vector3f Position;
@@ -18,10 +18,11 @@ namespace libMBIN.NMS.GameComponents
         /* 0x4C */ public float HoverTime;
         /* 0x50 */ public float HoverHeight;
         /* 0x54 */ public float WarpOutTime;
+        /* 0x58 */ public bool Wingman;
         [NMS(Size = 0x80)]
-        /* 0x58 */ public string SpecificModel;
-        /* 0xD8 */ public GcSeed Seed;
-        [NMS(Size = 0x8, Ignore = true)]
-        /* 0xE8 */ public byte[] EndPadding;
+        /* 0x59 */ public string SpecificModel;
+        [NMS(Size = 0x7, Ignore = true)]
+        /* 0xD9 */ public byte[] PaddingD9;
+        /* 0xE0 */ public GcSeed Seed;
     }
 }

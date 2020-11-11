@@ -135,12 +135,19 @@ def fail_comparison(file, loc):
     """ A simple function to do some cleanup and error reporting when running
     in verbose mode.
     """
-    os.remove(file)
     fname_fixed = file.replace('-recompiled', '')
     if loc == SIZE_MISMATCH:
         err = SIZE_MISMATCH
     else:
-        err = f'Difference at 0x{(loc - 0x60):x}'
+        if loc == 0x10:
+            # The error occurs in the GUID
+            with open(file, 'rb') as f:
+                f.seek(0x18)
+                name = f.read(0x40).decode()
+            err = f'GUID of {name} is incorrect'
+        else:
+            err = f'Difference at 0x{(loc - 0x60):x}'
+    os.remove(file)
     print(f'{fname_fixed},{err}')
     return False
 

@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Toolkit
 {
-	[NMS(Size = 0x4B0, Alignment = 0x10, GUID = 0x69E343F5F6665EE4, NameHash = 0xE39CB7AA4D818260)]
+	[NMS(Size = 0x4B0, Alignment = 0x10, GUID = 0xEC5071ED90E38E47, NameHash = 0xE39CB7AA4D818260)]
     public class TkMaterialMetaData : NMSTemplate {
 
         [NMS(Size = 0x80)]
@@ -93,8 +93,9 @@ namespace libMBIN.NMS.Toolkit
         /* 0x3AA */ public bool BeforeUI;
         /* 0x3AB */ public bool DepthMaskUI;
         /* 0x3AC */ public bool AlwaysOnTopUI;
-        /* 0x3AD */ public bool StretchyParticle;
-        /* 0x3AE */ public bool UVScrolling;
+        /* 0x3AD */ public bool ScreenSpaceReflections;
+        /* 0x3AE */ public bool StretchyParticle;
+        /* 0x3AF */ public bool UVScrolling;
         /* 0x3B0 */ public float UVScrollX;
         /* 0x3B4 */ public float UVScrollY;
         /* 0x3B8 */ public float UVScrollNormalX;

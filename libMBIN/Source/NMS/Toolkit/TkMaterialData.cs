@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Toolkit
 {
-	[NMS(Size = 0x2E0, GUID = 0x306B1AB3B7E7B836, NameHash = 0xCEE695A798E64B92)]
+	[NMS(Size = 0x2E0, GUID = 0xD71BDFD2F75A6880, NameHash = 0xCEE695A798E64B92)]
     public class TkMaterialData : NMSTemplate
     {
         [NMS(Size = 0x80)]

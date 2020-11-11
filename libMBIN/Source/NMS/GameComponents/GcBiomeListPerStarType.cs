@@ -10,9 +10,9 @@ namespace libMBIN.NMS.GameComponents
         /* 0x000 */ public GcBiomeList[] StarType;
         /* 0x200 */ public GcBiomeList LushYellow;
         /* 0x280 */ public GcBiomeList AbandonedYellow;
-        [NMS(Size = 4, EnumType = typeof(GcGalaxyStarTypes.GalaxyStarTypeEnum))]
+        [NMS(Size = 4, EnumType = typeof(GcPlanetLife.LifeSettingEnum))]
         /* 0x300 */ public float[] LifeChance;
-        [NMS(Size = 4, EnumType = typeof(GcGalaxyStarTypes.GalaxyStarTypeEnum))]
+        [NMS(Size = 4, EnumType = typeof(GcPlanetLife.LifeSettingEnum))]
         /* 0x310 */ public float[] AbandonedLifeChance;
         /* 0x324 */ public float ConvertDeadToWeird;
     }

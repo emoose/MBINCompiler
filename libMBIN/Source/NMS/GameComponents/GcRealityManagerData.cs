@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0xCE80, GUID = 0xF0699DFCC35F7F7F, NameHash = 0x5930542B7B565329)]
+	[NMS(Size = 0xD190, GUID = 0x94C33B54CAD88436, NameHash = 0x5930542B7B565329)]
     public class GcRealityManagerData : NMSTemplate
     {
         /* 0x0000 */ public ushort HomeRealityIteration;
@@ -89,40 +89,38 @@ namespace libMBIN.NMS.GameComponents
         [NMS(Size = 0x3, EnumType = typeof(GcRarity.RarityEnum))]
         /* 0x1ABC */ public float[] WeightedTextWeights;
         /* 0x1AC8 */ public GcRealityIconTable Icons;
-        [NMS(Size = 0x8, Ignore = true)]
-        /* 0x66D8 */ public byte[] Padding66D8;
         [NMS(Size = 0x6, EnumType = typeof(GcPlayerHazardType.HazardEnum))]
-        /* 0x66E0 */ public Colour[] HazardColours;
+        /* 0x69F0 */ public Colour[] HazardColours;
         [NMS(Size = 0x3, EnumType = typeof(GcRarity.RarityEnum))]
-        /* 0x6740 */ public Colour[] RarityColours;
+        /* 0x6A50 */ public Colour[] RarityColours;
         [NMS(Size = 0x9, EnumType = typeof(GcRealitySubstanceCategory.SubstanceCategoryEnum))]
-        /* 0x6770 */ public Colour[] SubstanceCategoryColours;
+        /* 0x6A80 */ public Colour[] SubstanceCategoryColours;
         [NMS(Size = 0x9, EnumType = typeof(GcRealitySubstanceCategory.SubstanceCategoryEnum))]
-        /* 0x6800 */ public TkTextureResource[] SubstanceChargeIcons;
+        /* 0x6B10 */ public TkTextureResource[] SubstanceChargeIcons;
         [NMS(Size = 0xA1, EnumType = typeof(GcStatsTypes.StatsTypeEnum))]
-        /* 0x6CA4 */ public TkTextureResource[] StatCategoryIcons;
+        /* 0x6FB4 */ public TkTextureResource[] StatCategoryIcons;
         public enum PossessionEnum { Suit, Weapon, Ship, Freighter, Vehicle }
         [NMS(Size = 0x5, EnumType = typeof(PossessionEnum))]
-        /* 0xBFA8 */ public GcStats[] Stats;
-        /* 0xBFF8 */ public GcTechList StationTechShops;
+        /* 0xC2B8 */ public GcStats[] Stats;
+        /* 0xC308 */ public GcTechList StationTechShops;
         [NMS(Size = 0x10, EnumType = typeof(GcBiomeType.BiomeEnum))]
-        /* 0xC008 */ public GcTechList[] PlanetTechShops;
-        /* 0xC108 */ public GcTradeSettings TradeSettings;
-        /* 0xCD68 */ public GcInventoryLayout SuitStartingSlotLayout;
-        /* 0xCD88 */ public GcInventoryLayout SuitTechOnlyStartingSlotLayout;
-        /* 0xCDA8 */ public GcInventoryLayout SuitCargoStartingSlotLayout;
-        /* 0xCDC8 */ public GcInventoryLayout ShipStartingLayout;
-        /* 0xCDE8 */ public GcInventoryLayout ShipTechOnlyStartingLayout;
-        /* 0xCE08 */ public List<int> SuitUpgradePrices;
-        /* 0xCE18 */ public List<int> SuitTechOnlyUpgradePrices;
-        /* 0xCE28 */ public List<int> SuitCargoUpgradePrices;
-        /* 0xCE38 */ public List<NMSString0x10> NeverSellableItems;
-        /* 0xCE48 */ public List<NMSString0x10> NeverOfferedForSale;
+        /* 0xC318 */ public GcTechList[] PlanetTechShops;
+        /* 0xC418 */ public GcTradeSettings TradeSettings;
+        /* 0xD078 */ public GcInventoryLayout SuitStartingSlotLayout;
+        /* 0xD098 */ public GcInventoryLayout SuitTechOnlyStartingSlotLayout;
+        /* 0xD0B8 */ public GcInventoryLayout SuitCargoStartingSlotLayout;
+        /* 0xD0D8 */ public GcInventoryLayout ShipStartingLayout;
+        /* 0xD0F8 */ public GcInventoryLayout ShipTechOnlyStartingLayout;
+        /* 0xD118 */ public List<int> SuitUpgradePrices;
+        /* 0xD128 */ public List<int> SuitTechOnlyUpgradePrices;
+        /* 0xD138 */ public List<int> SuitCargoUpgradePrices;
+        /* 0xD148 */ public List<NMSString0x10> NeverSellableItems;
+        /* 0xD158 */ public List<NMSString0x10> NeverOfferedForSale;
         public enum GoodsTypeEnum { Commodity, Technology, Fuel, Tradeable, Special }
         [NMS(Size = 0x5, EnumType = typeof(GoodsTypeEnum))]         // TODO: not sure about these values....
-        /* 0xCE58 */ public float[] NormalizedPriceLimits;
+        /* 0xD168 */ public float[] NormalizedPriceLimits;
         [NMS(Size = 0x4, Ignore = true)]
-        /* 0xCE6C */ public byte[] PaddingCE6C;
-        /* 0xCE70 */ public List<GcFiendCrimeSpawnTable> FiendCrimeSpawnTable;
+        /* 0xD17C */ public byte[] PaddingD17C;
+        /* 0xD180 */ public List<GcFiendCrimeSpawnTable> FiendCrimeSpawnTable;
     }
 }

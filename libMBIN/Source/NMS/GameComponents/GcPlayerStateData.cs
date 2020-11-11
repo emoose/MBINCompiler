@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x2A040, GUID = 0xA691972406DCF265, NameHash = 0x6C4510BB243EFA64)]
+	[NMS(Size = 0x2A030, GUID = 0xA18051E8320F1145, NameHash = 0x6C4510BB243EFA64)]
     public class GcPlayerStateData : NMSTemplate
     {
         /* 0x00000 */ public GcUniverseAddressData UniverseAddress;
@@ -263,6 +263,9 @@ namespace libMBIN.NMS.GameComponents
         [NMS(Size = 0x4, Ignore = true)]
         /* 0x29F3C */ public byte[] Padding29F3C;
         /* 0x29F40 */ public GcSeasonalGameModeData SeasonalData;
-        /* 0x2A028 */ public GcPlanetaryMappingData PlanetaryMappingData;
+        [NMS(Size = 0x8, Ignore = true)]
+        /* 0x2A028 */ public byte[] EndPadding;
+        // Not sure why the following was removed?? Maybe the weirdness of the class??
+        ///* 0x2A028 */ public GcPlanetaryMappingData PlanetaryMappingData;
     }
 }
