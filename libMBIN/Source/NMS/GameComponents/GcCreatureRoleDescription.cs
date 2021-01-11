@@ -12,8 +12,8 @@ namespace libMBIN.NMS.GameComponents
         /* 0x08 */ public string ForceID;
         [NMS(Size = 0x10)]
         /* 0x18 */ public string RequireTag;
-        /* 0x28 */ public float MinSize;
-        /* 0x2C */ public float MaxSize;
+        /* 0x28 */ public GcCreatureSizeClasses MinSize;
+        /* 0x2C */ public GcCreatureSizeClasses MaxSize;
         /* 0x30 */ public int MinGroupSize;
         /* 0x34 */ public int MaxGroupSize;
         /* 0x38 */ public float Density;
