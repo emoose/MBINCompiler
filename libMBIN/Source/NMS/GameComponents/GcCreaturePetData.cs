@@ -1,0 +1,12 @@
+using System.Collections.Generic;
+
+using libMBIN.NMS.Toolkit;
+using libMBIN.NMS.GameComponents;
+
+namespace libMBIN.NMS.GameComponents
+{
+    [NMS(Size = 0x10, GUID = 0x8793BF5B5D82BD39, NameHash = 0x60B2A2CE8774967D, Broken = true)]
+    public class GcCreaturePetData : NMSTemplate
+    {
+    }
+}

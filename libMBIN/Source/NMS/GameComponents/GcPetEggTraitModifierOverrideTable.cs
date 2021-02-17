@@ -1,0 +1,12 @@
+using System.Collections.Generic;
+
+using libMBIN.NMS.Toolkit;
+using libMBIN.NMS.GameComponents;
+
+namespace libMBIN.NMS.GameComponents
+{
+    [NMS(Size = 0x10, GUID = 0x6403DD26A54F5F36, NameHash = 0x34EE54AA314E3EDF, Broken = true)]
+    public class GcPetEggTraitModifierOverrideTable : NMSTemplate
+    {
+    }
+}
