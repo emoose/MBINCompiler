@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x140, GUID = 0x1B9B9349DABF96CC, NameHash = 0xBD1382185246DF07)]
+	[NMS(Size = 0x1F8, GUID = 0x4B7E84539BE68467, NameHash = 0xBD1382185246DF07)]
     public class GcPlayerEmote : NMSTemplate
     {
         [NMS(Size = 0x20)]
@@ -15,31 +15,36 @@ namespace libMBIN.NMS.GameComponents
         /* 0x041 */ public byte[] Padding41;
         [NMS(Size = 0x10)]
         /* 0x048 */ public string AnimationName;
-
         /* 0x058 */ public TkTextureResource Icon;
-
         [NMS(Size = 0x4, Ignore = true)]
-        /* 0x0DC */ public byte[] PaddingD4;
-        
+        /* 0x0DC */ public byte[] PaddingDC;
         [NMS(Size = 0x10)]
-        /* 0x0DE */ public string LinkedSpecialID;
-        [NMS(Size = 0x10)]
-        /* 0x0F0 */ public string LoopAnimUntilMov;
-
-        /* 0x100 */ public bool CloseMenuOnSelect;
+        /* 0x0E0 */ public string LinkedSpecialID;
+        /* 0x0F0 */ public bool NeverShowInMenu;
         [NMS(Size = 0x7, Ignore = true)]
-        /* 0x101 */ public byte[] Padding101;
-
+        /* 0x0F1 */ public byte[] PaddingF1;
         [NMS(Size = 0x10)]
-        /* 0x108 */ public string GekAnimationName;
+        /* 0x0F8 */ public string LoopAnimUntilMove;
+        /* 0x108 */ public bool CloseMenuOnSelect;
+        /* 0x109 */ public bool MoveToCancel;
+        [NMS(Size = 0x6, Ignore = true)]
+        /* 0x10A */ public byte[] Padding10A;
         [NMS(Size = 0x10)]
-        /* 0x118 */ public string GekLoopAnimUntilMove;
-
-        /* 0x128 */ public bool AvailableUnderwater;
-
+        /* 0x110 */ public string GekAnimationName;
+        [NMS(Size = 0x10)]
+        /* 0x120 */ public string GekLoopAnimUntilMove;
+        /* 0x130 */ public bool AvailableUnderwater;
         [NMS(Size = 0x7, Ignore = true)]
-        /* 0x129 */ public byte[] Padding129;
+        /* 0x131 */ public byte[] Padding131;
         [NMS(Size = 0x10)]
-        /* 0x130 */ public string RidingAnimationName;
+        /* 0x138 */ public string RidingAnimationName;
+        /* 0x148 */ public bool IsPetCommand;
+        [NMS(Size = 0x7, Ignore = true)]
+        /* 0x149 */ public byte[] Padding149;
+        [NMS(Size = 0x20)]
+        /* 0x150 */ public string PetCommandTitle;
+        /* 0x170 */ public TkTextureResource PetCommandIcon;
+        [NMS(Size = 0x4, Ignore = true)]
+        /* 0x1F4 */ public byte[] EndPadding;
     }
 }

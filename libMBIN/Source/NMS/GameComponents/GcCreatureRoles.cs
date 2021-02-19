@@ -3,11 +3,11 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x4, GUID = 0x9064A655757AF603, NameHash = 0xA8AB3ECD5F81E80C)]
+	[NMS(Size = 0x4, GUID = 0x3E7DA33CE8142243, NameHash = 0xA8AB3ECD5F81E80C)]
     public class GcCreatureRoles : NMSTemplate
     {
-        // 0xA elements
-		public enum CreatureRoleEnum { None, Predator, PlayerPredator, Prey, Passive, Bird, FishPrey, FishPredator, Butterfly, Robot }
+        // 0xB elements
+		public enum CreatureRoleEnum { None, Predator, PlayerPredator, Prey, Passive, Bird, FishPrey, FishPredator, Butterfly, Robot, Pet }
 		public CreatureRoleEnum CreatureRole;
     }
 }

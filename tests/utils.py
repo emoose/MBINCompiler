@@ -204,7 +204,7 @@ def format_err_results(results):
     return table
 
 
-def generate_report(input_fname, output_fname):
+def generate_report(input_fname, output_fname, datapath):
     """ Generate a .json file which contains info about the test.
 
     Parameters
@@ -216,9 +216,15 @@ def generate_report(input_fname, output_fname):
     output_fname: str
         The path to write the json formatted data to.
     """
+    version = 'Unknown'
+    version_path = op.join(datapath, '.version')
+    if op.exists(version_path):
+        with open(version_path, 'r') as f:
+            version = f.read().strip('\n')  # strip \n just in case...
 
     if op.exists(input_fname):
-        data = {'passed_count': 0,
+        data = {'version': version,
+                'passed_count': 0,
                 'failed_count': 0,
                 'total_count': 0,
                 'result': '?/?',

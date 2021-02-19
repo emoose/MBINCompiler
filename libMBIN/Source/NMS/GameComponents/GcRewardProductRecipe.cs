@@ -3,14 +3,16 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x18, GUID = 0xD2A4169D7657745E, NameHash = 0x27661A8643F25227)]
+	[NMS(Size = 0x1C, GUID = 0xD2A4169D7657745E, NameHash = 0x27661A8643F25227)]
     public class GcRewardProductRecipe : NMSTemplate
     {
-        public GcRealitySubstanceCategory Category;
-        public GcRarity Rarity;
-        public bool IgnoreRarity;
-        public int ItemLevel;
-        [NMS(Size = 8, EnumType = typeof(GcProductCategory.ProductCategoryEnum))]
-        public bool[] AllowedProductTypes;
+        /* 0x00 */ public GcRealitySubstanceCategory ItemCategory;
+        /* 0x04 */ public GcRarity ItemRarity;
+        /* 0x08 */ public bool IgnoreRarity;
+        /* 0x0C */ public int ItemLevel;
+        [NMS(Size = 9, EnumType = typeof(GcProductCategory.ProductCategoryEnum))]
+        /* 0x10 */ public bool[] AllowedProductTypes;
+        [NMS(Size = 0x3, Ignore = true)]
+        /* 0x19 */ public byte[] EndPadding;
     }
 }

@@ -4,7 +4,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x8C0, GUID = 0xF669A3A10258DF92, NameHash = 0xC449167C8DE081CD)]
+	[NMS(Size = 0x8D0, GUID = 0xE5B766DFB523477A, NameHash = 0xC449167C8DE081CD)]
     public class GcProceduralProductData : NMSTemplate
     {
         /* 0x000 */ public GcNameGeneratorWord NameGeneratorBase;
@@ -14,11 +14,11 @@ namespace libMBIN.NMS.GameComponents
         /* 0x03C */ public byte[] Padding3C;
         /* 0x040 */ public GcProductData Product;
         [NMS(Size = 0x3, EnumType = typeof(GcRarity.RarityEnum))]
-        /* 0x440 */ public GcProductProceduralOnlyData[] ProceduralData;
-        /* 0x818 */ public GcBiomeList PerBiomeDropWeights;
+        /* 0x450 */ public GcProductProceduralOnlyData[] ProceduralData;
+        /* 0x828 */ public GcBiomeList PerBiomeDropWeights;
         [NMS(Size = 0x20)]
-        /* 0x898 */ public string DeployableProductID;
+        /* 0x8A8 */ public string DeployableProductID;
         [NMS(Size = 0x8, Ignore = true)]
-        /* 0x8B8 */ public byte[] EndPadding;
+        /* 0x8C8 */ public byte[] EndPadding;
     }
 }

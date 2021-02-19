@@ -5,8 +5,12 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(Size = 0x18, GUID = 0x674E443873C61AA4, NameHash = 0x57A3CABFA5A7BDA8, Broken = true)]
+    [NMS(Size = 0x18, GUID = 0x674E443873C61AA4, NameHash = 0x57A3CABFA5A7BDA8)]
     public class TkAnimPoseBabyModifier : NMSTemplate
     {
+        [NMS(Size = 0x10)]
+        public string Item;
+        public float Value;
+        public float Weight;
     }
 }

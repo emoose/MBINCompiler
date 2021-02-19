@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x400, GUID = 0x86D4D44384C76751, NameHash = 0xE831C8A241FD8276)]
+	[NMS(Size = 0x410, GUID = 0x37D705A26A00BF70, NameHash = 0xE831C8A241FD8276)]
     public class GcProductData : NMSTemplate
     {
         [NMSDescription("Internal item name. This is the ID that will be used to refer to this product in other files (eg. rewardtable)")]
@@ -64,7 +64,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x39C */ public byte[] Padding39C;
         [NMSDescription("Notification when this substance has to be crafted. This string is referenced in each language file for translation")]
         [NMS(Size = 0x20)]
-        /* 0x3A0 */ public string PinObjeective;
+        /* 0x3A0 */ public string PinObjective;
         [NMSDescription("Notification hints to collect this item. This string is referenced in each language file for translation")]
         [NMS(Size = 0x20)]
         /* 0x3C0 */ public string PinObjeectiveTip;
@@ -75,5 +75,8 @@ namespace libMBIN.NMS.GameComponents
         /* 0x3E9 */ public byte[] Padding3E9;
         [NMS(Size = 0x10)]
         /* 0x3F0 */ public string GiveRewardOnSpecialPurchase;
+        /* 0x400 */ public bool EggModifierIngredient;
+        [NMS(Size = 0xF, Ignore = true)]
+        /* 0x401 */ public byte[] EndPadding;
     }
 }
