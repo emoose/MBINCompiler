@@ -5,10 +5,14 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x20, GUID = 0xF58DCE2E81C9E68D, NameHash = 0x434379BF90DDF679)]
+	[NMS(Size = 0x800, GUID = 0x12D1375C1BC3DF8F, NameHash = 0x434379BF90DDF679)]
     public class GcStatusMessageDefinitions : NMSTemplate
     {
-        public List<GcStatusMessageDefinition> Messages;
-        public Colour MissionMarkupColour;
+        /* 0x000 */ public List<GcStatusMessageDefinition> Messages;
+        /* 0x010 */ public Colour MissionMarkupColour;
+        [NMS(Size = 0xF, EnumType = typeof(GcPetVocabularyWords.PetVocabularyWordEnum))]
+        /* 0x020 */ public GcPetVocabularyEntry[] PetVocabulary;
+        [NMS(Size = 0x15, EnumType = typeof(GcPetChatType.PetChatTypeEnum))]
+        /* 0x368 */ public GcPetVocabularyEntry[] PetChatTemplates;
     }
 }

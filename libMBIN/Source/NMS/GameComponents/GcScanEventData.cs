@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x5E0, Alignment = 0x8, GUID = 0xC3E0B0C57DE7C6B1, NameHash = 0x7BBBCE7D7BC0F1F4)]
+	[NMS(Size = 0x5E0, Alignment = 0x8, GUID = 0x3166FA5CE1FDD675, NameHash = 0x7BBBCE7D7BC0F1F4)]
     public class GcScanEventData : NMSTemplate
     {
         [NMS(Size = 0x20)]
@@ -42,7 +42,7 @@ namespace libMBIN.NMS.GameComponents
         public enum BuildingLocationEnum { Nearest, AllNearest, Random, RandomOnNearPlanet, RandomOnFarPlanet, PlanetSearch }
 		/* 0x0B0 */ public BuildingLocationEnum BuildingLocation;
 		public enum BuildingTypeEnum { Any, AnyShelter, AnyNPC, BuildingClass, SpaceStation, SpaceAnomaly, Atlas, Freighter, FreighterBase,
-            ExternalPlanetBase, PlanetBaseTerminal, Expedition, TutorialShelter, MPMissionFreighter, Nexus, InitialDistressSignal }
+            ExternalPlanetBase, PlanetBaseTerminal, Expedition, TutorialShelter, MPMissionFreighter, Nexus, InitialDistressSignal, NexusEggMachine }
 		/* 0x0B4 */ public BuildingTypeEnum BuildingType;
         /* 0x0B8 */ public GcBuildingClassification BuildingClass;
         /* 0x0BC */ public bool AllowFriendBases;

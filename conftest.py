@@ -111,7 +111,7 @@ def pytest_terminal_summary(terminalreporter):
 
     # Write out the report if required.
     if terminalreporter.config.getoption('report'):
-        generate_report(REPORT_FNAME, JSON_REPORT_FNAME)
+        generate_report(REPORT_FNAME, JSON_REPORT_FNAME, datapath)
     # Write out the failures file.
     if len(failed_fpaths) != 0:
         with open(failed_fpath, 'w') as failed_fobj:

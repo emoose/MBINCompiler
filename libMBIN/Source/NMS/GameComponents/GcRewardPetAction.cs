@@ -5,8 +5,15 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x28, GUID = 0xD5DC7D27BDEF54F1, NameHash = 0x76B0722D154CFD89, Broken = true)]
+    [NMS(Size = 0x28, GUID = 0xD5DC7D27BDEF54F1, NameHash = 0x76B0722D154CFD89)]
     public class GcRewardPetAction : NMSTemplate
     {
+        /* 0x00 */ public GcCreaturePetRewardActions PetAction;
+        [NMS(Size = 0x4, Ignore = true)]
+        /* 0x04 */ public byte[] Padding4;
+        [NMS(Size = 0x10)]
+        /* 0x08 */ public string PlayerEmoteID;
+        [NMS(Size = 0x10)]
+        /* 0x18 */ public string EffectID;
     }
 }

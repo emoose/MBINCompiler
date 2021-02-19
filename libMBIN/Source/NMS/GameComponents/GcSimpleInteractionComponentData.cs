@@ -5,25 +5,23 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x1C0, Alignment = 0x8, GUID = 0xF61E58B2F568F4A0, NameHash = 0xEAE36C86E1479AF5)]
+	[NMS(Size = 0x1C0, Alignment = 0x8, GUID = 0x27B5D767424493C9, NameHash = 0xEAE36C86E1479AF5)]
     public class GcSimpleInteractionComponentData : NMSTemplate
     {
-        // 0x1F entries
+        // 0x20 entries
 		public enum SimpleInteractionTypeEnum {
             Interact, Treasure, Beacon, Scan, Save, CallShip, CallVehicle, Word, Tech, GenericReward,
             Feed, Ladder, ClaimBase, TeleportStartPoint, TeleportEndPoint, Portal, Chest, ResourceHarvester, BaseCapsule, Hologram,
             NPCTerminalMessage, VehicleBoot, BiomeHarvester, FreighterGalacticMap, FreighterChest, Collectable, Chair, BaseTreasureChest, SpawnObject, NoiseBox,
-            AbandFreighterTeleporter
+            AbandFreighterTeleporter, PetEgg, SubstancePickup
         }
 		/* 0x00 */ public SimpleInteractionTypeEnum SimpleInteractionType;
-
         /* 0x04 */ public float InteractDistance;
         /* 0x08 */ public bool Use2dInteractDistance;
         [NMS(Size = 0x7, Ignore = true)]
         /* 0x09 */ public byte[] Padding9;
         [NMS(Size = 0x10)]
         /* 0x10 */ public string Id;
-
         /* 0x20 */ public GcRarity Rarity;
         /* 0x24 */ public GcSizeIndicator Size;
         [NMS(Size = 0x10)]
@@ -41,14 +39,12 @@ namespace libMBIN.NMS.GameComponents
         [NMS(Size = 0x4, Ignore = true)]
         /* 0x6C */ public byte[] Padding6C;
         /* 0x70 */ public GcInteractionActivationCost ActivationCost;
-
         /* 0xA8 */ public GcStatsEnum StatToTrack;
         /* 0xAC */ public bool StartsBuried;
         /* 0xAD */ public bool MustBeVisibleToInteract;
         /* 0xAE */ public bool NeedsStorm;
         [NMS(Size = 0x1, Ignore = true)]
         /* 0xAF */ public byte[] PaddingAF;
-
         [NMS(Size = 0x20)]
         /* 0xB0 */ public string Name;
         [NMS(Size = 0x20)]

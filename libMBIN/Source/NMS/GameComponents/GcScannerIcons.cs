@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0xF3E0, GUID = 0x8F68138760D07B3C, NameHash = 0x392CEA8FE98D0F4)]
+	[NMS(Size = 0xFB40, GUID = 0xAAF97EB9DB2E77B9, NameHash = 0x392CEA8FE98D0F4)]
     public class GcScannerIcons : NMSTemplate
     {
         /* 0x0000 */ public GcScannerIcon TaggedBuilding;
@@ -43,53 +43,58 @@ namespace libMBIN.NMS.GameComponents
         /* 0x3888 */ public GcScannerIcon[] BuildingIconsBinocs;
         [NMS(Size = 0x13, EnumType = typeof(GcScannerBuildingIconTypes.ScanBuildingIconTypesEnum))]
         /* 0x4C6C */ public GcScannerIcon[] BuildingIconsHuge;
-        [NMS(Size = 0x31, EnumType = typeof(GcScannerIconTypes.ScanIconTypeEnum))]
+        [NMS(Size = 0x32, EnumType = typeof(GcScannerIconTypes.ScanIconTypeEnum))]
         /* 0x6050 */ public GcScannerIcon[] ScannableIcons;
-        [NMS(Size = 0x31, EnumType = typeof(GcScannerIconTypes.ScanIconTypeEnum))]
-        /* 0x939C */ public GcScannerIcon[] ScannableIconsBinocs;
-        [NMS(Size = 0x8, Ignore = true)]
-        /* 0x96E8 */ public byte[] Padding96E8;
-        [NMS(Size = 0x31, EnumType = typeof(GcScannerIconTypes.ScanIconTypeEnum))]
-        /* 0xC6F0 */ public Colour[] ScannableColours;
-        /* 0xCA00 */ public Colour BuildingColour;
-        /* 0xCA10 */ public Colour GenericColour;
-        /* 0xCA20 */ public Colour RelicColour;
-        /* 0xCA30 */ public Colour SignalColour;
-        /* 0xCA40 */ public Colour UnknownColour;
-        /* 0xCA50 */ public GcScannerIcon CreatureDiscovered;
-        /* 0xCB5C */ public GcScannerIcon CreatureUndiscovered;
-        /* 0xCC68 */ public GcScannerIcon CreatureUnknown;
-        /* 0xCD74 */ public GcScannerIcon MessageBeacon;
-        /* 0xCE80 */ public GcScannerIcon MessageBeaconSmall;
-        /* 0xCF8C */ public GcScannerIcon BaseBuildingMarker;
-        /* 0xD098 */ public GcScannerIcon PlanetNorthPole;
-        /* 0xD1A4 */ public GcScannerIcon PlanetSouthPole;
-        /* 0xD2B0 */ public GcScannerIcon MonumentMarker;
-        /* 0xD3BC */ public GcScannerIcon NetworkPlayerMarker;
-        /* 0xD4C8 */ public GcScannerIcon NetworkPlayerMarkerShip;
-        /* 0xD5D4 */ public GcScannerIcon NetworkPlayerMarkerVehicle;
+        [NMS(Size = 0x32, EnumType = typeof(GcScannerIconTypes.ScanIconTypeEnum))]
+        /* 0x94A8 */ public GcScannerIcon[] ScannableIconsBinocs;
+        [NMS(Size = 0x32, EnumType = typeof(GcScannerIconTypes.ScanIconTypeEnum))]
+        /* 0xC900 */ public Colour[] ScannableColours;
+        /* 0xCC20 */ public Colour BuildingColour;
+        /* 0xCC30 */ public Colour GenericColour;
+        /* 0xCC40 */ public Colour RelicColour;
+        /* 0xCC50 */ public Colour SignalColour;
+        /* 0xCC60 */ public Colour UnknownColour;
+        /* 0xCC70 */ public GcScannerIcon CreatureDiscovered;
+        /* 0xCD7C */ public GcScannerIcon CreatureUndiscovered;
+        /* 0xCE88 */ public GcScannerIcon CreatureUnknown;
+        /* 0xCF94 */ public GcScannerIcon MessageBeacon;
+        /* 0xD0A0 */ public GcScannerIcon MessageBeaconSmall;
+        /* 0xD1AC */ public GcScannerIcon BaseBuildingMarker;
+        /* 0xD2B8 */ public GcScannerIcon PlanetNorthPole;
+        /* 0xD3C4 */ public GcScannerIcon PlanetSouthPole;
+        /* 0xD4D0 */ public GcScannerIcon MonumentMarker;
+        /* 0xD5DC */ public GcScannerIcon NetworkPlayerMarker;
+        /* 0xD6E8 */ public GcScannerIcon NetworkPlayerMarkerShip;
+        /* 0xD7F4 */ public GcScannerIcon NetworkPlayerMarkerVehicle;
         [NMS(Size = 0x4)]
-        /* 0xD6E0 */ public GcScannerIcon[] NetworkFSPlayerMarkers;
+        /* 0xD900 */ public GcScannerIcon[] NetworkFSPlayerMarkers;
         [NMS(Size = 0x4)]
-        /* 0xDB10 */ public GcScannerIcon[] NetworkFSPlayerMarkersShip;
+        /* 0xDD30 */ public GcScannerIcon[] NetworkFSPlayerMarkersShip;
         [NMS(Size = 0x4)]
-        /* 0xDF40 */ public Colour[] NetworkFSPlayerColours;
+        /* 0xE160 */ public Colour[] NetworkFSPlayerColours;
         [NMS(Size = 0x4)]
-        /* 0xDF80 */ public GcScannerIcon[] NetworkPlayerFreighter;
-        /* 0xE3B0 */ public GcScannerIcon PortalMarker;
-        /* 0xE4BC */ public GcScannerIcon BlackHole;
-        /* 0xE5C8 */ public GcScannerIcon CreatureCurious;
-        /* 0xE6D4 */ public GcScannerIcon CreatureAction;
-        /* 0xE7E0 */ public GcScannerIcon CreatureTame;
-        /* 0xE8EC */ public GcScannerIcon CreatureDanger;
-        /* 0xE9F8 */ public GcScannerIcon CreatureFiend;
-        /* 0xEB04 */ public GcScannerIcon CreatureMilk;
+        /* 0xE1A0 */ public GcScannerIcon[] NetworkPlayerFreighter;
+        /* 0xE5D0 */ public GcScannerIcon PortalMarker;
+        /* 0xE6DC */ public GcScannerIcon BlackHole;
+        /* 0xE7E8 */ public GcScannerIcon CreatureCurious;
+        /* 0xE8F4 */ public GcScannerIcon CreatureAction;
+        /* 0xEA00 */ public GcScannerIcon CreatureTame;
+        /* 0xEB0C */ public GcScannerIcon CreatureDanger;
+        /* 0xEC18 */ public GcScannerIcon CreatureFiend;
+        /* 0xED24 */ public GcScannerIcon CreatureMilk;
         [NMS(Size = 0x5, EnumType = typeof(GcScannerIconHighlightTypes.ScannerIconHighlightTypeEnum))]
-        /* 0xEC10 */ public TkTextureResource[] HighlightIcons;
-        /* 0xEEA4 */ public GcScannerIcon MissionEnterOrbit;
-        /* 0xEFB0 */ public GcScannerIcon MissionEnterBuilding;
-        /* 0xF0BC */ public GcScannerIcon MissionEnterStation;
-        /* 0xF1C8 */ public GcScannerIcon MissionEnterFreighter;
-        /* 0xF2D4 */ public GcScannerIcon MissionAbandonedFreighter;
+        /* 0xEE30 */ public TkTextureResource[] HighlightIcons;
+        /* 0xF0C4 */ public GcScannerIcon MissionEnterOrbit;
+        /* 0xF1D0 */ public GcScannerIcon MissionEnterBuilding;
+        /* 0xF2DC */ public GcScannerIcon MissionEnterStation;
+        /* 0xF3E8 */ public GcScannerIcon MissionEnterFreighter;
+        /* 0xF4F4 */ public GcScannerIcon MissionAbandonedFreighter;
+        /* 0xF600 */ public GcScannerIcon CreatureInteraction;
+        /* 0xF70C */ public GcScannerIcon PetInteraction;
+        /* 0xF818 */ public GcScannerIcon Pet;
+        /* 0xF924 */ public GcScannerIcon PetSad;
+        /* 0xFA30 */ public GcScannerIcon PetActivity;
+        [NMS(Size = 0x4, Ignore = true)]
+        /* 0xFB3C */ public byte[] EndPadding;
     }
 }

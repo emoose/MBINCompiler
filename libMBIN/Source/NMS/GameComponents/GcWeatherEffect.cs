@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x138, GUID = 0xF5EE9B028F597A3F, NameHash = 0x419E50F8E497D496)]
+    [NMS(Size = 0x138, GUID = 0x2B268D4ACA77EAF3, NameHash = 0x419E50F8E497D496)]
     public class GcWeatherEffect : NMSTemplate
     {
         [NMS(Size = 0x10)]
