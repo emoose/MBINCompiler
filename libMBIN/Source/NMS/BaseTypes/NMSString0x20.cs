@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS
 {
-    [NMS(Size = 0x20)]
+    [NMS(Size = 0x20, Alignment = 0x1)]
     public class NMSString0x20 : NMSTemplate
     {
         [NMS(Size = 0x20)]
