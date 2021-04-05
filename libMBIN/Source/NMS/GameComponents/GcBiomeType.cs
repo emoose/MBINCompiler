@@ -7,7 +7,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcBiomeType : NMSTemplate
     {
         // 0x10 entries
-		public enum BiomeEnum { Lush, Toxic, Scorched, Radioactive, Frozen, Barren, Dead, Weird, Red, Green, Blue, Test, Swamp, Lava, Waterworld,  All }
+		public enum BiomeEnum { Lush, Toxic, Scorched, Radioactive, Frozen, Barren, Dead, Weird, Red, Green, Blue, Test, Swamp, Lava, Waterworld, All }
 		public BiomeEnum Biome;
     }
 }

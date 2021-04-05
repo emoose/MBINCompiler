@@ -14,6 +14,7 @@ FAILED_FNAME = '_failed.txt'
 TO_EXML_FAIL = 'Failed conversion to EXML'
 TO_MBIN_FAIL = 'Failed conversion to MBIN'
 SIZE_MISMATCH = 'Size mismatch'
+INCORRECT_GUID = 'Incorrect GUID'
 
 GIT_API = 'https://api.github.com'
 # The data folder should be unpacked into the same folder as this file
@@ -39,6 +40,7 @@ def compare_mbins(left_path, right_path):
     size = os.stat(left_path).st_size
     # Do a byte-wise comparison of the files.
     bad_loc = None
+    bad_guid = False
     with open(left_path, 'rb') as f_left:
         with open(right_path, 'rb') as f_right:
             left_bytes = f_left.read()
@@ -51,8 +53,11 @@ def compare_mbins(left_path, right_path):
             for i in range(0x10, size):
                 try:
                     if left_bytes[i] != right_bytes[i]:
-                        bad_loc = i
-                        break
+                        if i <= 0x18:
+                            bad_guid = True
+                        else:
+                            bad_loc = i
+                            break
                 except IndexError:
                     bad_loc = i
                     break
@@ -62,6 +67,9 @@ def compare_mbins(left_path, right_path):
     # have compared all of each file.
     if size != os.stat(right_path).st_size:
         return fail_comparison(right_path, SIZE_MISMATCH)
+    # At the moment, only consider a GUID mismatch at the end.
+    if bad_guid:
+        return fail_comparison(right_path, INCORRECT_GUID)
     # If we got this far then the files are good!
     os.remove(right_path)
     return True
@@ -139,7 +147,7 @@ def fail_comparison(file, loc):
     if loc == SIZE_MISMATCH:
         err = SIZE_MISMATCH
     else:
-        if loc == 0x10:
+        if loc == INCORRECT_GUID:
             # The error occurs in the GUID
             with open(file, 'rb') as f:
                 f.seek(0x18)

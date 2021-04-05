@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0xB0, GUID = 0x1DDB48B0A2D81267, NameHash = 0x66FAEFAF4E8E7167)]
+	[NMS(Size = 0xB8, GUID = 0x0, NameHash = 0x66FAEFAF4E8E7167)]
     public class GcTradeData : NMSTemplate
     {
         /* 0x00 */ public List<NMSString0x10> AlwaysPresentProducts;
@@ -20,19 +20,22 @@ namespace libMBIN.NMS.GameComponents
         /* 0x50 */ public float BuyPriceDecreaseGreenThreshold;
         /* 0x54 */ public float SellPriceIncreaseGreenThreshold;
         /* 0x58 */ public float SellPriceDecreaseRedThreshold;
-        [NMS(Size = 0x3)]
-        /* 0x5C */ public int[] MinAmountOfProductAvailable;
-        [NMS(Size = 0x3)]
-        /* 0x68 */ public int[] MaxAmountOfProductAvailable;
-        [NMS(Size = 0x3)]
-        /* 0x74 */ public int[] MinAmountOfSubstanceAvailable;
-        [NMS(Size = 0x3)]
-        /* 0x80 */ public int[] MaxAmountOfSubstanceAvailable;
-        [NMS(Size = 0x3)]
-        /* 0x8C */ public int[] MinExtraSystemProducts;
-        [NMS(Size = 0x3)]
-        /* 0x98 */ public int[] MaxExtraSystemProducts;
-        [NMS(Size = 0x3)]
-        /* 0xA4 */ public float[] TradeProductsPriceImprovements;
+        /* 0x5C */ public bool ShowSeasonRewards;
+        [NMS(Size = 0x3, EnumType = typeof(GcWealthClass.WealthClassEnum))]
+        /* 0x60 */ public int[] MinAmountOfProductAvailable;
+        [NMS(Size = 0x3, EnumType = typeof(GcWealthClass.WealthClassEnum))]
+        /* 0x6C */ public int[] MaxAmountOfProductAvailable;
+        [NMS(Size = 0x3, EnumType = typeof(GcWealthClass.WealthClassEnum))]
+        /* 0x78 */ public int[] MinAmountOfSubstanceAvailable;
+        [NMS(Size = 0x3, EnumType = typeof(GcWealthClass.WealthClassEnum))]
+        /* 0x84 */ public int[] MaxAmountOfSubstanceAvailable;
+        [NMS(Size = 0x3, EnumType = typeof(GcWealthClass.WealthClassEnum))]
+        /* 0x90 */ public int[] MinExtraSystemProducts;
+        [NMS(Size = 0x3, EnumType = typeof(GcWealthClass.WealthClassEnum))]
+        /* 0x9C */ public int[] MaxExtraSystemProducts;
+        [NMS(Size = 0x3, EnumType = typeof(GcWealthClass.WealthClassEnum))]
+        /* 0xA8 */ public float[] TradeProductsPriceImprovements;
+        [NMS(Size = 0x4, Ignore = true)]
+        /* 0xB4 */ public byte[] EndPadding;
     }
 }

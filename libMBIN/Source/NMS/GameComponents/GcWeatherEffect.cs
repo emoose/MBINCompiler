@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x138, GUID = 0x2B268D4ACA77EAF3, NameHash = 0x419E50F8E497D496)]
+    [NMS(Size = 0x1C0, GUID = 0x0, NameHash = 0x419E50F8E497D496)]
     public class GcWeatherEffect : NMSTemplate
     {
         [NMS(Size = 0x10)]
@@ -42,20 +42,25 @@ namespace libMBIN.NMS.GameComponents
         /* 0x0A8 */ public bool FadeoutVisuals;
         /* 0x0A9 */ public bool FadeoutAudio;
         /* 0x0AC */ public GcAudioWwiseEvents Audio;
-        /* 0x0B0 */ public float ClusterSpawnChance;
-        /* 0x0B4 */ public float ClusterMinLifetime;
-        /* 0x0B8 */ public float ClusterMaxLifetime;
-        /* 0x0BC */ public float PatchMaxTimeSpawnOffset;
-        /* 0x0C0 */ public float PatchMinRadius;
-        /* 0x0C4 */ public float PatchMaxRadius;
-        /* 0x0C8 */ public int PatchMinSpawns;
-        /* 0x0CC */ public int PatchMaxSpawns;
-        /* 0x0D0 */ public float PatchScaling;
-        /* 0x0D4 */ public float MoveSpeed;
-        /* 0x0D8 */ public float WanderMinRadius;
-        /* 0x0DC */ public float WanderMaxRadius;
-        /* 0x0E0 */ public float WanderMinArcDeg;
-        /* 0x0E4 */ public float WanderMaxArcDeg;
-        /* 0x0E8 */ public NMSTemplate EffectData;
+        [NMS(Size = 0x80)]
+        /* 0x0B0 */ public string ImpactGift;
+        /* 0x130 */ public float ImpactGiftChance;
+        /* 0x134 */ public float ClusterSpawnChance;
+        /* 0x138 */ public float ClusterMinLifetime;
+        /* 0x13C */ public float ClusterMaxLifetime;
+        /* 0x140 */ public float PatchMaxTimeSpawnOffset;
+        /* 0x144 */ public float PatchMinRadius;
+        /* 0x148 */ public float PatchMaxRadius;
+        /* 0x14C */ public int PatchMinSpawns;
+        /* 0x150 */ public int PatchMaxSpawns;
+        /* 0x154 */ public float PatchScaling;
+        /* 0x158 */ public float MoveSpeed;
+        /* 0x15C */ public float WanderMinRadius;
+        /* 0x160 */ public float WanderMaxRadius;
+        /* 0x164 */ public float WanderMinArcDeg;
+        /* 0x168 */ public float WanderMaxArcDeg;
+        [NMS(Size = 0x4, Ignore = true)]
+        /* 0x16C */ public byte[] Padding16C;
+        /* 0x170 */ public NMSTemplate EffectData;
     }
 }

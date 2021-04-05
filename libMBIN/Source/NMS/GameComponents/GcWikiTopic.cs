@@ -5,21 +5,22 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0xF0, GUID = 0x7EA1EEF36039128B, NameHash = 0x55D566D2C6EFD1C1)]
+	[NMS(Size = 0x170, GUID = 0x0, NameHash = 0x55D566D2C6EFD1C1)]
     public class GcWikiTopic : NMSTemplate
     {
         [NMS(Size = 0x20)]
-        /* 0x00 */ public string TopicID;
-        /* 0x20 */ public TkTextureResource Icon;
-        /* 0xA8 */ public List<GcWikiPage>  Pages;
+        /* 0x000 */ public string TopicID;
+        /* 0x020 */ public TkTextureResource Icon;
+        /* 0x0A4 */ public TkTextureResource NotifyIcon;
+        /* 0x128 */ public List<GcWikiPage>  Pages;
         [NMS(Size = 0x10)]
-        /* 0xB8 */ public string Mission;
+        /* 0x138 */ public string Mission;
         [NMS(Size = 0x20)]
-        /* 0xC8 */ public string MissionButtonText;
-        /* 0xE8 */ public bool Seen;
-        /* 0xE9 */ public bool Unlocked;
+        /* 0x148 */ public string MissionButtonText;
+        /* 0x168 */ public bool Seen;
+        /* 0x169 */ public bool Unlocked;
         [NMS(Size = 0x2, Ignore = true)]
-        /* 0xEA */ public byte[] PaddingEA;
-        /* 0xEC */ public GcActionSetType ActionSet;
+        /* 0x16A */ public byte[] Padding16A;
+        /* 0x16C */ public GcActionSetType ActionSet;
     }
 }

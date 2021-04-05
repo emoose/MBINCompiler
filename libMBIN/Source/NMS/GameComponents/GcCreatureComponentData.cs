@@ -5,18 +5,22 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x50, Alignment = 0x10, GUID = 0xCF20BAC0F40D296B, NameHash = 0x28E8DAB19EC55198)]
+    [NMS(Size = 0x70, Alignment = 0x10, GUID = 0x0, NameHash = 0x28E8DAB19EC55198)]
     public class GcCreatureComponentData : NMSTemplate
     {
         [NMS(Size = 0x10)]
         /* 0x00 */ public string Id;
         /* 0x10 */ public GcPrimaryAxis Axis;
         /* 0x14 */ public float Scaler;
+        /* 0x18 */ public float PetIndoorScaler;
+        [NMS(Size = 0x4, Ignore = true)]
+        /* 0x1C */ public byte[] Padding1C;
         [NMS(Size = 0x10)]
-        /* 0x18 */ public string DeathEffect;
-        /* 0x28 */ public List<GcReplacementEffectData> ReplacementImpacts;
-        /* 0x38 */ public float AccessoryPitchOffset;
-        /* 0x3C */ public float DiscoveryUIScaler;
-        /* 0x40 */ public Vector3f DiscoveryUIOffset;
+        /* 0x20 */ public string DeathEffect;
+        /* 0x30 */ public List<GcReplacementEffectData> ReplacementImpacts;
+        /* 0x40 */ public float AccessoryPitchOffset;
+        /* 0x44 */ public float DiscoveryUIScaler;
+        /* 0x50 */ public Vector3f DiscoveryUIOffset;
+        /* 0x60 */ public List<GcCreatureDiscoveryThumbnailOverride> ThumbnailOverrides;
     }
 }

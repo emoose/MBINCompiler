@@ -4,16 +4,23 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0xC8, GUID = 0x48A4414CC96082A0, NameHash = 0x0E7EC6E83CB496A6C)]
+    [NMS(Size = 0xF0, GUID = 0x0, NameHash = 0x0E7EC6E83CB496A6C)]
     public class GcCustomisationThrusterEffect : NMSTemplate
     {
         [NMS(Size = 0x10)]
         /* 0x00 */ public string Name;
         [NMS(Size = 0x10)]
         /* 0x10 */ public string NodeName;
+        /* 0x20 */ public bool SingleJet;
+        [NMS(Size = 0x7, Ignore = true)]
+        /* 0x21 */ public byte[] Padding21;
         [NMS(Size = 0x10)]
-        /* 0x20 */ public string LinkedSpecialID;
-        /* 0x30 */ public TkTextureResource Trails;
-        /* 0xB8 */ public List<GcCharacterJetpackEffect> Effects;
+        /* 0x28 */ public string LinkedSpecialID;
+        [NMS(Size = 0x20)]
+        /* 0x38 */ public string Tip;
+        /* 0x58 */ public TkTextureResource Trails;
+        [NMS(Size = 0x4, Ignore = true)]
+        /* 0xDC */ public byte[] PaddingDC;
+        /* 0xE0 */ public List<GcCharacterJetpackEffect> Effects;
     }
 }

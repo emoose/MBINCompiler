@@ -5,8 +5,8 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(Size = 0x410, GUID = 0xE39DD18EF82E623F, NameHash = 0x4BCC54BC6EF02B80)]
-    public class TkMaterialSketchComment : NMSTemplate
+    [NMS(Size = 0x410, GUID = 0x0000000000000000, NameHash = 0x69D7A72052C55F5E)]
+    public class TkMaterialShaderMillComment : NMSTemplate
     {
         [NMS(Size = 0x400)]
         public string Text;     // Not 100% sure on the data type. It doesn't look to be an array, and nothing else uses it... So I am assuming it's just a huge wall of text...

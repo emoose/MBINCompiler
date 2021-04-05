@@ -5,12 +5,12 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Toolkit
 {
-	[NMS(Size = 0x4B0, Alignment = 0x10, GUID = 0xEC5071ED90E38E47, NameHash = 0xE39CB7AA4D818260)]
+	[NMS(Size = 0x4C0, Alignment = 0x10, GUID = 0x0, NameHash = 0xE39CB7AA4D818260)]
     public class TkMaterialMetaData : NMSTemplate {
 
         [NMS(Size = 0x80)]
         /* 0x000 */ public string ExternalMaterial;
-		public enum ShaderEnum { UberShader, Sky, Screen, UberHack, UIScreen, SketchParticle, SketchUber }
+		public enum ShaderEnum { UberShader, Sky, Screen, UberHack, UIScreen, ShaderMillParticle, ShaderMillUber }
 		/* 0x080 */ public ShaderEnum Shader;
         /* 0x084 */ public bool Transparent;
         /* 0x088 */ public int TransparencyLayerID;
@@ -27,18 +27,17 @@ namespace libMBIN.NMS.Toolkit
         /* 0x099 */ public bool Metallic;
         /* 0x09A */ public bool MetallicMask;
         /* 0x09B */ public bool SubsurfaceMask;
-        /* 0x09C */ public bool ParallaxMapped;
-        /* 0x09D */ public bool RefractionMap;
+        /* 0x09C */ public bool RefractionMap;
         [NMS(Size = 0x80)]
-        /* 0x09E */ public string ForceDiffuse;
+        /* 0x09D */ public string ForceDiffuse;
         [NMS(Size = 0x80)]
-        /* 0x11E */ public string ForceNormal;
+        /* 0x11D */ public string ForceNormal;
         [NMS(Size = 0x80)]
-        /* 0x19E */ public string ForceMask;
+        /* 0x19D */ public string ForceMask;
         [NMS(Size = 0x80)]
-        /* 0x21E */ public string DetailDiffuse;
+        /* 0x21D */ public string DetailDiffuse;
         [NMS(Size = 0x80)]
-        /* 0x29E */ public string DetailNormal;
+        /* 0x29D */ public string DetailNormal;
         /* 0x320 */ public float DetailTiling;
         /* 0x324 */ public float MultiplyDetailTiling;
         /* 0x328 */ public int DetailImages;
@@ -94,30 +93,36 @@ namespace libMBIN.NMS.Toolkit
         /* 0x3AB */ public bool DepthMaskUI;
         /* 0x3AC */ public bool AlwaysOnTopUI;
         /* 0x3AD */ public bool ScreenSpaceReflections;
-        /* 0x3AE */ public bool StretchyParticle;
-        /* 0x3AF */ public bool UVScrolling;
-        /* 0x3B0 */ public float UVScrollX;
-        /* 0x3B4 */ public float UVScrollY;
-        /* 0x3B8 */ public float UVScrollNormalX;
-        /* 0x3BC */ public float UVScrollNormalY;
-        /* 0x3C0 */ public float UVFrameTime;
-        /* 0x3C4 */ public bool UVAnimation;
-        /* 0x3C5 */ public bool UVTileAlts;
-        /* 0x3C8 */ public float UVNumTilesX;
-        /* 0x3CC */ public float UVNumTilesY;
-        /* 0x3D0 */ public bool DisplacementWave;
-        /* 0x3D1 */ public bool DisplacementPositionOffset;
-        /* 0x3D4 */ public float WaveOneSpeed;
-        /* 0x3E0 */ public Vector3f WaveOneAmplitude;
-        /* 0x3F0 */ public Vector3f WaveOneFrequency;
-        /* 0x400 */ public Vector3f WaveOneFallOff;
-        /* 0x410 */ public float WaveTwoSpeed;
-        /* 0x420 */ public Vector3f WaveTwoAmplitude;
-        /* 0x430 */ public Vector3f WaveTwoFrequency;
-        /* 0x440 */ public Vector3f WaveTwoFallOff;
-        /* 0x450 */ public TkMaterialSketchData SketchData;
+        /* 0x3AE */ public bool ReflectionProbe;
+        /* 0x3AF */ public bool StretchyParticle;
+        /* 0x3B0 */ public bool UVScrolling;
+        /* 0x3B4 */ public float UVScrollX;
+        /* 0x3B8 */ public float UVScrollY;
+        /* 0x3BC */ public float UVScrollNormalX;
+        /* 0x3C0 */ public float UVScrollNormalY;
+        /* 0x3C4 */ public float UVFrameTime;
+        /* 0x3C8 */ public bool UVAnimation;
+        /* 0x3C9 */ public bool UVTileAlts;
+        /* 0x3CC */ public float UVNumTilesX;
+        /* 0x3D0 */ public float UVNumTilesY;
+        /* 0x3D4 */ public bool ParallaxMapped;
+        /* 0x3D8 */ public float ParallaxDepth;
+        /* 0x3DC */ public int NumSteps;
+        /* 0x3E0 */ public bool SelfShadow;
+        /* 0x3E4 */ public float ShadowFactor;
+        /* 0x3E8 */ public bool DisplacementWave;
+        /* 0x3E9 */ public bool DisplacementPositionOffset;
+        /* 0x3EC */ public float WaveOneSpeed;
+        /* 0x3F0 */ public Vector3f WaveOneAmplitude;
+        /* 0x400 */ public Vector3f WaveOneFrequency;
+        /* 0x410 */ public Vector3f WaveOneFallOff;
+        /* 0x420 */ public float WaveTwoSpeed;
+        /* 0x430 */ public Vector3f WaveTwoAmplitude;
+        /* 0x440 */ public Vector3f WaveTwoFrequency;
+        /* 0x450 */ public Vector3f WaveTwoFallOff;
+        /* 0x460 */ public TkMaterialShaderMillData ShaderMillData;
         [NMS(Size = 0x8, Ignore = true)]
-        /* 0x4A8 */ public byte[] EndPadding;
+        /* 0x4B8 */ public byte[] EndPadding;
     }
 
 }

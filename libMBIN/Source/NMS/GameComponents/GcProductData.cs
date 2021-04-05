@@ -25,13 +25,13 @@ namespace libMBIN.NMS.GameComponents
         /* 0x130 */ public string Hint;
         [NMS(Size = 0x10)]
         /* 0x150 */ public string GroupID;
-        /* 0x160 */ public TkModelResource DebrisFile;
+        /* 0x160 */ public TkTextureResource DebrisFile;
         [NMSDescription("Base item value in units")]
         /* 0x1E4 */ public int BaseValue;
         /* 0x1E8 */ public int Level;
         [NMSDescription("Item icon texture path")]
-        /* 0x1EC */ public TkModelResource Icon;
-        /* 0x270 */ public TkModelResource HeroIcon;
+        /* 0x1EC */ public TkTextureResource Icon;
+        /* 0x270 */ public TkTextureResource HeroIcon;
         [NMSDescription("Icon background colour. Applies under icon transparent parts")]
         /* 0x300 */ public Colour Colour;
         /* 0x310 */ public GcRealitySubstanceCategory SubstanceCategory;

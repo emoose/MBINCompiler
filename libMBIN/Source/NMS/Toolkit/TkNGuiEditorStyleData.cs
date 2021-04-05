@@ -5,24 +5,22 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Toolkit
 {
-	[NMS(Size = 0x9F90, GUID = 0x97BBEC400DB04410, NameHash = 0x6F26BF19981BB60C)]
+	[NMS(Size = 0xAEA0, GUID = 0x97BBEC400DB04410, NameHash = 0x6F26BF19981BB60C)]
     public class TkNGuiEditorStyleData : NMSTemplate
     {
-        [NMS(Size = 0x2B, EnumType = typeof(TKNGuiEditorComponentSize.NGuiEditorComponentSizeEnum))]
+        [NMS(Size = 0x30, EnumType = typeof(TKNGuiEditorComponentSize.NGuiEditorComponentSizeEnum))]
         /* 0x0000 */ public float[] Sizes;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x00AC */ public byte[] PaddingAC;
-        [NMS(Size = 8)]
-        /* 0x00B0 */ public TkNGuiEditorStyleColour[] SkinColours;
-        /* 0x0530 */ public float SkinFontHeight;
+        [NMS(Size = 0x8)]
+        /* 0x00C0 */ public TkNGuiEditorStyleColour[] SkinColours;
+        /* 0x0540 */ public float SkinFontHeight;
         [NMS(Size = 0x80)]
-        /* 0x0534 */ public string Font;
+        /* 0x0544 */ public string Font;
         [NMS(Size = 0xC, Ignore = true)]
-        /* 0x05B4 */ public byte[] Padding5B4;
-        [NMS(Size = 0x42, EnumType = typeof(TkNGuiEditorGraphicType.NGuiEditorGraphicEnum))]
-        /* 0x05C0 */ public TkNGuiGraphicStyle[] GraphicStyles;
-        [NMS(Size = 0xC, EnumType = typeof(TKNGuiEditorTextType.NGuiEditorTextEnum))]
-        /* 0x9200 */ public TkNGuiTextStyle[] TextStyles;
-        /* 0x9F80 */ public List<float> SnapSettings;
+        /* 0x05C4 */ public byte[] Padding5C4;
+        [NMS(Size = 0x48, EnumType = typeof(TkNGuiEditorGraphicType.NGuiEditorGraphicEnum))]
+        /* 0x05D0 */ public TkNGuiGraphicStyle[] GraphicStyles;
+        [NMS(Size = 0xE, EnumType = typeof(TKNGuiEditorTextType.NGuiEditorTextEnum))]
+        /* 0x9ED0 */ public TkNGuiTextStyle[] TextStyles;
+        /* 0xAE90 */ public List<float> SnapSettings;
     }
 }

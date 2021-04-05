@@ -5,23 +5,25 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0xF0, GUID = 0xA81469E1E461F02D, NameHash = 0x2ECD4E3663FDB26F)]
+	[NMS(Size = 0x110, GUID = 0x560FBAD5354B4033, NameHash = 0x2ECD4E3663FDB26F)]
     public class GcRewardTable : NMSTemplate
     {
-        /* 0x00 */ public List<GcGenericRewardTableEntry> GenericTable;
-        /* 0x10 */ public List<GcGenericRewardTableEntry> DestructionTable;
-        /* 0x20 */ public List<GcGenericRewardTableEntry> InteractionTable;
-        /* 0x30 */ public List<GcGenericRewardTableEntry> OldInteractionTable;
-        /* 0x40 */ public List<GcGenericRewardTableEntry> SpecialRewardTable;
-        /* 0x50 */ public List<GcGenericRewardTableEntry> MissionBoardTable;
-        /* 0x60 */ public List<GcGenericRewardTableEntry> FleetTable;
-        /* 0x70 */ public List<GcGenericRewardTableEntry> WikiProgressTable;
-        /* 0x80 */ public List<GcGenericRewardTableEntry> ShipSalvageTable;
-        /* 0x90 */ public List<GcRewardTableEntitlementItem> EntitlementTable;
-        /* 0xA0 */ public List<GcRewardTableEntry> Table;
-        /* 0xB0 */ public List<NMSString0x10> TechRewardOrder;
-        /* 0xC0 */ public List<NMSString0x10> ProductRewardOrder;
-        /* 0xD0 */ public List<GcGenericRewardTableEntry> MixerRewardTable;
-        /* 0xE0 */ public List<GcGenericRewardTableEntry> NPCPlanetSiteTable;
+        /* 0x000 */ public List<GcGenericRewardTableEntry> GenericTable;
+        /* 0x010 */ public List<GcGenericRewardTableEntry> DestructionTable;
+        /* 0x020 */ public List<GcGenericRewardTableEntry> InteractionTable;
+        /* 0x030 */ public List<GcGenericRewardTableEntry> OldInteractionTable;
+        /* 0x040 */ public List<GcGenericRewardTableEntry> SpecialRewardTable;
+        /* 0x050 */ public List<GcGenericRewardTableEntry> MissionBoardTable;
+        /* 0x060 */ public List<GcGenericRewardTableEntry> FleetTable;
+        /* 0x070 */ public List<GcGenericRewardTableEntry> WikiProgressTable;
+        /* 0x080 */ public List<GcGenericRewardTableEntry> ShipSalvageTable;
+        /* 0x090 */ public List<GcRewardTableEntitlementItem> EntitlementTable;
+        /* 0x0A0 */ public List<GcRewardTableEntry> Table;
+        /* 0x0B0 */ public List<NMSString0x10> TechRewardOrder;
+        /* 0x0C0 */ public List<NMSString0x10> ProductRewardOrder;
+        /* 0x0D0 */ public List<GcGenericRewardTableEntry> MixerRewardTable;
+        /* 0x0E0 */ public List<GcGenericRewardTableEntry> TwitchRewardTable;
+        /* 0x0F0 */ public List<GcGenericRewardTableEntry> NPCPlanetSiteTable;
+        /* 0x100 */ public List<GcGenericRewardTableEntry> SeasonRewardTable;
     }
 }

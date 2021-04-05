@@ -1,12 +1,12 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 
 using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Toolkit
 {
-	[NMS(Size = 0x28, GUID = 0x9761F1A258006A2C, NameHash = 0x3C0B60A90EFF93A9)]
-    public class TkMaterialSketchConnect : NMSTemplate
+    [NMS(Size = 0x28, GUID = 0x0000000000000000, NameHash = 0xE65D6D9E5CB7E8A3)]
+    public class TkMaterialShaderMillConnect : NMSTemplate
     {
         [NMS(Size = 0x20)]
         /* 0x00 */ public string Name;

@@ -1,12 +1,12 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 
 using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Toolkit
 {
-	[NMS(Size = 0x80, GUID = 0xB5719C924E6DC6FC, NameHash = 0x8A6FCDF95D18002E)]
-    public class TkMaterialSketchNode : NMSTemplate
+    [NMS(Size = 0x80, GUID = 0x0000000000000000, NameHash = 0x465D81033D79E7BB)]
+    public class TkMaterialShaderMillNode : NMSTemplate
     {
         /* 0x00 */ public int Id;
         [NMS(Size = 0x20)]
@@ -19,8 +19,8 @@ namespace libMBIN.NMS.Toolkit
         /* 0x50 */ public float FValue2;
         [NMS(Size = 0x4, Ignore = true)]
         /* 0x54 */ public byte[] Padding54;
-        /* 0x58 */ public List<TkMaterialSketchConnect> Inputs;
-        /* 0x68 */ public List<TkMaterialSketchConnect> Outputs;
+        /* 0x58 */ public List<TkMaterialShaderMillConnect> Inputs;
+        /* 0x68 */ public List<TkMaterialShaderMillConnect> Outputs;
         /* 0x78 */ public int WindowX;
         /* 0x7C */ public int WindowY;
     }

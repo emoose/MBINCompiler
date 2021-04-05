@@ -18,14 +18,14 @@ script:
     - dotnet build -r ubuntu.16.04-x64 -p:Configuration=Release /nowarn:cs0618
     # cwd: /home/travis/build/monkeyman192/MBINCompiler
     - sudo chmod +x Build/Release/ubuntu.16.04-x64/MBINCompiler.exe
-    - sudo chmod +x Build/Release/ubuntu.16.04-x64/MBINCompilerDocs.exe
+    #- sudo chmod +x Build/Release/ubuntu.16.04-x64/MBINCompilerDocs.exe
     # Run the tests
     - python3.6 -m pytest --platform ubuntu.16.04-x64 --tb=no --report
     # Build the docs
-    - sudo mono Build/Release/ubuntu.16.04-x64/MBINCompilerDocs.exe CI
-    - python3.6 -m mkdocs build
+    #- sudo mono Build/Release/ubuntu.16.04-x64/MBINCompilerDocs.exe CI
+    #- python3.6 -m mkdocs build
     # Disable jekyll builds
-    - touch html_docs/site/.nojekyll
+    #- touch html_docs/site/.nojekyll
 
 before_deploy:
     - export LIBMBIN_VERSION="$(cat libMBIN/Source/Version.cs | grep -P 'const[[:space:]]+string[[:space:]]+VERSION_STRING' | grep -oP '[0-9]+[.][0-9]+[.][0-9]+[.][0-9]+')"
@@ -74,11 +74,11 @@ deploy:
         condition: "$TRAVIS_TAG =~ ^v[[:digit:]]"
 
 # Deploy the docs
-deploy:
-    provider: pages
-    skip_cleanup: true
-    github_token: $GITHUB_TOKEN
-    keep_history: true
-    local_dir: "html_docs/site"
-    on:
-        branch: development
+#deploy:
+#    provider: pages
+#    skip_cleanup: true
+#    github_token: $GITHUB_TOKEN
+#    keep_history: true
+#    local_dir: "html_docs/site"
+#    on:
+#        branch: development

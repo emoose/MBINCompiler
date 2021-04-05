@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0xFE8, GUID = 0x0B910653B37B95B9, NameHash = 0x39BD1ED2FC8D7524)]
+    [NMS(Size = 0x1008, GUID = 0x27F11C8E2215E0EB, NameHash = 0x39BD1ED2FC8D7524)]
     public class GcPetBehaviourTable : NMSTemplate
     {
         [NMS(Size = 0x1C, EnumType = typeof(GcPetBehaviours.PetBehaviourEnum))]
@@ -26,12 +26,14 @@ namespace libMBIN.NMS.GameComponents
         /* 0xFC0 */ public float[] MoodValuesOnAdopt;
         [NMS(Size = 0x2, EnumType = typeof(GcCreaturePetMood.PetMoodEnum))]
         /* 0xFC8 */ public float[] MoodValuesOnHatch;
-        /* 0xFD0 */ public float AccessoryGyroFollowMotionStrength;
-        /* 0xFD4 */ public float AccessoryGyroToNeutralStrength;
-        /* 0xFD8 */ public float AccessoryGyroDamping;
-        /* 0xFDC */ public float AccessoryGyroStrength;
-        /* 0xFE0 */ public bool AccessoryGyroActive;
+        /* 0xFD0 */ public List<GcPetTraitStaminaModifier> TraitStaminaModifiers;
+        /* 0xFE0 */ public List<GcPetMoodStaminaModifier> MoodStaminaModifiers;
+        /* 0xFF0 */ public float AccessoryGyroFollowMotionStrength;
+        /* 0xFF4 */ public float AccessoryGyroToNeutralStrength;
+        /* 0xFF8 */ public float AccessoryGyroDamping;
+        /* 0xFFC */ public float AccessoryGyroStrength;
+        /* 0x1000 */ public bool AccessoryGyroActive;
         [NMS(Size = 0x7, Ignore = true)]
-        /* 0xFE1 */ public byte[] EndPadding;
+        /* 0x1001 */ public byte[] EndPadding;
     }
 }
