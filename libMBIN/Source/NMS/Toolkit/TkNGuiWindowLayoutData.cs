@@ -8,7 +8,6 @@ namespace libMBIN.NMS.Toolkit
     {
         [NMS(Size = 0x80)]
         /* 0x0000 */ public string Name;
-
         /* 0x0080 */ public float PositionX;
         /* 0x0084 */ public float PositionY;
         /* 0x0088 */ public float SizeX;
@@ -16,7 +15,6 @@ namespace libMBIN.NMS.Toolkit
         /* 0x0090 */ public float Separator;
 		public enum WindowStateEnum { Open, Minimised, Closed }
 		public WindowStateEnum WindowState;
-
         [NMS(Size = 0x20)]
         /* 0x0098 */ public NMSString0x80[] Tabs;
         /* 0x1098 */ public int ActiveTabIdx;

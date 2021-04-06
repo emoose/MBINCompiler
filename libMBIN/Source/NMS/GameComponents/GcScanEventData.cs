@@ -42,14 +42,15 @@ namespace libMBIN.NMS.GameComponents
         public enum BuildingLocationEnum { Nearest, AllNearest, Random, RandomOnNearPlanet, RandomOnFarPlanet, PlanetSearch }
 		/* 0x0B0 */ public BuildingLocationEnum BuildingLocation;
 		public enum BuildingTypeEnum { Any, AnyShelter, AnyNPC, BuildingClass, SpaceStation, SpaceAnomaly, Atlas, Freighter, FreighterBase,
-            ExternalPlanetBase, PlanetBaseTerminal, Expedition, TutorialShelter, MPMissionFreighter, Nexus, InitialDistressSignal, NexusEggMachine }
+            ExternalPlanetBase, PlanetBaseTerminal, Expedition, TutorialShelter, MPMissionFreighter, Nexus, InitialDistressSignal, SpaceMarker,
+            NexusEggMachine, PhotoTarget }
 		/* 0x0B4 */ public BuildingTypeEnum BuildingType;
         /* 0x0B8 */ public GcBuildingClassification BuildingClass;
-        /* 0x0BC */ public bool AllowFriendBases;
+        /* 0x0BC */ public bool AllowFriendsBases;
         /* 0x0BD */ public bool ForceWideRandom;
         /* 0x0BE */ public bool MustFindSystem;
         /* 0x0BF */ public bool AllowOverriddenBuildings;
-		public enum SolarSystemLocationEnum { Local, Near, LocalOrNear, NearWithNoExpeditions, FromList }
+		public enum SolarSystemLocationEnum { Local, Near, LocalOrNear, NearWithNoExpeditions, FromList, SeasonParty }
 		/* 0x0C0 */ public SolarSystemLocationEnum SolarSystemLocation;
         [NMS(Size = 0x4, Ignore = true)]
         /* 0x0C4 */ public byte[] PaddingC4;
@@ -72,18 +73,19 @@ namespace libMBIN.NMS.GameComponents
         [NMS(Size = 0x20)]
         /* 0x254 */ public string MarkerLabel;
         /* 0x274 */ public TkTextureResource MarkerIcon;
-        /* 0x2F8 */ public float StartTime;
-        /* 0x2FC */ public float MessageTime;
-        /* 0x300 */ public float MessageDisplayTime;
-        /* 0x304 */ public GcAudioWwiseEvents MessageAudio;
-        /* 0x308 */ public float IconTime;
-        /* 0x30C */ public float TooltipTime;
-        /* 0x310 */ public bool TooltipRepeats;
-        /* 0x311 */ public bool ShowEndTooltip;
+        /* 0x278 */ public GcScannerIconHighlightTypes MissionMarkerHighlightStyleOverride;
+        /* 0x2FC */ public float StartTime;
+        /* 0x300 */ public float MessageTime;
+        /* 0x304 */ public float MessageDisplayTime;
+        /* 0x308 */ public GcAudioWwiseEvents MessageAudio;
+        /* 0x30C */ public float IconTime;
+        /* 0x310 */ public float TooltipTime;
+        /* 0x314 */ public bool TooltipRepeats;
+        /* 0x315 */ public bool ShowEndTooltip;
         [NMS(Size = 0x20)]
-        /* 0x312 */ public string TooltipMessage;
-        [NMS(Size = 0x6, Ignore = true)]
-        /* 0x332 */ public byte[] Padding332;
+        /* 0x316 */ public string TooltipMessage;
+        [NMS(Size = 0x2, Ignore = true)]
+        /* 0x336 */ public byte[] Padding336;
         /* 0x338 */ public GcResourceElement ResourceOverride;
     }
 }

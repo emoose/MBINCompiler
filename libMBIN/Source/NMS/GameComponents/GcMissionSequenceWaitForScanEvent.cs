@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x230, Alignment = 0x8, GUID = 0xB1C47B378D57004, NameHash = 0xCFE8C2198256BF63)]
+	[NMS(Size = 0x3B0, Alignment = 0x8, GUID = 0x0, NameHash = 0xCFE8C2198256BF63)]
     public class GcMissionSequenceWaitForScanEvent : NMSTemplate
     {
         [NMS(Size = 0x80)]
@@ -18,8 +18,14 @@ namespace libMBIN.NMS.GameComponents
         /* 0x125 */ public string TimeoutOSD;
         /* 0x1A8 */ public GcScanEventGPSHint UseGPSInText;
         [NMS(Size = 0x80)]
-        /* 0x1AC */ public string DebugText;
+        /* 0x1AC */ public string SurveyInactiveHint;
+        [NMS(Size = 0x80)]
+        /* 0x22C */ public string SurveySwapHint;
+        [NMS(Size = 0x80)]
+        /* 0x2AC */ public string SurveyHint;
+        [NMS(Size = 0x80)]
+        /* 0x32C */ public string DebugText;
         [NMS(Size = 0x4, Ignore = true)]
-        /* 0x22C */ public byte[] EndPadding;
+        /* 0x3AC */ public byte[] EndPadding;
     }
 }

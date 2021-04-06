@@ -18,7 +18,8 @@ namespace libMBIN.NMS.GameComponents
         /* 0x828 */ public GcBiomeList PerBiomeDropWeights;
         [NMS(Size = 0x20)]
         /* 0x8A8 */ public string DeployableProductID;
-        [NMS(Size = 0x8, Ignore = true)]
-        /* 0x8C8 */ public byte[] EndPadding;
+        /* 0x8C8 */ public bool RecordsStat;
+        [NMS(Size = 0x7, Ignore = true)]
+        /* 0x8C9 */ public byte[] EndPadding;
     }
 }

@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x210, GUID = 0x704DAEA1E9D05391, NameHash = 0xC3AAF93B598F92B7)]
+	[NMS(Size = 0x350, GUID = 0x0, NameHash = 0xC3AAF93B598F92B7)]
     public class GcGalaxyRenderSetupData : NMSTemplate
     {
         /* 0x000 */ public Colour SunCoreColour;
@@ -30,10 +30,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x07C */ public float NebulaeTraceDensity;
         /* 0x080 */ public float NebulaeTraceDensityCutoff;
         /* 0x084 */ public Vector2f NebulaeTraceStepRange;
-
-        [NMS(Size = 4, Ignore = true)]
-        /* 0x08C */ public byte[] Padding8C;
-
         /* 0x090 */ public Vector4f CompositionControlB_S_C_G;
         /* 0x0A0 */ public float CompositionSaturationIncreaseError;
         /* 0x0A4 */ public float CompositionSaturationIncreaseFilter;
@@ -44,13 +40,15 @@ namespace libMBIN.NMS.GameComponents
         /* 0x0B8 */ public float VignetteSizeIncreaseFilter;
         /* 0x0BC */ public float VignetteSizeIncreaseSelected;
         /* 0x0C0 */ public Vector2f LensFlareExpandTowards;
-
         [NMS(Size = 0x8, Ignore = true)]
         /* 0x0C8 */ public byte[] PaddingC8;
-
         [NMS(Size = 0xA)]
-        /* 0x0D0 */ public Colour[] MapLargeAreaPrimaryColours;
+        /* 0x0D0 */ public Colour[] MapLargeAreaPrimaryDefaultColours;
         [NMS(Size = 0xA)]
-        /* 0x170 */ public Colour[] MapLargeAreaSecondaryColours;
+        /* 0x170 */ public Colour[] MapLargeAreaPrimaryHighContrastColours;
+        [NMS(Size = 0xA)]
+        /* 0x210 */ public Colour[] MapLargeAreaSecondaryDefaultColours;
+        [NMS(Size = 0xA)]
+        /* 0x2B0 */ public Colour[] MapLargeAreaSecondaryHighContrastColours;
     }
 }

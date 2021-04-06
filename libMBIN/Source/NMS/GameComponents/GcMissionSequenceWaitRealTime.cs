@@ -3,16 +3,21 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x110, GUID = 0xF5CF46F34D184154, NameHash = 0x32B3DC82536846ED)]
+	[NMS(Size = 0x128, GUID = 0x0, NameHash = 0x32B3DC82536846ED)]
     public class GcMissionSequenceWaitRealTime : NMSTemplate
     {
         [NMS(Size = 0x80)]
-        /* 0x00 */ public string Message;
-        /* 0x80 */ public ulong Time;
-        /* 0x88 */ public float Randomness;
-        [NMS(Size = 0x80)]
-        /* 0x8C */ public string DebugText;
+        /* 0x000 */ public string Message;
+        /* 0x080 */ public ulong Time;
+        /* 0x088 */ public float Randomness;
         [NMS(Size = 0x4, Ignore = true)]
-        /* 0x10C */ public byte[] EndPadding;
+        /* 0x08C */ public byte[] Padding8C;
+        [NMS(Size = 0x10)]
+        /* 0x090 */ public string DisplayStat;
+        /* 0x0A0 */ public bool StatFromNow;
+        [NMS(Size = 0x80)]
+        /* 0x0A1 */ public string DebugText;
+        [NMS(Size = 0x7, Ignore = true)]
+        /* 0x121 */ public byte[] EndPadding;
     }
 }

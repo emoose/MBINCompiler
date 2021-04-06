@@ -5,12 +5,12 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0xB0, GUID = 0x3FB8AFC401664CA0, NameHash = 0x6370110DC5DC47D2)]
+	[NMS(Size = 0xB0, GUID = 0x0, NameHash = 0x6370110DC5DC47D2)]
     public class GcGeneratedBaseDecorationTemplate : NMSTemplate
     {
         [NMS(Size = 0x10)]
         /* 0x00 */ public string Id;
-        /* 0x10 */ public TkModelResource TemplateScene;
+        /* 0x10 */ public TkTextureResource TemplateScene;
         /* 0x94 */ public float Probability;
         /* 0x98 */ public int MaxPerRoom;
         public enum DecorationLayerEnum { Stairs, Corridor, Room, Door, Decoration1, Decoration2, Decoration3, DecoratonCorridor };

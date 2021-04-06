@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x68, GUID = 0x1E64A8E9A44A165C, NameHash = 0x76DA44862CDF100D)]
+	[NMS(Size = 0x6C, GUID = 0x0, NameHash = 0x76DA44862CDF100D)]
     public class GcGalaxyCameraData : NMSTemplate
     {
         /* 0x00 */ public float CameraFOV;                      // 42C80000h
@@ -28,9 +28,10 @@ namespace libMBIN.NMS.GameComponents
         /* 0x4C */ public float MinZoomDIstance;
         /* 0x50 */ public float MaxZoomDistance;
         /* 0x54 */ public float MinPushingZoomDistance;
-        /* 0x58 */ public float CameraShakeDriftClip;           // 3E99999Ah
-        /* 0x5C */ public float CameraShakeDriftShift;          // 3D4CCCCDh
-        /* 0x60 */ public float CameraShakeSmoothingRate;       // 40800000h
-        /* 0x64 */ public float CameraShakeMaximum;             // 3F800000h
+        /* 0x58 */ public float MinPushingZoomDistanceScaler;
+        /* 0x5C */ public float CameraShakeDriftClip;           // 3E99999Ah
+        /* 0x60 */ public float CameraShakeDriftShift;          // 3D4CCCCDh
+        /* 0x64 */ public float CameraShakeSmoothingRate;       // 40800000h
+        /* 0x68 */ public float CameraShakeMaximum;             // 3F800000h
     }
 }

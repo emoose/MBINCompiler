@@ -14,7 +14,7 @@ namespace libMBIN.NMS.GameComponents
         [NMS(Size = 0x4, Ignore = true)]
         /* 0x014 */ public byte[] Padding14;
         /* 0x018 */ public GcNameGeneratorWord Description;
-        /* 0x040 */ public TkModelResource Icon;
-        /* 0x0C4 */ public TkModelResource HeroIcon;
+        /* 0x040 */ public TkTextureResource Icon;
+        /* 0x0C4 */ public TkTextureResource HeroIcon;
     }
 }

@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Toolkit
 {
-	[NMS(Size = 0x2E0, GUID = 0xD71BDFD2F75A6880, NameHash = 0xCEE695A798E64B92)]
+	[NMS(Size = 0x2E0, GUID = 0x61E6156B7B668D85, NameHash = 0xCEE695A798E64B92)]
     public class TkMaterialData : NMSTemplate
     {
         [NMS(Size = 0x80)]
@@ -26,6 +26,6 @@ namespace libMBIN.NMS.Toolkit
         /* 0x2A8 */ public List<TkMaterialFlags> Flags;
         /* 0x2B8 */ public List<TkMaterialUniform> Uniforms;
         /* 0x2C8 */ public List<TkMaterialSampler> Samplers;
-        /* 0x2D8 */ public long SketchDataHash;
+        /* 0x2D8 */ public long ShaderMillDataHash;
     }
 }

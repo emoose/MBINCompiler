@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Toolkit
 {
-	[NMS(Size = 0x78, GUID = 0x4E677597C10B7408, NameHash = 0xC02F1D19584B44D)]
+	[NMS(Size = 0x7C, GUID = 0x4E677597C10B7408, NameHash = 0xC02F1D19584B44D)]
     public class TkEngineSettingsMapping : NMSTemplate
     {
         [NMS(Size = 0x4, EnumType = typeof(TkGraphicsDetailTypes.GraphicDetailEnum))]
@@ -18,7 +18,9 @@ namespace libMBIN.NMS.Toolkit
         public float[] CloudsMaxIterations;
 
         [NMSDescription("An array of properties which require a game restart to apply")]
-        [NMS(Size = 0x28, EnumType = typeof(TkEngineSettingTypes.EngineSettingEnum))]
+        [NMS(Size = 0x2A, EnumType = typeof(TkEngineSettingTypes.EngineSettingEnum))]
         public bool[] NeedsGameRestart;
+        [NMS(Size = 0x2, Ignore = true)]
+        public byte[] EndPadding;
     }
 }

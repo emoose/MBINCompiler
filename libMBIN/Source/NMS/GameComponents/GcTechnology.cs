@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x350, GUID = 0x8927F72D2F2D142C, NameHash = 0x9F1CE8466638E767)]
+	[NMS(Size = 0x360, GUID = 0x0, NameHash = 0x9F1CE8466638E767)]
     public class GcTechnology : NMSTemplate
     {
         [NMS(Size = 0x10)]
@@ -19,23 +19,17 @@ namespace libMBIN.NMS.GameComponents
         /* 0x130 */ public VariableSizeString Subtitle;
         /* 0x140 */ public VariableSizeString Description;
         /* 0x150 */ public bool Teach;
-
         [NMS(Size = 0x7, Ignore = true)]
         /* 0x151 */ public byte[] Padding151;
-
         [NMS(Size = 0x20)]
         /* 0x158 */ public string HintStart;
-
         [NMS(Size = 0x20)]
         /* 0x178 */ public string HintEnd;
-
         /* 0x198 */ public TkTextureResource Icon;
-
         /* 0x220 */ public Colour Colour;
         /* 0x230 */ public int Level;
         /* 0x234 */ public bool Chargeable;
         /* 0x238 */ public int ChargeAmount;
-
         /* 0x23C */ public GcRealitySubstanceCategory ChargeType;
         /* 0x240 */ public List<NMSString0x10> ChargeBy;
         /* 0x250 */ public float ChargeMultiplier;
@@ -81,5 +75,7 @@ namespace libMBIN.NMS.GameComponents
         [NMS(Size = 0x7, Ignore = true)]
         /* 0x339 */ public byte[] Padding339;
         /* 0x340 */ public VariableSizeString DamagedDescription;
+        [NMS(Size = 0x10)]
+        /* 0x350 */ public string ParentTechId;
     }
 }

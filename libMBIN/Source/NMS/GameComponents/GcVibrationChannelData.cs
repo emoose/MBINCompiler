@@ -10,7 +10,8 @@ namespace libMBIN.NMS.GameComponents
     {
         [NMS(Size = 0x10)]
         public string Id;
-        [NMS(Size = 0x2)]
+        public enum SideEnum { Left, Right };
+        [NMS(Size = 0x2, EnumType = typeof(SideEnum))]
         public GcVibrationData[] Data;
     }
 }

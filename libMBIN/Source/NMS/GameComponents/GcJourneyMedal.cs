@@ -6,7 +6,7 @@ using libMBIN.NMS.GameComponents;
 namespace libMBIN.NMS.GameComponents
 {
 	[NMS(Size = 0x214, GUID = 0x3B84F81C9B02B741, NameHash = 0x33CAC73016241300)]
-    public class GcJourneyMedal : NMSTemplate        // size: 0x214
+    public class GcJourneyMedal : NMSTemplate
     {
         /* 0x000 */ public GcJourneyMedalType Type;
         /* 0x004 */ public TkTextureResource None;
