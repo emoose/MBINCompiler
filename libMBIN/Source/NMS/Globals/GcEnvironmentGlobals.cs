@@ -1,9 +1,11 @@
-﻿using libMBIN.NMS.Toolkit;
+﻿using System.Collections.Generic;
+
+using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(Size = 0x6F0, GUID = 0x4AB168D8BF669DDC)]
+    [NMS(Size = 0x580, GUID = 0x4AB168D8BF669DDC)]
     public class GcEnvironmentGlobals : NMSTemplate
     {
         [NMS(Size = 0x4)]
@@ -83,17 +85,13 @@ namespace libMBIN.NMS.Globals
         /* 0x3CC */ public float AsteroidMinRotate;
         /* 0x3D0 */ public float AsteroidMaxRotate;
         /* 0x3D4 */ public float MinWaterReflections;
-        [NMS(Size = 0x4)]
-        /* 0x3D8 */ public float[] SpacePlanetFogStrength;
-        [NMS(Size = 0x4)]
-        /* 0x3E8 */ public float[] SkyBlendLength;
+        /* 0x3D8 */ public List<float> SpacePlanetFogStrength;
+        /* 0x3E8 */ public List<float> SkyBlendLength;
         /* 0x3F8 */ public float SkyAtmospherePower;
-        [NMS(Size = 0x4)]
-        /* 0x3FC */ public float[] SkyAtmosphereBlendLength;
-        [NMS(Size = 0x4)]
-        /* 0x40C */ public float[] FarBlendHeight;
-        /* 0x41C */ public float FarBlendLength;
-        /* 0x420 */ public float IndoorColourBlendTime;
+        /* 0x400 */ public List<float> SkyAtmosphereBlendLength;
+        /* 0x410 */ public List<float> FarBlendHeight;
+        /* 0x420 */ public float FarBlendLength;
+        /* 0x424 */ public float IndoorColourBlendTime;
         /* 0x430 */ public Colour IndoorAmbientColour;
         /* 0x440 */ public float LightDirectionHeight;
         /* 0x444 */ public float LightDirectionBlend;
@@ -104,18 +102,15 @@ namespace libMBIN.NMS.Globals
         /* 0x458 */ public float ObjectSpawnDetailRadius;
         /* 0x45C */ public float InteractionRadius;
         /* 0x460 */ public bool EnableWind;
-        [NMS(Size = 0x7, Ignore = true)]
-        /* 0x461 */ public byte[] Padding461;
-        [NMS(Size = 0x3)]
-        /* 0x468 */ public TkShearWindData[] ShearWindSettings;
-        /* 0x5E8 */ public int HotspotsLOD;
-        /* 0x5EC */ public float RegionHotspotProbability;
-        /* 0x5F0 */ public float MaxHotspotOffsetDistance;
-        /* 0x5F4 */ public float MinHotspotFalloffDistance;
-        /* 0x5F8 */ public float MaxHotspotFalloffDistance;
-        /* 0x5FC */ public GcEnvironmentProperties EnvironmentProperties;
-        /* 0x674 */ public GcEnvironmentProperties EnvironmentPrimeProperties;
+        /* 0x468 */ public List<TkShearWindData> ShearWindSettings;
+        /* 0x478 */ public int HotspotsLOD;
+        /* 0x47C */ public float RegionHotspotProbability;
+        /* 0x480 */ public float MaxHotspotOffsetDistance;
+        /* 0x484 */ public float MinHotspotFalloffDistance;
+        /* 0x488 */ public float MaxHotspotFalloffDistance;
+        /* 0x48C */ public GcEnvironmentProperties EnvironmentProperties;
+        /* 0x504 */ public GcEnvironmentProperties EnvironmentPrimeProperties;
         [NMS(Size = 0x4, Ignore = true)]
-        /* 0x6EC */ public byte[] EndPadding;
+        /* 0x57C */ public byte[] EndPadding;
     }
 }

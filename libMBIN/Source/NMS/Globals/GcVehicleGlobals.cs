@@ -1,9 +1,11 @@
-﻿using libMBIN.NMS.Toolkit;
+﻿using System.Collections.Generic;
+
+using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(Size = 0x7630, GUID = 0x0107CD7DE6B7F761)]
+    [NMS(Size = 0x470, GUID = 0x0107CD7DE6B7F761)]
     public class GcVehicleGlobals : NMSTemplate
     {
         /* 0x000 */ public float VehicleSolarRegenFactor;
@@ -14,12 +16,8 @@ namespace libMBIN.NMS.Globals
         [NMS(Size = 0x10)]
         /* 0x018 */ public string MechStrongLaser;
         /* 0x028 */ public bool UseFirstPersonCamera;
-        [NMS(Size = 0x3, Ignore = true)]
-        /* 0x029 */ public byte[] Padding29;
         /* 0x02C */ public float LevelVehicleCameraFactor;
         /* 0x030 */ public bool ShowAllCheckpoints;
-        [NMS(Size = 0x3, Ignore = true)]
-        /* 0x031 */ public byte[] Padding31;
         /* 0x034 */ public float ControlStickRecenterSpeedDegPerSec;
         /* 0x038 */ public float SteeringWheelPushRange;
         /* 0x03C */ public float SteeringWheelPitchAngle;
@@ -31,38 +29,28 @@ namespace libMBIN.NMS.Globals
         /* 0x054 */ public float TestFrictionStat;
         /* 0x058 */ public float TestSkidFrictionStat;
         /* 0x05C */ public bool TestAnims;
-        [NMS(Size = 0x3, Ignore = true)]
-        /* 0x05D */ public byte[] Padding5D;
         /* 0x060 */ public float TestAnimThrust;
         /* 0x064 */ public float TestAnimBoost;
         /* 0x068 */ public float TestAnimTurn;
         /* 0x06C */ public float VisualTurnUnderwaterSpring;
         /* 0x070 */ public float VisualTurnSpring;
-        [NMS(Size = 0xC, Ignore = true)]
-        /* 0x074 */ public byte[] Padding74;
         /* 0x080 */ public Colour DefaultBoosterColour;
         /* 0x090 */ public float WheelDustColourLightFactor;
         /* 0x094 */ public Vector2f MechMovementStickSpeedLimit;
         /* 0x09C */ public Vector2f MechLookStickSpeedLimit;
         /* 0x0A4 */ public bool MechAltJumpMode;
-        [NMS(Size = 0x3, Ignore = true)]
-        /* 0x0A5 */ public byte[] PaddingA5;
         /* 0x0A8 */ public float MechContrailAlpha;
         /* 0x0AC */ public float MechJetpackJetScaleTime;
         [NMS(Size = 0x10)]
         /* 0x0B0 */ public string MechJetpackEffect;
         /* 0x0C0 */ public float MechTurnSpeed;
         /* 0x0C4 */ public float MechJetpackTurnSpeed;
-        [NMS(Size = 0x8, Ignore = true)]
-        /* 0x0C8 */ public byte[] PaddingC8;
         /* 0x0D0 */ public Vector3f MechTurretAngleLmits;
         /* 0x0E0 */ public float MechTurretTurnTimeGround;
         /* 0x0E4 */ public float MechTurretMaxAngleGround;
         /* 0x0E8 */ public float MechTurretTurnTimeAir;
         /* 0x0EC */ public float MechTurretMaxAngleAir;
         /* 0x0F0 */ public float MechTurretTimeVRModifier;
-        [NMS(Size = 0xC, Ignore = true)]
-        /* 0x0F4 */ public byte[] PaddingF4;
         /* 0x100 */ public Vector3f MechCrouchOffset;
         /* 0x110 */ public float MechCoGAdjustTimeWindUp;
         /* 0x114 */ public float MechCoGAdjustTimeAir;
@@ -133,8 +121,6 @@ namespace libMBIN.NMS.Globals
         /* 0x218 */ public float FirstPersonSteeringAdditionalReverseThreshold;
         /* 0x21C */ public float FirstPersonSteeringMinThrottleHardLeftRight;
         /* 0x220 */ public float FirstPersonSteeringLowSpeedTurnDamping;
-        [NMS(Size = 0xC, Ignore = true)]
-        /* 0x224 */ public byte[] Padding224;
         /* 0x230 */ public Vector3f FirstPersonNonVRCameraOffset;
         /* 0x240 */ public Vector3f FirstPersonNonVRCameraOffsetMech;
         /* 0x250 */ public float UnderwaterBuoyancySurfaceOffset;
@@ -151,122 +137,102 @@ namespace libMBIN.NMS.Globals
         /* 0x27C */ public float UnderwaterSurfaceSplashdownMinSpeed;
         /* 0x280 */ public float UnderwaterJumpForce;
         /* 0x284 */ public GcSpaceshipAvoidanceData UnderwaterAvoidance;
-        [NMS(Size = 0x8, Ignore = true)]
-        /* 0x2A8 */ public byte[] Padding2A8;
-        [NMS(Size = 0x4)]
-        /* 0x2B0 */ public Vector3f[] UnderwaterBubbleOffset;
-        /* 0x2F0 */ public bool VehicleAltControlScheme;
-        [NMS(Size = 0x3, Ignore = true)]
-        /* 0x2F1 */ public byte[] Padding2F1;
-        /* 0x2F4 */ public float VehicleAltControlStickSmoothInTime;
-        /* 0x2F8 */ public float VehicleAltControlStickSmoothOutTime;
-        /* 0x2FC */ public float VehicleBoostSpeedMultiplierPercent;
-        /* 0x300 */ public float VehicleGarageHologramMinFadeRange;
-        /* 0x304 */ public float VehicleGarageHologramFadeRange;
-        /* 0x308 */ public float CheckpointPlacementOffset;
-        /* 0x30C */ public float CheckpointPlacementRayLength;
-        /* 0x310 */ public float CheckpointDeleteDistance;
-        /* 0x314 */ public float CheckpointDeleteAngle;
-        /* 0x318 */ public float BoostPadTime;
-        /* 0x31C */ public float BoostPadStrength;
-        /* 0x320 */ public float DisablePhysicsRange;
-        /* 0x324 */ public float RaceMultipleStartOffset;
-        /* 0x328 */ public float RaceMultipleStartCaptureRange;
-        /* 0x32C */ public float MiningLaserDrainSpeed;
-        /* 0x330 */ public float ProjectileDrainPerShot;
-        /* 0x334 */ public float RaceStartSpawnUpOffset;
-        /* 0x338 */ public float RaceInteractRespawnOffset;
-        /* 0x33C */ public float RaceInteractRespawnUpOffset;
-        /* 0x340 */ public float StickTurnReducer;
-        /* 0x344 */ public float StickTurnReducerVR;
-        /* 0x348 */ public float StickTurnReducerAlt;
-        /* 0x34C */ public float TravelSpeedReportReducer;
-        /* 0x350 */ public float HornScareRadius;
-        /* 0x354 */ public float HornScareFleeRadius;
-        /* 0x358 */ public float HornScareTime;
-        /* 0x35C */ public float AttractAmount;
-        /* 0x360 */ public float AttractMaxSpeed;
-        /* 0x364 */ public float AttractAlign;
-        /* 0x368 */ public float AttractDirectionBrakeThresholdSq;
-        /* 0x36C */ public float ExitStopTime;
-        /* 0x370 */ public float ExitStopForce;
-        /* 0x374 */ public float GunFireRate;
-        /* 0x378 */ public float SummoningRange;
-        /* 0x37C */ public float CheckpointRadius;
-        /* 0x380 */ public float RaceCooldown;
-        /* 0x384 */ public bool RaceFinishAtStart;
-        [NMS(Size = 0x3, Ignore = true)]
-        /* 0x385 */ public byte[] Padding385;
-        /* 0x388 */ public float RaceResetFlashDuration;
-        /* 0x38C */ public float RaceResetFlashIntensity;
-        /* 0x390 */ public float CheckpointFlashDuration;
-        /* 0x394 */ public float CheckpointFlashIntensity;
-        [NMS(Size = 0x8, Ignore = true)]
-        /* 0x398 */ public byte[] Padding398;
-        /* 0x3A0 */ public Colour CheckpointBeamColourActive;
-        /* 0x3B0 */ public Colour CheckpointBeamColourNormal;
-        [NMS(Size = 0x1)]
-        /* 0x3C0 */ public NMSString0x10[] DefaultBuggyLoadout;
-        [NMS(Size = 0x2)]
-        /* 0x3D0 */ public NMSString0x10[] DefaultBikeLoadout;
-        [NMS(Size = 0x2)]
-        /* 0x3F0 */ public NMSString0x10[] DefaultTruckLoadout;
-        /* 0x410 */ public float CheckpointBeamSizeNormal;
-        /* 0x414 */ public float CheckpointBeamSizeActive;
-        /* 0x418 */ public float CheckpointBeamOffset;
-        /* 0x41C */ public float SpawnRotation;
-        /* 0x420 */ public float MechSpawnRotation;
-        /* 0x424 */ public float MiningLaserRadius;
-        /* 0x428 */ public int MiningLaserMiningDamage;
-        /* 0x42C */ public int MiningLaserDamage;
-        /* 0x430 */ public float MiningLaserSpeed;
-        /* 0x434 */ public int GunBaseDamage;
-        /* 0x438 */ public int GunBaseMiningDamage;
-        /* 0x43C */ public float ResourceCollectOffset;
-        /* 0x440 */ public float VehicleWheelNoise;
-        /* 0x444 */ public float VehicleWheelNoiseScale;
-        /* 0x448 */ public float WheelSideVerticalFactor;
-        /* 0x44C */ public float SuspensionDamping;
-        /* 0x450 */ public float SuspensionDampingAngularFactor;
-        /* 0x454 */ public bool ShowTempVehicleMesh;
-        /* 0x455 */ public bool ShowVehicleDebugging;
-        /* 0x456 */ public bool ShowVehicleWheelGuards;
-        /* 0x457 */ public bool ShowVehicleText;
-        /* 0x458 */ public float VehicleTextSize;
-        /* 0x45C */ public bool ShowVehicleParticleDebug;
-        /* 0x45D */ public bool VehicleDrawAudioDebug;
-        [NMS(Size = 0x2, Ignore = true)]
-        /* 0x45E */ public byte[] Padding45E;
-        /* 0x460 */ public float VehicleSuspensionAudioSpacing;
-        /* 0x464 */ public float VehicleSuspensionAudioDelay;
-        /* 0x468 */ public float VehicleSuspensionAudioScale;
-        /* 0x46C */ public float VehicleSuspensionAudioTrigger;
-        /* 0x470 */ public float VehicleFadeTime;
-        /* 0x474 */ public float VehicleMinSummonDistance;
-        /* 0x478 */ public float VehicleMaxSummonDistance;
-        /* 0x47C */ public float VehicleMaxSummonDistanceUnderwater;
-        /* 0x480 */ public float VehicleDeactivateRange;
-        /* 0x484 */ public float VehicleBoostFuelRate;
-        /* 0x488 */ public float VehicleBoostFuelRateSurvival;
-        /* 0x48C */ public float VehicleFuelRate;
-        /* 0x490 */ public float VehicleFuelRateSurvival;
-        /* 0x494 */ public float VehicleFuelRateTruckMultiplier;
-        /* 0x498 */ public float VehicleJumpTimeMin;
-        /* 0x49C */ public float VehicleJumpTimeMax;
-        /* 0x4A0 */ public float VehicleJumpCooldown;
-        /* 0x4A4 */ public float VehicleMotionDeadZone;
-        /* 0x4A8 */ public float WheelForceHalflife;
-        /* 0x4AC */ public bool ThrottleButtonCamRelative;
-        [NMS(Size = 0x3, Ignore = true)]
-        /* 0x4AD */ public byte[] Padding4AD;
-        /* 0x4B0 */ public float StickReverseTurnThreshold;
-        /* 0x4B4 */ public float StickReverseTurnStiffness;
-        /* 0x4B8 */ public GcScanData VehicleScan;
-        /* 0x4CC */ public GcScanData VehicleLocalScan;
-        //Do not use GcVehicleType.VehicleTypeEnum: GcVehicleGlobals.MBIN content swaps Buggy and Bike entries
-        //[NMS(Size = 0x7, EnumType = typeof(GcVehicleType.VehicleTypeEnum))]
-		public enum VehicleGlobalsTypeEnum { Bike, Buggy, Truck, WheeledBike, Hovercraft, Submarine, Mech }
-        [NMS(Size = 0x7, EnumType = typeof(VehicleGlobalsTypeEnum))]
-        /* 0x4E0 */ public GcVehicleData[] VehicleDataTable;
+        /* 0x2A8 */ public List<Vector3f> UnderwaterBubbleOffset;
+        /* 0x2B8 */ public bool VehicleAltControlScheme;
+        /* 0x2BC */ public float VehicleAltControlStickSmoothInTime;
+        /* 0x2C0 */ public float VehicleAltControlStickSmoothOutTime;
+        /* 0x2C4 */ public float VehicleBoostSpeedMultiplierPercent;
+        /* 0x2C8 */ public float VehicleGarageHologramMinFadeRange;
+        /* 0x2CC */ public float VehicleGarageHologramFadeRange;
+        /* 0x2D0 */ public float CheckpointPlacementOffset;
+        /* 0x2D4 */ public float CheckpointPlacementRayLength;
+        /* 0x2D8 */ public float CheckpointDeleteDistance;
+        /* 0x2DC */ public float CheckpointDeleteAngle;
+        /* 0x2E0 */ public float BoostPadTime;
+        /* 0x2E4 */ public float BoostPadStrength;
+        /* 0x2E8 */ public float DisablePhysicsRange;
+        /* 0x2EC */ public float RaceMultipleStartOffset;
+        /* 0x2F0 */ public float RaceMultipleStartCaptureRange;
+        /* 0x2F4 */ public float MiningLaserDrainSpeed;
+        /* 0x2F8 */ public float ProjectileDrainPerShot;
+        /* 0x2FC */ public float RaceStartSpawnUpOffset;
+        /* 0x300 */ public float RaceInteractRespawnOffset;
+        /* 0x304 */ public float RaceInteractRespawnUpOffset;
+        /* 0x308 */ public float StickTurnReducer;
+        /* 0x30C */ public float StickTurnReducerVR;
+        /* 0x310 */ public float StickTurnReducerAlt;
+        /* 0x314 */ public float TravelSpeedReportReducer;
+        /* 0x318 */ public float HornScareRadius;
+        /* 0x31C */ public float HornScareFleeRadius;
+        /* 0x320 */ public float HornScareTime;
+        /* 0x324 */ public float AttractAmount;
+        /* 0x328 */ public float AttractMaxSpeed;
+        /* 0x32C */ public float AttractAlign;
+        /* 0x330 */ public float AttractDirectionBrakeThresholdSq;
+        /* 0x334 */ public float ExitStopTime;
+        /* 0x338 */ public float ExitStopForce;
+        /* 0x33C */ public float GunFireRate;
+        /* 0x340 */ public float SummoningRange;
+        /* 0x344 */ public float CheckpointRadius;
+        /* 0x348 */ public float RaceCooldown;
+        /* 0x34C */ public bool RaceFinishAtStart;
+        /* 0x350 */ public float RaceResetFlashDuration;
+        /* 0x354 */ public float RaceResetFlashIntensity;
+        /* 0x358 */ public float CheckpointFlashDuration;
+        /* 0x35C */ public float CheckpointFlashIntensity;
+        /* 0x360 */ public Colour CheckpointBeamColourActive;
+        /* 0x370 */ public Colour CheckpointBeamColourNormal;
+        /* 0x380 */ public List<NMSString0x10> DefaultBuggyLoadout;
+        /* 0x390 */ public List<NMSString0x10> DefaultBikeLoadout;
+        /* 0x3A0 */ public List<NMSString0x10> DefaultTruckLoadout;
+        /* 0x3B0 */ public float CheckpointBeamSizeNormal;
+        /* 0x3B4 */ public float CheckpointBeamSizeActive;
+        /* 0x3B8 */ public float CheckpointBeamOffset;
+        /* 0x3BC */ public float SpawnRotation;
+        /* 0x3C0 */ public float MechSpawnRotation;
+        /* 0x3C4 */ public float MiningLaserRadius;
+        /* 0x3C8 */ public int MiningLaserMiningDamage;
+        /* 0x3CC */ public int MiningLaserDamage;
+        /* 0x3D0 */ public float MiningLaserSpeed;
+        /* 0x3D4 */ public int GunBaseDamage;
+        /* 0x3D8 */ public int GunBaseMiningDamage;
+        /* 0x3DC */ public float ResourceCollectOffset;
+        /* 0x3E0 */ public float VehicleWheelNoise;
+        /* 0x3E4 */ public float VehicleWheelNoiseScale;
+        /* 0x3E8 */ public float WheelSideVerticalFactor;
+        /* 0x3EC */ public float SuspensionDamping;
+        /* 0x3F0 */ public float SuspensionDampingAngularFactor;
+        /* 0x3F4 */ public bool ShowTempVehicleMesh;
+        /* 0x3F5 */ public bool ShowVehicleDebugging;
+        /* 0x3F6 */ public bool ShowVehicleWheelGuards;
+        /* 0x3F7 */ public bool ShowVehicleText;
+        /* 0x3F8 */ public float VehicleTextSize;
+        /* 0x3FC */ public bool ShowVehicleParticleDebug;
+        /* 0x3FD */ public bool VehicleDrawAudioDebug;
+        /* 0x400 */ public float VehicleSuspensionAudioSpacing;
+        /* 0x404 */ public float VehicleSuspensionAudioDelay;
+        /* 0x408 */ public float VehicleSuspensionAudioScale;
+        /* 0x40C */ public float VehicleSuspensionAudioTrigger;
+        /* 0x410 */ public float VehicleFadeTime;
+        /* 0x414 */ public float VehicleMinSummonDistance;
+        /* 0x418 */ public float VehicleMaxSummonDistance;
+        /* 0x41C */ public float VehicleMaxSummonDistanceUnderwater;
+        /* 0x420 */ public float VehicleDeactivateRange;
+        /* 0x424 */ public float VehicleBoostFuelRate;
+        /* 0x428 */ public float VehicleBoostFuelRateSurvival;
+        /* 0x42C */ public float VehicleFuelRate;
+        /* 0x430 */ public float VehicleFuelRateSurvival;
+        /* 0x434 */ public float VehicleFuelRateTruckMultiplier;
+        /* 0x438 */ public float VehicleJumpTimeMin;
+        /* 0x43C */ public float VehicleJumpTimeMax;
+        /* 0x440 */ public float VehicleJumpCooldown;
+        /* 0x444 */ public float VehicleMotionDeadZone;
+        /* 0x448 */ public float WheelForceHalflife;
+        /* 0x44C */ public bool ThrottleButtonCamRelative;
+        /* 0x450 */ public float StickReverseTurnThreshold;
+        /* 0x454 */ public float StickReverseTurnStiffness;
+        /* 0x458 */ public GcScanData VehicleScan;
+        /* 0x45C */ public GcScanData VehicleLocalScan;
+        /* 0x460 */ public List<GcVehicleData> VehicleDataTable;
     }
 }

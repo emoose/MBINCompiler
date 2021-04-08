@@ -1,9 +1,11 @@
-﻿using libMBIN.NMS.Toolkit;
+﻿using System.Collections.Generic;
+
+using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(Size = 0x3E0, GUID = 0xE5E5B707523C6390)]
+    [NMS(Size = 0x2F0, GUID = 0xCF1B1EB60E963DD0)]
     public class GcSolarGenerationGlobals : NMSTemplate
     {
         /* 0x000 */ public bool MassiveSolarSystems;
@@ -107,17 +109,15 @@ namespace libMBIN.NMS.Globals
         [NMS(Size = 0x4, EnumType = typeof(GcGalaxyStarTypes.GalaxyStarTypeEnum))]
         /* 0x1E0 */ public float[] EmptySystemProbability;
         /* 0x1F0 */ public int CivilianTraderSpaceshipsCacheCount;
-        [NMS(Size = 0x3)]
-        /* 0x1F4 */ public float[] SpaceshipSpawnFreqMultipliers;
-        [NMS(Size = 0x8, EnumType = typeof(GcAlienRace.AlienRaceEnum))]     // I think this is the enum type...
-        /* 0x200 */ public GcAISpaceshipWeightingData[] SpaceshipWeightings;
-        /* 0x300 */ public float PlanetRingProbability;
+        /* 0x1F8 */ public List<float> SpaceshipSpawnFreqMultipliers;
+        /* 0x208 */ public List<GcAISpaceshipWeightingData> SpaceshipWeightings;
+        /* 0x218 */ public float PlanetRingProbability;
+        [NMS(Size = 0x4, Ignore = true)]
+        /* 0x21C */ public byte[] Padding21C;
+        /* 0x220 */ public GcPlanetRingData PlanetRingsMin;
+        /* 0x280 */ public GcPlanetRingData PlanetRingsMax;
+        /* 0x2E0 */ public int PercentChanceExtraPrime;
         [NMS(Size = 0xC, Ignore = true)]
-        /* 0x304 */ public byte[] Padding304;
-        /* 0x310 */ public GcPlanetRingData PlanetRingsMin;
-        /* 0x370 */ public GcPlanetRingData PlanetRingsMax;
-        /* 0x3D0 */ public int PercentChanceExtraPrime;
-        [NMS(Size = 0xC, Ignore = true)]
-        /* 0x3D4 */ public byte[] EndPadding;
+        /* 0x2E4 */ public byte[] EndPadding;
     }
 }
