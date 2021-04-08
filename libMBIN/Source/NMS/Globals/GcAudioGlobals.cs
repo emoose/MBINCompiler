@@ -1,9 +1,11 @@
-﻿using libMBIN.NMS.Toolkit;
+﻿using System.Collections.Generic;
+
+using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(Size = 0x150, GUID = 0x83595753419F7B77)]
+    [NMS(Size = 0x148, GUID = 0x83595753419F7B77)]
     public class GcAudioGlobals : NMSTemplate
     {
         /* 0x000 */ public GcAudioNPCDoppler NPCEngines;
@@ -40,28 +42,27 @@ namespace libMBIN.NMS.Globals
         /* 0x0C8 */ public float ByteBeatBeginAtTonicProbability;
         /* 0x0CC */ public float ByteBeatChangeNoteProbability;
         /* 0x0D0 */ public float ByteBeatSkipNoteProbability;
-        [NMS(Size = 0x7)]
-        /* 0x0D4 */ public float[] ByteBeatScaleDegreeProbability;
-        /* 0x0F0 */ public float ByteBeatSpeakerVolumeInterSpeed;
-        /* 0x0F4 */ public Vector2f ByteBeatSpeakerMaxAmplitude;
-        /* 0x0FC */ public Vector2f ByteBeatSpeakerMinFrequency;
-        /* 0x104 */ public Vector2f ByteBeatSpeakerMaxFrequency;
-        /* 0x10C */ public float AtlasStationActiveDistance;
-        /* 0x110 */ public float MiniStationActiveDistance;
-        /* 0x114 */ public float PlayerDepthUnderwaterMax;
-        /* 0x118 */ public float PlayerLowerOffsetEmitterMul;
-        /* 0x11C */ public bool ObstructionEnabled;
-        /* 0x120 */ public float ObstructionSmoothTime;
-        /* 0x124 */ public float ObstructionValueMax;
-        /* 0x128 */ public float ObstructionAuxControlWhenVisible;
-        /* 0x12C */ public float ObstructionAuxControlWhenHidden;
-        /* 0x130 */ public bool PulseMusicEnabled;
-        /* 0x131 */ public bool LockListenerMatrix;
-        /* 0x132 */ public bool EnableVRSpecificAudio;
-        /* 0x134 */ public float ArmFoleySpeedMultiplier;
-        /* 0x138 */ public float ArmWhooshFoleyValueTrigger;
-        /* 0x13C */ public float MinSecondsBetweenArmWhooshes;
-        /* 0x140 */ public Vector2f CommsChatterFalloffFreighers;
-        /* 0x148 */ public Vector2f CommsChatterFalloffShips;
+        /* 0x0D8 */ public List<float> ByteBeatScaleDegreeProbability;
+        /* 0x0E8 */ public float ByteBeatSpeakerVolumeInterSpeed;
+        /* 0x0EC */ public Vector2f ByteBeatSpeakerMaxAmplitude;
+        /* 0x0F4 */ public Vector2f ByteBeatSpeakerMinFrequency;
+        /* 0x0FC */ public Vector2f ByteBeatSpeakerMaxFrequency;
+        /* 0x104 */ public float AtlasStationActiveDistance;
+        /* 0x108 */ public float MiniStationActiveDistance;
+        /* 0x10C */ public float PlayerDepthUnderwaterMax;
+        /* 0x110 */ public float PlayerLowerOffsetEmitterMul;
+        /* 0x114 */ public bool ObstructionEnabled;
+        /* 0x118 */ public float ObstructionSmoothTime;
+        /* 0x11C */ public float ObstructionValueMax;
+        /* 0x120 */ public float ObstructionAuxControlWhenVisible;
+        /* 0x124 */ public float ObstructionAuxControlWhenHidden;
+        /* 0x128 */ public bool PulseMusicEnabled;
+        /* 0x129 */ public bool LockListenerMatrix;
+        /* 0x12A */ public bool EnableVRSpecificAudio;
+        /* 0x12C */ public float ArmFoleySpeedMultiplier;
+        /* 0x130 */ public float ArmWhooshFoleyValueTrigger;
+        /* 0x134 */ public float MinSecondsBetweenArmWhooshes;
+        /* 0x138 */ public Vector2f CommsChatterFalloffFreighers;
+        /* 0x140 */ public Vector2f CommsChatterFalloffShips;
     }
 }

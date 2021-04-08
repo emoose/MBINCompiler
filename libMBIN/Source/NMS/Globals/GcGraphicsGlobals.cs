@@ -1,9 +1,11 @@
-﻿using libMBIN.NMS.Toolkit;
+﻿using System.Collections.Generic;
+
+using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(Size = 0x9C0, GUID = 0x5B8F3D449F3BDED1)]
+    [NMS(Size = 0xA20, GUID = 0xF8372A5337A07B2D)]
     public class GcGraphicsGlobals : NMSTemplate
     {
         /* 0x000 */ public float LUTDistanceFlightMultiplier;
@@ -288,35 +290,34 @@ namespace libMBIN.NMS.Globals
         /* 0x780 */ public float MinPixelSizeOfObjectsInShadowsPlanet;
         /* 0x784 */ public float MinPixelSizeOfObjectsInShadowsCockpitOnPlanet;
         /* 0x788 */ public bool AllowPartialCascadeRender;
-        [NMS(Size = 0x4)]
-        /* 0x78C */ public int[] CascadeRenderSequence;
-        /* 0x79C */ public int SupersamplingLevel;
-        /* 0x7A0 */ public bool EnableTextureStreaming;
-        /* 0x7A1 */ public bool ForceStreamAllTextures;
-        /* 0x7A2 */ public bool ForceEvictAllTextures;
-        /* 0x7A4 */ public int TargetTextureMemUsageMB;
-        /* 0x7A8 */ public float MotionBlurThresholdOnFoot;
-        /* 0x7AC */ public float MotionBlurThresholdInVehicle;
-        /* 0x7B0 */ public float MotionBlurThresholdSpace;
-        /* 0x7B4 */ public float MotionBlurThresholdDefault;
-        /* 0x7B8 */ public float SpaceIBLBlendStart;
-        /* 0x7BC */ public float SpaceIBLBlendDistance;
-        /* 0x7C0 */ public float NoFocusMaxFPS;
-        /* 0x7C4 */ public bool EnableCrossPipeSharing;
-        /* 0x7C5 */ public bool EnableSSR;
-        /* 0x7C8 */ public float SharpenFilterAmount;
-        /* 0x7CC */ public float SharpenFilterDepthFactorStart;
-        /* 0x7D0 */ public float SharpenFilterDepthFactorEnd;
+        /* 0x790 */ public List<int> CascadeRenderSequence;
+        /* 0x7A0 */ public int SupersamplingLevel;
+        /* 0x7A4 */ public bool EnableTextureStreaming;
+        /* 0x7A5 */ public bool ForceStreamAllTextures;
+        /* 0x7A6 */ public bool ForceEvictAllTextures;
+        /* 0x7A8 */ public int TargetTextureMemUsageMB;
+        /* 0x7AC */ public float MotionBlurThresholdOnFoot;
+        /* 0x7B0 */ public float MotionBlurThresholdInVehicle;
+        /* 0x7B4 */ public float MotionBlurThresholdSpace;
+        /* 0x7B8 */ public float MotionBlurThresholdDefault;
+        /* 0x7BC */ public float SpaceIBLBlendStart;
+        /* 0x7C0 */ public float SpaceIBLBlendDistance;
+        /* 0x7C4 */ public float NoFocusMaxFPS;
+        /* 0x7C8 */ public bool EnableCrossPipeSharing;
+        /* 0x7C9 */ public bool EnableSSR;
+        /* 0x7CC */ public float SharpenFilterAmount;
+        /* 0x7D0 */ public float SharpenFilterDepthFactorStart;
+        /* 0x7D4 */ public float SharpenFilterDepthFactorEnd;
         [NMS(Size = 0x4, EnumType = typeof( TkGraphicsDetailTypes.GraphicDetailEnum ))]
-        /* 0x7D4 */ public TkGraphicsDetailPreset[] GraphicsDetailPresetsPC;
-        /* 0x884 */ public TkGraphicsDetailPreset GraphicsDetailPresetPS4;
-        /* 0x8B0 */ public TkGraphicsDetailPreset GraphicsDetailPresetPS4VR;
-        /* 0x8DC */ public TkGraphicsDetailPreset GraphicsDetailPresetPS4Pro;
-        /* 0x908 */ public TkGraphicsDetailPreset GraphicsDetailPresetPS4ProVR;
-        /* 0x934 */ public TkGraphicsDetailPreset GraphicsDetailPresetXB1;
-        /* 0x960 */ public TkGraphicsDetailPreset GraphicsDetailPresetXB1X;
-        /* 0x98C */ public TkGraphicsDetailPreset GraphicsDetailPresetOberon;
-        [NMS(Size = 0x8, Ignore = true)]
-        /* 0x9B8 */ public byte[] EndPadding;
+        /* 0x7D8 */ public TkGraphicsDetailPreset[] GraphicsDetailPresetsPC;
+        /* 0x8A8 */ public TkGraphicsDetailPreset GraphicsDetailPresetPS4;
+        /* 0x8DC */ public TkGraphicsDetailPreset GraphicsDetailPresetPS4VR;
+        /* 0x910 */ public TkGraphicsDetailPreset GraphicsDetailPresetPS4Pro;
+        /* 0x944 */ public TkGraphicsDetailPreset GraphicsDetailPresetPS4ProVR;
+        /* 0x978 */ public TkGraphicsDetailPreset GraphicsDetailPresetXB1;
+        /* 0x9AC */ public TkGraphicsDetailPreset GraphicsDetailPresetXB1X;
+        /* 0x9E0 */ public TkGraphicsDetailPreset GraphicsDetailPresetOberon;
+        [NMS(Size = 0xC, Ignore = true)]
+	/* 0xA14 */ public byte[] EndPadding;
     }
 }

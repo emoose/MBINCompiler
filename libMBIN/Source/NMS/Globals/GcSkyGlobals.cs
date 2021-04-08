@@ -1,9 +1,11 @@
-﻿using libMBIN.NMS.Toolkit;
+﻿using System.Collections.Generic;
+
+using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(Size = 0x1150, GUID = 0xB296374F545CDF71)]
+    [NMS(Size = 0xDE0, GUID = 0xB296374F545CDF71)]
     public class GcSkyGlobals : NMSTemplate
     {
         /* 0x0000 */ public float RainbowDistance;
@@ -138,29 +140,28 @@ namespace libMBIN.NMS.Globals
         /* 0x09F0 */ public GcFogProperties AbandonedFreighterFog;
         /* 0x0AD0 */ public GcSpaceSkyProperties SpaceSkyMin;
         /* 0x0B70 */ public GcSpaceSkyProperties SpaceSkyMax;
-        [NMS(Size = 0x4)]
-        /* 0x0C10 */ public GcSpaceSkyColours[] SpaceSkyColours;
-        /* 0x0F90 */ public GcPlanetWeatherColourData NightSkyColours;
-        /* 0x1040 */ public float HackSpaceInterp1;
-        /* 0x1044 */ public float HackSpaceInterp2;
-        /* 0x1048 */ public int HackSpaceColourIndex;
+        /* 0x0C10 */ public List<GcSpaceSkyColours> SpaceSkyColours;
+        /* 0x0C20 */ public GcPlanetWeatherColourData NightSkyColours;
+        /* 0x0CD0 */ public float HackSpaceInterp1;
+        /* 0x0CD4 */ public float HackSpaceInterp2;
+        /* 0x0CD8 */ public int HackSpaceColourIndex;
         [NMS(Size = 0x4, Ignore = true)]
-        /* 0x104C */ public byte[] Padding104C;
-        /* 0x1050 */ public Colour HeavyAirColour1;
-        /* 0x1060 */ public Colour HeavyAirColour2;
-        /* 0x1070 */ public Colour NightHorizonColour;
-        /* 0x1080 */ public Colour NightSkyColour;
-        /* 0x1090 */ public Colour NightFogColour;
-        /* 0x10A0 */ public Colour NightHeightFogColour;
-        /* 0x10B0 */ public GcPlanetCloudProperties PlanetCloudsMin;
-        /* 0x10F0 */ public GcPlanetCloudProperties PlanetCloudsMax;
-        /* 0x1130 */ public float BinaryStarChance;
-        /* 0x1134 */ public float TernaryStarChance;
-        /* 0x1138 */ public float WeatherBloomGain;
-        /* 0x113C */ public float WeatherBloomGainSpeed;
-        /* 0x1140 */ public float WeatherBloomThreshold;
-        /* 0x1144 */ public float WeatherBloomThresholdSpeed;
-        /* 0x1148 */ public float WeatherBloomImpulseSpeed;
-        /* 0x114C */ public TkCurveType WeatherBloomCurve;
+        /* 0x0CDC */ public byte[] Padding104C;
+        /* 0x0CE0 */ public Colour HeavyAirColour1;
+        /* 0x0CF0 */ public Colour HeavyAirColour2;
+        /* 0x0D00 */ public Colour NightHorizonColour;
+        /* 0x0D10 */ public Colour NightSkyColour;
+        /* 0x0D20 */ public Colour NightFogColour;
+        /* 0x0D30 */ public Colour NightHeightFogColour;
+        /* 0x0D40 */ public GcPlanetCloudProperties PlanetCloudsMin;
+        /* 0x0D80 */ public GcPlanetCloudProperties PlanetCloudsMax;
+        /* 0x0DC0 */ public float BinaryStarChance;
+        /* 0x0DC4 */ public float TernaryStarChance;
+        /* 0x0DC8 */ public float WeatherBloomGain;
+        /* 0x0DCC */ public float WeatherBloomGainSpeed;
+        /* 0x0DD0 */ public float WeatherBloomThreshold;
+        /* 0x0DD4 */ public float WeatherBloomThresholdSpeed;
+        /* 0x0DD8 */ public float WeatherBloomImpulseSpeed;
+        /* 0x0DDC */ public TkCurveType WeatherBloomCurve;
     }
 }
