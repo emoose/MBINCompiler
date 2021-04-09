@@ -17,8 +17,6 @@ namespace libMBIN.NMS.Globals
         /* 0x018 */ public float SubtractEditFrequency;
         /* 0x01C */ public float TerrainBeamDefaultRadius;
         /* 0x020 */ public float TerrainBeamLightIntensity;
-        [NMS(Size = 0xC, Ignore = true)]
-        /* 0x024 */ public byte[] Padding24;
         /* 0x030 */ public Colour TerrainBeamLightColour;
         /* 0x040 */ public float UseMax;
         /* 0x044 */ public float TextureFadeDistance;
@@ -33,8 +31,6 @@ namespace libMBIN.NMS.Globals
         /* 0x068 */ public bool DebugFlattenAllTerrain;
         /* 0x069 */ public bool DebugNoFlattenForBuildings;
         /* 0x06A */ public bool DebugLockTerrainSettingsIndex;
-        [NMS(Size = 0x1, Ignore = true)]
-        /* 0x06B */ public byte[] Padding6B;
         /* 0x06C */ public int NumGeneratorCalls;
         /* 0x070 */ public int NumPolygoniseCalls;
         /* 0x074 */ public int NumPostPolygoniseCalls;
@@ -49,8 +45,6 @@ namespace libMBIN.NMS.Globals
         /* 0x094 */ public byte[] Padding94;
         [NMS(Size = 0x10, EnumType = typeof(GcBiomeType.BiomeEnum))]
         /* 0x098 */ public NMSString0x10[] MiningSubstanceBiome;
-
-
         /* 0x198 */ public List<NMSString0x10> MiningSubstanceStar;
         /* 0x1A8 */ public List<NMSString0x10> MiningSubstanceStarExtreme;
         /* 0x1B8 */ public List<NMSString0x10> MiningSubstanceRare;
@@ -71,8 +65,6 @@ namespace libMBIN.NMS.Globals
         /* 0x2D0 */ public bool DebugRegionHotspots;
         [NMS(Size = 0x80)]
         /* 0x2D1 */ public string RegionHotspotsTable;
-        [NMS(Size = 0x3, Ignore = true)]
-        /* 0x351 */ public byte[] Padding3F1;
         /* 0x354 */ public int TerrainPrimeIndexStart;
         [NMS(Size = 0x8, Ignore = true)]
         /* 0x358 */ public byte[] EndPadding;
