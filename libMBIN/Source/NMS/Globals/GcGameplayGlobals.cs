@@ -5,29 +5,31 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(Size = 0x1CE0, GUID = 0x272668FEFEEC95B6)]
+    [NMS(Size = 0x1F8C, GUID = 0xB313032879B1E3E8)]
     public class GcGameplayGlobals : NMSTemplate
     {
+        /* 0x0000 */ public float ShipScanPlanetRechargeMultiplier;
+        /* 0x0004 */ public float ShipScanSpaceRechargeMultiplier;
         [NMS(Size = 0x10)]
-        /* 0x0000 */ public string FreeSuitSlotID;
-        /* 0x0010 */ public float InitialLocationProtectionRadiusMultiplier;
-        /* 0x0014 */ public float PartyPlanetSearchDistance;
-        /* 0x0018 */ public int MaxActiveWeatherHazardGifts;
-        /* 0x001C */ public float WeatherHazardGiftMaxDistance;
-        /* 0x0020 */ public float WeatherHazardGiftLifeTime;
-        /* 0x0024 */ public GcTechnologyCategory TechnologyOverrideForSmuggler;
-        /* 0x0028 */ public float MaxMeteorSurfaceAngle;
-        /* 0x002C */ public float StormGravityChangeTime;
-        /* 0x0030 */ public float StormBonusJetpackMod;
-        /* 0x0034 */ public float StormBonusSprintMod;
-        /* 0x0038 */ public float StormBonusMiningHeatMod;
-        /* 0x003C */ public float StormBonusMiningAmountMod;
-        /* 0x0040 */ public GcPlayerHazardType StormBonusJetpackWeather;
-        /* 0x0044 */ public GcPlayerHazardType StormBonusSprintWeather;
-        /* 0x0048 */ public GcPlayerHazardType StormBonusMiningHeatWeather;
-        /* 0x004C */ public GcPlayerHazardType StormBonusMiningAmountWeather;
-        /* 0x0050 */ public float AlienPodThreshold2;
-        /* 0x0054 */ public float AlienPodThreshold1;
+        /* 0x0008 */ public string FreeSuitSlotID;
+        /* 0x0018 */ public float InitialLocationProtectionRadiusMultiplier;
+        /* 0x001C */ public float PartyPlanetSearchDistance;
+        /* 0x0020 */ public int MaxActiveWeatherHazardGifts;
+        /* 0x0024 */ public float WeatherHazardGiftMaxDistance;
+        /* 0x0028 */ public float WeatherHazardGiftLifeTime;
+        /* 0x002C */ public GcTechnologyCategory TechnologyOverrideForSmuggler;
+        /* 0x0030 */ public float MaxMeteorSurfaceAngle;
+        /* 0x0034 */ public float StormGravityChangeTime;
+        /* 0x0038 */ public float StormBonusJetpackMod;
+        /* 0x003C */ public float StormBonusSprintMod;
+        /* 0x0040 */ public float StormBonusMiningHeatMod;
+        /* 0x0044 */ public float StormBonusMiningAmountMod;
+        /* 0x0048 */ public GcPlayerHazardType StormBonusJetpackWeather;
+        /* 0x004C */ public GcPlayerHazardType StormBonusSprintWeather;
+        /* 0x0050 */ public GcPlayerHazardType StormBonusMiningHeatWeather;
+        /* 0x0054 */ public GcPlayerHazardType StormBonusMiningAmountWeather;
+        /* 0x0058 */ public float AlienPodThreshold2;
+        /* 0x005C */ public float AlienPodThreshold1;
         /* 0x0060 */ public Colour BulletTraceLineColour;
         /* 0x0070 */ public float BulletTraceLineWidth;
         /* 0x0074 */ public float TracerBeamStart;
