@@ -86,5 +86,8 @@ namespace libMBIN.NMS.GameComponents
 
 		public enum TestFlagsEnum { Null, Flag1, Flag2 }
 		public TestFlagsEnum TestFlags;
+
+        [NMS(Size = 4, Ignore = true)]
+        public byte[] EndPadding;
     }
 }
