@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x558, GUID = 0x1BEA8E7774A5394D, NameHash = 0x4EDC167332F6B824)]
+	[NMS(Size = 0x758, GUID = 0x0, NameHash = 0x4EDC167332F6B824)]
     public class GcSeasonalMilestone : NMSTemplate
     {
         [NMS(Size = 0x10)]
@@ -32,7 +32,9 @@ namespace libMBIN.NMS.GameComponents
         /* 0x351 */ public bool IsStageControl;
         [NMS(Size = 0x200)]
         /* 0x352 */ public string RewardDescription;
+        [NMS(Size = 0x200)]
+        /* 0x552 */ public string CantClaimRewardDescription;
         [NMS(Size = 0x6, Ignore = true)]
-        /* 0x552 */ public byte[] EndPadding;
+        /* 0x752 */ public byte[] EndPadding;
     }
 }

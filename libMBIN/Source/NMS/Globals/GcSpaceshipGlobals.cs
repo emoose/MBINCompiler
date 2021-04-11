@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(Size = 0x12F0, GUID = 0xB6B5470BB0CE3D12)]
+    [NMS(Size = 0x1040, GUID = 0xB6B5470BB0CE3D12)]
     public class GcSpaceshipGlobals : NMSTemplate
     {
         /* 0x0000 */ public bool AllowSideScreenPointing;

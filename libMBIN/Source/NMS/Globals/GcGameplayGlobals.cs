@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(Size = 0x1F8C, GUID = 0xB313032879B1E3E8)]
+    [NMS(Size = 0x1CE0, GUID = 0xB313032879B1E3E8)]
     public class GcGameplayGlobals : NMSTemplate
     {
         /* 0x0000 */ public float ShipScanPlanetRechargeMultiplier;

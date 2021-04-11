@@ -63,6 +63,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcGeneratedBaseLockDoorPair.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcGeneratedBaseDecorationTemplate.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcLightShaftProperties.cs" />
+	<Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcMissionConditionIsGrabbed.cs" />
+	<Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcMissionConditionSpecialKnown.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcMissionConditionAbandonedFreighterExplored.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcMissionConditionAlienPodAggroed.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcMissionConditionHasEntitlement.cs" />

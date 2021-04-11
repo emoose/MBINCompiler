@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x2C210, GUID = 0x0, NameHash = 0x6C4510BB243EFA64)]
+	[NMS(Size = 0x2C220, GUID = 0x0, NameHash = 0x6C4510BB243EFA64)]
     public class GcPlayerStateData : NMSTemplate
     {
         /* 0x00000 */ public GcUniverseAddressData UniverseAddress;
@@ -272,7 +272,12 @@ namespace libMBIN.NMS.GameComponents
         /* 0x2BD5C */ public byte[] Padding2BD5C;
         /* 0x2BD60 */ public GcSeasonalGameModeData SeasonalData;
         /* 0x2C1B0 */ public GcSeasonStateData SeasonState;
-        /* 0x2C1F0 */ public List<NMSString0x10> RedeemedSeasonRewards;
-        /* 0x2C200 */ public List<NMSString0x10> RedeemedTwitchRewards;
+        /* 0x2C1F0 */ public bool RestartAllInactiveSeasonalMissions;
+        [NMS(Size = 0x7, Ignore = true)]
+        /* 0x2C1F1 */ public byte[] Padding2C1F1;
+        /* 0x2C1F8 */ public List<NMSString0x10> RedeemedSeasonRewards;
+        /* 0x2C208 */ public List<NMSString0x10> RedeemedTwitchRewards;
+        [NMS(Size = 0x8, Ignore = true)]
+        /* 0x2CC18 */ public byte[] EndPadding;
     }
 }
