@@ -7,9 +7,11 @@ namespace libMBIN.NMS.GameComponents
     public class GcBiomeSubType : NMSTemplate
     {
         // length: 0x1B
-        public enum BiomeSubTypeEnum { None, Standard, HighQuality, Structure, Beam, Hexagon, FractCube, Bubble, Shards, Contour, Shell, BoneSpire, WireCell,
-                                       HydroGarden, HugePlant, HugeLush, HugeRing, HugeRock, HugeScorch, HugeToxic, Variant_A, Variant_B, Variant_C, Variant_D,
-                                       Infested, Swamp, Lava }
+        public enum BiomeSubTypeEnum {
+            None, Standard, HighQuality, Structure, Beam, Hexagon, FractCube, Bubble, Shards, Contour, Shell, BoneSpire, WireCell,
+            HydroGarden, HugePlant, HugeLush, HugeRing, HugeRock, HugeScorch, HugeToxic, Variant_A, Variant_B, Variant_C, Variant_D,
+            Infested, Swamp, Lava
+        }
         public BiomeSubTypeEnum BiomeSubType;
     }
 }

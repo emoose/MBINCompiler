@@ -9,7 +9,7 @@ namespace libMBIN.NMS.Toolkit
 		public enum FlatteningEnum { None, Natural, Artificial, AddResource }
 		public FlatteningEnum Flattening;
 
-		public enum WaterPlacementEnum { None, Underwater, UnderwaterOnly }
+		public enum WaterPlacementEnum { None, OnWater, Underwater, UnderwaterOnly }
 		public WaterPlacementEnum WaterPlacement;
     }
 }

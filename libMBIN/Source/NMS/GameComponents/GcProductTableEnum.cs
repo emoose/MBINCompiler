@@ -3,11 +3,11 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x4, GUID = 0x39DE939E945E1DB3, NameHash = 0xBD7214A930BFF3F2)]
+    [NMS(Size = 0x4, GUID = 0x0000000000000000, NameHash = 0xBD7214A930BFF3F2)]
     public class GcProductTableEnum : NMSTemplate
     {
         // 0x51F entries
-        public enum ProductEnum {
+        public enum gcproducttableEnumEnum {
             None, CASING, NANOTUBES, CARBON_SEAL, MICROCHIP, HYDRALIC, COMPUTER, MAGNET, MIRROR, BIO,
             TECH_COMP, REPAIRKIT, PRODFUEL2, POWERCELL, SHIPCHARGE, JELLY, LAUNCHFUEL, SUBFUEL, GRENFUEL1, AMMO,
             AM_HOUSING, ANTIMATTER, HYPERFUEL1, HYPERFUEL2, QUAD_PROD, WALKER_PROD, GEODE_LAND, GEODE_CAVE, GEODE_CRYSTAL, GEODE_SPACE,
@@ -141,6 +141,6 @@ namespace libMBIN.NMS.GameComponents
             FOOD_MM_CHOC, FOOD_MM_CARM, FOOD_MM_APPLE, FOOD_MM_CACTUS, FOOD_MM_JAM, FOOD_MM_JHOT, FOOD_MM_JGLITCH, FOOD_MM_CUST, FOOD_CM_BLOBBUT, FOOD_CM_HONEY,
             FOOD_CG_HONEY
         }
-        public ProductEnum Product;
+        public gcproducttableEnumEnum gcproducttableEnum;
     }
 }

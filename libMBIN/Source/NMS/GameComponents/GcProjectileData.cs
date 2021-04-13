@@ -42,8 +42,8 @@ namespace libMBIN.NMS.GameComponents
         /* 0x348 */ public float DamageImpactMinDistance;
         /* 0x350 */ public Colour Colour;
         [Flags]
-        public enum BehaviourFlagsEnum { None = 0x00, DestroyTerrain = 0x01, DestroyAsteroids = 0x02, GatherResources = 0x04, Homing = 0x08, HomingLaser = 0x10,
-            ScareCreatures = 0x20, ExplosionForce = 0x40}
+        public enum BehaviourFlagsEnum { None = 0x00, DestroyTerrain = 0x01, DestroyAsteroids = 0x02, GatherResources = 0x04,
+            Homing = 0x08, HomingLaser = 0x10, ScareCreatures = 0x20, ExplosionForce = 0x40}
         [NMSDescription("The enum that describes this field uses flags. This means that multiple values may be specified simultaneously" +
                         "by using the notation 'DestroyTerrain|Homing'. Ie. split values with a | character")]
         /* 0x360 */ public BehaviourFlagsEnum BehaviourFlags;

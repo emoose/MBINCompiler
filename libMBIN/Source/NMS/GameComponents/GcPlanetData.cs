@@ -58,6 +58,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x3D74 */ public float FuelMultiplier;
         [NMS(Size = 0x8, Ignore = true)]
         /* 0x3D78 */ public byte[] EndPadding;
-
     }
 }
+

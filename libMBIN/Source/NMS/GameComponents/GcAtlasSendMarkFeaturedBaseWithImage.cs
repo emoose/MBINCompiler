@@ -8,7 +8,7 @@ namespace libMBIN.NMS.GameComponents
     {
         /* 0x00 */ public ulong ClientUserdata;
         [NMS(Size = 0x40)]
-        /* 0x08 */ public String BaseID;
+        /* 0x08 */ public string BaseID;
         [NMS(Size = 0x10)]
         /* 0x48 */ public string Image;
     }
