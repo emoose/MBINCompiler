@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0xC0, Alignment = 0x8, GUID = 0x0, NameHash = 0x9166CF1D0ED63522)]
+	[NMS(Size = 0xC0, Alignment = 0x8, GUID = 0xEB2BD58DCACBE35A, NameHash = 0x9166CF1D0ED63522)]
     public class GcMissionSequencePirates : NMSTemplate
     {
         /* 0x00 */ public bool ScanCargo;

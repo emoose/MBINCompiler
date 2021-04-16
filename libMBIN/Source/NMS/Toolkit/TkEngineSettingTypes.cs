@@ -1,6 +1,6 @@
 ﻿namespace libMBIN.NMS.Toolkit
 {
-    [NMS(Size = 0x4,  GUID = 0x0, NameHash = 0x943946549DEC2216)]
+    [NMS(Size = 0x4,  GUID = 0xF3EF1981CC0020A4, NameHash = 0x943946549DEC2216)]
     public class TkEngineSettingTypes : NMSTemplate
     {
         // 0x2A entries

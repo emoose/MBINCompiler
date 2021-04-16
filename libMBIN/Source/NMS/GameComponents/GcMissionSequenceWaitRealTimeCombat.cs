@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x1A8, GUID = 0x0000000000000000, NameHash = 0xB497A82E7D25F7C4)]
+    [NMS(Size = 0x1A8, GUID = 0x9B7529D18442E956, NameHash = 0xB497A82E7D25F7C4)]
     public class GcMissionSequenceWaitRealTimeCombat : NMSTemplate
     {
         [NMS(Size = 0x80)]

@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x380, GUID = 0x0000000000000000, NameHash = 0x1D427C136EB50E9D)]
+    [NMS(Size = 0x380, GUID = 0xE6A5BBF8E86045CD, NameHash = 0x1D427C136EB50E9D)]
     public class GcNPCDebugSpawnData : NMSTemplate
     {
         /* 0x000 */ public Vector3f Position;

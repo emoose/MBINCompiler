@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x128, GUID = 0x0000000000000000, NameHash = 0xCEBA3C32BCAF04F6)]
+    [NMS(Size = 0x128, GUID = 0x498C96F5B230C04E, NameHash = 0xCEBA3C32BCAF04F6)]
     public class GcMissionSequenceWaitForStatSeasonal : NMSTemplate
     {
         [NMS(Size = 0x80)]

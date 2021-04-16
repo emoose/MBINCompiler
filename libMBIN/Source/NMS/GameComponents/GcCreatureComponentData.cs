@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x70, Alignment = 0x10, GUID = 0x0, NameHash = 0x28E8DAB19EC55198)]
+    [NMS(Size = 0x70, Alignment = 0x10, GUID = 0x0159962F5C6C8722, NameHash = 0x28E8DAB19EC55198)]
     public class GcCreatureComponentData : NMSTemplate
     {
         [NMS(Size = 0x10)]

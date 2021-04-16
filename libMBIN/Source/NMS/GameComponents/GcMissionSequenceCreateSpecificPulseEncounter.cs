@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x2A0, GUID = 0x0000000000000000, NameHash = 0x245D62E60DEB8B1E)]
+    [NMS(Size = 0x2A0, GUID = 0xEAA891CD60C683B4, NameHash = 0x245D62E60DEB8B1E)]
     public class GcMissionSequenceCreateSpecificPulseEncounter : NMSTemplate
     {
         [NMS(Size = 0x80)]
