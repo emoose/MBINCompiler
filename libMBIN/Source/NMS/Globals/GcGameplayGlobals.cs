@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(Size = 0x1CE0, GUID = 0xB313032879B1E3E8)]
+    [NMS(Size = 0x1CE0, GUID = 0xB36B01A8EEDB59BA, NameHash = 0x71CAF682B6986E6E)]
     public class GcGameplayGlobals : NMSTemplate
     {
         /* 0x0000 */ public float ShipScanPlanetRechargeMultiplier;
@@ -128,22 +128,23 @@ namespace libMBIN.NMS.Globals
         /* 0x03F4 */ public int RefinerSubsMadeInTimeSurvival;
         /* 0x03F8 */ public List<NMSString0x10> HyperdriveAccess;
         /* 0x0408 */ public List<NMSString0x10> FreighterHyperdriveAccess;
-        /* 0x0418 */ public float HmdInteractionRangeMinRange;
-        /* 0x041C */ public float HmdInteractionRangeMinDistance;
-        /* 0x0420 */ public float HmdInteractionRangeMultiplier;
+        /* 0x0418 */ public float SeasonalMessageModuleAttractDistanceMul;
+        /* 0x041C */ public float HmdInteractionRangeMinRange;
+        /* 0x0420 */ public float HmdInteractionRangeMinDistance;
+        /* 0x0424 */ public float HmdInteractionRangeMultiplier;
         [NMSDescription("Set to False to revert to legacy method of installing technologies and upgrades")]
-        /* 0x0424 */ public bool InstallTechWithInteraction;
-        /* 0x0425 */ public bool FreighterRequiresRGBHyperdriveUpgrades;
-        /* 0x0426 */ public bool DisableAnomalyAmbientSpawn;
-        /* 0x0427 */ public bool AllowDeconstruct;
-        /* 0x0428 */ public bool AllowBinocularMarker;
-        /* 0x0429 */ public bool EveryMaintenanceIsBroken;
-        /* 0x042A */ public bool SpawnResourceBlobsOnPartDelete;
-        /* 0x042B */ public bool EnableShootHitEffect;
-        /* 0x042C */ public int MaxNumSameGroupTech;
-        /* 0x0430 */ public float ShootableArmourHighlightHitTime;
-        /* 0x0434 */ public float ShootableAggroMinStartTime;
-        /* 0x0438 */ public float ShootableAggroForgetTime;
+        /* 0x0428 */ public bool InstallTechWithInteraction;
+        /* 0x0429 */ public bool FreighterRequiresRGBHyperdriveUpgrades;
+        /* 0x042A */ public bool DisableAnomalyAmbientSpawn;
+        /* 0x042B */ public bool AllowDeconstruct;
+        /* 0x042C */ public bool AllowBinocularMarker;
+        /* 0x042D */ public bool EveryMaintenanceIsBroken;
+        /* 0x042E */ public bool SpawnResourceBlobsOnPartDelete;
+        /* 0x042F */ public bool EnableShootHitEffect;
+        /* 0x0430 */ public int MaxNumSameGroupTech;
+        /* 0x0434 */ public float ShootableArmourHighlightHitTime;
+        /* 0x0438 */ public float ShootableAggroMinStartTime;
+        /* 0x043C */ public float ShootableAggroForgetTime;
         /* 0x0440 */ public Colour RefinerColour1A;
         /* 0x0450 */ public Colour RefinerColour1B;
         /* 0x0460 */ public Colour RefinerColour1C;

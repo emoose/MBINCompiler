@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x4, GUID = 0x0000000000000000, NameHash = 0xBD7214A930BFF3F2)]
+    [NMS(Size = 0x4, GUID = 0x49A4E851BFBB23AB, NameHash = 0xBD7214A930BFF3F2)]
     public class GcProductTableEnum : NMSTemplate
     {
         // 0x51F entries
