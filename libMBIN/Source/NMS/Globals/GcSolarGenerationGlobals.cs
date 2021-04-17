@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(Size = 0x2F0, GUID = 0xCF1B1EB60E963DD0)]
+    [NMS(Size = 0x2F0, GUID = 0xCF1B1EB60E963DD0, NameHash = 0xEAC286274BBCA057)]
     public class GcSolarGenerationGlobals : NMSTemplate
     {
         /* 0x000 */ public bool MassiveSolarSystems;

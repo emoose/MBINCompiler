@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(Size = 0x16B0, GUID = 0x0DE9B2EF02F090A8)]
+    [NMS(Size = 0x16B0, GUID = 0x0DE9B2EF02F090A8, NameHash = 0xB032629C37506E6A)]
     public class GcFleetGlobals : NMSTemplate
     {
         /* 0x0000 */ public Vector3f FreighterCustomiserSunAngleAdjust;
