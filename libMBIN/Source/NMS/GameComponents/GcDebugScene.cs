@@ -42,7 +42,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x1270 */ public List<GcAIShipDebugSpawnData> DebugEnemyShipSpawns;
         /* 0x1280 */ public List<GcAIShipDebugSpawnData> DebugShipSpawns;
         [NMS(Size = 0x7, EnumType = typeof(GcVehicleType.VehicleTypeEnum))]
-        /* 0x1290 */ public GcCameraFollowSettings VehicleCameraOverride;
+        /* 0x1290 */ public GcCameraFollowSettings[] VehicleCameraOverride;
         /* 0x1990 */ public bool DebugDroneScanPlayer;
         /* 0x19A0 */ public Vector3f DebugDroneSpawn;
         /* 0x19B0 */ public Vector3f DebugDroneTarget;
