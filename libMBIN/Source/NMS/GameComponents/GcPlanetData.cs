@@ -27,7 +27,7 @@ namespace libMBIN.NMS.GameComponents
         [NMS(Size = 0x17)]
         /* 0x1930 */ public Colour[] TileColours;
         /* 0x1AA0 */ public GcPlanetWeatherData Weather;
-        /* 0x1CC0 */ public GcPlanetCloudProperties Clouds;
+        /* 0x1C00 */ public GcPlanetCloudProperties Clouds;
         /* 0x1C40 */ public GcPlanetWaterData Water;
         [NMS(Size = 0x80)]
         /* 0x1DC0 */ public string TerrainFile;
