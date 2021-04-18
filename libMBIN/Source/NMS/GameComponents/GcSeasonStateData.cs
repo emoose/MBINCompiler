@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x40, GUID = 0x0000000000000000, NameHash = 0x4BC716CF849F5A74)]
+    [NMS(Size = 0x50, GUID = 0x46B484536E555EE2, NameHash = 0x4BC716CF849F5A74)]
     public class GcSeasonStateData : NMSTemplate
     {
         /* 0x00 */ public List<float> MilestoneValues;
@@ -16,5 +16,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x38 */ public bool HasCollectedFinalReward;
         [NMS(Size = 0x7, Ignore = true)]
         /* 0x39 */ public byte[] EndPadding;
+        /* 0x40 */ public List<GcUAProtectedLocations> ProtectedEvents;
     }
 }
