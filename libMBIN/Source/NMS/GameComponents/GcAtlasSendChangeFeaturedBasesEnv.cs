@@ -1,9 +1,11 @@
+using System.Collections.Generic;
+
 using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x18, GUID = 0x4B0EA5D3993F3367, NameHash = 0x0F7253E62FEA9C217)]
+    [NMS(Size = 0x18, GUID = 0x0000000000000000, NameHash = 0xF7253E62FEA9C217)]
     public class GcAtlasSendChangeFeaturedBasesEnv : NMSTemplate
     {
         /* 0x00 */ public ulong ClientUserdata;

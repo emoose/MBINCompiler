@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(Size = 0x470, GUID = 0x0107CD7DE6B7F761)]
+    [NMS(Size = 0x490, GUID = 0x0107CD7DE6B7F761, NameHash = 0x9B5DDD6D76FBC918)]
     public class GcVehicleGlobals : NMSTemplate
     {
         /* 0x000 */ public float VehicleSolarRegenFactor;
@@ -232,7 +232,7 @@ namespace libMBIN.NMS.Globals
         /* 0x450 */ public float StickReverseTurnThreshold;
         /* 0x454 */ public float StickReverseTurnStiffness;
         /* 0x458 */ public GcScanData VehicleScan;
-        /* 0x45C */ public GcScanData VehicleLocalScan;
-        /* 0x460 */ public List<GcVehicleData> VehicleDataTable;
+        /* 0x46C */ public GcScanData VehicleLocalScan;
+        /* 0x480 */ public List<GcVehicleData> VehicleDataTable;
     }
 }

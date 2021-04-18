@@ -7,7 +7,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcBuildingOverrideData : NMSTemplate
     {
         public GcSeed Seed;
-        public Vector4f Position;
+        public Vector3f Position;
         public int Index;
         [NMS(Size = 0xC, Ignore = true)]
         public byte[] EndPadding;

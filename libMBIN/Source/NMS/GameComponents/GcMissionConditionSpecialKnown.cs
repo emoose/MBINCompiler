@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x10, GUID = 0x0000000000000000, NameHash = 0x4F66A082950329D8)]
+    [NMS(Size = 0x10, GUID = 0x18B1DA9A905699E0, NameHash = 0x4F66A082950329D8)]
     public class GcMissionConditionSpecialKnown : NMSTemplate
     {
         [NMS(Size = 0x10)]

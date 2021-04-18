@@ -5,13 +5,13 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x2A0, GUID = 0x3B0818779E673446, NameHash = 0x245D62E60DEB8B1E)]
+    [NMS(Size = 0x2A0, GUID = 0xEAA891CD60C683B4, NameHash = 0x245D62E60DEB8B1E)]
     public class GcMissionSequenceCreateSpecificPulseEncounter : NMSTemplate
     {
         [NMS(Size = 0x80)]
         /* 0x000 */ public string Message;
         [NMS(Size = 0x80)]
-        /* 0x080 */ public string MessagenoShip;
+        /* 0x080 */ public string MessageNoShip;
         [NMS(Size = 0x80)]
         /* 0x100 */ public string MessageNotPulsing;
         [NMS(Size = 0x80)]
@@ -22,9 +22,10 @@ namespace libMBIN.NMS.GameComponents
         [NMS(Size = 0x10)]
         /* 0x208 */ public string PulseEncounterID;
         /* 0x218 */ public bool AllowAnyEncounter;
+        /* 0x219 */ public bool Silent;
         [NMS(Size = 0x80)]
-        /* 0x219 */ public string DebugText;
-        [NMS(Size = 0x7, Ignore = true)]
-        /* 0x299 */ public byte[] EndPadding;
+        /* 0x21A */ public string DebugText;
+        [NMS(Size = 0x6, Ignore = true)]
+        /* 0x29A */ public byte[] EndPadding;
     }
 }

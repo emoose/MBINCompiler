@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(Size = 0x680, GUID = 0xFCC6E4AB6ABA83F7)]
+    [NMS(Size = 0x680, GUID = 0xFCC6E4AB6ABA83F7, NameHash = 0xDD7401143C40F868)]
     public class GcRobotGlobals : NMSTemplate
     {
         /* 0x000 */ public bool SwarmDrones;

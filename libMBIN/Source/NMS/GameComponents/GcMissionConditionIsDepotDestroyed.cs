@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x20, GUID = 0x0000000000000000, NameHash = 0x2797515E3A43C26C)]
+    [NMS(Size = 0x20, GUID = 0x4A042E3F380B4B0E, NameHash = 0x2797515E3A43C26C)]
     public class GcMissionConditionIsDepotDestroyed : NMSTemplate
     {
         [NMS(Size = 0x20)]

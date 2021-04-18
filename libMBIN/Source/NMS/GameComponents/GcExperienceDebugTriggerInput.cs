@@ -8,6 +8,7 @@ namespace libMBIN.NMS.GameComponents
     [NMS(Size = 0x18, GUID = 0x6159A2D268D702F7, NameHash = 0x0BCDA670B36E2534)]
     public class GcExperienceDebugTriggerInput : NMSTemplate
     {
+        // 0xd entries
         public enum KeyPressEnum { _1, _2, _3, _4, _5, _6, _7, _8, _9, PadUp, PadDown, PadLeft, PadRight };
         /* 0x0 */ public KeyPressEnum KeyPress;
         [NMS(Size = 0x4, Ignore = true)]

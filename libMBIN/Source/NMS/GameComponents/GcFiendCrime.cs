@@ -7,7 +7,9 @@ namespace libMBIN.NMS.GameComponents
     public class GcFiendCrime : NMSTemplate
     {
         // length: 0x8
-		public enum FiendCrimeEnum { None, EggDamaged, EggDestroyed, EggCollected, UnderwaterPropDamaged, UnderwaterPropCollected, RockTransform, GroundPropDamage }
+		public enum FiendCrimeEnum {
+            None, EggDamaged, EggDestroyed, EggCollected, UnderwaterPropDamaged, UnderwaterPropCollected, RockTransform, GroundPropDamage
+        }
 		public FiendCrimeEnum FiendCrime;
     }
 }

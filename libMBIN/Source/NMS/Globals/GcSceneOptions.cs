@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(Size = 0x2B0, GUID = 0xE631F099F9410CAB)]
+    [NMS(Size = 0x2A8, GUID = 0xE631F099F9410CAB, NameHash = 0xFF2996557C508B00)]
     public class GcSceneOptions : NMSTemplate // doesn't seem like any of this is used by the game..
     {
         /* 0x000 */ public int RecentToolboxIndex;
@@ -26,9 +26,8 @@ namespace libMBIN.NMS.Globals
         [NMS(Size = 0x80)]
         /* 0x20D */ public string AtmosphereFile;
         /* 0x290 */ public List<Vector3f> ForceResource;
-
         /* 0x2A0 */ public float ForceResourceSize;
-        [NMS(Size = 0xC, Ignore = true)]
+        [NMS(Size = 0x4, Ignore = true)]
         /* 0x2A4 */ public byte[] EndPadding;
     }
 }

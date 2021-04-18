@@ -34,7 +34,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x270 */ public TkTextureResource HeroIcon;
         [NMSDescription("Icon background colour. Applies under icon transparent parts")]
         /* 0x300 */ public Colour Colour;
-        /* 0x310 */ public GcRealitySubstanceCategory SubstanceCategory;
+        /* 0x310 */ public GcRealitySubstanceCategory Category;
         /* 0x314 */ public GcProductCategory Type;
         /* 0x318 */ public GcRarity Rarity;
         /* 0x31C */ public GcLegality Legality;

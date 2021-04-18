@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x410, Alignment = 0x10, GUID = 0x0, NameHash = 0x51B3554FFBEBED66)]
+	[NMS(Size = 0x410, Alignment = 0x10, GUID = 0x350EC7222905E2E9, NameHash = 0x51B3554FFBEBED66)]
     public class GcMissionSequenceGroup : NMSTemplate
     {
         /* 0x000 */ public bool Silent;

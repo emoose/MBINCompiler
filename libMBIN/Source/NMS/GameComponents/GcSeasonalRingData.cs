@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0xC, GUID = 0x0000000000000000, NameHash = 0x772BC47975467C69)]
+    [NMS(Size = 0xC, GUID = 0xC8ED10077B3F2EC6, NameHash = 0x772BC47975467C69)]
     public class GcSeasonalRingData : NMSTemplate
     {
         public float RingSize;

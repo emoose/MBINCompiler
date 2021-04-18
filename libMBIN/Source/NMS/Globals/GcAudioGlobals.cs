@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(Size = 0x148, GUID = 0x83595753419F7B77)]
+    [NMS(Size = 0x148, GUID = 0x83595753419F7B77, NameHash = 0x7B6EECDDCAF6F923)]
     public class GcAudioGlobals : NMSTemplate
     {
         /* 0x000 */ public GcAudioNPCDoppler NPCEngines;

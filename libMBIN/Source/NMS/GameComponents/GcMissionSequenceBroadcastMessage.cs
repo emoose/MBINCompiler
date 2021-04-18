@@ -1,9 +1,11 @@
-﻿using libMBIN.NMS.Toolkit;
+﻿using System.Collections.Generic;
+
+using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x98, Alignment = 0x8, GUID = 0x3DBB581AA4B68F25, NameHash = 0x60741FB7E840229E)]
+    [NMS(Size = 0x98, Alignment = 0x8, GUID = 0x55D63D29EEF5CE11, NameHash = 0x60741FB7E840229E)]
     public class GcMissionSequenceBroadcastMessage : NMSTemplate
     {
         [NMS(Size = 0x80)]
@@ -11,8 +13,10 @@ namespace libMBIN.NMS.GameComponents
         [NMS(Size = 0x10)]
         /* 0x80 */ public string MessageID;
         /* 0x90 */ public bool Seeded;
-        /* 0x91 */ public bool Multiplayer;
-        [NMS(Size = 0x6, Ignore = true)]
-        /* 0x92 */ public byte[] EndPadding;
+        /* 0x91 */ public bool SendToAllMatchingSeeds;
+        /* 0x92 */ public bool Multiplayer;
+        /* 0x93 */ public bool BroadcastToActiveMultiplayerMission;
+        [NMS(Size = 0x4, Ignore = true)]
+        /* 0x94 */ public byte[] EndPadding;
     }
 }

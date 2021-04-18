@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x30, GUID = 0x0000000000000000, NameHash = 0xE9EC3242091011CC)]
+    [NMS(Size = 0x30, GUID = 0x582FB45B0B3B9CFB, NameHash = 0xE9EC3242091011CC)]
     public class GcUnlockableTwitchReward : NMSTemplate
     {
         [NMS(Size = 0x10)]
