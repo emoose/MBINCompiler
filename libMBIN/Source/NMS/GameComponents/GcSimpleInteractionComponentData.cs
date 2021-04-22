@@ -42,6 +42,8 @@ namespace libMBIN.NMS.GameComponents
         /* 0x0AC */ public bool StartsBuried;
         /* 0x0AD */ public bool MustBeVisibleToInteract;
         /* 0x0AE */ public bool NeedsStorm;
+        [NMS(Size = 0x1, Ignore = true)]
+        /* 0xAF */ public byte[] PaddingAF;
         [NMS(Size = 0x20)]
         /* 0x0B0 */ public string Name;
         [NMS(Size = 0x20)]
