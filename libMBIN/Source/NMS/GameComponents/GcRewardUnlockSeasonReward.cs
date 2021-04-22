@@ -5,14 +5,15 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x18, GUID = 0x0000000000000000, NameHash = 0x7AB9EBA17278DE9B)]
+    [NMS(Size = 0x18, GUID = 0x251398AB03485AB, NameHash = 0x7AB9EBA17278DE9B)]
     public class GcRewardUnlockSeasonReward : NMSTemplate
     {
         [NMS(Size = 0x10)]
-        public string ProductID;
-        public bool Silent;
-        public bool UseSpecialFormatting;
-        [NMS(Size = 0x6, Ignore = true)]
-        public byte[] EndPadding;
+        /* 0x00 */ public string ProductID;
+        /* 0x10 */ public bool Silent;
+        /* 0x11 */ public bool UseSpecialFormatting;
+        /* 0x12 */ public bool MarkAsClaimedInShop;
+        [NMS(Size = 0x5, Ignore = true)]
+        /* 0x13 */ public byte[] EndPadding;
     }
 }
