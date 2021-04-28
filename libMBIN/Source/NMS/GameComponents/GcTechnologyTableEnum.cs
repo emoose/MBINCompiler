@@ -3,11 +3,11 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x4, GUID = 0x616B7A57447D8E83, NameHash = 0xA32EA4A9B1B5B242)]
+    [NMS(Size = 0x4, GUID = 0x616B7A57447D8E83, NameHash = 0xA32EA4A9B1B5B242)]
     public class GcTechnologyTableEnum : NMSTemplate
     {
         // size: 0x114
-		public enum gctechnologytableEnumEnum {
+        public enum gctechnologytableEnumEnum {
             None, PROTECT, UT_PROTECT, ENERGY, UT_ENERGY, JET1, UT_JET, UT_JUMP, UT_MIDAIR, UT_HOT,
             UT_COLD, UT_TOX, UT_RAD, UT_WATER, SUIT_REFINER, POWERGLOVE, ATLASSUIT, STARSUIT, OBSOLETE, UT_WATERJET,
             UT_WATERENERGY, UT_TRANSLATE1, UT_TRANSLATE2, UT_TRANSLATE3, STORY_TRANSLATE, SHIPJUMP1, UT_PULSEFUEL, UT_PULSESPEED, PHOTONIX_CORE, LAUNCHER,
