@@ -11,6 +11,6 @@ namespace libMBIN.NMS.GameComponents
         public float FrigateScale;
         [NMS(Size = 0x4, Ignore = true)]
         public byte[] PaddingC;
-        public Vector4f SpawnOffset;
+        public Vector3f SpawnOffset;
     }
 }
