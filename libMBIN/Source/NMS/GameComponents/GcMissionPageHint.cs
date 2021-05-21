@@ -8,7 +8,7 @@ namespace libMBIN.NMS.GameComponents
 	[NMS(Size = 0x4, GUID = 0xAB554B2864B42A1D, NameHash = 0xBC45706D394C0853)]
     public class GcMissionPageHint : NMSTemplate
     {
-        // 0xB entries
+        // size: 0xB
 		public enum MissionPageHintEnum { None, Suit, Ship, Weapon, Vehicle, Freighter, Wiki, Catalogue, MissionLog, Discovery, Journey, Expedition }
 		public MissionPageHintEnum MissionPageHint;
     }

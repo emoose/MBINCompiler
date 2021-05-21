@@ -8,7 +8,7 @@ namespace libMBIN.NMS.GameComponents
     [NMS(Size = 0x30, GUID = 0x1CCB7BDC1ECBB02A, NameHash = 0x0C64AF7F76101CD0)]
     public class GcMessageCrime : NMSTemplate
     {
-        // 0xD entries
+        // size: 0xD
         public enum CrimeEnum { AttackCreature, AttackSentinel, AttackSentinelLaser, KillCreature, KillSentinel, MineResources,
             HitResources, AttackSpaceStation, AttackShip, AttackPolice, KillShip, KillPolice, TimedShootable
         }
