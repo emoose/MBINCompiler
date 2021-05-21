@@ -60,6 +60,8 @@ namespace libMBIN.NMS.GameComponents
         /* 0x46C */ public float DistanceFromShipAtStartOfGame;
         /* 0x470 */ public bool ShipStartsDamaged;
         /* 0x471 */ public bool AllowMissionDetailMessages;
+        [NMS(Size = 0x6, Ignore = true)]
+        /* 0x472 */ public byte[] Padding472;
         /* 0x478 */ public List<GcSeasonalStage> Stages;
         /* 0x488 */ public GcScanEventTable ScanEventTable;
     }

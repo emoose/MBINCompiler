@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x50, GUID = 0x46B484536E555EE2, NameHash = 0x4BC716CF849F5A74)]
+    [NMS(Size = 0x50, GUID = 0x72A849FE6FF40A2E, NameHash = 0x4BC716CF849F5A74)]
     public class GcSeasonStateData : NMSTemplate
     {
         /* 0x00 */ public List<float> MilestoneValues;

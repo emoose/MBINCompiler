@@ -20,6 +20,7 @@ namespace libMBIN.NMS.GameComponents
         ///* 0x048 */ public NMSString0x20A Description;
         /* 0x068 */ public TkTextureResource Patch;
         /* 0x0EC */ public TkTextureResource HoverPopupIcon;
+        [NMS(Size = 0x10)]
         /* 0x170 */ public string DecryptMissionId;
     }
 }

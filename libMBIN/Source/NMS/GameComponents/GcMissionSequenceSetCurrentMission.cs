@@ -9,9 +9,9 @@ namespace libMBIN.NMS.GameComponents
         [NMS(Size = 0x10)]
         /* 0x00 */ public string MissionID;
         /* 0x10 */ public bool Silent;
-        [NMS(Size = 0x7, Ignore = true)]
-        /* 0x11 */ public byte[] Padding11;
         [NMS(Size = 0x80)]
-        /* 0x88 */ public string DebugText;
+        /* 0x11 */ public string DebugText;
+        [NMS(Size = 0x7, Ignore = true)]
+        /* 0x91 */ public byte[] EndPadding;
     }
 }
