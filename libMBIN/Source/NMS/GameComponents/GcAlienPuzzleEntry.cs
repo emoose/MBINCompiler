@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x118, Alignment = 0x8, GUID = 0x8B7426F1428C8C87, NameHash = 0xDE1F17CE7E01A8C2)]
+	[NMS(Size = 0x118, Alignment = 0x8, GUID = 0x3914B6AF0B456EE9, NameHash = 0xDE1F17CE7E01A8C2)]
     public class GcAlienPuzzleEntry : NMSTemplate
     {
         /* 0x000 */ public int ProgressionIndex;
