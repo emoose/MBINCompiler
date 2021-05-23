@@ -24,8 +24,7 @@ namespace libMBIN.NMS.Globals
         /* 0x0034 */ public float HexMarkerRadius;
         /* 0x0038 */ public float HexMarkerRotation;
         /* 0x003C */ public float HexMarkerOuterWidth;
-        [NMS(Size = 0x80)]
-        /* 0x0040 */ public string MarkerDefaultHex;
+        /* 0x0040 */ public NMSString0x80 MarkerDefaultHex;
         /* 0x00C0 */ public float PathToTargetLineTimeFactor;
         /* 0x00C4 */ public float PathToTargetIndicatorTimeFactor;
         /* 0x00C8 */ public float PathUISelectionMultiplierPad;
