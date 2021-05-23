@@ -7,7 +7,9 @@ namespace libMBIN.NMS.GameComponents
 {
 	[NMS(Size = 0x8, GUID = 0xDC9B438A409E6F01, NameHash = 0x43DB1432B149AF84, Alignment = 0x8)]
     public class GcAtlasSendRequestTotalContribution : NMSTemplate {
-        /* 0x0000 */ public ulong ClientUserData;
+        public ulong ClientUserData;
+        [NMS(Size = 0x8, Ignore = true)]
+        public byte[] EndPadding;
     }
 
 }
