@@ -19,7 +19,7 @@ namespace libMBIN.NMS.Globals
         /* 0x024 */ public float FresnelBelowPow;
         /* 0x028 */ public float FresnelBelowMul;
         /* 0x02C */ public float FresnelBelowAlpha;
-        /* 0x030 */ public Colour WaterHeavyAirColour;
+        /* 0x030 */ public GcStyleProp_Colour WaterHeavyAirColour;
         /* 0x040 */ public GcPlanetWaterData WaterDataDay;
         /* 0x1C0 */ public GcPlanetWaterColourData WaterColourNight;
     }
