@@ -228,7 +228,7 @@ namespace libMBIN.NMS.Globals
         /* 0x930 */ public int TradeRouteMaxNum;
         [NMS(Size = 0x4, Ignore = true)]
         /* 0x934 */ public byte[] Padding934;
-        /* 0x938 */ public List<Vector4f> TradeRouteColours;
+        /* 0x938 */ public List<Colour> TradeRouteColours;
         /* 0x948 */ public bool EnableLoot;
         /* 0x94C */ public float LaserHitOffset;
         /* 0x950 */ public float DirectionBrakeThresholdSq;
