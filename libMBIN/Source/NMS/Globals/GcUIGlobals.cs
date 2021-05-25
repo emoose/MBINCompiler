@@ -6,7 +6,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(Size = 0x44F0, GUID = 0xC8CF05F1144F378E, NameHash = 0x95C306B1A90F3E08)]
+    [NMS(Size = 0x44F0, GUID = 0xB03A4315276D77B4, NameHash = 0x95C306B1A90F3E08)]
     public class GcUIGlobals : NMSTemplate
     {
         /* 0x0000 */ public float EggModifiyAnimMaxSize;
