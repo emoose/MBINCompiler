@@ -323,8 +323,7 @@ namespace libMBIN.NMS.Globals
         /* 0x2F64 */ public bool FollowDrawCamProbes;
         /* 0x2F68 */ public GcCameraAnimationData AmbientCameraAnimations;
         /* 0x2FEC */ public TkTextureResource AmbientDroneAnimations;
-        [NMS(Size = 0x80)]
-        /* 0x3070 */ public string CameraAmbientAnimationsData;
+        /* 0x3070 */ public NMSString0x80 CameraAmbientAnimationsData;
         /* 0x30F0 */ public float CameraAmbientAutoSwitchMinTime;
         /* 0x30F4 */ public float CameraAmbientAutoSwitchMaxTime;
         [NMS(Size = 0x8, Ignore = true)]
