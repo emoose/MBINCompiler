@@ -1,4 +1,5 @@
 ﻿using libMBIN.NMS.Toolkit;
+using System.Collections.Generic;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
@@ -8,6 +9,6 @@ namespace libMBIN.NMS.GameComponents
     {
         public enum EncounterTypeEnum { FactoryGuards, HarvesterGuards, ScrapHeap, CorruptedDroneReward, CorruptedDroneInteract }
         public EncounterTypeEnum EncounterType;
-        public NMSString0x10 InteractMissionTable;
+        public List<NMSString0x10> InteractMissionTable;
     }
 }
