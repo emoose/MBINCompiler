@@ -26,6 +26,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Source\EXML\EXmlData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\EXML\EXmlProperty.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\BaseTypes\INMSString.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\BaseTypes\NMSString0x800.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\BaseTypes\NMSString0x400.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\BaseTypes\NMSString0x200.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\BaseTypes\NMSString0x20A.cs" />
