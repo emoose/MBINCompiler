@@ -6,7 +6,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(Size = 0x3660, GUID = 0x7EEB800C70ED478F, NameHash = 0xA826BCA4D4C3DFE3)]
+    [NMS(Size = 0x3660, GUID = 0xB7D9D00E27F2C1C4, NameHash = 0xA826BCA4D4C3DFE3)]
     public class GcCameraGlobals : NMSTemplate
     {
         /* 0x0000 */ public TkModelRendererData FreighterCustomisationStandardCamera;
