@@ -649,18 +649,19 @@ namespace libMBIN
                 // if the class has no alignment value associated with it, set a default value
                 // Note: This will not work if the Type has a NMS Attribute defined (it will default to an alignment of 0x4)
                 int alignment_default = 0x4;
-                if (list[0].GetType().BaseType == typeof(NMSTemplate)) {
-                    alignment_default = 0x8;
-                } else if (list[0].GetType() == typeof(byte)){
-                    alignment_default = 0x1;
-                } else if (list[0].GetType() == typeof(Int16)) {
-                    alignment_default = 0x2;
-                } else if (list[0].GetType() == typeof(UInt16)) {
-                    alignment_default = 0x2;
-                } else if (list[0].GetType() == typeof(Int64)) {
-                    alignment_default = 0x8;
-                } else if (list[0].GetType() == typeof(UInt64)) {
-                    alignment_default = 0x8;
+		switch (list[0].GetType().BaseType.Name) {
+                    case "Byte":
+                        alignment_default = 0x1;
+                        break;
+                    case "Int16":
+                    case "UInt16":
+                        alignment_default = 0x2;
+                        break;
+                    case "Int64":
+                    case "UInt64":
+                    case "NMSTemplate":
+                        alignment_default = 0x8;
+                        break;
                 }
                 int alignment = list[0].GetType().GetCustomAttribute<NMSAttribute>()?.Alignment ?? alignment_default;
                 writer.Align(alignment, list[0].GetType().Name );
