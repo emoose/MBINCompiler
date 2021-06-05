@@ -433,14 +433,7 @@ namespace libMBIN
                     break;
 
                 case "NMSTemplate":
-                    int template_alignment = settings?.Alignment ?? 0x4;
-
-                    if ( template_alignment == 0x4 ) {
-                        Logger.LogDebug( $"{field.Name}: Expected alignment == 0x8, not {template_alignment}?" );
-                        writer.Align( 8, field?.Name ?? fieldType.Name );
-                    } else {
-                        writer.Align( template_alignment, field?.Name ?? fieldType.Name );
-                    }
+                    writer.Align( 8, field?.Name ?? fieldType.Name );
                     long refPos = writer.BaseStream.Position;
 
                     var template = (NMSTemplate) fieldData;
