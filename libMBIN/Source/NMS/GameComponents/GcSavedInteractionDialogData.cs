@@ -7,6 +7,6 @@ namespace libMBIN.NMS.GameComponents
     public class GcSavedInteractionDialogData : NMSTemplate
     {
         public ulong Hash;
-        public NMSString0x20 Dialog;
+        public NMSString0x20A Dialog;
     }
 }

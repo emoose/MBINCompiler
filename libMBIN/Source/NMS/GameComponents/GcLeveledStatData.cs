@@ -7,13 +7,13 @@ namespace libMBIN.NMS.GameComponents
     public class GcLeveledStatData : NMSTemplate
     {
         /* 0x000 */ public NMSString0x10 StatId;
-        /* 0x010 */ public NMSString0x20 StatTitle;
+        /* 0x010 */ public NMSString0x20A StatTitle;
 		public enum StatMessageTypeEnum { Full, Quick, Silent }
 		public StatMessageTypeEnum StatMessageType;
         [NMS(Size = 0x4, Ignore = true)]
         /* 0x034 */ public byte[] Padding34;
-        /* 0x038 */ public NMSString0x20 NotifyMessage;
-        /* 0x058 */ public NMSString0x20 NotifyMessageSingular;
+        /* 0x038 */ public NMSString0x20A NotifyMessage;
+        /* 0x058 */ public NMSString0x20A NotifyMessageSingular;
 
         /* 0x078 */ public bool ShowInTerminal;
         /* 0x079 */ public bool ShowStatLevel;

@@ -7,8 +7,8 @@ namespace libMBIN.NMS.GameComponents
     public class GcPulseEncounterInfo : NMSTemplate
     {
         /* 0x000 */ public NMSString0x10 Id;
-        /* 0x010 */ public NMSString0x20 MarkerLabel;
-        /* 0x030 */ public NMSString0x20 ChatMessageName;
+        /* 0x010 */ public NMSString0x20A MarkerLabel;
+        /* 0x030 */ public NMSString0x20A ChatMessageName;
         /* 0x050 */ public TkTextureResource MarkerIcon;
         [NMS(Size = 0x4, Ignore = true)]
         /* 0x0D4 */ public byte[] PaddingD4;

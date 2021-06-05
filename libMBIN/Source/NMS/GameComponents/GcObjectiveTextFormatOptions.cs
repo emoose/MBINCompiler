@@ -11,7 +11,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x00 */ public bool ObjectivesCanBeFormattedBySequences;
         [NMS(Size = 0x7, Ignore = true)]
         /* 0x01 */ public byte[] Padding1;
-        /* 0x08 */ public NMSString0x20 FormattableObjective;
-        /* 0x28 */ public NMSString0x20 FormattableObjectiveTip;
+        /* 0x08 */ public NMSString0x20A FormattableObjective;
+        /* 0x28 */ public NMSString0x20A FormattableObjectiveTip;
     }
 }

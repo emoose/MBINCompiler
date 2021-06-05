@@ -14,7 +14,7 @@ namespace libMBIN.NMS.Toolkit
         public bool IsSRGB;
         [NMS(Size = 4, Ignore = true)]
         public byte[] PaddingA4;
-        public NMSString0x20 MaterialAlternativeId;
+        public NMSString0x20A MaterialAlternativeId;
 		public enum TextureAddressModeEnum { Wrap, Clamp, ClampToBorder, Mirror }
 		public TextureAddressModeEnum TextureAddressMode;
 

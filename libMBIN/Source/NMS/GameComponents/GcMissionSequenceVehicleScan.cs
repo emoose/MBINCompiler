@@ -7,7 +7,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcMissionSequenceVehicleScan : NMSTemplate
     {
         /* 0x00 */ public NMSString0x80 Message;
-        /* 0x80 */ public NMSString0x20 ScanEventID;
+        /* 0x80 */ public NMSString0x20A ScanEventID;
         /* 0xA0 */ public NMSString0x80 DebugText;
     }
 }

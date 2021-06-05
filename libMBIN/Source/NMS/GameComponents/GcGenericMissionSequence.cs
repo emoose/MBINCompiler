@@ -30,7 +30,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x2C8 */ public GcMissionPageHint MissionPageHint;
         [NMS(Size = 0x4, Ignore = true)]
         /* 0x2CC */ public byte[] Padding2CC;
-        /* 0x2D0 */ public NMSString0x20 MissionPageLocID;
+        /* 0x2D0 */ public NMSString0x20A MissionPageLocID;
         /* 0x2F0 */ public NMSString0x10 MissionBuildMenuHint;
         /* 0x300 */ public bool MissionHasColourOverride;
         /* 0x310 */ public Colour MissionColourOverride;

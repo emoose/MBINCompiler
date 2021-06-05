@@ -1,4 +1,4 @@
-﻿using libMBIN.NMS.Toolkit;
+using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
@@ -6,8 +6,8 @@ namespace libMBIN.NMS.GameComponents
 	[NMS(Size = 0x1F8, GUID = 0x4B7E84539BE68467, NameHash = 0xBD1382185246DF07)]
     public class GcPlayerEmote : NMSTemplate
     {
-        /* 0x000 */ public NMSString0x20 Title;
-        /* 0x020 */ public NMSString0x20 ChatText;
+        /* 0x000 */ public NMSString0x20A Title;
+        /* 0x020 */ public NMSString0x20A ChatText;
         /* 0x040 */ public bool ChatUsesPrefix;
         [NMS(Size = 0x7, Ignore = true)]
         /* 0x041 */ public byte[] Padding41;
@@ -33,7 +33,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x148 */ public bool IsPetCommand;
         [NMS(Size = 0x7, Ignore = true)]
         /* 0x149 */ public byte[] Padding149;
-        /* 0x150 */ public NMSString0x20 PetCommandTitle;
+        /* 0x150 */ public NMSString0x20A PetCommandTitle;
         /* 0x170 */ public TkTextureResource PetCommandIcon;
         [NMS(Size = 0x4, Ignore = true)]
         /* 0x1F4 */ public byte[] EndPadding;

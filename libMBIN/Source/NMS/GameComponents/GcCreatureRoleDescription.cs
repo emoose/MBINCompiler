@@ -18,6 +18,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x3C */ public GcCreatureActiveTime ActiveTime;
         /* 0x40 */ public float ProbabilityOfBeingEnabled;
         /* 0x44 */ public float IncreasedSpawnDistance;
-        /* 0x48 */ public NMSString0x20 Filter;
+        /* 0x48 */ public NMSString0x20A Filter;
     }
 }

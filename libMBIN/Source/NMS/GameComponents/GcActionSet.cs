@@ -12,7 +12,7 @@ namespace libMBIN.NMS.GameComponents
         public GcActionUseType Status;
         public NMSString0x20 ExternalId;
         public NMSString0x20 ExternalLoc;
-        public NMSString0x20 LocTag;
+        public NMSString0x20A LocTag;
         public List<GcActionSetAction> Actions;
     }
 }

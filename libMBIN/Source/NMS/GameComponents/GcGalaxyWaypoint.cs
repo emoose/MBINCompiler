@@ -10,6 +10,6 @@ namespace libMBIN.NMS.GameComponents
     {
         /* 0x00 */ public GcGalacticAddressData Address;
         /* 0x14 */ public GcGalaxyWaypointTypes Type;
-        /* 0x18 */ public NMSString0x20 EventId;
+        /* 0x18 */ public NMSString0x20A EventId;
     }
 }

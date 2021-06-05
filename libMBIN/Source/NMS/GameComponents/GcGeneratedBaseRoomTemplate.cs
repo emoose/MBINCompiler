@@ -9,7 +9,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcGeneratedBaseRoomTemplate : NMSTemplate
     {
         /* 0x00 */ public NMSString0x10 Name;
-        /* 0x10 */ public NMSString0x20 LocId;
+        /* 0x10 */ public NMSString0x20A LocId;
         /* 0x30 */ public Colour PrimaryColour;
         /* 0x40 */ public Colour SecondaryColour;
         /* 0x50 */ public int MinPathLength;

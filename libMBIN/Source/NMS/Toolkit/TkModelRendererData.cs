@@ -14,7 +14,7 @@ namespace libMBIN.NMS.Toolkit
 		public enum FocusTypeEnum { ResourceBounds, ResourceBoundingHeight, NodeBoundingBox, DiscoveryView }
 		/* 0x4C */ public FocusTypeEnum FocusType;
 
-        /* 0x50 */ public NMSString0x20 FocusLocator;
+        /* 0x50 */ public NMSString0x20A FocusLocator;
         /* 0x70 */ public Vector3f FocusOffset;
         /* 0x80 */ public float FocusInterpTime;
         /* 0x84 */ public float BlendInTime;
