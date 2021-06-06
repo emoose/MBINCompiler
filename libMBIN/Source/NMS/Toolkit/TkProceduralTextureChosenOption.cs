@@ -11,6 +11,6 @@ namespace libMBIN.NMS.Toolkit
         /* 0x20 */ public TkPaletteTexture Palette;
         /* 0x28 */ public bool OverrideColour;
         /* 0x30 */ public Colour Colour;
-        /* 0x40 */ public NMSString0x20 OptionName;
+        /* 0x40 */ public NMSString0x20A OptionName;
     }
 }

@@ -17,6 +17,6 @@ namespace libMBIN.NMS.GameComponents
 		/* 0x5AC */ public GcCreatureDiet Diet;
         /* 0x5B0 */ public float GroupsPerSquareKm;
         /* 0x5B4 */ public GcCreatureHemiSphere HemiSphere;
-        /* 0x5B8 */ public NMSString0x20 Filter;
+        /* 0x5B8 */ public NMSString0x20A Filter;
     }
 }

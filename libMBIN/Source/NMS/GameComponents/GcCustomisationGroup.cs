@@ -9,7 +9,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcCustomisationGroup : NMSTemplate
     {
         /* 0x00 */ public NMSString0x10 GroupID;
-        /* 0x10 */ public NMSString0x20 GroupTitle;
+        /* 0x10 */ public NMSString0x20A GroupTitle;
         /* 0x30 */ public bool IsBannerGroup;
         /* 0x31 */ public bool ForceShowAllColourOptions;
         /* 0x34 */ public GcCustomisationCameraData CameraData;

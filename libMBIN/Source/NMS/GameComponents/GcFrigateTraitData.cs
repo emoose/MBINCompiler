@@ -7,7 +7,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcFrigateTraitData : NMSTemplate
     {
         /* 0x00 */ public NMSString0x10 ID;
-        /* 0x10 */ public NMSString0x20 DisplayName;
+        /* 0x10 */ public NMSString0x20A DisplayName;
         /* 0x30 */ public GcFrigateStatType FrigateStatType;
         /* 0x34 */ public GcFrigateTraitStrength Strength;
         [NMS(Size = 0x6, EnumType = typeof(GcFrigateClass.FrigateClassEnum))]

@@ -27,9 +27,9 @@ namespace libMBIN.NMS.GameComponents
 
         public GcRarity Rarity;
 
-        public NMSString0x20 BiomeDesc;
-        public NMSString0x20 TempermentDesc;
-        public NMSString0x20 DietDesc;
-        public NMSString0x20 NotesDesc;
+        public NMSString0x20A BiomeDesc;
+        public NMSString0x20A TempermentDesc;
+        public NMSString0x20A DietDesc;
+        public NMSString0x20A NotesDesc;
     }
 }

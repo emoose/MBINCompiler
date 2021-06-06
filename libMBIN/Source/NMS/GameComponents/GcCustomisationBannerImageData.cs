@@ -13,6 +13,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x98 */ public bool WideImage;
         [NMS(Size = 0x7, Ignore = true)]
         /* 0x99 */ public byte[] Padding99;
-        /* 0xA0 */ public NMSString0x20 TipText;
+        /* 0xA0 */ public NMSString0x20A TipText;
     }
 }

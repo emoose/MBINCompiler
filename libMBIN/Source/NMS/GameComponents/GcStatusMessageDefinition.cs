@@ -9,7 +9,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcStatusMessageDefinition : NMSTemplate
     {
         /* 0x00 */ public NMSString0x10 Id;
-        /* 0x10 */ public NMSString0x20 Message;
+        /* 0x10 */ public NMSString0x20A Message;
         /* 0x30 */ public bool AddPlayerNamePrefix;
         /* 0x31 */ public bool AddPetNamePrefix;
         /* 0x32 */ public bool IncludePlayerName;

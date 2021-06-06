@@ -7,7 +7,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcCustomisationTextureGroup : NMSTemplate
     {
         public NMSString0x10 GroupID;
-        public NMSString0x20 Title;
+        public NMSString0x20A Title;
         public NMSString0x10 TextureOptionsGroup;
     }
 }

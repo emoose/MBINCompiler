@@ -9,7 +9,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x00 */ public int Table;
         [NMS(Size = 4, Ignore = true)]
         /* 0x04 */ public byte[] Padding4;
-        /* 0x08 */ public NMSString0x20 Event;
+        /* 0x08 */ public NMSString0x20A Event;
         /* 0x28 */ public ulong GalacticAddress;
         /* 0x30 */ public GcSeed BuildingSeed;
         /* 0x40 */ public Vector3f BuildingLocation;

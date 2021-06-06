@@ -9,7 +9,7 @@ namespace libMBIN.NMS.Toolkit
     public class TkChordPathMapping : NMSTemplate
     {
         public List<TkInputEnum> ButtonIds;
-        public NMSString0x20 Name;
+        public NMSString0x20A Name;
         public NMSString0x10 TextTag;
         public NMSString0x80 SolidIcon;
         public NMSString0x80 OverlayIcon;

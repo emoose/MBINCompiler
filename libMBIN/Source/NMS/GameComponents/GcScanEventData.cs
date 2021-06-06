@@ -8,8 +8,8 @@ namespace libMBIN.NMS.GameComponents
 	[NMS(Size = 0x5E0, Alignment = 0x8, GUID = 0xC94E09D75F416150, NameHash = 0x7BBBCE7D7BC0F1F4)]
     public class GcScanEventData : NMSTemplate
     {
-        /* 0x000 */ public NMSString0x20 Name;
-        /* 0x020 */ public NMSString0x20 ForceInteraction;
+        /* 0x000 */ public NMSString0x20A Name;
+        /* 0x020 */ public NMSString0x20A ForceInteraction;
         /* 0x040 */ public GcInteractionType ForceInteractionType;
         /* 0x044 */ public bool ForceBroken;
         /* 0x045 */ public bool ForceFixed;
@@ -21,11 +21,11 @@ namespace libMBIN.NMS.GameComponents
         /* 0x051 */ public bool NeverShow;
         [NMS(Size = 0x6, Ignore = true)]
         /* 0x052 */ public byte[] Padding52;
-        /* 0x058 */ public NMSString0x20 PlanetLabelText;
+        /* 0x058 */ public NMSString0x20A PlanetLabelText;
         /* 0x078 */ public float SurveyDistance;
         [NMS(Size = 0x4, Ignore = true)]
         /* 0x07C */ public byte[] Padding7C;
-        /* 0x080 */ public NMSString0x20 SurveyDiscoveryOSDMessage;
+        /* 0x080 */ public NMSString0x20A SurveyDiscoveryOSDMessage;
         public enum EventStartTypeEnum { None, Special, Discovered, Timer, ObjectScan, LeaveBuilding }
 		/* 0x0A0 */ public EventStartTypeEnum EventStartType;
 		public enum EventEndTypeEnum { None, Proximity, Interact, EnterBuilding, TimedInteract }
@@ -56,7 +56,7 @@ namespace libMBIN.NMS.GameComponents
         [NMS(Size = 0x7, Ignore = true)]
         /* 0x1A9 */ public byte[] Padding1A9;
         /* 0x1B0 */ public NMSString0x10 HasReward;
-        /* 0x1C0 */ public NMSString0x20 NextOption;
+        /* 0x1C0 */ public NMSString0x20A NextOption;
         /* 0x1E0 */ public GcScanEventTriggers TriggerActions;
         /* 0x200 */ public List<NMSString0x100> UAsList;
         /* 0x210 */ public GcTechnologyCategory TechShopType;

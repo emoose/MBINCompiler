@@ -36,7 +36,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x091 */ public bool HideReward;
         [NMS(Size = 0x6, Ignore = true)]
         /* 0x092 */ public byte[] Padding92;
-        /* 0x098 */ public NMSString0x20 OverrideRewardLoc;
+        /* 0x098 */ public NMSString0x20A OverrideRewardLoc;
         /* 0x0B8 */ public float HardModeSubstanceMultiplier;
         [NMS(Size = 0x4, Ignore = true)]
         /* 0x0BC */ public byte[] PaddingBC;

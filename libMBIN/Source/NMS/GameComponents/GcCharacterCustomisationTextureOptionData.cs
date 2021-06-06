@@ -7,6 +7,6 @@ namespace libMBIN.NMS.GameComponents
     public class GcCharacterCustomisationTextureOptionData : NMSTemplate
     {
         public NMSString0x10 TextureOptionGroupName;
-        public NMSString0x20 TextureOptionName;
+        public NMSString0x20A TextureOptionName;
     }
 }

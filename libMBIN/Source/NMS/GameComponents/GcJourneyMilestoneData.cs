@@ -10,6 +10,6 @@ namespace libMBIN.NMS.GameComponents
         public int PointsToUnlock;
         [NMS(Size = 4, Ignore = true)]
         public byte[] Padding14;
-        public NMSString0x20 JourneyMilestoneTitle;
+        public NMSString0x20A JourneyMilestoneTitle;
     }
 }

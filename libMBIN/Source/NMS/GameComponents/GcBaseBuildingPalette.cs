@@ -8,6 +8,6 @@ namespace libMBIN.NMS.GameComponents
     {
         public Colour PrimaryColour;
         public Colour SecondaryColour;
-        public NMSString0x20 Name;
+        public NMSString0x20A Name;
     }
 }

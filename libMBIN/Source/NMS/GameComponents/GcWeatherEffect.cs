@@ -9,7 +9,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcWeatherEffect : NMSTemplate
     {
         /* 0x000 */ public NMSString0x10 Id;
-        /* 0x010 */ public NMSString0x20 OSDMessage;
+        /* 0x010 */ public NMSString0x20A OSDMessage;
         /* 0x030 */ public List<GcWeightedFilename> Effects;
         public enum SpawnConditionsEnum { Anytime, DuringStorm, AtNight, NotInStorm, AtNightNotInStorm };
         /* 0x040 */ public SpawnConditionsEnum SpawnConditions;

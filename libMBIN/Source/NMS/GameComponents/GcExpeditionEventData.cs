@@ -8,7 +8,7 @@ namespace libMBIN.NMS.GameComponents
 	[NMS(Size = 0x190, GUID = 0xCCE9EB1C98DF64CE, NameHash = 0x48A0FEC50BBF269C)]
     public class GcExpeditionEventData : NMSTemplate
     {
-        /* 0x000 */ public NMSString0x20 ID;
+        /* 0x000 */ public NMSString0x20A ID;
         [NMS(Size = 0x5)]
         /* 0x020 */ public float[] StatContribution;
         /* 0x034 */ public int DifficultyModifier;

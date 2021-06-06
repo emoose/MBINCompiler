@@ -11,7 +11,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x001 */ public byte[] Padding1;
         /* 0x004 */ public GcInputActions Pairing;
         /* 0x008 */ public NMSString0x80 TextTag;
-        /* 0x088 */ public NMSString0x20 LocTag;
+        /* 0x088 */ public NMSString0x20A LocTag;
         /* 0x0A8 */ public NMSString0x80 SolidIcon;
         /* 0x128 */ public NMSString0x80 OverlayIcon;
         /* 0x1A8 */ public NMSString0x80 SpecialIcon;

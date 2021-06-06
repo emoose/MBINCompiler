@@ -46,14 +46,14 @@ namespace libMBIN.NMS.GameComponents
         public NMSString0x200 TestString512;
 
         public NMSString0x10 TestID; // most likely they use a special ID field which maps this to the object using this ID automatically
-        public NMSString0x20 TestLocID; // ditto
+        public NMSString0x20A TestLocID; // ditto
 
         [NMS(Size = 8, Ignore = true)]
         public byte[] Padding568;
 
         public Vector3f DocOptionalVector;
         public NMSString0x40 DocRenamedString64;
-        public NMSString0x20 DocOptionalRenamed;
+        public NMSString0x20A DocOptionalRenamed;
 		public enum DocOptionalEnumEnum { SomeValue1, SomeValue2, SomeValue3, SomeValue4 }
 		public DocOptionalEnumEnum DocOptionalEnum;
         [NMS(Size = 4, Ignore = true)]

@@ -7,7 +7,7 @@ namespace libMBIN.NMS.Toolkit
     public class TkSceneNodeAttributeData : NMSTemplate     // size: 0x130
     {
         public NMSString0x10 Name;
-        public NMSString0x20 AltID;
+        public NMSString0x20A AltID;
         public NMSString0x100 Value;
     }
 }

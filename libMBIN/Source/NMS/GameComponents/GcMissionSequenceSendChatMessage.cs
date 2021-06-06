@@ -7,6 +7,6 @@ namespace libMBIN.NMS.GameComponents
     public class GcMissionSequenceSendChatMessage : NMSTemplate
     {
         public NMSString0x10 StatusMessageId;
-        public NMSString0x20 CustomText;
+        public NMSString0x20A CustomText;
     }
 }

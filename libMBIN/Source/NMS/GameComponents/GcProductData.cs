@@ -57,9 +57,9 @@ namespace libMBIN.NMS.GameComponents
         [NMS(Size = 0x4, Ignore = true)]
         /* 0x39C */ public byte[] Padding39C;
         [NMSDescription("Notification when this substance has to be crafted. This string is referenced in each language file for translation")]
-        /* 0x3A0 */ public NMSString0x20 PinObjective;
+        /* 0x3A0 */ public NMSString0x20A PinObjective;
         [NMSDescription("Notification hints to collect this item. This string is referenced in each language file for translation")]
-        /* 0x3C0 */ public NMSString0x20 PinObjeectiveTip;
+        /* 0x3C0 */ public NMSString0x20A PinObjectiveTip;
         /* 0x3E0 */ public bool CookingIngredient;
         /* 0x3E4 */ public float CookingValue;
         /* 0x3E8 */ public bool GoodForSelling;

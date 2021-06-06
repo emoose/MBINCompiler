@@ -38,6 +38,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x48 */ public bool NeedsHighCreatureLevel;
         [NMS(Size = 0x7, Ignore = true)]
         /* 0x49 */ public byte[] Padding49;
-        /* 0x50 */ public NMSString0x20 SamePlanetAsEvent;
+        /* 0x50 */ public NMSString0x20A SamePlanetAsEvent;
     }
 }

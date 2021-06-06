@@ -8,7 +8,7 @@ namespace libMBIN.NMS.GameComponents
     {
         /* 0x000 */ public NMSString0x80 Message;
         /* 0x080 */ public NMSString0x80 GalaxyMapMessage;
-        /* 0x100 */ public NMSString0x20 Event;
+        /* 0x100 */ public NMSString0x20A Event;
         /* 0x120 */ public float Timeout;
         /* 0x124 */ public bool DistanceTimeout;
         /* 0x125 */ public NMSString0x80 TimeoutOSD;
