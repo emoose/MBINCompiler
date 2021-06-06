@@ -168,10 +168,14 @@ namespace libMBIN
                     long offset = reader.ReadInt64();
                     string name = reader.ReadString(Encoding.ASCII, 0x40, true);
                     ulong NameHash = reader.ReadUInt64();
-                    if (template != null) {
-                        ulong expected_NameHash = template.GetType().GetCustomAttribute<NMSAttribute>()?.NameHash ?? 0;
-                        if (NameHash != expected_NameHash && template != null) {
-                            Logger.LogMessage("NameHash", $"{template.GetType().Name} has the wrong NameHash");
+                    if ( name.Length > 0 ) {
+                        var templateName = name;
+                        if ( name.StartsWith( "c" ) && name.Length > 1 ) {
+                            templateName = name.Substring( 1 );
+                        }
+                        ulong expected_NameHash = GetTemplateType( templateName )?.GetCustomAttribute<NMSAttribute>()?.NameHash ?? 0;
+                        if ( NameHash != expected_NameHash ) {
+                            Logger.LogMessage( "NameHash", $"{templateName} has the wrong NameHash" );
                         }
                     }
 
@@ -186,10 +190,9 @@ namespace libMBIN
                     return template;
                 default:
                     if ( fieldType == "VariableStringSize") {
-                        reader.Align( 0x4 );
+                        reader.Align( 0x8 );
                     }
 
-                    // todo: align for VariableSizeString?
                     if (field.IsEnum) {
                         reader.Align( 4 );
                         return fieldType == "Int32" ? (object)reader.ReadInt32() : (object)reader.ReadUInt32();
@@ -283,7 +286,7 @@ namespace libMBIN
                         if ( name.StartsWith( "c" ) && name.Length > 1 ) {
                             templateName = name.Substring( 1 );
                         }
-                        ulong expected_NameHash = GetTemplateType( templateName ).GetCustomAttribute<NMSAttribute>()?.NameHash ?? 0;
+                        ulong expected_NameHash = GetTemplateType( templateName )?.GetCustomAttribute<NMSAttribute>()?.NameHash ?? 0;
                         if ( NameHash != expected_NameHash ) {
                             Logger.LogMessage( "NameHash", $"{templateName} has the wrong NameHash" );
                         }
@@ -430,14 +433,7 @@ namespace libMBIN
                     break;
 
                 case "NMSTemplate":
-                    int template_alignment = settings?.Alignment ?? 0x4;
-
-                    if ( template_alignment == 0x4 ) {
-                        Logger.LogDebug( $"{field.Name}: Expected alignment == 0x8, not {template_alignment}?" );
-                        writer.Align( 8, field?.Name ?? fieldType.Name );
-                    } else {
-                        writer.Align( template_alignment, field?.Name ?? fieldType.Name );
-                    }
+                    writer.Align( 8, field?.Name ?? fieldType.Name );
                     long refPos = writer.BaseStream.Position;
 
                     var template = (NMSTemplate) fieldData;
@@ -469,10 +465,8 @@ namespace libMBIN
                     // have something defined so that it just ignores it
                     break;
                 default:
-                    if ( fieldType.Name == "Colour" ) writer.Align( 0x10, field?.Name ?? fieldType.Name ); // TODO: should not be needed
-
-                    // todo: align for VariableSizeString?
                     if ( fieldType.Name == "VariableSizeString" ) {
+                        writer.Align( 0x8, field?.Name ?? fieldType.Name );
                         // write empty DynamicString header
                         long fieldPos = writer.BaseStream.Position;
                         writer.Write( (Int64) 0 ); // listPosition
@@ -632,7 +626,7 @@ namespace libMBIN
                     //DebugLog(kvp.Value);
                     writer.WriteString( "c" + kvp.Value, Encoding.UTF8, 0x40 );
                     // Get the NameHash
-                    ulong NameHash = GetTemplateType(kvp.Value).GetCustomAttribute<NMSAttribute>()?.NameHash ?? 0;
+                    ulong NameHash = GetTemplateType(kvp.Value)?.GetCustomAttribute<NMSAttribute>()?.NameHash ?? 0;
                     if ( NameHash != 0 ) {
                         writer.Write( NameHash );
                     } else {
@@ -655,12 +649,19 @@ namespace libMBIN
                 // if the class has no alignment value associated with it, set a default value
                 // Note: This will not work if the Type has a NMS Attribute defined (it will default to an alignment of 0x4)
                 int alignment_default = 0x4;
-                if (list[0].GetType().BaseType == typeof(NMSTemplate)) {
-                    alignment_default = 0x8;
-                } else if (list[0].GetType() == typeof(UInt16)) {
-                    alignment_default = 0x2;
-                } else if (list[0].GetType() == typeof(byte)){
-                    alignment_default = 0x1;
+		switch (list[0].GetType().BaseType.Name) {
+                    case "Byte":
+                        alignment_default = 0x1;
+                        break;
+                    case "Int16":
+                    case "UInt16":
+                        alignment_default = 0x2;
+                        break;
+                    case "Int64":
+                    case "UInt64":
+                    case "NMSTemplate":
+                        alignment_default = 0x8;
+                        break;
                 }
                 int alignment = list[0].GetType().GetCustomAttribute<NMSAttribute>()?.Alignment ?? alignment_default;
                 writer.Align(alignment, list[0].GetType().Name );
@@ -688,13 +689,6 @@ namespace libMBIN
 
             foreach ( var entry in list ) {
                 DebugLogTemplate( $"[C] writing {entry.GetType().Name} to offset 0x{writer.BaseStream.Position:X}" );
-                int alignment = entry.GetType().GetCustomAttribute<NMSAttribute>()?.Alignment ?? 0x4;
-                if (entry.GetType() == typeof(UInt16)) {
-                    alignment = 0x2;
-                } else if (entry.GetType() == typeof(byte)) {
-                    alignment = 0x1;
-                }
-                writer.Align(alignment, entry.GetType().Name );
                 SerializeValue( writer, entry.GetType(), entry, null, null, ref additionalData, ref addtDataIndexThis, listEnding );
             }
         }
@@ -722,38 +716,15 @@ namespace libMBIN
                     //DebugLog($"Current i: {i}");
                     //DebugLog(data);
                     //writer.BaseStream.Position = additionalDataOffset; // addtDataOffset gets updated by child templates
-                    long origPos = writer.BaseStream.Position;
-
-                    // get the custom alignment value from the class if it has one
-                    // If the class has no alignment value associated with it, just set as default value of 4
-                    NMSAttribute settings = data.Item2?.GetType().GetCustomAttribute<NMSAttribute>();
-                    int alignment = settings?.Alignment ?? 0x4;
 
                     if ( data.Item2 == null ) {
-                        writer.Align( alignment, "List<null>" );
                         SerializeList( writer, new List<int>(), data.Item1, ref additionalData, i + 1, listEnding );  // pass an empty list. Data type doesn't matter...
                         continue;
                     }
 
-                    // we don't want alignment if the data is purely byte[] data
-                    if ( data.Item2.GetType() == typeof( byte[] ) ) {
-                        alignment = 1;
-
-                    } else if ( data.Item2.GetType() == typeof( List<ushort> ) ) {
-                        alignment = 2;
-
-                    // if we have an empty list we do not want to do alignment otherwise it can put off other things
-                    } else if ( data.Item2.GetType().IsGenericType && data.Item2.GetType().GetGenericTypeDefinition() == typeof( List<> ) ) {
-                        if ( ((IList) data.Item2).Count == 0 ) alignment = 1;
-
-                    }
-
-                    writer.Align( alignment, data.Item2.GetType().Name );
+                    NMSAttribute settings = data.Item2?.GetType().GetCustomAttribute<NMSAttribute>();
 
                     if ( data.Item2.GetType() == typeof( NMS.VariableSizeString ) ) {
-                        //DebugLog(alignment);
-                        writer.BaseStream.Position = origPos; // no alignment for dynamicstrings
-
                         var str = (NMS.VariableSizeString) data.Item2;
 
                         var stringPos = writer.BaseStream.Position;
@@ -768,6 +739,7 @@ namespace libMBIN
                         writer.BaseStream.Position = stringEndPos;
 
                     } else if ( data.Item2.GetType().BaseType == typeof( NMSTemplate ) ) {
+                        writer.Align( settings?.Alignment ?? 0x4, data.Item2.GetType().Name );
                         var pos = writer.BaseStream.Position;
                         var template = (NMSTemplate) data.Item2;
                         int i2 = i + 1;
