@@ -6,10 +6,12 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x18, GUID = 0x0000000000000000, NameHash = 0xF7253E62FEA9C217)]
+    [NMS(Size = 0x20, GUID = 0xA4BF39A04658FAB1, NameHash = 0xF7253E62FEA9C217)]
     public class GcAtlasSendChangeFeaturedBasesEnv : NMSTemplate
     {
-        /* 0x00 */ public ulong ClientUserdata;
-        /* 0x08 */ public List<GcAtlasFeaturedBaseStateChange> BaseList;
+        [NMS(Size = 0x8, Ignore = true)]
+        /* 0x00 */ public byte[] Padding0;
+        /* 0x08 */ public ulong ClientUserdata;
+        /* 0x10 */ public List<GcAtlasFeaturedBaseStateChange> BaseList;
     }
 }

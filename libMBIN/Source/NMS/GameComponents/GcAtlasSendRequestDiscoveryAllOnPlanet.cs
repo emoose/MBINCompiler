@@ -5,8 +5,12 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x20, GUID = 0xAA2968A35BA5A5A8, NameHash = 0xCED5BF08E5CDDB1D, Broken = true)]
+    [NMS(Size = 0x28, GUID = 0x6DFEB50FEF29FC7C, NameHash = 0xCED5BF08E5CDDB1D)]
     public class GcAtlasSendRequestDiscoveryAllOnPlanet : NMSTemplate
     {
+        [NMS(Size = 0x8, Ignore = true)]
+        /* 0x00 */ public byte[] Padding0;
+        /* 0x08 */ public ulong ClientUserdata;
+        /* 0x10 */ public GcUniverseAddressData UniverseAddress;
     }
 }

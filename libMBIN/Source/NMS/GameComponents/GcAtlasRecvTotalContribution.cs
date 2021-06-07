@@ -5,12 +5,16 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x18, GUID = 0x95AC0992C92BD05E, NameHash = 0x0BB8B54516B54A343, Alignment = 0x8)]
+	[NMS(Size = 0x20, GUID = 0x88D927C5D3ACE8D9, NameHash = 0x0BB8B54516B54A343)]
     public class GcAtlasRecvTotalContribution : NMSTemplate
     {
-        /* 0x0000 */ public long ClientUserData;
-        /* 0x0008 */ public bool Success;
-        /* 0x0010 */ public long TotalContribution;
+        [NMS(Size = 0x8, Ignore = true)]
+        /* 0x00 */ public byte[] Padding0;
+        /* 0x08 */ public ulong ClientUserdata;
+        /* 0x10 */ public bool Success;
+        [NMS(Size = 0x7, Ignore = true)]
+        /* 0x11 */ public byte[] Padding11;
+        /* 0x18 */ public ulong TotalContribution;
     }
 
 }
