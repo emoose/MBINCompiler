@@ -9,8 +9,8 @@ namespace libMBIN.NMS.GameComponents
         /* 0x000 */ public GcUniverseAddressData UniverseAddress;
         [NMS(Size = 0x8, Ignore = true)]
         /* 0x018 */ public byte[] Padding18;
-        /* 0x020 */ public Vector4f Position;
-        /* 0x030 */ public Vector4f At;
+        /* 0x020 */ public Vector3f Position;
+        /* 0x030 */ public Vector3f At;
         /* 0x040 */ public NMSString0x40 RID;
         /* 0x080 */ public NMSString0x40 CreatorName;
         /* 0x0C0 */ public NMSString0x40 CreatorOnlineID;

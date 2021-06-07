@@ -10,7 +10,7 @@ namespace libMBIN.NMS.GameComponents
     {
         public ulong GalacticAddress;
         public List<int> BufferSizes;
-        public List<Vector4f> BufferAnchors;
+        public List<Vector3f> BufferAnchors;
         public List<GcTerrainEdit> Edits;       // just a guess... Don't think any structs use this...
     }
 }

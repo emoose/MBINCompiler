@@ -26,7 +26,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x048 */ public float SteeringWheelSpringMultiplier;
         /* 0x04C */ public float SteeringWheelPushRange;
         [NMS(Size = 0xA)]
-        /* 0x050 */ public Vector4f[] WheelLocs;
+        /* 0x050 */ public Vector3f[] WheelLocs;
         [NMS(Size = 0xA)]
         /* 0x0F0 */ public NMSString0x20[] WheelNames;
         [NMS(Size = 0xA)]
@@ -153,7 +153,7 @@ namespace libMBIN.NMS.GameComponents
         [NMS(Size = 0x8, Ignore = true)]
         /* 0xB78 */ public byte[] PaddingB78;
         [NMS(Size = 0xA)]
-        /* 0xB80 */ public Vector4f[] WheelGrassPushers;
+        /* 0xB80 */ public Vector3f[] WheelGrassPushers;
         /* 0xC20 */ public float CreatureMassScale;
         [NMS(Size = 0x2)]
         /* 0xC24 */ public NMSString0x100[] HeadlightNames;

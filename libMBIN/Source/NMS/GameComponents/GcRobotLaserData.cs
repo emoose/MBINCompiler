@@ -18,7 +18,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x28 */ public float LaserLightAttackSize;
         [NMS(Size = 0x4, Ignore = true)]
         /* 0x2C */ public byte[] pad2C;
-        /* 0x30 */ public Vector4f LaserLightOffset;
+        /* 0x30 */ public Vector3f LaserLightOffset;
         /* 0x40 */ public Colour LaserColour;
     }
 

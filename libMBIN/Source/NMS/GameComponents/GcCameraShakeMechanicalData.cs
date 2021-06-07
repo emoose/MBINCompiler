@@ -11,11 +11,11 @@ namespace libMBIN.NMS.GameComponents
         [NMS(Size = 0xF, Ignore = true)]
         /* 0x001 */ public byte[] Padding1;
 
-        /* 0x010 */ public Vector4f ShakeStrength;
-        /* 0x020 */ public Vector4f ShakeFrequency;
-        /* 0x030 */ public Vector4f ExtraShakeFrequency;
-        /* 0x040 */ public Vector4f VibrateStrength;
-        /* 0x050 */ public Vector4f VibrateFrequency;
-        /* 0x060 */ public Vector4f ExtraVibrateFrequency;
+        /* 0x010 */ public Vector3f ShakeStrength;
+        /* 0x020 */ public Vector3f ShakeFrequency;
+        /* 0x030 */ public Vector3f ExtraShakeFrequency;
+        /* 0x040 */ public Vector3f VibrateStrength;
+        /* 0x050 */ public Vector3f VibrateFrequency;
+        /* 0x060 */ public Vector3f ExtraVibrateFrequency;
     }
 }

@@ -15,7 +15,7 @@ namespace libMBIN.NMS.GameComponents
         public NMSString0x100 AltId;
         [NMS(Size = 8, Ignore = true)]
         public byte[] Padding118;
-        public Vector4f SpawnPosition;
-        public Vector4f SpawnFacing;
+        public Vector3f SpawnPosition;
+        public Vector3f SpawnFacing;
     }
 }

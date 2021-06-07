@@ -11,8 +11,8 @@ namespace libMBIN.NMS.GameComponents
         [NMS(Size = 0xC, Ignore = true)]
         public byte[] Padding24;
 
-        public Vector4f Position;
-        public Vector4f Direction;
+        public Vector3f Position;
+        public Vector3f Direction;
         public float Radius;
 
         [NMS(Size = 0xC, Ignore = true)]

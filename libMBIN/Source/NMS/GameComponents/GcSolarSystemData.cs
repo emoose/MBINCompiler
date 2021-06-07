@@ -14,7 +14,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x0094 */ public GcGalaxyStarTypes StarType;
         /* 0x0098 */ public int Planets;
         [NMS(Size = 8)]
-        /* 0x00A0 */ public Vector4f[] PlanetPositions;
+        /* 0x00A0 */ public Vector3f[] PlanetPositions;
         [NMS(Size = 8)]
         /* 0x0120 */ public GcPlanetGenerationInputData[] PlanetGenerationInputs;
         [NMS(Size = 8)]

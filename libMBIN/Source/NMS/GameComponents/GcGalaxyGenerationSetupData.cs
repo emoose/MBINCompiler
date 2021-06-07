@@ -12,7 +12,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x14 */ public float SpiralTwistMult;
         [NMS(Size = 0x8, Ignore = true)]
         /* 0x18 */ public byte[] Padding18;
-        /* 0x20 */ public Vector4f SpiralPull;
+        /* 0x20 */ public Vector3f SpiralPull;
         /* 0x30 */ public Vector2f SpiralSizeScale;
         /* 0x38 */ public float RareSunChance;
         /* 0x3C */ public Vector2f ConnectionAttractorMax;
