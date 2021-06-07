@@ -15,6 +15,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x178 */ public List<float> DamageTimers;
         /* 0x188 */ public ushort Flags;
         [NMS(Size = 6, Ignore = true)]
-        /* 0x1C */ public byte[] EndPadding;
+        /* 0x18A */ public byte[] EndPadding;
     }
 }
