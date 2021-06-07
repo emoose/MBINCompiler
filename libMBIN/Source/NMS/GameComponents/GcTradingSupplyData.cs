@@ -3,13 +3,13 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x28, GUID = 0x47465FFF4364C345, NameHash = 0x5D0FDAEE020A4D6C)]
-    public class GcTradingSupplyData : NMSTemplate      // size: 0x28
+    [NMS(Size = 0x28, GUID = 0x47465FFF4364C345, NameHash = 0x5D0FDAEE020A4D6C)]
+    public class GcTradingSupplyData : NMSTemplate
     {
-        public ulong GalacticAddress;
-        public float Supply;
-        public float Demand;
-        public NMSString0x10 Product;
-        public ulong Timestamp;
+        /* 0x00 */ public ulong GalacticAddress;
+        /* 0x08 */ public float Supply;
+        /* 0x0C */ public float Demand;
+        /* 0x10 */ public NMSString0x10 Product;
+        /* 0x20 */ public ulong Timestamp;
     }
 }

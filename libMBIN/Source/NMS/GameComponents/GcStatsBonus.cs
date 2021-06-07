@@ -3,11 +3,11 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0xC, GUID = 0x19071614D76515B5, NameHash = 0xBAC710ADD80D9C59)]
+	[NMS(Size = 0xC, GUID = 0xEE5DBAAC1719BE35, NameHash = 0xBAC710ADD80D9C59)]
     public class GcStatsBonus : NMSTemplate
     {
-        public GcStatsTypes StatsTypes;
-        public float Bonus;
-        public int Level;
+        /* 0x00 */ public GcStatsTypes StatsTypes;
+        /* 0x04 */ public float Bonus;
+        /* 0x08 */ public int Level;
     }
 }
