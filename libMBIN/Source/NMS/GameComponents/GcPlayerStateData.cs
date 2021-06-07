@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x2DD30, GUID = 0x5C97DAEA9F15E300, NameHash = 0x6C4510BB243EFA64)]
+	[NMS(Size = 0x2DD20, GUID = 0x5E8E9178194B7B14, NameHash = 0x6C4510BB243EFA64)]
     public class GcPlayerStateData : NMSTemplate
     {
         /* 0x00000 */ public GcUniverseAddressData UniverseAddress;
@@ -81,7 +81,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x04AC0 */ public ulong TotalPlayTime;
         /* 0x04AC8 */ public List<GcScanEventSave> MarkerStack;
         /* 0x04AD8 */ public List<GcScanEventSave> NewMPMarkerStack;
-        /* 0x04AE8 */ public List<Vector4f> SurveyedEventPositions;
+        /* 0x04AE8 */ public List<Vector3f> SurveyedEventPositions;
         /* 0x04AF8 */ public int NextSurveyedEventPositionIndex;
         [NMS(Size = 0x4, Ignore = true)]
         /* 0x04AFC */ public byte[] Padding4AFC;
@@ -118,7 +118,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x05D66 */ public byte[] Padding5D66;
         /* 0x05D68 */ public List<GcSavedEntitlement> UsedEntitlements;
         [NMS(Size = 0x10)]
-        /* 0x05D80 */ public Vector4f[] PlanetPositions;
+        /* 0x05D80 */ public Vector3f[] PlanetPositions;
         [NMS(Size = 0x10)]
         /* 0x05E80 */ public GcSeed[] PlanetSeeds;
         /* 0x05F80 */ public int PrimaryPlanet;
@@ -196,7 +196,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x2C970 */ public bool ShipNeedsTerrainPositioning;
         /* 0x2C974 */ public int TradingSupplyDataIndex;
         /* 0x2C978 */ public List<GcTradingSupplyData> TradingSupplyData;
-        /* 0x2C988 */ public List<GcPortalData> LastPortal;
+        /* 0x2C988 */ public List<GcPortalSaveData> LastPortal;
         /* 0x2C998 */ public GcPortalSaveData VisitedPortal;
         /* 0x2C9B0 */ public int KnownPortalRunes;
         /* 0x2C9B4 */ public bool OnOtherSideOfPortal;
@@ -219,7 +219,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x2D140 */ public GcSeed FleetSeed;
         /* 0x2D150 */ public List<GcFleetFrigateSaveData> FleetFrigates;
         /* 0x2D160 */ public List<GcFleetExpeditionSaveData> FleetExpeditions;
-        /* 0x2D170 */ public List<long> ExpeditionSeedsSelectedToday;
+        /* 0x2D170 */ public List<ulong> ExpeditionSeedsSelectedToday;
         /* 0x2D180 */ public ulong LastKnownDay;
         /* 0x2D188 */ public ulong SunTimer;
         /* 0x2D190 */ public ulong MultiplayerLobbyID;
@@ -241,21 +241,21 @@ namespace libMBIN.NMS.GameComponents
         /* 0x2D770 */ public Vector3f NexusMatrixUp;
         /* 0x2D780 */ public Vector3f NexusMatrixPos;
         /* 0x2D790 */ public GcPhotoModeSettings PhotoModeSettings;
-        /* 0x2D7F0 */ public int BannerIcon;
-        /* 0x2D7F4 */ public int BannerMainColour;
-        /* 0x2D7F8 */ public int BannerBackgroundColour;
-        /* 0x2D800 */ public NMSString0x10 BannerTitleId;
-        /* 0x2D810 */ public int TelemetryUploadVersion;
-        /* 0x2D814 */ public bool UsesThirdPersonVehicleCam;
-        /* 0x2D818 */ public float VRCameraOffset;
+        /* 0x2D7E0 */ public int BannerIcon;
+        /* 0x2D7E4 */ public int BannerMainColour;
+        /* 0x2D7E8 */ public int BannerBackgroundColour;
+        /* 0x2D7F0 */ public NMSString0x10 BannerTitleId;
+        /* 0x2D800 */ public int TelemetryUploadVersion;
+        /* 0x2D804 */ public bool UsesThirdPersonVehicleCam;
+        /* 0x2D808 */ public float VRCameraOffset;
         [NMS(Size = 0x4, Ignore = true)]
-        /* 0x2D81C */ public byte[] Padding2D81C;
-        /* 0x2D820 */ public GcSeasonalGameModeData SeasonalData;
-        /* 0x2DCB8 */ public GcSeasonStateData SeasonState;
-        /* 0x2DD08 */ public bool RestartAllInactiveSeasonalMissions;
+        /* 0x2D80C */ public byte[] Padding2D80C;
+        /* 0x2D810 */ public GcSeasonalGameModeData SeasonData;
+        /* 0x2DCA8 */ public GcSeasonStateData SeasonState;
+        /* 0x2DCF8 */ public bool RestartAllInactiveSeasonalMissions;
         [NMS(Size = 0x7, Ignore = true)]
-        /* 0x2DD09 */ public byte[] Padding2DD09;
-        /* 0x2DD10 */ public List<NMSString0x10> RedeemedSeasonRewards;
-        /* 0x2DD20 */ public List<NMSString0x10> RedeemedTwitchRewards;
+        /* 0x2DCF9 */ public byte[] Padding2DCF9;
+        /* 0x2DD00 */ public List<NMSString0x10> RedeemedSeasonRewards;
+        /* 0x2DD10 */ public List<NMSString0x10> RedeemedTwitchRewards;
     }
 }

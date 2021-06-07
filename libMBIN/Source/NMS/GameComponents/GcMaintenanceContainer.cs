@@ -13,6 +13,8 @@ namespace libMBIN.NMS.GameComponents
         /* 0x168 */ public ulong LastCompletedTimestamp;
         /* 0x170 */ public ulong LastBrokenTimestamp;
         /* 0x178 */ public List<float> DamageTimers;
-        /* 0x188 */ public uint Flags;
+        /* 0x188 */ public ushort Flags;
+        [NMS(Size = 6, Ignore = true)]
+        /* 0x18A */ public byte[] EndPadding;
     }
 }

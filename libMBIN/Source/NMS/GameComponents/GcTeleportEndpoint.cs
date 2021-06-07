@@ -9,6 +9,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x00 */ public GcUniverseAddressData UniverseAddress;
         /* 0x20 */ public Vector3f Position;
         /* 0x30 */ public Vector3f Facing;
+        // size: 0x8
         public enum TeleporterTypeEnum { Base, Spacestation, Atlas, PlanetAwayFromShip, ExternalBase, EmergencyGalaxyFix, OnNexus, SpacestationFixPosition }
         public TeleporterTypeEnum TeleporterType;
         /* 0x44 */ public NMSString0x40 Name;
