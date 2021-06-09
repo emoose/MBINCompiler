@@ -33,7 +33,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x0AE */ public bool ReplaceEventIfAlreadyActive;
         public enum BuildingLocationEnum { Nearest, AllNearest, Random, RandomOnNearPlanet, RandomOnFarPlanet, PlanetSearch }
 		/* 0x0B0 */ public BuildingLocationEnum BuildingLocation;
-		
         // size: 0x13
         public enum BuildingTypeEnum { Any, AnyShelter, AnyNPC, BuildingClass, SpaceStation, SpaceAnomaly, Atlas, Freighter, FreighterBase,
             ExternalPlanetBase, PlanetBaseTerminal, Expedition, TutorialShelter, MPMissionFreighter, Nexus, InitialDistressSignal, SpaceMarker,
@@ -62,8 +61,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x234 */ public NMSString0x20 InterstellarOSDMessage;
         /* 0x254 */ public NMSString0x20 MarkerLabel;
         /* 0x274 */ public TkTextureResource MarkerIcon;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x2F4 */ public byte[] Padding2F4;
         /* 0x2F8 */ public GcScannerIconHighlightTypes MissionMarkerHighlightStyleOverride;
         /* 0x2FC */ public float StartTime;
         /* 0x300 */ public float MessageTime;
