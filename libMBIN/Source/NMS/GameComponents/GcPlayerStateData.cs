@@ -17,7 +17,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x00458 */ public GcInventoryContainer ShipInventory;
         /* 0x005B8 */ public GcInventoryContainer WeaponInventory;
         [NMS(Size = 0x3)]
-        /* 0x00718 */ public GcMultitoolData[] MultiTools;
+        /* 0x00718 */ public GcMultitoolData[] Multitools;
         /* 0x00C58 */ public int ActiveMultioolIndex;
         /* 0x006C0 */ public GcByteBeatLibraryData ByteBeatLibrary;
         [NMS(Size = 0x6)]
