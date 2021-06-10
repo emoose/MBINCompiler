@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x4B0, GUID = 0x8C5CCFEA425668CE, NameHash = 0xFAE86B2801335B6D)]
+	[NMS(Size = 0x4B0, GUID = 0x5C34922E0904BF06, NameHash = 0xFAE86B2801335B6D)]
     public class GcGenericMissionSequence : NMSTemplate
     {
         /* 0x000 */ public NMSString0x10 MissionID;
@@ -28,8 +28,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x2C0 */ public int MissionPriority;
         /* 0x2C4 */ public GcMissionCategory MissionCategory;
         /* 0x2C8 */ public GcMissionPageHint MissionPageHint;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x2CC */ public byte[] Padding2CC;
         /* 0x2D0 */ public NMSString0x20A MissionPageLocID;
         /* 0x2F0 */ public NMSString0x10 MissionBuildMenuHint;
         /* 0x300 */ public bool MissionHasColourOverride;
@@ -37,8 +35,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x320 */ public int BeginCheckFrequency;
         /* 0x328 */ public GcDefaultMissionItemsTable DefaultItems;
         /* 0x368 */ public bool PrefixTitle;
-        [NMS(Size = 0x7, Ignore = true)]
-        /* 0x369 */ public byte[] Padding339;
         /* 0x370 */ public NMSString0x10 NextMissionHint;
 		public enum MessageCompleteEnum { Default, Always, Never }
 		/* 0x380 */ public MessageCompleteEnum MessageComplete;
@@ -51,7 +47,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x40D */ public bool CancelSetsComplete;
         [NMS(Size = 0x2, Ignore = true)]
         /* 0x40E */ public byte[] Padding40E;
-        /* 0x410 */ public List<GcAlienPuzzleEntry> Dialog;
+        /* 0x410 */ public GcAlienPuzzleTable Dialog;
         /* 0x420 */ public List<GcScanEventData> ScanEvents;
         /* 0x430 */ public List<GcGenericRewardTableEntry> Rewards;
         /* 0x440 */ public List<GcCostTableEntry> Costs;

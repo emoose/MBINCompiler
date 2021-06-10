@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x5E0, Alignment = 0x8, GUID = 0xC94E09D75F416150, NameHash = 0x7BBBCE7D7BC0F1F4)]
+	[NMS(Size = 0x5E0, Alignment = 0x8, GUID = 0xC7D218267C466E5E, NameHash = 0x7BBBCE7D7BC0F1F4)]
     public class GcScanEventData : NMSTemplate
     {
         /* 0x000 */ public NMSString0x20A Name;
@@ -19,12 +19,8 @@ namespace libMBIN.NMS.GameComponents
         /* 0x04C */ public float BuildingPreventionRadius;
         /* 0x050 */ public bool AlwaysShow;
         /* 0x051 */ public bool NeverShow;
-        [NMS(Size = 0x6, Ignore = true)]
-        /* 0x052 */ public byte[] Padding52;
         /* 0x058 */ public NMSString0x20A PlanetLabelText;
         /* 0x078 */ public float SurveyDistance;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x07C */ public byte[] Padding7C;
         /* 0x080 */ public NMSString0x20A SurveyDiscoveryOSDMessage;
         public enum EventStartTypeEnum { None, Special, Discovered, Timer, ObjectScan, LeaveBuilding }
 		/* 0x0A0 */ public EventStartTypeEnum EventStartType;
@@ -37,7 +33,8 @@ namespace libMBIN.NMS.GameComponents
         /* 0x0AE */ public bool ReplaceEventIfAlreadyActive;
         public enum BuildingLocationEnum { Nearest, AllNearest, Random, RandomOnNearPlanet, RandomOnFarPlanet, PlanetSearch }
 		/* 0x0B0 */ public BuildingLocationEnum BuildingLocation;
-		public enum BuildingTypeEnum { Any, AnyShelter, AnyNPC, BuildingClass, SpaceStation, SpaceAnomaly, Atlas, Freighter, FreighterBase,
+        // size: 0x13
+        public enum BuildingTypeEnum { Any, AnyShelter, AnyNPC, BuildingClass, SpaceStation, SpaceAnomaly, Atlas, Freighter, FreighterBase,
             ExternalPlanetBase, PlanetBaseTerminal, Expedition, TutorialShelter, MPMissionFreighter, Nexus, InitialDistressSignal, SpaceMarker,
             NexusEggMachine, PhotoTarget }
 		/* 0x0B4 */ public BuildingTypeEnum BuildingType;
@@ -64,7 +61,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x234 */ public NMSString0x20 InterstellarOSDMessage;
         /* 0x254 */ public NMSString0x20 MarkerLabel;
         /* 0x274 */ public TkTextureResource MarkerIcon;
-        /* 0x278 */ public GcScannerIconHighlightTypes MissionMarkerHighlightStyleOverride;
+        /* 0x2F8 */ public GcScannerIconHighlightTypes MissionMarkerHighlightStyleOverride;
         /* 0x2FC */ public float StartTime;
         /* 0x300 */ public float MessageTime;
         /* 0x304 */ public float MessageDisplayTime;

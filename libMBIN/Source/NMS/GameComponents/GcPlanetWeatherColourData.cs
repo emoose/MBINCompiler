@@ -13,7 +13,7 @@ namespace libMBIN.NMS.GameComponents
         public Colour SunColour;
         public Colour FogColour;
         public Colour HeightFogColour;
-        public Vector4f SkyGradientSpeed;
+        public Vector3f SkyGradientSpeed;
         public Colour LightColour;
         public Colour CloudColour1;
         public Colour CloudColour2;

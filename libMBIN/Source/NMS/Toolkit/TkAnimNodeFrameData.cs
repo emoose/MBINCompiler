@@ -14,8 +14,8 @@ namespace libMBIN.NMS.Toolkit
     public class TkAnimNodeFrameData : NMSTemplate
     {
         public List<Quaternion> Rotations;
-        public List<Vector4f> Translations;
-        public List<Vector4f> Scales;
+        public List<Vector3f> Translations;
+        public List<Vector3f> Scales;
 
         
         public override object CustomDeserialize( BinaryReader reader, Type field, NMSAttribute settings, FieldInfo fieldInfo ) {

@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x80, Alignment = 0x8, GUID = 0xCA5FBE1F6ACA4F92, NameHash = 0x74BA808E86F0EC01)]
+    [NMS(Size = 0x80, Alignment = 0x8, GUID = 0x8B670E1642F40DC2, NameHash = 0x74BA808E86F0EC01)]
     public class GcScannableComponentData : NMSTemplate
     {
         /* 0x00 */ public float ScanRange;
@@ -16,7 +16,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x32 */ public bool DisableIfBuildingPart;
         /* 0x33 */ public bool DisableIfInBase;
         /* 0x34 */ public bool UseModelNode;
-        /* 0x38 */ public GcScannerIconTypes IconType;
+        /* 0x38 */ public GcScannerIconTypes Icon;
 		public enum ScannableTypeEnum { Binoculars, BinocularsHotspots, Scanner, Marker, None }
 		/* 0x3C */ public ScannableTypeEnum ScannableType;
         /* 0x40 */ public bool IsPlacedMarker;

@@ -11,7 +11,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x000 */ public NMSString0x80 File;
         /* 0x080 */ public NMSString0x20 Root;
         /* 0x0A0 */ public float Radius;
-        /* 0x0B0 */ public Vector4f MinSize;
-        /* 0x0C0 */ public Vector4f MaxSize;
+        /* 0x0B0 */ public Vector3f MinSize;
+        /* 0x0C0 */ public Vector3f MaxSize;
     }
 }

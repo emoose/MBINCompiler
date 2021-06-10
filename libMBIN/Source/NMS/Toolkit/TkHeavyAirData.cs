@@ -18,12 +18,12 @@ namespace libMBIN.NMS.Toolkit
         public float SpeedFadeOutTime;
         public float MaxVisibleSpeed;
         public float SpawnRotationRange;
-        public Vector4f MajorDirection;
-        public Vector4f ScaleRange;
-        public Vector4f RotationSpeedRange;
-        public Vector4f TwinkleRange;
-        public Vector4f AmplitudeMin;
-        public Vector4f AmplitudeMax;
+        public Vector3f MajorDirection;
+        public Vector3f ScaleRange;
+        public Vector3f RotationSpeedRange;
+        public Vector3f TwinkleRange;
+        public Vector3f AmplitudeMin;
+        public Vector3f AmplitudeMax;
         public Colour Colour1;
         public Colour Colour2;
 		public enum EmitterShapeEnum { Sphere, UpperHalfSphere, BottomHalfSphere }

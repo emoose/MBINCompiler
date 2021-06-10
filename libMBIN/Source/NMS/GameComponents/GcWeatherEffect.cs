@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x1C0, GUID = 0x9F315BB206C6CFB4, NameHash = 0x419E50F8E497D496)]
+    [NMS(Size = 0x1C0, GUID = 0xB1C20538A90A12BD, NameHash = 0x419E50F8E497D496)]
     public class GcWeatherEffect : NMSTemplate
     {
         /* 0x000 */ public NMSString0x10 Id;
@@ -16,7 +16,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x044 */ public int MaxHazardsOfThisTypeActive;
         /* 0x048 */ public bool AllowedInCreative;
         [NMS(Size = 0x7, Ignore = true)]
-        /* 0x49 */ public byte[] Padding49;
+        /* 0x049 */ public byte[] Padding49;
         /* 0x050 */ public NMSString0x10 ForcedOnByHazard;
         /* 0x060 */ public NMSString0x10 BlockedByCluster;
         public enum WeatherEffectBehaviourEnum { Static, Wander, ChasePlayer };

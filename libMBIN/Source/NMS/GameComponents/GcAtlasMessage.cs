@@ -8,7 +8,7 @@ namespace libMBIN.NMS.GameComponents
     {
         public GcUniverseAddressData UniverseAddress;
         public NMSString0x80 CustomName;
-        public Vector4f Positon;
+        public Vector3f Positon;
         public int ColourIndex;
     }
 }

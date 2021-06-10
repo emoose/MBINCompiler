@@ -11,9 +11,9 @@ namespace libMBIN.NMS.GameComponents
         /* 0x00 */ public ulong Timestamp;
         /* 0x08 */ public NMSString0x10 ObjectId;
         /* 0x18 */ public ulong UserData;
-        /* 0x20 */ public Vector4f Position;
-        /* 0x30 */ public Vector4f Up;
-        /* 0x40 */ public Vector4f At;
+        /* 0x20 */ public Vector3f Position;
+        /* 0x30 */ public Vector3f Up;
+        /* 0x40 */ public Vector3f At;
         /* 0x50 */ public NMSString0x40 Message;
     }
 }

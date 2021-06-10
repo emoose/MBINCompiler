@@ -13,7 +13,7 @@ namespace libMBIN.NMS.GameComponents
         [NMS(Size = 0x100)]
         /* 0x0C00 */ public byte[] BufferAges;
         [NMS(Size = 0x100)]
-        /* 0x0D00 */ public Vector4f[] BufferAnchors;
+        /* 0x0D00 */ public Vector3f[] BufferAnchors;
         [NMS(Size = 0x100)]
         /* 0x1D00 */ public bool[] BufferProtected;
         [NMS(Size = 0x3A98)]
