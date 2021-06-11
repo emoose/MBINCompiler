@@ -13,7 +13,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x18 */ public NMSString0x20A EncryptedText;
         /* 0x38 */ public bool UseSpecialFormatting;
         /* 0x39 */ public bool MarkAsClaimedInShop;
-        [NMS(Size = 0x6, Ignore = true)]
-        /* 0x3A */ public byte[] EndPadding;
     }
 }

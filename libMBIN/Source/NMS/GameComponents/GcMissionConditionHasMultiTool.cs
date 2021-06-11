@@ -12,7 +12,5 @@ namespace libMBIN.NMS.GameComponents
         public bool CheckAllTools;
         public bool BetterClassMatches;
         public bool TakeValueFromSeasonData;
-        [NMS(Size = 0x1, Ignore = true)]
-        public byte[] Endpadding;
     }
 }

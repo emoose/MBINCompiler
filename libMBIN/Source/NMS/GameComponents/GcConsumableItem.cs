@@ -15,7 +15,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0xB4 */ public GcAudioWwiseEvents AudioEventOnOpen;
         /* 0xB8 */ public NMSString0x40 RewardFailedLocID;
         /* 0xF8 */ public bool DestroyItemWhenConsumed;
-        [NMS(Size = 0x7, Ignore = true)]
-        /* 0xF9 */ public byte[] EndPadding;
     }
 }

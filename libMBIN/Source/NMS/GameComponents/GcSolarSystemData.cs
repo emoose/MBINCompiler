@@ -45,8 +45,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x1F28 */ public GcAlienRace InhabitingRace;
         /* 0x1F2C */ public GcPlanetTradingData TradingData;
         /* 0x1F34 */ public GcPlayerConflictData ConflictData;
-        [NMS(Size = 0x8, Ignore = true)]
-        /* 0x1F38 */ public byte[] EndPadding;
         
     }
 

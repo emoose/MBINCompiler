@@ -9,7 +9,5 @@ namespace libMBIN.NMS.GameComponents
         public GcTechnologyTableEnum Technology;
         public bool AllowPartiallyInstalled;
         public bool TeachIfNotKnown;
-        [NMS(Size = 0x2, Ignore = true)]
-        public byte[] EndPadding;
     }
 }

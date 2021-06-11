@@ -16,7 +16,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x20 */ public float HeightMax;
         /* 0x24 */ public float HeightTime;
         /* 0x28 */ public bool Herd;
-        [NMS(Size = 7, Ignore = true)]
-        /* 0x29 */ public byte[] EndPadding;
     }
 }

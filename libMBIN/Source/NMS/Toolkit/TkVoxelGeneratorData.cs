@@ -29,7 +29,5 @@ namespace libMBIN.NMS.Toolkit
         /* 0x15C0 */ public float BuildingSmoothingRadius;
         /* 0x15C4 */ public float BuildingSmoothingHeight;
         /* 0x15C8 */ public float WaterFadeInDistance;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x15CC */ public byte[] EndPadding;
     }
 }

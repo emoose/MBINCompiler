@@ -9,7 +9,5 @@ namespace libMBIN.NMS.GameComponents
         public GcSeed Seed;
         public Vector3f Position;
         public int Index;
-        [NMS(Size = 0xC, Ignore = true)]
-        public byte[] EndPadding;
     }
 }

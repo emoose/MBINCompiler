@@ -8,8 +8,6 @@ namespace libMBIN.NMS.Toolkit
     {
         public Vector3f Position;
         public TkNoiseFlattenPoint FlattenPoint;
-        [NMS(Size = 0x8, Ignore = true)]
-        public byte[] EndPadding;
     }
 }
 

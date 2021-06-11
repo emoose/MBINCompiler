@@ -11,7 +11,5 @@ namespace libMBIN.NMS.GameComponents
         public NMSString0x20A Event;
         public float CompletionDistance;
         public NMSString0x80 DebugText;
-        [NMS(Size = 0x4, Ignore = true)]
-        public byte[] EndPadding;
     }
 }

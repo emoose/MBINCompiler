@@ -10,7 +10,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x08 */ public NMSString0x10 Id;
         /* 0x18 */ public int Number;
         /* 0x1C */ public GcInventoryIndex InventoryIndex;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x24 */ public byte[] EndPadding;
     }
 }

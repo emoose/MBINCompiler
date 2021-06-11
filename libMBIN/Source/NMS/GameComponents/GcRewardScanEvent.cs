@@ -11,7 +11,5 @@ namespace libMBIN.NMS.GameComponents
 		/* 0x20 */ public ScanEventTableEnum ScanEventTable;
         /* 0x24 */ public bool DoAerialScan;
         /* 0x25 */ public bool UseMissionSeedForEvent;
-        [NMS(Size = 0x2, Ignore = true)]
-        /* 0x26 */ public byte[] EndPadding;
     }
 }

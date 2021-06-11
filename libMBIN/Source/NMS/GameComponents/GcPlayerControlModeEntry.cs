@@ -8,7 +8,5 @@ namespace libMBIN.NMS.GameComponents
     {
         public NMSString0x10 Id;
         public TkModelResource ControlModeResource;
-        [NMS(Size = 0x4, Ignore = true)]
-        public byte[] EndPadding;
     }
 }

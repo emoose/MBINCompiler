@@ -9,7 +9,5 @@ namespace libMBIN.NMS.GameComponents
 		public enum AbandonedFreighterMissionStateEnum { EndRoomComplete, CrewManifestRead, CaptainsLogRead, HazardOn, SlowWalkOn, OpenDoors }
 		/* 0x0 */ public AbandonedFreighterMissionStateEnum AbandonedFreighterMissionState;
         /* 0x4 */ public bool Silent;
-        [NMS(Size = 0x3, Ignore = true)]
-        /* 0x5 */ public byte[] EndPadding;
     }
 }

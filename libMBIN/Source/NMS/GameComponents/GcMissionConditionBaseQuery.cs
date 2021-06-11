@@ -10,7 +10,5 @@ namespace libMBIN.NMS.GameComponents
         public int MinBasesFound;
         public int MaxBasesFound;
         public float SearchDistanceLimit;
-        [NMS(Size = 0x4, Ignore = true)]
-        public byte[] EndPadding;
     }
 }

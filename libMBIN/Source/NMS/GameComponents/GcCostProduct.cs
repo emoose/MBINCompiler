@@ -9,7 +9,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x00 */ public GcDefaultMissionProductEnum Default;
         /* 0x08 */ public NMSString0x10 Id;
         /* 0x18 */ public int Amount;
-        [NMS(Size = 4, Ignore = true)]
-        /* 0x1C */public byte[] EndPadding;
     }
 }

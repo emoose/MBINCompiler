@@ -17,7 +17,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x44 */ public float MaxPetSpeedScale;
         /* 0x48 */ public float AnimMoveSpeed;
         /* 0x4C */ public bool AnimMoveSpeedCached;
-        [NMS(Size = 0x3, Ignore = true)]
-        /* 0x4D */ public byte[] EndPadding;
     }
 }

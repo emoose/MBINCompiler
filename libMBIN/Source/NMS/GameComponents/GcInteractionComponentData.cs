@@ -40,7 +40,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x2BC */ public bool ReseedAfterRewardSuccess;
         /* 0x2BD */ public bool UsePersonalPersistentBuffer;
         /* 0x2C0 */ public float InWorldUIScaler;
-        [NMS(Size = 0xC, Ignore = true)]
-        /* 0x2C4 */ public byte[] EndPadding;
     }
 }

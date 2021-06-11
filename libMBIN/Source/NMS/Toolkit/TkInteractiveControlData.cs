@@ -9,7 +9,5 @@ namespace libMBIN.NMS.Toolkit
         public NMSString0x20 Id;
         public NMSString0x10 RewardId;
         public float Cooldown;
-        [NMS(Size = 0x4, Ignore = true)]
-        public byte[] EndPadding;
     }
 }

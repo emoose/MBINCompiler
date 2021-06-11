@@ -39,7 +39,5 @@ namespace libMBIN.NMS.Toolkit
         /* 0x9C */ public NMSString0x100 AdapterName;
         /* 0x19C */ public int AdapterIndex;
         /* 0x1A0 */ public int NumGraphicsThreadsBeta;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x1A4 */ public byte[] EndPadding;
     }
 }

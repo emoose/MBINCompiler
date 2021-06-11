@@ -9,8 +9,5 @@ namespace libMBIN.NMS.GameComponents
         public NMSString0x10 ID;
 
         public int Ratio;
-
-        [NMS(Size = 4, Ignore = true)]
-        public byte[] Padding14;
     }
 }

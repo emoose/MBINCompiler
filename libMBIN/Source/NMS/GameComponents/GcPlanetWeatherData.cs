@@ -20,7 +20,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x148 */ public GcScreenFilters StormScreenFilter;
         /* 0x14C */ public GcRainbowType RainbowType;
         /* 0x150 */ public int NightColourIndex;
-        [NMS(Size = 0xC, Ignore = true)]
-        /* 0x154 */ public byte[] Endpadding;
     }
 }

@@ -11,8 +11,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x020 */ public GcResourceElement ResourceElement;
 
         /* 0x2C8 */ public GcAlienRace Race;
-        [NMS(Size = 4, Ignore = true)]
-        /* 0x2CC */ public byte[] EndPadding;
 
     }
 }

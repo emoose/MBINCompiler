@@ -13,7 +13,5 @@ namespace libMBIN.NMS.GameComponents
         public int WeightedChanceLegendary;
         public bool ForceRelevant;
         public bool ForceQualityRelevant;
-        [NMS(Size = 0x6, Ignore = true)]
-        public byte[] EndPadding;
     }
 }

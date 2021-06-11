@@ -9,7 +9,5 @@ namespace libMBIN.NMS.GameComponents
         public NMSString0x10 Mission;
         public NMSString0x10 MissionCreative;
         public bool InheritActiveMultiplayerMissionSeed;
-        [NMS(Size = 0x7, Ignore = true)]
-        public byte[] EndPadding;
     }
 }

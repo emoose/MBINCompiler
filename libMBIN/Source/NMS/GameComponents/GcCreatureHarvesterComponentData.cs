@@ -10,7 +10,5 @@ namespace libMBIN.NMS.GameComponents
     {
         /* 0x00 */ public GcMaintenanceComponentData MaintenanceData;
         /* 0x240 */ public int NumSlots;
-        [NMS(Size = 0xC, Ignore = true)]
-        /* 0x244 */ public byte[] EndPadding;
     }
 }

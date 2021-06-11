@@ -9,8 +9,5 @@ namespace libMBIN.NMS.GameComponents
         public NMSString0x10 Anim;
         public int FrameStart;
         public bool StartFromEnd;
-
-        [NMS(Size = 3, Ignore = true)]
-        public byte[] Padding15;
     }
 }

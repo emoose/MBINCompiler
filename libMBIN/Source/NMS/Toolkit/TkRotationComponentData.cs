@@ -9,7 +9,5 @@ namespace libMBIN.NMS.Toolkit
         /* 0x00 */ public float Speed;
         /* 0x10 */ public Vector3f Axis;
         /* 0x20 */ public int SyncGroup;
-        [NMS(Size = 0xC, Ignore = true)]
-        /* 0x24 */ public byte[] EndPadding;
     }
 }

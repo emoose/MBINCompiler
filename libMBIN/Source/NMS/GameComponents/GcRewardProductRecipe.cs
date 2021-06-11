@@ -12,7 +12,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x0C */ public int ItemLevel;
         [NMS(Size = 9, EnumType = typeof(GcProductCategory.ProductCategoryEnum))]
         /* 0x10 */ public bool[] AllowedProductTypes;
-        [NMS(Size = 0x3, Ignore = true)]
-        /* 0x19 */ public byte[] EndPadding;
     }
 }

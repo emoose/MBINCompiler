@@ -10,7 +10,5 @@ namespace libMBIN.NMS.GameComponents
         public Colour[] Colours;
         [NMS(Size = 0x5)]
         public int[] ColourIndices;
-        [NMS(Size = 0xC, Ignore = true)]
-        public byte[] EndPadding;
     }
 }

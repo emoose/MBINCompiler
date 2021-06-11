@@ -21,8 +21,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0xC8 */ public int UnlockedByInteractionIndex;
         /* 0xCC */ public GcAlienRace UnlockedByInteractionRace;
         /* 0xD0 */ public bool UnlockableInCreativeMode;
-        [NMS(Size = 0x7, Ignore = true)]
-        /* 0xD1 */ public byte[] EndPadding;
     }
 
 }

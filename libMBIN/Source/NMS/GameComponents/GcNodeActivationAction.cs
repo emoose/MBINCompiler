@@ -18,7 +18,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x108 */ public bool UseLocalNode;
         /* 0x109 */ public bool RestartEmitters;
         /* 0x10A */ public bool AffectModels;
-        [NMS(Size = 0x1, Ignore = true)]
-        /* 0x10B */ public byte[] EndPadding;
     }
 }

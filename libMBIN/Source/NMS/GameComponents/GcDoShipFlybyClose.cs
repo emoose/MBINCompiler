@@ -11,7 +11,5 @@ namespace libMBIN.NMS.GameComponents
         public float LockSpread;        // 41200000h
         public bool StayCloseAtLowSpeed;// 0
         public bool HailingBehaviour; // dummy for now maybe? Or might indicate whether it can/will hail.
-        [NMS(Size = 0x2, Ignore = true)]
-        public byte[] EndPadding;
     }
 }

@@ -11,7 +11,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x08 */ public float ValueMax;
         /* 0x0C */ public GcWeightingCurve WeightingCurve;
         /* 0x10 */ public bool AlwaysChoose;
-        [NMS(Size = 0x3, Ignore = true)]
-        /* 0x11 */ public byte[] EndPadding;
     }
 }

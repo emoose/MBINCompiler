@@ -18,7 +18,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x268 */ public NMSString0x20 ExternalDigitalAliasId;
         public enum InputActionInfoFlagsEnum { None = 0x0, HideInControlsPage = 0x1, OnlyVR = 0x2, OnlyNonVR = 0x4 }
         /* 0x288 */ public InputActionInfoFlagsEnum InputActionInfoFlags;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x28C */ public byte[] EndPadding;
     }
 }

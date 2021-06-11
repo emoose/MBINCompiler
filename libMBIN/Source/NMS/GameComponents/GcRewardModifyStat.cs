@@ -12,7 +12,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x24 */ public bool UseOtherStat;
         public enum ModifyTypeEnum { Set, Add, Subtract }
         /* 0x28 */ public ModifyTypeEnum ModifyType;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x2C */ public byte[] EndPadding;
     }
 }

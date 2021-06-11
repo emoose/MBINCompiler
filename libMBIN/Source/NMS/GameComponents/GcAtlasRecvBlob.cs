@@ -13,7 +13,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x30 */ public int DataTimestamp;
         /* 0x38 */ public ulong BlobData;
         /* 0x40 */ public int BlobDataSize;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x44 */ public byte[] EndPadding;
     }
 }

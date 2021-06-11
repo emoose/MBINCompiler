@@ -62,7 +62,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x4A5 */ public bool BlocksPinning;
         /* 0x4A6 */ public bool TelemetryUpload;
         /* 0x4A7 */ public bool UseSeasonTitleOverride;
-        [NMS(Size = 0x8, Ignore = true)]
-        /* 0x4A8 */ public byte[] EndPadding;
     }
 }

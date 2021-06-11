@@ -9,7 +9,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x00 */ public NMSString0x10 Mission;
         /* 0x10 */ public bool SetAsSelected;
         /* 0x11 */ public bool FailRewardIfMissionActive;
-        [NMS(Size = 0x6, Ignore = true)]
-        /* 0x12 */ public byte[] EndPadding;
     }
 }

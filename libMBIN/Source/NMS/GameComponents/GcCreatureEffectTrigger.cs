@@ -14,7 +14,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x28 */ public NMSString0x10 Anim;
         /* 0x38 */ public int Frame;
         /* 0x3C */ public bool GroundTint;
-        [NMS(Size = 0x3, Ignore = true)]
-        /* 0x3D */ public byte[] EndPadding;
     }
 }

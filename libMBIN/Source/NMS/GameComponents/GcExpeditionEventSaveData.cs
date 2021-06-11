@@ -19,7 +19,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x98 */ public bool Success;
         /* 0x99 */ public bool IsInterventionEvent;
         /* 0x9A */ public bool AvoidedIntervention;
-        [NMS(Size = 0x5, Ignore = true)]
-        /* 0x9B */ public byte[] EndPadding;
     }
 }

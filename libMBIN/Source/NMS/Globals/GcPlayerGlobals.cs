@@ -861,7 +861,5 @@ namespace libMBIN.NMS.Globals
         /* 0x1C88 */ public GcShipDialogueTreeEnum[] TraderHailReceiveFight;
         [NMS(Size = 0x2)]
         /* 0x1C90 */ public GcShipDialogueTreeEnum[] TraderHailSend;
-        [NMS(Size = 0x8, Ignore = true)]
-        /* 0x1C98 */ public byte[] EndPadding;
     }
 }

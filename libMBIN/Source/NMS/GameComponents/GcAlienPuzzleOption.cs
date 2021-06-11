@@ -26,7 +26,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0xA8 */ public List<NMSTemplate> EnablingConditions;
         /* 0xB8 */ public NMSString0x20A EnablingConditionId;
         /* 0xD8 */ public GcWordCategoryTableEnum WordCategory;
-        [NMS(Size = 4, Ignore = true)]
-        /* 0xDC */ public byte[] EndPadding;
     }
 }

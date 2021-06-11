@@ -12,7 +12,5 @@ namespace libMBIN.NMS.Toolkit
         public TkCurveType PhaseCurve;
         public float PhseRangeBegin;
         public float PhaseRangeEnd;
-        [NMS(Size = 0x4, Ignore = true)]
-        public byte[] EndPadding;
     }
 }

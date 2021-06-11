@@ -15,7 +15,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x430 */ public NMSString0x200 Text;
         /* 0x630 */ public bool Special;
         /* 0x638 */ public List<GcVROverride_Text> VROverrides;
-        [NMS(Size = 0x8, Ignore = true)]
-        /* 0x648 */ public byte[] EndPadding;
     }
 }

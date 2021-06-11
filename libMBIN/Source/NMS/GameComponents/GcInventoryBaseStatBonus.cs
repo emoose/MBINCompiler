@@ -8,7 +8,5 @@ namespace libMBIN.NMS.GameComponents
     {
         /* 0x00 */ public GcStatsTypes StatType;
         /* 0x04 */ public bool LessIsBetter;
-        [NMS(Size = 0x3, Ignore = true)]
-        /* 0x05 */ public byte[] EndPadding;
     }
 }

@@ -34,7 +34,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x250 */ public bool CookingIngredient;
         /* 0x251 */ public bool GoodForSelling;
         /* 0x252 */ public bool EggModifierIngredient;
-        [NMS(Size = 0xD, Ignore = true)]
-        /* 0x253 */ public byte[] EndPadding;
     }
 }

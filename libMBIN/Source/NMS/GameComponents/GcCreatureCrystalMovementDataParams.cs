@@ -64,7 +64,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x128 */ public float TentaclePitchRange;
         /* 0x12C */ public float TentacleYawRange;
         /* 0x130 */ public float TentacleRollRange;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x134 */ public byte[] EndPadding;
     }
 }

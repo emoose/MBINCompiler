@@ -12,8 +12,5 @@ namespace libMBIN.NMS.GameComponents
 
 		public enum ProductListRewardOrderEnum { OneRandom, InOrder, TryAllRandom, TryUnknownRandom }
 		public ProductListRewardOrderEnum ProductListRewardOrder;
-
-        [NMS(Size = 4, Ignore = true)]
-        public byte[] Padding14;
     }
 }

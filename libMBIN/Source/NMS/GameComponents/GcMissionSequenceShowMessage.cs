@@ -20,7 +20,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x1A5 */ public bool DisableIcon;
         /* 0x1A6 */ public bool DisableTitlePrefix;
         /* 0x1A7 */ public NMSString0x80 DebugText;
-        [NMS(Size = 0x9, Ignore = true)]
-        public byte[] EndPadding;
     }
 }

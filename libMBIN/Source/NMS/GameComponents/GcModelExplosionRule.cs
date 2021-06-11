@@ -18,7 +18,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x30 */ public Vector3f AxisMultiplier;
         /* 0x40 */ public Vector3f Offset;
         /* 0x50 */ public float ExplodeMod;
-        [NMS(Size = 0xC, Ignore = true)]
-        /* 0x54 */ public byte[] EndPadding;
     }
 }

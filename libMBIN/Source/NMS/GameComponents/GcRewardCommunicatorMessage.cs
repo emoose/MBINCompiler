@@ -11,7 +11,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x100 */ public NMSString0x80 OSDMessage;
         /* 0x180 */ public GcPlayerCommunicatorMessage Comms;
         /* 0x1D0 */ public bool AutoOpen;
-        [NMS(Size = 0x7, Ignore = true)]
-        /* 0x1D1 */ public byte[] EndPadding;
     }
 }

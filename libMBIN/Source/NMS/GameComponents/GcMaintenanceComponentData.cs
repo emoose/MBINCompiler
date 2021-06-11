@@ -44,7 +44,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x218 */ public NMSString0x20A ActionWarningOverride;
         /* 0x238 */ public float InWorldUIScaler;
         /* 0x23C */ public bool InteractionRequiresPower;
-        [NMS(Size = 0x3, Ignore = true)]
-        /* 0x23D */ public byte[] EndPadding;
     }
 }

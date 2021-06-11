@@ -25,7 +25,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x520 */ public GcTerrainControls Terrain;
         /* 0x598 */ public List<GcScreenFilterOption> FilterOptions;
         /* 0x5A8 */ public NMSString0x20A FloraLifeLocID;
-        [NMS(Size = 0x8, Ignore = true)]
-        /* 0x5C8 */ public byte[] EndPadding;
     }
 }

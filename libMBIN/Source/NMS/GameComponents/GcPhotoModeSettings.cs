@@ -23,7 +23,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x40 */ public float Vignette;
         /* 0x44 */ public int Filter;
         /* 0x48 */ public float Bloom;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x58 */ public byte[] EndPadding;
     }
 }

@@ -8,7 +8,5 @@ namespace libMBIN.NMS.GameComponents
     {
         /* 0x00 */ public NMSString0x20A ProcTechGroupID;
         /* 0x20 */ public int Count;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x24 */ public byte[] EndPadding;
     }
 }

@@ -16,8 +16,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x1B4 */ public int PrimaryMode;
         /* 0x1B8 */ public int SecondaryMode;
         /* 0x1BC */ public bool UseLegacyColours;
-        [NMS(Size = 0x3, Ignore = true)]
-        /* 0x1BD */ public byte[] EndPadding;
 
     }
 }

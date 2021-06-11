@@ -21,7 +21,5 @@ namespace libMBIN.NMS.Toolkit
         /* 0x200 */ public TkCurveType AnimCurve2;
         /* 0x204 */ public Vector2f CustomMinStart;
         /* 0x20C */ public Vector2f CustomMaxStart;
-        [NMS(Size = 0xC, Ignore = true)]
-        /* 0x214 */ public byte[] EndPadding;
     }
 }

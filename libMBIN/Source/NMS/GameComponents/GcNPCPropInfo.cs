@@ -12,7 +12,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x0E0 */ public NMSString0x40 ScanEffectNodeName;
         /* 0x120 */ public float Weight;
         /* 0x124 */ public GcTechnologyCategory ShopType;
-        [NMS(Size = 0x8, Ignore = true)]
-        /* 0x128 */ public byte[] EndPadding;
     }
 }

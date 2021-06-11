@@ -9,7 +9,5 @@ namespace libMBIN.NMS.GameComponents
         public NMSString0x10 Tech;
 		public enum DesiredTechProbabilityEnum { Never, Rare, Common, Always }
 		public DesiredTechProbabilityEnum DesiredTechProbability;
-        [NMS(Size = 4, Ignore = true)]
-        public byte[] Padding14;
     }
 }

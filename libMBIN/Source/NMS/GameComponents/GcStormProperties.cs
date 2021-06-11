@@ -13,7 +13,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x0F0 */ public GcWeatherColourModifiers ColourModifiers;
         [NMS(Size = 0x5, EnumType = typeof(GcHazardModifiers.HazardModifierEnum))]
         /* 0x390 */ public GcHazardValues[] HazardModifiers;        // meant to be a Vector2f. This looks nicer though in exml
-        [NMS(Size = 0x8, Ignore = true)]
-        /* 0x3B8 */ public byte[] EndPadding;
     }
 }

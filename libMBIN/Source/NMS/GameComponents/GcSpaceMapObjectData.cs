@@ -17,7 +17,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x24 */ public float ScaleMagnitude;     // 3FB33333h
         /* 0x28 */ public float ScaleMin;           // 3ECCCCCDh
         /* 0x2C */ public bool Orient;              // 0
-        [NMS(Size = 0x3, Ignore = true)]
-        /* 0x2D */ public byte[] EndPadding;
     }
 }

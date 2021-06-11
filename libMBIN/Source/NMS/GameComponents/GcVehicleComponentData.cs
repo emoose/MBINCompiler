@@ -16,7 +16,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0xA8 */ public float FoVFixedDistance;
         /* 0xAC */ public int BaseHealth;
         /* 0xB0 */ public TkModelResource WheelModel;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x134 */ public byte[] EndPadding;
     }
 }

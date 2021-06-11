@@ -15,7 +15,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x320 */ public NMSString0x80 DataFilename;
         public enum AltModeEnum { None, Normal, Alt}
         /* 0x3A0 */ public AltModeEnum AltMode;
-        [NMS(Size = 0xC, Ignore = true)]
-        /* 0x3A4 */ public byte[] EndPadding;
     }
 }

@@ -15,7 +15,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x100 */ public NMSString0x40 CocreatorName;
         /* 0x140 */ public NMSString0x40 CocreatorOnlineID;
         /* 0x180 */ public ulong Timestamp;
-        [NMS(Size = 0x8, Ignore = true)]
-        public byte[] EndPadding;
     }
 }

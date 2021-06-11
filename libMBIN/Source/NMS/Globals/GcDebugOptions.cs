@@ -369,7 +369,5 @@ namespace libMBIN.NMS.Globals
         /* 0x2348 */ public bool CrossPlatformFeaturedBases;
         /* 0x2349 */ public bool ShowMissionIdInTitle;
         /* 0x234C */ public TkGlobals ToolkitGlobals;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x256C */ public byte[] EndPadding;
     }
 }

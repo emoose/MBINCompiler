@@ -14,7 +14,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x3C */ public float DistanceOverride;
         /* 0x40 */ public bool ForceSpawn;
         /* 0x41 */ public NMSString0x80 DebugText;
-        [NMS(Size = 0x7, Ignore = true)]
-        /* 0xC1 */ public byte[] EndPadding;
     }
 }

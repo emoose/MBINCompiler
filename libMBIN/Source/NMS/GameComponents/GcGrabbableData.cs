@@ -26,7 +26,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x98 */ public float MovementMaxSpeed;
         /* 0x9C */ public float MovementReturnSpeed;
         /* 0xA0 */ public float MovementRequiredForActivation;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0xAC */ public byte[] EndPadding;
     }
 }

@@ -12,7 +12,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x10 */ public Vector3f Dir;
         /* 0x20 */ public float Length;
         /* 0x24 */ public float InfluenceRange;
-        [NMS(Size = 0x8, Ignore = true)]
-        /* 0x28 */ public byte[] Endpadding;
     }
 }

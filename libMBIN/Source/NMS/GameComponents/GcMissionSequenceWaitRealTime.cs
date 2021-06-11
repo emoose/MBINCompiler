@@ -12,7 +12,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x090 */ public NMSString0x10 DisplayStat;
         /* 0x0A0 */ public bool StatFromNow;
         /* 0x0A1 */ public NMSString0x80 DebugText;
-        [NMS(Size = 0x7, Ignore = true)]
-        /* 0x121 */ public byte[] EndPadding;
     }
 }

@@ -54,7 +54,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0xC0 */ public float AttackTargetOffsetMin;
         /* 0xC4 */ public float AttackTargetOffsetMax;
         /* 0xC8 */ public float AttackTargetSwitchTargetTime;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0xCC */ public byte[] EndPadding;
     }
 }

@@ -11,7 +11,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x00 */ public GcInventoryType Type;
         /* 0x08 */ public NMSString0x10 Id;
         /* 0x18 */ public float ProbabilityWeighting;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x1C */ public byte[] EndPadding;
     }
 }

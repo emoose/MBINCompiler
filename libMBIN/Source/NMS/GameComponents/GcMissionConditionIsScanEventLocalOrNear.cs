@@ -8,7 +8,5 @@ namespace libMBIN.NMS.GameComponents
     {
         public GcMissionConditionIsScanEventLocal Local;
         public float MaxDistance;
-        [NMS(Size = 0x4, Ignore = true)]
-        public byte[] EndPadding;
     }
 }

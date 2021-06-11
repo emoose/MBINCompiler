@@ -52,7 +52,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x1C0 */ public bool UsePersonalPersistentBuffer;
         /* 0x1C1 */ public bool ReseedOnRewardSuccess;
         /* 0x1C2 */ public bool CanCollectInMech;
-        [NMS(Size = 0x5, Ignore = true)]
-        /* 0x1C3 */ public byte[] EndPadding;
     }
 }

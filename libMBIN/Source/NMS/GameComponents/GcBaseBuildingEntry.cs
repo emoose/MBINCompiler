@@ -57,7 +57,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x268 */ public int GhostsCountOverride;
         /* 0x26C */ public float SnappingDistanceOverride;
         /* 0x270 */ public int RegionSpawnLOD;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x274 */ public byte[] EndPadding;
     }
 }

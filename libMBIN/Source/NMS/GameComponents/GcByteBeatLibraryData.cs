@@ -14,7 +14,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x1A01 */ public bool AutoplayOnFoot;
         /* 0x1A02 */ public bool AutoplayInShip;
         /* 0x1A03 */ public bool AutoplayInVehicle;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x1A04 */ public byte[] EndPadding;
     }
 }

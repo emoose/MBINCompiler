@@ -11,7 +11,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x0 */ public GcProceduralProductCategory ProcProduct;
         /* 0x4 */ public bool ForceSearchFreighterAndChests;
         /* 0x5 */ public bool SearchEveryShip;
-        [NMS(Size = 0x2, Ignore = true)]
-        /* 0x6 */ public byte[] EndPadding;
     }
 }

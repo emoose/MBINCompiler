@@ -9,7 +9,5 @@ namespace libMBIN.NMS.GameComponents
         public int AmountMin;
         public int AmountMax;
         public bool Silent;
-        [NMS(Size = 0x3, Ignore = true)]
-        public byte[] Endpadding;
     }
 }

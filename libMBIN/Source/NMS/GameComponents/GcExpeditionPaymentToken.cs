@@ -8,7 +8,5 @@ namespace libMBIN.NMS.GameComponents
     {
         public NMSString0x10 TokenName;
         public int TokenValue;
-        [NMS(Size = 0x4, Ignore = true)]
-        public byte[] EndPadding;
     }
 }

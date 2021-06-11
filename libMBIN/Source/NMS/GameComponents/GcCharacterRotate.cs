@@ -10,7 +10,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x10 */ public GcPrimaryAxis RotateAxis;
         /* 0x14 */ public float Damping;
         /* 0x18 */ public float RotateTime;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x1C */ public byte[] EndPadding;
     }
 }

@@ -337,7 +337,5 @@ namespace libMBIN.NMS.Globals
         /* 0x35E0 */ public List<TkPhysRelVectorData> SavedCameraPositions;
         /* 0x35F0 */ public List<Vector3f> SavedCameraFacing;
         /* 0x3600 */ public GcCameraWarpSettings WarpSettings;
-        [NMS(Size = 0xC, Ignore = true)]
-        /* 0x3654 */ public byte[] EndPadding;
     }
 }

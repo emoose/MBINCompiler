@@ -94,7 +94,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x12218 */ public GcScannerIcon Pet;
         /* 0x12324 */ public GcScannerIcon PetSad;
         /* 0x12430 */ public GcScannerIcon PetActivity;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x1253C */ public byte[] EndPadding;
     }
 }

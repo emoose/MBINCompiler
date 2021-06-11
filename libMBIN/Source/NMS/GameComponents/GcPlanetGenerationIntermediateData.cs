@@ -27,7 +27,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x440 */ public List<GcExternalObjectListOptions> ExternalObjectLists;
         /* 0x450 */ public List<int> ExternalObjectListIndices;
         /* 0x460 */ public bool Prime;
-        [NMS(Size = 0x7, Ignore = true)]
-        /* 0x461 */ public byte[] EndPadding;
     }
 }

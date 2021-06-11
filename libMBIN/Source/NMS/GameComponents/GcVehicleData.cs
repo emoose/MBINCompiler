@@ -160,7 +160,5 @@ namespace libMBIN.NMS.GameComponents
         [NMS(Size = 0x2)]
         /* 0x1024 */ public NMSString0x100[] CockpitHeadlightNames;
         /* 0x1224 */ public float HeadlightIntensity;
-        [NMS(Size = 0x8, Ignore = true)]
-        /* 0x1228 */ public byte[] EndPadding;
     }
 }

@@ -33,7 +33,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0xFF8 */ public float AccessoryGyroDamping;
         /* 0xFFC */ public float AccessoryGyroStrength;
         /* 0x1000 */ public bool AccessoryGyroActive;
-        [NMS(Size = 0x7, Ignore = true)]
-        /* 0x1001 */ public byte[] EndPadding;
     }
 }

@@ -15,7 +15,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x20 */ public NMSString0x10 PersistentState;
         /* 0x30 */ public bool ResetShotTimeOnStateChange;
         /* 0x31 */ public bool LinkStateToBaseGrid;
-        [NMS(Size = 6, Ignore = true)]
-        /* 0x32 */ public byte[] EndPadding;
     }
 }

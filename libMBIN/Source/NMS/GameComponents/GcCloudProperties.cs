@@ -39,7 +39,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0xCC */ public float HorizonFadeStartAlpha;
         /* 0xD0 */ public float HorizonFadeScalar;
         /* 0xD4 */ public float HorizonDistance;
-        [NMS(Size = 0x8, Ignore = true)]
-        /* 0xD8 */ public byte[] EndPadding;
     }
 }

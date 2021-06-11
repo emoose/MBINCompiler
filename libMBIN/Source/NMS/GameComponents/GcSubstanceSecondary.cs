@@ -10,7 +10,5 @@ namespace libMBIN.NMS.GameComponents
         public float Chance;
         public float AmountMin;
         public float AmountMax;
-        [NMS(Size = 0x4, Ignore = true)]
-        public byte[] EndPadding;
     }
 }

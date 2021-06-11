@@ -61,7 +61,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x3E8 */ public bool GoodForSelling;
         /* 0x3F0 */ public NMSString0x10 GiveRewardOnSpecialPurchase;
         /* 0x400 */ public bool EggModifierIngredient;
-        [NMS(Size = 0xF, Ignore = true)]
-        /* 0x401 */ public byte[] EndPadding;
     }
 }

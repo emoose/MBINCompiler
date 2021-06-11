@@ -96,7 +96,5 @@ namespace libMBIN.NMS.Globals
         /* 0x220 */ public GcPlanetRingData PlanetRingsMin;
         /* 0x280 */ public GcPlanetRingData PlanetRingsMax;
         /* 0x2E0 */ public int PercentChanceExtraPrime;
-        [NMS(Size = 0xC, Ignore = true)]
-        /* 0x2E4 */ public byte[] EndPadding;
     }
 }

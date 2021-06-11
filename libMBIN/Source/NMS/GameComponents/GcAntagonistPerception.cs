@@ -16,7 +16,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x1C */ public ViewShapeEnum ViewShape;
         /* 0x20 */ public bool RayCast;
         /* 0x21 */ public NMSString0x20 SenseLocator;
-        [NMS(Size = 0x7, Ignore = true)]
-        /* 0x42 */ public byte[] EndPadding;
     }
 }

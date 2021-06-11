@@ -11,7 +11,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x00 */ public NMSString0x10 Mission;
         /* 0x10 */ public NMSString0x20A Puzzle;
         /* 0x30 */ public bool ForceMissionSeed;
-        [NMS(Size = 0x7, Ignore = true)]
-        /* 0x31 */ public byte[] EndPadding;
     }
 }

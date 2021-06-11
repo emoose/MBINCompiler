@@ -86,7 +86,5 @@ namespace libMBIN.NMS.Globals
         /* 0x300 */ public float PlanetLocalEnitityInterestEnd;
         /* 0x304 */ public float EntityUpdateMaxRateDist;
         /* 0x308 */ public float EntityUpdateMinRateDist;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x30C */ public byte[] EndPadding;
     }
 }

@@ -11,7 +11,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x084 */ public bool BlockTimedScans;
         /* 0x085 */ public bool RequiresMissionActive;
         /* 0x086 */ public NMSString0x80 DebugText;
-        [NMS(Size = 0x2, Ignore = true)]
-        /* 0x106 */ public byte[] EndPadding;
     }
 }

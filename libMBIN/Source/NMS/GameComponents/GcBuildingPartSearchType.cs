@@ -13,7 +13,5 @@ namespace libMBIN.NMS.GameComponents
         public List<GcPersistentBaseTypes> BaseSearchFilters;
         public bool IncludeOnlyOverlappingBases;
         public bool IncludeGlobalBaseObjects;
-        [NMS(Size = 0x6, Ignore = true)]
-        public byte[] EndPadding;
     }
 }

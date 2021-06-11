@@ -9,7 +9,5 @@ namespace libMBIN.NMS.GameComponents
         public GcTechnologyCategory Category;
         public NMSString0x10 TechToDamage_optional;
         public bool ShowDamageMessage;
-        [NMS(Size = 0x7, Ignore = true)]
-        public byte[] EndPadding;
     }
 }

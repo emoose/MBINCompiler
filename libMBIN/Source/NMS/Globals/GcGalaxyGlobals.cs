@@ -198,7 +198,5 @@ namespace libMBIN.NMS.Globals
         /* 0x2190 */ public GcGalaxyRenderSetupData FinalAnimationRenderSetup;
         /* 0x24E0 */ public GcGalaxyGenerationSetupData FinalAnimationGeneration;
         /* 0x2660 */ public GcGalaxySolarSystemParams SolarSystemParameters;
-        [NMS(Size = 0x8, Ignore = true)]
-        /* 0x26B8 */ public byte[] EndPadding;
     }
 }

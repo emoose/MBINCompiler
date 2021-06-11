@@ -1149,7 +1149,5 @@ namespace libMBIN.NMS.Globals
         /* 0x44DC */ public float MultiplayerTeleportEffectDisappearTime;
         /* 0x44E0 */ public float MultiplayerTeleportEffectAppearTime;
         /* 0x44E4 */ public int AbandonedFreighterAirlockRoomNumber;
-        [NMS(Size = 0x8, Ignore = true)]
-        /* 0x44E8 */ public byte[] EndPadding;
     }
 }

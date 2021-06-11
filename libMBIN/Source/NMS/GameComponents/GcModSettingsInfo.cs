@@ -13,7 +13,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x88 */ public ushort LoadOrder;
         /* 0x8A */ public bool Enabled;
         /* 0x8B */ public bool EnabledVR;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x8C */ public byte[] EndPadding;
     }
 }

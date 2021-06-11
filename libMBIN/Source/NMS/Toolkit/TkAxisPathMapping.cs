@@ -15,7 +15,5 @@ namespace libMBIN.NMS.Toolkit
         /* 0x128 */ public NMSString0x80 SpecialIcon;
         /* 0x1A8 */ public TkInputHandEnum Hand;
         /* 0x1AC */ public NMSString0x20 OpenVROriginNames;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x1CC */ public byte[] EndPadding;
     }
 }

@@ -8,8 +8,5 @@ namespace libMBIN.NMS.GameComponents
     {
         public NMSString0x10 Id;
         public int Count;
-
-        [NMS( Size = 0x04, Ignore = true )]
-        public byte[] Padding14;
     }
 }

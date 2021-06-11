@@ -15,7 +15,5 @@ namespace libMBIN.NMS.Toolkit
         /* 0x3C */ public NMSString0x20 OutputConnect;
         /* 0x60 */ public NMSString0x10 OutputShuffle;
         /* 0x70 */ public int Count;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x74 */ public byte[] EndPadding;
     }
 }

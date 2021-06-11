@@ -10,7 +10,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x080 */ public NMSString0x10 Reward;
         /* 0x090 */ public bool CanOverride;
         /* 0x091 */ public NMSString0x80 DebugText;
-        [NMS(Size = 0x7, Ignore = true)]
-        /* 0x111 */ public byte[] EndPadding;
     }
 }

@@ -13,7 +13,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x10 */ public byte[] Padding10;  // Not sure why this padding is needed. Maybe an internal field?
         /* 0x14 */ public GcFiendCrime FiendCrimeType;
         /* 0x18 */ public float Value;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x1C */ public byte[] EndPadding;
     }
 }

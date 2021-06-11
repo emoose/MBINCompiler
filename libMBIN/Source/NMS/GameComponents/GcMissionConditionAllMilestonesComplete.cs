@@ -10,7 +10,5 @@ namespace libMBIN.NMS.GameComponents
     {
         public int ForStage;
         public bool UseSeasonOverrideMessage;
-        [NMS(Size = 0x3, Ignore = true)]
-        public byte[] EndPadding;
     }
 }

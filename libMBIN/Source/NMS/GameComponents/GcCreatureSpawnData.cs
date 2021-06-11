@@ -30,7 +30,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x864 */ public bool AllowFur;
         /* 0x865 */ public bool Herd;
         /* 0x868 */ public int RoleDataIndex;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x86C */ public byte[] EndPadding;
     }
 }

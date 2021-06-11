@@ -14,7 +14,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0xC */ public bool SyncWithMissionFireteam;
         /* 0xD */ public bool ForceSearchFreighterAndChests;
         /* 0xE */ public bool SearchEveryShip;
-        [NMS(Size = 0x1, Ignore = true)]
-        /* 0xF */ public byte[] EndPadding;
     }
 }

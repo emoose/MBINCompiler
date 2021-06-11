@@ -9,7 +9,5 @@ namespace libMBIN.NMS.GameComponents
         public enum ForHotspotTypeEnum { Any, Power, Gas, Minerals }
         public ForHotspotTypeEnum ForHotspotType;
         public bool RequireAlreadyAnalysed;
-        [NMS(Size = 0x3, Ignore = true)]
-        public byte[] EndPadding;
     }
 }

@@ -14,7 +14,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x0C */ public float AdjustMaxRange;                    // 40000000h
         /* 0x10 */ public TkCurveType AdjustMaxCurve;
         /* 0x14 */ public bool Inverted;
-        [NMS(Size = 0x3, Ignore = true)]
-        /* 0x15 */ public byte[] EndPadding;
     }
 }

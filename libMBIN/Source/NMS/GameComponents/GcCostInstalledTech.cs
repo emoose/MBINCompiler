@@ -9,7 +9,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x00 */ public NMSString0x10 Id;		
         public enum InventoryToCheckEnum { All, Suit, Ship, Weapon, Freighter, Buggy }
         /* 0x10 */ public InventoryToCheckEnum InventoryToCheck;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x14 */ public byte[] EndPadding;
     }
 }

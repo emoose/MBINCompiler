@@ -9,7 +9,5 @@ namespace libMBIN.NMS.GameComponents
     {
         public List<GcCreatureAlertData> AlertTable;
         public bool Inverse;
-        [NMS(Size = 0x7, Ignore = true)]
-        public byte[] EndPadding;
     }
 }

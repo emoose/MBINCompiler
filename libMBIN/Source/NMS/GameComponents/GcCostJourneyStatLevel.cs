@@ -8,8 +8,5 @@ namespace libMBIN.NMS.GameComponents
     {
         public NMSString0x10 StatName;
         public int RequiredLevel;
-
-        [NMS(Size = 4, Ignore = true)]
-        public byte[] Padding14;
     }
 }

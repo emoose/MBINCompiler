@@ -20,7 +20,5 @@ namespace libMBIN.NMS.Toolkit
         /* 0x100 */ public float Colour1Alpha;
         /* 0x110 */ public Colour Colour2;
         /* 0x120 */ public float Colour2Alpha;
-        [NMS(Size = 0xC, Ignore = true)]
-        /* 0x124 */ public byte[] EndPadding;
     }
 }

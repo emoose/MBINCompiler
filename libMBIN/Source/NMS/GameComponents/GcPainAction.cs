@@ -11,7 +11,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x14 */ public bool RadiusBasedDamage;
         /* 0x15 */ public bool AffectsPlayer;
         /* 0x18 */ public float RetriggerTime;
-        [NMS(Size = 4, Ignore = true)]
-        /* 0x1C */ public byte[] EndPadding;
     }
 }

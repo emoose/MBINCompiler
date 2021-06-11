@@ -20,7 +20,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x100 */ public GcStatLevelData[] StatLevels;
         /* 0x520 */ public bool UseRankNotStats;
         /* 0x521 */ public bool TelemetryUpload;
-        [NMS(Size = 0x6, Ignore = true)]
-        /* 0x522 */ public byte[] EndPadding;
     }
 }

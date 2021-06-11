@@ -17,8 +17,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x44 */ public GcProceduralProductCategory ProcProdType;
         /* 0x48 */ public GcRarity ProcProdRarity;
         /* 0x4C */ public bool HideInSeasonRewards;
-        [NMS(Size = 0x3, Ignore = true)]
-        /* 0x4D */ public byte[] EndPadding;
 
     }
 }

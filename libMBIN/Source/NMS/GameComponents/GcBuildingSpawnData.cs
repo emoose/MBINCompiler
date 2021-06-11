@@ -31,7 +31,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x5B0 */ public Vector3f AABBMin;
         /* 0x5C0 */ public Vector3f AABBMax;
         /* 0x5D0 */ public bool BuildingSizeCalculated;
-        [NMS(Size = 0xF, Ignore = true)]
-        /* 0x5D1 */ public byte[] EndPadding;
     }
 }

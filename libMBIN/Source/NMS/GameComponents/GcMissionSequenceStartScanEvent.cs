@@ -13,7 +13,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x028 */ public float Time;
         /* 0x02C */ public bool AllowOtherPlayerBase;
         /* 0x02D */ public NMSString0x80 DebugText;
-        [NMS(Size = 0x3, Ignore = true)]
-        public byte[] EndPadding;
     }
 }

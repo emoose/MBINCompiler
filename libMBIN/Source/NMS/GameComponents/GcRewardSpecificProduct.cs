@@ -15,7 +15,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x20 */ public bool ForceSpecialMessage;
         /* 0x21 */ public bool HideInSeasonRewards;
         /* 0x22 */ public bool Silent;
-        [NMS(Size = 0x5, Ignore = true)]
-        /* 0x23 */ public byte[] EndPadding;
     }
 }

@@ -23,7 +23,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x148 */ public bool IsPetCommand;
         /* 0x150 */ public NMSString0x20A PetCommandTitle;
         /* 0x170 */ public TkTextureResource PetCommandIcon;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x1F4 */ public byte[] EndPadding;
     }
 }

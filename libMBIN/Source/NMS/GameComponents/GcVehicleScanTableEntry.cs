@@ -12,7 +12,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x10 */ public NMSString0x20A Name;
         /* 0x30 */ public NMSString0x10 RequiredTech;
         /* 0x40 */ public TkTextureResource Icon;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0xC4 */ public byte[] EndPadding;
     }
 }

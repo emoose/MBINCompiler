@@ -16,7 +16,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x58 */ public NMSString0x10 MissionID;
         /* 0x68 */ public ulong MissionSeed;
         /* 0x70 */ public GcPlayerMissionParticipantType ParticipantType;
-        [NMS(Size = 0xC, Ignore = true)]
-        /* 0x74 */ public byte[] EndPadding;
     }
 }

@@ -18,7 +18,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x48 */ public NMSString0x10 RequiresMissionNotActive;
         /* 0x58 */ public bool RequiresAlienShip;
         /* 0x59 */ public bool StandardEncounter;
-        [NMS(Size = 0x6, Ignore = true)]
-        /* 0x5A */ public byte[] EndPadding;
     }
 }

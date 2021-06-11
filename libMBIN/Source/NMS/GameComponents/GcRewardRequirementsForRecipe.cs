@@ -10,7 +10,5 @@ namespace libMBIN.NMS.GameComponents
     {
         public NMSString0x10 RecipeID;
         public bool RewardInCreative;
-        [NMS(Size = 0x7, Ignore = true)]
-        public byte[] EndPadding;
     }
 }

@@ -17,7 +17,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x218 */ public bool AllowAnyEncounter;
         /* 0x219 */ public bool Silent;
         /* 0x21A */ public NMSString0x80 DebugText;
-        [NMS(Size = 0x6, Ignore = true)]
-        /* 0x29A */ public byte[] EndPadding;
     }
 }

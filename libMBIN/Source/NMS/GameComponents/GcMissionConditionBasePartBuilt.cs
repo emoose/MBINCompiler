@@ -11,7 +11,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x18 */ public GcBuildingPartSearchType Type;
 		public enum PartInCurrentBaseEnum { DontCare, YesAllPlayerOwned }
 		/* 0x38 */ public PartInCurrentBaseEnum PartInCurrentBase;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x3C */ public byte[] EndPadding;
     }
 }

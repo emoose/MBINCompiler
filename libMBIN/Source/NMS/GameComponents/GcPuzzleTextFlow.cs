@@ -10,7 +10,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x20 */ public bool IsAlien;
         /* 0x28 */ public NMSString0x20A Title;
         /* 0x48 */ public GcAlienMood Mood;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x4C */ public byte[] EndPadding;
     }
 }

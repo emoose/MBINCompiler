@@ -37,7 +37,5 @@ namespace libMBIN.NMS.GameComponents
         [NMS(Size = 0x4)]
         /* 0xDB8 */ public float[] LifeLevelDensityModifiers;
         /* 0xDE8 */ public float HerdCreaturePenalty;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0xDEC */ public byte[] Endpadding;
     }
 }

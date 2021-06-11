@@ -69,7 +69,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x3950 */ public int FireteamSessionCount;
         /* 0x3954 */ public int VibrationStrength;
         /* 0x3958 */ public int TriggerFeedbackStrength;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x395C */ public byte[] EndPadding;
     }
 }

@@ -30,7 +30,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x1D4 */ public int NumberOfFailedEventsThisExpedition;
         /* 0x1D8 */ public List<GcExpeditionEventSaveData> Events;
         /* 0x1E8 */ public bool InterventionPhoneCallActivated;
-        [NMS(Size = 0x7, Ignore = true)]
-        /* 0x1E9 */ public byte[] EndPadding;
     }
 }

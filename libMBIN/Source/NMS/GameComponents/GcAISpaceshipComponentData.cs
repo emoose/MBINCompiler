@@ -11,7 +11,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x08 */ public GcPrimaryAxis Axis;
         /* 0x0C */ public TkTextureResource Hangar;
         /* 0x90 */ public bool IsSpaceAnomaly;
-        [NMS(Size = 0x3, Ignore = true)]
-        /* 0x91 */ public byte[] EndPadding;
     }
 }

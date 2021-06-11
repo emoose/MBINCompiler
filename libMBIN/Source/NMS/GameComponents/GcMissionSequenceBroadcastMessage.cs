@@ -14,7 +14,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x91 */ public bool SendToAllMatchingSeeds;
         /* 0x92 */ public bool Multiplayer;
         /* 0x93 */ public bool BroadcastToActiveMultiplayerMission;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x94 */ public byte[] EndPadding;
     }
 }

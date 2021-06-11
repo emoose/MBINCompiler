@@ -16,7 +16,5 @@ namespace libMBIN.NMS.Toolkit
         /* 0xC0 */ public float AdultCorrelationValue;
         /* 0xC8 */ public List<TkAnimPoseBabyModifier> BabyModifiers;
         /* 0xD8 */ public bool ShouldRandomise;
-        [NMS(Size = 0x7, Ignore = true)]
-        /* 0xD9 */ public byte[] EndPadding;
     }
 }

@@ -16,7 +16,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0xB0 */ public NMSString0x10 SuccessReward;
         /* 0xC0 */ public NMSString0x10 FailureReward;
         /* 0xD0 */ public int FailureDamageChance;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0xD4 */ public byte[] EndPadding;
     }
 }

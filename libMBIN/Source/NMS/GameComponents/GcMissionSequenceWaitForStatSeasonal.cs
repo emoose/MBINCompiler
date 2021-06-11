@@ -14,7 +14,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x0A0 */ public int Amount;
         /* 0x0A4 */ public bool TakeAmountFromSeasonalData;
         /* 0x0A5 */ public NMSString0x80 DebugText;
-        [NMS(Size = 0x3, Ignore = true)]
-        /* 0x125 */ public byte[] EndPadding;
     }
 }

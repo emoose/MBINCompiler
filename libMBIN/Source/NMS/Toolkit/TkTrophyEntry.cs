@@ -10,8 +10,5 @@ namespace libMBIN.NMS.Toolkit
         /* 0x10 */ public int Ps4Id;
         /* 0x14 */ public NMSString0x40 PCId;
         /* 0x54 */ public NMSString0x20 XboxOneId;
-
-        [NMS(Size = 4, Ignore = true)]
-        /* 0x74 */ public byte[] EndPadding;
     }
 }

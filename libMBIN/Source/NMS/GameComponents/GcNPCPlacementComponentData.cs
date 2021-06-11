@@ -12,7 +12,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x01 */ public bool PlaceInAbandonedSystems;
         /* 0x08 */ public List<NMSString0x10> PlacementInfosToApply;
         /* 0x18 */ public bool WaitToPlace;
-        [NMS(Size = 0x7, Ignore = true)]
-        /* 0x19 */ public byte[] EndPadding;
     }
 }

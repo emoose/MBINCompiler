@@ -24,7 +24,5 @@ namespace libMBIN.NMS.Toolkit
         /* 0xA4 */ public bool UsePlayerCameraInHmd;
         /* 0xA5 */ public bool UseSensibleCameraFocusNodeIsNowOffsetNode;
         /* 0xA6 */ public bool LookForFocusInMasterModel;
-        [NMS(Size = 0x9, Ignore = true)]
-        /* 0xA7 */ public byte[] EndPadding;
     }
 }

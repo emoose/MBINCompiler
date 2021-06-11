@@ -12,7 +12,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x2C */ public TkTextureResource Icon;
         /* 0xB0 */ public Colour MessageColour;
         /* 0xC0 */ public bool UseTimedMessage;
-        [NMS(Size = 0xF, Ignore = true)]
-        /* 0xC1 */ public byte[] EndPadding;
     }
 }

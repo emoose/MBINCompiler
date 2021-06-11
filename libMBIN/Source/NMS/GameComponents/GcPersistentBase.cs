@@ -29,7 +29,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x284 */ public NMSString0x20 PlatformToken;
         /* 0x2A4 */ public bool IsReported;
         /* 0x2A5 */ public bool IsFeatured;
-        [NMS(Size = 0xA, Ignore = true)]
-        /* 0x2A6 */ public byte[] EndPadding;
     }
 }

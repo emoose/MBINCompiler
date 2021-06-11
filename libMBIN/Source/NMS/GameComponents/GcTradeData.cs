@@ -35,7 +35,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x9C */ public int[] MaxExtraSystemProducts;
         [NMS(Size = 0x3, EnumType = typeof(GcWealthClass.WealthClassEnum))]
         /* 0xA8 */ public float[] TradeProductsPriceImprovements;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0xB4 */ public byte[] EndPadding;
     }
 }

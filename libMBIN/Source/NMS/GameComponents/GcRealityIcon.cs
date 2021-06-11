@@ -8,7 +8,5 @@ namespace libMBIN.NMS.GameComponents
     {
         /* 0x00 */ public NMSString0x20A ID;
         /* 0x20 */ public TkTextureResource Texture;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0xA4 */ public byte[] EndPadding;
     }
 }

@@ -72,7 +72,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0xF6 */ public bool UseSpeedBasedSpring;
         /* 0xF7 */ public bool UseCustomBlendTime;
         /* 0xF8 */ public float CustomBlendTime;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0xFC */ public byte[] EndPadding;
     }
 }

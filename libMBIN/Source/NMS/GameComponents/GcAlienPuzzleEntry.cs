@@ -33,7 +33,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x108 */ public PersistancyBufferOverrideEnum PersistancyBufferOverride;
         /* 0x10C */ public int CustomFreighterTextIndex;
         /* 0x110 */ public bool RadialInteraction;
-        [NMS(Size = 0x7, Ignore = true)]
-        /* 0x111 */ public byte[] EndPadding;
     }
 }

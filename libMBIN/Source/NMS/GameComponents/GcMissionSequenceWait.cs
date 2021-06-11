@@ -9,7 +9,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x0 */ public float Time;
         /* 0x4 */ public NMSString0x80 DebugText;
         public bool SuppressMessages;
-        [NMS(Size = 0x3, Ignore = true)]
-        public byte[] EndPadding;
     }
 }

@@ -19,7 +19,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x60 */ public int MinContiguousDepth;
         /* 0x64 */ public float ShrinkFactor;
         /* 0x68 */ public List<NMSString0x10> DecorationThemes;
-        [NMS(Size = 0x8, Ignore = true)]
-        /* 0x78 */ public byte[] EndPadding;
     }
 }

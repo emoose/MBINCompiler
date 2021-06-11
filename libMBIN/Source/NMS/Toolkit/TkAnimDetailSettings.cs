@@ -12,8 +12,6 @@ namespace libMBIN.NMS.Toolkit
         public List<TkAnimDetailSettingsData> AnimDistanceSettings;
         [NMS(Size = 0x3)]
         public float[] AnimLODDistances;
-        [NMS(Size = 0x4, Ignore = true)]
-        public byte[] EndPadding;
 
     }
 }

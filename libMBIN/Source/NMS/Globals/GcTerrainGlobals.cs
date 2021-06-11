@@ -63,7 +63,5 @@ namespace libMBIN.NMS.Globals
         /* 0x2D0 */ public bool DebugRegionHotspots;
         /* 0x2D1 */ public NMSString0x80 RegionHotspotsTable;
         /* 0x354 */ public int TerrainPrimeIndexStart;
-        [NMS(Size = 0x8, Ignore = true)]
-        /* 0x358 */ public byte[] EndPadding;
     }
 }

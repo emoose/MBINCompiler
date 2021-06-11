@@ -17,7 +17,5 @@ namespace libMBIN.NMS.Toolkit
         /* 0x48 */ public float Zoom;
         /* 0x4C */ public int OutputX;
         /* 0x50 */ public int OutputY;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x54 */ public byte[] EndPadding;
     }
 }

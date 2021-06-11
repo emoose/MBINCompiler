@@ -8,7 +8,5 @@ namespace libMBIN.NMS.GameComponents
     {
         /* 0x00 */ public NMSString0x10 LinkedTechId;
         /* 0x10 */ public TkTextureResource BobbleHead;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x94 */ public byte[] EndPaddnig;
     }
 }

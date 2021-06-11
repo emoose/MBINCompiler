@@ -21,8 +21,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x22 */ public bool IncludeAllPhysics;
         /* 0x23 */ public bool IncludeMobileNPCs;
         /* 0x24 */ public bool TeleporterCountsAsPlayer;
-
-        [NMS(Size = 3, Ignore = true)]
-        /* 0x25 */ public byte[] EndPadding;
     }
 }

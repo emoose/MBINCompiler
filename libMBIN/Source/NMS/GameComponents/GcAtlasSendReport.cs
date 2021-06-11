@@ -17,7 +17,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x54 */ public GcUniverseAddressData UniverseAddress;
         /* 0x6C */ public NMSString0x20 RL;
         /* 0x8C */ public NMSString0x20 RC;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0xAC */ public byte[] EndPadding;
     }
 }

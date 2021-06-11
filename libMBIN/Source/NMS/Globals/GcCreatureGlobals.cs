@@ -588,7 +588,5 @@ namespace libMBIN.NMS.Globals
         /* 0x2260 */ public float AngryRockProportionNormal;
         /* 0x2264 */ public float AngryRockProportionSurvival;
         /* 0x2268 */ public int PauseBetweenCreatureSpawnRequests;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x226C */ public byte[] EndPadding;
     }
 }

@@ -160,7 +160,5 @@ namespace libMBIN.NMS.Globals
         /* 0x338 */ public float NPCFlavourIdleTimeMax;
         /* 0x33C */ public float NPCMoodIdleDelayChance;
         /* 0x340 */ public float NPCMoodIdleLowIntensityChance;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x344 */ public byte[] EndPadding;
     }
 }

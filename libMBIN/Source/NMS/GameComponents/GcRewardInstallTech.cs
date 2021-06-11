@@ -10,7 +10,5 @@ namespace libMBIN.NMS.GameComponents
         public enum InventoryToInstallInEnum { Personal, PersonalTech, Ship, ShipTech, Freighter, Vehicle, Weapon };
         /* 0x10 */ public InventoryToInstallInEnum InventoryToInstallIn;
         /* 0x14 */ public bool Silent;
-        [NMS(Size = 0x3, Ignore = true)]
-        /* 0x15 */ public byte[] EndPadding;
     }
 }

@@ -13,7 +13,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x3C */ public DependentEffectEnum DependentEffect;
         /* 0x40 */ public bool DisableWhenOffline;
         /* 0x41 */ public bool TransfersConnections;
-        [NMS(Size = 0x6, Ignore = true)]
-        /* 0x42 */ public byte[] EndPadding;
     }
 }

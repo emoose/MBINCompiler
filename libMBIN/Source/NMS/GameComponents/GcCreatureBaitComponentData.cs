@@ -13,7 +13,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x14 */ public float BaitRadius;
         /* 0x18 */ public bool Debug;
         /* 0x19 */ public bool InducesRage;
-        [NMS(Size = 6, Ignore = true)]
-        /* 0x1A */ public byte[] EndPadding;
     }
 }

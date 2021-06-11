@@ -11,8 +11,5 @@ namespace libMBIN.NMS.GameComponents
         public Vector2f Size;
 
         public NMSString0x80 Path;
-
-        [NMS(Size = 4, Ignore = true)]
-        public byte[] Padding9C;
     }
 }

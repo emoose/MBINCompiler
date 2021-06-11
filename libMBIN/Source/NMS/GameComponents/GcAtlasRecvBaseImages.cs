@@ -15,7 +15,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x14 */ public int DataTimestamp;
         /* 0x18 */ public ulong ImageDataPtr;
         /* 0x20 */ public int ImageDataSize;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x24 */ public byte[] EndPadding;
     }
 }

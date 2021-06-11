@@ -11,7 +11,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x0 */ public ulong DiscovererUID;
         /* 0x8 */ public ushort DiscovererPlatform;  // I think this is maybe an enum with base type ushort... In the save file this is 
         /* 0xA */ public bool DiscoveredState;
-        [NMS(Size = 0x5, Ignore = true)]
-        /* 0xB */ public byte[] EndPadding;
     }
 }

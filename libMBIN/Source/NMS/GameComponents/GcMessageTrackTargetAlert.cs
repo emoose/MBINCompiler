@@ -12,7 +12,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x04 */ public int Victim;
         /* 0x10 */ public Vector3f AlertPos;
         /* 0x20 */ public bool Primary;
-        [NMS(Size = 0xF, Ignore = true)]
-        /* 0x21 */ public byte[] EndPadding;
     }
 }

@@ -19,7 +19,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x6C */ public float RockTileFrequency;          // 3E800000h
         /* 0x70 */ public float SubstanceTileFrequency;     // 3E800000h
         /* 0x74 */ public bool ForceContinentalNoise;
-        [NMS(Size = 0x3, Ignore = true)]
-        /* 0x75 */ public byte[] EndPadding;
     }
 }

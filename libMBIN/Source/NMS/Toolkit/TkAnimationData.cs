@@ -34,7 +34,5 @@ namespace libMBIN.NMS.Toolkit
         /* 0x118 */ public NMSString0x10 AdditiveBaseAnim;
         /* 0x128 */ public float AdditiveBaseFrame;
         /* 0x12C */ public TkAnimationGameData GameData;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x134 */ public byte[] EndPadding;
     }
 }

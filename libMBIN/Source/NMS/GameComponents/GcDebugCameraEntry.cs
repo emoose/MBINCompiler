@@ -15,7 +15,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x40 */ public float FOV;
         /* 0x44 */ public float SpeedModifier;
         /* 0x48 */ public float Distance;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x4C */ public byte[] EndPadding;
     }
 }

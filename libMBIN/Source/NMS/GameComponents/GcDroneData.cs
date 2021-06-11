@@ -69,8 +69,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x1AC */ public float EyeAngleMax;
         /* 0x1B0 */ public float EngineDirSpeedMin;
         /* 0x1B4 */ public float EngineDirAngleMax;
-
-        [NMS(Size = 0x8, Ignore = true)]
-        /* 0x1B8 */ public byte[] EndPadding;
     }
 }

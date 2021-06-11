@@ -11,7 +11,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x10 */ public int AmountMin;
         /* 0x14 */ public int AmountMax;
         /* 0x18 */ public bool ForceSpecialMessage;
-        [NMS(Size = 0x7, Ignore = true)]
-        /* 0x19 */ public byte[] EndPadding;
     }
 }

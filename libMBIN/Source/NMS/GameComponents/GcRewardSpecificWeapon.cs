@@ -14,7 +14,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x238 */ public bool IsGift;
         /* 0x239 */ public bool IsRewardWeapon;
         /* 0x23A */ public bool FormatAsSeasonal;
-        [NMS(Size = 0x5, Ignore = true)]
-        /* 0x23B */ public byte[] EndPadding;
     }
 }

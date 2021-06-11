@@ -10,7 +10,5 @@ namespace libMBIN.NMS.GameComponents
     {
         public NMSString0x10 Mission;
         public GcInteractionBufferType Buffer;
-        [NMS(Size = 0x4, Ignore = true)]
-        public byte[] EndPadding;
     }
 }

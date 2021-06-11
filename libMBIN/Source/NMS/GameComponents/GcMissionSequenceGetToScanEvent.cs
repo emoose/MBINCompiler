@@ -19,7 +19,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x234 */ public NMSString0x80 SurveySwapHint;
         /* 0x2B4 */ public NMSString0x80 SurveyHint;
         /* 0x334 */ public NMSString0x80 DebugText;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x3B4 */ public byte[] EndPadding;
     }
 }

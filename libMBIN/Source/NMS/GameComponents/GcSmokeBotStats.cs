@@ -25,7 +25,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x90 */ public float TotalCpuFps;
         /* 0x94 */ public float TotalGpuFps;
         /* 0x98 */ public int FrameCount;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x9C */ public byte[] EndPadding;
     }
 }

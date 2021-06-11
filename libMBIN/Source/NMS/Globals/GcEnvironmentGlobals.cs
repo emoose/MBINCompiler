@@ -108,7 +108,5 @@ namespace libMBIN.NMS.Globals
         /* 0x488 */ public float MaxHotspotFalloffDistance;
         /* 0x48C */ public GcEnvironmentProperties EnvironmentProperties;
         /* 0x504 */ public GcEnvironmentProperties EnvironmentPrimeProperties;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x57C */ public byte[] EndPadding;
     }
 }

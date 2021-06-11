@@ -14,7 +14,5 @@ namespace libMBIN.NMS.Toolkit
 		public enum SpawnTypeEnum { Basic, Creature }
 		public SpawnTypeEnum SpawnType;
         public bool IgnoreComponents;
-        [NMS(Size = 0x7, Ignore = true)]
-        public byte[] EndPadding;
     }
 }

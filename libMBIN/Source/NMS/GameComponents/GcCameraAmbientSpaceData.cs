@@ -10,7 +10,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x10 */ public NMSString0x10 DroneAnimation;
 		public enum OriginEnum { SpaceStationInternals, SpaceStationBack, FreighterBattle, Freighter, FreighterHangar, AtlasStation, BlackHole, Anomaly }
 		/* 0x20 */ public OriginEnum Origin;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x24 */ public byte[] EndPadding;
     }
 }

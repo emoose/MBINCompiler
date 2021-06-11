@@ -10,8 +10,5 @@ namespace libMBIN.NMS.GameComponents
         public int MinProgress;
         public int MaxProgress;
         public int NewProgress;
-
-        [NMS(Size = 4, Ignore = true)]
-        public byte[] Padding1C;
     }
 }

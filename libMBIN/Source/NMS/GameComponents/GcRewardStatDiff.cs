@@ -12,7 +12,5 @@ namespace libMBIN.NMS.GameComponents
 		public GcCurrency RewardCurrency;
         public int AmountPerStat;
         public int StatRewardCap;
-        [NMS(Size = 0x4, Ignore = true)]
-        public byte[] EndPadding;
     }
 }

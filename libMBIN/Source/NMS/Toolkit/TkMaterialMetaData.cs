@@ -119,7 +119,5 @@ namespace libMBIN.NMS.Toolkit
         /* 0x450 */ public Vector3f WaveTwoFrequency;
         /* 0x460 */ public Vector3f WaveTwoFallOff;
         /* 0x470 */ public TkMaterialShaderMillData ShaderMillData;
-        [NMS(Size = 0x8, Ignore = true)]
-        /* 0x4C8 */ public byte[] EndPadding;
     }
 }

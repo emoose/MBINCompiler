@@ -44,7 +44,5 @@ namespace libMBIN.NMS.Toolkit
         /* 0xE0 */ public NMSString0x10 UserColour;
         /* 0xF0 */ public float MaxRenderDistance;
         /* 0xF4 */ public float MaxSpawnDistance;
-        [NMS(Size = 8, Ignore = true)]
-        /* 0xF8 */ public byte[] EndPadding;
     }
 }

@@ -10,7 +10,5 @@ namespace libMBIN.NMS.GameComponents
         public NMSString0x10 Item;
         public NMSString0x80 Desc;
         public int MinBlobs;
-        [NMS(Size = 0x4, Ignore = true)]
-        public byte[] EndPadding;
     }
 }

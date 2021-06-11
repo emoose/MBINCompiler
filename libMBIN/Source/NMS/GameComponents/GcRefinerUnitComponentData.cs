@@ -9,7 +9,5 @@ namespace libMBIN.NMS.GameComponents
         public GcMaintenanceComponentData MaintenanceData;
         public int NumInputs;
         public bool IsCooker;
-        [NMS(Size = 0xB, Ignore = true)]
-        public byte[] EndPadding;
     }
 }

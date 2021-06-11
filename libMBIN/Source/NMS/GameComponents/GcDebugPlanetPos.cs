@@ -8,7 +8,5 @@ namespace libMBIN.NMS.GameComponents
     {
         public Vector3f Position;
         public bool OverridePosition;
-        [NMS(Size = 0xF, Ignore = true)]
-        public byte[] EndPadding;
     }
 }
