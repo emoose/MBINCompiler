@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x48, Alignment = 0x8, GUID = 0x3CE3CF6A59E14C41, NameHash = 0xB9F3B9FAC994498B)]
+    [NMS(Size = 0x48, GUID = 0x3CE3CF6A59E14C41, NameHash = 0xB9F3B9FAC994498B)]
     public class GcRewardSpecificFrigate : NMSTemplate
     {
         /* 0x00 */ public GcFrigateClass FrigateClass;
