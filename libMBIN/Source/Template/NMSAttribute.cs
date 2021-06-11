@@ -12,7 +12,7 @@ namespace libMBIN
         public string[] EnumValue { get; set; }
         public Type EnumType { get; set; }
         public byte Padding { get; set; }
-        public int Alignment { get; set; } = 4;
+        public int Alignment { get; set; }
         public ulong GUID { get; set; }
         public ulong NameHash { get; set; }
         public bool Broken { get; set; }

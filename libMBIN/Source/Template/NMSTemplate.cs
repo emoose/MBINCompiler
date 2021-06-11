@@ -20,6 +20,7 @@ using System.Collections;
 using System.IO;
 using System.Text;
 using System.Collections.Generic;
+using System.Collections.Concurrent;
 using System.Diagnostics;
 using System.Reflection;
 using System.Runtime.InteropServices;
@@ -107,6 +108,79 @@ namespace libMBIN
             if (template == null) return 0;
 
             return template.GetDataSize();
+        }
+
+        private static ConcurrentDictionary<Type,int> AlignmentMap = new ConcurrentDictionary<Type,int>();
+
+        public static int GetAlignment(Type type) {
+            int alignment;
+
+            if (AlignmentMap.TryGetValue(type, out alignment)) {
+                return alignment;
+            }
+
+            switch (type.Name) {
+                case "Boolean":
+                case "Byte":
+                case "String":
+                    alignment = 0x1;
+                    break;
+
+                case "Int16":
+                case "UInt16":
+                    alignment = 0x2;
+                    break;
+
+                case "Single":
+                case "Int32":
+                case "UInt32":
+                    alignment = 0x4;
+                    break;
+
+                case "Int64":
+                case "UInt64":
+                case "List`1":
+                case "NMSTemplate":
+                case "VariableSizeString":
+                    alignment = 0x8;
+                    break;
+
+                default:
+                    if (type.IsArray) {
+                        alignment = GetAlignment(type.GetElementType());
+                        break;
+                    }
+
+                    if (type.IsEnum) {
+                        alignment = 0x4;
+                        break;
+                    }
+
+                    NMSAttribute settings = type.GetCustomAttribute<NMSAttribute>();
+                    if (settings != null && settings.Alignment > 0)
+                    {
+                        alignment = settings.Alignment;
+                        break;
+                    }
+
+                    if (type.BaseType == typeof(NMSTemplate))
+                    {
+                        alignment = 1;
+
+                        foreach (FieldInfo field in type.GetFields())
+                        {
+                            int align = GetAlignment(field.FieldType);
+                            if (align > alignment) alignment = align;
+                        }
+
+                        break;
+                    }
+
+                    throw new UnknownTypeException( type );
+            }
+
+            AlignmentMap[type] = alignment;
+            return alignment;
         }
 
         public static object DeserializeValue(BinaryReader reader, Type field, NMSAttribute settings, long templatePosition, FieldInfo fieldInfo, NMSTemplate parent) {
@@ -208,8 +282,7 @@ namespace libMBIN
                         }
                         return array;
                     } else {
-                        int alignment = field.GetCustomAttribute<NMSAttribute>()?.Alignment ?? 0x4;
-                        reader.Align( alignment ); // templatePosition when not in list??
+                        reader.Align( GetAlignment(field) ); // templatePosition when not in list??
                         return DeserializeBinaryTemplate(reader, fieldType);
                     }
             }
@@ -250,7 +323,8 @@ namespace libMBIN
                     }
                     DebugLogFieldName( $"{templateName}\t0x{reader.BaseStream.Position:X4}\t{field.Name}\t{field.GetValue( obj )}" );
                 }
-
+                reader.Align( GetAlignment(type) ); // This is to remove the need for end padding
+                
                 obj.FinishDeserialize();
 
             }
@@ -502,9 +576,7 @@ namespace libMBIN
                     } else if ( fieldType.BaseType == typeof( NMSTemplate ) ) {
                         var realData = (NMSTemplate) fieldData;
                         if ( realData == null ) realData = (NMSTemplate) Activator.CreateInstance( fieldType );
-                        int alignment = realData.GetType().GetCustomAttribute<NMSAttribute>()?.Alignment ?? 0x4;
-                        //DebugLogTemplate(alignment.ToString());
-                        writer.Align(alignment, field?.Name ?? fieldType.Name );     // startStructPos if not in list maybe??
+                        writer.Align( GetAlignment(realData.GetType()), field?.Name ?? fieldType.Name );     // startStructPos if not in list maybe??
                         realData.AppendToWriter( writer, ref additionalData, ref addtDataIndex, GetType(), listEnding );
 
                     } else {
@@ -531,6 +603,7 @@ namespace libMBIN
                     var fieldData = field.GetValue(this);
                     SerializeValue( writer, field.FieldType, fieldData, settings, field, ref additionalData, ref addtDataIndex, listEnding );
                 }
+                writer.Align( GetAlignment(type), type.Name ); // This is to remove the need for end padding
             } else {
                 SerializeValue( writer, type, null, null, null, ref additionalData, ref addtDataIndex, listEnding );
             }
@@ -566,9 +639,8 @@ namespace libMBIN
             //var entryOffsetNamePairs = new Dictionary<long, string>();
             List<KeyValuePair<long, String>> entryOffsetNamePairs = new List<KeyValuePair<long, String>>();
             foreach ( var entry in list ) {
-                int alignment = entry.GetType().GetCustomAttribute<NMSAttribute>()?.Alignment ?? 0x8;       // this will generally return 4 because it is the default...
                 string entryName = entry.GetType().Name;
-                writer.Align(alignment, entryName);
+                writer.Align( GetAlignment(entry.GetType()), entryName );
                 //Logger.LogDebug($"pos 0x{writer.BaseStream.Position:X}");
                 //Logger.LogDebug(entry.GetType().Name);
                 entryOffsetNamePairs.Add( new KeyValuePair<long, string>( writer.BaseStream.Position, entryName) );
@@ -591,8 +663,7 @@ namespace libMBIN
                             SerializeList( writer, (IList) data.Item2, data.Item1, ref listObjects, i + 1, listEnding );
                         }
                     } else {
-                        int alignment2 = data.Item2.GetType().GetCustomAttribute<NMSAttribute>()?.Alignment ?? 0x8;
-                        writer.Align( alignment2, data.Item2.GetType().Name );
+                        writer.Align( GetAlignment(data.Item2.GetType()), data.Item2.GetType().Name );
                         long origPos = writer.BaseStream.Position;
                         //DebugLog("this is it!!!");
                         //DebugLog($"0x{origPos:X}");
@@ -646,25 +717,7 @@ namespace libMBIN
         public void SerializeList( BinaryWriter writer, IList list, long listHeaderPosition, ref List<Tuple<long, object>> additionalData, int addtDataIndex, UInt32 listEnding = (UInt32) 0xAAAAAA01 ) {
             // first thing we want to do is align the writer with the location of the first element of the list
             if ( list.Count != 0 ) {
-                // if the class has no alignment value associated with it, set a default value
-                // Note: This will not work if the Type has a NMS Attribute defined (it will default to an alignment of 0x4)
-                int alignment_default = 0x4;
-		switch (list[0].GetType().BaseType.Name) {
-                    case "Byte":
-                        alignment_default = 0x1;
-                        break;
-                    case "Int16":
-                    case "UInt16":
-                        alignment_default = 0x2;
-                        break;
-                    case "Int64":
-                    case "UInt64":
-                    case "NMSTemplate":
-                        alignment_default = 0x8;
-                        break;
-                }
-                int alignment = list[0].GetType().GetCustomAttribute<NMSAttribute>()?.Alignment ?? alignment_default;
-                writer.Align(alignment, list[0].GetType().Name );
+                writer.Align( GetAlignment(list[0].GetType()), list[0].GetType().Name );
             }
 
             long listPosition = writer.BaseStream.Position;
@@ -739,7 +792,7 @@ namespace libMBIN
                         writer.BaseStream.Position = stringEndPos;
 
                     } else if ( data.Item2.GetType().BaseType == typeof( NMSTemplate ) ) {
-                        writer.Align( settings?.Alignment ?? 0x4, data.Item2.GetType().Name );
+                        writer.Align( GetAlignment(data.Item2.GetType()), data.Item2.GetType().Name );
                         var pos = writer.BaseStream.Position;
                         var template = (NMSTemplate) data.Item2;
                         int i2 = i + 1;
