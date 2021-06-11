@@ -51,8 +51,6 @@ namespace libMBIN.NMS.Globals
         /* 0x130 */ public float SwimmingRollSmoothTimeWithWeapon;
         /* 0x134 */ public float LadderDistanceToAutoMount;
         /* 0x138 */ public float LadderCooldownAfterBeforeAutoClimb;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x13C */ public byte[] Padding13C;
         /* 0x140 */ public NMSString0x10 LadderClimbIdle;
         /* 0x150 */ public NMSString0x10 LadderClimbUp;
         /* 0x160 */ public NMSString0x10 LadderClimbDown;

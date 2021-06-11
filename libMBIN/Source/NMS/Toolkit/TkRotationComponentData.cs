@@ -7,8 +7,6 @@ namespace libMBIN.NMS.Toolkit
     public class TkRotationComponentData : NMSTemplate
     {
         /* 0x00 */ public float Speed;
-        [NMS(Size = 0xC, Ignore = true)]
-        /* 0x04 */ public byte[] Padding4;
         /* 0x10 */ public Vector3f Axis;
         /* 0x20 */ public int SyncGroup;
         [NMS(Size = 0xC, Ignore = true)]

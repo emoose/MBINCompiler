@@ -11,8 +11,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x008 */ public int BaseValueMax;
         /* 0x00C */ public int AgeMin;
         /* 0x010 */ public int AgeMax;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x014 */ public byte[] Padding14;
         /* 0x018 */ public GcNameGeneratorWord Description;
         /* 0x040 */ public TkTextureResource Icon;
         /* 0x0C4 */ public TkTextureResource HeroIcon;

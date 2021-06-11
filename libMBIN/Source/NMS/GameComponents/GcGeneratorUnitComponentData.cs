@@ -11,8 +11,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x004 */ public int ResourceMaintenanceSlotOverride;
         [NMS(Size = 0x10, EnumType = typeof(GcBiomeType.BiomeEnum))]
         /* 0x008 */ public NMSString0x10[] BiomeGasRewards;
-        [NMS(Size = 0x8, Ignore = true)]
-        /* 0x108 */ public byte[] PaddingA8;
         /* 0x110 */ public GcMaintenanceComponentData MaintenanceData;
     }
 }

@@ -23,8 +23,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x1D4 */ public GcPersistentBaseTypes BaseType;
         /* 0x1D8 */ public NMSString0x40 LastEditedById;
         /* 0x218 */ public NMSString0x40 LastEditedByUsername;
-        [NMS(Size = 0x8, Ignore = true)]
-        /* 0x258 */ public byte[] Padding0x258;
         /* 0x260 */ public Vector3f ScreenshotAt;
         /* 0x270 */ public Vector3f ScreenshotPos;
         /* 0x280 */ public GcGameMode GameMode;

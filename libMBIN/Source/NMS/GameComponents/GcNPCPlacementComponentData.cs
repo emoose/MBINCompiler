@@ -10,8 +10,6 @@ namespace libMBIN.NMS.GameComponents
     {
         /* 0x00 */ public bool SearchPlacementFromMaster;
         /* 0x01 */ public bool PlaceInAbandonedSystems;
-        [NMS(Size = 0x6, Ignore = true)]
-        /* 0x02 */ public byte[] Padding2;
         /* 0x08 */ public List<NMSString0x10> PlacementInfosToApply;
         /* 0x18 */ public bool WaitToPlace;
         [NMS(Size = 0x7, Ignore = true)]

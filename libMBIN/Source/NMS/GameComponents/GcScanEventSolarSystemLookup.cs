@@ -32,12 +32,8 @@ namespace libMBIN.NMS.GameComponents
         /* 0x2C */ public GcBiomeSubType UseBiomeSubType;
         /* 0x30 */ public bool NeedsEmptySystem;
         /* 0x31 */ public bool NeedsAbandonedSystem;
-        [NMS(Size = 0x6, Ignore = true)]
-        /* 0x32 */ public byte[] Padding32;
         /* 0x38 */ public NMSString0x10 NeedsResourceHint;
         /* 0x48 */ public bool NeedsHighCreatureLevel;
-        [NMS(Size = 0x7, Ignore = true)]
-        /* 0x49 */ public byte[] Padding49;
         /* 0x50 */ public NMSString0x20A SamePlanetAsEvent;
     }
 }

@@ -22,12 +22,8 @@ namespace libMBIN.NMS.GameComponents
         /* 0x40 */ public bool IsPlacedMarker;
         /* 0x41 */ public bool ShowInFreighterBranchRoom;
         /* 0x42 */ public bool TellPlayerIfFreighterObjectUsed;
-        [NMS(Size = 0x5, Ignore = true)]
-        /* 0x43 */ public byte[] Padding43;
         /* 0x48 */ public NMSString0x20A FreighterObjectAlreadyUsedLocID;
         /* 0x68 */ public bool AllowedToMerge;
-        [NMS(Size = 0x7, Ignore = true)]
-        /* 0x69 */ public byte[] Padding69;
         /* 0x70 */ public NMSString0x10 MissionSurveyId;
     }
 }

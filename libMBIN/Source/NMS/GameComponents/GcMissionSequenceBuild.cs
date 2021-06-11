@@ -9,8 +9,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x000 */ public NMSString0x80 Message;
         /* 0x080 */ public NMSString0x10 Part;
         /* 0x090 */ public bool TeachIfNotKnown;
-        [NMS(Size = 0x7, Ignore = true)]
-        /* 0x091 */ public byte[] Padding91;
         /* 0x098 */ public GcBuildingPartSearchType Type;
         /* 0x0B8 */ public NMSString0x80 DebugText;
     }

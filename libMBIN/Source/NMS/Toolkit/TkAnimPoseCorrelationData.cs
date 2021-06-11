@@ -9,7 +9,5 @@ namespace libMBIN.NMS.Toolkit
         public NMSString0x10 ItemA;
         public NMSString0x10 ItemB;
         public float Correlation;
-        [NMS(Size = 4, Ignore = true)]
-        public byte[] Padding24;
     }
 }

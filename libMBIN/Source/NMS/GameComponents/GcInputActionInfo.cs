@@ -7,8 +7,6 @@ namespace libMBIN.NMS.GameComponents
     public class GcInputActionInfo : NMSTemplate
     {
         /* 0x000 */ public bool Analogue;
-        [NMS(Size = 0x3, Ignore = true)]
-        /* 0x001 */ public byte[] Padding1;
         /* 0x004 */ public GcInputActions Pairing;
         /* 0x008 */ public NMSString0x80 TextTag;
         /* 0x088 */ public NMSString0x20A LocTag;

@@ -20,8 +20,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x240 */ public float ScaleForMinLegSpread;
         /* 0x244 */ public float ScaleForMaxLegSpread;
         /* 0x248 */ public bool RequiresMatchingPartModifier;
-        [NMS(Size = 0x7, Ignore = true)]
-        /* 0x249 */ public byte[] Padding249;
         /* 0x250 */ public List<GcCreatureRidingPartModifier> PartModifiers;
         /* 0x260 */ public NMSString0x10 IdleRidingAnim;
         /* 0x270 */ public NMSString0x10 DefaultRidingAnim;

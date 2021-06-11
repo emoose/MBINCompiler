@@ -22,8 +22,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x130 */ public GcAudioWwiseEvents AudioOverheat;
         /* 0x134 */ public int Damage;
         /* 0x138 */ public GcDamageType DamageType;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x13C */ public byte[] Padding13C;
         /* 0x140 */ public NMSString0x10 PlayerDamage;
         /* 0x150 */ public NMSString0x10 ImpactEffect;
         /* 0x160 */ public List<GcProjectileImpactData> Impacts;

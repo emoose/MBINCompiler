@@ -8,13 +8,8 @@ namespace libMBIN.NMS.GameComponents
     {
 		public enum SpawnModeEnum { None, UseSeed, UseAltID }
 		public SpawnModeEnum SpawnMode;
-
-        [NMS(Size = 4, Ignore = true)]
-        public byte[] Padding4;
         public GcSeed Seed;
         public NMSString0x100 AltId;
-        [NMS(Size = 8, Ignore = true)]
-        public byte[] Padding118;
         public Vector3f SpawnPosition;
         public Vector3f SpawnFacing;
     }

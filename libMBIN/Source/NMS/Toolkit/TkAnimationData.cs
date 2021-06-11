@@ -18,8 +18,6 @@ namespace libMBIN.NMS.Toolkit
         /* 0x098 */ public int FrameEnd;
 
         /* 0x09C */ public NMSString0x40 StartNode;
-        [NMS(Size = 4, Ignore = true)]
-        /* 0x0DC */ public byte[] PaddingDC;
         /* 0x0E0 */ public List<NMSString0x40> ExtraStartNodes;
         /* 0x0F0 */ public int Priority;
         /* 0x0F4 */ public float OffsetMin;
@@ -33,8 +31,6 @@ namespace libMBIN.NMS.Toolkit
         /* 0x110 */ public bool Additive;
         /* 0x111 */ public bool Mirrored;
         /* 0x112 */ public bool Active;
-        [NMS(Size = 0x5, Ignore = true)]
-        /* 0x113 */ public byte[] Padding113;
         /* 0x118 */ public NMSString0x10 AdditiveBaseAnim;
         /* 0x128 */ public float AdditiveBaseFrame;
         /* 0x12C */ public TkAnimationGameData GameData;

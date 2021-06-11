@@ -31,9 +31,6 @@ namespace libMBIN.NMS.Toolkit
         /* 0x50 */ public float GradientEndOffset;
         /* 0x54 */ public bool GradientOffsetPercent;
 
-        [NMS(Size = 0xB, Ignore = true)]
-        /* 0x55 */ public byte[] Padding55;
-
         /* 0x60 */ public Colour GradientColour;
         /* 0x70 */ public float CornerRadius;
         /* 0x74 */ public float StrokeSize;
@@ -42,8 +39,6 @@ namespace libMBIN.NMS.Toolkit
         /* 0x80 */ public bool StrokeGradient;
         /* 0x84 */ public float StrokeGradientOffset;
         /* 0x88 */ public float StrokeGradientFeather;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x8C */ public byte[] Padding8C;
         /* 0x90 */ public Colour StrokeGradientColour;
     }
 }

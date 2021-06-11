@@ -13,8 +13,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x8C */ public float MaxHeadPitchDown;
         /* 0x90 */ public int DefaultHealth;
         /* 0x94 */ public float FoVFixedDistance;
-        [NMS(Size = 0x8, Ignore = true)]
-        /* 0x98 */ public byte[] Padding98;
         /* 0xA0 */ public TkModelRendererData Renderer;
     }
 }

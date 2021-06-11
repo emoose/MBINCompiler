@@ -12,8 +12,6 @@ namespace libMBIN.NMS.GameComponents
 		public enum CommunicatorTypeEnum { HoloExplorer, HoloSceptic, HoloNoone, Generic, PlayerFreighterCaptain, Polo, Nada, QuicksilverBot }
 		public CommunicatorTypeEnum CommunicatorType;
         /* 0x28 */ public GcAlienRace RaceOverride;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x2C */ public byte[] Padding2C;
         /* 0x30 */ public NMSString0x20A ShipHUDOverride;
     }
 }

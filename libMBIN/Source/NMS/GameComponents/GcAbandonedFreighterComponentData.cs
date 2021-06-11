@@ -9,8 +9,6 @@ namespace libMBIN.NMS.GameComponents
     public class GcAbandonedFreighterComponentData : NMSTemplate
     {
         /* 0x000 */ public TkModelResource DungeonRootScene;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x084 */ public byte[] Padding84;
         /* 0x088 */ public List<GcFreighterDungeonChoice> DungeonOptions;
         /* 0x098 */ public NMSString0x20A MarkerLabel;
         /* 0x0B8 */ public TkTextureResource MarkerIcon;

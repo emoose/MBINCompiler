@@ -23,8 +23,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x58 */ public List<NMSString0x20A> DefaultItemInitialWarpScanEvents;
         public enum DefaultItemTypeForInitialWarpEnum { None, PrimaryProduct, PrimarySubstance, SecondaryProduct, SecondarySubstance }
         /* 0x68 */ public DefaultItemTypeForInitialWarpEnum DefaultItemTypeForInitialWarp;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x6C */ public byte[] Padding6C;
         /* 0x70 */ public List<NMSString0x10> BasePartBlueprints;
     }
 }

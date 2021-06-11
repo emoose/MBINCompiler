@@ -28,8 +28,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x024 */ public bool ForceNoninteraction;
         /* 0x028 */ public float CompletedTransitionDelay;
         /* 0x02C */ public bool ShareInteractionModelRender;
-        [NMS(Size = 0x3, Ignore = true)]
-        /* 0x02D */ public byte[] Padding2D;
 
         /* 0x030 */ public TkModelRendererData ModelRendererData;
         /* 0x0E0 */ public TkModelRendererData ModelRendererDataAlt;

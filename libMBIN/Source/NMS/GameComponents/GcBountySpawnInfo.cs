@@ -10,8 +10,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x010 */ public GcAIShipSpawnData Data;
         /* 0x0D8 */ public NMSString0x10 AttackData;
         /* 0x0E8 */ public TkTextureResource Icon;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x16C */ public byte[] Padding14C;
         /* 0x170 */ public NMSString0x20A Label;
     }
 }

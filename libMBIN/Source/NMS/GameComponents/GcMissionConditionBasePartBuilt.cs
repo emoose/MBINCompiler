@@ -8,8 +8,6 @@ namespace libMBIN.NMS.GameComponents
     {
         /* 0x00 */ public NMSString0x10 PartID;
         /* 0x10 */ public int Count;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x14 */ public byte[] Padding14;
         /* 0x18 */ public GcBuildingPartSearchType Type;
 		public enum PartInCurrentBaseEnum { DontCare, YesAllPlayerOwned }
 		/* 0x38 */ public PartInCurrentBaseEnum PartInCurrentBase;

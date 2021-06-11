@@ -7,8 +7,6 @@ namespace libMBIN.NMS.Toolkit
     public class TkButtonPathMapping : NMSTemplate
     {
         /* 0x000 */ public TkInputEnum Id;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x004 */ public byte[] Padding4;
         /* 0x008 */ public NMSString0x20A Name;
         /* 0x028 */ public NMSString0x80 SolidIcon;
         /* 0x0A8 */ public NMSString0x80 OverlayIcon;

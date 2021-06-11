@@ -9,8 +9,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x00 */ public NMSString0x10 ID;
         /* 0x10 */ public NMSString0x10 PresetID;
         /* 0x20 */ public bool IsHidden;
-        [NMS(Size = 0x7, Ignore = true)]
-        /* 0x21 */ public byte[] Padding21;
         /* 0x28 */ public GcNGuiLayoutData Layout;
     }
 }

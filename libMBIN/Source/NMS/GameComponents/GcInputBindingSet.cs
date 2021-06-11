@@ -9,8 +9,6 @@ namespace libMBIN.NMS.GameComponents
     public class GcInputBindingSet : NMSTemplate
     {
         public GcActionSetType Type;
-        [NMS(Size = 0x4, Ignore = true)]
-        public byte[] Padding4;
         public List<GcInputBinding> InputBindings;
     }
 }

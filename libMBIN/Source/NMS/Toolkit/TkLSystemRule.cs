@@ -15,8 +15,5 @@ namespace libMBIN.NMS.Toolkit
 
 		public enum RuleTypeEnum { Default, BaseRule }
 		public RuleTypeEnum RuleType;
-
-        [NMS(Size = 4, Ignore = true)]
-        public byte[] PaddingB4;
     }
 }

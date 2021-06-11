@@ -13,8 +13,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x20 */ public GcInventoryClass Class;
         /* 0x24 */ public int SubstanceMaxStorageMultiplier;
         /* 0x28 */ public int ProductMaxStorageMultiplier;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x2C */ public byte[] Padding2C;
         /* 0x30 */ public List<GcInventoryBaseStatEntry> BaseStatValues;
         /* 0x40 */ public List<GcInventorySpecialSlot> SpecialSlots;
         /* 0x50 */ public int Width;

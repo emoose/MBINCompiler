@@ -10,8 +10,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x04 */ public bool AutoAimTarget;
         /* 0x05 */ public bool PlayerOnly;
         /* 0x06 */ public bool ImpactShake;
-        [NMS(Size = 1, Ignore = true)]
-        /* 0x07 */ public byte[] Padding7;
         /* 0x08 */ public NMSString0x10 ImpactShakeEffect;
         /* 0x18 */ public GcProjectileImpactType ForceImpactType;
         /* 0x1C */ public int IncreaseWanted;

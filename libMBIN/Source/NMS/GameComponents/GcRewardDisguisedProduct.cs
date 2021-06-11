@@ -7,8 +7,6 @@ namespace libMBIN.NMS.GameComponents
     public class GcRewardDisguisedProduct : NMSTemplate
     {
         public GcDefaultMissionProductEnum Default;
-        [NMS(Size = 0x4, Ignore = true)]
-        public byte[] Padding4;
         public NMSString0x10 ID;
         public NMSString0x10 DisplayAs;
         public NMSString0x10 AwardDisplayIDDuringMission;

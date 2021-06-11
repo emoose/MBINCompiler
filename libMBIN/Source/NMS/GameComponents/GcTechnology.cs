@@ -15,8 +15,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x130 */ public VariableSizeString Subtitle;
         /* 0x140 */ public VariableSizeString Description;
         /* 0x150 */ public bool Teach;
-        [NMS(Size = 0x7, Ignore = true)]
-        /* 0x151 */ public byte[] Padding151;
         /* 0x158 */ public NMSString0x20A HintStart;
         /* 0x178 */ public NMSString0x20A HintEnd;
         /* 0x198 */ public TkTextureResource Icon;
@@ -38,12 +36,8 @@ namespace libMBIN.NMS.GameComponents
         /* 0x270 */ public GcTechnologyCategory Category;
         /* 0x274 */ public GcTechnologyRarity Rarity;
         /* 0x278 */ public float Value;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x27C */ public byte[] Padding27C;
         /* 0x280 */ public List<GcTechnologyRequirement> Requirements;
         /* 0x290 */ public GcStatsTypes BaseStat;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x294 */ public byte[] Padding294;
         /* 0x298 */ public List<GcStatsBonus> StatBonuses;
         /* 0x2A8 */ public NMSString0x10 RequiredTech;
         /* 0x2B8 */ public int RequiredLevel;
@@ -58,8 +52,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x330 */ public int FragmentCost;
         /* 0x334 */ public GcTechnologyRarity TechShopRarity;
         /* 0x338 */ public bool WikiEnabled;
-        [NMS(Size = 0x7, Ignore = true)]
-        /* 0x339 */ public byte[] Padding339;
         /* 0x340 */ public VariableSizeString DamagedDescription;
         /* 0x350 */ public NMSString0x10 ParentTechId;
     }

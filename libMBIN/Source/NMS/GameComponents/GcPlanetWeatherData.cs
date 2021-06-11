@@ -7,8 +7,6 @@ namespace libMBIN.NMS.GameComponents
     public class GcPlanetWeatherData : NMSTemplate
     {
         public GcWeatherOptions WeatherType;
-        [NMS(Size = 0xC, Ignore = true)]
-        public byte[] Padding4;
         /* 0x010 */ public GcPlanetHeavyAirData HeavyAir;
 		public enum WeatherIntensityEnum { Default, Extreme }
 		/* 0x130 */ public WeatherIntensityEnum WeatherIntensity;

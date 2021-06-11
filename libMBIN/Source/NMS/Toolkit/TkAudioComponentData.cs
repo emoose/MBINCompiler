@@ -12,8 +12,6 @@ namespace libMBIN.NMS.Toolkit
         /* 0x080 */ public NMSString0x10 AmbientState;
         /* 0x090 */ public NMSString0x80 Shutdown;
         /* 0x110 */ public int MaxDistance;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x114 */ public byte[] Padding114;
         /* 0x118 */ public List<TkAudioAnimTrigger> AnimTriggers;
     }
 }

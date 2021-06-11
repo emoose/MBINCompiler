@@ -9,8 +9,6 @@ namespace libMBIN.NMS.GameComponents
         public NMSString0x10 Stat;
         public NMSString0x10 StatGroup;
         public int Level;
-        [NMS(Size = 0x4, Ignore = true)]
-        public byte[] Padding2C;
         public NMSString0x10 CompareStat;
         public int DisplayMilestoneNumber;
         public TkEqualityEnum Test;

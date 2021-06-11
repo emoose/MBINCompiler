@@ -10,8 +10,6 @@ namespace libMBIN.NMS.GameComponents
     {
         /* 0x00 */ public NMSString0x20A GroupTitle;
         /* 0x20 */ public bool FirstOptionIsEmpty;
-        [NMS(Size = 0x7, Ignore = true)]
-        /* 0x21 */ public byte[] Padding21;
         /* 0x28 */ public List<GcCustomisationDescriptorGroupOption> DescriptorGroupOptions;
         /* 0x38 */ public List<NMSString0x10> PrerequisiteGroup;
     }

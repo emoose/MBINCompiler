@@ -10,8 +10,6 @@ namespace libMBIN.NMS.Toolkit
     {
         /* 0x00 */ public GcPrimaryAxis LengthAxis;
         /* 0x04 */ public bool CanuseDefaultParams;
-        [NMS(Size = 0x3, Ignore = true)]
-        /* 0x05 */ public byte[] Padding5;
         /* 0x08 */ public TkCreatureTailParams DefaultParams;
         /* 0x78 */ public List<TkCreatureTailParams> ParamVariations;
     }

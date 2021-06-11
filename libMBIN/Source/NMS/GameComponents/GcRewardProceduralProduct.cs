@@ -7,8 +7,6 @@ namespace libMBIN.NMS.GameComponents
     public class GcRewardProceduralProduct : NMSTemplate
     {
         /* 0x00 */ public GcProceduralProductCategory Type;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x04 */ public byte[] Padding4;
         /* 0x08 */ public NMSString0x20A OSDMessage;
         /* 0x28 */ public bool SubIfPlayerAlreadyHasOne;
         /* 0x29 */ public bool OverrideRarity;

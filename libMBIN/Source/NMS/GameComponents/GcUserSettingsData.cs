@@ -30,8 +30,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x3885 */ public bool PS4VignetteAndScanlines;
         public enum BaseSharingModeEnum { Undecided, On, Off }
         /* 0x3888 */ public BaseSharingModeEnum BaseSharingMode;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x388C */ public byte[] Padding388C;
         /* 0x3890 */ public List<NMSString0x10> SeenSubstances;
         /* 0x38A0 */ public List<NMSString0x10> SeenTechnologies;
         /* 0x38B0 */ public List<NMSString0x10> SeenProducts;

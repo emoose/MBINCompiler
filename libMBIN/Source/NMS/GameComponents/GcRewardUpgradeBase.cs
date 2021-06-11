@@ -10,8 +10,6 @@ namespace libMBIN.NMS.GameComponents
     {
 		public enum UpgradeBaseTypeEnum { AllMatching, NearestMatching }
 		public UpgradeBaseTypeEnum UpgradeBaseType;
-        [NMS(Size = 0x4, Ignore = true)]
-        public byte[] Padding4;
         public List<GcPersistentBaseTypes> MatchingBaseTypes;
     }
 }

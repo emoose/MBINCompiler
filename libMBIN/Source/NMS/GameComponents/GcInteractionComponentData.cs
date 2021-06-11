@@ -12,8 +12,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x000 */ public InteractionActionEnum InteractionAction;
         /* 0x004 */ public GcInteractionType InteractionType;
         /* 0x008 */ public bool UseIntermediateUI;
-        [NMS(Size = 0x7, Ignore = true)]
-        /* 0x009 */ public byte[] Padding9;
         /* 0x010 */ public TkModelRendererData Renderer;
         /* 0x0C0 */ public TkModelRendererData RendererAlt;
         /* 0x170 */ public GcAlienRace Race;
@@ -22,8 +20,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x179 */ public bool UseInteractCamera;
         /* 0x17C */ public float BlendToCameraTime;
         /* 0x180 */ public float BlendFromCameraTime;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x184 */ public byte[] Padding184;
         /* 0x188 */ public GcInteractionActivationCost ActivationCost;
         /* 0x1C0 */ public NMSString0x10 TriggerAction;
         /* 0x1D0 */ public NMSString0x10 TriggerActionOnPrepare;
@@ -31,11 +27,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x1E4 */ public float InteractAngle;
         /* 0x1E8 */ public float InteractDistance;
         /* 0x1EC */ public bool InteractInvertFace;
-        [NMS(Size = 0x3, Ignore = true)]
-        /* 0x1ED */ public byte[] Padding1ED;
         /* 0x1F0 */ public GcInteractionType SecondaryInteractionType;
-        [NMS(Size = 4, Ignore = true)]
-        /* 0x1F4 */ public byte[] Padding1F4;
         /* 0x1F8 */ public GcInteractionActivationCost SecondaryActivationCost;
         /* 0x230 */ public List<TkModelRendererData> EventRenderers;
         /* 0x240 */ public List<TkModelRendererData> EventRenderersAlt;

@@ -10,8 +10,6 @@ namespace libMBIN.NMS.GameComponents
     {
         public enum TestEncounterTypeEnum { AnyEncounter, AnyObject, SpecificObject, Trader, AbandonedFreighter };
         /* 0x00 */ public TestEncounterTypeEnum TestEncounterType;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x04 */ public byte[] Padding4;
         /* 0x08 */ public NMSString0x10 SpecificObjectID;
         /* 0x18 */ public bool RequireFullySpawned;
         [NMS(Size = 0x7, Ignore = true)]

@@ -16,8 +16,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x148 */ public NMSString0x20A MissionButtonText;
         /* 0x168 */ public bool Seen;
         /* 0x169 */ public bool Unlocked;
-        [NMS(Size = 0x2, Ignore = true)]
-        /* 0x16A */ public byte[] Padding16A;
         /* 0x16C */ public GcActionSetType ActionSet;
     }
 }

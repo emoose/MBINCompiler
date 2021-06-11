@@ -7,8 +7,6 @@ namespace libMBIN.NMS.GameComponents
     public class GcNGuiGraphicData : NMSTemplate
     {
         /* 0x000 */ public GcNGuiElementData ElementData;
-        [NMS(Size = 0x8, Ignore = true)]
-        /* 0x068 */ public byte[] Padding68;
         /* 0x070 */ public TkNGuiGraphicStyle Style;
         /* 0x290 */ public NMSString0x80 Image;
     }

@@ -10,8 +10,6 @@ namespace libMBIN.NMS.GameComponents
     {
         /* 0x00 */ public NMSString0x80 Message;
         /* 0x80 */ public int NumUniquePartsRequired;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x84 */ public byte[] Padding84;
         /* 0x88 */ public List<GcConstructionPart> PotentialParts;
         /* 0x98 */ public GcBuildingPartSearchType Type;
         /* 0xB8 */ public NMSString0x80 DebugText;

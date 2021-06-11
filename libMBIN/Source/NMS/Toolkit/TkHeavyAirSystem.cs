@@ -18,8 +18,6 @@ namespace libMBIN.NMS.Toolkit
         /* 0x0E0 */ public Vector3f AmplitudeMax;
         /* 0x0F0 */ public Colour Colour1;
         /* 0x100 */ public float Colour1Alpha;
-        [NMS(Size = 0xC, Ignore = true)]
-        /* 0x104 */ public byte[] Padding104;
         /* 0x110 */ public Colour Colour2;
         /* 0x120 */ public float Colour2Alpha;
         [NMS(Size = 0xC, Ignore = true)]

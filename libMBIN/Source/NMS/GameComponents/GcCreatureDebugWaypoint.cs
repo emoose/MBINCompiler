@@ -11,8 +11,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x00 */ public Vector3f Position;
         public enum WaypointTypeEnum { Move, MoveAlt, Idle };
         /* 0x10 */ public WaypointTypeEnum WaypointType;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x14 */ public byte[] Padding14;
         /* 0x18 */ public NMSString0x10 Anim;
         /* 0x28 */ public float Time;
         [NMS(Size = 0x4, Ignore = true)]

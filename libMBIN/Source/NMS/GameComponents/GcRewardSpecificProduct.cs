@@ -9,8 +9,6 @@ namespace libMBIN.NMS.GameComponents
     public class GcRewardSpecificProduct : NMSTemplate
     {
         /* 0x00 */ public GcDefaultMissionProductEnum Default;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x04 */ public byte[] Padding4;
         /* 0x08 */ public NMSString0x10 ID;
         /* 0x18 */ public int AmountMin;
         /* 0x1C */ public int AmountMax;

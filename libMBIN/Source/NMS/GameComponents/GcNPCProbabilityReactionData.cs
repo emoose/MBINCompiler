@@ -10,8 +10,6 @@ namespace libMBIN.NMS.GameComponents
     {
         public NMSString0x10 Name;
         public float Probability;
-        [NMS(Size = 0x4, Ignore = true)]
-        public byte[] Padding14;
         public List<GcNPCRaceProbabilityModifierData> RaceModifiers;
     }
 }

@@ -15,8 +15,6 @@ namespace libMBIN.NMS.Toolkit
         public float WeightSpringTime;
         public TkCurveType WeightCurve;
         public float InitialWeight;
-        [NMS(Size = 0x4, Ignore = true)]
-        public byte[] Padding64;
         public NMSTemplate BlendChild;
     }
 }

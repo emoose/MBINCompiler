@@ -15,8 +15,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x010 */ public float RegionHotspotsMaxDifferentCategoryOverlap;
         [NMS(Size = 0x6, EnumType = typeof(GcRegionHotspotTypes.HotspotTypeEnum))]
         /* 0x014 */ public GcRegionHotspotData[] RegionHotspots;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x134 */ public byte[] Padding134;
         [NMS(Size = 0x10, EnumType = typeof(GcBiomeType.BiomeEnum))]
         /* 0x138 */ public GcRegionHotspotBiomeGases[] RegionHotspotBiomeGases;
         /* 0x338 */ public List<GcRegionHotspotSubstance> RegionHotspotSubstances;

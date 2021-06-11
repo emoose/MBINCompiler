@@ -29,8 +29,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x2F4 */ public float BounceDamping;
         /* 0x2F8 */ public float BounceFinalStopTime;
         /* 0x2FC */ public bool HitOnBounce;
-        [NMS(Size = 3, Ignore = true)]
-        /* 0x2FD */ public byte[] Padding2FD;
         /* 0x300 */ public NMSString0x10 PlayerDamage;
         /* 0x310 */ public bool UseCustomBulletData;
         /* 0x314 */ public GcProjectileLineData CustomBulletData;

@@ -19,8 +19,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x1C */ public float SearchDist;
         public enum PetBehaviourValidityEnum { Everywhere, OnPlanet }
         /* 0x20 */ public PetBehaviourValidityEnum PetBehaviourValidity;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x24 */ public byte[] Padding24;
         /* 0x28 */ public List<GcPetFollowUpBehaviour> FollowUpBehaviours;
         /* 0x38 */ public List<GcPetBehaviourTraitModifier> TraitBehaviourModifiers;
         /* 0x48 */ public List<GcPetBehaviourMoodModifier> MoodBehaviourModifiers;

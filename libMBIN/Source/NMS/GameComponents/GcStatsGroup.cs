@@ -10,8 +10,6 @@ namespace libMBIN.NMS.GameComponents
     {
         /* 0x00 */ public NMSString0x10 Id;
         /* 0x10 */ public TkTextureResource Icon;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x94 */ public byte[] Padding94;
         /* 0x98 */ public List<GcStatsEntry> StatIds;
     }
 }

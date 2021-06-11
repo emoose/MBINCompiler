@@ -8,7 +8,5 @@ namespace libMBIN.NMS.Toolkit
     {
         public NMSString0x10 Anim;
         public float Value;
-        [NMS(Size = 4, Ignore = true)]
-        public byte[] Padding14;
     }
 }

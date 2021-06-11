@@ -28,23 +28,15 @@ namespace libMBIN.NMS.GameComponents
         /* 0x1DC0 */ public NMSString0x80 TerrainFile;
         /* 0x1E40 */ public TkVoxelGeneratorData Terrain;
         /* 0x3410 */ public int TileTypeSet;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x3414 */ public byte[] Padding3414; 
         /* 0x3418 */ public List<int> TileTypeIndices;
         /* 0x3428 */ public GcEnvironmentSpawnData SpawnData;
         /* 0x3488 */ public GcAlienRace InhabitingRace;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x348C */ public byte[] Padding348C; 
         /* 0x3490 */ public GcPlanetBuildingData BuildingData;
         /* 0x3500 */ public GcPlanetGenerationIntermediateData GenerationData;
         /* 0x3968 */ public Vector2f SentinelTimer;
         /* 0x3970 */ public Vector2f FlybyTimer;
         /* 0x3978 */ public GcPlanetInfo PlanetInfo;
-        [NMS(Size = 0x1, Ignore = true)]
-        /* 0x3CFB */ public byte[] Padding3CFB; 
         /* 0x3CFC */ public GcPlanetSentinelData SentinelData;
-        [NMS(Size = 0xC, Ignore = true)]
-        /* 0x3D04 */ public byte[] Padding3D04; 
         /* 0x3D10 */ public GcPlanetRingData Rings;
         /* 0x3D70 */ public bool InEmptySystem;
         /* 0x3D71 */ public bool InAbandonedSystem;

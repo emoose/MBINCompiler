@@ -25,8 +25,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x48 */ public GcCreatureRarity Rarity;
         /* 0x4C */ public GcCreatureRoleFrequencyModifier PredatorProbabilityModifier;
         /* 0x50 */ public GcCreatureRoleFrequencyModifier HerbivoreProbabilityModifier;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x54 */ public byte[] Padding54;
         /* 0x58 */ public List<NMSTemplate> Data;
     }
 }

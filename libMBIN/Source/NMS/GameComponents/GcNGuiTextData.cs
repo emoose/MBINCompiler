@@ -9,15 +9,11 @@ namespace libMBIN.NMS.GameComponents
     public class GcNGuiTextData : NMSTemplate
     {
         /* 0x000 */ public GcNGuiElementData ElementData;
-        [NMS(Size = 0x8, Ignore = true)]
-        /* 0x068 */ public byte[] Padding68;
         /* 0x070 */ public TkNGuiTextStyle Style;
         /* 0x190 */ public TkNGuiGraphicStyle GraphicStyle;
         /* 0x3B0 */ public NMSString0x80 Image;
         /* 0x430 */ public NMSString0x200 Text;
         /* 0x630 */ public bool Special;
-        [NMS(Size = 0x7, Ignore = true)]
-        /* 0x631 */ public byte[] Padding631;
         /* 0x638 */ public List<GcVROverride_Text> VROverrides;
         [NMS(Size = 0x8, Ignore = true)]
         /* 0x648 */ public byte[] EndPadding;

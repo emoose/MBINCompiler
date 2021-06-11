@@ -11,8 +11,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x20 */ public float RangeMin;
         /* 0x24 */ public float RangeMax;
         /* 0x28 */ public bool LessIsBetter;
-        [NMS(Size = 0x7, Ignore = true)]
-        /* 0x29 */ public byte[] Padding29;
         /* 0x30 */ public NMSString0x10 BaseTechID;
     }
 }

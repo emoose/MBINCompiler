@@ -8,8 +8,6 @@ namespace libMBIN.NMS.GameComponents
     {
         /* 0x000 */ public NMSString0x80 Model;
         /* 0x080 */ public bool Hologram;
-        [NMS(Size = 0xF, Ignore = true)]
-        /* 0x081 */ public byte[] Padding81;
         /* 0x090 */ public GcScanEffectData ScanEffect;
         /* 0x0E0 */ public NMSString0x40 ScanEffectNodeName;
         /* 0x120 */ public float Weight;

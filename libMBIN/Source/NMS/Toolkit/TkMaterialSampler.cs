@@ -12,8 +12,6 @@ namespace libMBIN.NMS.Toolkit
         public bool UseCompression;
         public bool UseMipMaps;
         public bool IsSRGB;
-        [NMS(Size = 4, Ignore = true)]
-        public byte[] PaddingA4;
         public NMSString0x20A MaterialAlternativeId;
 		public enum TextureAddressModeEnum { Wrap, Clamp, ClampToBorder, Mirror }
 		public TextureAddressModeEnum TextureAddressMode;
@@ -22,7 +20,5 @@ namespace libMBIN.NMS.Toolkit
 		public TextureFilterModeEnum TextureFilterMode;
 
         public int Anisotropy;
-        [NMS(Size = 4, Ignore = true)]
-        public byte[] PaddingC4;
     }
 }

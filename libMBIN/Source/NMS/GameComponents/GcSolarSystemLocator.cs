@@ -8,14 +8,9 @@ namespace libMBIN.NMS.GameComponents
     {
         public NMSString0x20 Name;
         public GcSolarSystemLocatorTypes LocatorType;
-        [NMS(Size = 0xC, Ignore = true)]
-        public byte[] Padding24;
 
         public Vector3f Position;
         public Vector3f Direction;
         public float Radius;
-
-        [NMS(Size = 0xC, Ignore = true)]
-        public byte[] Padding54;
     }
 }

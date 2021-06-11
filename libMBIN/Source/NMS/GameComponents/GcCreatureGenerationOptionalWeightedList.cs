@@ -10,8 +10,6 @@ namespace libMBIN.NMS.GameComponents
     {
         /* 0x0 */ public float Probability;
         /* 0x4 */ public bool OverrideAllDomains;
-        [NMS(Size = 0x3, Ignore = true)]
-        /* 0x5 */ public byte[] Padding5;
         /* 0x8 */ public GcCreatureGenerationWeightedList Archetypes;
     }
 }

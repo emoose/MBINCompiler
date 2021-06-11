@@ -26,8 +26,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0xB2 */ public bool PlaceAtLeastOne;
         /* 0xB3 */ public bool SpawnMoving;
         /* 0xB4 */ public bool SpawnInAbandoned;
-        [NMS(Size = 0x3, Ignore = true)]
-        /* 0xB5 */ public byte[] PaddingB5;
         /* 0xB8 */ public List<NMSString0x10> HideDuringMissions;
         
     }

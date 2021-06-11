@@ -12,8 +12,6 @@ namespace libMBIN.NMS.Toolkit
         /* 0x138 */ public List<TkAnimationData> Anims;
         /* 0x148 */ public List<TkAnimBlendTree> Trees;
         /* 0x158 */ public bool NetSyncAnimation;
-        [NMS(Size = 0x7, Ignore = true)]
-        /* 0x159 */ public byte[] Padding159;
         /* 0x160 */ public List<TkAnimJointLODData> JointLODOverrides;
     }
 }

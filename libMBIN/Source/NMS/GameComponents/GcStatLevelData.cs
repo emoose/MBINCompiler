@@ -9,8 +9,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x00 */ public NMSString0x20A LevelName;
         /* 0x20 */ public NMSString0x20A OSDLevelName;
         /* 0x40 */ public GcStatValueData Value;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x4C */ public byte[] Padding4C;
         /* 0x50 */ public NMSString0x10 TrophyToUnlock;
     }
 }

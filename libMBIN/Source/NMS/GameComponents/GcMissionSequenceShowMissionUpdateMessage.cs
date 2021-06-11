@@ -8,8 +8,6 @@ namespace libMBIN.NMS.GameComponents
     {
 		public enum MissionUpdateMessageEnum { Start, End }
 		/* 0x00 */ public MissionUpdateMessageEnum MissionUpdateMessage;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x04 */ public byte[] Padding4;
         /* 0x08 */ public NMSString0x20A CustomMessageLocID;
         /* 0x28 */ public bool SetMissionSelected;
         /* 0x29 */ public bool WaitForMessageOver;

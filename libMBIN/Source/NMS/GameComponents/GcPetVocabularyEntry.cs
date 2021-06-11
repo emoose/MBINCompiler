@@ -10,8 +10,6 @@ namespace libMBIN.NMS.GameComponents
     {
         /* 0x00 */ public NMSString0x20A GenericFallback;
         /* 0x20 */ public float OddsOfProcReplacement;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x24 */ public byte[] Padding24;
         /* 0x28 */ public List<GcPetVocabularyTraitEntry> Vocabulary;
     }
 }

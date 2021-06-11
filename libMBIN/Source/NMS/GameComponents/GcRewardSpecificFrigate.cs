@@ -7,8 +7,6 @@ namespace libMBIN.NMS.GameComponents
     public class GcRewardSpecificFrigate : NMSTemplate
     {
         /* 0x00 */ public GcFrigateClass FrigateClass;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x04 */ public byte[] Padding4;
         /* 0x08 */ public ulong FrigateSeed;
         /* 0x10 */ public ulong SystemSeed;
         /* 0x18 */ public GcAlienRace AlienRace;

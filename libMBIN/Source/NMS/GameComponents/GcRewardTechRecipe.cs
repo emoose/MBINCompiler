@@ -7,8 +7,6 @@ namespace libMBIN.NMS.GameComponents
     public class GcRewardTechRecipe : NMSTemplate
     {
         public GcTechnologyCategory Category;
-        [NMS(Size = 0x4, Ignore = true)]
-        public byte[] Padding4;
         public NMSString0x10 RewardGroup;
     }
 }

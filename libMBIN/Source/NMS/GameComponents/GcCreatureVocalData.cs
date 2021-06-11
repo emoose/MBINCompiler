@@ -8,9 +8,6 @@ namespace libMBIN.NMS.GameComponents
     {
         public float ScaleBias;
 
-        [NMS(Size = 4, Ignore = true)]
-        public byte[] Padding4;
-
         public GcCreatureVocalSoundData IdleVocal;
         public GcCreatureVocalSoundData FleeVocal;
         public GcCreatureVocalSoundData DeathVocal;

@@ -7,8 +7,6 @@ namespace libMBIN.NMS.GameComponents
     public class GcAtlasMonument : NMSTemplate
     {
         /* 0x000 */ public GcUniverseAddressData UniverseAddress;
-        [NMS(Size = 0x8, Ignore = true)]
-        /* 0x018 */ public byte[] Padding18;
         /* 0x020 */ public Vector3f Position;
         /* 0x030 */ public Vector3f At;
         /* 0x040 */ public NMSString0x40 RID;

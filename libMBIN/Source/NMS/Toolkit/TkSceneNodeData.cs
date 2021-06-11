@@ -16,8 +16,6 @@ namespace libMBIN.NMS.Toolkit
         /* 0x80 */ public ulong NameHash;
         /* 0x88 */ public NMSString0x10 Type;
         /* 0x98 */ public TkTransformData Transform;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0xBC */ public byte[] PaddingBC;
         /* 0xC0 */ public List<TkSceneNodeAttributeData> Attributes;
         /* 0xD0 */ public List<TkSceneNodeData> Children;
 

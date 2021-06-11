@@ -13,8 +13,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x100 */ public NMSString0x80 MessageNotPulsing;
         /* 0x180 */ public NMSString0x80 MessageSignalBlocked;
         /* 0x200 */ public float MinTimeInPulse;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x204 */ public byte[] Padding204;
         /* 0x208 */ public NMSString0x10 PulseEncounterID;
         /* 0x218 */ public bool AllowAnyEncounter;
         /* 0x219 */ public bool Silent;

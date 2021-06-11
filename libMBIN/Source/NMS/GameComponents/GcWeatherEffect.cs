@@ -15,8 +15,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x040 */ public SpawnConditionsEnum SpawnConditions;
         /* 0x044 */ public int MaxHazardsOfThisTypeActive;
         /* 0x048 */ public bool AllowedInCreative;
-        [NMS(Size = 0x7, Ignore = true)]
-        /* 0x049 */ public byte[] Padding49;
         /* 0x050 */ public NMSString0x10 ForcedOnByHazard;
         /* 0x060 */ public NMSString0x10 BlockedByCluster;
         public enum WeatherEffectBehaviourEnum { Static, Wander, ChasePlayer };
@@ -54,8 +52,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x160 */ public float WanderMaxRadius;
         /* 0x164 */ public float WanderMinArcDeg;
         /* 0x168 */ public float WanderMaxArcDeg;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x16C */ public byte[] Padding16C;
         /* 0x170 */ public NMSTemplate EffectData;
     }
 }

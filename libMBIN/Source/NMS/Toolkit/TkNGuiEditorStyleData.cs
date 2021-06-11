@@ -14,8 +14,6 @@ namespace libMBIN.NMS.Toolkit
         /* 0x00C0 */ public TkNGuiEditorStyleColour[] SkinColours;
         /* 0x0540 */ public float SkinFontHeight;
         /* 0x0544 */ public NMSString0x80 Font;
-        [NMS(Size = 0xC, Ignore = true)]
-        /* 0x05C4 */ public byte[] Padding5C4;
         [NMS(Size = 0x48, EnumType = typeof(TkNGuiEditorGraphicType.NGuiEditorGraphicEnum))]
         /* 0x05D0 */ public TkNGuiGraphicStyle[] GraphicStyles;
         [NMS(Size = 0xE, EnumType = typeof(TKNGuiEditorTextType.NGuiEditorTextEnum))]

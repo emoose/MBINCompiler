@@ -12,8 +12,6 @@ namespace libMBIN.NMS.Toolkit
         /* 0x04 */ public bool FullScreen;
         /* 0x05 */ public bool Borderless;
         /* 0x08 */ public int Monitor;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x0C */ public byte[] PaddingC;
         /* 0x10 */ public List<NMSString0x100> TkMonitorNames;
         /* 0x20 */ public int ResolutionWidth;
         /* 0x24 */ public int ResolutionHeight;

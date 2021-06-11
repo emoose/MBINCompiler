@@ -8,8 +8,6 @@ namespace libMBIN.NMS.GameComponents
     {
 		public enum ResponseTypeEnum { DontIntervene, InterveneWithMission, MissionSuccess, MissionFailure }
 		public ResponseTypeEnum ResponseType;
-        [NMS(Size = 0x4, Ignore = true)]
-        public byte[] Padding4;
         public NMSString0x10 MissionID;
 
     }

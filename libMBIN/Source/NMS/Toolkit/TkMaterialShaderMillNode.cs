@@ -15,8 +15,6 @@ namespace libMBIN.NMS.Toolkit
         /* 0x48 */ public int IValue2;
         /* 0x4C */ public float FValue;
         /* 0x50 */ public float FValue2;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x54 */ public byte[] Padding54;
         /* 0x58 */ public List<TkMaterialShaderMillConnect> Inputs;
         /* 0x68 */ public List<TkMaterialShaderMillConnect> Outputs;
         /* 0x78 */ public int WindowX;

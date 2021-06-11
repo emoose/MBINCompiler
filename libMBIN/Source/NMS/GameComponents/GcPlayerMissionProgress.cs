@@ -8,12 +8,8 @@ namespace libMBIN.NMS.GameComponents
     {
         /* 0x00 */ public NMSString0x10 Mission;
         /* 0x10 */ public int Progress;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x14 */ public byte[] Padding14;
         /* 0x18 */ public ulong Seed;
         /* 0x20 */ public ulong Data;
-        [NMS(Size = 0x8, Ignore = true)]
-        /* 0x28 */ public byte[] Padding28;
         [NMS(Size = 0xD)]
         /* 0x30 */ public GcPlayerMissionParticipant[] Participants;
 

@@ -61,8 +61,6 @@ namespace libMBIN.NMS.Toolkit
         /* 0x352 */ public bool ClampAmbientLight;
         /* 0x353 */ public bool DoubleSided;
         /* 0x354 */ public bool DecalDiffuse;
-        [NMS(Size = 0x3, Ignore = true)]
-        /* 0x355 */ public byte[] Padding355;
 		public enum DecalNormalEnum { None, Decal, Vertex }
 		/* 0x358 */ public DecalNormalEnum DecalNormal;
         /* 0x35C */ public bool Billboard;

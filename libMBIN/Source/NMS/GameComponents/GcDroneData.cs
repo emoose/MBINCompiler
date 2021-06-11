@@ -46,8 +46,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x130 */ public float AttackMoveAngle;
         /* 0x134 */ public float AttackMaxDistanceFromAlert;
         /* 0x138 */ public float AttackAlertFailTime;
-        [NMS(Size = 4, Ignore = true)]
-        public byte[] Padding13C;
 
         /* 0x140 */ public Colour EyeColourAlert;
         /* 0x150 */ public Colour EyeColourSearch;

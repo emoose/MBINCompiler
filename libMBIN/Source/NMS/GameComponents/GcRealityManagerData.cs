@@ -14,8 +14,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x0004 */ public GcDiscoveryWorth[] DiscoveryWorth;
         [NMS(Size = 0x4, EnumType = typeof(GcCreatureSizeClasses.CreatureSizeClassEnum))]
         /* 0x01C4 */ public float[] CreatureDiscoverySizeMultiplier;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x01D4 */ public byte[] Padding1D4;
         /* 0x01D8 */ public List<GcSubstanceSecondaryLookup> SubstanceSecondaryLookups;
         /* 0x01E8 */ public GcSubstanceSecondaryBiome SubstanceSecondaryBiome;
         /* 0x03E8 */ public NMSString0x80 TechnologyTable;
@@ -101,8 +99,6 @@ namespace libMBIN.NMS.GameComponents
         public enum GoodsTypeEnum { Commodity, Technology, Fuel, Tradeable, Special }
         [NMS(Size = 0x5, EnumType = typeof(GoodsTypeEnum))]         // TODO: not sure about these values....
         /* 0xD688 */ public float[] NormalizedPriceLimits;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0xD69C */ public byte[] PaddingD69C;
         /* 0xD6A0 */ public List<GcFiendCrimeSpawnTable> FiendCrimeSpawnTable;
     }
 }

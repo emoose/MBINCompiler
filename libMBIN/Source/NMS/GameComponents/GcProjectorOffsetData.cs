@@ -9,8 +9,6 @@ namespace libMBIN.NMS.GameComponents
     public class GcProjectorOffsetData : NMSTemplate
     {
         public float Scale;
-        [NMS(Size = 0xC, Ignore = true)]
-        public byte[] Padding4;
         public GcInWorldUIScreenData Active;
         public GcInWorldUIScreenData Inactive;
     }

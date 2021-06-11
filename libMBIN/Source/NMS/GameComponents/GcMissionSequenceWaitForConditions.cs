@@ -10,13 +10,9 @@ namespace libMBIN.NMS.GameComponents
     {
         /* 0x000 */ public NMSString0x80 Message;
         /* 0x080 */ public GcMissionConditionTest ConditionTest;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x084 */ public byte[] Padding84;
         /* 0x088 */ public List<NMSTemplate> Conditions;
         /* 0x098 */ public bool AllowedToFormatObjectives;
         /* 0x099 */ public NMSString0x80 DebugText;
-        [NMS(Size = 0x3, Ignore = true)]
-        /* 0x119 */ public byte[] Padding119;
         /* 0x11C */ public GcStatusMessageMissionMarkup StatusMessageMissionMarkup;
     }
 }

@@ -8,13 +8,9 @@ namespace libMBIN.NMS.GameComponents
     public class GcNPCComponentData : NMSTemplate
     {
         /* 0x00 */ public GcAlienRace AlienRace;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x04 */ public byte[] Padding4;
         /* 0x08 */ public NMSString0x10 HologramEffect;
         /* 0x18 */ public bool IsOldStyleNPC;
         /* 0x19 */ public bool IsMech;
-        [NMS(Size = 0x6, Ignore = true)]
-        /* 0x1A */ public byte[] Padding1A;
         /* 0x20 */ public List<GcCharacterAlternateAnimation> AlternateAnims;
         /* 0x30 */ public List<NMSString0x10> Tags;
     }

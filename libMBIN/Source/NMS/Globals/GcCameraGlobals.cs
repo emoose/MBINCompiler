@@ -105,8 +105,6 @@ namespace libMBIN.NMS.Globals
         /* 0x19B8 */ public GcCameraFollowSettings CharacterRideCamLarge;
         /* 0x1AB8 */ public GcCameraFollowSettings CharacterRideCamHuge;
         /* 0x1BB8 */ public float ThirdPersonCameraChangeBlendTime;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x1BBC */ public byte[] Padding1BBC;
         /* 0x1BC0 */ public GcCameraFollowSettings BuggyFollowCam;
         /* 0x1CC0 */ public GcCameraFollowSettings HovercraftFollowCam;
         /* 0x1DC0 */ public GcCameraFollowSettings SubmarineFollowCam;
@@ -329,8 +327,6 @@ namespace libMBIN.NMS.Globals
         /* 0x3080 */ public NMSString0x80 CameraAmbientAnimationsData;
         /* 0x3100 */ public float CameraAmbientAutoSwitchMinTime;
         /* 0x3104 */ public float CameraAmbientAutoSwitchMaxTime;
-        [NMS(Size = 0x8, Ignore = true)]
-        /* 0x3108 */ public byte[] Padding3108;
         /* 0x3110 */ public TkModelRendererData CameraNPCShipInteraction;
         /* 0x31C0 */ public TkModelRendererData CameraNPCShopInteraction;
         /* 0x3270 */ public TkModelRendererData CameraCreatureCustomiseDefault;

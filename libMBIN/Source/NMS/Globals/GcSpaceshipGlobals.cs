@@ -182,8 +182,6 @@ namespace libMBIN.NMS.Globals
         /* 0x02FC */ public float TestShieldEffect;
         /* 0x0300 */ public float ShieldEffectHitTime;
         /* 0x0304 */ public TkCurveType ShieldEffectHitCurve;
-        [NMS(Size = 0x8, Ignore = true)]
-        /* 0x0308 */ public byte[] Padding308;
         /* 0x0310 */ public GcScanEffectData ShieldEffectScanData;
         /* 0x0360 */ public float _3rdPersonUpOffsetRollChangeSpeed;
         /* 0x0364 */ public float _3rdPersonRollAngle;
@@ -411,12 +409,8 @@ namespace libMBIN.NMS.Globals
         /* 0x0C88 */ public float CombatBoostTurnDamp;
         /* 0x0C8C */ public float MarkerEventTime;
         /* 0x0C90 */ public int GunAmmoMultiplier;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x0C94 */ public byte[] PaddingC94;
         /* 0x0C98 */ public List<GcPlayerSpaceshipAim> LaserAimArray;
         /* 0x0CA8 */ public int LaserAimLevel;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x0CAC */ public byte[] PaddingCAC;
         /* 0x0CB0 */ public List<GcPlayerSpaceshipAim> GunAimArray;
         /* 0x0CC0 */ public int TakeOffCost;
         /* 0x0CC4 */ public int LandingCost;

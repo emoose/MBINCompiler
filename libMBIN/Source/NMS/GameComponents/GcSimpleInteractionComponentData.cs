@@ -32,8 +32,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x068 */ public float InteractFiendCrimeChance;
         /* 0x06C */ public int InteractCrimeLevel;
         /* 0x070 */ public bool NotifyEncounter;
-        [NMS(Size = 0x7, Ignore = true)]
-        /* 0x071 */ public byte[] Paddin71;
         /* 0x078 */ public GcInteractionActivationCost ActivationCost;
         /* 0x0B0 */ public GcStatsEnum StatToTrack;
         /* 0x0B4 */ public bool StartsBuried;
@@ -46,8 +44,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x138 */ public NMSString0x20A ScanData;
         /* 0x158 */ public GcDiscoveryTypes ScanIcon;
         /* 0x15C */ public bool ActivateLocatorsFromRarity;
-        [NMS(Size = 0x3, Ignore = true)]
-        /* 0x15D */ public byte[] Padding15D;
         [NMS(Size = 0x3)]
         /* 0x160 */ public NMSString0x10[] RarityLocators;
         /* 0x190 */ public List<GcInteractionBaseBuildingState> BaseBuildingTriggerActions;

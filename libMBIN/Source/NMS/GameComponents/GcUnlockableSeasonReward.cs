@@ -11,8 +11,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x00 */ public NMSString0x10 ID;
         /* 0x10 */ public bool MustBeUnlocked;
         /* 0x11 */ public bool UniqueInventoryItem;
-        [NMS(Size = 0x6, Ignore = true)]
-        /* 0x12 */ public byte[] Padding12;
         /* 0x18 */ public List<int> SeasonIds;
         /* 0x28 */ public List<int> StageIds;
     }

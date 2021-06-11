@@ -28,8 +28,6 @@ namespace libMBIN.NMS.Globals
         /* 0x0038 */ public float MinArmExtension;
         /* 0x003C */ public float SummonArcRange;
         /* 0x0040 */ public float InteractionAimOffset;
-        [NMS(Size = 0xC, Ignore = true)]
-        /* 0x0044 */ public byte[] Padding44;
         /* 0x0050 */ public GcProjectorOffsetData QuickMenuLauncherTransforms;
         /* 0x00C0 */ public GcProjectorOffsetData WeaponMenuLauncherTransforms;
         /* 0x0130 */ public GcInWorldUIScreenData QuickMenuOffset;
@@ -362,8 +360,6 @@ namespace libMBIN.NMS.Globals
         /* 0x0B10 */ public float JetpackIgnitionForce;
         /* 0x0B14 */ public float JetpackIgnitionTime;
         /* 0x0B18 */ public float JetpackMinIgnitionTime;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x0B1C */ public byte[] PaddingB1C;
         /* 0x0B20 */ public List<float> JetpackTankTimes;
         /* 0x0B30 */ public float JetpackFillRate;
         /* 0x0B34 */ public float JetpackFillRateHardMode;
@@ -534,8 +530,6 @@ namespace libMBIN.NMS.Globals
         /* 0x0E18 */ public float MeleeDamageScale;
         /* 0x0E1C */ public float MeleeRadiusAlt;
         /* 0x0E20 */ public float MeleeDistanceAlt;
-        [NMS(Size = 0xC, Ignore = true)]
-        /* 0x0E24 */ public byte[] PaddingE24;
         /* 0x0E30 */ public GcScanEffectData MeleeHitEffect;
         /* 0x0E80 */ public float TemperatureDisplaySampleTime;
         /* 0x0E90 */ public Colour StarFieldColour;
@@ -580,8 +574,6 @@ namespace libMBIN.NMS.Globals
         /* 0x0F38 */ public float WantedWitnessFuzzyTime;
         /* 0x0F3C */ public float WantedMinorCrimeAmount;
         /* 0x0F40 */ public float WantedTimeoutAggressive;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x0F44 */ public byte[] PaddingF44;
         /* 0x0F48 */ public List<float> WantedTimeout;
         /* 0x0F58 */ public List<float> WantedEscalateTime;
         /* 0x0F68 */ public List<float> WantedExtremeEscalateTime;
@@ -691,8 +683,6 @@ namespace libMBIN.NMS.Globals
         /* 0x14F8 */ public float LabelOffset;
         /* 0x14FC */ public float AtmosphereEffectTime;
         /* 0x1500 */ public float AtmosphereEffectOffset;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x1504 */ public byte[] Padding1504;
         /* 0x1508 */ public List<GcCreatureAlertData> AlertTable;
         /* 0x1518 */ public float PainFlickerAmount;
         /* 0x151C */ public float PainColourSeperateAmount;
@@ -842,21 +832,15 @@ namespace libMBIN.NMS.Globals
         /* 0x1828 */ public float CriticalHitTime;
         /* 0x182C */ public float CriticalHitDesatTime;
         /* 0x1830 */ public float CriticalHitDesatFreq;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x1834 */ public byte[] Padding1834;
         /* 0x1838 */ public List<GcCameraSpawnSetupData> FirstSpawnDataTable;
         /* 0x1848 */ public GcInventoryValueData ShipValueData;
         /* 0x1864 */ public GcInventoryValueData WeaponValueData;
         /* 0x1880 */ public GcInventoryValueData FreighterValueData;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x189C */ public byte[] Padding189C;
         /* 0x18A0 */ public List<float> TechRarityData;
         /* 0x18B0 */ public List<float> TechLearningProbabilities;
         /* 0x18C0 */ public int NumTechShopSlots;
         /* 0x18C4 */ public float GrassPushDistance;
         /* 0x18C8 */ public float GrassPushDistanceFeet;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x18CC */ public byte[] Padding18CC;
         /* 0x18D0 */ public GcCameraAnomalySetupData AnomalyBlachHoleSpawnData;
         /* 0x1910 */ public GcCameraAnomalySetupData AnomalyAtlasStationSpawnData;
         /* 0x1950 */ public GcCameraAnomalySetupData AnomalyMiniStationSpawnData;

@@ -12,8 +12,6 @@ namespace libMBIN.NMS.GameComponents
         public NMSString0x20A Description;
         public NMSString0x20A Image;
         public GcAudioWwiseEvents AudioEvent;
-        [NMS(Size = 0x4, Ignore = true)]
-        public byte[] Padding64;
         public List<GcMissionSequenceDetailMessagePoint> Points;
         public NMSString0x80 DebugText;
     }

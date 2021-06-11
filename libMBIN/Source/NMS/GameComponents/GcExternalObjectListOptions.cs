@@ -15,8 +15,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x34 */ public GcTerrainTileType TileType;
         /* 0x38 */ public bool AllowLimiting;
         /* 0x39 */ public bool ChooseUsingLifeLevel;
-        [NMS(Size = 6, Ignore = true)]
-        /* 0x3A */ public byte[] Padding3A;
         /* 0x40 */ public List<NMSString0x80> Options;
     }
 }

@@ -11,8 +11,6 @@ namespace libMBIN.NMS.Toolkit
         /* 0x008 */ public bool Subtract;
         /* 0x009 */ public bool SwapZY;
         /* 0x00A */ public bool Hemisphere;
-        [NMS(Size = 0x1, Ignore = true)]
-        /* 0x00B */ public byte[] PaddingB;
         /* 0x00C */ public TkNoiseVoxelTypeEnum NoiseVoxelType;
 		public enum NoiseGridTypeEnum { Cube, Cone, Torus, Sphere, Cylinder, Capsule, Corridor, Pipe, Puck, SuperPrimitiveRandom, SuperFormula_01, SuperFormula_02, SuperFormula_03, SuperFormula_04, SuperFormula_05, SuperFormula_06, SuperFormula_07, SuperFormula_08, SuperFormulaRandom, SuperFormula, SuperPrimitive, File }
 		public NoiseGridTypeEnum NoiseGridType;

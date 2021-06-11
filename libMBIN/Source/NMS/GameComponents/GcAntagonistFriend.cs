@@ -9,8 +9,6 @@ namespace libMBIN.NMS.GameComponents
     public class GcAntagonistFriend : NMSTemplate
     {
         /* 0x0 */ public float ArticulationFactor;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x4 */ public byte[] Padding4;
         /* 0x8 */ public List<NMSString0x10> Perceptions;
     }
 }

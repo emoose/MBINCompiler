@@ -14,8 +14,6 @@ namespace libMBIN.NMS.Toolkit
         /* 0xA0 */ public List<TkAnimPoseExampleData> Examples;
         /* 0xB0 */ public List<float> CorrelationMat;
         /* 0xC0 */ public float AdultCorrelationValue;
-        [NMS(Size = 4, Ignore = true)]
-        /* 0xC4 */ public byte[] PaddingC4;
         /* 0xC8 */ public List<TkAnimPoseBabyModifier> BabyModifiers;
         /* 0xD8 */ public bool ShouldRandomise;
         [NMS(Size = 0x7, Ignore = true)]

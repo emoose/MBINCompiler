@@ -12,8 +12,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x10 */ public List<NMSString0x10> AltIds;
         /* 0x20 */ public int Cost;
         /* 0x24 */ public bool Repeat;
-        [NMS(Size = 3, Ignore = true)]
-        /* 0x25 */ public byte[] Padding25;
         /* 0x28 */ public NMSString0x10 RequiredTech;
     }
 }

@@ -10,9 +10,6 @@ namespace libMBIN.NMS.GameComponents
 
         public NMSString0x80 Text;
 
-        [NMS(Size = 8, Ignore = true)]
-        public byte[] PaddingA8;
-
         public GcTextPreset Preset;
     }
 }

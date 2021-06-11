@@ -7,15 +7,11 @@ namespace libMBIN.NMS.GameComponents
     public class GcBuildingSpawnData : NMSTemplate
     {
         /* 0x000 */ public float Density;
-        [NMS(Size = 4, Ignore = true)]
-        /* 0x004 */ public byte[] Padding4;
         /* 0x008 */ public GcResourceElement Resource;
         /* 0x2B0 */ public GcResourceElement UnderwaterResource;
         /* 0x558 */ public int LSystemID;
         /* 0x55C */ public int UnderwaterLSystemID;
         /* 0x560 */ public bool AutoCollision;
-        [NMS(Size = 7, Ignore = true)]
-        /* 0x561 */ public byte[] Padding561;
         /* 0x568 */ public GcSeed Seed;
         /* 0x578 */ public GcBuildingClassification Classification;
         /* 0x57C */ public GcBuildingClusterPlacement Placement;

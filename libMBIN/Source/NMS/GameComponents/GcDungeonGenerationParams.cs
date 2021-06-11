@@ -19,8 +19,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x20 */ public float YProbability;
         /* 0x24 */ public float ZProbability;
         /* 0x28 */ public float StraightProbability;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x2C */ public byte[] Padding2C;
         /* 0x30 */ public List<GcDungeonRoomParams> MainRoomTypes;
         /* 0x40 */ public List<NMSString0x10> BranchRoomTypes;
         /* 0x50 */ public List<GcDungeonQuestParams> Quests;

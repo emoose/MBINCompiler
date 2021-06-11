@@ -11,8 +11,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x100 */ public float EngageDistance;
         /* 0x104 */ public float EngageTime;
         /* 0x108 */ public float TimeAfterWarp;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x10C */ public byte[] Padding10C;
         /* 0x110 */ public NMSString0x10 TimeoutMessage;
         /* 0x120 */ public NMSString0x80 TimeoutOSDMessage;
         /* 0x1A0 */ public NMSString0x80 DebugText;

@@ -11,8 +11,6 @@ namespace libMBIN.NMS.Toolkit
         /* 0x00 */ public NMSString0x10 Name;
 
         /* 0x10 */ public float Probability;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x14 */ public byte[] Padding14;
 
         /* 0x18 */ public NMSString0x10 Group;
 

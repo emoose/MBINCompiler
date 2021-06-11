@@ -13,8 +13,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x20 */ public int NumFlashes;
         /* 0x24 */ public bool PhysicsControlled;
         /* 0x25 */ public bool KeepUpright;
-        [NMS(Size = 0x2, Ignore = true)]
-        /* 0x26 */ public byte[] Padding26;
         /* 0x28 */ public NMSString0x10 Reward;
     }
 }

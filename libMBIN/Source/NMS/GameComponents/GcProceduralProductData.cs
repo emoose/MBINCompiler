@@ -10,8 +10,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x000 */ public GcNameGeneratorWord NameGeneratorBase;
         /* 0x028 */ public List<GcProceduralProductWord> NameGeneratorWordList;
         /* 0x038 */ public int NameGeneratorLegacyRolls;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x03C */ public byte[] Padding3C;
         /* 0x040 */ public GcProductData Product;
         [NMS(Size = 0x3, EnumType = typeof(GcRarity.RarityEnum))]
         /* 0x450 */ public GcProductProceduralOnlyData[] ProceduralData;

@@ -9,8 +9,6 @@ namespace libMBIN.NMS.GameComponents
     public class GcCreatureGenerationWeightedListDomainEntry : NMSTemplate
     {
         /* 0x0 */ public float Weight;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x4 */ public byte[] Padding4;
         /* 0x8 */ public NMSString0x10 Archetype;
     }
 }

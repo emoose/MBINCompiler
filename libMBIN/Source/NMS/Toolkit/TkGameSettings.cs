@@ -10,9 +10,6 @@ namespace libMBIN.NMS.Toolkit
     {
 		public enum LanguageSettingEnum { Default, english, french, italian, german, spanish, russian, polish, dutch, portuguese, brazilianportuguese, japanese, traditionalchinese, simplifiedchinese, korean }
 		public LanguageSettingEnum LanguageSetting;
-
-        [NMS(Size = 0x4, Ignore = true)]
-        public byte[] Padding4;
         public List<GcInputActionMapping> Keymapping;
         public List<GcInputActionMapping2> KeyMapping2;
     }

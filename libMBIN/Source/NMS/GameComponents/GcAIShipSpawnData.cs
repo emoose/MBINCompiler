@@ -12,8 +12,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x00 */ public NMSString0x20A OSDMessage;
         /* 0x40 */ public TkInputEnum Shortcut;
         /* 0x44 */ public bool WarpIn;
-        [NMS(Size = 0x3, Ignore = true)]
-        /* 0x45 */ public byte[] Padding45;
         /* 0x48 */ public GcAISpaceshipRoles Role;
         /* 0x4C */ public float MinRange;
         /* 0x50 */ public Vector2f Scale;

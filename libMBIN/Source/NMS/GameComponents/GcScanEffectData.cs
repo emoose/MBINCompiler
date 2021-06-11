@@ -9,8 +9,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x00 */ public NMSString0x10 Id;
 		public enum ScanEffectTypeEnum { Building, TargetShip, Creature, Ground, Objects }
 		/* 0x10 */ public ScanEffectTypeEnum ScanEffectType;
-		[NMS(Size = 0xC, Ignore = true)]
-        public byte[] Padding4;
 		/* 0x20 */ public Colour Colour;
 		/* 0x30 */ public float BasecolourIntensity;
 		/* 0x34 */ public float ScanlinesSeparation;

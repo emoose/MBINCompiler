@@ -10,12 +10,8 @@ namespace libMBIN.NMS.GameComponents
     {
         /* 0x00 */ public bool HideModel;
         /* 0x01 */ public bool StartInactive;
-        [NMS(Size = 0x6, Ignore =true)]
-        /* 0x02 */ public byte[] Padding2;
         /* 0x08 */ public List<GcActionTriggerState> States;
         /* 0x18 */ public bool Persistent;
-        [NMS(Size = 7, Ignore = true)]
-        /* 0x19 */ public byte[] Padding19;
         /* 0x20 */ public NMSString0x10 PersistentState;
         /* 0x30 */ public bool ResetShotTimeOnStateChange;
         /* 0x31 */ public bool LinkStateToBaseGrid;

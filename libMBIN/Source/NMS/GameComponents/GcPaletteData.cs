@@ -9,9 +9,6 @@ namespace libMBIN.NMS.GameComponents
         public enum NumColoursEnum { Inactive, _1, _4, _8, _16, All }
         public NumColoursEnum NumColours;
 
-        [NMS(Size = 0xC, Ignore = true)]
-        public byte[] Padding4;
-
         [NMS(Size = 0x40)]
         public Colour[] Colours;
     }

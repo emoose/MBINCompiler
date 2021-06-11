@@ -19,8 +19,6 @@ namespace libMBIN.NMS.Toolkit
         /* 0x80 */ public float FocusInterpTime;
         /* 0x84 */ public float BlendInTime;
         /* 0x88 */ public float BlendInOffset;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x8C */ public byte[] Padding8C;
         /* 0x90 */ public NMSString0x10 Anim;
         /* 0xA0 */ public float HeightOffset;
         /* 0xA4 */ public bool UsePlayerCameraInHmd;

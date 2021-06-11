@@ -9,8 +9,6 @@ namespace libMBIN.NMS.GameComponents
         public float HologramRotationSpeedDegPerSec;
         public float CaptainScale;
         public float FrigateScale;
-        [NMS(Size = 0x4, Ignore = true)]
-        public byte[] PaddingC;
         public Vector3f SpawnOffset;
     }
 }

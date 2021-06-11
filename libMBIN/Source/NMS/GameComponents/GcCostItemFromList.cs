@@ -8,8 +8,6 @@ namespace libMBIN.NMS.GameComponents
     public class GcCostItemFromList : NMSTemplate
     {
         /* 0x00 */ public int Amount;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x04 */ public byte[] Padding4;
         /* 0x08 */ public List<NMSString0x10> ItemList;
         /* 0x18 */ public int Index;
         [NMS(Size = 0x4, Ignore = true)]

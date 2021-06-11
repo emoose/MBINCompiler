@@ -21,8 +21,6 @@ namespace libMBIN.NMS.GameComponents
         [NMS(Size = 0x4, EnumType = typeof(GcGalaxyStarTypes.GalaxyStarTypeEnum))]
         /* 0x3C0 */ public GcWeatherWeightings[] WeatherOptions;
         /* 0x4C0 */ public Vector2f WeatherChangeTime;
-        [NMS(Size = 0x8, Ignore = true)]
-        /* 0x4C8 */ public byte[] Padding4B8;
         /* 0x4D0 */ public GcBiomeCloudSettings CloudSettings;
         /* 0x520 */ public GcTerrainControls Terrain;
         /* 0x598 */ public List<GcScreenFilterOption> FilterOptions;

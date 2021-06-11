@@ -150,8 +150,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0xB6C */ public float WheelGrassPusherWobble;
         /* 0xB70 */ public float WheelGrassPusherFrequency;
         /* 0xB74 */ public float WheelGrassPusherReduce;
-        [NMS(Size = 0x8, Ignore = true)]
-        /* 0xB78 */ public byte[] PaddingB78;
         [NMS(Size = 0xA)]
         /* 0xB80 */ public Vector3f[] WheelGrassPushers;
         /* 0xC20 */ public float CreatureMassScale;

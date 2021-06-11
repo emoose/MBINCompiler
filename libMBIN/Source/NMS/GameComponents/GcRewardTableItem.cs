@@ -7,8 +7,6 @@ namespace libMBIN.NMS.GameComponents
     public class GcRewardTableItem : NMSTemplate
     {
         /* 0x00 */ public float PercentageChance;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x04 */ public byte[] Padding4;
         /* 0x08 */ public NMSTemplate Reward;
         /* 0x58 */ public NMSString0x40 LabelID;
     }

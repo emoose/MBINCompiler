@@ -14,9 +14,6 @@ namespace libMBIN.NMS.GameComponents
         public short TestInt16;
         public ushort TestUInt16;
 
-        [NMS(Size = 4, Ignore = true)]
-        public byte[] PaddingC;
-
         public long TestInt64;
         public ulong TestUInt64;
         public long TestInt64_2;
@@ -27,14 +24,10 @@ namespace libMBIN.NMS.GameComponents
 
         public Vector3f TestVector;
         public Vector2f TestVector2;
-        [NMS(Size = 8, Ignore = true)]
-        public byte[] Padding58;
 
         public Vector4f TestVector4;
         public Colour TestColour;
         public float TestFloat;
-        [NMS(Size = 4, Ignore = true)]
-        public byte[] Padding84;
 
         public GcSeed TestSeed;
 
@@ -48,16 +41,11 @@ namespace libMBIN.NMS.GameComponents
         public NMSString0x10 TestID; // most likely they use a special ID field which maps this to the object using this ID automatically
         public NMSString0x20A TestLocID; // ditto
 
-        [NMS(Size = 8, Ignore = true)]
-        public byte[] Padding568;
-
         public Vector3f DocOptionalVector;
         public NMSString0x40 DocRenamedString64;
         public NMSString0x20A DocOptionalRenamed;
 		public enum DocOptionalEnumEnum { SomeValue1, SomeValue2, SomeValue3, SomeValue4 }
 		public DocOptionalEnumEnum DocOptionalEnum;
-        [NMS(Size = 4, Ignore = true)]
-        public byte[] Padding5E4;
 
         public VariableSizeString TestDynamicString;
 		public enum TestEnumEnum { Default, Option1, Option2, Option3 }

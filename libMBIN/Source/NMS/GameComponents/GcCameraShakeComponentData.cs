@@ -9,8 +9,6 @@ namespace libMBIN.NMS.GameComponents
     public class GcCameraShakeComponentData : NMSTemplate
     {
         /* 0x0 */ public float DangerRadius;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x4 */ public byte[] Padding4;
         /* 0x8 */ public List<GcCameraShakeTriggerData> AnimTriggers;
     }
 }

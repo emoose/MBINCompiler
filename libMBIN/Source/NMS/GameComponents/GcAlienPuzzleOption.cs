@@ -23,8 +23,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x98 */ public bool SelectedOnBackOut;
         /* 0x9C */ public GcAudioWwiseEvents AudioEvent;
         /* 0xA0 */ public GcMissionConditionTest EnablingConditionTest;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0xA4 */ public byte[] PaddingA4;
         /* 0xA8 */ public List<NMSTemplate> EnablingConditions;
         /* 0xB8 */ public NMSString0x20A EnablingConditionId;
         /* 0xD8 */ public GcWordCategoryTableEnum WordCategory;
