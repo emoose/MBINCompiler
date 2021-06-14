@@ -157,20 +157,20 @@ namespace libMBIN
                     }
 
                     NMSAttribute settings = type.GetCustomAttribute<NMSAttribute>();
-                    if (settings != null && settings.Alignment > 0)
-                    {
+                    if (settings != null && settings.Alignment > 0) {
                         alignment = settings.Alignment;
                         break;
                     }
 
-                    if (type.BaseType == typeof(NMSTemplate))
-                    {
+                    if (type.BaseType == typeof(NMSTemplate)) {
                         alignment = 1;
 
-                        foreach (FieldInfo field in type.GetFields())
-                        {
+                        foreach (FieldInfo field in type.GetFields()) {
                             int align = GetAlignment(field.FieldType);
-                            if (align > alignment) alignment = align;
+                            if (align > alignment) {
+                                alignment = align;
+                                if (alignment >= 0x10) break;
+                            }
                         }
 
                         break;
@@ -282,7 +282,7 @@ namespace libMBIN
                         }
                         return array;
                     } else {
-                        reader.Align( GetAlignment(field) ); // templatePosition when not in list??
+                        reader.Align( GetAlignment(field) );
                         return DeserializeBinaryTemplate(reader, fieldType);
                     }
             }
@@ -576,7 +576,7 @@ namespace libMBIN
                     } else if ( fieldType.BaseType == typeof( NMSTemplate ) ) {
                         var realData = (NMSTemplate) fieldData;
                         if ( realData == null ) realData = (NMSTemplate) Activator.CreateInstance( fieldType );
-                        writer.Align( GetAlignment(realData.GetType()), field?.Name ?? fieldType.Name );     // startStructPos if not in list maybe??
+                        writer.Align( GetAlignment(realData.GetType()), field?.Name ?? fieldType.Name );
                         realData.AppendToWriter( writer, ref additionalData, ref addtDataIndex, GetType(), listEnding );
 
                     } else {
