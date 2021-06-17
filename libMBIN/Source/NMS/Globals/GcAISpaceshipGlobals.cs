@@ -6,7 +6,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(Size = 0xE30, GUID = 0x799F4D491CC28E95, NameHash = 0xD338272248F67908)]
+    [NMS(Size = 0xE40, GUID = 0x862A153314A798A7, NameHash = 0xD338272248F67908)]
     public class GcAISpaceshipGlobals : NMSTemplate
     {
         /* 0x000 */ public float MinimumCircleTimeBeforeLanding;
@@ -354,10 +354,15 @@ namespace libMBIN.NMS.Globals
         /* 0xC20 */ public float RollMinTurnAngle;
         /* 0xC24 */ public float FinalDeathExplosionScale;
         /* 0xC28 */ public float FinalDeathExplosionTime;
-        /* 0xC2C */ public GcShipAIDeathData Death;
-        /* 0xC48 */ public GcShipAIAttackData AttackPlanet;
-        /* 0xD18 */ public GcShipAIAttackData TraderAttack;
-        /* 0xDE8 */ public GcShipAIPlanetPatrolData WingmanPathData;
-        /* 0xE20 */ public List<GcAIShipDebugSpawnData> DebugShipSpawns;
+        /* 0xC2C */ public float FinalDeathFadeTime;
+        /* 0xC30 */ public GcShipAIDeathData Death;
+        [NMS(Size = 0x4, Ignore = true)]
+        /* 0xC4C */ public byte[] PaddingC4C;
+        /* 0xC50 */ public GcShipAIAttackData AttackPlanet;
+        /* 0xD20 */ public GcShipAIAttackData TraderAttack;
+        /* 0xDF0 */ public GcShipAIPlanetPatrolData WingmanPathData;
+        /* 0xE28 */ public List<GcAIShipDebugSpawnData> DebugShipSpawns;
+        [NMS(Size = 0x8, Ignore = true)]
+        /* 0xE38 */ public byte[] EndPadding;
     }
 }
