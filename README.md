@@ -1,7 +1,7 @@
 # MBINCompiler
 **Project Owner**: monkeyman192
 
-## DOWNLOAD ![Github Total Downloads](https://img.shields.io/github/downloads-pre/monkeyman192/MBINCompiler/total.svg) ![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/monkeyman192/MBINCompiler?include_prereleases&label=release%20%28experimental%29) ![GitHub release (latest by date)](https://img.shields.io/github/v/release/monkeyman192/MBINCompiler?label=release%20%28public%29) [![MBIN test file coverage](https://img.shields.io/badge/dynamic/json?color=blueviolet&label=test%20file%20coverage&query=result&url=https%3A%2F%2Fgithub.com%2Fmonkeyman192%2FMBINCompiler%2Freleases%2Flatest%2Fdownload%2Freport.json)](https://github.com/monkeyman192/MBINCompiler/releases/latest/download/report.json)
+## DOWNLOAD ![Github Total Downloads](https://img.shields.io/github/downloads-pre/monkeyman192/MBINCompiler/total.svg) ![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/monkeyman192/MBINCompiler?include_prereleases&label=release%20%28experimental%29) ![GitHub release (latest by date)](https://img.shields.io/github/v/release/monkeyman192/MBINCompiler?label=release%20%28public%29) [![MBIN test file coverage](https://img.shields.io/badge/dynamic/json?color=blueviolet&label=test%20file%20coverage&query=result&url=https%3A%2F%2Fgithub.com%2Fmonkeyman192%2FMBINCompiler%2Freleases%2Flatest%2Fdownload%2Freport.json)](https://github.com/monkeyman192/MBINCompiler/releases/latest/download/report.json) [![MBINCompiler](https://github.com/monkeyman192/MBINCompiler/actions/workflows/pipeline.yml/badge.svg?branch=development)](https://github.com/monkeyman192/MBINCompiler/actions/workflows/pipeline.yml)
 
 _**For Modders:** You only need to download MBINCompiler.exe_  
 _**For Developers:** You can download a precompiled DLL or get the libMBIN source and integrate with your own NMS modding tools._
@@ -28,7 +28,7 @@ If you need help, would like to help or just interested in NMS modding, check ou
 
 ## USAGE INSTRUCTIONS
 
-If you are new to modding in NMS, check out the [NMS Modding Wiki](https://nmsmodding.wikia.com/wiki/No_Man%27s_Sky_Modding_Wiki) for how to get started before you continue with MBINCompiler.  
+If you are new to modding in NMS, check out the [NMS Modding Wiki](https://stepmodifications.org/wiki/NoMansSky:Landing_Page) for how to get started before you continue with MBINCompiler.  
 
 The version of MBINCompiler you should download will depend on what version of the game you are using. When the experimental version is different to the public version (as can happen shortly after release), make sure to download the appropriate version based on the badges above.
 
@@ -46,6 +46,20 @@ Repack your file(s) into a new mod and add to your game.
 
 See the [User-Documentation](../../wiki/User-Documentation) on the wiki for more details and advanced usage.
 
+MBINCompiler/libMBIN are required for [AMUMSS](https://www.nexusmods.com/nomanssky/mods/957) which is a tool which uses the [lua programming language](https://www.lua.org/) to make mods which are much more resiliant to game updates than previous methods.
+
+### COMMAND LINE ARGUMENTS
+
+MBINCompiler has a number of arguments that can be called from the command line which may be useful:
+
+`MBINCompiler.exe version [<Option> ...] [<File>]` - prints the version of the MBINCompiler binary (if no arguments provided), or the version of MBINCompiler that was used to generate the .MBIN or .EXML file if the filepath to one is provided.
+
+`MBINCompiler.exe register` - Registers the directory that the MBINCompiler.exe resides in to your system path. This allows you to call `MBINCompiler` from anywhere on your computer which is useful.
+
+`MBINCompiler.exe <path> [<path> ...]` - Converts the input path(s) from their input format (either .MBIN or .EXML) to the output format (.MBIN -> .EXML, .EXML -> .MBIN). This is the default mode.
+
+There are also a number of other options that can be passed to the executable in most modes. To see all the details call `MBINCompiler.exe help` to see the help details.
+
 ## SUBMITTING BUG REPORTS
 
 If you run into errors, in most cases the errors are because:
@@ -56,7 +70,7 @@ Check if it's a problem with your file or with MBINCompiler by decompiling the v
 b) You are trying to use an older version of MBINCompiler with a newer version of MBIN/EXML or vice versa.  
 Make sure you are using the correct version of MBINCompiler for the file you are trying to process.
 
-c) MBINCompiler has yes to be updated for the current game version of the data structure used by a particular file.  
+c) MBINCompiler has yet to be updated for the current game version of the data structure used by a particular file.  
 Check if there are any [Open Issues](../../issues) for the file you are having problems with.
 
 If the vanilla MBIN fails to recompile, you are using the correct version of MBINCompiler and there are no issues already open that are related to the file, then open a [New issue](../../issues/new).
@@ -76,7 +90,7 @@ For anyone helping to develop MBINCompiler, if you are contributing new structs 
 ### Requirements
 
 To run the tests you will need python installed and on the path. It is recommended you get a recent version (3.7 or above).
-The required dependencies are `pytest` and `requests`. These can be installed by entering `python -m pytest -U pytest requests` in your favorite command line program.
+The required dependencies are `pytest` and `requests`. These can be installed by entering `python -m pip install -U pytest requests` in your favorite command line program.
 Before running the tests, you need to have built a `Release` version of MBINCompiler locally.
 
 ### Running the tests
