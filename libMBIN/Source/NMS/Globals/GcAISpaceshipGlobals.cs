@@ -352,13 +352,9 @@ namespace libMBIN.NMS.Globals
         /* 0xC28 */ public float FinalDeathExplosionTime;
         /* 0xC2C */ public float FinalDeathFadeTime;
         /* 0xC30 */ public GcShipAIDeathData Death;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0xC4C */ public byte[] PaddingC4C;
         /* 0xC50 */ public GcShipAIAttackData AttackPlanet;
         /* 0xD20 */ public GcShipAIAttackData TraderAttack;
         /* 0xDF0 */ public GcShipAIPlanetPatrolData WingmanPathData;
         /* 0xE28 */ public List<GcAIShipDebugSpawnData> DebugShipSpawns;
-        [NMS(Size = 0x8, Ignore = true)]
-        /* 0xE38 */ public byte[] EndPadding;
     }
 }
