@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x80, Alignment = 0x8, GUID = 0x8B670E1642F40DC2, NameHash = 0x74BA808E86F0EC01)]
+    [NMS(Size = 0x80, GUID = 0x8B670E1642F40DC2, NameHash = 0x74BA808E86F0EC01)]
     public class GcScannableComponentData : NMSTemplate
     {
         /* 0x00 */ public float ScanRange;
@@ -22,12 +22,8 @@ namespace libMBIN.NMS.GameComponents
         /* 0x40 */ public bool IsPlacedMarker;
         /* 0x41 */ public bool ShowInFreighterBranchRoom;
         /* 0x42 */ public bool TellPlayerIfFreighterObjectUsed;
-        [NMS(Size = 0x5, Ignore = true)]
-        /* 0x43 */ public byte[] Padding43;
         /* 0x48 */ public NMSString0x20A FreighterObjectAlreadyUsedLocID;
         /* 0x68 */ public bool AllowedToMerge;
-        [NMS(Size = 0x7, Ignore = true)]
-        /* 0x69 */ public byte[] Padding69;
         /* 0x70 */ public NMSString0x10 MissionSurveyId;
     }
 }

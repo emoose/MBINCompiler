@@ -10,8 +10,6 @@ namespace libMBIN.NMS.GameComponents
     {
         /* 0x00 */ public NMSString0x10 Id;
         /* 0x10 */ public float Default;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x14 */ public byte[] Padding14;
         /* 0x18 */ public List<GcDamageMultiplier> Multipliers;
     }
 }

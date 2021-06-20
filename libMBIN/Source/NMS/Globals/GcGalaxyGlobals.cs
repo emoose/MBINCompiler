@@ -177,15 +177,11 @@ namespace libMBIN.NMS.Globals
         /* 0x1A48 */ public float AnostreakAlpha;
         /* 0x1A4C */ public TkCurveType AnostreakAlphaCurve;
         /* 0x1A50 */ public TkCurveType AnostreakValueCurve;
-        [NMS(Size = 0xC, Ignore = true)]
-        /* 0x1A54 */ public byte[] Padding1A54;
         /* 0x1A60 */ public GcGalaxyRenderAnostreakData AnostreakAway;
         /* 0x1A90 */ public GcGalaxyRenderAnostreakData AnostreakFacing;
         /* 0x1AC0 */ public float SelectionTreeAlpha;
         /* 0x1AD0 */ public Colour SelectionTreeColour;
         /* 0x1AE0 */ public Vector2f GoalDistanceRange;
-        [NMS(Size = 0x8, Ignore = true)]
-        /* 0x1AE8 */ public byte[] Padding1AE8;
         /* 0x1AF0 */ public GcGalaxyStarColours BaseStarDefaultColours;
         /* 0x1B30 */ public GcGalaxyStarColours BaseStarProtanopiaColours;
         /* 0x1B70 */ public GcGalaxyStarColours BaseStarDeuteranopiaColours;
@@ -197,14 +193,10 @@ namespace libMBIN.NMS.Globals
         /* 0x1CA8 */ public float FadeMapOutTime;
         /* 0x1CAC */ public float FadeGameInTime;
         /* 0x1CB0 */ public float LargeAreaColourScale;
-        [NMS(Size = 0xC, Ignore = true)]
-        /* 0x1CB4 */ public byte[] Padding1CB4;
         /* 0x1CC0 */ public GcGalaxyRenderSetupData DefaultRenderSetup;
         /* 0x2010 */ public GcGalaxyGenerationSetupData DefaultGeneration;
         /* 0x2190 */ public GcGalaxyRenderSetupData FinalAnimationRenderSetup;
         /* 0x24E0 */ public GcGalaxyGenerationSetupData FinalAnimationGeneration;
         /* 0x2660 */ public GcGalaxySolarSystemParams SolarSystemParameters;
-        [NMS(Size = 0x8, Ignore = true)]
-        /* 0x26B8 */ public byte[] EndPadding;
     }
 }

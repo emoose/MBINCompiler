@@ -13,7 +13,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x10 */ public float MinHeight;
         /* 0x14 */ public float MaxHeight;
         /* 0x18 */ public bool DisabledWhenOnFreighter;
-        [NMS(Size = 0x3, Ignore = true)]
-        /* 0x19 */ public byte[] EndPadding;
     }
 }

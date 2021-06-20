@@ -9,7 +9,5 @@ namespace libMBIN.NMS.GameComponents
         public NMSString0x10 Misssion;
         public bool UseSeed;
         public NMSString0x80 DebugText;
-        [NMS(Size = 0x7, Ignore = true)]
-        public byte[] EndPadding;
     }
 }

@@ -39,7 +39,5 @@ namespace libMBIN.NMS.Globals
         /* 0xA6C */ public NMSString0x80 TeleportTunnelFile;
         /* 0xAEC */ public NMSString0x80 PortalTunnelFile;
         /* 0xB6C */ public NMSString0x80 PortalStoryTunnelFile;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0xBEC */ public byte[] EndPadding;
     }
 }

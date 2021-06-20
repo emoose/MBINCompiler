@@ -16,7 +16,5 @@ namespace libMBIN.NMS.GameComponents
 
         /* 0x5C */ public GcAlienRace AlienRace;
         /* 0x60 */ public int Level;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x64 */ public byte[] EndPadding;
     }
 }

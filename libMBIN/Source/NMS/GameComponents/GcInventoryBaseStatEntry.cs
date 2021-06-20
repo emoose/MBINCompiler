@@ -8,7 +8,5 @@ namespace libMBIN.NMS.GameComponents
     {
         /* 0x00 */ public NMSString0x10 BaseStatID;
         /* 0x10 */ public float Value;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x14 */ public byte[] EndPadding;
     }
 }

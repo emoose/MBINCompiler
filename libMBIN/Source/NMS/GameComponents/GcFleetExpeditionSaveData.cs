@@ -13,8 +13,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x020 */ public Vector3f SpawnPosition;
         /* 0x030 */ public Vector3f TerminalPosition;
         /* 0x040 */ public float SpeedMultiplier;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x044 */ public byte[] Padding44;
         /* 0x048 */ public List<NMSString0x10> Powerups;
         /* 0x058 */ public NMSString0x100 CustomName;
         /* 0x158 */ public NMSString0x10 InterventionEventMissionID;
@@ -24,8 +22,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x180 */ public int NextEventToTrigger;
         /* 0x184 */ public GcExpeditionCategory ExpeditionCategory;
         /* 0x188 */ public GcExpeditionDuration ExpeditionDuration;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x18C */ public byte[] Padding18C;
         /* 0x190 */ public List<int> ActiveFrigateIndices;
         /* 0x1A0 */ public List<int> DamagedFrigateIndices;
         /* 0x1B0 */ public List<int> DestroyedFrigateIndices;
@@ -34,7 +30,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x1D4 */ public int NumberOfFailedEventsThisExpedition;
         /* 0x1D8 */ public List<GcExpeditionEventSaveData> Events;
         /* 0x1E8 */ public bool InterventionPhoneCallActivated;
-        [NMS(Size = 0x7, Ignore = true)]
-        /* 0x1E9 */ public byte[] EndPadding;
     }
 }

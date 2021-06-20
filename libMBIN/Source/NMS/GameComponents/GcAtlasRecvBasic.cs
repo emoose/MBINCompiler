@@ -13,7 +13,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x00 */ public byte[] Padding0;
         /* 0x08 */ public ulong ClientUserdata;
         /* 0x10 */ public bool Success;
-        [NMS(Size = 0x7, Ignore = true)]
-        /* 0x11 */ public byte[] EndPadding;
     }
 }

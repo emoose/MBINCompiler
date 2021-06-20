@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x148, Alignment = 0x8, GUID = 0x51B376CBC0E11C67, NameHash = 0xFAE78D5DE55087ED)]
+    [NMS(Size = 0x148, GUID = 0x51B376CBC0E11C67, NameHash = 0xFAE78D5DE55087ED)]
     public class GcAntagonistComponentData : NMSTemplate
     {
         /* 0x000 */ public GcAntagonistGroup Group;
@@ -13,8 +13,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x008 */ public float ShockedFactor;
         /* 0x00C */ public float ComprehensionFactor;
         /* 0x010 */ public float CommunicationDelay;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x014 */ public byte[] Padding14;
         [NMS(Size = 0x6, EnumType = typeof(GcAntagonistGroup.AntagonistGroupEnum))]
         /* 0x018 */ public GcAntagonistFriend[] Friends;
         [NMS(Size = 0x6, EnumType = typeof(GcAntagonistGroup.AntagonistGroupEnum))]

@@ -23,15 +23,11 @@ namespace libMBIN.NMS.GameComponents
         /* 0x1D4 */ public GcPersistentBaseTypes BaseType;
         /* 0x1D8 */ public NMSString0x40 LastEditedById;
         /* 0x218 */ public NMSString0x40 LastEditedByUsername;
-        [NMS(Size = 0x8, Ignore = true)]
-        /* 0x258 */ public byte[] Padding0x258;
         /* 0x260 */ public Vector3f ScreenshotAt;
         /* 0x270 */ public Vector3f ScreenshotPos;
         /* 0x280 */ public GcGameMode GameMode;
         /* 0x284 */ public NMSString0x20 PlatformToken;
         /* 0x2A4 */ public bool IsReported;
         /* 0x2A5 */ public bool IsFeatured;
-        [NMS(Size = 0xA, Ignore = true)]
-        /* 0x2A6 */ public byte[] EndPadding;
     }
 }

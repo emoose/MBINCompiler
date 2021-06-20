@@ -43,8 +43,6 @@ namespace libMBIN.NMS.Globals
         /* 0x0C8 */ public float ByteBeatBeginAtTonicProbability;
         /* 0x0CC */ public float ByteBeatChangeNoteProbability;
         /* 0x0D0 */ public float ByteBeatSkipNoteProbability;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x0D4 */ public byte[] PaddingD4;
         /* 0x0D8 */ public List<float> ByteBeatScaleDegreeProbability;
         /* 0x0E8 */ public float ByteBeatSpeakerVolumeInterSpeed;
         /* 0x0EC */ public Vector2f ByteBeatSpeakerMaxAmplitude;

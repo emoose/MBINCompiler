@@ -10,7 +10,5 @@ namespace libMBIN.NMS.GameComponents
         public float Strength;
         public float Radius;
         public bool RadiusBasedStrength;
-        [NMS(Size = 0x3, Ignore = true)]
-        public byte[] EndPadding;
     }
 }

@@ -163,7 +163,5 @@ namespace libMBIN.NMS.Globals
         /* 0xE00 */ public float MaxRainWetness;
         /* 0xE04 */ public float RainWetnessFadeInTime;
         /* 0xE08 */ public float RainWetnessFadeOutTime;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0xE0C */ public byte[] EndPadding;
     }
 }

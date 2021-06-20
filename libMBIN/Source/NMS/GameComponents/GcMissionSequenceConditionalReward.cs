@@ -11,8 +11,6 @@ namespace libMBIN.NMS.GameComponents
         public NMSString0x10 RewardIfTrue;
         public NMSString0x10 RewardIfFalse;
         public GcMissionConditionTest ConditionTest;
-        [NMS(Size = 0x4, Ignore = true)]
-        public byte[] Padding24;
         public List<NMSTemplate> Conditions;
         public NMSString0x80 DebugText;
     }

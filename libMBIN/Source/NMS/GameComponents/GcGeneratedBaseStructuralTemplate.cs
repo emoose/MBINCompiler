@@ -11,7 +11,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x00 */ public NMSString0x10 Id;
         [NMS(Size = 0x20)]
         /* 0x10 */ public TkModelResource TemplateScene;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x94 */ public byte[] EndPadding;
     }
 }

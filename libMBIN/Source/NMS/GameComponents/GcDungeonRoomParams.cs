@@ -10,7 +10,5 @@ namespace libMBIN.NMS.GameComponents
     {
         /* 0x00 */ public NMSString0x10 RoomId;
         /* 0x10 */ public float BranchProbability;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x14 */ public byte[] EndPadding;
     }
 }

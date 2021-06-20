@@ -8,7 +8,5 @@ namespace libMBIN.NMS.GameComponents
     {
         /* 0x000 */ public NMSString0x10 Effect;
         /* 0x010 */ public GcProjectileImpactType Impact;
-        [NMS(Size = 4, Ignore = true)]
-        public byte[] Padding14;
     }
 }

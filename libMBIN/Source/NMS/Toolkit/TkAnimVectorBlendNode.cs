@@ -10,8 +10,6 @@ namespace libMBIN.NMS.Toolkit
     {
 		public enum BlendOperationEnum { Blend, Add }
 		public BlendOperationEnum BlendOperation;
-        [NMS(Size = 0x4, Ignore = true)]
-        public byte[] Padding4;
         public List<TkAnimVectorBlendNodeData> BlendChildren;
     }
 }

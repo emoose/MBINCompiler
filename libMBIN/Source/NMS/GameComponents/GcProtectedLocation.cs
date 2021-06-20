@@ -10,7 +10,5 @@ namespace libMBIN.NMS.GameComponents
     {
         /* 0x00 */ public Vector3f Location;
         /* 0x10 */ public float Radius;
-        [NMS(Size = 0xC, Ignore = true)]
-        /* 0x14 */ public byte[] EndPadding;
     }
 }

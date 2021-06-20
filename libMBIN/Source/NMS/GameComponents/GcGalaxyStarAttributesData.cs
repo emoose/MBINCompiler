@@ -21,7 +21,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x19C */ public GcAlienRace Race;
         /* 0x1A0 */ public bool AbandonedSystem;
         /* 0x1A1 */ public bool IsSystemSafe;
-        [NMS(Size =  0x6, Ignore = true)]
-        public byte[] EndPadding;
     }
 }

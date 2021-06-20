@@ -26,7 +26,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x68 */ public int NumShelters;
         /* 0x6C */ public bool InitialBuildingsPlaced;
         /* 0x6D */ public bool IsPrime;
-        [NMS(Size = 0x2, Ignore = true)]
-        /* 0x6E */ public byte[] EndPadding;
     }
 }

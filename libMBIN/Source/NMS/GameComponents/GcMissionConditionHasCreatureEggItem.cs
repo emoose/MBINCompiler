@@ -11,7 +11,5 @@ namespace libMBIN.NMS.GameComponents
         public enum EggItemTypeEnum { Egg, ValidCatalyst }
         /* 0x0 */ public EggItemTypeEnum EggItemType;
         /* 0x4 */ public bool IncludeEggMachineInventoryInSearch;
-        [NMS(Size = 0x3, Ignore = true)]
-        /* 0x5 */ public byte[] EndPadding;
     }
 }

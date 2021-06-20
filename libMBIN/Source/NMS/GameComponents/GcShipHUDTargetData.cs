@@ -22,9 +22,6 @@ namespace libMBIN.NMS.GameComponents
         public float ArrowMinSize;
         public float ArrowMaxSize;
 
-        [NMS(Size = 8, Ignore = true)]
-        public byte[] Padding3A8;
-
         public Colour BaseColour;
 
         public float ActiveDistance;
@@ -38,15 +35,9 @@ namespace libMBIN.NMS.GameComponents
         public float HitPulseTime;
         public float HitWhiteOut;
 
-        [NMS(Size = 4, Ignore = true)]
-        public byte[] Padding3DC;
-
         public Colour LockColour;
 
         public float PoliceColourFreq;
-
-        [NMS(Size = 0xC, Ignore = true)]
-        public byte[] Padding3F4;
 
         public Colour PoliceColour1;
         public Colour PoliceColour2;

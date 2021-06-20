@@ -9,13 +9,9 @@ namespace libMBIN.NMS.Toolkit
     public class TkAnimDetailSettings : NMSTemplate
     {
         public float MaxVisibleAngle;
-        [NMS(Size = 0x4, Ignore = true)]
-        public byte[] Padding4;
         public List<TkAnimDetailSettingsData> AnimDistanceSettings;
         [NMS(Size = 0x3)]
         public float[] AnimLODDistances;
-        [NMS(Size = 0x4, Ignore = true)]
-        public byte[] EndPadding;
 
     }
 }

@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x1F40, Alignment = 0x10, GUID = 0xC0571B235E7E1966, NameHash = 0x9B09276BB2795541)]
+    [NMS(Size = 0x1F40, GUID = 0xC0571B235E7E1966, NameHash = 0x9B09276BB2795541)]
     public class GcSolarSystemData : NMSTemplate
     {
         /* 0x0000 */ public GcSeed Seed;
@@ -45,8 +45,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x1F28 */ public GcAlienRace InhabitingRace;
         /* 0x1F2C */ public GcPlanetTradingData TradingData;
         /* 0x1F34 */ public GcPlayerConflictData ConflictData;
-        [NMS(Size = 0x8, Ignore = true)]
-        /* 0x1F38 */ public byte[] EndPadding;
         
     }
 

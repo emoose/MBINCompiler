@@ -8,8 +8,6 @@ namespace libMBIN.NMS.GameComponents
     public class GcFrigateFlybyLayout : NMSTemplate
     {
         /* 0x0 */ public GcFrigateFlybyType FlybyType;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x4 */ public byte[] Padding;
         /* 0x8 */ public List<GcFrigateFlybyOption> Frigate;
     }
 }

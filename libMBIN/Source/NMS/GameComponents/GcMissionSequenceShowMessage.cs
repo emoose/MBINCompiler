@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x230, Alignment = 0x10, GUID = 0x4E9EC4AF15672125, NameHash = 0xECE8B28E154961E9)]
+    [NMS(Size = 0x230, GUID = 0x4E9EC4AF15672125, NameHash = 0xECE8B28E154961E9)]
     public class GcMissionSequenceShowMessage : NMSTemplate
     {
         /* 0x000 */ public GcMissionCategory Category;
@@ -20,7 +20,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x1A5 */ public bool DisableIcon;
         /* 0x1A6 */ public bool DisableTitlePrefix;
         /* 0x1A7 */ public NMSString0x80 DebugText;
-        [NMS(Size = 0x9, Ignore = true)]
-        public byte[] EndPadding;
     }
 }

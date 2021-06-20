@@ -10,7 +10,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x08 */ public GcSeed BuildingSeed;
         /* 0x20 */ public Vector3f BuildingLocation;
         /* 0x30 */ public GcPlayerMissionParticipantType ParticipantType;
-        [NMS(Size = 0xC, Ignore = true)]
-        /* 0x34 */ public byte[] EndPadding;
     }
 }

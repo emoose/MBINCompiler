@@ -9,8 +9,6 @@ namespace libMBIN.NMS.GameComponents
     public class GcSmokeBotPlanetReport : NMSTemplate
     {
         /* 0x00 */ public ulong UA;
-        [NMS(Size = 0x8, Ignore = true)]
-        /* 0x08 */ public byte[] Padding4;
         /* 0x10 */ public GcSmokeBotStats PlanetStats;
     }
 }

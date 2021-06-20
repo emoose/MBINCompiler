@@ -12,8 +12,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x08 */ public int NetworkMask;
         /* 0x0C */ public float ConnectionDistance;
         /* 0x10 */ public bool UseMinDistance;
-        [NMS(Size = 0x7, Ignore = true)]
-        /* 0x11 */ public byte[] Padding11;
         /* 0x18 */ public List<Vector3f> LinkSocketPositions;
         /* 0x28 */ public List<int> LinkSocketSubGroups;
     }

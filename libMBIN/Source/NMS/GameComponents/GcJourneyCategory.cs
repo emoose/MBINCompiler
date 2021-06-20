@@ -11,8 +11,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x000 */ public GcJourneyCategoryType Type;
         /* 0x004 */ public GcGameMode GameModeRestriction;
         /* 0x008 */ public GcMissionFaction Faction;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x00C */ public byte[] PaddingC;
         /* 0x010 */ public NMSString0x20A NameIDLower;
         /* 0x030 */ public NMSString0x20A NameIDUpper;
         /* 0x050 */ public NMSString0x20A DescriptionID;

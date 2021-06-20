@@ -17,8 +17,5 @@ namespace libMBIN.NMS.GameComponents
         public float ToPathForce;
         public float BrakeForce;
         public float AlignForce;
-
-        [NMS(Size = 4, Ignore = true)]
-        public byte[] Padding34;
     }
 }

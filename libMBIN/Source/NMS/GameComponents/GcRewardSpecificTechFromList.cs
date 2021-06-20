@@ -11,8 +11,6 @@ namespace libMBIN.NMS.GameComponents
         public List<NMSString0x10> TechList;
 
         public bool FailIfAllKnown;
-        [NMS(Size = 0x3, Ignore = true)]
-        public byte[] Padding11;
 
 		public enum TechListRewardOrderEnum { OneRandom, InOrder, TryAllRandom }
 		public TechListRewardOrderEnum TechListRewardOrder;

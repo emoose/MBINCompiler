@@ -14,8 +14,5 @@ namespace libMBIN.NMS.GameComponents
         public int Height;
 		public enum AlignEnum { Center, TopLeft, TopRight, BottomLeft, BottomRight }
 		public AlignEnum Align;
-
-        [NMS(Size = 0x4, Ignore = true)]
-        public byte[] EndPadding;
     }
 }

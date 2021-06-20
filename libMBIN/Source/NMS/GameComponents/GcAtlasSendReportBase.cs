@@ -17,7 +17,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x68 */ public NMSString0x20 RL;
         /* 0x88 */ public NMSString0x40 RC;
         /* 0xA8 */ public GcGameMode GameMode;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0xAC */ public byte[] EndPadding;
     }
 }

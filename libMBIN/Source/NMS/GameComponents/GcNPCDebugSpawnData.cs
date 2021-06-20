@@ -15,8 +15,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x034 */ public float InitialDelay;
         /* 0x038 */ public List<Vector3f> Waypoints;
         /* 0x048 */ public bool PlayIdles;
-        [NMS(Size = 0x7, Ignore = true)]
-        /* 0x049 */ public byte[] Padding49;
         /* 0x050 */ public List<NMSString0x10> Idles;
         /* 0x060 */ public bool Run;
         /* 0x061 */ public bool RidePet;

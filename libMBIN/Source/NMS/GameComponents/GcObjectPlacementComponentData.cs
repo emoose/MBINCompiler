@@ -15,8 +15,5 @@ namespace libMBIN.NMS.GameComponents
         public int MaxGroupsActivated;
         public bool UseRaycast;
         public bool UseNodeParent;
-
-        [NMS(Size = 2, Ignore = true)]
-        public byte[] EndPadding;
     }
 }

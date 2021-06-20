@@ -8,8 +8,6 @@ namespace libMBIN.NMS.GameComponents
     {
         /* 0x000 */ public GcSeed Seed;
         /* 0x010 */ public GcCreatureTypes CreatureType;
-        [NMS(Size = 4, Ignore = true)]
-        public byte[] Padding14;
         /* 0x018 */ public NMSString0x10 CreatureId;
         /* 0x028 */ public GcCreatureRoleDescription Description;
         /* 0x090 */ public GcCreatureInfo Info;

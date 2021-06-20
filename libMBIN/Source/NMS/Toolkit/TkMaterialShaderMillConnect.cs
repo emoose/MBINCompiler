@@ -11,7 +11,5 @@ namespace libMBIN.NMS.Toolkit
         /* 0x00 */ public NMSString0x20 Name;
         /* 0x20 */ public int Count;
         /* 0x24 */ public bool Expanded;
-        [NMS(Size = 0x3, Ignore = true)]
-        /* 0x25 */ public byte[] EndPadding;
     }
 }

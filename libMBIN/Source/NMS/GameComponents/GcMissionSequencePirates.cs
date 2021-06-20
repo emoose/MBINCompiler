@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0xC8, Alignment = 0x8, GUID = 0xFD60E7AD8D890729, NameHash = 0x9166CF1D0ED63522)]
+    [NMS(Size = 0xC8, GUID = 0xFD60E7AD8D890729, NameHash = 0x9166CF1D0ED63522)]
     public class GcMissionSequencePirates : NMSTemplate
     {
         /* 0x00 */ public bool ScanCargo;
@@ -14,7 +14,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x3C */ public float DistanceOverride;
         /* 0x40 */ public bool ForceSpawn;
         /* 0x41 */ public NMSString0x80 DebugText;
-        [NMS(Size = 0x7, Ignore = true)]
-        /* 0xC1 */ public byte[] EndPadding;
     }
 }

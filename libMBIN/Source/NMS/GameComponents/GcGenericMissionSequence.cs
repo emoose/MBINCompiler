@@ -13,8 +13,6 @@ namespace libMBIN.NMS.GameComponents
 		/* 0x010 */ public MissionClassEnum MissionClass;
         /* 0x014 */ public bool MissionIsCritical;
         /* 0x015 */ public NMSString0x20 MissionObjective;
-        [NMS(Size = 0x3, Ignore = true)]
-        /* 0x035 */ public byte[] Padding35;
         /* 0x038 */ public GcNumberedTextList MissionTitles;
         /* 0x05C */ public GcNumberedTextList MissionSubtitles;
         /* 0x080 */ public GcNumberedTextList MissionDescriptions;
@@ -45,8 +43,6 @@ namespace libMBIN.NMS.GameComponents
 		/* 0x408 */ public AutoStartEnum AutoStart;
         /* 0x40C */ public bool RestartOnCompletion;
         /* 0x40D */ public bool CancelSetsComplete;
-        [NMS(Size = 0x2, Ignore = true)]
-        /* 0x40E */ public byte[] Padding40E;
         /* 0x410 */ public GcAlienPuzzleTable Dialog;
         /* 0x420 */ public List<GcScanEventData> ScanEvents;
         /* 0x430 */ public List<GcGenericRewardTableEntry> Rewards;
@@ -54,8 +50,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x450 */ public GcMissionConditionTest StartConditionTest;
         /* 0x454 */ public GcMissionConditionTest CancelConditionTest;
         /* 0x458 */ public bool StartIsCancel;
-        [NMS(Size = 0x7, Ignore = true)]
-        /* 0x459 */ public byte[] Padding459;
         /* 0x460 */ public List<NMSTemplate> StartingConditions;
         /* 0x470 */ public List<NMSTemplate> CancelingConditions;
         /* 0x480 */ public List<GcGenericMissionVersionProgress> FinalStageVersions;
@@ -68,7 +62,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x4A5 */ public bool BlocksPinning;
         /* 0x4A6 */ public bool TelemetryUpload;
         /* 0x4A7 */ public bool UseSeasonTitleOverride;
-        [NMS(Size = 0x8, Ignore = true)]
-        /* 0x4A8 */ public byte[] EndPadding;
     }
 }

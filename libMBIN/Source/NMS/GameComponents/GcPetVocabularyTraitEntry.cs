@@ -9,8 +9,6 @@ namespace libMBIN.NMS.GameComponents
     public class GcPetVocabularyTraitEntry : NMSTemplate
     {
         /* 0x00 */ public GcCreaturePetTraits Traits;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x04 */ public byte[] Padding4;
         /* 0x08 */ public NMSString0x20A Positive;
         /* 0x28 */ public NMSString0x20A Negative;
     }

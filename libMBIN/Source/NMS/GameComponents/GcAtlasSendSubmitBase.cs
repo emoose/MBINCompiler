@@ -12,8 +12,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x000 */ public byte[] Padding0;
         /* 0x008 */ public ulong ClientUserdata;
         /* 0x010 */ public GcGameMode GameMode;
-        [NMS(Size = 0xC, Ignore = true)]
-        /* 0x014 */ public byte[] Padding14;
         /* 0x020 */ public GcPersistentBase BaseData;
         /* 0x2D0 */ public GcAtlasRecvBlob TerrainData;
     }

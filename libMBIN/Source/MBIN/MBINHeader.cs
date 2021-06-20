@@ -4,7 +4,7 @@ using System.Text;
 
 namespace libMBIN
 {
-    [NMS(Size = 0x60)]
+    [NMS(Size = 0x60, Alignment = 0x8)]
     public class MBINHeader : NMSTemplate
     {
         internal const uint  MBIN_MAGIC    = 0xCCCCCCCC;         // MBIN format ID

@@ -19,7 +19,5 @@ namespace libMBIN.NMS.GameComponents
         // In the exe this above 8 bytes looks to be set to 0x3FFFF x 2 (ie. a float I guess).
         // But there are no actual fields there.
         /* 0x28 */ public int Value;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x2C */ public byte[] EndPadding;
     }
 }

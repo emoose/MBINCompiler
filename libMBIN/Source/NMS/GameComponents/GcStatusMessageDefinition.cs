@@ -22,7 +22,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x44 */ public bool OnlyInMultiplayer;
         /* 0x45 */ public bool OnlyOnFireteam;
         /* 0x48 */ public GcStatusMessageMissionMarkup MissionMarkup;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x4C */ public byte[] EndPadding;
     }
 }

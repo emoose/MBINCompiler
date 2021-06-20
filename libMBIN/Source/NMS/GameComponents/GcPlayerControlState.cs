@@ -9,8 +9,6 @@ namespace libMBIN.NMS.GameComponents
     {
         /* 0x00 */ public NMSString0x10 Id;
         /* 0x10 */ public bool StickToGround;
-        [NMS(Size = 0x7, Ignore = true)]
-        /* 0x11 */ public byte[] Padding11;
         /* 0x18 */ public GcPlayerControlInput OverrideInput;
         /* 0x50 */ public NMSString0x10 OverrideCamera;
         /* 0x60 */ public List<NMSTemplate> Data;

@@ -11,16 +11,12 @@ namespace libMBIN.NMS.GameComponents
         /* 0x0000 */ public bool Active;
         /* 0x0001 */ public bool DebugDraw;
         /* 0x0002 */ public bool AutoSave;
-        [NMS(Size = 0x5, Ignore = true)]
-        /* 0x0003 */ public byte[] Padding3;
         /* 0x0008 */ public List<GcExperienceDebugTriggerInput> TriggerActions;
         /* 0x0018 */ public bool FlyCamSmooth;
         /* 0x001C */ public float FlyCamSmoothFactor;
         /* 0x0020 */ public float FlyCamSpeedModifier;
         /* 0x0024 */ public float NPCIdleMinDelay;
         /* 0x0028 */ public float NPCIdleMaxDelay;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x002C */ public byte[] Padding2C;
         /* 0x0030 */ public List<NMSString0x10> DefaultNPCIdles;
         /* 0x0040 */ public List<GcNPCDebugSpawnData> DebugNPCSpawns;
         /* 0x0050 */ public bool LoadPetsFromDebugScene;
@@ -42,8 +38,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x1298 */ public float CloudAnimScale;
         /* 0x129C */ public Vector2f CloudWindOffset;
         /* 0x12A4 */ public Vector2f CloudStratosphereWindOffset;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x12AC */ public byte[] Padding12AC;
         /* 0x12B0 */ public List<GcDebugShipTravelLine> DebugShipPaths;
         /* 0x12C0 */ public List<GcDebugCamera> DebugCameraPaths;
         /* 0x12D0 */ public List<GcCreatureDebugSpawnData> DebugCreatureSpawns;
@@ -61,8 +55,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x1A70 */ public Vector3f DebugFlybyTarget;
         /* 0x1A80 */ public Vector3f DebugFlybyDir;
         /* 0x1A90 */ public float DebugFlybyRange;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x1A94 */ public byte[] Padding1A94;
         /* 0x1A98 */ public GcSeed DebugFlybySeed;
         /* 0x1AA8 */ public NMSString0x10 DebugExperienceCamShake;
         /* 0x1AC0 */ public Vector3f DebugShipSpawnPos;
@@ -79,8 +71,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x1B40 */ public float CameraSpinVerticalOffset;
         /* 0x1B44 */ public float CameraSpinDistanceOffset;
         /* 0x1B48 */ public TkCurveType CameraSpinEasing;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x1B4C */ public byte[] Padding1B4C;
         [NMS(Size = 0x6)]
         /* 0x1B50 */ public GcDebugPlanetPos[] PlanetPositions;
     }

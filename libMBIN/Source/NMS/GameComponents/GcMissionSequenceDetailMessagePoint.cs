@@ -9,8 +9,6 @@ namespace libMBIN.NMS.GameComponents
         public NMSString0x20A Text;
         public enum PointStateEnum { Statement, ObjectiveIncomplete, ObjectiveComplete }
         public PointStateEnum PointState;
-        [NMS(Size = 0x4, Ignore = true)]
-        public byte[] Padding24;
         public NMSString0x10 InsertItemName;
     }
 }

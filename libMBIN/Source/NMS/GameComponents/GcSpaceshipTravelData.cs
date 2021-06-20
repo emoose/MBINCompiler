@@ -27,7 +27,5 @@ namespace libMBIN.NMS.GameComponents
 		/* 0x54 */ public float MinHeight;
         /* 0x58 */ public float AvoidTime;
         /* 0x5C */ public bool Hovering;
-        [NMS(Size = 0x3, Ignore = true)]
-        /* 0x5D */ public byte[] EndPadding;
     }
 }

@@ -10,14 +10,10 @@ namespace libMBIN.NMS.GameComponents
     {
         /* 0x00 */ public NMSString0x10 NewState;
         /* 0x10 */ public float Probability;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x14 */ public byte[] Padding14;
         /* 0x18 */ public NMSString0x10 RequireEvent;
         /* 0x28 */ public NMSString0x10 RequireLocator;
         public enum RequireModeEnum { Seated, Standing, None }
         /* 0x38 */ public RequireModeEnum RequireMode;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x3C */ public byte[] Padding3C;
         /* 0x40 */ public List<NMSString0x10> ExcludeTags;
     }
 }

@@ -3,14 +3,12 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x50, Alignment = 0x10, GUID = 0x14E69D97BE09FE17, NameHash = 0xCB9E3018E759F166)]
+    [NMS(Size = 0x50, GUID = 0x14E69D97BE09FE17, NameHash = 0xCB9E3018E759F166)]
     public class GcScanEffectData : NMSTemplate
     {
         /* 0x00 */ public NMSString0x10 Id;
 		public enum ScanEffectTypeEnum { Building, TargetShip, Creature, Ground, Objects }
 		/* 0x10 */ public ScanEffectTypeEnum ScanEffectType;
-		[NMS(Size = 0xC, Ignore = true)]
-        public byte[] Padding4;
 		/* 0x20 */ public Colour Colour;
 		/* 0x30 */ public float BasecolourIntensity;
 		/* 0x34 */ public float ScanlinesSeparation;

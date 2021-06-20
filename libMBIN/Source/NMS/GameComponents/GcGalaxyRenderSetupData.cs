@@ -40,8 +40,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x0B8 */ public float VignetteSizeIncreaseFilter;
         /* 0x0BC */ public float VignetteSizeIncreaseSelected;
         /* 0x0C0 */ public Vector2f LensFlareExpandTowards;
-        [NMS(Size = 0x8, Ignore = true)]
-        /* 0x0C8 */ public byte[] PaddingC8;
         [NMS(Size = 0xA)]
         /* 0x0D0 */ public Colour[] MapLargeAreaPrimaryDefaultColours;
         [NMS(Size = 0xA)]

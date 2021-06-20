@@ -17,8 +17,5 @@ namespace libMBIN.NMS.Toolkit
         /* 0x24 */ public bool AddWaypoint;
         /* 0x25 */ public bool AddShelter;
         /* 0x26 */ public bool AddLandingPad;
-
-        [NMS(Size = 1, Ignore = true)]
-        public byte[] Padding27;
     }
 }

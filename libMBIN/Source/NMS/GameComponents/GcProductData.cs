@@ -50,12 +50,8 @@ namespace libMBIN.NMS.GameComponents
         public enum WikiCategoryEnum { NotEnabled, Crafting, Tech, Construction, Trade, Curio, Cooking }
         /* 0x380 */ public WikiCategoryEnum WikiCategory;
         /* 0x384 */ public bool IsCraftable;
-        [NMS(Size = 0x3, Ignore = true)]
-        /* 0x385 */ public byte[] Padding385;
         /* 0x388 */ public NMSString0x10 DeploysInto;
         /* 0x398 */ public float EconomyInfluenceMultiplier;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x39C */ public byte[] Padding39C;
         [NMSDescription("Notification when this substance has to be crafted. This string is referenced in each language file for translation")]
         /* 0x3A0 */ public NMSString0x20A PinObjective;
         [NMSDescription("Notification hints to collect this item. This string is referenced in each language file for translation")]
@@ -63,11 +59,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x3E0 */ public bool CookingIngredient;
         /* 0x3E4 */ public float CookingValue;
         /* 0x3E8 */ public bool GoodForSelling;
-        [NMS(Size = 0x7, Ignore = true)]
-        /* 0x3E9 */ public byte[] Padding3E9;
         /* 0x3F0 */ public NMSString0x10 GiveRewardOnSpecialPurchase;
         /* 0x400 */ public bool EggModifierIngredient;
-        [NMS(Size = 0xF, Ignore = true)]
-        /* 0x401 */ public byte[] EndPadding;
     }
 }

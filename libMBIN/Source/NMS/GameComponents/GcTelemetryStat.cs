@@ -9,8 +9,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x00 */ public NMSString0x10 Id;
         /* 0x10 */ public NMSString0x10 Type;
         /* 0x20 */ public int Value;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x24 */ public byte[] EndPadding;
     }
 }
 

@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x1C8, Alignment = 0x8, GUID = 0x5142359D32BAE2D2, NameHash = 0xEAE36C86E1479AF5)]
+    [NMS(Size = 0x1C8, GUID = 0x5142359D32BAE2D2, NameHash = 0xEAE36C86E1479AF5)]
     public class GcSimpleInteractionComponentData : NMSTemplate
     {
         // size: 0x21
@@ -32,8 +32,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x068 */ public float InteractFiendCrimeChance;
         /* 0x06C */ public int InteractCrimeLevel;
         /* 0x070 */ public bool NotifyEncounter;
-        [NMS(Size = 0x7, Ignore = true)]
-        /* 0x071 */ public byte[] Paddin71;
         /* 0x078 */ public GcInteractionActivationCost ActivationCost;
         /* 0x0B0 */ public GcStatsEnum StatToTrack;
         /* 0x0B4 */ public bool StartsBuried;
@@ -46,8 +44,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x138 */ public NMSString0x20A ScanData;
         /* 0x158 */ public GcDiscoveryTypes ScanIcon;
         /* 0x15C */ public bool ActivateLocatorsFromRarity;
-        [NMS(Size = 0x3, Ignore = true)]
-        /* 0x15D */ public byte[] Padding15D;
         [NMS(Size = 0x3)]
         /* 0x160 */ public NMSString0x10[] RarityLocators;
         /* 0x190 */ public List<GcInteractionBaseBuildingState> BaseBuildingTriggerActions;
@@ -56,7 +52,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x1C0 */ public bool UsePersonalPersistentBuffer;
         /* 0x1C1 */ public bool ReseedOnRewardSuccess;
         /* 0x1C2 */ public bool CanCollectInMech;
-        [NMS(Size = 0x5, Ignore = true)]
-        /* 0x1C3 */ public byte[] EndPadding;
     }
 }

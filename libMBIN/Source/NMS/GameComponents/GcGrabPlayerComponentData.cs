@@ -47,7 +47,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x308 */ public Vector2f LookAroundAnglesFine;
         /* 0x310 */ public float SleepChance;
         /* 0x314 */ public Vector2f SleepTime;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x31C */ public byte[] EndPadding;
     }
 }

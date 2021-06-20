@@ -12,7 +12,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x4 */ public bool Seeded;
         /* 0x5 */ public bool OverrideZeroSeed;
         /* 0x6 */ public bool OverrideMissionSeedWithRandomSeed;
-        [NMS(Size = 0x1, Ignore = true)]
-        /* 0x7 */ public byte[] EndPadding;
     }
 }

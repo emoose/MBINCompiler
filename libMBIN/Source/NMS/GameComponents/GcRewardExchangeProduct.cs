@@ -12,7 +12,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x24 */ public int AmountToGiveMax;
         /* 0x28 */ public int AmountToTakeMax;
         /* 0x2C */ public bool HideNewProduct;
-        [NMS(Size = 0x3, Ignore = true)]
-        /* 0x2D */ public byte[] EndPadding;
     }
 }

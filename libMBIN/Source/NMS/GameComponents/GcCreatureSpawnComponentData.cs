@@ -24,9 +24,6 @@ namespace libMBIN.NMS.GameComponents
 		public enum SpawnerModeEnum { Hidden, Visible, HideOnSpawn, HiddenTimer }
 		/* 0x0D0 */ public SpawnerModeEnum SpawnerMode;
 
-        [NMS(Size = 4, Ignore = true)]
-        /* 0x0D4 */ public byte[] PaddingD4;
-
         /* 0x0D8 */ public GcResourceElement SpecificModel;
         /* 0x380 */ public List<GcSpawnComponentOption> SpawnOptionList;
     }

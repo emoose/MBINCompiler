@@ -15,7 +15,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x26 */ public bool[] AvailableBuildings;
         [NMS(Size = 0x8, EnumType = typeof(GcAlienRace.AlienRaceEnum))]
         /* 0x4A */ public bool[] AvailableRaces;
-        [NMS(Size = 0x6, Ignore = true)]
-        /* 0x52 */ public byte[] EndPadding;
     }
 }

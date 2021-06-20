@@ -28,8 +28,5 @@ namespace libMBIN.NMS.Toolkit
         public Colour Colour2;
 		public enum EmitterShapeEnum { Sphere, UpperHalfSphere, BottomHalfSphere }
 		public EmitterShapeEnum EmitterShape;
-
-        [NMS(Size = 0xC, Ignore = true)]
-        public byte[] Padding134;
     }
 }

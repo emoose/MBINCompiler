@@ -12,8 +12,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x010 */ public bool HasProduct;
         /* 0x011 */ public bool IsTemporary;
         /* 0x012 */ public bool IsFromModFolder;
-        [NMS(Size = 0x1, Ignore = true)]
-        /* 0x013 */ public byte[] Padding13;
         /* 0x014 */ public TkModelResource SnapPoints;
         /* 0x098 */ public TkModelResource Model;
         /* 0x11C */ public TkModelResource InactiveModel;
@@ -40,8 +38,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x1D1 */ public bool CanPlaceOnItself;
         /* 0x1D2 */ public bool CanRotate3D;
         /* 0x1D3 */ public bool CanScale;
-        [NMS(Size = 4, Ignore = true)]
-        /* 0x1D4 */ public byte[] Padding1D4;
         /* 0x1D8 */ public List<NMSString0x10> Groups;
         /* 0x1E8 */ public int StorageContainerIndex;
         /* 0x1EC */ public bool CanChangeColour;
@@ -57,13 +53,9 @@ namespace libMBIN.NMS.GameComponents
         /* 0x204 */ public float TerrainEditBoundsScalar;
         /* 0x208 */ public bool IsSealed;
         /* 0x209 */ public bool CloseMenuAfterBuild;
-        [NMS(Size = 0x6, Ignore = true)]
-        /* 0x20A */ public byte[] Padding20A;
         /* 0x210 */ public GcBaseLinkGridData LinkGridData;
         /* 0x268 */ public int GhostsCountOverride;
         /* 0x26C */ public float SnappingDistanceOverride;
         /* 0x270 */ public int RegionSpawnLOD;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x274 */ public byte[] EndPadding;
     }
 }

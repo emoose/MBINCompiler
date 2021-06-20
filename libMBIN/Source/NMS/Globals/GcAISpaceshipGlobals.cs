@@ -54,8 +54,6 @@ namespace libMBIN.NMS.Globals
         /* 0x098 */ public float RewardLootOffsetSpeed;
         /* 0x09C */ public float RewardLootAngularSpeed;
         /* 0x0A0 */ public float FlybyPlanetLandingProbability;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x0A4 */ public byte[] PaddingA4;
         /* 0x0A8 */ public GcSpaceshipTravelData PirateTravel;
         /* 0x108 */ public GcSpaceshipTravelData PoliceTravel;
         /* 0x168 */ public GcSpaceshipTravelData TraderAttackTravel;
@@ -223,8 +221,6 @@ namespace libMBIN.NMS.Globals
         /* 0x928 */ public float TradeRouteFlickerFreq;
         /* 0x92C */ public float TradeRouteFlickerAmp;
         /* 0x930 */ public int TradeRouteMaxNum;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x934 */ public byte[] Padding934;
         /* 0x938 */ public List<Colour> TradeRouteColours;
         /* 0x948 */ public bool EnableLoot;
         /* 0x94C */ public float LaserHitOffset;
@@ -356,13 +352,9 @@ namespace libMBIN.NMS.Globals
         /* 0xC28 */ public float FinalDeathExplosionTime;
         /* 0xC2C */ public float FinalDeathFadeTime;
         /* 0xC30 */ public GcShipAIDeathData Death;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0xC4C */ public byte[] PaddingC4C;
         /* 0xC50 */ public GcShipAIAttackData AttackPlanet;
         /* 0xD20 */ public GcShipAIAttackData TraderAttack;
         /* 0xDF0 */ public GcShipAIPlanetPatrolData WingmanPathData;
         /* 0xE28 */ public List<GcAIShipDebugSpawnData> DebugShipSpawns;
-        [NMS(Size = 0x8, Ignore = true)]
-        /* 0xE38 */ public byte[] EndPadding;
     }
 }

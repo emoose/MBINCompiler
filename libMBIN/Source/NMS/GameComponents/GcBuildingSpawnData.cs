@@ -3,19 +3,15 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x5E0, Alignment = 0x10, GUID = 0xFA27257846FDC99F, NameHash = 0x2FE28DE7841506AF)]
+    [NMS(Size = 0x5E0, GUID = 0xFA27257846FDC99F, NameHash = 0x2FE28DE7841506AF)]
     public class GcBuildingSpawnData : NMSTemplate
     {
         /* 0x000 */ public float Density;
-        [NMS(Size = 4, Ignore = true)]
-        /* 0x004 */ public byte[] Padding4;
         /* 0x008 */ public GcResourceElement Resource;
         /* 0x2B0 */ public GcResourceElement UnderwaterResource;
         /* 0x558 */ public int LSystemID;
         /* 0x55C */ public int UnderwaterLSystemID;
         /* 0x560 */ public bool AutoCollision;
-        [NMS(Size = 7, Ignore = true)]
-        /* 0x561 */ public byte[] Padding561;
         /* 0x568 */ public GcSeed Seed;
         /* 0x578 */ public GcBuildingClassification Classification;
         /* 0x57C */ public GcBuildingClusterPlacement Placement;
@@ -35,7 +31,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x5B0 */ public Vector3f AABBMin;
         /* 0x5C0 */ public Vector3f AABBMax;
         /* 0x5D0 */ public bool BuildingSizeCalculated;
-        [NMS(Size = 0xF, Ignore = true)]
-        /* 0x5D1 */ public byte[] EndPadding;
     }
 }

@@ -12,7 +12,5 @@ namespace libMBIN.NMS.Toolkit
         /* 0x10 */ public Vector3f Centre;
         /* 0x20 */ public Vector3f Extents;
         /* 0x30 */ public float FalloffRadius;
-        [NMS(Size = 0xC, Ignore = true)]
-        /* 0x34 */ public byte[] EndPadding;
     }
 }

@@ -46,8 +46,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x130 */ public float AttackMoveAngle;
         /* 0x134 */ public float AttackMaxDistanceFromAlert;
         /* 0x138 */ public float AttackAlertFailTime;
-        [NMS(Size = 4, Ignore = true)]
-        public byte[] Padding13C;
 
         /* 0x140 */ public Colour EyeColourAlert;
         /* 0x150 */ public Colour EyeColourSearch;
@@ -71,8 +69,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x1AC */ public float EyeAngleMax;
         /* 0x1B0 */ public float EngineDirSpeedMin;
         /* 0x1B4 */ public float EngineDirAngleMax;
-
-        [NMS(Size = 0x8, Ignore = true)]
-        /* 0x1B8 */ public byte[] EndPadding;
     }
 }

@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x5E0, Alignment = 0x8, GUID = 0xC7D218267C466E5E, NameHash = 0x7BBBCE7D7BC0F1F4)]
+    [NMS(Size = 0x5E0, GUID = 0xC7D218267C466E5E, NameHash = 0x7BBBCE7D7BC0F1F4)]
     public class GcScanEventData : NMSTemplate
     {
         /* 0x000 */ public NMSString0x20A Name;
@@ -45,13 +45,9 @@ namespace libMBIN.NMS.GameComponents
         /* 0x0BF */ public bool AllowOverriddenBuildings;
 		public enum SolarSystemLocationEnum { Local, Near, LocalOrNear, NearWithNoExpeditions, FromList, SeasonParty }
 		/* 0x0C0 */ public SolarSystemLocationEnum SolarSystemLocation;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x0C4 */ public byte[] PaddingC4;
         /* 0x0C8 */ public GcScanEventSolarSystemLookup SolarSystemAttributes;
         /* 0x138 */ public GcScanEventSolarSystemLookup SolarSystemAttributesFallback;
         /* 0x1A8 */ public bool ForceRestartInteraction;
-        [NMS(Size = 0x7, Ignore = true)]
-        /* 0x1A9 */ public byte[] Padding1A9;
         /* 0x1B0 */ public NMSString0x10 HasReward;
         /* 0x1C0 */ public NMSString0x20A NextOption;
         /* 0x1E0 */ public GcScanEventTriggers TriggerActions;
@@ -71,8 +67,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x314 */ public bool TooltipRepeats;
         /* 0x315 */ public bool ShowEndTooltip;
         /* 0x316 */ public NMSString0x20 TooltipMessage;
-        [NMS(Size = 0x2, Ignore = true)]
-        /* 0x336 */ public byte[] Padding336;
         /* 0x338 */ public GcResourceElement ResourceOverride;
     }
 }

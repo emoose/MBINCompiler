@@ -15,16 +15,12 @@ namespace libMBIN.NMS.GameComponents
         /* 0x128 */ public NMSString0x100 AdditionalScaleJoint;
         /* 0x229 */ public bool BreakIfNotSelected;
         /* 0x229 */ public bool RelativeOffset;
-        [NMS(Size = 0x6, Ignore = true)]
-        /* 0x22A */ public byte[] Padding22A;
         /* 0x230 */ public Vector3f Offset;
         /* 0x240 */ public Vector3f RotationOffset;
         /* 0x250 */ public Vector3f VROffset;
         /* 0x260 */ public float HeadCounterRotation;
         /* 0x264 */ public float LegSpreadOffset;
         /* 0x268 */ public bool OverrideAnims;
-        [NMS(Size = 0x7, Ignore = true)]
-        /* 0x269 */ public byte[] Padding269;
         /* 0x270 */ public NMSString0x10 IdleRidingAnim;
         /* 0x280 */ public NMSString0x10 DefaultRidingAnim;
         /* 0x290 */ public List<GcCreatureRidingAnimation> RidingAnims;

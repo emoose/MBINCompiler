@@ -8,8 +8,6 @@ namespace libMBIN.NMS.GameComponents
     {
         /* 0x00 */ public bool DestroyAll;
         /* 0x01 */ public bool UseDestructables;
-        [NMS(Size = 0x6, Ignore = true)]
-        /* 0x02 */ public byte[] Padding2;
         /* 0x08 */ public NMSString0x10 PlayEffect;
     }
 }

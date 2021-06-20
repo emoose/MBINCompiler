@@ -17,7 +17,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x0030 */ public Vector2f BoxSizeEnd;
         /* 0x0040 */ public Colour BoxColourEnd;
         /* 0x0050 */ public float BoxThicknessEnd;
-        [NMS(Size = 0xC, Ignore = true)]
-        /* 0x0054 */ public byte[] Padding54;
     }
 }

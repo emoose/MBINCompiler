@@ -14,8 +14,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x24 */ public int PinnedMilestone;
         /* 0x28 */ public List<ulong> RendezvousUAs;
         /* 0x38 */ public bool HasCollectedFinalReward;
-        [NMS(Size = 0x7, Ignore = true)]
-        /* 0x39 */ public byte[] Padding39;
         /* 0x40 */ public List<GcUAProtectedLocations> ProtectedEvents;
     }
 }

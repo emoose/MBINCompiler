@@ -8,8 +8,6 @@ namespace libMBIN.NMS.GameComponents
     {
         /* 0x000 */ public NMSString0x10 Name;
         /* 0x010 */ public bool Active;
-		[NMS(Size = 3, Ignore = true)]
-        /* 0x011 */ public byte[] Padding011;
 		public enum CoverageTypeEnum { Total, SmoothPatch, GridPatch }
 		public CoverageTypeEnum CoverageType;
 

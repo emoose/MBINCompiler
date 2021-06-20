@@ -11,8 +11,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x00 */ public bool OnCurrentPlanet;
         /* 0x01 */ public bool InCurrentSystem;
         /* 0x02 */ public bool IsOverlapping;
-        [NMS(Size = 0x5, Ignore = true)]
-        /* 0x03 */ public byte[] Padding3;
         /* 0x08 */ public ulong OnSpecificPlanet;
         /* 0x10 */ public ulong InSpecificSystem;
         /* 0x18 */ public NMSString0x20A OnSpecificPlanetScanEvent;

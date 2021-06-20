@@ -8,8 +8,6 @@ namespace libMBIN.NMS.GameComponents
     {
         /* 0x00 */ public NMSString0x10 RoomID;
         /* 0x10 */ public int MinRoomIndex;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x14 */ public byte[] Padding14;
         /* 0x18 */ public NMSString0x10 MustBeBeforeRoom;
         /* 0x28 */ public NMSString0x10 MustBeAfterRoom;
     }

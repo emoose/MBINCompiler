@@ -18,8 +18,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x98 */ public float OperatorPermuteChance;
         /* 0x9C */ public float TemplateCombineChanceAtRoot;
         /* 0xA0 */ public float TemplateCombineChance;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0xA4 */ public byte[] PaddingA4;
         /* 0xA8 */ public List<GcByteBeatSong> Songs;
     }
 }

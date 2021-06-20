@@ -10,7 +10,5 @@ namespace libMBIN.NMS.GameComponents
     {
         public NMSString0x10 TriggerAction;
         public int Time;
-        [NMS(Size = 0x4, Ignore = true)]
-        public byte[] EndPadding;
     }
 }

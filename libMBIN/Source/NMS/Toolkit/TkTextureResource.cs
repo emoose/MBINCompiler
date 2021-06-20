@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Toolkit
 {
-	[NMS(Size = 0x84, GUID = 0x8F308DA13045525E, NameHash = 0x2316F23520D820A9)]
+    [NMS(Size = 0x84, Alignment = 0x4, GUID = 0x8F308DA13045525E, NameHash = 0x2316F23520D820A9)]
     public class TkTextureResource : NMSTemplate
     {
         public NMSString0x80 Filename;
@@ -11,3 +11,4 @@ namespace libMBIN.NMS.Toolkit
         public byte[] EndPadding;
     }
 }
+

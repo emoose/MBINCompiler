@@ -14,8 +14,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x0C */ public float SwarmMovementRadius;
 		public enum SwarmMovementTypeEnum { None, Circle, Random, Search, FollowPlayer, FollowPlayerLimited }
 		/* 0x10 */ public SwarmMovementTypeEnum SwarmMovementType;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x14 */ public byte[] Padding14;
         /* 0x18 */ public List<GcCreatureSwarmDataParams> Params;
     }
 }

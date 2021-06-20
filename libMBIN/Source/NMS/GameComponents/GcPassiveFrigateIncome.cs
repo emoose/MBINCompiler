@@ -10,7 +10,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x10 */ public GcInventoryType IncomeType;
         /* 0x14 */ public int AmountOfIncomeRewarded;
         /* 0x18 */ public int ForEveryXAmountOfTheStat;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x1C */ public byte[] EndPadding;
     }
 }

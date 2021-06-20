@@ -9,8 +9,6 @@ namespace libMBIN.NMS.GameComponents
     public class GcDungeonQuestParams : NMSTemplate
     {
         /* 0x0 */ public float Probability;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x4 */ public byte[] Padding4;
         /* 0x40 */ public List<NMSString0x10> QuestItems;
     }
 }

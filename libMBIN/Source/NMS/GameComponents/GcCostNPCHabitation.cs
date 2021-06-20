@@ -8,7 +8,5 @@ namespace libMBIN.NMS.GameComponents
     {
         public GcNPCHabitationType NPCHabitationType;
         public bool MustBeInhabited;
-        [NMS(Size = 0x3, Ignore = true)]
-        public byte[] EndPadding;
     }
 }

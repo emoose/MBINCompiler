@@ -13,8 +13,6 @@ namespace libMBIN.NMS.Globals
         /* 0x0001 */ public bool SkipAbandonedFreighterUnlocking;
         /* 0x0002 */ public bool AllowSavingOnAbandonedFreighters;
         /* 0x0003 */ public bool DisableAbandonedFreighterRoomsOptimisation;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x0004 */ public byte[] Padding4;
         /* 0x0008 */ public ulong OverrideAbandonedFreighterSeed;
         /* 0x0010 */ public bool ThirdPersonIsDefaultCamera;
         /* 0x0011 */ public bool SkipIntro;
@@ -152,8 +150,6 @@ namespace libMBIN.NMS.Globals
         /* 0x0AFA */ public bool DisableMissionShop;
         /* 0x0AFB */ public NMSString0x80 RealityPresetFile;
         /* 0x0B7C */ public ushort RealityGenerationIteration;
-        [NMS(Size = 0x2, Ignore = true)]
-        /* 0x0B7E */ public byte[] PaddingB7E;
         /* 0x0B80 */ public List<NMSString0x20> LocTableList;
         /* 0x0B90 */ public NMSString0x80 DefaultSaveData;
         /* 0x0C10 */ public bool FormatDownloadStorageAreaOnBoot;
@@ -373,7 +369,5 @@ namespace libMBIN.NMS.Globals
         /* 0x2348 */ public bool CrossPlatformFeaturedBases;
         /* 0x2349 */ public bool ShowMissionIdInTitle;
         /* 0x234C */ public TkGlobals ToolkitGlobals;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x256C */ public byte[] EndPadding;
     }
 }

@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x3B8, Alignment = 0x8, GUID = 0x6F9CCC867A54ED73, NameHash = 0x4FB6689285BFE7DE)]
+    [NMS(Size = 0x3B8, GUID = 0x6F9CCC867A54ED73, NameHash = 0x4FB6689285BFE7DE)]
     public class GcMissionSequenceGetToScanEvent : NMSTemplate
     {
         /* 0x000 */ public NMSString0x80 Message;
@@ -19,7 +19,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x234 */ public NMSString0x80 SurveySwapHint;
         /* 0x2B4 */ public NMSString0x80 SurveyHint;
         /* 0x334 */ public NMSString0x80 DebugText;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x3B4 */ public byte[] EndPadding;
     }
 }

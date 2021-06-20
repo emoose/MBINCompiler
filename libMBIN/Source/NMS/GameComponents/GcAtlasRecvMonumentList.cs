@@ -10,8 +10,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x00 */ public byte[] Padding0;
         /* 0x08 */ public ulong ClientUserdata;
         /* 0x10 */ public int NumberOfThings;
-        [NMS(Size = 0xC, Ignore = true)]
-        /* 0x14 */ public byte[] Padding14;
         [NMS(Size = 0x1)]
         /* 0x20 */ public GcAtlasMonument[] Monuments;
     }

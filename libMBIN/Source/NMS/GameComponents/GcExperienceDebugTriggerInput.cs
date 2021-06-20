@@ -11,8 +11,6 @@ namespace libMBIN.NMS.GameComponents
         // size: 0xD
         public enum KeyPressEnum { _1, _2, _3, _4, _5, _6, _7, _8, _9, PadUp, PadDown, PadLeft, PadRight };
         /* 0x0 */ public KeyPressEnum KeyPress;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x4 */ public byte[] Padding4;
         /* 0x8 */ public List<GcExperienceDebugTriggerAction> Actions;
     }
 }

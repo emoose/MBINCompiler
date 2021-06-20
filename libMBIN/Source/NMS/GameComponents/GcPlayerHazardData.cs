@@ -19,8 +19,6 @@ namespace libMBIN.NMS.GameComponents
         public float RechargeInitialTime;
         [NMSDescription("Time in seconds to replenish 100 protection charges")]
         public float RechargeTime;
-        [NMS(Size = 4, Ignore = true)]
-        public byte[] Padding24;
         [NMSDescription("Type of damages if protection falls to 0")]
         public NMSString0x10 Damage;
         public bool Increases;

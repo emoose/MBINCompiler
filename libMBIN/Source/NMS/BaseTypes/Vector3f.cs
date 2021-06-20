@@ -9,8 +9,6 @@ namespace libMBIN.NMS
         public float x;
         public float y;
         public float z;
-        [NMS(Size = 0x4, Ignore = true)]
-        public byte[] EndPadding;
 
         public Vector3f(float x, float y, float z)
         {

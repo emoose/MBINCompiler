@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x20, Alignment = 0x8, GUID = 0x4DDDBDFBD1267CE7, NameHash = 0x398860441F320FF2)]
+    [NMS(Size = 0x20, GUID = 0x4DDDBDFBD1267CE7, NameHash = 0x398860441F320FF2)]
     public class GcCreatureBaitComponentData : NMSTemplate
     {
         /* 0x00 */ public List<NMSString0x10> AttractList;
@@ -13,7 +13,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x14 */ public float BaitRadius;
         /* 0x18 */ public bool Debug;
         /* 0x19 */ public bool InducesRage;
-        [NMS(Size = 6, Ignore = true)]
-        /* 0x1A */ public byte[] EndPadding;
     }
 }

@@ -22,8 +22,5 @@ namespace libMBIN.NMS.Toolkit
         public Colour ColourEnd;
 		public enum LinesPositionEnum { Absolute, Relative }
 		public LinesPositionEnum LinesPosition;
-
-        [NMS(Size = 0xC, Ignore = true)]
-        public byte[] PaddingD4;
     }
 }

@@ -22,7 +22,5 @@ namespace libMBIN.NMS.Globals
         /* 0x20D */ public NMSString0x80 AtmosphereFile;
         /* 0x290 */ public List<Vector3f> ForceResource;
         /* 0x2A0 */ public float ForceResourceSize;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x2A4 */ public byte[] EndPadding;
     }
 }

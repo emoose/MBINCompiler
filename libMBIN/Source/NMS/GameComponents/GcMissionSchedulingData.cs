@@ -13,8 +13,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x64 */ public GcDate EndDate;
         /* 0x78 */ public bool IndependentStart;
         /* 0x79 */ public bool HasEndDate;
-        [NMS(Size = 0x6, Ignore = true)]
-        /* 0x7A */ public byte[] Padding72;
         /* 0x80 */ public ulong EarlyEndOffset;
         /* 0x88 */ public List<NMSString0x10> MissionIDs;
     }

@@ -9,7 +9,5 @@ namespace libMBIN.NMS.GameComponents
         public NMSString0x10 MessageID;
         public bool BroadcastInMultiplayer;
         public bool BroadcastToActiveMultiplayerMission;
-        [NMS(Size = 0x6, Ignore = true)]
-        public byte[] EndPadding;
     }
 }

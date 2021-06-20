@@ -10,8 +10,6 @@ namespace libMBIN.NMS.GameComponents
     {
         /* 0x00 */ public List<GcInteractionData> Interactions;
         /* 0x10 */ public int CurrentPos;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x14 */ public byte[] EndPadding;
     }
 }
 

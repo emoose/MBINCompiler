@@ -22,7 +22,5 @@ namespace libMBIN.NMS.Toolkit
         [NMSDescription("An array of properties which require a game restart to apply")]
         [NMS(Size = 0x2E, EnumType = typeof(TkEngineSettingTypes.EngineSettingEnum))]
         /* 0x60 */ public bool[] NeedsGameRestart;
-        [NMS(Size = 0x2, Ignore = true)]
-        /* 0x8E */ public byte[] EndPadding;
     }
 }

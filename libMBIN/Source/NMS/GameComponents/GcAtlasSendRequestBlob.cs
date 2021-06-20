@@ -14,7 +14,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x10 */ public NMSString0x20 Name;
         /* 0x30 */ public int LastTimestamp;
         /* 0x34 */ public NMSString0x40 Tracker;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x74 */ public byte[] EndPadding;
     }
 }

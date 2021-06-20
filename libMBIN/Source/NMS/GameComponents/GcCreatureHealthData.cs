@@ -13,8 +13,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x30 */ public NMSString0x10 HurtAudio;
         /* 0x40 */ public NMSString0x10 DeathAudio;
         /* 0x50 */ public bool DespawnOnDeath;
-        [NMS(Size = 0x7, Ignore = true)]
-        /* 0x51 */ public byte[] Padding51;
         /* 0x58 */ public List<NMSString0x20A> DespawnOnDeathDescriptors;
     }
 }

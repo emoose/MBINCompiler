@@ -7,11 +7,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcMissionConditionRefinerActive : NMSTemplate
     {
         /* 0x00 */ public bool HasFuel;
-        [NMS(Size = 0x7, Ignore = true)]
-        /* 0x01 */ public byte[] Padding1;
         /* 0x08 */ public NMSString0x20A ActiveRecipe;
         /* 0x28 */ public int AmountToMake;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x2C */ public byte[] EndPadding;
     }
 }

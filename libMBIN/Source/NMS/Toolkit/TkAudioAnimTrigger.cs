@@ -10,8 +10,5 @@ namespace libMBIN.NMS.Toolkit
         public NMSString0x10 Anim;
 
         public int FrameStart;
-
-        [NMS(Size = 4, Ignore = true)]
-        public byte[] Padding94;
     }
 }

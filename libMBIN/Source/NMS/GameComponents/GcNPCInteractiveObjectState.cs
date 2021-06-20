@@ -28,8 +28,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x80 */ public int MaxAnims;
         /* 0x84 */ public float MinTime;
         /* 0x88 */ public float MaxTime;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x8C */ public byte[] Padding8C;
         /* 0x90 */ public List<GcNPCInteractiveObjectStateTransition> Transitions;
     }
 }

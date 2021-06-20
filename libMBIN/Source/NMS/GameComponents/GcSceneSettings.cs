@@ -23,9 +23,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x420 */ public bool SpawnShip;
         /* 0x421 */ public bool SpawnInsideShip;
 
-        [NMS(Size = 0xE, Ignore = true)]
-        /* 0x422 */ public byte[] Padding422;
-
         /* 0x430 */ public GcPlayerSpawnStateData PlayerState;
 
         /* 0x4E0 */ public List<NMSTemplate> Events;

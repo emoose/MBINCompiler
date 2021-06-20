@@ -12,8 +12,5 @@ namespace libMBIN.NMS.GameComponents
         public List<GcInventoryTechProbability> DesiredTechs;
 
         public bool Cool;
-
-        [NMS(Size = 7, Ignore = true)]
-        public byte[] Padding21;
     }
 }

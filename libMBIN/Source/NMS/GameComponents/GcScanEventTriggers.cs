@@ -9,11 +9,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcScanEventTriggers : NMSTemplate
     {
         /* 0x00 */ public float Range;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x04 */ public byte[] Padding4;
         /* 0x08 */ public List<NMSString0x10> Triggers;
         /* 0x18 */ public bool AllowRetrigger;
-        [NMS(Size = 0x7, Ignore = true)]
-        /* 0x19 */ public byte[] EndPadding;
     }
 }

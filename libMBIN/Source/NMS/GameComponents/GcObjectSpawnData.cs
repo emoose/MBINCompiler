@@ -11,8 +11,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x000 */ public NMSString0x10 DebugName;
         public enum TypeEnum { Instanced, Single }
         /* 0x010 */ public TypeEnum Type;
-        [NMS(Size = 4, Ignore = true)]
-        /* 0x014 */ public byte[] Padding14;
         /* 0x018 */ public GcResourceElement Resource;
         /* 0x2C0 */ public List<GcResourceElement> AltResources;
         /* 0x2D0 */ public List<GcTerrainTileType> ExtraTileTypes;

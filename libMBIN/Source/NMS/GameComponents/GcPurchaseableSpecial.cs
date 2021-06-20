@@ -10,7 +10,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x10 */ public int ShopNumber;
         /* 0x14 */ public int MissionTier;
         /* 0x18 */ public bool IsConsumable;
-        [NMS(Size = 0x7, Ignore = true)]
-        /* 0x19 */ public byte[] EndPadding;
     }
 }

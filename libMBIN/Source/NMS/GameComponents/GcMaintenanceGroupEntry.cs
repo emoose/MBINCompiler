@@ -9,11 +9,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcMaintenanceGroupEntry : NMSTemplate      // size: 0x20
     {
         /* 0x00 */ public GcInventoryType Type;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x04 */ public byte[] Padding4;
         /* 0x08 */ public NMSString0x10 Id;
         /* 0x18 */ public float ProbabilityWeighting;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x1C */ public byte[] EndPadding;
     }
 }

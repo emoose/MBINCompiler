@@ -12,8 +12,6 @@ namespace libMBIN.NMS.Globals
         /* 0x0000 */ public float EggModifiyAnimMaxSize;
         /* 0x0004 */ public float EggModifiyAnimLoopTime;
         /* 0x0008 */ public int SeasonFinalStageIndex;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x000C */ public byte[] PaddingC;
         /* 0x0010 */ public List<GcSeasonalRingArray> SeasonalRingTable;
         /* 0x0020 */ public float SeasonalRingMultiplier;
         /* 0x0024 */ public float SeasonalRingPulseTime;
@@ -212,8 +210,6 @@ namespace libMBIN.NMS.Globals
         /* 0x0705 */ public bool DebugPopupSizes;
         /* 0x0706 */ public bool DebugInventoryIndices;
         /* 0x0707 */ public bool FixedInventoryIconPositions;
-        [NMS(Size = 0x8, Ignore = true)]
-        /* 0x0708 */ public byte[] Padding708;
         /* 0x0710 */ public GcHUDEffectRewardData OSDRareItemRewardEffect;
         /* 0x0770 */ public GcHUDEffectRewardData OSDEpicItemRewardEffect;
         /* 0x07D0 */ public float OSDMessageQueueSpeedMultiplier;
@@ -289,8 +285,6 @@ namespace libMBIN.NMS.Globals
         /* 0x099C */ public float RepairTechLabelOffset;
         /* 0x09A0 */ public float MaintenanceIconFadeStart;
         /* 0x09A4 */ public float MaintenanceIconFadeTime;
-        [NMS(Size = 0x8, Ignore = true)]
-        /* 0x09A8 */ public byte[] Padding9A8;
         /* 0x09B0 */ public TkModelRendererData RepairCamera;
         /* 0x0A60 */ public TkModelRendererData RepairWeaponCamera;
         /* 0x0B10 */ public TkModelRendererData RepairBackpackCamera;
@@ -376,8 +370,6 @@ namespace libMBIN.NMS.Globals
         /* 0x1064 */ public float TargetDisplayShipScale;
         /* 0x1070 */ public Vector3f TargetDisplayShipOffset;
         /* 0x1080 */ public float TargetDisplayDamageFlashTime;
-        [NMS(Size = 0xC, Ignore = true)]
-        /* 0x1084 */ public byte[] Padding1084;
         /* 0x1090 */ public GcScanEffectData TargetDisplayScanEffect;
         /* 0x10E0 */ public bool ProgressiveDialogStyle;
         /* 0x10E4 */ public float CommunicatorMessageTime;
@@ -391,8 +383,6 @@ namespace libMBIN.NMS.Globals
         /* 0x1118 */ public float HUDMarkerLabelDisplayDistance;
         /* 0x111C */ public float HUDMarkerNonActiveMissionAlpha;
         /* 0x1120 */ public bool DebugMarkerLabels;
-        [NMS(Size = 0xF, Ignore = true)]
-        /* 0x1121 */ public byte[] Padding1121;
         /* 0x1130 */ public GcScanEffectData DebugEditorPreviewEffect;
         /* 0x1180 */ public bool ShowDamageNumbers;
         /* 0x1184 */ public float QuickMenuCloseTime;
@@ -475,8 +465,6 @@ namespace libMBIN.NMS.Globals
         /* 0x130C */ public float FreighterSummonPlanetOffset;
         /* 0x1310 */ public float FreighterSummonLookTime;
         /* 0x1314 */ public float FreighterHighlightRange;
-        [NMS(Size = 0x8, Ignore = true)]
-        /* 0x1318 */ public byte[] Padding1318;
         /* 0x1320 */ public GcScanEffectData FreighterSummonScanEffect;
         /* 0x1370 */ public Colour FreighterSummonScanEffectColourBlocked;
         /* 0x1380 */ public Colour FreighterSummonScanEffectColourHighlight;
@@ -661,8 +649,6 @@ namespace libMBIN.NMS.Globals
         /* 0x17B0 */ public float WantedLevelWitnessAlpha;
         /* 0x17B4 */ public float WantedLevelScanAlpha;
         /* 0x17B8 */ public float WantedLevelScannedRate;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x17BC */ public byte[] Padding17BC;
         /* 0x17C0 */ public List<NMSString0x80> StatIcons;
         /* 0x17D0 */ public bool ShowJetpackNotificationForNonTerrain;
         /* 0x17D4 */ public float StatsMessageDelayTime;
@@ -819,8 +805,6 @@ namespace libMBIN.NMS.Globals
         /* 0x1BA8 */ public float AlwaysOnHazardMultiplierRad;
         /* 0x1BAC */ public float AlwaysOnHazardMultiplierCold;
         /* 0x1BB0 */ public float HazardPulseRate;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x1BB4 */ public byte[] Padding1BB4;
         /* 0x1BB8 */ public List<NMSString0x80> HazardTextures;
         /* 0x1BC8 */ public List<NMSString0x80> HazardNormalMaps;
         /* 0x1BD8 */ public List<NMSString0x80> HazardHeightmaps;
@@ -846,8 +830,6 @@ namespace libMBIN.NMS.Globals
         /* 0x1CAC */ public float InteractionLabelPixelHeightMin;
         /* 0x1CB0 */ public float InteractionLabelPixelHeightMax;
         /* 0x1CB4 */ public float ScanTime;
-        [NMS(Size = 0x8, Ignore = true)]
-        /* 0x1CB8 */ public byte[] Padding1CB8;
         /* 0x1CC0 */ public GcModelViewCollection ModelViews;
         /* 0x3160 */ public Colour CursorColour;
         /* 0x3170 */ public Colour CursorConfirmColour;
@@ -1167,7 +1149,5 @@ namespace libMBIN.NMS.Globals
         /* 0x44DC */ public float MultiplayerTeleportEffectDisappearTime;
         /* 0x44E0 */ public float MultiplayerTeleportEffectAppearTime;
         /* 0x44E4 */ public int AbandonedFreighterAirlockRoomNumber;
-        [NMS(Size = 0x8, Ignore = true)]
-        /* 0x44E8 */ public byte[] EndPadding;
     }
 }

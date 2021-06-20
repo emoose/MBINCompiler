@@ -11,7 +11,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0xA0 */ public float FadeDistance;
         /* 0xA4 */ public bool SelectableInPhotoMode;
         /* 0xA8 */ public float HdrAreaAdjust;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0xAC */ public byte[] EndPadding;
     }
 }

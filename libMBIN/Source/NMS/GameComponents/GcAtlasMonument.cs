@@ -7,8 +7,6 @@ namespace libMBIN.NMS.GameComponents
     public class GcAtlasMonument : NMSTemplate
     {
         /* 0x000 */ public GcUniverseAddressData UniverseAddress;
-        [NMS(Size = 0x8, Ignore = true)]
-        /* 0x018 */ public byte[] Padding18;
         /* 0x020 */ public Vector3f Position;
         /* 0x030 */ public Vector3f At;
         /* 0x040 */ public NMSString0x40 RID;
@@ -17,7 +15,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x100 */ public NMSString0x40 CocreatorName;
         /* 0x140 */ public NMSString0x40 CocreatorOnlineID;
         /* 0x180 */ public ulong Timestamp;
-        [NMS(Size = 0x8, Ignore = true)]
-        public byte[] EndPadding;
     }
 }

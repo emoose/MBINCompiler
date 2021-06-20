@@ -11,8 +11,6 @@ namespace libMBIN.NMS.Globals
         [NMS(Size = 0x4)]
         /* 0x000 */ public TkLODSettingsData[] LODSettings;
         /* 0x1D0 */ public Vector2f SpaceBuildingTemperature;
-        [NMS(Size = 0x8, Ignore = true)]
-        /* 0x1D8 */ public byte[] Padding1D8;
         /* 0x1E0 */ public GcCloudProperties CloudProperties;
         /* 0x2C0 */ public float SenseProbingValueSmoothingTime;
         /* 0x2C4 */ public float SenseProbingValueSmoothingTimeSlow;
@@ -88,8 +86,6 @@ namespace libMBIN.NMS.Globals
         /* 0x3D8 */ public List<float> SpacePlanetFogStrength;
         /* 0x3E8 */ public List<float> SkyBlendLength;
         /* 0x3F8 */ public float SkyAtmospherePower;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x3FC */ public byte[] Padding3FC;
         /* 0x400 */ public List<float> SkyAtmosphereBlendLength;
         /* 0x410 */ public List<float> FarBlendHeight;
         /* 0x420 */ public float FarBlendLength;
@@ -104,8 +100,6 @@ namespace libMBIN.NMS.Globals
         /* 0x458 */ public float ObjectSpawnDetailRadius;
         /* 0x45C */ public float InteractionRadius;
         /* 0x460 */ public bool EnableWind;
-        [NMS(Size = 0x7, Ignore = true)]
-        /* 0x461 */ public byte[] Padding461;
         /* 0x468 */ public List<TkShearWindData> ShearWindSettings;
         /* 0x478 */ public int HotspotsLOD;
         /* 0x47C */ public float RegionHotspotProbability;
@@ -114,7 +108,5 @@ namespace libMBIN.NMS.Globals
         /* 0x488 */ public float MaxHotspotFalloffDistance;
         /* 0x48C */ public GcEnvironmentProperties EnvironmentProperties;
         /* 0x504 */ public GcEnvironmentProperties EnvironmentPrimeProperties;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x57C */ public byte[] EndPadding;
     }
 }

@@ -42,8 +42,6 @@ namespace libMBIN.NMS.Globals
         /* 0x00A8 */ public int GPSRandomChangeTimeNarrow;
         /* 0x00AC */ public float SalvageValueAsProds;
         /* 0x00B0 */ public int SalvageSubstanceValueThreshold;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x00B4 */ public byte[] PaddingB4;
         [NMS(Size = 0x4)]
         /* 0x00B8 */ public NMSString0x10[] SalvageRewardsShuttle;
         [NMS(Size = 0x4)]
@@ -59,8 +57,6 @@ namespace libMBIN.NMS.Globals
         /* 0x0278 */ public bool AlwaysSpaceBattle;
         /* 0x027C */ public float MultidimensionalFadeTime;
         /* 0x0280 */ public float TeleporterDistanceTravelledMultiplier;
-        [NMS(Size = 0xC, Ignore = true)]
-        /* 0x0284 */ public byte[] Padding284;
         /* 0x0290 */ public GcScanEffectData BinocularSelectedEffect;
         /* 0x02E0 */ public Colour BinocularSelectedColour;
         /* 0x02F0 */ public Colour BinocularSelectedUnknownColour;
@@ -186,8 +182,6 @@ namespace libMBIN.NMS.Globals
         /* 0x0578 */ public float GrabPlayerCooldownTime;
         /* 0x057C */ public float TapInteractionIncreaseAmount;
         /* 0x0580 */ public float TapInteractionDecay;
-        [NMS(Size = 0xC, Ignore = true)]
-        /* 0x0584 */ public byte[] Padding584;
         /* 0x0590 */ public GcScanEffectData DeconstructEffect;
         /* 0x05E0 */ public GcScanEffectData HitEffect;
         /* 0x0630 */ public GcScanEffectData HitEffectCritical;
@@ -197,8 +191,6 @@ namespace libMBIN.NMS.Globals
         /* 0x06A0 */ public float CommunicatorSpawnScale;
         /* 0x06A4 */ public float CommunicatorSpawnRotation;
         /* 0x06A8 */ public float CommunicatorFadeTime;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x06AC */ public byte[] Padding6AC;
         /* 0x06B0 */ public List<GcScanEffectData> CommunicatorEffectTable;
         /* 0x06C0 */ public int MaxNumMissionsFromMissionGiver;
         /* 0x06C4 */ public float InteractionMinTimeBeforeHighlightedOptionSelection;
@@ -285,8 +277,6 @@ namespace libMBIN.NMS.Globals
         /* 0x0864 */ public GcExperienceTimers FreighterTimers;
         /* 0x0884 */ public GcExperienceTimers PirateTimers;
         /* 0x08A4 */ public GcExperienceTimers HardPirateTimers;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x08C4 */ public byte[] Padding8C4;
         /* 0x08C8 */ public List<float> PirateEarlySpawnChances;
         /* 0x08D8 */ public float PirateEarlySpawnTime;
         /* 0x08DC */ public GcExperienceTimers FlybyTimers;
@@ -342,11 +332,7 @@ namespace libMBIN.NMS.Globals
         /* 0x0B18 */ public float HoverTimeToScan;
         /* 0x0B1C */ public float HoverTimeToScanCreatures;
         /* 0x0B20 */ public int HoverVisiblePointsNeeded;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x0B24 */ public byte[] PaddingB24;
         /* 0x0B28 */ public List<GcZoomData> ZoomLevels;
-        [NMS(Size = 0x8, Ignore = true)]
-        /* 0x0B38 */ public byte[] PaddingB38;
         /* 0x0B40 */ public GcScanEffectData PassiveScanEffect;
         /* 0x0B90 */ public GcScanEffectData BuildingScanEffect;
         /* 0x0BE0 */ public GcScanEffectData TargetShipScanEffect;
@@ -410,8 +396,6 @@ namespace libMBIN.NMS.Globals
         /* 0x12A0 */ public float HUDDamageOffset;
         /* 0x12A4 */ public float HUDDamageScaler;
         /* 0x12A8 */ public float HUDDamageRadius;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x12AC */ public byte[] Padding12AC;
         /* 0x12B0 */ public GcShipHUDTargetData HUDTarget;
         /* 0x16E0 */ public float HUDLabelTime;
         /* 0x16E4 */ public float HUDLabelAngle;
@@ -535,8 +519,6 @@ namespace libMBIN.NMS.Globals
         /* 0x1B1C */ public float ScrapDroneProbability;
         /* 0x1B20 */ public float MaxRespawnOnGroundHeight;
         /* 0x1B24 */ public float DeadPlanetGravityFactor;
-        [NMS(Size = 0x8, Ignore = true)]
-        /* 0x1B28 */ public byte[] Padding1B28;
         /* 0x1B30 */ public GcScanEffectData ShipSalvageScanEffect;
         /* 0x1B80 */ public float SalvageShipPitch;
         /* 0x1B84 */ public float SalvageShipHeightOffset;

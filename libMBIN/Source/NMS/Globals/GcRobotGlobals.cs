@@ -113,8 +113,6 @@ namespace libMBIN.NMS.Globals
         /* 0x1F0 */ public bool DroneClickToMove;
         /* 0x1F4 */ public float DroneInvestigateMinScanTimeAttackMe;
         /* 0x1F8 */ public float DroneInvestigateMinScanTime;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x1FC */ public byte[] Padding1FC;
         /* 0x200 */ public GcScanEffectData DroneScanEffect;
         /* 0x250 */ public float HeightTestSampleDistance;
         /* 0x254 */ public float HeightTestSampleTime;
@@ -168,8 +166,6 @@ namespace libMBIN.NMS.Globals
         /* 0x314 */ public float WalkerTitanFallSpeed;
         /* 0x318 */ public NMSString0x10 WalkerTitanFallEffect;
         /* 0x328 */ public float WalkerTitanFallEffectScale;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x32C */ public byte[] Padding32C;
         /* 0x330 */ public NMSString0x10 WalkerTitanFallShake;
         /* 0x340 */ public float QuadAlertRange;
         /* 0x344 */ public float QuadAttackRange;

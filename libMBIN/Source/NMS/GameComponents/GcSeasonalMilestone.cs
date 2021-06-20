@@ -27,8 +27,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x578 */ public NMSString0x200 CantClaimRewardDescription;
         /* 0x778 */ public bool IsRendezvous;
         /* 0x779 */ public bool IsStageControl;
-        [NMS(Size = 0x6, Ignore = true)]
-        /* 0x77A */ public byte[] Padding77A;
         /* 0x780 */ public GcSeasonalMilestoneEncryption Encryption;
     }
 }

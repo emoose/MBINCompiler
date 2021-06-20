@@ -16,7 +16,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x158 */ public GcWikiTopicType Type;
         /* 0x15C */ public int UnseenCount;
         /* 0x160 */ public int UnlockedCount;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x164 */ public byte[] EndPadding;
     }
 }

@@ -11,8 +11,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x00000 */ public GcUniverseAddressData UniverseAddress;
         /* 0x00018 */ public GcUniverseAddressData PreviousUniverseAddress;
         /* 0x00030 */ public int HomeRealityIteration;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x00034 */ public byte[] Padding34;
         /* 0x00038 */ public GcInventoryContainer Inventory;
         /* 0x00198 */ public GcInventoryContainer Inventory_TechOnly;
         /* 0x002F8 */ public GcInventoryContainer Inventory_Cargo;
@@ -21,8 +19,6 @@ namespace libMBIN.NMS.GameComponents
         [NMS(Size = 0x3)]
         /* 0x00718 */ public GcMultitoolData[] MultiTools;
         /* 0x00C58 */ public int ActiveMultioolIndex;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x00C5C */ public byte[] PaddingC5C;
         /* 0x006C0 */ public GcByteBeatLibraryData ByteBeatLibrary;
         [NMS(Size = 0x6)]
         /* 0x02668 */ public GcPetData[] Pets;
@@ -32,13 +28,9 @@ namespace libMBIN.NMS.GameComponents
         /* 0x03E08 */ public GcPetCustomisationData[] PetAccessoryCustomisation;
         [NMS(Size = 0x6)]
         /* 0x04438 */ public bool[] UnlockedPetSlots;
-        [NMS(Size = 0x2, Ignore = true)]
-        /* 0x0443E */ public byte[] Padding443E;
         /* 0x04440 */ public GcInventoryContainer GraveInventory;
         /* 0x045A0 */ public bool SpawnGrave;
         /* 0x045A1 */ public bool SpaceGrave;
-        [NMS(Size = 2, Ignore = true)]
-        /* 0x045A2 */ public byte[] Padding45A2;
         /* 0x045A4 */ public GcUniverseAddressData GraveUniverseAddress;
         /* 0x045C0 */ public Vector4f GravePosition;
         /* 0x045D0 */ public Vector4f GraveMatrixLookAt;
@@ -60,11 +52,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x049F8 */ public NMSString0x10 PreviousMissionID;
         /* 0x04A08 */ public ulong PreviousMissionSeed;
         /* 0x04A10 */ public int MissionVersion;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x04A14 */ public byte[] Padding4A14;
         /* 0x04A18 */ public List<GcMissionIDEpochPair> MissionRecurrences;
-        [NMS(Size = 0x8, Ignore = true)]
-        /* 0x04A28 */ public byte[] Padding4A28;
         /* 0x04A30 */ public GcInteractionData HoloExplorerInteraction;
         /* 0x04A50 */ public GcInteractionData HoloScepticInteraction;
         /* 0x04A70 */ public GcInteractionData HoloNooneInteraction;
@@ -83,8 +71,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x04AD8 */ public List<GcScanEventSave> NewMPMarkerStack;
         /* 0x04AE8 */ public List<Vector3f> SurveyedEventPositions;
         /* 0x04AF8 */ public int NextSurveyedEventPositionIndex;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x04AFC */ public byte[] Padding4AFC;
         /* 0x04B00 */ public List<GcPlayerStatsGroup> Stats;
         /* 0x04B10 */ public List<GcTelemetryStat> TelemetryStats;
         [NMS(Size = 0xB, EnumType = typeof(GcInteractionBufferType.InterationBufferTypeEnum))]
@@ -114,8 +100,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x05D60 */ public int ProcTechIndex;
         /* 0x05D64 */ public bool IsNew;
         /* 0x05D65 */ public bool UseSmallerBlackholeJumps;
-        [NMS(Size = 0x2, Ignore = true)]
-        /* 0x05D66 */ public byte[] Padding5D66;
         /* 0x05D68 */ public List<GcSavedEntitlement> UsedEntitlements;
         [NMS(Size = 0x10)]
         /* 0x05D80 */ public Vector3f[] PlanetPositions;
@@ -136,8 +120,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x06010 */ public Vector4f FirstShipPosition;
         /* 0x06020 */ public ulong HazardTimeAlive;
         /* 0x06028 */ public bool RevealBlackHoles;
-        [NMS(Size = 0x7, Ignore = true)]
-        /* 0x06029 */ public byte[] Padding6029;
         /* 0x06030 */ public GcSeed CurrentFreighterHomeSystemSeed;
         /* 0x06040 */ public GcResourceElement CurrentFreighter;
         /* 0x062E8 */ public GcInventoryLayout FreighterLayout;
@@ -180,13 +162,9 @@ namespace libMBIN.NMS.GameComponents
         /* 0x27960 */ public GcInventoryLayout CookingIngredientsLayout;
         /* 0x27980 */ public GcInventoryContainer CookingIngredientsInventory;
         /* 0x27AE0 */ public GcResourceElement CurrentFreighterNPC;
-        [NMS(Size = 0x8, Ignore = true)]
-        /* 0x27D88 */ public byte[] Padding27D88;
         [NMS(Size = 0x7, EnumType = typeof(GcVehicleType.VehicleTypeEnum))]
         /* 0x27D90 */ public GcPlayerOwnershipData[] VehicleOwnership;
         /* 0x2A640 */ public int PrimaryVehicle;
-        [NMS(Size = 0xC, Ignore = true)]
-        /* 0x2A644 */ public byte[] Padding2A644;
         [NMS(Size = 0x6)]
         /* 0x2A650 */ public GcPlayerOwnershipData[] ShipOwnership;
         /* 0x2C930 */ public int PrimaryShip;
@@ -200,8 +178,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x2C998 */ public GcPortalSaveData VisitedPortal;
         /* 0x2C9B0 */ public int KnownPortalRunes;
         /* 0x2C9B4 */ public bool OnOtherSideOfPortal;
-        [NMS(Size = 0xB, Ignore = true)]
-        /* 0x2C9B5 */ public byte[] Padding2C9B5;
         /* 0x2C9C0 */ public GcTeleportEndpoint OtherSideOfPortalReturnBase;
         /* 0x2CA50 */ public Vector4f PortalMarkerPosition_Local;
         /* 0x2CA60 */ public Vector4f PortalMarkerPosition_Offset;
@@ -211,8 +187,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x2CA78 */ public GcCharacterCustomisationSaveData[] CharacterCustomisationData;
         [NMS(Size = 0x6)]
         /* 0x2D050 */ public bool[] ShipUsesLegacyColours;
-        [NMS(Size = 0x2, Ignore = true)]
-        /* 0x2D056 */ public byte[] Padding2D056;
         [NMS(Size = 0x3)]
         /* 0x2D058 */ public GcCharacterCustomisationData[] Outfits;
         /* 0x2D130 */ public NMSString0x10 JetpackEffect;
@@ -234,8 +208,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x2D738 */ public ushort ShopNumber;
         /* 0x2D73A */ public ushort ShopTier;
         /* 0x2D73C */ public bool HasAccessToNexus;
-        [NMS(Size = 0x3, Ignore = true)]
-        /* 0x2D73D */ public byte[] Padding2D73D;
         /* 0x2D740 */ public GcUniverseAddressData NexusUniverseAddress;
         /* 0x2D760 */ public Vector3f NexusMatrixAt;
         /* 0x2D770 */ public Vector3f NexusMatrixUp;
@@ -248,13 +220,9 @@ namespace libMBIN.NMS.GameComponents
         /* 0x2D800 */ public int TelemetryUploadVersion;
         /* 0x2D804 */ public bool UsesThirdPersonVehicleCam;
         /* 0x2D808 */ public float VRCameraOffset;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x2D80C */ public byte[] Padding2D80C;
         /* 0x2D810 */ public GcSeasonalGameModeData SeasonData;
         /* 0x2DCA8 */ public GcSeasonStateData SeasonState;
         /* 0x2DCF8 */ public bool RestartAllInactiveSeasonalMissions;
-        [NMS(Size = 0x7, Ignore = true)]
-        /* 0x2DCF9 */ public byte[] Padding2DCF9;
         /* 0x2DD00 */ public List<NMSString0x10> RedeemedSeasonRewards;
         /* 0x2DD10 */ public List<NMSString0x10> RedeemedTwitchRewards;
     }

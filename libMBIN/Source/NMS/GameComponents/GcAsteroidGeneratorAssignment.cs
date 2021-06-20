@@ -10,8 +10,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x04 */ public GcSolarSystemLocatorChoice Locator;
         /* 0x30 */ public GcSeed Seed;
         /* 0x40 */ public int AsteroidCount;
-
-        [NMS(Size = 4, Ignore = true)]
-        public byte[] Padding44;
     }
 }

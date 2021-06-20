@@ -13,12 +13,8 @@ namespace libMBIN.NMS.GameComponents
         /* 0x4C */ public NMSString0x20 SuccessLogEntry;
         /* 0x6C */ public NMSString0x20 AvoidanceLogEntry;
         /* 0x8C */ public NMSString0x20 FailureLogEntry;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0xAC */ public byte[] PaddingAC;
         /* 0xB0 */ public NMSString0x10 SuccessReward;
         /* 0xC0 */ public NMSString0x10 FailureReward;
         /* 0xD0 */ public int FailureDamageChance;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0xD4 */ public byte[] EndPadding;
     }
 }

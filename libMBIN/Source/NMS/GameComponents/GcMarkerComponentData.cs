@@ -11,8 +11,6 @@ namespace libMBIN.NMS.GameComponents
 		public enum DisplayModeEnum { Always, SpaceOnly, PlanetOnly }
 		/* 0x08 */ public DisplayModeEnum DisplayMode;
         /* 0x0C */ public bool ShipScannable;
-        [NMS(Size = 3, Ignore = true)]
-        /* 0x0D */ public byte[] PaddingD;
         /* 0x10 */ public NMSString0x20A CustomName;
         /* 0x30 */ public bool UseCustomIcon;
         /* 0x34 */ public GcRealityGameIcons CustomIcon;

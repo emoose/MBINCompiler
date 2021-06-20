@@ -74,8 +74,6 @@ namespace libMBIN.NMS.Globals
         /* 0x110 */ public float MissionWaitOnceAllPlayersReadyTime;
         /* 0x114 */ public float ChanceMissionEpic;
         /* 0x118 */ public float RemoveDuplicateChatMessageTime;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x11C */ public byte[] Padding11C;
         /* 0x120 */ public NMSString0x10 StandardMissionSecondReward;
         /* 0x130 */ public NMSString0x10 QuicksilverMissionSecondReward;
         /* 0x140 */ public NMSString0x10 EpicMissionSecondReward;
@@ -88,7 +86,5 @@ namespace libMBIN.NMS.Globals
         /* 0x300 */ public float PlanetLocalEnitityInterestEnd;
         /* 0x304 */ public float EntityUpdateMaxRateDist;
         /* 0x308 */ public float EntityUpdateMinRateDist;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x30C */ public byte[] EndPadding;
     }
 }

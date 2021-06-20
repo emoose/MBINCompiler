@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x240, Alignment = 0x10, GUID = 0xC8CAA170BF0EE120, NameHash = 0x479CFCB871ABBE0)]
+    [NMS(Size = 0x240, GUID = 0xC8CAA170BF0EE120, NameHash = 0x479CFCB871ABBE0)]
     public class GcMaintenanceComponentData : NMSTemplate
     {
         /* 0x000 */ public List<GcMaintenanceElement> PreInstalledTech;
@@ -28,8 +28,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x024 */ public bool ForceNoninteraction;
         /* 0x028 */ public float CompletedTransitionDelay;
         /* 0x02C */ public bool ShareInteractionModelRender;
-        [NMS(Size = 0x3, Ignore = true)]
-        /* 0x02D */ public byte[] Padding2D;
 
         /* 0x030 */ public TkModelRendererData ModelRendererData;
         /* 0x0E0 */ public TkModelRendererData ModelRendererDataAlt;
@@ -46,7 +44,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x218 */ public NMSString0x20A ActionWarningOverride;
         /* 0x238 */ public float InWorldUIScaler;
         /* 0x23C */ public bool InteractionRequiresPower;
-        [NMS(Size = 0x3, Ignore = true)]
-        /* 0x23D */ public byte[] EndPadding;
     }
 }

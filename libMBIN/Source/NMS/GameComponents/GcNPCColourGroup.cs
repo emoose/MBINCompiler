@@ -9,8 +9,6 @@ namespace libMBIN.NMS.GameComponents
     public class GcNPCColourGroup : NMSTemplate
     {
         public float Rarity;
-        [NMS(Size = 0xC, Ignore = true)]
-        public byte[] Padding4;
         public Colour primary;
         public List<Colour> Secondary;
     }

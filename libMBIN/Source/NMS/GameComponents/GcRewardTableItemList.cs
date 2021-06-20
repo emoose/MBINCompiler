@@ -14,8 +14,6 @@ namespace libMBIN.NMS.GameComponents
         }
         public RewardChoiceEnum RewardChoice;
         public bool OverrideZeroSeed;
-        [NMS(Size = 0x3, Ignore = true)]
-        public byte[] Padding5;
         public List<GcRewardTableItem> List;
     }
 }

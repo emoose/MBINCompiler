@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x1C0, Alignment = 0x10, GUID = 0xC41363206CAC4D4D, NameHash = 0x1AA966F8BA4E3153)]
+    [NMS(Size = 0x1C0, GUID = 0xC41363206CAC4D4D, NameHash = 0x1AA966F8BA4E3153)]
     public class GcLaserBeamData : NMSTemplate
     {
         /* 0x000 */ public NMSString0x10 Id;
@@ -22,8 +22,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x130 */ public GcAudioWwiseEvents AudioOverheat;
         /* 0x134 */ public int Damage;
         /* 0x138 */ public GcDamageType DamageType;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x13C */ public byte[] Padding13C;
         /* 0x140 */ public NMSString0x10 PlayerDamage;
         /* 0x150 */ public NMSString0x10 ImpactEffect;
         /* 0x160 */ public List<GcProjectileImpactData> Impacts;

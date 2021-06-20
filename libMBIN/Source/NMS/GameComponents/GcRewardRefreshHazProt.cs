@@ -8,7 +8,5 @@ namespace libMBIN.NMS.GameComponents
     {
         public float Amount;
         public bool SetNotAdd;
-        [NMS(Size = 0x3, Ignore = true)]
-        public byte[] EndPadding;
     }
 }

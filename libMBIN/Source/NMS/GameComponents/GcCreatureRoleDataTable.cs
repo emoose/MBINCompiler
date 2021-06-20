@@ -12,7 +12,5 @@ namespace libMBIN.NMS.GameComponents
         public float MaxProportionFlying;
         public bool HasSandWorms;
         public float SandWormFrequency;
-        [NMS(Size = 0x4, Ignore = true)]
-        public byte[] EndPadding;
     }
 }

@@ -24,8 +24,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0xE8 */ public Vector2f IconSize;
         /* 0xF0 */ public NMSString0x20 MarkerLabel;
         /* 0x110 */ public Vector2f TimeScaleRange;
-
-        [NMS(Size = 0x8, Ignore = true)]
-        /* 0x118 */ public byte[] EndPadding;
     }
 }

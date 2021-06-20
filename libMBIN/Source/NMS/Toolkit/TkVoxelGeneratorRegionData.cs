@@ -21,8 +21,5 @@ namespace libMBIN.NMS.Toolkit
         [NMS(Size = 3)]
         /* 0x3C */ public int[] ShelterIndices;
         /* 0x48 */ public int NumShelters;
-
-        [NMS(Size = 4, Ignore = true)]
-        public byte[] Padding4C;
     }
 }

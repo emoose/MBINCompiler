@@ -8,7 +8,5 @@ namespace libMBIN.NMS.GameComponents
     {
         public NMSString0x20A Event;
         public bool AllowInShip;
-        [NMS(Size = 0x7, Ignore = true)]
-        public byte[] EndPadding;
     }
 }

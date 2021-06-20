@@ -23,7 +23,5 @@ namespace libMBIN.NMS.GameComponents
 		/* 0x34 */public DamageStatusEnum DamageStatus;
 		public enum CompletionRequirementEnum { FullyChargedAndRepaired, AnyChargeAndRepaired, FullyRepaired, NotFullyCharged, EmptySlot, NoRequirement, UserInstalls, HasIngredients }
 		/* 0x38 */ public CompletionRequirementEnum CompletionRequirement;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x3C */ public byte[] EndPadding;
     }
 }

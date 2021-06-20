@@ -44,7 +44,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x90 */ public float BankingTime;
         /* 0x94 */ public float SpringSmoothTime;
         /* 0x98 */ public bool ApplyScaleToSpeed;
-        [NMS(Size = 0x7, Ignore = true)]
-        /* 0x99 */ public byte[] EndPadding;
     }
 }

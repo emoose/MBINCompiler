@@ -13,7 +13,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x20 */ public GcCreaturePetTraits Trait;
         /* 0x24 */ public bool IncreasesTrait;
         /* 0x28 */ public int BaseValueOverride;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x2C */ public byte[] EndPadding;
     }
 }

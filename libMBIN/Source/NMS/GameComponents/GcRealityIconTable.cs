@@ -29,8 +29,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x2520 */ public TkTextureResource DiscoveryPageTradingUnknown;
         /* 0x25A4 */ public TkTextureResource DiscoveryPageConflictUnknown;
         /* 0x2628 */ public TkTextureResource DiscoveryPageRaceUnknown;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x26AC */ public byte[] Padding26AC;
         /* 0x26B0 */ public List<GcPlanetResourceIconLookup> TerrainIconLookups;
         /* 0x26C0 */ public List<GcPlanetResourceIconLookup> PlanetResourceIconLookups;
         /* 0x26D0 */ public List<TkTextureResource> RepairTechIcons;

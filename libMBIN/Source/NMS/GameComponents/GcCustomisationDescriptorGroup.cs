@@ -16,7 +16,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x0D0 */ public NMSString0x10 LinkedSpecialID;
         /* 0x0E0 */ public NMSString0x20A Tip;
         /* 0x100 */ public bool HiddenInCustomiser;
-        [NMS(Size = 0x7, Ignore = true)]
-        /* 0x101 */ public byte[] EndPadding;
     }
 }

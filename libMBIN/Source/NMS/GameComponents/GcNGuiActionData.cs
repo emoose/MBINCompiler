@@ -10,7 +10,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x10 */ public NMSString0x80 Data;
 		public enum ActionEnum { Click, Hover, ArrowLeft, ArrowRight }
 		/* 0x90 */ public ActionEnum Action;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x94 */ public byte[] EndPadding;
     }
 }

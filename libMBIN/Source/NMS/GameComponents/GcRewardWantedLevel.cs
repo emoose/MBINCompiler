@@ -8,7 +8,5 @@ namespace libMBIN.NMS.GameComponents
     {
         public NMSString0x20A Message;
         public int Level;
-        [NMS(Size = 0x4, Ignore = true)]
-        public byte[] EndPadding;
     }
 }

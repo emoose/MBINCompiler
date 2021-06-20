@@ -15,8 +15,6 @@ namespace libMBIN.NMS.Globals
         /* 0x00C */ public float HBAOBias;
         /* 0x010 */ public float HBAORadius;
         /* 0x014 */ public float HBAOIntensity;
-        [NMS(Size = 0x8, Ignore = true)]
-        /* 0x018 */ public byte[] Padding18;
         /* 0x020 */ public GcLightShaftProperties LightShaftProperties;
         /* 0x050 */ public GcLightShaftProperties StormLightShaftProperties;
         /* 0x080 */ public float SunRayDensity;
@@ -62,8 +60,6 @@ namespace libMBIN.NMS.Globals
         /* 0x120 */ public Colour ScanColour;
         /* 0x130 */ public bool DebugLinesDepthTest;
         /* 0x131 */ public bool CenterRenderSpaceOffset;
-        [NMS(Size = 0xE, Ignore = true)]
-        /* 0x132 */ public byte[] Padding132;
         /* 0x140 */ public TkImGuiSettings ImGui;
         /* 0x2D0 */ public Colour UIColour;
         /* 0x2E0 */ public Colour UIShipColour;
@@ -295,8 +291,6 @@ namespace libMBIN.NMS.Globals
         /* 0x780 */ public float MinPixelSizeOfObjectsInShadowsPlanet;
         /* 0x784 */ public float MinPixelSizeOfObjectsInShadowsCockpitOnPlanet;
         /* 0x788 */ public bool AllowPartialCascadeRender;
-        [NMS(Size = 0x7, Ignore = true)]
-        /* 0x789 */ public byte[] Padding789;
         /* 0x790 */ public List<int> CascadeRenderSequence;
         /* 0x7A0 */ public int SupersamplingLevel;
         /* 0x7A4 */ public bool EnableTextureStreaming;

@@ -12,7 +12,5 @@ namespace libMBIN.NMS.GameComponents
 		/* 0x20 */ public CameraOriginEnum CameraOrigin;
         /* 0x24 */ public bool UseLookAt;
         /* 0x25 */ public bool AvoidTerrain;
-        [NMS(Size = 0x2, Ignore = true)]
-        /* 0x26 */ public byte[] EndPadding;
     }
 }

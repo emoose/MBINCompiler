@@ -13,7 +13,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x20 */ public List<GcCharacterCustomisationTextureOptionData> TextureOptions;
         /* 0x30 */ public List<GcCharacterCustomisationBoneScaleData> BoneScales;
         /* 0x40 */ public float Scale;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x44 */ public byte[] EndPadding;
     }
 }

@@ -7,8 +7,6 @@ namespace libMBIN.NMS.GameComponents
     public class GcVehicleComponentData : NMSTemplate
     {
         /* 0x00 */ public GcVehicleType Class;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x04 */ public byte[] Padding4;
         /* 0x08 */ public NMSString0x10 VehicleType;
         /* 0x18 */ public NMSString0x80 Cockpit;
         /* 0x98 */ public float MaxHeadTurn;
@@ -18,7 +16,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0xA8 */ public float FoVFixedDistance;
         /* 0xAC */ public int BaseHealth;
         /* 0xB0 */ public TkModelResource WheelModel;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x134 */ public byte[] EndPadding;
     }
 }

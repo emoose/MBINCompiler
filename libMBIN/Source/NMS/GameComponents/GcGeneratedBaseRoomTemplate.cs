@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x80, Alignment = 0x10, GUID = 0x590CDDA0790B637E, NameHash = 0x11A53087B029E4F)]
+    [NMS(Size = 0x80, GUID = 0x590CDDA0790B637E, NameHash = 0x11A53087B029E4F)]
     public class GcGeneratedBaseRoomTemplate : NMSTemplate
     {
         /* 0x00 */ public NMSString0x10 Name;
@@ -19,7 +19,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x60 */ public int MinContiguousDepth;
         /* 0x64 */ public float ShrinkFactor;
         /* 0x68 */ public List<NMSString0x10> DecorationThemes;
-        [NMS(Size = 0x8, Ignore = true)]
-        /* 0x78 */ public byte[] EndPadding;
     }
 }

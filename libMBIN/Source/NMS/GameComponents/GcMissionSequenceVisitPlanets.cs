@@ -14,7 +14,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x094 */ public int NumberOfEachToDiscover;
         /* 0x098 */ public bool TakeNumberFromSeasonalData;
         /* 0x099 */ public NMSString0x80 DebugText;
-        [NMS(Size = 0x7, Ignore = true)]
-        /* 0x119 */ public byte[] EndPadding;
     }
 }

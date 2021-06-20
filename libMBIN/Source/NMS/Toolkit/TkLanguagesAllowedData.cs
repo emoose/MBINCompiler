@@ -10,8 +10,5 @@ namespace libMBIN.NMS.Toolkit
     {
         public List<TkLanguages> Allowed;
         public TkLanguages Language;
-
-        [NMS(Size = 4, Ignore = true)]
-        public byte[] Padding14;
     }
 }

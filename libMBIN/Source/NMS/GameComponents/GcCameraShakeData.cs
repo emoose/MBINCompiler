@@ -16,15 +16,9 @@ namespace libMBIN.NMS.GameComponents
 
         /* 0x24 */ public GcCameraShakeCapturedData CapturedData;
 
-        [NMS(Size = 0x8, Ignore = true)]
-        /* 0x38 */ public byte[] Padding38;
-
        /* 0x40 */  public GcCameraShakeMechanicalData MechanicalData;
 
         /* 0xB0 */ public float FOVStrength;
         /* 0xB4 */ public float FOVFrequency;
-
-        [NMS(Size = 0x8, Ignore = true)]
-        /* 0xB8 */ public byte[] EndPadding;
     }
 }

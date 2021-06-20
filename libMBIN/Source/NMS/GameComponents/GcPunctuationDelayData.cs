@@ -10,7 +10,5 @@ namespace libMBIN.NMS.GameComponents
     {
         public List<GcPunctuationDelay> PunctuationList;
         public float DefaultDelay;
-        [NMS(Size = 0x4, Ignore = true)]
-        public byte[] EndPadding;
     }
 }

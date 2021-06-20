@@ -10,7 +10,5 @@ namespace libMBIN.NMS.Toolkit
         /* 0x10 */ public NMSTemplate Tree;
         /* 0x60 */ public int Priority;
         /* 0x64 */ public TkAnimationGameData GameData;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x6C */ public byte[] EndPadding;
     }
 }

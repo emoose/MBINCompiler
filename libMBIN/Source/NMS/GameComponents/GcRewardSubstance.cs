@@ -15,7 +15,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x18 */ public bool DisableMultiplier;
         /* 0x19 */ public bool RewardAsBlobs;
         /* 0x1A */ public bool UseFuelMultiplier;
-        [NMS(Size = 0x1, Ignore = true)]
-        public byte[] EndPadding;
     }
 }

@@ -17,8 +17,6 @@ namespace libMBIN.NMS.Toolkit
         /* 0x1A6 */ public bool CreateFur;
         /* 0x1A7 */ public NMSString0x80 Link;
         /* 0x227 */ public NMSString0x80 Shader;
-        [NMS(Size = 0x1, Ignore = true)]
-        /* 0x2A7 */ public byte[] Padding1A7;
         /* 0x2A8 */ public List<TkMaterialFlags> Flags;
         /* 0x2B8 */ public List<TkMaterialUniform> Uniforms;
         /* 0x2C8 */ public List<TkMaterialSampler> Samplers;

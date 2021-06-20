@@ -8,8 +8,5 @@ namespace libMBIN.NMS.GameComponents
     {
         public Colour OutlineColour;
         public Vector2f OutlineOffset;
-
-        [NMS(Size = 8, Ignore = true)]
-        public byte[] Padding18;
     }
 }

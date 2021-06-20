@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Toolkit
 {
-	[NMS(Size = 0x220, GUID = 0xFFA49BE86665206F, Alignment = 0x10, NameHash = 0xB70875CDF93EECEC)]
+    [NMS(Size = 0x220, GUID = 0xFFA49BE86665206F, NameHash = 0xB70875CDF93EECEC)]
     public class TkNGuiGraphicStyle : NMSTemplate
     {
         /* 0x000 */ public TkNGuiGraphicStyleData Default;
@@ -21,7 +21,5 @@ namespace libMBIN.NMS.Toolkit
         /* 0x200 */ public TkCurveType AnimCurve2;
         /* 0x204 */ public Vector2f CustomMinStart;
         /* 0x20C */ public Vector2f CustomMaxStart;
-        [NMS(Size = 0xC, Ignore = true)]
-        /* 0x214 */ public byte[] EndPadding;
     }
 }

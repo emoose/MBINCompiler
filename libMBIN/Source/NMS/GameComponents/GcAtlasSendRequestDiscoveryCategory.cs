@@ -13,7 +13,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x08 */ public ulong ClientUserdata;
         /* 0x10 */ public GcUniverseAddressData UniverseAddress;
         /* 0x28 */ public GcDiscoveryTypes Type;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x2C */ public byte[] EndPadding;
     }
 }

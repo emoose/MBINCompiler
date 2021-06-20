@@ -20,8 +20,5 @@ namespace libMBIN.NMS.Toolkit
         public bool WindowOpen;
         public bool WindowMinimised;
         public bool WindowUsed;
-
-        [NMS(Size = 1, Ignore = true)]
-        public byte[] PaddingA7;
     }
 }

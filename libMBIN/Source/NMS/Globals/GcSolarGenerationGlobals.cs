@@ -53,16 +53,12 @@ namespace libMBIN.NMS.Globals
         /* 0x0E8 */ public float RareAsteroidScale;
         /* 0x0EC */ public int RareAsteroidMinResources;
         /* 0x0F0 */ public int RareAsteroidMaxResources;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x0F4 */ public byte[] PaddingF4;
         /* 0x0F8 */ public NMSString0x10 RareAsteroidResource;
         /* 0x108 */ public int RareAsteroidHealth;
         /* 0x10C */ public float CommonAsteroidScale;
         /* 0x110 */ public int CommonAsteroidMinResources;
         /* 0x114 */ public int CommonAsteroidMaxResources;
         /* 0x118 */ public int CommonAsteroidResourceFuelMultiplier;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x11C */ public byte[] Padding11C;
         /* 0x120 */ public NMSString0x10 CommonAsteroidResourceFuel;
         /* 0x130 */ public NMSString0x10 RareAsteroidResourceFuel;     // GEODE_SPACE
         /* 0x140 */ public NMSString0x10 CommonAsteroidResourceProduct;     // GEODE_ASTEROID
@@ -94,17 +90,11 @@ namespace libMBIN.NMS.Globals
         [NMS(Size = 0x4, EnumType = typeof(GcGalaxyStarTypes.GalaxyStarTypeEnum))]
         /* 0x1E0 */ public float[] EmptySystemProbability;
         /* 0x1F0 */ public int CivilianTraderSpaceshipsCacheCount;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x1F4 */ public byte[] Padding1F4;
         /* 0x1F8 */ public List<float> SpaceshipSpawnFreqMultipliers;
         /* 0x208 */ public List<GcAISpaceshipWeightingData> SpaceshipWeightings;
         /* 0x218 */ public float PlanetRingProbability;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x21C */ public byte[] Padding21C;
         /* 0x220 */ public GcPlanetRingData PlanetRingsMin;
         /* 0x280 */ public GcPlanetRingData PlanetRingsMax;
         /* 0x2E0 */ public int PercentChanceExtraPrime;
-        [NMS(Size = 0xC, Ignore = true)]
-        /* 0x2E4 */ public byte[] EndPadding;
     }
 }

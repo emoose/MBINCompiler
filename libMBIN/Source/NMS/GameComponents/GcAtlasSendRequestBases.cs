@@ -12,7 +12,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x00 */ public byte[] Padding0;
         /* 0x08 */ public ulong ClientUserdata;
         /* 0x10 */ public GcAtlasBasesRequest RequestData;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x5C */ public byte[] EndPadding;
     }
 }

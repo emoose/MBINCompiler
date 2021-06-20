@@ -27,8 +27,6 @@ namespace libMBIN.NMS.Globals
         /* 0x0070 */ public int ExplorationPointsRequiredForScan;
         /* 0x0074 */ public GcInteractionDof FleetInteractionDepthOfField;
         /* 0x0088 */ public int PercentChangeOfFrigateBeingPurchasable;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x008C */ public byte[] Padding8C;
         /* 0x0090 */ public NMSString0x20A FleetCommunicationOSDMessage;
         /* 0x00B0 */ public int MinFrigateStatValue;
         /* 0x00B4 */ public int MaxFrigateStatValue;
@@ -131,8 +129,6 @@ namespace libMBIN.NMS.Globals
         /* 0x057C */ public GcFrigateClassCost FrigateBaseCost;
         /* 0x0594 */ public GcFrigateClassCost FrigateCostVariance;
         /* 0x05AC */ public GcInventoryClassCostMultiplier FrigateCostMultiplier;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x05BC */ public byte[] Padding5BC;
         /* 0x05C0 */ public GcFrigateTraitStrengthByType FrigateTraitStrengths;
         /* 0x0930 */ public GcFrigateStatsByClass FrigateInitialStats;
         /* 0x0BA0 */ public GcFrigateTraitIcons TraitIcons;
@@ -143,8 +139,6 @@ namespace libMBIN.NMS.Globals
         /* 0x1790 */ public GcScanEffectData DamagedFrigateHologramScanEffect;
         /* 0x17E0 */ public GcScanEffectData DestroyedFrigateHologramScanEffect;
         /* 0x1830 */ public GcExpeditionEventOccurrenceRate EventTypeOccurrenceChance;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x1894 */ public byte[] Padding1894;
         /* 0x1898 */ public List<NMSString0x80> FrigateHologramModels;
         /* 0x18A8 */ public List<NMSString0x80> FrigatePlanetModels;
         /* 0x18B8 */ public List<int> ExpeditionRankBoundaries;

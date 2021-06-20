@@ -5,13 +5,11 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0xA8, Alignment = 0x8, GUID = 0xEDB19955BFB2F65E, NameHash = 0xEB5E59FB895AFF06)]
+    [NMS(Size = 0xA8, GUID = 0xEDB19955BFB2F65E, NameHash = 0xEB5E59FB895AFF06)]
     public class GcStatsGroup : NMSTemplate
     {
         /* 0x00 */ public NMSString0x10 Id;
         /* 0x10 */ public TkTextureResource Icon;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x94 */ public byte[] Padding94;
         /* 0x98 */ public List<GcStatsEntry> StatIds;
     }
 }

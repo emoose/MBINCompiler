@@ -20,7 +20,5 @@ namespace libMBIN.NMS.GameComponents
         public int GridHasMinNonPassiveParts;
         public int GridHasMaxNonPassiveParts;
         public bool GridHasPositiveRatePotential;
-        [NMS(Size = 0x3, Ignore = true)]
-        public byte[] EndPadding;
     }
 }

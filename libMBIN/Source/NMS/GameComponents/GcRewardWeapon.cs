@@ -11,7 +11,5 @@ namespace libMBIN.NMS.GameComponents
         public int AmountMin;
         public int AmountMax;
         public bool MarkInteractionComplete;
-        [NMS(Size = 0x3, Ignore = true)]
-        public byte[] EndPadding;
     }
 }

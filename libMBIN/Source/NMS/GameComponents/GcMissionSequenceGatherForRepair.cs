@@ -8,8 +8,6 @@ namespace libMBIN.NMS.GameComponents
     {
         /* 0x000 */ public NMSString0x80 Message;
         /* 0x080 */ public GcStatsTypes TargetStat;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x084 */ public byte[] Padding84;
         /* 0x088 */ public NMSString0x10 GatherResource;
         /* 0x098 */ public NMSString0x80 DebugText;
     }

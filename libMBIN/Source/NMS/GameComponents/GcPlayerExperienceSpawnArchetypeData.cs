@@ -13,8 +13,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x20 */ public GcCreatureTypes Type;
         /* 0x24 */ public float Scale;
         /* 0x28 */ public float ScaleVariation;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x2C */ public byte[] Padding2C;
         /* 0x30 */ public NMSString0x10 AppearAnim;
         /* 0x40 */ public float SpeedMultiplier;
         /* 0x44 */ public int HealthOverride;

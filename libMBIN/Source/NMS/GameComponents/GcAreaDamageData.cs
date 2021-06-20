@@ -16,7 +16,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x2C */ public bool InstantKill;
         /* 0x2D */ public bool DamagePlayers;
         /* 0x2E */ public bool DamageCreatures;
-        [NMS(Size = 0x1, Ignore = true)]
-        /* 0x2F */ public byte[] EndPadding;
     }
 }

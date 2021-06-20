@@ -78,8 +78,6 @@ namespace libMBIN.NMS.Globals
         /* 0x14C8 */ public float PetMaxSummonDistance;
         /* 0x14CC */ public float PetSummonRotation;
         /* 0x14D0 */ public float PlayerDamageTransferScale;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x14D4 */ public byte[] Padding14D4;
         /* 0x14D8 */ public GcSeed CreatureSeed;
         /* 0x14E8 */ public NMSString0x20A CreatureFilter;
         /* 0x1508 */ public int MaxEcosystemCreaturesNormal;
@@ -507,8 +505,6 @@ namespace libMBIN.NMS.Globals
         /* 0x1D5C */ public float PetMinTurnRad;
         /* 0x1D60 */ public float PetMaxTurnRad;
         /* 0x1D64 */ public float PetMoodCurvePower;
-        [NMS(Size = 0x8, Ignore = true)]
-        /* 0x1D68 */ public byte[] Padding1D68;
         /* 0x1D70 */ public GcScanEffectData PetOffPlanetEffect;
         /* 0x1DC0 */ public NMSString0x80 PetEggResourceFile;
         /* 0x1E40 */ public NMSString0x80 PetEggHatchResourceFile;
@@ -583,20 +579,14 @@ namespace libMBIN.NMS.Globals
         /* 0x2050 */ public NMSString0x10 RobotFeedingProduct;
         /* 0x2060 */ public bool AllBaitIsBasic;
         /* 0x2061 */ public bool CanAlwaysLayEgg;
-        [NMS(Size = 0x6, Ignore = true)]
-        /* 0x2062 */ public byte[] Padding2062;
         /* 0x2068 */ public List<GcCreatureFoodList> HerbivoreFeedingProducts;
         /* 0x2078 */ public List<GcCreatureFoodList> CarnivoreFeedingProducts;
         /* 0x2088 */ public GcWeirdCreatureRewardList WeirdKillingRewards;
         /* 0x2238 */ public List<NMSString0x10> LootItems;
         /* 0x2248 */ public float RockTransformGlobalChance;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x224C */ public byte[] Padding224C;
         /* 0x2250 */ public List<float> RockTransformChanceModifiers;
         /* 0x2260 */ public float AngryRockProportionNormal;
         /* 0x2264 */ public float AngryRockProportionSurvival;
         /* 0x2268 */ public int PauseBetweenCreatureSpawnRequests;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x226C */ public byte[] EndPadding;
     }
 }

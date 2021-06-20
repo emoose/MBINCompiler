@@ -14,8 +14,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x14 */ public float ResponseRate;
         /* 0x18 */ public float PerSpawnDelay;
         /* 0x1C */ public bool Destroy;
-        [NMS(Size = 0x3, Ignore = true)]
-        /* 0x1D */ public byte[] Padding1D;
         /* 0x20 */ public List<GcPlayerExperienceSpawnData> Spawns;
     }
 }

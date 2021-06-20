@@ -15,7 +15,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x30 */ public bool ShowOverheatSwitch;
         /* 0x34 */ public float OverheatCoolTime;
         /* 0x38 */ public float CoolRate;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x3C */ public byte[] EndPadding;
     }
 }

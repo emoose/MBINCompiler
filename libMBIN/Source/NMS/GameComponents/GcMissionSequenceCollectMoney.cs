@@ -11,7 +11,5 @@ namespace libMBIN.NMS.GameComponents
 		/* 0x084 */ public GcCurrency CollectCurrency;
         /* 0x088 */ public bool TakeAmountFromSeasonData;
         /* 0x089 */ public NMSString0x80 DebugText;
-        [NMS(Size = 0x3, Ignore = true)]
-        /* 0x109 */ public byte[] EndPadding;
     }
 }
