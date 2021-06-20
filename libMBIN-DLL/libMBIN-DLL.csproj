@@ -11,7 +11,7 @@
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/monkeyman192/MBINCompiler</RepositoryUrl>
     <PackageProjectUrl>https://github.com/monkeyman192/MBINCompiler</PackageProjectUrl>
-    <PackageLicenseUrl>https://github.com/monkeyman192/MBINCompiler/blob/development/LICENSE.md</PackageLicenseUrl>
+    <PackageLicense>https://github.com/monkeyman192/MBINCompiler/blob/development/LICENSE.md</PackageLicense>
     <PackageTags>No Man's Sky</PackageTags>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Platforms>AnyCPU;x64</Platforms>

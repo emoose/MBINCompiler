@@ -15,7 +15,7 @@ JSON_REPORT_FNAME = op.join(op.dirname(__file__), 'report.json')
 def pytest_addoption(parser):
     parser.addoption("--platform", action="store", default="win-x64",
                      help="The platform the tests are run on.",
-                     choices=['win-x64', 'ubuntu.16.04-x64'])
+                     choices=['win-x64', 'linux-x64'])
     parser.addoption("--datapath", action="store", default=None,
                      help="The relative or absolute path to a folder "
                           "containing .MBIN files to be tested. If not "

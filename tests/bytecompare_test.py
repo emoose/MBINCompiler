@@ -31,7 +31,7 @@ def pytest_generate_tests(metafunc):
 
 @pytest.fixture()
 def MBINCompiler(platform):
-    if platform == 'ubuntu.16.04-x64':
+    if platform == 'linux-x64':
         # need to run with mono on linux
         # Build path also includes platform on the CI
         cmd = ['sudo', 'mono',
