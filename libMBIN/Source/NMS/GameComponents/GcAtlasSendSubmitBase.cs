@@ -13,6 +13,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x008 */ public ulong ClientUserdata;
         /* 0x010 */ public GcGameMode GameMode;
         /* 0x020 */ public GcPersistentBase BaseData;
-        /* 0x2D0 */ public GcAtlasRecvBlob TerrainData;
+        /* 0x2D0 */ public GcPersistentTerrainEdits TerrainData;
     }
 }
