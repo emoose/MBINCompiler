@@ -12,8 +12,8 @@ on:
 
 jobs:
   build:
-    name: Build and test MBINCompiler
-    runs-on: ubuntu-latest
+    name: Build and test MBINCompiler on Windows
+    runs-on: windows-latest
     steps:
       - uses: actions/checkout@v2
       - name: Setup .NET
@@ -25,35 +25,26 @@ jobs:
         with:
           python-version: "3.6"
       - name: Build Windows binary
-        run: |
-          dotnet restore -r win-x64
-          dotnet publish -c Release -r win-x64 --no-restore -p:Configuration=Release -o Build/Release/win-x64/ /nowarn:cs0618
-      - name: Build linux binary
-        run: |
-          dotnet restore -r linux-x64
-          dotnet publish -c Release -r linux-x64 --no-restore -p:Configuration=Release -o Build/Release/linux-x64/ /nowarn:cs0618
-      - name: Make binary executable
-        run: sudo chmod +x Build/Release/linux-x64/MBINCompiler.exe
+        run: dotnet publish -c Release -r win-x64 -o Build/Release/ /nowarn:cs0618
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install pytest requests mkdocs==1.0.4
       - name: Run tests
-        run: python -m pytest --platform linux-x64 --tb=no --report
+        run: python -m pytest --tb=no --report
       - name: Upload binary for release
         uses: actions/upload-artifact@v2
         with:
           name: MBINCompiler
           path: |
-            Build/Release/win-x64/MBINCompiler.exe
-            Build/Release/linux-x64/MBINCompiler.exe
-            Build/Release/win-x64/libMBIN.dll
+            Build/Release/MBINCompiler.exe
+            Build/Release/libMBIN.dll
             report.json
   release:
     name: Release MBINCompiler binaries and other data
     # Only run this job if the commit was tagged.
     if: ${{ startsWith(github.ref, 'refs/tags/') }}
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     needs: [build]
     steps:
       - name: Download files for release
@@ -62,8 +53,9 @@ jobs:
           name: MBINCompiler
       - name: Get MBINCompiler tag version
         run: |
-          echo "VERSION=$(sudo mono Build/Release/linux-x64/MBINCompiler.exe version | awk '{print $2}')" >> $GITHUB_ENV
+          echo "VERSION=$(Build/Release/MBINCompiler.exe version | awk '{print $2}')" >> $GITHUB_ENV
           echo "TAG=${GITHUB_REF/refs\/tags\//}" >> $GITHUB_ENV
+        shell: bash
       - name: Upload resources if version matches
         if: env.VERSION == env.TAG
         uses: softprops/action-gh-release@v1
@@ -71,7 +63,7 @@ jobs:
           name: "${{ env.TAG }} release"
           tag_name: ${{ env.TAG }}
           files: |
-            Build/Release/win-x64/MBINCompiler.exe
+            Build/Release/MBINCompiler.exe
             Build/Release/libMBIN.dll
             report.json
         env:
@@ -81,3 +73,4 @@ jobs:
         run: |
           echo "There is a version mismatch between the tag and MBINCompiler version!"
           exit 1
+        shell: bash
