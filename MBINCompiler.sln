@@ -26,7 +26,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MBINCompilerDocs", "MBINCompilerDocs\MBINCompilerDocs.csproj", "{9CFA3E54-6D7D-414B-A2E8-B1D98CFD0D0A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SaveFileMapping", "SaveFileMapping\SaveFileMapping.csproj", "{97076177-ECD1-4BD1-8BF7-3503EDEBF358}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SaveFileMapping", "SaveFileMapping\SaveFileMapping.csproj", "{97076177-ECD1-4BD1-8BF7-3503EDEBF358}"
 	ProjectSection(ProjectDependencies) = postProject
 		{F2D295A6-D082-4EB4-8FC9-F4687F674939} = {F2D295A6-D082-4EB4-8FC9-F4687F674939}
 	EndProjectSection
@@ -96,10 +96,16 @@ Global
 		{9CFA3E54-6D7D-414B-A2E8-B1D98CFD0D0A}.Release-XML|x64.Build.0 = Release|x64
 		{97076177-ECD1-4BD1-8BF7-3503EDEBF358}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{97076177-ECD1-4BD1-8BF7-3503EDEBF358}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97076177-ECD1-4BD1-8BF7-3503EDEBF358}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{97076177-ECD1-4BD1-8BF7-3503EDEBF358}.Debug|x64.Build.0 = Debug|Any CPU
 		{97076177-ECD1-4BD1-8BF7-3503EDEBF358}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{97076177-ECD1-4BD1-8BF7-3503EDEBF358}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97076177-ECD1-4BD1-8BF7-3503EDEBF358}.Release|x64.ActiveCfg = Release|x64
+		{97076177-ECD1-4BD1-8BF7-3503EDEBF358}.Release|x64.Build.0 = Release|x64
 		{97076177-ECD1-4BD1-8BF7-3503EDEBF358}.Release-XML|Any CPU.ActiveCfg = Release|Any CPU
 		{97076177-ECD1-4BD1-8BF7-3503EDEBF358}.Release-XML|Any CPU.Build.0 = Release|Any CPU
+		{97076177-ECD1-4BD1-8BF7-3503EDEBF358}.Release-XML|x64.ActiveCfg = Release|x64
+		{97076177-ECD1-4BD1-8BF7-3503EDEBF358}.Release-XML|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -30,6 +30,12 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install pytest requests mkdocs==1.0.4
+      - name: Generate save data mapping
+        run : |
+          Build/Release/SaveFileMapping.exe
+          pwd
+          ls
+        shell: bash
       - name: Run tests
         run: python -m pytest --tb=no --report
       - name: Upload binary for release
@@ -39,6 +45,7 @@ jobs:
           path: |
             Build/Release/MBINCompiler.exe
             Build/Release/libMBIN.dll
+            mapping.json
             report.json
   release:
     name: Release MBINCompiler binaries and other data
@@ -60,11 +67,12 @@ jobs:
         if: env.VERSION == env.TAG
         uses: softprops/action-gh-release@v1
         with:
-          name: "${{ env.TAG }} release"
+          name: "${{ env.TAG }}"
           tag_name: ${{ env.TAG }}
           files: |
             Build/Release/MBINCompiler.exe
             Build/Release/libMBIN.dll
+            mapping.json
             report.json
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

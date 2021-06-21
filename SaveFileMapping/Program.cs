@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Text;
+using System.Text.Json;
+using System.Text.Encodings.Web;
 using SpookilySharp;
 using System.Linq;
 using System.IO;
@@ -8,8 +10,24 @@ using libMBIN;
 
 namespace SaveFileMapping
 {
+    public class MappingPolicy : JsonNamingPolicy
+    {
+        public override string ConvertName(string name)
+        {
+            if (name == "Item1") { return "Key"; }
+            if (name == "Item2") { return "Value"; }
+            return "Unknown";  // If we hit this bad things have happened...
+        }
+    }
+
     class Program
     {
+        /// <summary>
+        /// Full credit to this code goes to AndASM for determining this
+        /// Their repository with the original code can be found here: https://github.com/AndASM/AndASM-NMS
+        /// </summary>
+        /// <param name="name"></param>
+        /// <returns></returns>
         public static string HashName(string name)
         {
             var output = new byte[3];
@@ -67,6 +85,7 @@ namespace SaveFileMapping
 
         static void Main(string[] args)
         {
+            var main_data = new Dictionary<string, object>();
             Type s = typeof(libMBIN.NMS.GameComponents.GcPlayerStateData);
             var data = new HashSet<Tuple<string, string>>();
             UpdateHashes(s, data);
@@ -112,28 +131,20 @@ namespace SaveFileMapping
             data.Add(new Tuple<string, string>(HashName("UserSettingsData"), "UserSettingsData"));
             UpdateHashes(typeof(libMBIN.NMS.GameComponents.GcUserSettingsData), data);
 
+            main_data["libMBIN_version"] = libMBIN.Version.AssemblyVersion.ToString();
+            main_data["Mapping"] = data;
+            var options = new JsonSerializerOptions
+            {
+                PropertyNamingPolicy = new MappingPolicy(),
+                Encoder = JavaScriptEncoder.UnsafeRelaxedJsonEscaping,
+                //WriteIndented = true
+            };
+            string jsonString = JsonSerializer.Serialize(main_data, options);
+
             using (StreamWriter sw = new StreamWriter("mapping.json"))
             {
-                sw.WriteLine("{");
-                // First write the version
-                sw.WriteLine($"\t\"version\": \"{libMBIN.Version.AssemblyVersion.ToString()}\"");
-                int i = 0;
-                foreach (var tup in data)
-                {
-                    i += 1;
-                    if (i != data.Count())
-                    {
-                        sw.WriteLine($"\t\"{tup.Item1}\": \"{tup.Item2}\",");
-                    }
-                    else
-                    {
-                        sw.WriteLine($"\t\"{tup.Item1}\": \"{tup.Item2}\"");
-                    }
-                }
-                sw.WriteLine("}");
+                sw.Write(jsonString);
             }
-            Console.WriteLine("Done!");
-            Console.ReadKey();
         }
     }
 }
