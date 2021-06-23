@@ -15,7 +15,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x20 */ public NMSString0x40 RID;
         /* 0x60 */ public ulong UniverseAddress;
         /* 0x68 */ public NMSString0x20 RL;
-        /* 0x88 */ public NMSString0x40 RC;
+        /* 0x88 */ public NMSString0x20 RC;
         /* 0xA8 */ public GcGameMode GameMode;
     }
 }
