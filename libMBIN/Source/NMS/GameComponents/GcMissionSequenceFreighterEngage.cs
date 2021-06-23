@@ -4,7 +4,7 @@ using libMBIN.NMS.GameComponents;
 namespace libMBIN.NMS.GameComponents
 {
     [NMS(Size = 0x220, GUID = 0x36CC0CF9D3A92382, NameHash = 0x5755416737105B76)]
-    public class GcMissionSequenceFreighterEngage : NMSTemplate      // size: 0x180
+    public class GcMissionSequenceFreighterEngage : NMSTemplate
     {
         /* 0x000 */ public NMSString0x80 MessageGetToSpace;
         /* 0x080 */ public NMSString0x80 Message;
