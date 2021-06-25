@@ -63,7 +63,15 @@ namespace MBINCompiler {
         private static long lastPosition = 0;
 
         public static int ShowException( Exception e, bool wait=true ) {
-            string msg = ( e.GetType() == typeof( CompilerException ) ) ? e.InnerException?.Message : null;
+            if ( e is AggregateException ae ) {
+                foreach ( var ie in ae.InnerExceptions ) {
+                    ShowException( ie, false );
+                }
+                WaitForKeypress( wait );
+                return (int) ErrorCode.Unknown;
+            }
+
+            string msg = ( e is CompilerException ) ? e.InnerException?.Message : null;
             if ( (Logger.LogStream?.BaseStream.Position ?? 0) != lastPosition ) Logger.LogMessage( "" ); // new line, log only
             ShowError( $"[{e.GetType().Name}]: {msg ?? e.Message}", wait: false );
             using ( var indent = new Logger.IndentScope() ) {
