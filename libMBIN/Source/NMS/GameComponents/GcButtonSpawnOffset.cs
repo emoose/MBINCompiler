@@ -4,7 +4,7 @@ using libMBIN.NMS.GameComponents;
 namespace libMBIN.NMS.GameComponents
 {
 	[NMS(Size = 0x20, GUID = 0x46CE100A699D46BF, NameHash = 0x42A6687A1AF1F42A)]
-    public class GcButtonSpawnOffset : NMSTemplate        // size: 0x20       // in a global?
+    public class GcButtonSpawnOffset : NMSTemplate
     {
         /* 0x00 */ public float AngleMin;                   // 0C1F00000h
         /* 0x04 */ public float AngleMax;                   // 41F00000h
