@@ -44,6 +44,9 @@ namespace MBINCompiler.Commands {
         private static List<string>    warnedFiles = new List<string>();
         private static List<string>    warnings    = new List<string>();
 
+        // we use a bool here and not a cancellation token to avoid creating more exceptions
+        private static volatile bool   thrown;
+
         public static ErrorCode ConvertFileList( string inputDir, string outputDir, List<string> fileList, bool force ) {
             var errorCode = ErrorCode.Success;
 
@@ -52,6 +55,7 @@ namespace MBINCompiler.Commands {
 
             var tasks = new List<Task>();
             currentIndent = Logger.IndentLevel;
+            thrown = false;
             foreach ( var fileIn in fileList ) {
                 var path = fileIn;
                 if ( outputDir != null ) path = fileIn.Substring( inputDir.Length + 1 );
@@ -60,13 +64,17 @@ namespace MBINCompiler.Commands {
                 RunTask( tasks, () => {
                     fileModeTask?.Wait(); // block tasks while waiting for overwrite prompt. if not threaded, this is a nop
                     errorTask?.Wait();    // block tasks while waiting for error message to be logged. if not threaded, this is a nop
+                    if ( thrown ) return;
                     try {
                         Logger.IndentLevel = currentIndent; // we need to reset the indent level for each thread otherwise it will accumulate
                         EmitInfo( $"Converting {path}" );
                         ConvertFile( path, fileIn, fileOut, InputFormat, OutputFormat );
 
                     } catch ( System.Exception e ) {
-                        if ( !force ) throw;
+                        if ( !force ) {
+                            thrown = true;
+                            throw;
+                        }
                         Async.SynchronizeTask( errorLock, ref errorTask, () => {
                             failedFiles.Add( path );
                             exceptions.Add( e );
