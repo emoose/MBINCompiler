@@ -1,0 +1,84 @@
+name: MBINCompiler
+
+on:
+  # Run on all branches except for the gh-pages branch
+  push:
+    branches-ignore:
+      - 'gh-pages'
+  pull_request:
+    branches-ignore:
+      - 'gh-pages'
+  create:
+
+jobs:
+  build:
+    name: Build and test MBINCompiler on Windows
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: '5.0.100'
+      - name: Set up Python 3.6
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.6"
+      - name: Build Windows binary
+        run: dotnet publish -c Release -r win-x64 -o Build/Release/ /nowarn:cs0618
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pytest requests mkdocs==1.0.4
+      - name: Generate save data mapping
+        run : |
+          Build/Release/SaveFileMapping.exe
+          pwd
+          ls
+        shell: bash
+      - name: Run tests
+        run: python -m pytest --tb=no --report
+      - name: Upload binary for release
+        uses: actions/upload-artifact@v2
+        with:
+          name: MBINCompiler
+          path: |
+            Build/Release/MBINCompiler.exe
+            Build/Release/libMBIN.dll
+            mapping.json
+            report.json
+  release:
+    name: Release MBINCompiler binaries and other data
+    # Only run this job if the commit was tagged.
+    if: ${{ startsWith(github.ref, 'refs/tags/') }}
+    runs-on: windows-latest
+    needs: [build]
+    steps:
+      - name: Download files for release
+        uses: actions/download-artifact@v2
+        with:
+          name: MBINCompiler
+      - name: Get MBINCompiler tag version
+        run: |
+          echo "VERSION=$(Build/Release/MBINCompiler.exe version | awk '{print $2}')" >> $GITHUB_ENV
+          echo "TAG=${GITHUB_REF/refs\/tags\//}" >> $GITHUB_ENV
+        shell: bash
+      - name: Upload resources if version matches
+        if: env.VERSION == env.TAG
+        uses: softprops/action-gh-release@v1
+        with:
+          name: "${{ env.TAG }}"
+          tag_name: ${{ env.TAG }}
+          files: |
+            Build/Release/MBINCompiler.exe
+            Build/Release/libMBIN.dll
+            mapping.json
+            report.json
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Check if tag doesn't match version
+        if: env.VERSION != env.TAG
+        run: |
+          echo "There is a version mismatch between the tag and MBINCompiler version!"
+          exit 1
+        shell: bash
