@@ -103,11 +103,115 @@ namespace libMBIN
             }
         }
 
+        public int OffsetOf(string field) {
+            return OffsetOf(GetType(), field);
+        }
+
+        public static int OffsetOf(string className, string fieldName) {
+            return OffsetOf(NMSTemplateMap[className], fieldName);
+        }
+
+        /// <summary>
+        /// Get the relative offset within the class of the given field name.
+        /// </summary>
+        /// <param name="type">
+        /// The type of the class that contains the specified field.
+        /// </param>
+        /// <param name="fieldName">
+        /// The name of the field to find the offset of. This must be a field of this class itself, not a child class.
+        /// </param>
+        /// <exception cref="System.ArgumentException">Thrown when the fieldName value isn't a valid field of the specified class.</exception>
+        /// <returns></returns>
+        public static int OffsetOf(Type type, string fieldName)
+        {
+            var fields = type.GetFields().OrderBy(field => field.MetadataToken);
+            int offset = 0;
+            foreach (var field in fields)
+            {
+                int alignment = GetAlignment(field.FieldType);
+                // Make sure the alignment is taken into consideration.
+                if (offset % alignment != 0) {
+                    offset += (offset % alignment);
+                }
+                // Now check to see if the field name matches.
+                if (fieldName == field.Name) {
+                    return offset;
+                }
+                // If not, then add the size of the current field and continue.
+                offset += GetSize(field.FieldType);
+            }
+
+            // If we get here then we have an issue. Throw an exception
+            throw new ArgumentException($"{type.Name} has no field called {fieldName}", fieldName);
+        }
+
         public static int GetTemplateDataSize(string templateName) {
             var template = TemplateFromName(templateName);
             if (template == null) return 0;
 
             return template.GetDataSize();
+        }
+
+
+        public static int GetSize(Type type) {
+            int size = 0;
+
+            switch (type.Name)
+            {
+                case "Boolean":
+                case "Byte":
+                case "String":
+                    size = 0x1;
+                    break;
+
+                case "Int16":
+                case "UInt16":
+                    size = 0x2;
+                    break;
+
+                case "Single":
+                case "Int32":
+                case "UInt32":
+                    size = 0x4;
+                    break;
+
+                case "Int64":
+                case "UInt64":
+                    size = 0x8;
+                    break;
+
+                case "VariableSizeString":
+                case "List`1":
+                    size = 0x10;
+                    break;
+
+                case "NMSTemplate":
+                    size = 0x50;
+                    break;
+
+                default:
+                    NMSAttribute settings = type.GetCustomAttribute<NMSAttribute>();
+                    if (type.IsArray) {
+                        int baseSize = GetAlignment(type.GetElementType());
+                        if (settings != null && settings.Size > 0) {
+                            size = baseSize * settings.Size;
+                        }
+                        
+                        break;
+                    }
+
+                    if (type.IsEnum) {
+                        size = GetSize(Enum.GetUnderlyingType(type));
+                        break;
+                    }
+
+                    if (settings != null && settings.Size > 0) {
+                        size = settings.Size;
+                        break;
+                    }
+                    break;
+            }
+            return size;
         }
 
         private static ConcurrentDictionary<Type,int> AlignmentMap = new ConcurrentDictionary<Type,int>();
