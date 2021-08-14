@@ -103,6 +103,48 @@ namespace libMBIN
             }
         }
 
+        public int OffsetOf(string field) {
+            return OffsetOf(GetType(), field);
+        }
+
+        public static int OffsetOf(string className, string fieldName) {
+            return OffsetOf(NMSTemplateMap[className], fieldName);
+        }
+
+        /// <summary>
+        /// Get the relative offset within the class of the given field name.
+        /// </summary>
+        /// <param name="type">
+        /// The type of the class that contains the specified field.
+        /// </param>
+        /// <param name="fieldName">
+        /// The name of the field to find the offset of. This must be a field of this class itself, not a child class.
+        /// </param>
+        /// <exception cref="System.ArgumentException">Thrown when the fieldName value isn't a valid field of the specified class.</exception>
+        /// <returns></returns>
+        public static int OffsetOf(Type type, string fieldName)
+        {
+            var fields = type.GetFields().OrderBy(field => field.MetadataToken);
+            int offset = 0;
+            foreach (var field in fields)
+            {
+                int alignment = AlignOf(field.FieldType);
+                // Make sure the alignment is taken into consideration.
+                if (offset % alignment != 0) {
+                    offset += alignment - (offset % alignment);
+                }
+                // Now check to see if the field name matches.
+                if (fieldName == field.Name) {
+                    return offset;
+                }
+                // If not, then add the size of the current field and continue.
+                offset += SizeOf(field);
+            }
+
+            // If we get here then we have an issue. Throw an exception
+            throw new ArgumentException($"{type.Name} has no field called {fieldName}", fieldName);
+        }
+
         public static int GetTemplateDataSize(string templateName) {
             var template = TemplateFromName(templateName);
             if (template == null) return 0;
@@ -110,9 +152,77 @@ namespace libMBIN
             return template.GetDataSize();
         }
 
+        public static int SizeOf(FieldInfo field) {
+            // Get the base size of the field.
+            int size;
+            // If the field is an array, we need to multiply this base size by the number of elements
+            if (field.FieldType.IsArray) {
+                size = SizeOf(field.FieldType.GetElementType());
+                size *= field.GetCustomAttribute<NMSAttribute>()?.Size ?? 0;
+            } else {
+                size = SizeOf(field.FieldType);
+            }
+            return size;
+        }
+
+
+        public static int SizeOf(Type type) {
+            int size = 0;
+
+            switch (type.Name)
+            {
+                case "Boolean":
+                case "Byte":
+                case "String":
+                    size = 0x1;
+                    break;
+
+                case "Int16":
+                case "UInt16":
+                    size = 0x2;
+                    break;
+
+                case "Single":
+                case "Int32":
+                case "UInt32":
+                    size = 0x4;
+                    break;
+
+                case "Int64":
+                case "UInt64":
+                    size = 0x8;
+                    break;
+
+                case "VariableSizeString":
+                case "List`1":
+                    size = 0x10;
+                    break;
+
+                case "NMSTemplate":
+                    size = 0x50;
+                    break;
+
+                default:
+                    if (type.IsEnum) {
+                        size = SizeOf(Enum.GetUnderlyingType(type));
+                        break;
+                    }
+
+                    NMSAttribute settings = type.GetCustomAttribute<NMSAttribute>();
+                    if (settings != null && settings.Size > 0) {
+                        size = settings.Size;
+                        break;
+                    }
+                    break;
+            }
+            if (size != 0) { return size; }
+            // If we have got here then we have got a type which we cannot determine the size of. Raise an error.
+            throw new ArgumentException($"{type.Name} has an unknown size.");
+        }
+
         private static ConcurrentDictionary<Type,int> AlignmentMap = new ConcurrentDictionary<Type,int>();
 
-        public static int GetAlignment(Type type) {
+        public static int AlignOf(Type type) {
             int alignment;
 
             if (AlignmentMap.TryGetValue(type, out alignment)) {
@@ -147,7 +257,7 @@ namespace libMBIN
 
                 default:
                     if (type.IsArray) {
-                        alignment = GetAlignment(type.GetElementType());
+                        alignment = AlignOf(type.GetElementType());
                         break;
                     }
 
@@ -166,7 +276,7 @@ namespace libMBIN
                         alignment = 1;
 
                         foreach (FieldInfo field in type.GetFields()) {
-                            int align = GetAlignment(field.FieldType);
+                            int align = AlignOf(field.FieldType);
                             if (align > alignment) {
                                 alignment = align;
                                 if (alignment >= 0x10) break;
@@ -282,7 +392,7 @@ namespace libMBIN
                         }
                         return array;
                     } else {
-                        reader.Align( GetAlignment(field) );
+                        reader.Align( AlignOf(field) );
                         return DeserializeBinaryTemplate(reader, fieldType);
                     }
             }
@@ -323,7 +433,7 @@ namespace libMBIN
                     }
                     DebugLogFieldName( $"{templateName}\t0x{reader.BaseStream.Position:X4}\t{field.Name}\t{field.GetValue( obj )}" );
                 }
-                reader.Align( GetAlignment(type) ); // This is to remove the need for end padding
+                reader.Align( AlignOf(type) ); // This is to remove the need for end padding
                 
                 obj.FinishDeserialize();
 
@@ -576,7 +686,7 @@ namespace libMBIN
                     } else if ( fieldType.BaseType == typeof( NMSTemplate ) ) {
                         var realData = (NMSTemplate) fieldData;
                         if ( realData == null ) realData = (NMSTemplate) Activator.CreateInstance( fieldType );
-                        writer.Align( GetAlignment(realData.GetType()), field?.Name ?? fieldType.Name );
+                        writer.Align( AlignOf(realData.GetType()), field?.Name ?? fieldType.Name );
                         realData.AppendToWriter( writer, ref additionalData, ref addtDataIndex, GetType(), listEnding );
 
                     } else {
@@ -603,7 +713,7 @@ namespace libMBIN
                     var fieldData = field.GetValue(this);
                     SerializeValue( writer, field.FieldType, fieldData, settings, field, ref additionalData, ref addtDataIndex, listEnding );
                 }
-                writer.Align( GetAlignment(type), type.Name ); // This is to remove the need for end padding
+                writer.Align( AlignOf(type), type.Name ); // This is to remove the need for end padding
             } else {
                 SerializeValue( writer, type, null, null, null, ref additionalData, ref addtDataIndex, listEnding );
             }
@@ -640,7 +750,7 @@ namespace libMBIN
             List<KeyValuePair<long, String>> entryOffsetNamePairs = new List<KeyValuePair<long, String>>();
             foreach ( var entry in list ) {
                 string entryName = entry.GetType().Name;
-                writer.Align( GetAlignment(entry.GetType()), entryName );
+                writer.Align( AlignOf(entry.GetType()), entryName );
                 //Logger.LogDebug($"pos 0x{writer.BaseStream.Position:X}");
                 //Logger.LogDebug(entry.GetType().Name);
                 entryOffsetNamePairs.Add( new KeyValuePair<long, string>( writer.BaseStream.Position, entryName) );
@@ -663,7 +773,7 @@ namespace libMBIN
                             SerializeList( writer, (IList) data.Item2, data.Item1, ref listObjects, i + 1, listEnding );
                         }
                     } else {
-                        writer.Align( GetAlignment(data.Item2.GetType()), data.Item2.GetType().Name );
+                        writer.Align( AlignOf(data.Item2.GetType()), data.Item2.GetType().Name );
                         long origPos = writer.BaseStream.Position;
                         //DebugLog("this is it!!!");
                         //DebugLog($"0x{origPos:X}");
@@ -717,7 +827,7 @@ namespace libMBIN
         public void SerializeList( BinaryWriter writer, IList list, long listHeaderPosition, ref List<Tuple<long, object>> additionalData, int addtDataIndex, UInt32 listEnding = (UInt32) 0xAAAAAA01 ) {
             // first thing we want to do is align the writer with the location of the first element of the list
             if ( list.Count != 0 ) {
-                writer.Align( GetAlignment(list[0].GetType()), list[0].GetType().Name );
+                writer.Align( AlignOf(list[0].GetType()), list[0].GetType().Name );
             }
 
             long listPosition = writer.BaseStream.Position;
@@ -792,7 +902,7 @@ namespace libMBIN
                         writer.BaseStream.Position = stringEndPos;
 
                     } else if ( data.Item2.GetType().BaseType == typeof( NMSTemplate ) ) {
-                        writer.Align( GetAlignment(data.Item2.GetType()), data.Item2.GetType().Name );
+                        writer.Align( AlignOf(data.Item2.GetType()), data.Item2.GetType().Name );
                         var pos = writer.BaseStream.Position;
                         var template = (NMSTemplate) data.Item2;
                         int i2 = i + 1;
