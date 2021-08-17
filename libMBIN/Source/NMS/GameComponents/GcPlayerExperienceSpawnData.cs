@@ -12,7 +12,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x10 */ public NMSString0x10 AppearAnim;
         /* 0x20 */ public NMSString0x10 SpawnLocator;
         /* 0x30 */ public NMSString0x20A SpawnLocatorScanEvent;
-        public enum FaceDirEnum { Random, TowardsPlayer, SpawnerAt };
+        public enum FaceDirEnum { Random, TowardsPlayer, SpawnerAt }
         /* 0x50 */ public FaceDirEnum FaceDir;
         /* 0x54 */ public float MinDist;
         /* 0x58 */ public float MaxDist;

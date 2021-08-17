@@ -46,8 +46,8 @@ namespace libMBIN.NMS.GameComponents
         /* 0x1F0 */ public float ScanRadius;
         /* 0x1F4 */ public bool RemovesAttachedDecoration;
         /* 0x1F5 */ public bool EditsTerrain;
-		public enum BaseTerrainEditShapeEnum { Cube, Cylinder }
-		/* 0x1F8 */ public BaseTerrainEditShapeEnum BaseTerrainEditShape;
+        public enum BaseTerrainEditShapeEnum { Cube, Cylinder }
+        /* 0x1F8 */ public BaseTerrainEditShapeEnum BaseTerrainEditShape;
         /* 0x1FC */ public float TerrainEditBaseYOffset;
         /* 0x200 */ public float TerrainEditTopYOffset;
         /* 0x204 */ public float TerrainEditBoundsScalar;

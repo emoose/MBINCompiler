@@ -9,7 +9,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcPlayerExperienceSpawnTable : NMSTemplate
     {
         /* 0x00 */ public NMSString0x10 Event;
-        public enum ExperienceSpawnTypeEnum { Freighter, Mission };
+        public enum ExperienceSpawnTypeEnum { Freighter, Mission }
         /* 0x10 */ public ExperienceSpawnTypeEnum ExperienceSpawnType;
         /* 0x14 */ public float ResponseRate;
         /* 0x18 */ public float PerSpawnDelay;

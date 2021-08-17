@@ -8,7 +8,7 @@ namespace libMBIN.NMS.GameComponents
     {
         /* 0x00 */ public NMSString0x10 Input;
         /* 0x10 */ public float Strength;
-        public enum ModeEnum { SetVelocity, ApplyForce };
+        public enum ModeEnum { SetVelocity, ApplyForce }
         /* 0x14 */ public ModeEnum Mode;
     }
 }

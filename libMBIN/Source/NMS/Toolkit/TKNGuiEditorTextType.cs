@@ -12,7 +12,7 @@ namespace libMBIN.NMS.Toolkit
         public enum NGuiEditorTextEnum {
             Text, Button, WindowTab, WindowTabInactive, TreeNode, CheckBox, TextInput, TextInputLabel, TextInputLabelHeader, Category,
             TaskBar, GroupTitle, TreeNodeSelected, DynamicPanelTitle
-        };
+        }
         public NGuiEditorTextEnum NGuiEditorText;
     }
 }

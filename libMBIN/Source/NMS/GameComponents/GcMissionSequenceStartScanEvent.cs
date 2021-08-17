@@ -6,7 +6,7 @@ namespace libMBIN.NMS.GameComponents
     [NMS(Size = 0xB0, GUID = 0x90CF75D7BA76F02A, NameHash = 0x84E26BAA3B367507)]
     public class GcMissionSequenceStartScanEvent : NMSTemplate
     {
-        public enum ScanTableEnum { Space, Planet, Missions, Tutorial, MissionsCreative, Vehicle, NPCPlanetSite, Seasonal };
+        public enum ScanTableEnum { Space, Planet, Missions, Tutorial, MissionsCreative, Vehicle, NPCPlanetSite, Seasonal }
         /* 0x000 */ public ScanTableEnum ScanTable;
         /* 0x004 */ public GcPlayerMissionParticipantType Participant;
         /* 0x008 */ public NMSString0x20A Event;

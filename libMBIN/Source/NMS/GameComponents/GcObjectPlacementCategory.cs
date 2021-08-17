@@ -9,7 +9,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcObjectPlacementCategory : NMSTemplate
     {
         // size: 0x5
-        public enum ObjectPlacementEnum { None, ResourceSmall, ResourceMedium, ResourceLarge, ResourceDebris };
+        public enum ObjectPlacementEnum { None, ResourceSmall, ResourceMedium, ResourceLarge, ResourceDebris }
         public ObjectPlacementEnum ObjectPlacement;
     }
 }

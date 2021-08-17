@@ -3,10 +3,10 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Toolkit
 {
-	[NMS(Size = 0x39420, GUID = 0x1DF205AFA78D885A, NameHash = 0x62EA167F11DA4F86)]
+    [NMS(Size = 0x39420, GUID = 0x1DF205AFA78D885A, NameHash = 0x62EA167F11DA4F86)]
     public class TkVoxelGeneratorSettingsArray : NMSTemplate
     {
         [NMS(Size = 0x15, EnumType = typeof(TkVoxelGeneratorSettingsTypes.TerrainSettingsEnum))]
-        public TkVoxelGeneratorSettingsElement[] TerrainSettings;
+        /* 0x0 */ public TkVoxelGeneratorSettingsElement[] TerrainSettings;
     }
 }

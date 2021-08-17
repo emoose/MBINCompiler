@@ -18,7 +18,7 @@ namespace libMBIN.NMS.Toolkit
             Background, GroupTitle, TextLabelSeparator, AlignmentAnchor, MinimiseHighlight, Table, TableBorder, TableFolderButton, TableAddEntryButton, TreeNode,
             CategoryCollapsed, CategoryExpanded, WindowTitleBarDragTarget, IconButtonSelected, Line, TreeNodeBackground, TreeNodeCategoryBackground, SceneNodeBackground, PinChildren, UnpinChildren,
             DynamicPanel, DynamicPanelTitle
-        };
+        }
         public NGuiEditorGraphicEnum NGuiEditorGraphic;
     }
 }

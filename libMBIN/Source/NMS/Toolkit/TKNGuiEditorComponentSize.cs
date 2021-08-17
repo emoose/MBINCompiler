@@ -15,7 +15,7 @@ namespace libMBIN.NMS.Toolkit
             CategoryHeight, WindowTitle, ScrollSpeed, ComboBox, Taskbar, IconListItem, Toolbar, ToolbarOptions, StartBarWidth, StartBarHeight,
             StartBarSearchWidth, TreeNodeSpacing, VectorSpacing, SliderMinSpacing, VectorMinSpacing, ColourAlphaMinsize, SpacingGap, Scroll, TextLabelSeparator, AlignmentAnchor,
             MinimiseHighlightHeight, TableButtonSpacing, TableHeaderHeight, TreeNodeHeight, ScrollMargin, ScrollIncrement, EditorPin, DynamicPanelTitle
-        };
+        }
         public NGuiEditorComponentSizeEnum NGuiEditorComponentSize;
     }
 }
