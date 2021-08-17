@@ -130,7 +130,6 @@ namespace libMBIN.NMS.Globals
         /* 0x043C */ public float HmdInteractionRangeMinRange;
         /* 0x0440 */ public float HmdInteractionRangeMinDistance;
         /* 0x0444 */ public float HmdInteractionRangeMultiplier;
-        [NMSDescription("Set to False to revert to legacy method of installing technologies and upgrades")]
         /* 0x0448 */ public bool InstallTechWithInteraction;
         /* 0x0449 */ public bool FreighterRequiresRGBHyperdriveUpgrades;
         /* 0x044A */ public bool DisableAnomalyAmbientSpawn;
@@ -540,8 +539,8 @@ namespace libMBIN.NMS.Globals
         [NMS(Size = 0x5)]
         /* 0x1C00 */ public int[] AlienShipEvolveCosts;
         /* 0x1C14 */ public float SpawnerWeaponRange;
-        /* 0x1C18 */ public TkTextureResource WeaponSpawnObject;
-        /* 0x1C9C */ public TkTextureResource WeaponSpawnAltObject;
+        /* 0x1C18 */ public TkModelResource WeaponSpawnObject;
+        /* 0x1C9C */ public TkModelResource WeaponSpawnAltObject;
     }
 }
 

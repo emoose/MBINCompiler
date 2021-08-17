@@ -194,7 +194,7 @@ namespace libMBIN.NMS.Globals
         /* 0x0E10 */ public bool SmokeTestDumpStatsMode;
         public enum SmokeTestCycleModeEnum { None, TourPlanet, TourSolarSystem, TourGalaxy, TourUDAs }
         /* 0x0E14 */ public SmokeTestCycleModeEnum SmokeTestCycleMode;
-        public enum SmokeTestScenarioEnum { None, TerrainSnapShotFromAltitude, BelowCloudLayerSnapShot, Flying, UltraBiomeSnapShot }
+        public enum SmokeTestScenarioEnum { None, TerrainSnapShotFromAltitude, BelowCloudLayerSnapShot, Flying, UltraBiomeSnapShot, Walking }
         /* 0x0E18 */ public SmokeTestScenarioEnum SmokeTestScenario;
         /* 0x0E1C */ public bool SmokeTestLegacyOutput;
         /* 0x0E20 */ public int SmokeTestConfigPlanetPositionCount;
@@ -238,7 +238,7 @@ namespace libMBIN.NMS.Globals
         public enum ProxyTypeEnum { None, ManualURI, InetProxy }
         /* 0x11F4 */ public ProxyTypeEnum ProxyType;
         /* 0x11F8 */ public NMSString0x80 ProxyURI;
-        public enum ServerEnvEnum { Default, dev, qa, prodqa, prod, custom, pentest }
+        public enum ServerEnvEnum { Default, dev, qa, prodqa, prod, custom, pentest, merged }
         /* 0x1278 */ public ServerEnvEnum ServerEnv;
         /* 0x127C */ public NMSString0x80 AuthBaseUrl;
         /* 0x12FC */ public bool CertificateSecurityBypass;

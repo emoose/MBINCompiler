@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(Size = 0x3D0, GUID = 0xC942FEAF55D6265D, NameHash = 0x7B6EECDDCAF6F923)]
+    [NMS(Size = 0x3D0, GUID = 0xC942FEAF55D6265D, NameHash = 0xCFD86CFD7BD870B1)]
     public class GcBuildingGlobals : NMSTemplate
     {
         /* 0x000 */ public Vector3f BuildingPartPreviewOffset;
