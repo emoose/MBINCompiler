@@ -49,8 +49,8 @@ namespace libMBIN.NMS.Globals
         /* 0x0107 */ public bool DisablePlayerFleets;
         /* 0x0108 */ public NMSString0x20A DebugInterventionEvent;
         // size: 0x9                      
-        public enum ForceDebriefEntryTypeEnum {None, PrimarySuccess, PrimaryFailure, PrimaryDamage,
-            SecondarySuccess, SecondaryFailure, SecondaryDamage, GenericSuccess, GenericFailure };                 
+        public enum ForceDebriefEntryTypeEnum { None, PrimarySuccess, PrimaryFailure, PrimaryDamage,
+            SecondarySuccess, SecondaryFailure, SecondaryDamage, GenericSuccess, GenericFailure }            
         /* 0x0128 */ public ForceDebriefEntryTypeEnum ForceDebriefEntryType;
         /* 0x012C */ public int ForcedSequentialEventsStartingIndex;
         /* 0x0130 */ public int NextDebriefDescriptionOffset;

@@ -9,7 +9,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcVibrationChannelData : NMSTemplate
     {
         public NMSString0x10 Id;
-        public enum SideEnum { Left, Right };
+        public enum SideEnum { Left, Right }
         [NMS(Size = 0x2, EnumType = typeof(SideEnum))]
         public GcVibrationData[] Data;
     }

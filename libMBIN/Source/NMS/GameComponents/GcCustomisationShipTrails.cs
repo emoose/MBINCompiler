@@ -7,6 +7,6 @@ namespace libMBIN.NMS.GameComponents
     public class GcCustomisationShipTrails : NMSTemplate
     {
         /* 0x00 */ public NMSString0x10 LinkedTechID;
-        /* 0x10 */ public TkTextureResource Trails;
+        /* 0x10 */ public TkModelResource Trails;
     }
 }

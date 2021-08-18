@@ -43,9 +43,9 @@ namespace libMBIN.NMS.GameComponents
         /* 0xA4 */ public GcAudioWwiseEvents MoveStopAudio;
         /* 0xA8 */ public float DeathFadeStart;
         /* 0xAC */ public float DeathFadeTime;
-        public enum DeathTypeEnum { Explode, Drop}
+        public enum DeathTypeEnum { Explode, Drop }
         /* 0xB0 */ public DeathTypeEnum DeathType;
-        public enum SubTypeEnum { Crystal, Tentacle}
+        public enum SubTypeEnum { Crystal, Tentacle }
         /* 0xB4 */ public SubTypeEnum SubType;
         /* 0xB8 */ public NMSString0x20 TentacleStartJoint;
         /* 0xD8 */ public NMSString0x20 TentacleEndJoint;

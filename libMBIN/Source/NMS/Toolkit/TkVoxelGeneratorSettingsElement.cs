@@ -3,10 +3,10 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Toolkit
 {
-	[NMS(Size = 0x2BA0, GUID = 0x896BC3E3FA9CFAB3, NameHash = 0x780D9DC36193A771)]
+    [NMS(Size = 0x2BA0, GUID = 0x896BC3E3FA9CFAB3, NameHash = 0x780D9DC36193A771)]
     public class TkVoxelGeneratorSettingsElement : NMSTemplate
     {
-        public TkVoxelGeneratorData Min;
-        public TkVoxelGeneratorData Max;
+        /* 0x0000 */ public TkVoxelGeneratorData Min;
+        /* 0x15D0 */ public TkVoxelGeneratorData Max;
     }
 }

@@ -10,7 +10,7 @@ namespace libMBIN.NMS.GameComponents
     {
         /* 0x00 */ public float PercentToDiscover;
         /* 0x04 */ public NMSString0x80 Message;
-        public enum DiscoverTargetOnThisPlanetEnum { Animal, Vegetable, Mineral };
+        public enum DiscoverTargetOnThisPlanetEnum { Animal, Vegetable, Mineral }
         /* 0x84 */ public DiscoverTargetOnThisPlanetEnum DiscoverTargetOnThisPlanet;
         /* 0x88 */ public NMSString0x80 DebugText;
     }

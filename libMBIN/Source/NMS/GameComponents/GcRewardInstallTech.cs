@@ -7,7 +7,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcRewardInstallTech : NMSTemplate
     {
 		/* 0x00 */ public NMSString0x10 TechId;
-        public enum InventoryToInstallInEnum { Personal, PersonalTech, Ship, ShipTech, Freighter, Vehicle, Weapon };
+        public enum InventoryToInstallInEnum { Personal, PersonalTech, Ship, ShipTech, Freighter, Vehicle, Weapon }
         /* 0x10 */ public InventoryToInstallInEnum InventoryToInstallIn;
         /* 0x14 */ public bool Silent;
     }

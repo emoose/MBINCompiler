@@ -42,7 +42,7 @@ namespace libMBIN.NMS.Globals
         /* 0x32C */ public bool MatchPlantPalettes;
         /* 0x330 */ public float DuplicateColourThreshold;
         public enum SwitchTypeEnum { None, Debug, Enabled }
-        /* 0x334 */ public SwitchTypeEnum PushForceAirFactor;
+        /* 0x334 */ public SwitchTypeEnum SwitchType;
         /* 0x338 */ public float GrassNormalUpright;
         /* 0x33C */ public float GrassNormalOffset;
         /* 0x340 */ public float GrassNormalSpherify;

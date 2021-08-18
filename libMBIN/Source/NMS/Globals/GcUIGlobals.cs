@@ -840,7 +840,6 @@ namespace libMBIN.NMS.Globals
         /* 0x31A8 */ public float FrontendConfirmTimeMouseMultiplier;
         /* 0x31AC */ public float FrontendConfirmTimeFast;
         /* 0x31B0 */ public float FrontendConfirmTime;
-        [NMSDescription("Middle button time to scrap an item")]
         /* 0x31B4 */ public float FrontendConfirmTimeSlow;
         /* 0x31B8 */ public TkCurveType FrontendConfirmCurve;
         /* 0x31BC */ public float FrontendCursorSize;

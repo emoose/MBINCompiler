@@ -9,7 +9,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcCreatureHemiSphere : NMSTemplate
     {
         // size: 0x3
-        public enum CreatureHemiSphereEnum { Any, Northern, Southern };
+        public enum CreatureHemiSphereEnum { Any, Northern, Southern }
         public CreatureHemiSphereEnum CreatureHemiSphere;
     }
 }

@@ -11,15 +11,15 @@ namespace libMBIN.NMS.GameComponents
         /* 0x000 */ public NMSString0x10 Id;
         /* 0x010 */ public NMSString0x20A OSDMessage;
         /* 0x030 */ public List<GcWeightedFilename> Effects;
-        public enum SpawnConditionsEnum { Anytime, DuringStorm, AtNight, NotInStorm, AtNightNotInStorm };
+        public enum SpawnConditionsEnum { Anytime, DuringStorm, AtNight, NotInStorm, AtNightNotInStorm }
         /* 0x040 */ public SpawnConditionsEnum SpawnConditions;
         /* 0x044 */ public int MaxHazardsOfThisTypeActive;
         /* 0x048 */ public bool AllowedInCreative;
         /* 0x050 */ public NMSString0x10 ForcedOnByHazard;
         /* 0x060 */ public NMSString0x10 BlockedByCluster;
-        public enum WeatherEffectBehaviourEnum { Static, Wander, ChasePlayer };
+        public enum WeatherEffectBehaviourEnum { Static, Wander, ChasePlayer }
         /* 0x070 */ public WeatherEffectBehaviourEnum WeatherEffectBehaviour;
-        public enum WeatherEffectSpawnTypeEnum { Single, Cluster, Patch };
+        public enum WeatherEffectSpawnTypeEnum { Single, Cluster, Patch }
         /* 0x074 */ public WeatherEffectSpawnTypeEnum WeatherEffectSpawnType;
         /* 0x078 */ public bool RandomRotationAroundUp;
         /* 0x07C */ public float MinSpawnScale;

@@ -1,6 +1,12 @@
-﻿namespace libMBIN.NMS.Toolkit
+﻿using System;
+using System.Collections.Generic;
+
+using libMBIN.NMS.Toolkit;
+using libMBIN.NMS.GameComponents;
+
+namespace libMBIN.NMS.Toolkit
 {
-    [NMS(Size = 0x4,  GUID = 0x7BABB618CE487C65, NameHash = 0x943946549DEC2216)]
+    [NMS(Size = 0x4, GUID = 0x7BABB618CE487C65, NameHash = 0x943946549DEC2216)]
     public class TkEngineSettingTypes : NMSTemplate
     {
         // size: 0x2E
