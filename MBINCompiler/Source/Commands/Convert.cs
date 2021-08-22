@@ -163,7 +163,9 @@ namespace MBINCompiler.Commands {
                     }
                     ms.Flush();
 
-                    FileMode fileMode = GetFileMode( fileOut );
+                    FileMode fileMode;
+                    if ( ! GetFileMode( fileOut, out fileMode ) ) return;
+
                     Directory.CreateDirectory( Path.GetDirectoryName( fileOut ) );
                     using ( var fOut = new FileStream( fileOut, fileMode, FileAccess.Write ) ) ms.WriteTo( fOut );
                 }
@@ -318,22 +320,26 @@ namespace MBINCompiler.Commands {
         /// how to handle the file.
         /// </summary>
         /// <param name="file">The file path to check.</param>
-        /// <returns>A FileMode enum.</returns>
-        private static FileMode GetFileMode( string file ) {
+        /// <param name="fileMode">When the methord returns, contains the file mode.</param>
+        /// <returns>true if the file mode is safe to use, otherwise false</returns>
+        private static bool GetFileMode( string file, out FileMode fileMode ) {
             FileMode mode = FileMode.CreateNew; // OverwriteMode.Never or file doesn't exist
+            bool ret = true;
             // If threaded, we need to synchronize so that the user doesn't get prompted multiple times.
             Async.SynchronizeTask( fileModeLock, ref fileModeTask, () => {
                 if ( Overwrite == OverwriteMode.Always ) {
                     mode = FileMode.Create;
-                } else if ( Overwrite == OverwriteMode.Prompt ) {
-                    if ( File.Exists( file ) ) {
-                        bool overwrite = Utils.PromptOverwrite( file, ref OptionBackers.optOverwrite );
-                        if ( !overwrite ) throw new IOException( "The destination file already exists!" );
+                } else if ( File.Exists( file ) ) {
+                    if ( Overwrite == OverwriteMode.Prompt &&
+                         Utils.PromptOverwrite( file, ref OptionBackers.optOverwrite ) ) {
                         mode = FileMode.Create;
+                    } else {
+                        ret = false;
                     }
                 }
             } );
-            return mode;
+            fileMode = mode;
+            return ret;
         }
 
     }
