@@ -1,4 +1,7 @@
-﻿using libMBIN.NMS.Toolkit;
+﻿using System;
+using System.Collections.Generic;
+
+using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Toolkit
@@ -17,9 +20,7 @@ namespace libMBIN.NMS.Toolkit
         [NMS(Size = 0x4, EnumType = typeof(TkGraphicsDetailTypes.GraphicDetailEnum))]
         /* 0x40 */ public float[] CloudsResolutionScale;
         [NMS(Size = 0x4, EnumType = typeof(TkGraphicsDetailTypes.GraphicDetailEnum))]
-        /* 0x50 */ public float[] CloudsMaxIterations;
-
-        [NMSDescription("An array of properties which require a game restart to apply")]
+        /* 0x50 */ public int[] CloudsMaxIterations;
         [NMS(Size = 0x2E, EnumType = typeof(TkEngineSettingTypes.EngineSettingEnum))]
         /* 0x60 */ public bool[] NeedsGameRestart;
     }
