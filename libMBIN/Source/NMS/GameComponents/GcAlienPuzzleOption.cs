@@ -13,7 +13,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x40 */ public bool IsAlien;
         /* 0x48 */ public NMSString0x10 Cost;
         /* 0x58 */ public List<NMSString0x10> Rewards;
-		/* 0x68 */ public GcAlienMood Mood;
+        /* 0x68 */ public GcAlienMood Mood;
         /* 0x6C */ public GcNPCPropTypes Prop;
         /* 0x70 */ public bool KeepOpen;
         /* 0x71 */ public bool DisplayCost;
