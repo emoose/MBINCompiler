@@ -3,10 +3,10 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x4, GUID = 0x9EA7089F867CBF54, NameHash = 0x47E189998F5D82E7)]
+	[NMS(Size = 0x4, GUID = 0xF02B987AA672F265, NameHash = 0x47E189998F5D82E7)]
     public class GcInteractionType : NMSTemplate
     {
-        // size: 0x75
+        // size: 0x7A
         public enum InteractionTypeEnum {
             None, Shop, NPC, NPC_Secondary, NPC_Anomaly, NPC_Anomaly_Secondary, Ship, Outpost, SpaceStation, RadioTower,
             Monolith, Factory, AbandonedShip, Harvester, Observatory, TradingPost, DistressBeacon, Portal, Plaque, AtlasStation,
@@ -19,7 +19,8 @@ namespace libMBIN.NMS.GameComponents
             NPC_Scavenger, BaseGridPart, NPC_Freighter_Crew, NPC_Freighter_Crew_Owned, AbandonedShip_With_NPC, ShipPilot, NexusMilestones, NexusDailyMission, CreatureFeeder, ExoticExtra1,
             ExoticExtra2, ExoticExtra3, ExoticExtra4, ExoticExtra5, ExoticExtra6, MapShop, NPC_Closure, StorageContainer, Teleporter_Nexus, ShipSalvage,
             ByteBeatSwitch, AbandonedFreighterIntro, AbandonedFreighterEnd, AbandonedFreighterProcText, AbandonedFreighterCaptLog, AbandonedFreighterCrewLog, AbandonedFreighterShop, CustomiseFreighter, LibraryVault, LibraryMainTerminal,
-            LibraryMap, WeaponUpgrade, Pet, Creature, FreighterGalacticMap, RecipeStation, StationCore
+            LibraryMap, WeaponUpgrade, Pet, Creature, FreighterGalacticMap, RecipeStation, StationCore, NPC_Settlement_SpecialWorker, NPC_Settlement_Secondary, SettlementHub,
+            SettlementBuildingSite, SettlementAdminTerminal
         }
 		public InteractionTypeEnum InteractionType;
     }

@@ -1,0 +1,10 @@
+using libMBIN.NMS.Toolkit;
+using libMBIN.NMS.GameComponents;
+
+namespace libMBIN.NMS.GameComponents
+{
+    [NMS(Size = 0xC, GUID = 0x2F4F88BBB72BE60, NameHash = 0x1DD776B0B61E916, Broken = true)]
+    public class GcMissionConditionSettlementStatLevel : NMSTemplate
+    {
+    }
+}

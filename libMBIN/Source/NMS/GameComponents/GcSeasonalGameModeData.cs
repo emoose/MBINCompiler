@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x498, GUID = 0xCA81471A19303785, NameHash = 0xFD6B0BE30E218605)]
+    [NMS(Size = 0xBC0, GUID = 0x76F4B595FB1507AA, NameHash = 0xFD6B0BE30E218605)]
     public class GcSeasonalGameModeData : NMSTemplate
     {
         /* 0x000 */ public int SeasonId;
@@ -19,30 +19,38 @@ namespace libMBIN.NMS.GameComponents
         /* 0x084 */ public NMSString0x20 SeasonalUAOverride;
         /* 0x0A8 */ public ulong UAOverrideValue;
         /* 0x0B0 */ public NMSString0x10 FinalReward;
-        /* 0x0C0 */ public NMSString0x200 FinalRewardDescription;
-        /* 0x2C0 */ public TkTextureResource MainIcon;
-        /* 0x344 */ public int SeasonNumber;
-        /* 0x348 */ public NMSString0x20A SeasonName;
-        /* 0x368 */ public NMSString0x20A SeasonNameUpper;
-        /* 0x388 */ public NMSString0x20A MainMissionTitle;
-        /* 0x3A8 */ public NMSString0x20A MainMissionMessage;
-        /* 0x3C8 */ public int StartingSuitSlots;
-        /* 0x3CC */ public int StartingSuitTechSlots;
-        /* 0x3D0 */ public int StartingSuitCargoSlots;
-        /* 0x3D8 */ public GcSeed WeaponSeed;
-        /* 0x3E8 */ public GcSeed ShipSeed;
-        /* 0x3F8 */ public GcSpaceshipClasses ShipType;
-        /* 0x3FC */ public bool StartWithFreighter;
-        /* 0x400 */ public GcAlienRace FreighterRace;
-        /* 0x408 */ public GcInventoryLayout WeaponInventoryLayout;
-        /* 0x428 */ public GcInventoryLayout ShipInventoryLayout;
-        /* 0x448 */ public GcInventoryLayout ShipTechInventoryLayout;
-        /* 0x468 */ public bool UseDefaultAppearance;
-        /* 0x469 */ public bool StartNextToShip;
-        /* 0x46C */ public float DistanceFromShipAtStartOfGame;
-        /* 0x470 */ public bool ShipStartsDamaged;
-        /* 0x471 */ public bool AllowMissionDetailMessages;
-        /* 0x478 */ public List<GcSeasonalStage> Stages;
-        /* 0x488 */ public GcScanEventTable ScanEventTable;
+        /* 0x0B0 */ public NMSString0x20A FinalCantRewardMessage;
+        /* 0x0E0 */ public NMSString0x200 FinalRewardDescription;
+        /* 0x2E0 */ public TkTextureResource MainIcon;
+        /* 0x364 */ public int SeasonNumber;
+        /* 0x368 */ public NMSString0x20A SeasonName;
+        /* 0x388 */ public NMSString0x20A SeasonNameUpper;
+        /* 0x3A8 */ public NMSString0x20A MainMissionTitle;
+        /* 0x3C8 */ public NMSString0x20A MainMissionMessage;
+        /* 0x3E8 */ public List<NMSString0x10> AdditionalTradeProducts;
+        /* 0x3F8 */ public int StartingSuitSlots;
+        /* 0x3FC */ public int StartingSuitTechSlots;
+        /* 0x400 */ public int StartingSuitCargoSlots;
+        /* 0x408 */ public GcSeed WeaponSeed;
+        /* 0x418 */ public GcSeed ShipSeed;
+        /* 0x428 */ public GcSpaceshipClasses ShipType;
+        /* 0x42C */ public bool StartWithFreighter;
+        /* 0x430 */ public GcAlienRace FreighterRace;
+        /* 0x438 */ public List<GcBuildingClassification> ValidSpawnBuildings;
+        /* 0x448 */ public GcInventoryLayout WeaponInventoryLayout;
+        /* 0x468 */ public GcInventoryLayout ShipInventoryLayout;
+        /* 0x488 */ public GcInventoryLayout ShipTechInventoryLayout;
+        /* 0x4A8 */ public bool UseDefaultAppearance;
+        /* 0x4B0 */ public GcInventoryContainer Inventory;
+        /* 0x610 */ public GcInventoryContainer Inventory_TechOnly;
+        /* 0x770 */ public GcInventoryContainer Inventory_Cargo;
+        /* 0x8D0 */ public GcInventoryContainer ShipInventory;
+        /* 0xA30 */ public GcInventoryContainer WeaponInventory;
+        /* 0xB90 */ public bool StartNextToShip;
+        /* 0xB94 */ public float DistanceFromShipAtStartOfGame;
+        /* 0xB98 */ public bool ShipStartsDamaged;
+        /* 0xB99 */ public bool AllowMissionDetailMessages;
+        /* 0xBA0 */ public List<GcSeasonalStage> Stages;
+        /* 0xBB0 */ public GcScanEventTable ScanEventTable;
     }
 }

@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x1F8, GUID = 0xB63A18B6EB667948, NameHash = 0x995CD6C5BC075C98)]
+	[NMS(Size = 0x220, GUID = 0x3C2F8ECDED4091E8, NameHash = 0x995CD6C5BC075C98)]
     public class GcPetData : NMSTemplate
     {
         /* 0x000 */ public float Scale;
@@ -15,25 +15,27 @@ namespace libMBIN.NMS.GameComponents
         /* 0x038 */ public GcSeed CreatureSecondarySeed;
         /* 0x048 */ public ulong SpeciesSeed;
         /* 0x050 */ public ulong GenusSeed;
-        /* 0x058 */ public bool Predator;
-        /* 0x060 */ public ulong UA;
-        /* 0x068 */ public GcSeed ColourBaseSeed;
-        /* 0x078 */ public GcSeed BoneScaleSeed;
-        /* 0x088 */ public bool HasFur;
-        /* 0x08C */ public GcBiomeType Biome;
-        /* 0x090 */ public GcCreatureTypes CreatureType;
-        /* 0x098 */ public ulong BirthTime;
-        /* 0x0A0 */ public ulong LastEggTime;
-        /* 0x0A8 */ public ulong LastTrustIncreaseTime;
-        /* 0x0B0 */ public ulong LastTrustDecreaseTime;
-        /* 0x0B8 */ public bool EggModified;
-        /* 0x0B9 */ public bool HasBeenSummoned;
-        /* 0x0BA */ public NMSString0x20 CustomName;
-        /* 0x0DC */ public float Trust;
-        /* 0x0E0 */ public GcDiscoveryOwner SenderData;
+        /* 0x058 */ public NMSString0x20A CustomSpeciesName;
+        /* 0x078 */ public bool Predator;
+        /* 0x080 */ public ulong UA;
+        /* 0x088 */ public bool AllowUnmodifiedReroll;
+        /* 0x090 */ public GcSeed ColourBaseSeed;
+        /* 0x0A0 */ public GcSeed BoneScaleSeed;
+        /* 0x0B0 */ public bool HasFur;
+        /* 0x0B4 */ public GcBiomeType Biome;
+        /* 0x0B8 */ public GcCreatureTypes CreatureType;
+        /* 0x0C0 */ public ulong BirthTime;
+        /* 0x0C8 */ public ulong LastEggTime;
+        /* 0x0D0 */ public ulong LastTrustIncreaseTime;
+        /* 0x0D8 */ public ulong LastTrustDecreaseTime;
+        /* 0x0E0 */ public bool EggModified;
+        /* 0x0E1 */ public bool HasBeenSummoned;
+        /* 0x0E2 */ public NMSString0x20 CustomName;
+        /* 0x104 */ public float Trust;
+        /* 0x108 */ public GcDiscoveryOwner SenderData;
         [NMS(Size = 0x3, EnumType = typeof(GcCreaturePetTraits.PetTraitsEnum))]
-        /* 0x1E4 */ public float[] Traits;
+        /* 0x20C */ public float[] Traits;
         [NMS(Size = 0x2, EnumType = typeof(GcCreaturePetMood.PetMoodEnum))]
-        /* 0x1F0 */ public float[] Moods;
+        /* 0x218 */ public float[] Moods;
     }
 }

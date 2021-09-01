@@ -1,0 +1,10 @@
+using libMBIN.NMS.Toolkit;
+using libMBIN.NMS.GameComponents;
+
+namespace libMBIN.NMS.Toolkit
+{
+    [NMS(Size = 0x50, GUID = 0xEE6183F98A1F9FE8, NameHash = 0xAB302D926FAE0DE4, Broken = true)]
+    public class TkBehaviourTreeSucceedDecoratorData : NMSTemplate
+    {
+    }
+}

@@ -1,0 +1,10 @@
+using libMBIN.NMS.Toolkit;
+using libMBIN.NMS.GameComponents;
+
+namespace libMBIN.NMS.GameComponents
+{
+    [NMS(Size = 0x4, GUID = 0xDE1DC45D04503AE3, NameHash = 0x6EC31F43E233154A, Broken = true)]
+    public class GcBiomeCondition : NMSTemplate
+    {
+    }
+}

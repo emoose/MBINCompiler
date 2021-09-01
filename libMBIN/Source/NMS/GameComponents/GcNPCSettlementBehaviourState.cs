@@ -1,0 +1,10 @@
+using libMBIN.NMS.Toolkit;
+using libMBIN.NMS.GameComponents;
+
+namespace libMBIN.NMS.GameComponents
+{
+    [NMS(Size = 0x4, GUID = 0x45D1408457CC38ED, NameHash = 0x36730B94549148DE, Broken = true)]
+    public class GcNPCSettlementBehaviourState : NMSTemplate
+    {
+    }
+}
