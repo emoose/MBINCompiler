@@ -3,8 +3,10 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(Size = 0x20, GUID = 0x333BDBCE8E81CE6E, NameHash = 0x9A99DA98FF7577EC, Broken = true)]
+    [NMS(Size = 0x20, GUID = 0x333BDBCE8E81CE6E, NameHash = 0x9A99DA98FF7577EC)]
     public class TkBlackboardValueId : NMSTemplate
     {
+        /* 0x00 */ public NMSString0x10 Key;
+        /* 0x10 */ public NMSString0x10 Value;
     }
 }

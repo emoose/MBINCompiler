@@ -6,7 +6,7 @@ from utils import compare_mbins, convert_mbin, failed_files
 
 
 DATA_PATH = op.join(op.dirname(__file__), 'data')
-BASE_PATH = op.join("Build", "Release")
+BASE_PATH = op.join("Build", "Release", "win-x64")
 TO_EXML_FAIL = 'Failed conversion to EXML'
 TO_MBIN_FAIL = 'Failed conversion to MBIN'
 

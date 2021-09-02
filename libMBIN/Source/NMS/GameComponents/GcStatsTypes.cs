@@ -3,10 +3,10 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x4, GUID = 0xBE9642E402E2836E, NameHash = 0x3E6292A999E2A6)]
+	[NMS(Size = 0x4, GUID = 0x313C5725A89E9ED, NameHash = 0x3E6292A999E2A6)]
     public class GcStatsTypes : NMSTemplate
     {
-        // size: 0xA3
+        // size: 0xA4
 		public enum StatsTypeEnum {
             Unspecified, Weapon_Laser, Weapon_Laser_Damage, Weapon_Laser_Mining_Speed, Weapon_Laser_HeatTime, Weapon_Laser_Bounce, Weapon_Laser_ReloadTime, Weapon_Laser_Recoil, Weapon_Laser_Drain, Weapon_Laser_StrongLaser,
             Weapon_Laser_ChargeTime, Weapon_Laser_MiningBonus, Weapon_Projectile, Weapon_Projectile_Damage, Weapon_Projectile_Range, Weapon_Projectile_Rate, Weapon_Projectile_ClipSize, Weapon_Projectile_ReloadTime, Weapon_Projectile_Recoil, Weapon_Projectile_Bounce,
@@ -21,10 +21,10 @@ namespace libMBIN.NMS.GameComponents
             Ship_Weapons_Lasers, Ship_Weapons_Lasers_Damage, Ship_Weapons_Lasers_HeatTime, Ship_Weapons_Missiles, Ship_Weapons_Missiles_NumPerShot, Ship_Weapons_Missiles_Speed, Ship_Weapons_Missiles_Damage, Ship_Weapons_Missiles_Size, Ship_Weapons_Shotgun, Ship_Weapons_MiniGun,
             Ship_Weapons_Plasma, Ship_Weapons_Rockets, Ship_Armour_Shield, Ship_Armour_Shield_Strength, Ship_Armour_Health, Ship_Scan, Ship_Scan_EconomyFilter, Ship_Scan_ConflictFilter, Ship_Hyperdrive, Ship_Hyperdrive_JumpDistance,
             Ship_Hyperdrive_JumpsPerCell, Ship_Hyperdrive_QuickWarp, Ship_Launcher, Ship_Launcher_TakeOffCost, Ship_Launcher_AutoCharge, Ship_PulseDrive, Ship_PulseDrive_MiniJumpFuelSpending, Ship_PulseDrive_MiniJumpSpeed, Ship_Boost, Ship_Maneuverability,
-            Ship_BoostManeuverability, Ship_Teleport, Freighter_Hyperdrive, Freighter_Hyperdrive_JumpDistance, Freighter_Hyperdrive_JumpsPerCell, Freighter_Teleport, Freighter_Fleet_Boost, Freighter_Fleet_Speed, Freighter_Fleet_Fuel, Freighter_Fleet_Combat,
-            Freighter_Fleet_Trade, Freighter_Fleet_Explore, Freighter_Fleet_Mine, Vehicle_Boost, Vehicle_Engine, Vehicle_Scan, Vehicle_EngineFuelUse, Vehicle_EngineTopSpeed, Vehicle_BoostSpeed, Vehicle_BoostTanks,
-            Vehicle_Grip, Vehicle_SkidGrip, Vehicle_SubBoostSpeed, Vehicle_Laser, Vehicle_LaserDamage, Vehicle_LaserHeatTime, Vehicle_LaserStrongLaser, Vehicle_Gun, Vehicle_GunDamage, Vehicle_GunHeatTime,
-            Vehicle_GunRate, Vehicle_TerrainEdit, Vehicle_FuelRegen
+            Ship_BoostManeuverability, Ship_LifeSupport, Ship_Teleport, Freighter_Hyperdrive, Freighter_Hyperdrive_JumpDistance, Freighter_Hyperdrive_JumpsPerCell, Freighter_Teleport, Freighter_Fleet_Boost, Freighter_Fleet_Speed, Freighter_Fleet_Fuel,
+            Freighter_Fleet_Combat, Freighter_Fleet_Trade, Freighter_Fleet_Explore, Freighter_Fleet_Mine, Vehicle_Boost, Vehicle_Engine, Vehicle_Scan, Vehicle_EngineFuelUse, Vehicle_EngineTopSpeed, Vehicle_BoostSpeed,
+            Vehicle_BoostTanks, Vehicle_Grip, Vehicle_SkidGrip, Vehicle_SubBoostSpeed, Vehicle_Laser, Vehicle_LaserDamage, Vehicle_LaserHeatTime, Vehicle_LaserStrongLaser, Vehicle_Gun, Vehicle_GunDamage,
+            Vehicle_GunHeatTime, Vehicle_GunRate, Vehicle_TerrainEdit, Vehicle_FuelRegen
         }
         public StatsTypeEnum StatsType;
     }

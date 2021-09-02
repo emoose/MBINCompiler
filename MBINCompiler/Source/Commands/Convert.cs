@@ -248,7 +248,7 @@ namespace MBINCompiler.Commands {
                       , filePath, mbin );
         }
         private static void FileIsUnrecognized( string filePath, MBINFile mbin, ulong expectedGUID = 0L ) {
-            WarnBroken( "File not recognized. You may need to use an older version of MBINCompiler."
+            WarnBroken( "File not recognized. You may need to use an older (or newer) version of MBINCompiler."
                       , filePath, mbin, null, expectedGUID );
         }
         private static void FileIsUnused(string filePath, MBINFile mbin)

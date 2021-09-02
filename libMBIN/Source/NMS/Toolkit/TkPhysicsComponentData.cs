@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(Size = 0x80, GUID = 0x4A354FF992433C79, NameHash = 0xC58660803669C46F)]
+    [NMS(Size = 0x88, GUID = 0xA0E99F7DDC90EF4D, NameHash = 0xC58660803669C46F)]
     public class TkPhysicsComponentData : NMSTemplate
     {
         /* 0x00 */ public TkPhysicsData Data;
@@ -25,5 +25,6 @@ namespace libMBIN.NMS.Toolkit
         /* 0x79 */ public bool BlockTeleporter;
         /* 0x7A */ public bool DisableGravity;
         /* 0x7C */ public float SpinOnCreate;
+        /* 0x80 */ public bool UseBasePartOptimisation;
     }
 }

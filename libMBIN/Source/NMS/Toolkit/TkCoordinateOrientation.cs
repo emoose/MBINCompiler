@@ -3,8 +3,11 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(Size = 0x4, GUID = 0xC973597A8E23689F, NameHash = 0x5F02C151C26450C8, Broken = true)]
+    [NMS(Size = 0x4, GUID = 0xC973597A8E23689F, NameHash = 0x5F02C151C26450C8)]
     public class TkCoordinateOrientation : NMSTemplate
     {
+        // Size: 0x2
+        public enum CoordinateOrientationEnum { None, Random }
+        public CoordinateOrientationEnum CoordinateOrientation;
     }
 }
