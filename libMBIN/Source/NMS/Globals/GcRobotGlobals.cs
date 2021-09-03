@@ -1,11 +1,12 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(Size = 0x680, GUID = 0xFCC6E4AB6ABA83F7, NameHash = 0xDD7401143C40F868)]
+    [NMS(Size = 0x680, GUID = 0x614B8197B1F1C0D1, NameHash = 0xDD7401143C40F868)]
     public class GcRobotGlobals : NMSTemplate
     {
         /* 0x000 */ public bool SwarmDrones;
