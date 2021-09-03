@@ -6,7 +6,7 @@ namespace libMBIN.NMS.GameComponents
     [NMS(Size = 0x4, GUID = 0xA36A0948C879475E, NameHash = 0x9394F46EDEDBE660)]
     public class GcSettlementStatType : NMSTemplate
     {
-        // Size: 0x7
+        // size: 0x7
         public enum SettlementStatTypeEnum { Population, Happiness, Production, Upkeep, Sentinels, Debt, Alert }
         public SettlementStatTypeEnum SettlementStatType;
     }

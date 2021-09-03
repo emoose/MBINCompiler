@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x38, GUID = 0x1D288621A5B4021B, NameHash = 0x76D3572C2A9662D2)]
+	[NMS(Size = 0x38, GUID = 0x98CAC5D1DEA68EBC, NameHash = 0x76D3572C2A9662D2)]
     public class GcExternalObjectFileList : NMSTemplate
     {
         /* 0x00 */ public NMSString0x10 Id;
@@ -16,6 +16,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x14 */ public bool NotOnStartPlanets;
         /* 0x15 */ public bool NotOnWeirdPlanets;
         /* 0x16 */ public bool NotOnDeadPlanets;
+        /* 0x17 */ public bool ForceOnSeasonStart;
         /* 0x18 */ public GcBiomeType OnlyOnBiome;
         /* 0x1C */ public float ProbabilityOfBeingActive;
         /* 0x20 */ public int MinFilesToChoose;

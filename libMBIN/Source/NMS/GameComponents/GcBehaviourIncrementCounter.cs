@@ -3,8 +3,9 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x10, GUID = 0x69117DBF4629DA38, NameHash = 0xE746E7FAA3EB7B78, Broken = true)]
+    [NMS(Size = 0x10, GUID = 0x69117DBF4629DA38, NameHash = 0xE746E7FAA3EB7B78)]
     public class GcBehaviourIncrementCounter : NMSTemplate
     {
+        public NMSString0x10 Key;
     }
 }

@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x3C0, GUID = 0xF55A7A26587852DE, NameHash = 0x43EBB2E6AFAC5863)]
+	[NMS(Size = 0x3C0, GUID = 0x43EBB2E6AFAC5863, NameHash = 0x43EBB2E6AFAC5863)]
     public class GcObjectSpawnData : NMSTemplate
     {
         /* 0x000 */ public NMSString0x10 DebugName;
@@ -18,7 +18,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x2F0 */ public GcSeed PlacementSeed;
         public enum PlacementPriorityEnum { Low, Normal, High }
         /* 0x300 */ public PlacementPriorityEnum PlacementPriority;
-        public enum LargeObjectCoverageEnum { DoNotPlace, DoNotPlaceClose, OnlyPlaceAround, AlwaysPlace, DoNotPlaceAnywhereNear }
+        public enum LargeObjectCoverageEnum { DoNotPlace, DoNotPlaceIgnoreFootprint, DoNotPlaceClose, DoNotPlaceAnywhereNear, OnlyPlaceAround, OnlyPlaceAroundIgnoreFootprint, AlwaysPlace }
         /* 0x304 */ public LargeObjectCoverageEnum LargeObjectCoverage;
         public enum OverlapStyleEnum { None, SameSeed, All }
         /* 0x308 */ public OverlapStyleEnum OverlapStyle;
