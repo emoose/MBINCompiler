@@ -6,7 +6,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(Size = 0xE10, GUID = 0xE56ABE936B88CAB7, NameHash = 0x5BED7FBA4647E787)]
+    [NMS(Size = 0xE20, GUID = 0x4C15E1414232BD2A, NameHash = 0x5BED7FBA4647E787)]
     public class GcSkyGlobals : NMSTemplate
     {
         /* 0x000 */ public float RainbowDistance;
@@ -118,50 +118,46 @@ namespace libMBIN.NMS.Globals
         /* 0x264 */ public float CloudColourH;
         /* 0x268 */ public float CloudColourS;
         /* 0x26C */ public float CloudColourV;
-        /* 0x270 */ public float NebulaShadow;
-        /* 0x274 */ public float SpaceAtmosphereThickness;
-        /* 0x278 */ public float WaterHeavyAirAlpha;
-        /* 0x27C */ public float NightHorizonBlendMin;
-        /* 0x280 */ public float NightHorizonBlendMax;
-        /* 0x284 */ public float NightSkyBlendMin;
-        /* 0x288 */ public float NightSkyBlendMax;
-        /* 0x28C */ public float NightLightBlendMin;
-        /* 0x290 */ public float NightLightBlendMax;
-        /* 0x294 */ public bool ForceNightBlend;
-        /* 0x298 */ public float ForceNightBlendValue;
-        /* 0x29C */ public float NoAtmosphereFogStrength;
-        /* 0x2A0 */ public float NoAtmosphereFogMax;
-        /* 0x2A4 */ public float NoAtmosphereColourStrength;
-        /* 0x2A8 */ public float NoAtmosphereColourMax;
-        /* 0x2AC */ public float LowFlightFogThreshold;
-        /* 0x2B0 */ public GcPlanetSkyProperties PlanetProperties;
-        /* 0x660 */ public GcPlanetSkyProperties PlanetPrimeProperties;
-        /* 0xA10 */ public GcFogProperties AbandonedFreighterFog;
+        /* 0x270 */ public float SpaceAtmosphereThickness;
+        /* 0x274 */ public float WaterHeavyAirAlpha;
+        /* 0x278 */ public float NightHorizonBlendMin;
+        /* 0x27C */ public float NightHorizonBlendMax;
+        /* 0x280 */ public float NightSkyBlendMin;
+        /* 0x284 */ public float NightSkyBlendMax;
+        /* 0x288 */ public float NightLightBlendMin;
+        /* 0x28C */ public float NightLightBlendMax;
+        /* 0x290 */ public bool ForceNightBlend;
+        /* 0x294 */ public float ForceNightBlendValue;
+        /* 0x298 */ public float NoAtmosphereFogStrength;
+        /* 0x29C */ public float NoAtmosphereFogMax;
+        /* 0x2A0 */ public float NoAtmosphereColourStrength;
+        /* 0x2A4 */ public float NoAtmosphereColourMax;
+        /* 0x2A8 */ public float LowFlightFogThreshold;
+        /* 0x2AC */ public GcPlanetSkyProperties PlanetProperties;
+        /* 0x65C */ public GcPlanetSkyProperties PlanetPrimeProperties;
+        /* 0xA0C */ public GcFogProperties AbandonedFreighterFog;
         /* 0xAF0 */ public GcSpaceSkyProperties SpaceSkyMin;
-        /* 0xB90 */ public GcSpaceSkyProperties SpaceSkyMax;
-        /* 0xC30 */ public List<GcSpaceSkyColours> SpaceSkyColours;
-        /* 0xC40 */ public GcPlanetWeatherColourData NightSkyColours;
-        /* 0xCF0 */ public float HackSpaceInterp1;
-        /* 0xCF4 */ public float HackSpaceInterp2;
-        /* 0xCF8 */ public int HackSpaceColourIndex;
-        /* 0xD00 */ public Colour HeavyAirColour1;
-        /* 0xD10 */ public Colour HeavyAirColour2;
-        /* 0xD20 */ public Colour NightHorizonColour;
-        /* 0xD30 */ public Colour NightSkyColour;
-        /* 0xD40 */ public Colour NightFogColour;
-        /* 0xD50 */ public Colour NightHeightFogColour;
-        /* 0xD60 */ public GcPlanetCloudProperties PlanetCloudsMin;
-        /* 0xDA0 */ public GcPlanetCloudProperties PlanetCloudsMax;
-        /* 0xDE0 */ public float BinaryStarChance;
-        /* 0xDE4 */ public float TernaryStarChance;
-        /* 0xDE8 */ public float WeatherBloomGain;
-        /* 0xDEC */ public float WeatherBloomGainSpeed;
-        /* 0xDF0 */ public float WeatherBloomThreshold;
-        /* 0xDF4 */ public float WeatherBloomThresholdSpeed;
-        /* 0xDF8 */ public float WeatherBloomImpulseSpeed;
-        /* 0xDFC */ public TkCurveType WeatherBloomCurve;
-        /* 0xE00 */ public float MaxRainWetness;
-        /* 0xE04 */ public float RainWetnessFadeInTime;
-        /* 0xE08 */ public float RainWetnessFadeOutTime;
+        /* 0xBA0 */ public GcSpaceSkyProperties SpaceSkyMax;
+        /* 0xC50 */ public List<GcSpaceSkyColours> SpaceSkyColours;
+        /* 0xC60 */ public GcPlanetWeatherColourData NightSkyColours;
+        /* 0xD10 */ public Colour HeavyAirColour1;
+        /* 0xD20 */ public Colour HeavyAirColour2;
+        /* 0xD30 */ public Colour NightHorizonColour;
+        /* 0xD40 */ public Colour NightSkyColour;
+        /* 0xD50 */ public Colour NightFogColour;
+        /* 0xD60 */ public Colour NightHeightFogColour;
+        /* 0xD70 */ public GcPlanetCloudProperties PlanetCloudsMin;
+        /* 0xDB0 */ public GcPlanetCloudProperties PlanetCloudsMax;
+        /* 0xDF0 */ public float BinaryStarChance;
+        /* 0xDF4 */ public float TernaryStarChance;
+        /* 0xDF8 */ public float WeatherBloomGain;
+        /* 0xDFC */ public float WeatherBloomGainSpeed;
+        /* 0xE00 */ public float WeatherBloomThreshold;
+        /* 0xE04 */ public float WeatherBloomThresholdSpeed;
+        /* 0xE08 */ public float WeatherBloomImpulseSpeed;
+        /* 0xE0C */ public TkCurveType WeatherBloomCurve;
+        /* 0xE10 */ public float MaxRainWetness;
+        /* 0xE14 */ public float RainWetnessFadeInTime;
+        /* 0xE18 */ public float RainWetnessFadeOutTime;
     }
 }

@@ -6,7 +6,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(Size = 0xA60, GUID = 0x995DC68934FA83A2, NameHash = 0xB24409E83457E875)]
+    [NMS(Size = 0xA80, GUID = 0xAF8D75F1458E71D0, NameHash = 0xB24409E83457E875)]
     public class GcGraphicsGlobals : NMSTemplate
     {
         /* 0x000 */ public float LUTDistanceFlightMultiplier;
@@ -319,13 +319,16 @@ namespace libMBIN.NMS.Globals
         /* 0x998 */ public TkGraphicsDetailPreset GraphicsDetailPresetXB1;
         /* 0x9D0 */ public TkGraphicsDetailPreset GraphicsDetailPresetXB1X;
         /* 0xA08 */ public TkGraphicsDetailPreset GraphicsDetailPresetOberon;
-        /* 0xA40 */ public float PhotoModeBloomGainMin;
-        /* 0xA44 */ public float PhotoModeBloomThresholdMin;
-        /* 0xA48 */ public float PhotoModeDefaultBloomValue;
-        /* 0xA4C */ public float PhotoModeMediumValue;
-        /* 0xA50 */ public float PhotoModeBloomGainMedium;
-        /* 0xA54 */ public float PhotoModeBloomThresholdMedium;
-        /* 0xA58 */ public float PhotoModeBloomGainMax;
-        /* 0xA5C */ public float PhotoModeBloomThresholdMax;
+        /* 0xA40 */ public bool EnableVariableUpdate;
+        [NMS(Size = 0x4)]
+        /* 0xA44 */ public float[] VariableUpdatePeriodModifers;
+        /* 0xA54 */ public float PhotoModeBloomGainMin;
+        /* 0xA58 */ public float PhotoModeBloomThresholdMin;
+        /* 0xA5C */ public float PhotoModeDefaultBloomValue;
+        /* 0xA60 */ public float PhotoModeMediumValue;
+        /* 0xA64 */ public float PhotoModeBloomGainMedium;
+        /* 0xA68 */ public float PhotoModeBloomThresholdMedium;
+        /* 0xA6C */ public float PhotoModeBloomGainMax;
+        /* 0xA70 */ public float PhotoModeBloomThresholdMax;
     }
 }

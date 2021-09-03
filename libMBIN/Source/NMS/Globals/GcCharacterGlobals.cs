@@ -1,9 +1,12 @@
-﻿using libMBIN.NMS.Toolkit;
+﻿using System;
+using System.Collections.Generic;
+
+using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(Size = 0x348, GUID = 0x1E3BB15A8FC3BAF6, NameHash = 0x9904F7D363A81377)]
+    [NMS(Size = 0x380, GUID = 0x8E7492A3FDFCA5A1, NameHash = 0x9904F7D363A81377)]
     public class GcCharacterGlobals : NMSTemplate
     {
         /* 0x000 */ public float PitchTest;
@@ -113,52 +116,66 @@ namespace libMBIN.NMS.Globals
         /* 0x27C */ public bool NPCBehaviourInfo;
         /* 0x280 */ public float NPCStaticDistance;
         /* 0x284 */ public float NPCStaticTimeTilFail;
-        /* 0x288 */ public float NPCWalkSpeedMech;
-        /* 0x28C */ public float NPCWalkSpeed;
-        /* 0x290 */ public float NPCWalkSpeedGek;
-        /* 0x294 */ public float NPCRunSpeed;
-        /* 0x298 */ public float NPCRunSpeedGek;
-        /* 0x29C */ public float NPCArriveDist;
-        /* 0x2A0 */ public float NPCIncreasedSteeringDist;
-        /* 0x2A4 */ public float NPCMinTurnSpeed;
-        /* 0x2A8 */ public float NPCMaxTurnSpeed;
-        /* 0x2AC */ public float NPCMinTurnSpeedMech;
-        /* 0x2B0 */ public float NPCDecelerateStrength;
-        /* 0x2B4 */ public float NPCStaticTurnTime;
-        /* 0x2B8 */ public float NPCTeleportEffectTime;
-        /* 0x2BC */ public float NPCMinStaticTurnAngle;
-        /* 0x2C0 */ public float NPCFastStaticTurnAngle;
-        /* 0x2C4 */ public float NPCSlowStaticTurnAngle;
-        /* 0x2C8 */ public float NPCMaxStaticTurnSpeed;
-        /* 0x2CC */ public float NPCActiveListenChance;
-        /* 0x2D0 */ public float NPCLookAtThingChance;
-        /* 0x2D4 */ public float NPCLookAtThingTimeMin;
-        /* 0x2D8 */ public float NPCLookAtThingTimeMax;
-        /* 0x2DC */ public float NPCLookAwayTimeMin;
-        /* 0x2E0 */ public float NPCLookAwayTimeMax;
-        /* 0x2E4 */ public float NPCMaxLookAtAngleMoving;
-        /* 0x2E8 */ public float NPCMaxLookAtAngleStatic;
-        /* 0x2EC */ public float NPCLookAtTerminateAngle;
-        /* 0x2F0 */ public float NPCSeatedLookAtLateralReduction;
-        /* 0x2F4 */ public float NPCMinInteractionSearchDist;
-        /* 0x2F8 */ public float NPCMaxInteractionSearchDist;
-        /* 0x2FC */ public float NPCSteeringSpringTime;
-        /* 0x300 */ public float NPCPerceptionRadius;
-        /* 0x304 */ public float NPCSteeringObstacleAvoidStrength;
-        /* 0x308 */ public float NPCSteeringFollowStrength;
-        /* 0x30C */ public float NPCSteeringAvoidStrength;
-        /* 0x310 */ public float NPCSteeringRadius;
-        /* 0x314 */ public float NPCSteeringRepelDist;
-        /* 0x318 */ public float NPCSteeringComingTowardsDegrees;
-        /* 0x31C */ public float NPCSteeringCollisionAvoidAngle;
-        /* 0x320 */ public float NPCSteeringCollisionAvoidStrength;
-        /* 0x324 */ public float NPCSteeringRaySpread;
-        /* 0x328 */ public float NPCSteeringRayLength;
-        /* 0x32C */ public float NPCSteeringRaySphereSize;
-        /* 0x330 */ public float NPCBlockedDestRadius;
-        /* 0x334 */ public float NPCFlavourIdleTimeMin;
-        /* 0x338 */ public float NPCFlavourIdleTimeMax;
-        /* 0x33C */ public float NPCMoodIdleDelayChance;
-        /* 0x340 */ public float NPCMoodIdleLowIntensityChance;
+        /* 0x288 */ public int NPCStaticFailsUntilNoPhys;
+        /* 0x28C */ public float NPCWalkSpeedMech;
+        /* 0x290 */ public float NPCWalkSpeed;
+        /* 0x294 */ public float NPCWalkSpeedGek;
+        /* 0x298 */ public float NPCRunSpeed;
+        /* 0x29C */ public float NPCRunSpeedGek;
+        /* 0x2A0 */ public float NPCArriveDist;
+        /* 0x2A4 */ public float NPCIncreasedSteeringDist;
+        /* 0x2A8 */ public float NPCMinTurnSpeed;
+        /* 0x2AC */ public float NPCMaxTurnSpeed;
+        /* 0x2B0 */ public float NPCMinTurnSpeedMech;
+        /* 0x2B4 */ public float NPCDecelerateStrength;
+        /* 0x2B8 */ public float NPCStaticTurnTime;
+        /* 0x2BC */ public float NPCTeleportEffectTime;
+        /* 0x2C0 */ public float NPCMinStaticTurnAngle;
+        /* 0x2C4 */ public float NPCFastStaticTurnAngle;
+        /* 0x2C8 */ public float NPCSlowStaticTurnAngle;
+        /* 0x2CC */ public float NPCMaxStaticTurnSpeed;
+        /* 0x2D0 */ public float NPCActiveListenChance;
+        /* 0x2D4 */ public float NPCLookAtThingChance;
+        /* 0x2D8 */ public float NPCLookAtThingTimeMin;
+        /* 0x2DC */ public float NPCLookAtThingTimeMax;
+        /* 0x2E0 */ public float NPCLookAwayTimeMin;
+        /* 0x2E4 */ public float NPCLookAwayTimeMax;
+        /* 0x2E8 */ public float NPCMaxLookAtAngleMoving;
+        /* 0x2EC */ public float NPCMaxLookAtAngleStatic;
+        /* 0x2F0 */ public float NPCLookAtTerminateAngle;
+        /* 0x2F4 */ public float NPCSeatedLookAtLateralReduction;
+        /* 0x2F8 */ public float NPCMinInteractionSearchDist;
+        /* 0x2FC */ public float NPCMaxInteractionSearchDist;
+        /* 0x300 */ public float NPCMaxSettlementInteractionSearchDist;
+        /* 0x304 */ public float NPCSteeringSpringTime;
+        /* 0x308 */ public float NPCPerceptionRadius;
+        /* 0x30C */ public float NPCSteeringObstacleAvoidStrength;
+        /* 0x310 */ public float NPCSteeringFollowStrength;
+        /* 0x314 */ public float NPCSteeringAvoidStrength;
+        /* 0x318 */ public float NPCSteeringRadius;
+        /* 0x31C */ public float NPCSteeringRepelDist;
+        /* 0x320 */ public float NPCSteeringComingTowardsDegrees;
+        /* 0x324 */ public float NPCSteeringCollisionAvoidAngle;
+        /* 0x328 */ public float NPCSteeringCollisionAvoidStrength;
+        /* 0x32C */ public float NPCSteeringRaySpread;
+        /* 0x330 */ public float NPCSteeringRayLength;
+        /* 0x334 */ public float NPCSteeringRaySphereSize;
+        /* 0x338 */ public float NPCMaxRandomNavPathMinIndoorOffset;
+        /* 0x33C */ public float NPCMaxRandomNavPathMaxIndoorOffset;
+        /* 0x340 */ public float NPCMaxRandomNavPathMinOutdoorOffset;
+        /* 0x344 */ public float NPCMaxRandomNavPathMaxOutdoorOffset;
+        /* 0x348 */ public float NPCBlockedDestRadius;
+        /* 0x34C */ public float NPCFlavourIdleTimeMin;
+        /* 0x350 */ public float NPCFlavourIdleTimeMax;
+        /* 0x354 */ public float NPCMoodIdleDelayChance;
+        /* 0x358 */ public float NPCMoodIdleLowIntensityChance;
+        /* 0x35C */ public float NPCReactToPlayerPresenceDist;
+        /* 0x360 */ public float NPCReactToPlayerPresenceIndividualCooldown;
+        /* 0x364 */ public float NPCReactToPlayerPresenceGloablCooldown;
+        /* 0x368 */ public float NPCReactToPlayerPresenceStaticTimer;
+        /* 0x36C */ public float NPCDisplayThoughtsMaxDuration;
+        /* 0x370 */ public float NPCDisplayThoughtsMaxDistance;
+        /* 0x374 */ public float NPCDisplayThoughtsRefreshInterval;
+        /* 0x378 */ public float NPCDisplayThoughtsProbability;
     }
 }
