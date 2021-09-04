@@ -6,7 +6,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(Size = 0x1DD0, GUID = 0xC5BFD455733BC8C2, NameHash = 0x71CAF682B6986E6E)]
+    [NMS(Size = 0x1DD0, GUID = 0xE1E96F5FAFBA2FEF, NameHash = 0x71CAF682B6986E6E)]
     public class GcGameplayGlobals : NMSTemplate
     {
         /* 0x0000 */ public NMSString0x10 NexusRecipeCostType;
@@ -501,30 +501,31 @@ namespace libMBIN.NMS.Globals
         /* 0x1A6C */ public float HoursBetweenMiniStation;
         /* 0x1A70 */ public NMSString0x80 LegacyBaseBuildingTable;
         /* 0x1AF0 */ public NMSString0x80 BaseBuildingTable;
-        /* 0x1B70 */ public ulong NPCWorkerInteractionCooldown;
-        /* 0x1B78 */ public float LightStrength;
-        /* 0x1B7C */ public float AirLockDoorRange;
-        /* 0x1B80 */ public bool DisableBasePowerHUDOverlay;
-        /* 0x1B81 */ public bool KeepAttackingMaxWantedLevel;
-        /* 0x1B82 */ public bool UseMultiplierBonus;
-        /* 0x1B84 */ public float ShipDisplayDamageMultiplier;
-        /* 0x1B88 */ public float IllegalProductTradingMod;
-        /* 0x1B8C */ public bool UseTradingCostTable;
-        /* 0x1B8D */ public bool ChangePricesLocally;
-        /* 0x1B8E */ public bool ShowPriceMarkupsAsPercentages;
-        /* 0x1B90 */ public int ProductItemStockDecayTime;
-        /* 0x1B94 */ public int ProductItemStockReplenishTime;
-        /* 0x1B98 */ public int SubstanceItemStockDecayTime;
-        /* 0x1B9C */ public int SubstanceItemStockReplenishTime;
-        /* 0x1BA0 */ public GcPortalData Portal;
-        /* 0x1BA8 */ public int FourthRaceSpawnPercentage;
-        /* 0x1BAC */ public int NonDominantRaceSpawnPercentage;
-        /* 0x1BB0 */ public float ViciousSentinelProbability;
-        /* 0x1BB4 */ public float ViciousStormProbability;
-        /* 0x1BB8 */ public float ViciousWeatherProbability;
-        /* 0x1BBC */ public float ScrapDroneProbability;
-        /* 0x1BC0 */ public float MaxRespawnOnGroundHeight;
-        /* 0x1BC4 */ public float DeadPlanetGravityFactor;
+        /* 0x1B70 */ public float BaseBuildingHoverTimeToKnowPart;
+        /* 0x1B78 */ public ulong NPCWorkerInteractionCooldown;
+        /* 0x1B80 */ public float LightStrength;
+        /* 0x1B84 */ public float AirLockDoorRange;
+        /* 0x1B88 */ public bool DisableBasePowerHUDOverlay;
+        /* 0x1B89 */ public bool KeepAttackingMaxWantedLevel;
+        /* 0x1B8A */ public bool UseMultiplierBonus;
+        /* 0x1B8C */ public float ShipDisplayDamageMultiplier;
+        /* 0x1B90 */ public float IllegalProductTradingMod;
+        /* 0x1B94 */ public bool UseTradingCostTable;
+        /* 0x1B95 */ public bool ChangePricesLocally;
+        /* 0x1B96 */ public bool ShowPriceMarkupsAsPercentages;
+        /* 0x1B98 */ public int ProductItemStockDecayTime;
+        /* 0x1B9C */ public int ProductItemStockReplenishTime;
+        /* 0x1BA0 */ public int SubstanceItemStockDecayTime;
+        /* 0x1BA4 */ public int SubstanceItemStockReplenishTime;
+        /* 0x1BA8 */ public GcPortalData Portal;
+        /* 0x1BB0 */ public int FourthRaceSpawnPercentage;
+        /* 0x1BB4 */ public int NonDominantRaceSpawnPercentage;
+        /* 0x1BB8 */ public float ViciousSentinelProbability;
+        /* 0x1BBC */ public float ViciousStormProbability;
+        /* 0x1BC0 */ public float ViciousWeatherProbability;
+        /* 0x1BC4 */ public float ScrapDroneProbability;
+        /* 0x1BC8 */ public float MaxRespawnOnGroundHeight;
+        /* 0x1BCC */ public float DeadPlanetGravityFactor;
         /* 0x1BD0 */ public GcScanEffectData ShipSalvageScanEffect;
         /* 0x1C20 */ public float SalvageShipPitch;
         /* 0x1C24 */ public float SalvageShipHeightOffset;

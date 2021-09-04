@@ -325,7 +325,7 @@ namespace libMBIN.NMS.Globals
         /* 0x36D0 */ public TkModelRendererData CameraCreatureCustomiseRight;
         /* 0x3780 */ public TkModelRendererData CameraCreatureCustomiseFront;
         /* 0x3830 */ public TkModelRendererData CameraCreatureCustomiseBack;
-                                                                           
+        /* 0x38E0 */ public List<TkPhysRelVectorData> SavedCameraPositions;
         /* 0x38F0 */ public List<Vector3f> SavedCameraFacing;
         /* 0x3900 */ public GcCameraWarpSettings WarpSettings;
     }

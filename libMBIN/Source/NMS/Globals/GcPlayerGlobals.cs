@@ -840,6 +840,7 @@ namespace libMBIN.NMS.Globals
         /* 0x182C */ public float CriticalHitTime;
         /* 0x1830 */ public float CriticalHitDesatTime;
         /* 0x1834 */ public float CriticalHitDesatFreq;
+        /* 0x1838 */ public List<GcCameraSpawnSetupData> FirstSpawnDataTable;
         /* 0x1848 */ public GcInventoryValueData ShipValueData;
         /* 0x1864 */ public GcInventoryValueData WeaponValueData;
         /* 0x1880 */ public GcInventoryValueData FreighterValueData;
