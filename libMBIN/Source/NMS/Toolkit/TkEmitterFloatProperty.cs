@@ -9,14 +9,14 @@ namespace libMBIN.NMS.Toolkit
         public enum AuthoringEnum { FixedValue, RandomRangeFloat, Curves }
         /* 0x00 */ public AuthoringEnum Authoring;
         /* 0x04 */ public float FixedValue;
-        /* 0x04 */ public float MinRandomValue;
-        /* 0x04 */ public float MaxRandomValue;
-        /* 0x04 */ public float CurveVariation;
-        /* 0x04 */ public float CurveStartValue;
-        /* 0x04 */ public float CurveMidValue;
-        /* 0x04 */ public float CurveEndValue;
-        /* 0x04 */ public float CurveBlendMidpoint;
-        /* 0x04 */ public TkCurveType Curve1Shape;
-        /* 0x04 */ public TkCurveType Curve2Shape;
+        /* 0x08 */ public float MinRandomValue;
+        /* 0x0C */ public float MaxRandomValue;
+        /* 0x10 */ public float CurveVariation;
+        /* 0x14 */ public float CurveStartValue;
+        /* 0x18 */ public float CurveMidValue;
+        /* 0x1C */ public float CurveEndValue;
+        /* 0x20 */ public float CurveBlendMidpoint;
+        /* 0x24 */ public TkCurveType Curve1Shape;
+        /* 0x28 */ public TkCurveType Curve2Shape;
     }
 }
