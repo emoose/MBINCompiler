@@ -3,8 +3,12 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x4, GUID = 0x9755EFA88663FD0B, NameHash = 0x1A9351C5A8C07BA4, Broken = true)]
+    [NMS(Size = 0x4, GUID = 0x9755EFA88663FD0B, NameHash = 0x1A9351C5A8C07BA4)]
     public class GcCharacterControlInputValidity : NMSTemplate
     {
+        // size: 0x3
+        // Note: in the exe the 3rd value has a typo: "KeyboardAnMouseOnly"
+        public enum CharacterControlInputValidityEnum { Always, PadOnly, KeyboardAndMouseOnly }
+        public CharacterControlInputValidityEnum CharacterControlInputValidity;
     }
 }

@@ -14,6 +14,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x08 */ public NMSString0x20 ExternalId;
         /* 0x28 */ public NMSString0x20 ExternalLoc;
         /* 0x48 */ public NMSString0x20A LocTag;
-        /* 0x68 */ public List<GcInputActions> Actions;
+        /* 0x68 */ public List<GcActionSetAction> Actions;
     }
 }

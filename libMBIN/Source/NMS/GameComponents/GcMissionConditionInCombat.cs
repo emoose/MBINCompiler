@@ -3,10 +3,12 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x4, GUID = 0x3C744F759BB701C6, NameHash = 0x326A8803E3B79519)]
+	[NMS(Size = 0x30, GUID = 0xE32CF6B3704508C7, NameHash = 0x326A8803E3B79519)]
     public class GcMissionConditionInCombat : NMSTemplate
     {
 		public enum CombatTypeEnum { GroundCombat, SpaceCombat, FiendCombat, BigFishFiendCombat, CorruptedSentinelCombat }
-		public CombatTypeEnum CombatType;
+		/* 0x00 */ public CombatTypeEnum CombatType;
+        /* 0x08 */ public NMSString0x20A OverrideOSDMessage;
+        /* 0x28 */ public bool CheckAllFireteamMembers;
     }
 }

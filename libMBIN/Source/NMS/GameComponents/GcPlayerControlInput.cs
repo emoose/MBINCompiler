@@ -4,7 +4,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x38, GUID = 0x5B0B15C1922C7378, NameHash = 0xD2873CCA9A0EDD77)]
+    [NMS(Size = 0x38, GUID = 0x85F704AC24B1AD33, NameHash = 0xD2873CCA9A0EDD77)]
     public class GcPlayerControlInput : NMSTemplate
     {
         /* 0x00 */ public bool InterceptAllInputs;

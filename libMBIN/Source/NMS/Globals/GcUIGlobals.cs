@@ -273,6 +273,8 @@ namespace libMBIN.NMS.Globals
         /* 0x0940 */ public Colour BaseComplexityWarningColour;
         /* 0x0950 */ public Colour BaseComplexityDangerColour;
         /* 0x0960 */ public float BuildMenuActionMessageDuration;
+        [NMS(Size = 0x4, Ignore = true)]
+        /* 0x0964 */ public byte[] Padding964;      // TODO: Remove this when we can correctly cast NMSString0x20 -> NMSString0x20A's so that all the arrays can be converted to NMSString0x20A's
         [NMS(Size = 0xD, EnumType = typeof(GcBuildMenuOption.BuildMenuOptionEnum))]
         /* 0x0968 */ public NMSString0x20[] BuildMenuOnActionLocIDs;
         [NMS(Size = 0xD, EnumType = typeof(GcBuildMenuOption.BuildMenuOptionEnum))]

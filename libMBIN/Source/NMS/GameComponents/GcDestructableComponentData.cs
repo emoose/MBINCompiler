@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x1F8, GUID = 0x9B51CEDAED51D099, NameHash = 0xE24B3D78ED0634BD)]
+    [NMS(Size = 0x1F8, GUID = 0x19CD67EAB3E79BBC, NameHash = 0xE24B3D78ED0634BD)]
     public class GcDestructableComponentData : NMSTemplate
     {
         /* 0x000 */ public NMSString0x10 Explosion;
@@ -30,7 +30,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x0B8 */ public float HardModeSubstanceMultiplier;
         /* 0x0C0 */ public List<GcRewardMissionOverride> RewardOverrideTable;
         /* 0x0D0 */ public bool ActivateLocatorsFromRarity;
-        [NMS(Size = 0x3)]
+        [NMS(Size = 0x3, EnumType = typeof(GcRarity.RarityEnum))]
         /* 0x0D8 */ public NMSString0x10[] RarityLocators;
         /* 0x108 */ public bool UseSystemColorsForTexture;
         /* 0x109 */ public bool RemoveModel;

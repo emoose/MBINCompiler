@@ -5,15 +5,15 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x1C8, GUID = 0x5142359D32BAE2D2, NameHash = 0xEAE36C86E1479AF5)]
+    [NMS(Size = 0x1C8, GUID = 0xA1BB31FAC09B05C8, NameHash = 0xEAE36C86E1479AF5)]
     public class GcSimpleInteractionComponentData : NMSTemplate
     {
         // size: 0x21
 		public enum SimpleInteractionTypeEnum {
-            Interact, Treasure, Beacon, Scan, Save, CallShip, CallVehicle, Word, Tech, GenericReward, Feed, Ladder, ClaimBase, TeleportStartPoint,
-            TeleportEndPoint, Portal, Chest, ResourceHarvester, BaseCapsule, Hologram, NPCTerminalMessage, VehicleBoot, BiomeHarvester,
-            FreighterGalacticMap, FreighterChest, Collectable, Chair, BaseTreasureChest, SpawnObject, NoiseBox, AbandFreighterTeleporter,
-            PetEgg, SubstancePickup
+            Interact, Treasure, Beacon, Scan, Save, CallShip, CallVehicle, Word, Tech, GenericReward,
+            Feed, Ladder, ClaimBase, TeleportStartPoint, TeleportEndPoint, Portal, Chest, ResourceHarvester, BaseCapsule, Hologram,
+            NPCTerminalMessage, VehicleBoot, BiomeHarvester, FreighterGalacticMap, FreighterChest, Collectable, Chair, BaseTreasureChest, SpawnObject, NoiseBox,
+            AbandFreighterTeleporter, PetEgg, SubstancePickup
         }
         /* 0x000 */ public SimpleInteractionTypeEnum SimpleInteractionType;
         /* 0x004 */ public float InteractDistance;
@@ -44,7 +44,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x138 */ public NMSString0x20A ScanData;
         /* 0x158 */ public GcDiscoveryTypes ScanIcon;
         /* 0x15C */ public bool ActivateLocatorsFromRarity;
-        [NMS(Size = 0x3)]
+        [NMS(Size = 0x3, EnumType = typeof(GcRarity.RarityEnum))]
         /* 0x160 */ public NMSString0x10[] RarityLocators;
         /* 0x190 */ public List<GcInteractionBaseBuildingState> BaseBuildingTriggerActions;
         /* 0x1A0 */ public List<GcRewardMissionOverride> RewardOverrideTable;

@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x5E0, GUID = 0xC7D218267C466E5E, NameHash = 0x7BBBCE7D7BC0F1F4)]
+    [NMS(Size = 0x5E0, GUID = 0x525B60757AD88AC5, NameHash = 0x7BBBCE7D7BC0F1F4)]
     public class GcScanEventData : NMSTemplate
     {
         /* 0x000 */ public NMSString0x20A Name;
@@ -31,12 +31,14 @@ namespace libMBIN.NMS.GameComponents
         /* 0x0AC */ public bool CanEndFromOutsideMission;
         /* 0x0AD */ public bool DisableMultiplayerSync;
         /* 0x0AE */ public bool ReplaceEventIfAlreadyActive;
-        public enum BuildingLocationEnum { Nearest, AllNearest, Random, RandomOnNearPlanet, RandomOnFarPlanet, PlanetSearch }
+        public enum BuildingLocationEnum { Nearest, AllNearest, Random, RandomOnNearPlanet, RandomOnFarPlanet, PlanetSearch, PlanetSettlement }
 		/* 0x0B0 */ public BuildingLocationEnum BuildingLocation;
-        // size: 0x13
-        public enum BuildingTypeEnum { Any, AnyShelter, AnyNPC, BuildingClass, SpaceStation, SpaceAnomaly, Atlas, Freighter, FreighterBase,
-            ExternalPlanetBase, PlanetBaseTerminal, Expedition, TutorialShelter, MPMissionFreighter, Nexus, InitialDistressSignal, SpaceMarker,
-            NexusEggMachine, PhotoTarget }
+        // size: 0x16
+        public enum BuildingTypeEnum {
+            Any, AnyShelter, AnyNPC, BuildingClass, SpaceStation, SpaceAnomaly, Atlas, Freighter, FreighterBase, ExternalPlanetBase,
+            PlanetBaseTerminal, Expedition, TutorialShelter, MPMissionFreighter, Nexus, InitialDistressSignal, SpaceMarker, NexusEggMachine, PhotoTarget, SettlementConstruction,
+            UnownedSettlement, NPC_HideOut
+        }
 		/* 0x0B4 */ public BuildingTypeEnum BuildingType;
         /* 0x0B8 */ public GcBuildingClassification BuildingClass;
         /* 0x0BC */ public bool AllowFriendsBases;

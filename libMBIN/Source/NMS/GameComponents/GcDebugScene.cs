@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x1C10, GUID = 0x8B8FC105C70B3860, NameHash = 0xB5B196A1179FFE00)]
+    [NMS(Size = 0x1D00, GUID = 0x188140228BFE195A, NameHash = 0xB5B196A1179FFE00)]
     public class GcDebugScene : NMSTemplate
     {
         /* 0x0000 */ public bool Active;
@@ -27,51 +27,51 @@ namespace libMBIN.NMS.GameComponents
         [NMS(Size = 0x6)]
         /* 0x0058 */ public GcPetData[] Pets;
         [NMS(Size = 0x6)]
-        /* 0x0C28 */ public GcPetCustomisationData[] PetAccessoryCustomisation;
-        /* 0x1258 */ public bool ForcePlayerWalk;
-        /* 0x125C */ public int PetRideIndex;
-        /* 0x1260 */ public List<Vector3f> PetRideWayPoints;
-        /* 0x1270 */ public bool ForceSunPosition;
-        /* 0x1280 */ public Vector3f ForcedSunPosition;
-        /* 0x1290 */ public bool ControlClouds;
-        /* 0x1294 */ public float CloudCover;
-        /* 0x1298 */ public float CloudAnimScale;
-        /* 0x129C */ public Vector2f CloudWindOffset;
-        /* 0x12A4 */ public Vector2f CloudStratosphereWindOffset;
-        /* 0x12B0 */ public List<GcDebugShipTravelLine> DebugShipPaths;
-        /* 0x12C0 */ public List<GcDebugCamera> DebugCameraPaths;
-        /* 0x12D0 */ public List<GcCreatureDebugSpawnData> DebugCreatureSpawns;
-        /* 0x12E0 */ public List<GcMechDebugSpawnData> DebugMechSpawns;
-        /* 0x12F0 */ public List<GcAIShipDebugSpawnData> DebugEnemyShipSpawns;
-        /* 0x1300 */ public List<GcAIShipDebugSpawnData> DebugShipSpawns;
+        /* 0x0D18 */ public GcPetCustomisationData[] PetAccessoryCustomisation;
+        /* 0x1348 */ public bool ForcePlayerWalk;
+        /* 0x134C */ public int PetRideIndex;
+        /* 0x1350 */ public List<Vector3f> PetRideWayPoints;
+        /* 0x1360 */ public bool ForceSunPosition;
+        /* 0x1370 */ public Vector3f ForcedSunPosition;
+        /* 0x1380 */ public bool ControlClouds;
+        /* 0x1384 */ public float CloudCover;
+        /* 0x1388 */ public float CloudAnimScale;
+        /* 0x138C */ public Vector2f CloudWindOffset;
+        /* 0x1394 */ public Vector2f CloudStratosphereWindOffset;
+        /* 0x13A0 */ public List<GcDebugShipTravelLine> DebugShipPaths;
+        /* 0x13B0 */ public List<GcDebugCamera> DebugCameraPaths;
+        /* 0x13C0 */ public List<GcCreatureDebugSpawnData> DebugCreatureSpawns;
+        /* 0x13D0 */ public List<GcMechDebugSpawnData> DebugMechSpawns;
+        /* 0x13E0 */ public List<GcAIShipDebugSpawnData> DebugEnemyShipSpawns;
+        /* 0x13F0 */ public List<GcAIShipDebugSpawnData> DebugShipSpawns;
         [NMS(Size = 0x7, EnumType = typeof(GcVehicleType.VehicleTypeEnum))]
-        /* 0x1310 */ public GcCameraFollowSettings[] VehicleCameraOverride;
-        /* 0x1A10 */ public bool DebugDroneScanPlayer;
-        /* 0x1A20 */ public Vector3f DebugDroneSpawn;
-        /* 0x1A30 */ public Vector3f DebugDroneTarget;
-        /* 0x1A40 */ public int DebugNumDrones;
-        /* 0x1A50 */ public Vector3f DebugWalkerSpawn;
-        /* 0x1A60 */ public Vector3f DebugWalkerTarget;
-        /* 0x1A70 */ public Vector3f DebugFlybyTarget;
-        /* 0x1A80 */ public Vector3f DebugFlybyDir;
-        /* 0x1A90 */ public float DebugFlybyRange;
-        /* 0x1A98 */ public GcSeed DebugFlybySeed;
-        /* 0x1AA8 */ public NMSString0x10 DebugExperienceCamShake;
-        /* 0x1AC0 */ public Vector3f DebugShipSpawnPos;
-        /* 0x1AD0 */ public Vector3f DebugShipSpawnFacing;
-        /* 0x1AE0 */ public Vector3f DebugShipSpawnUp;
-        /* 0x1AF0 */ public NMSString0x10 PulseEncounter;
-        /* 0x1B00 */ public Vector3f SandwormSpawnPos;
-        /* 0x1B10 */ public Vector3f DebugFrigateFlybySpawnPos;
-        /* 0x1B20 */ public float DebugFrigateFlybyRotation;
-        /* 0x1B24 */ public float DebugFrigateFlybyHeightOffset;
-        /* 0x1B28 */ public NMSString0x10 NormandyReward;
-        /* 0x1B38 */ public float CameraSpinTime;
-        /* 0x1B3C */ public float CameraSpinRevolutions;
-        /* 0x1B40 */ public float CameraSpinVerticalOffset;
-        /* 0x1B44 */ public float CameraSpinDistanceOffset;
-        /* 0x1B48 */ public TkCurveType CameraSpinEasing;
+        /* 0x1400 */ public GcCameraFollowSettings[] VehicleCameraOverride;
+        /* 0x1B00 */ public bool DebugDroneScanPlayer;
+        /* 0x1B10 */ public Vector3f DebugDroneSpawn;
+        /* 0x1B20 */ public Vector3f DebugDroneTarget;
+        /* 0x1B30 */ public int DebugNumDrones;
+        /* 0x1B40 */ public Vector3f DebugWalkerSpawn;
+        /* 0x1B50 */ public Vector3f DebugWalkerTarget;
+        /* 0x1B60 */ public Vector3f DebugFlybyTarget;
+        /* 0x1B70 */ public Vector3f DebugFlybyDir;
+        /* 0x1B80 */ public float DebugFlybyRange;
+        /* 0x1B88 */ public GcSeed DebugFlybySeed;
+        /* 0x1B98 */ public NMSString0x10 DebugExperienceCamShake;
+        /* 0x1BB0 */ public Vector3f DebugShipSpawnPos;
+        /* 0x1BC0 */ public Vector3f DebugShipSpawnFacing;
+        /* 0x1BD0 */ public Vector3f DebugShipSpawnUp;
+        /* 0x1BE0 */ public NMSString0x10 PulseEncounter;
+        /* 0x1BF0 */ public Vector3f SandwormSpawnPos;
+        /* 0x1C00 */ public Vector3f DebugFrigateFlybySpawnPos;
+        /* 0x1C10 */ public float DebugFrigateFlybyRotation;
+        /* 0x1C14 */ public float DebugFrigateFlybyHeightOffset;
+        /* 0x1C18 */ public NMSString0x10 NormandyReward;
+        /* 0x1C28 */ public float CameraSpinTime;
+        /* 0x1C2C */ public float CameraSpinRevolutions;
+        /* 0x1C30 */ public float CameraSpinVerticalOffset;
+        /* 0x1C34 */ public float CameraSpinDistanceOffset;
+        /* 0x1C38 */ public TkCurveType CameraSpinEasing;
         [NMS(Size = 0x6)]
-        /* 0x1B50 */ public GcDebugPlanetPos[] PlanetPositions;
+        /* 0x1C40 */ public GcDebugPlanetPos[] PlanetPositions;
     }
 }

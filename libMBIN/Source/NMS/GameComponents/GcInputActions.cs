@@ -3,10 +3,10 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x4, GUID = 0x7A5368FD92225B24, NameHash = 0xB3E8C8CD4B9DB0B1)]
+	[NMS(Size = 0x4, GUID = 0x53E023C06D95D034, NameHash = 0xB3E8C8CD4B9DB0B1)]
     public class GcInputActions : NMSTemplate
     {
-        // size: 0x111
+        // size: 0x11C
         public enum InputActionEnum {
             Invalid, Player_Forward, Player_Back, Player_Left, Player_Right, Player_SwimUp, Player_SwimDown, Player_Interact, Player_Melee, Player_Scan,
             Player_Torch, Player_Binoculars, Player_Zoom, Player_ShowHUD, Player_Jump, Player_Run, Player_Shoot, Player_Grenade, Player_Reload, Player_ChangeWeapon,
@@ -32,10 +32,11 @@ namespace libMBIN.NMS.GameComponents
             UI_CharacterCustomisation_RotateCamera, UI_CharacterCustomisation_PitchCamera, GameMode_CancelDelete, GameMode_TitleStart, GameMode_ChangeUser, Binocs_NextMode, Binocs_PrevMode, BaseBuilding_PinRecipe, BaseBuilding_SwitchBase, PhotoMode_CatLeft,
             PhotoMode_CatRight, PhotoMode_ValueIncrease, PhotoMode_ValueDecrease, PhotoMode_OptionUp, PhotoMode_OptionDown, PhotoMode_CameraRollLeft, PhotoMode_CameraRollRight, PhotoMode_PauseApplication, PhotoMode_CopyLocation, PhotoMode_HideLocation,
             UI_Up_Sub_Discovery, UI_Down_Sub_Discovery, Fe_Upload_Discovery, HMD_Recenter, HMD_Recenter2, HMD_FEOpen, TextChatOpenClose, TextChatSend, TextChatPasteHold, TextChatPaste,
-            TextChatAutocomplete, TextChatAutocompleteModifier, TextChatCursorLeft, TextChatCursorRight, TextChatCursorHome, TextChatCursorEnd, TextChatDelete, Player_InteractSecondary, TogglePause, TogglePlanet,
-            Suicide, Reset, AddLastToolbox, AddLastToolboxAtPos, TerrainInvalidate, TogglePipeline, TakeScreenshot, TakeExrScreenshot, ToggleDebugStats, ToggleDebugSubpage,
-            DumpNodeStats, ToggleTaa, DebugDropMeasurementAnchor, QuickWarp, DumpStats, DiscoverOwnBase, ClearTerrainEdits, SelectRegion, SwitchRegionRow, SwitchRegionAxis,
-            OpenLog, DumpVertStats, Player_TagMarker
+            TextChatAutocomplete, TextChatAutocompleteModifier, TextChatCursorLeft, TextChatCursorRight, TextChatCursorHome, TextChatCursorEnd, TextChatDelete, Player_InteractSecondary, BaseBuilding_ToggleVisions, BaseBuilding_Browse,
+            BaseBuilding_Pickup, BaseBuilding_Duplicate, BaseBuilding_Delete, BaseBuilding_ToggleRotationAxis, Build_AnalogRotateZ2, BaseBuilding_ToggleSnapping, BaseBuilding_ToggleWiring, BaseBuilding_Paint, BaseBuilding_NextPart, TogglePause,
+            TogglePlanet, Suicide, Reset, AddLastToolbox, AddLastToolboxAtPos, TerrainInvalidate, TogglePipeline, TakeScreenshot, TakeExrScreenshot, ToggleDebugStats,
+            ToggleDebugSubpage, DumpNodeStats, ToggleTaa, DebugDropMeasurementAnchor, QuickWarp, DumpStats, DiscoverOwnBase, ClearTerrainEdits, SelectRegion, SwitchRegionRow,
+            SwitchRegionAxis, OpenLog, DumpVertStats, Player_TagMarker
         }
         public InputActionEnum InputAction;
     }

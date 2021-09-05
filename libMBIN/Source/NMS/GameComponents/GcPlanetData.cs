@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x3D80, GUID = 0xF9FFC4EEEC16E569, NameHash = 0x25EDFA0EC4C3AF0A)]
+	[NMS(Size = 0x3D50, GUID = 0x5A8EC2970BA180BC, NameHash = 0x25EDFA0EC4C3AF0A)]
     public class GcPlanetData : NMSTemplate
     {
         /* 0x0000 */ public NMSString0x80 Name;
@@ -32,15 +32,15 @@ namespace libMBIN.NMS.GameComponents
         /* 0x3428 */ public GcEnvironmentSpawnData SpawnData;
         /* 0x3488 */ public GcAlienRace InhabitingRace;
         /* 0x3490 */ public GcPlanetBuildingData BuildingData;
-        /* 0x3500 */ public GcPlanetGenerationIntermediateData GenerationData;
-        /* 0x3968 */ public Vector2f SentinelTimer;
-        /* 0x3970 */ public Vector2f FlybyTimer;
-        /* 0x3978 */ public GcPlanetInfo PlanetInfo;
-        /* 0x3CFC */ public GcPlanetSentinelData SentinelData;
-        /* 0x3D10 */ public GcPlanetRingData Rings;
-        /* 0x3D70 */ public bool InEmptySystem;
-        /* 0x3D71 */ public bool InAbandonedSystem;
-        /* 0x3D74 */ public float FuelMultiplier;
+        /* 0x34D8 */ public GcPlanetGenerationIntermediateData GenerationData;
+        /* 0x3940 */ public Vector2f SentinelTimer;
+        /* 0x3948 */ public Vector2f FlybyTimer;
+        /* 0x3950 */ public GcPlanetInfo PlanetInfo;
+        /* 0x3CD4 */ public GcPlanetSentinelData SentinelData;
+        /* 0x3CE0 */ public GcPlanetRingData Rings;
+        /* 0x3D40 */ public bool InEmptySystem;
+        /* 0x3D41 */ public bool InAbandonedSystem;
+        /* 0x3D44 */ public float FuelMultiplier;
     }
 }
 

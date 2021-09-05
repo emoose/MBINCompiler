@@ -5,10 +5,10 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x2BB90, GUID = 0x6243D528366BE6, NameHash = 0xBEAB285DC115E7C6)]
+	[NMS(Size = 0x2D7C0, GUID = 0x492FFF6340004DD9, NameHash = 0xBEAB285DC115E7C6)]
     public class GcInputActionInfoMap : NMSTemplate
     {
-        [NMS(Size = 0x111, EnumType = typeof(GcInputActions.InputActionEnum))]
+        [NMS(Size = 0x11C, EnumType = typeof(GcInputActions.InputActionEnum))]
         public GcInputActionInfo[] ActionMap;
     }
 }

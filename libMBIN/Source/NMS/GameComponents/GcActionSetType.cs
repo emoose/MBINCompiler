@@ -5,12 +5,14 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x4, GUID = 0x9FF8C33BBF3A4F8F, NameHash = 0x99FB64404DAF2DE7)]
+	[NMS(Size = 0x4, GUID = 0xFC00A68A4FADC0C3, NameHash = 0x99FB64404DAF2DE7)]
     public class GcActionSetType : NMSTemplate
     {
-        // size: 0xE
-        public enum ActionSetTypeEnum { None, FRONTEND, OnFootControls, OnFootQuickMenu, ShipControls, ShipQuickMenu, VehicleMode, GalacticMap, PhotoModeMenu,
-            PhotoModeMvCam, AmbientMode, DebugMode, BuildMenuAnalogueRotate, TextChat }
+        // size: 0x10
+        public enum ActionSetTypeEnum {
+            None, FRONTEND, OnFootControls, OnFootQuickMenu, ShipControls, ShipQuickMenu, VehicleMode, GalacticMap, PhotoModeMenu, PhotoModeMvCam,
+            AmbientMode, DebugMode, BuildMenuAnalogueRotate, TextChat, BuildMenuSelectionMode, BuildMenuPlacementMode
+        }
         public ActionSetTypeEnum ActionSetType;
     }
 }

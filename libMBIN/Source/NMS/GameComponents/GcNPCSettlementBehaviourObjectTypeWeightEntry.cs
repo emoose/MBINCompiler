@@ -3,8 +3,10 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x8, GUID = 0x53F1251A0B78A5DF, NameHash = 0xDDDC2F57D70378EB, Broken = true)]
+    [NMS(Size = 0x8, GUID = 0x53F1251A0B78A5DF, NameHash = 0xDDDC2F57D70378EB)]
     public class GcNPCSettlementBehaviourObjectTypeWeightEntry : NMSTemplate
     {
+        /* 0x0 */ public GcNPCInteractiveObjectType ObjectType;
+        /* 0x4 */ public float Weight;
     }
 }

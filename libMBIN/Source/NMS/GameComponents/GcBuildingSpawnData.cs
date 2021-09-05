@@ -21,6 +21,7 @@ namespace libMBIN.NMS.GameComponents
         [NMS(Size = 0x8)]
         /* 0x588 */ public int[] ClusterLayouts;
         /* 0x5A8 */ public int ClusterLayoutCount;
+        /* 0x5AC */ public float ClusterSpacing;
         /* 0x5B0 */ public TkNoiseFlattenOptions FlattenType;
         /* 0x5B8 */ public bool GivesShelter;
         /* 0x5B9 */ public bool AlignToNormal;

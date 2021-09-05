@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x6E0, GUID = 0xED9D01EDEE998FDB,  NameHash = 0xCE965FAFD6BBF99E)]
+	[NMS(Size = 0x720, GUID = 0xED9D01EDEE998FDB,  NameHash = 0xCE965FAFD6BBF99E)]
     public class GcTestMetadata : NMSTemplate
     {
         public bool TestBool;
@@ -59,7 +59,7 @@ namespace libMBIN.NMS.GameComponents
         [NMS(Size = 0x4, EnumType = typeof(TestEnumEnum))]
         public float[] TestEnumArray;
 
-        [NMS(Size = 0x24, EnumType = typeof(GcBuildingClassification.BuildingClassEnum))]
+        [NMS(Size = 0x33, EnumType = typeof(GcBuildingClassification.BuildingClassEnum))]
         public float[] TestExternalEnumArray;
 
 		public enum TestFlagsEnum { Null, Flag1, Flag2 }

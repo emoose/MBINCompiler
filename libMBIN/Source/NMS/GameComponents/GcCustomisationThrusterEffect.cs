@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0xF0, GUID = 0xF88B362A684E947C, NameHash = 0xE7EC6E83CB496A6C)]
+    [NMS(Size = 0xF0, GUID = 0x8DC30F38C219E418, NameHash = 0xE7EC6E83CB496A6C)]
     public class GcCustomisationThrusterEffect : NMSTemplate
     {
         /* 0x00 */ public NMSString0x10 Name;
@@ -12,7 +12,8 @@ namespace libMBIN.NMS.GameComponents
         /* 0x20 */ public bool SingleJet;
         /* 0x28 */ public NMSString0x10 LinkedSpecialID;
         /* 0x38 */ public NMSString0x20A Tip;
-        /* 0x58 */ public TkModelResource Trails;
+        /* 0x58 */ public bool AllowedInSeasonalDefaults;
+        /* 0x5C */ public TkModelResource Trails;
         /* 0xE0 */ public List<GcCharacterJetpackEffect> Effects;
     }
 }

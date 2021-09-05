@@ -10,7 +10,7 @@ namespace libMBIN.NMS.GameComponents
     {
         /* 0x000 */ public NMSString0x80 TextureFile;
         /* 0x080 */ public NMSString0x80 OverlayFile;
-        /* 0x100 */ public NMSString0x100 TileTypesFile;
+        /* 0x100 */ public NMSString0x80 TileTypesFile;
         /* 0x180 */ public NMSString0x80 ColourPaletteFile;
         /* 0x200 */ public NMSString0x80 LegacyColourPaletteFile;
         /* 0x280 */ public GcMiningSubstanceData MiningSubstance1;

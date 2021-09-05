@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x1F40, GUID = 0xC0571B235E7E1966, NameHash = 0x9B09276BB2795541)]
+    [NMS(Size = 0x1F50, GUID = 0xEB09C442DE1A70E7, NameHash = 0x9B09276BB2795541)]
     public class GcSolarSystemData : NMSTemplate
     {
         /* 0x0000 */ public GcSeed Seed;
@@ -39,12 +39,12 @@ namespace libMBIN.NMS.GameComponents
         /* 0x05B0 */ public GcPlanetColourData Colours;
         /* 0x1DC0 */ public GcLightProperties Light;
         /* 0x1DF0 */ public GcSpaceSkyProperties Sky;
-        /* 0x1E90 */ public GcScreenFilters ScreenFilter;
-        /* 0x1E94 */ public NMSString0x80 HeavyAir;
-        /* 0x1F18 */ public List<GcAISpaceshipPreloadCacheData> SystemShips;
-        /* 0x1F28 */ public GcAlienRace InhabitingRace;
-        /* 0x1F2C */ public GcPlanetTradingData TradingData;
-        /* 0x1F34 */ public GcPlayerConflictData ConflictData;
+        /* 0x1EA0 */ public GcScreenFilters ScreenFilter;
+        /* 0x1EA4 */ public NMSString0x80 HeavyAir;
+        /* 0x1F28 */ public List<GcAISpaceshipPreloadCacheData> SystemShips;
+        /* 0x1F38 */ public GcAlienRace InhabitingRace;
+        /* 0x1F3C */ public GcPlanetTradingData TradingData;
+        /* 0x1F44 */ public GcPlayerConflictData ConflictData;
         
     }
 

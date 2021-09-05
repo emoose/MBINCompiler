@@ -5,12 +5,12 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(Size = 0x58, GUID = 0x46A62A46EA10C225, NameHash = 0xE5F4152C8F8FC861)]
+    [NMS(Size = 0x58, GUID = 0x829BC54E2E108D7, NameHash = 0xE5F4152C8F8FC861)]
     public class TkMaterialShaderMillData : NMSTemplate
     {
         /* 0x00 */ public List<TkMaterialShaderMillNode> ShaderMillNodes;
         /* 0x10 */ public List<TkMaterialShaderMillLink> ShaderMillLinks;
-        /* 0x20 */ public List<NMSString0x20> ShaderMillFlags;
+        /* 0x20 */ public List<TkMaterialShaderMillFlag> ShaderMillFlags;
         /* 0x30 */ public List<TkMaterialShaderMillComment> ShaderMillCmts;
         /* 0x40 */ public float ScrollX;
         /* 0x44 */ public float ScrollY;

@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x230, GUID = 0x4E9EC4AF15672125, NameHash = 0xECE8B28E154961E9)]
+    [NMS(Size = 0x230, GUID = 0x7B66A2F5237DE5F3, NameHash = 0xECE8B28E154961E9)]
     public class GcMissionSequenceShowMessage : NMSTemplate
     {
         /* 0x000 */ public GcMissionCategory Category;
@@ -14,7 +14,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x090 */ public NMSString0x80 OSDMessage;
         /* 0x110 */ public NMSString0x80 OSDMessageSubtitle;
         /* 0x190 */ public Colour OSDMessageColour;
-        public enum OSDMessageStyleEnum { Standard, Fancy, Stats }
+        public enum OSDMessageStyleEnum { Standard, Fancy, Stats, Settlement }
         /* 0x1A0 */ public OSDMessageStyleEnum OSDMessageStyle;
         /* 0x1A4 */ public bool OSDUseMissionIcon;
         /* 0x1A5 */ public bool DisableIcon;

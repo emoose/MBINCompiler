@@ -6,8 +6,11 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x8, GUID = 0x3A55F7D75764533A, NameHash = 0xB05E7D6A559B1AC0, Broken = true)]
+    [NMS(Size = 0x8, GUID = 0x3A55F7D75764533A, NameHash = 0xB05E7D6A559B1AC0)]
     public class GcBaseStatCondition : NMSTemplate
     {
+        public enum BaseStatEnum { HasTeleporter, HasMainframe }
+        /* 0x0 */ public BaseStatEnum BaseStat;
+        /* 0x4 */ public bool StatValue;
     }
 }

@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x80, GUID = 0x4195C66D915283D7, NameHash = 0x3D6AF30F10DB0EAA)]
+	[NMS(Size = 0xA0, GUID = 0x2F967CB46113EC9E, NameHash = 0x3D6AF30F10DB0EAA)]
     public class GcPlayerExperienceSpawnArchetypeData : NMSTemplate
     {
         /* 0x00 */ public NMSString0x10 Id;
@@ -20,6 +20,8 @@ namespace libMBIN.NMS.GameComponents
         /* 0x58 */ public NMSString0x10 DamageReceivedMultiplier;
         /* 0x68 */ public float SpawnDistOverride;
         /* 0x6C */ public float DespawnDistOverride;
-        /* 0x70 */ public List<NMSTemplate> BehaviourOverrides;
+        /* 0x70 */ public NMSString0x10 BehaviourTreeOverride;
+        /* 0x80 */ public List<NMSTemplate> BehaviourOverrides;
+        /* 0x90 */ public List<NMSTemplate> BlackboardValues;
     }
 }
