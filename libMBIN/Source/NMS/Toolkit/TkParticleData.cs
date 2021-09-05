@@ -1,9 +1,9 @@
-﻿using libMBIN.NMS.Toolkit;
+using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Toolkit
 {
-	[NMS(Size = 0x2C0, GUID = 0x2A9759FAB7C3786E, NameHash = 0xE9525144C4F949EB)]
+    [NMS(Size = 0x2C0, GUID = 0x2A9759FAB7C3786E, NameHash = 0xE9525144C4F949EB)]
     public class TkParticleData : NMSTemplate
     {
         /* 0x000 */ public bool StartEnabled;
@@ -29,11 +29,11 @@ namespace libMBIN.NMS.Toolkit
         public enum SpawnOffsetTypeEnum { Sphere, Box, Disc, Cone, Donut }
         /* 0x158 */ public SpawnOffsetTypeEnum SpawnOffsetType;
         /* 0x160 */ public Vector3f SpawnOffsetParams;
-        /* 0x170 */ public TkEmitterFloatProperty ParticleSiz;
+        /* 0x170 */ public TkEmitterFloatProperty ParticleSize;
         /* 0x19C */ public TkEmitterFloatProperty ParticleSizeY;
         /* 0x1C8 */ public float StartRotationVariation;
         /* 0x1CC */ public TkEmitterFloatProperty Rotation;
-        public enum AlignmentEnum { Rotation, Velcoity, VelocityScreenSpace }
+        public enum AlignmentEnum { Rotation, Velocity, VelocityScreenSpace }
         /* 0x1F8 */ public AlignmentEnum Alignment;
         /* 0x200 */ public Vector3f RotationPivot;
         /* 0x210 */ public TkCoordinateOrientation UCoordinate;

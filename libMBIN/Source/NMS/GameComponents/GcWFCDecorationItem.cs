@@ -15,12 +15,12 @@ namespace libMBIN.NMS.GameComponents
         /* 0x030 */ public List<GcWeightedResource> Scenes;
         /* 0x040 */ public List<NMSString0x10> ApplicableModules;
         /* 0x050 */ public bool Rotate;
-        /* 0x054 */ public bool RequireReachable;
-        /* 0x058 */ public int MaxPerBuilding;
-        /* 0x05C */ public int MinPerBuilding;
-        /* 0x060 */ public bool RequireAboveTerrain;
+        /* 0x051 */ public bool RequireReachable;
+        /* 0x054 */ public int MaxPerBuilding;
+        /* 0x058 */ public int MinPerBuilding;
+        /* 0x05C */ public bool RequireAboveTerrain;
         public enum InsideOutsideEnum { Both, InteriorOnly, ExteriorOnly }
-        /* 0x064 */ public InsideOutsideEnum InsideOutside;
+        /* 0x060 */ public InsideOutsideEnum InsideOutside;
         public enum LevelEnum { Everywhere, GroundLevelOnly, AboveGroundOnly }
         /* 0x064 */ public LevelEnum Level;
         /* 0x068 */ public GcWFCDecorationFace Left;
