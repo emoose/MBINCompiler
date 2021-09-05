@@ -112,6 +112,7 @@ namespace libMBIN.NMS.Globals
         /* 0x478 */ public float ObjectSpawnDetailRadius;
         /* 0x47C */ public float InteractionRadius;
         /* 0x480 */ public bool EnableWind;
+        /* 0x488 */ public List<TkShearWindData> ShearWindSettings;
         /* 0x498 */ public int HotspotsLOD;
         /* 0x49C */ public float RegionHotspotProbability;
         /* 0x4A0 */ public float MaxHotspotOffsetDistance;
