@@ -10,7 +10,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x00 */ public float RunWhenOutdoorsProbability;
         /* 0x04 */ public bool OnlyUseIndoorPOIs;
         /* 0x08 */ public List<GcNPCSettlementBehaviourBuildingClassCapacityEntry> BuildingClassCapacities;
-        /* 0x18 */ public List<GcNPCSettlementBehaviourBuildingClassWeightEntry> AreaPropertyWeights;
+        /* 0x18 */ public List<GcNPCSettlementBehaviourAreaPropertyWeightEntry> AreaPropertyWeights;
         /* 0x28 */ public List<GcNPCSettlementBehaviourBuildingClassWeightEntry> BuildingClassWeights;
         /* 0x38 */ public List<GcNPCSettlementBehaviourObjectTypeWeightEntry> ObjectTypeWeights;
     }
