@@ -67,7 +67,7 @@ jobs:
           name: MBINCompiler
       - name: Get MBINCompiler tag version
         run: |
-          echo "VERSION=$(Build/Release/MBINCompiler.exe version | awk '{print $2}')" >> $GITHUB_ENV
+          echo "VERSION=$(Build/Release/net5/MBINCompiler.exe version | awk '{print $2}')" >> $GITHUB_ENV
           echo "TAG=${GITHUB_REF/refs\/tags\//}" >> $GITHUB_ENV
         shell: bash
       - name: Upload resources if version matches
