@@ -320,7 +320,7 @@ namespace MBINCompiler.Commands {
         /// how to handle the file.
         /// </summary>
         /// <param name="file">The file path to check.</param>
-        /// <param name="fileMode">When the methord returns, contains the file mode.</param>
+        /// <param name="fileMode">When the method returns, contains the file mode.</param>
         /// <returns>true if the file mode is safe to use, otherwise false</returns>
         private static bool GetFileMode( string file, out FileMode fileMode ) {
             FileMode mode = FileMode.CreateNew; // OverwriteMode.Never or file doesn't exist
