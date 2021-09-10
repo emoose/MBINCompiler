@@ -44,6 +44,9 @@ namespace MBINCompiler.Commands {
         private static List<string>    warnedFiles = new List<string>();
         private static List<string>    warnings    = new List<string>();
 
+        // we use a bool here and not a cancellation token to avoid creating more exceptions
+        private static volatile bool   thrown;
+
         public static ErrorCode ConvertFileList( string inputDir, string outputDir, List<string> fileList, bool force ) {
             var errorCode = ErrorCode.Success;
 
@@ -52,6 +55,7 @@ namespace MBINCompiler.Commands {
 
             var tasks = new List<Task>();
             currentIndent = Logger.IndentLevel;
+            thrown = false;
             foreach ( var fileIn in fileList ) {
                 var path = fileIn;
                 if ( outputDir != null ) path = fileIn.Substring( inputDir.Length + 1 );
@@ -60,13 +64,17 @@ namespace MBINCompiler.Commands {
                 RunTask( tasks, () => {
                     fileModeTask?.Wait(); // block tasks while waiting for overwrite prompt. if not threaded, this is a nop
                     errorTask?.Wait();    // block tasks while waiting for error message to be logged. if not threaded, this is a nop
+                    if ( thrown ) return;
                     try {
                         Logger.IndentLevel = currentIndent; // we need to reset the indent level for each thread otherwise it will accumulate
                         EmitInfo( $"Converting {path}" );
                         ConvertFile( path, fileIn, fileOut, InputFormat, OutputFormat );
 
                     } catch ( System.Exception e ) {
-                        if ( !force ) throw;
+                        if ( !force ) {
+                            thrown = true;
+                            throw;
+                        }
                         Async.SynchronizeTask( errorLock, ref errorTask, () => {
                             failedFiles.Add( path );
                             exceptions.Add( e );
@@ -155,7 +163,9 @@ namespace MBINCompiler.Commands {
                     }
                     ms.Flush();
 
-                    FileMode fileMode = GetFileMode( fileOut );
+                    FileMode fileMode;
+                    if ( ! GetFileMode( fileOut, out fileMode ) ) return;
+
                     Directory.CreateDirectory( Path.GetDirectoryName( fileOut ) );
                     using ( var fOut = new FileStream( fileOut, fileMode, FileAccess.Write ) ) ms.WriteTo( fOut );
                 }
@@ -310,22 +320,26 @@ namespace MBINCompiler.Commands {
         /// how to handle the file.
         /// </summary>
         /// <param name="file">The file path to check.</param>
-        /// <returns>A FileMode enum.</returns>
-        private static FileMode GetFileMode( string file ) {
+        /// <param name="fileMode">When the method returns, contains the file mode.</param>
+        /// <returns>true if the file mode is safe to use, otherwise false</returns>
+        private static bool GetFileMode( string file, out FileMode fileMode ) {
             FileMode mode = FileMode.CreateNew; // OverwriteMode.Never or file doesn't exist
+            bool ret = true;
             // If threaded, we need to synchronize so that the user doesn't get prompted multiple times.
             Async.SynchronizeTask( fileModeLock, ref fileModeTask, () => {
                 if ( Overwrite == OverwriteMode.Always ) {
                     mode = FileMode.Create;
-                } else if ( Overwrite == OverwriteMode.Prompt ) {
-                    if ( File.Exists( file ) ) {
-                        bool overwrite = Utils.PromptOverwrite( file, ref OptionBackers.optOverwrite );
-                        if ( !overwrite ) throw new IOException( "The destination file already exists!" );
+                } else if ( File.Exists( file ) ) {
+                    if ( Overwrite == OverwriteMode.Prompt &&
+                         Utils.PromptOverwrite( file, ref OptionBackers.optOverwrite ) ) {
                         mode = FileMode.Create;
+                    } else {
+                        ret = false;
                     }
                 }
             } );
-            return mode;
+            fileMode = mode;
+            return ret;
         }
 
     }
