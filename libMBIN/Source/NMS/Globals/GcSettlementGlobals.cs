@@ -52,7 +52,7 @@ namespace libMBIN.NMS.Globals
         /* 0x3F44 */ public bool[] StatIsGoodWhenPositive;
         [NMS(Size = 0x7, EnumType = typeof(GcSettlementStatType.SettlementStatTypeEnum))]
         /* 0x3F4C */ public float[] NormalisedStatBadThresholds;
-        [NMS(Size = 0x7)]
+        [NMS(Size = 0x7, EnumType = typeof(GcSettlementStatType.SettlementStatTypeEnum))]
         /* 0x3F68 */ public float[] NormalisedStatGoodThresholds;
         /* 0x3F90 */ public Colour PositiveStatColour;
         /* 0x3FA0 */ public Colour NegativeStatColour;
