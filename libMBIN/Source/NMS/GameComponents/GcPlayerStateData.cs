@@ -1,11 +1,12 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x4CE70, GUID = 0xDC8C9BA8D1A98922, NameHash = 0x6C4510BB243EFA64)]
+    [NMS(Size = 0x4D4B0, GUID = 0x27E551F4F36CC901, NameHash = 0x6C4510BB243EFA64)]
     public class GcPlayerStateData : NMSTemplate
     {
         /* 0x00000 */ public GcUniverseAddressData UniverseAddress;
@@ -57,10 +58,10 @@ namespace libMBIN.NMS.GameComponents
         /* 0x04C30 */ public GcInteractionData HoloScepticInteraction;
         /* 0x04C50 */ public GcInteractionData HoloNooneInteraction;
         /* 0x04C70 */ public int Health;
-		/* 0x04C74 */ public int ShipHealth;
+        /* 0x04C74 */ public int ShipHealth;
         /* 0x04C78 */ public int Shield;
-		/* 0x04C7C */ public int ShipShield;
-		/* 0x04C80 */ public int Energy;
+        /* 0x04C7C */ public int ShipShield;
+        /* 0x04C80 */ public int Energy;
         /* 0x04C84 */ public int Units;
         /* 0x04C88 */ public int Nanites;
         /* 0x04C8C */ public int Specials;
@@ -228,7 +229,8 @@ namespace libMBIN.NMS.GameComponents
         /* 0x2E6C8 */ public List<NMSString0x10> RedeemedTwitchRewards;
         [NMS(Size = 0x64)]
         /* 0x2E6E0 */ public GcSettlementState[] SettlementStatesV2;
-        /* 0x4CE60 */ public int SettlementStateRingBufferIndexV2;
-
+        /* 0x4D4A0 */ public int SettlementStateRingBufferIndexV2;
+        [NMS(Size = 0xC, Ignore = true)]
+        /* 0x4D4A4 */ public byte[] EndPadding;
     }
 }

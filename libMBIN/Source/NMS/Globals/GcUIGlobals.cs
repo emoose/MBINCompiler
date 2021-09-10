@@ -6,7 +6,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(Size = 0x57D0, GUID = 0xAA777B7350DDE080, NameHash = 0x95C306B1A90F3E08)]
+    [NMS(Size = 0x57D0, GUID = 0xB9BD5682ED59A2C7, NameHash = 0x95C306B1A90F3E08)]
     public class GcUIGlobals : NMSTemplate
     {
         /* 0x0000 */ public float UseZoomedOutBuildCamRadius;
@@ -318,8 +318,9 @@ namespace libMBIN.NMS.Globals
         /* 0x0F68 */ public float BaseBuildingPartsGridBreadcrumbFlashDuration;
         /* 0x0F6C */ public float BaseBuildingPartsGridMinVisibilityForActive;
         /* 0x0F70 */ public float BaseBuildingPartsGridScrollSpeed;
-        /* 0x0F74 */ public float MarkerRingInnerRadius;
-        /* 0x0F78 */ public float MarkerRingOuterRadius;
+        /* 0x0F74 */ public float BaseBuildingPartsGridPopupDelay;
+        /* 0x0F78 */ public float MarkerRingInnerRadius;
+        /* 0x0F7C */ public float MarkerRingOuterRadius;
         /* 0x0F80 */ public Colour MarkerRingBGColour;
         /* 0x0F90 */ public float RepairTechRepairedWaitTime1;
         /* 0x0F94 */ public float RepairTechRepairedWaitTime2;
