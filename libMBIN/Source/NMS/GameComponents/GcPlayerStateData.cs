@@ -230,7 +230,5 @@ namespace libMBIN.NMS.GameComponents
         [NMS(Size = 0x64)]
         /* 0x2E6E0 */ public GcSettlementState[] SettlementStatesV2;
         /* 0x4D4A0 */ public int SettlementStateRingBufferIndexV2;
-        [NMS(Size = 0xC, Ignore = true)]
-        /* 0x4D4A4 */ public byte[] EndPadding;
     }
 }

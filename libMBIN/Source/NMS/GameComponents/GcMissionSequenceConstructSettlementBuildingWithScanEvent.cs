@@ -16,7 +16,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x200 */ public NMSString0x20A ScanEvent;
         /* 0x220 */ public float ForceCompleteSequenceAtStagePercentage;
         /* 0x224 */ public NMSString0x80 DebugText;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x2A4 */ public byte[] EndPadding;
     }
 }

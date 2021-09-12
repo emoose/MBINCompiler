@@ -24,7 +24,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x07C */ public float PetFollowOffset;
         /* 0x080 */ public GcPetData Pet;
         /* 0x2A0 */ public GcPetCustomisationData PetAccessoryCustomisation;
-        [NMS(Size = 0x8, Ignore = true)]
-        /* 0x3A8 */ public byte[] EndPadding;
     }
 }

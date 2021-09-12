@@ -16,7 +16,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x014 */ public GcSettlementState SettlementData;
         /* 0x504 */ public bool DeleteRequest;
         // There are empty bytes at the end?? Something is weird here...
-        [NMS(Size = 0x1B, Ignore = true)]
-        /* 0x505 */ public byte[] EndPadding;
     }
 }

@@ -13,7 +13,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x20 */ public GcNPCTriggerTypes InteractionTrigger;
         /* 0x24 */ public int InteractionSubType;
         /* 0x30 */ public Vector3f Position;
-        [NMS(Size = 0x10, Ignore = true)]
-        /* 0x40 */ public byte[] EndPadding;  // this is really weird but there doesn't seem to be anything here and the size *is* 0x50...
     }
 }

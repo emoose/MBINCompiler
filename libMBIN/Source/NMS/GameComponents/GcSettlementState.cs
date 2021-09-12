@@ -36,7 +36,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x4D4 */ public int NextBuildingUpgradeIndex;
         /* 0x4D8 */ public GcBuildingClassification NextBuildingUpgradeClass;
         /* 0x4E0 */ public ulong NextBuildingUpgradeSeedValue;
-        [NMS(Size = 0x8, Ignore = true)]
-        /* 0x4E8 */ public byte[] EndPadding;
     }
 }
