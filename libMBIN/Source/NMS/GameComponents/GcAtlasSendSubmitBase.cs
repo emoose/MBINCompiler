@@ -15,5 +15,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x010 */ public GcGameMode GameMode;
         /* 0x020 */ public GcPersistentBase BaseData;
         /* 0x2D0 */ public GcPersistentTerrainEdits TerrainData;
+        [NMS(Size = 0x8, Ignore = true)]
+        /* 0x308 */ public byte[] EndPadding;
     }
 }

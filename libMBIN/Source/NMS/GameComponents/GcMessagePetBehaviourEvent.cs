@@ -15,5 +15,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x40 */ public Vector3f Position;
         /* 0x50 */ public Vector3f Direction;
         // There are 0x10 empty bytes at the end?? Something is weird here...
+        [NMS(Size = 0x10, Ignore = true)]
+        /* 0x60 */ public byte[] EndPadding;
     }
 }
