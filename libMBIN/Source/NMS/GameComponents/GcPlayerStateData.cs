@@ -6,7 +6,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x4D4B0, GUID = 0x27E551F4F36CC901, NameHash = 0x6C4510BB243EFA64)]
+    [NMS(Size = 0x4D4B0, GUID = 0x7DE932852773CB09, NameHash = 0x6C4510BB243EFA64)]
     public class GcPlayerStateData : NMSTemplate
     {
         /* 0x00000 */ public GcUniverseAddressData UniverseAddress;
@@ -79,7 +79,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x04E08 */ public List<GcMaintenanceContainer> MaintenanceInteractions;
         /* 0x04E18 */ public List<GcMaintenanceContainer> PersonalMaintenanceInteractions;
         /* 0x04E28 */ public List<ulong> VisitedSystems;        // probably technically the 8 byte hex used to denote systems...
-        [NMS(Size = 6, EnumType = typeof(GcPlayerHazardType.HazardEnum))]
+        [NMS(Size = 0x6, EnumType = typeof(GcPlayerHazardType.HazardEnum))]
         /* 0x04E38 */ public float[] Hazard;
         /* 0x04E50 */ public int BoltAmmo;
         /* 0x04E54 */ public int ScatterAmmo;
