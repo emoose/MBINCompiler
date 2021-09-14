@@ -12,7 +12,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x00 */ public NMSString0x10 Anim;
         /* 0x10 */ public int FrameStart;
         /* 0x14 */ public NMSString0x20 Shake;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x34 */ public byte[] EndPadding;
     }
 }
