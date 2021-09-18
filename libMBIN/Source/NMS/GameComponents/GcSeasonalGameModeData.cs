@@ -1,11 +1,12 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0xBC0, GUID = 0x76F4B595FB1507AA, NameHash = 0xFD6B0BE30E218605)]
+    [NMS(Size = 0xBC8, GUID = 0x8DC854745B0BEDE0, NameHash = 0xFD6B0BE30E218605)]
     public class GcSeasonalGameModeData : NMSTemplate
     {
         /* 0x000 */ public int SeasonId;
@@ -19,7 +20,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x084 */ public NMSString0x20 SeasonalUAOverride;
         /* 0x0A8 */ public ulong UAOverrideValue;
         /* 0x0B0 */ public NMSString0x10 FinalReward;
-        /* 0x0B0 */ public NMSString0x20A FinalCantRewardMessage;
+        /* 0x0C0 */ public NMSString0x20A FinalCantRewardMessage;
         /* 0x0E0 */ public NMSString0x200 FinalRewardDescription;
         /* 0x2E0 */ public TkTextureResource MainIcon;
         /* 0x364 */ public int SeasonNumber;
@@ -52,5 +53,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0xB99 */ public bool AllowMissionDetailMessages;
         /* 0xBA0 */ public List<GcSeasonalStage> Stages;
         /* 0xBB0 */ public GcScanEventTable ScanEventTable;
+        /* 0xBC0 */ public bool CompatibleWithState;
     }
 }
