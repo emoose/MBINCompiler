@@ -1,11 +1,12 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x4B0, GUID = 0xE8A42129783B7B9A, NameHash = 0xFAE86B2801335B6D)]
+    [NMS(Size = 0x4B0, GUID = 0x89172F338BEF663A, NameHash = 0xFAE86B2801335B6D)]
     public class GcGenericMissionSequence : NMSTemplate
     {
         /* 0x000 */ public NMSString0x10 MissionID;

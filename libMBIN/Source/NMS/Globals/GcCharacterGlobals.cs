@@ -6,7 +6,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(Size = 0x380, GUID = 0xE0FBEE152960927B, NameHash = 0x9904F7D363A81377)]
+    [NMS(Size = 0x388, GUID = 0xBA380EAAC40E9E6F, NameHash = 0x9904F7D363A81377)]
     public class GcCharacterGlobals : NMSTemplate
     {
         /* 0x000 */ public float PitchTest;
@@ -178,5 +178,6 @@ namespace libMBIN.NMS.Globals
         /* 0x374 */ public float NPCDisplayThoughtsMaxDistance;
         /* 0x378 */ public float NPCDisplayThoughtsRefreshInterval;
         /* 0x37C */ public float NPCDisplayThoughtsProbability;
+        /* 0x380 */ public float NPCPOISelectionNearbyNPCBaseMultiplier;
     }
 }
