@@ -19,6 +19,9 @@ namespace libMBIN.UnitTests {
         private const ulong  TIMESTAMP     = 201809071631;
         private const ulong  TEMPLATE_GUID = 0xF1E2D3C4B5A6978;
 
+        private static readonly NMSAttribute[] attrTkAnimMetadata = (NMSAttribute[]) typeof( NMS.Toolkit.TkAnimMetadata ).GetCustomAttributes( typeof( NMSAttribute ), false );
+        private static readonly ulong TKANIMMETADATA_GUID = ((attrTkAnimMetadata?.Length ?? 0) != 0) ? attrTkAnimMetadata[0].GUID : 0;
+
         private static readonly NMSAttribute[] attrTkGeometryData = (NMSAttribute[]) typeof( NMS.Toolkit.TkGeometryData ).GetCustomAttributes( typeof( NMSAttribute ), false );
         private static readonly ulong TKGEOMETRYDATA_GUID = ((attrTkGeometryData?.Length ?? 0) != 0) ? attrTkGeometryData[0].GUID : 0;
 
@@ -49,7 +52,7 @@ namespace libMBIN.UnitTests {
         );
         private MBINHeader HeaderTkAnimMetadata => CreateMockHeader(
                     tag:     MBINHeader.TKANIMMETADATA_TAG,
-                    version: MBINHeader.TKANIMMETADATA_VERSION,
+                    version: TKANIMMETADATA_GUID,
                     padding: MBINHeader.TKANIMMETADATA_PADDING
         );
 
@@ -127,7 +130,7 @@ namespace libMBIN.UnitTests {
             Assert.AreEqual( MBINHeader.MBIN_MAGIC,             HeaderTkAnimMetadata.MagicID );
             Assert.AreEqual( MBINHeader.MBIN_VERSION,           HeaderTkAnimMetadata.FormatID );
             Assert.AreEqual( MBINHeader.TKANIMMETADATA_TAG,     HeaderTkAnimMetadata.Timestamp );
-            Assert.AreEqual( MBINHeader.TKANIMMETADATA_VERSION, HeaderTkAnimMetadata.TemplateGUID );
+            Assert.AreEqual( TKANIMMETADATA_GUID,               HeaderTkAnimMetadata.TemplateGUID );
             Assert.AreEqual( TEMPLATE_NAME,                     HeaderTkAnimMetadata.TemplateName );
             Assert.AreEqual( MBINHeader.TKANIMMETADATA_PADDING, HeaderTkAnimMetadata.EndPadding );
         }
@@ -170,7 +173,7 @@ namespace libMBIN.UnitTests {
             Assert.AreEqual( MBINHeader.MBIN_MAGIC,             header.MagicID );
             Assert.AreEqual( MBINHeader.MBIN_VERSION,           header.FormatID );
             Assert.AreEqual( MBINHeader.TKANIMMETADATA_TAG,     header.Tag );
-            Assert.AreEqual( MBINHeader.TKANIMMETADATA_VERSION, header.MbinVersion );
+            Assert.AreEqual( TKANIMMETADATA_GUID,               header.MbinVersion );
             Assert.AreEqual( "",                                header.TemplateName );
             Assert.AreEqual( MBINHeader.TKANIMMETADATA_PADDING, header.EndPadding );
 
@@ -215,7 +218,7 @@ namespace libMBIN.UnitTests {
             Assert.AreEqual( MBINHeader.MBIN_MAGIC,             header.MagicID );
             Assert.AreEqual( MBINHeader.MBIN_VERSION,           header.FormatID );
             Assert.AreEqual( MBINHeader.TKANIMMETADATA_TAG,     header.Tag );
-            Assert.AreEqual( MBINHeader.TKANIMMETADATA_VERSION, header.MbinVersion );
+            Assert.AreEqual( TKANIMMETADATA_GUID,               header.MbinVersion );
             Assert.AreEqual( "",                                header.TemplateName );
             Assert.AreEqual( MBINHeader.TKANIMMETADATA_PADDING, header.EndPadding );
 
