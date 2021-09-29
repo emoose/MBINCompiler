@@ -16,7 +16,6 @@ namespace libMBIN
 
         // used for format V1
         internal const ulong TKANIMMETADATA_TAG     = 0xFFFFFFFFFFFFFFFF; // only used for TkAnimMetadata
-        internal const ulong TKANIMMETADATA_VERSION = 0x3CD7D2192958BA6C; // only used for TkAnimMetadata
         internal const ulong TKANIMMETADATA_PADDING = 0xFEFEFEFEFEFEFEFE; // only used for TkAnimMetadata
 
         // used for format V2
@@ -216,7 +215,6 @@ namespace libMBIN
 
             if (type == typeof( NMS.Toolkit.TkAnimMetadata ) ) {
                 Tag         = TKANIMMETADATA_TAG;
-                MbinVersion = TKANIMMETADATA_VERSION;
                 EndPadding  = TKANIMMETADATA_PADDING;
             }
             else if (type == typeof(NMS.Toolkit.TkGeometryData) | type == typeof(NMS.Toolkit.TkGeometryStreamData))
