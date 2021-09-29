@@ -6,7 +6,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x4D4B0, GUID = 0x6E447C7CF18B6DC2, NameHash = 0x6C4510BB243EFA64)]
+    [NMS(Size = 0x4D4B0, GUID = 0xE7B4188054AE5BFB, NameHash = 0x6C4510BB243EFA64)]
     public class GcPlayerStateData : NMSTemplate
     {
         /* 0x00000 */ public GcUniverseAddressData UniverseAddress;
@@ -178,8 +178,8 @@ namespace libMBIN.NMS.GameComponents
         /* 0x2CC08 */ public List<GcTradingSupplyData> TradingSupplyData;
         /* 0x2CC18 */ public List<GcPortalSaveData> LastPortal;
         /* 0x2CC28 */ public GcPortalSaveData VisitedPortal;
-        /* 0x2CC40 */ public int KnownPortalRunes;
-        /* 0x2CC44 */ public bool OnOtherSideOfPortal;
+        /* 0x2CC48 */ public int KnownPortalRunes;
+        /* 0x2CC4C */ public bool OnOtherSideOfPortal;
         /* 0x2CC50 */ public GcTeleportEndpoint OtherSideOfPortalReturnBase;
         /* 0x2CCE0 */ public Vector4f PortalMarkerPosition_Local;
         /* 0x2CCF0 */ public Vector4f PortalMarkerPosition_Offset;
