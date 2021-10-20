@@ -6,7 +6,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x140, GUID = 0x6354DF70F709AB47, NameHash = 0x139E6194371FE10E)]
+    [NMS(Size = 0x140, GUID = 0x33CFFFA112AE370, NameHash = 0x139E6194371FE10E)]
     public class GcMissionSequenceCollectProduct : NMSTemplate
     {
         /* 0x00 */ public NMSString0x80 Message;
@@ -19,6 +19,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0xA8 */ public NMSString0x10 ForRepair;
         /* 0xB8 */ public bool TeachIfNotKnown;
         /* 0xB9 */ public bool FromNow;
-        /* 0xBA */ public NMSString0x80 DebugText;
+        /* 0xBA */ public bool TakeAmountFromSeasonData;
+        /* 0xBB */ public NMSString0x80 DebugText;
     }
 }

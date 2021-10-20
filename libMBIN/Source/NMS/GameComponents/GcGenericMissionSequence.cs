@@ -6,7 +6,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x4B0, GUID = 0x89172F338BEF663A, NameHash = 0xFAE86B2801335B6D)]
+    [NMS(Size = 0x4B0, GUID = 0x8C0B036D3822AAFD, NameHash = 0xFAE86B2801335B6D)]
     public class GcGenericMissionSequence : NMSTemplate
     {
         /* 0x000 */ public NMSString0x10 MissionID;

@@ -6,7 +6,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0xBC8, GUID = 0x8DC854745B0BEDE0, NameHash = 0xFD6B0BE30E218605)]
+    [NMS(Size = 0xBE0, GUID = 0x8258EDE519B5C7EE, NameHash = 0xFD6B0BE30E218605)]
     public class GcSeasonalGameModeData : NMSTemplate
     {
         /* 0x000 */ public int SeasonId;
@@ -47,12 +47,16 @@ namespace libMBIN.NMS.GameComponents
         /* 0x770 */ public GcInventoryContainer Inventory_Cargo;
         /* 0x8D0 */ public GcInventoryContainer ShipInventory;
         /* 0xA30 */ public GcInventoryContainer WeaponInventory;
-        /* 0xB90 */ public bool StartNextToShip;
-        /* 0xB94 */ public float DistanceFromShipAtStartOfGame;
-        /* 0xB98 */ public bool ShipStartsDamaged;
-        /* 0xB99 */ public bool AllowMissionDetailMessages;
-        /* 0xBA0 */ public List<GcSeasonalStage> Stages;
-        /* 0xBB0 */ public GcScanEventTable ScanEventTable;
-        /* 0xBC0 */ public bool CompatibleWithState;
+        /* 0xB90 */ public List<GcSandwormTimerAndFrequencyOverride> SandwormOverrides;
+        /* 0xBA0 */ public bool SandwormGlobalOverride;
+        /* 0xBA4 */ public float SandwormGlobalOverrideTimer;
+        /* 0xBA8 */ public float SandwormGlobalOverrideSpawnChance;
+        /* 0xBAC */ public bool StartNextToShip;
+        /* 0xBB0 */ public float DistanceFromShipAtStartOfGame;
+        /* 0xBB4 */ public bool ShipStartsDamaged;
+        /* 0xBB5 */ public bool AllowMissionDetailMessages;
+        /* 0xBB8 */ public List<GcSeasonalStage> Stages;
+        /* 0xBC8 */ public GcScanEventTable ScanEventTable;
+        /* 0xBD8 */ public bool CompatibleWithState;
     }
 }

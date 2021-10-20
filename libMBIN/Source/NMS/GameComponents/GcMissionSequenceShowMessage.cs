@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x230, GUID = 0x7B66A2F5237DE5F3, NameHash = 0xECE8B28E154961E9)]
+    [NMS(Size = 0x230, GUID = 0x6C919AA5AA23E95A, NameHash = 0xECE8B28E154961E9)]
     public class GcMissionSequenceShowMessage : NMSTemplate
     {
         /* 0x000 */ public GcMissionCategory Category;

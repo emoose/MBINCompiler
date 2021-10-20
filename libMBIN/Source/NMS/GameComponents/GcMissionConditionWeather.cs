@@ -3,11 +3,13 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x3, GUID = 0x7E964EBCC31CF4FD, NameHash = 0x9EACE51885CC7760)]
+	[NMS(Size = 0xC, GUID = 0xAAA343CB48DFA0FC, NameHash = 0x9EACE51885CC7760)]
     public class GcMissionConditionWeather : NMSTemplate
     {
-        public bool IsExtreme;
-        public bool StormActive;
-        public bool IgnoreStormIfInShip;
+        /* 0x0 */ public bool IsExtreme;
+        /* 0x4 */ public GcPlayerHazardType WeatherRequirement;
+        /* 0x8 */ public bool StormActive;
+        /* 0x9 */ public bool IgnoreStormIfInShip;
+        /* 0xA */ public bool AllowNonHazardExtremeIfNoStorms;
     }
 }
