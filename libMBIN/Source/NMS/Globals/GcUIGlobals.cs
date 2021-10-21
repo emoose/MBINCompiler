@@ -6,7 +6,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(Size = 0x57E0, GUID = 0x8B7824D9ACA57553, NameHash = 0x95C306B1A90F3E08)]
+    [NMS(Size = 0x57E0, GUID = 0xEBD20BB15DB0910E, NameHash = 0x95C306B1A90F3E08)]
     public class GcUIGlobals : NMSTemplate
     {
         /* 0x0000 */ public float UseZoomedOutBuildCamRadius;

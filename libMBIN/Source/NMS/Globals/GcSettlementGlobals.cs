@@ -6,7 +6,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(Size = 0x50C0, GUID = 0x551E00F662F90A05, NameHash = 0x8652A1B779227539)]
+    [NMS(Size = 0x50C0, GUID = 0x97B1166750F987F7, NameHash = 0x8652A1B779227539)]
     public class GcSettlementGlobals : NMSTemplate
     {
         /* 0x0000 */ public ulong BuildingUpgradeTimeInSeconds;
