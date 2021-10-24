@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x610, GUID = 0xFB76F5FD17603E6, NameHash = 0x2FE28DE7841506AF)]
+    [NMS(Size = 0x600, GUID = 0x2F9F6DE29A3DE97E, NameHash = 0x2FE28DE7841506AF)]
     public class GcBuildingSpawnData : NMSTemplate
     {
         /* 0x000 */ public float Density;
@@ -17,23 +17,22 @@ namespace libMBIN.NMS.GameComponents
         /* 0x56C */ public bool AutoCollision;
         /* 0x570 */ public GcSeed Seed;
         /* 0x580 */ public GcBuildingClassification Classification;
-        /* 0x584 */ public GcBuildingClusterPlacement Placement;
         [NMS(Size = 0x8)]
-        /* 0x588 */ public int[] ClusterLayouts;
-        /* 0x5A8 */ public int ClusterLayoutCount;
-        /* 0x5AC */ public float ClusterSpacing;
-        /* 0x5B0 */ public TkNoiseFlattenOptions FlattenType;
-        /* 0x5B8 */ public bool GivesShelter;
-        /* 0x5B9 */ public bool AlignToNormal;
-        /* 0x5BA */ public bool LowerIntoGround;
-        /* 0x5BC */ public float Scale;
-        /* 0x5C0 */ public float MaxXZRotation;
-        /* 0x5C4 */ public float Radius;
-        /* 0x5C8 */ public float MinHeight;
-        /* 0x5CC */ public float Maxheight;
-        /* 0x5D0 */ public int InstanceID;
-        /* 0x5E0 */ public Vector3f AABBMin;
-        /* 0x5F0 */ public Vector3f AABBMax;
-        /* 0x600 */ public bool BuildingSizeCalculated;
+        /* 0x584 */ public int[] ClusterLayouts;
+        /* 0x5A4 */ public int ClusterLayoutCount;
+        /* 0x5A8 */ public float ClusterSpacing;
+        /* 0x5AC */ public TkNoiseFlattenOptions FlattenType;
+        /* 0x5B4 */ public bool GivesShelter;
+        /* 0x5B5 */ public bool AlignToNormal;
+        /* 0x5B6 */ public bool LowerIntoGround;
+        /* 0x5B8 */ public float Scale;
+        /* 0x5BC */ public float MaxXZRotation;
+        /* 0x5C0 */ public float Radius;
+        /* 0x5C4 */ public float MinHeight;
+        /* 0x5C8 */ public float Maxheight;
+        /* 0x5CC */ public int InstanceID;
+        /* 0x5D0 */ public Vector3f AABBMin;
+        /* 0x5E0 */ public Vector3f AABBMax;
+        /* 0x5F0 */ public bool BuildingSizeCalculated;
     }
 }

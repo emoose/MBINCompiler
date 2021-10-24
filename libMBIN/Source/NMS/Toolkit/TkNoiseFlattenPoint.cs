@@ -13,7 +13,7 @@ namespace libMBIN.NMS.Toolkit
         /* 0x10 */ public int TurbulenceOctaves;
         /* 0x14 */ public TkNoiseFlattenOptions FlattenType;
         /* 0x1C */ public GcBuildingClassification Classification;     // in code, just an int
-        /* 0x20 */ public GcBuildingClusterPlacement Placement;        // in code, just an int
+        /* 0x20 */ public int Placement;
         /* 0x24 */ public bool AddWaypoint;
         /* 0x25 */ public bool AddShelter;
         /* 0x26 */ public bool AddLandingPad;

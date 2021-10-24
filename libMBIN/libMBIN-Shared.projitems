@@ -1126,7 +1126,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcBootLogoData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcBountySpawnInfo.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcBuildingClassification.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcBuildingClusterPlacement.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcBuildingCostPartCount.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcBuildingDefinitionData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcBuildingDefinitionTable.cs" />
@@ -1965,6 +1964,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Toolkit\TkVoxelGeneratorRegionData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Toolkit\TkVoxelGeneratorSettingsArray.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Toolkit\TkVoxelGeneratorSettingsElement.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Toolkit\TkStaticPhysicsComponentData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\BaseTypes\VariableSizeString.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\BaseTypes\Vector2f.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\BaseTypes\Vector3f.cs" />

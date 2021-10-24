@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(Size = 0x2C0, GUID = 0x2A9759FAB7C3786E, NameHash = 0xE9525144C4F949EB)]
+    [NMS(Size = 0x2C0, GUID = 0x620376E8715B3267, NameHash = 0xE9525144C4F949EB)]
     public class TkParticleData : NMSTemplate
     {
         /* 0x000 */ public bool StartEnabled;
@@ -39,7 +39,7 @@ namespace libMBIN.NMS.Toolkit
         /* 0x210 */ public TkCoordinateOrientation UCoordinate;
         /* 0x214 */ public TkCoordinateOrientation VCoordinate;
         /* 0x218 */ public float VelocityInheritance;
-        /* 0x21C */ public float Bounce;
+        /* 0x21C */ public float TrackEmitterPosition;
         /* 0x220 */ public float RotateAroundEmitter;
         /* 0x230 */ public Vector3f RotateAroundEmitterAxis;
         public enum FlipbookPlaybackRateEnum { Absolute, RelativeToMax, OnceToCompletion }
