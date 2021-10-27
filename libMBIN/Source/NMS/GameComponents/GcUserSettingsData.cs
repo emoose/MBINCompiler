@@ -1,11 +1,12 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x3980, GUID = 0xFCFA04F0FC0E96F9, NameHash = 0x3A50D683FD1CF4BF)]
+    [NMS(Size = 0x3988, GUID = 0xDB9EC7F71C3221D0, NameHash = 0x3A50D683FD1CF4BF)]
     public class GcUserSettingsData : NMSTemplate
     {
         /* 0x0000 */ public bool InvertLookControls;
@@ -23,12 +24,14 @@ namespace libMBIN.NMS.GameComponents
         /* 0x3870 */ public int MotionBlurAmount;
         /* 0x3874 */ public int Filter;
         /* 0x3878 */ public bool DamageNumbers;
-        public enum PS4FixedFPSEnum { Invalid, False, True}
+        // size: 0x3
+        public enum PS4FixedFPSEnum { Invalid, False, True }
         /* 0x387C */ public PS4FixedFPSEnum PS4FixedFPS;
         /* 0x3880 */ public float PS4FOVFoot;
         /* 0x3884 */ public float PS4FOVShip;
         /* 0x3888 */ public bool XboxOneXHighResolutionMode;
         /* 0x3889 */ public bool PS4VignetteAndScanlines;
+        // size: 0x3
         public enum BaseSharingModeEnum { Undecided, On, Off }
         /* 0x388C */ public BaseSharingModeEnum BaseSharingMode;
         /* 0x3890 */ public List<NMSString0x10> SeenSubstances;
@@ -46,15 +49,18 @@ namespace libMBIN.NMS.GameComponents
         /* 0x3923 */ public bool SpeechToText;
         /* 0x3924 */ public bool Translate;
         /* 0x3925 */ public bool CrossPlatform;
+        // size: 0x4
         public enum TemperatureUnitEnum { Invalid, C, F, K }
         /* 0x3928 */ public TemperatureUnitEnum TemperatureUnit;
         /* 0x392C */ public bool UseOldMouseFlight;
         /* 0x3930 */ public int LastSeenCommunityMission;
         /* 0x3934 */ public int LastSeenCommunityMissionTier;
+        // size: 0x2
         public enum MovementModeEnum { Teleporter, Smooth }
         /* 0x3938 */ public MovementModeEnum MovementMode;
         /* 0x393C */ public GcMovementDirection MovementDirectionPad;
         /* 0x3940 */ public GcMovementDirection MovementDirectionHands;
+        // size: 0x2
         public enum TurnModeEnum { Smooth, Snap }
         /* 0x3944 */ public TurnModeEnum TurnMode;
         /* 0x3948 */ public bool UseVrVignette;
@@ -62,6 +68,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x394C */ public float HUDZoom;
         /* 0x3950 */ public float FrontendZoom;
         /* 0x3954 */ public bool UseAutoTorch;
+        // size: 0x4
         public enum UIColourSchemeEnum { Default, Protanopia, Deuteranopia, Tritanopia }
         /* 0x3958 */ public UIColourSchemeEnum UIColourScheme;
         /* 0x395C */ public bool EnableModdingConsole;
@@ -72,7 +79,8 @@ namespace libMBIN.NMS.GameComponents
         /* 0x3961 */ public bool EnableLargeLobbies;
         /* 0x3964 */ public int FireteamSessionCount;
         /* 0x3968 */ public int VibrationStrength;
-        /* 0x396C */ public int TriggerFeedbackStrength;
-        /* 0x3970 */ public List<NMSString0x80> UpgradedUsers;
+        /* 0x396C */ public int CamerShakeStrength;
+        /* 0x3970 */ public int TriggerFeedbackStrength;
+        /* 0x3978 */ public List<NMSString0x80> UpgradedUsers;
     }
 }
