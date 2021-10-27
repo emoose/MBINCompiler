@@ -6,7 +6,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(Size = 0x3960, GUID = 0xC1E5BCB11D576BC5, NameHash = 0xA826BCA4D4C3DFE3)]
+    [NMS(Size = 0x3960, GUID = 0xB9D71DD39E93E133, NameHash = 0xA826BCA4D4C3DFE3)]
     public class GcCameraGlobals : NMSTemplate
     {
         /* 0x0000 */ public TkModelRendererData FreighterCustomisationStandardCamera;
@@ -97,6 +97,7 @@ namespace libMBIN.NMS.Globals
         /* 0x19B8 */ public GcCameraFollowSettings CharacterRideCamLarge;
         /* 0x1AB8 */ public GcCameraFollowSettings CharacterRideCamHuge;
         /* 0x1BB8 */ public float ThirdPersonCameraChangeBlendTime;
+        /* 0x1BBC */ public float ThirdPersonCameraChangeMinimumBlend;
         /* 0x1BC0 */ public GcCameraFollowSettings BuggyFollowCam;
         /* 0x1CC0 */ public GcCameraFollowSettings HovercraftFollowCam;
         /* 0x1DC0 */ public GcCameraFollowSettings SubmarineFollowCam;
