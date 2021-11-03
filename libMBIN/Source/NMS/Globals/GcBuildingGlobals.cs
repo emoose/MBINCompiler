@@ -6,7 +6,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(Size = 0x1270, GUID = 0x51E7DCDE36888079, NameHash = 0xCFD86CFD7BD870B1)]
+    [NMS(Size = 0x1270, GUID = 0xC21EEB34A8B0F6EC, NameHash = 0xCFD86CFD7BD870B1)]
     public class GcBuildingGlobals : NMSTemplate
     {
         /* 0x0000 */ public Vector3f BuildingPartPreviewOffset;
@@ -171,8 +171,8 @@ namespace libMBIN.NMS.Globals
         /* 0x118C */ public float[] TotalPlanetFrameTimeForComplexity;
         [NMS(Size = 0x4)]
         /* 0x119C */ public float[] TotalSpaceFrameTimeForComplexity;
-        /* 0x11AC */ public float MaxPercentageNodesBuffer;
-        /* 0x11B0 */ public float MaxLoadingPercentageNodesBuffer;
+        /* 0x11AC */ public float MinPercentageNodesBufferFree;
+        /* 0x11B0 */ public float MinLoadingPercentageNodesBufferFree;
         /* 0x11B4 */ public float PercentagePhysicsComponentsForComplexity;
         /* 0x11B8 */ public float MaximumComplexityDensity;
         /* 0x11BC */ public float ComplexityDensityTestRange;
