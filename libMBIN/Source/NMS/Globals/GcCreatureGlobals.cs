@@ -6,10 +6,11 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(Size = 0x22C0, GUID = 0xD42E3A1B54A9B118, NameHash = 0xE2DEF8CC8775E050)]
+    [NMS(Size = 0x22C0, GUID = 0x5833562FEC771D84, NameHash = 0xE2DEF8CC8775E050)]
     public class GcCreatureGlobals : NMSTemplate
     {
-        /* 0x0000 */ public int AllCreaturesDiscoveredBonusMul;
+        /* 0x0000 */ public int NumCreaturesRequiredForDiscoveryMission;
+        /* 0x0004 */ public int AllCreaturesDiscoveredBonusMul;
         /* 0x0010 */ public Colour AllCreaturesDiscoveredColour;
         /* 0x0020 */ public NMSString0x20A PetCarePuzzleOverrideID;
         /* 0x0040 */ public float CreatureInteractionRangeBoostHuge;

@@ -1,11 +1,12 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x70, GUID = 0x0CEDBF75707F5C11, NameHash = 0xE523CFAD6AFB4BB6)]
+    [NMS(Size = 0x70, GUID = 0xD932F12CB844A3C2, NameHash = 0xE523CFAD6AFB4BB6)]
     public class GcScanEventSolarSystemLookup : NMSTemplate
     {
         /* 0x00 */ public bool UseStarType;
@@ -33,7 +34,8 @@ namespace libMBIN.NMS.GameComponents
         /* 0x30 */ public bool NeedsEmptySystem;
         /* 0x31 */ public bool NeedsAbandonedSystem;
         /* 0x38 */ public NMSString0x10 NeedsResourceHint;
-        /* 0x48 */ public bool NeedsHighCreatureLevel;
+        /* 0x48 */ public bool SuitableForCreatureDiscovery;
+        /* 0x49 */ public bool SuitableForCreatureTaming;
         /* 0x50 */ public NMSString0x20A SamePlanetAsEvent;
     }
 }
