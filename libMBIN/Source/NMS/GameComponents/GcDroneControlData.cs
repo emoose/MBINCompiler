@@ -3,19 +3,20 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x2C, GUID = 0x33F2238EFBDDCC89, NameHash = 0xF561E496C1DF269E)]
+	[NMS(Size = 0x30, GUID = 0x1D1F2601FEC961D9, NameHash = 0xF561E496C1DF269E)]
     public class GcDroneControlData : NMSTemplate
     {
-        public float MaxSpeed;                  // 41A00000h
-        public float Strength;                  // 3FC00000h
-        public float DirectionBrake;            // 3F800000h
-        public float MinHeight;                 // 40A00000h
-        public float MaxHeight;                 // 40A00000h
-        public float HeightAdjustStrength;      // 40000000h
-        public float HeightAdjustDownStrength;  // 3DCCCCCDh
-        public float LookStrength;              // 3F800000h
-        public float StopTime;                  // 3ECCCCCDh
-        public float RepelForce;                // 41200000h
-        public float RepelRange;                // 40A00000h
+        /* 0x00 */ public float MaxSpeed;
+        /* 0x04 */ public float Strength;
+        /* 0x08 */ public float DirectionBrake;
+        /* 0x0C */ public float MinHeight;
+        /* 0x10 */ public float MaxHeight;
+        /* 0x14 */ public float MaxPitch;
+        /* 0x18 */ public float HeightAdjustStrength;
+        /* 0x1C */ public float HeightAdjustDownStrength;
+        /* 0x20 */ public float LookStrength;
+        /* 0x24 */ public float StopTime;
+        /* 0x28 */ public float RepelForce;
+        /* 0x2C */ public float RepelRange;
     }
 }

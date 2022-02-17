@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x160, GUID = 0x30B4483E1E27ABDD, NameHash = 0x5F9BF82F9925D932)]
+	[NMS(Size = 0x170, GUID = 0x3FA1BD8448DD793F, NameHash = 0x5F9BF82F9925D932)]
     public class GcPlayerDamageData : NMSTemplate
     {
         /* 0x000 */ public NMSString0x10 Id;
@@ -12,17 +12,19 @@ namespace libMBIN.NMS.GameComponents
         /* 0x040 */ public TkTextureResource HitIcon;
         /* 0x0C8 */ public NMSString0x20A HitChatMessage;
         /* 0x0E8 */ public NMSString0x20A HitMessage;
-        /* 0x108 */ public NMSString0x20A CriticalHitMessage;
-        /* 0x128 */ public float Damage;
-        /* 0x12C */ public float HardModeMultiplier;
-        /* 0x130 */ public float PushForce;
-        /* 0x134 */ public float CameraTurn;
-        /* 0x138 */ public NMSString0x10 CameraShakeShield;
-        /* 0x148 */ public NMSString0x10 CameraShakeNoShield;
-        /* 0x158 */ public bool ShowTrackIcon;
-        /* 0x159 */ public bool ForceDamageInInteraction;
-        /* 0x159 */ public bool AllowDeathInInteraction;
+        /* 0x108 */ public GcAudioWwiseEvents HitMessageAudio;
+        /* 0x110 */ public NMSString0x20A CriticalHitMessage;
+        /* 0x130 */ public GcAudioWwiseEvents CriticalHitMessageAudio;
+        /* 0x134 */ public float Damage;
+        /* 0x138 */ public float HardModeMultiplier;
+        /* 0x13C */ public float PushForce;
+        /* 0x140 */ public float CameraTurn;
+        /* 0x148 */ public NMSString0x10 CameraShakeShield;
+        /* 0x158 */ public NMSString0x10 CameraShakeNoShield;
+        /* 0x168 */ public bool ShowTrackIcon;
+        /* 0x169 */ public bool ForceDamageInInteraction;
+        /* 0x16A */ public bool AllowDeathInInteraction;
 		public enum PlayerDamageTypeEnum { Normal, Toxic, Radioactive, Freeze, Scorch }
-		/* 0x15C */ public PlayerDamageTypeEnum PlayerDamageType;
+		/* 0x16C */ public PlayerDamageTypeEnum PlayerDamageType;
     }
 }

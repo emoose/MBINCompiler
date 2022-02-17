@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x2D0, GUID = 0x0FBE2AEABA3D65ED, NameHash = 0xDAB0554EA36957B5)]
+    [NMS(Size = 0x2D0, GUID = 0x755847FFD9D23F80, NameHash = 0xDAB0554EA36957B5)]
     public class GcInteractionComponentData : NMSTemplate
     {
         public enum InteractionActionEnum { PressButton, HoldButton, Shoot }
@@ -16,8 +16,9 @@ namespace libMBIN.NMS.GameComponents
         /* 0x0C0 */ public TkModelRendererData RendererAlt;
         /* 0x170 */ public GcAlienRace Race;
         /* 0x174 */ public float AttractDistanceSq;
-        /* 0x178 */ public bool RepeatInteraction;
-        /* 0x179 */ public bool UseInteractCamera;
+        /* 0x178 */ public bool SecondaryMeshAlwaysVisible;
+        /* 0x179 */ public bool RepeatInteraction;
+        /* 0x17A */ public bool UseInteractCamera;
         /* 0x17C */ public float BlendToCameraTime;
         /* 0x180 */ public float BlendFromCameraTime;
         /* 0x188 */ public GcInteractionActivationCost ActivationCost;

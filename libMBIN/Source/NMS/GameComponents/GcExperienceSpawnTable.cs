@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x120, GUID = 0xE708D4288044E050, NameHash = 0x5F4CA33999F0D259)]
+    [NMS(Size = 0x310, GUID = 0xEDB1ADC4426FDE46, NameHash = 0x5F4CA33999F0D259)]
     public class GcExperienceSpawnTable : NMSTemplate
     {
         /* 0x000 */ public List<GcAIShipSpawnData> FlybySpawns;
@@ -26,5 +26,13 @@ namespace libMBIN.NMS.GameComponents
         /* 0x0F0 */ public List<GcPlayerExperienceSpawnTable> CreatureSpawnTable;
         /* 0x100 */ public List<GcPlayerExperienceSpawnArchetypeData> CreatureSpawnArchetypes;
         /* 0x110 */ public List<GcAIShipSpawnData> FrigateFlybySpawns;
+        [NMS(Size = 0x6)]
+        /* 0x120 */ public GcSentinelSpawnSequenceGroupList[] WantedLevelSpawns;
+        [NMS(Size = 0x7, EnumType = typeof(GcEncounterType.EncounterTypeEnum))]
+        /* 0x1E0 */ public GcSentinelSpawnSequenceGroupList[] EncounterSpawns;
+        /* 0x2C0 */ public List<GcSentinelEncounterOverride> EncounterOverrides;
+        /* 0x2D0 */ public GcSentinelnWaveGroup SummonerSpawns;
+        /* 0x2F0 */ public List<GcSentinelSpawnNamedSequence> SentinelSequences;
+        /* 0x300 */ public List<GcSentinelSpawnWave> SentinelSpawns;
     }
 }

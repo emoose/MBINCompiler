@@ -6,7 +6,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0xBF8, GUID = 0x0FA39679EE602D48, NameHash = 0xFD6B0BE30E218605)]
+    [NMS(Size = 0x3250, GUID = 0xE8526B0919B7F8F7, NameHash = 0xFD6B0BE30E218605)]
     public class GcSeasonalGameModeData : NMSTemplate
     {
         /* 0x000 */ public int SeasonId;
@@ -25,6 +25,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x2E0 */ public TkTextureResource MainIcon;
         /* 0x364 */ public int SeasonNumber;
         /* 0x368 */ public int RemixNumber;
+        /* 0x36C */ public int DisplayNumber;
         /* 0x370 */ public NMSString0x20A SeasonName;
         /* 0x390 */ public NMSString0x20A SeasonNameUpper;
         /* 0x3B0 */ public NMSString0x20A MainMissionTitle;
@@ -48,18 +49,22 @@ namespace libMBIN.NMS.GameComponents
         /* 0x778 */ public GcInventoryContainer Inventory_Cargo;
         /* 0x8D8 */ public GcInventoryContainer ShipInventory;
         /* 0xA38 */ public GcInventoryContainer WeaponInventory;
-        /* 0xB98 */ public List<GcSandwormTimerAndFrequencyOverride> SandwormOverrides;
-        /* 0xBA8 */ public bool SandwormGlobalOverride;
-        /* 0xBAC */ public float SandwormGlobalOverrideTimer;
-        /* 0xBB0 */ public float SandwormGlobalOverrideSpawnChance;
-        /* 0xBB4 */ public bool StartNextToShip;
-        /* 0xBB8 */ public float DistanceFromShipAtStartOfGame;
-        /* 0xBBC */ public bool ShipStartsDamaged;
-        /* 0xBBD */ public bool AllowMissionDetailMessages;
-        /* 0xBBE */ public bool UseStartPlanetObjectListOverrides;
-        /* 0xBC0 */ public NMSString0x10 StartPlanetRareSubstanceOverride;
-        /* 0xBD0 */ public List<GcSeasonalStage> Stages;
-        /* 0xBE0 */ public GcScanEventTable ScanEventTable;
-        /* 0xBF0 */ public bool CompatibleWithState;
+        /* 0xB98 */ public bool UseRandomPet;
+        /* 0xBA0 */ public List<GcSeasonPetConstraints> RandomPetConstraints;
+        [NMS(Size = 0x12)]
+        /* 0xBB0 */ public GcPetData[] SpecificPets;
+        /* 0x31F0 */ public List<GcSandwormTimerAndFrequencyOverride> SandwormOverrides;
+        /* 0x3200 */ public bool SandwormGlobalOverride;
+        /* 0x3204 */ public float SandwormGlobalOverrideTimer;
+        /* 0x3208 */ public float SandwormGlobalOverrideSpawnChance;
+        /* 0x320C */ public bool StartNextToShip;
+        /* 0x3210 */ public float DistanceFromShipAtStartOfGame;
+        /* 0x3214 */ public bool ShipStartsDamaged;
+        /* 0x3215 */ public bool AllowMissionDetailMessages;
+        /* 0x3216 */ public bool UseStartPlanetObjectListOverrides;
+        /* 0x3218 */ public NMSString0x10 StartPlanetRareSubstanceOverride;
+        /* 0x3228 */ public List<GcSeasonalStage> Stages;
+        /* 0x3238 */ public GcScanEventTable ScanEventTable;
+        /* 0x3248 */ public bool CompatibleWithState;
     }
 }
