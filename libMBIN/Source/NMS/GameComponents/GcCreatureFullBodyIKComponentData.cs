@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x48, GUID = 0x7329F4CFE6FE07F1, NameHash = 0x741554C15123D097)]
+	[NMS(Size = 0x58, GUID = 0x9CC2D53D1C2C776F, NameHash = 0x741554C15123D097)]
     public class GcCreatureFullBodyIKComponentData : NMSTemplate
     {
         /* 0x00 */ public List<GcCreatureIkData> JointData;
@@ -15,12 +15,16 @@ namespace libMBIN.NMS.GameComponents
         /* 0x24 */ public float MaxHeadPitch;
         /* 0x28 */ public float MaxHeadRoll;
         /* 0x2C */ public float MaxHeadYaw;
-        /* 0x30 */ public bool UseFootGlue;
-        /* 0x34 */ public float FootPlantSpringTime;
-        /* 0x38 */ public bool UseFootAngle;
-        /* 0x3C */ public float FootAngleSpeed;
-        /* 0x40 */ public float MaxFootAngle;
-        /* 0x44 */ public bool UsePistons;
-        /* 0x45 */ public bool Mesh;
+        /* 0x30 */ public float BodyMassWeight;
+        /* 0x34 */ public float Omega;
+        /* 0x38 */ public float OmegaDropOff;
+        /* 0x3C */ public float MovementDamp;
+        /* 0x40 */ public bool UseFootGlue;
+        /* 0x44 */ public float FootPlantSpringTime;
+        /* 0x48 */ public bool UseFootAngle;
+        /* 0x4C */ public float FootAngleSpeed;
+        /* 0x50 */ public float MaxFootAngle;
+        /* 0x54 */ public bool UsePistons;
+        /* 0x55 */ public bool Mech;
     }
 }

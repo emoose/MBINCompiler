@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x1C0, GUID = 0xC4C62AC91045E0A7, NameHash = 0x1AA966F8BA4E3153)]
+    [NMS(Size = 0x1F0, GUID = 0xAA3E65B5A297D9EC, NameHash = 0x1AA966F8BA4E3153)]
     public class GcLaserBeamData : NMSTemplate
     {
         /* 0x000 */ public NMSString0x10 Id;
@@ -20,8 +20,9 @@ namespace libMBIN.NMS.GameComponents
         /* 0x128 */ public GcAudioWwiseEvents AudioStart;
         /* 0x12C */ public GcAudioWwiseEvents AudioStop;
         /* 0x130 */ public GcAudioWwiseEvents AudioOverheat;
-        /* 0x134 */ public int Damage;
+        /* 0x134 */ public int DefaultDamage;
         /* 0x138 */ public GcDamageType DamageType;
+        /* 0x13C */ public float CriticalHitModifier;
         /* 0x140 */ public NMSString0x10 PlayerDamage;
         /* 0x150 */ public NMSString0x10 ImpactEffect;
         /* 0x160 */ public List<GcProjectileImpactData> Impacts;
@@ -32,10 +33,14 @@ namespace libMBIN.NMS.GameComponents
         /* 0x180 */ public float MiningHitRate;
         /* 0x184 */ public bool HasLight;
         /* 0x185 */ public bool CanMine;
-        /* 0x188 */ public float LightScale;
-        /* 0x190 */ public Colour LightColour;
-        /* 0x1A0 */ public Colour Colour;
-        /* 0x1B0 */ public Vector3f ImpactOffset;
+        /* 0x188 */ public float DroneImpulse;
+        /* 0x18C */ public float PiercingDamagePercentage;
+        /* 0x190 */ public float LightIntensity;
+        /* 0x1A0 */ public Colour LightColour;
+        /* 0x1B0 */ public Colour Colour;
+        /* 0x1C0 */ public Vector3f ImpactOffset;
+        /* 0x1D0 */ public List<GcImpactCombatEffectData> CombatEffectsOnImpact;
+        /* 0x1E0 */ public List<GcCombatEffectDamageMultiplier> CombatEffectDamageMultipliers;
     }
 
 }

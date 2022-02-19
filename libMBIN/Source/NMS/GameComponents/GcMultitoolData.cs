@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x1C0, GUID = 0x5A1C57036035083D, NameHash = 0x2AF78E5732410B4F)]
+    [NMS(Size = 0x468, GUID = 0x598FC07BCB855575, NameHash = 0x2AF78E5732410B4F)]
     public class GcMultitoolData : NMSTemplate
     {
         /* 0x000 */ public GcInventoryLayout Layout;
@@ -16,6 +16,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x1B4 */ public int PrimaryMode;
         /* 0x1B8 */ public int SecondaryMode;
         /* 0x1BC */ public bool UseLegacyColours;
-
+        /* 0x1C0 */ public GcResourceElement Resource;
     }
 }
