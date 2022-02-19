@@ -1,9 +1,12 @@
-﻿using libMBIN.NMS.Toolkit;
+﻿using System;
+using System.Collections.Generic;
+
+using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x110, GUID = 0x15B4D41D64355FD6, NameHash = 0xE586E1C6C9A10307)]
+    [NMS(Size = 0x110, GUID = 0x71C19DF25548EF2F, NameHash = 0xE586E1C6C9A10307)]
     public class GcMissionSequenceTeleport : NMSTemplate
     {
         /* 0x000 */ public NMSString0x80 Message;
@@ -13,6 +16,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x105 */ public bool DoWhiteout;
         /* 0x108 */ public float SequenceTime;
         /* 0x10C */ public float EffectTime;
-
     }
 }

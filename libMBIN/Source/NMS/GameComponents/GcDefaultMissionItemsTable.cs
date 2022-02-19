@@ -6,12 +6,12 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x40, GUID = 0xA1CD58CFF7F39B88, NameHash = 0x87FB8E825C599E66)]
+    [NMS(Size = 0x40, GUID = 0xB61378ABA919F3CC, NameHash = 0x87FB8E825C599E66)]
     public class GcDefaultMissionItemsTable : NMSTemplate
     {
-        public List<GcDefaultMissionSubstance> PrimarySubstances;
-        public List<GcDefaultMissionSubstance> SecondarySubstances;
-        public List<GcDefaultMissionProduct> PrimaryProducts;
-        public List<GcDefaultMissionProduct> SecondaryProducts;
+        /* 0x00 */ public List<GcDefaultMissionSubstance> PrimarySubstances;
+        /* 0x10 */ public List<GcDefaultMissionSubstance> SecondarySubstances;
+        /* 0x20 */ public List<GcDefaultMissionProduct> PrimaryProducts;
+        /* 0x30 */ public List<GcDefaultMissionProduct> SecondaryProducts;
     }
 }

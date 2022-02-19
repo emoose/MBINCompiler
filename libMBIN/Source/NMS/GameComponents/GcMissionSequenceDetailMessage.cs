@@ -1,18 +1,19 @@
-﻿using libMBIN.NMS.Toolkit;
-using libMBIN.NMS.GameComponents;
-
+﻿using System;
 using System.Collections.Generic;
+
+using libMBIN.NMS.Toolkit;
+using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0xF8, GUID = 0x15D122F716C8436A, NameHash = 0xA29EE4D703004484)]
+    [NMS(Size = 0xF8, GUID = 0x6228EC6725D79089, NameHash = 0xA29EE4D703004484)]
     public class GcMissionSequenceDetailMessage : NMSTemplate
     {
-        public NMSString0x20A Title;
-        public NMSString0x20A Description;
-        public NMSString0x20A Image;
-        public GcAudioWwiseEvents AudioEvent;
-        public List<GcMissionSequenceDetailMessagePoint> Points;
-        public NMSString0x80 DebugText;
+        /* 0x00 */ public NMSString0x20A Title;
+        /* 0x20 */ public NMSString0x20A Description;
+        /* 0x40 */ public NMSString0x20A Image;
+        /* 0x60 */ public GcAudioWwiseEvents AudioEvent;
+        /* 0x68 */ public List<GcMissionSequenceDetailMessagePoint> Points;
+        /* 0x78 */ public NMSString0x80 DebugText;
     }
 }

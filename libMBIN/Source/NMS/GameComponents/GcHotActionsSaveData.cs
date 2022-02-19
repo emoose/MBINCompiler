@@ -1,13 +1,17 @@
-﻿using libMBIN.NMS.Toolkit;
+﻿using System;
+using System.Collections.Generic;
+
+using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x190, GUID = 0xBFEC0C7984E5771A, NameHash = 0xE6D4EE849D2F9101)]
+    [NMS(Size = 0x190, GUID = 0xBFEC0C7984E5771A, NameHash = 0xE6D4EE849D2F9101)]
     public class GcHotActionsSaveData : NMSTemplate
     {
-        // may be the first 0xA elements of GcQuickMenuActions.QuickMenuActionsEnum?
+        // maybe the first 0xA elements of GcQuickMenuActions.QuickMenuActionsEnum?
+        // or the 0xA 'Saved' GcQuickMenuActions as the name says?
         [NMS(Size = 0xA)]
-        public GcQuickMenuActionSaveData[] KeyActions;
+        /* 0x0 */ public GcQuickMenuActionSaveData[] KeyActions;
     }
 }

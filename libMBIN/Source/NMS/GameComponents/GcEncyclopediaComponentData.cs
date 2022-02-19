@@ -1,11 +1,14 @@
-﻿using libMBIN.NMS.Toolkit;
+﻿using System;
+using System.Collections.Generic;
+
+using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x4, GUID = 0xED2105715EAEE514, NameHash = 0xBC637850359D6328)]
+    [NMS(Size = 0x4, GUID = 0xC53BF72D9881A45D, NameHash = 0xBC637850359D6328)]
     public class GcEncyclopediaComponentData : NMSTemplate
     {
-        public GcDiscoveryTypes Type;
+        /* 0x0 */ public GcDiscoveryTypes Type;
     }
 }

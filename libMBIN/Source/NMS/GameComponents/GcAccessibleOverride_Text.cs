@@ -6,8 +6,12 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x8, GUID = 0x8EC83D33BCEEDFC7, NameHash = 0x13FCF5FDFA2BFA4E, Broken = true)]
+    [NMS(Size = 0x8, GUID = 0x8EC83D33BCEEDFC7, NameHash = 0x13FCF5FDFA2BFA4E)]
     public class GcAccessibleOverride_Text : NMSTemplate
     {
+        // size: 0x1
+        public enum AccessibleOverride_TextEnum { FontHeight }
+        /* 0x0 */ public AccessibleOverride_TextEnum AccessibleOverride_Text;
+        /* 0x4 */ public float FloatValue;
     }
 }

@@ -1,12 +1,15 @@
-﻿using libMBIN.NMS.Toolkit;
+﻿using System;
+using System.Collections.Generic;
+
+using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x8, GUID = 0xC18DF8C8988CAB78, NameHash = 0xB387E3560FAA5681)]
+    [NMS(Size = 0x8, GUID = 0x153062EC76ACFA0E, NameHash = 0xB387E3560FAA5681)]
     public class GcDamageMultiplier : NMSTemplate
     {
-        /* 0x00 */ public GcDamageType Type;
-        /* 0x04 */ public float Multiplier;
+        /* 0x0 */ public GcDamageType Type;
+        /* 0x4 */ public float Multiplier;
     }
 }

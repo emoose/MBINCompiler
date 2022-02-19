@@ -1,9 +1,12 @@
-﻿using libMBIN.NMS.Toolkit;
+﻿using System;
+using System.Collections.Generic;
+
+using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x100, GUID = 0x3D75ED83F93ED1CA, NameHash = 0xDA5F4DFE0527A693)]
+    [NMS(Size = 0x100, GUID = 0x4C3D67ECF8C51904, NameHash = 0xDA5F4DFE0527A693)]
     public class GcConsumableItem : NMSTemplate
     {
         /* 0x00 */ public NMSString0x10 ID;
