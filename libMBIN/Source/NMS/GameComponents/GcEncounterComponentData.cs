@@ -1,14 +1,15 @@
-﻿using libMBIN.NMS.Toolkit;
+﻿using System;
 using System.Collections.Generic;
+
+using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x18, GUID = 0x1CBAA2AF7483FD9F, NameHash = 0x1BAD68301EABDA5C)]
+    [NMS(Size = 0x18, GUID = 0x72AB02DDFF433465, NameHash = 0x1BAD68301EABDA5C)]
     public class GcEncounterComponentData : NMSTemplate
     {
-        public enum EncounterTypeEnum { FactoryGuards, HarvesterGuards, ScrapHeap, CorruptedDroneReward, CorruptedDroneInteract, GroundWorms }
-        public EncounterTypeEnum EncounterType;
-        public List<NMSString0x10> InteractMissionTable;
+        /* 0x0 */ public GcEncounterType EncounterType;
+        /* 0x8 */ public List<NMSString0x10> InteractMissionTable;
     }
 }

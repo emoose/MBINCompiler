@@ -1,9 +1,12 @@
+using System;
+using System.Collections.Generic;
+
 using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x8, GUID = 0x3E77F6502C61A1BD, NameHash = 0xE47353C2B9EE4F60)]
+    [NMS(Size = 0x8, GUID = 0xA671E67E6FA863F4, NameHash = 0xE47353C2B9EE4F60)]
     public class GcMissionConditionHasSettlementBuilding : NMSTemplate
     {
         /* 0x0 */ public GcBuildingClassification BuildingClass;

@@ -1,14 +1,16 @@
+using System;
+using System.Collections.Generic;
+
 using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
-using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x30, GUID = 0x76FEBE26415F7C00, NameHash = 0x0FD3FA61F96564C04)]
+    [NMS(Size = 0x30, GUID = 0x042E4B2B49052EF2, NameHash = 0xFD3FA61F96564C04)]
     public class GcCustomisationThrusterEffects : NMSTemplate
     {
-        public List<GcCustomisationThrusterEffect> JetpackEffects;
-        public List<NMSString0x10> SingleJetJetpacks;
-        public List<GcCustomisationShipTrails> ShipEffects;
+        /* 0x00 */ public List<GcCustomisationThrusterEffect> JetpackEffects;
+        /* 0x10 */ public List<GcCustomisationBackpackData> BackpackData;
+        /* 0x20 */ public List<GcCustomisationShipTrails> ShipEffects;
     }
 }
