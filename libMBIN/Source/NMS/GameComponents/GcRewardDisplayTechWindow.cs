@@ -1,14 +1,17 @@
-﻿using libMBIN.NMS.Toolkit;
+﻿using System;
+using System.Collections.Generic;
+
+using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x18, GUID = 0x9BBD56EFA4E311E3, NameHash = 0xC04EFF3E2A378ED7)]
+    [NMS(Size = 0x18, GUID = 0xE4E6338F9F235C3D, NameHash = 0xC04EFF3E2A378ED7)]
     public class GcRewardDisplayTechWindow : NMSTemplate
     {
-        public NMSString0x10 TechID;
-        public bool Damaged;
-        public bool NeedsInstall;
-        public bool FullBox;
+        /* 0x00 */ public NMSString0x10 TechID;
+        /* 0x10 */ public bool Damaged;
+        /* 0x11 */ public bool NeedsInstall;
+        /* 0x12 */ public bool FullBox;
     }
 }

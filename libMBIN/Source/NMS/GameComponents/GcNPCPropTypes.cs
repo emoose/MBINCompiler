@@ -1,12 +1,18 @@
-﻿using libMBIN.NMS.Toolkit;
+﻿using System;
+using System.Collections.Generic;
+
+using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x4, GUID = 0x5A0389A6ECF0D075, NameHash = 0xC6B93CF490CDB3AC)]
+    [NMS(Size = 0x4, GUID = 0xB910AB8E8A65A4F1, NameHash = 0xC6B93CF490CDB3AC)]
     public class GcNPCPropTypes : NMSTemplate
     {
-		public enum NPCPropEnum { None, IPad, HoloBlob, HoloFrigate, HoloShip, HoloMultitool, HoloSolarSystem, Container, Box, Cup, DontCare, RandomHologram }
-		public NPCPropEnum NPCProp;
+        // size: 0xD
+        public enum NPCPropEnum { None, IPad, HoloBlob, HoloFrigate, HoloShip, HoloMultitool, HoloSolarSystem,
+            Container, Box, Cup, DontCare, RandomHologram, HoloDrone
+        }
+        /* 0x0 */ public NPCPropEnum NPCProp;
     }
 }

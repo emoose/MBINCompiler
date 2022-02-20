@@ -1,11 +1,12 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x440, GUID = 0xB86437249C30BC78, NameHash = 0xEF1AB4FE11FCFA6D)]
+    [NMS(Size = 0x440, GUID = 0xEE0BA62D44A5C890, NameHash = 0xEF1AB4FE11FCFA6D)]
     public class GcNPCSpawnTable : NMSTemplate
     {
         [NMS(Size = 8, EnumType = typeof(GcAlienRace.AlienRaceEnum))]

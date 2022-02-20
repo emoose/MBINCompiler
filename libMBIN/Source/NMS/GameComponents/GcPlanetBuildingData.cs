@@ -1,11 +1,12 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x48, GUID = 0x74A654AE55B44DE7, NameHash = 0xF6213EDD899A8CAE)]
+    [NMS(Size = 0x48, GUID = 0x41673B16E74486CA, NameHash = 0xF6213EDD899A8CAE)]
     public class GcPlanetBuildingData : NMSTemplate
     {
         /* 0x00 */ public List<GcBuildingSpawnSlot> BuildingSlots;

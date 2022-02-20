@@ -1,12 +1,14 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0xD8, GUID = 0xDC377083E6A945FF, NameHash = 0x864FCB26DF972FCF)]
-    public class GcPlayerTitle : NMSTemplate {
+    [NMS(Size = 0xD8, GUID = 0x03CCEE810B6C19FE, NameHash = 0x864FCB26DF972FCF)]
+    public class GcPlayerTitle : NMSTemplate
+    {
         /* 0x00 */ public NMSString0x10 ID;
         /* 0x10 */ public NMSString0x20A Title;
         /* 0x30 */ public NMSString0x20A UnlockDescription;
@@ -22,5 +24,4 @@ namespace libMBIN.NMS.GameComponents
         /* 0xCC */ public GcAlienRace UnlockedByInteractionRace;
         /* 0xD0 */ public bool UnlockableInCreativeMode;
     }
-
 }

@@ -1,9 +1,12 @@
+using System;
+using System.Collections.Generic;
+
 using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0xC, GUID = 0xE424151117B1E45B, NameHash = 0xC563E51748C26DEE)]
+    [NMS(Size = 0xC, GUID = 0xAD430298472E1ED3, NameHash = 0xC563E51748C26DEE)]
     public class GcNPCSettlementBehaviourBuildingClassWeightEntry : NMSTemplate
     {
         /* 0x0 */ public GcBuildingClassification BuildingClass;

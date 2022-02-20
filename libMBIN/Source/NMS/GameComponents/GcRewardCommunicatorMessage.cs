@@ -1,9 +1,12 @@
+using System;
+using System.Collections.Generic;
+
 using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x1D8, GUID = 0xA4CCC2F6A734A389, NameHash = 0x382AC51563627203)]
+    [NMS(Size = 0x1D8, GUID = 0xE0DCEE5A57FD7B06, NameHash = 0x382AC51563627203)]
     public class GcRewardCommunicatorMessage : NMSTemplate
     {
         /* 0x000 */ public NMSString0x80 Message;

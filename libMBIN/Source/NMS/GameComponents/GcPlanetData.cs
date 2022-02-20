@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 
 using libMBIN.NMS.Toolkit;
@@ -5,13 +6,14 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x3D50, GUID = 0x61F4781A63B7AC9C, NameHash = 0x25EDFA0EC4C3AF0A)]
+    [NMS(Size = 0x3D50, GUID = 0x2C41D6E6E401EF4F, NameHash = 0x25EDFA0EC4C3AF0A)]
     public class GcPlanetData : NMSTemplate
     {
         /* 0x0000 */ public NMSString0x80 Name;
         /* 0x0080 */ public GcPlanetLife Life;
         /* 0x0084 */ public GcPlanetLife CreatureLife;
         /* 0x0088 */ public GcPlanetHazardData Hazard;
+        // size: 0x2
         public enum ResourceLevelEnum { Low, High }
         /* 0x00D8 */ public ResourceLevelEnum ResourceLevel;
         /* 0x00DC */ public GcBuildingDensityLevels BuildingLevel;
@@ -43,4 +45,3 @@ namespace libMBIN.NMS.GameComponents
         /* 0x3D44 */ public float FuelMultiplier;
     }
 }
-

@@ -1,9 +1,12 @@
-﻿using libMBIN.NMS.Toolkit;
+﻿using System;
+using System.Collections.Generic;
+
+using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x40, GUID = 0x383C04AC40AFDBAE, NameHash = 0x73BA1311CF8E1962)]
+    [NMS(Size = 0x40, GUID = 0x082A3EB954406BFC, NameHash = 0x73BA1311CF8E1962)]
     public class GcShipWeaponData : NMSTemplate
     {
         /* 0x00 */ public NMSString0x10 Projectile;
@@ -15,5 +18,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x30 */ public bool ShowOverheatSwitch;
         /* 0x34 */ public float OverheatCoolTime;
         /* 0x38 */ public float CoolRate;
+        /* 0x3C */ public GcRemoteWeapons RemoteType;
     }
 }

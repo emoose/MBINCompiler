@@ -1,16 +1,19 @@
-﻿using libMBIN.NMS.Toolkit;
+﻿using System;
+using System.Collections.Generic;
+
+using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x4, GUID = 0x9975736CD08616FA, NameHash = 0x8A17532BB2410967)]
+    [NMS(Size = 0x4, GUID = 0xD1B978D86D9CAD03, NameHash = 0x8A17532BB2410967)]
     public class GcPlayerWeapons : NMSTemplate
     {
-        // size: 0xF
-        public enum WeaponModeEnum {
-            Bolt, Shotgun, Burst, Laser, Rail, Grenade, MineGrenade, Scope, FrontShield,
-            TerrainEdit, SunLaser, Spawner, SpawnerAlt, SoulLaser, Flamethrower
+        // size: 0x13
+        public enum WeaponModeEnum { Bolt, Shotgun, Burst, Rail, Cannon, Laser, Grenade, MineGrenade, Scope, FrontShield,
+            Melee, TerrainEdit, SunLaser, Spawner, SpawnerAlt, SoulLaser,
+            Flamethrower, StunGrenade, Stealth
         }
-        public WeaponModeEnum WeaponMode;
+        /* 0x0 */ public WeaponModeEnum WeaponMode;
     }
 }

@@ -1,10 +1,12 @@
+using System;
+using System.Collections.Generic;
+
 using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
-using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x48, GUID = 0xAC744EF9504A00A8, NameHash = 0xB268E74AC135A1A5)]
+    [NMS(Size = 0x48, GUID = 0x1A735D64B5D4C86F, NameHash = 0xB268E74AC135A1A5)]
     public class GcNPCSettlementBehaviourEntry : NMSTemplate
     {
         /* 0x00 */ public float RunWhenOutdoorsProbability;

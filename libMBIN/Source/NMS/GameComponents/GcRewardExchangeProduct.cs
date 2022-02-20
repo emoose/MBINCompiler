@@ -1,9 +1,12 @@
+using System;
+using System.Collections.Generic;
+
 using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x30, GUID = 0xAD794EB2CCE2FD5F, NameHash = 0x2F9B8F940B001C76)]
+    [NMS(Size = 0x30, GUID = 0xE722BF470BB5E3FE, NameHash = 0x2F9B8F940B001C76)]
     public class GcRewardExchangeProduct : NMSTemplate
     {
         /* 0x00 */ public NMSString0x10 IDToGive;
@@ -12,5 +15,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x24 */ public int AmountToGiveMax;
         /* 0x28 */ public int AmountToTakeMax;
         /* 0x2C */ public bool HideNewProduct;
+        /* 0x2D */ public bool ForceSpecialMessage;
     }
 }

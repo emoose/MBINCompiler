@@ -38,11 +38,11 @@ namespace libMBIN.NMS.GameComponents
         /* 0x01E6C */ public GcScannerIcon ArrowLarge;
         [NMS(Size = 0x6, EnumType = typeof(GcGenericIconTypes.GenericIconTypeEnum))]
         /* 0x01F68 */ public GcScannerIcon[] GenericIcons;
-        [NMS(Size = 0x20, EnumType = typeof(GcScannerBuildingIconTypes.ScanBuildingIconTypesEnum))]
+        [NMS(Size = 0x20, EnumType = typeof(GcScannerBuildingIconTypes.ScanBuildingIconTypeEnum))]
         /* 0x025B0 */ public GcScannerIcon[] BuildingIcons;
-        [NMS(Size = 0x20, EnumType = typeof(GcScannerBuildingIconTypes.ScanBuildingIconTypesEnum))]
+        [NMS(Size = 0x20, EnumType = typeof(GcScannerBuildingIconTypes.ScanBuildingIconTypeEnum))]
         /* 0x04730 */ public GcScannerIcon[] BuildingIconsBinocs;
-        [NMS(Size = 0x20, EnumType = typeof(GcScannerBuildingIconTypes.ScanBuildingIconTypesEnum))]
+        [NMS(Size = 0x20, EnumType = typeof(GcScannerBuildingIconTypes.ScanBuildingIconTypeEnum))]
         /* 0x068B0 */ public GcScannerIcon[] BuildingIconsHuge;
         [NMS(Size = 0x35, EnumType = typeof(GcScannerIconTypes.ScanIconTypeEnum))]
         /* 0x08A30 */ public GcScannerIcon[] ScannableIcons;
