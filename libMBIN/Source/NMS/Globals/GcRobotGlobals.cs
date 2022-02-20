@@ -114,7 +114,7 @@ namespace libMBIN.NMS.Globals
         /* 0x0208 */ public float DroneInvestigateMinScanTime;
         /* 0x020C */ public float MedicDroneMinHealTime;
         /* 0x0210 */ public GcScanEffectData DroneScanEffect;
-        [NMS(Size = 0x9, EnumType = typeof(/*>>>>>>???<<<<<<*/))]
+        [NMS(Size = 0x9)]
         /* 0x0260 */ public int[] SentinelSpawnLimits;
         /* 0x0794 */ public float HeightTestSampleDistance;
         /* 0x0798 */ public float HeightTestSampleTime;
