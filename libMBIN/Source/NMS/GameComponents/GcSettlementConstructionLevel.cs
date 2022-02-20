@@ -1,3 +1,6 @@
+using System;
+using System.Collections.Generic;
+
 using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
@@ -8,6 +11,6 @@ namespace libMBIN.NMS.GameComponents
     {
         // size: 0x6
         public enum SettlementConstructionLevelEnum { Start, GroundStorey, RegularStorey, Roof, Decoration, Other }
-        public SettlementConstructionLevelEnum SettlementConstructionLevel;
+        /* 0x0 */ public SettlementConstructionLevelEnum SettlementConstructionLevel;
     }
 }

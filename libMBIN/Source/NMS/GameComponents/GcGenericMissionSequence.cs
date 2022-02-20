@@ -6,12 +6,13 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x4B0, GUID = 0x23AD58B638D30D5E, NameHash = 0xFAE86B2801335B6D)]
+    [NMS(Size = 0x4B0, GUID = 0x4ED9B6D24932C6C7, NameHash = 0xFAE86B2801335B6D)]
     public class GcGenericMissionSequence : NMSTemplate
     {
         /* 0x000 */ public NMSString0x10 MissionID;
-		public enum MissionClassEnum { Primary, Secondary, ChainedSecondary, Guide, Wiki, Seasonal }
-		/* 0x010 */ public MissionClassEnum MissionClass;
+        // size: 0x6
+        public enum MissionClassEnum { Primary, Secondary, ChainedSecondary, Guide, Wiki, Seasonal }
+        /* 0x010 */ public MissionClassEnum MissionClass;
         /* 0x014 */ public bool MissionIsCritical;
         /* 0x015 */ public NMSString0x20 MissionObjective;
         /* 0x038 */ public GcNumberedTextList MissionTitles;
@@ -35,13 +36,16 @@ namespace libMBIN.NMS.GameComponents
         /* 0x328 */ public GcDefaultMissionItemsTable DefaultItems;
         /* 0x368 */ public bool PrefixTitle;
         /* 0x370 */ public NMSString0x10 NextMissionHint;
-		public enum MessageCompleteEnum { Default, Always, Never }
-		/* 0x380 */ public MessageCompleteEnum MessageComplete;
-		public enum MessageStartEnum { Default, Always, Never }
-		/* 0x384 */ public MessageStartEnum MessageStart;
+        // size: 0x3
+        public enum MessageCompleteEnum { Default, Always, Never }
+        /* 0x380 */ public MessageCompleteEnum MessageComplete;
+        // size: 0x3
+        public enum MessageStartEnum { Default, Always, Never }
+        /* 0x384 */ public MessageStartEnum MessageStart;
         /* 0x388 */ public GcMissionBoardOptions MissionBoardOptions;
-		public enum AutoStartEnum { None, AllModes, NotCreative, Survival, Creative, Seasonal, OnSelected }
-		/* 0x408 */ public AutoStartEnum AutoStart;
+        // size: 0x7
+        public enum AutoStartEnum { None, AllModes, NotCreative, Survival, Creative, Seasonal, OnSelected }
+        /* 0x408 */ public AutoStartEnum AutoStart;
         /* 0x40C */ public bool RestartOnCompletion;
         /* 0x40D */ public bool CancelSetsComplete;
         /* 0x410 */ public GcAlienPuzzleTable Dialog;

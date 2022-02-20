@@ -1,16 +1,19 @@
-﻿using libMBIN.NMS.Toolkit;
+﻿using System;
+using System.Collections.Generic;
+
+using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x40, GUID = 0x89A4A807075326E0, NameHash = 0x9F1240710CA7E631)]
+    [NMS(Size = 0x40, GUID = 0xE2A01D855CFA16DB, NameHash = 0x9F1240710CA7E631)]
     public class GcRewardStatDiff : NMSTemplate
     {
-        public NMSString0x10 CoreStat;
-        public NMSString0x10 CompareAndSetStat;
-        public NMSString0x10 SubstanceID;
-		public GcCurrency RewardCurrency;
-        public int AmountPerStat;
-        public int StatRewardCap;
+        /* 0x00 */ public NMSString0x10 CoreStat;
+        /* 0x10 */ public NMSString0x10 CompareAndSetStat;
+        /* 0x20 */ public NMSString0x10 SubstanceID;
+        /* 0x30 */ public GcCurrency RewardCurrency;
+        /* 0x34 */ public int AmountPerStat;
+        /* 0x38 */ public int StatRewardCap;
     }
 }

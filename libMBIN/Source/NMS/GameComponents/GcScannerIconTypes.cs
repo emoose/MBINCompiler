@@ -1,20 +1,25 @@
-﻿using libMBIN.NMS.Toolkit;
+﻿using System;
+using System.Collections.Generic;
+
+using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x4, GUID = 0x320E4FBE3248CBE5, NameHash = 0x8A4027FC041677F0)]
+    [NMS(Size = 0x4, GUID = 0x8CC2900EEC8F7436, NameHash = 0x8A4027FC041677F0)]
     public class GcScannerIconTypes : NMSTemplate
     {
-        // size: 0x35
-        public enum ScanIconTypeEnum {
-            None, Health, Shield, Hazard, LifeSupport, Tech, BluePlant, CaveSubstance, LaunchCrystals, Power,
-            Carbon, CarbonPlus, Oxygen, Mineral, Sodium, SodiumPlus, Crate, Artifact, Plant, HazardPlant,
-            ArtifactCrate, BuriedTech, BuriedRare, Drone, CustomMarker, SignalBooster, Refiner, Grave, Rare1, Rare2,
-            Rare3, Pearl, RareEgg, HazardEgg, FishFiend, Clam, CaveStone, StormCrystal, BiomeTrophy, PowerHotspot,
-            MineralHotspot, GasHotspot, HarvestPlant, Cooker, CreaturePoop, FreighterTeleporter, FreighterDoor, FreighterTerminal, FreighterHeater, FreighterDataPad,
-            LandedPilot, PetEgg, Sandworm
+        // size: 0x36
+        public enum ScanIconTypeEnum { None, Health, Shield, Hazard, LifeSupport, Tech, BluePlant, CaveSubstance,
+            LaunchCrystals, Power, Carbon, CarbonPlus, Oxygen, Mineral, Sodium,
+            SodiumPlus, Crate, Artifact, Plant, HazardPlant, ArtifactCrate, BuriedTech,
+            BuriedRare, Drone, CustomMarker, SignalBooster, Refiner, Grave,
+            Rare1, Rare2, Rare3, Pearl, RareEgg, HazardEgg, FishFiend, Clam, CaveStone,
+            StormCrystal, BiomeTrophy, PowerHotspot, MineralHotspot, GasHotspot,
+            HarvestPlant, Cooker, CreaturePoop, FreighterTeleporter, FreighterDoor,
+            FreighterTerminal, FreighterHeater, FreighterDataPad, LandedPilot,
+            PetEgg, Sandworm, FriendlyDrone
         }
-        public ScanIconTypeEnum ScanIconType;
+        /* 0x0 */ public ScanIconTypeEnum ScanIconType;
     }
 }

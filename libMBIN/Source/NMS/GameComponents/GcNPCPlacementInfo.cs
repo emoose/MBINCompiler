@@ -1,11 +1,12 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0xC8, GUID = 0xD275DFE22DF8BB68, NameHash = 0xA12AC584067DF8E0)]
+    [NMS(Size = 0xC8, GUID = 0xCA6E18C69F56081E, NameHash = 0xA12AC584067DF8E0)]
     public class GcNPCPlacementInfo : NMSTemplate
     {
         /* 0x00 */ public NMSString0x10 PlacementRuleId;
@@ -28,6 +29,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0xB3 */ public bool SpawnMoving;
         /* 0xB4 */ public bool SpawnInAbandoned;
         /* 0xB8 */ public List<NMSString0x10> HideDuringMissions;
-        
     }
 }

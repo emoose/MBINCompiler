@@ -1,9 +1,12 @@
-﻿using libMBIN.NMS.Toolkit;
+﻿using System;
+using System.Collections.Generic;
+
+using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x48, GUID = 0x8B10056FD8A6F907, NameHash = 0x34272E24BB717FCB)]
+    [NMS(Size = 0x48, GUID = 0x4C6F7081406F9214, NameHash = 0x34272E24BB717FCB)]
     public class GcAtlasDiscoveryData : NMSTemplate
     {
         /* 0x00 */ public GcUniverseAddressData UniverseAddress;

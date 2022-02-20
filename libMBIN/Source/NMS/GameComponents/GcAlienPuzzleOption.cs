@@ -1,11 +1,12 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0xE0, GUID = 0x8331A004540D5284, NameHash = 0x3FE862FE8570BE69)]
+    [NMS(Size = 0xE0, GUID = 0x35AE9AD95E635A09, NameHash = 0x3FE862FE8570BE69)]
     public class GcAlienPuzzleOption : NMSTemplate
     {
         /* 0x00 */ public NMSString0x20A Name;

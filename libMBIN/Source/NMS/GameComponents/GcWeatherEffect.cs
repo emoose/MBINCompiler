@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 
 using libMBIN.NMS.Toolkit;
@@ -5,20 +6,23 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x1C0, GUID = 0x66BEBE5A4D2DF040, NameHash = 0x419E50F8E497D496)]
+    [NMS(Size = 0x1C0, GUID = 0xB4858BEBDE816F3B, NameHash = 0x419E50F8E497D496)]
     public class GcWeatherEffect : NMSTemplate
     {
         /* 0x000 */ public NMSString0x10 Id;
         /* 0x010 */ public NMSString0x20A OSDMessage;
         /* 0x030 */ public List<GcWeightedFilename> Effects;
+        // size: 0x5
         public enum SpawnConditionsEnum { Anytime, DuringStorm, AtNight, NotInStorm, AtNightNotInStorm }
         /* 0x040 */ public SpawnConditionsEnum SpawnConditions;
         /* 0x044 */ public int MaxHazardsOfThisTypeActive;
         /* 0x048 */ public bool AllowedInCreative;
         /* 0x050 */ public NMSString0x10 ForcedOnByHazard;
         /* 0x060 */ public NMSString0x10 BlockedByCluster;
+        // size: 0x3
         public enum WeatherEffectBehaviourEnum { Static, Wander, ChasePlayer }
         /* 0x070 */ public WeatherEffectBehaviourEnum WeatherEffectBehaviour;
+        // size: 0x3
         public enum WeatherEffectSpawnTypeEnum { Single, Cluster, Patch }
         /* 0x074 */ public WeatherEffectSpawnTypeEnum WeatherEffectSpawnType;
         /* 0x078 */ public bool RandomRotationAroundUp;

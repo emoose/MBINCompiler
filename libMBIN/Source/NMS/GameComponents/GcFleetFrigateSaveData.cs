@@ -1,11 +1,12 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x168, GUID = 0x1244A53919988284, NameHash = 0xE6F863FE26F77270)]
+    [NMS(Size = 0x168, GUID = 0x01052D03C151CE07, NameHash = 0xE6F863FE26F77270)]
     public class GcFleetFrigateSaveData : NMSTemplate
     {
         /* 0x000 */ public GcSeed ResourceSeed;

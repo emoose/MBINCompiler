@@ -1,16 +1,18 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x1F8, GUID = 0xED47FD409C8797FF, NameHash = 0xE24B3D78ED0634BD)]
+    [NMS(Size = 0x1F8, GUID = 0x957327A64B86F6B6, NameHash = 0xE24B3D78ED0634BD)]
     public class GcDestructableComponentData : NMSTemplate
     {
         /* 0x000 */ public NMSString0x10 Explosion;
         /* 0x010 */ public float ExplosionScale;
         /* 0x014 */ public bool ExplosionScaleToBounds;
+        /* 0x015 */ public bool OnlyExplodeSelf;
         /* 0x018 */ public NMSString0x10 VehicleDestroyEffect;
         /* 0x028 */ public NMSString0x10 TriggerAction;
         /* 0x038 */ public int IncreaseWanted;
@@ -46,6 +48,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x1C4 */ public bool DestroyEffectMatrices;
         /* 0x1C8 */ public NMSString0x10 AreaDamage;
         /* 0x1D8 */ public bool ShowInteract;
+        /* 0x1D9 */ public bool HideInteractWhenAllArmourDestroyed;
         /* 0x1DC */ public float ShowInteractRange;
         /* 0x1E0 */ public bool GrenadeSingleHit;
         /* 0x1E8 */ public List<GcLootProbability> LootItems;

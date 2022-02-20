@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 
 using libMBIN.NMS.Toolkit;
@@ -5,7 +6,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x1F50, GUID = 0xEB09C442DE1A70E7, NameHash = 0x9B09276BB2795541)]
+    [NMS(Size = 0x1F50, GUID = 0x4F7F0310C25C765C, NameHash = 0x9B09276BB2795541)]
     public class GcSolarSystemData : NMSTemplate
     {
         /* 0x0000 */ public GcSeed Seed;
@@ -34,6 +35,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x0574 */ public GcSolarSystemTraderSpawnData TraderSpawnInStations;
         /* 0x0588 */ public List<GcSolarSystemLocator> Locators;
         /* 0x0598 */ public List<NMSTemplate> AsteroidGenerators;
+        // size: 0x3
 		public enum AsteroidLevelEnum { NoRares, SomeRares, LotsOfRares }
 		/* 0x05A8 */ public AsteroidLevelEnum AsteroidLevel;
         /* 0x05B0 */ public GcPlanetColourData Colours;
@@ -45,7 +47,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x1F38 */ public GcAlienRace InhabitingRace;
         /* 0x1F3C */ public GcPlanetTradingData TradingData;
         /* 0x1F44 */ public GcPlayerConflictData ConflictData;
-        
     }
-
 }

@@ -1,20 +1,21 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0xA0, GUID = 0x31ACFD1014283D9A, NameHash = 0x8D18F9F6D2A592B3)]
+    [NMS(Size = 0xA0, GUID = 0x147632799F602B87, NameHash = 0x8D18F9F6D2A592B3)]
     public class GcNPCInteractiveObjectState : NMSTemplate
     {
         /* 0x00 */ public NMSString0x10 Name;
         /* 0x10 */ public bool FaceSpawnDir;
-        /* 0x10 */ public bool FaceNodeDir;
-        /* 0x11 */ public bool FaceInvNodeDir;
-        /* 0x12 */ public bool LookAtModel;
+        /* 0x11 */ public bool FaceNodeDir;
+        /* 0x12 */ public bool FaceInvNodeDir;
+        /* 0x13 */ public bool LookAtModel;
         /* 0x14 */ public NMSString0x40 LookAtNode;
-        /* 0x54 */ public bool FaceLookA;
+        /* 0x54 */ public bool FaceLookAt;
         /* 0x55 */ public bool MaintainLookAt;
         /* 0x56 */ public bool PlayIdles;
         /* 0x57 */ public bool CanConverse;

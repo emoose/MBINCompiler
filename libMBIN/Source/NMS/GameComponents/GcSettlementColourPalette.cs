@@ -1,10 +1,12 @@
+using System;
+using System.Collections.Generic;
+
 using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
-using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x38, GUID = 0x2B94909B231687A0, NameHash = 0x4D5124F6D6062BBF)]
+    [NMS(Size = 0x38, GUID = 0x27E57CAFDC405F19, NameHash = 0x4D5124F6D6062BBF)]
     public class GcSettlementColourPalette : NMSTemplate
     {
         /* 0x00 */ public NMSString0x10 Name;
