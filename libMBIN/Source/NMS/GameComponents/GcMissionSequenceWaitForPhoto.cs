@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x240, GUID = 0x812B41B01DFCC437, NameHash = 0x2EB82866D685EFBF)]
+	[NMS(Size = 0x248, GUID = 0xA5D631EA00E6DF53, NameHash = 0x2EB82866D685EFBF)]
     public class GcMissionSequenceWaitForPhoto : NMSTemplate
     {
         /* 0x000 */ public NMSString0x80 Message;
@@ -15,6 +15,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x190 */ public List<GcPhotoFauna> Fauna;
         /* 0x1A0 */ public List<GcPhotoFlora> Flora;
         /* 0x1B0 */ public List<GcPhotoBuildings> Buildings;
-        /* 0x1C0 */ public NMSString0x80 DebugText;
+        /* 0x1C0 */ public bool TakeAmountFromSeasonData;
+        /* 0x1C1 */ public NMSString0x80 DebugText;
     }
 }

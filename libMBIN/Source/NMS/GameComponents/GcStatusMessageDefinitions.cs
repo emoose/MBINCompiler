@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x800, GUID = 0xE559207CECEA2E9B, NameHash = 0x434379BF90DDF679)]
+	[NMS(Size = 0x8A00, GUID = 0x85B6126BCD34BFB7, NameHash = 0x434379BF90DDF679)]
     public class GcStatusMessageDefinitions : NMSTemplate
     {
         /* 0x000 */ public List<GcStatusMessageDefinition> Messages;
@@ -14,5 +14,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x020 */ public GcPetVocabularyEntry[] PetVocabulary;
         [NMS(Size = 0x15, EnumType = typeof(GcPetChatType.PetChatTypeEnum))]
         /* 0x368 */ public GcPetVocabularyEntry[] PetChatTemplates;
+        [NMS(Size = 0x5, EnumType = typeof(GcFriendlyDroneChatType.FriendlyDroneChatTypeEnum))]
+        /* 0x800 */ public GcFriendlyDroneVocabularyEntry[] FriendlyDroneChatTemplates;
     }
 }

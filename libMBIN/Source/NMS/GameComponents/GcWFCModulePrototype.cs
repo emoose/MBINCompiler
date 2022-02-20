@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x458, GUID = 0xB1CD57C85D8DC08E, NameHash = 0xEB956F6AA5C15F5C)]
+    [NMS(Size = 0x460, GUID = 0x10FF6832C5905B11, NameHash = 0xEB956F6AA5C15F5C)]
     public class GcWFCModulePrototype : NMSTemplate
     {
         /* 0x000 */ public NMSString0x80 Name;
@@ -17,6 +17,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x117 */ public bool Indoors;
         /* 0x118 */ public bool LimitToOnePerLevel;
         /* 0x119 */ public bool ExcludeRotatedVariants;
+        /* 0x11A */ public bool DontRotateModel;
         /* 0x120 */ public NMSString0x10 LayoutGroup;
         /* 0x130 */ public List<GcWeightedResource> Scenes;
         public enum TerrainEditsEnum { None, ClearEntireBlock, UseScene, UseBasebuildingEdits }
@@ -28,6 +29,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x2D8 */ public GcWFCFace Right;
         /* 0x358 */ public GcWFCFace Up;
         /* 0x3D8 */ public GcWFCFace Forward;
-
+        public enum FreighterModuleTypeEnum { None, Room, Corridor }
+        /* 0x458 */ public FreighterModuleTypeEnum FreighterModuleType;
     }
 }

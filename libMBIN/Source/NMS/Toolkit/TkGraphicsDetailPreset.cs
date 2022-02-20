@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Toolkit
 {
-	[NMS(Size = 0x38, GUID = 0xDB5598A7AE4E6F4E, NameHash = 0x56E0EB96EB3713F0)]
+	[NMS(Size = 0x3C, GUID = 0x9A2A7347324926E6, NameHash = 0x56E0EB96EB3713F0)]
     public class TkGraphicsDetailPreset : NMSTemplate
     {
         public TkGraphicsDetailTypes TextureQuality;
@@ -21,6 +21,8 @@ namespace libMBIN.NMS.Toolkit
         public UIQualityEnum UIQuality;
         public enum DLSSQualityEnum { MaxPerformance, Balanced, MaxQuality, UltraPerformance, UltraQuality }
         public DLSSQualityEnum DLSSQuality;
+        public enum FFXSRQualityEnum { Off, UltraQuality, Quality, Balanced, Performance }
+        public FFXSRQualityEnum FFXSRQuality;
         public enum AmbientOcclusionEnum { Off, GTAO_Low, GTAO_Medium, GTAO_High, GTAO_Ultra, HBAO_Low, HBAO_High }
         public AmbientOcclusionEnum AmbientOcclusion;
         public enum AnisotropyLevelEnum { _1, _2, _4, _8, _16 }

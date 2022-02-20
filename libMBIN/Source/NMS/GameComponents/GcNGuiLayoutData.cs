@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x40, GUID = 0x5D064E6D46BE6643, NameHash = 0xCEE71E03D7326B71)]
+	[NMS(Size = 0x50, GUID = 0x99A1A56E9CAA31FD, NameHash = 0xCEE71E03D7326B71)]
     public class GcNGuiLayoutData : NMSTemplate
     {
         /* 0x00 */ public float PositionX;
@@ -24,5 +24,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x28 */ public bool SlowCursorOnHover;
         /* 0x2C */ public float MaxWidth;
         /* 0x30 */ public List<GcVROverride_Layout> VROverrides;
+        /* 0x40 */ public List<GcAccessibleOverride_Layout> AccessibleOverrides;
     }
 }

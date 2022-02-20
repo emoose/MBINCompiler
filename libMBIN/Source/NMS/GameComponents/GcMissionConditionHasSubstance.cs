@@ -3,12 +3,12 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x10, GUID = 0xD332F70D80FD64DE, NameHash = 0x9D5EE4FB6274CF9E)]
+	[NMS(Size = 0x20, GUID = 0xC2B60F34A4EC5AEE, NameHash = 0x9D5EE4FB6274CF9E)]
     public class GcMissionConditionHasSubstance : NMSTemplate
     {
-        public GcDefaultMissionSubstanceEnum Default;
-        public GcSubstanceTableEnum Substance;
-        public int Amount;
-        public bool TakeAmountFromSeasonData;
+        /* 0x00 */ public GcDefaultMissionSubstanceEnum Default;
+        /* 0x08 */ public NMSString0x10 Substance;
+        /* 0x18 */ public int Amount;
+        /* 0x1C */ public bool TakeAmountFromSeasonData;
     }
 }

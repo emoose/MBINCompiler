@@ -3,13 +3,14 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x80, GUID = 0xF6888349F90C44AD, NameHash = 0x387AC5FC8E642A15)]
+    [NMS(Size = 0x88, GUID = 0x634A789AE698CA51, NameHash = 0x387AC5FC8E642A15)]
     public class GcShootableComponentData : NMSTemplate
     {
         /* 0x00 */ public int Health;
         /* 0x04 */ public bool AutoAimTarget;
         /* 0x05 */ public bool PlayerOnly;
-        /* 0x06 */ public bool ImpactShake;
+        /* 0x06 */ public bool IgnorePlayer;
+        /* 0x07 */ public bool ImpactShake;
         /* 0x08 */ public NMSString0x10 ImpactShakeEffect;
         /* 0x18 */ public GcProjectileImpactType ForceImpactType;
         /* 0x1C */ public int IncreaseWanted;
@@ -23,10 +24,12 @@ namespace libMBIN.NMS.GameComponents
         /* 0x36 */ public bool HitEffectEnabled;
         /* 0x37 */ public bool HitEffectEntireModel;
         /* 0x38 */ public bool IsArmoured;
-        /* 0x39 */ public bool IgnoreTerrainEditKill;
-        /* 0x3A */ public NMSString0x20 NameOverride;
+        /* 0x39 */ public bool CouldCountAsArmourForParent;
+        /* 0x3A */ public bool IgnoreTerrainEditKill;
+        /* 0x3B */ public NMSString0x20 NameOverride;
         /* 0x60 */ public NMSString0x10 RequiredTech;
         /* 0x70 */ public NMSString0x10 DamageMultiplier;
-
+        /* 0x80 */ public bool IsPiercable;
+        /* 0x81 */ public bool IsAffectedByPiercing;
     }
 }

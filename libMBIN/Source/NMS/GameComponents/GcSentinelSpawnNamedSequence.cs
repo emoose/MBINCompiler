@@ -10,6 +10,6 @@ namespace libMBIN.NMS.GameComponents
     public class GcSentinelSpawnNamedSequence : NMSTemplate
     {
         /* 0x00 */ public NMSString0x10 Id;
-        /* 0x10 */ public List<NMSString0x10> Waves;
+        /* 0x10 */ public List<GcSentinelSpawnSequence> Waves;
     }
 }

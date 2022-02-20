@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x1D00, GUID = 0x188140228BFE195A, NameHash = 0xB5B196A1179FFE00)]
+    [NMS(Size = 0x42E0, GUID = 0x4E435D8EC9894AA9, NameHash = 0xB5B196A1179FFE00)]
     public class GcDebugScene : NMSTemplate
     {
         /* 0x0000 */ public bool Active;
@@ -24,54 +24,54 @@ namespace libMBIN.NMS.GameComponents
         /* 0x0052 */ public bool ResetMoodsOnSummon;
         /* 0x0053 */ public bool ShowAccessoryMoods;
         /* 0x0054 */ public GcPetBehaviours PetForceBehaviour;
-        [NMS(Size = 0x6)]
+        [NMS(Size = 0x12)]
         /* 0x0058 */ public GcPetData[] Pets;
-        [NMS(Size = 0x6)]
-        /* 0x0D18 */ public GcPetCustomisationData[] PetAccessoryCustomisation;
-        /* 0x1348 */ public bool ForcePlayerWalk;
-        /* 0x134C */ public int PetRideIndex;
-        /* 0x1350 */ public List<Vector3f> PetRideWayPoints;
-        /* 0x1360 */ public bool ForceSunPosition;
-        /* 0x1370 */ public Vector3f ForcedSunPosition;
-        /* 0x1380 */ public bool ControlClouds;
-        /* 0x1384 */ public float CloudCover;
-        /* 0x1388 */ public float CloudAnimScale;
-        /* 0x138C */ public Vector2f CloudWindOffset;
-        /* 0x1394 */ public Vector2f CloudStratosphereWindOffset;
-        /* 0x13A0 */ public List<GcDebugShipTravelLine> DebugShipPaths;
-        /* 0x13B0 */ public List<GcDebugCamera> DebugCameraPaths;
-        /* 0x13C0 */ public List<GcCreatureDebugSpawnData> DebugCreatureSpawns;
-        /* 0x13D0 */ public List<GcMechDebugSpawnData> DebugMechSpawns;
-        /* 0x13E0 */ public List<GcAIShipDebugSpawnData> DebugEnemyShipSpawns;
-        /* 0x13F0 */ public List<GcAIShipDebugSpawnData> DebugShipSpawns;
+        [NMS(Size = 0x12)]
+        /* 0x2698 */ public GcPetCustomisationData[] PetAccessoryCustomisation;
+        /* 0x3928 */ public bool ForcePlayerWalk;
+        /* 0x392C */ public int PetRideIndex;
+        /* 0x3930 */ public List<Vector3f> PetRideWayPoints;
+        /* 0x3940 */ public bool ForceSunPosition;
+        /* 0x3950 */ public Vector3f ForcedSunPosition;
+        /* 0x3960 */ public bool ControlClouds;
+        /* 0x3964 */ public float CloudCover;
+        /* 0x3968 */ public float CloudAnimScale;
+        /* 0x396C */ public Vector2f CloudWindOffset;
+        /* 0x3974 */ public Vector2f CloudStratosphereWindOffset;
+        /* 0x3980 */ public List<GcDebugShipTravelLine> DebugShipPaths;
+        /* 0x3990 */ public List<GcDebugCamera> DebugCameraPaths;
+        /* 0x39A0 */ public List<GcCreatureDebugSpawnData> DebugCreatureSpawns;
+        /* 0x39B0 */ public List<GcMechDebugSpawnData> DebugMechSpawns;
+        /* 0x39C0 */ public List<GcAIShipDebugSpawnData> DebugEnemyShipSpawns;
+        /* 0x39D0 */ public List<GcAIShipDebugSpawnData> DebugShipSpawns;
         [NMS(Size = 0x7, EnumType = typeof(GcVehicleType.VehicleTypeEnum))]
-        /* 0x1400 */ public GcCameraFollowSettings[] VehicleCameraOverride;
-        /* 0x1B00 */ public bool DebugDroneScanPlayer;
-        /* 0x1B10 */ public Vector3f DebugDroneSpawn;
-        /* 0x1B20 */ public Vector3f DebugDroneTarget;
-        /* 0x1B30 */ public int DebugNumDrones;
-        /* 0x1B40 */ public Vector3f DebugWalkerSpawn;
-        /* 0x1B50 */ public Vector3f DebugWalkerTarget;
-        /* 0x1B60 */ public Vector3f DebugFlybyTarget;
-        /* 0x1B70 */ public Vector3f DebugFlybyDir;
-        /* 0x1B80 */ public float DebugFlybyRange;
-        /* 0x1B88 */ public GcSeed DebugFlybySeed;
-        /* 0x1B98 */ public NMSString0x10 DebugExperienceCamShake;
-        /* 0x1BB0 */ public Vector3f DebugShipSpawnPos;
-        /* 0x1BC0 */ public Vector3f DebugShipSpawnFacing;
-        /* 0x1BD0 */ public Vector3f DebugShipSpawnUp;
-        /* 0x1BE0 */ public NMSString0x10 PulseEncounter;
-        /* 0x1BF0 */ public Vector3f SandwormSpawnPos;
-        /* 0x1C00 */ public Vector3f DebugFrigateFlybySpawnPos;
-        /* 0x1C10 */ public float DebugFrigateFlybyRotation;
-        /* 0x1C14 */ public float DebugFrigateFlybyHeightOffset;
-        /* 0x1C18 */ public NMSString0x10 NormandyReward;
-        /* 0x1C28 */ public float CameraSpinTime;
-        /* 0x1C2C */ public float CameraSpinRevolutions;
-        /* 0x1C30 */ public float CameraSpinVerticalOffset;
-        /* 0x1C34 */ public float CameraSpinDistanceOffset;
-        /* 0x1C38 */ public TkCurveType CameraSpinEasing;
+        /* 0x39E0 */ public GcCameraFollowSettings[] VehicleCameraOverride;
+        /* 0x40E0 */ public bool DebugDroneScanPlayer;
+        /* 0x40F0 */ public Vector3f DebugDroneSpawn;
+        /* 0x4100 */ public Vector3f DebugDroneTarget;
+        /* 0x4110 */ public int DebugNumDrones;
+        /* 0x4120 */ public Vector3f DebugWalkerSpawn;
+        /* 0x4130 */ public Vector3f DebugWalkerTarget;
+        /* 0x4140 */ public Vector3f DebugFlybyTarget;
+        /* 0x4150 */ public Vector3f DebugFlybyDir;
+        /* 0x4160 */ public float DebugFlybyRange;
+        /* 0x4168 */ public GcSeed DebugFlybySeed;
+        /* 0x4178 */ public NMSString0x10 DebugExperienceCamShake;
+        /* 0x4190 */ public Vector3f DebugShipSpawnPos;
+        /* 0x41A0 */ public Vector3f DebugShipSpawnFacing;
+        /* 0x41B0 */ public Vector3f DebugShipSpawnUp;
+        /* 0x41C0 */ public NMSString0x10 PulseEncounter;
+        /* 0x41D0 */ public Vector3f SandwormSpawnPos;
+        /* 0x41E0 */ public Vector3f DebugFrigateFlybySpawnPos;
+        /* 0x41F0 */ public float DebugFrigateFlybyRotation;
+        /* 0x41F4 */ public float DebugFrigateFlybyHeightOffset;
+        /* 0x41F8 */ public NMSString0x10 NormandyReward;
+        /* 0x4208 */ public float CameraSpinTime;
+        /* 0x420C */ public float CameraSpinRevolutions;
+        /* 0x4210 */ public float CameraSpinVerticalOffset;
+        /* 0x4214 */ public float CameraSpinDistanceOffset;
+        /* 0x4218 */ public TkCurveType CameraSpinEasing;
         [NMS(Size = 0x6)]
-        /* 0x1C40 */ public GcDebugPlanetPos[] PlanetPositions;
+        /* 0x4220 */ public GcDebugPlanetPos[] PlanetPositions;
     }
 }
