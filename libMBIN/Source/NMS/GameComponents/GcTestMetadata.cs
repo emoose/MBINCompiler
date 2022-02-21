@@ -13,7 +13,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x001 */ public byte TestByte;
         /* 0x004 */ public int TestInt;
         /* 0x008 */ public short TestInt16;
-        /* 0x??? */ public ushort TestUInt16;
+        /* 0x00A */ public ushort TestUInt16;
         /* 0x010 */ public long TestInt64;
         /* 0x018 */ public ulong TestUInt64;
         /* 0x020 */ public long TestInt64_2;
@@ -44,9 +44,9 @@ namespace libMBIN.NMS.GameComponents
         /* 0x5E8 */ public VariableSizeString TestDynamicString;
         // size: 0x4
         public enum TestEnumEnum { Default, Option1, Option2, Option3 }
-        /* 0x5FC */ public TestEnumEnum TestEnum;
+        /* 0x5F8 */ public TestEnumEnum TestEnum;
         [NMS(Size = 0xA)]
-        /* 0x??? */ public float[] TestStaticArray;
+        /* 0x5FC */ public float[] TestStaticArray;
         /* 0x628 */ public List<float> TestDynamicArray;
         [NMS(Size = 0x4, EnumType = typeof(TestEnumEnum))]
         /* 0x638 */ public float[] TestEnumArray;

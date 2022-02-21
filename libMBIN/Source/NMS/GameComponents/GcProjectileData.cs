@@ -6,7 +6,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x400, GUID = 0x1154E25DA79E14D1, NameHash = 0x98B648B5C054B7F7)]
+    [NMS(Size = 0x400, GUID = 0x3EDA3B285CB7B6F5, NameHash = 0x98B648B5C054B7F7)]
     public class GcProjectileData : NMSTemplate
     {
         /* 0x000 */ public NMSString0x10 Id;
@@ -16,9 +16,10 @@ namespace libMBIN.NMS.GameComponents
         /* 0x2C0 */ public GcAudioWwiseEvents OverheatAudioEvent;
         /* 0x2C4 */ public float Scale;
         /* 0x2C8 */ public bool IsAutonomous;
+        /* 0x2C9 */ public bool ApplyCombatLevelMultipliers;
         /* 0x2CC */ public float Radius;
         /* 0x2D0 */ public float CapsuleHeight;
-        /* 0x2D4 */ public float Speed;
+        /* 0x2D4 */ public float DefaultSpeed;
         /* 0x2D8 */ public float Gravity;
         /* 0x2DC */ public float Life;
         /* 0x2E0 */ public float Offset;
@@ -26,12 +27,13 @@ namespace libMBIN.NMS.GameComponents
         /* 0x2E8 */ public float PhysicsPush;
         /* 0x2EC */ public float DroneImpulse;
         /* 0x2F0 */ public int DefaultDamage;
-        /* 0x2F4 */ public GcDamageType DamageType;
-        /* 0x2F8 */ public int DefaultBounces;
-        /* 0x2FC */ public float BounceMaxSpeed;
-        /* 0x300 */ public float BounceDamping;
-        /* 0x304 */ public float BounceFinalStopTime;
-        /* 0x308 */ public bool HitOnBounce;
+        /* 0x2F4 */ public float ExtraPlayerDamage;
+        /* 0x2F8 */ public GcDamageType DamageType;
+        /* 0x2FC */ public int DefaultBounces;
+        /* 0x300 */ public float BounceMaxSpeed;
+        /* 0x304 */ public float BounceDamping;
+        /* 0x308 */ public float BounceFinalStopTime;
+        /* 0x30C */ public bool HitOnBounce;
         /* 0x310 */ public NMSString0x10 PlayerDamage;
         /* 0x320 */ public float CriticalHitModifier;
         /* 0x324 */ public float PiercingDamagePercentage;
@@ -44,12 +46,16 @@ namespace libMBIN.NMS.GameComponents
         /* 0x370 */ public Colour Colour;
         /* 0x380 */ public bool OverrideLightColour;
         /* 0x390 */ public Colour LightColour;
+        // size: 0x8
         [Flags]
-        public enum BehaviourFlagsEnum { None = 0x00, DestroyTerrain = 0x01, DestroyAsteroids = 0x02, GatherResources = 0x04,
-            Homing = 0x08, HomingLaser = 0x10, ScareCreatures = 0x20, ExplosionForce = 0x40}
-        [NMSDescription("The enum that describes this field uses flags. This means that multiple values may be specified simultaneously" +
+        public enum BehaviourFlagsEnum {
+            None  = 0x0, DestroyTerrain = 0x1, DestroyAsteroids = 0x2, GatherResources = 0x4,
+            Homing = 0x8, HomingLaser = 0x10, ScareCreatures = 0x20, ExplosionForce = 0x40
+        }
+        [NMSDescription("The enum that describes this field uses Flags. This means that multiple values may be specified simultaneously" +
                         "by using the notation 'DestroyTerrain|Homing'. Ie. split values with a | character")]
         /* 0x3A0 */ public BehaviourFlagsEnum BehaviourFlags;
+        // size: 0x4
         public enum ClassEnum { Player, PlayerShip, Ship, Robot }
         /* 0x3A4 */ public ClassEnum Class;
         /* 0x3A8 */ public NMSString0x10 DefaultImpact;

@@ -10,6 +10,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcMissionSequenceCollectMultiProducts : NMSTemplate
     {
         /* 0x00 */ public NMSString0x80 Message;
+        /* 0x80 */ public List<GcProductToCollect> Products;
         /* 0x90 */ public bool WaitForSelected;
         /* 0x91 */ public NMSString0x80 DebugText;
     }
