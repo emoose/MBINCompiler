@@ -6,7 +6,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(Size = 0x388, GUID = 0xBA380EAAC40E9E6F, NameHash = 0x9904F7D363A81377)]
+    [NMS(Size = 0x388, GUID = 0xF85B06DB501B96D7, NameHash = 0x9904F7D363A81377)]
     public class GcCharacterGlobals : NMSTemplate
     {
         /* 0x000 */ public float PitchTest;

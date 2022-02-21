@@ -25,6 +25,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x25C */ public int NumStatsMax;
         /* 0x260 */ public GcWeightingCurve WeightingCurve;
         /* 0x270 */ public Colour UpgradeColour;
-        /* 0x280 */ public List<GcStatsTypes> StatLevels;
+        /* 0x280 */ public List<GcProceduralTechnologyStatLevel> StatLevels;
     }
 }

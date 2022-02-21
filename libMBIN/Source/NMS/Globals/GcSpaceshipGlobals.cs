@@ -6,7 +6,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(Size = 0x1070, GUID = 0x3FB48F3CCA3EB49A, NameHash = 0xC45203411E9AFE95)]
+    [NMS(Size = 0x1070, GUID = 0xC833B97E44E39BAB, NameHash = 0xC45203411E9AFE95)]
     public class GcSpaceshipGlobals : NMSTemplate
     {
         /* 0x0000 */ public bool AllowSideScreenPointing;
@@ -169,19 +169,20 @@ namespace libMBIN.NMS.Globals
         /* 0x02C8 */ public float ContrailSpeedDamping;
         /* 0x02CC */ public float MaxOverspeedBrake;
         /* 0x02D0 */ public float PostWarpSlowDownTime;
-        /* 0x02D4 */ public float PulseDrivePlanetApproachMinAngle;
-        /* 0x02D8 */ public float PulseDrivePlanetApproachMaxAngle;
-        /* 0x02DC */ public float PulseDrivePlanetApproachHeight;
-        /* 0x02E0 */ public float TestJetsStage1;
-        /* 0x02E4 */ public float TestJetsStage2;
-        /* 0x02E8 */ public float TestJetsBoost;
-        /* 0x02EC */ public float TestTrailThreshold;
-        /* 0x02F0 */ public float ContrailDefaultAlpha;
-        /* 0x02F4 */ public float EngineJetLightIntensityMultiplier;
-        /* 0x02F8 */ public float EngineEffectsThrustContribution;
-        /* 0x02FC */ public float TestShieldEffect;
-        /* 0x0300 */ public float ShieldEffectHitTime;
-        /* 0x0304 */ public TkCurveType ShieldEffectHitCurve;
+        /* 0x02D4 */ public float PostFreighterWarpTransitionTime;
+        /* 0x02D8 */ public float PulseDrivePlanetApproachMinAngle;
+        /* 0x02DC */ public float PulseDrivePlanetApproachMaxAngle;
+        /* 0x02E0 */ public float PulseDrivePlanetApproachHeight;
+        /* 0x02E4 */ public float TestJetsStage1;
+        /* 0x02E8 */ public float TestJetsStage2;
+        /* 0x02EC */ public float TestJetsBoost;
+        /* 0x02F0 */ public float TestTrailThreshold;
+        /* 0x02F4 */ public float ContrailDefaultAlpha;
+        /* 0x02F8 */ public float EngineJetLightIntensityMultiplier;
+        /* 0x02FC */ public float EngineEffectsThrustContribution;
+        /* 0x0300 */ public float TestShieldEffect;
+        /* 0x0304 */ public float ShieldEffectHitTime;
+        /* 0x0308 */ public TkCurveType ShieldEffectHitCurve;
         /* 0x0310 */ public GcScanEffectData ShieldEffectScanData;
         /* 0x0360 */ public float AcrobaticLowFlightLevel;
         /* 0x0364 */ public float _3rdPersonUpOffsetRollChangeSpeed;

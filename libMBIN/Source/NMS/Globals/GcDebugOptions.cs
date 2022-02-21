@@ -6,7 +6,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(Size = 0x25D0, GUID = 0xFADAAC086CAB431B, NameHash = 0x013FED27DF728C38)]
+    [NMS(Size = 0x2650, GUID = 0xD8AA1A7A1EB32119, NameHash = 0x013FED27DF728C38)]
     public class GcDebugOptions : NMSTemplate
     {
         /* 0x0000 */ public bool ForceScanEventsToGoPrime;
@@ -24,145 +24,150 @@ namespace libMBIN.NMS.Globals
         /* 0x0021 */ public bool VideoCaptureMode;
         /* 0x0022 */ public bool GodMode;
         /* 0x0023 */ public bool TakeNoDamage;
-        /* 0x0024 */ public bool AlwaysHaveFocus;
-        /* 0x0025 */ public bool DisableVibration;
-        /* 0x0026 */ public bool DebugGalaxyMapInQuickMenu;
-        /* 0x0027 */ public bool MapWarpCheckIgnoreFuel;
-        /* 0x0028 */ public bool MapWarpCheckIgnoreDrive;
-        /* 0x0029 */ public bool EverythingIsFree;
-        /* 0x002A */ public bool EverythingIsKnown;
-        /* 0x002B */ public bool EverythingIsStar;
-        /* 0x002C */ public bool InfiniteStamina;
-        /* 0x002D */ public bool DisableHazards;
-        /* 0x002E */ public bool IgnoreMissionRank;
-        /* 0x002F */ public bool CanLeaveDialogs;
-        /* 0x0030 */ public bool DisableOldMissions;
-        /* 0x0031 */ public bool UseScreenEffects;
-        /* 0x0032 */ public bool UseGunImpactEffect;
-        /* 0x0033 */ public bool RenderCreatureDetails;
-        /* 0x0034 */ public bool SkipTutorial;
-        /* 0x0035 */ public bool IgnoreFreighterSpawnWarpRequirement;
-        /* 0x0036 */ public bool MaximumFreighterSpawns;
-        /* 0x0037 */ public bool DisableSaveSlotSorting;
-        /* 0x0038 */ public bool DisableSaving;
-        /* 0x0039 */ public bool DisableStorms;
-        /* 0x003A */ public bool AlternateControls;
-        /* 0x003B */ public bool AlwaysShowURI;
-        /* 0x003C */ public bool MPMissionsAlwaysEPIC;
-        /* 0x003D */ public bool ShowFireteamMembersUA;
-        /* 0x003E */ public bool RevealAllTitles;
-        /* 0x003F */ public bool UnlockAllTitles;
-        /* 0x0040 */ public bool LockAllTitles;
-        /* 0x0041 */ public bool AlwaysAllowShipOperations;
-        /* 0x0042 */ public bool AlwaysAllowVehicleOperations;
-        /* 0x0043 */ public bool AlwaysAllowFreighterInventoryAccess;
-        /* 0x0044 */ public NMSString0x200 SeasonalDataOverrideFile;
-        /* 0x0244 */ public bool UnlockAllSeasonRewards;
-        /* 0x0245 */ public bool UnlockAllTwitchRewards;
-        /* 0x0246 */ public NMSString0x400 DebugTwitchRewards;
-        /* 0x0646 */ public bool AllowPause;
-        /* 0x0647 */ public bool AllSettlementsAreCompleted;
-        /* 0x0648 */ public bool UseDebugScreenSettings;
-        /* 0x064C */ public int ScreenWidth;
-        /* 0x0650 */ public int ScreenHeight;
-        /* 0x0654 */ public bool DisableVSync;
+        /* 0x0024 */ public bool SuperKillGuns;
+        /* 0x0025 */ public bool AlwaysHaveFocus;
+        /* 0x0026 */ public bool DisableVibration;
+        /* 0x0027 */ public bool DebugGalaxyMapInQuickMenu;
+        /* 0x0028 */ public bool MapWarpCheckIgnoreFuel;
+        /* 0x0029 */ public bool MapWarpCheckIgnoreDrive;
+        /* 0x002A */ public bool EverythingIsFree;
+        /* 0x002B */ public bool EverythingIsKnown;
+        /* 0x002C */ public bool EverythingIsStar;
+        /* 0x002D */ public bool InfiniteStamina;
+        /* 0x002E */ public bool DisableHazards;
+        /* 0x002F */ public bool IgnoreMissionRank;
+        /* 0x0030 */ public bool CanLeaveDialogs;
+        /* 0x0031 */ public bool DisableOldMissions;
+        /* 0x0032 */ public bool UseScreenEffects;
+        /* 0x0033 */ public bool UseGunImpactEffect;
+        /* 0x0034 */ public bool RenderCreatureDetails;
+        /* 0x0035 */ public bool SkipTutorial;
+        /* 0x0036 */ public bool IgnoreFreighterSpawnWarpRequirement;
+        /* 0x0037 */ public bool MaximumFreighterSpawns;
+        /* 0x0038 */ public bool DisableSaveSlotSorting;
+        /* 0x0039 */ public bool DisableSaving;
+        /* 0x003A */ public bool DisableStorms;
+        /* 0x003B */ public bool AlternateControls;
+        /* 0x003C */ public bool AlwaysShowURI;
+        /* 0x003D */ public bool MPMissionsAlwaysEPIC;
+        /* 0x003E */ public bool ShowFireteamMembersUA;
+        /* 0x003F */ public bool RevealAllTitles;
+        /* 0x0040 */ public bool UnlockAllTitles;
+        /* 0x0041 */ public bool LockAllTitles;
+        /* 0x0042 */ public bool AlwaysAllowShipOperations;
+        /* 0x0043 */ public bool AlwaysAllowVehicleOperations;
+        /* 0x0044 */ public bool AlwaysAllowFreighterInventoryAccess;
+        /* 0x0045 */ public NMSString0x200 SeasonalDataOverrideFile;
+        /* 0x0245 */ public bool UnlockAllSeasonRewards;
+        /* 0x0246 */ public bool UnlockAllTwitchRewards;
+        /* 0x0247 */ public NMSString0x400 DebugTwitchRewards;
+        /* 0x0647 */ public bool AllowPause;
+        /* 0x0648 */ public bool AllSettlementsAreCompleted;
+        /* 0x0649 */ public bool DisableSettlements;
+        /* 0x064A */ public bool PlaceOnGroundWhenLeavingDebugCamera;
+        /* 0x064B */ public bool EnableOctohedralImposters;
+        /* 0x064C */ public bool UseDebugScreenSettings;
+        /* 0x0650 */ public int ScreenWidth;
+        /* 0x0654 */ public int ScreenHeight;
+        /* 0x0658 */ public bool DisableVSync;
         // size: 0x3
         public enum GameWindowModeEnum { Bordered, Borderless, Fullscreen }
-        /* 0x0658 */ public GameWindowModeEnum GameWindowMode;
-        /* 0x065C */ public int Monitor;
-        /* 0x0660 */ public int TiledWindowsSplitCount;
-        /* 0x0664 */ public int TiledWindowsIndex;
-        /* 0x0668 */ public NMSString0x100 ForceUniverseAddress;
-        /* 0x0768 */ public NMSString0x100 ForcePlayerPosition;
-        /* 0x0868 */ public bool ForceInitialShip;
-        /* 0x0869 */ public bool ForceInitialWeapon;
+        /* 0x065C */ public GameWindowModeEnum GameWindowMode;
+        /* 0x0660 */ public int Monitor;
+        /* 0x0664 */ public int TiledWindowsSplitCount;
+        /* 0x0668 */ public int TiledWindowsIndex;
+        /* 0x066C */ public NMSString0x100 ForceUniverseAddress;
+        /* 0x076C */ public NMSString0x100 ForcePlayerPosition;
+        /* 0x086C */ public bool ForceInitialShip;
+        /* 0x086D */ public bool ForceInitialWeapon;
         // size: 0x3
         public enum GameStateModeEnum { LoadPreset, UserStorage, FreshStart }
-        /* 0x086C */ public GameStateModeEnum GameStateMode;
+        /* 0x0870 */ public GameStateModeEnum GameStateMode;
         // size: 0x7
         public enum BootModeEnum { MinimalSolarSystem, SolarSystem, GalaxyMap, SmokeTest, SmokeTestGalaxyMap,
             Scratchpad, UnitTest
         }
-        /* 0x0870 */ public BootModeEnum BootMode;
+        /* 0x0840 */ public BootModeEnum BootMode;
         // size: 0x7
         public enum PlayerSpawnLocationOverrideEnum { None, FromSettings, Space, SpaceStation, RandomPlanet, GameStartPlanet, SpecificLocation
         }
-        /* 0x0874 */ public PlayerSpawnLocationOverrideEnum PlayerSpawnLocationOverride;
-        /* 0x0878 */ public NMSString0x80 SceneSettings;
-        /* 0x08F8 */ public NMSString0x100 WorkingDirectory;
-        /* 0x09F8 */ public NMSString0x80 DebugScene;
+        /* 0x0878 */ public PlayerSpawnLocationOverrideEnum PlayerSpawnLocationOverride;
+        /* 0x087C */ public NMSString0x80 SceneSettings;
+        /* 0x08FC */ public NMSString0x100 WorkingDirectory;
+        /* 0x09FC */ public NMSString0x80 DebugScene;
         // size: 0x2
         public enum SolarSystemBootEnum { FromSettings, Generate }
-        /* 0x0A78 */ public SolarSystemBootEnum SolarSystemBoot;
+        /* 0x0A7C */ public SolarSystemBootEnum SolarSystemBoot;
         // size: 0x2
         public enum ShaderPreloadEnum { Off, Full }
-        /* 0x0A7C */ public ShaderPreloadEnum ShaderPreload;
-        /* 0x0A80 */ public bool ShaderPreloadListExport;
-        /* 0x0A81 */ public bool ShaderPreloadListImport;
-        /* 0x0A82 */ public bool ShaderCaching;
+        /* 0x0A80 */ public ShaderPreloadEnum ShaderPreload;
+        /* 0x0A84 */ public bool ShaderPreloadListExport;
+        /* 0x0A85 */ public bool ShaderPreloadListImport;
+        /* 0x0A86 */ public bool ShaderCaching;
         // size: 0x3
         public enum BootLoadDelayEnum { LoadAll, WaitForPlanet, WaitForNothing }
-        /* 0x0A84 */ public BootLoadDelayEnum BootLoadDelay;
-        /* 0x0A88 */ public bool MemCsv;
-        /* 0x0A8C */ public float ForceTimeOfDay;
-        /* 0x0A90 */ public float ForceInitialTimeOfDay;
-        /* 0x0A94 */ public bool ForceSunDirectionFromPhotoMode;
-        /* 0x0A98 */ public float ForceSunAngle;
-        /* 0x0A9C */ public bool ResetForcedSaveSlotOnLoad;
-        /* 0x0A9D */ public bool UseParticles;
-        /* 0x0A9E */ public bool UseHeavyAir;
-        /* 0x0A9F */ public bool UseVolumetrics;
-        /* 0x0AA0 */ public bool UseClouds;
-        /* 0x0AA1 */ public bool EnableCloudAnimation;
-        /* 0x0AA2 */ public bool UseTerrain;
-        /* 0x0AA3 */ public bool UseInstances;
-        /* 0x0AA4 */ public bool UseObjects;
-        /* 0x0AA5 */ public bool UseBuildings;
-        /* 0x0AA6 */ public bool UseCreatures;
-        /* 0x0AA7 */ public bool UseElevation;
-        /* 0x0AA8 */ public bool UseLegacyFreighters;
-        /* 0x0AA9 */ public bool UseLegacyBuildingTable;
-        /* 0x0AAA */ public bool EnableDayNightCycle;
-        /* 0x0AAB */ public bool SpawnPirates;
-        /* 0x0AAC */ public bool SpawnRobots;
-        /* 0x0AAD */ public bool SpawnShips;
-        /* 0x0AAE */ public bool SpawnPulseEncounters;
-        /* 0x0AAF */ public bool InstanceCollision;
-        /* 0x0AB0 */ public bool LoadMissions;
-        /* 0x0AB1 */ public bool MPMissions;
-        /* 0x0AB2 */ public bool SpecialsShop;
-        /* 0x0AB3 */ public bool MultiplePlayerFreightersInASystem;
-        /* 0x0AB4 */ public bool ForceNexusInQuickMenu;
-        /* 0x0AB5 */ public bool MissionSurveyEnabled;
-        /* 0x0AB6 */ public bool SeasonalModeEnabled;
-        /* 0x0AB7 */ public bool AllSeasonMilestonesShowComplete;
-        /* 0x0AB8 */ public bool EnableGalaxyRecolouring;
-        /* 0x0AB9 */ public bool IgnoreSteamDev;
-        /* 0x0ABA */ public bool MouseLookEnabled;
-        /* 0x0ABB */ public bool StartPaused;
-        /* 0x0ABC */ public bool DisableDebugControls;
-        /* 0x0ABD */ public bool FixedFramerate;
-        /* 0x0ABE */ public bool ScreenshotMode;
-        /* 0x0ABF */ public bool RenderHud;
-        /* 0x0AC0 */ public bool DisableDiscoveryNaming;
-        /* 0x0AC1 */ public bool DebugDrawPlayerInteract;
-        /* 0x0AC2 */ public bool ForceInteractionToSettings;
-        /* 0x0AC4 */ public int ForceInteractionIndex;
-        /* 0x0AC8 */ public bool InteractionsAllwaysGivesTech;
-        /* 0x0AC9 */ public bool InfiniteInteractions;
-        /* 0x0ACA */ public bool StopSwitchingToSecondaryInteractions;
-        /* 0x0ACC */ public TkLanguages DebugLanguage;
-        /* 0x0AD0 */ public NMSString0x20 AllowedLanguagesFile;
-        /* 0x0AF0 */ public bool DoAlienLanguage;
-        /* 0x0AF4 */ public GcAlienRace ForceInteractionRaceTo;
+        /* 0x0A88 */ public BootLoadDelayEnum BootLoadDelay;
+        /* 0x0A8C */ public bool MemCsv;
+        /* 0x0A90 */ public float ForceTimeOfDay;
+        /* 0x0A94 */ public float ForceInitialTimeOfDay;
+        /* 0x0A98 */ public bool ForceSunDirectionFromPhotoMode;
+        /* 0x0A9C */ public float ForceSunAngle;
+        /* 0x0AA0 */ public bool ResetForcedSaveSlotOnLoad;
+        /* 0x0AA1 */ public bool MissionMessageLoggingEnabled;
+        /* 0x0AA2 */ public bool UseParticles;
+        /* 0x0AA3 */ public bool UseHeavyAir;
+        /* 0x0AA4 */ public bool UseVolumetrics;
+        /* 0x0AA5 */ public bool UseClouds;
+        /* 0x0AA6 */ public bool EnableCloudAnimation;
+        /* 0x0AA7 */ public bool UseTerrain;
+        /* 0x0AA8 */ public bool UseInstances;
+        /* 0x0AA9 */ public bool UseObjects;
+        /* 0x0AAA */ public bool UseBuildings;
+        /* 0x0AAB */ public bool UseCreatures;
+        /* 0x0AAC */ public bool UseElevation;
+        /* 0x0AAD */ public bool UseLegacyFreighters;
+        /* 0x0AAE */ public bool UseLegacyBuildingTable;
+        /* 0x0AAF */ public bool EnableDayNightCycle;
+        /* 0x0AB0 */ public bool SpawnPirates;
+        /* 0x0AB1 */ public bool SpawnRobots;
+        /* 0x0AB2 */ public bool SpawnShips;
+        /* 0x0AB3 */ public bool SpawnPulseEncounters;
+        /* 0x0AB4 */ public bool InstanceCollision;
+        /* 0x0AB5 */ public bool LoadMissions;
+        /* 0x0AB6 */ public bool MPMissions;
+        /* 0x0AB7 */ public bool SpecialsShop;
+        /* 0x0AB8 */ public bool MultiplePlayerFreightersInASystem;
+        /* 0x0AB9 */ public bool ForceNexusInQuickMenu;
+        /* 0x0ABA */ public bool MissionSurveyEnabled;
+        /* 0x0ABB */ public bool AllSeasonMilestonesShowComplete;
+        /* 0x0ABC */ public bool EnableGalaxyRecolouring;
+        /* 0x0ABD */ public bool IgnoreSteamDev;
+        /* 0x0ABE */ public bool EnableBaseBuildingExpandables;
+        /* 0x0ABF */ public bool MouseLookEnabled;
+        /* 0x0AC0 */ public bool StartPaused;
+        /* 0x0AC1 */ public bool DisableDebugControls;
+        /* 0x0AC2 */ public bool FixedFramerate;
+        /* 0x0AC3 */ public bool ScreenshotMode;
+        /* 0x0AC4 */ public bool RenderHud;
+        /* 0x0AC5 */ public bool DisableDiscoveryNaming;
+        /* 0x0AC6 */ public bool DebugDrawPlayerInteract;
+        /* 0x0AC7 */ public bool ForceInteractionToSettings;
+        /* 0x0AC8 */ public int ForceInteractionIndex;
+        /* 0x0ACC */ public bool InteractionsAllwaysGivesTech;
+        /* 0x0ACD */ public bool InfiniteInteractions;
+        /* 0x0ACE */ public bool StopSwitchingToSecondaryInteractions;
+        /* 0x0AD0 */ public TkLanguages DebugLanguage;
+        /* 0x0AD4 */ public NMSString0x20 AllowedLanguagesFile;
+        /* 0x0AF4 */ public bool DoAlienLanguage;
+        /* 0x0AF8 */ public GcAlienRace ForceInteractionRaceTo;
         // size: 0x2
         public enum RealityModeEnum { LoadPreset, Generate }
-        /* 0x0AF8 */ public RealityModeEnum RealityMode;
-        /* 0x0AFC */ public bool DebugPersistentInteractions;
-        /* 0x0AFD */ public bool UseHighlightedOptionStyle;
-        /* 0x0AFE */ public bool DisableMissionShop;
-        /* 0x0AFF */ public NMSString0x80 RealityPresetFile;
-        /* 0x0B80 */ public ushort RealityGenerationIteration;
+        /* 0x0AFC */ public RealityModeEnum RealityMode;
+        /* 0x0B00 */ public bool DebugPersistentInteractions;
+        /* 0x0B01 */ public bool UseHighlightedOptionStyle;
+        /* 0x0B02 */ public bool DisableMissionShop;
+        /* 0x0B03 */ public NMSString0x80 RealityPresetFile;
+        /* 0x0B84 */ public ushort RealityGenerationIteration;
         /* 0x0B88 */ public List<NMSString0x20> LocTableList;
         /* 0x0B98 */ public NMSString0x80 DefaultSaveData;
         /* 0x0C18 */ public bool FormatDownloadStorageAreaOnBoot;
@@ -206,11 +211,11 @@ namespace libMBIN.NMS.Globals
         /* 0x0E17 */ public bool GraphTexStreaming;
         /* 0x0E18 */ public bool SmokeTestDumpStatsMode;
         // size: 0x5
-        public enum SmokeTestCycleModeEnum { None, TourPlanet, TourSolarSystem, TourGalaxy, TourUDAs }
+        public enum SmokeTestCycleModeEnum { None, TourPlanet, TourSolarSystem, TourGalaxy, TourUDAs, TourShortUDAs, TourRandomWarps }
         /* 0x0E1C */ public SmokeTestCycleModeEnum SmokeTestCycleMode;
-        // size: 0x6
+        // size: 0x7
         public enum SmokeTestScenarioEnum { None, TerrainSnapShotFromAltitude, BelowCloudLayerSnapShot, Flying, UltraBiomeSnapShot,
-            Walking
+            Walking, LeakDetector
         }
         /* 0x0E20 */ public SmokeTestScenarioEnum SmokeTestScenario;
         /* 0x0E24 */ public bool SmokeTestLegacyOutput;
@@ -396,5 +401,9 @@ namespace libMBIN.NMS.Globals
         /* 0x23A8 */ public bool CrossPlatformFeaturedBases;
         /* 0x23A9 */ public bool ShowMissionIdInTitle;
         /* 0x23AC */ public TkGlobals ToolkitGlobals;
+        /* 0x25CC */ public bool AllowOverrideSettlementOwnership;
+        /* 0x25CD */ public NMSString0x40 OverrideSettlementOwnershipUsername;
+        /* 0x260D */ public NMSString0x40 OverrideSettlementOwnershipOnlineId;
+        /* 0x264D */ public bool BlockSettlementsNetwork;
     }
 }
