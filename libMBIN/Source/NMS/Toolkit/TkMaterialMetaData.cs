@@ -6,7 +6,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(Size = 0x550, GUID = 0x30940E47D5F5A31D, NameHash = 0xE39CB7AA4D818260)]
+    [NMS(Size = 0x560, GUID = 0x0CBDE654F38591C4, NameHash = 0xE39CB7AA4D818260)]
     public class TkMaterialMetaData : NMSTemplate
     {
         /* 0x000 */ public NMSString0x80 ExternalMaterial;
@@ -90,7 +90,8 @@ namespace libMBIN.NMS.Toolkit
         /* 0x416 */ public bool ReflectionProbe;
         /* 0x417 */ public bool DrawToBloom;
         /* 0x418 */ public bool DrawToLensFlare;
-        /* 0x419 */ public bool CreateFur;
+        /* 0x419 */ public bool DoubleBufferGeometry;
+        /* 0x41A */ public bool CreateFur;
         /* 0x41C */ public float ShellsHeight;
         /* 0x420 */ public float FurNoiseScale;
         /* 0x424 */ public float FurNoiseThickness;
@@ -110,21 +111,25 @@ namespace libMBIN.NMS.Toolkit
         /* 0x454 */ public float Refraction;
         /* 0x458 */ public float RefractionIndex;
         /* 0x45C */ public bool RefractionMask;
-        /* 0x45D */ public bool ParallaxMapped;
-        /* 0x460 */ public float ParallaxDepth;
-        /* 0x464 */ public int NumSteps;
-        /* 0x468 */ public bool SelfShadow;
-        /* 0x46C */ public float ShadowFactor;
-        /* 0x470 */ public bool DisplacementWave;
-        /* 0x471 */ public bool DisplacementPositionOffset;
-        /* 0x474 */ public float WaveOneSpeed;
-        /* 0x480 */ public Vector3f WaveOneAmplitude;
-        /* 0x490 */ public Vector3f WaveOneFrequency;
-        /* 0x4A0 */ public Vector3f WaveOneFallOff;
-        /* 0x4B0 */ public float WaveTwoSpeed;
-        /* 0x4C0 */ public Vector3f WaveTwoAmplitude;
-        /* 0x4D0 */ public Vector3f WaveTwoFrequency;
-        /* 0x4E0 */ public Vector3f WaveTwoFallOff;
-        /* 0x4F0 */ public TkMaterialShaderMillData ShaderMillData;
+        /* 0x460 */ public float ParticleRefractionStrengthX;
+        /* 0x464 */ public float ParticleRefractionStrengthY;
+        /* 0x468 */ public float ParticleRefractionBrightnessMultiplier;
+        /* 0x46C */ public float ParticleRefractionTint;
+        /* 0x470 */ public bool ParallaxMapped;
+        /* 0x474 */ public float ParallaxDepth;
+        /* 0x478 */ public int NumSteps;
+        /* 0x47C */ public bool SelfShadow;
+        /* 0x480 */ public float ShadowFactor;
+        /* 0x484 */ public bool DisplacementWave;
+        /* 0x485 */ public bool DisplacementPositionOffset;
+        /* 0x488 */ public float WaveOneSpeed;
+        /* 0x490 */ public Vector3f WaveOneAmplitude;
+        /* 0x4A0 */ public Vector3f WaveOneFrequency;
+        /* 0x4B0 */ public Vector3f WaveOneFallOff;
+        /* 0x4C0 */ public float WaveTwoSpeed;
+        /* 0x4D0 */ public Vector3f WaveTwoAmplitude;
+        /* 0x4E0 */ public Vector3f WaveTwoFrequency;
+        /* 0x4F0 */ public Vector3f WaveTwoFallOff;
+        /* 0x500 */ public TkMaterialShaderMillData ShaderMillData;
     }
 }

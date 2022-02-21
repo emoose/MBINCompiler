@@ -6,10 +6,11 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x30, GUID = 0xAADEC9ADF54D1CEC, NameHash = 0x8753450A435B1BC5)]
+    [NMS(Size = 0x38, GUID = 0x40E4B2CFB2236E44, NameHash = 0x8753450A435B1BC5)]
     public class GcCostMultiItem : NMSTemplate
     {
         /* 0x00 */ public NMSString0x20A DisplayLocID;
-        /* 0x20 */ public List<GcItemAmountCostPair> ItemList;
+        /* 0x20 */ public bool OnlyTakeIfCanAfford;
+        /* 0x28 */ public List<GcItemAmountCostPair> ItemList;
     }
 }
