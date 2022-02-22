@@ -10,6 +10,6 @@ namespace libMBIN.NMS.GameComponents
     public class GcMechMeshPartTypeData : NMSTemplate
     {
         /* 0x00 */ public NMSString0x20 LocatorNodeName;
-        /* 0x20 */ public NMSString0x10 RequiredTechs;
+        /* 0x20 */ public List<NMSString0x10> RequiredTechs;
     }
 }
