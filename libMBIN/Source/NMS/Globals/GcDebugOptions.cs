@@ -19,7 +19,7 @@ namespace libMBIN.NMS.Globals
         /* 0x0012 */ public bool SkipLogos;
         /* 0x0014 */ public int BootDirectlyIntoSaveSlot;
         /* 0x0018 */ public bool BootDirectlyIntoLastSave;
-        /* 0x001C */ public GcGameMode NewSaveGameMode;
+        /* 0x001C */ public GcLegality NewSaveGameMode;
         /* 0x0020 */ public bool SkipPlanetDiscoverOnBoot;
         /* 0x0021 */ public bool VideoCaptureMode;
         /* 0x0022 */ public bool GodMode;
@@ -87,7 +87,7 @@ namespace libMBIN.NMS.Globals
         public enum BootModeEnum { MinimalSolarSystem, SolarSystem, GalaxyMap, SmokeTest, SmokeTestGalaxyMap,
             Scratchpad, UnitTest
         }
-        /* 0x0840 */ public BootModeEnum BootMode;
+        /* 0x0874 */ public BootModeEnum BootMode;
         // size: 0x7
         public enum PlayerSpawnLocationOverrideEnum { None, FromSettings, Space, SpaceStation, RandomPlanet, GameStartPlanet, SpecificLocation
         }
@@ -210,8 +210,9 @@ namespace libMBIN.NMS.Globals
         /* 0x0E16 */ public bool GraphFPS;
         /* 0x0E17 */ public bool GraphTexStreaming;
         /* 0x0E18 */ public bool SmokeTestDumpStatsMode;
-        // size: 0x5
-        public enum SmokeTestCycleModeEnum { None, TourPlanet, TourSolarSystem, TourGalaxy, TourUDAs, TourShortUDAs, TourRandomWarps }
+        // size: 0x7
+        public enum SmokeTestCycleModeEnum { None, TourPlanet, TourSolarSystem, TourGalaxy, TourUDAs, TourShortUDAs, TourRandomWarps
+        }
         /* 0x0E1C */ public SmokeTestCycleModeEnum SmokeTestCycleMode;
         // size: 0x7
         public enum SmokeTestScenarioEnum { None, TerrainSnapShotFromAltitude, BelowCloudLayerSnapShot, Flying, UltraBiomeSnapShot,
@@ -405,5 +406,6 @@ namespace libMBIN.NMS.Globals
         /* 0x25CD */ public NMSString0x40 OverrideSettlementOwnershipUsername;
         /* 0x260D */ public NMSString0x40 OverrideSettlementOwnershipOnlineId;
         /* 0x264D */ public bool BlockSettlementsNetwork;
+        /* 0x264E */ public bool EnableAccessibleUI;
     }
 }
