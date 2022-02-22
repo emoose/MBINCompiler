@@ -19,7 +19,7 @@ namespace libMBIN.NMS.Globals
         /* 0x0012 */ public bool SkipLogos;
         /* 0x0014 */ public int BootDirectlyIntoSaveSlot;
         /* 0x0018 */ public bool BootDirectlyIntoLastSave;
-        /* 0x001C */ public GcLegality NewSaveGameMode;
+        /* 0x001C */ public GcGameMode NewSaveGameMode;
         /* 0x0020 */ public bool SkipPlanetDiscoverOnBoot;
         /* 0x0021 */ public bool VideoCaptureMode;
         /* 0x0022 */ public bool GodMode;
