@@ -116,6 +116,8 @@ namespace libMBIN.NMS.Globals
         /* 0x0210 */ public GcScanEffectData DroneScanEffect;
         [NMS(Size = 0x9)]
         /* 0x0260 */ public int[] SentinelSpawnLimits;
+        [NMS(Size = 0x9)]
+        /* 0x0284 */ public GcSentinelData[] SentinelResources;
         /* 0x0794 */ public float HeightTestSampleDistance;
         /* 0x0798 */ public float HeightTestSampleTime;
         /* 0x079C */ public float CollisionDistance;

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
@@ -13,7 +14,8 @@ namespace libMBIN.NMS.GameComponents
         /* 0x2A0 */ public NMSString0x80 Image;
         /* 0x320 */ public List<NMSTemplate> Children;
         /* 0x330 */ public NMSString0x80 DataFilename;
-        public enum AltModeEnum { None, Normal, Alt}
+        // size: 0x3
+        public enum AltModeEnum { None, Normal, Alt }
         /* 0x3B0 */ public AltModeEnum AltMode;
     }
 }
