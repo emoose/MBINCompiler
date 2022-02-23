@@ -11,7 +11,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x20 */ public float Offset;
         /* 0x24 */ public bool UseLookAt;
         /* 0x25 */ public bool AvoidTerrain;
-        [NMS(Size = 0x33, EnumType = typeof(GcBuildingClassification.BuildingClassEnum))]
+        [NMS(Size = 0x34, EnumType = typeof(GcBuildingClassification.BuildingClassEnum))]
         /* 0x26 */ public bool[] AvailableBuildings;
         [NMS(Size = 0x8, EnumType = typeof(GcAlienRace.AlienRaceEnum))]
         /* 0x59 */ public bool[] AvailableRaces;

@@ -7,7 +7,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcBaseBuildingMaterial : NMSTemplate
     {
         /* 0x000 */ public TkTextureResource Icon;
-        /* 0x084 */ public TkTextureResource IconSwatchImage;
+        /* 0x084 */ public TkTextureResource SwatchImage;
         /* 0x108 */ public NMSString0x20A LocName;
         /* 0x128 */ public NMSString0x20A Id;
         /* 0x148 */ public int MaterialIndex;
