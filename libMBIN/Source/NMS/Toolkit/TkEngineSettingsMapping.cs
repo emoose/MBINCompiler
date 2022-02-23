@@ -21,7 +21,7 @@ namespace libMBIN.NMS.Toolkit
         /* 0x40 */ public float[] CloudsResolutionScale;
         [NMS(Size = 0x4, EnumType = typeof(TkGraphicsDetailTypes.GraphicDetailEnum))]
         /* 0x50 */ public int[] CloudsMaxIterations;
-        [NMS(Size = 0x2E, EnumType = typeof(TkEngineSettingTypes.EngineSettingEnum))]
+        [NMS(Size = 0x2F, EnumType = typeof(TkEngineSettingTypes.EngineSettingEnum))]
         /* 0x60 */ public bool[] NeedsGameRestart;
     }
 }
