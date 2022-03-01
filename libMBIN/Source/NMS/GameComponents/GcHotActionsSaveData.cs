@@ -6,7 +6,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x190, GUID = 0x8AC4EB4712C0B824, NameHash = 0xE6D4EE849D2F9101)]
+    [NMS(Size = 0x190, GUID = 0x4328513D6EA21CD1, NameHash = 0xE6D4EE849D2F9101)]
     public class GcHotActionsSaveData : NMSTemplate
     {
         // maybe the first 0xA elements of GcQuickMenuActions.QuickMenuActionsEnum?
