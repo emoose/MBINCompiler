@@ -6,7 +6,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(Size = 0xD00, GUID = 0x65CA8B13B1F11888, NameHash = 0x9B5DDD6D76FBC918)]
+    [NMS(Size = 0xD00, GUID = 0x82BF5C9573392E54, NameHash = 0x9B5DDD6D76FBC918)]
     public class GcVehicleGlobals : NMSTemplate
     {
         /* 0x000 */ public float VehicleSolarRegenFactor;
@@ -46,8 +46,7 @@ namespace libMBIN.NMS.Globals
         /* 0x104 */ public float MechAIResummonMinSpeedForVelBasedSpawnPos;
         /* 0x108 */ public float MechAIResummonVelBasedSpawnSpeedMultiplier;
         /* 0x10C */ public bool MechStrafeEnabled;
-        /* 0x10D */ public bool MechAIEnabled;
-        /* 0x10E */ public bool MechAltJumpMode;
+        /* 0x10D */ public bool MechAltJumpMode;
         /* 0x110 */ public float MechContrailAlpha;
         /* 0x114 */ public float MechJetpackJetScaleTime;
         /* 0x118 */ public NMSString0x10 MechLandingImpactEffect;
