@@ -131,6 +131,9 @@ namespace MBINCompiler
                 }
                 if ( index < 0 ) return false;
 
+                // to prevent an empty 'exclude' from gulping the next arg
+                if (options[index].longName == $"exclude" && (val == "")) val = " ";
+
                 // if the option requires a param but we don't have one yet then get the next arg
                 if ((options[index].param != null) && (val == "")) {
                     Args.RemoveAt( 0 );

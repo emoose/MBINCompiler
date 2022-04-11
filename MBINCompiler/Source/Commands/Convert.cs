@@ -151,6 +151,7 @@ namespace MBINCompiler.Commands {
         
         public static void ConvertFile( string inputPath, string fileIn, string fileOut, FormatType inputFormat, FormatType outputFormat ) {
             fileOut = ChangeFileExtension( fileOut, outputFormat );
+            Logger.LogMessage(null, "INFO", inputPath);
 
             try {
                 using ( var fIn = new FileStream( fileIn, FileMode.Open, FileAccess.Read ) )
@@ -161,13 +162,15 @@ namespace MBINCompiler.Commands {
                     } else if ( inputFormat == FormatType.EXML ) {
                         fileOut = ConvertEXML( inputPath, fIn, ms, fileOut );
                     }
-                    ms.Flush();
+                    if (!(EXMLtoConsole && inputFormat == FormatType.MBIN)) {
+                        ms.Flush();
 
-                    FileMode fileMode;
-                    if ( ! GetFileMode( fileOut, out fileMode ) ) return;
+                        FileMode fileMode;
+                        if (!GetFileMode(fileOut, out fileMode)) return;
 
-                    Directory.CreateDirectory( Path.GetDirectoryName( fileOut ) );
-                    using ( var fOut = new FileStream( fileOut, fileMode, FileAccess.Write ) ) ms.WriteTo( fOut );
+                        Directory.CreateDirectory(Path.GetDirectoryName(fileOut));
+                        using (var fOut = new FileStream(fileOut, fileMode, FileAccess.Write)) ms.WriteTo(fOut);
+                    }
                 }
             } catch ( Exception e ) {
                 if ( e is CompilerException ) throw;
@@ -214,9 +217,18 @@ namespace MBINCompiler.Commands {
                 if ( data is null ) throw new InvalidDataException( "Invalid MBIN data." );
 
                 msg = $"Failed serializing {mbin.Header.GetXMLTemplateName()} to EXML.";
-                sw.Write( EXmlFile.WriteTemplate( data ) );
-                sw.Flush();
-                if ( msOut.Length == 0 ) throw new InvalidDataException( "Invalid EXML data." );
+                string exml = EXmlFile.WriteTemplate(data, hideVersionInfo);
+
+                if ( EXMLtoConsole ) {
+                    EmitInfo($"");
+                    EmitInfo($"[NEW]: {inputPath}");
+                    EmitInfo($"{exml}");
+                }
+                else {
+                    sw.Write(exml);
+                    sw.Flush();
+                    if ( msOut.Length == 0 ) throw new InvalidDataException( "Invalid EXML data." );
+                }
             } catch ( Exception e ) {
                 throw new MbinException( msg, e, fIn.Name, mbin );
             }

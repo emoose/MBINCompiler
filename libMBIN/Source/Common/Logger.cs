@@ -533,8 +533,15 @@ namespace libMBIN {
         public static void LogMessage( bool log, TextWriter tee, string label, string format, params object[] args ) {
             Async.SynchronizeTask( logMessageLock, ref logMessageTask, () => {
                 label = !string.IsNullOrWhiteSpace( label ) ? $"[{label}]: " : "";
+                string[] lines = { "" };
+                try { 
+                    lines = string.Format(format, args).Replace("\r\n", "\n").Split(new char[] { '\n' });
+                }
+                catch {
+                    // to allow LANGUAGE EXML files to work
+                    lines = format.Replace("\r\n", "\n").Split(new char[] { '\n' });
+                }
 
-                string[] lines = string.Format( format, args ).Replace( "\r\n", "\n" ).Split( new char[] { '\n' } );
                 StringBuilder sbLine = new StringBuilder();
                 StringBuilder sbLog = new StringBuilder();
 
