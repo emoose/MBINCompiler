@@ -17,8 +17,8 @@ namespace MBINCompiler.Commands {
 
             IgnoreErrors = options.GetOptionSwitch( "force" );
             UseThreads   = !options.GetOptionSwitch( "no-threads" );
-            EXMLtoConsole = options.GetOptionSwitch("EXMLtoConsole");
-            hideVersionInfo = options.GetOptionSwitch("hideVersionInfo");
+            StreamToConsole = options.GetOptionSwitch("stream");
+            HideVersionInfo = options.GetOptionSwitch("no-version");
             
             var arg = options.GetOptionArg( "format-version" );
             if ( arg != null ) {

@@ -18,7 +18,7 @@ namespace MBINCompiler
             public static bool optDebugMode              = false;
             public static bool optQuiet                  = false;
             public static bool optNoLog                  = false;
-            public static bool optEXMLtoConsole          = false;
+            public static bool optStreamToConsole        = false;
             public static bool optHideVersionInfo        = false;
             public static OverwriteMode optOverwrite     = OverwriteMode.Prompt;
             public static bool optIgnoreErrors           = false;
@@ -48,12 +48,12 @@ namespace MBINCompiler
         // --nolog
         public static bool NoLog { get => optNoLog; internal set => optNoLog = value; }
 
-        // --EXMLtoLog
-        public static bool EXMLtoConsole { get => optEXMLtoConsole; internal set => optEXMLtoConsole = value; }
+        // --stream
+        public static bool StreamToConsole { get => optStreamToConsole; internal set => optStreamToConsole = value; }
 
 
-        // --hideVersionInfo
-        public static bool hideVersionInfo { get => optHideVersionInfo; internal set => optHideVersionInfo = value; }
+        // --no-version
+        public static bool HideVersionInfo { get => optHideVersionInfo; internal set => optHideVersionInfo = value; }
 
 
         // --overwrite and --keep
@@ -117,7 +117,7 @@ namespace MBINCompiler
                                         "Do not pause for errors.\n" +
                                         "(Any errors will be written to MBINCompiler.log)" },
 
-            new Option { longName = "hideVersionInfo", description = "Hide version info in EXML header." },
+            new Option { longName = "no-version", description = "Hide version info in EXML header." },
 
             new Option { shortName = 'd', longName = "output-dir", param = "<Directory>",
                             description = "\nSpecify the directory where files will be written to.\n" +
@@ -153,7 +153,7 @@ namespace MBINCompiler
 
             new Option { longName = "no-threads", isHidden = true, description = "Disable multi-threading." },
 
-            new Option { longName = "EXMLtoConsole", isHidden = true, description = "Enable sending EXML to Console." },
+            new Option { longName = "stream", isHidden = true, description = "Enable sending EXML to Console." },
         };
         
         public static readonly List<Option> OPTIONS_LIST = new List<Option> {

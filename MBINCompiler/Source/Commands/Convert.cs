@@ -162,7 +162,7 @@ namespace MBINCompiler.Commands {
                     } else if ( inputFormat == FormatType.EXML ) {
                         fileOut = ConvertEXML( inputPath, fIn, ms, fileOut );
                     }
-                    if (!(EXMLtoConsole && inputFormat == FormatType.MBIN)) {
+                    if (!(StreamToConsole && inputFormat == FormatType.MBIN)) {
                         ms.Flush();
 
                         FileMode fileMode;
@@ -217,9 +217,9 @@ namespace MBINCompiler.Commands {
                 if ( data is null ) throw new InvalidDataException( "Invalid MBIN data." );
 
                 msg = $"Failed serializing {mbin.Header.GetXMLTemplateName()} to EXML.";
-                string exml = EXmlFile.WriteTemplate(data, hideVersionInfo);
+                string exml = EXmlFile.WriteTemplate(data, HideVersionInfo);
 
-                if ( EXMLtoConsole ) {
+                if ( StreamToConsole ) {
                     EmitInfo($"");
                     EmitInfo($"[NEW]: {inputPath}");
                     EmitInfo($"{exml}");
