@@ -17,6 +17,9 @@ namespace MBINCompiler.Commands {
 
             IgnoreErrors = options.GetOptionSwitch( "force" );
             UseThreads   = !options.GetOptionSwitch( "no-threads" );
+            StreamToConsole = options.GetOptionSwitch("stream");
+            HideVersionInfo = options.GetOptionSwitch("no-version");
+            
             var arg = options.GetOptionArg( "format-version" );
             if ( arg != null ) {
                 MBINHeader.Format version;
@@ -65,6 +68,12 @@ namespace MBINCompiler.Commands {
 
             // if not auto-detecting then OutputFormat can be excluded
             if ( !autoFormat ) ExcludeFilters.Add( $"*.{OutputFormat}" );
+
+            // to remove any empty entry, otherwise all files are excluded
+            for (int i = ExcludeFilters.Count - 1; i >= 0; i--)
+            {
+                if (ExcludeFilters[i] == "" || ExcludeFilters[i] == " ") ExcludeFilters.RemoveAt(i);
+            }
 
             // generate a filtered file listing of the combined paths
             if ( !GetFileList( paths, out var fileList ) ) return (int) ErrorCode.CommandLine;
@@ -206,10 +215,10 @@ namespace MBINCompiler.Commands {
                 InputFormat = Utils.PromptInputFormat();
                 Console.WriteLine();
             } else if ( foundMBIN ) {
-                Logger.LogInfo( "Auto-Detected --input-format=MBIN" );
+                if (!StreamToConsole) Logger.LogInfo( "Auto-Detected --input-format=MBIN" );
                 InputFormat = FormatType.MBIN;
             } else if ( foundEXML ) {
-                Logger.LogInfo( "Auto-Detected --input-format=EXML" );
+                if (!StreamToConsole) Logger.LogInfo( "Auto-Detected --input-format=EXML" );
                 InputFormat = FormatType.EXML;
             } else {
                 CommandLine.ShowError( "No valid files found!" );

@@ -47,7 +47,7 @@ namespace libMBIN {
 
             if (size != null) {
                 if (size.Value - bufferSize < 0) {
-                    Logger.LogMessage($@"The provided string '{str}' is too long (0x{bufferSize:X}). " +
+                    Logger.LogWarning($@"The provided string '{str}' is too long (0x{bufferSize:X}). " +
                                       $"It will be shortened to a length of 0x{size.Value:X}. " +
                                       "This may have unintended size effects.");
                 }
