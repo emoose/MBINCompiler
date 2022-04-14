@@ -67,7 +67,7 @@ namespace MBINCompiler.Commands {
                     if ( thrown ) return;
                     try {
                         Logger.IndentLevel = currentIndent; // we need to reset the indent level for each thread otherwise it will accumulate
-                        EmitInfo( $"Converting {path}" );
+                        //EmitInfo( $"Converting {path}" );
                         ConvertFile( path, fileIn, fileOut, InputFormat, OutputFormat );
 
                     } catch ( System.Exception e ) {
@@ -221,7 +221,7 @@ namespace MBINCompiler.Commands {
 
                 if ( StreamToConsole ) {
                     EmitInfo($"");
-                    EmitInfo($"[NEW]: {inputPath}");
+                    EmitInfo($"[INPUT]: {inputPath}");
                     EmitInfo($"{exml}");
                 }
                 else {

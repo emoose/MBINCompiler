@@ -153,7 +153,7 @@ namespace MBINCompiler
 
             new Option { longName = "no-threads", isHidden = true, description = "Disable multi-threading." },
 
-            new Option { longName = "stream", isHidden = true, description = "Enable sending EXML to Console." },
+            new Option { longName = "stream", description = "Enable sending EXML to Console." },
         };
         
         public static readonly List<Option> OPTIONS_LIST = new List<Option> {

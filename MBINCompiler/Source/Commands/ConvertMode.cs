@@ -215,10 +215,10 @@ namespace MBINCompiler.Commands {
                 InputFormat = Utils.PromptInputFormat();
                 Console.WriteLine();
             } else if ( foundMBIN ) {
-                Logger.LogInfo( "Auto-Detected --input-format=MBIN" );
+                if (!StreamToConsole) Logger.LogInfo( "Auto-Detected --input-format=MBIN" );
                 InputFormat = FormatType.MBIN;
             } else if ( foundEXML ) {
-                Logger.LogInfo( "Auto-Detected --input-format=EXML" );
+                if (!StreamToConsole) Logger.LogInfo( "Auto-Detected --input-format=EXML" );
                 InputFormat = FormatType.EXML;
             } else {
                 CommandLine.ShowError( "No valid files found!" );
