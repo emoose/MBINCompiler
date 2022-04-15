@@ -86,6 +86,17 @@ namespace libMBIN
             }
         }
 
+        /// <summary>
+        /// Writes the NMSTemplate object to an .exml file.
+        /// </summary>
+        /// <param name="outputpath">The location to write the .exml file.</param>
+        /// <param name="hideVersionInfo">version info is written to the EXML file.</param>
+        public static string WriteTemplate(NMSTemplate template) => WriteTemplate(template, false);
+        /// <summary>
+        /// Writes the NMSTemplate object to an .exml file.
+        /// </summary>
+        /// <param name="outputpath">The location to write the .exml file.</param>
+        /// <param name="hideVersionInfo">If true, version info is not written to the EXML file.</param>
         public static string WriteTemplate(NMSTemplate template, bool hideVersionInfo = false)
         {
             var origCulture = Thread.CurrentThread.CurrentCulture;
