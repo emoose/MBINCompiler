@@ -1455,6 +1455,12 @@ namespace libMBIN
         /// Writes the NMSTemplate object to an .exml file.
         /// </summary>
         /// <param name="outputpath">The location to write the .exml file.</param>
+        public void WriteToExml(string outputpath) => WriteToExml(outputpath, false);
+        /// <summary>
+        /// Writes the NMSTemplate object to an .exml file.
+        /// </summary>
+        /// <param name="outputpath">The location to write the .exml file.</param>
+        /// <param name="hideVersionInfo">If true, version info is not written to the EXML file.</param>
         public void WriteToExml(string outputpath, bool hideVersionInfo = false)
         {
             var data = EXmlFile.WriteTemplate(this, hideVersionInfo);
