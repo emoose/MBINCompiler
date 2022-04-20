@@ -1,9 +1,12 @@
-﻿using libMBIN.NMS.Toolkit;
+﻿using System;
+using System.Collections.Generic;
+
+using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0xE0, GUID = 0x78888851C81D7B10, NameHash = 0x32F1C073DAE21750)]
+    [NMS(Size = 0xE0, GUID = 0xAE4E26ACEEDC1A03, NameHash = 0x32F1C073DAE21750)]
     public class GcFogProperties : NMSTemplate
     {
         /* 0x00 */ public float FogStrength;

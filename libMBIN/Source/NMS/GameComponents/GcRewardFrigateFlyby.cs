@@ -6,7 +6,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x118, GUID = 0xFB763D93064C4B1D, NameHash = 0x3FACFB36175544A6)]
+    [NMS(Size = 0x118, GUID = 0x1EEBD7521D58173F, NameHash = 0x3FACFB36175544A6)]
     public class GcRewardFrigateFlyby : NMSTemplate
     {
         /* 0x000 */ public GcFrigateFlybyType FlybyType;

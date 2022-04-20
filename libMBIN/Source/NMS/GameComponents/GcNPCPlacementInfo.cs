@@ -6,12 +6,12 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0xC8, GUID = 0xCA6E18C69F56081E, NameHash = 0xA12AC584067DF8E0)]
+    [NMS(Size = 0xC8, GUID = 0xC8753D4AEE364B1C, NameHash = 0xA12AC584067DF8E0)]
     public class GcNPCPlacementInfo : NMSTemplate
     {
         /* 0x00 */ public NMSString0x10 PlacementRuleId;
         /* 0x10 */ public NMSString0x20 SpawnUnderNodeName;
-        /* 0x30 */ public NMSString0x20 PlacementNodeName;
+        /* 0x30 */ public NMSString0x20 PlacementNodeName; //PlacmentNodeName;
         /* 0x50 */ public bool MustPlace;
         /* 0x54 */ public float SpawnChance;
         /* 0x58 */ public float FractionOfNodesActive;

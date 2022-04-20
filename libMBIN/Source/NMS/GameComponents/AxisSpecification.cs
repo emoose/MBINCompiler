@@ -1,0 +1,17 @@
+using System;
+using System.Collections.Generic;
+
+using libMBIN.NMS.Toolkit;
+using libMBIN.NMS.GameComponents;
+
+namespace libMBIN.NMS.GameComponents 
+{
+    [NMS(Size = 0x20, GUID = 0x9C0A302F5966D7FA, NameHash = 0xE46A33ECA1AA62F7)]
+    public class AxisSpecification : NMSTemplate
+    {
+        // size: 0x7
+        public enum AxisEnum { X, Y, Z, NegativeX, NegativeY, NegativeZ, CustomAxis }
+        /* 0x00 */ public AxisEnum Axis;
+        /* 0x10 */ public Vector3f CustomAxis;
+    }
+}

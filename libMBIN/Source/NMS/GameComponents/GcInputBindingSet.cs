@@ -1,14 +1,15 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x18, GUID = 0x35494631B11A15A1, NameHash = 0x52AAFE72AAC465AE)]
+    [NMS(Size = 0x18, GUID = 0x74D06B2CE7228A08, NameHash = 0x52AAFE72AAC465AE)]
     public class GcInputBindingSet : NMSTemplate
     {
-        public GcActionSetType Type;
-        public List<GcInputBinding> InputBindings;
+        /* 0x0 */ public GcActionSetType Type;
+        /* 0x8 */ public List<GcInputBinding> InputBindings;
     }
 }

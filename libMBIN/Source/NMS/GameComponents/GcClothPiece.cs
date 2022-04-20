@@ -6,34 +6,47 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x148, GUID = 0xD28B961C29B6B991, NameHash = 0x7596FBA2C232AC37)]
+    [NMS(Size = 0x380, GUID = 0xE31133DE1EFABE3F, NameHash = 0x7596FBA2C232AC37)]
     public class GcClothPiece : NMSTemplate
     {
         /* 0x000 */ public bool Enabled;
-        /* 0x001 */ public NMSString0x20 DebugName;
-        /* 0x021 */ public NMSString0x20 RenderMeshNodeName;
-        /* 0x044 */ public int NumPointsInRenderMeshI;
-        /* 0x048 */ public int NumPointsInRenderMeshJ;
-        /* 0x04C */ public int VertexRemappingPermutation;
-        /* 0x050 */ public int NumSimPointsI;
-        /* 0x054 */ public int NumSimPointsJ;
-        /* 0x058 */ public float ClothHeight;
-        /* 0x05C */ public float ParticleRadius;
-        /* 0x060 */ public float StaticFriction;
-        /* 0x064 */ public float ParticleDamping;
-        /* 0x068 */ public float GlobalDamping;
-        /* 0x06C */ public float StandardGravityScale;
-        /* 0x070 */ public bool ApplyMoreGravityAtBottom;
-        /* 0x074 */ public float GravityScaleAtBottom;
-        /* 0x078 */ public NMSString0x20 InitialShapeReferenceBone;
-        /* 0x098 */ public bool InitialShapeIsCapeLike;
-        /* 0x09C */ public GcCapeLikeInitialShape CapeLikeInitialShape;
-        /* 0x0D0 */ public GcRectangularInitialShape RectangularInitialShape;
-        /* 0x100 */ public int NumFixedTopRowsInInitialShape;
-        /* 0x104 */ public int NumExtraFixedBoundaryRowsInInitialShape;
-        /* 0x108 */ public List<GcClothAttachmentCirlce> AttachmentCircles;
-        /* 0x118 */ public List<GcClothAttachmentLine> AttachmentLines;
-        /* 0x128 */ public List<GcClothCollisionBone> CollisionBones;
-        /* 0x138 */ public List<NMSString0x20> NodesToRemove;
+        /* 0x001 */ public NMSString0x40 DebugName;
+        /* 0x041 */ public NMSString0x40 RenderMeshNodeName;
+        /* 0x084 */ public int NumPointsInRenderMeshI;
+        /* 0x088 */ public int NumPointsInRenderMeshJ;
+        /* 0x08C */ public int VertexRemappingPermutation;
+        /* 0x090 */ public int NumSimPointsI;
+        /* 0x094 */ public int NumSimPointsJ;
+        /* 0x098 */ public float ClothHeight;
+        /* 0x09C */ public float ParticleRadius;
+        /* 0x0A0 */ public float StaticFriction;
+        /* 0x0A4 */ public float ParticleDamping;
+        /* 0x0A8 */ public float GlobalDamping;
+        /* 0x0AC */ public float StandardGravityScale;
+        /* 0x0B0 */ public NMSString0x40 InitialShapeReferenceBone;
+        // size: 0x3
+        public enum InitialShapeSourceEnum { CapeLike, Rectangular, TakenFromSource }
+        /* 0x0F0 */ public InitialShapeSourceEnum InitialShapeSource;
+        /* 0x100 */ public GcCapeLikeInitialShape CapeLikeInitialShape;
+        /* 0x190 */ public Vector3f TopLineStart;
+        /* 0x1A0 */ public Vector3f TopLineEnd;
+        /* 0x1B0 */ public Vector3f BottomLineStart;
+        /* 0x1C0 */ public Vector3f BottomLineEnd;
+        /* 0x1D0 */ public List<GcClothCollisionBone> CollisionBones;
+        /* 0x1E0 */ public List<GcClothAttachmentCirlce> AttachmentCircles;
+        /* 0x1F0 */ public List<GcClothAttachmentLine> AttachmentLines;
+        /* 0x200 */ public List<GcAttachmentPointData> AttachmentPointSets;
+        /* 0x210 */ public GcConstraintsToCreateSpec ConstraintsToCreate;
+        /* 0x260 */ public float AttractionStrength;
+        /* 0x264 */ public bool UseInitialShapeAsAttractorShape;
+        /* 0x268 */ public float AttractionRadiusAtTop;
+        /* 0x26C */ public float AttractionRadiusAtBottom;
+        /* 0x270 */ public GcCapeLikeInitialShape CapeLikeAttractorShape;
+        /* 0x300 */ public List<NMSString0x40> NodesThatMustBePresent;
+        /* 0x310 */ public List<NMSString0x40> NodesToHide;
+        /* 0x320 */ public GcAdvancedTweaks Advanced;
+        /* 0x348 */ public List<int> DeletedSimPoints;
+        /* 0x358 */ public List<int> DeletedConstraintsI;
+        /* 0x368 */ public List<int> DeletedConstraintsJ;
     }
 }

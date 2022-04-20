@@ -1,15 +1,18 @@
-﻿using libMBIN.NMS.Toolkit;
+﻿using System;
+using System.Collections.Generic;
+
+using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x110, GUID = 0x29F034D475D98285, NameHash = 0x10BF10453E33157C)]
+    [NMS(Size = 0x110, GUID = 0xE4B6854809C3423C, NameHash = 0x10BF10453E33157C)]
     public class GcMissionSequenceWaitForFactionStanding : NMSTemplate
     {
-        /* 0x000 */ public NMSString0x80 Message;
-        /* 0x080 */ public GcFactionSelectOptions SelectFrom;
-        /* 0x088 */ public int AmountMin;
-        /* 0x08C */ public int AmountMax;
-        /* 0x090 */ public NMSString0x80 DebugText;
+        /* 0x00 */ public NMSString0x80 Message;
+        /* 0x80 */ public GcFactionSelectOptions SelectFrom;
+        /* 0x88 */ public int AmountMin;
+        /* 0x8C */ public int AmountMax;
+        /* 0x90 */ public NMSString0x80 DebugText;
     }
 }

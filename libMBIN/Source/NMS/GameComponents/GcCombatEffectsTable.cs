@@ -6,10 +6,10 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0xC0, GUID = 0xF2C9D9A9CCAFB1FE, NameHash = 0x733D7A989F8B9969)]
+    [NMS(Size = 0x100, GUID = 0x0ED2B35F7B82B96C, NameHash = 0x733D7A989F8B9969)]
     public class GcCombatEffectsTable : NMSTemplate
     {
-        [NMS(Size = 0x3)]
+        [NMS(Size = 0x4)]
         /* 0x0 */ public GcCombatEffectData[] EffectsData;
     }
 }

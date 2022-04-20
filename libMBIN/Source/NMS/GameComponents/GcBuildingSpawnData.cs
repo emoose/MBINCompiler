@@ -1,9 +1,12 @@
-﻿using libMBIN.NMS.Toolkit;
+﻿using System;
+using System.Collections.Generic;
+
+using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x350, GUID = 0x8AA3C4592AEB14E5, NameHash = 0x2FE28DE7841506AF)]
+    [NMS(Size = 0x350, GUID = 0x62FABFE80ABB876A, NameHash = 0x2FE28DE7841506AF)]
     public class GcBuildingSpawnData : NMSTemplate
     {
         /* 0x000 */ public float Density;
@@ -26,7 +29,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x30C */ public float MaxXZRotation;
         /* 0x310 */ public float Radius;
         /* 0x314 */ public float MinHeight;
-        /* 0x318 */ public float Maxheight;
+        /* 0x318 */ public float MaxHeight;
         /* 0x31C */ public int InstanceID;
         /* 0x320 */ public Vector3f AABBMin;
         /* 0x330 */ public Vector3f AABBMax;

@@ -6,7 +6,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x3988, GUID = 0xDB9EC7F71C3221D0, NameHash = 0x3A50D683FD1CF4BF)]
+    [NMS(Size = 0x3988, GUID = 0x306ECD9D2DAC9A52, NameHash = 0x3A50D683FD1CF4BF)]
     public class GcUserSettingsData : NMSTemplate
     {
         /* 0x0000 */ public bool InvertLookControls;
@@ -81,6 +81,9 @@ namespace libMBIN.NMS.GameComponents
         /* 0x3968 */ public int VibrationStrength;
         /* 0x396C */ public int CamerShakeStrength;
         /* 0x3970 */ public int TriggerFeedbackStrength;
+        // size: 0x3
+        public enum SpaceCombatFollowModeEnum { Disabled, Hold, Toggle }
+        /* 0x3974 */ public SpaceCombatFollowModeEnum SpaceCombatFollowMode;
         /* 0x3978 */ public List<NMSString0x80> UpgradedUsers;
     }
 }

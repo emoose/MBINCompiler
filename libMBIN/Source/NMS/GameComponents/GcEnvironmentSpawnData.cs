@@ -1,11 +1,12 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x60, GUID = 0x7DA73A334EB91FD1, NameHash = 0x1B03CB87DECA6BCC)]
+    [NMS(Size = 0x60, GUID = 0x0EBFB6A8B164BA51, NameHash = 0x1B03CB87DECA6BCC)]
     public class GcEnvironmentSpawnData : NMSTemplate
     {
         /* 0x00 */ public List<GcCreatureSpawnData> Creatures;

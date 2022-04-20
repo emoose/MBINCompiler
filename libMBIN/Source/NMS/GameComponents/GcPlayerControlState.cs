@@ -1,10 +1,12 @@
-using libMBIN.NMS.Toolkit;
+using System;
 using System.Collections.Generic;
+
+using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x70, GUID = 0xD9E9BA146F8CD952, NameHash = 0x9CBA2290362425C1)]
+    [NMS(Size = 0x70, GUID = 0x3CD41A091F9AB5C3, NameHash = 0x9CBA2290362425C1)]
     public class GcPlayerControlState : NMSTemplate
     {
         /* 0x00 */ public NMSString0x10 Id;

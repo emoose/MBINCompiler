@@ -1,12 +1,15 @@
-﻿using libMBIN.NMS.Toolkit;
+﻿using System;
+using System.Collections.Generic;
+
+using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x150, GUID = 0xB8DDE7805167BA7D, NameHash = 0x1C94F7F917E32E73)]
+    [NMS(Size = 0x150, GUID = 0x3FB4468AD1C72854, NameHash = 0x1C94F7F917E32E73)]
     public class GcSpaceshipComponentData : NMSTemplate
     {
-        /* 0x00 */ public GcSpaceshipClasses ShipClass;
+        /* 0x00 */ public GcSpaceshipClasses Class;
         /* 0x04 */ public NMSString0x80 Cockpit;
         /* 0x84 */ public float MaxHeadTurn;
         /* 0x88 */ public float MaxHeadPitchUp;

@@ -1,11 +1,14 @@
-﻿using libMBIN.NMS.Toolkit;
+﻿using System;
+using System.Collections.Generic;
+
+using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x150, GUID = 0xCEF2498474683652, NameHash = 0xA947081E204C32BB)]
+    [NMS(Size = 0x150, GUID = 0xD04A4B8221B05F24, NameHash = 0xA947081E204C32BB)]
     public class GcShipOwnershipComponentData : NMSTemplate
     {
-        public GcSpaceshipComponentData Data;
+        /* 0x0 */ public GcSpaceshipComponentData Data;
     }
 }

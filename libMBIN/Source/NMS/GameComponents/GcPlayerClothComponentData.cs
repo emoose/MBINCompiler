@@ -6,11 +6,14 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x18, GUID = 0x71B286D4EF3F176D, NameHash = 0x7095201046A71EFE)]
+    [NMS(Size = 0x28, GUID = 0x0CBA236CF6B30FE5, NameHash = 0x7095201046A71EFE)]
     public class GcPlayerClothComponentData : NMSTemplate
     {
-        /* 0x0 */ public bool Enabled;
-        /* 0x4 */ public int NumConstraintSolvingIterations;
-        /* 0x8 */ public List<GcClothPiece> ClothPieces;
+        /* 0x00 */ public bool Enabled;
+        /* 0x04 */ public int NumConstraintSolvingIterations;
+        /* 0x08 */ public List<GcClothPiece> ClothPieces;
+        /* 0x18 */ public float ClothScale;
+        /* 0x1C */ public float CollisionScale;
+        /* 0x20 */ public float AttachmentScale;
     }
 }

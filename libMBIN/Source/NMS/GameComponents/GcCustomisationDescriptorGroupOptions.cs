@@ -1,11 +1,12 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x48, GUID = 0x99DF37CCC96BB816, NameHash = 0x57CBFDF164E923E9)]
+    [NMS(Size = 0x48, GUID = 0xE971DE16B48509D7, NameHash = 0x57CBFDF164E923E9)]
     public class GcCustomisationDescriptorGroupOptions : NMSTemplate
     {
         /* 0x00 */ public NMSString0x20A GroupTitle;

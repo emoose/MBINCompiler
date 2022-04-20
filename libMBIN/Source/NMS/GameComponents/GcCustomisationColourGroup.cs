@@ -1,13 +1,16 @@
-﻿using libMBIN.NMS.Toolkit;
+﻿using System;
+using System.Collections.Generic;
+
+using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x38, GUID = 0x1140A5527024434B, NameHash = 0x7E7DCFD2B65C6AD6)]
+    [NMS(Size = 0x38, GUID = 0x1DC06213C8097716, NameHash = 0x7E7DCFD2B65C6AD6)]
     public class GcCustomisationColourGroup : NMSTemplate
     {
-        public NMSString0x10 GroupID;
-        public NMSString0x20A Title;
-        public TkPaletteTexture Palette;
+        /* 0x00 */ public NMSString0x10 GroupID;
+        /* 0x10 */ public NMSString0x20A Title;
+        /* 0x30 */ public TkPaletteTexture Palette;
     }
 }

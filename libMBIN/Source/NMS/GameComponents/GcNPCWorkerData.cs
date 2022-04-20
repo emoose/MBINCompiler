@@ -1,9 +1,12 @@
-﻿using libMBIN.NMS.Toolkit;
+﻿using System;
+using System.Collections.Generic;
+
+using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x2E0, GUID = 0x9282A787424288F3, NameHash = 0xB88BA2B1282BE1C1)]
+    [NMS(Size = 0x2E0, GUID = 0xB4A807B4AD3E5627, NameHash = 0xB88BA2B1282BE1C1)]
     public class GcNPCWorkerData : NMSTemplate
     {
         /* 0x000 */ public GcResourceElement ResourceElement;

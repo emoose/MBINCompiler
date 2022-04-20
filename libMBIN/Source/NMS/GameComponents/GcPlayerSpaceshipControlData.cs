@@ -1,33 +1,36 @@
-﻿using libMBIN.NMS.Toolkit;
+﻿using System;
+using System.Collections.Generic;
+
+using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x154, GUID = 0x923F5436EAB7BB64, NameHash = 0x49B6F6CA72CF5A3F)]
+    [NMS(Size = 0x21C, GUID = 0xAB72AFECF5631053, NameHash = 0x49B6F6CA72CF5A3F)]
     public class GcPlayerSpaceshipControlData : NMSTemplate
     {
         /* 0x000 */ public GcPlayerSpaceshipEngineData SpaceEngine;
-        /* 0x058 */ public GcPlayerSpaceshipEngineData PlanetEngine;
-        /* 0x0B0 */ public GcPlayerSpaceshipEngineData CombatEngine;
-
-        /* 0x108 */ public float ExitHeightFactorMin;
-        /* 0x10C */ public float ExitHeightFactorMax;
-        /* 0x110 */ public float ExitHeightFactorPlungeMin;
-        /* 0x114 */ public float ExitHeightFactorPlungeMax;
-        /* 0x118 */ public float ExitAngleMin;
-        /* 0x11C */ public float ExitAngleMax;
-        /* 0x120 */ public float ExitLeaveAngle;
-        /* 0x124 */ public TkCurveType ExitCurve;
-        /* 0x128 */ public TkCurveType ExitDownCurve;
-        /* 0x12C */ public float AngularFactor;
-        /* 0x130 */ public float MaxTorque;
-        /* 0x134 */ public float ShipPlanetBrakeMinSpeed;
-        /* 0x138 */ public float ShipPlanetBrakeMaxSpeed;
-        /* 0x13C */ public float ShipPlanetBrakeMinHeight;
-        /* 0x140 */ public float ShipPlanetBrakeMaxHeight;
-        /* 0x144 */ public float ShipPlanetBrakeForce;
-        /* 0x148 */ public float ShipPlanetBrakeAlignMinTime;
-        /* 0x14C */ public float ShipPlanetBrakeAlignMaxTime;
-        /* 0x150 */ public float ShipMinHeightForce;
+        /* 0x074 */ public GcPlayerSpaceshipEngineData PlanetEngine;
+        /* 0x0E8 */ public GcPlayerSpaceshipEngineData CombatEngine;
+        /* 0x15C */ public GcPlayerSpaceshipEngineData AtmosCombatEngine;
+        /* 0x1D0 */ public float ExitHeightFactorMin;
+        /* 0x1D4 */ public float ExitHeightFactorMax;
+        /* 0x1D8 */ public float ExitHeightFactorPlungeMin;
+        /* 0x1DC */ public float ExitHeightFactorPlungeMax;
+        /* 0x1E0 */ public float ExitAngleMin;
+        /* 0x1E4 */ public float ExitAngleMax;
+        /* 0x1E8 */ public float ExitLeaveAngle;
+        /* 0x1EC */ public TkCurveType ExitCurve;
+        /* 0x1F0 */ public TkCurveType ExitDownCurve;
+        /* 0x1F4 */ public float AngularFactor;
+        /* 0x1F8 */ public float MaxTorque;
+        /* 0x1FC */ public float ShipPlanetBrakeMinSpeed;
+        /* 0x200 */ public float ShipPlanetBrakeMaxSpeed;
+        /* 0x204 */ public float ShipPlanetBrakeMinHeight;
+        /* 0x208 */ public float ShipPlanetBrakeMaxHeight;
+        /* 0x20C */ public float ShipPlanetBrakeForce;
+        /* 0x210 */ public float ShipPlanetBrakeAlignMinTime;
+        /* 0x214 */ public float ShipPlanetBrakeAlignMaxTime;
+        /* 0x218 */ public float ShipMinHeightForce;
     }
 }

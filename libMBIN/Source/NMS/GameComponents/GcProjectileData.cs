@@ -6,7 +6,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x400, GUID = 0x3EDA3B285CB7B6F5, NameHash = 0x98B648B5C054B7F7)]
+    [NMS(Size = 0x400, GUID = 0x02FB74BFA35EF907, NameHash = 0x98B648B5C054B7F7)]
     public class GcProjectileData : NMSTemplate
     {
         /* 0x000 */ public NMSString0x10 Id;
@@ -49,7 +49,7 @@ namespace libMBIN.NMS.GameComponents
         // size: 0x8
         [Flags]
         public enum BehaviourFlagsEnum {
-            None  = 0x0, DestroyTerrain = 0x1, DestroyAsteroids = 0x2, GatherResources = 0x4,
+            None = 0x0, DestroyTerrain = 0x1, DestroyAsteroids = 0x2, GatherResources = 0x4,
             Homing = 0x8, HomingLaser = 0x10, ScareCreatures = 0x20, ExplosionForce = 0x40
         }
         [NMSDescription("The enum that describes this field uses Flags. This means that multiple values may be specified simultaneously" +

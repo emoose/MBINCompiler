@@ -1,13 +1,17 @@
-﻿using libMBIN.NMS.Toolkit;
+﻿using System;
+using System.Collections.Generic;
+
+using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x8, GUID = 0xECA3BFB616CCAB0, NameHash = 0x49D48E5A22491956)]
+    [NMS(Size = 0x8, GUID = 0x418CE861C6D3D21C, NameHash = 0x49D48E5A22491956)]
     public class GcFactionSelectOptions : NMSTemplate
     {
-		public enum FactionOptionEnum { DataDefined, CurrentMission, CurrentSystem }
-		public FactionOptionEnum FactionOption;
-        public GcMissionFaction Faction;
+        // size: 0x3
+        public enum FactionOptionEnum { DataDefined, CurrentMission, CurrentSystem }
+        /* 0x0 */ public FactionOptionEnum FactionOption;
+        /* 0x4 */ public GcMissionFaction Faction;
     }
 }
