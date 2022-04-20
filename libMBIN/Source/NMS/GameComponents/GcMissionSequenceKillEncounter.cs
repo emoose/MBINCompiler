@@ -6,11 +6,12 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x120, GUID = 0xE33661217CE46088, NameHash = 0x07E1936B219E215F)]
+    [NMS(Size = 0x128, GUID = 0xA9B413F7556A27E7, NameHash = 0x07E1936B219E215F)]
     public class GcMissionSequenceKillEncounter : NMSTemplate
     {
         /* 0x00 */ public NMSString0x80 Message;
         /* 0x80 */ public NMSString0x20A EncounterComponentScanEvent;
-        /* 0xA0 */ public NMSString0x80 DebugText;
+        /* 0xA0 */ public bool AllowedToEscape;
+        /* 0xA1 */ public NMSString0x80 DebugText;
     }
 }

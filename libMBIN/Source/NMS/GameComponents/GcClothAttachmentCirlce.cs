@@ -6,26 +6,27 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x60, GUID = 0x04C1187EB004E79D, NameHash = 0xE5DC8328938D3562)]
+    [NMS(Size = 0x130, GUID = 0x7E4CA3328A83DDBD, NameHash = 0xE5DC8328938D3562)]
     public class GcClothAttachmentCirlce : NMSTemplate
     {
-        /* 0x00 */ public bool Enabled;
-        /* 0x01 */ public NMSString0x20 BoneName;
-        /* 0x24 */ public float Radius;
-        /* 0x28 */ public float CenterX;
-        /* 0x2C */ public float CenterY;
-        /* 0x30 */ public float CenterZ;
-        /* 0x34 */ public int RightAxisIndex;
-        /* 0x38 */ public int ForwardAxisIndex;
-        /* 0x3C */ public int ClothDirectionAxis;
-        /* 0x40 */ public float StartAngle;
-        /* 0x44 */ public float EndAngle;
-        /* 0x48 */ public bool WrapIAround;
-        /* 0x49 */ public bool WrapJAround;
-        /* 0x4C */ public int NumRowsOfSameJToFix;
-        /* 0x50 */ public int RowToFixJ;
-        /* 0x54 */ public int NumRowsOfSameIToFix;
-        /* 0x58 */ public int RowToFixI;
-        /* 0x5C */ public bool Unwrinkle;
+        /* 0x000 */ public bool Enabled;
+        /* 0x001 */ public NMSString0x40 DebugName;
+        /* 0x041 */ public NMSString0x40 BoneName;
+        /* 0x084 */ public float Radius;
+        /* 0x090 */ public Vector3f Center;
+        /* 0x0A0 */ public AxisSpecification RightAxis;
+        /* 0x0C0 */ public AxisSpecification ForwardAxis;
+        /* 0x0E0 */ public AxisSpecification ClothDirection;
+        /* 0x100 */ public float StartAngle;
+        /* 0x104 */ public float EndAngle;
+        /* 0x108 */ public bool WrapIAround;
+        /* 0x109 */ public bool WrapJAround;
+        /* 0x10C */ public int NumRowsOfSameJToFix;
+        /* 0x110 */ public int RowToFixJ;
+        /* 0x114 */ public float AttractionStrength;
+        /* 0x118 */ public float AttractionStartDistance;
+        /* 0x11C */ public float StartIFraction;
+        /* 0x120 */ public float EndIFraction;
+        /* 0x124 */ public float JStepDistanceOverride;
     }
 }

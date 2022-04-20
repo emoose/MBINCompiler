@@ -1,11 +1,12 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0xA0, GUID = 0x9507B42892191B2A, NameHash = 0x71B66F631708B3B1)]
+    [NMS(Size = 0xA0, GUID = 0x0957592739DF69FA, NameHash = 0x71B66F631708B3B1)]
     public class GcSolarSystemEventWarpIn : NMSTemplate
     {
         /* 0x00 */ public GcSolarSystemLocatorChoice Locator;

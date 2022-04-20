@@ -6,12 +6,12 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x440, GUID = 0xEE0BA62D44A5C890, NameHash = 0xEF1AB4FE11FCFA6D)]
+    [NMS(Size = 0x440, GUID = 0x5C0B33E825347A4D, NameHash = 0xEF1AB4FE11FCFA6D)]
     public class GcNPCSpawnTable : NMSTemplate
     {
-        [NMS(Size = 8, EnumType = typeof(GcAlienRace.AlienRaceEnum))]
+        [NMS(Size = 0x8, EnumType = typeof(GcAlienRace.AlienRaceEnum))]
         /* 0x000 */ public NMSString0x80[] NPCModelNames;
-        [NMS(Size = 8, EnumType = typeof(GcAlienRace.AlienRaceEnum))]
+        [NMS(Size = 0x8, EnumType = typeof(GcAlienRace.AlienRaceEnum))]
         /* 0x400 */ public float[] NPCRaceScale;
         /* 0x420 */ public List<GcUniqueNPCSpawnData> UniqueNPCs;
         /* 0x430 */ public List<GcNPCPlacementInfo> PlacementInfos;

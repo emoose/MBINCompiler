@@ -1,14 +1,18 @@
-﻿using libMBIN.NMS.Toolkit;
+﻿using System;
+using System.Collections.Generic;
+
+using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x58, GUID = 0x38BECBB20B340F37, NameHash = 0xCF9FC45A7B70BB85)]
+    [NMS(Size = 0x58, GUID = 0x2E75BAD60825C82E, NameHash = 0xCF9FC45A7B70BB85)]
     public class GcRewardSpecificSpecial : NMSTemplate
     {
-        public NMSString0x10 ID;
-        public NMSString0x20A Message;
-        public bool UseSpecialFormatting;
-        public NMSString0x20A MilestoneRewardOverrideText;
+        /* 0x00 */ public NMSString0x10 ID;
+        /* 0x10 */ public NMSString0x20A Message;
+        /* 0x30 */ public bool ShowSpecialProductPopup;
+        /* 0x31 */ public bool UseSpecialFormatting;
+        /* 0x38 */ public NMSString0x20A MilestoneRewardOverrideText;
     }
 }

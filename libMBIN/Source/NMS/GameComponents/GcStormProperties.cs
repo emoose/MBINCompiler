@@ -1,11 +1,12 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x3C0, GUID = 0x803A1FD27B476D5F, NameHash = 0x82B1B19A1A57F975)]
+    [NMS(Size = 0x3C0, GUID = 0x5134D902EE787FB8, NameHash = 0x82B1B19A1A57F975)]
     public class GcStormProperties : NMSTemplate
     {
         /* 0x000 */ public float Weighting;

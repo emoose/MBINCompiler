@@ -1,12 +1,15 @@
-﻿using libMBIN.NMS.Toolkit;
+﻿using System;
+using System.Collections.Generic;
+
+using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0xDF70, GUID = 0xD30F287F6E810E96, NameHash = 0xDF4A26E5B1BF936A)]
+    [NMS(Size = 0xE380, GUID = 0xD30F287F6E810E96, NameHash = 0xDF4A26E5B1BF936A)]
     public class GcPaletteList : NMSTemplate
     {
-        [NMS(Size = 0x37, EnumType = typeof(TkPaletteTexture.PaletteEnum))]
-        public GcPaletteData[] Palettes;
+        [NMS(Size = 0x38, EnumType = typeof(TkPaletteTexture.PaletteEnum))]
+        /* 0x0 */ public GcPaletteData[] Palettes;
     }
 }

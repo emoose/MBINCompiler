@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 
 using libMBIN.NMS.Toolkit;
@@ -5,12 +6,14 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x20, GUID = 0xCB99DEA09142AA8E, NameHash = 0xC51C8A0A49F892DC)]
+    [NMS(Size = 0x30, GUID = 0x9CCE7F992A936F32, NameHash = 0xC51C8A0A49F892DC)]
     public class GcShipInventoryMaxUpgradeCapacity : NMSTemplate
     {
         [NMS(Size = 0x4)]
-        public int[] MaxInventoryCapacity;
+        /* 0x00 */ public int[] MaxInventoryCapacity;
         [NMS(Size = 0x4)]
-        public int[] MaxTechInventoryCapacity;
+        /* 0x10 */ public int[] MaxTechInventoryCapacity;
+        [NMS(Size = 0x4)]
+        /* 0x20 */ public int[] MaxCargoInventoryCapacity;
     }
 }

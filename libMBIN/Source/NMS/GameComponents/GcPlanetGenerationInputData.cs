@@ -1,9 +1,12 @@
-﻿using libMBIN.NMS.Toolkit;
+﻿using System;
+using System.Collections.Generic;
+
+using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x50, GUID = 0xABA9DA38AAAE2258, NameHash = 0x2E161A5A69971115)]
+    [NMS(Size = 0x50, GUID = 0x1E0DA304FDB3CC74, NameHash = 0x2E161A5A69971115)]
     public class GcPlanetGenerationInputData : NMSTemplate
     {
         /* 0x00 */ public GcSeed Seed;
@@ -18,7 +21,8 @@ namespace libMBIN.NMS.GameComponents
         /* 0x45 */ public bool ForceContinents;
         /* 0x46 */ public bool InEmptySystem;
         /* 0x47 */ public bool InAbandonedSystem;
-        /* 0x48 */ public bool Prime;
+        /* 0x48 */ public bool InPirateSystem;
+        /* 0x49 */ public bool Prime;
         /* 0x4C */ public int RealityIndex;
     }
 }

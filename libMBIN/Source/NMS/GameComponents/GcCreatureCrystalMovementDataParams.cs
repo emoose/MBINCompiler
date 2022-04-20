@@ -6,7 +6,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x138, GUID = 0x1F21E88C823BB904, NameHash = 0x1232AC16AD2DF95C)]
+    [NMS(Size = 0x138, GUID = 0x294CBD4570C94C10, NameHash = 0x1232AC16AD2DF95C)]
     public class GcCreatureCrystalMovementDataParams : NMSTemplate
     {
         /* 0x000 */ public List<GcBiomeSubType> ValidBiomes;

@@ -1,9 +1,12 @@
-﻿using libMBIN.NMS.Toolkit;
+﻿using System;
+using System.Collections.Generic;
+
+using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(Size = 0x60, GUID = 0xEFA68130B1B05C91, NameHash = 0x4BFAC826445A23F2)]
+    [NMS(Size = 0x60, GUID = 0xA5A84B235D067059, NameHash = 0x4BFAC826445A23F2)]
     public class TkProceduralTextureChosenOption : NMSTemplate
     {
         /* 0x00 */ public NMSString0x10 Layer;

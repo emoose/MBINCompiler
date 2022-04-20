@@ -1,9 +1,12 @@
+using System;
+using System.Collections.Generic;
+
 using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x60, GUID = 0x1DF09CAF01E518B, NameHash = 0x662E605B574D59AB)]
+    [NMS(Size = 0x60, GUID = 0xFA0B6E598870688E, NameHash = 0x662E605B574D59AB)]
     public class GcPulseEncounterSpawnConditions : NMSTemplate
     {
         /* 0x00 */ public bool AllowedInCreative;
@@ -18,5 +21,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x48 */ public NMSString0x10 RequiresMissionNotActive;
         /* 0x58 */ public bool RequiresAlienShip;
         /* 0x59 */ public bool StandardEncounter;
+        /* 0x5A */ public bool MissionEncounter;
     }
 }

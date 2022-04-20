@@ -1,9 +1,12 @@
-﻿using libMBIN.NMS.Toolkit;
+﻿using System;
+using System.Collections.Generic;
+
+using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x20, GUID = 0xB093C1958758D9A4, NameHash = 0xF53E6F170BCA9237)]
+    [NMS(Size = 0x20, GUID = 0x32605211E43082D2, NameHash = 0xF53E6F170BCA9237)]
     public class GcHeavyAirSettingValues : NMSTemplate
     {
         /* 0x00 */ public float Thickness;

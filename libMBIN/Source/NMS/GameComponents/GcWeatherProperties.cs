@@ -1,11 +1,12 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x800, GUID = 0x32F96608DE1A3DB0, NameHash = 0xD216CE8E772352C)]
+    [NMS(Size = 0x800, GUID = 0x5BC61268B653440B, NameHash = 0x0D216CE8E772352C)]
     public class GcWeatherProperties : NMSTemplate
     {
         /* 0x000 */ public NMSString0x10 Name;

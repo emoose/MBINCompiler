@@ -1,11 +1,12 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x58, GUID = 0xE49536D3319A2AE4, NameHash = 0xCDB7AC6D11C9DF03)]
+    [NMS(Size = 0x58, GUID = 0x7B177B3FD2A4955C, NameHash = 0xCDB7AC6D11C9DF03)]
     public class GcCustomisationTextureOption : NMSTemplate
     {
         /* 0x00 */ public NMSString0x10 TextureOptionsID;

@@ -6,7 +6,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x1F50, GUID = 0x4F7F0310C25C765C, NameHash = 0x9B09276BB2795541)]
+    [NMS(Size = 0x1FD0, GUID = 0x0BFDF0C338170D79, NameHash = 0x9B09276BB2795541)]
     public class GcSolarSystemData : NMSTemplate
     {
         /* 0x0000 */ public GcSeed Seed;
@@ -28,24 +28,26 @@ namespace libMBIN.NMS.GameComponents
         /* 0x03F8 */ public int MaxNumFreighters;
         /* 0x03FC */ public bool StartWithFreighters;
         /* 0x0400 */ public Vector2f FreighterTimer;
-        /* 0x0408 */ public Vector2f PirateTimer;
-        /* 0x0410 */ public Vector2f FlybyTimer;
-        /* 0x0420 */ public GcSpaceStationSpawnData SpaceStationSpawn;
-        /* 0x0560 */ public GcSolarSystemTraderSpawnData TraderSpawnOnOutposts;
-        /* 0x0574 */ public GcSolarSystemTraderSpawnData TraderSpawnInStations;
-        /* 0x0588 */ public List<GcSolarSystemLocator> Locators;
-        /* 0x0598 */ public List<NMSTemplate> AsteroidGenerators;
+        /* 0x0408 */ public Vector2f SpacePirateTimer;
+        /* 0x0410 */ public Vector2f PlanetPirateTimer;
+        /* 0x0418 */ public Vector2f FlybyTimer;
+        /* 0x0420 */ public Vector2f PoliceTimer;
+        /* 0x0430 */ public GcSpaceStationSpawnData SpaceStationSpawn;
+        /* 0x0570 */ public GcSolarSystemTraderSpawnData TraderSpawnOnOutposts;
+        /* 0x0584 */ public GcSolarSystemTraderSpawnData TraderSpawnInStations;
+        /* 0x0598 */ public List<GcSolarSystemLocator> Locators;
+        /* 0x05A8 */ public List<NMSTemplate> AsteroidGenerators;
         // size: 0x3
-		public enum AsteroidLevelEnum { NoRares, SomeRares, LotsOfRares }
-		/* 0x05A8 */ public AsteroidLevelEnum AsteroidLevel;
-        /* 0x05B0 */ public GcPlanetColourData Colours;
-        /* 0x1DC0 */ public GcLightProperties Light;
-        /* 0x1DF0 */ public GcSpaceSkyProperties Sky;
-        /* 0x1EA0 */ public GcScreenFilters ScreenFilter;
-        /* 0x1EA4 */ public NMSString0x80 HeavyAir;
-        /* 0x1F28 */ public List<GcAISpaceshipPreloadCacheData> SystemShips;
-        /* 0x1F38 */ public GcAlienRace InhabitingRace;
-        /* 0x1F3C */ public GcPlanetTradingData TradingData;
-        /* 0x1F44 */ public GcPlayerConflictData ConflictData;
+        public enum AsteroidLevelEnum { NoRares, SomeRares, LotsOfRares }
+        /* 0x05B8 */ public AsteroidLevelEnum AsteroidLevel;
+        /* 0x05C0*/ public GcPlanetColourData Colours;
+        /* 0x1E40 */ public GcLightProperties Light;
+        /* 0x1E70 */ public GcSpaceSkyProperties Sky;
+        /* 0x1F20 */ public GcScreenFilters ScreenFilter;
+        /* 0x1F24 */ public NMSString0x80 HeavyAir;
+        /* 0x1FA8 */ public List<GcAISpaceshipPreloadCacheData> SystemShips;
+        /* 0x1FB8 */ public GcAlienRace InhabitingRace;
+        /* 0x1FBC */ public GcPlanetTradingData TradingData;
+        /* 0x1FC4 */ public GcPlayerConflictData ConflictData;
     }
 }

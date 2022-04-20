@@ -1,9 +1,12 @@
-﻿using libMBIN.NMS.Toolkit;
+﻿using System;
+using System.Collections.Generic;
+
+using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x94, GUID = 0x70DD92F44548851C, NameHash = 0x4F5433BCFC028B49)]
+    [NMS(Size = 0x94, GUID = 0x421989D6CB0CEEEF, NameHash = 0x4F5433BCFC028B49)]
     public class GcAISpaceshipComponentData : NMSTemplate
     {
         /* 0x00 */ public GcAISpaceshipTypes Type;

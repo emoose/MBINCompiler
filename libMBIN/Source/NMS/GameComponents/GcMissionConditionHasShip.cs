@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 
 using libMBIN.NMS.Toolkit;
@@ -5,7 +6,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0xC, GUID = 0xD02C56CC0E4C2180, NameHash = 0x9511DDC4A0C718D3)]
+    [NMS(Size = 0xC, GUID = 0xEF41B6F6AD669376, NameHash = 0x9511DDC4A0C718D3)]
     public class GcMissionConditionHasShip : NMSTemplate
     {
         /* 0x0 */ public GcSpaceshipClasses ShipType;

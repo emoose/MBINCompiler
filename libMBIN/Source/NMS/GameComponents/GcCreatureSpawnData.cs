@@ -1,14 +1,17 @@
-﻿using libMBIN.NMS.Toolkit;
+﻿using System;
+using System.Collections.Generic;
+
+using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x870, GUID = 0x581465750D0D676F, NameHash = 0x17AC2C984675F276)]
+    [NMS(Size = 0x870, GUID = 0x867BD9E5E0E88DB0, NameHash = 0x17AC2C984675F276)]
     public class GcCreatureSpawnData : NMSTemplate
     {
         /* 0x000 */ public GcResourceElement Resource;
         /* 0x2A8 */ public GcResourceElement FemaleResource;
-        /* 0x558 */ public GcResourceElement ExtraResource;
+        /* 0x550 */ public GcResourceElement ExtraResource;
         /* 0x7F8 */ public GcTerrainTileType TileType;
         /* 0x7FC */ public bool SwapPrimaryForSecondaryColour;
         /* 0x7FD */ public bool SwapPrimaryForRandomColour;

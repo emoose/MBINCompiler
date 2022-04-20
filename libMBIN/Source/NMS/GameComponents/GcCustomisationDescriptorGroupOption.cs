@@ -1,11 +1,12 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x78, GUID = 0xB58FA1EE8A51F1E1, NameHash = 0xA29C133FB960AEB2)]
+    [NMS(Size = 0xC8, GUID = 0x95E711E355CBFBFF, NameHash = 0xA29C133FB960AEB2)]
     public class GcCustomisationDescriptorGroupOption : NMSTemplate
     {
         /* 0x00 */ public NMSString0x10 DescriptorOption;
@@ -16,5 +17,10 @@ namespace libMBIN.NMS.GameComponents
         /* 0x40 */ public List<GcCustomisationBoneScales> BoneScales;
         /* 0x50 */ public int InteractionCameraIndexOverride;
         /* 0x54 */ public NMSString0x20 InteracttionCameraFocusJointOverride;
+        /* 0x78 */ public List<NMSString0x10> HideIfGroupActive;
+        /* 0x88 */ public List<NMSString0x10> SelectingRemovesGroup;
+        /* 0x98 */ public List<NMSString0x10> SelectingAddsGroup;
+        /* 0xA8 */ public List<NMSString0x10> UnselectingRemovesGroup;
+        /* 0xB8 */ public List<NMSString0x10> UnselectingAddsGroup;
     }
 }

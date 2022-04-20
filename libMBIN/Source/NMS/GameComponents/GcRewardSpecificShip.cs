@@ -1,9 +1,12 @@
-﻿using libMBIN.NMS.Toolkit;
+﻿using System;
+using System.Collections.Generic;
+
+using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x458, GUID = 0x722EBDD593263686, NameHash = 0x977CF58471E48CD1)]
+    [NMS(Size = 0x458, GUID = 0xD1C89DCD2F9E952F, NameHash = 0x977CF58471E48CD1)]
     public class GcRewardSpecificShip : NMSTemplate
     {
         /* 0x000 */ public GcResourceElement ShipResource;

@@ -1,29 +1,33 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0xC8, GUID = 0xD860F7A0405EE7AB, NameHash = 0x35C91009067A6431)]
+    [NMS(Size = 0x1A8, GUID = 0xC1E37CAD611FFF3A, NameHash = 0x35C91009067A6431)]
     public class GcAIShipSpawnData : NMSTemplate
     {
-        /* 0x00 */ public NMSString0x20A Message;
-        /* 0x20 */ public NMSString0x20A OSDMessage;
-        /* 0x40 */ public TkInputEnum Shortcut;
-        /* 0x44 */ public bool WarpIn;
-        /* 0x48 */ public GcAISpaceshipRoles Role;
-        /* 0x4C */ public float MinRange;
-        /* 0x50 */ public Vector2f Scale;
-        /* 0x58 */ public NMSString0x10 Reward;
-        /* 0x68 */ public NMSString0x20A RewardMessage;
-        /* 0x88 */ public bool AttackFreighter;
-        /* 0x8C */ public Vector2f Spread;
-        /* 0x94 */ public Vector2f Count;
-        /* 0x9C */ public Vector2f StartTime;
-		public enum SpawnShapeEnum { Sphere, Cone }
-		/* 0xA4 */ public SpawnShapeEnum SpawnShape;
-        /* 0xA8 */ public GcShipAIPerformanceArray Performances;
-        /* 0xB8 */ public List<GcAIShipSpawnData> ChildSpawns;
+        /* 0x000 */ public NMSString0x20A Message;
+        /* 0x020 */ public NMSString0x20A CombatMessage;
+        /* 0x040 */ public NMSString0x20A OSDMessage;
+        /* 0x060 */ public TkInputEnum Shortcut;
+        /* 0x064 */ public bool WarpIn;
+        /* 0x068 */ public GcAISpaceshipRoles Role;
+        /* 0x06C */ public float MinRange;
+        /* 0x070 */ public Vector2f Scale;
+        /* 0x078 */ public NMSString0x10 Reward;
+        /* 0x088 */ public NMSString0x20A RewardMessage;
+        /* 0x0A8 */ public GcAIShipSpawnMarkerData MarkerData;
+        /* 0x168 */ public bool AttackFreighter;
+        /* 0x16C */ public Vector2f Spread;
+        /* 0x174 */ public Vector2f Count;
+        /* 0x17C */ public Vector2f StartTime;
+        // size: 0x2
+        public enum SpawnShapeEnum { Sphere, Cone }
+        /* 0x184 */ public SpawnShapeEnum SpawnShape;
+        /* 0x188 */ public List<NMSTemplate> Array;
+        /* 0x198 */ public List<GcAIShipSpawnData> ChildSpawns;
     }
 }

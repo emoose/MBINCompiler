@@ -1,14 +1,16 @@
-﻿using libMBIN.NMS.Toolkit;
+﻿using System;
+using System.Collections.Generic;
+
+using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS( Size = 0x4, GUID = 0x5CCDC0B70353BB1, NameHash = 0x0F47FD4328A49A000)]
-    public class GcPlayerConflictData : NMSTemplate {
-
-        public enum ConflictLevelEnum { Low, Default, High }
-        public ConflictLevelEnum ConflictLevel;
-
+    [NMS(Size = 0x4, GUID = 0x3317E7A729576553, NameHash = 0xF47FD4328A49A000)]
+    public class GcPlayerConflictData : NMSTemplate
+    {
+        // size: 0x4
+        public enum ConflictLevelEnum { Low, Default, High, Pirate }
+        /* 0x0 */ public ConflictLevelEnum ConflictLevel;
     }
-
 }

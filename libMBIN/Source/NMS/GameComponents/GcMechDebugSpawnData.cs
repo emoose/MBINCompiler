@@ -1,11 +1,12 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0xB0, GUID = 0x258CF2694C9502B2, NameHash = 0xCD20631E8DC06987)]
+    [NMS(Size = 0xB0, GUID = 0xCEF023611425D19E, NameHash = 0xCD20631E8DC06987)]
     public class GcMechDebugSpawnData : NMSTemplate
     {
         /* 0x00 */ public Vector3f Position;
@@ -16,6 +17,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x44 */ public float TitanFallDelay;
         /* 0x48 */ public float MoveDelay;
         /* 0x4C */ public bool UseCustomisation;
-        /* 0x50 */ public GcCharacterCustomisationSaveData CustomisationData;
+        /* 0x50 */ public GcCharacterCustomisationSaveData CustomisationData; //CustomisatonData;
     }
 }

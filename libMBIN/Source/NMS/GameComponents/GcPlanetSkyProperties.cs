@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 
 using libMBIN.NMS.Toolkit;
@@ -5,7 +6,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x3B0, GUID = 0x2F5D90A06B4E8030, NameHash = 0x7333B5EC725370EF)]
+    [NMS(Size = 0x3B0, GUID = 0x5ABBB4EFC9041B8B, NameHash = 0x7333B5EC725370EF)]
     public class GcPlanetSkyProperties : NMSTemplate
     {
         /* 0x000 */ public GcSkyProperties PlanetSky;

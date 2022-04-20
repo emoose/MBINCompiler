@@ -6,10 +6,10 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x72D70, GUID = 0x921D347984220EFF, NameHash = 0xF0829DCD8555A52E)]
+    [NMS(Size = 0x76BA0, GUID = 0x443803A83E1B1C49, NameHash = 0xF0829DCD8555A52E)]
     public class GcDefaultSaveData : NMSTemplate
     {
         /* 0x00000 */ public GcPlayerStateData State;
-        /* 0x72CC0 */ public GcPlayerSpawnStateData Spawn;
+        /* 0x76AF0 */ public GcPlayerSpawnStateData Spawn;
     }
 }

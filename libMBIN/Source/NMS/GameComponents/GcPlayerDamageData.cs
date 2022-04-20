@@ -1,9 +1,12 @@
-﻿using libMBIN.NMS.Toolkit;
+﻿using System;
+using System.Collections.Generic;
+
+using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x170, GUID = 0x3FA1BD8448DD793F, NameHash = 0x5F9BF82F9925D932)]
+    [NMS(Size = 0x170, GUID = 0x70365DA434E80CEA, NameHash = 0x5F9BF82F9925D932)]
     public class GcPlayerDamageData : NMSTemplate
     {
         /* 0x000 */ public NMSString0x10 Id;
@@ -24,7 +27,8 @@ namespace libMBIN.NMS.GameComponents
         /* 0x168 */ public bool ShowTrackIcon;
         /* 0x169 */ public bool ForceDamageInInteraction;
         /* 0x16A */ public bool AllowDeathInInteraction;
-		public enum PlayerDamageTypeEnum { Normal, Toxic, Radioactive, Freeze, Scorch }
-		/* 0x16C */ public PlayerDamageTypeEnum PlayerDamageType;
+        // size: 0x5
+        public enum PlayerDamageTypeEnum { Normal, Toxic, Radioactive, Freeze, Scorch }
+        /* 0x16C */ public PlayerDamageTypeEnum PlayerDamageType;
     }
 }

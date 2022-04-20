@@ -1,11 +1,12 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x188, GUID = 0x1D45AD369A7A2FE8, NameHash = 0x88F1E142115EF824)]
+    [NMS(Size = 0x188, GUID = 0x5831E5CDA56D681B, NameHash = 0x88F1E142115EF824)]
     public class GcJourneyCategory : NMSTemplate
     {
         /* 0x000 */ public GcJourneyCategoryType Type;

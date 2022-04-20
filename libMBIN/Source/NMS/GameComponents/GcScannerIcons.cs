@@ -1,9 +1,12 @@
+using System;
+using System.Collections.Generic;
+
 using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x13410, GUID = 0x2BA984E6B3A6CBBA, NameHash = 0x392CEA8FE98D0F4)]
+    [NMS(Size = 0x13520, GUID = 0xFA9B9247B798D3E4, NameHash = 0x0392CEA8FE98D0F4)]
     public class GcScannerIcons : NMSTemplate
     {
         /* 0x00000 */ public GcScannerIcon TaggedBuilding;
@@ -28,7 +31,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x013E4 */ public GcScannerIcon BattleSmall;
         /* 0x014F0 */ public GcScannerIcon TimedEvent;
         /* 0x015FC */ public GcScannerIcon Checkpoint;
-        /* 0x01700 */ public GcScannerIcon Garage;
+        /* 0x01708 */ public GcScannerIcon Garage;
         /* 0x01814 */ public GcScannerIcon NPC;
         /* 0x01920 */ public GcScannerIcon SettlementNPC;
         /* 0x01A2C */ public GcScannerIcon CircleAnimation;
@@ -61,8 +64,8 @@ namespace libMBIN.NMS.GameComponents
         /* 0x10544 */ public GcScannerIcon MessageBeacon;
         /* 0x10650 */ public GcScannerIcon MessageBeaconSmall;
         /* 0x1075C */ public GcScannerIcon BaseBuildingMarker;
-        /* 0x10868 */ public GcScannerIcon PlanetNorthPole;
-        /* 0x10974 */ public GcScannerIcon PlanetSouthPole;
+        /* 0x10868 */ public GcScannerIcon PlanetPoleNorth;
+        /* 0x10974 */ public GcScannerIcon PlanetPoleSouth;
         /* 0x10A80 */ public GcScannerIcon MonumentMarker;
         /* 0x10B8C */ public GcScannerIcon NetworkPlayerMarker;
         /* 0x10C98 */ public GcScannerIcon NetworkPlayerMarkerShip;
@@ -98,5 +101,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x130EC */ public GcScannerIcon PlayerSettlement;
         /* 0x131F8 */ public GcScannerIcon OtherPlayerSettlement;
         /* 0x13304 */ public GcScannerIcon FriendlyDrone;
+        /* 0x13410 */ public GcScannerIcon PirateRaid;
     }
 }

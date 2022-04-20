@@ -6,7 +6,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x3D50, GUID = 0x2C41D6E6E401EF4F, NameHash = 0x25EDFA0EC4C3AF0A)]
+    [NMS(Size = 0x3DC0, GUID = 0x9E825F897FC3FF70, NameHash = 0x25EDFA0EC4C3AF0A)]
     public class GcPlanetData : NMSTemplate
     {
         /* 0x0000 */ public NMSString0x80 Name;
@@ -23,25 +23,25 @@ namespace libMBIN.NMS.GameComponents
         /* 0x0110 */ public List<GcPlanetDataResourceHint> ExtraResourceHints;
         /* 0x0120 */ public GcPlanetColourData Colours;
         [NMS(Size = 0x17)]
-        /* 0x1930 */ public Colour[] TileColours;
-        /* 0x1AA0 */ public GcPlanetWeatherData Weather;
-        /* 0x1C00 */ public GcPlanetCloudProperties Clouds;
-        /* 0x1C40 */ public GcPlanetWaterData Water;
-        /* 0x1DC0 */ public NMSString0x80 TerrainFile;
-        /* 0x1E40 */ public TkVoxelGeneratorData Terrain;
-        /* 0x3410 */ public int TileTypeSet;
-        /* 0x3418 */ public List<int> TileTypeIndices;
-        /* 0x3428 */ public GcEnvironmentSpawnData SpawnData;
-        /* 0x3488 */ public GcAlienRace InhabitingRace;
-        /* 0x3490 */ public GcPlanetBuildingData BuildingData;
-        /* 0x34D8 */ public GcPlanetGenerationIntermediateData GenerationData;
-        /* 0x3940 */ public Vector2f SentinelTimer;
-        /* 0x3948 */ public Vector2f FlybyTimer;
-        /* 0x3950 */ public GcPlanetInfo PlanetInfo;
-        /* 0x3CD4 */ public GcPlanetSentinelData SentinelData;
-        /* 0x3CE0 */ public GcPlanetRingData Rings;
-        /* 0x3D40 */ public bool InEmptySystem;
-        /* 0x3D41 */ public bool InAbandonedSystem;
-        /* 0x3D44 */ public float FuelMultiplier;
+        /* 0x19A0 */ public Colour[] TileColours;
+        /* 0x1B10 */ public GcPlanetWeatherData Weather;
+        /* 0x1C70 */ public GcPlanetCloudProperties Clouds;
+        /* 0x1CB0 */ public GcPlanetWaterData Water;
+        /* 0x1E30 */ public NMSString0x80 TerrainFile;
+        /* 0x1EB0 */ public TkVoxelGeneratorData Terrain;
+        /* 0x3480 */ public int TileTypeSet;
+        /* 0x3488 */ public List<int> TileTypeIndices;
+        /* 0x3498 */ public GcEnvironmentSpawnData SpawnData;
+        /* 0x34F8 */ public GcAlienRace InhabitingRace;
+        /* 0x3500 */ public GcPlanetBuildingData BuildingData;
+        /* 0x3548 */ public GcPlanetGenerationIntermediateData GenerationData;
+        /* 0x39B0 */ public Vector2f SentinelTimer;
+        /* 0x39B8 */ public Vector2f FlybyTimer;
+        /* 0x39C0 */ public GcPlanetInfo PlanetInfo;
+        /* 0x3D44 */ public GcPlanetSentinelData SentinelData;
+        /* 0x3D50 */ public GcPlanetRingData Rings;
+        /* 0x3DB0 */ public bool InEmptySystem;
+        /* 0x3DB1 */ public bool InAbandonedSystem;
+        /* 0x3DB4 */ public float FuelMultiplier;
     }
 }
