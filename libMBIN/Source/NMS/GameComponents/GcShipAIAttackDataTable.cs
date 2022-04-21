@@ -12,6 +12,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x00 */ public List<GcShipAICombatDefinition> Definitions;
         /* 0x10 */ public List<GcShipAIAttackData> BehaviourTable;
         /* 0x20 */ public List<GcSpaceshipTravelData> EngineTable;
+        /* 0x30 */ public List<GcSpaceshipShieldData> ShieldTable;
         [NMS(Size = 0x4)]
         /* 0x40 */ public NMSString0x10[] TraderAttackLookup;
     }
