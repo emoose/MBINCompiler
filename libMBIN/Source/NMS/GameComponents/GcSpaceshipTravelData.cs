@@ -20,6 +20,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x2C */ public float DirectionBrake;
         /* 0x30 */ public float MaxSpeedBrake;
         /* 0x34 */ public float Falloff;
+        /* 0x38 */ public float Roll;
         /* 0x3C */ public float MinHeight;
         /* 0x40 */ public float AvoidTime;
         /* 0x44 */ public bool Hovering;

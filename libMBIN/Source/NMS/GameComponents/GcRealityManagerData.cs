@@ -60,11 +60,11 @@ namespace libMBIN.NMS.GameComponents
         /* 0x1598 */ public GcPlayerWeaponData[] PlayerWeapons;
         [NMS(Size = 0x7, EnumType = typeof(GcVehicleType.VehicleTypeEnum))]
         /* 0x16C8 */ public TkIDArray[] DefaultVehicleLoadout;
-        [NMS(Size = 0x9, EnumType = typeof(GcAlienRace.AlienRaceEnum))]
+        [NMS(Size = 0x9, EnumType = typeof(GcMissionFaction.MissionFactionEnum))]
         /* 0x1738 */ public NMSString0x10[] FactionStandingIDs;
-        [NMS(Size = 0x9, EnumType = typeof(GcAlienRace.AlienRaceEnum))]
+        [NMS(Size = 0x9, EnumType = typeof(GcMissionFaction.MissionFactionEnum))]
         /* 0x17C8 */ public NMSString0x20[] FactionNames;
-        [NMS(Size = 0x9, EnumType = typeof(GcAlienRace.AlienRaceEnum))]
+        [NMS(Size = 0x9, EnumType = typeof(GcMissionFaction.MissionFactionEnum))]
         /* 0x18E8 */ public GcNumberedTextList[] FactionClients;
         [NMS(Size = 0xB, EnumType = typeof(GcMissionType.MissionTypeEnum))]
         /* 0x1A2C */ public GcNumberedTextList[] MissionNameFormats;
