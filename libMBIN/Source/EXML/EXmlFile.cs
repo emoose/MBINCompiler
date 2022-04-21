@@ -97,7 +97,7 @@ namespace libMBIN
         /// </summary>
         /// <param name="outputpath">The location to write the .exml file.</param>
         /// <param name="hideVersionInfo">If true, version info is not written to the EXML file.</param>
-        public static string WriteTemplate(NMSTemplate template, bool hideVersionInfo = false)
+        public static string WriteTemplate(NMSTemplate template, bool hideVersionInfo)
         {
             var origCulture = Thread.CurrentThread.CurrentCulture;
             Thread.CurrentThread.CurrentCulture = CultureInfo.InvariantCulture;

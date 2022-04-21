@@ -6,7 +6,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x3C0, GUID = 0x10FD007D83D28D50, NameHash = 0x43EBB2E6AFAC5863)]
+    [NMS(Size = 0x3C0, GUID = 0xE7245CB024AD5968, NameHash = 0x43EBB2E6AFAC5863)]
     public class GcObjectSpawnData : NMSTemplate
     {
         /* 0x000 */ public NMSString0x10 DebugName;
@@ -18,10 +18,15 @@ namespace libMBIN.NMS.GameComponents
         /* 0x2D0 */ public List<GcTerrainTileType> ExtraTileTypes;
         /* 0x2E0 */ public NMSString0x10 Placement;
         /* 0x2F0 */ public GcSeed Seed;
+        // size: 0x3
         public enum PlacementPriorityEnum { Low, Normal, High }
         /* 0x300 */ public PlacementPriorityEnum PlacementPriority;
-        public enum LargeObjectCoverageEnum { DoNotPlace, DoNotPlaceIgnoreFootprint, DoNotPlaceClose, DoNotPlaceAnywhereNear, OnlyPlaceAround, OnlyPlaceAroundIgnoreFootprint, AlwaysPlace }
+        // size: 0x7
+        public enum LargeObjectCoverageEnum { DoNotPlace, DoNotPlaceIgnoreFootprint, DoNotPlaceClose, DoNotPlaceAnywhereNear,
+            OnlyPlaceAround, OnlyPlaceAroundIgnoreFootprint, AlwaysPlace
+        }
         /* 0x304 */ public LargeObjectCoverageEnum LargeObjectCoverage;
+        // size: 0x3
         public enum OverlapStyleEnum { None, SameSeed, All }
         /* 0x308 */ public OverlapStyleEnum OverlapStyle;
         /* 0x30C */ public float MinHeight;
@@ -30,6 +35,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x318 */ public float MinAngle;
         /* 0x31C */ public float MaxAngle;
         /* 0x320 */ public bool MatchGroundColour;
+        // size: 0x3
         public enum GroundColourIndexEnum { Auto, Main, Patch }
         /* 0x324 */ public GroundColourIndexEnum GroundColourIndex;
         /* 0x328 */ public bool SwapPrimaryForSecondaryColour;

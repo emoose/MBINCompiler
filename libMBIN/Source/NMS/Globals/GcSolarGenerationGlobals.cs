@@ -1,11 +1,12 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(Size = 0x2F0, GUID = 0xCF1B1EB60E963DD0, NameHash = 0xEAC286274BBCA057)]
+    [NMS(Size = 0x300, GUID = 0x21AB9CFAD8E5C18C, NameHash = 0xEAC286274BBCA057)]
     public class GcSolarGenerationGlobals : NMSTemplate
     {
         /* 0x000 */ public bool MassiveSolarSystems;
@@ -80,21 +81,23 @@ namespace libMBIN.NMS.Globals
         /* 0x1B0 */ public float RingAsteroidSpacing;
         /* 0x1B4 */ public float RingAsteroidFadeRangeMin;
         /* 0x1B8 */ public float RingAsteroidFadeRangeMax;
-        /* 0x1BC */ public int AsteroidMaxNumGenerates;
-        /* 0x1C0 */ public int AsteroidMaxNumGeneratesPulseJump;
-        /* 0x1C4 */ public float AsteroidSpaceStationAvoidRadius;
-        /* 0x1C8 */ public float AsteroidAnomalyAvoidRadius;
-        /* 0x1CC */ public float AsteroidWarpInAreaAvoidRadius;
+        /* 0x1BC */ public float AsteroidSpaceStationAvoidRadius;
+        /* 0x1C0 */ public float AsteroidAnomalyAvoidRadius;
+        /* 0x1C4 */ public float AsteroidWarpInAreaAvoidRadius;
         [NMS(Size = 0x4, EnumType = typeof(GcGalaxyStarTypes.GalaxyStarTypeEnum))]
-        /* 0x1D0 */ public float[] AbandonedSystemProbability;
+        /* 0x1C8 */ public float[] AbandonedSystemProbability;
         [NMS(Size = 0x4, EnumType = typeof(GcGalaxyStarTypes.GalaxyStarTypeEnum))]
-        /* 0x1E0 */ public float[] EmptySystemProbability;
-        /* 0x1F0 */ public int CivilianTraderSpaceshipsCacheCount;
-        /* 0x1F8 */ public List<float> SpaceshipSpawnFreqMultipliers;
-        /* 0x208 */ public List<GcAISpaceshipWeightingData> SpaceshipWeightings;
-        /* 0x218 */ public float PlanetRingProbability;
-        /* 0x220 */ public GcPlanetRingData PlanetRingsMin;
-        /* 0x280 */ public GcPlanetRingData PlanetRingsMax;
-        /* 0x2E0 */ public int PercentChanceExtraPrime;
+        /* 0x1D8 */ public float[] EmptySystemProbability;
+        [NMS(Size = 0x4, EnumType = typeof(GcGalaxyStarTypes.GalaxyStarTypeEnum))]
+        /* 0x1E8 */ public float[] PirateSystemProbability;
+        /* 0x1F8 */ public int CivilianTraderSpaceshipsCacheCount;
+        /* 0x200 */ public List<float> SpaceshipSpawnFreqMultipliers;
+        /* 0x210 */ public List<GcAISpaceshipWeightingData> SpaceshipWeightings;
+        /* 0x220 */ public float PirateClassShipOverrideProbability;
+        /* 0x224 */ public float PirateClassShipOverrideProbabilityPirateSystem;
+        /* 0x228 */ public float PlanetRingProbability;
+        /* 0x230 */ public GcPlanetRingData PlanetRingsMin;
+        /* 0x290 */ public GcPlanetRingData PlanetRingsMax;
+        /* 0x2F0 */ public int PercentChanceExtraPrime;
     }
 }

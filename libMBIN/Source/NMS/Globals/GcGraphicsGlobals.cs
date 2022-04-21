@@ -6,7 +6,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(Size = 0xAB0, GUID = 0x819E9B71731E9969, NameHash = 0xB24409E83457E875)]
+    [NMS(Size = 0xAB0, GUID = 0x0AB91FEAE6D8AD39, NameHash = 0xB24409E83457E875)]
     public class GcGraphicsGlobals : NMSTemplate
     {
         /* 0x000 */ public float LUTDistanceFlightMultiplier;

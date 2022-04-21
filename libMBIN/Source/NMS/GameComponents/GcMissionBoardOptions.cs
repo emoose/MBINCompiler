@@ -1,11 +1,12 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x80, GUID = 0xCA65A99C3B10391B, NameHash = 0xDD272E15749CCDF5)]
+    [NMS(Size = 0x80, GUID = 0x11A579F6514D0471, NameHash = 0xDD272E15749CCDF5)]
     public class GcMissionBoardOptions : NMSTemplate
     {
         /* 0x00 */ public GcMissionType Type;
@@ -21,6 +22,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x34 */ public bool IgnoreCalculatedObjective;
         /* 0x38 */ public NMSString0x20A MultiplayerMissionInitialWarpScanEvent;
         /* 0x58 */ public List<NMSString0x20A> DefaultItemInitialWarpScanEvents;
+        // size: 0x5
         public enum DefaultItemTypeForInitialWarpEnum { None, PrimaryProduct, PrimarySubstance, SecondaryProduct, SecondarySubstance }
         /* 0x68 */ public DefaultItemTypeForInitialWarpEnum DefaultItemTypeForInitialWarp;
         /* 0x70 */ public List<NMSString0x10> BasePartBlueprints;

@@ -6,7 +6,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(Size = 0x19F0, GUID = 0x54BD186BA7992F70, NameHash = 0xB032629C37506E6A)]
+    [NMS(Size = 0x1A00, GUID = 0xC255BC67A5D5B1B1, NameHash = 0xB032629C37506E6A)]
     public class GcFleetGlobals : NMSTemplate
     {
         /* 0x0000 */ public Vector3f FreighterCustomiserSunAngleAdjust;
@@ -152,5 +152,6 @@ namespace libMBIN.NMS.Globals
         /* 0x19CC */ public int NormandyDamageEvents;
         /* 0x19D0 */ public List<NMSString0x10> NormandyTraits;
         /* 0x19E0 */ public List<NMSString0x10> DeepSpaceFrigateTraits;
+        /* 0x19F0 */ public int MaxNumberOfPlayerShipsInFreighterHangar;
     }
 }

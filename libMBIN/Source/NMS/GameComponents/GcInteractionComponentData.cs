@@ -1,13 +1,15 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x2D0, GUID = 0x755847FFD9D23F80, NameHash = 0xDAB0554EA36957B5)]
+    [NMS(Size = 0x2D0, GUID = 0x5287F165681F5619, NameHash = 0xDAB0554EA36957B5)]
     public class GcInteractionComponentData : NMSTemplate
     {
+        // size: 0x3
         public enum InteractionActionEnum { PressButton, HoldButton, Shoot }
         /* 0x000 */ public InteractionActionEnum InteractionAction;
         /* 0x004 */ public GcInteractionType InteractionType;
@@ -36,6 +38,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x254 */ public GcInteractionDof DepthOfField;
         /* 0x268 */ public List<GcAlienPuzzleMissionOverride> PuzzleMissionOverrideTable;
         /* 0x278 */ public GcStoryUtilityOverride StoryUtilityOverrideData;
+        // size: 0x3
         public enum OverrideInteriorExteriorMarkerEnum { No, Interior, Exterior }
         /* 0x2B8 */ public OverrideInteriorExteriorMarkerEnum OverrideInteriorExteriorMarker;
         /* 0x2BC */ public bool ReseedAfterRewardSuccess;
