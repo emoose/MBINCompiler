@@ -1,11 +1,12 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x42E0, GUID = 0x4E435D8EC9894AA9, NameHash = 0xB5B196A1179FFE00)]
+    [NMS(Size = 0x42E0, GUID = 0xA0166F10651C5F05, NameHash = 0xB5B196A1179FFE00)]
     public class GcDebugScene : NMSTemplate
     {
         /* 0x0000 */ public bool Active;
@@ -29,24 +30,28 @@ namespace libMBIN.NMS.GameComponents
         [NMS(Size = 0x12)]
         /* 0x2698 */ public GcPetCustomisationData[] PetAccessoryCustomisation;
         /* 0x3928 */ public bool ForcePlayerWalk;
-        /* 0x392C */ public int PetRideIndex;
-        /* 0x3930 */ public List<Vector3f> PetRideWayPoints;
-        /* 0x3940 */ public bool ForceSunPosition;
+        /* 0x392C */ public float PlayerWalkSpeed;
+        /* 0x3930 */ public int PetRideIndex;
+        /* 0x3938 */ public List<Vector3f> PetRideWayPoints;
+        /* 0x3948 */ public bool ForceSunPosition;
         /* 0x3950 */ public Vector3f ForcedSunPosition;
         /* 0x3960 */ public bool ControlClouds;
         /* 0x3964 */ public float CloudCover;
         /* 0x3968 */ public float CloudAnimScale;
         /* 0x396C */ public Vector2f CloudWindOffset;
         /* 0x3974 */ public Vector2f CloudStratosphereWindOffset;
-        /* 0x3980 */ public List<GcDebugShipTravelLine> DebugShipPaths;
-        /* 0x3990 */ public List<GcDebugCamera> DebugCameraPaths;
-        /* 0x39A0 */ public List<GcCreatureDebugSpawnData> DebugCreatureSpawns;
-        /* 0x39B0 */ public List<GcMechDebugSpawnData> DebugMechSpawns;
-        /* 0x39C0 */ public List<GcAIShipDebugSpawnData> DebugEnemyShipSpawns;
-        /* 0x39D0 */ public List<GcAIShipDebugSpawnData> DebugShipSpawns;
+        /* 0x397C */ public bool BusyShips;
+        /* 0x3980 */ public float CustomShipDockedTime;
+        /* 0x3984 */ public float ShipSpawningMultiplier;
+        /* 0x3988 */ public List<GcDebugShipTravelLine> DebugShipPaths;
+        /* 0x3998 */ public List<GcDebugCamera> DebugCameraPaths;
+        /* 0x39A8 */ public List<GcCreatureDebugSpawnData> DebugCreatureSpawns;
+        /* 0x39B8 */ public List<GcMechDebugSpawnData> DebugMechSpawns;
+        /* 0x39C8 */ public List<GcAIShipDebugSpawnData> DebugEnemyShipSpawns;
+        /* 0x39D8 */ public List<GcAIShipDebugSpawnData> DebugShipSpawns;
         [NMS(Size = 0x7, EnumType = typeof(GcVehicleType.VehicleTypeEnum))]
-        /* 0x39E0 */ public GcCameraFollowSettings[] VehicleCameraOverride;
-        /* 0x40E0 */ public bool DebugDroneScanPlayer;
+        /* 0x39E8 */ public GcCameraFollowSettings[] VehicleCameraOverride;
+        /* 0x40E8 */ public bool DebugDroneScanPlayer;
         /* 0x40F0 */ public Vector3f DebugDroneSpawn;
         /* 0x4100 */ public Vector3f DebugDroneTarget;
         /* 0x4110 */ public int DebugNumDrones;

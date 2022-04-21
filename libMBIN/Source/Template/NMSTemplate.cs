@@ -1461,7 +1461,7 @@ namespace libMBIN
         /// </summary>
         /// <param name="outputpath">The location to write the .exml file.</param>
         /// <param name="hideVersionInfo">If true, version info is not written to the EXML file.</param>
-        public void WriteToExml(string outputpath, bool hideVersionInfo = false)
+        public void WriteToExml(string outputpath, bool hideVersionInfo)
         {
             var data = EXmlFile.WriteTemplate(this, hideVersionInfo);
             File.WriteAllText(outputpath, data);
