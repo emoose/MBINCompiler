@@ -28,20 +28,13 @@ namespace libMBIN.NMS.GameComponents
         public enum InitialShapeSourceEnum { CapeLike, Rectangular, TakenFromSource }
         /* 0x0F0 */ public InitialShapeSourceEnum InitialShapeSource;
         /* 0x100 */ public GcCapeLikeInitialShape CapeLikeInitialShape;
-        /* 0x190 */ public Vector3f TopLineStart;
-        /* 0x1A0 */ public Vector3f TopLineEnd;
-        /* 0x1B0 */ public Vector3f BottomLineStart;
-        /* 0x1C0 */ public Vector3f BottomLineEnd;
+        /* 0x190 */ public GcRectangularInitialShape RectangularInitialShape;
         /* 0x1D0 */ public List<GcClothCollisionBone> CollisionBones;
         /* 0x1E0 */ public List<GcClothAttachmentCirlce> AttachmentCircles;
         /* 0x1F0 */ public List<GcClothAttachmentLine> AttachmentLines;
-        /* 0x200 */ public List<GcAttachmentPointData> AttachmentPointSets;
+        /* 0x200 */ public List<GcAttachmentPointSet> AttachmentPointSets;
         /* 0x210 */ public GcConstraintsToCreateSpec ConstraintsToCreate;
-        /* 0x260 */ public float AttractionStrength;
-        /* 0x264 */ public bool UseInitialShapeAsAttractorShape;
-        /* 0x268 */ public float AttractionRadiusAtTop;
-        /* 0x26C */ public float AttractionRadiusAtBottom;
-        /* 0x270 */ public GcCapeLikeInitialShape CapeLikeAttractorShape;
+        /* 0x260 */ public GcClothAttractor Attractor;
         /* 0x300 */ public List<NMSString0x40> NodesThatMustBePresent;
         /* 0x310 */ public List<NMSString0x40> NodesToHide;
         /* 0x320 */ public GcAdvancedTweaks Advanced;
