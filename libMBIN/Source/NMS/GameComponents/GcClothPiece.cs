@@ -6,7 +6,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x380, GUID = 0xE31133DE1EFABE3F, NameHash = 0x7596FBA2C232AC37)]
+    [NMS(Size = 0x380, GUID = 0xF25ACB89E697B5AA, NameHash = 0x7596FBA2C232AC37)]
     public class GcClothPiece : NMSTemplate
     {
         /* 0x000 */ public bool Enabled;
@@ -25,8 +25,17 @@ namespace libMBIN.NMS.GameComponents
         /* 0x0AC */ public float StandardGravityScale;
         /* 0x0B0 */ public NMSString0x40 InitialShapeReferenceBone;
         // size: 0x3
+        public enum ScaleInTransformApplicationOnClothEnum { Multiply, Divide, Ignore }
+        /* 0x0F0 */ public ScaleInTransformApplicationOnClothEnum ScaleInTransformApplicationOnCloth;
+        // size: 0x3
+        public enum ScaleInTransformApplicationOnCollisionEnum { Multiply, Divide, Ignore }
+        /* 0x0F4 */ public ScaleInTransformApplicationOnCollisionEnum ScaleInTransformApplicationOnCollision;
+        // size: 0x3
+        public enum ScaleInTransformApplicationOnAttachmentEnum { Multiply, Divide, Ignore }
+        /* 0x0F8 */ public ScaleInTransformApplicationOnAttachmentEnum ScaleInTransformApplicationOnAttachment;
+        // size: 0x3
         public enum InitialShapeSourceEnum { CapeLike, Rectangular, TakenFromSource }
-        /* 0x0F0 */ public InitialShapeSourceEnum InitialShapeSource;
+        /* 0x0FC */ public InitialShapeSourceEnum InitialShapeSource;
         /* 0x100 */ public GcCapeLikeInitialShape CapeLikeInitialShape;
         /* 0x190 */ public GcRectangularInitialShape RectangularInitialShape;
         /* 0x1D0 */ public List<GcClothCollisionBone> CollisionBones;

@@ -264,7 +264,7 @@ namespace libMBIN.NMS.Globals
         /* 0x6D0 */ public Vector4f TerrainMipDistanceMed;
         /* 0x6E0 */ public Vector4f TerrainMipDistanceHigh;
         /* 0x6F0 */ public Vector4f TerrainMipDistanceUlt;
-        [NMS(Size = 0x4, EnumType = typeof( TkGraphicsDetailTypes.GraphicDetailEnum ))]
+        [NMS(Size = 0x4, EnumType = typeof(TkGraphicsDetailTypes.GraphicDetailEnum))]
         /* 0x700 */ public Vector4f[] ShellsSettings;
         /* 0x740 */ public int TerrainAnisoLow;
         /* 0x744 */ public int TerrainAnisoMed;
@@ -312,7 +312,7 @@ namespace libMBIN.NMS.Globals
         /* 0x7DC */ public float SharpenFilterAmount;
         /* 0x7E0 */ public float SharpenFilterDepthFactorStart;
         /* 0x7E4 */ public float SharpenFilterDepthFactorEnd;
-        [NMS(Size = 0x4, EnumType = typeof( TkGraphicsDetailTypes.GraphicDetailEnum ))]
+        [NMS(Size = 0x4, EnumType = typeof(TkGraphicsDetailTypes.GraphicDetailEnum))]
         /* 0x7E8 */ public TkGraphicsDetailPreset[] GraphicsDetailPresetsPC;
         /* 0x8D8 */ public TkGraphicsDetailPreset GraphicsDetailPresetPS4;
         /* 0x914 */ public TkGraphicsDetailPreset GraphicsDetailPresetPS4VR;
