@@ -6,7 +6,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x28, GUID = 0x0CBA236CF6B30FE5, NameHash = 0x7095201046A71EFE)]
+    [NMS(Size = 0x28, GUID = 0xFA3553876D195122, NameHash = 0x7095201046A71EFE)]
     public class GcPlayerClothComponentData : NMSTemplate
     {
         /* 0x00 */ public bool Enabled;
