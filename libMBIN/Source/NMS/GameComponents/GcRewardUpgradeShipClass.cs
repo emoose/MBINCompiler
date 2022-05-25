@@ -5,10 +5,11 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x8, GUID = 0x77861A28C2F21023, NameHash = 0x710A6CDD7B84F22B)]
+    [NMS(Size = 0xC, GUID = 0x276FF4887CF16716, NameHash = 0x710A6CDD7B84F22B)]
     public class GcRewardUpgradeShipClass : NMSTemplate
     {
         /* 0x0 */ public bool Silent;
         /* 0x4 */ public GcInventoryClass ForceToSpecificClass;
+        /* 0x8 */ public bool MatchClassToCommunityTier;
     }
 }

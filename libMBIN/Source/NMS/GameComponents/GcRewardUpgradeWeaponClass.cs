@@ -5,8 +5,10 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x1, GUID = 0x1E77383736772524, NameHash = 0x8EE3EC0791BD99B7)]
+    [NMS(Size = 0x2, GUID = 0xFBD6EA952BB287E1, NameHash = 0x8EE3EC0791BD99B7)]
     public class GcRewardUpgradeWeaponClass : NMSTemplate
     {
+        public bool Silent;
+        public bool MatchClassToCommunityTier;
     }
 }

@@ -6,7 +6,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x70, GUID = 0xDD7A84BAD6E8F73A, NameHash = 0xE523CFAD6AFB4BB6)]
+    [NMS(Size = 0x70, GUID = 0xBEB7BC266C45CBB3, NameHash = 0xE523CFAD6AFB4BB6)]
     public class GcScanEventSolarSystemLookup : NMSTemplate
     {
         /* 0x00 */ public bool UseStarType;
@@ -22,17 +22,19 @@ namespace libMBIN.NMS.GameComponents
         /* 0x1E */ public bool NeverAllowAbandoned;
         /* 0x1F */ public bool RequireUndiscovered;
         /* 0x20 */ public bool NeedsWaterPlanet;
-        /* 0x21 */ public bool NeedsExtremeSentinelPlanet;
-        /* 0x22 */ public bool NeverAllowExtremeSentinelPlanet;
-        /* 0x23 */ public bool NeedsExtremeWeatherPlanet;
-        /* 0x24 */ public bool NeedsExtremeHazardPlanet;
-        /* 0x25 */ public bool AnyBiomeNotWeirdOrDead;
-        /* 0x26 */ public bool AnyRGBBiome;
-        /* 0x27 */ public bool NeedsBiome;
-        /* 0x28 */ public GcBiomeType NeedsBiomeType;
-        /* 0x2C */ public GcBiomeSubType UseBiomeSubType;
-        /* 0x30 */ public bool NeedsEmptySystem;
-        /* 0x31 */ public bool NeedsAbandonedSystem;
+        /* 0x21 */ public bool NeedsPrimePlanet;
+        /* 0x22 */ public bool NeedsExtremeSentinelPlanet;
+        /* 0x23 */ public bool NeverAllowExtremeSentinelPlanet;
+        /* 0x24 */ public bool NeedsExtremeWeatherPlanet;
+        /* 0x25 */ public bool NeedsExtremeHazardPlanet;
+        /* 0x26 */ public bool AnyBiomeNotWeirdOrDead;
+        /* 0x27 */ public bool AnyRGBBiome;
+        /* 0x28 */ public bool AnyInfestedBiome;
+        /* 0x29 */ public bool NeedsBiome;
+        /* 0x2C */ public GcBiomeType NeedsBiomeType;
+        /* 0x30 */ public GcBiomeSubType UseBiomeSubType;
+        /* 0x34 */ public bool NeedsEmptySystem;
+        /* 0x35 */ public bool NeedsAbandonedSystem;
         /* 0x38 */ public NMSString0x10 NeedsResourceHint;
         /* 0x48 */ public bool SuitableForCreatureDiscovery;
         /* 0x49 */ public bool SuitableForCreatureTaming;

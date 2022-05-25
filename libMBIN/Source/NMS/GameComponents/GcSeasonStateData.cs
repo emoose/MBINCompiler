@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x50, GUID = 0x72A849FE6FF40A2E, NameHash = 0x4BC716CF849F5A74)]
+    [NMS(Size = 0x58, GUID = 0xCEF7CA862298698B, NameHash = 0x4BC716CF849F5A74)]
     public class GcSeasonStateData : NMSTemplate
     {
         /* 0x00 */ public List<float> MilestoneValues;
@@ -15,5 +15,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x28 */ public List<ulong> RendezvousUAs;
         /* 0x38 */ public bool HasCollectedFinalReward;
         /* 0x40 */ public List<GcUAProtectedLocations> ProtectedEvents;
+        /* 0x50 */ public GcSeasonSaveStateOnDeath StateOnDeath;
     }
 }

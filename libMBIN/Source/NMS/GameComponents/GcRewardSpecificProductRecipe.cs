@@ -3,10 +3,11 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x18, GUID = 0xF76E52C52365A783, NameHash = 0xD0AAAD197E826825)]
+    [NMS(Size = 0x18, GUID = 0x5637F3002418C38E, NameHash = 0xD0AAAD197E826825)]
     public class GcRewardSpecificProductRecipe : NMSTemplate
     {
-        public NMSString0x10 Id;
-        public bool Slient;
+        /* 0x00 */ public NMSString0x10 Id;
+        /* 0x10 */ public bool Slient;
+        /* 0x11 */ public bool HideInSeasonRewards;
     }
 }

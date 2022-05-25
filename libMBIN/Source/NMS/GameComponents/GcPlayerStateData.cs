@@ -6,7 +6,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x76B10, GUID = 0x98C18F97236AC977, NameHash = 0x6C4510BB243EFA64)]
+    [NMS(Size = 0x76BA0, GUID = 0x20B90D2DA2BB4304, NameHash = 0x6C4510BB243EFA64)]
     public class GcPlayerStateData : NMSTemplate
     {
         /* 0x00000 */ public GcUniverseAddressData UniverseAddress;
@@ -230,12 +230,13 @@ namespace libMBIN.NMS.GameComponents
         /* 0x54424 */ public bool UsesThirdPersonVehicleCam;
         /* 0x54428 */ public float VRCameraOffset;
         /* 0x54430 */ public GcSeasonalGameModeData SeasonData;
-        /* 0x57688 */ public GcSeasonStateData SeasonState;
-        /* 0x576D8 */ public bool RestartAllInactiveSeasonalMissions;
-        /* 0x576E0 */ public List<NMSString0x10> RedeemedSeasonRewards;
-        /* 0x576F0 */ public List<NMSString0x10> RedeemedTwitchRewards;
+        /* 0x57710 */ public GcSeasonStateData SeasonState;
+        /* 0x57768 */ public bool RestartAllInactiveSeasonalMissions;
+        /* 0x57770 */ public List<NMSString0x10> RedeemedSeasonRewards;
+        /* 0x57780 */ public List<NMSString0x10> RedeemedTwitchRewards;
         [NMS(Size = 0x64)]
-        /* 0x57700 */ public GcSettlementState[] SettlementStatesV2;
-        /* 0x76B00 */ public int SettlementStateRingBufferIndexV2;
+        /* 0x57790 */ public GcSettlementState[] SettlementStatesV2;
+        /* 0x76B90 */ public int SettlementStateRingBufferIndexV2;
+        /* 0x76B94 */ public bool NextLoadSpawnsWithFreshStart;
     }
 }

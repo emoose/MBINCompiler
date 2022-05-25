@@ -5,7 +5,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x410, GUID = 0x37D705A26A00BF70, NameHash = 0xE831C8A241FD8276)]
+	[NMS(Size = 0x410, GUID = 0xF6ACE6D21C5EC4B, NameHash = 0xE831C8A241FD8276)]
     public class GcProductData : NMSTemplate
     {
         /* 0x000 */ public NMSString0x10 Id;
@@ -51,5 +51,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x3E8 */ public bool GoodForSelling;
         /* 0x3F0 */ public NMSString0x10 GiveRewardOnSpecialPurchase;
         /* 0x400 */ public bool EggModifierIngredient;
+        /* 0x401 */ public bool IsTechBox;
     }
 }

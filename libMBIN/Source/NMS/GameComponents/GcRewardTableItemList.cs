@@ -5,15 +5,16 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x18, GUID = 0xC23192B97A18C613, NameHash = 0xF97DB1C704357E47)]
+    [NMS(Size = 0x18, GUID = 0xF67038EB7F695692, NameHash = 0xF97DB1C704357E47)]
     public class GcRewardTableItemList : NMSTemplate
     {
         // size: 0x9
         public enum RewardChoiceEnum { GiveAll, Select, SelectAlways, TryEach, SelectSilent, GiveAllSilent,
             TryFirst_ThenSelectAlways, SelectFromSuccess, SelectAlwaysSilent, SelectFromSuccessSilent
         }
-        public RewardChoiceEnum RewardChoice;
-        public bool OverrideZeroSeed;
-        public List<GcRewardTableItem> List;
+        /* 0x0 */ public RewardChoiceEnum RewardChoice;
+        /* 0x4 */ public bool OverrideZeroSeed;
+        /* 0x5 */ public bool UseInventoryChoiceOverride;
+        /* 0x8 */ public List<GcRewardTableItem> List;
     }
 }

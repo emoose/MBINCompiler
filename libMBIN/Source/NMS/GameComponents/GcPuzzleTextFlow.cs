@@ -6,7 +6,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x58, GUID = 0xCCC5537A6235E75D, NameHash = 0x44CB81CE83D73B16)]
+    [NMS(Size = 0x58, GUID = 0x94B36BC72B00E86F, NameHash = 0x44CB81CE83D73B16)]
     public class GcPuzzleTextFlow : NMSTemplate
     {
         /* 0x00 */ public NMSString0x20A Text;
@@ -19,5 +19,6 @@ namespace libMBIN.NMS.GameComponents
         // size: 0x3
         public enum BracketsOverrideEnum { None, Brackets, NoBrackets }
         /* 0x50 */ public BracketsOverrideEnum BracketsOverride;
+        /* 0x54 */ public GcAudioWwiseEvents AudioEvent;
     }
 }

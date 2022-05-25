@@ -3,14 +3,16 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x40, GUID = 0x2BC80C07487546FC, NameHash = 0xA56864A865FEBE6D)]
+    [NMS(Size = 0x40, GUID = 0x9C42F3A1D0B5AE7D, NameHash = 0xA56864A865FEBE6D)]
     public class GcMissionConditionStatLevel : NMSTemplate
     {
-        public NMSString0x10 Stat;
-        public NMSString0x10 StatGroup;
-        public int Level;
-        public NMSString0x10 CompareStat;
-        public int DisplayMilestoneNumber;
-        public TkEqualityEnum Test;
+        /* 0x00 */ public NMSString0x10 Stat;
+        /* 0x10 */ public NMSString0x10 StatGroup;
+        /* 0x20 */ public int Level;
+        /* 0x24 */ public bool TakeLevelFromSeasonData;
+        /* 0x25 */ public bool ForceIgnoreLevelledStat;
+        /* 0x28 */ public NMSString0x10 CompareStat;
+        /* 0x38 */ public int DisplayMilestoneNumber;
+        /* 0x3C */ public TkEqualityEnum Test;
     }
 }
