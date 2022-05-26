@@ -6,7 +6,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(Size = 0x5EF0, GUID = 0xB465C6404E609BCD, NameHash = 0x95C306B1A90F3E08)]
+    [NMS(Size = 0x5EF0, GUID = 0xA3CB52292AC4F742, NameHash = 0x95C306B1A90F3E08)]
     public class GcUIGlobals : NMSTemplate
     {
         /* 0x0000 */ public bool UseIntermediateMissionGiverOptions;

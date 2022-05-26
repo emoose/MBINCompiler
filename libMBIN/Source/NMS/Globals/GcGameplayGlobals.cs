@@ -6,7 +6,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(Size = 0x1F20, GUID = 0xF25C3ADE916F9ED7, NameHash = 0x71CAF682B6986E6E)]
+    [NMS(Size = 0x1F20, GUID = 0xAF3097104934EA65, NameHash = 0x71CAF682B6986E6E)]
     public class GcGameplayGlobals : NMSTemplate
     {
         /* 0x0000 */ public float CargoShieldStrength;
@@ -20,16 +20,17 @@ namespace libMBIN.NMS.Globals
         /* 0x0020 */ public float PoliceAcceleratorNoCargoWealthy;
         /* 0x0024 */ public float PoliceAcceleratorNoCargoNormal;
         /* 0x0028 */ public float PoliceAcceleratorNoCargoSkipScanOdds;
-        /* 0x002C */ public float SmugglerSellingMarkup;
-        /* 0x0030 */ public float IllegalTechProductTradingMod;
-        /* 0x0034 */ public float CombatLevelBestWeaponBias;
-        /* 0x0038 */ public float CombatLevelBaseValueBoltcaster;
-        /* 0x003C */ public float CombatLevelBaseValueShotgun;
-        /* 0x0040 */ public float CombatLevelBaseValueRailgun;
-        /* 0x0044 */ public float CombatLevelBaseValueSMG;
-        /* 0x0048 */ public float CombatLevelBaseValueCannon;
-        /* 0x004C */ public float CombatLevelBaseValueGrenade;
-        /* 0x0050 */ public float CombatLevelSClassValue;
+        /* 0x002C */ public float InfestedPlanetDeepSpaceFlybyMultiplier;
+        /* 0x0030 */ public float SmugglerSellingMarkup;
+        /* 0x0034 */ public float IllegalTechProductTradingMod;
+        /* 0x0038 */ public float CombatLevelBestWeaponBias;
+        /* 0x003C */ public float CombatLevelBaseValueBoltcaster;
+        /* 0x0040 */ public float CombatLevelBaseValueShotgun;
+        /* 0x0044 */ public float CombatLevelBaseValueRailgun;
+        /* 0x0048 */ public float CombatLevelBaseValueSMG;
+        /* 0x004C */ public float CombatLevelBaseValueCannon;
+        /* 0x0050 */ public float CombatLevelBaseValueGrenade;
+        /* 0x0054 */ public float CombatLevelSClassValue;
         /* 0x0058 */ public NMSString0x10 NexusRecipeCostType;
         /* 0x0068 */ public int NexusRecipeCostNaniteMultiplier;
         /* 0x006C */ public float ShipScanPlanetRechargeMultiplier;

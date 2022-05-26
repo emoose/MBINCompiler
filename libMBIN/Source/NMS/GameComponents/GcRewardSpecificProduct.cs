@@ -6,7 +6,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x28, GUID = 0x21CC3670639A422D, NameHash = 0x691B32769ECE3BC6)]
+    [NMS(Size = 0x48, GUID = 0xB8E5A601DB5F5271, NameHash = 0x691B32769ECE3BC6)]
     public class GcRewardSpecificProduct : NMSTemplate
     {
         /* 0x00 */ public GcDefaultMissionProductEnum Default;
@@ -17,5 +17,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x21 */ public bool ForceSpecialMessage;
         /* 0x22 */ public bool HideInSeasonRewards;
         /* 0x23 */ public bool Silent;
+        /* 0x28 */ public NMSString0x10 SeasonRewardListFormat;
+        /* 0x38 */ public NMSString0x10 RequiresTech;
     }
 }

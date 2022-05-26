@@ -6,7 +6,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x98, GUID = 0xBB39956A6C381A25, NameHash = 0x858F65761E6CEB71)]
+    [NMS(Size = 0xA0, GUID = 0x849D0BD64186A466, NameHash = 0x858F65761E6CEB71)]
     public class GcSentinelEncounterOverride : NMSTemplate
     {
         /* 0x00 */ public NMSString0x10 Id;
@@ -22,5 +22,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x80 */ public bool UseCustomOSDIcon;
         /* 0x84 */ public GcRealityGameIcons CustomOSDIcon;
         /* 0x88 */ public NMSString0x10 StatusMessage;
+        /* 0x98 */ public bool UseEncounterTypeOverride;
+        /* 0x9C */ public GcEncounterType EncounterTypeOverride;
     }
 }

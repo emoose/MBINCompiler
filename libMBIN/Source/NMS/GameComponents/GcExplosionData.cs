@@ -6,7 +6,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0xC8, GUID = 0xF1AF93332CC66C05, NameHash = 0x8318BC4815036659)]
+    [NMS(Size = 0xC8, GUID = 0x28BCE6FE88D7078F, NameHash = 0x8318BC4815036659)]
     public class GcExplosionData : NMSTemplate
     {
         /* 0x00 */ public NMSString0x10 Id;

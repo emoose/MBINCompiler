@@ -6,7 +6,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x20, GUID = 0x2E8523CF07C4E10A, NameHash = 0x9537448E73030512)]
+    [NMS(Size = 0x28, GUID = 0xA8C867067F6C8BB2, NameHash = 0x9537448E73030512)]
     public class GcMissionConditionHasProduct : NMSTemplate
     {
         /* 0x00 */ public GcDefaultMissionProductEnum Default;
@@ -16,5 +16,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x1D */ public bool ForceSearchFreighterAndChests;
         /* 0x1E */ public bool SearchEveryShip;
         /* 0x1F */ public bool TakeAmountFromSeasonData;
+        /* 0x20 */ public bool DependentOnSeasonMilestone;
     }
 }

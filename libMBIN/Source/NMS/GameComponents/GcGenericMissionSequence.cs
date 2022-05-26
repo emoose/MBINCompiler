@@ -6,7 +6,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x4B0, GUID = 0x57EE4647E7FBED92, NameHash = 0xFAE86B2801335B6D)]
+    [NMS(Size = 0x4C0, GUID = 0xF265BDFF5E6603EA, NameHash = 0xFAE86B2801335B6D)]
     public class GcGenericMissionSequence : NMSTemplate
     {
         /* 0x000 */ public NMSString0x10 MissionID;
@@ -65,7 +65,8 @@ namespace libMBIN.NMS.GameComponents
         /* 0x4A3 */ public bool IsRecurring;
         /* 0x4A4 */ public bool IsLegacy;
         /* 0x4A5 */ public bool BlocksPinning;
-        /* 0x4A6 */ public bool TelemetryUpload;
-        /* 0x4A7 */ public bool UseSeasonTitleOverride;
+        /* 0x4A8 */ public NMSString0x10 UseCommunityMissionForLog;
+        /* 0x4B8 */ public bool TelemetryUpload;
+        /* 0x4B9 */ public bool UseSeasonTitleOverride;
     }
 }

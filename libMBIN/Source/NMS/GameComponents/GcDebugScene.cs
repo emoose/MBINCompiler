@@ -6,7 +6,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x42E0, GUID = 0xA0166F10651C5F05, NameHash = 0xB5B196A1179FFE00)]
+    [NMS(Size = 0x42F0, GUID = 0x19109B41BCA97BDD, NameHash = 0xB5B196A1179FFE00)]
     public class GcDebugScene : NMSTemplate
     {
         /* 0x0000 */ public bool Active;
@@ -71,12 +71,13 @@ namespace libMBIN.NMS.GameComponents
         /* 0x41F0 */ public float DebugFrigateFlybyRotation;
         /* 0x41F4 */ public float DebugFrigateFlybyHeightOffset;
         /* 0x41F8 */ public NMSString0x10 NormandyReward;
-        /* 0x4208 */ public float CameraSpinTime;
-        /* 0x420C */ public float CameraSpinRevolutions;
-        /* 0x4210 */ public float CameraSpinVerticalOffset;
-        /* 0x4214 */ public float CameraSpinDistanceOffset;
-        /* 0x4218 */ public TkCurveType CameraSpinEasing;
+        /* 0x4208 */ public NMSString0x10 LivingFrigateReward;
+        /* 0x4218 */ public float CameraSpinTime;
+        /* 0x421C */ public float CameraSpinRevolutions;
+        /* 0x4220 */ public float CameraSpinVerticalOffset;
+        /* 0x4224 */ public float CameraSpinDistanceOffset;
+        /* 0x4228 */ public TkCurveType CameraSpinEasing;
         [NMS(Size = 0x6)]
-        /* 0x4220 */ public GcDebugPlanetPos[] PlanetPositions;
+        /* 0x4230 */ public GcDebugPlanetPos[] PlanetPositions;
     }
 }

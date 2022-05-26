@@ -5,11 +5,11 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x4, GUID = 0x12F0CFFEB3957D33, NameHash = 0xA78B3BB0870D4585)]
+    [NMS(Size = 0x4, GUID = 0xE275F1D869BA08BC, NameHash = 0xA78B3BB0870D4585)]
     public class GcCreaturePetRewardActions : NMSTemplate
     {
-        // size: 0x8
-        public enum PetActionEnum { Tickle, Treat, Ride, Customise, Abandon, LayEgg, Adopt, Milk }
+        // size: 0x9
+        public enum PetActionEnum { Tickle, Treat, Ride, Customise, Abandon, LayEgg, Adopt, Milk, HarvestSpecial }
         public PetActionEnum PetAction;
     }
 }

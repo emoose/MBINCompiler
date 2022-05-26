@@ -5,11 +5,12 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x18, GUID = 0x7E13B6505AC7D5A6, NameHash = 0x1518FAA28FFA87F7)]
+    [NMS(Size = 0x20, GUID = 0x7C176A230F59889E, NameHash = 0x1518FAA28FFA87F7)]
     public class GcMissionConditionCreatureOwned : NMSTemplate
     {
-        public int Amount;
-        public TkEqualityEnum Test;
-        public NMSString0x10 SpecificCreatureID;
+        /* 0x00 */ public int Amount;
+        /* 0x04 */ public TkEqualityEnum Test;
+        /* 0x08 */ public NMSString0x10 SpecificCreatureID;
+        /* 0x18 */ public bool AnyPredator;
     }
 }
