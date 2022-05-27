@@ -249,6 +249,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcDungeonGenerationParams.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcAbandonedFreighterComponentData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcMissionSequenceExploreAbandonedFreighter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcRewardSetCurrentMission.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcRewardSettlementJudgement.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcRewardSettlementProgress.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcRewardSettlementStat.cs" />
