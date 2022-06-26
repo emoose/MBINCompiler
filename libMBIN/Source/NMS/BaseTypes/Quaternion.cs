@@ -23,6 +23,7 @@ namespace libMBIN.NMS
 
         /// <summary>
         /// Returns a formatted string for this quaternion.
+        /// <br/>Format: (x, y, z, w)
         /// </summary>
         /// <returns></returns>
         public override string ToString()

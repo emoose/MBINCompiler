@@ -27,6 +27,7 @@ namespace libMBIN.NMS
 
         /// <summary>
         /// Returns a formatted string for this vector.
+        /// <br/>Format: (x, y, z, t)
         /// </summary>
         /// <returns></returns>
         public override string ToString()
