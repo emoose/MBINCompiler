@@ -8,7 +8,16 @@ namespace libMBIN.NMS
     {
         public string Value;
 
-		public static implicit operator VariableSizeString ( string str ) => new VariableSizeString { Value = str };
+        /// <summary>
+        /// Returns the value held by this string.
+        /// </summary>
+        /// <returns></returns>
+        public override string ToString()
+        {
+            return Value;
+        }
+
+        public static implicit operator VariableSizeString ( string str ) => new VariableSizeString { Value = str };
 		public static implicit operator string ( VariableSizeString str ) => str.Value;
 	}
 }
