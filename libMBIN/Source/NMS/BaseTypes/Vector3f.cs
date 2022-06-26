@@ -26,7 +26,7 @@ namespace libMBIN.NMS
         /// <returns></returns>
         public override string ToString()
         {
-            return $"({x}, {y}, {z})";
+            return $"({this.x}, {this.y}, {this.z})";
         }
     }
 }

@@ -14,7 +14,7 @@ namespace libMBIN.NMS
         /// <returns></returns>
         public override string ToString()
         {
-            return Value;
+            return this.Value;
         }
 
         public static implicit operator VariableSizeString ( string str ) => new VariableSizeString { Value = str };

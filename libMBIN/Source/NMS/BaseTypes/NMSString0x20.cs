@@ -20,7 +20,7 @@ namespace libMBIN.NMS
         /// <returns></returns>
         public override string ToString()
         {
-            return Value;
+            return this.Value;
         }
 
         public NMSString0x20(string str)
