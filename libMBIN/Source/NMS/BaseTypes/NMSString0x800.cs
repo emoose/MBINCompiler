@@ -14,6 +14,15 @@ namespace libMBIN.NMS
             return this.Value;
         }
 
+        /// <summary>
+        /// Returns the value held by this string.
+        /// </summary>
+        /// <returns></returns>
+        public override string ToString()
+        {
+            return this.Value;
+        }
+
         public NMSString0x800(string str)
         {
             this.Value = str;

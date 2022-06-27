@@ -20,5 +20,15 @@ namespace libMBIN.NMS
         }
 
         public Quaternion() { }
+
+        /// <summary>
+        /// Returns a formatted string for this quaternion.
+        /// <br/>Format: (x, y, z, w)
+        /// </summary>
+        /// <returns></returns>
+        public override string ToString()
+        {
+            return $"({this.x}, {this.y}, {this.z}, {this.w})";
+        }
     }
 }

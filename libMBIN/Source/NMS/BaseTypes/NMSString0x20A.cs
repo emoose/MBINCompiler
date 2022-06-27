@@ -3,6 +3,9 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS
 {
+    /// <summary>
+    /// This is a modified version of the NMSString0x20 which is aligned (hence the 'A' in the name) to 0x8.
+    /// </summary>
     [NMS(Size = 0x20, Alignment = 0x8)]
     public class NMSString0x20A : NMSTemplate, INMSString
     {
@@ -11,6 +14,15 @@ namespace libMBIN.NMS
         public string Value;
 
         public string StringValue()
+        {
+            return this.Value;
+        }
+
+        /// <summary>
+        /// Returns the value held by this string.
+        /// </summary>
+        /// <returns></returns>
+        public override string ToString()
         {
             return this.Value;
         }

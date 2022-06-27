@@ -18,5 +18,15 @@ namespace libMBIN.NMS
         }
 
         public Vector3f() { }
+
+        /// <summary>
+        /// Returns a formatted string for this vector.
+        /// <br/>Format: (x, y, z)
+        /// </summary>
+        /// <returns></returns>
+        public override string ToString()
+        {
+            return $"({this.x}, {this.y}, {this.z})";
+        }
     }
 }

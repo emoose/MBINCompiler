@@ -16,5 +16,15 @@ namespace libMBIN.NMS
         }
 
         public Vector2f() { }
+
+        /// <summary>
+        /// Returns a formatted string for this vector.
+        /// <br/>Format: (x, y)
+        /// </summary>
+        /// <returns></returns>
+        public override string ToString()
+        {
+            return $"({this.x}, {this.y})";
+        }
     }
 }
