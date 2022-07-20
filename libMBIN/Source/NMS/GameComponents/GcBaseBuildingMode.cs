@@ -6,11 +6,11 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x4, GUID = 0xBFF5DE124DF5E1F4, NameHash = 0xC3799C08BEEDFEF6)]
+    [NMS(Size = 0x4, GUID = 0x7DC95C6172CA4D67, NameHash = 0xC3799C08BEEDFEF6)]
     public class GcBaseBuildingMode : NMSTemplate
     {
-        // size: 0x4
-        public enum BaseBuildingModeEnum { Inactive, Selection, Placement, Browse }
+        // size: 0x5
+        public enum BaseBuildingModeEnum { Inactive, Selection, Placement, Browse, Relatives }
         public BaseBuildingModeEnum BaseBuildingMode;
     }
 }

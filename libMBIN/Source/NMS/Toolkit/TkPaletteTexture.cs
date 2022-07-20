@@ -6,19 +6,16 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(Size = 0x8, GUID = 0xEC3618A820F951D6, NameHash = 0x6A57676B42321253)]
+    [NMS(Size = 0x8, GUID = 0x8AE44D0FFA901B0F, NameHash = 0x6A57676B42321253)]
     public class TkPaletteTexture : NMSTemplate
     {
-        // size: 0x38
-        public enum PaletteEnum { Grass, Plant, Leaf, Wood, Rock, Stone, Crystal, Sand, Dirt, Metal, Paint,
-            Plastic, Fur, Scale, Feather, Water, Cloud, Sky, Space, Underbelly, Undercoat,
-            Snow, SkyHorizon, SkyFog, SkyHeightFog, SkySunset, SkyNight,
-            WaterNear, SpaceCloud, SpaceBottom, SpaceSolar, SpaceLight, Warrior,
-            Scientific, Trader, WarriorAlt, ScientificAlt, TraderAlt, RockSaturated,
-            RockLight, RockDark, PlanetRing, Custom_Head, Custom_Torso, Custom_Chest_Armour,
-            Custom_Backpack, Custom_Arms, Custom_Hands, Custom_Legs,
-            Custom_Feet, Cave, GrassAlt, BioShip_Body, BioShip_Underbelly, BioShip_Cockpit,
-            SailShip_Sails
+        // size: 0x3A
+        public enum PaletteEnum { Grass, Plant, Leaf, Wood, Rock, Stone, Crystal, Sand, Dirt, Metal, 
+            Paint, Plastic, Fur, Scale, Feather, Water, Cloud, Sky, Space, Underbelly, 
+            Undercoat, Snow, SkyHorizon, SkyFog, SkyHeightFog, SkySunset, SkyNight, WaterNear, SpaceCloud, SpaceBottom, 
+            SpaceSolar, SpaceLight, Warrior, Scientific, Trader, WarriorAlt, ScientificAlt, TraderAlt, RockSaturated, RockLight, 
+            RockDark, PlanetRing, Custom_Head, Custom_Torso, Custom_Chest_Armour, Custom_Backpack, Custom_Arms, Custom_Hands, Custom_Legs, Custom_Feet, 
+            Cave, GrassAlt, BioShip_Body, BioShip_Underbelly, BioShip_Cockpit, SailShip_Sails, Freighter, FreighterPaint
         }
         /* 0x0 */ public PaletteEnum Palette;
         // size: 0x8

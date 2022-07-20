@@ -3,10 +3,14 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x40, GUID = 0x1C784EA9C0D6B06B, NameHash = 0x8201F7ADD0F5959D)]
+	[NMS(Size = 0x148, GUID = 0x98BF723C39B6BB58, NameHash = 0x8201F7ADD0F5959D)]
     public class GcFreighterBaseComponentData : NMSTemplate
     {
+        public enum FreighterBaseGenerationModeEnum { Prefab, WFC }
+        /* 0x00 */ public FreighterBaseGenerationModeEnum FreighterBaseGenerationMode;
         [NMS(Size = 0x4)]
-        public GcFreighterBaseOptions[] FreighterBaseOptions;
+        /* 0x08 */ public GcFreighterBaseOptions[] FreighterBaseOptions;
+        /* 0x48 */ public NMSString0x80 FreighterBaseForPlayerReset;
+        /* 0xC8 */ public NMSString0x80 WFCBuildingFile;
     }
 }

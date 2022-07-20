@@ -6,7 +6,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x32E0, GUID = 0xFF2114F411FADD35, NameHash = 0xFD6B0BE30E218605)]
+    [NMS(Size = 0x3370, GUID = 0x4F2D32DDF11EEAE, NameHash = 0xFD6B0BE30E218605)]
     public class GcSeasonalGameModeData : NMSTemplate
     {
         /* 0x0000 */ public int SeasonId;
@@ -42,43 +42,46 @@ namespace libMBIN.NMS.GameComponents
         /* 0x0468 */ public GcSeed ShipSeed;
         /* 0x0478 */ public GcSpaceshipClasses ShipType;
         /* 0x047C */ public bool StartWithFreighter;
-        /* 0x0480 */ public GcAlienRace FreighterRace;
-        /* 0x0488 */ public List<GcBuildingClassification> ValidSpawnBuildings;
-        /* 0x0498 */ public GcInventoryLayout WeaponInventoryLayout;
-        /* 0x04B8 */ public GcInventoryLayout ShipInventoryLayout;
-        /* 0x04D8 */ public GcInventoryLayout ShipTechInventoryLayout;
-        /* 0x04F8 */ public bool UseDefaultAppearance;
-        /* 0x0500 */ public GcInventoryContainer Inventory;
-        /* 0x0660 */ public GcInventoryContainer Inventory_TechOnly;
-        /* 0x07C0 */ public GcInventoryContainer Inventory_Cargo;
-        /* 0x0920 */ public GcInventoryContainer ShipInventory;
-        /* 0x0A80 */ public GcInventoryContainer WeaponInventory;
-        /* 0x0BE0 */ public bool UseRandomPet;
-        /* 0x0BE8 */ public List<GcSeasonPetConstraints> RandomPetConstraints;
+        /* 0x047D */ public NMSString0x80 FreighterBaseOverrideFilename;
+        /* 0x0500 */ public GcAlienRace FreighterRace;
+        /* 0x0504 */ public bool StartAboardFreighter;
+        /* 0x0508 */ public List<GcBuildingClassification> ValidSpawnBuildings;
+        /* 0x0518 */ public GcInventoryLayout WeaponInventoryLayout;
+        /* 0x0538 */ public GcInventoryLayout ShipInventoryLayout;
+        /* 0x0558 */ public GcInventoryLayout ShipTechInventoryLayout;
+        /* 0x0578 */ public bool UseDefaultAppearance;
+        /* 0x0580 */ public GcInventoryContainer Inventory;
+        /* 0x06E0 */ public GcInventoryContainer Inventory_TechOnly;
+        /* 0x0840 */ public GcInventoryContainer Inventory_Cargo;
+        /* 0x09A0 */ public GcInventoryContainer ShipInventory;
+        /* 0x0B00 */ public GcInventoryContainer WeaponInventory;
+        /* 0x0C60 */ public bool UseRandomPet;
+        /* 0x0C68 */ public List<GcSeasonPetConstraints> RandomPetConstraints;
         [NMS(Size = 0x12)]
-        /* 0x0BF8 */ public GcPetData[] SpecificPets;
-        /* 0x3238 */ public List<GcSandwormTimerAndFrequencyOverride> SandwormOverrides;
-        /* 0x3248 */ public bool SandwormGlobalOverride;
-        /* 0x324C */ public float SandwormGlobalOverrideTimer;
-        /* 0x3250 */ public float SandwormGlobalOverrideSpawnChance;
-        /* 0x3254 */ public bool StartNextToShip;
-        /* 0x3258 */ public float DistanceFromShipAtStartOfGame;
-        /* 0x325C */ public bool ShipStartsDamaged;
-        /* 0x325D */ public bool AllowMissionDetailMessages;
-        /* 0x325E */ public bool UseStartPlanetObjectListOverrides;
-        /* 0x3260 */ public NMSString0x10 StartPlanetRareSubstanceOverride;
-        /* 0x3270 */ public bool TrashInventoryOnGalaxyTravel;
-        /* 0x3274 */ public int FreighterBattleEarlyWarpsOverride;
-        /* 0x3278 */ public bool ForceDeepSpaceAmbientFrigatesOnInfested;
-        /* 0x327C */ public int TechCostMultiplier;
-        /* 0x3280 */ public List<NMSString0x10> NeverLearnableTech;
-        /* 0x3290 */ public bool IncreaseXClassTechOddsWithCommTier;
-        /* 0x3294 */ public float AbandonedFreighterHazardProtectionMul;
-        /* 0x3298 */ public int QuestSubstanceReducer;
-        /* 0x32A0 */ public List<GcSeasonalStage> Stages;
-        /* 0x32B0 */ public GcScanEventTable ScanEventTable;
-        /* 0x32C0 */ public bool ResetSaveOnDeath;
-        /* 0x32C8 */ public List<GcPersistedStatData> StatsToPersistOnReset;
-        /* 0x32D8 */ public bool CompatibleWithState;
+        /* 0x0C78 */ public GcPetData[] SpecificPets;
+        /* 0x32B8 */ public List<GcSandwormTimerAndFrequencyOverride> SandwormOverrides;
+        /* 0x32C8 */ public bool SandwormGlobalOverride;
+        /* 0x32CC */ public float SandwormGlobalOverrideTimer;
+        /* 0x32D0 */ public float SandwormGlobalOverrideSpawnChance;
+        /* 0x32D4 */ public bool StartNextToShip;
+        /* 0x32D8 */ public float DistanceFromShipAtStartOfGame;
+        /* 0x32DC */ public bool ShipStartsDamaged;
+        /* 0x32DD */ public bool AllowMissionDetailMessages;
+        /* 0x32DE */ public bool UseStartPlanetObjectListOverrides;
+        /* 0x32E0 */ public NMSString0x10 StartPlanetRareSubstanceOverride;
+        /* 0x32F0 */ public bool TrashInventoryOnGalaxyTravel;
+        /* 0x32F4 */ public int FreighterBattleEarlyWarpsOverride;
+        /* 0x32F8 */ public bool ForceDeepSpaceAmbientFrigatesOnInfested;
+        /* 0x32FC */ public int TechCostMultiplier;
+        /* 0x3300 */ public List<NMSString0x10> NeverLearnableTech;
+        /* 0x3310 */ public List<NMSString0x10> ForgottenProducts;
+        /* 0x3320 */ public bool IncreaseXClassTechOddsWithCommTier;
+        /* 0x3324 */ public float AbandonedFreighterHazardProtectionMul;
+        /* 0x3328 */ public int QuestSubstanceReducer;
+        /* 0x3330 */ public List<GcSeasonalStage> Stages;
+        /* 0x3340 */ public GcScanEventTable ScanEventTable;
+        /* 0x3350 */ public bool ResetSaveOnDeath;
+        /* 0x3358 */ public List<GcPersistedStatData> StatsToPersistOnReset;
+        /* 0x3368 */ public bool CompatibleWithState;
     }
 }

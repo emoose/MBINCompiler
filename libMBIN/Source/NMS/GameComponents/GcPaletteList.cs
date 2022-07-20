@@ -6,10 +6,10 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0xE380, GUID = 0xD30F287F6E810E96, NameHash = 0xDF4A26E5B1BF936A)]
+    [NMS(Size = 0xEBA0, GUID = 0xD30F287F6E810E96, NameHash = 0xDF4A26E5B1BF936A)]
     public class GcPaletteList : NMSTemplate
     {
-        [NMS(Size = 0x38, EnumType = typeof(TkPaletteTexture.PaletteEnum))]
+        [NMS(Size = 0x3A, EnumType = typeof(TkPaletteTexture.PaletteEnum))]
         /* 0x0 */ public GcPaletteData[] Palettes;
     }
 }
