@@ -8,7 +8,7 @@ namespace libMBIN.NMS.GameComponents
     [NMS(Size = 0xB8, GUID = 0x9FE0AD3EF56B036C, NameHash = 0xBBB68492659143C4)]
     public class GcByteBeatTemplates : NMSTemplate
     {
-        /* 0x00 */ public List<NMSString0x40> InitalTrees;
+        /* 0x00 */ public List<NMSString0x40> InitialTrees;
         /* 0x10 */ public List<GcByteBeatTemplate> Templates;
         [NMS(Size = 0x12, EnumType = typeof(GcByteBeatToken.ByteBeatTokenEnum))]
         /* 0x20 */ public float[] CombinerWeights;

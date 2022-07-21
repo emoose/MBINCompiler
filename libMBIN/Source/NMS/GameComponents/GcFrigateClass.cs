@@ -3,11 +3,11 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x4, GUID = 0x84FF8B0985606841, NameHash = 0xA3C86E46D2A8CA67)]
+    [NMS(Size = 0x4, GUID = 0xADC2716BE63D089D, NameHash = 0xA3C86E46D2A8CA67)]
     public class GcFrigateClass : NMSTemplate
     {
-        // size: 0x7
-        public enum FrigateClassEnum { Combat, Exploration, Mining, Diplomacy, Support, Normandy, DeepSpace }
+        // size: 0x8
+        public enum FrigateClassEnum { Combat, Exploration, Mining, Diplomacy, Support, Normandy, DeepSpace, DeepSpaceCommon }
         public FrigateClassEnum FrigateClass;
     }
 }

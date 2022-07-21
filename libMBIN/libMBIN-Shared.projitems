@@ -1969,7 +1969,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcCustomisationFreighterEngineEffect.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcDoShipFlybyMineAsteroids.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcEncounterStateComponentData.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcFreighterBaseGlobals.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Globals\GcFreighterBaseGlobals.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcFreighterNPCSpawnPriority.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcFreighterNPCType.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcFreighterRoomNPCData.cs" />

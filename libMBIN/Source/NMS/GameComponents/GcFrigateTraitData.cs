@@ -10,7 +10,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x10 */ public NMSString0x20A DisplayName;
         /* 0x30 */ public GcFrigateStatType FrigateStatType;
         /* 0x34 */ public GcFrigateTraitStrength Strength;
-        [NMS(Size = 0x7, EnumType = typeof(GcFrigateClass.FrigateClassEnum))]
+        [NMS(Size = 0x8, EnumType = typeof(GcFrigateClass.FrigateClassEnum))]
         /* 0x38 */ public int[] ChanceOfBeingOffered;
     }
 }

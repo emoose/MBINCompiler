@@ -6,11 +6,11 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x4, GUID = 0x62DC210F3945CB15, NameHash = 0x20BC4D823F8443DB)]
+    [NMS(Size = 0x4, GUID = 0xA216EBAC011E5BA1, NameHash = 0x20BC4D823F8443DB)]
     public class GcFrigateFlybyType : NMSTemplate
     {
-        // size: 0x4
-        public enum FrigateFlybyTypeEnum { SingleShip, AmbientGroup, ScriptedGroup, DeepSpace }
+        // size: 0x5
+        public enum FrigateFlybyTypeEnum { SingleShip, AmbientGroup, ScriptedGroup, DeepSpace, DeepSpaceCommon }
         /* 0x0 */ public FrigateFlybyTypeEnum FrigateFlybyType;
     }
 }

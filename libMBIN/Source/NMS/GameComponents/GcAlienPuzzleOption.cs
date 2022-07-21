@@ -6,7 +6,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0xE0, GUID = 0x8C04D3A2DD96E668, NameHash = 0x3FE862FE8570BE69)]
+    [NMS(Size = 0x100, GUID = 0x1CF40C4F1230A841, NameHash = 0x3FE862FE8570BE69)]
     public class GcAlienPuzzleOption : NMSTemplate
     {
         /* 0x00 */ public NMSString0x20A Name;
@@ -23,9 +23,10 @@ namespace libMBIN.NMS.GameComponents
         /* 0x78 */ public NMSString0x20A NextInteraction;
         /* 0x98 */ public bool SelectedOnBackOut;
         /* 0x9C */ public GcAudioWwiseEvents AudioEvent;
-        /* 0xA0 */ public GcMissionConditionTest EnablingConditionTest;
-        /* 0xA8 */ public List<NMSTemplate> EnablingConditions;
-        /* 0xB8 */ public NMSString0x20A EnablingConditionId;
-        /* 0xD8 */ public GcWordCategoryTableEnum WordCategory;
+        /* 0xA0 */ public NMSString0x20A TitleOverride;
+        /* 0xC0 */ public GcMissionConditionTest EnablingConditionTest;
+        /* 0xC8 */ public List<NMSTemplate> EnablingConditions;
+        /* 0xD8 */ public NMSString0x20A EnablingConditionId;
+        /* 0xF8 */ public GcWordCategoryTableEnum WordCategory;
     }
 }
