@@ -1,12 +1,16 @@
-﻿using libMBIN.NMS.Toolkit;
+﻿using System;
+using System.Collections.Generic;
+
+using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x350, GUID = 0xE00FD71EA06ABA75, NameHash = 0xE7D049A3A9D077A8)]
+    [NMS(Size = 0x350, GUID = 0x32E6322B9724F800, NameHash = 0xE7D049A3A9D077A8)]
     public class GcGeneratorUnitComponentData : NMSTemplate
     {
-		public enum GeneratorUnitTypeEnum { MiningUnit, GasHarvester }
+        // size: 0x3
+        public enum GeneratorUnitTypeEnum { MiningUnit, GasHarvester, SystemHoover }
 		/* 0x000 */ public GeneratorUnitTypeEnum GeneratorUnitType;
         /* 0x004 */ public int ResourceMaintenanceSlotOverride;
         [NMS(Size = 0x10, EnumType = typeof(GcBiomeType.BiomeEnum))]

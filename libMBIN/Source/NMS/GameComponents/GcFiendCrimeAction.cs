@@ -1,12 +1,15 @@
-﻿using libMBIN.NMS.Toolkit;
+﻿using System;
+using System.Collections.Generic;
+
+using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x8, GUID = 0x59FDEDC6EC119BDF, NameHash = 0xDF042CD9CF0C561)]
+    [NMS(Size = 0x8, GUID = 0x4C26329D3938695C, NameHash = 0x0DF042CD9CF0C561)]
     public class GcFiendCrimeAction : NMSTemplate
     {
-        public GcFiendCrime FiendCrimeType;
-        public float FiendCrimeModifier;
+        /* 0x0 */ public GcFiendCrime FiendCrimeType;
+        /* 0x4 */ public float FiendCrimeModifier;
     }
 }

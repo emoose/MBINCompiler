@@ -7,7 +7,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcRewardSpecificProductRecipe : NMSTemplate
     {
         /* 0x00 */ public NMSString0x10 Id;
-        /* 0x10 */ public bool Slient;
+        /* 0x10 */ public bool Silent;
         /* 0x11 */ public bool HideInSeasonRewards;
     }
 }

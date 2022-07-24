@@ -1,12 +1,18 @@
-﻿using libMBIN.NMS.Toolkit;
+﻿using System;
+using System.Collections.Generic;
+
+using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x4, GUID = 0x8441E6AA6DAFDE25, NameHash = 0xFA9A306017ED3640)]
+    [NMS(Size = 0x4, GUID = 0xFA18B90B26D0E9D4, NameHash = 0xFA9A306017ED3640)]
     public class GcRewardFrigateDamageResponse : NMSTemplate
     {
-		public enum ResponseEnum { StayOut, ReturnHome, CheckForMoreDamage, ShowDamagedCaptain, ShowExpeditionCaptian }
-		public ResponseEnum Response;
+        // size: 0x6
+        public enum ResponseEnum { StayOut, ReturnHome, CheckForMoreDamage, ShowDamagedCaptain, ShowExpeditionCaptain,
+            AbortExpedition
+        }
+        /* 0x0 */ public ResponseEnum Response;
     }
 }

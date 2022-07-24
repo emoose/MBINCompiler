@@ -6,7 +6,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0xA0, GUID = 0xE1060BD141027238, NameHash = 0x6E90E2A796E798F4)]
+    [NMS(Size = 0xA0, GUID = 0x89EEC1BAF42214F7, NameHash = 0x6E90E2A796E798F4)]
     public class GcHeavyAirSetting : NMSTemplate
     {
         [NMS(Size = 0x5)]

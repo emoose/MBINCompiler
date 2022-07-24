@@ -1,15 +1,18 @@
-﻿using libMBIN.NMS.Toolkit;
+﻿using System;
+using System.Collections.Generic;
+
+using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x4, GUID = 0x23F63688C28E979D, NameHash = 0xAF90A56B0E99C0CB)]
+    [NMS(Size = 0x4, GUID = 0xCC63EE3FF18D05FE, NameHash = 0xAF90A56B0E99C0CB)]
     public class GcFiendCrime : NMSTemplate
     {
-        // size: 0x8
-		public enum FiendCrimeEnum {
-            None, EggDamaged, EggDestroyed, EggCollected, UnderwaterPropDamaged, UnderwaterPropCollected, RockTransform, GroundPropDamage
+        // size: 0x9
+        public enum FiendCrimeEnum { None, EggDamaged, EggDestroyed, EggCollected, UnderwaterPropDamaged, UnderwaterPropCollected,
+            RockTransform, GroundPropDamage, ShotWorm
         }
-		public FiendCrimeEnum FiendCrime;
+        /* 0x0 */ public FiendCrimeEnum FiendCrime;
     }
 }
