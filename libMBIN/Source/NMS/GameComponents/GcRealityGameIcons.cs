@@ -6,10 +6,10 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x4, GUID = 0x63C0BC9ADCAE3B63, NameHash = 0x878911013D83AEE9)]
+    [NMS(Size = 0x4, GUID = 0xF6136CA74055A1C4, NameHash = 0x878911013D83AEE9)]
     public class GcRealityGameIcons : NMSTemplate
     {
-        // size: 0x55
+        // size: 0x56
         public enum GameIconsEnum { Stamina, NoStamina, EnergyCharge, Scanner, NoScanner, Grave, Resources, Inventory,
             InventoryFull, RareItems, Pirates, PirateScan, Drone, Quad,
             Mech, Walker, DroneOff, Police, AtlasStation, BlackHole, SaveGame, SaveInventory,
@@ -28,7 +28,7 @@ namespace libMBIN.NMS.GameComponents
             GarageMarkerHovercraft, CorruptedDrone, HandHold,
             ShipThumbnailBG, CClass, BClass, AClass, SClass, NoSaveWarning, ExploreMissionPlanetIcon,
             ExploreMissionSystemIcon, PetThumbnailBG, SettlementOSD,
-            Stealth, StealthEmpty
+            Stealth, StealthEmpty, DefenceForce
         }
         /* 0x0 */ public GameIconsEnum GameIcons;
     }
