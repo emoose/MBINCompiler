@@ -6,7 +6,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x13520, GUID = 0xFA9B9247B798D3E4, NameHash = 0x0392CEA8FE98D0F4)]
+    [NMS(Size = 0x13630, GUID = 0x66F1E7DD3AAA747B, NameHash = 0x0392CEA8FE98D0F4)]
     public class GcScannerIcons : NMSTemplate
     {
         /* 0x00000 */ public GcScannerIcon TaggedBuilding;
@@ -102,5 +102,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x131F8 */ public GcScannerIcon OtherPlayerSettlement;
         /* 0x13304 */ public GcScannerIcon FriendlyDrone;
         /* 0x13410 */ public GcScannerIcon PirateRaid;
+        /* 0x1351C */ public GcScannerIcon FuelAsteroid;
     }
 }

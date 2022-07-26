@@ -1,11 +1,12 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x68, GUID = 0x7B02CE1010B72306, NameHash = 0x184558FBF0A370E2)]
+    [NMS(Size = 0x78, GUID = 0x237396867B77CCC2, NameHash = 0x184558FBF0A370E2)]
     public class GcOutpostComponentData : NMSTemplate
     {
         /* 0x00 */ public bool Anomaly;
@@ -33,6 +34,9 @@ namespace libMBIN.NMS.GameComponents
         /* 0x4C */ public float TakeOffSpeed;
         /* 0x50 */ public float TakeOffBoost;
         /* 0x54 */ public float TakeOffExtraAIHeight;
-        /* 0x58 */ public List<GcOutpostLSystemPair> LSystems;
+        /* 0x58 */ public float PostTakeOffExtraPlayerHeight;
+        /* 0x5C */ public float PostTakeOffExtraPlayerSpeed;
+        /* 0x60 */ public float TakeOffProgressForExtraHeight;
+        /* 0x68 */ public List<GcOutpostLSystemPair> LSystems;
     }
 }

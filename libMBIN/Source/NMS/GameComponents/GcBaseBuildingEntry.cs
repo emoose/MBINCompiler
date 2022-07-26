@@ -1,62 +1,65 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x278, GUID = 0xB9BCACA4DB13794C, NameHash = 0xA6F7B710166F6076)]
+    [NMS(Size = 0x290, GUID = 0x5104E440BBC7AF54, NameHash = 0xA6F7B710166F6076)]
     public class GcBaseBuildingEntry : NMSTemplate
     {
         /* 0x000 */ public NMSString0x10 ID;
-        /* 0x010 */ public bool HasProduct;
-        /* 0x011 */ public bool IsTemporary;
-        /* 0x012 */ public bool IsFromModFolder;
+        /* 0x010 */ public bool IsTemporary;
+        /* 0x011 */ public bool IsFromModFolder;
         /* 0x014 */ public GcBaseBuildingPartStyle Style;
         /* 0x018 */ public TkModelResource PlacementScene;
         /* 0x09C */ public GcBaseBuildingObjectDecorationTypes DecorationType;
         /* 0x0A0 */ public bool IsPlaceable;
         /* 0x0A1 */ public bool IsDecoration;
-        /* 0x0A4 */ public float PlacementNormalOffset;
-        /* 0x0A8 */ public GcBiomeType Biome;
-        /* 0x0AC */ public bool BuildableOnPlanetBase;
-        /* 0x0AD */ public bool BuildableOnSpaceBase;
-        /* 0x0AE */ public bool BuildableOnFreighter;
-        /* 0x0AF */ public bool BuildableOnPlanet;
-        /* 0x0B0 */ public bool BuildableOnPlanetWithProduct;
-        /* 0x0B1 */ public bool BuildableUnderwater;
-        /* 0x0B2 */ public bool BuildableAboveWater;
-        /* 0x0B4 */ public int PlanetLimit;
-        /* 0x0B8 */ public int RegionLimit;
-        /* 0x0BC */ public int PlanetBaseLimit;
-        /* 0x0C0 */ public int FreighterBaseLimit;
-        /* 0x0C4 */ public bool CheckPlaceholderCollision;
-        /* 0x0C5 */ public bool EnableCollision;
-        /* 0x0C6 */ public bool OptionalPhysics;
-        /* 0x0C7 */ public bool CanPlaceOnItself;
-        /* 0x0C8 */ public bool CanRotate3D;
-        /* 0x0C9 */ public bool CanScale;
-        /* 0x0D0 */ public List<GcBaseBuildingEntryGroup> Groups;
-        /* 0x0E0 */ public int StorageContainerIndex;
-        /* 0x0E8 */ public NMSString0x20A ColourPaletteGroupId;
-        /* 0x108 */ public NMSString0x20A DefaultColourPaletteId;
-        /* 0x128 */ public NMSString0x20A MaterialGroupId;
-        /* 0x148 */ public NMSString0x20A DefaultMaterialId;
-        /* 0x168 */ public bool CanChangeColour;
-        /* 0x169 */ public bool CanChangeMaterial;
-        /* 0x16A */ public bool CanPickUp;
-        /* 0x16B */ public bool ShowInBuildMenu;
-        /* 0x170 */ public List<NMSString0x10> CompositePartObjectIDs;
-        /* 0x180 */ public bool RemovesAttachedDecoration;
-        /* 0x181 */ public bool EditsTerrain;
+        /* 0x0A4 */ public GcBiomeType Biome;
+        /* 0x0A8 */ public bool BuildableOnPlanetBase;
+        /* 0x0A9 */ public bool BuildableOnSpaceBase;
+        /* 0x0AA */ public bool BuildableOnFreighter;
+        /* 0x0AB */ public bool BuildableOnPlanet;
+        /* 0x0AC */ public bool BuildableOnPlanetWithProduct;
+        /* 0x0AD */ public bool BuildableUnderwater;
+        /* 0x0AE */ public bool BuildableAboveWater;
+        /* 0x0B0 */ public int PlanetLimit;
+        /* 0x0B4 */ public int RegionLimit;
+        /* 0x0B8 */ public int PlanetBaseLimit;
+        /* 0x0BC */ public int FreighterBaseLimit;
+        /* 0x0C0 */ public bool CheckPlaceholderCollision;
+        /* 0x0C1 */ public bool CheckPlayerCollision;
+        /* 0x0C2 */ public bool CanRotate3D;
+        /* 0x0C3 */ public bool CanScale;
+        /* 0x0C8 */ public List<GcBaseBuildingEntryGroup> Groups;
+        /* 0x0D8 */ public int StorageContainerIndex;
+        /* 0x0E0 */ public NMSString0x20A ColourPaletteGroupId;
+        /* 0x100 */ public NMSString0x20A DefaultColourPaletteId;
+        /* 0x120 */ public NMSString0x20A MaterialGroupId;
+        /* 0x140 */ public NMSString0x20A DefaultMaterialId;
+        /* 0x160 */ public bool CanChangeColour;
+        /* 0x161 */ public bool CanChangeMaterial;
+        /* 0x162 */ public bool CanPickUp;
+        /* 0x163 */ public bool ShowInBuildMenu;
+        /* 0x168 */ public List<NMSString0x10> CompositePartObjectIDs;
+        /* 0x178 */ public List<NMSString0x10> FamilyIDs;
+        /* 0x188 */ public float BuildEffectAccelerator;
+        /* 0x18C */ public bool RemovesAttachedDecoration;
+        /* 0x18D */ public bool RemovesWhenUnsnapped;
+        /* 0x18E */ public bool EditsTerrain;
+        // size: 0x2
         public enum BaseTerrainEditShapeEnum { Cube, Cylinder }
-        /* 0x184 */ public BaseTerrainEditShapeEnum BaseTerrainEditShape;
-        /* 0x188 */ public bool IsSealed;
-        /* 0x189 */ public bool CloseMenuAfterBuild;
-        /* 0x190 */ public GcBaseLinkGridData LinkGridData;
-        /* 0x1E8 */ public int GhostsCountOverride;
-        /* 0x1EC */ public float SnappingDistanceOverride;
-        /* 0x1F0 */ public int RegionSpawnLOD;
-        /* 0x1F4 */ public TkModelResource NPCInteractionScene;
+        /* 0x190 */ public BaseTerrainEditShapeEnum BaseTerrainEditShape;
+        /* 0x194 */ public float MinimumDeleteDistance;
+        /* 0x198 */ public bool IsSealed;
+        /* 0x199 */ public bool CloseMenuAfterBuild;
+        /* 0x1A0 */ public GcBaseLinkGridData LinkGridData;
+        /* 0x1F8 */ public int GhostsCountOverride;
+        /* 0x1FC */ public bool ShowGhosts;
+        /* 0x200 */ public float SnappingDistanceOverride;
+        /* 0x204 */ public int RegionSpawnLOD;
+        /* 0x208 */ public TkModelResource NPCInteractionScene;
     }
 }

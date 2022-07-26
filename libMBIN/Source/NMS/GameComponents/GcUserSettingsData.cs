@@ -6,7 +6,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x3988, GUID = 0x306ECD9D2DAC9A52, NameHash = 0x3A50D683FD1CF4BF)]
+    [NMS(Size = 0x39A0, GUID = 0xA32D947E48CC5752, NameHash = 0x3A50D683FD1CF4BF)]
     public class GcUserSettingsData : NMSTemplate
     {
         /* 0x0000 */ public bool InvertLookControls;
@@ -17,9 +17,13 @@ namespace libMBIN.NMS.GameComponents
         /* 0x0008 */ public int ScreenBrightness;
         /* 0x000C */ public int MusicVolume;
         /* 0x0010 */ public int SfxVolume;
-        /* 0x0014 */ public int LookSensitivityV2;
-        /* 0x0018 */ public int FlightSensitivityV2;
-        /* 0x001C */ public int MouseSpringSmoothing;
+        /* 0x0014 */ public int LookSensitivityMode1;
+        /* 0x0018 */ public int LookSensitivityMode2;
+        /* 0x001C */ public int FlightSensitivityMode1;
+        /* 0x0020 */ public int FlightSensitivityMode2;
+        /* 0x0024 */ public int CursorSensitivityMode1;
+        /* 0x0028 */ public int CursorSensitivityMode2;
+        /* 0x002C */ public int MouseSpringSmoothing;
         /* 0x0020 */ public GcBlockListPersistence BlockList;
         /* 0x3870 */ public int MotionBlurAmount;
         /* 0x3874 */ public int Filter;

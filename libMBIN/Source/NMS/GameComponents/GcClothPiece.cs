@@ -6,7 +6,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x380, GUID = 0xF25ACB89E697B5AA, NameHash = 0x7596FBA2C232AC37)]
+    [NMS(Size = 0x370, GUID = 0xB6C2A059DCAAB297, NameHash = 0x7596FBA2C232AC37)]
     public class GcClothPiece : NMSTemplate
     {
         /* 0x000 */ public bool Enabled;
@@ -20,8 +20,8 @@ namespace libMBIN.NMS.GameComponents
         /* 0x098 */ public float ClothHeight;
         /* 0x09C */ public float ParticleRadius;
         /* 0x0A0 */ public float StaticFriction;
-        /* 0x0A4 */ public float ParticleDamping;
-        /* 0x0A8 */ public float GlobalDamping;
+        /* 0x0A4 */ public float DampingWrtFixed;
+        /* 0x0A8 */ public float AbsoluteDamping;
         /* 0x0AC */ public float StandardGravityScale;
         /* 0x0B0 */ public NMSString0x40 InitialShapeReferenceBone;
         // size: 0x3

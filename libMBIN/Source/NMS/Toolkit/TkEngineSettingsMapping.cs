@@ -6,7 +6,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Toolkit
 {
-	[NMS(Size = 0x90, GUID = 0xB3029E8E98933199, NameHash = 0xC02F1D19584B44D)]
+    [NMS(Size = 0x94, GUID = 0xB3029E8E98933199, NameHash = 0x0C02F1D19584B44D)]
     public class TkEngineSettingsMapping : NMSTemplate
     {
         [NMS(Size = 0x4, EnumType = typeof(TkGraphicsDetailTypes.GraphicDetailEnum))]
@@ -21,7 +21,7 @@ namespace libMBIN.NMS.Toolkit
         /* 0x40 */ public float[] CloudsResolutionScale;
         [NMS(Size = 0x4, EnumType = typeof(TkGraphicsDetailTypes.GraphicDetailEnum))]
         /* 0x50 */ public int[] CloudsMaxIterations;
-        [NMS(Size = 0x2F, EnumType = typeof(TkEngineSettingTypes.EngineSettingEnum))]
+        [NMS(Size = 0x31, EnumType = typeof(TkEngineSettingTypes.EngineSettingEnum))]
         /* 0x60 */ public bool[] NeedsGameRestart;
     }
 }

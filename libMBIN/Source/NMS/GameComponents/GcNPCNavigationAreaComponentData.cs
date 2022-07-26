@@ -6,11 +6,12 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x1C, GUID = 0x5565E718EAF218C8, NameHash = 0xB4FC959D6A910DEB)]
+    [NMS(Size = 0x1C, GUID = 0x9A1D5B875B3E9215, NameHash = 0xB4FC959D6A910DEB)]
     public class GcNPCNavigationAreaComponentData : NMSTemplate
     {
-        // size: 0x8
-        public enum NavAreaTypeEnum { Normal, BuildingWithExterior, Debris, Ship, Mech, PlanetMech, Demo, WFCBase
+        // size: 0x9
+        public enum NavAreaTypeEnum { Normal, BuildingWithExterior, Debris, Ship, Mech, PlanetMech, Demo, WFCBase,
+            FreighterBase
         }
         /* 0x00 */ public NavAreaTypeEnum NavAreaType;
         /* 0x04 */ public float MinRadius;

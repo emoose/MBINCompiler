@@ -6,7 +6,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x76E50, GUID = 0x2325725DFAC6CEF5, NameHash = 0x6C4510BB243EFA64)]
+    [NMS(Size = 0x76E50, GUID = 0xC5EFB8C61ACDEED8, NameHash = 0x6C4510BB243EFA64)]
     public class GcPlayerStateData : NMSTemplate
     {
         /* 0x00000 */ public GcUniverseAddressData UniverseAddress;
@@ -130,9 +130,10 @@ namespace libMBIN.NMS.GameComponents
         /* 0x0BE28 */ public GcInventoryContainer FreighterInventory_Cargo;
         /* 0x0BF88 */ public ulong FreighterLastSpawnTime;
         /* 0x0BF90 */ public GcUniverseAddressData FreighterUniverseAddress;
+        /* 0x0BFA8 */ public bool FreighterDismissed;
         /* 0x0BFB0 */ public Vector3f FreighterMatrixAt;
-        /* 0x0BEC0 */ public Vector3f FreighterMatrixUp;
-        /* 0x0BED0 */ public Vector3f FreighterMatrixPos;
+        /* 0x0BFC0 */ public Vector3f FreighterMatrixUp;
+        /* 0x0BFD0 */ public Vector3f FreighterMatrixPos;
         [NMS(Size = 0x4)]
         /* 0x0BFE0 */ public bool[] SquadronUnlockedPilotSlots;
         [NMS(Size = 0x4)]
@@ -188,6 +189,8 @@ namespace libMBIN.NMS.GameComponents
         /* 0x53698 */ public List<GcTradingSupplyData> TradingSupplyData;
         /* 0x536A8 */ public List<GcPortalSaveData> LastPortal;
         /* 0x536B8 */ public GcPortalSaveData VisitedPortal;
+                                                
+                                                
         /* 0x536D8 */ public int KnownPortalRunes;
         /* 0x536DC */ public bool OnOtherSideOfPortal;
         /* 0x536E0 */ public GcTeleportEndpoint OtherSideOfPortalReturnBase;

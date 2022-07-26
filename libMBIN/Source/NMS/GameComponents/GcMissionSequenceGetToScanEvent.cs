@@ -1,9 +1,12 @@
-﻿using libMBIN.NMS.Toolkit;
+﻿using System;
+using System.Collections.Generic;
+
+using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x3B8, GUID = 0x6F9CCC867A54ED73, NameHash = 0x4FB6689285BFE7DE)]
+    [NMS(Size = 0x438, GUID = 0x01FFBFD7AC43F95D, NameHash = 0x4FB6689285BFE7DE)]
     public class GcMissionSequenceGetToScanEvent : NMSTemplate
     {
         /* 0x000 */ public NMSString0x80 Message;
@@ -18,6 +21,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x1B4 */ public NMSString0x80 SurveyInactiveHint;
         /* 0x234 */ public NMSString0x80 SurveySwapHint;
         /* 0x2B4 */ public NMSString0x80 SurveyHint;
-        /* 0x334 */ public NMSString0x80 DebugText;
+        /* 0x334 */ public NMSString0x80 SurveyVehicleHint;
+        /* 0x3B4 */ public NMSString0x80 DebugText;
     }
 }

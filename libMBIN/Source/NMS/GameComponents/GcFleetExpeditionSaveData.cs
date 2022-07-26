@@ -5,10 +5,10 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(Size = 0x1F0, GUID = 0x4CB3ED5D550DACB8, NameHash = 0x1CD96DF6BD8E239C)]
+    [NMS(Size = 0x1F0, GUID = 0x561705883B3C2556, NameHash = 0x1CD96DF6BD8E239C)]
     public class GcFleetExpeditionSaveData : NMSTemplate
     {
-        /* 0x000 */ public GcSeed ResourceSeed;
+        /* 0x000 */ public GcSeed Seed;
         /* 0x010 */ public ulong UA;
         /* 0x020 */ public Vector3f SpawnPosition;
         /* 0x030 */ public Vector3f TerminalPosition;
