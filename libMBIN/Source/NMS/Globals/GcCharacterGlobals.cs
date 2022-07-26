@@ -6,7 +6,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(Size = 0x388, GUID = 0xF85B06DB501B96D7, NameHash = 0x9904F7D363A81377)]
+    [NMS(Size = 0x388, GUID = 0x49686EDCECE0ECFE, NameHash = 0x9904F7D363A81377)]
     public class GcCharacterGlobals : NMSTemplate
     {
         /* 0x000 */ public float PitchTest;
@@ -147,37 +147,38 @@ namespace libMBIN.NMS.Globals
         /* 0x2F8 */ public float NPCSeatedLookAtLateralReduction;
         /* 0x2FC */ public float NPCMinInteractionSearchDist;
         /* 0x300 */ public float NPCMaxInteractionSearchDist;
-        /* 0x304 */ public float NPCMaxSettlementInteractionSearchDist;
-        /* 0x308 */ public float NPCSteeringSpringTime;
-        /* 0x30C */ public float NPCPerceptionRadius;
-        /* 0x310 */ public float NPCSteeringObstacleAvoidStrength;
-        /* 0x314 */ public float NPCSteeringFollowStrength;
-        /* 0x318 */ public float NPCSteeringAvoidStrength;
-        /* 0x31C */ public float NPCSteeringRadius;
-        /* 0x320 */ public float NPCSteeringRepelDist;
-        /* 0x324 */ public float NPCSteeringComingTowardsDegrees;
-        /* 0x328 */ public float NPCSteeringCollisionAvoidAngle;
-        /* 0x32C */ public float NPCSteeringCollisionAvoidStrength;
-        /* 0x330 */ public float NPCSteeringRaySpread;
-        /* 0x334 */ public float NPCSteeringRayLength;
-        /* 0x338 */ public float NPCSteeringRaySphereSize;
-        /* 0x33C */ public float NPCMaxRandomNavPathMinIndoorOffset;
-        /* 0x340 */ public float NPCMaxRandomNavPathMaxIndoorOffset;
-        /* 0x344 */ public float NPCMaxRandomNavPathMinOutdoorOffset;
-        /* 0x348 */ public float NPCMaxRandomNavPathMaxOutdoorOffset;
-        /* 0x34C */ public float NPCBlockedDestRadius;
-        /* 0x350 */ public float NPCFlavourIdleTimeMin;
-        /* 0x354 */ public float NPCFlavourIdleTimeMax;
-        /* 0x358 */ public float NPCMoodIdleDelayChance;
-        /* 0x35C */ public float NPCMoodIdleLowIntensityChance;
-        /* 0x360 */ public float NPCReactToPlayerPresenceDist;
-        /* 0x364 */ public float NPCReactToPlayerPresenceIndividualCooldown;
-        /* 0x368 */ public float NPCReactToPlayerPresenceGloablCooldown;
-        /* 0x36C */ public float NPCReactToPlayerPresenceStaticTimer;
-        /* 0x370 */ public float NPCDisplayThoughtsMaxDuration;
-        /* 0x374 */ public float NPCDisplayThoughtsMaxDistance;
-        /* 0x378 */ public float NPCDisplayThoughtsRefreshInterval;
-        /* 0x37C */ public float NPCDisplayThoughtsProbability;
-        /* 0x380 */ public float NPCPOISelectionNearbyNPCBaseMultiplier;
+        /* 0x304 */ public float NPCMaxFreighterInteractionSearchDist;
+        /* 0x308 */ public float NPCMaxSettlementInteractionSearchDist;
+        /* 0x30C */ public float NPCSteeringSpringTime;
+        /* 0x310 */ public float NPCPerceptionRadius;
+        /* 0x314 */ public float NPCSteeringObstacleAvoidStrength;
+        /* 0x318 */ public float NPCSteeringFollowStrength;
+        /* 0x31C */ public float NPCSteeringAvoidStrength;
+        /* 0x320 */ public float NPCSteeringRadius;
+        /* 0x324 */ public float NPCSteeringRepelDist;
+        /* 0x328 */ public float NPCSteeringComingTowardsDegrees;
+        /* 0x32C */ public float NPCSteeringCollisionAvoidAngle;
+        /* 0x330 */ public float NPCSteeringCollisionAvoidStrength;
+        /* 0x334 */ public float NPCSteeringRaySpread;
+        /* 0x338 */ public float NPCSteeringRayLength;
+        /* 0x33C */ public float NPCSteeringRaySphereSize;
+        /* 0x340 */ public float NPCMaxRandomNavPathMinIndoorOffset;
+        /* 0x344 */ public float NPCMaxRandomNavPathMaxIndoorOffset;
+        /* 0x348 */ public float NPCMaxRandomNavPathMinOutdoorOffset;
+        /* 0x34C */ public float NPCMaxRandomNavPathMaxOutdoorOffset;
+        /* 0x350 */ public float NPCBlockedDestRadius;
+        /* 0x354 */ public float NPCFlavourIdleTimeMin;
+        /* 0x358 */ public float NPCFlavourIdleTimeMax;
+        /* 0x35C */ public float NPCMoodIdleDelayChance;
+        /* 0x360 */ public float NPCMoodIdleLowIntensityChance;
+        /* 0x364 */ public float NPCReactToPlayerPresenceDist;
+        /* 0x368 */ public float NPCReactToPlayerPresenceIndividualCooldown;
+        /* 0x36C */ public float NPCReactToPlayerPresenceGloablCooldown;
+        /* 0x370 */ public float NPCReactToPlayerPresenceStaticTimer;
+        /* 0x374 */ public float NPCDisplayThoughtsMaxDuration;
+        /* 0x378 */ public float NPCDisplayThoughtsMaxDistance;
+        /* 0x37C */ public float NPCDisplayThoughtsRefreshInterval;
+        /* 0x380 */ public float NPCDisplayThoughtsProbability;
+        /* 0x384 */ public float NPCPOISelectionNearbyNPCBaseMultiplier;
     }
 }

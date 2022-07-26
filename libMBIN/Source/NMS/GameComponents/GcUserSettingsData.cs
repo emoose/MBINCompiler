@@ -89,5 +89,6 @@ namespace libMBIN.NMS.GameComponents
         public enum SpaceCombatFollowModeEnum { Disabled, Hold, Toggle }
         /* 0x3974 */ public SpaceCombatFollowModeEnum SpaceCombatFollowMode;
         /* 0x3978 */ public List<NMSString0x80> UpgradedUsers;
+        /* 0x3998 */ public bool AllowWhiteScreenTransitions;
     }
 }
