@@ -6,7 +6,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x88, GUID = 0x3E183E0746AF8ECD, NameHash = 0x74BA808E86F0EC01)]
+    [NMS(Size = 0x88, GUID = 0xF31A50547C883F99, NameHash = 0x74BA808E86F0EC01)]
     public class GcScannableComponentData : NMSTemplate
     {
         /* 0x00 */ public float ScanRange;
@@ -28,6 +28,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x42 */ public bool TellPlayerIfFreighterObjectUsed;
         /* 0x48 */ public NMSString0x20A FreighterObjectAlreadyUsedLocID;
         /* 0x68 */ public bool AllowedToMerge;
+        /* 0x69 */ public bool MarkerActiveWithNodeInactive;
         /* 0x70 */ public NMSString0x10 MissionSurveyId;
         /* 0x80 */ public float MinDisplayDistanceOverride;
     }

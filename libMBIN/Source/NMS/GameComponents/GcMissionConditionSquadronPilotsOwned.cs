@@ -6,10 +6,11 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x8, GUID = 0x243BF91D4FF4DE3B, NameHash = 0x8984A8784D46EE5F)]
+    [NMS(Size = 0xC, GUID = 0x5672B4343D867BBE, NameHash = 0x8984A8784D46EE5F)]
     public class GcMissionConditionSquadronPilotsOwned : NMSTemplate
     {
         /* 0x0 */ public int Amount;
         /* 0x4 */ public TkEqualityEnum Test;
+        /* 0x8 */ public bool TakeNumberFromSeasonData;
     }
 }

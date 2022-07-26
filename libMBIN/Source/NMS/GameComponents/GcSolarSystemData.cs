@@ -6,7 +6,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x1FD0, GUID = 0x0BFDF0C338170D79, NameHash = 0x9B09276BB2795541)]
+    [NMS(Size = 0x20B0, GUID = 0x53E9341D16A62CD2, NameHash = 0x9B09276BB2795541)]
     public class GcSolarSystemData : NMSTemplate
     {
         /* 0x0000 */ public GcSeed Seed;
@@ -40,14 +40,14 @@ namespace libMBIN.NMS.GameComponents
         // size: 0x3
         public enum AsteroidLevelEnum { NoRares, SomeRares, LotsOfRares }
         /* 0x05B8 */ public AsteroidLevelEnum AsteroidLevel;
-        /* 0x05C0*/ public GcPlanetColourData Colours;
-        /* 0x1E40 */ public GcLightProperties Light;
-        /* 0x1E70 */ public GcSpaceSkyProperties Sky;
-        /* 0x1F20 */ public GcScreenFilters ScreenFilter;
-        /* 0x1F24 */ public NMSString0x80 HeavyAir;
-        /* 0x1FA8 */ public List<GcAISpaceshipPreloadCacheData> SystemShips;
-        /* 0x1FB8 */ public GcAlienRace InhabitingRace;
-        /* 0x1FBC */ public GcPlanetTradingData TradingData;
-        /* 0x1FC4 */ public GcPlayerConflictData ConflictData;
+        /* 0x05C0 */ public GcPlanetColourData Colours;
+        /* 0x1F20 */ public GcLightProperties Light;
+        /* 0x1F50 */ public GcSpaceSkyProperties Sky;
+        /* 0x2000 */ public GcScreenFilters ScreenFilter;
+        /* 0x2004 */ public NMSString0x80 HeavyAir;
+        /* 0x2088 */ public List<GcAISpaceshipPreloadCacheData> SystemShips;
+        /* 0x2098 */ public GcAlienRace InhabitingRace;
+        /* 0x209C */ public GcPlanetTradingData TradingData;
+        /* 0x20A4 */ public GcPlayerConflictData ConflictData;
     }
 }

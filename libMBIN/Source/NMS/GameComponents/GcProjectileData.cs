@@ -6,7 +6,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x400, GUID = 0x901F2FB7E492EB63, NameHash = 0x98B648B5C054B7F7)]
+    [NMS(Size = 0x400, GUID = 0x7955FE523C1E4EFB, NameHash = 0x98B648B5C054B7F7)]
     public class GcProjectileData : NMSTemplate
     {
         /* 0x000 */ public NMSString0x10 Id;
@@ -53,7 +53,7 @@ namespace libMBIN.NMS.GameComponents
             Homing = 0x8, HomingLaser = 0x10, ScareCreatures = 0x20, ExplosionForce = 0x40
         }
         [NMSDescription("The enum that describes this field uses Flags. This means that multiple values may be specified simultaneously" +
-                        "by using the notation 'DestroyTerrain|Homing'. Ie. split values with a | character")]
+        "for example, if ValueX = 0x20, ValueY = 0x40: use the notation ''ValueX|ValueY''. Ie. split values with a | character")]
         /* 0x3A0 */ public BehaviourFlagsEnum BehaviourFlags;
         // size: 0x4
         public enum ClassEnum { Player, PlayerShip, Ship, Robot }

@@ -6,23 +6,24 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(Size = 0x370, GUID = 0xD2B8CF555917027C, NameHash = 0xE9525144C4F949EB)]
+    [NMS(Size = 0x370, GUID = 0x54BA2C0CF8D5F7B3, NameHash = 0xE9525144C4F949EB)]
     public class TkParticleData : NMSTemplate
     {
-        /* 0x000 */ public bool StartEnabled;
-        /* 0x001 */ public bool Oneshot;
-        /* 0x004 */ public int MaxCount;
-        /* 0x008 */ public TkParticleBurstData BurstData;
-        /* 0x064 */ public TkEmitterFloatProperty EmissionRate;
-        /* 0x090 */ public float Delay;
-        /* 0x094 */ public TkEmitFromParticleInfo EmitFromParticleInfo;
-        /* 0x09C */ public TkEmitterFloatProperty ParticleLife;
-        /* 0x0C8 */ public TkEmitterFloatProperty EmitterLife;
-        /* 0x0F4 */ public float EmitterMidLifeRatio;
-        /* 0x0F8 */ public TkCurveType EmitterLifeCurve1;
-        /* 0x0FC */ public TkCurveType EmitterLifeCurve2;
-        /* 0x100 */ public float EmitterSpreadAngle;
-        /* 0x104 */ public float EmitterSpreadAngleMin;
+        /* 0x000 */ public uint AudioEvent;
+        /* 0x004 */ public bool StartEnabled;
+        /* 0x005 */ public bool Oneshot;
+        /* 0x008 */ public int MaxCount;
+        /* 0x00C */ public TkParticleBurstData BurstData;
+        /* 0x068 */ public TkEmitterFloatProperty EmissionRate;
+        /* 0x094 */ public float Delay;
+        /* 0x098 */ public TkEmitFromParticleInfo EmitFromParticleInfo;
+        /* 0x0A0 */ public TkEmitterFloatProperty ParticleLife;
+        /* 0x0CC */ public TkEmitterFloatProperty EmitterLife;
+        /* 0x0F8 */ public float EmitterMidLifeRatio;
+        /* 0x0FC */ public TkCurveType EmitterLifeCurve1;
+        /* 0x100 */ public TkCurveType EmitterLifeCurve2;
+        /* 0x104 */ public float EmitterSpreadAngle;
+        /* 0x108 */ public float EmitterSpreadAngleMin;
         /* 0x110 */ public Vector3f EmitterDirection;
         /* 0x120 */ public TkEmitterFloatProperty ParticleSpeedMultiplier;
         /* 0x14C */ public TkEmitterFloatProperty ParticleGravity;
@@ -44,8 +45,9 @@ namespace libMBIN.NMS.Toolkit
         // size: 0x3
         public enum AlignmentEnum { Rotation, Velocity, VelocityScreenSpace }
         /* 0x278 */ public AlignmentEnum Alignment;
-        // size: 0x7
-        public enum BillboardAlignmentEnum { Screen, XLocal, YLocal, ZLocal, NegativeXLocal, NegativeYLocal, NegativeZLocal
+        // size: 0x8
+        public enum BillboardAlignmentEnum { Screen, XLocal, YLocal, ZLocal, NegativeXLocal, NegativeYLocal, NegativeZLocal,
+            ScreenWorld
         }
         /* 0x27C */ public BillboardAlignmentEnum BillboardAlignment;
         /* 0x280 */ public Vector3f RotationPivot;
@@ -66,10 +68,14 @@ namespace libMBIN.NMS.Toolkit
         /* 0x2F0 */ public Colour ColourMiddle;
         /* 0x300 */ public Colour ColourEnd;
         /* 0x310 */ public TkEmitterFloatProperty AlphaThreshold;
-        /* 0x340 */ public NMSString0x10 UserColour;
-        /* 0x350 */ public float MaxRenderDistance;
-        /* 0x354 */ public float MaxSpawnDistance;
-        /* 0x358 */ public float SoftFadeStrength;
-        /* 0x35C */ public TkFloatRange CameraDistanceFade;
+        // size: 0x2
+        public enum OnRefractionsDisabledEnum { Hide, AlphaBlend }
+        /* 0x33C */ public OnRefractionsDisabledEnum OnRefractionsDisabled;
+        /* 0x340 */ public bool FadeRefractionsAtScreenEdge;
+        /* 0x348 */ public NMSString0x10 UserColour;
+        /* 0x358 */ public float MaxRenderDistance;
+        /* 0x35C */ public float MaxSpawnDistance;
+        /* 0x360 */ public float SoftFadeStrength;
+        /* 0x364 */ public TkFloatRange CameraDistanceFade;
     }
 }

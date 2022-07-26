@@ -1,9 +1,12 @@
+using System;
+using System.Collections.Generic;
+
 using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0xB0, GUID = 0x7485915F0C275769, NameHash = 0xAF7590464B3BC984)]
+    [NMS(Size = 0xB0, GUID = 0x67EFEBE4D5061994, NameHash = 0xAF7590464B3BC984)]
     public class GcRewardDeath : NMSTemplate
     {
         /* 0x00 */ public NMSString0x10 PlayerDamage;

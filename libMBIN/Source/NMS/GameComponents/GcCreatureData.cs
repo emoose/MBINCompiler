@@ -1,11 +1,12 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x68, GUID = 0x4A290062CBDE61A1, NameHash = 0x132EB7906E53B7A7)]
+    [NMS(Size = 0x68, GUID = 0xAC26274CF440839F, NameHash = 0x132EB7906E53B7A7)]
     public class GcCreatureData : NMSTemplate
     {
         /* 0x00 */ public NMSString0x10 Id;
@@ -15,6 +16,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x1C */ public bool EcoSystemCreature;
         /* 0x1D */ public bool CanBeFemale;
         /* 0x20 */ public List<GcCreatureTagAndRarity> Tags;
+        // size: 0x4
         public enum MoveAreaEnum { Ground, Water, Air, Space }
         /* 0x30 */ public MoveAreaEnum MoveArea;
         /* 0x34 */ public float MinScale;
