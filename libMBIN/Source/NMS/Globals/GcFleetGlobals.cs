@@ -68,7 +68,7 @@ namespace libMBIN.NMS.Globals
         /* 0x015C */ public GcNumberedTextList FrigateDamageDescriptions;
         /* 0x0180 */ public GcNumberedTextList FrigateGoodMoods;
         /* 0x01A4 */ public GcNumberedTextList FrigateBadMoods;
-        [NMS(Size = 0xB, EnumType = typeof(GcFrigateClass.FrigateClassEnum))]
+        [NMS(Size = 0xB, EnumType = typeof(GcFrigateStatType.FrigateStatTypeEnum))]
         /* 0x01C8 */ public GcNumberedTextList[] DeepSpaceFrigateMoods;
         /* 0x0354 */ public GcNumberedTextList FrigateExtraNotes;
         /* 0x0378 */ public float RadiusRequiredForFrigateSpawn;
