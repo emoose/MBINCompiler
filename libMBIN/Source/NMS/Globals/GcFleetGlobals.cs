@@ -6,7 +6,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(Size = 0x1A00, GUID = 0x9B93EC4CB435711A, NameHash = 0xB032629C37506E6A)]
+    [NMS(Size = 0x1C40, GUID = 0x4966DEECD69CF4DF, NameHash = 0xB032629C37506E6A)]
     public class GcFleetGlobals : NMSTemplate
     {
         /* 0x0000 */ public Vector3f FreighterCustomiserSunAngleAdjust;
@@ -15,7 +15,7 @@ namespace libMBIN.NMS.Globals
         /* 0x0034 */ public float SingleShipFlybyDistance;
         /* 0x0038 */ public float SingleShipFlybyMaxAngle;
         /* 0x003C */ public float SingleShipFlybyHeightOffset;
-        /* 0x0040 */ public float DistanceForFlybyCommsReset;
+        /* 0x0040 */ public float DistanceForSingleShipFlybyCommsReset;
         /* 0x0044 */ public float DistanceForPurchaseReset;
         /* 0x0048 */ public float CombatFrigateSpawnMinRange;
         /* 0x004C */ public float CombatFrigateSpawnAngle;
@@ -48,9 +48,10 @@ namespace libMBIN.NMS.Globals
         /* 0x0106 */ public bool ShowSeeds;
         /* 0x0107 */ public bool DisablePlayerFleets;
         /* 0x0108 */ public NMSString0x20A DebugInterventionEvent;
-        // size: 0x9
-        public enum ForceDebriefEntryTypeEnum { None, PrimarySuccess, PrimaryFailure, PrimaryDamage, SecondarySuccess, SecondaryFailure,
-            SecondaryDamage, GenericSuccess, GenericFailure
+        // size: 0xB
+        public enum ForceDebriefEntryTypeEnum { None, PrimarySuccess, WhaleSuccess, PrimaryFailure, PrimaryDamage, SecondarySuccess,
+            SecondaryFailure, SecondaryDamage, GenericSuccess, GenericFailure,
+            WhaleFailure
         }
         /* 0x0128 */ public ForceDebriefEntryTypeEnum ForceDebriefEntryType;
         /* 0x012C */ public int ForcedSequentialEventsStartingIndex;
@@ -67,91 +68,95 @@ namespace libMBIN.NMS.Globals
         /* 0x015C */ public GcNumberedTextList FrigateDamageDescriptions;
         /* 0x0180 */ public GcNumberedTextList FrigateGoodMoods;
         /* 0x01A4 */ public GcNumberedTextList FrigateBadMoods;
-        /* 0x01C8 */ public GcNumberedTextList FrigateExtraNotes;
-        /* 0x01EC */ public float RadiusRequiredForFrigateSpawn;
-        /* 0x01F0 */ public float SpawnDelayForNewFrigates;
-        /* 0x01F4 */ public float SpawnDelayForFleetFrigates;
-        /* 0x01F8 */ public float SpawnDelayForReturningFrigates;
-        /* 0x01FC */ public float SpawnDelayRandomMin;
-        /* 0x0200 */ public float SpawnDelayRandomMax;
-        /* 0x0204 */ public float SpawnDelayIncreasePerFrigate;
-        /* 0x0208 */ public float DespawnDelay;
-        /* 0x020C */ public float DespawnDelayIncreasePerFrigate;
-        /* 0x0210 */ public float FrigatesPerSecondForInstantSpawn;
-        /* 0x0214 */ public float HologramSwapSpeed;
-        /* 0x0218 */ public NMSString0x20A TerminalNeedsAssignmentPuzzleID;
-        /* 0x0238 */ public NMSString0x20A TerminalInterventionPuzzleID;
-        /* 0x0258 */ public NMSString0x20A TerminalDamagePuzzleID;
-        /* 0x0278 */ public NMSString0x20A TerminalActivePuzzleID;
-        /* 0x0298 */ public NMSString0x20A TerminalDebriefPuzzleID;
-        /* 0x02B8 */ public NMSString0x20A NormandyActivePuzzleID;
-        /* 0x02D8 */ public NMSString0x20A NormandyDebriefPuzzleID;
-        /* 0x02F8 */ public NMSString0x20A DeepSpaceFrigateActivePuzzleID;
-        /* 0x0318 */ public NMSString0x20A DeepSpaceFrigateDebriefPuzzleID;
-        /* 0x0338 */ public NMSString0x20A NeedFrigatesPuzzleID;
-        /* 0x0358 */ public NMSString0x20A NewExpeditionsAvailablePuzzleID;
-        /* 0x0378 */ public NMSString0x20A NeedExpeditionTerminalPuzzleID;
-        /* 0x0398 */ public NMSString0x20A NeedAvailableExpeditionTerminalPuzzleID;
-        /* 0x03B8 */ public NMSString0x20A SelectExpeditionPuzzleID;
-        /* 0x03D8 */ public int NumberOfExpeditionChoices;
-        /* 0x03DC */ public int ExpeditionDifficultyVariance;
-        /* 0x03E0 */ public float ExpeditionDifficultyIncreaseForEachAdditionalFrigate;
-        /* 0x03E4 */ public int MinExpeditionStatValue;
-        /* 0x03E8 */ public int MaxExpeditionStatValue;
-        /* 0x03EC */ public int NumberOfFrigatesPurchasedToEndEasyExpeditions;
-        /* 0x03F0 */ public int TimeTakenForExpeditionEvent_Easy;
-        /* 0x03F4 */ public int TimeTakenForExpeditionEvent;
-        /* 0x03F8 */ public int LightYearsPerExpeditionEvent_Easy;
-        /* 0x03FC */ public int LightYearsPerExpeditionEvent;
-        /* 0x0400 */ public int NumberOfUAChangesPerExpeditionEvent;
-        /* 0x0404 */ public int TimeBetweenPassiveIncomeTicks;
-        /* 0x0408 */ public List<GcExpeditionPaymentToken> FreighterTokenProductIDs;
-        /* 0x0418 */ public GcPassiveFrigateIncomeArray PassiveIncomes;
-        /* 0x04F8 */ public List<GcExpeditionPowerup> Powerups;
-        /* 0x0508 */ public int FreighterTokenMinimumSpend;
-        /* 0x050C */ public int PercentChanceOfInterventionEvent;
-        /* 0x0510 */ public int FirstEventIndexWhichCanBeIntervention;
-        /* 0x0514 */ public float TimeBeforePlayerAlertedToInterventionEvent;
-        /* 0x0518 */ public int MaxDiceRollWhenCalculatingExpeditionEventResult;
-        /* 0x051C */ public float DifficultyMultiplierForBalancedExpeditions;
-        /* 0x0520 */ public float DifficultyMultiplierForNonPrimaryEvents;
-        /* 0x0524 */ public int StatPointsAwardedForLevelUp;
-        /* 0x0528 */ public int MinGapBetweenExpeditionLogEntries;
-        /* 0x052C */ public int MaxGapBetweenExpeditionLogEntries;
-        /* 0x0530 */ public float TimeBetweenDebriefLettersAppearing;
-        /* 0x0534 */ public float TimeBetweenDebriefLogSectionsAppearing;
-        /* 0x0538 */ public float TimeBetweenDebriefLogsAppearing;
-        /* 0x053C */ public float TimeBeforeDebriefLogsStart;
-        /* 0x0540 */ public bool ShowMissingRewardDescriptions;
-        /* 0x0548 */ public NMSString0x20A CommunicatorDamagePuzzleTableEntry;
-        /* 0x0568 */ public NMSString0x20A FrigateDamagePuzzleTableEntry;
-        /* 0x0588 */ public NMSString0x20A FrigatePurchasePuzzleTableEntry;
-        /* 0x05A8 */ public List<int> DifficultyModifier;
-        /* 0x05B8 */ public List<GcExpeditionDebriefPunctuation> DebriefPunctuationList;
-        /* 0x05C8 */ public GcExpeditionDurationValues ExpeditionDurations;
-        /* 0x05DC */ public GcFrigateClassCost FrigateBaseCost;
-        /* 0x05F8 */ public GcFrigateClassCost FrigateCostVariance;
-        /* 0x0614 */ public GcInventoryClassCostMultiplier FrigateCostMultiplier;
-        /* 0x0628 */ public GcFrigateTraitStrengthByType FrigateTraitStrengths;
-        /* 0x0998 */ public GcFrigateStatsByClass FrigateInitialStats;
-        /* 0x0C70 */ public GcFrigateTraitIcons TraitIcons;
-        /* 0x11F0 */ public GcFrigateTraitIcons NegativeTraitIcons;
-        /* 0x1770 */ public GcScanEffectData FrigateScanEffect;
-        /* 0x17C0 */ public GcScanEffectData FrigateHologramScanEffect;
-        /* 0x1810 */ public GcScanEffectData CompletedFrigateHologramScanEffect;
-        /* 0x1860 */ public GcScanEffectData DamagedFrigateHologramScanEffect;
-        /* 0x18B0 */ public GcScanEffectData DestroyedFrigateHologramScanEffect;
-        /* 0x1900 */ public GcExpeditionEventOccurrenceRate EventTypeOccurrenceChance;
-        /* 0x1968 */ public List<NMSString0x80> FrigateHologramModels;
-        /* 0x1978 */ public List<NMSString0x80> FrigatePlanetModels;
-        /* 0x1988 */ public List<int> ExpeditionRankBoundaries;
-        /* 0x1998 */ public List<int> FrigateLevelVictoriesRequired;
-        /* 0x19A8 */ public List<GcExpeditionDifficultyKeyframe> ExpeditionDifficultyKeyframes;
-        /* 0x19B8 */ public List<NMSString0x80> FrigateInteriorsToCache;
-        /* 0x19C8 */ public int NormandyFailures;
-        /* 0x19CC */ public int NormandyDamageEvents;
-        /* 0x19D0 */ public List<NMSString0x10> NormandyTraits;
-        /* 0x19E0 */ public List<NMSString0x10> DeepSpaceFrigateTraits;
-        /* 0x19F0 */ public int MaxNumberOfPlayerShipsInFreighterHangar;
+        [NMS(Size = 0xB, EnumType = typeof(GcFrigateStatType.FrigateStatTypeEnum))]
+        /* 0x01C8 */ public GcNumberedTextList[] DeepSpaceFrigateMoods;
+        /* 0x0354 */ public GcNumberedTextList FrigateExtraNotes;
+        /* 0x0378 */ public float RadiusRequiredForFrigateSpawn;
+        /* 0x037C */ public float SpawnDelayForNewFrigates;
+        /* 0x0380 */ public float SpawnDelayForFleetFrigates;
+        /* 0x0384 */ public float SpawnDelayForReturningFrigates;
+        /* 0x0388 */ public float SpawnDelayRandomMin;
+        /* 0x038C */ public float SpawnDelayRandomMax;
+        /* 0x0390 */ public float SpawnDelayIncreasePerFrigate;
+        /* 0x0394 */ public float DespawnDelay;
+        /* 0x0398 */ public float DespawnDelayIncreasePerFrigate;
+        /* 0x039C */ public float FrigatesPerSecondForInstantSpawn;
+        /* 0x03A0 */ public float HologramSwapSpeed;
+        /* 0x03A8 */ public NMSString0x20A TerminalNeedsAssignmentPuzzleID;
+        /* 0x03C8 */ public NMSString0x20A TerminalInterventionPuzzleID;
+        /* 0x03E8 */ public NMSString0x20A TerminalDamagePuzzleID;
+        /* 0x0408 */ public NMSString0x20A TerminalActivePuzzleID;
+        /* 0x0428 */ public NMSString0x20A TerminalDebriefPuzzleID;
+        /* 0x0448 */ public NMSString0x20A NormandyActivePuzzleID;
+        /* 0x0468 */ public NMSString0x20A NormandyDebriefPuzzleID;
+        /* 0x0488 */ public NMSString0x20A DeepSpaceFrigateActivePuzzleID;
+        /* 0x04A8 */ public NMSString0x20A DeepSpaceFrigateDebriefPuzzleID;
+        /* 0x04C8 */ public NMSString0x20A NeedFrigatesPuzzleID;
+        /* 0x04E8 */ public NMSString0x20A NewExpeditionsAvailablePuzzleID;
+        /* 0x0508 */ public NMSString0x20A NeedExpeditionTerminalPuzzleID;
+        /* 0x0528 */ public NMSString0x20A NeedAvailableExpeditionTerminalPuzzleID;
+        /* 0x0548 */ public NMSString0x20A SelectExpeditionPuzzleID;
+        /* 0x0568 */ public int NumberOfExpeditionChoices;
+        /* 0x056C */ public int ExpeditionDifficultyVariance;
+        /* 0x0570 */ public float ExpeditionDifficultyIncreaseForEachAdditionalFrigate;
+        /* 0x0574 */ public int MinExpeditionStatValue;
+        /* 0x0578 */ public int MaxExpeditionStatValue;
+        /* 0x057C */ public int NumberOfFrigatesPurchasedToEndEasyExpeditions;
+        /* 0x0580 */ public int TimeTakenForExpeditionEvent_Easy;
+        /* 0x0584 */ public int TimeTakenForExpeditionEvent;
+        /* 0x0588 */ public int LightYearsPerExpeditionEvent_Easy;
+        /* 0x058C */ public int LightYearsPerExpeditionEvent;
+        /* 0x0590 */ public int NumberOfUAChangesPerExpeditionEvent;
+        /* 0x0594 */ public int TimeBetweenPassiveIncomeTicks;
+        /* 0x0598 */ public List<GcExpeditionPaymentToken> FreighterTokenProductIDs;
+        /* 0x05A8 */ public GcPassiveFrigateIncomeArray PassiveIncomes;
+        /* 0x06A8 */ public List<GcExpeditionPowerup> Powerups;
+        /* 0x06B8 */ public int FreighterTokenMinimumSpend;
+        /* 0x06BC */ public int PercentChanceOfInterventionEvent;
+        /* 0x06C0 */ public int FirstEventIndexWhichCanBeIntervention;
+        /* 0x06C4 */ public float TimeBeforePlayerAlertedToInterventionEvent;
+        /* 0x06C8 */ public int MaxDiceRollWhenCalculatingExpeditionEventResult;
+        /* 0x06CC */ public float DifficultyMultiplierForBalancedExpeditions;
+        /* 0x06D0 */ public float DifficultyMultiplierForNonPrimaryEvents;
+        /* 0x06D4 */ public int StatPointsAwardedForLevelUp;
+        /* 0x06D8 */ public int MinGapBetweenExpeditionLogEntries;
+        /* 0x06DC */ public int MaxGapBetweenExpeditionLogEntries;
+        /* 0x06E0 */ public float TimeBetweenDebriefLettersAppearing;
+        /* 0x06E4 */ public float TimeBetweenDebriefLogSectionsAppearing;
+        /* 0x06E8 */ public float TimeBetweenDebriefLogsAppearing;
+        /* 0x06EC */ public float TimeBeforeDebriefLogsStart;
+        /* 0x06F0 */ public bool ShowMissingRewardDescriptions;
+        /* 0x06F8 */ public NMSString0x20A CommunicatorDamagePuzzleTableEntry;
+        /* 0x0718 */ public NMSString0x20A FrigateDamagePuzzleTableEntry;
+        /* 0x0738 */ public NMSString0x20A FrigatePurchasePuzzleTableEntry;
+        /* 0x0758 */ public List<int> DifficultyModifier;
+        /* 0x0768 */ public List<GcExpeditionDebriefPunctuation> DebriefPunctuationList;
+        /* 0x0778 */ public GcExpeditionDurationValues ExpeditionDurations;
+        /* 0x078C */ public GcFrigateClassCost FrigateBaseCost;
+        /* 0x07AC */ public GcFrigateClassCost FrigateCostVariance;
+        /* 0x07CC */ public GcInventoryClassCostMultiplier FrigateCostMultiplier;
+        /* 0x07E0 */ public GcFrigateTraitStrengthByType FrigateTraitStrengths;
+        /* 0x0B50 */ public GcFrigateStatsByClass FrigateInitialStats;
+        /* 0x0E90 */ public GcFrigateTraitIcons TraitIcons;
+        /* 0x1410 */ public GcFrigateTraitIcons NegativeTraitIcons;
+        /* 0x1990 */ public GcScanEffectData FrigateScanEffect;
+        /* 0x19E0 */ public GcScanEffectData FrigateHologramScanEffect;
+        /* 0x1A30 */ public GcScanEffectData CompletedFrigateHologramScanEffect;
+        /* 0x1A80 */ public GcScanEffectData DamagedFrigateHologramScanEffect;
+        /* 0x1AD0 */ public GcScanEffectData DestroyedFrigateHologramScanEffect;
+        /* 0x1B20 */ public GcExpeditionEventOccurrenceRate EventTypeOccurrenceChance;
+        /* 0x1B88 */ public List<NMSString0x80> FrigateHologramModels;
+        /* 0x1B98 */ public List<NMSString0x80> FrigatePlanetModels;
+        /* 0x1BA8 */ public List<int> ExpeditionRankBoundaries;
+        /* 0x1BB8 */ public List<int> FrigateLevelVictoriesRequired;
+        /* 0x1BC8 */ public List<GcExpeditionDifficultyKeyframe> ExpeditionDifficultyKeyframes;
+        /* 0x1BD8 */ public List<NMSString0x80> FrigateInteriorsToCache;
+        /* 0x1BE8 */ public int NormandyFailures;
+        /* 0x1BEC */ public int NormandyDamageEvents;
+        /* 0x1BF0 */ public List<NMSString0x10> NormandyTraits;
+        /* 0x1C00 */ public List<NMSString0x10> DeepSpaceFrigateTraits;
+        /* 0x1C10 */ public List<NMSString0x10> DeepSpaceCommonPrimaryTraits;
+        /* 0x1C20 */ public List<NMSString0x20> FrigateCaptainPuzzleIds;
+        /* 0x1C30 */ public int MaxNumberOfPlayerShipsInFreighterHangar;
     }
 }

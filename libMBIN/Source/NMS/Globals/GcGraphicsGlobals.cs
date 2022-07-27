@@ -6,7 +6,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(Size = 0xAB0, GUID = 0x0AB91FEAE6D8AD39, NameHash = 0xB24409E83457E875)]
+    [NMS(Size = 0xB10, GUID = 0x8755162A20840555, NameHash = 0xB24409E83457E875)]
     public class GcGraphicsGlobals : NMSTemplate
     {
         /* 0x000 */ public float LUTDistanceFlightMultiplier;
@@ -314,23 +314,23 @@ namespace libMBIN.NMS.Globals
         /* 0x7E4 */ public float SharpenFilterDepthFactorEnd;
         [NMS(Size = 0x4, EnumType = typeof(TkGraphicsDetailTypes.GraphicDetailEnum))]
         /* 0x7E8 */ public TkGraphicsDetailPreset[] GraphicsDetailPresetsPC;
-        /* 0x8D8 */ public TkGraphicsDetailPreset GraphicsDetailPresetPS4;
-        /* 0x914 */ public TkGraphicsDetailPreset GraphicsDetailPresetPS4VR;
-        /* 0x950 */ public TkGraphicsDetailPreset GraphicsDetailPresetPS4Pro;
-        /* 0x98C */ public TkGraphicsDetailPreset GraphicsDetailPresetPS4ProVR;
-        /* 0x9C8 */ public TkGraphicsDetailPreset GraphicsDetailPresetXB1;
-        /* 0xA04 */ public TkGraphicsDetailPreset GraphicsDetailPresetXB1X;
-        /* 0xA40 */ public TkGraphicsDetailPreset GraphicsDetailPresetOberon;
-        /* 0xA7C */ public bool EnableVariableUpdate;
+        /* 0x8F8 */ public TkGraphicsDetailPreset GraphicsDetailPresetPS4;
+        /* 0x93C */ public TkGraphicsDetailPreset GraphicsDetailPresetPS4VR;
+        /* 0x980 */ public TkGraphicsDetailPreset GraphicsDetailPresetPS4Pro;
+        /* 0x9C4 */ public TkGraphicsDetailPreset GraphicsDetailPresetPS4ProVR;
+        /* 0xA08 */ public TkGraphicsDetailPreset GraphicsDetailPresetXB1;
+        /* 0xA4C */ public TkGraphicsDetailPreset GraphicsDetailPresetXB1X;
+        /* 0xA90 */ public TkGraphicsDetailPreset GraphicsDetailPresetOberon;
+        /* 0xAD4 */ public bool EnableVariableUpdate;
         [NMS(Size = 0x4)]
-        /* 0xA80 */ public float[] VariableUpdatePeriodModifers;
-        /* 0xA90 */ public float PhotoModeBloomGainMin;
-        /* 0xA94 */ public float PhotoModeBloomThresholdMin;
-        /* 0xA98 */ public float PhotoModeDefaultBloomValue;
-        /* 0xA9C */ public float PhotoModeMediumValue;
-        /* 0xAA0 */ public float PhotoModeBloomGainMedium;
-        /* 0xAA4 */ public float PhotoModeBloomThresholdMedium;
-        /* 0xAA8 */ public float PhotoModeBloomGainMax;
-        /* 0xAAC */ public float PhotoModeBloomThresholdMax;
+        /* 0xAD8 */ public float[] VariableUpdatePeriodModifers;
+        /* 0xAE8 */ public float PhotoModeBloomGainMin;
+        /* 0xAEC */ public float PhotoModeBloomThresholdMin;
+        /* 0xAF0 */ public float PhotoModeDefaultBloomValue;
+        /* 0xAF4 */ public float PhotoModeMediumValue;
+        /* 0xAF8 */ public float PhotoModeBloomGainMedium;
+        /* 0xAFC */ public float PhotoModeBloomThresholdMedium;
+        /* 0xB00 */ public float PhotoModeBloomGainMax;
+        /* 0xB04 */ public float PhotoModeBloomThresholdMax;
     }
 }

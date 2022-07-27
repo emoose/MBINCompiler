@@ -6,10 +6,11 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(Size = 0xD00, GUID = 0x454F270609CEAE63, NameHash = 0x9B5DDD6D76FBC918)]
+    [NMS(Size = 0xD00, GUID = 0x5669DFB0E8B5048E, NameHash = 0x9B5DDD6D76FBC918)]
     public class GcVehicleGlobals : NMSTemplate
     {
-        /* 0x000 */ public float VehicleSolarRegenFactor;
+        /* 0x000 */ public float UnderwaterScannerIconRangeBoost;
+        /* 0x004 */ public float VehicleSolarRegenFactor;
         /* 0x008 */ public NMSString0x10 VehicleStrongLaser;
         /* 0x018 */ public NMSString0x10 MechStrongLaser;
         /* 0x028 */ public NMSString0x10 SentinelRightArmTech;

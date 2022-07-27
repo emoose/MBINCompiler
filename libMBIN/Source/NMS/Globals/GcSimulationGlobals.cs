@@ -6,7 +6,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(Size = 0xC00, GUID = 0xF4E574DF1A3F5E64, NameHash = 0xD1D7201E3228DD7B)]
+    [NMS(Size = 0xC80, GUID = 0x3FEF7F584D60D980, NameHash = 0xD1D7201E3228DD7B)]
     public class GcSimulationGlobals : NMSTemplate
     {
         /* 0x000 */ public NMSString0x80 StartingSceneFile;
@@ -25,21 +25,22 @@ namespace libMBIN.NMS.Globals
         /* 0x4B8 */ public NMSString0x80 HeavyAirCave;
         /* 0x538 */ public NMSString0x80 HeavyAirUnderwater;
         /* 0x5B8 */ public NMSString0x80 HeavyAirAbandonedFreighter;
-        /* 0x638 */ public List<NMSString0x80> PrefetchScenegraphResources;
-        /* 0x648 */ public List<NMSString0x80> PrefetchMaterialResources;
-        /* 0x658 */ public NMSString0x80 PlanetAtmosphereFile;
-        /* 0x6D8 */ public NMSString0x80 PlanetAtmosphereMaterialFile;
-        /* 0x758 */ public NMSString0x80 PlanetRingFile;
-        /* 0x7D8 */ public NMSString0x80 PlanetRingMaterialFile;
-        /* 0x858 */ public NMSString0x80 PlanetMaterialFile;
-        /* 0x8D8 */ public NMSString0x80 PlaterWaterMaterialFile;
-        /* 0x958 */ public List<NMSString0x80> PlanetTerrainMaterials;
-        /* 0x968 */ public List<NMSString0x80> PrefetchTextureResources;
-        /* 0x978 */ public float WarpTunnelScale;
-        /* 0x97C */ public NMSString0x80 WarpTunnelFile;
-        /* 0x9FC */ public NMSString0x80 BlackHoleTunnelFile;
-        /* 0xA7C */ public NMSString0x80 TeleportTunnelFile;
-        /* 0xAFC */ public NMSString0x80 PortalTunnelFile;
-        /* 0xB7C */ public NMSString0x80 PortalStoryTunnelFile;
+        /* 0x638 */ public NMSString0x80 HeavyAirSpaceStorm;
+        /* 0x6B8 */ public List<NMSString0x80> PrefetchScenegraphResources;
+        /* 0x6C8 */ public List<NMSString0x80> PrefetchMaterialResources;
+        /* 0x6D8 */ public NMSString0x80 PlanetAtmosphereFile;
+        /* 0x758 */ public NMSString0x80 PlanetAtmosphereMaterialFile;
+        /* 0x7D8 */ public NMSString0x80 PlanetRingFile;
+        /* 0x858 */ public NMSString0x80 PlanetRingMaterialFile;
+        /* 0x8D8 */ public NMSString0x80 PlanetMaterialFile;
+        /* 0x958 */ public NMSString0x80 PlaterWaterMaterialFile;
+        /* 0x9D8 */ public List<NMSString0x80> PlanetTerrainMaterials;
+        /* 0x9E8 */ public List<NMSString0x80> PrefetchTextureResources;
+        /* 0x9F8 */ public float WarpTunnelScale;
+        /* 0x9FC */ public NMSString0x80 WarpTunnelFile;
+        /* 0xA7C */ public NMSString0x80 BlackHoleTunnelFile;
+        /* 0xAFC */ public NMSString0x80 TeleportTunnelFile;
+        /* 0xB7C */ public NMSString0x80 PortalTunnelFile;
+        /* 0xBFC */ public NMSString0x80 PortalStoryTunnelFile;
     }
 }

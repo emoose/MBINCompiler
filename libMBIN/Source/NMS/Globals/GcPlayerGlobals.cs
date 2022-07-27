@@ -6,7 +6,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(Size = 0x1B20, GUID = 0x6CA356E3DF2B514D, NameHash = 0x49E4A0E330E783EE)]
+    [NMS(Size = 0x1B20, GUID = 0x193517197C364654, NameHash = 0x49E4A0E330E783EE)]
     public class GcPlayerGlobals : NMSTemplate
     {
         /* 0x0000 */ public bool ForceFreighterProcTechRandom;
@@ -19,16 +19,18 @@ namespace libMBIN.NMS.Globals
         /* 0x001C */ public float FoodValueThresholdWorst;
         /* 0x0020 */ public float TeleportAppearEffectSpeed;
         /* 0x0024 */ public float TeleportDisappearEffectSpeed;
-        /* 0x0028 */ public bool RecenterViewWhenEnteringShip;
-        /* 0x0029 */ public bool UseInitialFacingForMoveDirection;
-        /* 0x002A */ public bool EmulateNoHandsForHandScreens;
-        /* 0x002C */ public float BinocularAimOffset;
-        /* 0x0030 */ public float BinocularScopeScale;
-        /* 0x0034 */ public float BinocularScopeSmoothing;
-        /* 0x0038 */ public float MaxArmExtension;
-        /* 0x003C */ public float MinArmExtension;
-        /* 0x0040 */ public float SummonArcRange;
-        /* 0x0044 */ public float InteractionAimOffset;
+        /* 0x0028 */ public float MiniportalAppearEffectTime;
+        /* 0x002C */ public float MiniportalDisappearEffectTime;
+        /* 0x0030 */ public bool RecenterViewWhenEnteringShip;
+        /* 0x0031 */ public bool UseInitialFacingForMoveDirection;
+        /* 0x0032 */ public bool EmulateNoHandsForHandScreens;
+        /* 0x0034 */ public float BinocularAimOffset;
+        /* 0x0038 */ public float BinocularScopeScale;
+        /* 0x003C */ public float BinocularScopeSmoothing;
+        /* 0x0040 */ public float MaxArmExtension;
+        /* 0x0044 */ public float MinArmExtension;
+        /* 0x0048 */ public float SummonArcRange;
+        /* 0x004C */ public float InteractionAimOffset;
         /* 0x0050 */ public GcProjectorOffsetData QuickMenuLauncherTransforms;
         /* 0x00C0 */ public GcProjectorOffsetData WeaponMenuLauncherTransforms;
         /* 0x0130 */ public GcInWorldUIScreenData QuickMenuOffset;
@@ -92,16 +94,17 @@ namespace libMBIN.NMS.Globals
         /* 0x0421 */ public bool ShowFirstPersonCharacterShadowPCVR;
         /* 0x0422 */ public bool ShowFirstPersonCharacterShadowPSVR;
         /* 0x0423 */ public bool InteractNearbyRadiusEnabled;
-        /* 0x0424 */ public bool PassiveLook;
-        /* 0x0428 */ public float BodyRealignmentDelay;
-        /* 0x042C */ public float PointDownToMoveAngle;
-        /* 0x0430 */ public float PointDownToMoveBackAngle;
-        /* 0x0434 */ public bool EnableLeaning;
-        /* 0x0435 */ public bool EnablePointDownToSmoothMove;
-        /* 0x0436 */ public bool HmdSmoothTurnAlways;
-        /* 0x0438 */ public float HmdTurnSpeed;
-        /* 0x043C */ public float HmdTurnSpeedPad;
-        /* 0x0440 */ public ulong PointingWristAdjustmentTimeMilliseconds;
+        /* 0x0424 */ public float InteractNearbyRadius;
+        /* 0x0428 */ public bool PassiveLook;
+        /* 0x042C */ public float BodyRealignmentDelay;
+        /* 0x0430 */ public float PointDownToMoveAngle;
+        /* 0x0434 */ public float PointDownToMoveBackAngle;
+        /* 0x0438 */ public bool EnableLeaning;
+        /* 0x0439 */ public bool EnablePointDownToSmoothMove;
+        /* 0x043A */ public bool HmdSmoothTurnAlways;
+        /* 0x043C */ public float HmdTurnSpeed;
+        /* 0x0440 */ public float HmdTurnSpeedPad;
+        /* 0x0448 */ public ulong PointingWristAdjustmentTimeMilliseconds;
         /* 0x0450 */ public Vector3f PointingWristAngles;
         /* 0x0460 */ public bool HolsterOnHip;
         /* 0x0464 */ public float HolsterHeadRotX;
@@ -272,7 +275,8 @@ namespace libMBIN.NMS.Globals
         /* 0x0950 */ public float GhostbusterFreq3;
         /* 0x0954 */ public float GhostbusterAmp3;
         /* 0x0958 */ public bool FireButtonReloadsWeapon;
-        /* 0x0959 */ public bool WeaponZoomEnabled;
+        /* 0x0959 */ public bool ShowLowAmmoWarning;
+        /* 0x095A */ public bool WeaponZoomEnabled;
         /* 0x095C */ public float WeaponZoomFOV;
         /* 0x0960 */ public float PassiveWeaponZoomFOV;
         /* 0x0964 */ public float PassiveWeaponZoomFOVThirdPerson;
