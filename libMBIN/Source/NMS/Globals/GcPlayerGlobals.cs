@@ -302,7 +302,10 @@ namespace libMBIN.NMS.Globals
         /* 0x09B4 */ public float CockpitEjectSideTestRange;
         /* 0x09B8 */ public float WeaponShotgunSlowdown;
         // size: 0x2
-        public enum MouseSmoothModeEnum { Off, Sprung }
+        public enum MouseSmoothModeEnum { 
+            Off,
+            Sprung
+        }
         /* 0x09BC */ public MouseSmoothModeEnum MouseSmoothMode;
         /* 0x09C0 */ public Vector2f MouseSpringStrength;
         /* 0x09C8 */ public Vector2f MouseSpringStrengthMinDelta;
@@ -603,7 +606,11 @@ namespace libMBIN.NMS.Globals
         /* 0x0F98 */ public List<float> WantedEscalateTime;
         /* 0x0FA8 */ public List<float> WantedExtremeEscalateTime;
         // size: 0x3
-        public enum ControlModesEnum { Normal, FlightStick, Inverted }
+        public enum ControlModesEnum { 
+            Normal,
+            FlightStick,
+            Inverted
+        }
         /* 0x0FB8 */ public ControlModesEnum ControlModes;
         /* 0x0FBC */ public float PlayerViewTargetRange;
         /* 0x0FC0 */ public float InteractionScanRange;
