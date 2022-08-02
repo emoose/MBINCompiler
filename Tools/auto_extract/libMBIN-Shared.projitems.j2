@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>b6850f17-d8fd-48de-9cf2-240f1ba87236</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>libMBIN</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Source\Common\APIException.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\Common\Async.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\Common\BinaryStreamExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\Common\Crc32.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\Common\FileIO.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\Common\Half.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\Common\HalfHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\Common\Logger.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\Common\INT_2_10_10_10_REV.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\Common\MathHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\Common\IO.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\EXML\EXmlFile.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\EXML\EXmlBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\EXML\EXmlMeta.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\EXML\EXmlData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\EXML\EXmlProperty.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\MBIN\MBINFile.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\MBIN\MBINHeader.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\BaseTypes\Colour.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\BaseTypes\EmptyNode.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\BaseTypes\GcNodeID.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\BaseTypes\GcResource.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\BaseTypes\GcSeed.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\BaseTypes\INMSString.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\BaseTypes\NMSString0x10.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\BaseTypes\NMSString0x20.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\BaseTypes\NMSString0x20A.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\BaseTypes\NMSString0x40.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\BaseTypes\NMSString0x80.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\BaseTypes\NMSString0x100.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\BaseTypes\NMSString0x200.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\BaseTypes\NMSString0x400.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\BaseTypes\NMSString0x800.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\BaseTypes\VariableSizeString.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\BaseTypes\Vector2f.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\BaseTypes\Vector3f.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\BaseTypes\Vector4f.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\BaseTypes\Quaternion.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\Version.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\Template\MBINCompilerTestTemplate.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\Template\NMSAlignment.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\Template\NMSDescription.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\Template\TemplateException.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\Template\NMSAttribute.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\Template\NMSTemplate.cs" />
+    {% for item in gc_filenames %}
+    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\{{ item }}.cs" />
+    {% endfor %}
+    {% for item in tk_filenames %}
+    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Toolkit\{{ item }}.cs" />
+    {% endfor %}
+    {% for item in global_filenames %}
+    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Globals\{{ item }}.cs" />
+    {% endfor %}
+    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\SketchNodes\SnIfValueIs.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\SketchNodes\SnValueAsBool.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\SketchNodes\SnRandomNumber.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\SketchNodes\SnOnPlayerNear.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\SketchNodes\SnSetVariableValue.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\SketchNodes\SnWaitSeconds.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\SketchNodes\SnSetLightIntensity.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Source\EXML\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Source\MBIN\" />
+  </ItemGroup>
+</Project>
