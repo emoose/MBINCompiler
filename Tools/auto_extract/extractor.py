@@ -88,7 +88,7 @@ ARRAY_TEMPLATE = """        [NMS(Size = {3})]
 
 CLASS_TEMPLATE = """{0}namespace {1}
 {{
-    [NMS(Size = 0x{2}, GUID = 0x{3}, NameHash = 0x{4}{5})]
+    [NMS(Size = {2}, GUID = {3}, NameHash = {4}{5})]
     public class {6} : NMSTemplate
     {{
 {7}
@@ -149,7 +149,7 @@ class Field(ABC):
         self._field_offset = struct.unpack_from('<I', data, offset=0x2C)[0]
 
         # Sort out the requirements for this field.
-        self.required_using = None
+        self.required_using: set = set()
 
         # The number of hexadecimal digits the maximum offset has.
         self.max_offset_width = 1
@@ -215,7 +215,7 @@ class CustomField(Field):
         self._field_type = nms_mem.read_string(ptr_custom_type)[1:]
 
         if self.field_type[:2] in ('Gc', 'Tk'):
-            self.required_using = USING_MAPPING[self.field_type[:2]]
+            self.required_using = {USING_MAPPING[self.field_type[:2]], }
 
     @property
     def field_type(self):
@@ -237,7 +237,7 @@ class ArrayField(Field):
                 struct.unpack_from('<Q', data, offset=0x30)[0]
             )
             self._field_type = nms_mem.read_string(ptr_custom_type)[1:]
-            self.required_using = USING_MAPPING[self._field_type[:2]]
+            self.required_using = {USING_MAPPING[self._field_type[:2]], }
         else:
             self._field_type = TYPE_MAPPING.get(
                 array_type_raw, f'unknown {array_type_raw:X}'
@@ -261,7 +261,7 @@ class ListField(Field):
         self.is_list = True
         self.raw_field_type = 0x06
         self.field_size = 0x10
-        self.required_using = 'System.Collections.Generic'
+        self.required_using = {'System.Collections.Generic', }
 
         array_type_raw = struct.unpack_from('<I', data, offset=0x20)[0]
         if array_type_raw == 0x03:
@@ -269,7 +269,7 @@ class ListField(Field):
                 struct.unpack_from('<Q', data, offset=0x30)[0]
             )
             self._field_type = nms_mem.read_string(ptr_custom_type)[1:]
-            self.required_using = USING_MAPPING[self._field_type[:2]]
+            self.required_using.add(USING_MAPPING[self._field_type[:2]])
         else:
             self._field_type = TYPE_MAPPING.get(
                 array_type_raw, f"unknown {array_type_raw:X}"
@@ -307,7 +307,7 @@ class EnumField(Field):
     def __str__(self):
         if self.requires_values:
             enum_vals = [
-                f'            {x[1]} = 0x{fmt_hex(x[0])}' for x in self.enum_data
+                f'            {x[1]} = {fmt_hex(x[0])}' for x in self.enum_data
             ]
             enum_vals = ',\n'.join(enum_vals)
         else:
@@ -331,7 +331,10 @@ class NMSClass():
         self.name_hash = fmt_hex(name_hash)
         self.guid = fmt_hex(guid)
         self.required_usings = set()
-        self.namespace = USING_MAPPING.get(self.name[:2])
+        if self.name != 'GcDebugOptions' and not self.name.endswith('Globals'):
+            self.namespace = USING_MAPPING.get(self.name[:2])
+        else:
+            self.namespace = 'libMBIN.NMS.Globals'
         self.size = 1
 
     def add_fields(self, fields: list[Field]):
@@ -339,7 +342,7 @@ class NMSClass():
         max_offset_width = 1
         for field in fields:
             if field.required_using:
-                self.required_usings.add(field.required_using)
+                self.required_usings.update(field.required_using)
         if self.fields:
             max_offset_width = len(self.fields[-1].field_offset)
             self.size = self.fields[-1]._field_offset + self.fields[-1].field_size
@@ -379,7 +382,7 @@ def read_class(nms_mem: pymem.Pymem, address: int):
     ptr_name, name_hash, guid, ptr_data, field_num = struct.unpack(
         '<QQQQI', data)
     name = nms_mem.read_string(ptr_name)
-    if (name.startswith('cGc') and name.endswith('Globals')) or name == 'GcDebugOptions':
+    if (name.startswith('cGc') and name.endswith('Globals')) or name == 'cGcDebugOptions':
         dir_ = 'Globals'
     else:
         dir_ = PREFIX_MAPPING.get(name[:3], "unknown")
