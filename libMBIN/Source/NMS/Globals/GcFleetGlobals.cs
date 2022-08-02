@@ -6,7 +6,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(Size = 0x1C40, GUID = 0x4966DEECD69CF4DF, NameHash = 0xB032629C37506E6A)]
+    [NMS(Size = 0x1C40, GUID = 0x35E26D2CF989029B, NameHash = 0xB032629C37506E6A)]
     public class GcFleetGlobals : NMSTemplate
     {
         /* 0x0000 */ public Vector3f FreighterCustomiserSunAngleAdjust;
@@ -49,8 +49,17 @@ namespace libMBIN.NMS.Globals
         /* 0x0107 */ public bool DisablePlayerFleets;
         /* 0x0108 */ public NMSString0x20A DebugInterventionEvent;
         // size: 0xB
-        public enum ForceDebriefEntryTypeEnum { None, PrimarySuccess, WhaleSuccess, PrimaryFailure, PrimaryDamage, SecondarySuccess,
-            SecondaryFailure, SecondaryDamage, GenericSuccess, GenericFailure,
+        public enum ForceDebriefEntryTypeEnum { 
+            None,
+            PrimarySuccess,
+            WhaleSuccess,
+            PrimaryFailure,
+            PrimaryDamage,
+            SecondarySuccess,
+            SecondaryFailure,
+            SecondaryDamage,
+            GenericSuccess,
+            GenericFailure,
             WhaleFailure
         }
         /* 0x0128 */ public ForceDebriefEntryTypeEnum ForceDebriefEntryType;
