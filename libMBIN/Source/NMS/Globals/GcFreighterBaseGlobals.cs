@@ -1,8 +1,10 @@
-using libMBIN.NMS.Toolkit;
-using libMBIN.NMS.GameComponents;
+using System;
 using System.Collections.Generic;
 
-namespace libMBIN.NMS.GameComponents
+using libMBIN.NMS.Toolkit;
+using libMBIN.NMS.GameComponents;
+
+namespace libMBIN.NMS.Globals
 {
     [NMS(Size = 0x98, GUID = 0x06CD970039C9D523, NameHash = 0xCB9E3321AA0276BD)]
     public class GcFreighterBaseGlobals : NMSTemplate
