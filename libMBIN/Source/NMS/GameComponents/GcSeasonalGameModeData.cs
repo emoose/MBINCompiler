@@ -6,7 +6,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x3370, GUID = 0x4F2D32DDF11EEAE, NameHash = 0xFD6B0BE30E218605)]
+    [NMS(Size = 0x3370, GUID = 0x7FA157ED8E92FC85, NameHash = 0xFD6B0BE30E218605)]
     public class GcSeasonalGameModeData : NMSTemplate
     {
         /* 0x0000 */ public int SeasonId;
