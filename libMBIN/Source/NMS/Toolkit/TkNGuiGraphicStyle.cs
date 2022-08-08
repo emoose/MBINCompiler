@@ -1,9 +1,8 @@
 ﻿using libMBIN.NMS.Toolkit;
-using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(Size = 0x220, GUID = 0xFFA49BE86665206F, NameHash = 0xB70875CDF93EECEC)]
+    [NMS(Size = 0x214, GUID = 0xBCBE1C90ABE771C2, NameHash = 0xB70875CDF93EECEC)]
     public class TkNGuiGraphicStyle : NMSTemplate
     {
         /* 0x000 */ public TkNGuiGraphicStyleData Default;
@@ -13,8 +12,16 @@ namespace libMBIN.NMS.Toolkit
         /* 0x1E4 */ public float HighlightTime;
         /* 0x1E8 */ public float HighlightScale;
         /* 0x1EC */ public float GlobalFade;
-		public enum AnimateEnum { None, WipeRightToLeft, SimpleWipe, SimpleWipeDown, CustomWipe, CustomWipeAlpha }
-		/* 0x1F0 */ public AnimateEnum Animate;
+        // size: 0x6
+        public enum AnimateEnum {
+            None,
+            WipeRightToLeft,
+            SimpleWipe,
+            SimpleWipeDown,
+            CustomWipe,
+            CustomWipeAlpha
+        }
+        /* 0x1F0 */ public AnimateEnum Animate;
         /* 0x1F4 */ public float AnimTime;
         /* 0x1F8 */ public float AnimSplit;
         /* 0x1FC */ public TkCurveType AnimCurve1;
