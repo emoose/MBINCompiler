@@ -1,14 +1,11 @@
-using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
+using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(Size = 0x18, GUID = 0xB90FB4F173367E1B, NameHash = 0x055F9EF59F3B21D8)]
+    [NMS(Size = 0x10, GUID = 0xE8D57E7EBF9DE772, NameHash = 0x55F9EF59F3B21D8)]
     public class GcCreaturePetTraitRanges : NMSTemplate
     {
-        [NMS(Size = 0x3, EnumType = typeof(GcCreaturePetTraits.PetTraitsEnum))]
-        public GcCreaturePetTraitRange[] TraitRanges;
+        /* 0x0 */ public List<GcCreaturePetTraitRange> TraitRanges;
     }
 }
