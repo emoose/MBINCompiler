@@ -83,5 +83,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x3350 */ public bool ResetSaveOnDeath;
         /* 0x3358 */ public List<GcPersistedStatData> StatsToPersistOnReset;
         /* 0x3368 */ public bool CompatibleWithState;
+        /* 0x3369 */ public bool HasBeenConverted;
     }
 }
