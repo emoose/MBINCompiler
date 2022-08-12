@@ -151,6 +151,8 @@ class Field(ABC):
         self.field_name = nms_mem.read_string(
             struct.unpack_from('<Q', data, offset=0x0)[0]
         )
+        if self.field_name[0].isdigit():
+            self.field_name = '_' + self.field_name
         self.field_size = struct.unpack_from('<I', data, offset=0x24)[0]
         self._array_size = struct.unpack_from('<I', data, offset=0x28)[0]
         self._field_offset = struct.unpack_from('<I', data, offset=0x2C)[0]
@@ -249,6 +251,12 @@ class ArrayField(Field):
                 struct.unpack_from('<Q', data, offset=0x30)[0]
             )
             self._field_type = nms_mem.read_string(ptr_custom_type, byte=128)[1:]
+            if self._field_type == "NMSString0x20A":
+                # There is an issue with this type in arrays due to MBINCompiler
+                # not being able to actually serialize it correctly. For now we
+                # change to a non-aligned one, but add padding if required.
+                self._field_type = "NMSString0x20"
+                # TODO: Add ability to add some padding if needed...
             self.required_using = {
                 USING_MAPPING.get(self._field_type[:2].lower(),
                                   'libMBIN.NMS.GameComponents'),
