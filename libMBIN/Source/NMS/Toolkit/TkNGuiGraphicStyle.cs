@@ -1,8 +1,12 @@
-﻿using libMBIN.NMS.Toolkit;
+﻿using System;
+using System.Collections.Generic;
+
+using libMBIN.NMS.Toolkit;
+using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(Size = 0x214, GUID = 0xBCBE1C90ABE771C2, NameHash = 0xB70875CDF93EECEC)]
+    [NMS(Size = 0x220, GUID = 0xBCBE1C90ABE771C2, NameHash = 0xB70875CDF93EECEC)]
     public class TkNGuiGraphicStyle : NMSTemplate
     {
         /* 0x000 */ public TkNGuiGraphicStyleData Default;
