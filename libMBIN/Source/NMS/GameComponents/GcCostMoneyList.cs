@@ -1,8 +1,5 @@
-using System;
-using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
+using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
@@ -13,11 +10,23 @@ namespace libMBIN.NMS.GameComponents
         /* 0x10 */ public GcCurrency CostCurrency;
         /* 0x14 */ public bool AssertIfOutOfBounds;
         // size: 0x3
-        public enum OutOfBoundsBehaviourEnum { NoCost, UseFirst, UseLast }
+        public enum OutOfBoundsBehaviourEnum {
+            NoCost,
+            UseFirst,
+            UseLast
+        }
         /* 0x18 */ public OutOfBoundsBehaviourEnum OutOfBoundsBehaviour;
         // size: 0x9
-        public enum IndexProviderEnum { None, ShipSlot, ShipClass, DailyFreighters, WeaponClass, WeaponSlot, PetSlot,
-            PilotSlot, PilotRank
+        public enum IndexProviderEnum {
+            None,
+            ShipSlot,
+            ShipClass,
+            DailyFreighters,
+            WeaponClass,
+            WeaponSlot,
+            PetSlot,
+            PilotSlot,
+            PilotRank
         }
         /* 0x1C */ public IndexProviderEnum IndexProvider;
     }

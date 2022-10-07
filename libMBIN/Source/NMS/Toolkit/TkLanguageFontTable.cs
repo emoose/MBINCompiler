@@ -1,13 +1,11 @@
-﻿using System.Collections.Generic;
-
 using libMBIN.NMS.Toolkit;
-using libMBIN.NMS.GameComponents;
+using System.Collections.Generic;
 
 namespace libMBIN.NMS.Toolkit
 {
-	[NMS(GUID = 0xB7D3E07377C672EF, NameHash = 0xF4500CD57E96D069)]
+    [NMS(GUID = 0xB7D3E07377C672EF, NameHash = 0xF4500CD57E96D069)]
     public class TkLanguageFontTable : NMSTemplate
     {
-        public List<TkLanguageFontTableEntry> Table;
+        /* 0x0 */ public List<TkLanguageFontTableEntry> Table;
     }
 }

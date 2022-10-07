@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-
 using libMBIN.NMS.Toolkit;
-using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x5C4861F128CFA647, NameHash = 0x27F13746A084A731)]
+    [NMS(GUID = 0x4145A4BF45C3014D, NameHash = 0x27F13746A084A731)]
     public class GcShipAICombatDefinition : NMSTemplate
     {
         /* 0x00 */ public NMSString0x10 Id;

@@ -10,7 +10,7 @@ import struct
 import subprocess
 import time
 
-# import jinja2
+from jinja2 import Template
 import pymem
 
 
@@ -83,6 +83,12 @@ ENUM_TEMPLATE = """        // size: {3}
         /* {0} */ public {1}Enum {1};"""
 ARRAY_TEMPLATE = """        [NMS(Size = {3})]
         /* {0} */ public {1} {2};"""
+ARRAY_ENUM_TEMPLATE = """        // size: {2}
+        public enum {0}Enum {{
+{1}
+        }}"""
+TYPED_ARRAY_TEMPLATE = """        [NMS(Size = {3}, EnumType = typeof({4}))]
+        /* {0} */ public {1} {2};"""
 
 # 0: usings: NB: End with two \n's
 # 1: namespace
@@ -95,10 +101,10 @@ ARRAY_TEMPLATE = """        [NMS(Size = {3})]
 
 CLASS_TEMPLATE = """{0}namespace {1}
 {{
-    [NMS(Size = {2}, GUID = {3}, NameHash = {4}{5})]
-    public class {6} : NMSTemplate
+    [NMS(GUID = {2}, NameHash = {3}{4})]
+    public class {5} : NMSTemplate
     {{
-{7}
+{6}
     }}
 }}
 """
@@ -123,6 +129,8 @@ Details on the format of the 0x60 bytes for each field:
     table of:
         (uint64): enum index
         (uint64*): pointer to name of enum value.
+      (if 0x1C == 0x17) pointer to a table with the enum values for the array,
+      and a pointer to the type after.
 0x40: (if 0x1C == 0x09): enum count.
 0x44: (float) 1.0 (always?)
 0x48: ??? (seems to always be (uint32) 3 or 4) Can't see why it's which or what
@@ -148,11 +156,12 @@ class Field(ABC):
         self.is_enum = False
 
         # Get the name of the field.
-        self.field_name = nms_mem.read_string(
+        self._field_name = nms_mem.read_string(
             struct.unpack_from('<Q', data, offset=0x0)[0]
         )
-        if self.field_name[0].isdigit():
-            self.field_name = '_' + self.field_name
+        # Some field names are annoyingly duplicated in the exe. c# doesn't
+        # allow this, so we need to add something to the name to make it unique.
+        self._field_name_is_duplicate = False
         self.field_size = struct.unpack_from('<I', data, offset=0x24)[0]
         self._array_size = struct.unpack_from('<I', data, offset=0x28)[0]
         self._field_offset = struct.unpack_from('<I', data, offset=0x2C)[0]
@@ -169,6 +178,16 @@ class Field(ABC):
             self.raw_field_type,
             f'unknown ({self.raw_field_type:X})'
         )
+
+    @property
+    def field_name(self):
+        if self._field_name[0].isdigit():
+            return '_' + self._field_name
+        if self._field_name_is_duplicate:
+            return self._field_name + '_' + self.field_type
+        if self._field_name[:2].lower() in {'gc', 'tk'}:
+            return self._field_name[2:]
+        return self._field_name
 
     @property
     def field_offset(self):
@@ -243,6 +262,7 @@ class ArrayField(Field):
         self.raw_field_type = 0x17
         # Multiply the field size by the array size to get the correct size
         self.field_size *= self._array_size
+        self.array_enum = None
 
         array_type_raw = struct.unpack_from('<I', data, offset=0x20)[0]
         # A custom array subtype.
@@ -265,16 +285,49 @@ class ArrayField(Field):
             self._field_type = TYPE_MAPPING.get(
                 array_type_raw, f'unknown {array_type_raw:X}'
             )
+        # Determine the associated EnumType
+        ptr_enum = struct.unpack_from('<Q', data, offset=0x38)[0]
+        # This may be a nullptr, in which case we end as we have no enum to get.
+        if ptr_enum == 0:
+            return
+        # Get all the values of the enum:
+        self.array_enum = []
+        for i in range(self._array_size):
+            ptr_enum_name = nms_mem.read_ulonglong(ptr_enum + i * 0x10 + 0x8)
+            name = nms_mem.read_string(ptr_enum_name, byte=128)
+            # 'default' (all lowercase) is a resticted word in c#.
+            # Replace the leading 'd' with 'D'.
+            if name == 'default':
+                name = 'Default'
+            self.array_enum.append(name)
 
     @property
     def field_type(self):
         return f'{NAME_MAPPING.get(self._field_type, self._field_type)}[]'
 
-
     def __str__(self):
-        return ARRAY_TEMPLATE.format(
-            self.field_offset, self.field_type, self.field_name, self.array_size
-        )
+        if self.array_enum is None:
+            return ARRAY_TEMPLATE.format(
+                self.field_offset,
+                self.field_type,
+                self.field_name,
+                self.array_size,
+            )
+        else:
+            enum_vals = ',\n'.join([' ' * 12 + x for x in self.array_enum])
+            _enum = ARRAY_ENUM_TEMPLATE.format(
+                self.field_name,
+                enum_vals,
+                fmt_hex(self._array_size),
+            )
+            _field = TYPED_ARRAY_TEMPLATE.format(
+                self.field_offset,
+                self.field_type,
+                self.field_name,
+                self.array_size,
+                self.field_name + 'Enum',
+            )
+            return _enum + '\n' + _field
 
 
 
@@ -316,14 +369,22 @@ class EnumField(Field):
         enum_count = struct.unpack_from('<I', data, offset=0x40)[0]
         ptr_enum_data = struct.unpack_from('<Q', data, offset=0x38)[0]
         self.enum_data = []
+        # For each enum value, read the index, and a pointer to the name.
         for i in range(enum_count):
             idx = nms_mem.read_uint(ptr_enum_data + i * 0x10)
             ptr_enum_name = nms_mem.read_ulonglong(ptr_enum_data + i * 0x10 + 0x8)
             enum_name = nms_mem.read_string(ptr_enum_name, byte=128)
             # If the string starts with a number we need to prefix with an
             # underscore so that the name is not illegal.
-            if enum_name[0].isdigit():
-                enum_name = '_' + enum_name
+            if enum_name:
+                if enum_name[0].isdigit():
+                    enum_name = '_' + enum_name
+                # 'default' (all lowercase) is a resticted word in c#.
+                # Replace the leading 'd' with 'D'.
+                if enum_name == 'default':
+                    enum_name = 'Default'
+            else:
+                enum_name = 'None'
             self.enum_data.append((idx, enum_name))
         # Most enums have keys which are concurrent. Some however are not, so
         # we detect this by comparing to the expected range.
@@ -353,6 +414,7 @@ class EnumField(Field):
 class NMSClass():
     def __init__(self, name: str, name_hash: int, guid: int):
         self.fields = []
+        self._field_names = set()
         self.name = name
         self.name_hash = fmt_hex(name_hash)
         self.guid = fmt_hex(guid)
@@ -376,6 +438,10 @@ class NMSClass():
         for field in fields:
             if field.required_using:
                 self.required_usings.update(field.required_using)
+            if field.field_name not in self._field_names:
+                self._field_names.add(field.field_name)
+            else:
+                field._field_name_is_duplicate = True
         # If there are some fields, calculate the maximum offset so that we can
         # nicely format the offset comments.
         if self.fields:
@@ -396,7 +462,6 @@ class NMSClass():
         return CLASS_TEMPLATE.format(
             usings,
             self.namespace,
-            fmt_hex(self.size),
             self.guid,
             self.name_hash,
             '',  # TODO: add this if needed?
@@ -405,7 +470,7 @@ class NMSClass():
         )
 
 
-def read_class(nms_mem: pymem.Pymem, address: int):
+def read_class(nms_mem: pymem.Pymem, address: int, filepaths: list[str]):
     """
     Take an array of 24 bytes and extract some information:
     0x00: (uint64*): Class name
@@ -432,6 +497,7 @@ def read_class(nms_mem: pymem.Pymem, address: int):
     cls.add_fields(fields)
     with open(op.join(out_dir, name + '.cs'), 'w') as f:
         f.write(str(cls))
+    filepaths.append(f'{dir_}\\{name}')
 
 
 def extract(nms_mem: pymem.Pymem, address: int, field_count: int) -> list[Field]:
@@ -503,9 +569,13 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     nms_proc = subprocess.Popen(args.nms_path)
+    filepaths = []
+    with open('./libMBIN-Shared.projitems.j2', 'r') as f:
+        template = Template(f.read())
+
     try:
         # Wait some time for the data to be written to memory.
-        time.sleep(2)
+        time.sleep(5)
         # Now find the process with pymem.
         # If there is for some reason multiple instances of NMS running this
         # will probably have issues...
@@ -514,13 +584,16 @@ if __name__ == '__main__':
         t1 = time.time()
         names = []
         for name, offset in find_classes(args.nms_path):
-            read_class(nms, nms_base + offset)
+            read_class(nms, nms_base + offset, filepaths)
             if name[1:] in NAME_MAPPING:
                 name = 'c' + NAME_MAPPING[name[1:]]
-            names.append(name)
+            names.append(f'{name}, {nms_base + offset:X}')
         names.sort()
         with open(SUMMARY_FILE, 'w') as f:
             f.write('\n'.join(names))
+        filepaths.sort()
+        with open('./libMBIN-Shared.projitems', 'w') as f:
+            f.write(template.render(filepaths=filepaths))
         print(f'Took {time.time() - t1}s')
         # Kill the NMS process.
     except Exception as exc:

@@ -1,14 +1,20 @@
-using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
+using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
     [NMS(GUID = 0x2B4D90F7E808C657, NameHash = 0x7439D28A897F0ACC)]
     public class GcMultiSpecificItemEntry : NMSTemplate
     {
-        public enum MultiItemRewardTypeEnum { Product, Substance, ProcTech, ProcProduct, InventorySlot, CommunityTierProduct }
+        // size: 0x6
+        public enum MultiItemRewardTypeEnum {
+            Product,
+            Substance,
+            ProcTech,
+            ProcProduct,
+            InventorySlot,
+            CommunityTierProduct
+        }
         /* 0x00 */ public MultiItemRewardTypeEnum MultiItemRewardType;
         /* 0x08 */ public NMSString0x10 Id;
         /* 0x18 */ public int Amount;
@@ -20,6 +26,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x50 */ public List<NMSString0x10> CommunityTierProductList;
         /* 0x60 */ public bool HideInSeasonRewards;
         /* 0x68 */ public NMSString0x10 SeasonRewardListFormat;
-
     }
 }

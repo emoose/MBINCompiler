@@ -1,7 +1,3 @@
-﻿using System;
-using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
@@ -10,7 +6,11 @@ namespace libMBIN.NMS.GameComponents
     public class GcFactionSelectOptions : NMSTemplate
     {
         // size: 0x3
-        public enum FactionOptionEnum { DataDefined, CurrentMission, CurrentSystem }
+        public enum FactionOptionEnum {
+            DataDefined,
+            CurrentMission,
+            CurrentSystem
+        }
         /* 0x0 */ public FactionOptionEnum FactionOption;
         /* 0x4 */ public GcMissionFaction Faction;
     }

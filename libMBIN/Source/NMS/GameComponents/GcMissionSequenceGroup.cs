@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-
 using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
+using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x6E3AF03C585E73BB, NameHash = 0x51B3554FFBEBED66)]
+    [NMS(GUID = 0xB7A69E9A4EDFF724, NameHash = 0x51B3554FFBEBED66)]
     public class GcMissionSequenceGroup : NMSTemplate
     {
         /* 0x000 */ public bool Silent;
@@ -27,10 +25,19 @@ namespace libMBIN.NMS.GameComponents
         /* 0x1D8 */ public bool BlockPinning;
         /* 0x1DC */ public GcMissionConditionTest ConditionTest;
         // size: 0x3
-        public enum RepeatLogicEnum { None, Loop, RestartOnConditionFail }
+        public enum RepeatLogicEnum {
+            None,
+            Loop,
+            RestartOnConditionFail
+        }
         /* 0x1E0 */ public RepeatLogicEnum RepeatLogic;
         // size: 0x4
-        public enum IconStyleEnum { Default, Large, Square, NoFrame }
+        public enum IconStyleEnum {
+            Default,
+            Large,
+            Square,
+            NoFrame
+        }
         /* 0x1E4 */ public IconStyleEnum IconStyle;
         /* 0x1E8 */ public TkInputEnum SpecialButtonIcon;
         /* 0x1F0 */ public GcObjectiveTextFormatOptions ObjectiveFormatting;

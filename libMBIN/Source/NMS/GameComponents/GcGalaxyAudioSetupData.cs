@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xB1791359307F4F7D, NameHash = 0xA3F156D44BBFB2B9)]
+    [NMS(GUID = 0x2DFE995574B9A3DF, NameHash = 0xA3F156D44BBFB2B9)]
     public class GcGalaxyAudioSetupData : NMSTemplate
     {
         /* 0x00 */ public GcAudioWwiseEvents EventMapEnter;
@@ -24,7 +20,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x30 */ public GcAudioWwiseEvents EventNavmodePathMove;
         /* 0x34 */ public GcAudioWwiseEvents EventPlanetRumble;
         /* 0x38 */ public GcAudioWwiseRTPCs RTPCStarWhoosh;
-        /* 0x3C */ public float WhooshClip;                             // 3DCCCCCDh
-        /* 0x40 */ public float WhooshMultiplier;                       // 42C80000h
+        /* 0x3C */ public float WhooshClip;
+        /* 0x40 */ public float WhooshMultiplier;
     }
 }

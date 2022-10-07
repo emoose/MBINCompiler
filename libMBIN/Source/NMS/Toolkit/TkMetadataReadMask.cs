@@ -1,17 +1,16 @@
-﻿using System;
-
-using libMBIN.NMS.Toolkit;
-using libMBIN.NMS.GameComponents;
-
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0x4DEB11EC99BFE346, NameHash = 0x76BB9C78D7AE1C6B)]
+    [NMS(GUID = 0x72165BB3A09C239C, NameHash = 0x76BB9C78D7AE1C6B)]
     public class TkMetadataReadMask : NMSTemplate
     {
-        [Flags]
-        public enum MetadataReadMaskEnum { Default = 0x01, SaveWhenMultiplayerClient = 0x02, SavePlayerPosition = 0x04, SavePlayerInventory = 0x08 }
-        [NMSDescription("The enum that describes this field uses flags. This means that multiple values may be specified simultaneously" +
-                        "by using the notation 'Default|SavePlayerPosition'. Ie. split values with a | character")]
-        public MetadataReadMaskEnum MetadataReadMask;
+        // size: 0x5
+        public enum MetadataReadMaskEnum : uint {
+            Default = 0x1,
+            SaveWhenMultiplayerClient = 0x2,
+            SavePlayerPosition = 0x4,
+            SavePlayerInventory = 0x8,
+            SaveDifficultySettings = 0x10
+        }
+        /* 0x0 */ public MetadataReadMaskEnum MetadataReadMask;
     }
 }

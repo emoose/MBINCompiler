@@ -1,12 +1,8 @@
-﻿using libMBIN.NMS.Toolkit;
-using libMBIN.NMS.GameComponents;
-
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0xA0E3358A8611930D, NameHash = 0x2D0C96FA112A44AA)]
-    // Note: This is called "GcDefaulMissionSubstance", fixed the spelling mistake...
+    [NMS(GUID = 0xA5BBD058DD00DB71, NameHash = 0x8B1B13A218F93615)]
     public class GcDefaultMissionSubstance : NMSTemplate
     {
-        public NMSString0x10 Substance;
+        /* 0x0 */ public NMSString0x10 Substance;
     }
 }

@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-
 using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
+using System.Collections.Generic;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(GUID = 0x5669DFB0E8B5048E, NameHash = 0x9B5DDD6D76FBC918)]
+    [NMS(GUID = 0x8785035A0CB4CE75, NameHash = 0x9B5DDD6D76FBC918)]
     public class GcVehicleGlobals : NMSTemplate
     {
         /* 0x000 */ public float UnderwaterScannerIconRangeBoost;
@@ -152,9 +150,23 @@ namespace libMBIN.NMS.Globals
         /* 0x434 */ public float AIMechGunExplosionRadius;
         /* 0x438 */ public float AIMechGunInheritVelocity;
         /* 0x43C */ public float MechWeaponInterpSpeed;
-        [NMS(Size = 0x4, EnumType = typeof(GcMechWeaponLocation.MechWeaponLocationEnum))]
+        // size: 0x4
+        public enum MechWeaponLocatorNamesEnum {
+            TurretExocraft,
+            TurretSentinel,
+            ArmLeft,
+            ArmRight
+        }
+        [NMS(Size = 0x4, EnumType = typeof(MechWeaponLocatorNamesEnum))]
         /* 0x440 */ public NMSString0x20[] MechWeaponLocatorNames;
-        [NMS(Size = 0x4, EnumType = typeof(GcMechWeaponLocation.MechWeaponLocationEnum))]
+        // size: 0x4
+        public enum MechWeaponDataEnum {
+            Laser,
+            Gun,
+            TerrainEdit,
+            StunGun
+        }
+        [NMS(Size = 0x4, EnumType = typeof(MechWeaponDataEnum))]
         /* 0x4C0 */ public GcExoMechWeaponData[] MechWeaponData;
         /* 0x6A0 */ public GcMechMeshPartTable MechMeshPartsTable;
         /* 0x880 */ public float WeaponInterpSpeed;
@@ -270,19 +282,28 @@ namespace libMBIN.NMS.Globals
         /* 0xABC */ public float VehicleBoostFuelRate;
         /* 0xAC0 */ public float VehicleBoostFuelRateSurvival;
         /* 0xAC4 */ public float VehicleFuelRate;
-        /* 0xAC8 */ public float VehicleFuelRateSurvival;
-        /* 0xACC */ public float VehicleFuelRateTruckMultiplier;
-        /* 0xAD0 */ public float VehicleJumpTimeMin;
-        /* 0xAD4 */ public float VehicleJumpTimeMax;
-        /* 0xAD8 */ public float VehicleJumpCooldown;
-        /* 0xADC */ public float VehicleMotionDeadZone;
-        /* 0xAE0 */ public float WheelForceHalflife;
-        /* 0xAE4 */ public bool ThrottleButtonCamRelative;
-        /* 0xAE8 */ public float StickReverseTurnThreshold;
-        /* 0xAEC */ public float StickReverseTurnStiffness;
-        /* 0xAF0 */ public GcScanData VehicleScan;
-        /* 0xB04 */ public GcScanData VehicleLocalScan;
-        [NMS(Size = 0x7, EnumType = typeof(GcVehicleType.VehicleTypeEnum))]
+        /* 0xAC8 */ public float VehicleFuelRateTruckMultiplier;
+        /* 0xACC */ public float VehicleJumpTimeMin;
+        /* 0xAD0 */ public float VehicleJumpTimeMax;
+        /* 0xAD4 */ public float VehicleJumpCooldown;
+        /* 0xAD8 */ public float VehicleMotionDeadZone;
+        /* 0xADC */ public float WheelForceHalflife;
+        /* 0xAE0 */ public bool ThrottleButtonCamRelative;
+        /* 0xAE4 */ public float StickReverseTurnThreshold;
+        /* 0xAE8 */ public float StickReverseTurnStiffness;
+        /* 0xAEC */ public GcScanData VehicleScan;
+        /* 0xB00 */ public GcScanData VehicleLocalScan;
+        // size: 0x7
+        public enum VehicleWeaponMuzzleFlashEnum {
+            Buggy,
+            Bike,
+            Truck,
+            WheeledBike,
+            Hovercraft,
+            Submarine,
+            Mech
+        }
+        [NMS(Size = 0x7, EnumType = typeof(VehicleWeaponMuzzleFlashEnum))]
         /* 0xB18 */ public GcVehicleMuzzleData[] VehicleWeaponMuzzleFlash;
         /* 0xCD8 */ public List<GcVehicleWeaponMuzzleData> VehicleWeaponMuzzleDataTable;
         /* 0xCE8 */ public List<GcVehicleData> VehicleDataTable;

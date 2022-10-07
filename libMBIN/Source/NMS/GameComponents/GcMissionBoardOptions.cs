@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
+using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
@@ -23,7 +20,13 @@ namespace libMBIN.NMS.GameComponents
         /* 0x38 */ public NMSString0x20A MultiplayerMissionInitialWarpScanEvent;
         /* 0x58 */ public List<NMSString0x20A> DefaultItemInitialWarpScanEvents;
         // size: 0x5
-        public enum DefaultItemTypeForInitialWarpEnum { None, PrimaryProduct, PrimarySubstance, SecondaryProduct, SecondarySubstance }
+        public enum DefaultItemTypeForInitialWarpEnum {
+            None,
+            PrimaryProduct,
+            PrimarySubstance,
+            SecondaryProduct,
+            SecondarySubstance
+        }
         /* 0x68 */ public DefaultItemTypeForInitialWarpEnum DefaultItemTypeForInitialWarp;
         /* 0x70 */ public List<NMSString0x10> BasePartBlueprints;
     }

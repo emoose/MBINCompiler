@@ -1,12 +1,8 @@
-using System;
-using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x17B1E9E8A7589E9E, NameHash = 0xB9F3B9FAC994498B)]
+    [NMS(GUID = 0xEB1AFEA1294DC7EA, NameHash = 0xB9F3B9FAC994498B)]
     public class GcRewardSpecificFrigate : NMSTemplate
     {
         /* 0x00 */ public GcFrigateClass FrigateClass;

@@ -1,9 +1,8 @@
-﻿using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0xAAA343CB48DFA0FC, NameHash = 0x9EACE51885CC7760)]
+    [NMS(GUID = 0xAAA343CB48DFA0FC, NameHash = 0x9EACE51885CC7760)]
     public class GcMissionConditionWeather : NMSTemplate
     {
         /* 0x0 */ public bool IsExtreme;

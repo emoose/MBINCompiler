@@ -1,13 +1,11 @@
-﻿using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
+using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0xA4768229DACCC1, NameHash = 0xD2E65AA0EC314D9C)]
+    [NMS(GUID = 0xA0C8BE3A4DC01E1F, NameHash = 0xD2E65AA0EC314D9C)]
     public class GcJourneyMilestoneTable : NMSTemplate
     {
-        public List<GcJourneyMilestoneData> Table; // called GcJourneyMilestoneTable in the exe
+        /* 0x0 */ public List<GcJourneyMilestoneData> JourneyMilestoneTable;
     }
 }

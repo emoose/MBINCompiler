@@ -1,8 +1,3 @@
-using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
-using libMBIN.NMS.GameComponents;
-
 namespace libMBIN.NMS.GameComponents
 {
     [NMS(GUID = 0xD2947B48751240C7, NameHash = 0x95E6C4BF9139916C)]

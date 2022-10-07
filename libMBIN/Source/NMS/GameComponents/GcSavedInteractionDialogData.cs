@@ -1,12 +1,9 @@
-﻿using libMBIN.NMS.Toolkit;
-using libMBIN.NMS.GameComponents;
-
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0xA80997A95CD03CAA, NameHash = 0xC148692F6AE43572)]
+    [NMS(GUID = 0xA80997A95CD03CAA, NameHash = 0xC148692F6AE43572)]
     public class GcSavedInteractionDialogData : NMSTemplate
     {
-        public ulong Hash;
-        public NMSString0x20A Dialog;
+        /* 0x0 */ public ulong Hash;
+        /* 0x8 */ public NMSString0x20A Dialog;
     }
 }

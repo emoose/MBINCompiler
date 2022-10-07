@@ -1,13 +1,10 @@
-﻿using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
-using libMBIN.NMS.GameComponents;
+using System.Collections.Generic;
 
 namespace libMBIN.NMS.Toolkit
 {
-	[NMS(GUID = 0x2D1C094801F11119, NameHash = 0x3DDA3A377A87BD8D)]
-    public class TkIDArray : NMSTemplate
+    [NMS(GUID = 0x1DFDF6D9F2137608, NameHash = 0x5BE759AC75174BE6)]
+    public class TkIdArray : NMSTemplate
     {
-        public List<NMSString0x10> Array;
+        /* 0x0 */ public List<NMSString0x10> Array;
     }
 }

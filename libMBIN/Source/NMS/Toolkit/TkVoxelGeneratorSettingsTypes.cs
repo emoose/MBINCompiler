@@ -1,6 +1,3 @@
-﻿using libMBIN.NMS.Toolkit;
-using libMBIN.NMS.GameComponents;
-
 namespace libMBIN.NMS.Toolkit
 {
     [NMS(GUID = 0xDB29A0A6B9F50F91, NameHash = 0x60B0A451EF1759F9)]
@@ -8,10 +5,28 @@ namespace libMBIN.NMS.Toolkit
     {
         // size: 0x15
         public enum TerrainSettingsEnum {
-            FloatingIslands, GrandCanyon, MountainRavines, HugeArches, Alien, Craters, Caverns, Alpine, LilyPad, Desert,
-            WaterworldPrime, FloatingIslandsPrime, GrandCanyonPrime, MountainRavinesPrime, HugeArchesPrime, AlienPrime,
-            CratersPrime, CavernsPrime, AlpinePrime, LilyPadPrime, DesertPrime
+            FloatingIslands,
+            GrandCanyon,
+            MountainRavines,
+            HugeArches,
+            Alien,
+            Craters,
+            Caverns,
+            Alpine,
+            LilyPad,
+            Desert,
+            WaterworldPrime,
+            FloatingIslandsPrime,
+            GrandCanyonPrime,
+            MountainRavinesPrime,
+            HugeArchesPrime,
+            AlienPrime,
+            CratersPrime,
+            CavernsPrime,
+            AlpinePrime,
+            LilyPadPrime,
+            DesertPrime
         }
-        public TerrainSettingsEnum TerrainSettings;
+        /* 0x0 */ public TerrainSettingsEnum TerrainSettings;
     }
 }

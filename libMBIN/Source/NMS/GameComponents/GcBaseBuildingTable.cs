@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-
 using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
+using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xA87BCE144343C714, NameHash = 0x69B43206529CA591)]
+    [NMS(GUID = 0xCB648AFEF284DCA5, NameHash = 0x69B43206529CA591)]
     public class GcBaseBuildingTable : NMSTemplate
     {
         /* 0x000 */ public TkModelResource LegModel;

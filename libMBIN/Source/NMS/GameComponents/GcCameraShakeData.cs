@@ -1,9 +1,8 @@
-﻿using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0x2BDD0C90F80F5BE7, NameHash = 0x381A76E400DE3EE7)]
+    [NMS(GUID = 0x2BDD0C90F80F5BE7, NameHash = 0x381A76E400DE3EE7)]
     public class GcCameraShakeData : NMSTemplate
     {
         /* 0x00 */ public NMSString0x10 Name;
@@ -14,7 +13,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x20 */ public float ThirdPersonDamp;
         /* 0x24 */ public GcCameraShakeCapturedData CapturedData;
         /* 0x40 */ public GcCameraShakeMechanicalData MechanicalData;
-        /* 0xB0 */ public float FOVStrength;
-        /* 0xB4 */ public float FOVFrequency;
+        /* 0xB0 */ public float FovStrength;
+        /* 0xB4 */ public float FovFrequency;
     }
 }

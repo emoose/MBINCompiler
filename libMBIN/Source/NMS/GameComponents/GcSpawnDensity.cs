@@ -1,17 +1,18 @@
-﻿using libMBIN.NMS.Toolkit;
-using libMBIN.NMS.GameComponents;
-
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0xD5F1AEB0209042C6, NameHash = 0x36320600C6ADE7CA)]
+    [NMS(GUID = 0xD5F1AEB0209042C6, NameHash = 0x36320600C6ADE7CA)]
     public class GcSpawnDensity : NMSTemplate
     {
-        /* 0x000 */ public NMSString0x10 Name;
-        /* 0x010 */ public bool Active;
-		public enum CoverageTypeEnum { Total, SmoothPatch, GridPatch }
-		public CoverageTypeEnum CoverageType;
-
-        /* 0x018 */ public float PatchSize;
-        /* 0x01C */ public float RegionScale;
+        /* 0x00 */ public NMSString0x10 Name;
+        /* 0x10 */ public bool Active;
+        // size: 0x3
+        public enum CoverageTypeEnum {
+            Total,
+            SmoothPatch,
+            GridPatch
+        }
+        /* 0x14 */ public CoverageTypeEnum CoverageType;
+        /* 0x18 */ public float PatchSize;
+        /* 0x1C */ public float RegionScale;
     }
 }

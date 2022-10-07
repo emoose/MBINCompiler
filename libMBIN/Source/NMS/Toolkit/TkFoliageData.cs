@@ -1,11 +1,6 @@
-using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
-using libMBIN.NMS.GameComponents;
-
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0xE539478BBD90E8D3, NameHash = 0x0678F6A0ACE397B4)]
+    [NMS(GUID = 0xE539478BBD90E8D3, NameHash = 0x678F6A0ACE397B4)]
     public class TkFoliageData : NMSTemplate
     {
         /* 0x00 */ public NMSString0x80 Material;

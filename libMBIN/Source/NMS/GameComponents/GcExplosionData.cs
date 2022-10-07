@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-
 using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
+using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x6CE757710B98CED, NameHash = 0x8318BC4815036659)]
+    [NMS(GUID = 0x9EA75562133216DF, NameHash = 0x8318BC4815036659)]
     public class GcExplosionData : NMSTemplate
     {
         /* 0x00 */ public NMSString0x10 Id;

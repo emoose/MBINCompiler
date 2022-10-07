@@ -1,13 +1,11 @@
-﻿using System.Collections.Generic;
-
 using libMBIN.NMS.Toolkit;
-using libMBIN.NMS.GameComponents;
+using System.Collections.Generic;
 
 namespace libMBIN.NMS.Toolkit
 {
-	[NMS(GUID = 0xD33AC9B9ADD17756, NameHash = 0x3542E107D9C3C98)]
+    [NMS(GUID = 0xD33AC9B9ADD17756, NameHash = 0x3542E107D9C3C98)]
     public class TkControllerList : NMSTemplate
     {
-        public List<TkControllerButtonLookup> Controllers;
+        /* 0x0 */ public List<TkControllerButtonLookup> Controllers;
     }
 }

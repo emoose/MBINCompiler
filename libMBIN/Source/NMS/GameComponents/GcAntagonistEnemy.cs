@@ -1,11 +1,8 @@
-﻿using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
-using libMBIN.NMS.GameComponents;
+using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0x71CAAD93EF1D64EC, NameHash = 0xFF1B80B6AD49D2A3)]
+    [NMS(GUID = 0x71CAAD93EF1D64EC, NameHash = 0xFF1B80B6AD49D2A3)]
     public class GcAntagonistEnemy : NMSTemplate
     {
         /* 0x0 */ public float HatredFactor;

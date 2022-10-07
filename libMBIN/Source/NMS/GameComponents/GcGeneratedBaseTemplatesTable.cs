@@ -1,11 +1,9 @@
-﻿using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
+using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0xDBA6938E9D54B281, NameHash = 0x7F0943EC9DBC0BDD)]
+    [NMS(GUID = 0xDBA6938E9D54B281, NameHash = 0x7F0943EC9DBC0BDD)]
     public class GcGeneratedBaseTemplatesTable : NMSTemplate
     {
         /* 0x00 */ public List<GcGeneratedBaseDecorationTemplate> DecorationTemplates;

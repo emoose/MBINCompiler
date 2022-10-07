@@ -1,12 +1,9 @@
-﻿using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
-using libMBIN.NMS.GameComponents;
+using System.Collections.Generic;
 
 namespace libMBIN.NMS.Globals
 {
     [NMS(GUID = 0xE631F099F9410CAB, NameHash = 0xFF2996557C508B00)]
-    public class GcSceneOptions : NMSTemplate // doesn't seem like any of this is used by the game..
+    public class GcSceneOptions : NMSTemplate
     {
         /* 0x000 */ public int RecentToolboxIndex;
         /* 0x004 */ public int SelectedToolboxIndex;

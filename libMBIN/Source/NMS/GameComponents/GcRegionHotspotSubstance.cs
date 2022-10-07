@@ -1,15 +1,10 @@
-﻿using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
-using libMBIN.NMS.GameComponents;
-
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0x7AAA8A17257BB80C, NameHash = 0x9A26DA40EA0EA5D4)]
+    [NMS(GUID = 0x7AAA8A17257BB80C, NameHash = 0x9A26DA40EA0EA5D4)]
     public class GcRegionHotspotSubstance : NMSTemplate
     {
-        public NMSString0x10 SubstanceId;
-        public int AmountCost;
-        public int SubstanceYeild;
+        /* 0x00 */ public NMSString0x10 SubstanceId;
+        /* 0x10 */ public int AmountCost;
+        /* 0x14 */ public int SubstanceYeild;
     }
 }

@@ -1,11 +1,8 @@
-using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xFF20FABD019768C3, NameHash = 0x562052A8272CC4A3)]
+    [NMS(GUID = 0x552A7189F2A5C8C7, NameHash = 0x562052A8272CC4A3)]
     public class GcGalaxyWaypoint : NMSTemplate
     {
         /* 0x00 */ public GcGalacticAddressData Address;

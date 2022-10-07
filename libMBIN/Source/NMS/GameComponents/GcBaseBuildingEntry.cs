@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-
 using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
+using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x5104E440BBC7AF54, NameHash = 0xA6F7B710166F6076)]
+    [NMS(GUID = 0x7C820E70B1E606C3, NameHash = 0xA6F7B710166F6076)]
     public class GcBaseBuildingEntry : NMSTemplate
     {
         /* 0x000 */ public NMSString0x10 ID;
@@ -50,7 +48,10 @@ namespace libMBIN.NMS.GameComponents
         /* 0x18D */ public bool RemovesWhenUnsnapped;
         /* 0x18E */ public bool EditsTerrain;
         // size: 0x2
-        public enum BaseTerrainEditShapeEnum { Cube, Cylinder }
+        public enum BaseTerrainEditShapeEnum {
+            Cube,
+            Cylinder
+        }
         /* 0x190 */ public BaseTerrainEditShapeEnum BaseTerrainEditShape;
         /* 0x194 */ public float MinimumDeleteDistance;
         /* 0x198 */ public bool IsSealed;

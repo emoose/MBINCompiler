@@ -1,17 +1,13 @@
-using libMBIN.NMS.Toolkit;
-using libMBIN.NMS.GameComponents;
-
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0x89ED051FD49328DB, NameHash = 0xFAC452E6BECE8553)]
+    [NMS(GUID = 0x89ED051FD49328DB, NameHash = 0xFAC452E6BECE8553)]
     public class GcShipHUDTargetIconData : NMSTemplate
     {
-        public NMSString0x80 Corner;
-        public NMSString0x80 LineHorizontal;
-        public NMSString0x80 LineVertical;
-
-        public NMSString0x80 GlowCorner;
-        public NMSString0x80 GlowLineHorizontal;
-        public NMSString0x80 GlowLineVertical;
+        /* 0x000 */ public NMSString0x80 Corner;
+        /* 0x080 */ public NMSString0x80 LineHorizontal;
+        /* 0x100 */ public NMSString0x80 LineVertical;
+        /* 0x180 */ public NMSString0x80 GlowCorner;
+        /* 0x200 */ public NMSString0x80 GlowLineHorizontal;
+        /* 0x280 */ public NMSString0x80 GlowLineVertical;
     }
 }

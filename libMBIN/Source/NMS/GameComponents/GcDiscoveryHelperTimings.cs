@@ -1,14 +1,10 @@
-﻿using libMBIN.NMS.Toolkit;
-using libMBIN.NMS.GameComponents;
-
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0x41FEBAC9A23EF9D6, NameHash = 0xD14651666CB8A6EB)]
-    public class GcDiscoveryHelperTimings : NMSTemplate // size = 0xC
+    [NMS(GUID = 0x41FEBAC9A23EF9D6, NameHash = 0xD14651666CB8A6EB)]
+    public class GcDiscoveryHelperTimings : NMSTemplate
     {
-
-        public float DiscoverPlanetTotalTime;           // 41200000h
-        public float DiscoverPlanetMessageWait;         // 3F800000h
-        public float DiscoverPlanetMessageTime;         // 40E00000h
+        /* 0x0 */ public float DiscoverPlanetTotalTime;
+        /* 0x4 */ public float DiscoverPlanetMessageWait;
+        /* 0x8 */ public float DiscoverPlanetMessageTime;
     }
 }

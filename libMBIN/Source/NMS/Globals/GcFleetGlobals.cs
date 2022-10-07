@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
+using System.Collections.Generic;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(GUID = 0xFEC2822F248FB729, NameHash = 0xB032629C37506E6A)]
+    [NMS(GUID = 0xD33DAEB8A6FB7E3, NameHash = 0xB032629C37506E6A)]
     public class GcFleetGlobals : NMSTemplate
     {
         /* 0x0000 */ public Vector3f FreighterCustomiserSunAngleAdjust;
@@ -49,7 +46,7 @@ namespace libMBIN.NMS.Globals
         /* 0x0107 */ public bool DisablePlayerFleets;
         /* 0x0108 */ public NMSString0x20A DebugInterventionEvent;
         // size: 0xB
-        public enum ForceDebriefEntryTypeEnum { 
+        public enum ForceDebriefEntryTypeEnum {
             None,
             PrimarySuccess,
             WhaleSuccess,
@@ -77,7 +74,21 @@ namespace libMBIN.NMS.Globals
         /* 0x015C */ public GcNumberedTextList FrigateDamageDescriptions;
         /* 0x0180 */ public GcNumberedTextList FrigateGoodMoods;
         /* 0x01A4 */ public GcNumberedTextList FrigateBadMoods;
-        [NMS(Size = 0xB, EnumType = typeof(GcFrigateStatType.FrigateStatTypeEnum))]
+        // size: 0xB
+        public enum DeepSpaceFrigateMoodsEnum {
+            Combat,
+            Exploration,
+            Mining,
+            Diplomatic,
+            FuelBurnRate,
+            FuelCapacity,
+            Speed,
+            ExtraLoot,
+            Repair,
+            Invulnerable,
+            Stealth
+        }
+        [NMS(Size = 0xB, EnumType = typeof(DeepSpaceFrigateMoodsEnum))]
         /* 0x01C8 */ public GcNumberedTextList[] DeepSpaceFrigateMoods;
         /* 0x0354 */ public GcNumberedTextList FrigateExtraNotes;
         /* 0x0378 */ public float RadiusRequiredForFrigateSpawn;
@@ -107,7 +118,7 @@ namespace libMBIN.NMS.Globals
         /* 0x0548 */ public NMSString0x20A SelectExpeditionPuzzleID;
         /* 0x0568 */ public int NumberOfExpeditionChoices;
         /* 0x056C */ public int ExpeditionDifficultyVariance;
-        /* 0x0570 */ public float ExpeditionDifficultyIncreaseForEachAdditionalFrigate;
+        /* 0x0570 */ public float ExpeditionDifficultyIncreaseForEachAdditionalFriga;
         /* 0x0574 */ public int MinExpeditionStatValue;
         /* 0x0578 */ public int MaxExpeditionStatValue;
         /* 0x057C */ public int NumberOfFrigatesPurchasedToEndEasyExpeditions;

@@ -1,11 +1,6 @@
-﻿using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
-using libMBIN.NMS.GameComponents;
-
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0xB4F9156DFE56219D, NameHash = 0x1805828080FC646E)]
+    [NMS(GUID = 0xB4F9156DFE56219D, NameHash = 0x1805828080FC646E)]
     public class GcWorldUISettings : NMSTemplate
     {
         /* 0x00 */ public float UIWorldQuadOffset;

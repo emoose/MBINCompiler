@@ -1,13 +1,11 @@
-﻿using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
+using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0xDA2E856096A99DAE, NameHash = 0x1B43FEE74DE674AE)]
+    [NMS(GUID = 0xDA2E856096A99DAE, NameHash = 0x1B43FEE74DE674AE)]
     public class GcEntitlementRewardsTable : NMSTemplate
     {
-        public List<GcEntitlementRewardData> Table;
+        /* 0x0 */ public List<GcEntitlementRewardData> Table;
     }
 }

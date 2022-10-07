@@ -1,24 +1,21 @@
-﻿using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
+using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0x2F97654090258A71, NameHash = 0xAF875892F81EDE11)]
+    [NMS(GUID = 0xDAB31DAB05F5E090, NameHash = 0xAF875892F81EDE11)]
     public class GcInventoryContainer : NMSTemplate
     {
-        /* 0x00 */ public List<GcInventoryElement> Slots;
-        /* 0x10 */ public List<GcInventoryIndex> ValidSlotIndices;
-        /* 0x20 */ public GcInventoryClass Class;
-        /* 0x24 */ public int SubstanceMaxStorageMultiplier;
-        /* 0x28 */ public int ProductMaxStorageMultiplier;
-        /* 0x30 */ public List<GcInventoryBaseStatEntry> BaseStatValues;
-        /* 0x40 */ public List<GcInventorySpecialSlot> SpecialSlots;
-        /* 0x50 */ public int Width;
-        /* 0x54 */ public int Height;
-        /* 0x58 */ public bool IsCool;
-        /* 0x59 */ public NMSString0x100 Name;
-        /* 0x15C */ public int Version;
+        /* 0x000 */ public List<GcInventoryElement> Slots;
+        /* 0x010 */ public List<GcInventoryIndex> ValidSlotIndices;
+        /* 0x020 */ public GcInventoryClass Class;
+        /* 0x024 */ public GcInventoryStackSizeGroup StackSizeGroup;
+        /* 0x028 */ public List<GcInventoryBaseStatEntry> BaseStatValues;
+        /* 0x038 */ public List<GcInventorySpecialSlot> SpecialSlots;
+        /* 0x048 */ public int Width;
+        /* 0x04C */ public int Height;
+        /* 0x050 */ public bool IsCool;
+        /* 0x051 */ public NMSString0x100 Name;
+        /* 0x154 */ public int Version;
     }
 }

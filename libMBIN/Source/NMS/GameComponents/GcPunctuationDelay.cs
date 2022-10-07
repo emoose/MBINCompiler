@@ -1,14 +1,9 @@
-﻿using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
-using libMBIN.NMS.GameComponents;
-
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0x69B0DB0BE1574A11, NameHash = 0x88FA9D134F35E97B)]
+    [NMS(GUID = 0x69B0DB0BE1574A11, NameHash = 0x88FA9D134F35E97B)]
     public class GcPunctuationDelay : NMSTemplate
     {
-        public NMSString0x20 Punctuation;
-        public float Delay;
+        /* 0x00 */ public NMSString0x20 Punctuation;
+        /* 0x20 */ public float Delay;
     }
 }

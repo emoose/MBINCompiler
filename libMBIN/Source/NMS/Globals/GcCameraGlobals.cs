@@ -1,8 +1,6 @@
-using System;
-using System.Collections.Generic;
-
 using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
+using System.Collections.Generic;
 
 namespace libMBIN.NMS.Globals
 {
@@ -314,7 +312,7 @@ namespace libMBIN.NMS.Globals
         /* 0x3594 */ public float CreatureSizeMin;
         /* 0x3598 */ public float CreatureSizeMax;
         /* 0x359C */ public float CreatureInteractionMinDist;
-        /* 0x35A0 */ public float CreatureInteractionPushCameraDownForCreatureBiggerThan;
+        /* 0x35A0 */ public float CreatureInteractionPushCameraDownForCreatureBigger;
         /* 0x35A4 */ public float CreatureInteractionPushCameraDownAmount;
         /* 0x35A8 */ public float CreatureInteractionDistMulMin;
         /* 0x35AC */ public float CreatureInteractionDistMulMax;
@@ -334,7 +332,7 @@ namespace libMBIN.NMS.Globals
         /* 0x35E4 */ public float CreatureInteractionHeadHeightSpring;
         /* 0x35E8 */ public bool FollowDrawCamProbes;
         /* 0x35EC */ public GcCameraAnimationData AmbientCameraAnimations;
-        /* 0x3670 */ public TkTextureResource AmbientDroneAnimations;
+        /* 0x3670 */ public TkModelResource AmbientDroneAnimations;
         /* 0x36F4 */ public NMSString0x80 CameraAmbientAnimationsData;
         /* 0x3774 */ public float CameraAmbientAutoSwitchMinTime;
         /* 0x3778 */ public float CameraAmbientAutoSwitchMaxTime;

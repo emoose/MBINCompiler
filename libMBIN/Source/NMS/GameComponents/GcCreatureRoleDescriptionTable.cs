@@ -1,11 +1,9 @@
-﻿using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
+using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0xCA864386410EA955, NameHash = 0xBCFEFAC14ECD961B)]
+    [NMS(GUID = 0xCA864386410EA955, NameHash = 0xBCFEFAC14ECD961B)]
     public class GcCreatureRoleDescriptionTable : NMSTemplate
     {
         /* 0x00 */ public List<GcCreatureRoleDescription> RoleDescription;

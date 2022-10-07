@@ -1,9 +1,6 @@
-﻿using libMBIN.NMS.Toolkit;
-using libMBIN.NMS.GameComponents;
-
 namespace libMBIN.NMS.Toolkit
 {
-	[NMS(GUID = 0x55BA4726F9A4A05D, NameHash = 0xA720068E4459862)]
+    [NMS(GUID = 0x55BA4726F9A4A05D, NameHash = 0xA720068E4459862)]
     public class TkNoiseUberData : NMSTemplate
     {
         /* 0x00 */ public int Octaves;
@@ -21,7 +18,13 @@ namespace libMBIN.NMS.Toolkit
         /* 0x30 */ public float RemapFromMax;
         /* 0x34 */ public float RemapToMin;
         /* 0x38 */ public float RemapToMax;
-		public enum DebugNoiseTypeEnum { Plane, Check, Sine, Uber }
-		public DebugNoiseTypeEnum DebugNoiseType;
+        // size: 0x4
+        public enum DebugNoiseTypeEnum {
+            Plane,
+            Check,
+            Sine,
+            Uber
+        }
+        /* 0x3C */ public DebugNoiseTypeEnum DebugNoiseType;
     }
 }

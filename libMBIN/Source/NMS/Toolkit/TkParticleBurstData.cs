@@ -1,16 +1,12 @@
-using System;
-using System.Collections.Generic;
-
 using libMBIN.NMS.Toolkit;
-using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0xDDA826D0D091C6EF, NameHash = 0x523281BEC01AA0F4)]
+    [NMS(GUID = 0x8CE9F96EF7BFAD50, NameHash = 0x523281BEC01AA0F4)]
     public class TkParticleBurstData : NMSTemplate
     {
-        /* 0x00 */ public TkEmitterFloatProperty BurstAmount;
-        /* 0x2C */ public TkEmitterFloatProperty BurstInterval;
-        /* 0x58 */ public int LoopCount;
+        /* 0x000 */ public TkEmitterFloatProperty BurstAmount;
+        /* 0x080 */ public TkEmitterFloatProperty BurstInterval;
+        /* 0x100 */ public int LoopCount;
     }
 }

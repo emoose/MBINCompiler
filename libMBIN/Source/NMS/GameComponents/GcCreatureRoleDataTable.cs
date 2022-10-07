@@ -1,16 +1,14 @@
-﻿using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
+using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0x36FDA5516CBF4B75, NameHash = 0xF460B1FDC0499CEA)]
+    [NMS(GUID = 0x36FDA5516CBF4B75, NameHash = 0xF460B1FDC0499CEA)]
     public class GcCreatureRoleDataTable : NMSTemplate
     {
-        public List<GcCreatureRoleData> AvailableRoles;
-        public float MaxProportionFlying;
-        public bool HasSandWorms;
-        public float SandWormFrequency;
+        /* 0x00 */ public List<GcCreatureRoleData> AvailableRoles;
+        /* 0x10 */ public float MaxProportionFlying;
+        /* 0x14 */ public bool HasSandWorms;
+        /* 0x18 */ public float SandWormFrequency;
     }
 }

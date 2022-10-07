@@ -1,15 +1,9 @@
-using System;
-using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
+using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    // Inexplicably this class has an alignment of 0x10. I can't see a reason for this,]
-    // unless the first class of a generic list always has an alignment of 0x10???
-    // Will need more investigation...
-    [NMS(GUID = 0xCFCC496EAF24EC6F, NameHash = 0x7095201046A71EFE, Alignment = 0x10)]
+    [NMS(GUID = 0xF98A51715C54E9F4, NameHash = 0x7095201046A71EFE)]
     public class GcPlayerClothComponentData : NMSTemplate
     {
         /* 0x00 */ public bool Enabled;

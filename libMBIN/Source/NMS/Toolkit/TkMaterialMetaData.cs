@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
 using libMBIN.NMS.Toolkit;
-using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Toolkit
 {
@@ -11,7 +7,14 @@ namespace libMBIN.NMS.Toolkit
     {
         /* 0x000 */ public NMSString0x80 ExternalMaterial;
         // size: 0x7
-        public enum ShaderEnum { UberShader, Sky, Screen, UberHack, UIScreen, ShaderMillParticle, ShaderMillUber
+        public enum ShaderEnum {
+            UberShader,
+            Sky,
+            Screen,
+            UberHack,
+            UIScreen,
+            ShaderMillParticle,
+            ShaderMillUber
         }
         /* 0x080 */ public ShaderEnum Shader;
         /* 0x084 */ public bool Transparent;
@@ -68,7 +71,11 @@ namespace libMBIN.NMS.Toolkit
         /* 0x3F8 */ public bool DecalDiffuse;
         /* 0x3F9 */ public bool DecalTerrainOnly;
         // size: 0x3
-        public enum DecalNormalEnum { None, Decal, Vertex }
+        public enum DecalNormalEnum {
+            None,
+            Decal,
+            Vertex
+        }
         /* 0x3FC */ public DecalNormalEnum DecalNormal;
         /* 0x400 */ public bool Billboard;
         /* 0x401 */ public bool RotateAroundAt;

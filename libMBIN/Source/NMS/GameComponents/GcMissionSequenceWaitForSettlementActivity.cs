@@ -1,12 +1,6 @@
-using System;
-using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
-using libMBIN.NMS.GameComponents;
-
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xCDF9A69EB7D1BC79, NameHash = 0x00013DC6DC343F05)]
+    [NMS(GUID = 0xCDF9A69EB7D1BC79, NameHash = 0x13DC6DC343F05)]
     public class GcMissionSequenceWaitForSettlementActivity : NMSTemplate
     {
         /* 0x000 */ public NMSString0x80 Message;

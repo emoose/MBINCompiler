@@ -1,4 +1,3 @@
-using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
@@ -8,7 +7,7 @@ namespace libMBIN.NMS.GameComponents
     {
         /* 0x00 */ public NMSString0x10 BaseID;
         /* 0x10 */ public ulong SeedValue;
-        /* 0x18 */ public float ChangeStrenght;
+        /* 0x18 */ public float ChangeStrength;
         /* 0x1C */ public GcSettlementStatType Stat;
         /* 0x20 */ public bool IsNegative;
         /* 0x21 */ public bool IsProc;

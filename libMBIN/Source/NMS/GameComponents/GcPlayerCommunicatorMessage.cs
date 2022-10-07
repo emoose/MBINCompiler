@@ -1,7 +1,3 @@
-﻿using System;
-using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
@@ -12,8 +8,17 @@ namespace libMBIN.NMS.GameComponents
         /* 0x00 */ public NMSString0x20A Dialog;
         /* 0x20 */ public bool ShowHologram;
         // size: 0xA
-        public enum CommunicatorTypeEnum { HoloExplorer, HoloSceptic, HoloNoone, Generic, PlayerFreighterCaptain, Polo,
-            Nada, QuicksilverBot, PlayerSettlementResident, CargoScanDrone
+        public enum CommunicatorTypeEnum {
+            HoloExplorer,
+            HoloSceptic,
+            HoloNoone,
+            Generic,
+            PlayerFreighterCaptain,
+            Polo,
+            Nada,
+            QuicksilverBot,
+            PlayerSettlementResident,
+            CargoScanDrone
         }
         /* 0x24 */ public CommunicatorTypeEnum CommunicatorType;
         /* 0x28 */ public GcAlienRace RaceOverride;

@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
+using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x2582CA2EF134A027, NameHash = 0x6EB308F16DDC755C)]
+    [NMS(GUID = 0xFD25A36DC0C6423A, NameHash = 0x6EB308F16DDC755C)]
     public class GcNPCInteractiveObjectComponentData : NMSTemplate
     {
         /* 0x00 */ public GcNPCInteractiveObjectType InteractiveObjectType;

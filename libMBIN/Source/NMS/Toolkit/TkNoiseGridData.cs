@@ -1,9 +1,8 @@
-﻿using libMBIN.NMS.Toolkit;
-using libMBIN.NMS.GameComponents;
+using libMBIN.NMS.Toolkit;
 
 namespace libMBIN.NMS.Toolkit
 {
-	[NMS(GUID = 0x881E40C22112767, NameHash = 0xA45052EB66E281C7)]
+    [NMS(GUID = 0x881E40C22112767, NameHash = 0xA45052EB66E281C7)]
     public class TkNoiseGridData : NMSTemplate
     {
         /* 0x000 */ public bool Active;
@@ -11,10 +10,33 @@ namespace libMBIN.NMS.Toolkit
         /* 0x008 */ public bool Subtract;
         /* 0x009 */ public bool SwapZY;
         /* 0x00A */ public bool Hemisphere;
-        /* 0x00C */ public TkNoiseVoxelTypeEnum NoiseVoxelType;
-		public enum NoiseGridTypeEnum { Cube, Cone, Torus, Sphere, Cylinder, Capsule, Corridor, Pipe, Puck, SuperPrimitiveRandom, SuperFormula_01, SuperFormula_02, SuperFormula_03, SuperFormula_04, SuperFormula_05, SuperFormula_06, SuperFormula_07, SuperFormula_08, SuperFormulaRandom, SuperFormula, SuperPrimitive, File }
-		public NoiseGridTypeEnum NoiseGridType;
-
+        /* 0x00C */ public TkNoiseVoxelTypeEnum VoxelType;
+        // size: 0x16
+        public enum NoiseGridTypeEnum {
+            Cube,
+            Cone,
+            Torus,
+            Sphere,
+            Cylinder,
+            Capsule,
+            Corridor,
+            Pipe,
+            Puck,
+            SuperPrimitiveRandom,
+            SuperFormula_01,
+            SuperFormula_02,
+            SuperFormula_03,
+            SuperFormula_04,
+            SuperFormula_05,
+            SuperFormula_06,
+            SuperFormula_07,
+            SuperFormula_08,
+            SuperFormulaRandom,
+            SuperFormula,
+            SuperPrimitive,
+            File
+        }
+        /* 0x010 */ public NoiseGridTypeEnum NoiseGridType;
         /* 0x014 */ public NMSString0x80 Filename;
         /* 0x094 */ public float MinWidth;
         /* 0x098 */ public float MaxWidth;
@@ -23,8 +45,7 @@ namespace libMBIN.NMS.Toolkit
         /* 0x0A4 */ public float MinHeightOffset;
         /* 0x0A8 */ public float MaxHeightOffset;
         /* 0x0AC */ public float HeightOffset;
-
-        /* 0x0B0 */ public TkNoiseOffsetEnum OffsetType;
+        /* 0x0B0 */ public TkNoiseOffsetEnum Offset;
         /* 0x0B4 */ public float RegionRatio;
         /* 0x0B8 */ public float RegionScale;
         /* 0x0BC */ public TkNoiseUberLayerData TurbulenceNoiseLayer;

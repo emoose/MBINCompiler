@@ -1,7 +1,3 @@
-﻿using System;
-using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
@@ -21,7 +17,13 @@ namespace libMBIN.NMS.GameComponents
         /* 0x34 */ public bool UseModelNode;
         /* 0x38 */ public GcScannerIconTypes Icon;
         // size: 0x5
-        public enum ScannableTypeEnum { Binoculars, BinocularsHotspots, Scanner, Marker, None }
+        public enum ScannableTypeEnum {
+            Binoculars,
+            BinocularsHotspots,
+            Scanner,
+            Marker,
+            None
+        }
         /* 0x3C */ public ScannableTypeEnum ScannableType;
         /* 0x40 */ public bool IsPlacedMarker;
         /* 0x41 */ public bool ShowInFreighterBranchRoom;

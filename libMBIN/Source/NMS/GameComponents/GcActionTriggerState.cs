@@ -1,14 +1,12 @@
-﻿using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
+using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0x85EAE598340B4C9E, NameHash = 0x51A3F598097EC1ED)]
+    [NMS(GUID = 0xBC0DC8392B75520F, NameHash = 0x51A3F598097EC1ED)]
     public class GcActionTriggerState : NMSTemplate
     {
-        public NMSString0x10 StateID;
-        public List<GcActionTrigger> Triggers;
+        /* 0x00 */ public NMSString0x10 StateID;
+        /* 0x10 */ public List<GcActionTrigger> Triggers;
     }
 }

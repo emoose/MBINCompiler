@@ -1,15 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-
 using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
+using System.Collections.Generic;
 
 namespace libMBIN.NMS.Globals
 {
     [NMS(GUID = 0xD55E818E8B266EC3, NameHash = 0x1E09DD001FDA82F8)]
     public class GcEnvironmentGlobals : NMSTemplate
     {
-        [NMS(Size = 0x4)]
+        // size: 0x4
+        public enum LODSettingsEnum {
+            Low,
+            Medium,
+            High,
+            Ultra
+        }
+        [NMS(Size = 0x4, EnumType = typeof(LODSettingsEnum))]
         /* 0x000 */ public TkLODSettingsData[] LODSettings;
         /* 0x250 */ public Vector2f SpaceBuildingTemperature;
         /* 0x260 */ public GcCloudProperties CloudProperties;
@@ -56,7 +61,11 @@ namespace libMBIN.NMS.Globals
         /* 0x3E0 */ public bool MatchPlantPalettes;
         /* 0x3E4 */ public float DuplicateColourThreshold;
         // size: 0x3
-        public enum SwitchTypeEnum { None, Debug, Enabled }
+        public enum SwitchTypeEnum {
+            None,
+            Debug,
+            Enabled
+        }
         /* 0x3E8 */ public SwitchTypeEnum SwitchType;
         /* 0x3EC */ public float GrassNormalUpright;
         /* 0x3F0 */ public float GrassNormalOffset;

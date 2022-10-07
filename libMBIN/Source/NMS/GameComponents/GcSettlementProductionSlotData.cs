@@ -1,6 +1,3 @@
-using libMBIN.NMS.Toolkit;
-using libMBIN.NMS.GameComponents;
-
 namespace libMBIN.NMS.GameComponents
 {
     [NMS(GUID = 0xA0751CB4D138F6F4, NameHash = 0xB7360AAB256AE198)]

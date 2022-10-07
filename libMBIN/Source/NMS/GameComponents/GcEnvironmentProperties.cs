@@ -1,14 +1,9 @@
-using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
-using libMBIN.NMS.GameComponents;
-
 namespace libMBIN.NMS.GameComponents
 {
     [NMS(GUID = 0x201EF4D59CBBD069, NameHash = 0xB125AED843BB9164)]
     public class GcEnvironmentProperties : NMSTemplate
     {
-        /* 0x00 */ public float FlightFogheight;
+        /* 0x00 */ public float FlightFogHeight;
         /* 0x04 */ public float FlightFogBlend;
         /* 0x08 */ public float CloudHeightMin;
         /* 0x0C */ public float CloudHeightMax;
@@ -22,7 +17,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x2C */ public float PlanetLodSwitch3;
         /* 0x30 */ public float AsteroidFadeHeightMin;
         /* 0x34 */ public float AsteroidFadeHeightMax;
-        [NMS(Size = 0x4)]   // Possible enum: GcPlanetSize
+        [NMS(Size = 0x4)]
         /* 0x38 */ public float[] SkyHeight;
         /* 0x48 */ public float SkyAtmosphereHeight;
         /* 0x4C */ public float HorizonBlendHeight;

@@ -1,4 +1,3 @@
-﻿using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
@@ -6,7 +5,7 @@ namespace libMBIN.NMS.GameComponents
     [NMS(GUID = 0xEE35B5C5F8B515B0, NameHash = 0x98F83A1A50531877)]
     public class GcPlanetWaterData : NMSTemplate
     {
-        /* 0x00 */ public int ColourIndex;      // this *should* correspond to the index of the list entry in the \METADATA\SIMULATION\SOLARSYSTEM\COLOURS\WATERCOLOURS.MBIN file...
+        /* 0x00 */ public int ColourIndex;
         /* 0x04 */ public float WaterStrength;
         /* 0x08 */ public float WaterColourStrength;
         /* 0x0C */ public float WaterMultiplyStrength;

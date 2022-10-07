@@ -1,12 +1,9 @@
-﻿using libMBIN.NMS.Toolkit;
-using libMBIN.NMS.GameComponents;
-
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0x686BB2CB47FE47CF, NameHash = 0xD8515CBE051F359)]
+    [NMS(GUID = 0x10FC26BDEE9CB907, NameHash = 0xD8515CBE051F359)]
     public class GcScareCreaturesAction : NMSTemplate
     {
-        public float HearRadius;
-        public float FleeRadius;
+        /* 0x0 */ public float HearRadius;
+        /* 0x4 */ public float FleeRadius;
     }
 }

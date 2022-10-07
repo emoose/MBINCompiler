@@ -1,17 +1,23 @@
-﻿using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
+using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0x9CC2D53D1C2C776F, NameHash = 0x741554C15123D097)]
+    [NMS(GUID = 0x9CC2D53D1C2C776F, NameHash = 0x741554C15123D097)]
     public class GcCreatureFullBodyIKComponentData : NMSTemplate
     {
         /* 0x00 */ public List<GcCreatureIkData> JointData;
         /* 0x10 */ public List<GcIkPistonData> PistonData;
-		public enum HeadUpAxisEnum { X, XNeg, Y, YNeg, Z, ZNeg }
-		/* 0x20 */ public HeadUpAxisEnum HeadUpAxis;
+        // size: 0x6
+        public enum HeadUpAxisEnum {
+            X,
+            XNeg,
+            Y,
+            YNeg,
+            Z,
+            ZNeg
+        }
+        /* 0x20 */ public HeadUpAxisEnum HeadUpAxis;
         /* 0x24 */ public float MaxHeadPitch;
         /* 0x28 */ public float MaxHeadRoll;
         /* 0x2C */ public float MaxHeadYaw;

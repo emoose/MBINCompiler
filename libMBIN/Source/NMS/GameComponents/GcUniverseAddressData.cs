@@ -1,12 +1,11 @@
-﻿using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0xAF3FFA464A170D62, NameHash = 0x49FD8C968D7B338D)]
+    [NMS(GUID = 0xAF3FFA464A170D62, NameHash = 0x49FD8C968D7B338D)]
     public class GcUniverseAddressData : NMSTemplate
     {
-        /* 0x00 */ public int RealityIndex;
-        /* 0x04 */ public GcGalacticAddressData GalacticAddress;
+        /* 0x0 */ public int RealityIndex;
+        /* 0x4 */ public GcGalacticAddressData GalacticAddress;
     }
 }

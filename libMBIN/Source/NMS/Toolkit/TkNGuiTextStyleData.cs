@@ -1,9 +1,8 @@
-﻿using libMBIN.NMS.Toolkit;
-using libMBIN.NMS.GameComponents;
+using libMBIN.NMS.Toolkit;
 
 namespace libMBIN.NMS.Toolkit
 {
-	[NMS(GUID = 0x8B2E43B87941769B, NameHash = 0x91FBF976CBE15B5F)]
+    [NMS(GUID = 0xC41DDB5FFBA58D7F, NameHash = 0x91FBF976CBE15B5F)]
     public class TkNGuiTextStyleData : NMSTemplate
     {
         /* 0x00 */ public Colour Colour;
@@ -11,7 +10,7 @@ namespace libMBIN.NMS.Toolkit
         /* 0x14 */ public float FontSpacing;
         /* 0x18 */ public bool IsIndented;
         /* 0x19 */ public bool HasDropShadow;
-        /* 0x20 */ public Colour DropShadowColour;
+        /* 0x20 */ public Colour ShadowColour;
         /* 0x30 */ public float DropShadowAngle;
         /* 0x34 */ public float DropShadowOffset;
         /* 0x38 */ public bool HasOutline;
@@ -21,7 +20,8 @@ namespace libMBIN.NMS.Toolkit
         /* 0x51 */ public bool AllowScroll;
         /* 0x52 */ public bool ForceUpperCase;
         /* 0x53 */ public bool AutoAdjustHeight;
-        /* 0x54 */ public int FontIndex;
-        /* 0x58 */ public TkNGuiAlignment Align;
+        /* 0x54 */ public bool BlockAudio;
+        /* 0x58 */ public int FontIndex;
+        /* 0x5C */ public TkNGuiAlignment Align;
     }
 }

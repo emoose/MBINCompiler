@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
+using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xD4DF6C84127C0B0C, NameHash = 0xA29EE4D703004484)]
+    [NMS(GUID = 0x6866598CB26B45BF, NameHash = 0xA29EE4D703004484)]
     public class GcMissionSequenceDetailMessage : NMSTemplate
     {
         /* 0x00 */ public NMSString0x20A Title;

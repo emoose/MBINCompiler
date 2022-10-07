@@ -1,9 +1,6 @@
-﻿using libMBIN.NMS.Toolkit;
-using libMBIN.NMS.GameComponents;
-
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0xF9E364878E24F868, NameHash = 0xCD3485C140AE7B57)]
+    [NMS(GUID = 0xF9E364878E24F868, NameHash = 0xCD3485C140AE7B57)]
     public class GcPersistentBBObjectData : NMSTemplate
     {
         /* 0x00 */ public ulong Timestamp;

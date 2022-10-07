@@ -1,13 +1,11 @@
-﻿using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
+using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0x4619BA006C8DD078, NameHash = 0xCE1983E849879238)]
+    [NMS(GUID = 0xECD4751321F47A0E, NameHash = 0xCE1983E849879238)]
     public class GcSelectableObjectTable : NMSTemplate
     {
-        public List<GcSelectableObjectList> Lists;
+        /* 0x0 */ public List<GcSelectableObjectList> Lists;
     }
 }

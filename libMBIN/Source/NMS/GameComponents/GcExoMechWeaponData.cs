@@ -1,8 +1,5 @@
-using System;
-using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
+using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
@@ -11,7 +8,14 @@ namespace libMBIN.NMS.GameComponents
     {
         /* 0x00 */ public List<GcMechWeaponLocation> LocationPriority;
         /* 0x10 */ public float MaintainFireLocationMinTime;
-        [NMS(Size = 0x4)]
+        // size: 0x4
+        public enum MuzzleFlashDataIDEnum {
+            TurretExocraft,
+            TurretSentinel,
+            ArmLeft,
+            ArmRight
+        }
+        [NMS(Size = 0x4, EnumType = typeof(MuzzleFlashDataIDEnum))]
         /* 0x18 */ public NMSString0x10[] MuzzleFlashDataID;
         /* 0x58 */ public float AngleToleranceForArmAiming;
         /* 0x5C */ public float CooldownTimeMin;

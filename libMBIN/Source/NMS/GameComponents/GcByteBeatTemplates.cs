@@ -1,7 +1,5 @@
-using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
+using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
@@ -10,7 +8,28 @@ namespace libMBIN.NMS.GameComponents
     {
         /* 0x00 */ public List<NMSString0x40> InitialTrees;
         /* 0x10 */ public List<GcByteBeatTemplate> Templates;
-        [NMS(Size = 0x12, EnumType = typeof(GcByteBeatToken.ByteBeatTokenEnum))]
+        // size: 0x12
+        public enum CombinerWeightsEnum {
+            T,
+            AND,
+            OR,
+            XOR,
+            Plus,
+            Minus,
+            Multiply,
+            Divide,
+            Modulo,
+            ShiftLeft,
+            ShiftRight,
+            Greater,
+            GreaterEqual,
+            Less,
+            LessEqual,
+            Number,
+            OpenParenthesis,
+            CloseParenthesis
+        }
+        [NMS(Size = 0x12, EnumType = typeof(CombinerWeightsEnum))]
         /* 0x20 */ public float[] CombinerWeights;
         /* 0x68 */ public List<GcByteBeatDrum> KickDrums;
         /* 0x78 */ public List<GcByteBeatDrum> SnareDrums;

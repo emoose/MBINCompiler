@@ -1,11 +1,8 @@
-﻿using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0x558E920650090689, NameHash = 0x6B3A62EF81161171)]
+    [NMS(GUID = 0x558E920650090689, NameHash = 0x6B3A62EF81161171)]
     public class GcUnlockableItemTree : NMSTemplate
     {
         /* 0x00 */ public NMSString0x20A Title;

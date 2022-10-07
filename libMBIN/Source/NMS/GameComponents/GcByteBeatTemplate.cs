@@ -1,17 +1,15 @@
-using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
+using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
     [NMS(GUID = 0x4A35B9B8FCE6DD42, NameHash = 0xB764F802BDE36ADF)]
     public class GcByteBeatTemplate : NMSTemplate
     {
-        public float Weight;
-        public GcByteBeatToken TokenType;
-        public int MinValue;
-        public int MaxValue;
-        public List<GcByteBeatTemplate> Children;
+        /* 0x00 */ public float Weight;
+        /* 0x04 */ public GcByteBeatToken TokenType;
+        /* 0x08 */ public int MinValue;
+        /* 0x0C */ public int MaxValue;
+        /* 0x10 */ public List<GcByteBeatTemplate> Children;
     }
 }

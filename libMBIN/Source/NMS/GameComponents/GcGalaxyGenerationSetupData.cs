@@ -1,9 +1,6 @@
-using libMBIN.NMS.Toolkit;
-using libMBIN.NMS.GameComponents;
-
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0x139125167CF73FEB, NameHash = 0x74E6E445263E30C1)]
+    [NMS(GUID = 0x139125167CF73FEB, NameHash = 0x74E6E445263E30C1)]
     public class GcGalaxyGenerationSetupData : NMSTemplate
     {
         /* 0x00 */ public float SpiralFormChance;
@@ -38,7 +35,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0xCC */ public Vector2f StarHighlightAlpha;
         /* 0xD4 */ public Vector2f StarHighlightSize;
         /* 0xDC */ public float ColourBaseBlendOnSize;
-
         [NMS(Size = 0xA)]
         /* 0xE0 */ public Colour[] InnerSectorColours;
     }

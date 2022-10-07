@@ -1,13 +1,11 @@
-﻿using System.Collections.Generic;
-
 using libMBIN.NMS.Toolkit;
-using libMBIN.NMS.GameComponents;
+using System.Collections.Generic;
 
 namespace libMBIN.NMS.Toolkit
 {
-	[NMS(GUID = 0x5627895BB950EF14, NameHash = 0x2969CA92E6538A9A)]
+    [NMS(GUID = 0x5627895BB950EF14, NameHash = 0x2969CA92E6538A9A)]
     public class TkLocalisationTable : NMSTemplate
     {
-        public List<TkLocalisationEntry> Table;
+        /* 0x0 */ public List<TkLocalisationEntry> Table;
     }
 }

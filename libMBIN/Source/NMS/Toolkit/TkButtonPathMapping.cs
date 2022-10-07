@@ -1,9 +1,8 @@
-﻿using libMBIN.NMS.Toolkit;
-using libMBIN.NMS.GameComponents;
+using libMBIN.NMS.Toolkit;
 
 namespace libMBIN.NMS.Toolkit
 {
-	[NMS(GUID = 0xC5D79446117184CF, NameHash = 0xBC97B5A50FBB25EA)]
+    [NMS(GUID = 0xB63DF6CACA7CC2B8, NameHash = 0xBC97B5A50FBB25EA)]
     public class TkButtonPathMapping : NMSTemplate
     {
         /* 0x000 */ public TkInputEnum Id;

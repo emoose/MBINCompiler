@@ -1,12 +1,9 @@
-using System;
-using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
+using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xF9CF5806AFD8A6E6, NameHash = 0x1D427C136EB50E9D)]
+    [NMS(GUID = 0x98F14B77C869788A, NameHash = 0x1D427C136EB50E9D)]
     public class GcNPCDebugSpawnData : NMSTemplate
     {
         /* 0x000 */ public Vector3f Position;

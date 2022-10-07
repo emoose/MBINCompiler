@@ -1,11 +1,9 @@
-﻿using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
+using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0x98CAC5D1DEA68EBC, NameHash = 0x76D3572C2A9662D2)]
+    [NMS(GUID = 0x98CAC5D1DEA68EBC, NameHash = 0x76D3572C2A9662D2)]
     public class GcExternalObjectFileList : NMSTemplate
     {
         /* 0x00 */ public NMSString0x10 Id;
@@ -22,6 +20,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0x20 */ public int MinFilesToChoose;
         /* 0x24 */ public int MaxFilesToChoose;
         /* 0x28 */ public List<GcExternalObjectListOptions> ExternalObjectFiles;
-
     }
 }

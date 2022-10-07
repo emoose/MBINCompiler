@@ -1,4 +1,3 @@
-using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
@@ -7,7 +6,10 @@ namespace libMBIN.NMS.GameComponents
     public class GcPlayerControlInputMouse : NMSTemplate
     {
         /* 0x00 */ public GcCharacterControlInputValidity Validity;
-        public enum InputMouseModeEnum { ScreenCentrePos }
+        // size: 0x1
+        public enum InputMouseModeEnum {
+            ScreenCentrePos
+        }
         /* 0x04 */ public InputMouseModeEnum InputMouseMode;
         /* 0x08 */ public GcCharacterControlOutputSpace OutputSpace;
         /* 0x10 */ public NMSString0x10 Output;

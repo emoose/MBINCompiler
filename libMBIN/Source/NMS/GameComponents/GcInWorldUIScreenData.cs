@@ -1,15 +1,10 @@
-﻿using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
-using libMBIN.NMS.GameComponents;
-
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0x1E6D02062E36E3D, NameHash = 0xFFAAB9AB630ACB70)]
+    [NMS(GUID = 0x1E6D02062E36E3D, NameHash = 0xFFAAB9AB630ACB70)]
     public class GcInWorldUIScreenData : NMSTemplate
     {
-        public float ScreenScale;
-        public Vector3f ScreenOffset;
-        public Vector3f ScreenRotation;
+        /* 0x00 */ public float ScreenScale;
+        /* 0x10 */ public Vector3f ScreenOffset;
+        /* 0x20 */ public Vector3f ScreenRotation;
     }
 }

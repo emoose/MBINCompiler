@@ -1,11 +1,6 @@
-﻿using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
-using libMBIN.NMS.GameComponents;
-
 namespace libMBIN.NMS.Toolkit
 {
-	[NMS(GUID = 0xFEB421323879E283, NameHash = 0x38D7F8085AD4CE3)]
+    [NMS(GUID = 0xFEB421323879E283, NameHash = 0x38D7F8085AD4CE3)]
     public class TkCreatureTailJoints : NMSTemplate
     {
         /* 0x00 */ public NMSString0x20 StartJoint;

@@ -1,7 +1,5 @@
-﻿using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
+using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
@@ -12,4 +10,3 @@ namespace libMBIN.NMS.GameComponents
         /* 0x10 */ public int CurrentPos;
     }
 }
-

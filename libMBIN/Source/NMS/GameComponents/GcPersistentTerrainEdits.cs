@@ -1,16 +1,14 @@
-﻿using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
+using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0x24AFDEE56923EAD3, NameHash = 0xC6506D02A6391EEB)]
+    [NMS(GUID = 0x24AFDEE56923EAD3, NameHash = 0xC6506D02A6391EEB)]
     public class GcPersistentTerrainEdits : NMSTemplate
     {
-        public ulong GalacticAddress;
-        public List<int> BufferSizes;
-        public List<Vector3f> BufferAnchors;
-        public List<GcTerrainEdit> Edits;       // just a guess... Don't think any structs use this...
+        /* 0x00 */ public ulong GalacticAddress;
+        /* 0x08 */ public List<int> BufferSizes;
+        /* 0x18 */ public List<Vector3f> BufferAnchors;
+        /* 0x28 */ public List<GcTerrainEdit> Edits;
     }
 }

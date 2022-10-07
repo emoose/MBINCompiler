@@ -1,8 +1,5 @@
-using System;
-using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
+using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
@@ -10,9 +7,33 @@ namespace libMBIN.NMS.GameComponents
     public class GcModelExplosionRules : NMSTemplate
     {
         /* 0x00 */ public List<GcModelExplosionRule> Rules;
-        [NMS(Size = 0x9, EnumType = typeof(GcSpaceshipClasses.ShipClassEnum))]
+        // size: 0x9
+        public enum UseRulesEnum {
+            Freighter,
+            Dropship,
+            Fighter,
+            Scientific,
+            Shuttle,
+            PlayerFreighter,
+            Royal,
+            Alien,
+            Sail
+        }
+        [NMS(Size = 0x9, EnumType = typeof(UseRulesEnum))]
         /* 0x10 */ public bool[] UseRules;
-        [NMS(Size = 0x9, EnumType = typeof(GcSpaceshipClasses.ShipClassEnum))]
+        // size: 0x9
+        public enum ShipSalvageDisplayScalesEnum {
+            Freighter,
+            Dropship,
+            Fighter,
+            Scientific,
+            Shuttle,
+            PlayerFreighter,
+            Royal,
+            Alien,
+            Sail
+        }
+        [NMS(Size = 0x9, EnumType = typeof(ShipSalvageDisplayScalesEnum))]
         /* 0x1C */ public float[] ShipSalvageDisplayScales;
     }
 }

@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
+using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x66BFF15699735514, NameHash = 0xCE965FAFD6BBF99E)]
+    [NMS(GUID = 0x906412E6BFF5E2BF, NameHash = 0xCE965FAFD6BBF99E)]
     public class GcTestMetadata : NMSTemplate
     {
         /* 0x000 */ public bool TestBool;
@@ -18,8 +15,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x018 */ public ulong TestUInt64;
         /* 0x020 */ public long TestInt64_2;
         /* 0x028 */ public ulong TestUInt64_2;
-        [NMS(Size = 0x10, Ignore = true)]
-        public byte[] Padding30;
+        /* 0x030 */ public GcResource TestResource;
         /* 0x040 */ public Vector3f TestVector;
         /* 0x050 */ public Vector2f TestVector2;
         /* 0x060 */ public Vector4f TestVector4;
@@ -32,28 +28,105 @@ namespace libMBIN.NMS.GameComponents
         /* 0x1B8 */ public NMSString0x80 TestString128;
         /* 0x238 */ public NMSString0x100 TestString256;
         /* 0x338 */ public NMSString0x200 TestString512;
-        /* 0x538 */ public NMSString0x10 TestID; // most likely they use a special ID field which maps this to the object using this ID automatically
-        /* 0x548 */ public NMSString0x20A TestLocID; // ditto
+        /* 0x538 */ public NMSString0x10 TestID;
+        /* 0x548 */ public NMSString0x20A TestLocID;
         /* 0x568 */ public GcAudioWwiseEvents TestAudioEvent;
         /* 0x570 */ public Vector3f DocOptionalVector;
         /* 0x580 */ public NMSString0x40 DocRenamedString64;
         /* 0x5C0 */ public NMSString0x20A DocOptionalRenamed;
         // size: 0x4
-        public enum DocOptionalEnumEnum { SomeValue1, SomeValue2, SomeValue3, SomeValue4 }
+        public enum DocOptionalEnumEnum {
+            SomeValue1,
+            SomeValue2,
+            SomeValue3,
+            SomeValue4
+        }
         /* 0x5E0 */ public DocOptionalEnumEnum DocOptionalEnum;
         /* 0x5E8 */ public VariableSizeString TestDynamicString;
         // size: 0x4
-        public enum TestEnumEnum { Default, Option1, Option2, Option3 }
+        public enum TestEnumEnum {
+            Default,
+            Option1,
+            Option2,
+            Option3
+        }
         /* 0x5F8 */ public TestEnumEnum TestEnum;
         [NMS(Size = 0xA)]
         /* 0x5FC */ public float[] TestStaticArray;
         /* 0x628 */ public List<float> TestDynamicArray;
-        [NMS(Size = 0x4, EnumType = typeof(TestEnumEnum))]
+        // size: 0x4
+        public enum TestEnumArrayEnum {
+            Default,
+            Option1,
+            Option2,
+            Option3
+        }
+        [NMS(Size = 0x4, EnumType = typeof(TestEnumArrayEnum))]
         /* 0x638 */ public float[] TestEnumArray;
-        [NMS(Size = 0x34, EnumType = typeof(GcBuildingClassification.BuildingClassEnum))]
+        // size: 0x34
+        public enum TestExternalEnumArrayEnum {
+            None,
+            TerrainResource,
+            Shelter,
+            Abandoned,
+            Terminal,
+            Shop,
+            Outpost,
+            Waypoint,
+            Beacon,
+            RadioTower,
+            Observatory,
+            Depot,
+            Factory,
+            Harvester,
+            Plaque,
+            Monolith,
+            Portal,
+            Ruin,
+            Debris,
+            DamagedMachine,
+            DistressSignal,
+            LandingPad,
+            Base,
+            MissionTower,
+            CrashedFreighter,
+            GraveInCave,
+            StoryGlitch,
+            TreasureRuins,
+            GameStartSpawn,
+            WaterCrashedFreighter,
+            WaterTreasureRuins,
+            WaterAbandoned,
+            WaterDistressSignal,
+            NPCDistressSignal,
+            NPCDebris,
+            LargeBuilding,
+            Settlement_Hub,
+            Settlement_LandingZone,
+            Settlement_Bar,
+            Settlement_Tower,
+            Settlement_Market,
+            Settlement_Small,
+            Settlement_SmallIndustrial,
+            Settlement_Medium,
+            Settlement_Large,
+            Settlement_Monument,
+            Settlement_SheriffsOffice,
+            Settlement_Double,
+            Settlement_Farm,
+            Settlement_Factory,
+            Settlement_Clump,
+            DroneHive
+        }
+        [NMS(Size = 0x34, EnumType = typeof(TestExternalEnumArrayEnum))]
         /* 0x648 */ public float[] TestExternalEnumArray;
-        // size: 0x3
-        public enum TestFlagsEnum { Null, Flag1, Flag2 }
+        // size: 0x4
+        public enum TestFlagsEnum : uint {
+            None = 0x0,
+            Flag1 = 0x1,
+            Flag2 = 0x2,
+            Flag3 = 0x4
+        }
         /* 0x718 */ public TestFlagsEnum TestFlags;
     }
 }

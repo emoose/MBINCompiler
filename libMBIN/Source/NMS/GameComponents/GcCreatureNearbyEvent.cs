@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
+using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xA111493A3BF14CC7, NameHash = 0x42869E79D40A84C1)]
+    [NMS(GUID = 0xA74A27FA293E449F, NameHash = 0x42869E79D40A84C1)]
     public class GcCreatureNearbyEvent : NMSTemplate
     {
         /* 0x00 */ public List<GcCreatureAlertData> AlertTable;

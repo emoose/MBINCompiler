@@ -1,14 +1,18 @@
-﻿using System.Collections.Generic;
-
 using libMBIN.NMS.Toolkit;
-using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Toolkit
 {
-	[NMS(GUID = 0x4B3E272ACB25859F, NameHash = 0xC1032FBFB34EDA05)]
+    [NMS(GUID = 0x4B3E272ACB25859F, NameHash = 0xC1032FBFB34EDA05)]
     public class TkAnimDetailSettingsTable : NMSTemplate
     {
-        [NMS(Size = 0x4)]
-        public TkAnimDetailSettings[] Table;
+        // size: 0x4
+        public enum TableEnum {
+            Low,
+            Medium,
+            High,
+            Ultra
+        }
+        [NMS(Size = 0x4, EnumType = typeof(TableEnum))]
+        /* 0x0 */ public TkAnimDetailSettings[] Table;
     }
 }

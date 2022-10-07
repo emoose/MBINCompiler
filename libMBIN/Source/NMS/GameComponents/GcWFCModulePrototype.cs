@@ -1,4 +1,3 @@
-using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 using System.Collections.Generic;
 
@@ -20,7 +19,13 @@ namespace libMBIN.NMS.GameComponents
         /* 0x11A */ public bool DontRotateModel;
         /* 0x120 */ public NMSString0x10 LayoutGroup;
         /* 0x130 */ public List<GcWeightedResource> Scenes;
-        public enum TerrainEditsEnum { None, ClearEntireBlock, UseScene, UseBasebuildingEdits }
+        // size: 0x4
+        public enum TerrainEditsEnum {
+            None,
+            ClearEntireBlock,
+            UseScene,
+            UseBasebuildingEdits
+        }
         /* 0x140 */ public TerrainEditsEnum TerrainEdits;
         /* 0x148 */ public List<GcWFCTerrainConstraint> TerrainConstraints;
         /* 0x158 */ public GcWFCFace Left;
@@ -29,7 +34,12 @@ namespace libMBIN.NMS.GameComponents
         /* 0x2D8 */ public GcWFCFace Right;
         /* 0x358 */ public GcWFCFace Up;
         /* 0x3D8 */ public GcWFCFace Forward;
-        public enum FreighterModuleTypeEnum { None, Room, Corridor }
+        // size: 0x3
+        public enum FreighterModuleTypeEnum {
+            None,
+            Room,
+            Corridor
+        }
         /* 0x458 */ public FreighterModuleTypeEnum FreighterModuleType;
     }
 }

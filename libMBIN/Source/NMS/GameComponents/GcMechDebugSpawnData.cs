@@ -1,7 +1,3 @@
-﻿using System;
-using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
@@ -17,6 +13,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x44 */ public float TitanFallDelay;
         /* 0x48 */ public float MoveDelay;
         /* 0x4C */ public bool UseCustomisation;
-        /* 0x50 */ public GcCharacterCustomisationSaveData CustomisationData; //CustomisatonData;
+        /* 0x50 */ public GcCharacterCustomisationSaveData CustomisatonData;
     }
 }

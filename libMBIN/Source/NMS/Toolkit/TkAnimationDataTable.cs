@@ -1,13 +1,11 @@
-﻿using System.Collections.Generic;
-
 using libMBIN.NMS.Toolkit;
-using libMBIN.NMS.GameComponents;
+using System.Collections.Generic;
 
 namespace libMBIN.NMS.Toolkit
 {
-	[NMS(GUID = 0x64AA97FB40881F68, NameHash = 0x6955787592193D13)]
+    [NMS(GUID = 0x64AA97FB40881F68, NameHash = 0x6955787592193D13)]
     public class TkAnimationDataTable : NMSTemplate
     {
-        public List<TkAnimationData> Table;
+        /* 0x0 */ public List<TkAnimationData> Table;
     }
 }

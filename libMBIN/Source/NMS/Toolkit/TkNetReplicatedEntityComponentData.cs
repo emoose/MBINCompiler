@@ -1,18 +1,29 @@
-﻿using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
-using libMBIN.NMS.GameComponents;
+using System.Collections.Generic;
 
 namespace libMBIN.NMS.Toolkit
 {
     [NMS(GUID = 0xDA10D58FC718E8E9, NameHash = 0xDB0FD87A0597E5FD)]
     public class TkNetReplicatedEntityComponentData : NMSTemplate
     {
-        public List<NMSString0x80> ReplicaComponentMask;
-		public enum ReplicationRangeEnum { NotSet, System, Systemlocal, Planet, PlanetLocal, Space, SpaceStation, Nexus }
-		public ReplicationRangeEnum ReplicationRange;
-		public enum SpawnTypeEnum { Basic, Creature }
-		public SpawnTypeEnum SpawnType;
-        public bool IgnoreComponents;
+        /* 0x00 */ public List<NMSString0x80> ReplicaComponentMask;
+        // size: 0x8
+        public enum ReplicationRangeEnum {
+            NotSet,
+            System,
+            SystemLocal,
+            Planet,
+            PlanetLocal,
+            Space,
+            SpaceStation,
+            Nexus
+        }
+        /* 0x10 */ public ReplicationRangeEnum ReplicationRange;
+        // size: 0x2
+        public enum SpawnTypeEnum {
+            Basic,
+            Creature
+        }
+        /* 0x14 */ public SpawnTypeEnum SpawnType;
+        /* 0x18 */ public bool IgnoreComponents;
     }
 }

@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(GUID = 0x49686EDCECE0ECFE, NameHash = 0x9904F7D363A81377)]
+    [NMS(GUID = 0xC01B5BA02C36731, NameHash = 0x9904F7D363A81377)]
     public class GcCharacterGlobals : NMSTemplate
     {
         /* 0x000 */ public float PitchTest;
@@ -101,7 +97,7 @@ namespace libMBIN.NMS.Globals
         /* 0x244 */ public float SitPostureChangeTimeMax;
         /* 0x248 */ public bool NPCUseBehaviourTree;
         /* 0x249 */ public bool NPCLightsAlwaysOn;
-        /* 0x24C */ public GcNPCPropTypes NPCForceProp;
+        /* 0x24C */ public GcNPCPropType NPCForceProp;
         /* 0x250 */ public float NPCPropScaleTime;
         /* 0x254 */ public float NPCReactionChance;
         /* 0x258 */ public float NPCReactCooldown;

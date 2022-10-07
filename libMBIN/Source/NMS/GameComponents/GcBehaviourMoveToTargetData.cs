@@ -1,5 +1,4 @@
 using libMBIN.NMS.Toolkit;
-using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
@@ -8,7 +7,12 @@ namespace libMBIN.NMS.GameComponents
     {
         /* 0x00 */ public NMSString0x10 TargetKey;
         /* 0x10 */ public TkBlackboardDefaultValueFloat ArriveDist;
-        public enum BehaviourMoveSpeedEnum { Normal, Fast, Dynamic }
+        // size: 0x3
+        public enum BehaviourMoveSpeedEnum {
+            Normal,
+            Fast,
+            Dynamic
+        }
         /* 0x30 */ public BehaviourMoveSpeedEnum BehaviourMoveSpeed;
         /* 0x34 */ public float DynamicMoveSlowdownDistMul;
         /* 0x38 */ public float SpeedModifier;

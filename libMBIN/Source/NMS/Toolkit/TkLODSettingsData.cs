@@ -1,15 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
-using libMBIN.NMS.GameComponents;
-
 namespace libMBIN.NMS.Toolkit
 {
     [NMS(GUID = 0xB81AC33DDA9C1C25, NameHash = 0xA0C253D5A5EF8A51)]
     public class TkLODSettingsData : NMSTemplate
     {
-        [NMS(Size = 5)]
+        [NMS(Size = 0x5)]
         /* 0x00 */ public float[] LODAdjust;
         [NMS(Size = 0x6)]
         /* 0x14 */ public int[] ImposterOverrideRange;

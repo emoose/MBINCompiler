@@ -1,12 +1,9 @@
-using System;
-using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
+using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x4EBC349D72354BAF, NameHash = 0x6E458F753254E426)]
+    [NMS(GUID = 0xD528F914EC3DDD34, NameHash = 0x6E458F753254E426)]
     public class GcTriggerFeedbackStateTable : NMSTemplate
     {
         /* 0x0 */ public List<GcTriggerFeedbackState> Events;

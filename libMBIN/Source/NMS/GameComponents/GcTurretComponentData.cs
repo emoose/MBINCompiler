@@ -1,13 +1,15 @@
-﻿using libMBIN.NMS.Toolkit;
-using libMBIN.NMS.GameComponents;
-
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0xBB6DFF049368D63D, NameHash = 0x88530A815E5B1B46)]
+    [NMS(GUID = 0xBB6DFF049368D63D, NameHash = 0x88530A815E5B1B46)]
     public class GcTurretComponentData : NMSTemplate
     {
-		public enum GunTypeEnum { Laser, Projectile, Missile }
-		/* 0x00 */ public GunTypeEnum GunType;
+        // size: 0x3
+        public enum GunTypeEnum {
+            Laser,
+            Projectile,
+            Missile
+        }
+        /* 0x00 */ public GunTypeEnum GunType;
         /* 0x08 */ public NMSString0x10 LaserEffectId;
         /* 0x18 */ public NMSString0x10 LaserMuzzleFlashId;
         /* 0x28 */ public NMSString0x10 ProjectileId;

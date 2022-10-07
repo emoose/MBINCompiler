@@ -1,8 +1,6 @@
-using System;
-using System.Collections.Generic;
-
 using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
+using System.Collections.Generic;
 
 namespace libMBIN.NMS.Globals
 {
@@ -67,7 +65,17 @@ namespace libMBIN.NMS.Globals
         /* 0x3B0 */ public bool AttackRepositionBoost;
         /* 0x3B1 */ public bool AttackShipsFollowLeader;
         /* 0x3B4 */ public float AttackTooCloseMinRelSpeed;
-        [NMS(Size = 0x7)]
+        // size: 0x7
+        public enum ProjectileWeaponMuzzleFlashesEnum {
+            None,
+            Pirate,
+            Police,
+            Trader,
+            Freighter,
+            PlayerSquadron,
+            DefenceForce
+        }
+        [NMS(Size = 0x7, EnumType = typeof(ProjectileWeaponMuzzleFlashesEnum))]
         /* 0x3B8 */ public NMSString0x10[] ProjectileWeaponMuzzleFlashes;
         /* 0x428 */ public float RewardLootOffset;
         /* 0x42C */ public float RewardLootOffsetSpeed;
@@ -89,7 +97,62 @@ namespace libMBIN.NMS.Globals
         /* 0x5A8 */ public float AttackShipAvoidStartTime;
         /* 0x5AC */ public float AttackMinimumTimeBeforeTargetSwitch;
         /* 0x5B0 */ public float PirateExtraDamage;
-        [NMS(Size = 0x34, EnumType = typeof(GcBuildingClassification.BuildingClassEnum))]
+        // size: 0x34
+        public enum PirateAttackableBuildingClassesEnum {
+            None,
+            TerrainResource,
+            Shelter,
+            Abandoned,
+            Terminal,
+            Shop,
+            Outpost,
+            Waypoint,
+            Beacon,
+            RadioTower,
+            Observatory,
+            Depot,
+            Factory,
+            Harvester,
+            Plaque,
+            Monolith,
+            Portal,
+            Ruin,
+            Debris,
+            DamagedMachine,
+            DistressSignal,
+            LandingPad,
+            Base,
+            MissionTower,
+            CrashedFreighter,
+            GraveInCave,
+            StoryGlitch,
+            TreasureRuins,
+            GameStartSpawn,
+            WaterCrashedFreighter,
+            WaterTreasureRuins,
+            WaterAbandoned,
+            WaterDistressSignal,
+            NPCDistressSignal,
+            NPCDebris,
+            LargeBuilding,
+            Settlement_Hub,
+            Settlement_LandingZone,
+            Settlement_Bar,
+            Settlement_Tower,
+            Settlement_Market,
+            Settlement_Small,
+            Settlement_SmallIndustrial,
+            Settlement_Medium,
+            Settlement_Large,
+            Settlement_Monument,
+            Settlement_SheriffsOffice,
+            Settlement_Double,
+            Settlement_Farm,
+            Settlement_Factory,
+            Settlement_Clump,
+            DroneHive
+        }
+        [NMS(Size = 0x34, EnumType = typeof(PirateAttackableBuildingClassesEnum))]
         /* 0x5B4 */ public bool[] PirateAttackableBuildingClasses;
         /* 0x5E8 */ public float PirateMaintainBuildingTargetTime;
         /* 0x5EC */ public float ShieldCollisionRadiusMultiplier;
@@ -339,9 +402,29 @@ namespace libMBIN.NMS.Globals
         /* 0xCDC */ public float WarpInPostSpeedFreighter;
         /* 0xCE0 */ public float WarpInAudioFXDelay;
         /* 0xCE4 */ public float WarpOutDistance;
-        [NMS(Size = 0x7)]
+        // size: 0x7
+        public enum WarpStartEffectIDsEnum {
+            None,
+            Pirate,
+            Police,
+            Trader,
+            Freighter,
+            PlayerSquadron,
+            DefenceForce
+        }
+        [NMS(Size = 0x7, EnumType = typeof(WarpStartEffectIDsEnum))]
         /* 0xCE8 */ public NMSString0x10[] WarpStartEffectIDs;
-        [NMS(Size = 0x7)]
+        // size: 0x7
+        public enum WarpArriveEffectIDsEnum {
+            None,
+            Pirate,
+            Police,
+            Trader,
+            Freighter,
+            PlayerSquadron,
+            DefenceForce
+        }
+        [NMS(Size = 0x7, EnumType = typeof(WarpArriveEffectIDsEnum))]
         /* 0xD58 */ public NMSString0x10[] WarpArriveEffectIDs;
         /* 0xDC8 */ public float ShipEscapeTimeBeforeWarpOut;
         /* 0xDCC */ public float ShipEscortLockOnDistance;

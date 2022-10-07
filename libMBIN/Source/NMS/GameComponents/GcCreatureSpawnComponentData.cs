@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
+using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
@@ -22,7 +19,12 @@ namespace libMBIN.NMS.GameComponents
         /* 0x0C8 */ public float StartTimeMax;
         /* 0x0CC */ public bool SpawnAlert;
         // size: 0x4
-        public enum SpawnerModeEnum { Hidden, Visible, HideOnSpawn, HiddenTimer }
+        public enum SpawnerModeEnum {
+            Hidden,
+            Visible,
+            HideOnSpawn,
+            HiddenTimer
+        }
         /* 0x0D0 */ public SpawnerModeEnum SpawnerMode;
         /* 0x0D8 */ public GcResourceElement SpecificModel;
         /* 0x380 */ public List<GcSpawnComponentOption> SpawnOptionList;

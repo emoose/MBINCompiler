@@ -1,7 +1,4 @@
-﻿using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
-using libMBIN.NMS.GameComponents;
+using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
@@ -10,7 +7,9 @@ namespace libMBIN.NMS.GameComponents
     {
         /* 0x00 */ public List<NMSString0x10> Techs;
         // size: 0x1
-        public enum InventoryEnum { Vehicle }
+        public enum InventoryEnum {
+            Vehicle
+        }
         /* 0x10 */ public InventoryEnum Inventory;
         /* 0x14 */ public bool Inverted;
     }

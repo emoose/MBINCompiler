@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-
 using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
+using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xC1E37CAD611FFF3A, NameHash = 0x35C91009067A6431)]
+    [NMS(GUID = 0xF1085718E68DAF2C, NameHash = 0x35C91009067A6431)]
     public class GcAIShipSpawnData : NMSTemplate
     {
         /* 0x000 */ public NMSString0x20A Message;
@@ -25,9 +23,12 @@ namespace libMBIN.NMS.GameComponents
         /* 0x174 */ public Vector2f Count;
         /* 0x17C */ public Vector2f StartTime;
         // size: 0x2
-        public enum SpawnShapeEnum { Sphere, Cone }
+        public enum SpawnShapeEnum {
+            Sphere,
+            Cone
+        }
         /* 0x184 */ public SpawnShapeEnum SpawnShape;
-        /* 0x188 */ public List<NMSTemplate> Array;
+        /* 0x188 */ public GcShipAIPerformanceArray Performances;
         /* 0x198 */ public List<GcAIShipSpawnData> ChildSpawns;
     }
 }

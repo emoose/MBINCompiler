@@ -1,8 +1,4 @@
-﻿using System;
 using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
-using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
@@ -11,7 +7,12 @@ namespace libMBIN.NMS.GameComponents
     {
         /* 0x00 */ public List<NMSString0x10> ProductList;
         // size: 0x4
-        public enum ProductListRewardOrderEnum { OneRandom, InOrder, TryAllRandom, TryUnknownRandom }
+        public enum ProductListRewardOrderEnum {
+            OneRandom,
+            InOrder,
+            TryAllRandom,
+            TryUnknownRandom
+        }
         /* 0x10 */ public ProductListRewardOrderEnum ProductListRewardOrder;
     }
 }

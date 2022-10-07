@@ -1,15 +1,14 @@
-﻿using libMBIN.NMS.Toolkit;
-using libMBIN.NMS.GameComponents;
+using libMBIN.NMS.Toolkit;
 
 namespace libMBIN.NMS.Toolkit
 {
-	[NMS(GUID = 0x7AACCA8A1F8AE79F, NameHash = 0xED10CD4D4540B757)]
+    [NMS(GUID = 0x7AACCA8A1F8AE79F, NameHash = 0xED10CD4D4540B757)]
     public class TkNGuiRectanglePulseEffect : NMSTemplate
     {
-        public float PulseWidth;                // 40C00000h
-        public float PulseOffset;               // 42200000h
-        public float PulseRate;                 // 3F99999Ah
-        public TkCurveType PulseAlphaCurve;
-        public TkCurveType PulseSizeCurve;
+        /* 0x00 */ public float PulseWidth;
+        /* 0x04 */ public float PulseOffset;
+        /* 0x08 */ public float PulseRate;
+        /* 0x0C */ public TkCurveType PulseAlphaCurve;
+        /* 0x10 */ public TkCurveType PulseSizeCurve;
     }
 }

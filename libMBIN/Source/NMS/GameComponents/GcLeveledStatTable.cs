@@ -1,13 +1,11 @@
-﻿using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
+using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0x5E1C192BBFA383BA, NameHash = 0x7169FE9CB058F962)]
+    [NMS(GUID = 0x374213750797CD00, NameHash = 0x7169FE9CB058F962)]
     public class GcLeveledStatTable : NMSTemplate
     {
-        public List<GcLeveledStatData> Table;
+        /* 0x0 */ public List<GcLeveledStatData> LeveledStatTable;
     }
 }

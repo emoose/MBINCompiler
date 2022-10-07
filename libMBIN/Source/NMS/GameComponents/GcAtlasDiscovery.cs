@@ -1,17 +1,11 @@
-using System;
-using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x61C6CA2541E58840, NameHash = 0x0886C03C3F3987F4)]
+    [NMS(GUID = 0xBFF35AB6E4A1B63E, NameHash = 0x886C03C3F3987F4)]
     public class GcAtlasDiscovery : NMSTemplate
     {
-        // size: 0x4
-        public enum DownloadTypeEnum { Unknown, Discovery, Base, Message }
-        /* 0x000 */ public DownloadTypeEnum DownloadType;
+        /* 0x000 */ public GcAtlasDownloadType PackageType;
         /* 0x004 */ public GcDiscoveryOwner Owner;
         /* 0x108 */ public GcAtlasDiscoveryData Data;
         /* 0x150 */ public GcAtlasDiscoveryMetadata Metadata;

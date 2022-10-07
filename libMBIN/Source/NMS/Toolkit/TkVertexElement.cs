@@ -1,9 +1,3 @@
-using System;
-using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
-using libMBIN.NMS.GameComponents;
-
 namespace libMBIN.NMS.Toolkit
 {
     [NMS(GUID = 0x56D2CFD1D4DB01F3, NameHash = 0x8687A0CA8457FC32)]
@@ -15,7 +9,10 @@ namespace libMBIN.NMS.Toolkit
         /* 0x0C */ public int Offset;
         /* 0x10 */ public int Normalise;
         // size: 0x2
-        public enum InstancingEnum { PerVertex, PerModel }
+        public enum InstancingEnum {
+            PerVertex,
+            PerModel
+        }
         /* 0x14 */ public InstancingEnum Instancing;
         /* 0x18 */ public long PlatformData;
     }

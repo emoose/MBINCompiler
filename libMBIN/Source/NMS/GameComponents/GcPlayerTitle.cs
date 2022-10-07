@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x374CA1B6FC7781FB, NameHash = 0x864FCB26DF972FCF)]
+    [NMS(GUID = 0x7111A03C93A247B1, NameHash = 0x864FCB26DF972FCF)]
     public class GcPlayerTitle : NMSTemplate
     {
         /* 0x00 */ public NMSString0x10 ID;
@@ -22,6 +18,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0xC4 */ public GcInteractionType UnlockedByInteraction;
         /* 0xC8 */ public int UnlockedByInteractionIndex;
         /* 0xCC */ public GcAlienRace UnlockedByInteractionRace;
-        /* 0xD0 */ public bool UnlockableInCreativeMode;
     }
 }

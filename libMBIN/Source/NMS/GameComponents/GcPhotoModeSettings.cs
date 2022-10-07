@@ -1,19 +1,20 @@
-﻿using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
-using libMBIN.NMS.GameComponents;
-
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0x04DFB9FAA89995B6, NameHash = 0xE5075EC0403F94CA)]
+    [NMS(GUID = 0x4DFB9FAA89995B6, NameHash = 0xE5075EC0403F94CA)]
     public class GcPhotoModeSettings : NMSTemplate
     {
         /* 0x00 */ public float Fog;
         /* 0x04 */ public float CloudAmount;
         /* 0x10 */ public Vector4f SunDir;
         /* 0x20 */ public float FoV;
-		public enum DepthOfFieldSettingEnum { Off, Mid, On, Macro }
-		/* 0x24 */ public DepthOfFieldSettingEnum DepthOfFieldSetting;
+        // size: 0x4
+        public enum DepthOfFieldSettingEnum {
+            Off,
+            Mid,
+            On,
+            Macro
+        }
+        /* 0x24 */ public DepthOfFieldSettingEnum DepthOfFieldSetting;
         /* 0x28 */ public float DepthOfFieldDistance;
         /* 0x2C */ public float DepthOfFieldDistanceSpace;
         /* 0x30 */ public float HalfFocalPlaneDepth;

@@ -1,7 +1,3 @@
-﻿using System;
-using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
@@ -10,7 +6,15 @@ namespace libMBIN.NMS.GameComponents
     public class GcExpeditionEventData : NMSTemplate
     {
         /* 0x000 */ public NMSString0x20A ID;
-        [NMS(Size = 0x5)]
+        // size: 0x5
+        public enum StatContributionEnum {
+            Combat,
+            Exploration,
+            Mining,
+            Diplomacy,
+            Balanced
+        }
+        [NMS(Size = 0x5, EnumType = typeof(StatContributionEnum))]
         /* 0x020 */ public float[] StatContribution;
         /* 0x034 */ public int DifficultyModifier;
         /* 0x038 */ public int DifficultyVarianceModifier;

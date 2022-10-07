@@ -1,8 +1,3 @@
-﻿using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
-using libMBIN.NMS.GameComponents;
-
 namespace libMBIN.NMS.GameComponents
 {
     [NMS(GUID = 0x86FB503A8D2FC455, NameHash = 0x44D6DFC8A512D8CB)]
@@ -12,9 +7,13 @@ namespace libMBIN.NMS.GameComponents
         /* 0x10 */ public float Range;
         /* 0x14 */ public float XFOV;
         /* 0x18 */ public float YFOV;
-        public enum ViewShapeEnum { Pyramid, Cone }
+        // size: 0x2
+        public enum ViewShapeEnum {
+            Pyramid,
+            Cone
+        }
         /* 0x1C */ public ViewShapeEnum ViewShape;
-        /* 0x20 */ public bool RayCast;
+        /* 0x20 */ public bool Raycast;
         /* 0x21 */ public NMSString0x20 SenseLocator;
     }
 }

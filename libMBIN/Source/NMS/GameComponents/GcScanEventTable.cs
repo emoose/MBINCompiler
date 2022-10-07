@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
+using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xACD58F673D9A2D82, NameHash = 0x0D550A58E83EA253)]
+    [NMS(GUID = 0xEE92C8E6676A9FEF, NameHash = 0xD550A58E83EA253)]
     public class GcScanEventTable : NMSTemplate
     {
         /* 0x0 */ public List<GcScanEventData> Events;

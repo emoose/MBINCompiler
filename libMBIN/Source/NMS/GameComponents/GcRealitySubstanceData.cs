@@ -1,9 +1,9 @@
-﻿using libMBIN.NMS.Toolkit;
+using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0x067E5523FF7E6036, NameHash = 0xD811F4C9E014843E)]
+    [NMS(GUID = 0x67E5523FF7E6036, NameHash = 0xD811F4C9E014843E)]
     public class GcRealitySubstanceData : NMSTemplate
     {
         /* 0x000 */ public NMSString0x20 Name;
@@ -25,7 +25,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x1D8 */ public GcItemPriceModifiers Cost;
         /* 0x1EC */ public float NormalisedValueOnWorld;
         /* 0x1F0 */ public float NormalisedValueOffWorld;
-        /* 0x1F4 */ public GcTradeCategory tradeCategory;
+        /* 0x1F4 */ public GcTradeCategory TradeCategory;
         /* 0x1F8 */ public bool WikiEnabled;
         /* 0x1FC */ public float EconomyInfluenceMultiplier;
         /* 0x200 */ public NMSString0x20A PinObjective;

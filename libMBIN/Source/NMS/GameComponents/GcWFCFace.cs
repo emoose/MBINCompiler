@@ -1,5 +1,3 @@
-using libMBIN.NMS.Toolkit;
-using libMBIN.NMS.GameComponents;
 using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
@@ -9,7 +7,14 @@ namespace libMBIN.NMS.GameComponents
     {
         /* 0x00 */ public NMSString0x20 Connector;
         /* 0x20 */ public bool Symmetric;
-        public enum TransformEnum { None, Rotated90, Rotated180, Rotated270, FlippedHorizontally }
+        // size: 0x5
+        public enum TransformEnum {
+            None,
+            Rotated90,
+            Rotated180,
+            Rotated270,
+            FlippedHorizontally
+        }
         /* 0x24 */ public TransformEnum Transform;
         /* 0x28 */ public List<NMSString0x10> ExcludedNeighboursR0;
         /* 0x38 */ public List<NMSString0x10> ExcludedNeighboursR1;

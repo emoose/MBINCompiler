@@ -1,9 +1,3 @@
-﻿using System;
-using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
-using libMBIN.NMS.GameComponents;
-
 namespace libMBIN.NMS.GameComponents
 {
     [NMS(GUID = 0xD6070654B6235488, NameHash = 0xB499CC97C0515963)]
@@ -16,10 +10,20 @@ namespace libMBIN.NMS.GameComponents
         /* 0x40 */ public NMSString0x20A Name;
         /* 0x60 */ public NMSString0x20A Id;
         // size: 0x4
-        public enum SwatchPrimaryColourEnum { Primary, Secondary, Ternary, Quaternary }
+        public enum SwatchPrimaryColourEnum {
+            Primary,
+            Secondary,
+            Ternary,
+            Quaternary
+        }
         /* 0x80 */ public SwatchPrimaryColourEnum SwatchPrimaryColour;
         // size: 0x4
-        public enum SwatchSecondaryColourEnum { Primary, Secondary, Ternary, Quaternary }
+        public enum SwatchSecondaryColourEnum {
+            Primary,
+            Secondary,
+            Ternary,
+            Quaternary
+        }
         /* 0x84 */ public SwatchSecondaryColourEnum SwatchSecondaryColour;
     }
 }

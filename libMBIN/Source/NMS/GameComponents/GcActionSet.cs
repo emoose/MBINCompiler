@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
+using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x0F59C3FE552760B2, NameHash = 0xA14126BE226C6660)]
+    [NMS(GUID = 0xE86F82B6AFB0FA6D, NameHash = 0xA14126BE226C6660)]
     public class GcActionSet : NMSTemplate
     {
         /* 0x00 */ public GcActionSetType Type;
