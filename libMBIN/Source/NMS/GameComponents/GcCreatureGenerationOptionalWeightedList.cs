@@ -1,11 +1,8 @@
-using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x5972CF272DDD8DCA, NameHash = 0x3FE2B5A3043E562F)]
+    [NMS(GUID = 0x9DEB8D16BD1A72D8, NameHash = 0x3FE2B5A3043E562F)]
     public class GcCreatureGenerationOptionalWeightedList : NMSTemplate
     {
         /* 0x0 */ public float Probability;

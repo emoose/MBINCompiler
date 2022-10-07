@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
+using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
@@ -17,7 +14,12 @@ namespace libMBIN.NMS.GameComponents
         /* 0x1D */ public bool CanBeFemale;
         /* 0x20 */ public List<GcCreatureTagAndRarity> Tags;
         // size: 0x4
-        public enum MoveAreaEnum { Ground, Water, Air, Space }
+        public enum MoveAreaEnum {
+            Ground,
+            Water,
+            Air,
+            Space
+        }
         /* 0x30 */ public MoveAreaEnum MoveArea;
         /* 0x34 */ public float MinScale;
         /* 0x38 */ public float MaxScale;

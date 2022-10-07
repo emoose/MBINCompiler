@@ -1,11 +1,8 @@
-﻿using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
-using libMBIN.NMS.GameComponents;
+using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x21E3CCED5C322A2A, NameHash = 0xDF5512FA05691ED2)]
+    [NMS(GUID = 0x9F6982F4EFE67200, NameHash = 0xDF5512FA05691ED2)]
     public class GcInteractionActivationCost : NMSTemplate
     {
         /* 0x00 */ public NMSString0x10 SubstanceId;
@@ -13,5 +10,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x20 */ public int Cost;
         /* 0x24 */ public bool Repeat;
         /* 0x28 */ public NMSString0x10 RequiredTech;
+        /* 0x38 */ public List<int> OnlyChargeDuringSeasons;
     }
 }

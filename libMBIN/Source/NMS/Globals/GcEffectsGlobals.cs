@@ -1,7 +1,6 @@
 using libMBIN.NMS.Toolkit;
-using libMBIN.NMS.GameComponents;
 
-namespace libMBIN.NMS.GameComponents
+namespace libMBIN.NMS.Globals
 {
     [NMS(GUID = 0xDAADDA98B194C4C1, NameHash = 0x5FE8CF76972566C2)]
     public class GcEffectsGlobals : NMSTemplate

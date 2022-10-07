@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x4AA758926A0C77DE, NameHash = 0xC42B2790FC61E0A9)]
+    [NMS(GUID = 0x24DFC11D12930608, NameHash = 0xC42B2790FC61E0A9)]
     public class GcDroneData : NMSTemplate
     {
         /* 0x000 */ public GcDroneControlData Patrol;
@@ -62,10 +58,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x2B8 */ public float CoverPlacementUpOffset;
         /* 0x2BC */ public int CoverPlacementMaxActiveCover;
         /* 0x2C0 */ public GcSentinelResource CoverResource;
-        /* 0x340 */ public int BaseHealth;
-        /* 0x344 */ public int HealthIncreasePerLevel;
-        /* 0x348 */ public float RepairTime;
-        /* 0x34C */ public float RepairThreshold;
         /* 0x350 */ public float DroneSearchTime;
         /* 0x354 */ public float DroneSearchRadius;
         /* 0x358 */ public float DroneSearchPauseTime;

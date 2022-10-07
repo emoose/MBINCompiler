@@ -1,9 +1,8 @@
-﻿using libMBIN.NMS.Toolkit;
-using libMBIN.NMS.GameComponents;
+using libMBIN.NMS.Toolkit;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(GUID = 0x020B74531D4B36C5, NameHash = 0xAE0EEF5ED0659FF3)]
+    [NMS(GUID = 0x19D958B657388801, NameHash = 0xAE0EEF5ED0659FF3)]
     public class GcMultiplayerGlobals : NMSTemplate
     {
         /* 0x000 */ public Vector2f FullSimHandUpdateDistance;
@@ -79,12 +78,13 @@ namespace libMBIN.NMS.Globals
         /* 0x140 */ public NMSString0x10 EpicMissionSecondReward;
         /* 0x150 */ public NMSString0x10 WeekendMissionSecondReward;
         /* 0x160 */ public NMSString0x10 EpicMissionRewardOverride;
-        /* 0x170 */ public TkTextureResource EpicMissionIcon;
-        /* 0x1F4 */ public TkTextureResource EpicMissionIconSelected;
-        /* 0x278 */ public TkTextureResource EpicMissionIconNotSelected;
-        /* 0x2FC */ public float PlanetLocalEnitityInterestStart;
-        /* 0x300 */ public float PlanetLocalEnitityInterestEnd;
-        /* 0x304 */ public float EntityUpdateMaxRateDist;
-        /* 0x308 */ public float EntityUpdateMinRateDist;
+        /* 0x170 */ public NMSString0x10 NexusMissionStandardReward;
+        /* 0x180 */ public TkTextureResource EpicMissionIcon;
+        /* 0x204 */ public TkTextureResource EpicMissionIconSelected;
+        /* 0x288 */ public TkTextureResource EpicMissionIconNotSelected;
+        /* 0x30C */ public float PlanetLocalEnitityInterestStart;
+        /* 0x310 */ public float PlanetLocalEnitityInterestEnd;
+        /* 0x314 */ public float EntityUpdateMaxRateDist;
+        /* 0x318 */ public float EntityUpdateMinRateDist;
     }
 }

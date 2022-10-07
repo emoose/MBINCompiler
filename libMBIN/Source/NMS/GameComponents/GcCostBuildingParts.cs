@@ -1,14 +1,12 @@
-﻿using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
+using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0xA50B10766E494BB3, NameHash = 0x61447A1079C43833)]
+    [NMS(GUID = 0xA50B10766E494BB3, NameHash = 0x61447A1079C43833)]
     public class GcCostBuildingParts : NMSTemplate
     {
-        public NMSString0x20A Description;
-        public List<GcBuildingCostPartCount> RequiredParts;
+        /* 0x00 */ public NMSString0x20A Description;
+        /* 0x20 */ public List<GcBuildingCostPartCount> RequiredParts;
     }
 }

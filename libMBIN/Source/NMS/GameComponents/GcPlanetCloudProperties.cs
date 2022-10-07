@@ -1,9 +1,6 @@
-﻿using libMBIN.NMS.Toolkit;
-using libMBIN.NMS.GameComponents;
-
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0x2639B637EB1A04F2, NameHash = 0x96E42AD217EA55B2)]
+    [NMS(GUID = 0x2639B637EB1A04F2, NameHash = 0x96E42AD217EA55B2)]
     public class GcPlanetCloudProperties : NMSTemplate
     {
         /* 0x00 */ public GcSeed Seed;
@@ -17,7 +14,11 @@ namespace libMBIN.NMS.GameComponents
         /* 0x30 */ public float Ratio;
         /* 0x34 */ public float RateOfChange;
         /* 0x38 */ public float SecondaryRateOfChange;
-        public enum CloudinessEnum { CloudyWithClearSpells, ClearWithCloudySpells }
+        // size: 0x2
+        public enum CloudinessEnum {
+            CloudyWithClearSpells,
+            ClearWithCloudySpells
+        }
         /* 0x3C */ public CloudinessEnum Cloudiness;
     }
 }

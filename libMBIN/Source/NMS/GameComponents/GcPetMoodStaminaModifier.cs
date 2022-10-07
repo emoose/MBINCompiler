@@ -1,6 +1,3 @@
-using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
@@ -10,10 +7,10 @@ namespace libMBIN.NMS.GameComponents
     {
         /* 0x00 */ public GcCreaturePetMood Mood;
         /* 0x04 */ public float MoodMin;
-        /* 0x04 */ public float MoodMax;
-        /* 0x04 */ public float StaminaDrainModifierMin;
-        /* 0x04 */ public float StaminaDrainModifierMax;
-        /* 0x04 */ public float StaminaRechargeModifierMin;
-        /* 0x04 */ public float StaminaRechargeModifierMax;
+        /* 0x08 */ public float MoodMax;
+        /* 0x0C */ public float StaminaDrainModifierMin;
+        /* 0x10 */ public float StaminaDrainModifierMax;
+        /* 0x14 */ public float StaminaRechargeModifierMin;
+        /* 0x18 */ public float StaminaRechargeModifierMax;
     }
 }

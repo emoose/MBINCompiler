@@ -1,13 +1,10 @@
-﻿using libMBIN.NMS.Toolkit;
-using libMBIN.NMS.GameComponents;
-
 namespace libMBIN.NMS.Toolkit
 {
-	[NMS(GUID = 0xE39536D6A25C5F9, NameHash = 0x36EF2564DBF81DFA)]
-    public class TkAnimPoseCorrelationData : NMSTemplate // 0x28 bytes
+    [NMS(GUID = 0xE39536D6A25C5F9, NameHash = 0x36EF2564DBF81DFA)]
+    public class TkAnimPoseCorrelationData : NMSTemplate
     {
-        public NMSString0x10 ItemA;
-        public NMSString0x10 ItemB;
-        public float Correlation;
+        /* 0x00 */ public NMSString0x10 ItemA;
+        /* 0x10 */ public NMSString0x10 ItemB;
+        /* 0x20 */ public float Correlation;
     }
 }

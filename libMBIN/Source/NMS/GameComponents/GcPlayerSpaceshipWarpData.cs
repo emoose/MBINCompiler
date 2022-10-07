@@ -1,22 +1,14 @@
-﻿using libMBIN.NMS.Toolkit;
-using libMBIN.NMS.GameComponents;
+using libMBIN.NMS.Toolkit;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0xFC0B28004AD759EC, NameHash = 0x69AE13F58EC1B23A)]
+    [NMS(GUID = 0xC18525760EC6C875, NameHash = 0x69AE13F58EC1B23A)]
     public class GcPlayerSpaceshipWarpData : NMSTemplate
     {
-        /* 0x000 */ public float EntryTime;
-        /* 0x004 */ public TkCurveType EntryTunnelCurve;
-        /* 0x008 */ public float EntryTunnelDistance;
-        /* 0x00C */ public float EntryWorldlDistance;
-        /* 0x010 */ public float TravelTunnelTime;
-        /* 0x014 */ public float TravelTunnelDriftDist;
-		/* 0x018 */ public float TravelDriftRate;
-		/* 0x01C */ public float ExitTime;
-		/* 0x020 */ public float ExitHoldAlphaTime;
-		/* 0x024 */ public TkCurveType ExitTunnelCurve;
-		/* 0x028 */ public float ExitTunnelDistance;
-		/* 0x02C */ public float ExitWorldDistance;
+        /* 0x00 */ public float EntryTime;
+        /* 0x04 */ public TkCurveType EntryTunnelCurve;
+        /* 0x08 */ public float TravelTunnelTime;
+        /* 0x0C */ public float ExitTime;
+        /* 0x10 */ public TkCurveType ExitTunnelCurve;
     }
 }

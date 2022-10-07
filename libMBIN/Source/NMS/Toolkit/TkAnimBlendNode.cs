@@ -1,11 +1,8 @@
-﻿using System.Collections.Generic;
-
 using libMBIN.NMS.Toolkit;
-using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Toolkit
 {
-	[NMS(GUID = 0x7886A38513257F16, NameHash = 0xA394D25E5A975DA5)]
+    [NMS(GUID = 0x7886A38513257F16, NameHash = 0xA394D25E5A975DA5)]
     public class TkAnimBlendNode : NMSTemplate
     {
         /* 0x00 */ public NMSString0x10 NodeId;

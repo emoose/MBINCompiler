@@ -1,11 +1,8 @@
-﻿using libMBIN.NMS.Toolkit;
-using libMBIN.NMS.GameComponents;
-
 namespace libMBIN.NMS.Toolkit
 {
-	[NMS(GUID = 0x4AF25493757A559C, NameHash = 0xF37361EE179B2EF6)]
+    [NMS(GUID = 0x4AF25493757A559C, NameHash = 0xF37361EE179B2EF6)]
     public class TkEmitterData : NMSTemplate
     {
-        public NMSString0x80 Particle;
+        /* 0x0 */ public NMSString0x80 Particle;
     }
 }

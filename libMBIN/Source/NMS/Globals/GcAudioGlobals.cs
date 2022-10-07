@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
+using System.Collections.Generic;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(GUID = 0x916D68D153BCF764, NameHash = 0x7B6EECDDCAF6F923)]
+    [NMS(GUID = 0x6000867BDADEC1DF, NameHash = 0x7B6EECDDCAF6F923)]
     public class GcAudioGlobals : NMSTemplate
     {
         /* 0x000 */ public GcAudioNPCDoppler NPCEngines;

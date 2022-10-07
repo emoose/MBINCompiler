@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-
 using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
+using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x884475D380C17DF4, NameHash = 0x5F9BF82F9925D932)]
+    [NMS(GUID = 0x9A5BCD6DCBCFD8D, NameHash = 0x5F9BF82F9925D932)]
     public class GcPlayerDamageData : NMSTemplate
     {
         /* 0x000 */ public NMSString0x10 Id;
@@ -19,16 +17,23 @@ namespace libMBIN.NMS.GameComponents
         /* 0x110 */ public NMSString0x20A CriticalHitMessage;
         /* 0x130 */ public GcAudioWwiseEvents CriticalHitMessageAudio;
         /* 0x134 */ public float Damage;
-        /* 0x138 */ public float HardModeMultiplier;
-        /* 0x13C */ public float PushForce;
-        /* 0x140 */ public float CameraTurn;
-        /* 0x148 */ public NMSString0x10 CameraShakeShield;
-        /* 0x158 */ public NMSString0x10 CameraShakeNoShield;
-        /* 0x168 */ public bool ShowTrackIcon;
-        /* 0x169 */ public bool ForceDamageInInteraction;
-        /* 0x16A */ public bool AllowDeathInInteraction;
+        /* 0x138 */ public float PushForce;
+        /* 0x13C */ public float CameraTurn;
+        /* 0x140 */ public NMSString0x10 CameraShakeShield;
+        /* 0x150 */ public NMSString0x10 CameraShakeNoShield;
+        /* 0x160 */ public bool ShowTrackIcon;
+        /* 0x161 */ public bool ForceDamageInInteraction;
+        /* 0x162 */ public bool AllowDeathInInteraction;
         // size: 0x5
-        public enum PlayerDamageTypeEnum { Normal, Toxic, Radioactive, Freeze, Scorch }
-        /* 0x16C */ public PlayerDamageTypeEnum PlayerDamageType;
+        public enum PlayerDamageTypeEnum {
+            Normal,
+            Toxic,
+            Radioactive,
+            Freeze,
+            Scorch
+        }
+        /* 0x164 */ public PlayerDamageTypeEnum PlayerDamageType;
+        /* 0x168 */ public List<GcBreakTechByStatData> DamageTechWithStat;
+        /* 0x178 */ public float TechDamageChance;
     }
 }

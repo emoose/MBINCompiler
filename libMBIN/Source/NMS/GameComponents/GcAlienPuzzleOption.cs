@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
+using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x1CF40C4F1230A841, NameHash = 0x3FE862FE8570BE69)]
+    [NMS(GUID = 0x436FC0740B9DA36C, NameHash = 0x3FE862FE8570BE69)]
     public class GcAlienPuzzleOption : NMSTemplate
     {
         /* 0x00 */ public NMSString0x20A Name;
@@ -15,11 +12,13 @@ namespace libMBIN.NMS.GameComponents
         /* 0x48 */ public NMSString0x10 Cost;
         /* 0x58 */ public List<NMSString0x10> Rewards;
         /* 0x68 */ public GcAlienMood Mood;
-        /* 0x6C */ public GcNPCPropTypes Prop;
-        /* 0x70 */ public bool KeepOpen;
-        /* 0x71 */ public bool DisplayCost;
-        /* 0x72 */ public bool TruncateCost;
-        /* 0x73 */ public bool MarkInteractionComplete;
+        /* 0x6C */ public GcNPCPropType Prop;
+        /* 0x70 */ public bool OverrideWithAlienWord;
+        /* 0x71 */ public bool ReseedInteractionOnUse;
+        /* 0x72 */ public bool KeepOpen;
+        /* 0x73 */ public bool DisplayCost;
+        /* 0x74 */ public bool TruncateCost;
+        /* 0x75 */ public bool MarkInteractionComplete;
         /* 0x78 */ public NMSString0x20A NextInteraction;
         /* 0x98 */ public bool SelectedOnBackOut;
         /* 0x9C */ public GcAudioWwiseEvents AudioEvent;

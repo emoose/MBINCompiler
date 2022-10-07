@@ -1,12 +1,9 @@
-using System;
-using System.Collections.Generic;
-
 using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x1F2FB8B13E72C43F, NameHash = 0x3FACFB36175544A6)]
+    [NMS(GUID = 0x96ACDB1D82A379FB, NameHash = 0x3FACFB36175544A6)]
     public class GcRewardFrigateFlyby : NMSTemplate
     {
         /* 0x000 */ public GcFrigateFlybyType FlybyType;

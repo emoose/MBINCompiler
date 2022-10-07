@@ -1,9 +1,3 @@
-using System;
-using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
-using libMBIN.NMS.GameComponents;
-
 namespace libMBIN.NMS.GameComponents
 {
     [NMS(GUID = 0x8B4FA8D64E615DCE, NameHash = 0xE1F35851383555E2)]
@@ -14,7 +8,14 @@ namespace libMBIN.NMS.GameComponents
         /* 0x08 */ public NMSString0x10 SpawnEffectId;
         /* 0x18 */ public NMSString0x10 DestroyEffectId;
         /* 0x28 */ public NMSString0x20 EffectLocator;
-        [NMS(Size = 0x4)]
+        // size: 0x4
+        public enum CoverStateAnimsEnum {
+            Deploying,
+            Deployed,
+            ShuttingDown,
+            ShutDown
+        }
+        [NMS(Size = 0x4, EnumType = typeof(CoverStateAnimsEnum))]
         /* 0x48 */ public NMSString0x10[] CoverStateAnims;
     }
 }

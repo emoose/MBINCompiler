@@ -1,10 +1,8 @@
-﻿using libMBIN.NMS.Toolkit;
-using libMBIN.NMS.GameComponents;
 using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0x9E936EDD82DCDD95, NameHash = 0x8554BC1ADD990AB6)]
+    [NMS(GUID = 0x9E936EDD82DCDD95, NameHash = 0x8554BC1ADD990AB6)]
     public class GcCreatureHealthData : NMSTemplate
     {
         /* 0x00 */ public NMSString0x10 HurtAnim;

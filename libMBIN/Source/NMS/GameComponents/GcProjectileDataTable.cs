@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
+using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xF70B426BA3CD32EB, NameHash = 0x9439AD97E8673BC0)]
+    [NMS(GUID = 0xE2B15ED2096036F1, NameHash = 0x9439AD97E8673BC0)]
     public class GcProjectileDataTable : NMSTemplate
     {
         /* 0x00 */ public List<GcProjectileData> Table;

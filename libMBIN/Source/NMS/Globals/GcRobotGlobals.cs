@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
+using System.Collections.Generic;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(GUID = 0xC356AF05AFCF791A, NameHash = 0xDD7401143C40F868)]
+    [NMS(GUID = 0xF1B39D1BDAB103BA, NameHash = 0xDD7401143C40F868)]
     public class GcRobotGlobals : NMSTemplate
     {
         /* 0x0000 */ public bool ForceShowDebugMoveTrail;
@@ -114,10 +111,34 @@ namespace libMBIN.NMS.Globals
         /* 0x0208 */ public float DroneInvestigateMinScanTime;
         /* 0x020C */ public float MedicDroneMinHealTime;
         /* 0x0210 */ public GcScanEffectData DroneScanEffect;
-        [NMS(Size = 0x9)]
+        // size: 0x9
+        public enum SentinelSpawnLimitsEnum {
+            PatrolDrone,
+            CombatDrone,
+            MedicDrone,
+            SummonerDrone,
+            CorruptedDrone,
+            Quad,
+            Mech,
+            Walker,
+            FriendlyDrone
+        }
+        [NMS(Size = 0x9, EnumType = typeof(SentinelSpawnLimitsEnum))]
         /* 0x0260 */ public int[] SentinelSpawnLimits;
-        [NMS(Size = 0x9)]
-        /* 0x0284 */ public GcSentinelData[] SentinelResources;
+        // size: 0x9
+        public enum SentinelResourcesEnum {
+            PatrolDrone,
+            CombatDrone,
+            MedicDrone,
+            SummonerDrone,
+            CorruptedDrone,
+            Quad,
+            Mech,
+            Walker,
+            FriendlyDrone
+        }
+        [NMS(Size = 0x9, EnumType = typeof(SentinelResourcesEnum))]
+        /* 0x0284 */ public GcSentinelResource[] SentinelResources;
         /* 0x0794 */ public float HeightTestSampleDistance;
         /* 0x0798 */ public float HeightTestSampleTime;
         /* 0x079C */ public float CollisionDistance;
@@ -187,7 +208,13 @@ namespace libMBIN.NMS.Globals
         /* 0x08D8 */ public float MechHearingRange;
         /* 0x08DC */ public float MechPatrolRadius;
         /* 0x08E0 */ public Vector2f MechPatrolPauseTime;
-        [NMS(Size = 0x3)]
+        // size: 0x3
+        public enum SentinelMechWeaponDataEnum {
+            Gun,
+            Canon,
+            Flamethrower
+        }
+        [NMS(Size = 0x3, EnumType = typeof(SentinelMechWeaponDataEnum))]
         /* 0x08E8 */ public GcSentinelMechWeaponData[] SentinelMechWeaponData;
         /* 0x0A68 */ public float WalkerPauseTime;
         /* 0x0A6C */ public float WalkerAttackRange;
@@ -300,7 +327,19 @@ namespace libMBIN.NMS.Globals
         /* 0x0C84 */ public float FireRateModifierMax;
         /* 0x0C88 */ public int ScoreForMinFireRateModifier;
         /* 0x0C8C */ public int ScoreForMaxFireRateModifier;
-        [NMS(Size = 0x9)]
+        // size: 0x9
+        public enum FireRateModifierScoresEnum {
+            PatrolDrone,
+            CombatDrone,
+            MedicDrone,
+            SummonerDrone,
+            CorruptedDrone,
+            Quad,
+            Mech,
+            Walker,
+            FriendlyDrone
+        }
+        [NMS(Size = 0x9, EnumType = typeof(FireRateModifierScoresEnum))]
         /* 0x0C90 */ public float[] FireRateModifierScores;
         /* 0x0CC0 */ public GcRobotLaserData WalkerLaser;
         /* 0x0D10 */ public GcRobotLaserData QuadLaser;

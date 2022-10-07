@@ -1,12 +1,16 @@
-using libMBIN.NMS.Toolkit;
-using libMBIN.NMS.GameComponents;
-
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xD26DF9A0D47D6468, NameHash = 0x9A93F045019746C1)]
+    [NMS(GUID = 0xFBA194BDD0535901, NameHash = 0x9A93F045019746C1)]
     public class GcCatalogueGroups : NMSTemplate
     {
-        public enum CatalogueGroupEnum { MaterialsAndItems, CraftingAndTechnology, Buildables }
-        public CatalogueGroupEnum CatalogueGroup;
+        // size: 0x5
+        public enum CatalogueGroupEnum {
+            MaterialsAndItems,
+            CraftingAndTechnology,
+            Buildables,
+            Recipes,
+            Collections
+        }
+        /* 0x0 */ public CatalogueGroupEnum CatalogueGroup;
     }
 }

@@ -276,5 +276,7 @@ results.txt
 docs/classes/
 html_docs/
 
-# TEMP: auto-extraction script output
-output/**/*.cs
+# auto-extraction script output
+Tools/auto_extract/output/**/*.cs
+Tools/auto_extract/*.projitems
+Tools/auto_extract/summary.txt

@@ -1,9 +1,6 @@
-﻿using libMBIN.NMS.Toolkit;
-using libMBIN.NMS.GameComponents;
-
 namespace libMBIN.NMS.Toolkit
 {
-	[NMS(GUID = 0xB5AD1E575E115E05, NameHash = 0xCB25F378CA730AFC)]
+    [NMS(GUID = 0xB5AD1E575E115E05, NameHash = 0xCB25F378CA730AFC)]
     public class TkHeavyAirData : NMSTemplate
     {
         /* 0x000 */ public NMSString0x80 Material;
@@ -27,7 +24,12 @@ namespace libMBIN.NMS.Toolkit
         /* 0x100 */ public Vector3f AmplitudeMax;
         /* 0x110 */ public Colour Colour1;
         /* 0x120 */ public Colour Colour2;
-		public enum EmitterShapeEnum { Sphere, UpperHalfSphere, BottomHalfSphere }
-		/* 0x130 */ public EmitterShapeEnum EmitterShape;
+        // size: 0x3
+        public enum EmitterShapeEnum {
+            Sphere,
+            UpperHalfSphere,
+            BottomHalfSphere
+        }
+        /* 0x130 */ public EmitterShapeEnum EmitterShape;
     }
 }

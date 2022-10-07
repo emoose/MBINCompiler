@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
-using libMBIN.NMS.GameComponents;
-
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x67EC77E325C72A07, NameHash = 0x1F78606838C7F310)]
+    [NMS(GUID = 0x1EA4FCB361BE0E8E, NameHash = 0x6186073FB1EA2382)]
     public class GcDefaultMissionProduct : NMSTemplate
     {
         /* 0x0 */ public NMSString0x10 Product;

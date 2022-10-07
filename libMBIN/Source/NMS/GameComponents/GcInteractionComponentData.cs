@@ -1,16 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-
 using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
+using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x32D03283F14AE75B, NameHash = 0xDAB0554EA36957B5)]
+    [NMS(GUID = 0x2C7FDC9DF4DACFBD, NameHash = 0xDAB0554EA36957B5)]
     public class GcInteractionComponentData : NMSTemplate
     {
         // size: 0x3
-        public enum InteractionActionEnum { PressButton, HoldButton, Shoot }
+        public enum InteractionActionEnum {
+            PressButton,
+            HoldButton,
+            Shoot
+        }
         /* 0x000 */ public InteractionActionEnum InteractionAction;
         /* 0x004 */ public GcInteractionType InteractionType;
         /* 0x008 */ public bool UseIntermediateUI;
@@ -24,25 +26,31 @@ namespace libMBIN.NMS.GameComponents
         /* 0x17C */ public float BlendToCameraTime;
         /* 0x180 */ public float BlendFromCameraTime;
         /* 0x188 */ public GcInteractionActivationCost ActivationCost;
-        /* 0x1C0 */ public NMSString0x10 TriggerAction;
-        /* 0x1D0 */ public NMSString0x10 TriggerActionOnPrepare;
-        /* 0x1E0 */ public bool BroadcastTriggerAction;
-        /* 0x1E4 */ public float InteractAngle;
-        /* 0x1E8 */ public float InteractDistance;
-        /* 0x1EC */ public bool InteractInvertFace;
-        /* 0x1F0 */ public GcInteractionType SecondaryInteractionType;
-        /* 0x1F8 */ public GcInteractionActivationCost SecondaryActivationCost;
-        /* 0x230 */ public List<TkModelRendererData> EventRenderers;
-        /* 0x240 */ public List<TkModelRendererData> EventRenderersAlt;
-        /* 0x250 */ public float SecondaryCameraTransitionTime;
-        /* 0x254 */ public GcInteractionDof DepthOfField;
-        /* 0x268 */ public List<GcAlienPuzzleMissionOverride> PuzzleMissionOverrideTable;
-        /* 0x278 */ public GcStoryUtilityOverride StoryUtilityOverrideData;
+        /* 0x1D0 */ public NMSString0x10 TriggerAction;
+        /* 0x1E0 */ public NMSString0x10 TriggerActionOnPrepare;
+        /* 0x1F0 */ public bool BroadcastTriggerAction;
+        /* 0x1F4 */ public float InteractAngle;
+        /* 0x1F8 */ public float InteractDistance;
+        /* 0x1FC */ public bool InteractInvertFace;
+        /* 0x200 */ public GcInteractionType SecondaryInteractionType;
+        /* 0x208 */ public GcInteractionActivationCost SecondaryActivationCost;
+        /* 0x250 */ public List<TkModelRendererData> EventRenderers;
+        /* 0x260 */ public List<TkModelRendererData> EventRenderersAlt;
+        /* 0x270 */ public float SecondaryCameraTransitionTime;
+        /* 0x274 */ public GcInteractionDof DepthOfField;
+        /* 0x288 */ public List<GcAlienPuzzleMissionOverride> PuzzleMissionOverrideTable;
+        /* 0x298 */ public GcStoryUtilityOverride StoryUtilityOverrideData;
         // size: 0x3
-        public enum OverrideInteriorExteriorMarkerEnum { No, Interior, Exterior }
-        /* 0x2B8 */ public OverrideInteriorExteriorMarkerEnum OverrideInteriorExteriorMarker;
-        /* 0x2BC */ public bool ReseedAfterRewardSuccess;
-        /* 0x2BD */ public bool UsePersonalPersistentBuffer;
-        /* 0x2C0 */ public float InWorldUIScaler;
+        public enum OverrideInteriorExteriorMarkerEnum {
+            No,
+            Interior,
+            Exterior
+        }
+        /* 0x2D8 */ public OverrideInteriorExteriorMarkerEnum OverrideInteriorExteriorMarker;
+        /* 0x2DC */ public bool ReseedAfterRewardSuccess;
+        /* 0x2DD */ public bool UsePersonalPersistentBuffer;
+        /* 0x2E0 */ public float InWorldUIScaler;
+        /* 0x2E8 */ public NMSString0x10 StartMissionOnUse;
+        /* 0x2F8 */ public bool AllowMissionUnderwater;
     }
 }

@@ -1,4 +1,3 @@
-using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 using System.Collections.Generic;
 
@@ -9,7 +8,12 @@ namespace libMBIN.NMS.GameComponents
     {
         /* 0x000 */ public NMSString0x20 Name;
         /* 0x020 */ public NMSString0x80 ModuleSet;
-        [NMS(Size = 0x2, EnumType = typeof(GcWFCDecorationTheme.WFCDecorationThemeEnum))]
+        // size: 0x2
+        public enum DecorationEnum {
+            Default,
+            Construction
+        }
+        [NMS(Size = 0x2, EnumType = typeof(DecorationEnum))]
         /* 0x0A0 */ public NMSString0x80[] Decoration;
         /* 0x1A0 */ public bool ImprovedCoherence;
         /* 0x1A1 */ public bool RequireNoUnreachableRooms;
@@ -22,7 +26,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x1E0 */ public List<NMSString0x10> NPCs;
         /* 0x1F0 */ public List<GcWeightedResource> Layouts;
         /* 0x200 */ public List<GcWeightedBuildingSize> Sizes;
-        /* 0x210 */ public List<long> FallbackSeeds;        // Not 100% about this datatype, but it's definitelty a list, and the objects look to be 8 bytes and it's not a ulong...
+        /* 0x210 */ public List<long> FallbackSeeds;
         /* 0x220 */ public List<long> PresetFallbackSeeds;
         /* 0x230 */ public int NumberOfPresetsPerPlanet;
         /* 0x234 */ public GcBaseBuildingPartStyle ReplaceMaterials;

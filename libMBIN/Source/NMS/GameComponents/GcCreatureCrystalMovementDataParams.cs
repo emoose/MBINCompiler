@@ -1,12 +1,10 @@
-using System;
-using System.Collections.Generic;
-
 using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
+using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x301CA5BAF5117C87, NameHash = 0x1232AC16AD2DF95C)]
+    [NMS(GUID = 0x71732689B505E348, NameHash = 0x1232AC16AD2DF95C)]
     public class GcCreatureCrystalMovementDataParams : NMSTemplate
     {
         /* 0x000 */ public List<GcBiomeSubType> ValidBiomes;
@@ -45,10 +43,16 @@ namespace libMBIN.NMS.GameComponents
         /* 0x0A8 */ public float DeathFadeStart;
         /* 0x0AC */ public float DeathFadeTime;
         // size: 0x2
-        public enum DeathTypeEnum { Explode, Drop }
+        public enum DeathTypeEnum {
+            Explode,
+            Drop
+        }
         /* 0x0B0 */ public DeathTypeEnum DeathType;
         // size: 0x2
-        public enum SubTypeEnum { Crystal, Tentacle }
+        public enum SubTypeEnum {
+            Crystal,
+            Tentacle
+        }
         /* 0x0B4 */ public SubTypeEnum SubType;
         /* 0x0B8 */ public NMSString0x20 TentacleStartJoint;
         /* 0x0D8 */ public NMSString0x20 TentacleEndJoint;

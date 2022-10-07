@@ -1,21 +1,20 @@
-﻿using libMBIN.NMS.Toolkit;
-using libMBIN.NMS.GameComponents;
+using libMBIN.NMS.Toolkit;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0xDB92FE50460E2D1F, NameHash = 0x6BA92648DD779F47)]
+    [NMS(GUID = 0x8500A5FB87A567E6, NameHash = 0x4453C3D28B780FD8)]
     public class GcHUDEffectRewardData : NMSTemplate
     {
-        /* 0x0000 */ public int NumBoxes;
-        /* 0x0004 */ public float BoxAnimTime;
-        /* 0x0008 */ public float BoxRotate;
-        /* 0x000C */ public float BoxAnimTimeBetweenBoxes;
-        /* 0x0010 */ public TkCurveType BoxAnimTimeCurve;
-        /* 0x0014 */ public Vector2f BoxSizeStart;
-        /* 0x001C */ public float BoxThicknessStart;
-        /* 0x0020 */ public Colour BoxColourStart;
-        /* 0x0030 */ public Vector2f BoxSizeEnd;
-        /* 0x0040 */ public Colour BoxColourEnd;
-        /* 0x0050 */ public float BoxThicknessEnd;
+        /* 0x00 */ public int NumBoxes;
+        /* 0x04 */ public float BoxAnimTime;
+        /* 0x08 */ public float BoxRotate;
+        /* 0x0C */ public float BoxAnimTimeBetweenBoxes;
+        /* 0x10 */ public TkCurveType BoxAnimTimeCurve;
+        /* 0x14 */ public Vector2f BoxSizeStart;
+        /* 0x1C */ public float BoxThicknessStart;
+        /* 0x20 */ public Colour BoxColourStart;
+        /* 0x30 */ public Vector2f BoxSizeEnd;
+        /* 0x40 */ public Colour BoxColourEnd;
+        /* 0x50 */ public float BoxThicknessEnd;
     }
 }

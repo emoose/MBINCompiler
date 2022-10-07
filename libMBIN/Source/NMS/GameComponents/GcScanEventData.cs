@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-
 using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
+using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xDAF8F57E112A338E, NameHash = 0x7BBBCE7D7BC0F1F4)]
+    [NMS(GUID = 0x64E3181E8121EFB7, NameHash = 0x7BBBCE7D7BC0F1F4)]
     public class GcScanEventData : NMSTemplate
     {
         /* 0x000 */ public NMSString0x20A Name;
@@ -26,28 +24,69 @@ namespace libMBIN.NMS.GameComponents
         /* 0x090 */ public float SurveyDistance;
         /* 0x098 */ public NMSString0x20A SurveyDiscoveryOSDMessage;
         // size: 0x6
-        public enum EventStartTypeEnum { None, Special, Discovered, Timer, ObjectScan, LeaveBuilding }
+        public enum EventStartTypeEnum {
+            None,
+            Special,
+            Discovered,
+            Timer,
+            ObjectScan,
+            LeaveBuilding
+        }
         /* 0x0B8 */ public EventStartTypeEnum EventStartType;
         // size: 0x5
-        public enum EventEndTypeEnum { None, Proximity, Interact, EnterBuilding, TimedInteract }
+        public enum EventEndTypeEnum {
+            None,
+            Proximity,
+            Interact,
+            EnterBuilding,
+            TimedInteract
+        }
         /* 0x0BC */ public EventEndTypeEnum EventEndType;
         // size: 0x2
-        public enum EventPriorityEnum { Regular, High }
+        public enum EventPriorityEnum {
+            Regular,
+            High
+        }
         /* 0x0C0 */ public EventPriorityEnum EventPriority;
         /* 0x0C4 */ public bool CanEndFromOutsideMission;
         /* 0x0C5 */ public bool DisableMultiplayerSync;
         /* 0x0C6 */ public bool ReplaceEventIfAlreadyActive;
         // size: 0x7
-        public enum BuildingLocationEnum { Nearest, AllNearest, Random, RandomOnNearPlanet, RandomOnFarPlanet, PlanetSearch,
+        public enum BuildingLocationEnum {
+            Nearest,
+            AllNearest,
+            Random,
+            RandomOnNearPlanet,
+            RandomOnFarPlanet,
+            PlanetSearch,
             PlayerSettlement
         }
         /* 0x0C8 */ public BuildingLocationEnum BuildingLocation;
         // size: 0x17
-        public enum BuildingTypeEnum { Any, AnyShelter, AnyNPC, BuildingClass, SpaceStation, SpaceAnomaly, Atlas,
-            Freighter, FreighterBase, ExternalPlanetBase, PlanetBaseTerminal, Expedition,
-            TutorialShelter, MPMissionFreighter, Nexus, InitialDistressSignal,
-            SpaceMarker, NexusEggMachine, PhotoTarget, SettlementConstruction,
-            UnownedSettlement, NPC_HideOut, FriendlyDrone
+        public enum BuildingTypeEnum {
+            Any,
+            AnyShelter,
+            AnyNPC,
+            BuildingClass,
+            SpaceStation,
+            SpaceAnomaly,
+            Atlas,
+            Freighter,
+            FreighterBase,
+            ExternalPlanetBase,
+            PlanetBaseTerminal,
+            Expedition,
+            TutorialShelter,
+            MPMissionFreighter,
+            Nexus,
+            InitialDistressSignal,
+            SpaceMarker,
+            NexusEggMachine,
+            PhotoTarget,
+            SettlementConstruction,
+            UnownedSettlement,
+            NPC_HideOut,
+            FriendlyDrone
         }
         /* 0x0CC */ public BuildingTypeEnum BuildingType;
         /* 0x0D0 */ public GcBuildingClassification BuildingClass;
@@ -56,7 +95,14 @@ namespace libMBIN.NMS.GameComponents
         /* 0x0D6 */ public bool MustFindSystem;
         /* 0x0D7 */ public bool AllowOverriddenBuildings;
         // size: 0x6
-        public enum SolarSystemLocationEnum { Local, Near, LocalOrNear, NearWithNoExpeditions, FromList, SeasonParty }
+        public enum SolarSystemLocationEnum {
+            Local,
+            Near,
+            LocalOrNear,
+            NearWithNoExpeditions,
+            FromList,
+            SeasonParty
+        }
         /* 0x0D8 */ public SolarSystemLocationEnum SolarSystemLocation;
         /* 0x0E0 */ public GcScanEventSolarSystemLookup SolarSystemAttributes;
         /* 0x150 */ public GcScanEventSolarSystemLookup SolarSystemAttributesFallback;

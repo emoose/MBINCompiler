@@ -1,12 +1,9 @@
-using System;
-using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
+using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xB129C1474D31C711, NameHash = 0x7F61AD955291D8A9)]
+    [NMS(GUID = 0x9383C9B469F00841, NameHash = 0x7F61AD955291D8A9)]
     public class GcPlayerWeaponBiomeProperties : NMSTemplate
     {
         /* 0x00 */ public GcBiomeType Biome;
@@ -22,6 +19,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x98 */ public NMSString0x10 WeaponFireParticlesId;
         /* 0xA8 */ public NMSString0x10 Projectile;
         /* 0xC0 */ public Colour UpgradeColourOverride;
-        /* 0xD0 */ public List<GcStatsTypes> StatBonusesOverride;
+        /* 0xD0 */ public List<GcStatsBonus> StatBonusesOverride;
     }
 }

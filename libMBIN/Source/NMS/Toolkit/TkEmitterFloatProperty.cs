@@ -1,12 +1,16 @@
 using libMBIN.NMS.Toolkit;
-using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0x3B502AF5CCB4C9F, NameHash = 0x6ECA0FF0AE9F9E21)]
+    [NMS(GUID = 0x7EA691C253E5384B, NameHash = 0x6ECA0FF0AE9F9E21)]
     public class TkEmitterFloatProperty : NMSTemplate
     {
-        public enum AuthoringEnum { FixedValue, RandomRangeFloat, Curves }
+        // size: 0x3
+        public enum AuthoringEnum {
+            FixedValue,
+            RandomRangeFloat,
+            Curves
+        }
         /* 0x00 */ public AuthoringEnum Authoring;
         /* 0x04 */ public float FixedValue;
         /* 0x08 */ public float MinRandomValue;
@@ -18,5 +22,6 @@ namespace libMBIN.NMS.Toolkit
         /* 0x20 */ public float CurveBlendMidpoint;
         /* 0x24 */ public TkCurveType Curve1Shape;
         /* 0x28 */ public TkCurveType Curve2Shape;
+        /* 0x30 */ public NMSTemplate NextStage;
     }
 }

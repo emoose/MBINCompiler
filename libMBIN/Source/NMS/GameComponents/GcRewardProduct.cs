@@ -1,4 +1,3 @@
-﻿using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
@@ -9,7 +8,19 @@ namespace libMBIN.NMS.GameComponents
         /* 0x00 */ public GcRealitySubstanceCategory ItemCategory;
         /* 0x04 */ public GcRarity ItemRarity;
         /* 0x08 */ public int ItemLevel;
-        [NMS(Size = 9, EnumType = typeof(GcProductCategory.ProductCategoryEnum))]
+        // size: 0x9
+        public enum AllowedProductTypesEnum {
+            Component,
+            Consumable,
+            Tradeable,
+            Curiosity,
+            BuildingPart,
+            Procedural,
+            Emote,
+            CustomisationPart,
+            CreatureEgg
+        }
+        [NMS(Size = 0x9, EnumType = typeof(AllowedProductTypesEnum))]
         /* 0x0C */ public bool[] AllowedProductTypes;
         /* 0x18 */ public int AmountMin;
         /* 0x1C */ public int AmountMax;

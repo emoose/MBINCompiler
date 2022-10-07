@@ -1,13 +1,12 @@
-﻿using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x753DA7EC326F5429, NameHash = 0xD2A73F296D17A20)]
+    [NMS(GUID = 0x2883437A02D119F, NameHash = 0xD2A73F296D17A20)]
     public class GcRefinerUnitComponentData : NMSTemplate
     {
-        public GcMaintenanceComponentData MaintenanceData;
-        public int NumInputs;
-        public bool IsCooker;
+        /* 0x000 */ public GcMaintenanceComponentData MaintenanceData;
+        /* 0x2D0 */ public int NumInputs;
+        /* 0x2D4 */ public bool IsCooker;
     }
 }

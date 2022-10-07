@@ -1,7 +1,3 @@
-﻿using System;
-using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
@@ -12,7 +8,15 @@ namespace libMBIN.NMS.GameComponents
         /* 0x000 */ public float Weighting;
         /* 0x004 */ public GcFogProperties Fog;
         /* 0x0F0 */ public GcWeatherColourModifiers ColourModifiers;
-        [NMS(Size = 0x5, EnumType = typeof(GcHazardModifiers.HazardModifierEnum))]
-        /* 0x390 */ public GcHazardValues[] HazardModifiers;        // meant to be a Vector2f. This looks nicer though in exml
+        // size: 0x5
+        public enum HazardModifiersEnum {
+            Temperature,
+            Toxicity,
+            Radiation,
+            LifeSupportDrain,
+            Gravity
+        }
+        [NMS(Size = 0x5, EnumType = typeof(HazardModifiersEnum))]
+        /* 0x390 */ public Vector2f[] HazardModifiers;
     }
 }

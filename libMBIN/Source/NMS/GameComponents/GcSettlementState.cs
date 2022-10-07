@@ -1,8 +1,5 @@
-using System;
-using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
+using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
@@ -21,7 +18,17 @@ namespace libMBIN.NMS.GameComponents
         /* 0x2E8 */ public GcDiscoveryOwner Owner;
         /* 0x3EC */ public GcSettlementJudgementType PendingJudgementType;
         /* 0x3F0 */ public NMSString0x10 PendingCustomJudgementID;
-        [NMS(Size = 0x7, EnumType = typeof(GcSettlementStatType.SettlementStatTypeEnum))]
+        // size: 0x7
+        public enum StatsEnum {
+            Population,
+            Happiness,
+            Production,
+            Upkeep,
+            Sentinels,
+            Debt,
+            Alert
+        }
+        [NMS(Size = 0x7, EnumType = typeof(StatsEnum))]
         /* 0x400 */ public int[] Stats;
         /* 0x420 */ public List<NMSString0x10> Perks;
         /* 0x430 */ public ulong LastJudgementTime;

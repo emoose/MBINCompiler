@@ -1,18 +1,18 @@
-﻿using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
-using libMBIN.NMS.GameComponents;
+using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0x7C282CE33A844ED7, NameHash = 0xF33640B1865E5E4B)]
+    [NMS(GUID = 0x7C282CE33A844ED7, NameHash = 0xF33640B1865E5E4B)]
     public class GcRewardSpecificTechFromList : NMSTemplate
     {
-        public List<NMSString0x10> TechList;
-
-        public bool FailIfAllKnown;
-
-		public enum TechListRewardOrderEnum { OneRandom, InOrder, TryAllRandom }
-		public TechListRewardOrderEnum TechListRewardOrder;
+        /* 0x00 */ public List<NMSString0x10> TechList;
+        /* 0x10 */ public bool FailIfAllKnown;
+        // size: 0x3
+        public enum TechListRewardOrderEnum {
+            OneRandom,
+            InOrder,
+            TryAllRandom
+        }
+        /* 0x14 */ public TechListRewardOrderEnum TechListRewardOrder;
     }
 }

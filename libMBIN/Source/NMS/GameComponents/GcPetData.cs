@@ -1,7 +1,5 @@
-﻿using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
+using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
@@ -33,9 +31,20 @@ namespace libMBIN.NMS.GameComponents
         /* 0x0E2 */ public NMSString0x20 CustomName;
         /* 0x104 */ public float Trust;
         /* 0x108 */ public GcDiscoveryOwner SenderData;
-        [NMS(Size = 0x3, EnumType = typeof(GcCreaturePetTraits.PetTraitsEnum))]
+        // size: 0x3
+        public enum TraitsEnum {
+            Helpfulness,
+            Aggression,
+            Independence
+        }
+        [NMS(Size = 0x3, EnumType = typeof(TraitsEnum))]
         /* 0x20C */ public float[] Traits;
-        [NMS(Size = 0x2, EnumType = typeof(GcCreaturePetMood.PetMoodEnum))]
+        // size: 0x2
+        public enum MoodsEnum {
+            Hungry,
+            Lonely
+        }
+        [NMS(Size = 0x2, EnumType = typeof(MoodsEnum))]
         /* 0x218 */ public float[] Moods;
     }
 }

@@ -1,8 +1,5 @@
-using System;
-using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
+using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
@@ -13,7 +10,11 @@ namespace libMBIN.NMS.GameComponents
         /* 0x04 */ public float InitialDelay;
         /* 0x08 */ public List<GcCreatureDebugWaypoint> Waypoints;
         // size: 0x3
-        public enum OnCompleteEnum { Hold, Loop, Destroy }
+        public enum OnCompleteEnum {
+            Hold,
+            Loop,
+            Destroy
+        }
         /* 0x18 */ public OnCompleteEnum OnComplete;
         /* 0x1C */ public float SmoothTime;
         /* 0x20 */ public int CurrentWaypoint;

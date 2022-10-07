@@ -1,13 +1,11 @@
-﻿using libMBIN.NMS.Toolkit;
-using libMBIN.NMS.GameComponents;
-
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0x833A881A215D0E67, NameHash = 0x71B9EA7C3B789C6B)]
+    [NMS(GUID = 0x7390A977466FA75C, NameHash = 0x71B9EA7C3B789C6B)]
     public class GcRewardMissionSeeded : NMSTemplate
     {
-        public NMSString0x10 Mission;
-        public NMSString0x10 MissionCreative;
-        public bool InheritActiveMultiplayerMissionSeed;
+        /* 0x00 */ public NMSString0x10 Mission;
+        /* 0x10 */ public NMSString0x10 MissionNoGroundCombat;
+        /* 0x20 */ public NMSString0x10 MissionNoSpaceCombat;
+        /* 0x30 */ public bool InheritActiveMultiplayerMissionSeed;
     }
 }

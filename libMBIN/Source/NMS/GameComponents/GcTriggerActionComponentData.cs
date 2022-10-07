@@ -1,11 +1,9 @@
-﻿using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
+using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xEC7F1B8F3E183559, NameHash = 0x7F5DF5820C8BDB22)]
+    [NMS(GUID = 0xEA11CA484D25A558, NameHash = 0x7F5DF5820C8BDB22)]
     public class GcTriggerActionComponentData : NMSTemplate
     {
         /* 0x00 */ public bool HideModel;

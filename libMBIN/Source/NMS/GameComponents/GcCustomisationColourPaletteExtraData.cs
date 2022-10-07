@@ -1,11 +1,8 @@
-﻿using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
-using libMBIN.NMS.GameComponents;
+using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0x56227E3EC58C1531, NameHash = 0x9B0B9933C035E4C2)]
+    [NMS(GUID = 0x56227E3EC58C1531, NameHash = 0x9B0B9933C035E4C2)]
     public class GcCustomisationColourPaletteExtraData : NMSTemplate
     {
         /* 0x00 */ public List<NMSString0x10> ProductToUnlock;

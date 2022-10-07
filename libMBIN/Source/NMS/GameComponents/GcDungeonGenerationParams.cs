@@ -1,11 +1,9 @@
-﻿using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
+using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0xFCFC86CC50CA838B, NameHash = 0xFD9E29934900184E)]
+    [NMS(GUID = 0xFCFC86CC50CA838B, NameHash = 0xFD9E29934900184E)]
     public class GcDungeonGenerationParams : NMSTemplate
     {
         /* 0x00 */ public uint SizeX;
@@ -18,7 +16,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x1C */ public float XProbability;
         /* 0x20 */ public float YProbability;
         /* 0x24 */ public float ZProbability;
-        /* 0x28 */ public float StraightProbability;
+        /* 0x28 */ public float StraightMultiplier;
         /* 0x30 */ public List<GcDungeonRoomParams> MainRoomTypes;
         /* 0x40 */ public List<NMSString0x10> BranchRoomTypes;
         /* 0x50 */ public List<GcDungeonQuestParams> Quests;

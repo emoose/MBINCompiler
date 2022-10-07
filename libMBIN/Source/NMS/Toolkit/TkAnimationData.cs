@@ -1,7 +1,5 @@
-﻿using System.Collections.Generic;
-
 using libMBIN.NMS.Toolkit;
-using libMBIN.NMS.GameComponents;
+using System.Collections.Generic;
 
 namespace libMBIN.NMS.Toolkit
 {
@@ -10,13 +8,16 @@ namespace libMBIN.NMS.Toolkit
     {
         /* 0x000 */ public NMSString0x10 Anim;
         /* 0x010 */ public NMSString0x80 Filename;
-
-        public enum AnimTypeEnum { Loop, OneShot, Control, OneShotBlendable }
+        // size: 0x4
+        public enum AnimTypeEnum {
+            Loop,
+            OneShot,
+            Control,
+            OneShotBlendable
+        }
         /* 0x090 */ public AnimTypeEnum AnimType;
-
         /* 0x094 */ public int FrameStart;
         /* 0x098 */ public int FrameEnd;
-
         /* 0x09C */ public NMSString0x40 StartNode;
         /* 0x0E0 */ public List<NMSString0x40> ExtraStartNodes;
         /* 0x0F0 */ public int Priority;
@@ -26,7 +27,12 @@ namespace libMBIN.NMS.Toolkit
         /* 0x100 */ public float Speed;
         /* 0x104 */ public float ActionStartFrame;
         /* 0x108 */ public float ActionFrame;
-        public enum CreatureSizeEnum { AllSizes, SmallOnly, LargeOnly }
+        // size: 0x3
+        public enum CreatureSizeEnum {
+            AllSizes,
+            SmallOnly,
+            LargeOnly
+        }
         /* 0x10C */ public CreatureSizeEnum CreatureSize;
         /* 0x110 */ public bool Additive;
         /* 0x111 */ public bool Mirrored;

@@ -1,13 +1,10 @@
-﻿using libMBIN.NMS.Toolkit;
-using libMBIN.NMS.GameComponents;
-
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0xC30E8192B2598E1A, NameHash = 0x7C82C5EBE3916386)]
+    [NMS(GUID = 0xEDBF2832CB2FDFA6, NameHash = 0x7C82C5EBE3916386)]
     public class GcPlayAudioAction : NMSTemplate
     {
-        public NMSString0x80 Sound;
-        public bool UseOcclusion;
-        public float OcclusionRadius;
+        /* 0x00 */ public NMSString0x80 Sound;
+        /* 0x80 */ public bool UseOcclusion;
+        /* 0x84 */ public float OcclusionRadius;
     }
 }

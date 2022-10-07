@@ -1,26 +1,27 @@
-﻿using libMBIN.NMS.Toolkit;
-using libMBIN.NMS.GameComponents;
-
 namespace libMBIN.NMS.Toolkit
 {
-	[NMS(GUID = 0x5B2795E2FEF75E70, NameHash = 0xEC9FF9AD5EDADEFF)]
+    [NMS(GUID = 0x5B2795E2FEF75E70, NameHash = 0xEC9FF9AD5EDADEFF)]
     public class TkSpeedLineData : NMSTemplate
     {
-        public NMSString0x80 Material;
-        public int NumberOfParticles;
-        public float Radius;
-        public float Length;
-        public float RemoveCylinderRadius;
-        public float Width;
-        public float Alpha;
-        public float FadeTime;
-        public float MinVisibleSpeed;
-        public float MaxVisibleSpeed;
-        public float Lifetime;
-        public float Speed;
-        public Colour ColourOrigin;
-        public Colour ColourEnd;
-		public enum LinesPositionEnum { Absolute, Relative }
-		public LinesPositionEnum LinesPosition;
+        /* 0x00 */ public NMSString0x80 Material;
+        /* 0x80 */ public int NumberOfParticles;
+        /* 0x84 */ public float Radius;
+        /* 0x88 */ public float Length;
+        /* 0x8C */ public float RemoveCylinderRadius;
+        /* 0x90 */ public float Width;
+        /* 0x94 */ public float Alpha;
+        /* 0x98 */ public float FadeTime;
+        /* 0x9C */ public float MinVisibleSpeed;
+        /* 0xA0 */ public float MaxVisibleSpeed;
+        /* 0xA4 */ public float Lifetime;
+        /* 0xA8 */ public float Speed;
+        /* 0xB0 */ public Colour ColourOrigin;
+        /* 0xC0 */ public Colour ColourEnd;
+        // size: 0x2
+        public enum LinesPositionEnum {
+            Absolute,
+            Relative
+        }
+        /* 0xD0 */ public LinesPositionEnum LinesPosition;
     }
 }

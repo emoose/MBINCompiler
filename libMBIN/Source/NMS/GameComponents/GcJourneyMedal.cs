@@ -1,17 +1,21 @@
-﻿using System.Collections.Generic;
-
 using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0x3B84F81C9B02B741, NameHash = 0x33CAC73016241300)]
+    [NMS(GUID = 0x829E6BA10A6A826C, NameHash = 0x33CAC73016241300)]
     public class GcJourneyMedal : NMSTemplate
     {
-        /* 0x000 */ public GcJourneyMedalType Type;
-        /* 0x004 */ public TkTextureResource None;
-        /* 0x088 */ public TkTextureResource Bronze;
-        /* 0x10C */ public TkTextureResource Silver;
-        /* 0x190 */ public TkTextureResource Gold;
+        /* 0x000 */ public NMSString0x10 LevelledStatID;
+        /* 0x010 */ public NMSString0x20A MedalTitle;
+        /* 0x030 */ public NMSString0x20A MedalProgressText;
+        /* 0x050 */ public NMSString0x20A PinnedDescription;
+        /* 0x070 */ public NMSString0x10 PinnedMission;
+        /* 0x080 */ public GcStatType StatType;
+        /* 0x084 */ public bool OverallJourneyDummy;
+        /* 0x088 */ public TkTextureResource IconNone;
+        /* 0x10C */ public TkTextureResource IconBronze;
+        /* 0x190 */ public TkTextureResource IconSilver;
+        /* 0x214 */ public TkTextureResource IconGold;
     }
 }

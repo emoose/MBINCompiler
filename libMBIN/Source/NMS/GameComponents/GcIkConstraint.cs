@@ -1,12 +1,10 @@
-﻿using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
+using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0x7D72EC550373804, NameHash = 0xE71CD9CB0F5ED75B)]
-    public class GcIkConstraint : NMSTemplate
+    [NMS(GUID = 0x3028EC1449DC7626, NameHash = 0x9A9B4993026AA411)]
+    public class GcIKConstraint : NMSTemplate
     {
         /* 0x000 */ public NMSString0x10 Id;
         /* 0x010 */ public NMSString0x100 JointName;

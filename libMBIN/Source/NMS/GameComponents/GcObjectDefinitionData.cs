@@ -1,28 +1,58 @@
-﻿using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
-using libMBIN.NMS.GameComponents;
-
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0x698532BFF8C2F781, NameHash = 0xF6BC04E88CDBB164)]
+    [NMS(GUID = 0x698532BFF8C2F781, NameHash = 0xF6BC04E88CDBB164)]
     public class GcObjectDefinitionData : NMSTemplate
     {
         /* 0x00 */ public NMSString0x80 Filename;
-		public enum ObjectRenderTypeEnum { Instanced, Single }
-		public ObjectRenderTypeEnum ObjectRenderType;
+        // size: 0x2
+        public enum ObjectRenderTypeEnum {
+            Instanced,
+            Single
+        }
+        /* 0x80 */ public ObjectRenderTypeEnum ObjectRenderType;
         /* 0x84 */ public bool AutoCollision;
         /* 0x85 */ public bool MatchGroundColour;
-		public enum SizeClassEnum { Tiny, Small, Medium, Large, Massive }
-		public SizeClassEnum SizeClass;
-		public enum ObjectCoverageTypeEnum { Blanket, Cluster, Solo }
-		public ObjectCoverageTypeEnum ObjectCoverageType;
-		public enum LifeTypeEnum { Rock, DryPlant, LargePlant, Artificial }
-		public LifeTypeEnum LifeType;
-		public enum LocationTypeEnum { AboveGround, UnderGround, WaterSurface, UnderWater }
-		public LocationTypeEnum LocationType;
-		public enum ObjectAlignmentEnum { Upright, SlightOffsetFromUpright, LargeOffsetFromUpright, ToNormal, SlightOffsetFromNormal, LargeOffsetFromNormal }
-		public ObjectAlignmentEnum ObjectAlignment;
-
+        // size: 0x5
+        public enum SizeClassEnum {
+            Tiny,
+            Small,
+            Medium,
+            Large,
+            Massive
+        }
+        /* 0x88 */ public SizeClassEnum SizeClass;
+        // size: 0x3
+        public enum ObjectCoverageTypeEnum {
+            Blanket,
+            Cluster,
+            Solo
+        }
+        /* 0x8C */ public ObjectCoverageTypeEnum ObjectCoverageType;
+        // size: 0x4
+        public enum LifeTypeEnum {
+            Rock,
+            DryPlant,
+            LushPlant,
+            Artificial
+        }
+        /* 0x90 */ public LifeTypeEnum LifeType;
+        // size: 0x4
+        public enum LocationTypeEnum {
+            AboveGround,
+            UnderGround,
+            WaterSurface,
+            UnderWater
+        }
+        /* 0x94 */ public LocationTypeEnum LocationType;
+        // size: 0x6
+        public enum ObjectAlignmentEnum {
+            Upright,
+            SlightOffsetFromUpright,
+            LargeOffsetFromUpright,
+            ToNormal,
+            SlightOffsetFromNormal,
+            LargeOffsetFromNormal
+        }
+        /* 0x98 */ public ObjectAlignmentEnum ObjectAlignment;
     }
 }

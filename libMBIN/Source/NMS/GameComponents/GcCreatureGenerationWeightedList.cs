@@ -1,17 +1,14 @@
-using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
+using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x6D3677593F04FAF6, NameHash = 0xE51761B21603792C)]
+    [NMS(GUID = 0x79FD808F9DDD453C, NameHash = 0xE51761B21603792C)]
     public class GcCreatureGenerationWeightedList : NMSTemplate
     {
-        // In the exe the datatypes are GcCreatureGenerationWeightedListEntry
-        public List<GcCreatureGenerationWeightedListDomainEntry> Ground;
-        public List<GcCreatureGenerationWeightedListDomainEntry> Air;
-        public List<GcCreatureGenerationWeightedListDomainEntry> Cave;
-        public List<GcCreatureGenerationWeightedListDomainEntry> Water;
+        /* 0x00 */ public List<GcCreatureGenerationWeightedListDomainEntry> Ground;
+        /* 0x10 */ public List<GcCreatureGenerationWeightedListDomainEntry> Air;
+        /* 0x20 */ public List<GcCreatureGenerationWeightedListDomainEntry> Cave;
+        /* 0x30 */ public List<GcCreatureGenerationWeightedListDomainEntry> Water;
     }
 }

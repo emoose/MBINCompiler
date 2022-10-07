@@ -1,7 +1,3 @@
-using System;
-using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
@@ -10,7 +6,15 @@ namespace libMBIN.NMS.GameComponents
     public class GcNPCSettlementBehaviourData : NMSTemplate
     {
         /* 0x00 */ public GcNPCSettlementBehaviourEntry BaseBehaviour;
-        [NMS(Size = 0x5, EnumType = typeof(GcNPCSettlementBehaviourState.NPCSettlementBehaviourStateEnum))]
+        // size: 0x5
+        public enum BehaviourOverridesEnum {
+            Generic,
+            Sociable,
+            Productive,
+            Tired,
+            Afraid
+        }
+        [NMS(Size = 0x5, EnumType = typeof(BehaviourOverridesEnum))]
         /* 0x48 */ public GcNPCSettlementBehaviourEntry[] BehaviourOverrides;
     }
 }

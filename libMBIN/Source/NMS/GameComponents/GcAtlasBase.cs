@@ -1,11 +1,8 @@
-﻿using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0x1512A8A65E002815, NameHash = 0xF676D3AEF2BB991F)]
+    [NMS(GUID = 0x1512A8A65E002815, NameHash = 0xF676D3AEF2BB991F)]
     public class GcAtlasBase : NMSTemplate
     {
         /* 0x000 */ public NMSString0x200 OpaqueData;

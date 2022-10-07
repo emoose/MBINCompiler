@@ -1,16 +1,15 @@
-﻿using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0x551F2CE669AC9111, NameHash = 0xDC4640E07A221674)]
+    [NMS(GUID = 0x89FF7E7DF7FAE073, NameHash = 0xDC4640E07A221674)]
     public class GcMissionConditionBasePartsQuery : NMSTemplate
     {
-        public GcBasePartSearchFilter PartsSeachFilter;
-        public int MinPartsFound;
-        public int MaxPartsFound;
-        public GcBaseSearchFilter ExcludeBasesFilter;
-        public bool ExcludeGlobalBuffer;
-        public float SearchDistanceLimit;
+        /* 0x00 */ public GcBasePartSearchFilter PartsSearchFilter;
+        /* 0x48 */ public int MinPartsFound;
+        /* 0x4C */ public int MaxPartsFound;
+        /* 0x50 */ public GcBaseSearchFilter ExcludeBasesFilter;
+        /* 0xE8 */ public bool ExcludeGlobalBuffer;
+        /* 0xEC */ public float SearchDistanceLimit;
     }
 }

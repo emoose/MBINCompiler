@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
+using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x237396867B77CCC2, NameHash = 0x184558FBF0A370E2)]
+    [NMS(GUID = 0x6C0DB468518D5E74, NameHash = 0x184558FBF0A370E2)]
     public class GcOutpostComponentData : NMSTemplate
     {
         /* 0x00 */ public bool Anomaly;

@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
+using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xB61378ABA919F3CC, NameHash = 0x87FB8E825C599E66)]
+    [NMS(GUID = 0x9D77A4B3C1BBA25C, NameHash = 0x87FB8E825C599E66)]
     public class GcDefaultMissionItemsTable : NMSTemplate
     {
         /* 0x00 */ public List<GcDefaultMissionSubstance> PrimarySubstances;

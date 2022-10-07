@@ -1,7 +1,3 @@
-﻿using System;
-using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
@@ -13,8 +9,18 @@ namespace libMBIN.NMS.GameComponents
         /* 0x20 */ public Vector3f Position;
         /* 0x30 */ public Vector3f Facing;
         // size: 0xB
-        public enum TeleporterTypeEnum { Base, Spacestation, Atlas, PlanetAwayFromShip, ExternalBase, EmergencyGalaxyFix,
-            OnNexus, SpacestationFixPosition, Settlement, Freighter, Frigate
+        public enum TeleporterTypeEnum {
+            Base,
+            Spacestation,
+            Atlas,
+            PlanetAwayFromShip,
+            ExternalBase,
+            EmergencyGalaxyFix,
+            OnNexus,
+            SpacestationFixPosition,
+            Settlement,
+            Freighter,
+            Frigate
         }
         /* 0x40 */ public TeleporterTypeEnum TeleporterType;
         /* 0x44 */ public NMSString0x40 Name;

@@ -1,11 +1,6 @@
-using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
-using libMBIN.NMS.GameComponents;
-
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0x07629102C1581415, NameHash = 0xF95FF845E00A143C)]
+    [NMS(GUID = 0x7629102C1581415, NameHash = 0xF95FF845E00A143C)]
     public class TkPostProcessData : NMSTemplate
     {
         /* 0x00 */ public float DOFNearPlane;

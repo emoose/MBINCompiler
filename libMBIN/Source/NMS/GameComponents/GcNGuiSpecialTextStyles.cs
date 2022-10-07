@@ -1,13 +1,11 @@
-﻿using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
+using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0xD1752B2A47080504, NameHash = 0x9E60066285AC5880)]
+    [NMS(GUID = 0x1A68FAF670126663, NameHash = 0x9E60066285AC5880)]
     public class GcNGuiSpecialTextStyles : NMSTemplate
     {
-        public List<GcNGuiSpecialTextStyleData> SpecialStyles;
+        /* 0x0 */ public List<GcNGuiSpecialTextStyleData> SpecialStyles;
     }
 }

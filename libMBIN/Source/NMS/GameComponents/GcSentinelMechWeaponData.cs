@@ -1,12 +1,8 @@
-using System;
-using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x38A754BE41C7AC6A, NameHash = 0x4484F9F6C0F33596)]
+    [NMS(GUID = 0x96D3659EFC636BC8, NameHash = 0x4484F9F6C0F33596)]
     public class GcSentinelMechWeaponData : NMSTemplate
     {
         /* 0x00 */ public NMSString0x10 Id;

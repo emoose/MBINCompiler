@@ -1,4 +1,3 @@
-﻿using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
@@ -9,7 +8,11 @@ namespace libMBIN.NMS.GameComponents
         /* 0x00 */ public NMSString0x10 PartID;
         /* 0x10 */ public int Count;
         /* 0x18 */ public GcBuildingPartSearchType Type;
-		public enum PartInCurrentBaseEnum { DontCare, YesAllPlayerOwned }
-		/* 0x38 */ public PartInCurrentBaseEnum PartInCurrentBase;
+        // size: 0x2
+        public enum PartInCurrentBaseEnum {
+            DontCare,
+            YesAllPlayerOwned
+        }
+        /* 0x38 */ public PartInCurrentBaseEnum PartInCurrentBase;
     }
 }

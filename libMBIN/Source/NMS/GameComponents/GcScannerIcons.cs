@@ -1,12 +1,9 @@
-using System;
-using System.Collections.Generic;
-
 using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x66F1E7DD3AAA747B, NameHash = 0x0392CEA8FE98D0F4)]
+    [NMS(GUID = 0x66F1E7DD3AAA747B, NameHash = 0x392CEA8FE98D0F4)]
     public class GcScannerIcons : NMSTemplate
     {
         /* 0x00000 */ public GcScannerIcon TaggedBuilding;
@@ -39,19 +36,307 @@ namespace libMBIN.NMS.GameComponents
         /* 0x01C44 */ public GcScannerIcon DiamondAnimation;
         /* 0x01D50 */ public GcScannerIcon ArrowSmall;
         /* 0x01E5C */ public GcScannerIcon ArrowLarge;
-        [NMS(Size = 0x6, EnumType = typeof(GcGenericIconTypes.GenericIconTypeEnum))]
+        // size: 0x6
+        public enum GenericIconsEnum {
+            None,
+            Interaction,
+            SpaceStation,
+            SpaceAnomaly,
+            SpaceAtlas,
+            Nexus
+        }
+        [NMS(Size = 0x6, EnumType = typeof(GenericIconsEnum))]
         /* 0x01F68 */ public GcScannerIcon[] GenericIcons;
-        [NMS(Size = 0x21, EnumType = typeof(GcScannerBuildingIconTypes.ScanBuildingIconTypeEnum))]
+        // size: 0x21
+        public enum BuildingIconsEnum {
+            None,
+            Generic,
+            Shelter,
+            Relic,
+            Factory,
+            Unknown,
+            Distress,
+            Beacon,
+            Waypoint,
+            SpaceStation,
+            TechResource,
+            FuelResource,
+            MineralResource,
+            SpaceAnomaly,
+            SpaceAtlas,
+            ExternalBase,
+            PlanetBaseTerminal,
+            Nexus,
+            AbandonedFreighter,
+            Telescope,
+            Outpost,
+            UpgradePod,
+            Cog,
+            Ruins,
+            Portal,
+            Library,
+            Abandoned,
+            SmallBuilding,
+            StoryGlitch,
+            GraveInCave,
+            HoloHub,
+            Settlement,
+            DroneHive
+        }
+        [NMS(Size = 0x21, EnumType = typeof(BuildingIconsEnum))]
         /* 0x025B0 */ public GcScannerIcon[] BuildingIcons;
-        [NMS(Size = 0x21, EnumType = typeof(GcScannerBuildingIconTypes.ScanBuildingIconTypeEnum))]
+        // size: 0x21
+        public enum BuildingIconsBinocsEnum {
+            None,
+            Generic,
+            Shelter,
+            Relic,
+            Factory,
+            Unknown,
+            Distress,
+            Beacon,
+            Waypoint,
+            SpaceStation,
+            TechResource,
+            FuelResource,
+            MineralResource,
+            SpaceAnomaly,
+            SpaceAtlas,
+            ExternalBase,
+            PlanetBaseTerminal,
+            Nexus,
+            AbandonedFreighter,
+            Telescope,
+            Outpost,
+            UpgradePod,
+            Cog,
+            Ruins,
+            Portal,
+            Library,
+            Abandoned,
+            SmallBuilding,
+            StoryGlitch,
+            GraveInCave,
+            HoloHub,
+            Settlement,
+            DroneHive
+        }
+        [NMS(Size = 0x21, EnumType = typeof(BuildingIconsBinocsEnum))]
         /* 0x0483C */ public GcScannerIcon[] BuildingIconsBinocs;
-        [NMS(Size = 0x21, EnumType = typeof(GcScannerBuildingIconTypes.ScanBuildingIconTypeEnum))]
+        // size: 0x21
+        public enum BuildingIconsHugeEnum {
+            None,
+            Generic,
+            Shelter,
+            Relic,
+            Factory,
+            Unknown,
+            Distress,
+            Beacon,
+            Waypoint,
+            SpaceStation,
+            TechResource,
+            FuelResource,
+            MineralResource,
+            SpaceAnomaly,
+            SpaceAtlas,
+            ExternalBase,
+            PlanetBaseTerminal,
+            Nexus,
+            AbandonedFreighter,
+            Telescope,
+            Outpost,
+            UpgradePod,
+            Cog,
+            Ruins,
+            Portal,
+            Library,
+            Abandoned,
+            SmallBuilding,
+            StoryGlitch,
+            GraveInCave,
+            HoloHub,
+            Settlement,
+            DroneHive
+        }
+        [NMS(Size = 0x21, EnumType = typeof(BuildingIconsHugeEnum))]
         /* 0x06AC8 */ public GcScannerIcon[] BuildingIconsHuge;
-        [NMS(Size = 0x36, EnumType = typeof(GcScannerIconTypes.ScanIconTypeEnum))]
+        // size: 0x36
+        public enum ScannableIconsEnum {
+            None,
+            Health,
+            Shield,
+            Hazard,
+            LifeSupport,
+            Tech,
+            BluePlant,
+            CaveSubstance,
+            LaunchCrystals,
+            Power,
+            Carbon,
+            CarbonPlus,
+            Oxygen,
+            Mineral,
+            Sodium,
+            SodiumPlus,
+            Crate,
+            Artifact,
+            Plant,
+            HazardPlant,
+            ArtifactCrate,
+            BuriedTech,
+            BuriedRare,
+            Drone,
+            CustomMarker,
+            SignalBooster,
+            Refiner,
+            Grave,
+            Rare1,
+            Rare2,
+            Rare3,
+            Pearl,
+            RareEgg,
+            HazardEgg,
+            FishFiend,
+            Clam,
+            CaveStone,
+            StormCrystal,
+            BiomeTrophy,
+            PowerHotspot,
+            MineralHotspot,
+            GasHotspot,
+            HarvestPlant,
+            Cooker,
+            CreaturePoop,
+            FreighterTeleporter,
+            FreighterDoor,
+            FreighterTerminal,
+            FreighterHeater,
+            FreighterDataPad,
+            LandedPilot,
+            PetEgg,
+            Sandworm,
+            FriendlyDrone
+        }
+        [NMS(Size = 0x36, EnumType = typeof(ScannableIconsEnum))]
         /* 0x08D54 */ public GcScannerIcon[] ScannableIcons;
-        [NMS(Size = 0x36, EnumType = typeof(GcScannerIconTypes.ScanIconTypeEnum))]
+        // size: 0x36
+        public enum ScannableIconsBinocsEnum {
+            None,
+            Health,
+            Shield,
+            Hazard,
+            LifeSupport,
+            Tech,
+            BluePlant,
+            CaveSubstance,
+            LaunchCrystals,
+            Power,
+            Carbon,
+            CarbonPlus,
+            Oxygen,
+            Mineral,
+            Sodium,
+            SodiumPlus,
+            Crate,
+            Artifact,
+            Plant,
+            HazardPlant,
+            ArtifactCrate,
+            BuriedTech,
+            BuriedRare,
+            Drone,
+            CustomMarker,
+            SignalBooster,
+            Refiner,
+            Grave,
+            Rare1,
+            Rare2,
+            Rare3,
+            Pearl,
+            RareEgg,
+            HazardEgg,
+            FishFiend,
+            Clam,
+            CaveStone,
+            StormCrystal,
+            BiomeTrophy,
+            PowerHotspot,
+            MineralHotspot,
+            GasHotspot,
+            HarvestPlant,
+            Cooker,
+            CreaturePoop,
+            FreighterTeleporter,
+            FreighterDoor,
+            FreighterTerminal,
+            FreighterHeater,
+            FreighterDataPad,
+            LandedPilot,
+            PetEgg,
+            Sandworm,
+            FriendlyDrone
+        }
+        [NMS(Size = 0x36, EnumType = typeof(ScannableIconsBinocsEnum))]
         /* 0x0C5DC */ public GcScannerIcon[] ScannableIconsBinocs;
-        [NMS(Size = 0x36, EnumType = typeof(GcScannerIconTypes.ScanIconTypeEnum))]
+        // size: 0x36
+        public enum ScannableColoursEnum {
+            None,
+            Health,
+            Shield,
+            Hazard,
+            LifeSupport,
+            Tech,
+            BluePlant,
+            CaveSubstance,
+            LaunchCrystals,
+            Power,
+            Carbon,
+            CarbonPlus,
+            Oxygen,
+            Mineral,
+            Sodium,
+            SodiumPlus,
+            Crate,
+            Artifact,
+            Plant,
+            HazardPlant,
+            ArtifactCrate,
+            BuriedTech,
+            BuriedRare,
+            Drone,
+            CustomMarker,
+            SignalBooster,
+            Refiner,
+            Grave,
+            Rare1,
+            Rare2,
+            Rare3,
+            Pearl,
+            RareEgg,
+            HazardEgg,
+            FishFiend,
+            Clam,
+            CaveStone,
+            StormCrystal,
+            BiomeTrophy,
+            PowerHotspot,
+            MineralHotspot,
+            GasHotspot,
+            HarvestPlant,
+            Cooker,
+            CreaturePoop,
+            FreighterTeleporter,
+            FreighterDoor,
+            FreighterTerminal,
+            FreighterHeater,
+            FreighterDataPad,
+            LandedPilot,
+            PetEgg,
+            Sandworm,
+            FriendlyDrone
+        }
+        [NMS(Size = 0x36, EnumType = typeof(ScannableColoursEnum))]
         /* 0x0FE70 */ public Colour[] ScannableColours;
         /* 0x101D0 */ public Colour BuildingColour;
         /* 0x101E0 */ public Colour GenericColour;
@@ -86,7 +371,15 @@ namespace libMBIN.NMS.GameComponents
         /* 0x120BC */ public GcScannerIcon CreatureDanger;
         /* 0x121C8 */ public GcScannerIcon CreatureFiend;
         /* 0x122D4 */ public GcScannerIcon CreatureMilk;
-        [NMS(Size = 0x5, EnumType = typeof(GcScannerIconHighlightTypes.ScannerIconHighlightTypeEnum))]
+        // size: 0x5
+        public enum HighlightIconsEnum {
+            Diamond,
+            Hexagon,
+            Tag,
+            Octagon,
+            Circle
+        }
+        [NMS(Size = 0x5, EnumType = typeof(HighlightIconsEnum))]
         /* 0x123E0 */ public TkTextureResource[] HighlightIcons;
         /* 0x12674 */ public GcScannerIcon MissionEnterOrbit;
         /* 0x12780 */ public GcScannerIcon MissionEnterBuilding;

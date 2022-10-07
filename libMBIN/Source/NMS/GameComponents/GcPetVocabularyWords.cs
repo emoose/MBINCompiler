@@ -1,8 +1,3 @@
-using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
-using libMBIN.NMS.GameComponents;
-
 namespace libMBIN.NMS.GameComponents
 {
     [NMS(GUID = 0x6DCC4E8DC485D130, NameHash = 0xDCBFB26222DD9DE6)]
@@ -10,9 +5,22 @@ namespace libMBIN.NMS.GameComponents
     {
         // size: 0xF
         public enum PetVocabularyWordEnum {
-            Attack, Dislike, Cute, Good, Happy, Hostile, Like, Lonely, Loved, Noise,
-            OwnerLove, SummonedTrait, Hungry, Tickles, Yummy
+            Attack,
+            Dislike,
+            Cute,
+            Good,
+            Happy,
+            Hostile,
+            Like,
+            Lonely,
+            Loved,
+            Noise,
+            OwnerLove,
+            SummonedTrait,
+            Hungry,
+            Tickles,
+            Yummy
         }
-        public PetVocabularyWordEnum PetVocabularyWord;
+        /* 0x0 */ public PetVocabularyWordEnum PetVocabularyWord;
     }
 }

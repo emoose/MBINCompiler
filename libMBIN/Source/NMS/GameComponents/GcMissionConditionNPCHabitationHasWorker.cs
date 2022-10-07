@@ -1,13 +1,17 @@
-﻿using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0x7C5DB65E2CF0F90, NameHash = 0x41BFFB2F8544AD51)]
+    [NMS(GUID = 0x6EE89AAE6CE65363, NameHash = 0x41BFFB2F8544AD51)]
     public class GcMissionConditionNPCHabitationHasWorker : NMSTemplate
     {
-        public GcNPCHabitationType WorkerType;
-		public enum WorkerInCurrentBaseEnum { DontCare, Yes, No }
-		public WorkerInCurrentBaseEnum WorkerInCurrentBase;
+        /* 0x0 */ public GcNPCHabitationType WorkerType;
+        // size: 0x3
+        public enum WorkerInCurrentBaseEnum {
+            DontCare,
+            Yes,
+            No
+        }
+        /* 0x4 */ public WorkerInCurrentBaseEnum WorkerInCurrentBase;
     }
 }

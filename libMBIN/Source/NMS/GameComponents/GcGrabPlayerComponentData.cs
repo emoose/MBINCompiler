@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xEC47449F9D4476AE, NameHash = 0xDE6FCE33E294F619)]
+    [NMS(GUID = 0xE29CFAC5A650DB8, NameHash = 0xDE6FCE33E294F619)]
     public class GcGrabPlayerComponentData : NMSTemplate
     {
         /* 0x000 */ public NMSString0x100 LookJoint;

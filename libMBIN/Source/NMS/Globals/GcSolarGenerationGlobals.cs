@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-
 using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
+using System.Collections.Generic;
 
 namespace libMBIN.NMS.Globals
 {
@@ -19,7 +17,7 @@ namespace libMBIN.NMS.Globals
         /* 0x034 */ public Vector2f PerPlanetGenerationAngleChangeDegreesRange;
         /* 0x03C */ public Vector2f PerPlanetGenerationElevationChangeDegreesRange;
         /* 0x044 */ public Vector2f SpawnPointStationToPlanetInterpRange;
-        [NMS(Size = 0x4, EnumType = typeof(GcGalaxyStarTypes.GalaxyStarTypeEnum))]
+        [NMS(Size = 0x4)]
         /* 0x04C */ public float[] ExtremePlanetChance;
         /* 0x05C */ public float StationSpawnAvoidRadius;
         /* 0x060 */ public int LocatorScatterMinCount;
@@ -50,8 +48,8 @@ namespace libMBIN.NMS.Globals
         /* 0x0E8 */ public int FuelAsteroidMultiplier;
         /* 0x0EC */ public int CommonAsteroidResourceFuelMultiplier;
         /* 0x0F0 */ public NMSString0x10 CommonAsteroidResourceFuel;
-        /* 0x100 */ public NMSString0x10 RareAsteroidResourceFuel;     // GEODE_SPACE
-        /* 0x110 */ public NMSString0x10 CommonAsteroidResourceProduct;     // GEODE_ASTEROID
+        /* 0x100 */ public NMSString0x10 RareAsteroidResourceFuel;
+        /* 0x110 */ public NMSString0x10 CommonAsteroidResourceProduct;
         /* 0x120 */ public NMSString0x10 CommonAsteroidResourceMain;
         /* 0x130 */ public NMSString0x10 CommonAsteroidResourceSecondary;
         /* 0x140 */ public NMSString0x10 RareAsteroidDataProduct;
@@ -65,11 +63,11 @@ namespace libMBIN.NMS.Globals
         /* 0x16C */ public float AsteroidAnomalyAvoidRadius;
         /* 0x170 */ public float AsteroidWarpInAreaAvoidRadius;
         /* 0x174 */ public float AsteroidCreatureRichSystemProbability;
-        [NMS(Size = 0x4, EnumType = typeof(GcGalaxyStarTypes.GalaxyStarTypeEnum))]
+        [NMS(Size = 0x4)]
         /* 0x178 */ public float[] AbandonedSystemProbability;
-        [NMS(Size = 0x4, EnumType = typeof(GcGalaxyStarTypes.GalaxyStarTypeEnum))]
+        [NMS(Size = 0x4)]
         /* 0x188 */ public float[] EmptySystemProbability;
-        [NMS(Size = 0x4, EnumType = typeof(GcGalaxyStarTypes.GalaxyStarTypeEnum))]
+        [NMS(Size = 0x4)]
         /* 0x198 */ public float[] PirateSystemProbability;
         /* 0x1A8 */ public int CivilianTraderSpaceshipsCacheCount;
         /* 0x1B0 */ public List<float> SpaceshipSpawnFreqMultipliers;

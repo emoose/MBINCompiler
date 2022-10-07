@@ -1,14 +1,21 @@
-﻿using libMBIN.NMS.Toolkit;
-using libMBIN.NMS.GameComponents;
+using libMBIN.NMS.Toolkit;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0xF9044903B4B2CDD3, NameHash = 0xF112AB8FC14A734A)]
+    [NMS(GUID = 0x7FB3512B07888B4F, NameHash = 0xF112AB8FC14A734A)]
     public class GcMissionConditionInventorySlots : NMSTemplate
     {
-		public enum InventoryTestEnum { Current, personal, Ship, Vehicle }
-		public InventoryTestEnum InventoryTest;
-        public int SlotsFree;
-        public TkEqualityEnum Test;
+        // size: 0x4
+        public enum InventoryTestEnum {
+            Current,
+            Personal,
+            Ship,
+            Vehicle
+        }
+        /* 0x0 */ public InventoryTestEnum InventoryTest;
+        /* 0x4 */ public int SlotsFree;
+        /* 0x8 */ public TkEqualityEnum Test;
+        /* 0xC */ public bool TestAllSlotsUnlocked;
+        /* 0xD */ public bool TestOnlyMainInventory;
     }
 }

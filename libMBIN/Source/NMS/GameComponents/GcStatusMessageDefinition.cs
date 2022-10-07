@@ -1,7 +1,3 @@
-﻿using System;
-using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
@@ -16,8 +12,15 @@ namespace libMBIN.NMS.GameComponents
         /* 0x32 */ public bool AddFriendlyDronePrefix;
         /* 0x33 */ public bool IncludePlayerName;
         // size: 0x8
-        public enum ReplicateToEnum { None, Fireteam, Fireteam_SameUA, Global, Global_Distance, Fireteam_Distance,
-            Fireteam_Global_Distance, Not_Fireteam
+        public enum ReplicateToEnum {
+            None,
+            Fireteam,
+            Fireteam_SameUA,
+            Global,
+            Global_Distance,
+            Fireteam_Distance,
+            Fireteam_Global_Distance,
+            Not_Fireteam
         }
         /* 0x34 */ public ReplicateToEnum ReplicateTo;
         /* 0x38 */ public bool PostLocally;

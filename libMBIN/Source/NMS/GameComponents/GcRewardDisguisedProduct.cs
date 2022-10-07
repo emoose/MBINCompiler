@@ -1,16 +1,15 @@
-﻿using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0xDE62A068FABD286A, NameHash = 0xDBFECF3462D8A0FB)]
+    [NMS(GUID = 0xDE62A068FABD286A, NameHash = 0xDBFECF3462D8A0FB)]
     public class GcRewardDisguisedProduct : NMSTemplate
     {
-        public GcDefaultMissionProductEnum Default;
-        public NMSString0x10 ID;
-        public NMSString0x10 DisplayAs;
-        public NMSString0x10 AwardDisplayIDDuringMission;
-        public int AmountMin;
-        public int AmountMax;
+        /* 0x00 */ public GcDefaultMissionProductEnum Default;
+        /* 0x08 */ public NMSString0x10 ID;
+        /* 0x18 */ public NMSString0x10 DisplayAs;
+        /* 0x28 */ public NMSString0x10 AwardDisplayIDDuringMission;
+        /* 0x38 */ public int AmountMin;
+        /* 0x3C */ public int AmountMax;
     }
 }

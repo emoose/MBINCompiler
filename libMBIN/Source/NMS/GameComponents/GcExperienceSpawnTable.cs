@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
+using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xFD773FB50F1D6504, NameHash = 0x5F4CA33999F0D259)]
+    [NMS(GUID = 0x97A26CEEC361F2D8, NameHash = 0x5F4CA33999F0D259)]
     public class GcExperienceSpawnTable : NMSTemplate
     {
         /* 0x000 */ public List<GcAIShipSpawnData> FlybySpawns;
@@ -34,10 +31,20 @@ namespace libMBIN.NMS.GameComponents
         /* 0x198 */ public List<GcAIShipSpawnData> FrigateFlybySpawns;
         [NMS(Size = 0x6)]
         /* 0x1A8 */ public GcSentinelSpawnSequenceGroupList[] WantedLevelSpawns;
-        [NMS(Size = 0x7, EnumType = typeof(GcEncounterType.EncounterTypeEnum))]
+        // size: 0x7
+        public enum EncounterSpawnsEnum {
+            FactoryGuards,
+            HarvesterGuards,
+            ScrapHeap,
+            Reward,
+            CorruptedDroneInteract,
+            GroundWorms,
+            DroneHiveGuards
+        }
+        [NMS(Size = 0x7, EnumType = typeof(EncounterSpawnsEnum))]
         /* 0x268 */ public GcSentinelSpawnSequenceGroupList[] EncounterSpawns;
         /* 0x348 */ public List<GcSentinelEncounterOverride> EncounterOverrides;
-        /* 0x358 */ public GcSentinelnWaveGroup SummonerSpawns;
+        /* 0x358 */ public GcSentinelWaveGroup SummonerSpawns;
         /* 0x378 */ public List<GcSentinelSpawnNamedSequence> SentinelSequences;
         /* 0x388 */ public List<GcSentinelSpawnWave> SentinelSpawns;
     }

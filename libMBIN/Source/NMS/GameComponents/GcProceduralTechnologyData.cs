@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
+using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x6F72B02B7202F57D, NameHash = 0x6B8472FADE3C492C)]
+    [NMS(GUID = 0x674AA77470312509, NameHash = 0x6B8472FADE3C492C)]
     public class GcProceduralTechnologyData : NMSTemplate
     {
         /* 0x000 */ public NMSString0x10 ID;
@@ -18,7 +15,14 @@ namespace libMBIN.NMS.GameComponents
         /* 0x1C0 */ public NMSString0x80 Description;
         /* 0x240 */ public Colour Colour;
         // size: 0x6
-        public enum QualityEnum { Normal, Rare, Epic, Legendary, Illegal, Sentinel }
+        public enum QualityEnum {
+            Normal,
+            Rare,
+            Epic,
+            Legendary,
+            Illegal,
+            Sentinel
+        }
         /* 0x250 */ public QualityEnum Quality;
         /* 0x254 */ public GcProceduralTechnologyCategory Category;
         /* 0x258 */ public int NumStatsMin;

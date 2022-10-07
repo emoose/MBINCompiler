@@ -1,22 +1,53 @@
-﻿using System;
-using System.Collections.Generic;
-
 using libMBIN.NMS.Toolkit;
-using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x30BC0E1C6079088A, NameHash = 0x1DE42844C3529A0B)]
+    [NMS(GUID = 0x4C6BB77CC0F3C9A1, NameHash = 0x1DE42844C3529A0B)]
     public class GcGalaxyInfoIcons : NMSTemplate
     {
-        [NMS(Size = 0x8, EnumType = typeof(GcAlienRace.AlienRaceEnum))]
+        // size: 0x8
+        public enum RaceIconsEnum {
+            Traders,
+            Warriors,
+            Explorers,
+            Robots,
+            Atlas,
+            Diplomats,
+            Exotics,
+            None
+        }
+        [NMS(Size = 0x8, EnumType = typeof(RaceIconsEnum))]
         /* 0x000 */ public TkTextureResource[] RaceIcons;
-        [NMS(Size = 0x7, EnumType = typeof(GcTradingClass.TradingClassEnum))]
+        // size: 0x7
+        public enum EconomyIconsEnum {
+            Mining,
+            HighTech,
+            Trading,
+            Manufacturing,
+            Fusion,
+            Scientific,
+            PowerGeneration
+        }
+        [NMS(Size = 0x7, EnumType = typeof(EconomyIconsEnum))]
         /* 0x420 */ public TkTextureResource[] EconomyIcons;
         /* 0x7BC */ public TkTextureResource EconomyTechNotInstalledIcon;
-        [NMS(Size = 0x4, EnumType = typeof(GcWealthClass.WealthClassEnum))]
+        // size: 0x4
+        public enum WealthIconsEnum {
+            Poor,
+            Average,
+            Wealthy,
+            Pirate
+        }
+        [NMS(Size = 0x4, EnumType = typeof(WealthIconsEnum))]
         /* 0x840 */ public TkTextureResource[] WealthIcons;
-        [NMS(Size = 0x4, EnumType = typeof(GcPlayerConflictData.ConflictLevelEnum))]
+        // size: 0x4
+        public enum ConflictIconsEnum {
+            Low,
+            Default,
+            High,
+            Pirate
+        }
+        [NMS(Size = 0x4, EnumType = typeof(ConflictIconsEnum))]
         /* 0xA50 */ public TkTextureResource[] ConflictIcons;
         /* 0xC60 */ public TkTextureResource ConflictTechNotInstalledIcon;
         /* 0xCE4 */ public TkTextureResource WarpIcon;

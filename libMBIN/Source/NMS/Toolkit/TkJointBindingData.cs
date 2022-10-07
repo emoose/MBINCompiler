@@ -1,21 +1,15 @@
-using libMBIN.NMS.Toolkit;
-using libMBIN.NMS.GameComponents;
-
 namespace libMBIN.NMS.Toolkit
 {
-	[NMS(GUID = 0xBBE337CA5A46D965, NameHash = 0xCABBB7951E50DCAF)]
+    [NMS(GUID = 0xBBE337CA5A46D965, NameHash = 0xCABBB7951E50DCAF)]
     public class TkJointBindingData : NMSTemplate
     {
-        [NMS(Size = 16)]
-        public float[] InvBindMatrix; // 4x4 matrix
-
-        [NMS(Size = 3)]
-        public float[] BindTranslate; // Vector3f
-
-        [NMS(Size = 4)]
-        public float[] BindRotate; // Quaternion
-
-        [NMS(Size = 3)]
-        public float[] BindScale; // Vector3f
+        [NMS(Size = 0x10)]
+        /* 0x00 */ public float[] InvBindMatrix;
+        [NMS(Size = 0x3)]
+        /* 0x40 */ public float[] BindTranslate;
+        [NMS(Size = 0x4)]
+        /* 0x4C */ public float[] BindRotate;
+        [NMS(Size = 0x3)]
+        /* 0x5C */ public float[] BindScale;
     }
 }

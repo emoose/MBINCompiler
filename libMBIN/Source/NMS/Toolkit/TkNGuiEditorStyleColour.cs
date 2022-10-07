@@ -1,14 +1,9 @@
-﻿using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
-using libMBIN.NMS.GameComponents;
-
 namespace libMBIN.NMS.Toolkit
 {
-	[NMS(GUID = 0x882C3ED27F9FEC62, NameHash = 0x6719A275CA7E9C08)]
+    [NMS(GUID = 0x882C3ED27F9FEC62, NameHash = 0x6719A275CA7E9C08)]
     public class TkNGuiEditorStyleColour : NMSTemplate
     {
-        public NMSString0x80 Name;
-        public Colour Colour;
+        /* 0x00 */ public NMSString0x80 Name;
+        /* 0x80 */ public Colour Colour;
     }
 }

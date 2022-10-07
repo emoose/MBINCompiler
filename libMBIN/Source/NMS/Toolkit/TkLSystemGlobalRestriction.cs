@@ -1,16 +1,13 @@
-﻿using System.Collections.Generic;
-
 using libMBIN.NMS.Toolkit;
-using libMBIN.NMS.GameComponents;
+using System.Collections.Generic;
 
 namespace libMBIN.NMS.Toolkit
 {
-	[NMS(GUID = 0x4C98B666C4454E5A, NameHash = 0x26AACC9ACEE360C5)]
+    [NMS(GUID = 0x4C98B666C4454E5A, NameHash = 0x26AACC9ACEE360C5)]
     public class TkLSystemGlobalRestriction : NMSTemplate
     {
-        public NMSString0x20 Name;
-        public NMSString0x80 Model;
-
-        public List<TkLSystemRestrictionData> Restrictions;
+        /* 0x00 */ public NMSString0x20 Name;
+        /* 0x20 */ public NMSString0x80 Model;
+        /* 0xA0 */ public List<TkLSystemRestrictionData> Restrictions;
     }
 }

@@ -1098,12 +1098,7 @@ namespace libMBIN
 
                         return arrayProperty;
                     } else if ( fieldType.IsEnum ) {
-                        // output MaterialFlagEnum as UberFlagEnum
-                        if ( field.FieldType == typeof( NMS.Toolkit.TkMaterialFlags.MaterialFlagEnum ) ) {
-                            valueString = ((NMS.Toolkit.TkMaterialFlags.UberFlagEnum) value).ToString();
-                        } else {
-                            valueString = value?.ToString();
-                        }
+                        valueString = value?.ToString();
                         break;
                     } else {
                         throw new UnknownTypeException( field.FieldType, field.Name );
@@ -1305,7 +1300,6 @@ namespace libMBIN
                     if (field.FieldType.IsArray && field.FieldType.GetElementType().BaseType.Name == "NMSTemplate") {
                         int length = GetArrayLength( field.Name, settings );
                         Array array = Array.CreateInstance(field.FieldType.GetElementType(), length);
-                        //var data = xmlProperty.Elements.OfType<EXmlProperty>().ToList();
                         List<EXmlBase> data = xmlProperty.Elements.ToList();
                         int numMeta = 0;
                         foreach (EXmlBase entry in data) {
@@ -1320,6 +1314,9 @@ namespace libMBIN
                         for (int i = 0; i < data.Count; ++i) {
                             if (data[i].GetType() == typeof(EXmlProperty)) {
                                 NMSTemplate element = DeserializeEXml(data[i]);
+                                if (fieldType.GetElementType().Name == "NMSString0x20A") {
+                                    element = new NMS.NMSString0x20A(element.ToString());
+                                }
                                 array.SetValue(element, i - numMeta);
                             } else if (data[i].GetType() == typeof(EXmlMeta)) {
                                 DebugLogComment(((EXmlMeta)data[i]).Comment);     // don't need to worry about nummeta here since it is already counted above...

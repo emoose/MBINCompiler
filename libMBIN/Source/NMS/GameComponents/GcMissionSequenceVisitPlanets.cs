@@ -1,18 +1,16 @@
-using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
+using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
     [NMS(GUID = 0x7084427058F54870, NameHash = 0xA6EC06362FCAD424)]
     public class GcMissionSequenceVisitPlanets : NMSTemplate
     {
-        /* 0x000 */ public NMSString0x80 Message;
-        /* 0x080 */ public List<GcBiomeType> PlanetTypesToWatch;
-        /* 0x090 */ public bool MustAlsoDiscover;
-        /* 0x094 */ public int NumberOfEachToDiscover;
-        /* 0x098 */ public bool TakeNumberFromSeasonalData;
-        /* 0x099 */ public NMSString0x80 DebugText;
+        /* 0x00 */ public NMSString0x80 Message;
+        /* 0x80 */ public List<GcBiomeType> PlanetTypesToWatch;
+        /* 0x90 */ public bool MustAlsoDiscover;
+        /* 0x94 */ public int NumberOfEachToDiscover;
+        /* 0x98 */ public bool TakeNumberFromSeasonalData;
+        /* 0x99 */ public NMSString0x80 DebugText;
     }
 }

@@ -1,11 +1,9 @@
-﻿using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
+using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0x91F4D6E2D2815BD5, NameHash = 0xD679E7C47BC9313C)]
+    [NMS(GUID = 0x91F4D6E2D2815BD5, NameHash = 0xD679E7C47BC9313C)]
     public class GcCustomisationBannerGroup : NMSTemplate
     {
         /* 0x000 */ public List<GcCustomisationBannerImageData> BannerImages;

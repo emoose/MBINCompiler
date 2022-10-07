@@ -1,9 +1,8 @@
-﻿using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0x6845EF170C6FF29B, NameHash = 0xBD4D110E1D076CE)]
+    [NMS(GUID = 0x6845EF170C6FF29B, NameHash = 0xBD4D110E1D076CE)]
     public class GcAtlasMonument : NMSTemplate
     {
         /* 0x000 */ public GcUniverseAddressData UniverseAddress;

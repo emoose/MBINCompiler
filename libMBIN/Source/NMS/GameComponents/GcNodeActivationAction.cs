@@ -1,14 +1,18 @@
-﻿using libMBIN.NMS.Toolkit;
-using libMBIN.NMS.GameComponents;
-
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0x7F19CAEEA79ADD39, NameHash = 0xB2C5F1A083F1473A)]
+    [NMS(GUID = 0x7F19CAEEA79ADD39, NameHash = 0xB2C5F1A083F1473A)]
     public class GcNodeActivationAction : NMSTemplate
     {
-		public enum NodeActiveStateEnum { Activate, Deactivate, Toggle, Add, Remove, RemoveChildren }
-		/* 0x000 */ public NodeActiveStateEnum NodeActiveState;
-
+        // size: 0x6
+        public enum NodeActiveStateEnum {
+            Activate,
+            Deactivate,
+            Toggle,
+            Add,
+            Remove,
+            RemoveChildren
+        }
+        /* 0x000 */ public NodeActiveStateEnum NodeActiveState;
         /* 0x004 */ public NMSString0x80 Name;
         /* 0x084 */ public NMSString0x80 SceneToAdd;
         /* 0x104 */ public bool IncludePhysics;

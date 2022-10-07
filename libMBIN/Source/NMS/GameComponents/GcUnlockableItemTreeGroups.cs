@@ -1,15 +1,25 @@
-﻿using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
-using libMBIN.NMS.GameComponents;
-
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0x6B0A243454D26E36, NameHash = 0x8F55B25E91A470A9)]
+    [NMS(GUID = 0x24370E169189B2D6, NameHash = 0x8F55B25E91A470A9)]
     public class GcUnlockableItemTreeGroups : NMSTemplate
     {
-        // size: 0xB
-        public enum UnlockableItemTreeEnum { Test, BasicBaseParts, BasicTechParts, BaseParts, SpecialBaseParts, SuitTech, ShipTech, WeapTech, ExocraftTech, CraftProducts, FreighterTech }
-        public UnlockableItemTreeEnum GetUnlockableItemTree;
+        // size: 0xE
+        public enum UnlockableItemTreeEnum {
+            Test,
+            BasicBaseParts,
+            BasicTechParts,
+            BaseParts,
+            SpecialBaseParts,
+            SuitTech,
+            ShipTech,
+            WeapTech,
+            ExocraftTech,
+            CraftProducts,
+            FreighterTech,
+            S9BaseParts,
+            S9ExoTech,
+            S9ShipTech
+        }
+        /* 0x0 */ public UnlockableItemTreeEnum UnlockableItemTree;
     }
 }

@@ -1,16 +1,13 @@
-﻿using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
-using libMBIN.NMS.GameComponents;
+using System.Collections.Generic;
 
 namespace libMBIN.NMS.Toolkit
 {
-	[NMS(GUID = 0xE1B108BEAEA9229C, NameHash = 0x52912F535A46A50C)]
+    [NMS(GUID = 0xE1B108BEAEA9229C, NameHash = 0x52912F535A46A50C)]
     public class TkRagdollData : NMSTemplate
     {
-        public float Density;
-        public float Gravity;
-        public List<NMSString0x20> ChainEnds;
-        public List<NMSString0x20> ExcludeJoints;
+        /* 0x00 */ public float Density;
+        /* 0x04 */ public float Gravity;
+        /* 0x08 */ public List<NMSString0x20> ChainEnds;
+        /* 0x18 */ public List<NMSString0x20> ExcludeJoints;
     }
 }

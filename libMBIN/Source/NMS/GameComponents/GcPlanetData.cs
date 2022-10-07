@@ -1,12 +1,10 @@
-using System;
-using System.Collections.Generic;
-
 using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
+using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xE775EECEA7BCF980, NameHash = 0x25EDFA0EC4C3AF0A)]
+    [NMS(GUID = 0x69E8B767F7073B37, NameHash = 0x25EDFA0EC4C3AF0A)]
     public class GcPlanetData : NMSTemplate
     {
         /* 0x0000 */ public NMSString0x80 Name;
@@ -14,7 +12,10 @@ namespace libMBIN.NMS.GameComponents
         /* 0x0084 */ public GcPlanetLife CreatureLife;
         /* 0x0088 */ public GcPlanetHazardData Hazard;
         // size: 0x2
-        public enum ResourceLevelEnum { Low, High }
+        public enum ResourceLevelEnum {
+            Low,
+            High
+        }
         /* 0x00D8 */ public ResourceLevelEnum ResourceLevel;
         /* 0x00DC */ public GcBuildingDensityLevels BuildingLevel;
         /* 0x00E0 */ public NMSString0x10 CommonSubstanceID;

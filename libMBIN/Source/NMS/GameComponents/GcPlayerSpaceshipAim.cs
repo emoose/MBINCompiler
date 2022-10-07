@@ -1,16 +1,13 @@
-﻿using libMBIN.NMS.Toolkit;
-using libMBIN.NMS.GameComponents;
-
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0x6807D0364B187845, NameHash = 0xD03BA349FC9AC748)]
+    [NMS(GUID = 0x6807D0364B187845, NameHash = 0xD03BA349FC9AC748)]
     public class GcPlayerSpaceshipAim : NMSTemplate
     {
-        /* 0x000 */ public float AimAngleMin;
-        /* 0x004 */ public float AimAngleRange;
-        /* 0x008 */ public float AimDistanceAngleMin;
-        /* 0x00C */ public float AimDistanceAngleRange;
-        /* 0x010 */ public float AimDistanceMin;
-        /* 0x014 */ public float AimDistanceRange;
+        /* 0x00 */ public float AimAngleMin;
+        /* 0x04 */ public float AimAngleRange;
+        /* 0x08 */ public float AimDistanceAngleMin;
+        /* 0x0C */ public float AimDistanceAngleRange;
+        /* 0x10 */ public float AimDistanceMin;
+        /* 0x14 */ public float AimDistanceRange;
     }
 }

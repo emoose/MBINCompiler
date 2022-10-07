@@ -1,14 +1,11 @@
-using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xEF7DD6630B364951, NameHash = 0xD595098569C459AF)]
+    [NMS(GUID = 0x813A8674440C2AE8, NameHash = 0xD595098569C459AF)]
     public class GcPersistencyMissionOverride : NMSTemplate
     {
-        public NMSString0x10 Mission;
-        public GcInteractionBufferType Buffer;
+        /* 0x00 */ public NMSString0x10 Mission;
+        /* 0x10 */ public GcInteractionBufferType Buffer;
     }
 }

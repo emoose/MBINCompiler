@@ -1,15 +1,12 @@
-﻿using libMBIN.NMS.Toolkit;
-using libMBIN.NMS.GameComponents;
-
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0x60314A82826889E0, NameHash = 0x271F1C7199403F55)]
+    [NMS(GUID = 0x60314A82826889E0, NameHash = 0x271F1C7199403F55)]
     public class GcMissionSequenceFeed : NMSTemplate
     {
-        public NMSString0x80 Message;
-        public bool RequireSpecificBait;
-        public int AmountMin;
-        public int Amountmax;
-        public NMSString0x80 DebugText;
+        /* 0x00 */ public NMSString0x80 Message;
+        /* 0x80 */ public bool RequireSpecificBait;
+        /* 0x84 */ public int AmountMin;
+        /* 0x88 */ public int AmountMax;
+        /* 0x8C */ public NMSString0x80 DebugText;
     }
 }

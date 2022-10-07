@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x8A4A4E0DF5324DA6, NameHash = 0x9537448E73030512)]
+    [NMS(GUID = 0xCB6DBC2347FAC261, NameHash = 0x9537448E73030512)]
     public class GcMissionConditionHasProduct : NMSTemplate
     {
         /* 0x00 */ public GcDefaultMissionProductEnum Default;
@@ -20,5 +16,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x28 */ public NMSString0x10 UseAmountToAffordRecipe;
         /* 0x38 */ public bool TakeAffordRecipeFromSeasonData;
         /* 0x39 */ public bool UseAffordRecipeForTextFormatting;
+        /* 0x3C */ public GcItemNeedPurpose Purpose;
     }
 }

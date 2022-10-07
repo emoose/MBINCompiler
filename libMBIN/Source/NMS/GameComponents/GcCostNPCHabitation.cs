@@ -1,12 +1,11 @@
-﻿using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0x3E3746301EA071B3, NameHash = 0x6FDD00442DB9926C)]
+    [NMS(GUID = 0x1A2C26901584AFBA, NameHash = 0x6FDD00442DB9926C)]
     public class GcCostNPCHabitation : NMSTemplate
     {
-        public GcNPCHabitationType NPCHabitationType;
-        public bool MustBeInhabited;
+        /* 0x0 */ public GcNPCHabitationType NPCHabitationType;
+        /* 0x4 */ public bool MustBeInhabited;
     }
 }

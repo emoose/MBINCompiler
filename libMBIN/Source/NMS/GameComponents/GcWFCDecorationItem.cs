@@ -1,4 +1,3 @@
-using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 using System.Collections.Generic;
 
@@ -19,9 +18,19 @@ namespace libMBIN.NMS.GameComponents
         /* 0x054 */ public int MaxPerBuilding;
         /* 0x058 */ public int MinPerBuilding;
         /* 0x05C */ public bool RequireAboveTerrain;
-        public enum InsideOutsideEnum { Both, InteriorOnly, ExteriorOnly }
+        // size: 0x3
+        public enum InsideOutsideEnum {
+            Both,
+            InteriorOnly,
+            ExteriorOnly
+        }
         /* 0x060 */ public InsideOutsideEnum InsideOutside;
-        public enum LevelEnum { Everywhere, GroundLevelOnly, AboveGroundOnly }
+        // size: 0x3
+        public enum LevelEnum {
+            Everywhere,
+            GroundLevelOnly,
+            AboveGroundOnly
+        }
         /* 0x064 */ public LevelEnum Level;
         /* 0x068 */ public GcWFCDecorationFace Left;
         /* 0x0EC */ public GcWFCDecorationFace Down;

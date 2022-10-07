@@ -1,14 +1,13 @@
-﻿using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0x1D95CBD03BFA089D, NameHash = 0x4EBB7BDC5EE300EA)]
+    [NMS(GUID = 0x86EDE733F335D538, NameHash = 0x4EBB7BDC5EE300EA)]
     public class GcFiendCrimeSpawnTable : NMSTemplate
     {
-        public GcFiendCrime Crime;
-        public float ResponseRate;
-        public List<GcFiendCrimeSpawnData> Spawns;
+        /* 0x0 */ public GcFiendCrime Crime;
+        /* 0x4 */ public float ResponseRate;
+        /* 0x8 */ public List<GcFiendCrimeSpawnData> Spawns;
     }
 }

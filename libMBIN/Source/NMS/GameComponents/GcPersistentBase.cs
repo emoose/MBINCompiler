@@ -1,11 +1,9 @@
-﻿using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
+using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0x908F4F3B9D436AF, NameHash = 0x732552199A3AE45E)]
+    [NMS(GUID = 0x4DB4D76FF9DE9754, NameHash = 0x732552199A3AE45E)]
     public class GcPersistentBase : NMSTemplate
     {
         /* 0x000 */ public int BaseVersion;
@@ -28,5 +26,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x284 */ public NMSString0x20 PlatformToken;
         /* 0x2A4 */ public bool IsReported;
         /* 0x2A5 */ public bool IsFeatured;
+        /* 0x2A8 */ public GcBaseAutoPowerSetting AutoPowerSetting;
     }
 }

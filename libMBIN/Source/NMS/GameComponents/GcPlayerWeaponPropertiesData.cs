@@ -1,19 +1,12 @@
-using System;
-using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
+using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x73608DA2838CD2E7, NameHash = 0xD0F82AE353636444)]
+    [NMS(GUID = 0x2C8C7D23B0D26121, NameHash = 0xD0F82AE353636444)]
     public class GcPlayerWeaponPropertiesData : NMSTemplate
     {
-        // size: 0x9
-        public enum WeaponClassEnum { None, Projectile, ChargedProjectile, Laser, Grenade, Utility, TerrainEditor,
-            Spawner, SpawnerAlt
-        }
-        /* 0x000 */ public WeaponClassEnum WeaponClass;
+        /* 0x000 */ public GcPlayerWeaponClass WeaponClass;
         /* 0x004 */ public GcStatsTypes Stat;
         /* 0x008 */ public GcRemoteWeapons RemoteType;
         /* 0x00C */ public NMSString0x80 MuzzleLaserResource;

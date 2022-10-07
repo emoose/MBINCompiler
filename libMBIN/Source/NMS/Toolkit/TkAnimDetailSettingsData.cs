@@ -1,15 +1,10 @@
-﻿using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
-using libMBIN.NMS.GameComponents;
-
 namespace libMBIN.NMS.Toolkit
 {
-	[NMS(GUID = 0x522802FFC949E6C6, NameHash = 0x19B524BD08F5E823)]
+    [NMS(GUID = 0x522802FFC949E6C6, NameHash = 0x19B524BD08F5E823)]
     public class TkAnimDetailSettingsData : NMSTemplate
     {
-        public float Distance;
-        public bool DisableAnims;
-        public int NumCulledFrames;
+        /* 0x0 */ public float Distance;
+        /* 0x4 */ public bool DisableAnim;
+        /* 0x8 */ public int NumCulledFrames;
     }
 }

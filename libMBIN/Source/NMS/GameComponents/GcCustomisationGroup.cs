@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
+using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x90377BDA44FB143, NameHash = 0x0B5A01AE676FD46D)]
+    [NMS(GUID = 0x90377BDA44FB143, NameHash = 0xB5A01AE676FD46D)]
     public class GcCustomisationGroup : NMSTemplate
     {
         /* 0x00 */ public NMSString0x10 GroupID;

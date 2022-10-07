@@ -1,15 +1,10 @@
-using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
-using libMBIN.NMS.GameComponents;
-
 namespace libMBIN.NMS.GameComponents
 {
     [NMS(GUID = 0x1D4D698F7CD5240A, NameHash = 0xBCF143B353D06CD3)]
     public class GcDeathQuote : NMSTemplate
     {
-        public NMSString0x80 QuoteLine1;
-        public NMSString0x80 QuoteLine2;
-        public NMSString0x20 Author;
+        /* 0x000 */ public NMSString0x80 QuoteLine1;
+        /* 0x080 */ public NMSString0x80 QuoteLine2;
+        /* 0x100 */ public NMSString0x20 Author;
     }
 }

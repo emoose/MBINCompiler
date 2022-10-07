@@ -1,15 +1,24 @@
-﻿using libMBIN.NMS.Toolkit;
-using libMBIN.NMS.GameComponents;
-
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0x7C02623F66277A41, NameHash = 0xC9D7FFE72FBDED51)]
+    [NMS(GUID = 0x7C02623F66277A41, NameHash = 0xC9D7FFE72FBDED51)]
     public class GcDiscoveryWorth : NMSTemplate
     {
-        [NMS(Size = 0x3)]
-        public int[] Record;
-        [NMS(Size = 0x3)]
-        public int[] OnScan;
-        public int Mission;
+        // size: 0x3
+        public enum RecordEnum {
+            Common,
+            Uncommon,
+            Rare
+        }
+        [NMS(Size = 0x3, EnumType = typeof(RecordEnum))]
+        /* 0x00 */ public int[] Record;
+        // size: 0x3
+        public enum OnScanEnum {
+            Common,
+            Uncommon,
+            Rare
+        }
+        [NMS(Size = 0x3, EnumType = typeof(OnScanEnum))]
+        /* 0x0C */ public int[] OnScan;
+        /* 0x18 */ public int Mission;
     }
 }

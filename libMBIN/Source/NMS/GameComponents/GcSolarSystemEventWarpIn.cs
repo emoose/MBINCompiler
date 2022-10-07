@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
+using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x0957592739DF69FA, NameHash = 0x71B66F631708B3B1)]
+    [NMS(GUID = 0x957592739DF69FA, NameHash = 0x71B66F631708B3B1)]
     public class GcSolarSystemEventWarpIn : NMSTemplate
     {
         /* 0x00 */ public GcSolarSystemLocatorChoice Locator;
@@ -16,7 +13,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x3C */ public bool InvertDirection;
         /* 0x3D */ public bool InstantWarpIn;
         /* 0x3E */ public NMSString0x20 SquadName;
-        [NMS(Size = 0x2, Ignore = true)]
         /* 0x60 */ public GcSeed Seed;
         /* 0x70 */ public GcRealityCommonFactions Faction;
         /* 0x74 */ public GcAISpaceshipRoles ShipRole;

@@ -1,7 +1,4 @@
-﻿using System.Collections.Generic;
-
 using libMBIN.NMS.Toolkit;
-using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Toolkit
 {
@@ -11,7 +8,11 @@ namespace libMBIN.NMS.Toolkit
         /* 0x00 */ public TkPhysicsData Data;
         /* 0x18 */ public NMSTemplate RagdollData;
         /* 0x68 */ public TkVolumeTriggerType TriggerVolumeType;
-        public enum SurfacePropertiesEnum { None, Glass }
+        // size: 0x2
+        public enum SurfacePropertiesEnum {
+            None,
+            Glass
+        }
         /* 0x6C */ public SurfacePropertiesEnum SurfaceProperties;
         /* 0x70 */ public bool TriggerVolume;
         /* 0x71 */ public bool Climbable;

@@ -1,11 +1,9 @@
-using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
+using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x634CD9FEA02E73F9, NameHash = 0x309337FC0812738C)]
+    [NMS(GUID = 0xEBDA69BE8CCA86E7, NameHash = 0x309337FC0812738C)]
     public class GcPetBehaviourData : NMSTemplate
     {
         /* 0x00 */ public bool ReactiveBehaviour;
@@ -17,12 +15,21 @@ namespace libMBIN.NMS.GameComponents
         /* 0x14 */ public float ChatChance;
         /* 0x18 */ public float ApproachPlayerDist;
         /* 0x1C */ public float SearchDist;
-        public enum PetBehaviourValidityEnum { Everywhere, OnPlanet }
+        // size: 0x2
+        public enum PetBehaviourValidityEnum {
+            Everywhere,
+            OnPlanet
+        }
         /* 0x20 */ public PetBehaviourValidityEnum PetBehaviourValidity;
         /* 0x28 */ public List<GcPetFollowUpBehaviour> FollowUpBehaviours;
         /* 0x38 */ public List<GcPetBehaviourTraitModifier> TraitBehaviourModifiers;
         /* 0x48 */ public List<GcPetBehaviourMoodModifier> MoodBehaviourModifiers;
-        [NMS(Size = 0x2, EnumType = typeof(GcCreaturePetMood.PetMoodEnum))]
+        // size: 0x2
+        public enum MoodModifyOnCompleteEnum {
+            Hungry,
+            Lonely
+        }
+        [NMS(Size = 0x2, EnumType = typeof(MoodModifyOnCompleteEnum))]
         /* 0x58 */ public float[] MoodModifyOnComplete;
         /* 0x60 */ public NMSString0x20A LabelText;
     }

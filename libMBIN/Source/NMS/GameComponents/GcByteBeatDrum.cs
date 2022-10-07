@@ -1,6 +1,3 @@
-using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
@@ -21,7 +18,12 @@ namespace libMBIN.NMS.GameComponents
         /* 0x64 */ public float AugmentPitch;
         /* 0x68 */ public float AugmentPitchFalloff;
         /* 0x6C */ public float AugmentPitchFalloffPower;
-        public enum AugmentModeEnum { Add, Multiply, Max }
+        // size: 0x3
+        public enum AugmentModeEnum {
+            Add,
+            Multiply,
+            Max
+        }
         /* 0x70 */ public AugmentModeEnum AugmentMode;
     }
 }

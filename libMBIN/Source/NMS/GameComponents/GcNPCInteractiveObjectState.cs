@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
+using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x147632799F602B87, NameHash = 0x8D18F9F6D2A592B3)]
+    [NMS(GUID = 0x704BAAC9965E5404, NameHash = 0x8D18F9F6D2A592B3)]
     public class GcNPCInteractiveObjectState : NMSTemplate
     {
         /* 0x00 */ public NMSString0x10 Name;
@@ -19,7 +16,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x55 */ public bool MaintainLookAt;
         /* 0x56 */ public bool PlayIdles;
         /* 0x57 */ public bool CanConverse;
-        /* 0x58 */ public GcNPCPropTypes Prop;
+        /* 0x58 */ public GcNPCPropType Prop;
         /* 0x5C */ public GcNPCSeatedPosture SeatedPosture;
         /* 0x60 */ public float BlendTime;
         /* 0x64 */ public float EarlyOutTime;

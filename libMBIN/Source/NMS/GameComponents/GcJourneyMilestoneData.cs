@@ -1,13 +1,11 @@
-﻿using libMBIN.NMS.Toolkit;
-using libMBIN.NMS.GameComponents;
-
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0x70A99E84E5D737DB, NameHash = 0xC35BDABF76750407)]
+    [NMS(GUID = 0xB363473EC036D320, NameHash = 0xC35BDABF76750407)]
     public class GcJourneyMilestoneData : NMSTemplate
     {
-        public NMSString0x10 JourneyMilestoneId;
-        public int PointsToUnlock;
-        public NMSString0x20A JourneyMilestoneTitle;
+        /* 0x00 */ public NMSString0x10 JourneyMilestoneId;
+        /* 0x10 */ public int PointsToUnlock;
+        /* 0x18 */ public NMSString0x20A JourneyMilestoneTitle;
+        /* 0x38 */ public NMSString0x20A JourneyMilestoneTitleLower;
     }
 }

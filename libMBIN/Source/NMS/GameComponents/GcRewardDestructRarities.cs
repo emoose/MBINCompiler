@@ -1,12 +1,17 @@
-﻿using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0x76842D5545DF5D3F, NameHash = 0x72703AC399E3162F)]
+    [NMS(GUID = 0x237BE1FB5877A276, NameHash = 0x72703AC399E3162F)]
     public class GcRewardDestructRarities : NMSTemplate
     {
-        [NMS(Size = 0x3, EnumType = typeof(GcRarity.RarityEnum))]
-        public GcRewardDestructEntry[] Rarities;
+        // size: 0x3
+        public enum RaritiesEnum {
+            Common,
+            Uncommon,
+            Rare
+        }
+        [NMS(Size = 0x3, EnumType = typeof(RaritiesEnum))]
+        /* 0x0 */ public GcRewardDestructEntry[] Rarities;
     }
 }

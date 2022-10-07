@@ -1,11 +1,8 @@
-﻿using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
-using libMBIN.NMS.GameComponents;
+using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0xA0814A4C94B662F6, NameHash = 0x6F214CFBE5603A0)]
+    [NMS(GUID = 0xA0814A4C94B662F6, NameHash = 0x6F214CFBE5603A0)]
     public class GcScanEventTriggers : NMSTemplate
     {
         /* 0x00 */ public float Range;

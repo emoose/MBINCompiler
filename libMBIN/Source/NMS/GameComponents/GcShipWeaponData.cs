@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x3F08F95FEEA7B4F3, NameHash = 0x73BA1311CF8E1962)]
+    [NMS(GUID = 0x375645F9C059C3F7, NameHash = 0x73BA1311CF8E1962)]
     public class GcShipWeaponData : NMSTemplate
     {
         /* 0x00 */ public NMSString0x10 Projectile;

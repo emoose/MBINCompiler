@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
+using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x7955FE523C1E4EFB, NameHash = 0x98B648B5C054B7F7)]
+    [NMS(GUID = 0xF419B2E572A37408, NameHash = 0x98B648B5C054B7F7)]
     public class GcProjectileData : NMSTemplate
     {
         /* 0x000 */ public NMSString0x10 Id;
@@ -47,16 +44,24 @@ namespace libMBIN.NMS.GameComponents
         /* 0x380 */ public bool OverrideLightColour;
         /* 0x390 */ public Colour LightColour;
         // size: 0x8
-        [Flags]
-        public enum BehaviourFlagsEnum {
-            None = 0x0, DestroyTerrain = 0x1, DestroyAsteroids = 0x2, GatherResources = 0x4,
-            Homing = 0x8, HomingLaser = 0x10, ScareCreatures = 0x20, ExplosionForce = 0x40
+        public enum BehaviourFlagsEnum : uint {
+            None = 0x0,
+            DestroyTerrain = 0x1,
+            DestroyAsteroids = 0x2,
+            GatherResources = 0x4,
+            Homing = 0x8,
+            HomingLaser = 0x10,
+            ScareCreatures = 0x20,
+            ExplosionForce = 0x40
         }
-        [NMSDescription("The enum that describes this field uses Flags. This means that multiple values may be specified simultaneously" +
-        "for example, if ValueX = 0x20, ValueY = 0x40: use the notation ''ValueX|ValueY''. Ie. split values with a | character")]
         /* 0x3A0 */ public BehaviourFlagsEnum BehaviourFlags;
         // size: 0x4
-        public enum ClassEnum { Player, PlayerShip, Ship, Robot }
+        public enum ClassEnum {
+            Player,
+            PlayerShip,
+            Ship,
+            Robot
+        }
         /* 0x3A4 */ public ClassEnum Class;
         /* 0x3A8 */ public NMSString0x10 DefaultImpact;
         /* 0x3B8 */ public NMSString0x10 CriticalImpact;

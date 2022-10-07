@@ -1,11 +1,6 @@
-﻿using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
-using libMBIN.NMS.GameComponents;
-
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0x4A53B69223F74C8F, NameHash = 0xBE33B4E320477672)]
+    [NMS(GUID = 0x4A53B69223F74C8F, NameHash = 0xBE33B4E320477672)]
     public class GcInventoryGenerationBaseStatDataEntry : NMSTemplate
     {
         /* 0x00 */ public NMSString0x10 BaseStatID;

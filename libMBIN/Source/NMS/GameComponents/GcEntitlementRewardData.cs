@@ -1,17 +1,11 @@
-﻿using libMBIN.NMS.Toolkit;
-using libMBIN.NMS.GameComponents;
-
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0x54366264A902610C, NameHash = 0x748EDC86AFA4F5A3)]
+    [NMS(GUID = 0x54366264A902610C, NameHash = 0x748EDC86AFA4F5A3)]
     public class GcEntitlementRewardData : NMSTemplate
     {
-        public NMSString0x10 EntitlementId;
-
-        public NMSString0x10 RewardId;
-
-        public NMSString0x20A Name;
-
-        public NMSString0x20A Error;
+        /* 0x00 */ public NMSString0x10 EntitlementId;
+        /* 0x10 */ public NMSString0x10 RewardId;
+        /* 0x20 */ public NMSString0x20A Name;
+        /* 0x40 */ public NMSString0x20A Error;
     }
 }

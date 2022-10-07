@@ -1,16 +1,15 @@
-﻿using libMBIN.NMS.Toolkit;
-using libMBIN.NMS.GameComponents;
+using libMBIN.NMS.Toolkit;
 
 namespace libMBIN.NMS.Toolkit
 {
-	[NMS(GUID = 0xB911CEB4CA3E7843, NameHash = 0xEC73620F98D708BF)]
+    [NMS(GUID = 0xB911CEB4CA3E7843, NameHash = 0xEC73620F98D708BF)]
     public class TkAnimAnimNode : NMSTemplate
     {
-        public NMSString0x10 NodeId;
-        public NMSString0x10 AnimId;
-        public NMSString0x40 PhaseIn;
-        public TkCurveType PhaseCurve;
-        public float PhseRangeBegin;
-        public float PhaseRangeEnd;
+        /* 0x00 */ public NMSString0x10 NodeId;
+        /* 0x10 */ public NMSString0x10 AnimId;
+        /* 0x20 */ public NMSString0x40 PhaseIn;
+        /* 0x60 */ public TkCurveType PhaseCurve;
+        /* 0x64 */ public float PhaseRangeBegin;
+        /* 0x68 */ public float PhaseRangeEnd;
     }
 }

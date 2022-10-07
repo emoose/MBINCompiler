@@ -1,12 +1,9 @@
-using System;
-using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
+using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x53E9341D16A62CD2, NameHash = 0x9B09276BB2795541)]
+    [NMS(GUID = 0xD4C172899E29BD9C, NameHash = 0x9B09276BB2795541)]
     public class GcSolarSystemData : NMSTemplate
     {
         /* 0x0000 */ public GcSeed Seed;
@@ -14,11 +11,11 @@ namespace libMBIN.NMS.GameComponents
         /* 0x0090 */ public GcSolarSystemClass Class;
         /* 0x0094 */ public GcGalaxyStarTypes StarType;
         /* 0x0098 */ public int Planets;
-        [NMS(Size = 8)]
+        [NMS(Size = 0x8)]
         /* 0x00A0 */ public Vector3f[] PlanetPositions;
-        [NMS(Size = 8)]
+        [NMS(Size = 0x8)]
         /* 0x0120 */ public GcPlanetGenerationInputData[] PlanetGenerationInputs;
-        [NMS(Size = 8)]
+        [NMS(Size = 0x8)]
         /* 0x03A0 */ public int[] PlanetOrbits;
         /* 0x03C0 */ public int PrimePlanets;
         /* 0x03D0 */ public Vector3f SunPosition;
@@ -38,7 +35,11 @@ namespace libMBIN.NMS.GameComponents
         /* 0x0598 */ public List<GcSolarSystemLocator> Locators;
         /* 0x05A8 */ public List<NMSTemplate> AsteroidGenerators;
         // size: 0x3
-        public enum AsteroidLevelEnum { NoRares, SomeRares, LotsOfRares }
+        public enum AsteroidLevelEnum {
+            NoRares,
+            SomeRares,
+            LotsOfRares
+        }
         /* 0x05B8 */ public AsteroidLevelEnum AsteroidLevel;
         /* 0x05C0 */ public GcPlanetColourData Colours;
         /* 0x1F20 */ public GcLightProperties Light;

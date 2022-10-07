@@ -1,7 +1,5 @@
-﻿using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
+using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
@@ -9,7 +7,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcExternalObjectListOptions : NMSTemplate
     {
         /* 0x00 */ public NMSString0x10 Name;
-		/* 0x10 */ public NMSString0x10 ResourceHint;
+        /* 0x10 */ public NMSString0x10 ResourceHint;
         /* 0x20 */ public NMSString0x10 ResourceHintIcon;
         /* 0x30 */ public float Probability;
         /* 0x34 */ public float SeasonalProbabilityOverride;

@@ -1,8 +1,4 @@
-using System;
-using System.Collections.Generic;
-
 using libMBIN.NMS.Toolkit;
-using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
@@ -16,7 +12,11 @@ namespace libMBIN.NMS.GameComponents
         /* 0xB0 */ public float MaxVisibleRange;
         /* 0xB4 */ public float MinAngleVisible;
         // size: 0x3
-        public enum ShipsToMarkEnum { None, Leader, All }
+        public enum ShipsToMarkEnum {
+            None,
+            Leader,
+            All
+        }
         /* 0xB8 */ public ShipsToMarkEnum ShipsToMark;
     }
 }

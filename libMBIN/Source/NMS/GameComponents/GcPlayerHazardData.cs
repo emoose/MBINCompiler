@@ -1,25 +1,24 @@
-﻿using libMBIN.NMS.Toolkit;
-using libMBIN.NMS.GameComponents;
+using libMBIN.NMS.Toolkit;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0xBBCFC24EB018B5F3, NameHash = 0x18642126695741B5)]
+    [NMS(GUID = 0xBBCFC24EB018B5F3, NameHash = 0x18642126695741B5)]
     public class GcPlayerHazardData : NMSTemplate
     {
-        public float ProtectionInitialTime;
-        public Vector2f ProtectionTime;
-        public Vector2f DamageRate;
-        public Vector2f WoundRate;
-        public float RechargeInitialTime;
-        public float RechargeTime;
-        public NMSString0x10 Damage;
-        public bool Increases;
-        public TkCurveType Curve;
-        public float TriggerValue;
-        public float CapValue;
-        public float CriticalValue;
-        public float OutputMultiplier;
-        public float OutputMinAddition;
-        public float OutputMaxAddition;
+        /* 0x00 */ public float ProtectionInitialTime;
+        /* 0x04 */ public Vector2f ProtectionTime;
+        /* 0x0C */ public Vector2f DamageRate;
+        /* 0x14 */ public Vector2f WoundRate;
+        /* 0x1C */ public float RechargeInitialTime;
+        /* 0x20 */ public float RechargeTime;
+        /* 0x28 */ public NMSString0x10 Damage;
+        /* 0x38 */ public bool Increases;
+        /* 0x3C */ public TkCurveType DisplayCurve;
+        /* 0x40 */ public float TriggerValue;
+        /* 0x44 */ public float CapValue;
+        /* 0x48 */ public float CriticalValue;
+        /* 0x4C */ public float OutputMultiplier;
+        /* 0x50 */ public float OutputMinAddition;
+        /* 0x54 */ public float OutputMaxAddition;
     }
 }

@@ -1,13 +1,27 @@
-﻿using libMBIN.NMS.Toolkit;
-using libMBIN.NMS.GameComponents;
-
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0x7E5F8259CA3DB8C9, NameHash = 0x29A5D23AA5A4C794)]
+    [NMS(GUID = 0x7E5F8259CA3DB8C9, NameHash = 0x29A5D23AA5A4C794)]
     public class GcPhysicsCollisionGroups : NMSTemplate
     {
         // size: 0x10
-		public enum CollisionGroupEnum { Normal, Water, Terrain, Substance, Asteroid, TerrainInstance, TerrainActivated, Player, Creature, Spaceship, Debris, Shield, Raycast, NetworkPlayer, NPCs, Trigger }
-		public CollisionGroupEnum CollisionGroup;
+        public enum CollisionGroupEnum : uint {
+            Normal = 0x1,
+            Water = 0x2,
+            Terrain = 0x4,
+            Substance = 0x8,
+            Asteroid = 0x10,
+            TerrainInstance = 0x20,
+            TerrainActivated = 0x40,
+            Player = 0x80,
+            Creature = 0x100,
+            Spaceship = 0x200,
+            Debris = 0x400,
+            Shield = 0x800,
+            Raycast = 0x1000,
+            NetworkPlayer = 0x2000,
+            NPCs = 0x4000,
+            Trigger = 0x8000
+        }
+        /* 0x0 */ public CollisionGroupEnum CollisionGroup;
     }
 }

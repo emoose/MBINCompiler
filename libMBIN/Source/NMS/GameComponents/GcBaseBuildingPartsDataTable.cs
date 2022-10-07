@@ -1,12 +1,11 @@
-using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x2E522B820E17C6A5, NameHash = 0x56ACF1BE57EEA8E9)]
+    [NMS(GUID = 0x70E8CDC29BE15B93, NameHash = 0x56ACF1BE57EEA8E9)]
     public class GcBaseBuildingPartsDataTable : NMSTemplate
     {
-        public List<GcBaseBuildingPartData> PartsData;
+        /* 0x0 */ public List<GcBaseBuildingPartData> PartsData;
     }
 }

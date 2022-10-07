@@ -1,15 +1,17 @@
-﻿using System.Collections.Generic;
-
 using libMBIN.NMS.Toolkit;
-using libMBIN.NMS.GameComponents;
+using System.Collections.Generic;
 
 namespace libMBIN.NMS.Toolkit
 {
-	[NMS(GUID = 0x1300B3988CAEE69E, NameHash = 0xCEE7FEFDA2096939)]
+    [NMS(GUID = 0x1300B3988CAEE69E, NameHash = 0xCEE7FEFDA2096939)]
     public class TkAnimVectorBlendNode : NMSTemplate
     {
-		public enum BlendOperationEnum { Blend, Add }
-		public BlendOperationEnum BlendOperation;
-        public List<TkAnimVectorBlendNodeData> BlendChildren;
+        // size: 0x2
+        public enum BlendOperationEnum {
+            Blend,
+            Add
+        }
+        /* 0x0 */ public BlendOperationEnum BlendOperation;
+        /* 0x8 */ public List<TkAnimVectorBlendNodeData> BlendChildren;
     }
 }

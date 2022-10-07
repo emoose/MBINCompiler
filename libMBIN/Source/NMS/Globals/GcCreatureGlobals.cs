@@ -1,12 +1,9 @@
-using System;
-using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
+using System.Collections.Generic;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(GUID = 0xD4E3FD6AE10880DB, NameHash = 0xE2DEF8CC8775E050)]
+    [NMS(GUID = 0xA424833624A1A977, NameHash = 0xE2DEF8CC8775E050)]
     public class GcCreatureGlobals : NMSTemplate
     {
         /* 0x0000 */ public int NumCreaturesRequiredForDiscoveryMission;
@@ -24,31 +21,31 @@ namespace libMBIN.NMS.Globals
         /* 0x0060 */ public float CreatureInteractBaseRange;
         /* 0x0064 */ public float PetInteractBaseRange;
         [NMS(Size = 0xB)]
-        /* 0x0068 */ public NMSString0x20[] Temperments;
+        /* 0x0068 */ public NMSString0x20A[] Temperments;
         [NMS(Size = 0xB)]
-        /* 0x01C8 */ public NMSString0x20[] TempermentDescriptions;
+        /* 0x01C8 */ public NMSString0x20A[] TempermentDescriptions;
         [NMS(Size = 0x4)]
-        /* 0x0328 */ public NMSString0x20[] Diets;
+        /* 0x0328 */ public NMSString0x20A[] Diets;
         [NMS(Size = 0x4)]
-        /* 0x03A8 */ public NMSString0x20[] WaterDiets;
+        /* 0x03A8 */ public NMSString0x20A[] WaterDiets;
         [NMS(Size = 0x10)]
-        /* 0x0428 */ public NMSString0x20[] DietMeat;
+        /* 0x0428 */ public NMSString0x20A[] DietMeat;
         [NMS(Size = 0x10)]
-        /* 0x0628 */ public NMSString0x20[] DietVeg;
+        /* 0x0628 */ public NMSString0x20A[] DietVeg;
         [NMS(Size = 0x4)]
-        /* 0x0828 */ public NMSString0x20[] DietDescriptions;
+        /* 0x0828 */ public NMSString0x20A[] DietDescriptions;
         [NMS(Size = 0x4)]
-        /* 0x08A8 */ public NMSString0x20[] WaterDietDescriptions;
+        /* 0x08A8 */ public NMSString0x20A[] WaterDietDescriptions;
         [NMS(Size = 0x10)]
-        /* 0x0928 */ public NMSString0x20[] BiomeDescriptions;
+        /* 0x0928 */ public NMSString0x20A[] BiomeDescriptions;
         [NMS(Size = 0x10)]
-        /* 0x0B28 */ public NMSString0x20[] BiomeWaterDescriptions;
+        /* 0x0B28 */ public NMSString0x20A[] BiomeWaterDescriptions;
         [NMS(Size = 0x10)]
-        /* 0x0D28 */ public NMSString0x20[] BiomeAirDescriptions;
+        /* 0x0D28 */ public NMSString0x20A[] BiomeAirDescriptions;
         [NMS(Size = 0x1B)]
-        /* 0x0F28 */ public NMSString0x20[] WeirdBiomeDescriptions;
+        /* 0x0F28 */ public NMSString0x20A[] WeirdBiomeDescriptions;
         [NMS(Size = 0x10)]
-        /* 0x1288 */ public NMSString0x20[] PetBiomeClimates;
+        /* 0x1288 */ public NMSString0x20A[] PetBiomeClimates;
         /* 0x1488 */ public bool IsHurtingCreaturesACrime;
         /* 0x1489 */ public bool EnableFlyingSnakeTails;
         /* 0x148A */ public bool EnableNewStuff;
@@ -510,15 +507,16 @@ namespace libMBIN.NMS.Globals
         /* 0x1D88 */ public float PetMaxSizeOffPlanet;
         /* 0x1D8C */ public float PetTeleportDistOffPlanet;
         /* 0x1D90 */ public float PetTeleportDistOnPlanet;
-        /* 0x1D94 */ public float PetAnimSpeedBoostSmallerThan;
-        /* 0x1D98 */ public float PetAnimSpeedBoostStrength;
-        /* 0x1D9C */ public float PetAnimSpeedMax;
-        /* 0x1DA0 */ public float PetAnimSpeedMin;
-        /* 0x1DA4 */ public float PetNavRadForMinTurn;
-        /* 0x1DA8 */ public float PetNavRadForMaxTurn;
-        /* 0x1DAC */ public float PetMinTurnRad;
-        /* 0x1DB0 */ public float PetMaxTurnRad;
-        /* 0x1DB4 */ public float PetMoodCurvePower;
+        /* 0x1D94 */ public bool PetCanSummonOnFreighter;
+        /* 0x1D98 */ public float PetAnimSpeedBoostSmallerThan;
+        /* 0x1D9C */ public float PetAnimSpeedBoostStrength;
+        /* 0x1DA0 */ public float PetAnimSpeedMax;
+        /* 0x1DA4 */ public float PetAnimSpeedMin;
+        /* 0x1DA8 */ public float PetNavRadForMinTurn;
+        /* 0x1DAC */ public float PetNavRadForMaxTurn;
+        /* 0x1DB0 */ public float PetMinTurnRad;
+        /* 0x1DB4 */ public float PetMaxTurnRad;
+        /* 0x1DB8 */ public float PetMoodCurvePower;
         /* 0x1DC0 */ public GcScanEffectData PetOffPlanetEffect;
         /* 0x1E10 */ public NMSString0x80 PetEggResourceFile;
         /* 0x1E90 */ public NMSString0x80 PetEggHatchResourceFile;

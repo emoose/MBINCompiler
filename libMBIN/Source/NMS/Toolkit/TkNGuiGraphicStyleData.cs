@@ -1,4 +1,4 @@
-﻿namespace libMBIN.NMS.Toolkit
+namespace libMBIN.NMS.Toolkit
 {
     [NMS(GUID = 0xF37ACDDBA9FD878F, NameHash = 0x250B60FD6373D170)]
     public class TkNGuiGraphicStyleData : NMSTemplate

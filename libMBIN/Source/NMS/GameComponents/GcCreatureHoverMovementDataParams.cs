@@ -1,11 +1,9 @@
-﻿using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
+using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0xCDCC9259306D4B7B, NameHash = 0x2862D9C79079A037)]
+    [NMS(GUID = 0xCDCC9259306D4B7B, NameHash = 0x2862D9C79079A037)]
     public class GcCreatureHoverMovementDataParams : NMSTemplate
     {
         /* 0x000 */ public List<NMSString0x20A> ValidDescriptors;

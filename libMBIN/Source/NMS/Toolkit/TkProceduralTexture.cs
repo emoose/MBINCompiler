@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
 using libMBIN.NMS.Toolkit;
-using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Toolkit
 {
@@ -13,7 +9,11 @@ namespace libMBIN.NMS.Toolkit
         /* 0x020 */ public TkPaletteTexture Palette;
         /* 0x028 */ public float Probability;
         // size: 0x3
-        public enum TextureGameplayUseEnum { IgnoreName, MatchName, DoNotMatchName }
+        public enum TextureGameplayUseEnum {
+            IgnoreName,
+            MatchName,
+            DoNotMatchName
+        }
         /* 0x02C */ public TextureGameplayUseEnum TextureGameplayUse;
         /* 0x030 */ public bool OverrideAverageColour;
         /* 0x040 */ public Colour AverageColour;

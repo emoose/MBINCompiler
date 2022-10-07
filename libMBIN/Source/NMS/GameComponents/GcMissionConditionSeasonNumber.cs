@@ -1,11 +1,9 @@
-using libMBIN.NMS.Toolkit;
-using libMBIN.NMS.GameComponents;
-
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x9AA8CC133BED2E72, NameHash = 0x56F9C280B6CFD741)]
+    [NMS(GUID = 0x31CB68CD784329CA, NameHash = 0x56F9C280B6CFD741)]
     public class GcMissionConditionSeasonNumber : NMSTemplate
     {
-        public int ActiveSeason;
+        /* 0x0 */ public int ActiveSeason;
+        /* 0x4 */ public bool IncludeRemix;
     }
 }

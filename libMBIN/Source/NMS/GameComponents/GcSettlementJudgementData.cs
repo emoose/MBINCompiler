@@ -1,4 +1,3 @@
-using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
@@ -12,7 +11,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x028 */ public NMSString0x20A Title;
         /* 0x048 */ public NMSString0x20A NPCTitle;
         /* 0x068 */ public NMSString0x20A QuestionText;
-        /* 0x088 */ public NMSString0x20A Dilemmatext;
+        /* 0x088 */ public NMSString0x20A DilemmaText;
         /* 0x0A8 */ public bool UseResearchLoc;
         /* 0x0A9 */ public bool UseAltResearchLoc;
         /* 0x0B0 */ public GcSettlementJudgementOption Option1;
@@ -23,7 +22,12 @@ namespace libMBIN.NMS.GameComponents
         /* 0x1D0 */ public NMSString0x20A NPC2CustomName;
         /* 0x1F0 */ public NMSString0x10 NPC1HoloEffect;
         /* 0x200 */ public NMSString0x10 NPC2HoloEffect;
-        public enum NPCsEnum { None, One, Two }
+        // size: 0x3
+        public enum NPCsEnum {
+            None,
+            One,
+            Two
+        }
         /* 0x210 */ public NPCsEnum NPCs;
     }
 }

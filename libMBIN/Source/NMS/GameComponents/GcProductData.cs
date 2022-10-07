@@ -1,14 +1,13 @@
-﻿using System.Collections.Generic;
-
 using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
+using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0xF6ACE6D21C5EC4B, NameHash = 0xE831C8A241FD8276)]
+    [NMS(GUID = 0xBBDA80CAF419FE55, NameHash = 0xE831C8A241FD8276)]
     public class GcProductData : NMSTemplate
     {
-        /* 0x000 */ public NMSString0x10 Id;
+        /* 0x000 */ public NMSString0x10 ID;
         /* 0x010 */ public NMSString0x80 Name;
         /* 0x090 */ public NMSString0x80 NameLower;
         /* 0x110 */ public VariableSizeString Subtitle;
@@ -39,7 +38,16 @@ namespace libMBIN.NMS.GameComponents
         /* 0x374 */ public float NormalisedValueOnWorld;
         /* 0x378 */ public float NormalisedValueOffWorld;
         /* 0x37C */ public GcTradeCategory TradeCategory;
-        public enum WikiCategoryEnum { NotEnabled, Crafting, Tech, Construction, Trade, Curio, Cooking }
+        // size: 0x7
+        public enum WikiCategoryEnum {
+            NotEnabled,
+            Crafting,
+            Tech,
+            Construction,
+            Trade,
+            Curio,
+            Cooking
+        }
         /* 0x380 */ public WikiCategoryEnum WikiCategory;
         /* 0x384 */ public bool IsCraftable;
         /* 0x388 */ public NMSString0x10 DeploysInto;
@@ -51,6 +59,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x3E8 */ public bool GoodForSelling;
         /* 0x3F0 */ public NMSString0x10 GiveRewardOnSpecialPurchase;
         /* 0x400 */ public bool EggModifierIngredient;
-        /* 0x401 */ public bool IsTechBox;
+        /* 0x401 */ public bool IsTechbox;
     }
 }

@@ -1,14 +1,9 @@
-using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
-using libMBIN.NMS.GameComponents;
-
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x02617A29D7ACB2B3, NameHash = 0x0EC60D3F951991D7)]
+    [NMS(GUID = 0x2617A29D7ACB2B3, NameHash = 0xEC60D3F951991D7)]
     public class GcRewardRequirementsForRecipe : NMSTemplate
     {
-        public NMSString0x10 RecipeID;
-        public bool RewardInCreative;
+        /* 0x00 */ public NMSString0x10 RecipeID;
+        /* 0x10 */ public bool RewardInCreative;
     }
 }

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
 using libMBIN.NMS.Toolkit;
-using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Toolkit
 {
@@ -15,13 +11,50 @@ namespace libMBIN.NMS.Toolkit
         /* 0x0018 */ public float NoSeaBaseLevel;
         /* 0x001C */ public TkNoiseVoxelTypeEnum BuildingVoxelType;
         /* 0x0020 */ public TkNoiseVoxelTypeEnum ResourceVoxelType;
-        [NMS(Size = 8, EnumType = typeof(TkNoiseLayersEnum.NoiseLayerTypesEnum))]
+        // size: 0x8
+        public enum NoiseLayersEnum {
+            Base,
+            Hill,
+            Mountain,
+            Rock,
+            UnderWater,
+            Texture,
+            Elevation,
+            Continent
+        }
+        [NMS(Size = 0x8, EnumType = typeof(NoiseLayersEnum))]
         /* 0x0024 */ public TkNoiseUberLayerData[] NoiseLayers;
-        [NMS(Size = 9, EnumType = typeof(TkGridLayersEnum.GridLayerTypesEnum))]
+        // size: 0x9
+        public enum GridLayersEnum {
+            Small,
+            Large,
+            Resources_Heridium,
+            Resources_Iridium,
+            Resources_Copper,
+            Resources_Nickel,
+            Resources_Aluminium,
+            Resources_Gold,
+            Resources_Emeril
+        }
+        [NMS(Size = 0x9, EnumType = typeof(GridLayersEnum))]
         /* 0x0464 */ public TkNoiseGridData[] GridLayers;
-        [NMS(Size = 0x7, EnumType = typeof(TkFeaturesEnum.FeatureTypesEnum))]
+        // size: 0x7
+        public enum FeaturesEnum {
+            River,
+            Crater,
+            Arches,
+            ArchesSmall,
+            Blobs,
+            BlobsSmall,
+            Substance
+        }
+        [NMS(Size = 0x7, EnumType = typeof(FeaturesEnum))]
         /* 0x134C */ public TkNoiseFeatureData[] Features;
-        [NMS(Size = 1, EnumType = typeof(TkCavesEnum.CaveTypesEnum))]
+        // size: 0x1
+        public enum CavesEnum {
+            Underground
+        }
+        [NMS(Size = 0x1, EnumType = typeof(CavesEnum))]
         /* 0x1528 */ public TkNoiseCaveData[] Caves;
         /* 0x15B0 */ public float MinimumCaveDepth;
         /* 0x15B4 */ public float CaveRoofSmoothingDist;

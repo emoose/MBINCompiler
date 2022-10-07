@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
+using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
@@ -15,10 +12,13 @@ namespace libMBIN.NMS.GameComponents
         /* 0x18 */ public bool Critical;
         /* 0x19 */ public bool Ineffective;
         /* 0x1A */ public bool LaserHeatBoost;
-        [NMS(Size = 0x4, Ignore = true)]
-        /* 0x1C */ public byte[] Padding1C;
+        /* 0x1C */ public GcNodeID Node;
         // size: 0x3
-        public enum HitTypeEnum { Shootable, Terrain, Generic }
+        public enum HitTypeEnum {
+            Shootable,
+            Terrain,
+            Generic
+        }
         /* 0x20 */ public HitTypeEnum HitType;
         /* 0x30 */ public Vector3f PosLocal;
         /* 0x40 */ public Vector3f PosOffset;

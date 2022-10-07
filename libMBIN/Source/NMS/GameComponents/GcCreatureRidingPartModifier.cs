@@ -1,19 +1,17 @@
-﻿using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
+using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-	[NMS(GUID = 0x3C344C32A2437BC0, NameHash = 0xB9A3955D41C87D67)]
+    [NMS(GUID = 0x674D6D8C76E7033C, NameHash = 0xB9A3955D41C87D67)]
     public class GcCreatureRidingPartModifier : NMSTemplate
     {
-        /* 0x000 */ public NMSString0x20A Partname;
+        /* 0x000 */ public NMSString0x20A PartName;
         /* 0x020 */ public NMSString0x100 JointName;
         /* 0x120 */ public float MinScale;
         /* 0x124 */ public float MaxScale;
         /* 0x128 */ public NMSString0x100 AdditionalScaleJoint;
-        /* 0x229 */ public bool BreakIfNotSelected;
+        /* 0x228 */ public bool BreakIfNotSelected;
         /* 0x229 */ public bool RelativeOffset;
         /* 0x230 */ public Vector3f Offset;
         /* 0x240 */ public Vector3f RotationOffset;

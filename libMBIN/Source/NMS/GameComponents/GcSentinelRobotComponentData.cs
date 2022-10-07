@@ -1,7 +1,3 @@
-using System;
-using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
@@ -10,10 +6,6 @@ namespace libMBIN.NMS.GameComponents
     public class GcSentinelRobotComponentData : NMSTemplate
     {
         /* 0x00 */ public NMSString0x10 Id;
-        // size: 0x9
-        public enum SentinelTypeEnum { PatrolDrone, CombatDrone, MedicDrone, SummonerDrone, CorruptedDrone, Quad,
-            Mech, Walker, FriendlyDrone
-        }
-        /* 0x10 */ public SentinelTypeEnum SentinelType;
+        /* 0x10 */ public GcSentinelTypes Type;
     }
 }

@@ -1,7 +1,3 @@
-﻿using System;
-using System.Collections.Generic;
-
-using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
@@ -12,7 +8,11 @@ namespace libMBIN.NMS.GameComponents
         /* 0x00 */ public GcGenericIconTypes Icon;
         /* 0x04 */ public float Radius;
         // size: 0x3
-        public enum DisplayModeEnum { Always, SpaceOnly, PlanetOnly }
+        public enum DisplayModeEnum {
+            Always,
+            SpaceOnly,
+            PlanetOnly
+        }
         /* 0x08 */ public DisplayModeEnum DisplayMode;
         /* 0x0C */ public bool ShipScannable;
         /* 0x10 */ public NMSString0x20A CustomName;

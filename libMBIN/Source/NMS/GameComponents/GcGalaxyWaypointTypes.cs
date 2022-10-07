@@ -1,13 +1,17 @@
-﻿using libMBIN.NMS.Toolkit;
-using libMBIN.NMS.GameComponents;
-
 namespace libMBIN.NMS.GameComponents
 {
     [NMS(GUID = 0x895A0820CE617DE4, NameHash = 0xF808614547AF2B25)]
     public class GcGalaxyWaypointTypes : NMSTemplate
     {
         // size: 0x6
-        public enum GalaxyWaypointTypeEnum { User, Gameplay_AtlasStation, Gameplay_DistressBeacon, Gameplay_BlackHole, Gameplay_Mission, Gameplay_SeasonParty }
-        public GalaxyWaypointTypeEnum GalaxyWaypointType;
+        public enum GalaxyWaypointTypeEnum {
+            User,
+            Gameplay_AtlasStation,
+            Gameplay_DistressBeacon,
+            Gameplay_BlackHole,
+            Gameplay_Mission,
+            Gameplay_SeasonParty
+        }
+        /* 0x0 */ public GalaxyWaypointTypeEnum GalaxyWaypointType;
     }
 }
