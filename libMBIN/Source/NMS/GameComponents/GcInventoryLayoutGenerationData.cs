@@ -43,7 +43,7 @@ namespace libMBIN.NMS.GameComponents
             ChestCapsule,
             Suit,
             MaintObject,
-            UNKNOWN  // NOTE: The exe auto-extraction only seems to have 0x24 elements, but the total size indicates 0x25... No idea... will need to decompile to see...
+            RocketLocker
         }
         [NMS(Size = 0x25, EnumType = typeof(GenerationDataPerSizeTypeEnum))]
         /* 0x0 */ public GcInventoryLayoutGenerationDataEntry[] GenerationDataPerSizeType;

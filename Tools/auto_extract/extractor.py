@@ -38,7 +38,7 @@ TYPE_MAPPING = {
     0x07: 'VariableSizeString',
     0x09: 'ENUM',
     0x0A: 'NMSString0x80',  # Technically a "filename" -> GcFilename (?)
-    0x0B: 'FLAGENUM',  # Looks like this isn't in the data completely... :/
+    0x0B: 'FLAGENUM',
     0x0C: 'float',
     0x0D: 'NMSString0x10',
     0x0E: 'NMSString0x20A',  # There seems to be no difference in use between this
@@ -92,12 +92,11 @@ TYPED_ARRAY_TEMPLATE = """        [NMS(Size = {3}, EnumType = typeof({4}))]
 
 # 0: usings: NB: End with two \n's
 # 1: namespace
-# 2: size
-# 3: GUID
-# 4: namehash
-# 5: Extra attributes (optional, normally '')  # TODO: Remove?
-# 6: class name
-# 7: fields
+# 2: GUID
+# 3: namehash
+# 4: Extra attributes (optional, normally '')  # TODO: Remove?
+# 5: class name
+# 6: fields
 
 CLASS_TEMPLATE = """{0}namespace {1}
 {{
