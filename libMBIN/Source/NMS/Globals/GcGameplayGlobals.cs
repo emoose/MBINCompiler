@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(GUID = 0x576B23656E2E080A, NameHash = 0x71CAF682B6986E6E)]
+    [NMS(GUID = 0x319DB03C5F2CFE0A, NameHash = 0x71CAF682B6986E6E)]
     public class GcGameplayGlobals : NMSTemplate
     {
         /* 0x0000 */ public GcDifficultyConfig DifficultyConfig;
