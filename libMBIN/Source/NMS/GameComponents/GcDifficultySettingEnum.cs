@@ -1,10 +1,11 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xCF82836F1D821B6E, NameHash = 0x42FEEB238F6504DE)]
+    [NMS(GUID = 0xB88D6ACFA377B28F, NameHash = 0x42FEEB238F6504DE)]
     public class GcDifficultySettingEnum : NMSTemplate
     {
-        // size: 0x1B
+        // size: 0x1C
         public enum DifficultySettingEnum {
+            SettingsLocked,
             InventoriesAlwaysInRange,
             AllSlotsUnlocked,
             WarpDriveRequirements,
