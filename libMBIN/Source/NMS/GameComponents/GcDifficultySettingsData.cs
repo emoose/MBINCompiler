@@ -2,16 +2,17 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x41D6721A86A0DF9F, NameHash = 0x640D4FDC2A95A771)]
+    [NMS(GUID = 0xDFF6CD33E4C4D65, NameHash = 0x640D4FDC2A95A771)]
     public class GcDifficultySettingsData : NMSTemplate
     {
-        /* 0x00 */ public bool InventoriesAlwaysInRange;
-        /* 0x01 */ public bool AllSlotsUnlocked;
-        /* 0x02 */ public bool WarpDriveRequirements;
-        /* 0x03 */ public bool CraftingIsFree;
-        /* 0x04 */ public bool TutorialEnabled;
-        /* 0x05 */ public bool StartWithAllItemsKnown;
-        /* 0x06 */ public bool BaseAutoPower;
+        /* 0x00 */ public bool SettingsLocked;
+        /* 0x01 */ public bool InventoriesAlwaysInRange;
+        /* 0x02 */ public bool AllSlotsUnlocked;
+        /* 0x03 */ public bool WarpDriveRequirements;
+        /* 0x04 */ public bool CraftingIsFree;
+        /* 0x05 */ public bool TutorialEnabled;
+        /* 0x06 */ public bool StartWithAllItemsKnown;
+        /* 0x07 */ public bool BaseAutoPower;
         /* 0x08 */ public GcDeathConsequencesDifficultyOption DeathConsequences;
         /* 0x0C */ public GcDamageReceivedDifficultyOption DamageReceived;
         /* 0x10 */ public GcDamageGivenDifficultyOption DamageGiven;
