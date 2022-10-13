@@ -312,7 +312,7 @@ namespace libMBIN.NMS.Globals
         /* 0x3594 */ public float CreatureSizeMin;
         /* 0x3598 */ public float CreatureSizeMax;
         /* 0x359C */ public float CreatureInteractionMinDist;
-        /* 0x35A0 */ public float CreatureInteractionPushCameraDownForCreatureBigger;
+        /* 0x35A0 */ public float CreatureInteractionPushCameraDownForCreatureBiggerThan;
         /* 0x35A4 */ public float CreatureInteractionPushCameraDownAmount;
         /* 0x35A8 */ public float CreatureInteractionDistMulMin;
         /* 0x35AC */ public float CreatureInteractionDistMulMax;
