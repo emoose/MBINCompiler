@@ -156,7 +156,7 @@ class Field(ABC):
 
         # Get the name of the field.
         self._field_name = nms_mem.read_string(
-            struct.unpack_from('<Q', data, offset=0x0)[0]
+            struct.unpack_from('<Q', data, offset=0x0)[0], byte=128
         )
         # Some field names are annoyingly duplicated in the exe. c# doesn't
         # allow this, so we need to add something to the name to make it unique.

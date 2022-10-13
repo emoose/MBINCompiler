@@ -118,7 +118,7 @@ namespace libMBIN.NMS.Globals
         /* 0x0548 */ public NMSString0x20A SelectExpeditionPuzzleID;
         /* 0x0568 */ public int NumberOfExpeditionChoices;
         /* 0x056C */ public int ExpeditionDifficultyVariance;
-        /* 0x0570 */ public float ExpeditionDifficultyIncreaseForEachAdditionalFriga;
+        /* 0x0570 */ public float ExpeditionDifficultyIncreaseForEachAdditionalFrigate;
         /* 0x0574 */ public int MinExpeditionStatValue;
         /* 0x0578 */ public int MaxExpeditionStatValue;
         /* 0x057C */ public int NumberOfFrigatesPurchasedToEndEasyExpeditions;

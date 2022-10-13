@@ -53,7 +53,7 @@ namespace libMBIN.NMS.Globals
         /* 0x0042 */ public bool ClothForcePositionExtrapolationOff;
         /* 0x0043 */ public bool ClothForcePositionExtrapolationOn;
         /* 0x0044 */ public bool ClothForcePositionExtrapolationBackOn;
-        /* 0x0045 */ public bool ClothForcePositionExtrapolationUpdateOrderDependen;
+        /* 0x0045 */ public bool ClothForcePositionExtrapolationUpdateOrderDependent;
         /* 0x0046 */ public bool ClothForcePositionExtrapolationSyncWithFpsLock;
         /* 0x0047 */ public bool ClothForcePositionExtrapolationAntiSyncWithFpsLock;
         /* 0x0048 */ public bool ForceEnablePlayerSpringAttachmentComponent;
