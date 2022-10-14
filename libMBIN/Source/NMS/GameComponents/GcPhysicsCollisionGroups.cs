@@ -1,9 +1,12 @@
+using System;
+
 namespace libMBIN.NMS.GameComponents
 {
     [NMS(GUID = 0x7E5F8259CA3DB8C9, NameHash = 0x29A5D23AA5A4C794)]
     public class GcPhysicsCollisionGroups : NMSTemplate
     {
         // size: 0x10
+        [Flags]
         public enum CollisionGroupEnum : uint {
             Normal = 0x1,
             Water = 0x2,

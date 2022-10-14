@@ -1,3 +1,4 @@
+using System;
 namespace libMBIN.NMS.Globals
 {
     [NMS(GUID = 0x3293706C84E09F2F, NameHash = 0xB62E6456DFE47836)]
@@ -13,6 +14,7 @@ namespace libMBIN.NMS.Globals
         /* 0x000 */ public AssertsLevelEnum AssertsLevel;
         /* 0x004 */ public bool DefaultSelectIgnoreAsserts;
         // size: 0x9
+        [Flags]
         public enum EnabledChannelsEnum : uint {
             None = 0x0,
             Default = 0x1,

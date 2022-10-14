@@ -1,9 +1,12 @@
+using System;
+
 namespace libMBIN.NMS.Toolkit
 {
     [NMS(GUID = 0x72165BB3A09C239C, NameHash = 0x76BB9C78D7AE1C6B)]
     public class TkMetadataReadMask : NMSTemplate
     {
         // size: 0x5
+        [Flags]
         public enum MetadataReadMaskEnum : uint {
             Default = 0x1,
             SaveWhenMultiplayerClient = 0x2,
