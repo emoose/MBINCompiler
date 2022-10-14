@@ -1,9 +1,12 @@
+using System;
+
 namespace libMBIN.NMS.Toolkit
 {
     [NMS(GUID = 0x8DA8A8B3A5CCE5AD, NameHash = 0x8C2EDCD50FA3956F)]
     public class TkInputEnum : NMSTemplate
     {
         // size: 0x9C
+        [Flags]
         public enum InputButtonEnum : uint {
             None = 0x0,
             Space = 0x20,

@@ -1,3 +1,4 @@
+using System;
 using libMBIN.NMS.GameComponents;
 using System.Collections.Generic;
 
@@ -44,6 +45,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x380 */ public bool OverrideLightColour;
         /* 0x390 */ public Colour LightColour;
         // size: 0x8
+        [Flags]
         public enum BehaviourFlagsEnum : uint {
             None = 0x0,
             DestroyTerrain = 0x1,

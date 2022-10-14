@@ -1,3 +1,4 @@
+using System;
 using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
@@ -17,6 +18,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x268 */ public NMSString0x20 ExternalLoc;
         /* 0x288 */ public NMSString0x20 ExternalDigitalAliasId;
         // size: 0x5
+        [Flags]
         public enum InputActionInfoFlagsEnum : uint {
             HideInControlsPage = 0x1,
             HideInMenusMenu = 0x2,

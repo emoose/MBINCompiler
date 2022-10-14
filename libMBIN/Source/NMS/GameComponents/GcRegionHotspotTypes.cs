@@ -1,9 +1,12 @@
+using System;
+
 namespace libMBIN.NMS.GameComponents
 {
     [NMS(GUID = 0x703C4FBFD011682A, NameHash = 0x1B2443FC607CC2A)]
     public class GcRegionHotspotTypes : NMSTemplate
     {
         // size: 0x6
+        [Flags]
         public enum HotspotTypeEnum : uint {
             Power = 0x1,
             Mineral1 = 0x2,
