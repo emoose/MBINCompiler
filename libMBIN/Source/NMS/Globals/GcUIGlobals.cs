@@ -4,11 +4,12 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(GUID = 0x143CFD75F535C56E, NameHash = 0x95C306B1A90F3E08)]
+    [NMS(GUID = 0x2024E20B1CE649A0, NameHash = 0x95C306B1A90F3E08)]
     public class GcUIGlobals : NMSTemplate
     {
-        /* 0x0000 */ public int DebugMedalRank;
-        /* 0x0004 */ public TkCurveType PadCursorUICurve;
+        /* 0x0000 */ public bool ShowDifficultyStar;
+        /* 0x0004 */ public int DebugMedalRank;
+        /* 0x0008 */ public TkCurveType PadCursorUICurve;
         /* 0x0010 */ public Colour JoaoBoxCompletedObjectiveColour;
         /* 0x0020 */ public Colour InvSlotGradientBaseColour;
         /* 0x0030 */ public float InvSlotGradientFactorMin;
