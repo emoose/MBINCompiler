@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x8967DD156BEF8B3D, NameHash = 0x15DCF5F4B3591EDB)]
+    [NMS(GUID = 0xC673CA1F242CA77, NameHash = 0x15DCF5F4B3591EDB)]
     public class GcInventoryLayoutGenerationDataEntry : NMSTemplate
     {
         /* 0x00 */ public int MinSlots;
@@ -13,5 +13,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x14 */ public int MaxCargoSlots;
         /* 0x18 */ public GcInventoryLayoutGenerationBounds Bounds;
         /* 0x30 */ public GcInventoryLayoutGenerationBounds TechBounds;
+        /* 0x48 */ public int MaxNumSpecialTechSlots;
+        /* 0x4C */ public GcInventoryIndex SpecialTechSlotMaxIndex;
     }
 }
