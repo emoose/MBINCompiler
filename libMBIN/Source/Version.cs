@@ -59,8 +59,8 @@
         ///     Eg. "1.1.0" (Release) or "1.1.0-pre1" (Pre-Release)
         /// </summary>
         /// <returns>"{<see cref="Major"/>}.{<see cref="Minor"/>}.{<see cref="Release"/>}{<see cref="GetSuffix">Suffix</see>}"</returns>
-        public static string GetString() => AssemblyVersion.ToString( 3 ) + GetSuffix();
-
+        public static string GetString() {
+            return $"{AssemblyVersion.Major}.{AssemblyVersion.Minor:00}.{AssemblyVersion.Build}"  + GetSuffix();
+        }
     }
-
 }
