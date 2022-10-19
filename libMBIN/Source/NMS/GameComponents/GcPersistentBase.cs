@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x4DB4D76FF9DE9754, NameHash = 0x732552199A3AE45E)]
+    [NMS(GUID = 0xE27CE1A9C1BDC8D, NameHash = 0x732552199A3AE45E)]
     public class GcPersistentBase : NMSTemplate
     {
         /* 0x000 */ public int BaseVersion;
@@ -23,9 +23,10 @@ namespace libMBIN.NMS.GameComponents
         /* 0x260 */ public Vector3f ScreenshotAt;
         /* 0x270 */ public Vector3f ScreenshotPos;
         /* 0x280 */ public GcGameMode GameMode;
-        /* 0x284 */ public NMSString0x20 PlatformToken;
-        /* 0x2A4 */ public bool IsReported;
-        /* 0x2A5 */ public bool IsFeatured;
-        /* 0x2A8 */ public GcBaseAutoPowerSetting AutoPowerSetting;
+        /* 0x284 */ public GcPersistentBaseDifficultyData Difficulty;
+        /* 0x28C */ public NMSString0x20 PlatformToken;
+        /* 0x2AC */ public bool IsReported;
+        /* 0x2AD */ public bool IsFeatured;
+        /* 0x2B0 */ public GcBaseAutoPowerSetting AutoPowerSetting;
     }
 }
