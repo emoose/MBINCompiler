@@ -4,7 +4,7 @@
     <RootNamespace>libMBIN</RootNamespace>
     <AssemblyName>libMBIN</AssemblyName>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
-    <TargetFrameworks>net5.0-windows;net452</TargetFrameworks>
+    <TargetFrameworks>net6.0-windows;net5.0-windows;net452</TargetFrameworks>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
     <Configurations>Release;Debug;Release-XML</Configurations>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>

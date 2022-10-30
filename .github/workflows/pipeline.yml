@@ -11,55 +11,78 @@ on:
   create:
 
 jobs:
-  build:
-    name: Build and test MBINCompiler on Windows
+  build-dotnet4:
+    name: Build .NET 4 artefacts
     runs-on: windows-latest
     steps:
-      - uses: actions/checkout@v2
-      - name: Setup .NET
-        uses: actions/setup-dotnet@v1
-        with:
-          dotnet-version: '5.0.100'
-      - name: Set up Python 3.6
-        uses: actions/setup-python@v2
-        with:
-          python-version: "3.6"
-      - name: Build Windows .net 5 binary
-        run: dotnet publish -c Release -f net5.0-windows -r win-x64 -o Build/Release/net5/ /nowarn:cs0618
+      - uses: actions/checkout@v3
       - name: Build Windows net452 binary
         run: dotnet publish libMBIN-DLL -c Release -f net452 -r win-x64 -o Build/Release/net4/ /nowarn:cs0618
       - name: Move some files to rename them
+        run: cp Build/Release/net4/libMBIN.dll libMBIN-dotnet4.dll
+      - name: Upload binary for release
+        uses: actions/upload-artifact@v3
+        with:
+          name: MBINCompiler
+          path: libMBIN-dotnet4.dll
+  build-dotnet5:
+    name: Build .NET 5 artefacts
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python 3.9
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.9"
+      - name: Build Windows .NET 5 binaries
         run: |
-          cp Build/Release/net5/MBINCompiler.exe Build/Release/MBINCompiler.exe
-          cp Build/Release/net4/libMBIN.dll Build/Release/net4/libMBIN-dotnet4.dll
+          dotnet publish libMBIN-DLL -c Release -f net5.0-windows -r win-x64 -o Build/Release/net5/ /nowarn:cs0618
+          dotnet publish MBINCompiler -c Release -f net5.0-windows -r win-x64 -o Build/Release/net5/ /nowarn:cs0618
+      - name: Move the exe so the tests can find it easier
+        run: |
+          cp Build/Release/net5/MBINCompiler.exe MBINCompiler.exe
+          cp Build/Release/net5/libMBIN.dll libMBIN.dll
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install pytest requests mkdocs==1.0.4
-      - name: Generate save data mapping
-        run : |
-          Build/Release/net5/SaveFileMapping.exe
-          pwd
-          ls
-        shell: bash
+          pip install pytest requests
       - name: Run tests
-        run: python -m pytest --tb=no --report
+        run: python -m pytest --mbincompiler_path="" --tb=no --report
       - name: Upload binary for release
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: MBINCompiler
           path: |
-            Build/Release/net5/MBINCompiler.exe
-            Build/Release/net5/libMBIN.dll
-            Build/Release/net4/libMBIN-dotnet4.dll
-            mapping.json
+            MBINCompiler.exe
+            libMBIN.dll
             report.json
+  build-dotnet6:
+    name: Build .NET 6 artefacts
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Build Windows .NET 6 binaries
+        run: |
+          dotnet publish libMBIN-DLL -c Release -f net6.0-windows -r win-x64 -o Build/Release/net6/ /nowarn:cs0618
+          dotnet publish SaveFileMapping -c Release -f net6.0-windows -r win-x64 -o Build/Release/net6/ /nowarn:cs0618
+      - name: Move some files to rename them
+        run: cp Build/Release/net6/libMBIN.dll libMBIN-dotnet6.dll
+      - name: Generate save data mapping
+        run : Build/Release/net6/SaveFileMapping.exe
+        shell: bash
+      - name: Upload binary for release
+        uses: actions/upload-artifact@v3
+        with:
+          name: MBINCompiler
+          path: |
+            libMBIN-dotnet6.dll
+            mapping.json
   release:
     name: Release MBINCompiler binaries and other data
     # Only run this job if the commit was tagged.
     if: ${{ startsWith(github.ref, 'refs/tags/') }}
     runs-on: windows-latest
-    needs: [build]
+    needs: [build-dotnet4, build-dotnet5, build-dotnet6]
     steps:
       - name: Download files for release
         uses: actions/download-artifact@v2
@@ -77,9 +100,10 @@ jobs:
           name: "${{ env.TAG }}"
           tag_name: ${{ env.TAG }}
           files: |
-            Build/Release/net5/MBINCompiler.exe
-            Build/Release/net5/libMBIN.dll
-            Build/Release/net4/libMBIN-dotnet4.dll
+            MBINCompiler.exe
+            libMBIN.dll
+            libMBIN-dotnet4.dll
+            libMBIN-dotnet6.dll
             mapping.json
             report.json
         env:
