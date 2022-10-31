@@ -2,9 +2,7 @@ from io import BytesIO
 import json
 import os
 import os.path as op
-import tempfile
 import shutil
-import subprocess
 import zipfile
 
 import requests
@@ -73,49 +71,6 @@ def compare_mbins(left_path, right_path):
     # If we got this far then the files are good!
     os.remove(right_path)
     return True
-
-
-def convert_mbin(fpath, MBINCompiler_command):
-    """ Convert an MBIN file to EXML and back in a temp directory.
-
-    Parameters
-    ----------
-    fpath : str
-        The absolute filepath to the mbin to be converted.
-    MBINCompiler_command : list
-        A list containing the commands required to run MBINCompiler on whatever
-        platform the test is run on.
-
-    Returns
-    -------
-    out_path : str
-        The final path of the recompiled MBIN file.
-    """
-    fname = op.splitext(op.basename(fpath))[0]
-    with tempfile.TemporaryDirectory() as temp_dir:
-        # First convert mbin to exml
-        cmd = list(MBINCompiler_command)
-        cmd.append('--output-dir=%s' % temp_dir)
-        cmd.append(fpath)
-        subprocess.run(cmd)
-        # Now we want to convert the exml back to mbin
-        cmd = list(MBINCompiler_command)
-        cmd.append('--output-dir=%s' % temp_dir)
-        exml_fname = op.join(temp_dir, '%s.EXML' % fname)
-        # If the conversion fails to exml return an error value
-        if not op.exists(exml_fname):
-            return TO_EXML_FAIL
-        cmd.append(exml_fname)
-        subprocess.run(cmd)
-        # Move the file back to the original directory but renamed
-        new_fname = op.join(op.dirname(fpath), '%s-recompiled.MBIN' % fname)
-        # If the new files doesn't exist (ie. reconversion failed) return an
-        # error value
-        recompiled_fname = op.join(temp_dir, '%s.MBIN' % fname)
-        if not op.exists(recompiled_fname):
-            return TO_MBIN_FAIL
-        shutil.move(recompiled_fname, new_fname)
-        return new_fname
 
 
 def download_data():

@@ -1,12 +1,16 @@
 import os.path as op
 import os
+import subprocess
+import tempfile
 
 import pytest
 
 from tests.utils import download_data, format_err_results, generate_report
 
 
-DATA_PATH = op.join(op.dirname(__file__), 'tests', 'data')
+TEST_ROOT_PATH = op.join(op.dirname(__file__), 'tests')
+DATA_PATH = op.join(TEST_ROOT_PATH, 'data')
+BASE_PATH = op.join("Build", "Release", "win-x64")
 FAILED_FNAME = '_failed.txt'
 REPORT_FNAME = op.join(op.dirname(__file__), 'results.txt')
 JSON_REPORT_FNAME = op.join(op.dirname(__file__), 'report.json')
@@ -37,12 +41,6 @@ def pytest_addoption(parser):
 def pytest_generate_tests(metafunc):
     # This is called for every test. Only get/set command line arguments
     # if the argument is specified in the list of test "fixturenames".
-    if 'platform' in metafunc.fixturenames:
-        metafunc.parametrize("platform",
-                             [metafunc.config.getoption('platform')])
-    if 'datapath' in metafunc.fixturenames:
-        metafunc.parametrize("datapath",
-                             [metafunc.config.getoption('datapath')])
     if 'rerun' in metafunc.fixturenames:
         metafunc.parametrize("rerun", [metafunc.config.getoption('rerun')])
 
@@ -50,6 +48,11 @@ def pytest_generate_tests(metafunc):
 def pytest_sessionstart(session):
     # Before running any tests collect the required test data.
     datapath = session.config.getoption('datapath')
+    if datapath:
+        os.environ['datapath'] = datapath
+    platform = session.config.getoption('platform')
+    if platform:
+        os.environ['platform'] = platform
     use_cache = session.config.getoption('use_cache')
     if datapath is not None and use_cache:
         print("Providing both 'datapath' and 'use_cache' command line "
@@ -69,6 +72,35 @@ def pytest_sessionstart(session):
     # otherwise it will be polluted by the previous run.
     if op.exists(REPORT_FNAME):
         os.remove(REPORT_FNAME)
+
+
+@pytest.fixture(scope='session')
+def convert_files():
+    # First, figure out the first part of the MBINCompiler call.
+    platform = os.environ.get('platform')
+    if platform == 'linux-x64':
+        # need to run with mono on linux
+        # Build path also includes platform on the CI
+        cmd = ['sudo', 'mono',
+               op.join(BASE_PATH, platform, 'MBINCompiler.exe'), '-q']
+    else:
+        cmd = [op.join(BASE_PATH, 'MBINCompiler.exe'), '-q']
+
+    datapath = os.environ.get('datapath', DATA_PATH)
+
+    # Next, convert all the mbin files in the data folder to a `data_exml`
+    # folder.
+    # We'll have a double nested with statement so we can have both temp
+    # directories existing for the whole lifecycle of the tests.
+    with tempfile.TemporaryDirectory(prefix='exml_') as temp_exml_dir:
+        with tempfile.TemporaryDirectory(prefix='mbin_') as temp_mbin_dir:
+            print('Converting the original files to .EXML')
+            subprocess.run(cmd + [datapath, f'--output-dir={temp_exml_dir}'])
+            print('Converting the converted .EXML files back to .MBIN')
+            subprocess.run(
+                cmd + [temp_exml_dir, f'--output-dir={temp_mbin_dir}']
+            )
+            yield temp_exml_dir, temp_mbin_dir
 
 
 @pytest.hookimpl(tryfirst=True, hookwrapper=True)
@@ -98,10 +130,13 @@ def pytest_terminal_summary(terminalreporter):
     for failed in terminalreporter.stats.get('failed', []):
         if len(failed.sections) != 0:
             fname, err = failed.sections[0][1].split(',')
-        # Fix the filename to be relative to the test data directory.
-        failed_fpaths.append(fname)
-        fname = op.relpath(fname, datapath)
-        results.append((fname, err.replace('\n', '')))
+            # Clean up the filename
+            try:
+                clean_fname = fname.split('mbin_', 1)[1].split(op.sep, 1)[1]
+            except Exception:  # noqa
+                clean_fname = fname
+            failed_fpaths.append(clean_fname)
+            results.append((clean_fname, err.replace('\n', '')))
     if results != []:
         results = format_err_results(results)
         print('\n')
