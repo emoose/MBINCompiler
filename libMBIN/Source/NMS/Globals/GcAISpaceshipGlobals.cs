@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(GUID = 0x57D137DB00D02984, NameHash = 0xD338272248F67908)]
+    [NMS(GUID = 0xCAF07D3CA5DEF3BB, NameHash = 0xD338272248F67908)]
     public class GcAISpaceshipGlobals : NMSTemplate
     {
         /* 0x000 */ public GcPlayerSquadronConfig PlayerSquadronConfig;
@@ -65,17 +65,7 @@ namespace libMBIN.NMS.Globals
         /* 0x3B0 */ public bool AttackRepositionBoost;
         /* 0x3B1 */ public bool AttackShipsFollowLeader;
         /* 0x3B4 */ public float AttackTooCloseMinRelSpeed;
-        // size: 0x7
-        public enum ProjectileWeaponMuzzleFlashesEnum {
-            None,
-            Pirate,
-            Police,
-            Trader,
-            Freighter,
-            PlayerSquadron,
-            DefenceForce
-        }
-        [NMS(Size = 0x7, EnumType = typeof(ProjectileWeaponMuzzleFlashesEnum))]
+        [NMS(Size = 0x7, EnumType = typeof(GcAISpaceshipTypes.ShipTypeEnum))]
         /* 0x3B8 */ public NMSString0x10[] ProjectileWeaponMuzzleFlashes;
         /* 0x428 */ public float RewardLootOffset;
         /* 0x42C */ public float RewardLootOffsetSpeed;
@@ -97,62 +87,7 @@ namespace libMBIN.NMS.Globals
         /* 0x5A8 */ public float AttackShipAvoidStartTime;
         /* 0x5AC */ public float AttackMinimumTimeBeforeTargetSwitch;
         /* 0x5B0 */ public float PirateExtraDamage;
-        // size: 0x34
-        public enum PirateAttackableBuildingClassesEnum {
-            None,
-            TerrainResource,
-            Shelter,
-            Abandoned,
-            Terminal,
-            Shop,
-            Outpost,
-            Waypoint,
-            Beacon,
-            RadioTower,
-            Observatory,
-            Depot,
-            Factory,
-            Harvester,
-            Plaque,
-            Monolith,
-            Portal,
-            Ruin,
-            Debris,
-            DamagedMachine,
-            DistressSignal,
-            LandingPad,
-            Base,
-            MissionTower,
-            CrashedFreighter,
-            GraveInCave,
-            StoryGlitch,
-            TreasureRuins,
-            GameStartSpawn,
-            WaterCrashedFreighter,
-            WaterTreasureRuins,
-            WaterAbandoned,
-            WaterDistressSignal,
-            NPCDistressSignal,
-            NPCDebris,
-            LargeBuilding,
-            Settlement_Hub,
-            Settlement_LandingZone,
-            Settlement_Bar,
-            Settlement_Tower,
-            Settlement_Market,
-            Settlement_Small,
-            Settlement_SmallIndustrial,
-            Settlement_Medium,
-            Settlement_Large,
-            Settlement_Monument,
-            Settlement_SheriffsOffice,
-            Settlement_Double,
-            Settlement_Farm,
-            Settlement_Factory,
-            Settlement_Clump,
-            DroneHive
-        }
-        [NMS(Size = 0x34, EnumType = typeof(PirateAttackableBuildingClassesEnum))]
+        [NMS(Size = 0x34, EnumType = typeof(GcBuildingClassification.BuildingClassEnum))]
         /* 0x5B4 */ public bool[] PirateAttackableBuildingClasses;
         /* 0x5E8 */ public float PirateMaintainBuildingTargetTime;
         /* 0x5EC */ public float ShieldCollisionRadiusMultiplier;
@@ -402,29 +337,9 @@ namespace libMBIN.NMS.Globals
         /* 0xCDC */ public float WarpInPostSpeedFreighter;
         /* 0xCE0 */ public float WarpInAudioFXDelay;
         /* 0xCE4 */ public float WarpOutDistance;
-        // size: 0x7
-        public enum WarpStartEffectIDsEnum {
-            None,
-            Pirate,
-            Police,
-            Trader,
-            Freighter,
-            PlayerSquadron,
-            DefenceForce
-        }
-        [NMS(Size = 0x7, EnumType = typeof(WarpStartEffectIDsEnum))]
+        [NMS(Size = 0x7, EnumType = typeof(GcAISpaceshipTypes.ShipTypeEnum))]
         /* 0xCE8 */ public NMSString0x10[] WarpStartEffectIDs;
-        // size: 0x7
-        public enum WarpArriveEffectIDsEnum {
-            None,
-            Pirate,
-            Police,
-            Trader,
-            Freighter,
-            PlayerSquadron,
-            DefenceForce
-        }
-        [NMS(Size = 0x7, EnumType = typeof(WarpArriveEffectIDsEnum))]
+        [NMS(Size = 0x7, EnumType = typeof(GcAISpaceshipTypes.ShipTypeEnum))]
         /* 0xD58 */ public NMSString0x10[] WarpArriveEffectIDs;
         /* 0xDC8 */ public float ShipEscapeTimeBeforeWarpOut;
         /* 0xDCC */ public float ShipEscortLockOnDistance;

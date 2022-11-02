@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xE2D74B0996EA4321, NameHash = 0xE6422EFF3ABFA613)]
+    [NMS(GUID = 0xB9B44A3955396D7E, NameHash = 0xE6422EFF3ABFA613)]
     public class GcEncounterStateComponentData : NMSTemplate
     {
 

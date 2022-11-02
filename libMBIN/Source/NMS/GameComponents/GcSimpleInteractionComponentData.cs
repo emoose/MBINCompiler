@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x5802CD099CBCFB6B, NameHash = 0xEAE36C86E1479AF5)]
+    [NMS(GUID = 0xBD7A58EA372E56B8, NameHash = 0xEAE36C86E1479AF5)]
     public class GcSimpleInteractionComponentData : NMSTemplate
     {
         // size: 0x24
@@ -75,13 +75,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x168 */ public NMSString0x20A ScanData;
         /* 0x188 */ public GcDiscoveryType ScanIcon;
         /* 0x18C */ public bool ActivateLocatorsFromRarity;
-        // size: 0x3
-        public enum RarityLocatorsEnum {
-            Common,
-            Uncommon,
-            Rare
-        }
-        [NMS(Size = 0x3, EnumType = typeof(RarityLocatorsEnum))]
+        [NMS(Size = 0x3, EnumType = typeof(GcRarity.RarityEnum))]
         /* 0x190 */ public NMSString0x10[] RarityLocators;
         /* 0x1C0 */ public List<GcInteractionBaseBuildingState> BaseBuildingTriggerActions;
         /* 0x1D0 */ public List<GcRewardMissionOverride> RewardOverrideTable;

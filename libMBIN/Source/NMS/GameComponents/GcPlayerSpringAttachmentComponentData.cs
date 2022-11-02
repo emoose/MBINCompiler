@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x367474B2655F5076, NameHash = 0xBF5506070D1A6102)]
+    [NMS(GUID = 0x3C038A38B51FEBBC, NameHash = 0xBF5506070D1A6102)]
     public class GcPlayerSpringAttachmentComponentData : NMSTemplate
     {
         /* 0x00 */ public bool Enabled;

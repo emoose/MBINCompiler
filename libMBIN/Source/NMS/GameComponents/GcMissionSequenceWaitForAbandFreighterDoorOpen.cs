@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x4DFA5FFAAFE6B182, NameHash = 0x3C3DF65980E5A451)]
+    [NMS(GUID = 0x865A8320564BB712, NameHash = 0x3C3DF65980E5A451)]
     public class GcMissionSequenceWaitForAbandFreighterDoorOpen : NMSTemplate
     {
         /* 0x000 */ public NMSString0x80 Message;

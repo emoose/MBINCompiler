@@ -2,7 +2,7 @@ using libMBIN.NMS.Toolkit;
 
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0x931A29826B925349, NameHash = 0x56E0EB96EB3713F0)]
+    [NMS(GUID = 0x25DA985683D5F067, NameHash = 0x56E0EB96EB3713F0)]
     public class TkGraphicsDetailPreset : NMSTemplate
     {
         /* 0x00 */ public TkGraphicsDetailTypes TextureQuality;

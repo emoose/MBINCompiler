@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xAD72055522079998, NameHash = 0x95028D8CB7957BEF)]
+    [NMS(GUID = 0x683CCC790F9F822, NameHash = 0x95028D8CB7957BEF)]
     public class GcAbandonedFreighterComponentData : NMSTemplate
     {
         /* 0x00 */ public TkModelResource DungeonRootScene;

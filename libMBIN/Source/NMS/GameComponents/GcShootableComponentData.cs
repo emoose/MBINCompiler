@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x86FCB52AB4EF505, NameHash = 0x387AC5FC8E642A15)]
+    [NMS(GUID = 0x3282BDE5F84E9FA0, NameHash = 0x387AC5FC8E642A15)]
     public class GcShootableComponentData : NMSTemplate
     {
         /* 0x00 */ public int Health;

@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x460A5242E45C4AF8, NameHash = 0x436337B25B8F877E)]
+    [NMS(GUID = 0x193F9AD69A3CC0FF, NameHash = 0x436337B25B8F877E)]
     public class GcSolarSystemTraderSpawnData : NMSTemplate
     {
         /* 0x00 */ public int MaxToSpawn;

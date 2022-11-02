@@ -4,17 +4,10 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(GUID = 0xD55E818E8B266EC3, NameHash = 0x1E09DD001FDA82F8)]
+    [NMS(GUID = 0x273F0B7B39FF493D, NameHash = 0x1E09DD001FDA82F8)]
     public class GcEnvironmentGlobals : NMSTemplate
     {
-        // size: 0x4
-        public enum LODSettingsEnum {
-            Low,
-            Medium,
-            High,
-            Ultra
-        }
-        [NMS(Size = 0x4, EnumType = typeof(LODSettingsEnum))]
+        [NMS(Size = 0x4, EnumType = typeof(TkGraphicsDetailTypes.GraphicDetailEnum))]
         /* 0x000 */ public TkLODSettingsData[] LODSettings;
         /* 0x250 */ public Vector2f SpaceBuildingTemperature;
         /* 0x260 */ public GcCloudProperties CloudProperties;

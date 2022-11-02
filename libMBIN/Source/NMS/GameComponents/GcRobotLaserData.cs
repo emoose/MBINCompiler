@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xF2A6C64121B1D193, NameHash = 0xAAC69095D4C233F5)]
+    [NMS(GUID = 0x55ED5CA88BF03FAD, NameHash = 0xAAC69095D4C233F5)]
     public class GcRobotLaserData : NMSTemplate
     {
         /* 0x00 */ public NMSString0x10 LaserID;

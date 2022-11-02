@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x45A0E050DAB66262, NameHash = 0xFB50309B36475BDE)]
+    [NMS(GUID = 0x60791D758631FA5E, NameHash = 0xFB50309B36475BDE)]
     public class GcSmokeBotSystemReport : NMSTemplate
     {
         /* 0x000 */ public ulong UA;

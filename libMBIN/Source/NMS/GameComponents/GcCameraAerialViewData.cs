@@ -2,7 +2,7 @@ using libMBIN.NMS.Toolkit;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x135475BEC6A4BDE9, NameHash = 0x7AB4D686179F9F82)]
+    [NMS(GUID = 0x82B81A91FF1AAE67, NameHash = 0x7AB4D686179F9F82)]
     public class GcCameraAerialViewData : NMSTemplate
     {
         /* 0x00 */ public float Time;

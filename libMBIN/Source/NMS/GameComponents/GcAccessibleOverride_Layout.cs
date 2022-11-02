@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xBDB1247667EEDE3E, NameHash = 0xCB6432BD8E0191A0)]
+    [NMS(GUID = 0x1FA8D1F5E4F82180, NameHash = 0xCB6432BD8E0191A0)]
     public class GcAccessibleOverride_Layout : NMSTemplate
     {
         // size: 0x5

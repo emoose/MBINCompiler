@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xD6887A15EB973C41, NameHash = 0x3A5D1C2419669AFF)]
+    [NMS(GUID = 0xFA02CAF6AA82D823, NameHash = 0x3A5D1C2419669AFF)]
     public class GcTerrainTextureSettings : NMSTemplate
     {
         /* 0x0 */ public float Brightness;

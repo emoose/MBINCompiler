@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x8FDBA424CB55A384, NameHash = 0xC52227A9653C40A8)]
+    [NMS(GUID = 0xD9B738007AAFCC26, NameHash = 0xC52227A9653C40A8)]
     public class GcMissionConditionInVR : NMSTemplate
     {
         /* 0x0 */ public bool NeedsHandControllers;

@@ -2,7 +2,7 @@ using libMBIN.NMS.Toolkit;
 
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0x7AACCA8A1F8AE79F, NameHash = 0xED10CD4D4540B757)]
+    [NMS(GUID = 0xA3DB8AB8BEEF030F, NameHash = 0xED10CD4D4540B757)]
     public class TkNGuiRectanglePulseEffect : NMSTemplate
     {
         /* 0x00 */ public float PulseWidth;

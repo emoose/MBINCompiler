@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.Globals
 {
-    [NMS(GUID = 0x37A021DF6D707809, NameHash = 0x9B12FDDE20DE4536)]
+    [NMS(GUID = 0xAABD3EED468AF125, NameHash = 0x9B12FDDE20DE4536)]
     public class GcRichPresenceGlobals : NMSTemplate
     {
         /* 0x00 */ public bool ShowOnScreen;

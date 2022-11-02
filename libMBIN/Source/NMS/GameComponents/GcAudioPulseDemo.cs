@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x267CDC1694674427, NameHash = 0xF13F97A441A8794A)]
+    [NMS(GUID = 0xA7288B79C7867FF2, NameHash = 0xF13F97A441A8794A)]
     public class GcAudioPulseDemo : NMSTemplate
     {
         /* 0x00 */ public float MixRateSeconds;

@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xE7FEDC1213C888C7, NameHash = 0x488F8DF6F4A99ACA)]
+    [NMS(GUID = 0xD09981B34619C2AE, NameHash = 0x488F8DF6F4A99ACA)]
     public class GcSpaceSkyColours : NMSTemplate
     {
         /* 0x00 */ public Colour CloudColour;

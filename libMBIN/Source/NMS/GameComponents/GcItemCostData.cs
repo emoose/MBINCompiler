@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x2C6EA5392999C687, NameHash = 0xA3976E1971095FC4)]
+    [NMS(GUID = 0x3F75FB6C7361C08B, NameHash = 0xA3976E1971095FC4)]
     public class GcItemCostData : NMSTemplate
     {
         /* 0x00 */ public NMSString0x10 ID;

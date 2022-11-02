@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x3E71C0C038386682, NameHash = 0xB732A8EFDEA74BA)]
+    [NMS(GUID = 0x4BE5EEB51B67AB01, NameHash = 0xB732A8EFDEA74BA)]
     public class GcProceduralProductWord : NMSTemplate
     {
         /* 0x00 */ public GcNameGeneratorWord Word;

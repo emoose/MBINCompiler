@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xE5F8BE3FDC17F3C2, NameHash = 0xE8C3B2237C130170)]
+    [NMS(GUID = 0x4E8AE6E84D2716DE, NameHash = 0xE8C3B2237C130170)]
     public class GcPlayerCharacterComponentData : NMSTemplate
     {
         /* 0x00 */ public List<GcCharacterJetpackEffect> JetpackEffects;

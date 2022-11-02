@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x6807D0364B187845, NameHash = 0xD03BA349FC9AC748)]
+    [NMS(GUID = 0xC6BFD2237AE39712, NameHash = 0xD03BA349FC9AC748)]
     public class GcPlayerSpaceshipAim : NMSTemplate
     {
         /* 0x00 */ public float AimAngleMin;

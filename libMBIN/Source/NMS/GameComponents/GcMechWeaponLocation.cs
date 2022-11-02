@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xD13E5E200C9ADC04, NameHash = 0x87D2DB7CF99E11A4)]
+    [NMS(GUID = 0xAC76F3CC1DD7BEEA, NameHash = 0x87D2DB7CF99E11A4)]
     public class GcMechWeaponLocation : NMSTemplate
     {
         // size: 0x4

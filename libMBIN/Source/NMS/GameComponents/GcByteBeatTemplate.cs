@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x4A35B9B8FCE6DD42, NameHash = 0xB764F802BDE36ADF)]
+    [NMS(GUID = 0xDC379BFBE7C52DA9, NameHash = 0xB764F802BDE36ADF)]
     public class GcByteBeatTemplate : NMSTemplate
     {
         /* 0x00 */ public float Weight;

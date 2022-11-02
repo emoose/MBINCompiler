@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x2ECC1844681E933E, NameHash = 0x8F7F2EBCF9C0EDF)]
+    [NMS(GUID = 0xF603C94E9951BFF1, NameHash = 0x8F7F2EBCF9C0EDF)]
     public class GcColouriseComponentData : NMSTemplate
     {
         /* 0x00 */ public Colour PrimaryColour;

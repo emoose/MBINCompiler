@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0x26B2A6E1D1D0EC94, NameHash = 0x42F1604851DA7F02)]
+    [NMS(GUID = 0x6D210250ED24025C, NameHash = 0x42F1604851DA7F02)]
     public class TkSketchConditions : NMSTemplate
     {
         // size: 0x6

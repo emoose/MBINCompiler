@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0xF9F37CB6A1E27E76, NameHash = 0xB92478FDE531276E)]
+    [NMS(GUID = 0x3A59B66B0DCEF8D1, NameHash = 0xB92478FDE531276E)]
     public class TkNoiseFlattenOptions : NMSTemplate
     {
         // size: 0x3

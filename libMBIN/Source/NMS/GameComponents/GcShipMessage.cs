@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xEAECF620845E40EE, NameHash = 0x7D370752342BB815)]
+    [NMS(GUID = 0x421065E59E69DDC4, NameHash = 0x7D370752342BB815)]
     public class GcShipMessage : NMSTemplate
     {
         // size: 0x2

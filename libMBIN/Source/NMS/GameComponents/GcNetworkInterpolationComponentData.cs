@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x10E4E1659E2ABD9B, NameHash = 0x1A8AEEF0DF2E3D8A)]
+    [NMS(GUID = 0x2BBCEBCC96798B00, NameHash = 0x1A8AEEF0DF2E3D8A)]
     public class GcNetworkInterpolationComponentData : NMSTemplate
     {
         // size: 0x3

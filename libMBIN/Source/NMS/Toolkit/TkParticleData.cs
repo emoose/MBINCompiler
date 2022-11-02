@@ -2,7 +2,7 @@ using libMBIN.NMS.Toolkit;
 
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0xABD2CCEA60EF4656, NameHash = 0xE9525144C4F949EB)]
+    [NMS(GUID = 0x4256E703FE75E2D6, NameHash = 0xE9525144C4F949EB)]
     public class TkParticleData : NMSTemplate
     {
         /* 0x000 */ public uint AudioEvent;

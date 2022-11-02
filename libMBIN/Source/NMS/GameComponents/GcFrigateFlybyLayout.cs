@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xF61A2AADC59DCA16, NameHash = 0xB1B9570C76B5EA49)]
+    [NMS(GUID = 0x4B6B8ABAF42184CE, NameHash = 0xB1B9570C76B5EA49)]
     public class GcFrigateFlybyLayout : NMSTemplate
     {
         /* 0x00 */ public GcFrigateFlybyType FlybyType;

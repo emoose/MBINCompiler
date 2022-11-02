@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x561705883B3C2556, NameHash = 0x1CD96DF6BD8E239C)]
+    [NMS(GUID = 0x15081673D33C2FDD, NameHash = 0x1CD96DF6BD8E239C)]
     public class GcFleetExpeditionSaveData : NMSTemplate
     {
         /* 0x000 */ public GcSeed Seed;

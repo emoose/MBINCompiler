@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x6093D382214F692D, NameHash = 0xB7FEFB0DFC120BF4)]
+    [NMS(GUID = 0x2800DC5C6AD3502, NameHash = 0xB7FEFB0DFC120BF4)]
     public class GcShipAIPlanetPatrolData : NMSTemplate
     {
         /* 0x00 */ public NMSString0x10 Squad;

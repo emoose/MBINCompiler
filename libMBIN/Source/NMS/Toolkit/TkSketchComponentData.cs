@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0x229D20001EB4BC5A, NameHash = 0xBE4097172440769E)]
+    [NMS(GUID = 0x2225CAABA327449F, NameHash = 0xBE4097172440769E)]
     public class TkSketchComponentData : NMSTemplate
     {
         /* 0x00 */ public float GraphPosX;

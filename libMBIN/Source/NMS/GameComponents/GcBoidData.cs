@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x4F4457FDB9B16E09, NameHash = 0xC455782DFAD32032)]
+    [NMS(GUID = 0xFC7E0C7C056BA1FA, NameHash = 0xC455782DFAD32032)]
     public class GcBoidData : NMSTemplate
     {
         /* 0x00 */ public float Coherence;

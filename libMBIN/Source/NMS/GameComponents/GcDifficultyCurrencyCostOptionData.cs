@@ -1,15 +1,9 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x8FFF784BE03AC324, NameHash = 0x9061069311B1AB2E)]
+    [NMS(GUID = 0x7142D10F99A9A2D5, NameHash = 0x9061069311B1AB2E)]
     public class GcDifficultyCurrencyCostOptionData : NMSTemplate
     {
-        // size: 0x3
-        public enum MultipliersEnum {
-            Units,
-            Nanites,
-            Specials
-        }
-        [NMS(Size = 0x3, EnumType = typeof(MultipliersEnum))]
+        [NMS(Size = 0x3, EnumType = typeof(GcCurrency.CurrencyEnum))]
         /* 0x00 */ public float[] Multipliers;
         // size: 0x3
         public enum FreeCostTypesEnum {

@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0x46FE92211FE98307, NameHash = 0xF3DC604B80A24AD)]
+    [NMS(GUID = 0xABFE480626D0DA90, NameHash = 0xF3DC604B80A24AD)]
     public class TkInputFrame : NMSTemplate
     {
         /* 0x00 */ public Vector2f LeftStick;

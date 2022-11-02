@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xE03B5DCACF43ADC3, NameHash = 0x4A57F915F84ABBCD)]
+    [NMS(GUID = 0x7D2E6ACCD0E0D8B3, NameHash = 0x4A57F915F84ABBCD)]
     public class GcAlienPuzzleMissionOverride : NMSTemplate
     {
         /* 0x00 */ public NMSString0x10 Mission;

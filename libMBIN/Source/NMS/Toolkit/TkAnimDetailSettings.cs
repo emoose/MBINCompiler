@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0x3E92534447257CA6, NameHash = 0x2FAF173AC809FC4C)]
+    [NMS(GUID = 0xA51F22D45DB57132, NameHash = 0x2FAF173AC809FC4C)]
     public class TkAnimDetailSettings : NMSTemplate
     {
         /* 0x00 */ public float MaxVisibleAngle;

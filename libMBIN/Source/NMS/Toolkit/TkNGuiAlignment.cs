@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0x10B96B017A55BF39, NameHash = 0xD1E7F0BE0B98FD48)]
+    [NMS(GUID = 0x449B34A7F2405390, NameHash = 0xD1E7F0BE0B98FD48)]
     public class TkNGuiAlignment : NMSTemplate
     {
         // size: 0x3

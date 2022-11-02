@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x67F87561F25DD6A0, NameHash = 0x891EECEF6BD18108)]
+    [NMS(GUID = 0x12267BD492BCDDB3, NameHash = 0x891EECEF6BD18108)]
     public class GcMissionConditionFeedingCreatures : NMSTemplate
     {
         /* 0x0 */ public int MinCreatures;

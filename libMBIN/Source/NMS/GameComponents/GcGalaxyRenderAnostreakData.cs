@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xC6A8297C630A22AF, NameHash = 0x916C4DD873AEFE6B)]
+    [NMS(GUID = 0x22BA384AD35E9A95, NameHash = 0x916C4DD873AEFE6B)]
     public class GcGalaxyRenderAnostreakData : NMSTemplate
     {
         /* 0x00 */ public Colour OuterColour;

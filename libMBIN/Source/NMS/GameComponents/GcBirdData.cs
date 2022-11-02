@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xC20488715E8586D1, NameHash = 0x840B4D8139B48954)]
+    [NMS(GUID = 0x84FD5986EB9ECD2E, NameHash = 0x840B4D8139B48954)]
     public class GcBirdData : NMSTemplate
     {
         /* 0x00 */ public float FlapSpeedMin;

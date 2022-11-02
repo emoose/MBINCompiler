@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0x84EB54591A477F3, NameHash = 0xA012CD9DA9418E41)]
+    [NMS(GUID = 0x8C6481D77E451B7E, NameHash = 0xA012CD9DA9418E41)]
     public class TkChordPathMapping : NMSTemplate
     {
         /* 0x000 */ public List<TkInputEnum> ButtonIds;

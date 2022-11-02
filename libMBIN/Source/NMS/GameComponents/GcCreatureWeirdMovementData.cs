@@ -2,7 +2,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xF208518170F7956C, NameHash = 0xBE42E310FC94C8E3)]
+    [NMS(GUID = 0x2823AE055070AEBD, NameHash = 0xBE42E310FC94C8E3)]
     public class GcCreatureWeirdMovementData : NMSTemplate
     {
         // size: 0x3

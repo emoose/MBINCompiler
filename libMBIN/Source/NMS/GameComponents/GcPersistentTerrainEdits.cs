@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x24AFDEE56923EAD3, NameHash = 0xC6506D02A6391EEB)]
+    [NMS(GUID = 0x92B41226FFC0D2D9, NameHash = 0xC6506D02A6391EEB)]
     public class GcPersistentTerrainEdits : NMSTemplate
     {
         /* 0x00 */ public ulong GalacticAddress;

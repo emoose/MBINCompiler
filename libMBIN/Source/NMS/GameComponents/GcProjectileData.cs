@@ -1,10 +1,10 @@
-using System;
 using libMBIN.NMS.GameComponents;
+using System;
 using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xF419B2E572A37408, NameHash = 0x98B648B5C054B7F7)]
+    [NMS(GUID = 0x7B5EEA8A509F46F6, NameHash = 0x98B648B5C054B7F7)]
     public class GcProjectileData : NMSTemplate
     {
         /* 0x000 */ public NMSString0x10 Id;

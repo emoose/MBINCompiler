@@ -1,7 +1,8 @@
 using System;
+
 namespace libMBIN.NMS.Globals
 {
-    [NMS(GUID = 0x3293706C84E09F2F, NameHash = 0xB62E6456DFE47836)]
+    [NMS(GUID = 0x3B5C9795769E2D27, NameHash = 0xB62E6456DFE47836)]
     public class TkGlobals : NMSTemplate
     {
         // size: 0x4

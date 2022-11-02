@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0x2562477FC204D168, NameHash = 0x18F53DCA811C8E56)]
+    [NMS(GUID = 0xB4CCAB85E91EEDD1, NameHash = 0x18F53DCA811C8E56)]
     public class TkGameSettings : NMSTemplate
     {
         // size: 0xF

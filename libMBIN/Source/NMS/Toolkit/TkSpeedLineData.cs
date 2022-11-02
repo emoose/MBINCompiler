@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0x5B2795E2FEF75E70, NameHash = 0xEC9FF9AD5EDADEFF)]
+    [NMS(GUID = 0xC1CE893B937954D4, NameHash = 0xEC9FF9AD5EDADEFF)]
     public class TkSpeedLineData : NMSTemplate
     {
         /* 0x00 */ public NMSString0x80 Material;

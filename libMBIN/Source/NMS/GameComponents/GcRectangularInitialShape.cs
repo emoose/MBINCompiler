@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xFA87654DE1245BCE, NameHash = 0xD1F40E0F6517D194)]
+    [NMS(GUID = 0xF031B23F4E47519, NameHash = 0xD1F40E0F6517D194)]
     public class GcRectangularInitialShape : NMSTemplate
     {
         /* 0x00 */ public Vector3f TopLineStart;

@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x8AAA1550E1C281E5, NameHash = 0xC39E8583E846A389)]
+    [NMS(GUID = 0xCCFBDA1406430E25, NameHash = 0xC39E8583E846A389)]
     public class GcCombatEffectsProperties : NMSTemplate
     {
         /* 0x0 */ public bool IsAffected;

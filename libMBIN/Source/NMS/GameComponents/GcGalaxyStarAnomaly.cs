@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xD930090CE3C00E66, NameHash = 0x6488969F6CD933A4)]
+    [NMS(GUID = 0xFCF659162BE3B139, NameHash = 0x6488969F6CD933A4)]
     public class GcGalaxyStarAnomaly : NMSTemplate
     {
         // size: 0x5

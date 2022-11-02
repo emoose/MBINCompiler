@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x1D1348AD9F68E484, NameHash = 0xDA00E84E26C162C5)]
+    [NMS(GUID = 0xE2A9AAD1785785D1, NameHash = 0xDA00E84E26C162C5)]
     public class GcMetaBallComponentData : NMSTemplate
     {
         /* 0x00 */ public NMSString0x80 File;

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x40E4B2CFB2236E44, NameHash = 0x8753450A435B1BC5)]
+    [NMS(GUID = 0x3BBDC22C7A6FAEDF, NameHash = 0x8753450A435B1BC5)]
     public class GcCostMultiItem : NMSTemplate
     {
         /* 0x00 */ public NMSString0x20A DisplayLocID;

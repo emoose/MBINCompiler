@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x7E5A94C7CE357745, NameHash = 0x6C4510BB243EFA64)]
+    [NMS(GUID = 0x71ADB08E257C403B, NameHash = 0x6C4510BB243EFA64)]
     public class GcPlayerStateData : NMSTemplate
     {
         /* 0x00000 */ public GcUniverseAddressData UniverseAddress;
@@ -74,176 +74,19 @@ namespace libMBIN.NMS.GameComponents
         /* 0x0A278 */ public int NextSurveyedEventPositionIndex;
         /* 0x0A280 */ public List<GcPlayerStatsGroup> Stats;
         /* 0x0A290 */ public List<GcTelemetryStat> TelemetryStats;
-        // size: 0xB
-        public enum StoredInteractionsEnum {
-            Distress_Signal,
-            Crate,
-            Destructable,
-            Terrain,
-            Cost,
-            Building,
-            Creature,
-            Maintenance,
-            Personal,
-            Personal_Maintenance,
-            FireteamSync
-        }
-        [NMS(Size = 0xB, EnumType = typeof(StoredInteractionsEnum))]
+        [NMS(Size = 0xB, EnumType = typeof(GcInteractionBufferType.InteractionBufferTypeEnum))]
         /* 0x0A2A0 */ public GcInteractionBuffer[] StoredInteractions;
         /* 0x0A3A8 */ public List<GcMaintenanceContainer> MaintenanceInteractions;
         /* 0x0A3B8 */ public List<GcMaintenanceContainer> PersonalMaintenanceInteractions;
         /* 0x0A3C8 */ public List<ulong> VisitedSystems;
-        // size: 0x6
-        public enum HazardEnum {
-            None,
-            NoOxygen,
-            ExtremeHeat,
-            ExtremeCold,
-            ToxicGas,
-            Radiation
-        }
-        [NMS(Size = 0x6, EnumType = typeof(HazardEnum))]
+        [NMS(Size = 0x6, EnumType = typeof(GcPlayerHazardType.HazardEnum))]
         /* 0x0A3D8 */ public float[] Hazard;
         /* 0x0A3F0 */ public int BoltAmmo;
         /* 0x0A3F4 */ public int ScatterAmmo;
         /* 0x0A3F8 */ public int PulseAmmo;
         /* 0x0A3FC */ public int LaserAmmo;
         /* 0x0A400 */ public Vector4f FirstSpawnPosition;
-        // size: 0x83
-        public enum SavedInteractionIndiciesEnum {
-            None,
-            Shop,
-            NPC,
-            NPC_Secondary,
-            NPC_Anomaly,
-            NPC_Anomaly_Secondary,
-            Ship,
-            Outpost,
-            SpaceStation,
-            RadioTower,
-            Monolith,
-            Factory,
-            AbandonedShip,
-            Harvester,
-            Observatory,
-            TradingPost,
-            DistressBeacon,
-            Portal,
-            Plaque,
-            AtlasStation,
-            AbandonedBuildings,
-            WeaponTerminal,
-            SuitTerminal,
-            SignalScanner,
-            Teleporter_Base,
-            Teleporter_Station,
-            ClaimBase,
-            NPC_Freighter_Captain,
-            NPC_HIRE_Weapons,
-            NPC_HIRE_Weapons_Wait,
-            NPC_HIRE_Farmer,
-            NPC_HIRE_Farmer_Wait,
-            NPC_HIRE_Builder,
-            NPC_HIRE_Builder_Wait,
-            NPC_HIRE_Vehicles,
-            NPC_HIRE_Vehicles_Wait,
-            MessageBeacon,
-            NPC_HIRE_Scientist,
-            NPC_HIRE_Scientist_Wait,
-            NPC_Recruit,
-            NPC_Freighter_Captain_Secondary,
-            NPC_Recruit_Secondary,
-            Vehicle,
-            MessageModule,
-            TechShop,
-            VehicleRaceStart,
-            BuildingShop,
-            MissionGiver,
-            HoloHub,
-            HoloExplorer,
-            HoloSceptic,
-            HoloNoone,
-            PortalRuneEntry,
-            PortalActivate,
-            CrashedFreighter,
-            GraveInCave,
-            GlitchyStoryBox,
-            NetworkPlayer,
-            NetworkMonument,
-            AnomalyComputer,
-            AtlasPlinth,
-            Epilogue,
-            GuildEnvoy,
-            ManageFleet,
-            ManageExpeditions,
-            Frigate,
-            CustomiseCharacter,
-            CustomiseShip,
-            CustomiseWeapon,
-            CustomiseVehicle,
-            ClaimBaseAnywhere,
-            FleetNavigator,
-            FleetCommandPost,
-            StoryUtility,
-            MPMissionGiver,
-            SpecialsShop,
-            WaterRuin,
-            LocationScanner,
-            ByteBeat,
-            NPC_CrashSite,
-            NPC_Scavenger,
-            BaseGridPart,
-            NPC_Freighter_Crew,
-            NPC_Freighter_Crew_Owned,
-            AbandonedShip_With_NPC,
-            ShipPilot,
-            NexusMilestones,
-            NexusDailyMission,
-            CreatureFeeder,
-            ExoticExtra1,
-            ExoticExtra2,
-            ExoticExtra3,
-            ExoticExtra4,
-            ExoticExtra5,
-            ExoticExtra6,
-            MapShop,
-            NPC_Closure,
-            StorageContainer,
-            Teleporter_Nexus,
-            ShipSalvage,
-            ByteBeatSwitch,
-            AbandonedFreighterIntro,
-            AbandonedFreighterEnd,
-            AbandonedFreighterProcText,
-            AbandonedFreighterCaptLog,
-            AbandonedFreighterCrewLog,
-            AbandonedFreighterShop,
-            CustomiseFreighter,
-            LibraryVault,
-            LibraryMainTerminal,
-            LibraryMap,
-            WeaponUpgrade,
-            Pet,
-            Creature,
-            FreighterGalacticMap,
-            RecipeStation,
-            StationCore,
-            NPC_Settlement_SpecialWorker,
-            NPC_Settlement_Secondary,
-            SettlementHub,
-            SettlementBuildingSite,
-            SettlementAdminTerminal,
-            FriendlyDrone,
-            DroneHive,
-            RocketLocker,
-            FrigateCaptain,
-            PirateShop,
-            NPC_PirateSecondary,
-            NPC_FreighterBase_SquadronPilot,
-            NPC_FreighterBase_FrigateCaptain,
-            NPC_FreighterBase_Worker
-        }
-        [NMS(Size = 0x83, EnumType = typeof(SavedInteractionIndiciesEnum))]
+        [NMS(Size = 0x83, EnumType = typeof(GcInteractionType.InteractionTypeEnum))]
         /* 0x0A410 */ public GcSavedInteractionRaceData[] SavedInteractionIndicies;
         /* 0x0B888 */ public List<GcSavedInteractionDialogData> SavedInteractionDialogTable;
         /* 0x0B898 */ public List<NMSString0x20A> InteractionProgressTable;
@@ -298,15 +141,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x0DA68 */ public List<NMSString0x10> SeenBaseBuildingObjects;
         /* 0x0DA78 */ public List<GcPersistentBBObjectData> BaseBuildingObjects;
         /* 0x0DA90 */ public GcTerrainEditsBuffer TerrainEditData;
-        // size: 0x5
-        public enum NPCWorkersEnum {
-            WeaponsExpert,
-            Farmer,
-            Builder,
-            Vehicles,
-            Scientist
-        }
-        [NMS(Size = 0x5, EnumType = typeof(NPCWorkersEnum))]
+        [NMS(Size = 0x5, EnumType = typeof(GcNPCHabitationType.NPCHabitationTypeEnum))]
         /* 0x4A210 */ public GcNPCWorkerData[] NPCWorkers;
         /* 0x4B070 */ public List<GcPersistentBase> PersistentPlayerBases;
         /* 0x4B080 */ public List<GcTeleportEndpoint> TeleportEndpoints;
@@ -339,17 +174,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x4C3A8 */ public GcInventoryLayout RocketLockerLayout;
         /* 0x4C3C8 */ public GcInventoryContainer RocketLockerInventory;
         /* 0x4C520 */ public GcResourceElement CurrentFreighterNPC;
-        // size: 0x7
-        public enum VehicleOwnershipEnum {
-            Buggy,
-            Bike,
-            Truck,
-            WheeledBike,
-            Hovercraft,
-            Submarine,
-            Mech
-        }
-        [NMS(Size = 0x7, EnumType = typeof(VehicleOwnershipEnum))]
+        [NMS(Size = 0x7, EnumType = typeof(GcVehicleType.VehicleTypeEnum))]
         /* 0x4C7D0 */ public GcPlayerOwnershipData[] VehicleOwnership;
         /* 0x4F9B0 */ public int PrimaryVehicle;
         [NMS(Size = 0x9)]
@@ -371,30 +196,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x53B10 */ public Vector4f PortalMarkerPosition_Offset;
         /* 0x53B20 */ public GcPlayerWeapons StartingPrimaryWeapon;
         /* 0x53B24 */ public GcPlayerWeapons StartingSecondaryWeapon;
-        // size: 0x14
-        public enum CharacterCustomisationDataEnum {
-            Player,
-            Vehicle,
-            Weapon,
-            Ship_01,
-            Ship_02,
-            Ship_03,
-            Ship_04,
-            Ship_05,
-            Ship_06,
-            Vehicle_Bike,
-            Vehicle_Truck,
-            Vehicle_WheeledBike,
-            Vehicle_Hovercraft,
-            Vehicle_Submarine,
-            Vehicle_Mech,
-            Freighter,
-            Pet,
-            Ship_07,
-            Ship_08,
-            Ship_09
-        }
-        [NMS(Size = 0x14, EnumType = typeof(CharacterCustomisationDataEnum))]
+        [NMS(Size = 0x14, EnumType = typeof(GcCustomisationComponentData.CustomisationDataTypeEnum))]
         /* 0x53B28 */ public GcCharacterCustomisationSaveData[] CharacterCustomisationData;
         [NMS(Size = 0x9)]
         /* 0x54208 */ public bool[] ShipUsesLegacyColours;
@@ -413,13 +215,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x54380 */ public GcPlayerSpawnStateData MultiplayerSpawn;
         /* 0x54450 */ public List<GcRepairTechData> RepairTechBuffer;
         /* 0x54460 */ public ulong MultiplayerPrivileges;
-        // size: 0x3
-        public enum HotActionsEnum {
-            OnFoot,
-            InShip,
-            InExocraft
-        }
-        [NMS(Size = 0x3, EnumType = typeof(HotActionsEnum))]
+        [NMS(Size = 0x3, EnumType = typeof(GcHotActionMenuTypes.HotActionMenuTypesEnum))]
         /* 0x54468 */ public GcHotActionsSaveData[] HotActions;
         /* 0x54918 */ public ulong LastUABeforePortalWarp;
         /* 0x54920 */ public ulong StoryPortalSeed;
@@ -448,18 +244,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x57E80 */ public GcSettlementState[] SettlementStatesV2;
         /* 0x77280 */ public int SettlementStateRingBufferIndexV2;
         /* 0x77284 */ public bool NextLoadSpawnsWithFreshStart;
-        // size: 0x8
-        public enum SeenStoriesEnum {
-            Traders,
-            Warriors,
-            Explorers,
-            Robots,
-            Atlas,
-            Diplomats,
-            Exotics,
-            None
-        }
-        [NMS(Size = 0x8, EnumType = typeof(SeenStoriesEnum))]
+        [NMS(Size = 0x8, EnumType = typeof(GcAlienRace.AlienRaceEnum))]
         /* 0x77288 */ public GcStoryPageSeenDataArray[] SeenStories;
     }
 }

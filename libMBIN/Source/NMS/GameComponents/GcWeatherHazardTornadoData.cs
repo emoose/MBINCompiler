@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x35EECEB5C135BA81, NameHash = 0x10FCB49CBC61F8AA)]
+    [NMS(GUID = 0xFAA7C51DA9C614E8, NameHash = 0x10FCB49CBC61F8AA)]
     public class GcWeatherHazardTornadoData : NMSTemplate
     {
         /* 0x00 */ public float SuckInRadius;

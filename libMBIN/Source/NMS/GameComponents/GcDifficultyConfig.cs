@@ -2,76 +2,18 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x26B3A1181AA50B2F, NameHash = 0xA688E4255C8FED76)]
+    [NMS(GUID = 0x3BEF0D9E1B9202D0, NameHash = 0xA688E4255C8FED76)]
     public class GcDifficultyConfig : NMSTemplate
     {
         /* 0x0000 */ public NMSString0x20A PresetLocId;
-        // size: 0x7
-        public enum PresetOptionLocIdsEnum {
-            Invalid,
-            Custom,
-            Normal,
-            Creative,
-            Relaxed,
-            Survival,
-            Permadeath
-        }
-        [NMS(Size = 0x7, EnumType = typeof(PresetOptionLocIdsEnum))]
+        [NMS(Size = 0x7, EnumType = typeof(GcDifficultyPresetType.DifficultyPresetTypeEnum))]
         /* 0x0020 */ public NMSString0x20A[] PresetOptionLocIds;
-        // size: 0x7
-        public enum PresetsEnum {
-            Invalid,
-            Custom,
-            Normal,
-            Creative,
-            Relaxed,
-            Survival,
-            Permadeath
-        }
-        [NMS(Size = 0x7, EnumType = typeof(PresetsEnum))]
+        [NMS(Size = 0x7, EnumType = typeof(GcDifficultyPresetType.DifficultyPresetTypeEnum))]
         /* 0x0100 */ public GcDifficultySettingsData[] Presets;
         /* 0x0368 */ public GcDifficultySettingsData PermadeathMinSettings;
-        // size: 0x4
-        public enum UILayoutEnum {
-            Survival,
-            Crafting,
-            Combat,
-            Ease
-        }
-        [NMS(Size = 0x4, EnumType = typeof(UILayoutEnum))]
+        [NMS(Size = 0x4, EnumType = typeof(GcDifficultyOptionGroups.DifficultyOptionGroupEnum))]
         /* 0x03C0 */ public GcDifficultyOptionUIGroup[] UILayout;
-        // size: 0x1C
-        public enum CommonSettingsDataEnum {
-            SettingsLocked,
-            InventoriesAlwaysInRange,
-            AllSlotsUnlocked,
-            WarpDriveRequirements,
-            CraftingIsFree,
-            TutorialEnabled,
-            StartWithAllItemsKnown,
-            BaseAutoPower,
-            DeathConsequences,
-            DamageReceived,
-            DamageGiven,
-            ActiveSurvivalBars,
-            HazardDrain,
-            EnergyDrain,
-            SubstanceCollection,
-            InventoryStackLimits,
-            ChargingRequirements,
-            FuelUse,
-            LaunchFuelCost,
-            CurrencyCost,
-            ScannerRecharge,
-            ReputationGain,
-            CreatureHostility,
-            SpaceCombat,
-            GroundCombat,
-            ItemShopAvailablity,
-            SprintingCost,
-            BreakTechOnDamage
-        }
-        [NMS(Size = 0x1C, EnumType = typeof(CommonSettingsDataEnum))]
+        [NMS(Size = 0x1C, EnumType = typeof(GcDifficultySettingEnum.DifficultySettingEnum))]
         /* 0x0480 */ public GcDifficultySettingCommonData[] CommonSettingsData;
         /* 0x1440 */ public int AllSlotsUnlockedStartingSuitSlots;
         /* 0x1444 */ public int AllSlotsUnlockedStartingSuitTechSlots;
@@ -80,347 +22,85 @@ namespace libMBIN.NMS.GameComponents
         /* 0x1450 */ public int AllSlotsUnlockedStartingShipTechSlots;
         /* 0x1458 */ public GcDifficultyStartWithAllItemsKnownOptionData StartWithAllItemsKnownDisabledData;
         /* 0x1768 */ public GcDifficultyStartWithAllItemsKnownOptionData StartWithAllItemsKnownEnabledData;
-        // size: 0x3
-        public enum CreatureHostilityOptionLocIdsEnum {
-            NeverAttack,
-            AttackIfProvoked,
-            FullEcosystem
-        }
-        [NMS(Size = 0x3, EnumType = typeof(CreatureHostilityOptionLocIdsEnum))]
+        [NMS(Size = 0x3, EnumType = typeof(GcCreatureHostilityDifficultyOption.CreatureHostilityDifficultyEnum))]
         /* 0x1A78 */ public NMSString0x20A[] CreatureHostilityOptionLocIds;
-        // size: 0x4
-        public enum DeathConsequencesOptionLocIdsEnum {
-            None,
-            ItemGrave,
-            DestroyItems,
-            DestroySave
-        }
-        [NMS(Size = 0x4, EnumType = typeof(DeathConsequencesOptionLocIdsEnum))]
+        [NMS(Size = 0x4, EnumType = typeof(GcDeathConsequencesDifficultyOption.DeathConsequencesDifficultyEnum))]
         /* 0x1AD8 */ public NMSString0x20A[] DeathConsequencesOptionLocIds;
-        // size: 0x4
-        public enum DamageReceivedOptionLocIdsEnum {
-            None,
-            Low,
-            Normal,
-            High
-        }
-        [NMS(Size = 0x4, EnumType = typeof(DamageReceivedOptionLocIdsEnum))]
+        [NMS(Size = 0x4, EnumType = typeof(GcDamageReceivedDifficultyOption.DamageReceivedDifficultyEnum))]
         /* 0x1B58 */ public NMSString0x20A[] DamageReceivedOptionLocIds;
-        // size: 0x4
-        public enum DamageReceivedMultipliersEnum {
-            None,
-            Low,
-            Normal,
-            High
-        }
-        [NMS(Size = 0x4, EnumType = typeof(DamageReceivedMultipliersEnum))]
+        [NMS(Size = 0x4, EnumType = typeof(GcDamageReceivedDifficultyOption.DamageReceivedDifficultyEnum))]
         /* 0x1BD8 */ public float[] DamageReceivedMultipliers;
-        // size: 0x3
-        public enum DamageGivenOptionLocIdsEnum {
-            High,
-            Normal,
-            Low
-        }
-        [NMS(Size = 0x3, EnumType = typeof(DamageGivenOptionLocIdsEnum))]
+        [NMS(Size = 0x3, EnumType = typeof(GcDamageGivenDifficultyOption.DamageGivenDifficultyEnum))]
         /* 0x1BE8 */ public NMSString0x20A[] DamageGivenOptionLocIds;
-        // size: 0x3
-        public enum DamageGivenMultipliersEnum {
-            High,
-            Normal,
-            Low
-        }
-        [NMS(Size = 0x3, EnumType = typeof(DamageGivenMultipliersEnum))]
+        [NMS(Size = 0x3, EnumType = typeof(GcDamageGivenDifficultyOption.DamageGivenDifficultyEnum))]
         /* 0x1C48 */ public float[] DamageGivenMultipliers;
-        // size: 0x4
-        public enum ActiveSurvivalBarsOptionLocIdsEnum {
-            None,
-            HealthOnly,
-            HealthAndHazard,
-            All
-        }
-        [NMS(Size = 0x4, EnumType = typeof(ActiveSurvivalBarsOptionLocIdsEnum))]
+        [NMS(Size = 0x4, EnumType = typeof(GcActiveSurvivalBarsDifficultyOption.ActiveSurvivalBarsDifficultyEnum))]
         /* 0x1C58 */ public NMSString0x20A[] ActiveSurvivalBarsOptionLocIds;
-        // size: 0x3
-        public enum HazardDrainOptionLocIdsEnum {
-            Slow,
-            Normal,
-            Fast
-        }
-        [NMS(Size = 0x3, EnumType = typeof(HazardDrainOptionLocIdsEnum))]
+        [NMS(Size = 0x3, EnumType = typeof(GcHazardDrainDifficultyOption.HazardDrainDifficultyEnum))]
         /* 0x1CD8 */ public NMSString0x20A[] HazardDrainOptionLocIds;
-        // size: 0x3
-        public enum HazardDrainMultipliersEnum {
-            Slow,
-            Normal,
-            Fast
-        }
-        [NMS(Size = 0x3, EnumType = typeof(HazardDrainMultipliersEnum))]
+        [NMS(Size = 0x3, EnumType = typeof(GcHazardDrainDifficultyOption.HazardDrainDifficultyEnum))]
         /* 0x1D38 */ public float[] HazardDrainMultipliers;
-        // size: 0x3
-        public enum EnergyDrainOptionLocIdsEnum {
-            Slow,
-            Normal,
-            Fast
-        }
-        [NMS(Size = 0x3, EnumType = typeof(EnergyDrainOptionLocIdsEnum))]
+        [NMS(Size = 0x3, EnumType = typeof(GcEnergyDrainDifficultyOption.EnergyDrainDifficultyEnum))]
         /* 0x1D48 */ public NMSString0x20A[] EnergyDrainOptionLocIds;
-        // size: 0x3
-        public enum EnergyDrainMultipliersEnum {
-            Slow,
-            Normal,
-            Fast
-        }
-        [NMS(Size = 0x3, EnumType = typeof(EnergyDrainMultipliersEnum))]
+        [NMS(Size = 0x3, EnumType = typeof(GcEnergyDrainDifficultyOption.EnergyDrainDifficultyEnum))]
         /* 0x1DA8 */ public float[] EnergyDrainMultipliers;
-        // size: 0x3
-        public enum SubstanceCollectionOptionLocIdsEnum {
-            High,
-            Normal,
-            Low
-        }
-        [NMS(Size = 0x3, EnumType = typeof(SubstanceCollectionOptionLocIdsEnum))]
+        [NMS(Size = 0x3, EnumType = typeof(GcSubstanceCollectionDifficultyOption.SubstanceCollectionDifficultyEnum))]
         /* 0x1DB8 */ public NMSString0x20A[] SubstanceCollectionOptionLocIds;
-        // size: 0x3
-        public enum SubstanceCollectionMultipliersEnum {
-            High,
-            Normal,
-            Low
-        }
-        [NMS(Size = 0x3, EnumType = typeof(SubstanceCollectionMultipliersEnum))]
+        [NMS(Size = 0x3, EnumType = typeof(GcSubstanceCollectionDifficultyOption.SubstanceCollectionDifficultyEnum))]
         /* 0x1E18 */ public float[] SubstanceCollectionMultipliers;
-        // size: 0x3
-        public enum SubstanceCollectionLaserAmountEnum {
-            High,
-            Normal,
-            Low
-        }
-        [NMS(Size = 0x3, EnumType = typeof(SubstanceCollectionLaserAmountEnum))]
+        [NMS(Size = 0x3, EnumType = typeof(GcSubstanceCollectionDifficultyOption.SubstanceCollectionDifficultyEnum))]
         /* 0x1E24 */ public int[] SubstanceCollectionLaserAmount;
-        // size: 0x3
-        public enum InventoryStackLimitsOptionLocIdsEnum {
-            High,
-            Normal,
-            Low
-        }
-        [NMS(Size = 0x3, EnumType = typeof(InventoryStackLimitsOptionLocIdsEnum))]
+        [NMS(Size = 0x3, EnumType = typeof(GcInventoryStackLimitsDifficultyOption.InventoryStackLimitsDifficultyEnum))]
         /* 0x1E30 */ public NMSString0x20A[] InventoryStackLimitsOptionLocIds;
-        // size: 0x3
-        public enum InventoryStackLimitsOptionDataEnum {
-            High,
-            Normal,
-            Low
-        }
-        [NMS(Size = 0x3, EnumType = typeof(InventoryStackLimitsOptionDataEnum))]
+        [NMS(Size = 0x3, EnumType = typeof(GcInventoryStackLimitsDifficultyOption.InventoryStackLimitsDifficultyEnum))]
         /* 0x1E90 */ public GcDifficultyInventoryStackSizeOptionData[] InventoryStackLimitsOptionData;
-        // size: 0x4
-        public enum ChargingRequirementsOptionLocIdsEnum {
-            None,
-            Low,
-            Normal,
-            High
-        }
-        [NMS(Size = 0x4, EnumType = typeof(ChargingRequirementsOptionLocIdsEnum))]
+        [NMS(Size = 0x4, EnumType = typeof(GcChargingRequirementsDifficultyOption.ChargingRequirementsDifficultyEnum))]
         /* 0x1FC8 */ public NMSString0x20A[] ChargingRequirementsOptionLocIds;
-        // size: 0x4
-        public enum ChargingRequirementsMultipliersEnum {
-            None,
-            Low,
-            Normal,
-            High
-        }
-        [NMS(Size = 0x4, EnumType = typeof(ChargingRequirementsMultipliersEnum))]
+        [NMS(Size = 0x4, EnumType = typeof(GcChargingRequirementsDifficultyOption.ChargingRequirementsDifficultyEnum))]
         /* 0x2048 */ public float[] ChargingRequirementsMultipliers;
-        // size: 0x4
-        public enum FuelUseOptionLocIdsEnum {
-            Free,
-            Cheap,
-            Normal,
-            Expensive
-        }
-        [NMS(Size = 0x4, EnumType = typeof(FuelUseOptionLocIdsEnum))]
+        [NMS(Size = 0x4, EnumType = typeof(GcFuelUseDifficultyOption.FuelUseDifficultyEnum))]
         /* 0x2058 */ public NMSString0x20A[] FuelUseOptionLocIds;
-        // size: 0x4
-        public enum FuelUseOptionDataEnum {
-            Free,
-            Cheap,
-            Normal,
-            Expensive
-        }
-        [NMS(Size = 0x4, EnumType = typeof(FuelUseOptionDataEnum))]
+        [NMS(Size = 0x4, EnumType = typeof(GcFuelUseDifficultyOption.FuelUseDifficultyEnum))]
         /* 0x20D8 */ public GcDifficultyFuelUseOptionData[] FuelUseOptionData;
-        // size: 0x4
-        public enum LaunchFuelCostOptionLocIdsEnum {
-            Free,
-            Low,
-            Normal,
-            High
-        }
-        [NMS(Size = 0x4, EnumType = typeof(LaunchFuelCostOptionLocIdsEnum))]
+        [NMS(Size = 0x4, EnumType = typeof(GcLaunchFuelCostDifficultyOption.LaunchFuelCostDifficultyEnum))]
         /* 0x2138 */ public NMSString0x20A[] LaunchFuelCostOptionLocIds;
-        // size: 0x4
-        public enum LaunchFuelCostMultipliersEnum {
-            Free,
-            Low,
-            Normal,
-            High
-        }
-        [NMS(Size = 0x4, EnumType = typeof(LaunchFuelCostMultipliersEnum))]
+        [NMS(Size = 0x4, EnumType = typeof(GcLaunchFuelCostDifficultyOption.LaunchFuelCostDifficultyEnum))]
         /* 0x21B8 */ public float[] LaunchFuelCostMultipliers;
-        // size: 0x4
-        public enum ShipSummoningFuelCostMultipliersEnum {
-            Free,
-            Low,
-            Normal,
-            High
-        }
-        [NMS(Size = 0x4, EnumType = typeof(ShipSummoningFuelCostMultipliersEnum))]
+        [NMS(Size = 0x4, EnumType = typeof(GcLaunchFuelCostDifficultyOption.LaunchFuelCostDifficultyEnum))]
         /* 0x21C8 */ public float[] ShipSummoningFuelCostMultipliers;
-        // size: 0x4
-        public enum CurrencyCostOptionLocIdsEnum {
-            Free,
-            Cheap,
-            Normal,
-            Expensive
-        }
-        [NMS(Size = 0x4, EnumType = typeof(CurrencyCostOptionLocIdsEnum))]
+        [NMS(Size = 0x4, EnumType = typeof(GcCurrencyCostDifficultyOption.CurrencyCostDifficultyEnum))]
         /* 0x21D8 */ public NMSString0x20A[] CurrencyCostOptionLocIds;
-        // size: 0x4
-        public enum CurrencyCostOptionDataEnum {
-            Free,
-            Cheap,
-            Normal,
-            Expensive
-        }
-        [NMS(Size = 0x4, EnumType = typeof(CurrencyCostOptionDataEnum))]
+        [NMS(Size = 0x4, EnumType = typeof(GcCurrencyCostDifficultyOption.CurrencyCostDifficultyEnum))]
         /* 0x2258 */ public GcDifficultyCurrencyCostOptionData[] CurrencyCostOptionData;
-        // size: 0x3
-        public enum ItemShopAvailabilityOptionLocIdsEnum {
-            High,
-            Normal,
-            Low
-        }
-        [NMS(Size = 0x3, EnumType = typeof(ItemShopAvailabilityOptionLocIdsEnum))]
+        [NMS(Size = 0x3, EnumType = typeof(GcItemShopAvailabilityDifficultyOption.ItemShopAvailabilityDifficultyEnum))]
         /* 0x22B8 */ public NMSString0x20A[] ItemShopAvailabilityOptionLocIds;
-        // size: 0x3
-        public enum ItemShopAvailabilityOptionDataEnum {
-            High,
-            Normal,
-            Low
-        }
-        [NMS(Size = 0x3, EnumType = typeof(ItemShopAvailabilityOptionDataEnum))]
+        [NMS(Size = 0x3, EnumType = typeof(GcItemShopAvailabilityDifficultyOption.ItemShopAvailabilityDifficultyEnum))]
         /* 0x2318 */ public GcItemShopAvailabilityDifficultyOptionData[] ItemShopAvailabilityOptionData;
-        // size: 0x4
-        public enum ScannerRechargeOptionLocIdsEnum {
-            VeryFast,
-            Fast,
-            Normal,
-            Slow
-        }
-        [NMS(Size = 0x4, EnumType = typeof(ScannerRechargeOptionLocIdsEnum))]
+        [NMS(Size = 0x4, EnumType = typeof(GcScannerRechargeDifficultyOption.ScannerRechargeDifficultyEnum))]
         /* 0x2348 */ public NMSString0x20A[] ScannerRechargeOptionLocIds;
-        // size: 0x4
-        public enum ScannerRechargeMultipliersEnum {
-            VeryFast,
-            Fast,
-            Normal,
-            Slow
-        }
-        [NMS(Size = 0x4, EnumType = typeof(ScannerRechargeMultipliersEnum))]
+        [NMS(Size = 0x4, EnumType = typeof(GcScannerRechargeDifficultyOption.ScannerRechargeDifficultyEnum))]
         /* 0x23C8 */ public float[] ScannerRechargeMultipliers;
-        // size: 0x4
-        public enum ReputationGainOptionLocIdsEnum {
-            VeryFast,
-            Fast,
-            Normal,
-            Slow
-        }
-        [NMS(Size = 0x4, EnumType = typeof(ReputationGainOptionLocIdsEnum))]
+        [NMS(Size = 0x4, EnumType = typeof(GcReputationGainDifficultyOption.ReputationGainDifficultyEnum))]
         /* 0x23D8 */ public NMSString0x20A[] ReputationGainOptionLocIds;
-        // size: 0x4
-        public enum ReputationGainMultipliersEnum {
-            VeryFast,
-            Fast,
-            Normal,
-            Slow
-        }
-        [NMS(Size = 0x4, EnumType = typeof(ReputationGainMultipliersEnum))]
+        [NMS(Size = 0x4, EnumType = typeof(GcReputationGainDifficultyOption.ReputationGainDifficultyEnum))]
         /* 0x2458 */ public float[] ReputationGainMultipliers;
-        // size: 0x4
-        public enum SpaceCombatOptionLocIdsEnum {
-            Off,
-            Slow,
-            Normal,
-            Fast
-        }
-        [NMS(Size = 0x4, EnumType = typeof(SpaceCombatOptionLocIdsEnum))]
+        [NMS(Size = 0x4, EnumType = typeof(GcCombatTimerDifficultyOption.CombatTimerDifficultyOptionEnum))]
         /* 0x2468 */ public NMSString0x20A[] SpaceCombatOptionLocIds;
-        // size: 0x4
-        public enum SpaceCombatMultipliersEnum {
-            Off,
-            Slow,
-            Normal,
-            Fast
-        }
-        [NMS(Size = 0x4, EnumType = typeof(SpaceCombatMultipliersEnum))]
+        [NMS(Size = 0x4, EnumType = typeof(GcCombatTimerDifficultyOption.CombatTimerDifficultyOptionEnum))]
         /* 0x24E8 */ public float[] SpaceCombatMultipliers;
-        // size: 0x4
-        public enum GroundCombatOptionLocIdsEnum {
-            Off,
-            Slow,
-            Normal,
-            Fast
-        }
-        [NMS(Size = 0x4, EnumType = typeof(GroundCombatOptionLocIdsEnum))]
+        [NMS(Size = 0x4, EnumType = typeof(GcCombatTimerDifficultyOption.CombatTimerDifficultyOptionEnum))]
         /* 0x24F8 */ public NMSString0x20A[] GroundCombatOptionLocIds;
-        // size: 0x4
-        public enum GroundCombatMultipliersEnum {
-            Off,
-            Slow,
-            Normal,
-            Fast
-        }
-        [NMS(Size = 0x4, EnumType = typeof(GroundCombatMultipliersEnum))]
+        [NMS(Size = 0x4, EnumType = typeof(GcCombatTimerDifficultyOption.CombatTimerDifficultyOptionEnum))]
         /* 0x2578 */ public float[] GroundCombatMultipliers;
-        // size: 0x4
-        public enum SentinelTimeOutMultipliersEnum {
-            Off,
-            Slow,
-            Normal,
-            Fast
-        }
-        [NMS(Size = 0x4, EnumType = typeof(SentinelTimeOutMultipliersEnum))]
+        [NMS(Size = 0x4, EnumType = typeof(GcCombatTimerDifficultyOption.CombatTimerDifficultyOptionEnum))]
         /* 0x2588 */ public float[] SentinelTimeOutMultipliers;
-        // size: 0x3
-        public enum SprintingOptionLocIdsEnum {
-            Free,
-            Low,
-            Full
-        }
-        [NMS(Size = 0x3, EnumType = typeof(SprintingOptionLocIdsEnum))]
+        [NMS(Size = 0x3, EnumType = typeof(GcSprintingCostDifficultyOption.SprintingCostDifficultyEnum))]
         /* 0x2598 */ public NMSString0x20A[] SprintingOptionLocIds;
-        // size: 0x3
-        public enum SprintingCostMultipliersEnum {
-            Free,
-            Low,
-            Full
-        }
-        [NMS(Size = 0x3, EnumType = typeof(SprintingCostMultipliersEnum))]
+        [NMS(Size = 0x3, EnumType = typeof(GcSprintingCostDifficultyOption.SprintingCostDifficultyEnum))]
         /* 0x25F8 */ public float[] SprintingCostMultipliers;
-        // size: 0x3
-        public enum BreakTechOnDamageOptionLocIdsEnum {
-            None,
-            Low,
-            High
-        }
-        [NMS(Size = 0x3, EnumType = typeof(BreakTechOnDamageOptionLocIdsEnum))]
+        [NMS(Size = 0x3, EnumType = typeof(GcBreakTechOnDamageDifficultyOption.BreakTechOnDamageProbabilityEnum))]
         /* 0x2608 */ public NMSString0x20A[] BreakTechOnDamageOptionLocIds;
-        // size: 0x3
-        public enum BreakTechOnDamageMultipliersEnum {
-            None,
-            Low,
-            High
-        }
-        [NMS(Size = 0x3, EnumType = typeof(BreakTechOnDamageMultipliersEnum))]
+        [NMS(Size = 0x3, EnumType = typeof(GcBreakTechOnDamageDifficultyOption.BreakTechOnDamageProbabilityEnum))]
         /* 0x2668 */ public float[] BreakTechOnDamageMultipliers;
     }
 }

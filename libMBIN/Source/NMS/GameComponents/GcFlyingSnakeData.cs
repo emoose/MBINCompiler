@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x1A17963717B304A1, NameHash = 0x8AE34D6AD8F2EB14)]
+    [NMS(GUID = 0x6C0474D10DD1F99C, NameHash = 0x8AE34D6AD8F2EB14)]
     public class GcFlyingSnakeData : NMSTemplate
     {
         /* 0x00 */ public float CircleSpeed;

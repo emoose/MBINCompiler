@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x9E4C596FF4EF9DEB, NameHash = 0x340529EE9BE0F315)]
+    [NMS(GUID = 0x3267A1FE6946176F, NameHash = 0x340529EE9BE0F315)]
     public class GcNPCHabitationComponentData : NMSTemplate
     {
         /* 0x00 */ public NMSString0x10 NPCSpawnLocator;

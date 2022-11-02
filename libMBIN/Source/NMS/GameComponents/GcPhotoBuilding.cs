@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xFA18C6BA7927319B, NameHash = 0x2535C1B3F76633D)]
+    [NMS(GUID = 0x7C7D2578FE93157F, NameHash = 0x2535C1B3F76633D)]
     public class GcPhotoBuilding : NMSTemplate
     {
         // size: 0xD

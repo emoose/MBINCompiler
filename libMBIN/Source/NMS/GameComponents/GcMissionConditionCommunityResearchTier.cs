@@ -2,7 +2,7 @@ using libMBIN.NMS.Toolkit;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x8A12FEDC69FBE966, NameHash = 0x2CFD4438CD6B0BDC)]
+    [NMS(GUID = 0x58FBECCACE94E49B, NameHash = 0x2CFD4438CD6B0BDC)]
     public class GcMissionConditionCommunityResearchTier : NMSTemplate
     {
         /* 0x0 */ public float CompletedTiers;

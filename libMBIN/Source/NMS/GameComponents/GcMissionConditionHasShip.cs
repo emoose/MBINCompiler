@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xEF41B6F6AD669376, NameHash = 0x9511DDC4A0C718D3)]
+    [NMS(GUID = 0x777056D7C4ED48D7, NameHash = 0x9511DDC4A0C718D3)]
     public class GcMissionConditionHasShip : NMSTemplate
     {
         /* 0x0 */ public GcSpaceshipClasses ShipType;

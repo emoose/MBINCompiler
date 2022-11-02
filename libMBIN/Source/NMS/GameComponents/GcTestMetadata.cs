@@ -1,9 +1,10 @@
 using libMBIN.NMS.GameComponents;
+using System;
 using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x906412E6BFF5E2BF, NameHash = 0xCE965FAFD6BBF99E)]
+    [NMS(GUID = 0x978C88C00E087D3B, NameHash = 0xCE965FAFD6BBF99E)]
     public class GcTestMetadata : NMSTemplate
     {
         /* 0x000 */ public bool TestBool;
@@ -63,64 +64,10 @@ namespace libMBIN.NMS.GameComponents
         }
         [NMS(Size = 0x4, EnumType = typeof(TestEnumArrayEnum))]
         /* 0x638 */ public float[] TestEnumArray;
-        // size: 0x34
-        public enum TestExternalEnumArrayEnum {
-            None,
-            TerrainResource,
-            Shelter,
-            Abandoned,
-            Terminal,
-            Shop,
-            Outpost,
-            Waypoint,
-            Beacon,
-            RadioTower,
-            Observatory,
-            Depot,
-            Factory,
-            Harvester,
-            Plaque,
-            Monolith,
-            Portal,
-            Ruin,
-            Debris,
-            DamagedMachine,
-            DistressSignal,
-            LandingPad,
-            Base,
-            MissionTower,
-            CrashedFreighter,
-            GraveInCave,
-            StoryGlitch,
-            TreasureRuins,
-            GameStartSpawn,
-            WaterCrashedFreighter,
-            WaterTreasureRuins,
-            WaterAbandoned,
-            WaterDistressSignal,
-            NPCDistressSignal,
-            NPCDebris,
-            LargeBuilding,
-            Settlement_Hub,
-            Settlement_LandingZone,
-            Settlement_Bar,
-            Settlement_Tower,
-            Settlement_Market,
-            Settlement_Small,
-            Settlement_SmallIndustrial,
-            Settlement_Medium,
-            Settlement_Large,
-            Settlement_Monument,
-            Settlement_SheriffsOffice,
-            Settlement_Double,
-            Settlement_Farm,
-            Settlement_Factory,
-            Settlement_Clump,
-            DroneHive
-        }
-        [NMS(Size = 0x34, EnumType = typeof(TestExternalEnumArrayEnum))]
+        [NMS(Size = 0x34, EnumType = typeof(GcBuildingClassification.BuildingClassEnum))]
         /* 0x648 */ public float[] TestExternalEnumArray;
         // size: 0x4
+        [Flags]
         public enum TestFlagsEnum : uint {
             None = 0x0,
             Flag1 = 0x1,

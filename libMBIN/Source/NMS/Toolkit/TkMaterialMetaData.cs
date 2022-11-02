@@ -2,7 +2,7 @@ using libMBIN.NMS.Toolkit;
 
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0x86066780075E1F18, NameHash = 0xE39CB7AA4D818260)]
+    [NMS(GUID = 0x7D099C5BCD4E1786, NameHash = 0xE39CB7AA4D818260)]
     public class TkMaterialMetaData : NMSTemplate
     {
         /* 0x000 */ public NMSString0x80 ExternalMaterial;

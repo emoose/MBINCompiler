@@ -2,7 +2,7 @@ using libMBIN.NMS.Toolkit;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xC940DA4B0BE8A4BB, NameHash = 0x30CD85DD787F512A)]
+    [NMS(GUID = 0xEA2AED35A90BBF6, NameHash = 0x30CD85DD787F512A)]
     public class GcTileTypeSet : NMSTemplate
     {
         /* 0x0 */ public float Probability;

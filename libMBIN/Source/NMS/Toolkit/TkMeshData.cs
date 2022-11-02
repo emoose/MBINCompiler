@@ -5,12 +5,10 @@ using System.Diagnostics;
 using System.IO;
 using System.Reflection;
 
-using libMBIN.NMS.Toolkit;
-using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0x990A0508C5DCEEE6, NameHash = 0xF671716161E708E3)]
+    [NMS(GUID = 0xA45155ABFDB4FF9C, NameHash = 0xF671716161E708E3)]
     public class TkMeshData : NMSTemplate
     {
         [NMS(Size = 0x80, Padding = 0xFE)]
@@ -23,7 +21,7 @@ namespace libMBIN.NMS.Toolkit
         public override object CustomDeserialize( BinaryReader reader, Type field, NMSAttribute settings, FieldInfo fieldInfo ) {
             var fieldName = fieldInfo.Name;
             switch (fieldName)
-            {
+                {
                 case nameof(MeshDataStream):
                     long listPosition = reader.BaseStream.Position;
 
@@ -43,10 +41,10 @@ namespace libMBIN.NMS.Toolkit
         }
 
         public override bool CustomSerialize(BinaryWriter writer, Type field, object fieldData, NMSAttribute settings, FieldInfo fieldInfo, ref List<Tuple<long, object>> additionalData, ref int addtDataIndex)
-        {
+            {
             var fieldName = fieldInfo.Name;
             switch (fieldName)
-            {
+                {
                 case nameof(MeshDataStream):
                     writer.Align(8, fieldName );
 

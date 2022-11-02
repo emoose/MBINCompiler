@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xBF9AD056B83B4043, NameHash = 0x458BD6BED0D5C445)]
+    [NMS(GUID = 0x6378EF9DFDD950D8, NameHash = 0x458BD6BED0D5C445)]
     public class GcPlanetRingData : NMSTemplate
     {
         /* 0x00 */ public bool HasRings;

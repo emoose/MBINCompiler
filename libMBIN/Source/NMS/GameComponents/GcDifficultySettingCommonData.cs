@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xC25D6C36073B1B3A, NameHash = 0xA98FDB01046545AD)]
+    [NMS(GUID = 0x9F5B75DEFDD1C3C3, NameHash = 0xA98FDB01046545AD)]
     public class GcDifficultySettingCommonData : NMSTemplate
     {
         /* 0x00 */ public GcDifficultySettingType SettingType;

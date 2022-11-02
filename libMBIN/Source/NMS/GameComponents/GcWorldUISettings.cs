@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xB4F9156DFE56219D, NameHash = 0x1805828080FC646E)]
+    [NMS(GUID = 0xE966123EFDB7E7C3, NameHash = 0x1805828080FC646E)]
     public class GcWorldUISettings : NMSTemplate
     {
         /* 0x00 */ public float UIWorldQuadOffset;

@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xCC7FC0FE5B81DBE1, NameHash = 0xEF85A351ABA84D63)]
+    [NMS(GUID = 0x1E9865B1A44F4190, NameHash = 0xEF85A351ABA84D63)]
     public class GcGrabbableData : NMSTemplate
     {
         /* 0x00 */ public NMSString0x20 LocatorName;

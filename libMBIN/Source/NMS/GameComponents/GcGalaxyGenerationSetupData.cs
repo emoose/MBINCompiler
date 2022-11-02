@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x139125167CF73FEB, NameHash = 0x74E6E445263E30C1)]
+    [NMS(GUID = 0x584CA0FA3AB8FEE2, NameHash = 0x74E6E445263E30C1)]
     public class GcGalaxyGenerationSetupData : NMSTemplate
     {
         /* 0x00 */ public float SpiralFormChance;

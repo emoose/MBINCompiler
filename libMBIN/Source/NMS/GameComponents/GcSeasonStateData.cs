@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x52DA52ECE795581F, NameHash = 0x4BC716CF849F5A74)]
+    [NMS(GUID = 0x7E9BD92D465EB9CF, NameHash = 0x4BC716CF849F5A74)]
     public class GcSeasonStateData : NMSTemplate
     {
         /* 0x00 */ public List<float> MilestoneValues;

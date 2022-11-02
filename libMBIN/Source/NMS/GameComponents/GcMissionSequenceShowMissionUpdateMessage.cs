@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xFCF0CBC38A5AD177, NameHash = 0x2431FBC75DE4AEB6)]
+    [NMS(GUID = 0xB995229DA1EE5C29, NameHash = 0x2431FBC75DE4AEB6)]
     public class GcMissionSequenceShowMissionUpdateMessage : NMSTemplate
     {
         // size: 0x2

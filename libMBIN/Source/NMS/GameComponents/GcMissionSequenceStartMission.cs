@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x18075B181EC35F1E, NameHash = 0x5BB6B87A77237F5E)]
+    [NMS(GUID = 0x1901D4BDC06F210, NameHash = 0x5BB6B87A77237F5E)]
     public class GcMissionSequenceStartMission : NMSTemplate
     {
         /* 0x00 */ public NMSString0x80 Message;

@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0xFAFFDE9C9C0261C1, NameHash = 0x34E815E84B84D42B)]
+    [NMS(GUID = 0x6B0CCC967FBBBDDD, NameHash = 0x34E815E84B84D42B)]
     public class TkFeaturesEnum : NMSTemplate
     {
         // size: 0x7
