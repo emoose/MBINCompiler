@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x7417707B793B2ED1, NameHash = 0xCF22467E41623053)]
+    [NMS(GUID = 0xA3CEBA10AF0B416, NameHash = 0xCF22467E41623053)]
     public class GcDebugCameraEntry : NMSTemplate
     {
         /* 0x00 */ public Vector3f Offset;

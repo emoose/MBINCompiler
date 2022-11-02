@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x4A23A530852BCA7E, NameHash = 0x6310315CF52D5A45)]
+    [NMS(GUID = 0x1AB96F6CE70EFC1F, NameHash = 0x6310315CF52D5A45)]
     public class GcTriggerFeedbackState : NMSTemplate
     {
         /* 0x00 */ public NMSString0x10 Id;

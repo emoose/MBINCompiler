@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xC451365E9DC4DD6A, NameHash = 0x3FBB55C99E667F9E)]
+    [NMS(GUID = 0xD2ADDC20255D0B3B, NameHash = 0x3FBB55C99E667F9E)]
     public class GcBaseLinkGridData : NMSTemplate
     {
         /* 0x00 */ public GcBaseLinkGridConnectionData Connection;

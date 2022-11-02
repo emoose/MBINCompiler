@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0x70F15FEDCAE3687B, NameHash = 0x20F7F01AF38D19B2)]
+    [NMS(GUID = 0xB2E33B4EA830F35C, NameHash = 0x20F7F01AF38D19B2)]
     public class TkImGuiSettings : NMSTemplate
     {
         /* 0x000 */ public Colour BackgroundColour;

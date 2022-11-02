@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xFA18B90B26D0E9D4, NameHash = 0xFA9A306017ED3640)]
+    [NMS(GUID = 0x4246FD0878C23044, NameHash = 0xFA9A306017ED3640)]
     public class GcRewardFrigateDamageResponse : NMSTemplate
     {
         // size: 0x6

@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xD01EF801E878D8F5, NameHash = 0x5980B3D90F168F60)]
+    [NMS(GUID = 0x605CEF56BB06DFA7, NameHash = 0x5980B3D90F168F60)]
     public class GcScannerRechargeDifficultyOption : NMSTemplate
     {
         // size: 0x4

@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xFB212B0D1A5AF93A, NameHash = 0x7F6183B8DF97F0B3)]
+    [NMS(GUID = 0x3E11257013670AC3, NameHash = 0x7F6183B8DF97F0B3)]
     public class GcBiomeCloudSettings : NMSTemplate
     {
         /* 0x00 */ public float MinCover;

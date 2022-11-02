@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(GUID = 0x71394DB0768F731E, NameHash = 0x49E4A0E330E783EE)]
+    [NMS(GUID = 0xE7F66542665BE1A0, NameHash = 0x49E4A0E330E783EE)]
     public class GcPlayerGlobals : NMSTemplate
     {
         /* 0x0000 */ public bool ForceFreighterProcTechRandom;

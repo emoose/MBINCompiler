@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0xF37ACDDBA9FD878F, NameHash = 0x250B60FD6373D170)]
+    [NMS(GUID = 0x7CD197891754B9EB, NameHash = 0x250B60FD6373D170)]
     public class TkNGuiGraphicStyleData : NMSTemplate
     {
         /* 0x00 */ public float PaddingX;

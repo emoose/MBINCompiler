@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xA762E30993D934E3, NameHash = 0xCD8F8BFF2399836A)]
+    [NMS(GUID = 0xCAFE9EDE26AF1CC1, NameHash = 0xCD8F8BFF2399836A)]
     public class GcResourceCollectEffect : NMSTemplate
     {
         /* 0x00 */ public float PlayerOffset;

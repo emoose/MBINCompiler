@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xEA0B4D7494AE4965, NameHash = 0x6E9F63DB3D3055)]
+    [NMS(GUID = 0xB6EA81161254F2AA, NameHash = 0x6E9F63DB3D3055)]
     public class GcFriendlyDroneChatType : NMSTemplate
     {
         // size: 0x5

@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xAFD832D5AAAFFA2A, NameHash = 0x76DA44862CDF100D)]
+    [NMS(GUID = 0xC563924D43DB9D6B, NameHash = 0x76DA44862CDF100D)]
     public class GcGalaxyCameraData : NMSTemplate
     {
         /* 0x00 */ public float CameraFOV;

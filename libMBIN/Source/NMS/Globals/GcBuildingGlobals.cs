@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(GUID = 0xF59FA872AF34CECE, NameHash = 0xCFD86CFD7BD870B1)]
+    [NMS(GUID = 0x229E9AC00C1BF683, NameHash = 0xCFD86CFD7BD870B1)]
     public class GcBuildingGlobals : NMSTemplate
     {
         /* 0x0000 */ public Vector3f BuildingPartPreviewOffset;
@@ -16,46 +16,13 @@ namespace libMBIN.NMS.Globals
         /* 0x0028 */ public float BuildingPartPreviewRadius;
         /* 0x002C */ public float BuildingPartPreviewPitch;
         /* 0x0030 */ public float BuildingPartPreviewRotateSpeed;
-        // size: 0x4
-        public enum ActiveLodDistancesEnum {
-            Low,
-            Medium,
-            High,
-            Ultra
-        }
-        [NMS(Size = 0x4, EnumType = typeof(ActiveLodDistancesEnum))]
+        [NMS(Size = 0x4, EnumType = typeof(TkGraphicsDetailTypes.GraphicDetailEnum))]
         /* 0x0034 */ public TkLODDistances[] ActiveLodDistances;
-        // size: 0x4
-        public enum InactiveLodDistancesEnum {
-            Low,
-            Medium,
-            High,
-            Ultra
-        }
-        [NMS(Size = 0x4, EnumType = typeof(InactiveLodDistancesEnum))]
+        [NMS(Size = 0x4, EnumType = typeof(TkGraphicsDetailTypes.GraphicDetailEnum))]
         /* 0x0084 */ public TkLODDistances[] InactiveLodDistances;
         /* 0x00D4 */ public TkTextureResource ScreenSpaceRotationIcon;
         /* 0x0158 */ public TkTextureResource ScreenSpaceRotationGlow;
-        // size: 0x10
-        public enum IconsEnum {
-            Place,
-            ChangeColour,
-            FreeRotate,
-            Scale,
-            SnapRotate,
-            Move,
-            Duplicate,
-            Delete,
-            ToggleBuildCam,
-            ToggleSnappingAndCollision,
-            ToggleSelectionMode,
-            ToggleWiringMode,
-            ViewRelatives,
-            CyclePart,
-            PlaceWire,
-            CycleRotateMode
-        }
-        [NMS(Size = 0x10, EnumType = typeof(IconsEnum))]
+        [NMS(Size = 0x10, EnumType = typeof(GcBuildMenuOption.BuildMenuOptionEnum))]
         /* 0x01DC */ public GcBuildMenuIconSet[] Icons;
         /* 0x125C */ public float PowerlineSnapDistance;
         /* 0x1260 */ public float HologramDistanceMultiplier;
@@ -206,23 +173,9 @@ namespace libMBIN.NMS.Globals
         /* 0x14B4 */ public Vector2f BuildingPlacementScaleMinMax;
         /* 0x14BC */ public float InactiveVisibleComplexityFactor;
         /* 0x14C0 */ public bool DebugForceShowInactives;
-        // size: 0x4
-        public enum TotalPlanetFrameTimeForComplexityEnum {
-            Low,
-            Medium,
-            High,
-            Ultra
-        }
-        [NMS(Size = 0x4, EnumType = typeof(TotalPlanetFrameTimeForComplexityEnum))]
+        [NMS(Size = 0x4, EnumType = typeof(TkGraphicsDetailTypes.GraphicDetailEnum))]
         /* 0x14C4 */ public float[] TotalPlanetFrameTimeForComplexity;
-        // size: 0x4
-        public enum TotalSpaceFrameTimeForComplexityEnum {
-            Low,
-            Medium,
-            High,
-            Ultra
-        }
-        [NMS(Size = 0x4, EnumType = typeof(TotalSpaceFrameTimeForComplexityEnum))]
+        [NMS(Size = 0x4, EnumType = typeof(TkGraphicsDetailTypes.GraphicDetailEnum))]
         /* 0x14D4 */ public float[] TotalSpaceFrameTimeForComplexity;
         /* 0x14E4 */ public float MinPercentageNodesBufferFree;
         /* 0x14E8 */ public float MinLoadingPercentageNodesBufferFree;

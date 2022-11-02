@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x47874E22D3FBC790, NameHash = 0x941FCFA867A41357)]
+    [NMS(GUID = 0xD40B3D5A4D9902F1, NameHash = 0x941FCFA867A41357)]
     public class GcNetworkPlayerMarkerComponentData : NMSTemplate
     {
 

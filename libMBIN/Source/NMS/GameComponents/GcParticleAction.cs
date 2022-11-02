@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x616B3DCF51C081DB, NameHash = 0x88C11D6208F25864)]
+    [NMS(GUID = 0x485DCE7CBEDE05A2, NameHash = 0x88C11D6208F25864)]
     public class GcParticleAction : NMSTemplate
     {
         /* 0x00 */ public NMSString0x10 Effect;

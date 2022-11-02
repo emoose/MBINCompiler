@@ -2,19 +2,11 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x675D83BD10A417B6, NameHash = 0x48A0FEC50BBF269C)]
+    [NMS(GUID = 0x1E52FBB66969A329, NameHash = 0x48A0FEC50BBF269C)]
     public class GcExpeditionEventData : NMSTemplate
     {
         /* 0x000 */ public NMSString0x20A ID;
-        // size: 0x5
-        public enum StatContributionEnum {
-            Combat,
-            Exploration,
-            Mining,
-            Diplomacy,
-            Balanced
-        }
-        [NMS(Size = 0x5, EnumType = typeof(StatContributionEnum))]
+        [NMS(Size = 0x5, EnumType = typeof(GcExpeditionCategory.ExpeditionCategoryEnum))]
         /* 0x020 */ public float[] StatContribution;
         /* 0x034 */ public int DifficultyModifier;
         /* 0x038 */ public int DifficultyVarianceModifier;

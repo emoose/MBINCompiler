@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x56E9F4FD69E0DE84, NameHash = 0xA2AEA53FED6497EC)]
+    [NMS(GUID = 0xBBE115ED0ACDDDAD, NameHash = 0xA2AEA53FED6497EC)]
     public class GcWeatherOptions : NMSTemplate
     {
         // size: 0x10

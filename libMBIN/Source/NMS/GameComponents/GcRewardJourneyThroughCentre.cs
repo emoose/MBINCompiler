@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xF0196F209D21EB12, NameHash = 0x1D30BD6C3E0FC228)]
+    [NMS(GUID = 0xEC32041BE142CE32, NameHash = 0x1D30BD6C3E0FC228)]
     public class GcRewardJourneyThroughCentre : NMSTemplate
     {
         // size: 0x5

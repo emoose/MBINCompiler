@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x83DF9924AAB4C52A, NameHash = 0xEEACA2899046E3A1)]
+    [NMS(GUID = 0xFCE99D1949CD480A, NameHash = 0xEEACA2899046E3A1)]
     public class GcCapeLikeInitialShape : NMSTemplate
     {
         /* 0x00 */ public float TopRadius;

@@ -2,7 +2,7 @@ using libMBIN.NMS.Toolkit;
 
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0xAC8ABF0FF573A7C, NameHash = 0x5DBD3B5170282610)]
+    [NMS(GUID = 0xA9ABFAD84B6EA258, NameHash = 0x5DBD3B5170282610)]
     public class TkControllerSpecification : NMSTemplate
     {
         /* 0x00 */ public NMSString0x10 Id;

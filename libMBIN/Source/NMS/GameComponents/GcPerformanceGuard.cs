@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xB804EB5670D334BD, NameHash = 0xC88FD2BBB93553F9)]
+    [NMS(GUID = 0x33774AD7F1EBEB91, NameHash = 0xC88FD2BBB93553F9)]
     public class GcPerformanceGuard : NMSTemplate
     {
         /* 0x0 */ public float Radius;

@@ -2,16 +2,10 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xC0C793FFA12CE763, NameHash = 0x55F9EF59F3B21D8)]
+    [NMS(GUID = 0x27A88BDEEE5ED818, NameHash = 0x55F9EF59F3B21D8)]
     public class GcCreaturePetTraitRanges : NMSTemplate
     {
-        // size: 0x3
-        public enum TraitRangesEnum {
-            Helpfulness,
-            Aggression,
-            Independence
-        }
-        [NMS(Size = 0x3, EnumType = typeof(TraitRangesEnum))]
+        [NMS(Size = 0x3, EnumType = typeof(GcCreaturePetTraits.PetTraitEnum))]
         /* 0x0 */ public GcCreaturePetTraitRange[] TraitRanges;
     }
 }

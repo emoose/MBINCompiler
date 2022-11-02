@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x2639B637EB1A04F2, NameHash = 0x96E42AD217EA55B2)]
+    [NMS(GUID = 0x317CC475080CF8F1, NameHash = 0x96E42AD217EA55B2)]
     public class GcPlanetCloudProperties : NMSTemplate
     {
         /* 0x00 */ public GcSeed Seed;

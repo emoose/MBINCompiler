@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xC4AFAE16849B79D3, NameHash = 0x21C58A0DDEF4EC87)]
+    [NMS(GUID = 0x64A4CA5EBA458232, NameHash = 0x21C58A0DDEF4EC87)]
     public class GcCloudProperties : NMSTemplate
     {
         /* 0x00 */ public float HorizonCoverageStart;

@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x4C14489B52A92050, NameHash = 0x68C0F45A086C1EB)]
+    [NMS(GUID = 0x6AD3CEF92BE2D1A5, NameHash = 0x68C0F45A086C1EB)]
     public class GcDoShipEscort : NMSTemplate
     {
         /* 0x00 */ public bool MatchRole;

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(GUID = 0xCA8C490826A0A433, NameHash = 0xC45203411E9AFE95)]
+    [NMS(GUID = 0x11C7F129B383BD91, NameHash = 0xC45203411E9AFE95)]
     public class GcSpaceshipGlobals : NMSTemplate
     {
         /* 0x0000 */ public float ShieldLeechMul;

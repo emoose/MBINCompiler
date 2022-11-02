@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x6C0DB468518D5E74, NameHash = 0x184558FBF0A370E2)]
+    [NMS(GUID = 0x88C51EBA7406AE10, NameHash = 0x184558FBF0A370E2)]
     public class GcOutpostComponentData : NMSTemplate
     {
         /* 0x00 */ public bool Anomaly;

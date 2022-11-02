@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x34E46A2140A63B57, NameHash = 0x651218B208D538A0)]
+    [NMS(GUID = 0x15776A9491BAFF8D, NameHash = 0x651218B208D538A0)]
     public class GcMissionConditionAbandonedOrEmptySystem : NMSTemplate
     {
         // size: 0x3

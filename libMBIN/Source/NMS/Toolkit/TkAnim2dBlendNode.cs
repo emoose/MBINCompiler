@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0x1B8A8FEEDBCC6340, NameHash = 0xB08E12209E446AC4)]
+    [NMS(GUID = 0x3D986C559A7C523E, NameHash = 0xB08E12209E446AC4)]
     public class TkAnim2dBlendNode : NMSTemplate
     {
         /* 0x00 */ public NMSString0x10 NodeId;

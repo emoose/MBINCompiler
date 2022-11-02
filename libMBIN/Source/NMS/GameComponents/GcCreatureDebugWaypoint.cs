@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x98B79D0E3A5D1787, NameHash = 0x4C03886F1A1C1DF7)]
+    [NMS(GUID = 0xF308B3FC00EF34F, NameHash = 0x4C03886F1A1C1DF7)]
     public class GcCreatureDebugWaypoint : NMSTemplate
     {
         /* 0x00 */ public Vector3f Position;

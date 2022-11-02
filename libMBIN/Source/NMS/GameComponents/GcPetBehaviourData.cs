@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xEBDA69BE8CCA86E7, NameHash = 0x309337FC0812738C)]
+    [NMS(GUID = 0x1605E4AB343449E7, NameHash = 0x309337FC0812738C)]
     public class GcPetBehaviourData : NMSTemplate
     {
         /* 0x00 */ public bool ReactiveBehaviour;
@@ -24,12 +24,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x28 */ public List<GcPetFollowUpBehaviour> FollowUpBehaviours;
         /* 0x38 */ public List<GcPetBehaviourTraitModifier> TraitBehaviourModifiers;
         /* 0x48 */ public List<GcPetBehaviourMoodModifier> MoodBehaviourModifiers;
-        // size: 0x2
-        public enum MoodModifyOnCompleteEnum {
-            Hungry,
-            Lonely
-        }
-        [NMS(Size = 0x2, EnumType = typeof(MoodModifyOnCompleteEnum))]
+        [NMS(Size = 0x2, EnumType = typeof(GcCreaturePetMood.PetMoodEnum))]
         /* 0x58 */ public float[] MoodModifyOnComplete;
         /* 0x60 */ public NMSString0x20A LabelText;
     }

@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x8D50AB1EC49C90E8, NameHash = 0x73783FC8636BAB3E)]
+    [NMS(GUID = 0xDD73BB6ECCA3C950, NameHash = 0x73783FC8636BAB3E)]
     public class GcAtlasDownloadType : NMSTemplate
     {
         // size: 0x4

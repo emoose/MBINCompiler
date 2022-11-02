@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x7777570EFFE16F34, NameHash = 0x29C73977774C3241)]
+    [NMS(GUID = 0x95ED2A834A5572E3, NameHash = 0x29C73977774C3241)]
     public class GcStateTimeEvent : NMSTemplate
     {
         /* 0x0 */ public float Seconds;

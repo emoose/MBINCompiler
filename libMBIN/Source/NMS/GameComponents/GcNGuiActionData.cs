@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x8AB614E47861119A, NameHash = 0x2D0ED597896EB5AF)]
+    [NMS(GUID = 0xFC3DBD4403921B16, NameHash = 0x2D0ED597896EB5AF)]
     public class GcNGuiActionData : NMSTemplate
     {
         /* 0x00 */ public NMSString0x10 LayerID;

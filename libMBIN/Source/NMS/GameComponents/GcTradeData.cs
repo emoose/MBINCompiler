@@ -2,7 +2,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x8AAD82F7812779CF, NameHash = 0x66FAEFAF4E8E7167)]
+    [NMS(GUID = 0x5D6914999AB83F9E, NameHash = 0x66FAEFAF4E8E7167)]
     public class GcTradeData : NMSTemplate
     {
         /* 0x00 */ public List<NMSString0x10> AlwaysPresentProducts;
@@ -17,68 +17,19 @@ namespace libMBIN.NMS.GameComponents
         /* 0x54 */ public float SellPriceIncreaseGreenThreshold;
         /* 0x58 */ public float SellPriceDecreaseRedThreshold;
         /* 0x5C */ public bool ShowSeasonRewards;
-        // size: 0x4
-        public enum MinAmountOfProductAvailableEnum {
-            Poor,
-            Average,
-            Wealthy,
-            Pirate
-        }
-        [NMS(Size = 0x4, EnumType = typeof(MinAmountOfProductAvailableEnum))]
+        [NMS(Size = 0x4, EnumType = typeof(GcWealthClass.WealthClassEnum))]
         /* 0x60 */ public int[] MinAmountOfProductAvailable;
-        // size: 0x4
-        public enum MaxAmountOfProductAvailableEnum {
-            Poor,
-            Average,
-            Wealthy,
-            Pirate
-        }
-        [NMS(Size = 0x4, EnumType = typeof(MaxAmountOfProductAvailableEnum))]
+        [NMS(Size = 0x4, EnumType = typeof(GcWealthClass.WealthClassEnum))]
         /* 0x70 */ public int[] MaxAmountOfProductAvailable;
-        // size: 0x4
-        public enum MinAmountOfSubstanceAvailableEnum {
-            Poor,
-            Average,
-            Wealthy,
-            Pirate
-        }
-        [NMS(Size = 0x4, EnumType = typeof(MinAmountOfSubstanceAvailableEnum))]
+        [NMS(Size = 0x4, EnumType = typeof(GcWealthClass.WealthClassEnum))]
         /* 0x80 */ public int[] MinAmountOfSubstanceAvailable;
-        // size: 0x4
-        public enum MaxAmountOfSubstanceAvailableEnum {
-            Poor,
-            Average,
-            Wealthy,
-            Pirate
-        }
-        [NMS(Size = 0x4, EnumType = typeof(MaxAmountOfSubstanceAvailableEnum))]
+        [NMS(Size = 0x4, EnumType = typeof(GcWealthClass.WealthClassEnum))]
         /* 0x90 */ public int[] MaxAmountOfSubstanceAvailable;
-        // size: 0x4
-        public enum MinExtraSystemProductsEnum {
-            Poor,
-            Average,
-            Wealthy,
-            Pirate
-        }
-        [NMS(Size = 0x4, EnumType = typeof(MinExtraSystemProductsEnum))]
+        [NMS(Size = 0x4, EnumType = typeof(GcWealthClass.WealthClassEnum))]
         /* 0xA0 */ public int[] MinExtraSystemProducts;
-        // size: 0x4
-        public enum MaxExtraSystemProductsEnum {
-            Poor,
-            Average,
-            Wealthy,
-            Pirate
-        }
-        [NMS(Size = 0x4, EnumType = typeof(MaxExtraSystemProductsEnum))]
+        [NMS(Size = 0x4, EnumType = typeof(GcWealthClass.WealthClassEnum))]
         /* 0xB0 */ public int[] MaxExtraSystemProducts;
-        // size: 0x4
-        public enum TradeProductsPriceImprovementsEnum {
-            Poor,
-            Average,
-            Wealthy,
-            Pirate
-        }
-        [NMS(Size = 0x4, EnumType = typeof(TradeProductsPriceImprovementsEnum))]
+        [NMS(Size = 0x4, EnumType = typeof(GcWealthClass.WealthClassEnum))]
         /* 0xC0 */ public float[] TradeProductsPriceImprovements;
     }
 }

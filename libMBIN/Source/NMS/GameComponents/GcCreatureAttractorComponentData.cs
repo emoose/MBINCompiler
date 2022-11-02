@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x97582F86CA14661B, NameHash = 0x2F505B818F28B755)]
+    [NMS(GUID = 0xE7BC0D0F8C271BA0, NameHash = 0x2F505B818F28B755)]
     public class GcCreatureAttractorComponentData : NMSTemplate
     {
         /* 0x0 */ public bool Universal;

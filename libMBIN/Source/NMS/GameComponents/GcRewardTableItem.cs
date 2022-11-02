@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xD61AC3F6F7059033, NameHash = 0x743B54DBF617C58D)]
+    [NMS(GUID = 0x25D72AA437F6585B, NameHash = 0x743B54DBF617C58D)]
     public class GcRewardTableItem : NMSTemplate
     {
         /* 0x00 */ public float PercentageChance;

@@ -2,7 +2,7 @@ using libMBIN.NMS.Toolkit;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xBBCFC24EB018B5F3, NameHash = 0x18642126695741B5)]
+    [NMS(GUID = 0xD65717AA66068DB1, NameHash = 0x18642126695741B5)]
     public class GcPlayerHazardData : NMSTemplate
     {
         /* 0x00 */ public float ProtectionInitialTime;

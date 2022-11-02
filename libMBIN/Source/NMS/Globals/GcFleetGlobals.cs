@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(GUID = 0xD33DAEB8A6FB7E3, NameHash = 0xB032629C37506E6A)]
+    [NMS(GUID = 0x99747A5E7531FC2D, NameHash = 0xB032629C37506E6A)]
     public class GcFleetGlobals : NMSTemplate
     {
         /* 0x0000 */ public Vector3f FreighterCustomiserSunAngleAdjust;
@@ -74,21 +74,7 @@ namespace libMBIN.NMS.Globals
         /* 0x015C */ public GcNumberedTextList FrigateDamageDescriptions;
         /* 0x0180 */ public GcNumberedTextList FrigateGoodMoods;
         /* 0x01A4 */ public GcNumberedTextList FrigateBadMoods;
-        // size: 0xB
-        public enum DeepSpaceFrigateMoodsEnum {
-            Combat,
-            Exploration,
-            Mining,
-            Diplomatic,
-            FuelBurnRate,
-            FuelCapacity,
-            Speed,
-            ExtraLoot,
-            Repair,
-            Invulnerable,
-            Stealth
-        }
-        [NMS(Size = 0xB, EnumType = typeof(DeepSpaceFrigateMoodsEnum))]
+        [NMS(Size = 0xB, EnumType = typeof(GcFrigateStatType.FrigateStatTypeEnum))]
         /* 0x01C8 */ public GcNumberedTextList[] DeepSpaceFrigateMoods;
         /* 0x0354 */ public GcNumberedTextList FrigateExtraNotes;
         /* 0x0378 */ public float RadiusRequiredForFrigateSpawn;

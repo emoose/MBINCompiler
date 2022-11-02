@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xFAB9C0B6A3CF6C16, NameHash = 0xA8207C75DBE0FE33)]
+    [NMS(GUID = 0xAE3F41DF13F9368F, NameHash = 0xA8207C75DBE0FE33)]
     public class GcSkyProperties : NMSTemplate
     {
         /* 0x00 */ public float AtmosphereThickness;

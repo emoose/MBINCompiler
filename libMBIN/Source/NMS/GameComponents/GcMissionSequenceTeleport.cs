@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x71C19DF25548EF2F, NameHash = 0xE586E1C6C9A10307)]
+    [NMS(GUID = 0x1501180B8594D67D, NameHash = 0xE586E1C6C9A10307)]
     public class GcMissionSequenceTeleport : NMSTemplate
     {
         /* 0x000 */ public NMSString0x80 Message;

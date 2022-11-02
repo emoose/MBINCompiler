@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(GUID = 0x30D7C783B3556088, NameHash = 0x1BBDA54E462E00C3)]
+    [NMS(GUID = 0x46003F71023DBB54, NameHash = 0x1BBDA54E462E00C3)]
     public class GcScratchpadGlobals : NMSTemplate
     {
         /* 0x00 */ public List<GcPresetTextureData> IBLMaps;

@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x62F399B99B149834, NameHash = 0x2AA340CCDBA01EAD)]
+    [NMS(GUID = 0x158D95878335ADD6, NameHash = 0x2AA340CCDBA01EAD)]
     public class GcThirdPersonAnimParams : NMSTemplate
     {
         /* 0x00 */ public Vector2f Velocity;

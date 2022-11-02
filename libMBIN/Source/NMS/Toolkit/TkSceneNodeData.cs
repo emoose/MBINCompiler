@@ -5,11 +5,9 @@ using System.Reflection;
 using System.Text;
 
 using libMBIN.NMS.Toolkit;
-using libMBIN.NMS.GameComponents;
-
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0x9371B32161E1830C, NameHash = 0x2C1B6B0E807F7193)]
+    [NMS(GUID = 0xD006CF8683852182, NameHash = 0x2C1B6B0E807F7193)]
     public class TkSceneNodeData : NMSTemplate
     {
         /* 0x00 */ public NMSString0x80 Name;
@@ -22,7 +20,7 @@ namespace libMBIN.NMS.Toolkit
         public override object CustomDeserialize( BinaryReader reader, Type field, NMSAttribute settings, FieldInfo fieldInfo ) {
             var fieldName = fieldInfo.Name;
             switch (fieldName)
-            {
+                {
                 case nameof(NameHash):
                     ulong NEXT_GUID = 0xD5756F96B501B8A2;
                     long returnPos = reader.BaseStream.Position;
@@ -35,7 +33,7 @@ namespace libMBIN.NMS.Toolkit
                     // Make sure we return the read position
                     reader.BaseStream.Position = returnPos;
                     if (GUID == NEXT_GUID) {
-                         return (UInt64)crc32.Get(byteName);
+                        return (UInt64)crc32.Get(byteName);
                     }
                     else {
                         // just deserialize as normal...

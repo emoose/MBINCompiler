@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xCDC0444569389B85, NameHash = 0x880E3ABD8848E698)]
+    [NMS(GUID = 0xAC3ADAE0D82ACF59, NameHash = 0x880E3ABD8848E698)]
     public class GcGalacticAddressData : NMSTemplate
     {
         /* 0x00 */ public int VoxelX;

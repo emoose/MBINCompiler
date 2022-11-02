@@ -2,22 +2,13 @@ using libMBIN.NMS.Toolkit;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xEC16679A05969680, NameHash = 0x59A43238181BB69F)]
+    [NMS(GUID = 0xC3F9903855E67D5D, NameHash = 0x59A43238181BB69F)]
     public class GcBuildingDefinitionData : NMSTemplate
     {
         /* 0x00 */ public TkNoiseFlattenOptions FlattenType;
         /* 0x08 */ public NMSString0x10 ClusterLayout;
         /* 0x18 */ public float ClusterSpacing;
-        // size: 0x6
-        public enum DensityEnum {
-            Dead,
-            Low,
-            Mid,
-            Full,
-            Weird,
-            HalfWeird
-        }
-        [NMS(Size = 0x6, EnumType = typeof(DensityEnum))]
+        [NMS(Size = 0x6, EnumType = typeof(GcBuildingDensityLevels.BuildingDensityEnum))]
         /* 0x1C */ public float[] Density;
         /* 0x34 */ public bool EnabledWhenPlanetHasNoNPCs;
         /* 0x38 */ public int NumOverridesToGenerate;

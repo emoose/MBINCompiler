@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x5CF50411F86F56C9, NameHash = 0xE62B86A237CB0756)]
+    [NMS(GUID = 0x8C45A02353DED2BB, NameHash = 0xE62B86A237CB0756)]
     public class GcMissionSequenceCloseMenu : NMSTemplate
     {
         /* 0x0 */ public float Delay;

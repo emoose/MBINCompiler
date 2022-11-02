@@ -2,7 +2,7 @@ using libMBIN.NMS.Toolkit;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xF126BA8FB804DBA6, NameHash = 0xD85F7F00F1F64BD1)]
+    [NMS(GUID = 0xEA7512B34E14DF, NameHash = 0xD85F7F00F1F64BD1)]
     public class GcWeatherHazardLightningData : NMSTemplate
     {
         /* 0x000 */ public TkModelResource IndicatorDecal;

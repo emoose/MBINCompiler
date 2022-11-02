@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xB60D30DE6DFB3569, NameHash = 0xDCCAA3DA4C5BEA87)]
+    [NMS(GUID = 0xD8B70B88C48613EC, NameHash = 0xDCCAA3DA4C5BEA87)]
     public class GcInventoryLayoutGenerationBounds : NMSTemplate
     {
         /* 0x00 */ public int MaxWidthSmall;

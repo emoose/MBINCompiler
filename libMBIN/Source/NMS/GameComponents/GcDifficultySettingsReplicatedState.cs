@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xEBF5A76C89ABEE45, NameHash = 0xAE3AC9A3967B8330)]
+    [NMS(GUID = 0x5F64A44E4291E4C9, NameHash = 0xAE3AC9A3967B8330)]
     public class GcDifficultySettingsReplicatedState : NMSTemplate
     {
         /* 0x00 */ public bool IsPermadeath;

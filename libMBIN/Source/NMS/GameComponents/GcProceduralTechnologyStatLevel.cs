@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xDCA147E335677C6, NameHash = 0xF41CD566C844982A)]
+    [NMS(GUID = 0x9CB7EB09BD638943, NameHash = 0xF41CD566C844982A)]
     public class GcProceduralTechnologyStatLevel : NMSTemplate
     {
         /* 0x00 */ public GcStatsTypes Stat;

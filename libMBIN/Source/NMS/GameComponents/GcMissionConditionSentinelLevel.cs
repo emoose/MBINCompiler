@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x2553FB84ED818C60, NameHash = 0xB45DF78C123D703E)]
+    [NMS(GUID = 0xF6EBF12975089317, NameHash = 0xB45DF78C123D703E)]
     public class GcMissionConditionSentinelLevel : NMSTemplate
     {
         // size: 0x4

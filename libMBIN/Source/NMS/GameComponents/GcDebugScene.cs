@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x3FBBF10762F2E354, NameHash = 0xB5B196A1179FFE00)]
+    [NMS(GUID = 0x9F6F0B7E3BD34664, NameHash = 0xB5B196A1179FFE00)]
     public class GcDebugScene : NMSTemplate
     {
         /* 0x0000 */ public bool Active;
@@ -47,17 +47,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x39B8 */ public List<GcMechDebugSpawnData> DebugMechSpawns;
         /* 0x39C8 */ public List<GcAIShipDebugSpawnData> DebugEnemyShipSpawns;
         /* 0x39D8 */ public List<GcAIShipDebugSpawnData> DebugShipSpawns;
-        // size: 0x7
-        public enum VehicleCameraOverrideEnum {
-            Buggy,
-            Bike,
-            Truck,
-            WheeledBike,
-            Hovercraft,
-            Submarine,
-            Mech
-        }
-        [NMS(Size = 0x7, EnumType = typeof(VehicleCameraOverrideEnum))]
+        [NMS(Size = 0x7, EnumType = typeof(GcVehicleType.VehicleTypeEnum))]
         /* 0x39E8 */ public GcCameraFollowSettings[] VehicleCameraOverride;
         /* 0x40E8 */ public bool DebugDroneScanPlayer;
         /* 0x40F0 */ public Vector3f DebugDroneSpawn;

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(GUID = 0x5EF103312E583027, NameHash = 0xB24409E83457E875)]
+    [NMS(GUID = 0xB5BC4F0206F0F706, NameHash = 0xB24409E83457E875)]
     public class GcGraphicsGlobals : NMSTemplate
     {
         /* 0x000 */ public float LUTDistanceFlightMultiplier;
@@ -256,27 +256,13 @@ namespace libMBIN.NMS.Globals
         /* 0x66D */ public bool ShowTaaNVarianceBuf;
         /* 0x66E */ public bool ShowTaaCVarianceBuf;
         /* 0x670 */ public Vector4f TaaSettings;
-        // size: 0x4
-        public enum TessSettingsEnum {
-            Low,
-            Medium,
-            High,
-            Ultra
-        }
-        [NMS(Size = 0x4, EnumType = typeof(TessSettingsEnum))]
+        [NMS(Size = 0x4, EnumType = typeof(TkGraphicsDetailTypes.GraphicDetailEnum))]
         /* 0x680 */ public Vector4f[] TessSettings;
         /* 0x6C0 */ public Vector4f TerrainMipDistanceLow;
         /* 0x6D0 */ public Vector4f TerrainMipDistanceMed;
         /* 0x6E0 */ public Vector4f TerrainMipDistanceHigh;
         /* 0x6F0 */ public Vector4f TerrainMipDistanceUlt;
-        // size: 0x4
-        public enum ShellsSettingsEnum {
-            Low,
-            Medium,
-            High,
-            Ultra
-        }
-        [NMS(Size = 0x4, EnumType = typeof(ShellsSettingsEnum))]
+        [NMS(Size = 0x4, EnumType = typeof(TkGraphicsDetailTypes.GraphicDetailEnum))]
         /* 0x700 */ public Vector4f[] ShellsSettings;
         /* 0x740 */ public int TerrainAnisoLow;
         /* 0x744 */ public int TerrainAnisoMed;
@@ -324,14 +310,7 @@ namespace libMBIN.NMS.Globals
         /* 0x7DC */ public float SharpenFilterAmount;
         /* 0x7E0 */ public float SharpenFilterDepthFactorStart;
         /* 0x7E4 */ public float SharpenFilterDepthFactorEnd;
-        // size: 0x4
-        public enum GraphicsDetailPresetsPCEnum {
-            Low,
-            Medium,
-            High,
-            Ultra
-        }
-        [NMS(Size = 0x4, EnumType = typeof(GraphicsDetailPresetsPCEnum))]
+        [NMS(Size = 0x4, EnumType = typeof(TkGraphicsDetailTypes.GraphicDetailEnum))]
         /* 0x7E8 */ public TkGraphicsDetailPreset[] GraphicsDetailPresetsPC;
         /* 0x8F8 */ public TkGraphicsDetailPreset GraphicsDetailPresetPS4;
         /* 0x93C */ public TkGraphicsDetailPreset GraphicsDetailPresetPS4VR;
@@ -342,14 +321,7 @@ namespace libMBIN.NMS.Globals
         /* 0xA90 */ public TkGraphicsDetailPreset GraphicsDetailPresetOberon;
         /* 0xAD4 */ public TkGraphicsDetailPreset GraphicsDetailPresetPS5VR;
         /* 0xB18 */ public bool EnableVariableUpdate;
-        // size: 0x4
-        public enum VariableUpdatePeriodModifersEnum {
-            Low,
-            Medium,
-            High,
-            Ultra
-        }
-        [NMS(Size = 0x4, EnumType = typeof(VariableUpdatePeriodModifersEnum))]
+        [NMS(Size = 0x4, EnumType = typeof(TkGraphicsDetailTypes.GraphicDetailEnum))]
         /* 0xB1C */ public float[] VariableUpdatePeriodModifers;
         /* 0xB2C */ public float PhotoModeBloomGainMin;
         /* 0xB30 */ public float PhotoModeBloomThresholdMin;

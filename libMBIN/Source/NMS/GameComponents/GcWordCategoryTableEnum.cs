@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xD2D75D99686EC7B0, NameHash = 0x4F41C5DCED5937F1)]
+    [NMS(GUID = 0x3AADB8BA87A2C0C2, NameHash = 0x4F41C5DCED5937F1)]
     public class GcWordCategoryTableEnum : NMSTemplate
     {
         // size: 0x7

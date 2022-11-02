@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0x53ACC709803EED2D, NameHash = 0xF50D34444AC02C1E)]
+    [NMS(GUID = 0x6E024AF2BAA1696E, NameHash = 0xF50D34444AC02C1E)]
     public class TkTrophyEnum : NMSTemplate
     {
         // size: 0x6

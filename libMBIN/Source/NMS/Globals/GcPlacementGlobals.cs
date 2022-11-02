@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.Globals
 {
-    [NMS(GUID = 0xCC46EA70144FB1CB, NameHash = 0x78E77E9B846089A1)]
+    [NMS(GUID = 0xF323700F1D86A95A, NameHash = 0x78E77E9B846089A1)]
     public class GcPlacementGlobals : NMSTemplate
     {
         /* 0x00 */ public float MinFrequency;

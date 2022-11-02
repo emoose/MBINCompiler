@@ -2,7 +2,7 @@ using libMBIN.NMS.Toolkit;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x25C7464DF342E314, NameHash = 0xC9F6512AC970CD07)]
+    [NMS(GUID = 0xFAE51C195D8F7EAD, NameHash = 0xC9F6512AC970CD07)]
     public class GcDebrisData : NMSTemplate
     {
         /* 0x00 */ public TkModelResource Filename;

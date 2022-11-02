@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xB54E432D41DB9B3B, NameHash = 0xFE54641DFEAF51F)]
+    [NMS(GUID = 0xD245D7A8D1CEB1AA, NameHash = 0xFE54641DFEAF51F)]
     public class GcCreatureHoverTintableEffect : NMSTemplate
     {
         /* 0x000 */ public NMSString0x100 EffectNode;

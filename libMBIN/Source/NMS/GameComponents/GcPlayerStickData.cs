@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x2CE40353E3CAA625, NameHash = 0x3375DA42DA55F3B3)]
+    [NMS(GUID = 0x495908940DC5C069, NameHash = 0x3375DA42DA55F3B3)]
     public class GcPlayerStickData : NMSTemplate
     {
         /* 0x00 */ public float AcceleratorStickPoint;

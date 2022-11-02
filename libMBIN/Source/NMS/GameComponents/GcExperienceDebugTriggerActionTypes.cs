@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xC6C1413034865F16, NameHash = 0x902E6B8A4F1B75A6)]
+    [NMS(GUID = 0x48AB680D69B45516, NameHash = 0x902E6B8A4F1B75A6)]
     public class GcExperienceDebugTriggerActionTypes : NMSTemplate
     {
         // size: 0x29

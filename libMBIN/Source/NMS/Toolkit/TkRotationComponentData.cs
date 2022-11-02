@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0xA641C128A2F004F0, NameHash = 0xB808E542DB69E5FE)]
+    [NMS(GUID = 0xE4820AF33895CBB5, NameHash = 0xB808E542DB69E5FE)]
     public class TkRotationComponentData : NMSTemplate
     {
         /* 0x00 */ public float Speed;

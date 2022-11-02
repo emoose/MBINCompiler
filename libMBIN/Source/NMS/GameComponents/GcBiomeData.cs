@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x5EA924B84E8AD457, NameHash = 0x2FD5560612237D4D)]
+    [NMS(GUID = 0x528D16C1FB645749, NameHash = 0x2FD5560612237D4D)]
     public class GcBiomeData : NMSTemplate
     {
         /* 0x000 */ public NMSString0x80 TextureFile;
@@ -17,14 +17,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x2A4 */ public float FuelMultiplier;
         /* 0x2B0 */ public GcPlanetWaterData Water;
         /* 0x430 */ public List<GcExternalObjectListOptions> ExternalObjectLists;
-        // size: 0x4
-        public enum WeatherOptionsEnum {
-            Yellow,
-            Green,
-            Blue,
-            Red
-        }
-        [NMS(Size = 0x4, EnumType = typeof(WeatherOptionsEnum))]
+        [NMS(Size = 0x4, EnumType = typeof(GcGalaxyStarTypes.GalaxyStarTypeEnum))]
         /* 0x440 */ public GcWeatherWeightings[] WeatherOptions;
         /* 0x540 */ public Vector2f WeatherChangeTime;
         /* 0x550 */ public GcBiomeCloudSettings CloudSettings;

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(GUID = 0x8785035A0CB4CE75, NameHash = 0x9B5DDD6D76FBC918)]
+    [NMS(GUID = 0xEAAB7CD965BFAE0C, NameHash = 0x9B5DDD6D76FBC918)]
     public class GcVehicleGlobals : NMSTemplate
     {
         /* 0x000 */ public float UnderwaterScannerIconRangeBoost;
@@ -150,23 +150,9 @@ namespace libMBIN.NMS.Globals
         /* 0x434 */ public float AIMechGunExplosionRadius;
         /* 0x438 */ public float AIMechGunInheritVelocity;
         /* 0x43C */ public float MechWeaponInterpSpeed;
-        // size: 0x4
-        public enum MechWeaponLocatorNamesEnum {
-            TurretExocraft,
-            TurretSentinel,
-            ArmLeft,
-            ArmRight
-        }
-        [NMS(Size = 0x4, EnumType = typeof(MechWeaponLocatorNamesEnum))]
+        [NMS(Size = 0x4, EnumType = typeof(GcMechWeaponLocation.MechWeaponLocationEnum))]
         /* 0x440 */ public NMSString0x20[] MechWeaponLocatorNames;
-        // size: 0x4
-        public enum MechWeaponDataEnum {
-            Laser,
-            Gun,
-            TerrainEdit,
-            StunGun
-        }
-        [NMS(Size = 0x4, EnumType = typeof(MechWeaponDataEnum))]
+        [NMS(Size = 0x4, EnumType = typeof(GcVehicleWeaponMode.VehicleWeaponModeEnum))]
         /* 0x4C0 */ public GcExoMechWeaponData[] MechWeaponData;
         /* 0x6A0 */ public GcMechMeshPartTable MechMeshPartsTable;
         /* 0x880 */ public float WeaponInterpSpeed;
@@ -293,17 +279,7 @@ namespace libMBIN.NMS.Globals
         /* 0xAE8 */ public float StickReverseTurnStiffness;
         /* 0xAEC */ public GcScanData VehicleScan;
         /* 0xB00 */ public GcScanData VehicleLocalScan;
-        // size: 0x7
-        public enum VehicleWeaponMuzzleFlashEnum {
-            Buggy,
-            Bike,
-            Truck,
-            WheeledBike,
-            Hovercraft,
-            Submarine,
-            Mech
-        }
-        [NMS(Size = 0x7, EnumType = typeof(VehicleWeaponMuzzleFlashEnum))]
+        [NMS(Size = 0x7, EnumType = typeof(GcVehicleType.VehicleTypeEnum))]
         /* 0xB18 */ public GcVehicleMuzzleData[] VehicleWeaponMuzzleFlash;
         /* 0xCD8 */ public List<GcVehicleWeaponMuzzleData> VehicleWeaponMuzzleDataTable;
         /* 0xCE8 */ public List<GcVehicleData> VehicleDataTable;

@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xB9207441A50AA6CF, NameHash = 0x8A8D7D07807BE9DC)]
+    [NMS(GUID = 0x1F97840D23C29926, NameHash = 0x8A8D7D07807BE9DC)]
     public class GcPlayerNearbyEvent : NMSTemplate
     {
         // size: 0x6

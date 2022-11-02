@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0xB81AC33DDA9C1C25, NameHash = 0xA0C253D5A5EF8A51)]
+    [NMS(GUID = 0xCDD6D11F9CBC8D54, NameHash = 0xA0C253D5A5EF8A51)]
     public class TkLODSettingsData : NMSTemplate
     {
         [NMS(Size = 0x5)]

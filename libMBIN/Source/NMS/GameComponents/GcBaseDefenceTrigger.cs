@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xA3DD15E1F86778ED, NameHash = 0x295BE0CF9BD70B66)]
+    [NMS(GUID = 0xF80E2E80E984E6C0, NameHash = 0x295BE0CF9BD70B66)]
     public class GcBaseDefenceTrigger : NMSTemplate
     {
         /* 0x00 */ public NMSString0x10 PerceptionId;

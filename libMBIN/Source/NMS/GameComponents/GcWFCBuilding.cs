@@ -3,17 +3,12 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x2DFFDA7D2829661D, NameHash = 0x42C648ED396E4B44)]
+    [NMS(GUID = 0x7FAF9606AC3737A1, NameHash = 0x42C648ED396E4B44)]
     public class GcWFCBuilding : NMSTemplate
     {
         /* 0x000 */ public NMSString0x20 Name;
         /* 0x020 */ public NMSString0x80 ModuleSet;
-        // size: 0x2
-        public enum DecorationEnum {
-            Default,
-            Construction
-        }
-        [NMS(Size = 0x2, EnumType = typeof(DecorationEnum))]
+        [NMS(Size = 0x2, EnumType = typeof(GcWFCDecorationTheme.WFCDecorationThemeEnum))]
         /* 0x0A0 */ public NMSString0x80[] Decoration;
         /* 0x1A0 */ public bool ImprovedCoherence;
         /* 0x1A1 */ public bool RequireNoUnreachableRooms;

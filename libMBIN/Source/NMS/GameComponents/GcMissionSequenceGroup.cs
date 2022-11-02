@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xB7A69E9A4EDFF724, NameHash = 0x51B3554FFBEBED66)]
+    [NMS(GUID = 0x3A1F54E888D8A892, NameHash = 0x51B3554FFBEBED66)]
     public class GcMissionSequenceGroup : NMSTemplate
     {
         /* 0x000 */ public bool Silent;

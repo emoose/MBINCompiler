@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x94984A317842AEE5, NameHash = 0xECE6F42F8A522B34)]
+    [NMS(GUID = 0xA94378519F16BB2A, NameHash = 0xECE6F42F8A522B34)]
     public class GcTeleporterType : NMSTemplate
     {
         // size: 0xA

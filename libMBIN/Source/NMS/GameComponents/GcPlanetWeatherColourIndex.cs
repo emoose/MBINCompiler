@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x4DA6EA7EB1532236, NameHash = 0x8F4800F7EA8399A7)]
+    [NMS(GUID = 0xB66E86BB410213C0, NameHash = 0x8F4800F7EA8399A7)]
     public class GcPlanetWeatherColourIndex : NMSTemplate
     {
         // size: 0x2

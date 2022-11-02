@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0x63660285B883E92D, NameHash = 0xFCAC758E3056BFEF)]
+    [NMS(GUID = 0x698E0801C27070A2, NameHash = 0xFCAC758E3056BFEF)]
     public class TkNoiseOffsetEnum : NMSTemplate
     {
         // size: 0x4

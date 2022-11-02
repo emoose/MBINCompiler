@@ -5,32 +5,29 @@ using System.IO;
 using System.Reflection;
 using System.Linq;
 
-using libMBIN.NMS.Toolkit;
-using libMBIN.NMS.GameComponents;
-
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0x122A23E7D278667B, NameHash = 0x270204EDCEE4DB62)]
+    [NMS(GUID = 0xAACAD995AEC3891, NameHash = 0x270204EDCEE4DB62)]
     public class TkAnimNodeFrameData : NMSTemplate
     {
         /* 0x00 */ public List<Quaternion> Rotations;
         /* 0x10 */ public List<Vector3f> Translations;
         /* 0x20 */ public List<Vector3f> Scales;
 
-        
-        public override object CustomDeserialize( BinaryReader reader, Type field, NMSAttribute settings, FieldInfo fieldInfo ) {
+
+        public override object CustomDeserialize(BinaryReader reader, Type field, NMSAttribute settings, FieldInfo fieldInfo) {
             var fieldName = fieldInfo.Name;
 
             switch (fieldName)
-            {
+                {
                 case nameof(Rotations):
                     // sort out reading of list
                     long listPosition = reader.BaseStream.Position;
 
                     long listStartOffset = reader.ReadInt64();
-                    int numEntries = reader.ReadInt32()/3;
+                    int numEntries = reader.ReadInt32() / 3;
                     uint listMagic = reader.ReadUInt32();
-                    if ((listMagic & 0xFF) != 1) throw new InvalidListException( listMagic, reader.BaseStream.Position );
+                    if ((listMagic & 0xFF) != 1) throw new InvalidListException(listMagic, reader.BaseStream.Position);
 
                     long listEndPosition = reader.BaseStream.Position;
 
@@ -46,7 +43,7 @@ namespace libMBIN.NMS.Toolkit
                     // now, iterate over the input data.
                     // We will read in the data in chunks of 6 bytes
                     for (int i = 0; i < numEntries; i++)
-                    {
+                        {
                         // assign the variables
                         c_x = reader.ReadUInt16();
                         c_y = reader.ReadUInt16();
@@ -81,7 +78,7 @@ namespace libMBIN.NMS.Toolkit
                         Quaternion qo;
 
                         switch (dropcomponent)
-                        {
+                            {
                             case 3:     // qx was dropped
                                 qo = new Quaternion(q.w, q.x, q.y, q.z);
                                 break;
@@ -110,13 +107,13 @@ namespace libMBIN.NMS.Toolkit
         }
 
         public override bool CustomSerialize(BinaryWriter writer, Type field, object fieldData, NMSAttribute settings, FieldInfo fieldInfo, ref List<Tuple<long, object>> additionalData, ref int addtDataIndex)
-        {
+            {
             if (field == null || fieldInfo == null)
                 return false;
 
             var fieldName = fieldInfo.Name;
             switch (fieldName)
-            {
+                {
                 case nameof(Rotations):
 
                     IList<Quaternion> data = (IList<Quaternion>)fieldData;
@@ -129,10 +126,10 @@ namespace libMBIN.NMS.Toolkit
                     writer.Write((Int32)0); // listCount
                     writer.Write((UInt32)0x00000001);
 
-                    if ( data == null ) return true;
+                    if (data == null) return true;
 
                     foreach (Quaternion q in data)
-                    {
+                        {
                         List<UInt16> convertedQ = new List<UInt16>
                         {ConvertQuat(q.x),
                          ConvertQuat(q.y),
@@ -166,21 +163,21 @@ namespace libMBIN.NMS.Toolkit
         }
 
         private UInt16 DetermineDropComponent(List<UInt16> arr)
-        {
+            {
             UInt16 max_loc = 0;        // x by default
             HashSet<UInt16> doubled_elements = new HashSet<UInt16>();
             HashSet<UInt16> condensed_arr = new HashSet<UInt16>();
             // add all the elements in arr to the set version
             foreach (UInt16 i in arr)
-            {
-                if (condensed_arr.Contains(i))
                 {
+                if (condensed_arr.Contains(i))
+                    {
                     doubled_elements.Add(i);
                 }
                 condensed_arr.Add(i);
             }
             if (condensed_arr.Count == 4)
-            {
+                {
                 // in this case we simply want the max
                 UInt16 max_val = arr.Max();
                 max_loc = (UInt16)arr.IndexOf(max_val);
@@ -189,7 +186,7 @@ namespace libMBIN.NMS.Toolkit
             {
                 // we have a doubled element
                 if (!doubled_elements.Contains(0x3FFF))
-                {
+                    {
                     max_loc = 0;        // remove x
                 }
                 else
@@ -203,7 +200,7 @@ namespace libMBIN.NMS.Toolkit
         }
 
         private UInt16 ConvertQuat(float qi)
-        {
+            {
             return (UInt16)(0x3FFF * (Math.Sqrt(2) * qi + 1));
         }
     }

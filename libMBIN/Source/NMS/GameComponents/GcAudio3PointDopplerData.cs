@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x12CAE7C5B1936243, NameHash = 0x8E9A21977A683E5A)]
+    [NMS(GUID = 0xB0CCB49A1B47E256, NameHash = 0x8E9A21977A683E5A)]
     public class GcAudio3PointDopplerData : NMSTemplate
     {
         /* 0x0 */ public float Front;

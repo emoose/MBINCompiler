@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(GUID = 0x8D9ECBBBB009F22D, NameHash = 0x95C306B1A90F3E08)]
+    [NMS(GUID = 0xB95BB38E701F1956, NameHash = 0x95C306B1A90F3E08)]
     public class GcUIGlobals : NMSTemplate
     {
         /* 0x0000 */ public bool ShowDifficultyForBases;
@@ -314,89 +314,13 @@ namespace libMBIN.NMS.Globals
         /* 0x0A80 */ public Colour BaseComplexityWarningColour;
         /* 0x0A90 */ public Colour BaseComplexityDangerColour;
         /* 0x0AA0 */ public float BuildMenuActionMessageDuration;
-        // size: 0x10
-        public enum BuildMenuOnActionLocIDsEnum {
-            Place,
-            ChangeColour,
-            FreeRotate,
-            Scale,
-            SnapRotate,
-            Move,
-            Duplicate,
-            Delete,
-            ToggleBuildCam,
-            ToggleSnappingAndCollision,
-            ToggleSelectionMode,
-            ToggleWiringMode,
-            ViewRelatives,
-            CyclePart,
-            PlaceWire,
-            CycleRotateMode
-        }
-        [NMS(Size = 0x10, EnumType = typeof(BuildMenuOnActionLocIDsEnum))]
+        [NMS(Size = 0x10, EnumType = typeof(GcBuildMenuOption.BuildMenuOptionEnum))]
         /* 0x0AA8 */ public NMSString0x20A[] BuildMenuOnActionLocIDs;
-        // size: 0x10
-        public enum BuildMenuOnActionDisabledLocIDsEnum {
-            Place,
-            ChangeColour,
-            FreeRotate,
-            Scale,
-            SnapRotate,
-            Move,
-            Duplicate,
-            Delete,
-            ToggleBuildCam,
-            ToggleSnappingAndCollision,
-            ToggleSelectionMode,
-            ToggleWiringMode,
-            ViewRelatives,
-            CyclePart,
-            PlaceWire,
-            CycleRotateMode
-        }
-        [NMS(Size = 0x10, EnumType = typeof(BuildMenuOnActionDisabledLocIDsEnum))]
+        [NMS(Size = 0x10, EnumType = typeof(GcBuildMenuOption.BuildMenuOptionEnum))]
         /* 0x0CA8 */ public NMSString0x20A[] BuildMenuOnActionDisabledLocIDs;
-        // size: 0x10
-        public enum BuildMenuOnActionErrorLocIDsEnum {
-            Place,
-            ChangeColour,
-            FreeRotate,
-            Scale,
-            SnapRotate,
-            Move,
-            Duplicate,
-            Delete,
-            ToggleBuildCam,
-            ToggleSnappingAndCollision,
-            ToggleSelectionMode,
-            ToggleWiringMode,
-            ViewRelatives,
-            CyclePart,
-            PlaceWire,
-            CycleRotateMode
-        }
-        [NMS(Size = 0x10, EnumType = typeof(BuildMenuOnActionErrorLocIDsEnum))]
+        [NMS(Size = 0x10, EnumType = typeof(GcBuildMenuOption.BuildMenuOptionEnum))]
         /* 0x0EA8 */ public NMSString0x20A[] BuildMenuOnActionErrorLocIDs;
-        // size: 0x10
-        public enum BuildMenuUseSmallIconOnPadEnum {
-            Place,
-            ChangeColour,
-            FreeRotate,
-            Scale,
-            SnapRotate,
-            Move,
-            Duplicate,
-            Delete,
-            ToggleBuildCam,
-            ToggleSnappingAndCollision,
-            ToggleSelectionMode,
-            ToggleWiringMode,
-            ViewRelatives,
-            CyclePart,
-            PlaceWire,
-            CycleRotateMode
-        }
-        [NMS(Size = 0x10, EnumType = typeof(BuildMenuUseSmallIconOnPadEnum))]
+        [NMS(Size = 0x10, EnumType = typeof(GcBuildMenuOption.BuildMenuOptionEnum))]
         /* 0x10A8 */ public bool[] BuildMenuUseSmallIconOnPad;
         /* 0x10C0 */ public Colour BuildMenuPassiveErrorTextColour;
         /* 0x10D0 */ public Colour BuildMenuPassiveErrorTextOutlineColour;
@@ -850,23 +774,9 @@ namespace libMBIN.NMS.Globals
         /* 0x23A0 */ public Colour HUDNotifyColour;
         /* 0x23B0 */ public float HUDPlayerTrackArrowMinFadeDist;
         /* 0x23B4 */ public float HUDPlayerTrackArrowFadeRange;
-        // size: 0x4
-        public enum SystemHooverLEDColoursEnum {
-            Yellow,
-            Green,
-            Blue,
-            Red
-        }
-        [NMS(Size = 0x4, EnumType = typeof(SystemHooverLEDColoursEnum))]
+        [NMS(Size = 0x4, EnumType = typeof(GcGalaxyStarTypes.GalaxyStarTypeEnum))]
         /* 0x23C0 */ public Colour[] SystemHooverLEDColours;
-        // size: 0x4
-        public enum SystemHooverStatusBarColoursEnum {
-            Yellow,
-            Green,
-            Blue,
-            Red
-        }
-        [NMS(Size = 0x4, EnumType = typeof(SystemHooverStatusBarColoursEnum))]
+        [NMS(Size = 0x4, EnumType = typeof(GcGalaxyStarTypes.GalaxyStarTypeEnum))]
         /* 0x2400 */ public Colour[] SystemHooverStatusBarColours;
         /* 0x2440 */ public float GalaxyMapRadialBorder;
         /* 0x2444 */ public float GalaxyMapRadialTargetDist;
@@ -1390,65 +1300,15 @@ namespace libMBIN.NMS.Globals
         /* 0x56FC */ public float SettlementStatOuterRadius;
         /* 0x5700 */ public Colour SettlementStatColour;
         /* 0x5710 */ public Colour SettlementStatBackgroundColour;
-        // size: 0x7
-        public enum SettlementStatLocEnum {
-            Population,
-            Happiness,
-            Production,
-            Upkeep,
-            Sentinels,
-            Debt,
-            Alert
-        }
-        [NMS(Size = 0x7, EnumType = typeof(SettlementStatLocEnum))]
+        [NMS(Size = 0x7, EnumType = typeof(GcSettlementStatType.SettlementStatTypeEnum))]
         /* 0x5720 */ public NMSString0x20A[] SettlementStatLoc;
-        // size: 0x7
-        public enum SettlementStatFormatLocEnum {
-            Population,
-            Happiness,
-            Production,
-            Upkeep,
-            Sentinels,
-            Debt,
-            Alert
-        }
-        [NMS(Size = 0x7, EnumType = typeof(SettlementStatFormatLocEnum))]
+        [NMS(Size = 0x7, EnumType = typeof(GcSettlementStatType.SettlementStatTypeEnum))]
         /* 0x5800 */ public NMSString0x20A[] SettlementStatFormatLoc;
-        // size: 0x7
-        public enum SettlementStatBasicImagesEnum {
-            Population,
-            Happiness,
-            Production,
-            Upkeep,
-            Sentinels,
-            Debt,
-            Alert
-        }
-        [NMS(Size = 0x7, EnumType = typeof(SettlementStatBasicImagesEnum))]
+        [NMS(Size = 0x7, EnumType = typeof(GcSettlementStatType.SettlementStatTypeEnum))]
         /* 0x58E0 */ public TkTextureResource[] SettlementStatBasicImages;
-        // size: 0x7
-        public enum SettlementStatPositiveImagesEnum {
-            Population,
-            Happiness,
-            Production,
-            Upkeep,
-            Sentinels,
-            Debt,
-            Alert
-        }
-        [NMS(Size = 0x7, EnumType = typeof(SettlementStatPositiveImagesEnum))]
+        [NMS(Size = 0x7, EnumType = typeof(GcSettlementStatType.SettlementStatTypeEnum))]
         /* 0x5C7C */ public TkTextureResource[] SettlementStatPositiveImages;
-        // size: 0x7
-        public enum SettlementStatNegativeImagesEnum {
-            Population,
-            Happiness,
-            Production,
-            Upkeep,
-            Sentinels,
-            Debt,
-            Alert
-        }
-        [NMS(Size = 0x7, EnumType = typeof(SettlementStatNegativeImagesEnum))]
+        [NMS(Size = 0x7, EnumType = typeof(GcSettlementStatType.SettlementStatTypeEnum))]
         /* 0x6018 */ public TkTextureResource[] SettlementStatNegativeImages;
         /* 0x63B4 */ public float MinimumHoldFill;
         /* 0x63B8 */ public bool EnableAccessibleUI;

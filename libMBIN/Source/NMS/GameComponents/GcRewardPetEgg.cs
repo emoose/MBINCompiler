@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x674C19E150C1308D, NameHash = 0x4B8D117DE870E17C)]
+    [NMS(GUID = 0x3BCBA5AFBB839312, NameHash = 0x4B8D117DE870E17C)]
     public class GcRewardPetEgg : NMSTemplate
     {
 

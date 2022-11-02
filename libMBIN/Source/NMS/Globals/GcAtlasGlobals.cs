@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.Globals
 {
-    [NMS(GUID = 0xF07A5559350356C7, NameHash = 0xD5128E119194249)]
+    [NMS(GUID = 0x8384897911EE4641, NameHash = 0xD5128E119194249)]
     public class GcAtlasGlobals : NMSTemplate
     {
         /* 0x0 */ public int ChanceOfDisconnect;

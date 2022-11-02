@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0x3AAEF54B3BF203E, NameHash = 0x6DC70ADC2461C621)]
+    [NMS(GUID = 0x1F6E06F477FB487D, NameHash = 0x6DC70ADC2461C621)]
     public class TkInputAxisEnum : NMSTemplate
     {
         // size: 0x31

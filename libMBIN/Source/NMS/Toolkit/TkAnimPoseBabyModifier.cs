@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0x674E443873C61AA4, NameHash = 0x57A3CABFA5A7BDA8)]
+    [NMS(GUID = 0x44D61D7B564917C8, NameHash = 0x57A3CABFA5A7BDA8)]
     public class TkAnimPoseBabyModifier : NMSTemplate
     {
         /* 0x00 */ public NMSString0x10 Item;

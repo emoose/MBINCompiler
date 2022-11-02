@@ -2,19 +2,10 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x234DE601620B66D9, NameHash = 0xCC978CCE3CFE915B)]
+    [NMS(GUID = 0xA0E88479C3899F4D, NameHash = 0xCC978CCE3CFE915B)]
     public class GcPlayerHazardTable : NMSTemplate
     {
-        // size: 0x6
-        public enum TableEnum {
-            None,
-            NoOxygen,
-            ExtremeHeat,
-            ExtremeCold,
-            ToxicGas,
-            Radiation
-        }
-        [NMS(Size = 0x6, EnumType = typeof(TableEnum))]
+        [NMS(Size = 0x6, EnumType = typeof(GcPlayerHazardType.HazardEnum))]
         /* 0x0 */ public GcPlayerHazardData[] Table;
     }
 }

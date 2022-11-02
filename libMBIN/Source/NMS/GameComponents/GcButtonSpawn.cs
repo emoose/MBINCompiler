@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x11E70E34EF2692B0, NameHash = 0x7F9FCEDE7E2CBFC0)]
+    [NMS(GUID = 0x62F8EBC5CC56A505, NameHash = 0x7F9FCEDE7E2CBFC0)]
     public class GcButtonSpawn : NMSTemplate
     {
         /* 0x0 */ public TkInputEnum Button;

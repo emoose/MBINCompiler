@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xA8C771CAEE257006, NameHash = 0xD5B7E38D470CFF7E)]
+    [NMS(GUID = 0x60C1722394A2CD71, NameHash = 0xD5B7E38D470CFF7E)]
     public class GcMissionConditionHasTwitchReward : NMSTemplate
     {
 

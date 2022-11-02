@@ -2,7 +2,7 @@ using libMBIN.NMS.Toolkit;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x93F6410B4C29B3E9, NameHash = 0x7C8B3A3A3EEFC49F)]
+    [NMS(GUID = 0x3084ECA6BA37F650, NameHash = 0x7C8B3A3A3EEFC49F)]
     public class GcBehaviourMaintainRangeFromTargetData : NMSTemplate
     {
         /* 0x00 */ public NMSString0x10 TargetKey;

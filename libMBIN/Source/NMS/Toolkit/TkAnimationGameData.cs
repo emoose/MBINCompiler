@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0xC3435145E07F1AFE, NameHash = 0x4CC02B5A253167FD)]
+    [NMS(GUID = 0xE4FCE7BE8C20CFF5, NameHash = 0x4CC02B5A253167FD)]
     public class TkAnimationGameData : NMSTemplate
     {
         /* 0x0 */ public bool RootMotionEnabled;

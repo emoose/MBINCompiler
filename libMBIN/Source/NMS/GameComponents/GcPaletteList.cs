@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xD30F287F6E810E96, NameHash = 0xDF4A26E5B1BF936A)]
+    [NMS(GUID = 0x7457C75ACD3DECA1, NameHash = 0xDF4A26E5B1BF936A)]
     public class GcPaletteList : NMSTemplate
     {
         // size: 0x3A
