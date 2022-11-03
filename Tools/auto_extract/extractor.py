@@ -1,14 +1,16 @@
 # Extract all the class definitions from the NMS.exe
 
 from abc import ABC
-import argparse
+import configparser
 import os
 import os.path as op
 import pathlib
 import re
+from signal import SIGTERM
 import struct
 import subprocess
 import time
+from typing import Optional
 
 from jinja2 import Template
 import pymem
@@ -23,6 +25,28 @@ NAME_MAPPING = {
     'gcwordcategorytableEnum': 'GcWordCategoryTableEnum',
     'GCHUDEffectRewardData': 'GcHUDEffectRewardData',
 }
+# Flag enums fixes
+FLAG_ENUM_FIXES = {
+    'false_positives': [],
+    'false_negatives': [
+        'HotspotType',
+        'CollisionGroup',
+        'MetadataReadMask',
+        'InputActionInfoFlags',
+    ],
+}
+# Lookup for classes with extra attributes.
+EXTRA_ATTRIBUTES = {
+    'GcPlayerClothComponentData': ', Alignment = 0x10',
+}
+# List of classes to avoid overwriting as the have custom deserialisation
+# methods.
+DONT_OVERRIDE = [
+    'TkGeometryData',
+    'TkMeshData',
+    'TkSceneNodeData',
+    'TkAnimNodeFrameData',
+]
 
 SUMMARY_FILE = op.join(op.dirname(__file__), 'summary.txt')
 
@@ -76,7 +100,7 @@ USING_MAPPING = {
 }
 
 FIELD_TEMPLATE = "        /* {0} */ public {1} {2};"
-ENUM_TEMPLATE = """        // size: {3}
+ENUM_TEMPLATE = """        // size: {3}{5}
         public enum {1}Enum{4} {{
 {2}
         }}
@@ -128,8 +152,7 @@ Details on the format of the 0x60 bytes for each field:
     table of:
         (uint64): enum index
         (uint64*): pointer to name of enum value.
-      (if 0x1C == 0x17) pointer to a table with the enum values for the array,
-      and a pointer to the type after.
+      (if 0x1C == 0x17) pointer to a table with the enum values for the array
 0x40: (if 0x1C == 0x09): enum count.
 0x44: (float) 1.0 (always?)
 0x48: ??? (seems to always be (uint32) 3 or 4) Can't see why it's which or what
@@ -150,9 +173,6 @@ class Field(ABC):
         self.data = data
         self.raw_field_type = 0x00
         self.field_size = 0x0
-        self.is_array = False
-        self.is_list = False
-        self.is_enum = False
 
         # Get the name of the field.
         self._field_name = nms_mem.read_string(
@@ -212,7 +232,11 @@ class Field(ABC):
         """
         raw_type = struct.unpack_from('<I', data, offset=0x1C)[0]
         if raw_type == 0x09 or raw_type == 0x0B:
-            return EnumField(data, nms_mem)
+            ef = EnumField(data, nms_mem)
+            if raw_type == 0x0B:
+                ef.is_flag = True
+            ef.check_flag_overwrites()
+            return ef
         elif raw_type == 0x06:
             return ListField(data, nms_mem)
         elif raw_type == 0x17:
@@ -242,12 +266,12 @@ class CustomField(Field):
         self._field_type = nms_mem.read_string(ptr_custom_type, byte=128)[1:]
 
         if self.field_type[:2].lower() in ('cg', 'gc', 'tk'):
-            self.required_using = {
+            self.required_using.add(
                 USING_MAPPING.get(self.field_type[:2].lower(),
-                                  'libMBIN.NMS.GameComponents'),
-            }
+                                  'libMBIN.NMS.GameComponents')
+            )
         elif self.field_type == 'AxisSpecification':
-            self.required_using = {'libMBIN.NMS.GameComponents', }
+            self.required_using.add('libMBIN.NMS.GameComponents')
 
     @property
     def field_type(self):
@@ -257,11 +281,12 @@ class CustomField(Field):
 class ArrayField(Field):
     def __init__(self, data: bytes, nms_mem: pymem.Pymem):
         super().__init__(data, nms_mem)
-        self.is_array = True
         self.raw_field_type = 0x17
         # Multiply the field size by the array size to get the correct size
         self.field_size *= self._array_size
         self.array_enum = None
+        self.ptr_enum: int = 0
+        self.array_enum_type: Optional[str] = None
 
         array_type_raw = struct.unpack_from('<I', data, offset=0x20)[0]
         # A custom array subtype.
@@ -270,29 +295,27 @@ class ArrayField(Field):
                 struct.unpack_from('<Q', data, offset=0x30)[0]
             )
             self._field_type = nms_mem.read_string(ptr_custom_type, byte=128)[1:]
-            if self._field_type == "NMSString0x20A":
-                # There is an issue with this type in arrays due to MBINCompiler
-                # not being able to actually serialize it correctly. For now we
-                # change to a non-aligned one, but add padding if required.
-                self._field_type = "NMSString0x20"
-                # TODO: Add ability to add some padding if needed...
-            self.required_using = {
+            self.required_using.add(
                 USING_MAPPING.get(self._field_type[:2].lower(),
-                                  'libMBIN.NMS.GameComponents'),
-            }
+                                  'libMBIN.NMS.GameComponents')
+            )
         else:
             self._field_type = TYPE_MAPPING.get(
                 array_type_raw, f'unknown {array_type_raw:X}'
             )
         # Determine the associated EnumType
-        ptr_enum = struct.unpack_from('<Q', data, offset=0x38)[0]
+        self.ptr_enum = struct.unpack_from('<Q', data, offset=0x38)[0]
         # This may be a nullptr, in which case we end as we have no enum to get.
-        if ptr_enum == 0:
+        if self.ptr_enum == 0:
             return
+        # If the pointer is non-zero, then it will be a pointer to the enums
+        # either associated with some other class, or an inline one.
+        # We need to keep track of the pointer do we can determine what class
+        # it was later.
         # Get all the values of the enum:
         self.array_enum = []
         for i in range(self._array_size):
-            ptr_enum_name = nms_mem.read_ulonglong(ptr_enum + i * 0x10 + 0x8)
+            ptr_enum_name = nms_mem.read_ulonglong(self.ptr_enum + i * 0x10 + 0x8)
             name = nms_mem.read_string(ptr_enum_name, byte=128)
             # 'default' (all lowercase) is a resticted word in c#.
             # Replace the leading 'd' with 'D'.
@@ -313,30 +336,38 @@ class ArrayField(Field):
                 self.array_size,
             )
         else:
-            enum_vals = ',\n'.join([' ' * 12 + x for x in self.array_enum])
-            _enum = ARRAY_ENUM_TEMPLATE.format(
-                self.field_name,
-                enum_vals,
-                fmt_hex(self._array_size),
-            )
-            _field = TYPED_ARRAY_TEMPLATE.format(
-                self.field_offset,
-                self.field_type,
-                self.field_name,
-                self.array_size,
-                self.field_name + 'Enum',
-            )
-            return _enum + '\n' + _field
+            if self.array_enum_type is None:
+                enum_vals = ',\n'.join([' ' * 12 + x for x in self.array_enum])
+                _enum = ARRAY_ENUM_TEMPLATE.format(
+                    self.field_name,
+                    enum_vals,
+                    fmt_hex(self._array_size),
+                )
+                _field = TYPED_ARRAY_TEMPLATE.format(
+                    self.field_offset,
+                    self.field_type,
+                    self.field_name,
+                    self.array_size,
+                    self.field_name + 'Enum',
+                )
+                return _enum + '\n' + _field
+            else:
+                return TYPED_ARRAY_TEMPLATE.format(
+                    self.field_offset,
+                    self.field_type,
+                    self.field_name,
+                    self.array_size,
+                    self.array_enum_type,
+                )
 
 
 
 class ListField(Field):
     def __init__(self, data: bytes, nms_mem: pymem.Pymem):
         super().__init__(data, nms_mem)
-        self.is_list = True
         self.raw_field_type = 0x06
         self.field_size = 0x10
-        self.required_using = {'System.Collections.Generic', }
+        self.required_using.add('System.Collections.Generic')
 
         array_type_raw = struct.unpack_from('<I', data, offset=0x20)[0]
         if array_type_raw == 0x03:
@@ -361,17 +392,17 @@ class ListField(Field):
 class EnumField(Field):
     def __init__(self, data: bytes, nms_mem: pymem.Pymem):
         super().__init__(data, nms_mem)
-        self.is_enum = True
+        self._is_flag: bool = False
         self.raw_field_type = 0x09
         self.requires_values = False
 
         enum_count = struct.unpack_from('<I', data, offset=0x40)[0]
-        ptr_enum_data = struct.unpack_from('<Q', data, offset=0x38)[0]
+        self.ptr_enum = struct.unpack_from('<Q', data, offset=0x38)[0]
         self.enum_data = []
         # For each enum value, read the index, and a pointer to the name.
         for i in range(enum_count):
-            idx = nms_mem.read_uint(ptr_enum_data + i * 0x10)
-            ptr_enum_name = nms_mem.read_ulonglong(ptr_enum_data + i * 0x10 + 0x8)
+            idx = nms_mem.read_uint(self.ptr_enum + i * 0x10)
+            ptr_enum_name = nms_mem.read_ulonglong(self.ptr_enum + i * 0x10 + 0x8)
             enum_name = nms_mem.read_string(ptr_enum_name, byte=128)
             # If the string starts with a number we need to prefix with an
             # underscore so that the name is not illegal.
@@ -390,6 +421,26 @@ class EnumField(Field):
         if [x[0] for x in self.enum_data] != list(range(enum_count)):
             self.requires_values = True
 
+    def check_flag_overwrites(self):
+        # Check our overwrites and modify the `is_flag` property appropriately.
+        if self.field_name in FLAG_ENUM_FIXES['false_negatives']:
+            self.is_flag = True
+        elif self.field_name in FLAG_ENUM_FIXES['false_positives']:
+            self.is_flag = False
+
+    @property
+    def is_flag(self) -> bool:
+        return self._is_flag
+
+    @is_flag.setter
+    def is_flag(self, value: bool):
+        self._is_flag = value
+        if value is True:
+            self.required_using.add('System')
+        elif value is False:
+            # Remove the System using requirement.
+            self.required_using -= {'System', }
+
     def __str__(self):
         if self.requires_values:
             enum_vals = [
@@ -401,16 +452,22 @@ class EnumField(Field):
         enum_type = ''
         if self.requires_values:
             enum_type = ' : uint'
+        flags_string = ''
+        if self.is_flag:
+            flags_string = '\n        [Flags]'
         return ENUM_TEMPLATE.format(
             self.field_offset,
             self.field_name,
             enum_vals,
             fmt_hex(len(self.enum_data)),
             enum_type,
+            flags_string,
         )
 
 
 class NMSClass():
+    enum_reference_data: dict = {}
+
     def __init__(self, name: str, name_hash: int, guid: int):
         self.fields = []
         self._field_names = set()
@@ -424,7 +481,10 @@ class NMSClass():
             )
         else:
             self.namespace = 'libMBIN.NMS.Globals'
-        self.size = 1
+        self.is_enum_class = False
+        self.ptr_enum = None
+        self.output_fname = None
+        self.has_enum_arrays = False
 
     def add_fields(self, fields: list[Field]):
         # Add a list of field objects.
@@ -445,10 +505,23 @@ class NMSClass():
         # nicely format the offset comments.
         if self.fields:
             max_offset_width = len(self.fields[-1].field_offset) - 2
-            self.size = self.fields[-1]._field_offset + self.fields[-1].field_size
         # Finally, for each field, give it this found max_offset_width
         for field in self.fields:
             field.max_offset_width = max_offset_width
+
+        # Determine if the class is an enum class
+        if len(fields) == 1 and isinstance(fields[0], EnumField):
+            self.is_enum_class = True
+            self.ptr_enum = fields[0].ptr_enum
+            NMSClass.enum_reference_data[fields[0].ptr_enum] = f'{self.name}.{fields[0].field_name}Enum'
+
+    def update_array_enum_refs(self):
+        # Update the enum array references for the required fields.
+        # To make it faster, only do this for classes which need it.
+        if self.has_enum_arrays:
+            for field in self.fields:
+                if isinstance(field, ArrayField):
+                    field.array_enum_type = NMSClass.enum_reference_data.get(field.ptr_enum)
 
     def __str__(self):
         # String representation. This will be the contents of the .cs file.
@@ -463,13 +536,17 @@ class NMSClass():
             self.namespace,
             self.guid,
             self.name_hash,
-            '',  # TODO: add this if needed?
+            EXTRA_ATTRIBUTES.get(self.name, ''),
             self.name,
             '\n'.join([str(x) for x in self.fields]),
         )
 
+    def write(self):
+        with open(self.output_fname, 'w') as f:
+            f.write(str(self))
 
-def read_class(nms_mem: pymem.Pymem, address: int, filepaths: list[str]):
+
+def read_class(nms_mem: pymem.Pymem, address: int, filepaths: list[str]) -> NMSClass:
     """
     Take an array of 24 bytes and extract some information:
     0x00: (uint64*): Class name
@@ -489,25 +566,34 @@ def read_class(nms_mem: pymem.Pymem, address: int, filepaths: list[str]):
     out_dir = f'./output/{dir_}'
     if not op.exists(out_dir):
         os.makedirs(out_dir, exist_ok=True)
-    fields = extract(nms_mem, ptr_data, field_num)
+    fields, has_enum_arrays = extract(nms_mem, ptr_data, field_num)
     # If the name needs to be fix do so here.
     name = NAME_MAPPING.get(name[1:], name[1:])
     cls = NMSClass(name, name_hash, guid)
     cls.add_fields(fields)
-    with open(op.join(out_dir, name + '.cs'), 'w') as f:
-        f.write(str(cls))
+    cls.output_fname = op.join(out_dir, name + '.cs')
+    cls.has_enum_arrays = has_enum_arrays
     filepaths.append(f'{dir_}\\{name}')
+    return cls
 
 
-def extract(nms_mem: pymem.Pymem, address: int, field_count: int) -> list[Field]:
+def extract(nms_mem: pymem.Pymem, address: int, field_count: int) -> tuple[list[Field], bool]:
     # Take the 0x60 bytes and process them.
     fields = []
+    has_enum_arrays = False
     for i in range(field_count):
         data = nms_mem.read_bytes(address + i * 0x60, 0x60)
         field = Field.instantiate(data, nms_mem)
+        # As we add fields, determine if the field is an array with an
+        # associated enum. If it is then set a flag.
+        if (not has_enum_arrays
+            and isinstance(field, ArrayField)
+            and field.array_enum is not None
+        ):
+            has_enum_arrays = True
         fields.append(field)
 
-    return fields
+    return fields, has_enum_arrays
 
 
 def find_classes(nms_path: pathlib.Path):
@@ -556,25 +642,26 @@ def find_classes(nms_path: pathlib.Path):
 
 
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser(
-        description='Run NMS.exe and extract all the class definitions'
-    )
-    parser.add_argument(
-        '--nms_path',
-        type=pathlib.Path,
-        default='C://GOG Games//No Man\'s Sky//Binaries//NMS.exe'
-    )
+    # First, handle the configuration loading.
+    config = configparser.ConfigParser()
+    config_path = op.join(op.dirname(__file__), 'extract.cfg')
+    if not op.exists(config_path):
+        raise FileNotFoundError('extract.cfg not found in same directory as '
+                                'this script. Please copy the '
+                                'extract.cfg.sample file, rename it '
+                                'extract.cfg, and modify any values as needed.')
+    config.read(config_path)
+    binary_path = config['NMS']['binary_path']
 
-    args = parser.parse_args()
-
-    nms_proc = subprocess.Popen(args.nms_path)
+    nms_proc = subprocess.Popen(binary_path)
+    print(f'Opened NMS with PID: {nms_proc.pid}')
     filepaths = []
     with open('./libMBIN-Shared.projitems.j2', 'r') as f:
         template = Template(f.read())
 
     try:
         # Wait some time for the data to be written to memory.
-        time.sleep(5)
+        time.sleep(config['general'].getint('wait_time', fallback=10))
         # Now find the process with pymem.
         # If there is for some reason multiple instances of NMS running this
         # will probably have issues...
@@ -582,20 +669,32 @@ if __name__ == '__main__':
         nms_base = nms.base_address
         t1 = time.time()
         names = []
-        for name, offset in find_classes(args.nms_path):
-            read_class(nms, nms_base + offset, filepaths)
+        classes: list[NMSClass] = []
+        for name, offset in find_classes(binary_path):
+            cls_ = read_class(nms, nms_base + offset, filepaths)
             if name[1:] in NAME_MAPPING:
                 name = 'c' + NAME_MAPPING[name[1:]]
             names.append(f'{name}, {nms_base + offset:X}')
+            classes.append(cls_)
         names.sort()
         with open(SUMMARY_FILE, 'w') as f:
             f.write('\n'.join(names))
+        for cls_ in classes:
+            # Before writing out, loop over the fields of the class also to
+            # determine if any of the array fields need to have updated enum
+            # references.
+            cls_.update_array_enum_refs()
+            cls_.write()
         filepaths.sort()
         with open('./libMBIN-Shared.projitems', 'w') as f:
             f.write(template.render(filepaths=filepaths))
         print(f'Took {time.time() - t1}s')
-        # Kill the NMS process.
     except Exception as exc:
         raise exc
     finally:
-        nms_proc.terminate()
+        # Kill the NMS process.
+        if config['general'].getboolean('close_NMS_process', fallback=True):
+            nms_proc.terminate()
+            nms_pid = nms.process_id
+            if nms_pid != nms_proc.pid:
+                os.kill(nms_pid, SIGTERM)
