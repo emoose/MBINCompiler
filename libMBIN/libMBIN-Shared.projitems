@@ -2109,6 +2109,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Toolkit\TkNGuiEditorLayout.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Toolkit\TkNGuiEditorStyleColour.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Toolkit\TkNGuiEditorStyleData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Toolkit\TkNGuiForcedStyle.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Toolkit\TkNGuiGraphicStyle.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Toolkit\TkNGuiGraphicStyleData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Toolkit\TkNGuiLayoutList.cs" />
