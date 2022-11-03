@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x3BEF0D9E1B9202D0, NameHash = 0xA688E4255C8FED76)]
+    [NMS(GUID = 0xEECB963387B3C01B, NameHash = 0xA688E4255C8FED76)]
     public class GcDifficultyConfig : NMSTemplate
     {
         /* 0x0000 */ public NMSString0x20A PresetLocId;
@@ -89,18 +89,20 @@ namespace libMBIN.NMS.GameComponents
         [NMS(Size = 0x4, EnumType = typeof(GcCombatTimerDifficultyOption.CombatTimerDifficultyOptionEnum))]
         /* 0x24E8 */ public float[] SpaceCombatMultipliers;
         [NMS(Size = 0x4, EnumType = typeof(GcCombatTimerDifficultyOption.CombatTimerDifficultyOptionEnum))]
-        /* 0x24F8 */ public NMSString0x20A[] GroundCombatOptionLocIds;
+        /* 0x24F8 */ public float[] SpaceCombatDifficultyMultipliers;
         [NMS(Size = 0x4, EnumType = typeof(GcCombatTimerDifficultyOption.CombatTimerDifficultyOptionEnum))]
-        /* 0x2578 */ public float[] GroundCombatMultipliers;
+        /* 0x2508 */ public NMSString0x20A[] GroundCombatOptionLocIds;
         [NMS(Size = 0x4, EnumType = typeof(GcCombatTimerDifficultyOption.CombatTimerDifficultyOptionEnum))]
-        /* 0x2588 */ public float[] SentinelTimeOutMultipliers;
+        /* 0x2588 */ public float[] GroundCombatMultipliers;
+        [NMS(Size = 0x4, EnumType = typeof(GcCombatTimerDifficultyOption.CombatTimerDifficultyOptionEnum))]
+        /* 0x2598 */ public float[] SentinelTimeOutMultipliers;
         [NMS(Size = 0x3, EnumType = typeof(GcSprintingCostDifficultyOption.SprintingCostDifficultyEnum))]
-        /* 0x2598 */ public NMSString0x20A[] SprintingOptionLocIds;
+        /* 0x25A8 */ public NMSString0x20A[] SprintingOptionLocIds;
         [NMS(Size = 0x3, EnumType = typeof(GcSprintingCostDifficultyOption.SprintingCostDifficultyEnum))]
-        /* 0x25F8 */ public float[] SprintingCostMultipliers;
+        /* 0x2608 */ public float[] SprintingCostMultipliers;
         [NMS(Size = 0x3, EnumType = typeof(GcBreakTechOnDamageDifficultyOption.BreakTechOnDamageProbabilityEnum))]
-        /* 0x2608 */ public NMSString0x20A[] BreakTechOnDamageOptionLocIds;
+        /* 0x2618 */ public NMSString0x20A[] BreakTechOnDamageOptionLocIds;
         [NMS(Size = 0x3, EnumType = typeof(GcBreakTechOnDamageDifficultyOption.BreakTechOnDamageProbabilityEnum))]
-        /* 0x2668 */ public float[] BreakTechOnDamageMultipliers;
+        /* 0x2678 */ public float[] BreakTechOnDamageMultipliers;
     }
 }
