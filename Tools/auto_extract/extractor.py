@@ -522,6 +522,10 @@ class NMSClass():
             for field in self.fields:
                 if isinstance(field, ArrayField):
                     field.array_enum_type = NMSClass.enum_reference_data.get(field.ptr_enum)
+                    field.required_using.add(
+                        USING_MAPPING.get(field.array_enum_type[:2].lower(),
+                                          'libMBIN.NMS.GameComponents')
+                    )
 
     def __str__(self):
         # String representation. This will be the contents of the .cs file.
