@@ -99,6 +99,7 @@ USING_MAPPING = {
     'tk': 'libMBIN.NMS.Toolkit'
 }
 
+# TODO: Move all this to a jinja file definition.
 FIELD_TEMPLATE = "        /* {0} */ public {1} {2};"
 ENUM_TEMPLATE = """        // size: {3}{5}
         public enum {1}Enum{4} {{
@@ -521,7 +522,16 @@ class NMSClass():
         if self.has_enum_arrays:
             for field in self.fields:
                 if isinstance(field, ArrayField):
-                    field.array_enum_type = NMSClass.enum_reference_data.get(field.ptr_enum)
+                    field.array_enum_type = NMSClass.enum_reference_data.get(
+                        field.ptr_enum
+                    )
+                    if field.array_enum_type is not None:
+                        self.required_usings.add(
+                            USING_MAPPING.get(
+                                field.array_enum_type[:2].lower(),
+                                'libMBIN.NMS.GameComponents'
+                            )
+                        )
 
     def __str__(self):
         # String representation. This will be the contents of the .cs file.
