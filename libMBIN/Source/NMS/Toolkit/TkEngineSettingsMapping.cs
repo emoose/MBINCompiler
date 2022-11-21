@@ -1,3 +1,5 @@
+using libMBIN.NMS.Toolkit;
+
 namespace libMBIN.NMS.Toolkit
 {
     [NMS(GUID = 0xC43FEFF002A22D0E, NameHash = 0xC02F1D19584B44D)]
