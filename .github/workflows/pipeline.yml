@@ -89,5 +89,7 @@ jobs:
         if: env.VERSION != env.TAG
         run: |
           echo "There is a version mismatch between the tag and MBINCompiler version!"
+          echo "MBINCompiler version: ${{ env.VERSION }}"
+          echo "Tag version: ${{ env.TAG }}"
           exit 1
         shell: bash
