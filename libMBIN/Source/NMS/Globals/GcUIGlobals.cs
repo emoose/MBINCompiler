@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(GUID = 0xB95BB38E701F1956, NameHash = 0x95C306B1A90F3E08)]
+    [NMS(GUID = 0x4039D37156547AB0, NameHash = 0x95C306B1A90F3E08)]
     public class GcUIGlobals : NMSTemplate
     {
         /* 0x0000 */ public bool ShowDifficultyForBases;
@@ -291,25 +291,26 @@ namespace libMBIN.NMS.Globals
         /* 0x0A08 */ public int MaxNumMessageBeaconIcons;
         /* 0x0A0C */ public float MissionObjectiveBaseHeight;
         /* 0x0A10 */ public float MissionObjectiveDoneHeight;
-        /* 0x0A14 */ public float MissionDetailsPageBaseHeight;
-        /* 0x0A18 */ public float MarkerTagAppearDelay;
-        /* 0x0A1C */ public Vector2f CompassCentre;
-        /* 0x0A24 */ public float CompassHeight;
-        /* 0x0A28 */ public float CompassWidth;
-        /* 0x0A2C */ public float CompassDistanceScaleMin;
-        /* 0x0A30 */ public float CompassDistanceScaleRange;
-        /* 0x0A34 */ public float CompassDistanceSpaceScaleMin;
-        /* 0x0A38 */ public float CompassDistanceSpaceScaleRange;
-        /* 0x0A3C */ public float CompassDistanceScale;
-        /* 0x0A40 */ public float CompassDistanceShipMinScale;
-        /* 0x0A44 */ public float CompassDistanceMaxAngle;
-        /* 0x0A48 */ public float CompassDistanceYOffset;
-        /* 0x0A4C */ public float CompassAngleClamp;
-        /* 0x0A50 */ public float CompassAngleFade;
-        /* 0x0A54 */ public TkCurveType CompassCurve;
-        /* 0x0A58 */ public float CompassAngleClampSpace;
-        /* 0x0A5C */ public float BaseComplexityDangerFactor;
-        /* 0x0A60 */ public float BaseComplexityWarningFactor;
+        /* 0x0A14 */ public float MissionObjectiveScrollingExtra;
+        /* 0x0A18 */ public float MissionDetailsPageBaseHeight;
+        /* 0x0A1C */ public float MarkerTagAppearDelay;
+        /* 0x0A20 */ public Vector2f CompassCentre;
+        /* 0x0A28 */ public float CompassHeight;
+        /* 0x0A2C */ public float CompassWidth;
+        /* 0x0A30 */ public float CompassDistanceScaleMin;
+        /* 0x0A34 */ public float CompassDistanceScaleRange;
+        /* 0x0A38 */ public float CompassDistanceSpaceScaleMin;
+        /* 0x0A3C */ public float CompassDistanceSpaceScaleRange;
+        /* 0x0A40 */ public float CompassDistanceScale;
+        /* 0x0A44 */ public float CompassDistanceShipMinScale;
+        /* 0x0A48 */ public float CompassDistanceMaxAngle;
+        /* 0x0A4C */ public float CompassDistanceYOffset;
+        /* 0x0A50 */ public float CompassAngleClamp;
+        /* 0x0A54 */ public float CompassAngleFade;
+        /* 0x0A58 */ public TkCurveType CompassCurve;
+        /* 0x0A5C */ public float CompassAngleClampSpace;
+        /* 0x0A60 */ public float BaseComplexityDangerFactor;
+        /* 0x0A64 */ public float BaseComplexityWarningFactor;
         /* 0x0A70 */ public Colour BaseComplexityDefaultColour;
         /* 0x0A80 */ public Colour BaseComplexityWarningColour;
         /* 0x0A90 */ public Colour BaseComplexityDangerColour;
