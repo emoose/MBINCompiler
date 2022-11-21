@@ -29,6 +29,9 @@ jobs:
           cp Build/Release/net5/MBINCompiler.exe MBINCompiler.exe
           cp Build/Release/net5/libMBIN.dll libMBIN.dll
           cp Build/Release/net6/libMBIN.dll libMBIN-dotnet6.dll
+      - name: Get MBINCompiler version
+        run: echo "VERSION=$(Build/Release/net5/MBINCompiler.exe version | awk '{print $2}')" >> $GITHUB_ENV
+        shell: bash
       - name: Set up Python 3.9
         uses: actions/setup-python@v4
         with:
@@ -65,9 +68,7 @@ jobs:
         with:
           name: MBINCompiler
       - name: Get MBINCompiler tag version
-        run: |
-          echo "VERSION=$(MBINCompiler.exe version | awk '{print $2}')" >> $GITHUB_ENV
-          echo "TAG=${GITHUB_REF/refs\/tags\//}" >> $GITHUB_ENV
+        run: echo "TAG=${GITHUB_REF/refs\/tags\//}" >> $GITHUB_ENV
         shell: bash
       - name: Upload resources if version matches
         if: env.VERSION == env.TAG
