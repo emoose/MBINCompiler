@@ -7,9 +7,9 @@ namespace libMBIN.NMS.GameComponents
     public class GcPlayerSquadronConfig : NMSTemplate
     {
         /* 0x000 */ public NMSString0x20 SquadName;
-        [NMS(Size = 0x4)]
+        [NMS(Size = 0x4, EnumType = typeof(GcInventoryClass.InventoryClassEnum))]
         /* 0x020 */ public Vector2f[] PilotRankTraitRanges;
-        [NMS(Size = 0x4)]
+        [NMS(Size = 0x4, EnumType = typeof(GcInventoryClass.InventoryClassEnum))]
         /* 0x040 */ public NMSString0x10[] PilotRankAttackDefinitions;
         /* 0x080 */ public float SummonArriveTime;
         /* 0x084 */ public float SummonArriveTimeIntervalMin;

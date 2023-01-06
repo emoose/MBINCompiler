@@ -622,7 +622,7 @@ namespace libMBIN.NMS.Globals
         /* 0x1F50 */ public float CrosshairInterceptAlpha;
         /* 0x1F54 */ public float CrosshairInterceptLockRange;
         /* 0x1F58 */ public float CrosshairTargetLockSize;
-        [NMS(Size = 0x13)]
+        [NMS(Size = 0x13, EnumType = typeof(GcPlayerWeapons.WeaponModeEnum))]
         /* 0x1F5C */ public float[] CrosshairTargetLockSizeSpecific;
         /* 0x1FA8 */ public TkCurveType CrosshairTargetLockCurve;
         /* 0x1FAC */ public TkCurveType CrosshairTargetLockAlphaCurve;

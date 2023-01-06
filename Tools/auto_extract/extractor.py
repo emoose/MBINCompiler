@@ -16,6 +16,67 @@ from jinja2 import Template
 import pymem
 
 
+ENUM_OVERRIDES = {
+    'GcCreatureGlobals': {
+        'Temperments': 'GcCreatureRoles.CreatureRoleEnum',
+        'TempermentDescriptions': 'GcCreatureRoles.CreatureRoleEnum',
+        'Diets': 'GcCreatureDiet.DietEnum',
+        'WaterDiets': 'GcCreatureDiet.DietEnum',
+        'DietMeat': 'GcBiomeType.BiomeEnum',
+        'DietVeg': 'GcBiomeType.BiomeEnum',
+        'DietDescriptions': 'GcCreatureDiet.DietEnum',
+        'WaterDietDescriptions': 'GcCreatureDiet.DietEnum',
+        'BiomeDescriptions': 'GcBiomeType.BiomeEnum',
+        'BiomeWaterDescriptions': 'GcBiomeType.BiomeEnum',
+        'BiomeAirDescriptions': 'GcBiomeType.BiomeEnum',
+        'WeirdBiomeDescriptions': 'GcBiomeSubType.BiomeSubTypeEnum',
+        'PetBiomeClimates': 'GcBiomeType.BiomeEnum',
+    },
+    'GcEnvironmentProperties': {'SkyHeight': 'GcPlanetSize.PlanetSizeEnum'},
+    'GcGalaxyGenerationSetupData': {
+        'StarSize': 'GcGalaxyStarTypes.GalaxyStarTypeEnum',
+    },
+    'GcGalaxyGlobals': {
+        'RaceFilterDefaultColours': 'GcAlienRace.AlienRaceEnum',
+        'RaceFilterProtanopiaColours': 'GcAlienRace.AlienRaceEnum',
+        'RaceFilterDeuteranopiaColours': 'GcAlienRace.AlienRaceEnum',
+        'RaceFilterTritanopiaColours': 'GcAlienRace.AlienRaceEnum',
+        'EconomyFilterDefaultColours': 'GcTradingClass.TradingClassEnum',
+        'EconomyFilterProtanopiaColours': 'GcTradingClass.TradingClassEnum',
+        'EconomyFilterDeuteranopiaColours': 'GcTradingClass.TradingClassEnum',
+        'EconomyFilterTritanopiaColours': 'GcTradingClass.TradingClassEnum',
+        'ConflictFilterDefaultColours': 'GcPlayerConflictData.ConflictLevelEnum',
+        'ConflictFilterProtanopiaColours': 'GcPlayerConflictData.ConflictLevelEnum',
+        'ConflictFilterDeuteranopiaColours': 'GcPlayerConflictData.ConflictLevelEnum',
+        'ConflictFilterTritanopiaColours': 'GcPlayerConflictData.ConflictLevelEnum',
+        'MarkerSettings': 'GcGalaxyMarkerTypes.GalaxyMarkerTypeEnum',
+    },
+    'GcGameplayGlobals': {
+        'SalvageRewardsShuttle': 'GcInventoryClass.InventoryClassEnum',
+        'SalvageRewardsDropship': 'GcInventoryClass.InventoryClassEnum',
+        'SalvageRewardsFighter': 'GcInventoryClass.InventoryClassEnum',
+        'SalvageRewardsScience': 'GcInventoryClass.InventoryClassEnum',
+        'FreighterTechQualityWeightings': 'GcProceduralTechnologyData.QualityEnum',
+    },
+    'GcSolarGenerationGlobals': {
+        'ExtremePlanetChance': 'GcGalaxyStarTypes.GalaxyStarTypeEnum',
+        'AbandonedSystemProbability': 'GcGalaxyStarTypes.GalaxyStarTypeEnum',
+        'EmptySystemProbability': 'GcGalaxyStarTypes.GalaxyStarTypeEnum',
+        'PirateSystemProbability': 'GcGalaxyStarTypes.GalaxyStarTypeEnum',
+    },
+    'GcTerrainGlobals': {'MiningSubstanceBiome': 'GcBiomeType.BiomeEnum'},
+    'GcPlayerSquadronConfig': {
+        'PilotRankTraitRanges': 'GcInventoryClass.InventoryClassEnum',
+        'PilotRankAttackDefinitions': 'GcInventoryClass.InventoryClassEnum',
+    },
+    'GcRealityManagerData': {
+        'MissionBoardRewardOptions': 'GcMissionType.MissionTypeEnum',
+    },
+    'GcUIGlobals': {
+        'CrosshairTargetLockSizeSpecific': 'GcPlayerWeapons.WeaponModeEnum',
+    },
+}
+
 EXTRA_CLASSES = ['cAxisSpecification', 'cCgExpeditionCategoryStrength']
 # Classes that don't look like globals but actually are.
 ACTUALLY_GLOBALS = ['GcSceneOptions', 'GcSmokeTestOptions', 'GcDebugOptions']
@@ -519,7 +580,7 @@ class NMSClass():
     def update_array_enum_refs(self):
         # Update the enum array references for the required fields.
         # To make it faster, only do this for classes which need it.
-        if self.has_enum_arrays:
+        if self.has_enum_arrays or self.name in ENUM_OVERRIDES:
             for field in self.fields:
                 if isinstance(field, ArrayField):
                     field.array_enum_type = NMSClass.enum_reference_data.get(
@@ -532,6 +593,24 @@ class NMSClass():
                                 'libMBIN.NMS.GameComponents'
                             )
                         )
+                    elif self.name in ENUM_OVERRIDES:
+                        # Check to see if the field name is in the override
+                        # mapping.
+                        # If it is add the type and also the required usings
+                        # mapping.
+                        field.array_enum_type = ENUM_OVERRIDES[self.name].get(
+                            field.field_name
+                        )
+                        if field.array_enum_type is not None:
+                            self.required_usings.add(
+                                USING_MAPPING.get(
+                                    field.array_enum_type[:2].lower(),
+                                    'libMBIN.NMS.GameComponents'
+                                )
+                            )
+                            # Set the array_enum property to be an empty list so
+                            # that the actual enum type is written.
+                            field.array_enum = []
 
     def __str__(self):
         # String representation. This will be the contents of the .cs file.
@@ -637,6 +716,8 @@ def find_classes(nms_path: pathlib.Path):
             if found_addr != -1:
                 found_addr += rdata_offset
                 yield name, found_addr + virtual_offset
+            else:
+                print(name)
         for name in EXTRA_CLASSES:
             # For the extra classes we'll be lazy and find them slightly
             # differently...

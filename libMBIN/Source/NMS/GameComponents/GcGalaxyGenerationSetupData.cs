@@ -1,3 +1,5 @@
+using libMBIN.NMS.GameComponents;
+
 namespace libMBIN.NMS.GameComponents
 {
     [NMS(GUID = 0x584CA0FA3AB8FEE2, NameHash = 0x74E6E445263E30C1)]
@@ -16,7 +18,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x54 */ public float ConnectionDistortionTMult;
         /* 0x58 */ public float ConnectionDistanceLimit;
         /* 0x5C */ public Vector2f BaseSize;
-        [NMS(Size = 0x4)]
+        [NMS(Size = 0x4, EnumType = typeof(GcGalaxyStarTypes.GalaxyStarTypeEnum))]
         /* 0x64 */ public Vector2f[] StarSize;
         /* 0x84 */ public float BaseTurbulenceScale;
         /* 0x88 */ public float BaseTurbulenceLac;
