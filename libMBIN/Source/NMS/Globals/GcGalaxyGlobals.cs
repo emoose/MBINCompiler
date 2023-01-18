@@ -116,31 +116,31 @@ namespace libMBIN.NMS.Globals
         /* 0x0390 */ public Colour[] GalacticWaypointDeuteranopiaColours;
         [NMS(Size = 0x7)]
         /* 0x0400 */ public Colour[] GalacticWaypointTritanopiaColours;
-        [NMS(Size = 0x8)]
+        [NMS(Size = 0x8, EnumType = typeof(GcAlienRace.AlienRaceEnum))]
         /* 0x0470 */ public Colour[] RaceFilterDefaultColours;
-        [NMS(Size = 0x8)]
+        [NMS(Size = 0x8, EnumType = typeof(GcAlienRace.AlienRaceEnum))]
         /* 0x04F0 */ public Colour[] RaceFilterProtanopiaColours;
-        [NMS(Size = 0x8)]
+        [NMS(Size = 0x8, EnumType = typeof(GcAlienRace.AlienRaceEnum))]
         /* 0x0570 */ public Colour[] RaceFilterDeuteranopiaColours;
-        [NMS(Size = 0x8)]
+        [NMS(Size = 0x8, EnumType = typeof(GcAlienRace.AlienRaceEnum))]
         /* 0x05F0 */ public Colour[] RaceFilterTritanopiaColours;
-        [NMS(Size = 0x7)]
+        [NMS(Size = 0x7, EnumType = typeof(GcTradingClass.TradingClassEnum))]
         /* 0x0670 */ public Colour[] EconomyFilterDefaultColours;
-        [NMS(Size = 0x7)]
+        [NMS(Size = 0x7, EnumType = typeof(GcTradingClass.TradingClassEnum))]
         /* 0x06E0 */ public Colour[] EconomyFilterProtanopiaColours;
-        [NMS(Size = 0x7)]
+        [NMS(Size = 0x7, EnumType = typeof(GcTradingClass.TradingClassEnum))]
         /* 0x0750 */ public Colour[] EconomyFilterDeuteranopiaColours;
-        [NMS(Size = 0x7)]
+        [NMS(Size = 0x7, EnumType = typeof(GcTradingClass.TradingClassEnum))]
         /* 0x07C0 */ public Colour[] EconomyFilterTritanopiaColours;
-        [NMS(Size = 0x4)]
+        [NMS(Size = 0x4, EnumType = typeof(GcPlayerConflictData.ConflictLevelEnum))]
         /* 0x0830 */ public Colour[] ConflictFilterDefaultColours;
-        [NMS(Size = 0x4)]
+        [NMS(Size = 0x4, EnumType = typeof(GcPlayerConflictData.ConflictLevelEnum))]
         /* 0x0870 */ public Colour[] ConflictFilterProtanopiaColours;
-        [NMS(Size = 0x4)]
+        [NMS(Size = 0x4, EnumType = typeof(GcPlayerConflictData.ConflictLevelEnum))]
         /* 0x08B0 */ public Colour[] ConflictFilterDeuteranopiaColours;
-        [NMS(Size = 0x4)]
+        [NMS(Size = 0x4, EnumType = typeof(GcPlayerConflictData.ConflictLevelEnum))]
         /* 0x08F0 */ public Colour[] ConflictFilterTritanopiaColours;
-        [NMS(Size = 0x10)]
+        [NMS(Size = 0x10, EnumType = typeof(GcGalaxyMarkerTypes.GalaxyMarkerTypeEnum))]
         /* 0x0930 */ public GcGalaxyMarkerSettings[] MarkerSettings;
         /* 0x1B30 */ public float IntroFadeInRate;
         /* 0x1B34 */ public float IntroTitleFadeTrigger;

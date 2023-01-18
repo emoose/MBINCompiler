@@ -39,7 +39,7 @@ namespace libMBIN.NMS.Globals
         /* 0x088 */ public float MaxHighWaterRatio;
         /* 0x08C */ public float MinWaterRatio;
         /* 0x090 */ public float MaxWaterRatio;
-        [NMS(Size = 0x10)]
+        [NMS(Size = 0x10, EnumType = typeof(GcBiomeType.BiomeEnum))]
         /* 0x098 */ public NMSString0x10[] MiningSubstanceBiome;
         /* 0x198 */ public List<NMSString0x10> MiningSubstanceStar;
         /* 0x1A8 */ public List<NMSString0x10> MiningSubstanceStarExtreme;

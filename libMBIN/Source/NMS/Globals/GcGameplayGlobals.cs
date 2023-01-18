@@ -75,13 +75,13 @@ namespace libMBIN.NMS.Globals
         /* 0x27D4 */ public int GPSRandomChangeTimeNarrow;
         /* 0x27D8 */ public float SalvageValueAsProds;
         /* 0x27DC */ public int SalvageSubstanceValueThreshold;
-        [NMS(Size = 0x4)]
+        [NMS(Size = 0x4, EnumType = typeof(GcInventoryClass.InventoryClassEnum))]
         /* 0x27E0 */ public NMSString0x10[] SalvageRewardsShuttle;
-        [NMS(Size = 0x4)]
+        [NMS(Size = 0x4, EnumType = typeof(GcInventoryClass.InventoryClassEnum))]
         /* 0x2820 */ public NMSString0x10[] SalvageRewardsDropship;
-        [NMS(Size = 0x4)]
+        [NMS(Size = 0x4, EnumType = typeof(GcInventoryClass.InventoryClassEnum))]
         /* 0x2860 */ public NMSString0x10[] SalvageRewardsFighter;
-        [NMS(Size = 0x4)]
+        [NMS(Size = 0x4, EnumType = typeof(GcInventoryClass.InventoryClassEnum))]
         /* 0x28A0 */ public NMSString0x10[] SalvageRewardsScience;
         [NMS(Size = 0x5)]
         /* 0x28E0 */ public NMSString0x10[] SalvageTechList;
@@ -329,7 +329,7 @@ namespace libMBIN.NMS.Globals
         /* 0x2FE4 */ public GcExperienceTimers FlybyTimers;
         /* 0x3004 */ public GcExperienceTimers SpaceFlybyTimers;
         /* 0x3024 */ public GcExperienceTimers PoliceTimers;
-        [NMS(Size = 0x6)]
+        [NMS(Size = 0x6, EnumType = typeof(GcProceduralTechnologyData.QualityEnum))]
         /* 0x3044 */ public int[] FreighterTechQualityWeightings;
         /* 0x305C */ public int SentinelsHigh;
         /* 0x3060 */ public int SentinelsLow;

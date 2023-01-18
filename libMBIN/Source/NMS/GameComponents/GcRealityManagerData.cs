@@ -72,7 +72,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x01D50 */ public GcNumberedTextList[] MissionNameAdjectives;
         [NMS(Size = 0xB, EnumType = typeof(GcMissionType.MissionTypeEnum))]
         /* 0x01EDC */ public GcNumberedTextList[] MissionNameNouns;
-        [NMS(Size = 0xB)]
+        [NMS(Size = 0xB, EnumType = typeof(GcMissionType.MissionTypeEnum))]
         /* 0x02068 */ public TkIdArray[] MissionBoardRewardOptions;
         [NMS(Size = 0x3, EnumType = typeof(GcRarity.RarityEnum))]
         /* 0x02118 */ public float[] WeightedTextWeights;

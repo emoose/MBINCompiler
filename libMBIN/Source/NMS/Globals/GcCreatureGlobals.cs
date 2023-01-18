@@ -20,31 +20,31 @@ namespace libMBIN.NMS.Globals
         /* 0x005C */ public bool CreatureInteractWithoutRaycasts;
         /* 0x0060 */ public float CreatureInteractBaseRange;
         /* 0x0064 */ public float PetInteractBaseRange;
-        [NMS(Size = 0xB)]
+        [NMS(Size = 0xB, EnumType = typeof(GcCreatureRoles.CreatureRoleEnum))]
         /* 0x0068 */ public NMSString0x20A[] Temperments;
-        [NMS(Size = 0xB)]
+        [NMS(Size = 0xB, EnumType = typeof(GcCreatureRoles.CreatureRoleEnum))]
         /* 0x01C8 */ public NMSString0x20A[] TempermentDescriptions;
-        [NMS(Size = 0x4)]
+        [NMS(Size = 0x4, EnumType = typeof(GcCreatureDiet.DietEnum))]
         /* 0x0328 */ public NMSString0x20A[] Diets;
-        [NMS(Size = 0x4)]
+        [NMS(Size = 0x4, EnumType = typeof(GcCreatureDiet.DietEnum))]
         /* 0x03A8 */ public NMSString0x20A[] WaterDiets;
-        [NMS(Size = 0x10)]
+        [NMS(Size = 0x10, EnumType = typeof(GcBiomeType.BiomeEnum))]
         /* 0x0428 */ public NMSString0x20A[] DietMeat;
-        [NMS(Size = 0x10)]
+        [NMS(Size = 0x10, EnumType = typeof(GcBiomeType.BiomeEnum))]
         /* 0x0628 */ public NMSString0x20A[] DietVeg;
-        [NMS(Size = 0x4)]
+        [NMS(Size = 0x4, EnumType = typeof(GcCreatureDiet.DietEnum))]
         /* 0x0828 */ public NMSString0x20A[] DietDescriptions;
-        [NMS(Size = 0x4)]
+        [NMS(Size = 0x4, EnumType = typeof(GcCreatureDiet.DietEnum))]
         /* 0x08A8 */ public NMSString0x20A[] WaterDietDescriptions;
-        [NMS(Size = 0x10)]
+        [NMS(Size = 0x10, EnumType = typeof(GcBiomeType.BiomeEnum))]
         /* 0x0928 */ public NMSString0x20A[] BiomeDescriptions;
-        [NMS(Size = 0x10)]
+        [NMS(Size = 0x10, EnumType = typeof(GcBiomeType.BiomeEnum))]
         /* 0x0B28 */ public NMSString0x20A[] BiomeWaterDescriptions;
-        [NMS(Size = 0x10)]
+        [NMS(Size = 0x10, EnumType = typeof(GcBiomeType.BiomeEnum))]
         /* 0x0D28 */ public NMSString0x20A[] BiomeAirDescriptions;
-        [NMS(Size = 0x1B)]
+        [NMS(Size = 0x1B, EnumType = typeof(GcBiomeSubType.BiomeSubTypeEnum))]
         /* 0x0F28 */ public NMSString0x20A[] WeirdBiomeDescriptions;
-        [NMS(Size = 0x10)]
+        [NMS(Size = 0x10, EnumType = typeof(GcBiomeType.BiomeEnum))]
         /* 0x1288 */ public NMSString0x20A[] PetBiomeClimates;
         /* 0x1488 */ public bool IsHurtingCreaturesACrime;
         /* 0x1489 */ public bool EnableFlyingSnakeTails;
