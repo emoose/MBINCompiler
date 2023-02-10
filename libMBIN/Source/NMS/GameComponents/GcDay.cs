@@ -11,7 +11,7 @@ namespace libMBIN.NMS.GameComponents
             Wednesday,
             Thursday,
             Friday,
-            Saturday
+            Saturday,
         }
         /* 0x0 */ public DayEnum Day;
     }

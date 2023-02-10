@@ -7,7 +7,7 @@ namespace libMBIN.NMS.GameComponents
         public enum UsingCameraModeEnum {
             OnFoot,
             Ship,
-            Vehicle
+            Vehicle,
         }
         /* 0x0 */ public UsingCameraModeEnum UsingCameraMode;
     }

@@ -7,7 +7,7 @@ namespace libMBIN.NMS.GameComponents
         public enum SpawnModeEnum {
             None,
             UseSeed,
-            UseAltID
+            UseAltID,
         }
         /* 0x000 */ public SpawnModeEnum SpawnMode;
         /* 0x008 */ public GcSeed Seed;

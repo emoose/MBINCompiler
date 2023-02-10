@@ -8,7 +8,7 @@ namespace libMBIN.NMS.GameComponents
             None,
             Low,
             Normal,
-            High
+            High,
         }
         /* 0x0 */ public DamageReceivedDifficultyEnum DamageReceivedDifficulty;
     }

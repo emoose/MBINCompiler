@@ -9,7 +9,7 @@ namespace libMBIN.NMS.GameComponents
             Sociable,
             Productive,
             Tired,
-            Afraid
+            Afraid,
         }
         /* 0x0 */ public NPCSettlementBehaviourStateEnum NPCSettlementBehaviourState;
     }

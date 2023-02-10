@@ -21,7 +21,7 @@ namespace libMBIN.NMS.GameComponents
             BURIED_PROPS,
             MINIWORM_KILL,
             POOP_COLLECTED,
-            GRAVBALLS
+            GRAVBALLS,
         }
         /* 0x0 */ public StatEnumEnum StatEnum;
     }

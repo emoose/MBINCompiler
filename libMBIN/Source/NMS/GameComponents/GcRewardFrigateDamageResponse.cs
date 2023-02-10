@@ -10,7 +10,7 @@ namespace libMBIN.NMS.GameComponents
             CheckForMoreDamage,
             ShowDamagedCaptain,
             ShowExpeditionCaptain,
-            AbortExpedition
+            AbortExpedition,
         }
         /* 0x0 */ public ResponseEnum Response;
     }

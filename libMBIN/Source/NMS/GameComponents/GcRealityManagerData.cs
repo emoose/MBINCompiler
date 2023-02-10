@@ -95,7 +95,7 @@ namespace libMBIN.NMS.GameComponents
             Weapon,
             Ship,
             Freighter,
-            Vehicle
+            Vehicle,
         }
         [NMS(Size = 0x5, EnumType = typeof(StatsEnum))]
         /* 0x146F0 */ public GcStats[] Stats;

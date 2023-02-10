@@ -7,7 +7,7 @@ namespace libMBIN.NMS.GameComponents
         public enum RarityEnum {
             Common,
             Uncommon,
-            Rare
+            Rare,
         }
         /* 0x0 */ public RarityEnum Rarity;
     }

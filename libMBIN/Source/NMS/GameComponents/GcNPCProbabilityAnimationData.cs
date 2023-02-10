@@ -13,7 +13,7 @@ namespace libMBIN.NMS.GameComponents
             Low,
             Medium,
             High,
-            None
+            None,
         }
         /* 0x14 */ public AnimationIntensityEnum AnimationIntensity;
         /* 0x18 */ public List<GcAlienRace> ExcludeRace;

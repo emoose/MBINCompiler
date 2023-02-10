@@ -30,7 +30,7 @@ namespace libMBIN.NMS.GameComponents
             Discovered,
             Timer,
             ObjectScan,
-            LeaveBuilding
+            LeaveBuilding,
         }
         /* 0x0B8 */ public EventStartTypeEnum EventStartType;
         // size: 0x5
@@ -39,13 +39,13 @@ namespace libMBIN.NMS.GameComponents
             Proximity,
             Interact,
             EnterBuilding,
-            TimedInteract
+            TimedInteract,
         }
         /* 0x0BC */ public EventEndTypeEnum EventEndType;
         // size: 0x2
         public enum EventPriorityEnum {
             Regular,
-            High
+            High,
         }
         /* 0x0C0 */ public EventPriorityEnum EventPriority;
         /* 0x0C4 */ public bool CanEndFromOutsideMission;
@@ -59,7 +59,7 @@ namespace libMBIN.NMS.GameComponents
             RandomOnNearPlanet,
             RandomOnFarPlanet,
             PlanetSearch,
-            PlayerSettlement
+            PlayerSettlement,
         }
         /* 0x0C8 */ public BuildingLocationEnum BuildingLocation;
         // size: 0x17
@@ -86,7 +86,7 @@ namespace libMBIN.NMS.GameComponents
             SettlementConstruction,
             UnownedSettlement,
             NPC_HideOut,
-            FriendlyDrone
+            FriendlyDrone,
         }
         /* 0x0CC */ public BuildingTypeEnum BuildingType;
         /* 0x0D0 */ public GcBuildingClassification BuildingClass;
@@ -101,7 +101,7 @@ namespace libMBIN.NMS.GameComponents
             LocalOrNear,
             NearWithNoExpeditions,
             FromList,
-            SeasonParty
+            SeasonParty,
         }
         /* 0x0D8 */ public SolarSystemLocationEnum SolarSystemLocation;
         /* 0x0E0 */ public GcScanEventSolarSystemLookup SolarSystemAttributes;

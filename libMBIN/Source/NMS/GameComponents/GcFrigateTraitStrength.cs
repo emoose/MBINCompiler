@@ -14,7 +14,7 @@ namespace libMBIN.NMS.GameComponents
             SecondarySmall,
             SecondaryMedium,
             SecondaryLarge,
-            Primary
+            Primary,
         }
         /* 0x0 */ public FrigateTraitStrengthEnum FrigateTraitStrength;
     }

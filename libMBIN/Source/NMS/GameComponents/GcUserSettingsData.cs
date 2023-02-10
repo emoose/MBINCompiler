@@ -29,7 +29,7 @@ namespace libMBIN.NMS.GameComponents
         public enum PS4FixedFPSEnum {
             Invalid,
             False,
-            True
+            True,
         }
         /* 0x388C */ public PS4FixedFPSEnum PS4FixedFPS;
         /* 0x3890 */ public float PS4FOVFoot;
@@ -40,7 +40,7 @@ namespace libMBIN.NMS.GameComponents
         public enum BaseSharingModeEnum {
             Undecided,
             On,
-            Off
+            Off,
         }
         /* 0x389C */ public BaseSharingModeEnum BaseSharingMode;
         /* 0x38A0 */ public List<NMSString0x10> SeenSubstances;
@@ -65,7 +65,7 @@ namespace libMBIN.NMS.GameComponents
             Invalid,
             C,
             F,
-            K
+            K,
         }
         /* 0x3958 */ public TemperatureUnitEnum TemperatureUnit;
         /* 0x395C */ public bool UseOldMouseFlight;
@@ -74,7 +74,7 @@ namespace libMBIN.NMS.GameComponents
         // size: 0x2
         public enum MovementModeEnum {
             Teleporter,
-            Smooth
+            Smooth,
         }
         /* 0x3968 */ public MovementModeEnum MovementMode;
         /* 0x396C */ public GcMovementDirection MovementDirectionPad;
@@ -82,7 +82,7 @@ namespace libMBIN.NMS.GameComponents
         // size: 0x2
         public enum TurnModeEnum {
             Smooth,
-            Snap
+            Snap,
         }
         /* 0x3974 */ public TurnModeEnum TurnMode;
         /* 0x3978 */ public bool UseVrVignette;
@@ -95,7 +95,7 @@ namespace libMBIN.NMS.GameComponents
             Default,
             Protanopia,
             Deuteranopia,
-            Tritanopia
+            Tritanopia,
         }
         /* 0x3988 */ public UIColourSchemeEnum UIColourScheme;
         /* 0x398C */ public bool EnableModdingConsole;
@@ -113,7 +113,7 @@ namespace libMBIN.NMS.GameComponents
         public enum SpaceCombatFollowModeEnum {
             Disabled,
             Hold,
-            Toggle
+            Toggle,
         }
         /* 0x39A4 */ public SpaceCombatFollowModeEnum SpaceCombatFollowMode;
         /* 0x39A8 */ public List<NMSString0x80> UpgradedUsers;

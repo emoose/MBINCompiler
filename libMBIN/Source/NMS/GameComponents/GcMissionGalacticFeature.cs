@@ -7,7 +7,7 @@ namespace libMBIN.NMS.GameComponents
         public enum GalacticFeatureEnum {
             Anomaly,
             Atlas,
-            BlackHole
+            BlackHole,
         }
         /* 0x0 */ public GalacticFeatureEnum GalacticFeature;
     }

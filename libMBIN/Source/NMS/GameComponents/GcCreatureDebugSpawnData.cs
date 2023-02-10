@@ -13,7 +13,7 @@ namespace libMBIN.NMS.GameComponents
         public enum OnCompleteEnum {
             Hold,
             Loop,
-            Destroy
+            Destroy,
         }
         /* 0x18 */ public OnCompleteEnum OnComplete;
         /* 0x1C */ public float SmoothTime;

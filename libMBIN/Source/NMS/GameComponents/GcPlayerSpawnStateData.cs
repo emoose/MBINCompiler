@@ -17,7 +17,7 @@ namespace libMBIN.NMS.GameComponents
             AboardFleet,
             InNexus,
             AbandonedFreighter,
-            InShipLanded
+            InShipLanded,
         }
         /* 0x60 */ public LastKnownPlayerStateEnum LastKnownPlayerState;
         /* 0x70 */ public Vector4f FreighterPositionInSystem;

@@ -53,7 +53,7 @@ namespace libMBIN.NMS.Toolkit
             DirectionalPadY = 0x2C,
             DirectionalButtonsX = 0x2D,
             DirectionalButtonsY = 0x2E,
-            ChordAD = 0x2F
+            ChordAD = 0x2F,
         }
         /* 0x0 */ public InputAxisEnum InputAxis;
     }

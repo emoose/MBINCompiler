@@ -8,7 +8,7 @@ namespace libMBIN.NMS.GameComponents
             Yellow,
             Green,
             Blue,
-            Red
+            Red,
         }
         /* 0x0 */ public GalaxyStarTypeEnum GalaxyStarType;
     }

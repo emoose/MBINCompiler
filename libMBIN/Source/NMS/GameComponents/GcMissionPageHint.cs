@@ -16,7 +16,7 @@ namespace libMBIN.NMS.GameComponents
             MissionLog,
             Discovery,
             Journey,
-            Expedition
+            Expedition,
         }
         /* 0x0 */ public MissionPageHintEnum MissionPageHint;
     }

@@ -8,7 +8,7 @@ namespace libMBIN.NMS.GameComponents
             Unknown,
             Discovery,
             Base,
-            Message
+            Message,
         }
         /* 0x0 */ public DownloadTypeEnum DownloadType;
     }

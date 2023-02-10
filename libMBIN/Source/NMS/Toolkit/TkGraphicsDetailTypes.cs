@@ -8,7 +8,7 @@ namespace libMBIN.NMS.Toolkit
             Low,
             Medium,
             High,
-            Ultra
+            Ultra,
         }
         /* 0x0 */ public GraphicDetailEnum GraphicDetail;
     }

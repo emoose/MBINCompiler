@@ -135,7 +135,7 @@ namespace libMBIN.NMS.GameComponents
             NPC_PirateSecondary,
             NPC_FreighterBase_SquadronPilot,
             NPC_FreighterBase_FrigateCaptain,
-            NPC_FreighterBase_Worker
+            NPC_FreighterBase_Worker,
         }
         /* 0x0 */ public InteractionTypeEnum InteractionType;
     }

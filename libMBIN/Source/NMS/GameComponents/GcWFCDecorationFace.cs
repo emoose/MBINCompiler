@@ -8,7 +8,7 @@ namespace libMBIN.NMS.GameComponents
         public enum CanWalkEnum {
             None,
             RequireCanWalk,
-            RequireCanNotWalk
+            RequireCanNotWalk,
         }
         /* 0x80 */ public CanWalkEnum CanWalk;
     }

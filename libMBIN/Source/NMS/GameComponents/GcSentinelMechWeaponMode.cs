@@ -7,7 +7,7 @@ namespace libMBIN.NMS.GameComponents
         public enum SentinelMechWeaponModeEnum {
             Gun,
             Canon,
-            Flamethrower
+            Flamethrower,
         }
         /* 0x0 */ public SentinelMechWeaponModeEnum SentinelMechWeaponMode;
     }

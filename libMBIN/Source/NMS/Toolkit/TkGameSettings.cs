@@ -22,7 +22,7 @@ namespace libMBIN.NMS.Toolkit
             japanese,
             traditionalchinese,
             simplifiedchinese,
-            korean
+            korean,
         }
         /* 0x00 */ public LanguageSettingEnum LanguageSetting;
         /* 0x08 */ public List<GcInputActionMapping> KeyMapping;

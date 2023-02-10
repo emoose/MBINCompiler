@@ -10,7 +10,7 @@ namespace libMBIN.NMS.GameComponents
             InShip,
             OnFoot,
             OnFootOutside,
-            Upload
+            Upload,
         }
         /* 0x00 */ public RequirePlayerActionEnum RequirePlayerAction;
         /* 0x04 */ public float Distance;
@@ -22,7 +22,7 @@ namespace libMBIN.NMS.GameComponents
         // size: 0x2
         public enum DistanceCheckTypeEnum {
             Radius,
-            BoundingBox
+            BoundingBox,
         }
         /* 0x1C */ public DistanceCheckTypeEnum DistanceCheckType;
         /* 0x20 */ public bool Inverse;

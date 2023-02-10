@@ -8,7 +8,7 @@ namespace libMBIN.NMS.GameComponents
             DistanceJetpacked,
             DistanceWalked,
             DistanceWarped,
-            DamageSustained
+            DamageSustained,
         }
         /* 0x0 */ public StatsValueEnum StatsValue;
     }

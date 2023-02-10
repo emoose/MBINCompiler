@@ -25,7 +25,7 @@ namespace libMBIN.NMS.Toolkit
             CavernsPrime,
             AlpinePrime,
             LilyPadPrime,
-            DesertPrime
+            DesertPrime,
         }
         /* 0x0 */ public TerrainSettingsEnum TerrainSettings;
     }

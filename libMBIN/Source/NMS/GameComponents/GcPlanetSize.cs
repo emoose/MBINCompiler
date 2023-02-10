@@ -8,7 +8,7 @@ namespace libMBIN.NMS.GameComponents
             Large,
             Medium,
             Small,
-            Moon
+            Moon,
         }
         /* 0x0 */ public PlanetSizeEnum PlanetSize;
     }

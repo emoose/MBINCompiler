@@ -293,7 +293,7 @@ namespace libMBIN.NMS.GameComponents
             SwitchRegionAxis,
             OpenLog,
             DumpVertStats,
-            Player_TagMarker
+            Player_TagMarker,
         }
         /* 0x0 */ public InputActionEnum InputAction;
     }

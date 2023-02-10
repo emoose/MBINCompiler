@@ -16,7 +16,7 @@ namespace libMBIN.NMS.GameComponents
             September,
             October,
             November,
-            December
+            December,
         }
         /* 0x0 */ public MonthEnum Month;
     }

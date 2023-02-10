@@ -13,7 +13,7 @@ namespace libMBIN.NMS.GameComponents
             FollowPlayer,
             AvoidPlayer,
             NoticePlayer,
-            FollowRoutine
+            FollowRoutine,
         }
         /* 0x0 */ public LegacyBehaviourEnum LegacyBehaviour;
     }

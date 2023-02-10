@@ -8,7 +8,7 @@ namespace libMBIN.NMS.GameComponents
         public enum PointStateEnum {
             Statement,
             ObjectiveIncomplete,
-            ObjectiveComplete
+            ObjectiveComplete,
         }
         /* 0x20 */ public PointStateEnum PointState;
         /* 0x28 */ public NMSString0x10 InsertItemName;

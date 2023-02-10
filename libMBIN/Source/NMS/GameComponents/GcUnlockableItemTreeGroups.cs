@@ -18,7 +18,7 @@ namespace libMBIN.NMS.GameComponents
             FreighterTech,
             S9BaseParts,
             S9ExoTech,
-            S9ShipTech
+            S9ShipTech,
         }
         /* 0x0 */ public UnlockableItemTreeEnum UnlockableItemTree;
     }

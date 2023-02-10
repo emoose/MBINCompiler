@@ -160,7 +160,7 @@ namespace libMBIN.NMS.Toolkit
             GestureThrottle = 0x152,
             GestureFlightStick = 0x153,
             GestureTeleport = 0x154,
-            MaxEnumValue = 0x155
+            MaxEnumValue = 0x155,
         }
         /* 0x0 */ public InputButtonEnum InputButton;
     }

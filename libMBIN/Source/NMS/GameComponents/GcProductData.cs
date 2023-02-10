@@ -46,7 +46,7 @@ namespace libMBIN.NMS.GameComponents
             Construction,
             Trade,
             Curio,
-            Cooking
+            Cooking,
         }
         /* 0x380 */ public WikiCategoryEnum WikiCategory;
         /* 0x384 */ public bool IsCraftable;

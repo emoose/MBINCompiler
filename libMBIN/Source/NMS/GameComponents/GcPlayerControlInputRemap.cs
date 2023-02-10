@@ -11,7 +11,7 @@ namespace libMBIN.NMS.GameComponents
         // size: 0x2
         public enum InputRemapModeEnum {
             ReplaceOriginalBinding,
-            AdditionalBinding
+            AdditionalBinding,
         }
         /* 0xC */ public InputRemapModeEnum InputRemapMode;
     }

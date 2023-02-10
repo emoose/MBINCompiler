@@ -9,7 +9,7 @@ namespace libMBIN.NMS.GameComponents
             Short,
             Medium,
             Long,
-            VeryLong
+            VeryLong,
         }
         /* 0x0 */ public ExpeditionDurationEnum ExpeditionDuration;
     }

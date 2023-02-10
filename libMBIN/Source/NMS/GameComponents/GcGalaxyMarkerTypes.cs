@@ -20,7 +20,7 @@ namespace libMBIN.NMS.GameComponents
             Freighter,
             PathIcon,
             SeasonParty,
-            Settlement
+            Settlement,
         }
         /* 0x0 */ public GalaxyMarkerTypeEnum GalaxyMarkerType;
     }

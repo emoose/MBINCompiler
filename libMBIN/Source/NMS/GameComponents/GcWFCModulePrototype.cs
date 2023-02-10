@@ -24,7 +24,7 @@ namespace libMBIN.NMS.GameComponents
             None,
             ClearEntireBlock,
             UseScene,
-            UseBasebuildingEdits
+            UseBasebuildingEdits,
         }
         /* 0x140 */ public TerrainEditsEnum TerrainEdits;
         /* 0x148 */ public List<GcWFCTerrainConstraint> TerrainConstraints;
@@ -38,7 +38,7 @@ namespace libMBIN.NMS.GameComponents
         public enum FreighterModuleTypeEnum {
             None,
             Room,
-            Corridor
+            Corridor,
         }
         /* 0x458 */ public FreighterModuleTypeEnum FreighterModuleType;
     }

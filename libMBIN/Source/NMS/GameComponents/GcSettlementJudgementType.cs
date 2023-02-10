@@ -11,7 +11,7 @@ namespace libMBIN.NMS.GameComponents
             NewBuilding,
             BuildingChoice,
             Conflict,
-            Request
+            Request,
         }
         /* 0x0 */ public SettlementJudgementTypeEnum SettlementJudgementType;
     }

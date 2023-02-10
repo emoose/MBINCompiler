@@ -12,7 +12,7 @@ namespace libMBIN.NMS.Toolkit
         public enum ThumbnailModeEnum {
             None,
             HUD,
-            GUI
+            GUI,
         }
         /* 0x48 */ public ThumbnailModeEnum ThumbnailMode;
         // size: 0x4
@@ -20,7 +20,7 @@ namespace libMBIN.NMS.Toolkit
             ResourceBounds,
             ResourceBoundingHeight,
             NodeBoundingBox,
-            DiscoveryView
+            DiscoveryView,
         }
         /* 0x4C */ public FocusTypeEnum FocusType;
         /* 0x50 */ public NMSString0x20A FocusLocator;

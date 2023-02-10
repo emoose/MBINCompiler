@@ -6,7 +6,7 @@ namespace libMBIN.NMS.GameComponents
         // size: 0x2
         public enum GalacticPointEnum {
             Atlas,
-            BlackHole
+            BlackHole,
         }
         /* 0x0 */ public GalacticPointEnum GalacticPoint;
     }

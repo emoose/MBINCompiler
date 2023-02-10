@@ -10,7 +10,7 @@ namespace libMBIN.NMS.Globals
             Disabled,
             Ignored,
             Skipped,
-            Enabled
+            Enabled,
         }
         /* 0x000 */ public AssertsLevelEnum AssertsLevel;
         /* 0x004 */ public bool DefaultSelectIgnoreAsserts;
@@ -25,7 +25,7 @@ namespace libMBIN.NMS.Globals
             Info = 0x10,
             Alt = 0x20,
             AltWarn = 0x40,
-            AltError = 0x80
+            AltError = 0x80,
         }
         /* 0x008 */ public EnabledChannelsEnum EnabledChannels;
         /* 0x00C */ public NMSString0x100 IncludeLogFilter;

@@ -7,7 +7,7 @@ namespace libMBIN.NMS.GameComponents
         public enum IndexTypeEnum {
             Regular,
             Seeded,
-            Random
+            Random,
         }
         /* 0x0 */ public IndexTypeEnum IndexType;
     }

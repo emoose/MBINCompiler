@@ -13,7 +13,7 @@ namespace libMBIN.NMS.GameComponents
             Cave,
             Dirt,
             Liquid,
-            Substance
+            Substance,
         }
         /* 0x0 */ public TileTypeEnum TileType;
     }

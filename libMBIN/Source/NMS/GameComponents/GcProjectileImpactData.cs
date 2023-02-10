@@ -10,13 +10,13 @@ namespace libMBIN.NMS.GameComponents
         // size: 0x2
         public enum ImpactAlignmentEnum {
             ImpactNormal,
-            GravityUp
+            GravityUp,
         }
         /* 0x14 */ public ImpactAlignmentEnum ImpactAlignment;
         // size: 0x2
         public enum ImpactAttachmentEnum {
             World,
-            HitBody
+            HitBody,
         }
         /* 0x18 */ public ImpactAttachmentEnum ImpactAttachment;
     }

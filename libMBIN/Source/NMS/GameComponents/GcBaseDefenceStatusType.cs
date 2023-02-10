@@ -9,7 +9,7 @@ namespace libMBIN.NMS.GameComponents
             Alert,
             SearchingForTarget,
             Disabled,
-            Security
+            Security,
         }
         /* 0x0 */ public BaseDefenceStatusEnum BaseDefenceStatus;
     }

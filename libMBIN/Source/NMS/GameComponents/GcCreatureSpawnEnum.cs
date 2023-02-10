@@ -30,7 +30,7 @@ namespace libMBIN.NMS.GameComponents
             Fighters,
             PostFighters,
             Escape,
-            Warp
+            Warp,
         }
         /* 0x0 */ public IncrementorEnum Incrementor;
     }

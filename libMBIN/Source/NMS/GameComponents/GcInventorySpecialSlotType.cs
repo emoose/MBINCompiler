@@ -9,7 +9,7 @@ namespace libMBIN.NMS.GameComponents
             TechOnly,
             Cargo,
             BlockedByBrokenTech,
-            TechBonus
+            TechBonus,
         }
         /* 0x0 */ public InventorySpecialSlotTypeEnum InventorySpecialSlotType;
     }

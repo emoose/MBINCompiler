@@ -8,7 +8,7 @@ namespace libMBIN.NMS.GameComponents
             SawTooth,
             Sine,
             Square,
-            Triangle
+            Triangle,
         }
         /* 0x0 */ public ByteBeatWaveEnum ByteBeatWave;
     }

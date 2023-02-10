@@ -9,7 +9,7 @@ namespace libMBIN.NMS.GameComponents
             MostlyDay,
             AnyTime,
             MostlyNight,
-            OnlyNight
+            OnlyNight,
         }
         /* 0x0 */ public CreatureActiveTimeEnum CreatureActiveTime;
     }

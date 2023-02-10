@@ -11,7 +11,7 @@ namespace libMBIN.NMS.GameComponents
             Reward,
             CorruptedDroneInteract,
             GroundWorms,
-            DroneHiveGuards
+            DroneHiveGuards,
         }
         /* 0x0 */ public EncounterTypeEnum EncounterType;
     }

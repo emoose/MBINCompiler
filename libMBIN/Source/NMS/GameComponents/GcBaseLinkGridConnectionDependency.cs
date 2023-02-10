@@ -13,7 +13,7 @@ namespace libMBIN.NMS.GameComponents
             EnablesRate,
             DisablesRate,
             EnablesConnection,
-            DisablesConnection
+            DisablesConnection,
         }
         /* 0x3C */ public DependentEffectEnum DependentEffect;
         /* 0x40 */ public bool DisableWhenOffline;

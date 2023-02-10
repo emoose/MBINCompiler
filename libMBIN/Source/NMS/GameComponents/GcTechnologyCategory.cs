@@ -18,7 +18,7 @@ namespace libMBIN.NMS.GameComponents
             Mech,
             AllVehicles,
             AlienShip,
-            AllShips
+            AllShips,
         }
         /* 0x0 */ public TechnologyCategoryEnum TechnologyCategory;
     }

@@ -19,7 +19,7 @@ namespace libMBIN.NMS.Toolkit
             Bezier,
             BezierInverted,
             BezierWide,
-            BezierWideInverted
+            BezierWideInverted,
         }
         /* 0x40 */ public ShapeEnum Shape;
         /* 0x44 */ public bool SolidColour;
@@ -33,7 +33,7 @@ namespace libMBIN.NMS.Toolkit
             Horizontal,
             HorizontalBounce,
             Radial,
-            Box
+            Box,
         }
         /* 0x48 */ public GradientEnum Gradient;
         /* 0x4C */ public float GradientStartOffset;

@@ -7,7 +7,7 @@ namespace libMBIN.NMS.GameComponents
         public enum ActionTypeEnum {
             Repair,
             UpdateDamagedComponents,
-            CargoPhoneCall
+            CargoPhoneCall,
         }
         /* 0x0 */ public ActionTypeEnum ActionType;
         /* 0x8 */ public NMSString0x20A CommunicatorDialog;

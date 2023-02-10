@@ -25,21 +25,21 @@ namespace libMBIN.NMS.GameComponents
         public enum ScaleInTransformApplicationOnClothEnum {
             Multiply,
             Divide,
-            Ignore
+            Ignore,
         }
         /* 0x0F0 */ public ScaleInTransformApplicationOnClothEnum ScaleInTransformApplicationOnCloth;
         // size: 0x3
         public enum ScaleInTransformApplicationOnCollisionEnum {
             Multiply,
             Divide,
-            Ignore
+            Ignore,
         }
         /* 0x0F4 */ public ScaleInTransformApplicationOnCollisionEnum ScaleInTransformApplicationOnCollision;
         // size: 0x3
         public enum ScaleInTransformApplicationOnAttachmentEnum {
             Multiply,
             Divide,
-            Ignore
+            Ignore,
         }
         /* 0x0F8 */ public ScaleInTransformApplicationOnAttachmentEnum ScaleInTransformApplicationOnAttachment;
         // size: 0x4
@@ -47,7 +47,7 @@ namespace libMBIN.NMS.GameComponents
             CapeLike,
             Rectangular,
             TakenFromSource,
-            Saved
+            Saved,
         }
         /* 0x0FC */ public InitialShapeSourceEnum InitialShapeSource;
         /* 0x100 */ public GcCapeLikeInitialShape CapeLikeInitialShape;

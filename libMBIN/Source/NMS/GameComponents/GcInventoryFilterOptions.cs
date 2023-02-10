@@ -9,7 +9,7 @@ namespace libMBIN.NMS.GameComponents
             Substance,
             HighValue,
             Consumable,
-            Deployable
+            Deployable,
         }
         /* 0x0 */ public InventoryFilterEnum InventoryFilter;
     }

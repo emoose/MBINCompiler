@@ -7,7 +7,7 @@ namespace libMBIN.NMS.GameComponents
         public enum BaseAutoPowerSettingEnum {
             UseDefault,
             ForceDisabled,
-            ForceEnabled
+            ForceEnabled,
         }
         /* 0x0 */ public BaseAutoPowerSettingEnum BaseAutoPowerSetting;
     }

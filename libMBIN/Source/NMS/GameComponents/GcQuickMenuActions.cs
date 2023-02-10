@@ -61,7 +61,7 @@ namespace libMBIN.NMS.GameComponents
             ReportBase,
             CargoShield,
             CallRocket,
-            Invalid
+            Invalid,
         }
         /* 0x0 */ public QuickMenuActionsEnum QuickMenuActions;
     }

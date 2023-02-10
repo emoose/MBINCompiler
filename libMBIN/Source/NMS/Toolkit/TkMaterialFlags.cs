@@ -68,7 +68,7 @@ namespace libMBIN.NMS.Toolkit
             _F61_CLAMP_AMBIENT,
             _F62_DETAIL_ALPHACUTOUT,
             _F63_DISSOLVE,
-            _F64_
+            _F64_,
         }
         /* 0x0 */ public MaterialFlagEnum MaterialFlag;
     }

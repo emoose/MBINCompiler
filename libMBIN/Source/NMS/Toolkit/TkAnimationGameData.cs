@@ -9,7 +9,7 @@ namespace libMBIN.NMS.Toolkit
         public enum BlockPlayerWeaponEnum {
             Unblocked,
             Sheathed,
-            OutButCannotFire
+            OutButCannotFire,
         }
         /* 0x4 */ public BlockPlayerWeaponEnum BlockPlayerWeapon;
     }

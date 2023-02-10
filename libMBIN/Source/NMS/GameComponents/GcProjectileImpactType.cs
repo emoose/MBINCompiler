@@ -21,7 +21,7 @@ namespace libMBIN.NMS.GameComponents
             Player,
             OtherPlayer,
             SentinelShield,
-            SpaceshipShield
+            SpaceshipShield,
         }
         /* 0x0 */ public ImpactEnum Impact;
     }

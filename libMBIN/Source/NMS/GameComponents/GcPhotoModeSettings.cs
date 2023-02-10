@@ -12,7 +12,7 @@ namespace libMBIN.NMS.GameComponents
             Off,
             Mid,
             On,
-            Macro
+            Macro,
         }
         /* 0x24 */ public DepthOfFieldSettingEnum DepthOfFieldSetting;
         /* 0x28 */ public float DepthOfFieldDistance;

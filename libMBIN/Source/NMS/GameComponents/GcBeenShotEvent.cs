@@ -7,7 +7,7 @@ namespace libMBIN.NMS.GameComponents
         public enum ShotByEnum {
             Player,
             Anything,
-            PlayerOrRemotePlayer
+            PlayerOrRemotePlayer,
         }
         /* 0x0 */ public ShotByEnum ShotBy;
         /* 0x4 */ public int DamageThreshold;

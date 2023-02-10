@@ -8,7 +8,7 @@ namespace libMBIN.NMS.GameComponents
             Set,
             Add,
             Max,
-            Min
+            Min,
         }
         /* 0x0 */ public StatTrackTypeEnum StatTrackType;
     }

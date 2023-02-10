@@ -7,7 +7,7 @@ namespace libMBIN.NMS.GameComponents
         public enum DefaultProductTypeEnum {
             None,
             PrimaryProduct,
-            SecondaryProduct
+            SecondaryProduct,
         }
         /* 0x0 */ public DefaultProductTypeEnum DefaultProductType;
     }

@@ -18,7 +18,7 @@ namespace libMBIN.NMS.GameComponents
             Ground,
             Water,
             Air,
-            Space
+            Space,
         }
         /* 0x30 */ public MoveAreaEnum MoveArea;
         /* 0x34 */ public float MinScale;

@@ -11,7 +11,7 @@ namespace libMBIN.NMS.GameComponents
             Terrain,
             Substance,
             Plant,
-            BuildingSurfaceNormal
+            BuildingSurfaceNormal,
         }
         /* 0x0 */ public BaseBuildingDecorationTypeEnum BaseBuildingDecorationType;
     }

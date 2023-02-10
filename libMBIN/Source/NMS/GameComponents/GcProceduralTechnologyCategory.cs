@@ -9,7 +9,7 @@ namespace libMBIN.NMS.GameComponents
             Combat,
             Mining,
             Scanning,
-            Protection
+            Protection,
         }
         /* 0x0 */ public ProceduralTechnologyCategoryEnum ProceduralTechnologyCategory;
     }

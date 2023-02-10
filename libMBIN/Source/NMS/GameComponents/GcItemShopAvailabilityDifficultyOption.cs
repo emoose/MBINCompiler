@@ -7,7 +7,7 @@ namespace libMBIN.NMS.GameComponents
         public enum ItemShopAvailabilityDifficultyEnum {
             High,
             Normal,
-            Low
+            Low,
         }
         /* 0x0 */ public ItemShopAvailabilityDifficultyEnum ItemShopAvailabilityDifficulty;
     }

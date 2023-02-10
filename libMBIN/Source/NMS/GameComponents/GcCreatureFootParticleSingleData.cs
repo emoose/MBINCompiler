@@ -11,7 +11,7 @@ namespace libMBIN.NMS.GameComponents
         public enum MoveSpeedEnum {
             Always,
             Walk,
-            Run
+            Run,
         }
         /* 0x1C */ public MoveSpeedEnum MoveSpeed;
     }

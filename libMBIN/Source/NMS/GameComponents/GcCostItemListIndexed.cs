@@ -12,14 +12,14 @@ namespace libMBIN.NMS.GameComponents
         public enum ItemOutOfBoundsBehaviourEnum {
             NoCost,
             UseFirst,
-            UseLast
+            UseLast,
         }
         /* 0x18 */ public ItemOutOfBoundsBehaviourEnum ItemOutOfBoundsBehaviour;
         // size: 0x3
         public enum ItemIndexProviderEnum {
             None,
             Biome,
-            SubBiome
+            SubBiome,
         }
         /* 0x1C */ public ItemIndexProviderEnum ItemIndexProvider;
     }

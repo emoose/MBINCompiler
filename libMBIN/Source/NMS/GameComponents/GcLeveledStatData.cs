@@ -12,7 +12,7 @@ namespace libMBIN.NMS.GameComponents
         public enum StatMessageTypeEnum {
             Full,
             Quick,
-            Silent
+            Silent,
         }
         /* 0x030 */ public StatMessageTypeEnum StatMessageType;
         /* 0x038 */ public NMSString0x20A NotifyMessage;

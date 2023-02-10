@@ -10,7 +10,7 @@ namespace libMBIN.NMS.GameComponents
             Toggle,
             Add,
             Remove,
-            RemoveChildren
+            RemoveChildren,
         }
         /* 0x000 */ public NodeActiveStateEnum NodeActiveState;
         /* 0x004 */ public NMSString0x80 Name;

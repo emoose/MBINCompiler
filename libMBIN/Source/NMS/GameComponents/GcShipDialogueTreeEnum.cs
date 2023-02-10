@@ -11,7 +11,7 @@ namespace libMBIN.NMS.GameComponents
             Trade,
             Help,
             Goods,
-            Hostile
+            Hostile,
         }
         /* 0x0 */ public DialogueTreeEnum DialogueTree;
     }

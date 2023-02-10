@@ -23,7 +23,7 @@ namespace libMBIN.NMS.GameComponents
             SoulLaser,
             Flamethrower,
             StunGrenade,
-            Stealth
+            Stealth,
         }
         /* 0x0 */ public WeaponModeEnum WeaponMode;
     }

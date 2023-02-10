@@ -22,7 +22,7 @@ namespace libMBIN.NMS.GameComponents
             Y,
             YNeg,
             Z,
-            ZNeg
+            ZNeg,
         }
         /* 0x300 */ public PlayerHeadUpAxisEnum PlayerHeadUpAxis;
         /* 0x308 */ public List<GcCreatureIkData> JointDataDeprecated;

@@ -24,7 +24,7 @@ namespace libMBIN.NMS.GameComponents
             HideInMenusMenu = 0x2,
             OnlyVR = 0x4,
             OnlyNonVR = 0x8,
-            None = 0x0
+            None = 0x0,
         }
         /* 0x2A8 */ public InputActionInfoFlagsEnum InputActionInfoFlags;
     }

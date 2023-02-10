@@ -43,7 +43,7 @@ namespace libMBIN.NMS.GameComponents
             SubstancePickup,
             FreighterTeleport,
             MiniPortalTrigger,
-            SuperDoopaScanner
+            SuperDoopaScanner,
         }
         /* 0x000 */ public SimpleInteractionTypeEnum SimpleInteractionType;
         /* 0x004 */ public float InteractDistance;

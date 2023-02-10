@@ -17,7 +17,7 @@ namespace libMBIN.NMS.GameComponents
         // size: 0x2
         public enum CloudinessEnum {
             CloudyWithClearSpells,
-            ClearWithCloudySpells
+            ClearWithCloudySpells,
         }
         /* 0x3C */ public CloudinessEnum Cloudiness;
     }

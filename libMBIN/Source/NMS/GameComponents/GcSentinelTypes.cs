@@ -13,7 +13,7 @@ namespace libMBIN.NMS.GameComponents
             Quad,
             Mech,
             Walker,
-            FriendlyDrone
+            FriendlyDrone,
         }
         /* 0x0 */ public SentinelTypeEnum SentinelType;
     }

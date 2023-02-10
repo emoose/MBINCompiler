@@ -25,7 +25,7 @@ namespace libMBIN.NMS.GameComponents
             PrimaryProduct,
             PrimarySubstance,
             SecondaryProduct,
-            SecondarySubstance
+            SecondarySubstance,
         }
         /* 0x68 */ public DefaultItemTypeForInitialWarpEnum DefaultItemTypeForInitialWarp;
         /* 0x70 */ public List<NMSString0x10> BasePartBlueprints;

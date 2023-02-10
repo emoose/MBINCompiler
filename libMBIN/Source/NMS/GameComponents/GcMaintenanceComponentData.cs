@@ -25,7 +25,7 @@ namespace libMBIN.NMS.GameComponents
             OnlyWhenComplete,
             OnlyWhenNotComplete,
             Always,
-            Never
+            Never,
         }
         /* 0x020 */ public InteractableEnum Interactable;
         /* 0x024 */ public bool ForceNoninteraction;
@@ -36,7 +36,7 @@ namespace libMBIN.NMS.GameComponents
         // size: 0x2
         public enum ModelRendererResourceEnum {
             ModelNode,
-            MasterModelNode
+            MasterModelNode,
         }
         /* 0x190 */ public ModelRendererResourceEnum ModelRendererResource;
         /* 0x194 */ public GcBroadcastLevel BroadcastLevel;

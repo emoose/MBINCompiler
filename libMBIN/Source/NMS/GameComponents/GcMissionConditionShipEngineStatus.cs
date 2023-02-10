@@ -12,7 +12,7 @@ namespace libMBIN.NMS.GameComponents
             Boosting,
             Pulsing,
             LowFlight,
-            Inverted
+            Inverted,
         }
         /* 0x0 */ public EngineStatusEnum EngineStatus;
     }

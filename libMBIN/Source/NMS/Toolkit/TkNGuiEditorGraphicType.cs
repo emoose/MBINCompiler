@@ -76,7 +76,7 @@ namespace libMBIN.NMS.Toolkit
             PinChildren,
             UnpinChildren,
             DynamicPanel,
-            DynamicPanelTitle
+            DynamicPanelTitle,
         }
         /* 0x0 */ public NGuiEditorGraphicEnum NGuiEditorGraphic;
     }

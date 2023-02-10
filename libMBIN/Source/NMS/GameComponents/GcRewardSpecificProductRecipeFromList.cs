@@ -11,7 +11,7 @@ namespace libMBIN.NMS.GameComponents
             OneRandom,
             InOrder,
             TryAllRandom,
-            TryUnknownRandom
+            TryUnknownRandom,
         }
         /* 0x10 */ public ProductListRewardOrderEnum ProductListRewardOrder;
     }

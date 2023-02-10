@@ -7,7 +7,7 @@ namespace libMBIN.NMS.GameComponents
         public enum DefaultSubstanceTypeEnum {
             None,
             PrimarySubstance,
-            SecondarySubstance
+            SecondarySubstance,
         }
         /* 0x0 */ public DefaultSubstanceTypeEnum DefaultSubstanceType;
     }

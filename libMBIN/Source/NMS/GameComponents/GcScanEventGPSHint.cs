@@ -11,7 +11,7 @@ namespace libMBIN.NMS.GameComponents
             OffsetMid,
             OffsetWide,
             Obfuscated,
-            PartObfuscated
+            PartObfuscated,
         }
         /* 0x0 */ public ScanEventGPSHintEnum ScanEventGPSHint;
     }

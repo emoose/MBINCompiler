@@ -10,7 +10,7 @@ namespace libMBIN.NMS.GameComponents
             SpecificObject,
             Trader,
             AbandonedFreighter,
-            AnyEncounterOtherThanTheNamedOne
+            AnyEncounterOtherThanTheNamedOne,
         }
         /* 0x00 */ public TestEncounterTypeEnum TestEncounterType;
         /* 0x08 */ public NMSString0x10 SpecificObjectID;

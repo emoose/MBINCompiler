@@ -13,7 +13,7 @@ namespace libMBIN.NMS.GameComponents
             Exotic,
             Energy,
             None,
-            SpecialShop
+            SpecialShop,
         }
         /* 0x0 */ public TradeCategoryEnum TradeCategory;
     }

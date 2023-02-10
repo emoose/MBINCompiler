@@ -20,7 +20,7 @@ namespace libMBIN.NMS.GameComponents
             Bubble,
             Weird,
             Fire,
-            ClearCold
+            ClearCold,
         }
         /* 0x0 */ public WeatherEnum Weather;
     }

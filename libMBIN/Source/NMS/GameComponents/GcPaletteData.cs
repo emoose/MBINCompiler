@@ -10,7 +10,7 @@ namespace libMBIN.NMS.GameComponents
             _4,
             _8,
             _16,
-            All
+            All,
         }
         /* 0x00 */ public NumColoursEnum NumColours;
         [NMS(Size = 0x40)]

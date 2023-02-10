@@ -7,7 +7,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x10 */ public NMSString0x10 DroneAnimation;
         // size: 0x1
         public enum CameraOriginEnum {
-            ExternalBase
+            ExternalBase,
         }
         /* 0x20 */ public CameraOriginEnum CameraOrigin;
         /* 0x24 */ public bool UseLookAt;

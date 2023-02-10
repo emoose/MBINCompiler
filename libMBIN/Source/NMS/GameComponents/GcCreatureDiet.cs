@@ -8,7 +8,7 @@ namespace libMBIN.NMS.GameComponents
             Carnivore,
             Omnivore,
             Herbivore,
-            Robot
+            Robot,
         }
         /* 0x0 */ public DietEnum Diet;
     }

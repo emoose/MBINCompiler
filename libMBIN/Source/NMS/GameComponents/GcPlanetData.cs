@@ -14,7 +14,7 @@ namespace libMBIN.NMS.GameComponents
         // size: 0x2
         public enum ResourceLevelEnum {
             Low,
-            High
+            High,
         }
         /* 0x00D8 */ public ResourceLevelEnum ResourceLevel;
         /* 0x00DC */ public GcBuildingDensityLevels BuildingLevel;

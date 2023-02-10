@@ -8,7 +8,7 @@ namespace libMBIN.NMS.GameComponents
             Always,
             Occasional,
             Storm,
-            None
+            None,
         }
         /* 0x0 */ public RainbowTypeEnum RainbowType;
     }

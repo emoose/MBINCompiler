@@ -8,7 +8,7 @@ namespace libMBIN.NMS.GameComponents
             Off,
             Slow,
             Normal,
-            Fast
+            Fast,
         }
         /* 0x0 */ public CombatTimerDifficultyOptionEnum CombatTimerDifficultyOption;
     }

@@ -57,7 +57,7 @@ namespace libMBIN.NMS.Globals
             SecondaryDamage,
             GenericSuccess,
             GenericFailure,
-            WhaleFailure
+            WhaleFailure,
         }
         /* 0x0128 */ public ForceDebriefEntryTypeEnum ForceDebriefEntryType;
         /* 0x012C */ public int ForcedSequentialEventsStartingIndex;

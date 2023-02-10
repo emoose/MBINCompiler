@@ -10,7 +10,7 @@ namespace libMBIN.NMS.GameComponents
             Building,
             Repairing,
             Charging,
-            Paying
+            Paying,
         }
         /* 0x0 */ public ItemPurposeEnum ItemPurpose;
     }

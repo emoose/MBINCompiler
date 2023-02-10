@@ -92,7 +92,7 @@ namespace libMBIN.NMS.Globals
         public enum GameWindowModeEnum {
             Bordered,
             Borderless,
-            Fullscreen
+            Fullscreen,
         }
         /* 0x0678 */ public GameWindowModeEnum GameWindowMode;
         /* 0x067C */ public int Monitor;
@@ -106,7 +106,7 @@ namespace libMBIN.NMS.Globals
         public enum GameStateModeEnum {
             LoadPreset,
             UserStorage,
-            FreshStart
+            FreshStart,
         }
         /* 0x088C */ public GameStateModeEnum GameStateMode;
         // size: 0x7
@@ -117,7 +117,7 @@ namespace libMBIN.NMS.Globals
             SmokeTest,
             SmokeTestGalaxyMap,
             Scratchpad,
-            UnitTest
+            UnitTest,
         }
         /* 0x0890 */ public BootModeEnum BootMode;
         // size: 0x7
@@ -128,7 +128,7 @@ namespace libMBIN.NMS.Globals
             SpaceStation,
             RandomPlanet,
             GameStartPlanet,
-            SpecificLocation
+            SpecificLocation,
         }
         /* 0x0894 */ public PlayerSpawnLocationOverrideEnum PlayerSpawnLocationOverride;
         /* 0x0898 */ public NMSString0x80 SceneSettings;
@@ -137,13 +137,13 @@ namespace libMBIN.NMS.Globals
         // size: 0x2
         public enum SolarSystemBootEnum {
             FromSettings,
-            Generate
+            Generate,
         }
         /* 0x0A98 */ public SolarSystemBootEnum SolarSystemBoot;
         // size: 0x2
         public enum ShaderPreloadEnum {
             Off,
-            Full
+            Full,
         }
         /* 0x0A9C */ public ShaderPreloadEnum ShaderPreload;
         /* 0x0AA0 */ public bool ShaderPreloadListExport;
@@ -153,7 +153,7 @@ namespace libMBIN.NMS.Globals
         public enum BootLoadDelayEnum {
             LoadAll,
             WaitForPlanet,
-            WaitForNothing
+            WaitForNothing,
         }
         /* 0x0AA4 */ public BootLoadDelayEnum BootLoadDelay;
         /* 0x0AA8 */ public bool MemCsv;
@@ -212,7 +212,7 @@ namespace libMBIN.NMS.Globals
         // size: 0x2
         public enum RealityModeEnum {
             LoadPreset,
-            Generate
+            Generate,
         }
         /* 0x0B18 */ public RealityModeEnum RealityMode;
         /* 0x0B1C */ public bool DebugPersistentInteractions;
@@ -235,7 +235,7 @@ namespace libMBIN.NMS.Globals
         public enum RecordSettingEnum {
             None,
             Record,
-            Playback
+            Playback,
         }
         /* 0x0C54 */ public RecordSettingEnum RecordSetting;
         /* 0x0C58 */ public bool DebugBuildingSpawns;
@@ -275,7 +275,7 @@ namespace libMBIN.NMS.Globals
             TourGalaxy,
             TourUDAs,
             TourShortUDAs,
-            TourRandomWarps
+            TourRandomWarps,
         }
         /* 0x0E48 */ public SmokeTestCycleModeEnum SmokeTestCycleMode;
         // size: 0x8
@@ -287,7 +287,7 @@ namespace libMBIN.NMS.Globals
             UltraBiomeSnapShot,
             Walking,
             LeakDetector,
-            WalkingSnapshot
+            WalkingSnapshot,
         }
         /* 0x0E4C */ public SmokeTestScenarioEnum SmokeTestScenario;
         /* 0x0E50 */ public bool SmokeTestLegacyOutput;
@@ -336,7 +336,7 @@ namespace libMBIN.NMS.Globals
         public enum ProxyTypeEnum {
             None,
             ManualURI,
-            InetProxy
+            InetProxy,
         }
         /* 0x124C */ public ProxyTypeEnum ProxyType;
         /* 0x1250 */ public NMSString0x80 ProxyURI;
@@ -349,7 +349,7 @@ namespace libMBIN.NMS.Globals
             prod,
             custom,
             pentest,
-            merged
+            merged,
         }
         /* 0x12D0 */ public ServerEnvEnum ServerEnv;
         /* 0x12D4 */ public NMSString0x80 AuthBaseUrl;

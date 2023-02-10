@@ -10,7 +10,7 @@ namespace libMBIN.NMS.GameComponents
             Current,
             Personal,
             Ship,
-            Vehicle
+            Vehicle,
         }
         /* 0x0 */ public InventoryTestEnum InventoryTest;
         /* 0x4 */ public int SlotsFree;

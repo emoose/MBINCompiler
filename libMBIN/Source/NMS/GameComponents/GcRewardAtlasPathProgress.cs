@@ -6,7 +6,7 @@ namespace libMBIN.NMS.GameComponents
         // size: 0x2
         public enum AtlasPathProgressTypeEnum {
             IncrementPathProgress,
-            FinalStoryAtlas
+            FinalStoryAtlas,
         }
         /* 0x0 */ public AtlasPathProgressTypeEnum AtlasPathProgressType;
     }

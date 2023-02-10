@@ -7,7 +7,7 @@ namespace libMBIN.NMS.GameComponents
         public enum DamageGivenDifficultyEnum {
             High,
             Normal,
-            Low
+            Low,
         }
         /* 0x0 */ public DamageGivenDifficultyEnum DamageGivenDifficulty;
     }

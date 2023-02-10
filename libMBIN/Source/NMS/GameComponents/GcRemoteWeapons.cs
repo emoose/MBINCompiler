@@ -26,7 +26,7 @@ namespace libMBIN.NMS.GameComponents
             ShipMinigun,
             ShipPlasma,
             ShipRocket,
-            None
+            None,
         }
         /* 0x0 */ public RemoteWeaponTypeEnum RemoteWeaponType;
     }

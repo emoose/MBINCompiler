@@ -7,7 +7,7 @@ namespace libMBIN.NMS.GameComponents
         public enum InventoryStackLimitsDifficultyEnum {
             High,
             Normal,
-            Low
+            Low,
         }
         /* 0x0 */ public InventoryStackLimitsDifficultyEnum InventoryStackLimitsDifficulty;
     }

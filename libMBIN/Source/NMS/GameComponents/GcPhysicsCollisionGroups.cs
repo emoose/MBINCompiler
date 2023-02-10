@@ -23,7 +23,7 @@ namespace libMBIN.NMS.GameComponents
             Raycast = 0x1000,
             NetworkPlayer = 0x2000,
             NPCs = 0x4000,
-            Trigger = 0x8000
+            Trigger = 0x8000,
         }
         /* 0x0 */ public CollisionGroupEnum CollisionGroup;
     }

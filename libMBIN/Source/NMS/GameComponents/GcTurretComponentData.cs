@@ -7,7 +7,7 @@ namespace libMBIN.NMS.GameComponents
         public enum GunTypeEnum {
             Laser,
             Projectile,
-            Missile
+            Missile,
         }
         /* 0x00 */ public GunTypeEnum GunType;
         /* 0x08 */ public NMSString0x10 LaserEffectId;

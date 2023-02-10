@@ -19,7 +19,7 @@ namespace libMBIN.NMS.Toolkit
             Off,
             On,
             Adaptive,
-            Triple
+            Triple,
         }
         /* 0x02C */ public VsyncExEnum VsyncEx;
         /* 0x030 */ public TkGraphicsDetailPreset GraphicsDetail;
@@ -36,7 +36,7 @@ namespace libMBIN.NMS.Toolkit
             Off,
             On,
             Auto,
-            NonDynamic
+            NonDynamic,
         }
         /* 0x094 */ public TextureStreamingVkEnum TextureStreamingVk;
         /* 0x098 */ public bool ShowRequirementsWarnings;
@@ -49,7 +49,7 @@ namespace libMBIN.NMS.Toolkit
             Off,
             HDR400,
             HDR600,
-            HDR1000
+            HDR1000,
         }
         /* 0x0A4 */ public HDRModeEnum HDRMode;
         /* 0x0A8 */ public NMSString0x100 AdapterName;

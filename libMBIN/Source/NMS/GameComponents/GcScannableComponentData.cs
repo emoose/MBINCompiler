@@ -22,7 +22,7 @@ namespace libMBIN.NMS.GameComponents
             BinocularsHotspots,
             Scanner,
             Marker,
-            None
+            None,
         }
         /* 0x3C */ public ScannableTypeEnum ScannableType;
         /* 0x40 */ public bool IsPlacedMarker;

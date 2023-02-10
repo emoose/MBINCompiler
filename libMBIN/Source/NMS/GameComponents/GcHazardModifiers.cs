@@ -9,7 +9,7 @@ namespace libMBIN.NMS.GameComponents
             Toxicity,
             Radiation,
             LifeSupportDrain,
-            Gravity
+            Gravity,
         }
         /* 0x0 */ public HazardModifierEnum HazardModifier;
     }

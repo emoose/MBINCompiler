@@ -11,7 +11,7 @@ namespace libMBIN.NMS.Toolkit
             ArchesSmall,
             Blobs,
             BlobsSmall,
-            Substance
+            Substance,
         }
         /* 0x0 */ public FeatureTypesEnum FeatureTypes;
     }

@@ -27,7 +27,7 @@ namespace libMBIN.NMS.GameComponents
             ShipWeapons,
             VehicleWeapons,
             CombatEffects,
-            Fiend
+            Fiend,
         }
         /* 0x0 */ public DamageTypeEnum DamageType;
     }

@@ -7,7 +7,7 @@ namespace libMBIN.NMS.Toolkit
         // size: 0x2
         public enum EmissionRateTypeEnum {
             PerParticle,
-            Distance
+            Distance,
         }
         /* 0x4 */ public EmissionRateTypeEnum EmissionRateType;
     }

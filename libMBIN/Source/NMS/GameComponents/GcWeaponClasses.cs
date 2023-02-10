@@ -9,7 +9,7 @@ namespace libMBIN.NMS.GameComponents
             Rifle,
             Pristine,
             Alien,
-            Royal
+            Royal,
         }
         /* 0x0 */ public WeaponStatClassEnum WeaponStatClass;
     }

@@ -11,7 +11,7 @@ namespace libMBIN.NMS.GameComponents
             Survival,
             Ambient,
             Permadeath,
-            Seasonal
+            Seasonal,
         }
         /* 0x0 */ public PresetGameModeEnum PresetGameMode;
     }

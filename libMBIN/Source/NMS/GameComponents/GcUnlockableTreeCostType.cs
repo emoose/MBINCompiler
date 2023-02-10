@@ -10,7 +10,7 @@ namespace libMBIN.NMS.GameComponents
         public enum TypeOfCostEnum {
             Currency,
             Substance,
-            Product
+            Product,
         }
         /* 0x10 */ public TypeOfCostEnum TypeOfCost;
         /* 0x14 */ public GcCurrency CurrencyType;

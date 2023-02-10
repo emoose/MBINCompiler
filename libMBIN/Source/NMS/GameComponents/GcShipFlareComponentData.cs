@@ -5,7 +5,7 @@ namespace libMBIN.NMS.GameComponents
     {
         // size: 0x1
         public enum FlareTypeEnum {
-            Default
+            Default,
         }
         /* 0x0 */ public FlareTypeEnum FlareType;
     }

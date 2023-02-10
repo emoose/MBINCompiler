@@ -14,7 +14,7 @@ namespace libMBIN.NMS.GameComponents
             OnNexus,
             SpacestationFixPosition,
             Settlement,
-            Freighter
+            Freighter,
         }
         /* 0x0 */ public TeleporterDestinationTypeEnum TeleporterDestinationType;
     }

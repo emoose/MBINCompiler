@@ -11,7 +11,7 @@ namespace libMBIN.NMS.GameComponents
             Manufacturing,
             Fusion,
             Scientific,
-            PowerGeneration
+            PowerGeneration,
         }
         /* 0x0 */ public TradingClassEnum TradingClass;
     }

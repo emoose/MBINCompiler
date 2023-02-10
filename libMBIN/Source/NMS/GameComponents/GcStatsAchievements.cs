@@ -6,7 +6,7 @@ namespace libMBIN.NMS.GameComponents
         // size: 0x2
         public enum StatsAchievementsEnum {
             FirstWarp,
-            FirstDiscovery
+            FirstDiscovery,
         }
         /* 0x0 */ public StatsAchievementsEnum StatsAchievements;
     }

@@ -13,7 +13,7 @@ namespace libMBIN.NMS.GameComponents
             Rotated90,
             Rotated180,
             Rotated270,
-            FlippedHorizontally
+            FlippedHorizontally,
         }
         /* 0x24 */ public TransformEnum Transform;
         /* 0x28 */ public List<NMSString0x10> ExcludedNeighboursR0;

@@ -17,7 +17,7 @@ namespace libMBIN.NMS.GameComponents
             Random,
             Search,
             FollowPlayer,
-            FollowPlayerLimited
+            FollowPlayerLimited,
         }
         /* 0x10 */ public SwarmMovementTypeEnum SwarmMovementType;
         /* 0x18 */ public List<GcCreatureSwarmDataParams> Params;

@@ -6,7 +6,7 @@ namespace libMBIN.NMS.GameComponents
         // size: 0x2
         public enum WeatherColourSetEnum {
             Common,
-            Rare
+            Rare,
         }
         /* 0x0 */ public WeatherColourSetEnum WeatherColourSet;
         /* 0x4 */ public int Index;

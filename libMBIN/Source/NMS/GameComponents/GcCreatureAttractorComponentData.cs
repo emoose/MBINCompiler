@@ -9,7 +9,7 @@ namespace libMBIN.NMS.GameComponents
         // size: 0x2
         public enum AttractorTypeEnum {
             Food,
-            Harvester
+            Harvester,
         }
         /* 0x8 */ public AttractorTypeEnum AttractorType;
     }

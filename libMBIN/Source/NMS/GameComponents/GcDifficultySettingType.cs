@@ -6,7 +6,7 @@ namespace libMBIN.NMS.GameComponents
         // size: 0x2
         public enum DifficultySettingTypeEnum {
             Toggle,
-            OptionList
+            OptionList,
         }
         /* 0x0 */ public DifficultySettingTypeEnum DifficultySettingType;
     }

@@ -12,7 +12,7 @@ namespace libMBIN.NMS.Toolkit
         public enum TextureGameplayUseEnum {
             IgnoreName,
             MatchName,
-            DoNotMatchName
+            DoNotMatchName,
         }
         /* 0x02C */ public TextureGameplayUseEnum TextureGameplayUse;
         /* 0x030 */ public bool OverrideAverageColour;

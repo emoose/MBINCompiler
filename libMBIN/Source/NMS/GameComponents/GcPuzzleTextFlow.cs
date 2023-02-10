@@ -13,14 +13,14 @@ namespace libMBIN.NMS.GameComponents
         public enum TranslateAlienTextOverrideEnum {
             None,
             Translate,
-            DoNotTranslate
+            DoNotTranslate,
         }
         /* 0x4C */ public TranslateAlienTextOverrideEnum TranslateAlienTextOverride;
         // size: 0x3
         public enum BracketsOverrideEnum {
             None,
             Brackets,
-            NoBrackets
+            NoBrackets,
         }
         /* 0x50 */ public BracketsOverrideEnum BracketsOverride;
         /* 0x54 */ public GcAudioWwiseEvents AudioEvent;

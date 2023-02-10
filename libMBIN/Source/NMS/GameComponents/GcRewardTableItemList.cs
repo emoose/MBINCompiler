@@ -17,7 +17,7 @@ namespace libMBIN.NMS.GameComponents
             TryFirst_ThenSelectAlways,
             SelectFromSuccess,
             SelectAlwaysSilent,
-            SelectFromSuccessSilent
+            SelectFromSuccessSilent,
         }
         /* 0x0 */ public RewardChoiceEnum RewardChoice;
         /* 0x4 */ public bool OverrideZeroSeed;

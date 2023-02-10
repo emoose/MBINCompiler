@@ -9,7 +9,7 @@ namespace libMBIN.NMS.GameComponents
             QuickMenu,
             BuildMenu,
             Inventory,
-            AllDetailMessages
+            AllDetailMessages,
         }
         /* 0x4 */ public MenuToCloseEnum MenuToClose;
         /* 0x8 */ public NMSString0x80 DebugText;

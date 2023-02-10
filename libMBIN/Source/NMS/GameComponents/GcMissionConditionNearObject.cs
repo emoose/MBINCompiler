@@ -8,7 +8,7 @@ namespace libMBIN.NMS.GameComponents
             PlayerShip,
             PlayerVehicle,
             StoryPortal,
-            OpenStandardPortal
+            OpenStandardPortal,
         }
         /* 0x0 */ public MissionObjectEnum MissionObject;
         /* 0x4 */ public float Distance;

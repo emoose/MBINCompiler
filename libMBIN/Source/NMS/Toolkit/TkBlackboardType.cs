@@ -11,7 +11,7 @@ namespace libMBIN.NMS.Toolkit
             Bool,
             Id,
             Vector,
-            Attachment
+            Attachment,
         }
         /* 0x0 */ public BlackboardTypeEnum BlackboardType;
     }

@@ -7,7 +7,7 @@ namespace libMBIN.NMS.GameComponents
         public enum InventoryTypeEnum {
             Substance,
             Technology,
-            Product
+            Product,
         }
         /* 0x0 */ public InventoryTypeEnum InventoryType;
     }

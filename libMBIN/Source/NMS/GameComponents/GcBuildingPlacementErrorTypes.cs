@@ -26,7 +26,7 @@ namespace libMBIN.NMS.GameComponents
             MustPlaceOnTerrain,
             Collision,
             ShipInside,
-            PlayerInside
+            PlayerInside,
         }
         /* 0x0 */ public InvalidPlacementReasonEnum InvalidPlacementReason;
     }

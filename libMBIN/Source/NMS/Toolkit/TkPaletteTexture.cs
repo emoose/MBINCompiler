@@ -62,7 +62,7 @@ namespace libMBIN.NMS.Toolkit
             BioShip_Cockpit,
             SailShip_Sails,
             Freighter,
-            FreighterPaint
+            FreighterPaint,
         }
         /* 0x0 */ public PaletteEnum Palette;
         // size: 0x8
@@ -74,7 +74,7 @@ namespace libMBIN.NMS.Toolkit
             Alternative4,
             Unique,
             MatchGround,
-            None
+            None,
         }
         /* 0x4 */ public ColourAltEnum ColourAlt;
     }

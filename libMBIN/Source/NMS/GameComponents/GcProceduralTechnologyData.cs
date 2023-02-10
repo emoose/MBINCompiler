@@ -21,7 +21,7 @@ namespace libMBIN.NMS.GameComponents
             Epic,
             Legendary,
             Illegal,
-            Sentinel
+            Sentinel,
         }
         /* 0x250 */ public QualityEnum Quality;
         /* 0x254 */ public GcProceduralTechnologyCategory Category;

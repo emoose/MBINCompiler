@@ -9,7 +9,7 @@ namespace libMBIN.NMS.GameComponents
             Freighter_SpaceWalk,
             Freighter_BioRoom,
             Freighter_TechRoom,
-            Freighter_IndustrialRoom
+            Freighter_IndustrialRoom,
         }
         /* 0x0 */ public BasePartAudioLocationEnum BasePartAudioLocation;
     }

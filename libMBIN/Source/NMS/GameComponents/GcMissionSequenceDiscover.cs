@@ -9,7 +9,7 @@ namespace libMBIN.NMS.GameComponents
         public enum DiscoverTargetEnum {
             Animal,
             Vegetable,
-            Mineral
+            Mineral,
         }
         /* 0x84 */ public DiscoverTargetEnum DiscoverTarget;
         /* 0x88 */ public int AmountMin;

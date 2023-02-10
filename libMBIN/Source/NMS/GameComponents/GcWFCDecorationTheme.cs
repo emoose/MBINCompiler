@@ -6,7 +6,7 @@ namespace libMBIN.NMS.GameComponents
         // size: 0x2
         public enum WFCDecorationThemeEnum {
             Default,
-            Construction
+            Construction,
         }
         /* 0x0 */ public WFCDecorationThemeEnum WFCDecorationTheme;
     }

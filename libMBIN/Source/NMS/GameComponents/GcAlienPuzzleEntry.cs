@@ -16,7 +16,7 @@ namespace libMBIN.NMS.GameComponents
         public enum AdditionalOptionsEnum {
             None,
             LearnWord,
-            SayWord
+            SayWord,
         }
         /* 0x034 */ public AdditionalOptionsEnum AdditionalOptions;
         /* 0x038 */ public NMSString0x20A Title;
@@ -36,7 +36,7 @@ namespace libMBIN.NMS.GameComponents
         public enum PersistancyBufferOverrideEnum {
             None,
             AlwaysPersonal,
-            AlwaysFireteam
+            AlwaysFireteam,
         }
         /* 0x108 */ public PersistancyBufferOverrideEnum PersistancyBufferOverride;
         /* 0x10C */ public int CustomFreighterTextIndex;

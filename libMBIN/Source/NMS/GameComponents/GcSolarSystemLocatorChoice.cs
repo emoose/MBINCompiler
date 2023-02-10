@@ -10,7 +10,7 @@ namespace libMBIN.NMS.GameComponents
             LookupName,
             AnyOfType,
             SpecificIndex,
-            InFrontOfPlayer
+            InFrontOfPlayer,
         }
         /* 0x00 */ public ChoiceEnum Choice;
         /* 0x04 */ public NMSString0x20 Name;

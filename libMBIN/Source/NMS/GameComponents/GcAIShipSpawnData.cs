@@ -25,7 +25,7 @@ namespace libMBIN.NMS.GameComponents
         // size: 0x2
         public enum SpawnShapeEnum {
             Sphere,
-            Cone
+            Cone,
         }
         /* 0x184 */ public SpawnShapeEnum SpawnShape;
         /* 0x188 */ public GcShipAIPerformanceArray Performances;

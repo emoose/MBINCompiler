@@ -10,7 +10,7 @@ namespace libMBIN.NMS.GameComponents
             ExtremeHeat,
             ExtremeCold,
             ToxicGas,
-            Radiation
+            Radiation,
         }
         /* 0x0 */ public HazardEnum Hazard;
     }

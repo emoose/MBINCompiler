@@ -12,7 +12,7 @@ namespace libMBIN.NMS.GameComponents
             Support,
             Normandy,
             DeepSpace,
-            DeepSpaceCommon
+            DeepSpaceCommon,
         }
         /* 0x0 */ public FrigateClassEnum FrigateClass;
     }

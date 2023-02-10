@@ -7,7 +7,7 @@ namespace libMBIN.NMS.GameComponents
         public enum PetTraitEnum {
             Helpfulness,
             Aggression,
-            Independence
+            Independence,
         }
         /* 0x0 */ public PetTraitEnum PetTrait;
     }

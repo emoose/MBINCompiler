@@ -6,7 +6,7 @@ namespace libMBIN.NMS.GameComponents
         // size: 0x2
         public enum MissionUpdateMessageEnum {
             Start,
-            End
+            End,
         }
         /* 0x00 */ public MissionUpdateMessageEnum MissionUpdateMessage;
         /* 0x08 */ public NMSString0x20A CustomMessageLocID;
@@ -18,7 +18,7 @@ namespace libMBIN.NMS.GameComponents
         public enum PlayMusicStingEnum {
             None,
             Start,
-            End
+            End,
         }
         /* 0x4C */ public PlayMusicStingEnum PlayMusicSting;
         /* 0x50 */ public NMSString0x80 DebugText;

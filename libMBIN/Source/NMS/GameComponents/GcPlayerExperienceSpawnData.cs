@@ -13,7 +13,7 @@ namespace libMBIN.NMS.GameComponents
         public enum FaceDirEnum {
             Random,
             TowardsPlayer,
-            SpawnerAt
+            SpawnerAt,
         }
         /* 0x50 */ public FaceDirEnum FaceDir;
         /* 0x54 */ public float MinDist;

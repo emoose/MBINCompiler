@@ -14,7 +14,7 @@ namespace libMBIN.NMS.Toolkit
             UberHack,
             UIScreen,
             ShaderMillParticle,
-            ShaderMillUber
+            ShaderMillUber,
         }
         /* 0x080 */ public ShaderEnum Shader;
         /* 0x084 */ public bool Transparent;
@@ -74,7 +74,7 @@ namespace libMBIN.NMS.Toolkit
         public enum DecalNormalEnum {
             None,
             Decal,
-            Vertex
+            Vertex,
         }
         /* 0x3FC */ public DecalNormalEnum DecalNormal;
         /* 0x400 */ public bool Billboard;

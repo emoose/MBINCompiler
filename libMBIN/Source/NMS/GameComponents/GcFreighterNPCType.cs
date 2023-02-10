@@ -9,7 +9,7 @@ namespace libMBIN.NMS.GameComponents
             FrigateCaptain,
             WorkerBio,
             WorkerTech,
-            WorkerIndustry
+            WorkerIndustry,
         }
         /* 0x0 */ public FreighterNPCTypeEnum FreighterNPCType;
     }

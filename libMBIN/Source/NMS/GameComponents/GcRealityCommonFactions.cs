@@ -9,7 +9,7 @@ namespace libMBIN.NMS.GameComponents
             Civilian,
             Pirate,
             Police,
-            Creature
+            Creature,
         }
         /* 0x0 */ public AIFactionEnum AIFaction;
     }

@@ -90,7 +90,7 @@ namespace libMBIN.NMS.GameComponents
             SettlementOSD,
             Stealth,
             StealthEmpty,
-            DefenceForce
+            DefenceForce,
         }
         /* 0x0 */ public GameIconsEnum GameIcons;
     }

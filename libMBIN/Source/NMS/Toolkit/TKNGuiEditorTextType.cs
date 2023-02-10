@@ -18,7 +18,7 @@ namespace libMBIN.NMS.Toolkit
             TaskBar,
             GroupTitle,
             TreeNodeSelected,
-            DynamicPanelTitle
+            DynamicPanelTitle,
         }
         /* 0x0 */ public NGuiEditorTextEnum NGuiEditorText;
     }

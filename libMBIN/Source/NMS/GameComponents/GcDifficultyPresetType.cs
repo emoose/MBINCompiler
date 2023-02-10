@@ -11,7 +11,7 @@ namespace libMBIN.NMS.GameComponents
             Creative,
             Relaxed,
             Survival,
-            Permadeath
+            Permadeath,
         }
         /* 0x0 */ public DifficultyPresetTypeEnum DifficultyPresetType;
     }

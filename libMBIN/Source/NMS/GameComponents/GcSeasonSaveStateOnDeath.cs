@@ -8,7 +8,7 @@ namespace libMBIN.NMS.GameComponents
             Standard,
             ResetAndQuit,
             ResetPosSaveAndQuit,
-            SaveAndQuit
+            SaveAndQuit,
         }
         /* 0x0 */ public SeasonSaveStateOnDeathEnum SeasonSaveStateOnDeath;
     }

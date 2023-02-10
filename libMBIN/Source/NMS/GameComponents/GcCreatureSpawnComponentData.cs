@@ -23,7 +23,7 @@ namespace libMBIN.NMS.GameComponents
             Hidden,
             Visible,
             HideOnSpawn,
-            HiddenTimer
+            HiddenTimer,
         }
         /* 0x0D0 */ public SpawnerModeEnum SpawnerMode;
         /* 0x0D8 */ public GcResourceElement SpecificModel;

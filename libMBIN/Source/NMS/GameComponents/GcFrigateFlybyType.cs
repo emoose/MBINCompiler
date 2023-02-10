@@ -9,7 +9,7 @@ namespace libMBIN.NMS.GameComponents
             AmbientGroup,
             ScriptedGroup,
             DeepSpace,
-            DeepSpaceCommon
+            DeepSpaceCommon,
         }
         /* 0x0 */ public FrigateFlybyTypeEnum FrigateFlybyType;
     }

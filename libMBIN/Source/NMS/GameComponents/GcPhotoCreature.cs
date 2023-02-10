@@ -7,7 +7,7 @@ namespace libMBIN.NMS.GameComponents
         public enum PhotoCreatureTypeEnum {
             Ground,
             Water,
-            Air
+            Air,
         }
         /* 0x0 */ public PhotoCreatureTypeEnum PhotoCreatureType;
     }

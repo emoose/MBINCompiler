@@ -11,7 +11,7 @@ namespace libMBIN.NMS.GameComponents
             Trader,
             Freighter,
             PlayerSquadron,
-            DefenceForce
+            DefenceForce,
         }
         /* 0x0 */ public ShipTypeEnum ShipType;
     }

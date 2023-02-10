@@ -22,14 +22,14 @@ namespace libMBIN.NMS.GameComponents
         public enum InsideOutsideEnum {
             Both,
             InteriorOnly,
-            ExteriorOnly
+            ExteriorOnly,
         }
         /* 0x060 */ public InsideOutsideEnum InsideOutside;
         // size: 0x3
         public enum LevelEnum {
             Everywhere,
             GroundLevelOnly,
-            AboveGroundOnly
+            AboveGroundOnly,
         }
         /* 0x064 */ public LevelEnum Level;
         /* 0x068 */ public GcWFCDecorationFace Left;

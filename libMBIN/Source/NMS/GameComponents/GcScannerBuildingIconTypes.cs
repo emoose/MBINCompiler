@@ -37,7 +37,7 @@ namespace libMBIN.NMS.GameComponents
             GraveInCave,
             HoloHub,
             Settlement,
-            DroneHive
+            DroneHive,
         }
         /* 0x0 */ public ScanBuildingIconTypeEnum ScanBuildingIconType;
     }

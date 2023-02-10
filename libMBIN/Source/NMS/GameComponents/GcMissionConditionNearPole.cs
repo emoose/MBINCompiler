@@ -6,7 +6,7 @@ namespace libMBIN.NMS.GameComponents
         // size: 0x2
         public enum PoleConditionEnum {
             North,
-            South
+            South,
         }
         /* 0x0 */ public PoleConditionEnum PoleCondition;
         /* 0x4 */ public float Distance;

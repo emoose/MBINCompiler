@@ -7,7 +7,7 @@ namespace libMBIN.NMS.GameComponents
         public enum DroneTypeEnum {
             Patrol,
             Combat,
-            Corrupted
+            Corrupted,
         }
         /* 0x0 */ public DroneTypeEnum DroneType;
     }

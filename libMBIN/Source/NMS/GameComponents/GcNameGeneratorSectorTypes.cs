@@ -16,7 +16,7 @@ namespace libMBIN.NMS.GameComponents
             Dead,
             Buildings,
             Water,
-            Ice
+            Ice,
         }
         /* 0x0 */ public SectorNameEnum SectorName;
     }

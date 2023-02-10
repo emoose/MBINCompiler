@@ -8,7 +8,7 @@ namespace libMBIN.NMS.GameComponents
             Dead,
             Low,
             Mid,
-            Full
+            Full,
         }
         /* 0x0 */ public LifeSettingEnum LifeSetting;
     }

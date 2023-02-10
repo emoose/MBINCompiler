@@ -17,7 +17,7 @@ namespace libMBIN.NMS.GameComponents
             AttackPolice,
             KillShip,
             KillPolice,
-            TimedShootable
+            TimedShootable,
         }
         /* 0x00 */ public CrimeEnum Crime;
         /* 0x10 */ public Vector3f Position;

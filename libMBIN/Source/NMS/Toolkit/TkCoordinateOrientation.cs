@@ -6,7 +6,7 @@ namespace libMBIN.NMS.Toolkit
         // size: 0x2
         public enum CoordinateOrientationEnum {
             None,
-            Random
+            Random,
         }
         /* 0x0 */ public CoordinateOrientationEnum CoordinateOrientation;
     }

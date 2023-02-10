@@ -11,7 +11,7 @@ namespace libMBIN.NMS.GameComponents
         // size: 0x2
         public enum PartInCurrentBaseEnum {
             DontCare,
-            YesAllPlayerOwned
+            YesAllPlayerOwned,
         }
         /* 0x38 */ public PartInCurrentBaseEnum PartInCurrentBase;
     }

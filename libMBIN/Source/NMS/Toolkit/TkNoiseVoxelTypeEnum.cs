@@ -14,7 +14,7 @@ namespace libMBIN.NMS.Toolkit
             Substance_2,
             Substance_3,
             RandomRock,
-            RandomRockOrSubstance
+            RandomRockOrSubstance,
         }
         /* 0x0 */ public NoiseVoxelTypeEnum NoiseVoxelType;
     }

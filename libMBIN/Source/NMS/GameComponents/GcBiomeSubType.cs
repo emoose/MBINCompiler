@@ -31,7 +31,7 @@ namespace libMBIN.NMS.GameComponents
             Variant_D,
             Infested,
             Swamp,
-            Lava
+            Lava,
         }
         /* 0x0 */ public BiomeSubTypeEnum BiomeSubType;
     }

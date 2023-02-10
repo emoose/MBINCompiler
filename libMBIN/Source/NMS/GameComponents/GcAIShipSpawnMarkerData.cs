@@ -15,7 +15,7 @@ namespace libMBIN.NMS.GameComponents
         public enum ShipsToMarkEnum {
             None,
             Leader,
-            All
+            All,
         }
         /* 0xB8 */ public ShipsToMarkEnum ShipsToMark;
     }

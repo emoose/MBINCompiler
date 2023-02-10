@@ -9,7 +9,7 @@ namespace libMBIN.NMS.GameComponents
         public enum UseCorePartsOnlyEnum {
             False,
             True,
-            DontCare
+            DontCare,
         }
         /* 0x0 */ public UseCorePartsOnlyEnum UseCorePartsOnly;
         /* 0x4 */ public TkGraphicsDetailTypes MaxAffectedDetail;

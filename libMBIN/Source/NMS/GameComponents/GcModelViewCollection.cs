@@ -39,7 +39,7 @@ namespace libMBIN.NMS.GameComponents
             PetLarge,
             SquadronPilotLarge,
             SquadronPilotThumbnail,
-            SquadronSpaceshipThumbnail
+            SquadronSpaceshipThumbnail,
         }
         [NMS(Size = 0x21, EnumType = typeof(ModelViewsEnum))]
         /* 0x0 */ public TkModelRendererData[] ModelViews;

@@ -15,7 +15,7 @@ namespace libMBIN.NMS.GameComponents
             DuringStorm,
             AtNight,
             NotInStorm,
-            AtNightNotInStorm
+            AtNightNotInStorm,
         }
         /* 0x040 */ public SpawnConditionsEnum SpawnConditions;
         /* 0x044 */ public int MaxHazardsOfThisTypeActive;
@@ -25,14 +25,14 @@ namespace libMBIN.NMS.GameComponents
         public enum WeatherEffectBehaviourEnum {
             Static,
             Wander,
-            ChasePlayer
+            ChasePlayer,
         }
         /* 0x068 */ public WeatherEffectBehaviourEnum WeatherEffectBehaviour;
         // size: 0x3
         public enum WeatherEffectSpawnTypeEnum {
             Single,
             Cluster,
-            Patch
+            Patch,
         }
         /* 0x06C */ public WeatherEffectSpawnTypeEnum WeatherEffectSpawnType;
         /* 0x070 */ public bool RandomRotationAroundUp;

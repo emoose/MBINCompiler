@@ -5,7 +5,7 @@ namespace libMBIN.NMS.GameComponents
     {
         // size: 0x1
         public enum LookAtTypeEnum {
-            Player
+            Player,
         }
         /* 0x00 */ public LookAtTypeEnum LookAtType;
         /* 0x04 */ public NMSString0x20 NodeName;

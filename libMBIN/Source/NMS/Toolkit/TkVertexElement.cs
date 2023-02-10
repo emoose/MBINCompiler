@@ -11,7 +11,7 @@ namespace libMBIN.NMS.Toolkit
         // size: 0x2
         public enum InstancingEnum {
             PerVertex,
-            PerModel
+            PerModel,
         }
         /* 0x14 */ public InstancingEnum Instancing;
         /* 0x18 */ public long PlatformData;

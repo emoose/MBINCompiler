@@ -7,7 +7,7 @@ namespace libMBIN.NMS.GameComponents
         public enum CategoryTypeEnum {
             Journey,
             Race,
-            Guild
+            Guild,
         }
         /* 0x0 */ public CategoryTypeEnum CategoryType;
     }

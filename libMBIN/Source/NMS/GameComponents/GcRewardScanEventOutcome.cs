@@ -11,7 +11,7 @@ namespace libMBIN.NMS.GameComponents
             FailedToFindBase,
             Duplicate,
             NoBuilding,
-            NoSystem
+            NoSystem,
         }
         /* 0x0 */ public RewardScanEventOutcomeEnum RewardScanEventOutcome;
     }

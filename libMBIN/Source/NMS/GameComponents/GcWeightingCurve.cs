@@ -11,7 +11,7 @@ namespace libMBIN.NMS.GameComponents
             MaxIsSuperRare,
             MinIsUncommon,
             MinIsRare,
-            MinIsSuperRare
+            MinIsSuperRare,
         }
         /* 0x0 */ public WeightingCurveEnum WeightingCurve;
     }

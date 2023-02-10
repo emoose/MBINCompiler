@@ -13,7 +13,7 @@ namespace libMBIN.NMS.GameComponents
         // size: 0x2
         public enum WordInteractEffectEnum {
             Pain,
-            Heal
+            Heal,
         }
         /* 0x58 */ public WordInteractEffectEnum WordInteractEffect;
         /* 0x5C */ public GcAlienRace Race;

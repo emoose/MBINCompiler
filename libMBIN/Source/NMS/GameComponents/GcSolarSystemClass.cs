@@ -8,7 +8,7 @@ namespace libMBIN.NMS.GameComponents
             Default,
             Initial,
             Anomaly,
-            GameStart
+            GameStart,
         }
         /* 0x0 */ public SolarSystemClassEnum SolarSystemClass;
     }

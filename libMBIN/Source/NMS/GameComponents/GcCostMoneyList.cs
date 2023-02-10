@@ -13,7 +13,7 @@ namespace libMBIN.NMS.GameComponents
         public enum OutOfBoundsBehaviourEnum {
             NoCost,
             UseFirst,
-            UseLast
+            UseLast,
         }
         /* 0x18 */ public OutOfBoundsBehaviourEnum OutOfBoundsBehaviour;
         // size: 0x9
@@ -26,7 +26,7 @@ namespace libMBIN.NMS.GameComponents
             WeaponSlot,
             PetSlot,
             PilotSlot,
-            PilotRank
+            PilotRank,
         }
         /* 0x1C */ public IndexProviderEnum IndexProvider;
     }

@@ -30,7 +30,7 @@ namespace libMBIN.NMS.GameComponents
             FreighterTechExp,
             DismantleBio,
             DismantleTech,
-            DismantleData
+            DismantleData,
         }
         /* 0x0 */ public ProceduralProductCategoryEnum ProceduralProductCategory;
     }

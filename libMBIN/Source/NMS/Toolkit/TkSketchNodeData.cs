@@ -14,7 +14,7 @@ namespace libMBIN.NMS.Toolkit
             RunParallel,
             Blocked,
             QueueLatest,
-            QueueAll
+            QueueAll,
         }
         /* 0x20 */ public TriggerTypeEnum TriggerType;
         /* 0x24 */ public int SelectedVariant;

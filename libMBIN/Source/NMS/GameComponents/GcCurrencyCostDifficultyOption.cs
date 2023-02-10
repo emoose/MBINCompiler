@@ -8,7 +8,7 @@ namespace libMBIN.NMS.GameComponents
             Free,
             Cheap,
             Normal,
-            Expensive
+            Expensive,
         }
         /* 0x0 */ public CurrencyCostDifficultyEnum CurrencyCostDifficulty;
     }

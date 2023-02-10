@@ -16,7 +16,7 @@ namespace libMBIN.NMS.GameComponents
             Traders,
             Fiends,
             HazardousFlora,
-            Worms
+            Worms,
         }
         /* 0x80 */ public KillTargetEnum KillTarget;
         /* 0x84 */ public int AmountMin;

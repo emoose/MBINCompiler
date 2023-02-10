@@ -22,7 +22,7 @@ namespace libMBIN.NMS.GameComponents
         public enum AugmentModeEnum {
             Add,
             Multiply,
-            Max
+            Max,
         }
         /* 0x70 */ public AugmentModeEnum AugmentMode;
     }

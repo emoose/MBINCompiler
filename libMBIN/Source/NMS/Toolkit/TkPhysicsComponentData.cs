@@ -11,7 +11,7 @@ namespace libMBIN.NMS.Toolkit
         // size: 0x2
         public enum SurfacePropertiesEnum {
             None,
-            Glass
+            Glass,
         }
         /* 0x6C */ public SurfacePropertiesEnum SurfaceProperties;
         /* 0x70 */ public bool TriggerVolume;

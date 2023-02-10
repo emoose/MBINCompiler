@@ -21,7 +21,7 @@ namespace libMBIN.NMS.GameComponents
             Uniform,
             Itself,
             Parent,
-            Component
+            Component,
         }
         /* 0x090 */ public ApplyMotionScaleInEnum ApplyMotionScaleIn;
         /* 0x094 */ public float MotionScale_Uniform;
@@ -31,7 +31,7 @@ namespace libMBIN.NMS.GameComponents
             Disabled,
             Itself,
             Parent,
-            Component
+            Component,
         }
         /* 0x0B0 */ public ApplyMotionLimitsInEnum ApplyMotionLimitsIn;
         /* 0x0C0 */ public Vector3f MotionLimitMin;
@@ -47,7 +47,7 @@ namespace libMBIN.NMS.GameComponents
             Uniform,
             Itself,
             Parent,
-            Component
+            Component,
         }
         /* 0x100 */ public ApplyAngularMotionScaleInEnum ApplyAngularMotionScaleIn;
         /* 0x104 */ public float AngularMotionScale_Uniform;
@@ -57,7 +57,7 @@ namespace libMBIN.NMS.GameComponents
             Disabled,
             Itself,
             Parent,
-            Component
+            Component,
         }
         /* 0x120 */ public ApplyAngularLimitsInEnum ApplyAngularLimitsIn;
         /* 0x130 */ public Vector3f AngularLimitMinDeg;

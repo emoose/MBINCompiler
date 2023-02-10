@@ -29,7 +29,7 @@ namespace libMBIN.NMS.Toolkit
         public enum DragTypeEnum {
             IgnoreGravity,
             PhysicallyBased,
-            ApplyWind
+            ApplyWind,
         }
         /* 0x4D0 */ public DragTypeEnum DragType;
         /* 0x4D4 */ public float Variation;
@@ -41,7 +41,7 @@ namespace libMBIN.NMS.Toolkit
             Disc,
             Cone,
             Donut,
-            Point
+            Point,
         }
         /* 0x4DC */ public SpawnOffsetTypeEnum SpawnOffsetType;
         /* 0x4E0 */ public Vector3f SpawnOffsetParams;
@@ -53,7 +53,7 @@ namespace libMBIN.NMS.Toolkit
         public enum AlignmentEnum {
             Rotation,
             Velocity,
-            VelocityScreenSpace
+            VelocityScreenSpace,
         }
         /* 0x678 */ public AlignmentEnum Alignment;
         // size: 0x8
@@ -65,7 +65,7 @@ namespace libMBIN.NMS.Toolkit
             NegativeXLocal,
             NegativeYLocal,
             NegativeZLocal,
-            ScreenWorld
+            ScreenWorld,
         }
         /* 0x67C */ public BillboardAlignmentEnum BillboardAlignment;
         /* 0x680 */ public Vector3f RotationPivot;
@@ -80,7 +80,7 @@ namespace libMBIN.NMS.Toolkit
             Absolute,
             RelativeToMax,
             OnceToCompletion,
-            Random
+            Random,
         }
         /* 0x6C0 */ public FlipbookPlaybackRateEnum FlipbookPlaybackRate;
         /* 0x6C4 */ public float HueVariance;
@@ -94,7 +94,7 @@ namespace libMBIN.NMS.Toolkit
         // size: 0x2
         public enum OnRefractionsDisabledEnum {
             Hide,
-            AlphaBlend
+            AlphaBlend,
         }
         /* 0x790 */ public OnRefractionsDisabledEnum OnRefractionsDisabled;
         /* 0x794 */ public bool FadeRefractionsAtScreenEdge;

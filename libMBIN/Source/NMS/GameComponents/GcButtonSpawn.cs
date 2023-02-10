@@ -13,7 +13,7 @@ namespace libMBIN.NMS.GameComponents
             Pirates,
             Police,
             Traders,
-            Walker
+            Walker,
         }
         /* 0x4 */ public EventEnum Event;
         /* 0x8 */ public GcButtonSpawnOffset Offset;

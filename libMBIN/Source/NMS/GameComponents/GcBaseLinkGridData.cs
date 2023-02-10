@@ -13,7 +13,7 @@ namespace libMBIN.NMS.GameComponents
         public enum DependsOnEnvironmentEnum {
             None,
             DayNight,
-            Storms
+            Storms,
         }
         /* 0x40 */ public DependsOnEnvironmentEnum DependsOnEnvironment;
         // size: 0x4
@@ -21,7 +21,7 @@ namespace libMBIN.NMS.GameComponents
             None,
             Power,
             Mineral,
-            Gas
+            Gas,
         }
         /* 0x44 */ public DependsOnHotspotsEnum DependsOnHotspots;
         /* 0x48 */ public List<GcBaseLinkGridConnectionDependency> DependentConnections;

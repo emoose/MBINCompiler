@@ -10,7 +10,7 @@ namespace libMBIN.NMS.GameComponents
             X,
             XNeg,
             Y,
-            YNeg
+            YNeg,
         }
         /* 0x0 */ public PrimaryAxisEnum PrimaryAxis;
     }

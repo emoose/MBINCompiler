@@ -16,7 +16,7 @@ namespace libMBIN.NMS.GameComponents
             Chest,
             BaseCapsule,
             MaintenanceObject,
-            UIPopup
+            UIPopup,
         }
         /* 0x0 */ public InventoryStackSizeGroupEnum InventoryStackSizeGroup;
     }

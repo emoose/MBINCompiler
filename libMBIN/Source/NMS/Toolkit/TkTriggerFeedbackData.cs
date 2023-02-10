@@ -8,7 +8,7 @@ namespace libMBIN.NMS.Toolkit
             None,
             Feedback,
             Weapon,
-            Vibration
+            Vibration,
         }
         /* 0x0 */ public FeedbackTypeEnum FeedbackType;
         /* 0x4 */ public float Strength;

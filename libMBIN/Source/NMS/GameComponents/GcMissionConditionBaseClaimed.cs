@@ -11,7 +11,7 @@ namespace libMBIN.NMS.GameComponents
         public enum IsOnCurrentSystemEnum {
             DontCare,
             Yes,
-            No
+            No,
         }
         /* 0x08 */ public IsOnCurrentSystemEnum IsOnCurrentSystem;
         /* 0x0C */ public bool MustBeInBase;

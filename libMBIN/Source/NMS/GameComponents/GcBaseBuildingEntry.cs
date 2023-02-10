@@ -50,7 +50,7 @@ namespace libMBIN.NMS.GameComponents
         // size: 0x2
         public enum BaseTerrainEditShapeEnum {
             Cube,
-            Cylinder
+            Cylinder,
         }
         /* 0x190 */ public BaseTerrainEditShapeEnum BaseTerrainEditShape;
         /* 0x194 */ public float MinimumDeleteDistance;

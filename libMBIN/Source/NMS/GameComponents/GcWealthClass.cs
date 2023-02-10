@@ -8,7 +8,7 @@ namespace libMBIN.NMS.GameComponents
             Poor,
             Average,
             Wealthy,
-            Pirate
+            Pirate,
         }
         /* 0x0 */ public WealthClassEnum WealthClass;
     }

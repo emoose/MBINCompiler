@@ -17,7 +17,7 @@ namespace libMBIN.NMS.Toolkit
         // size: 0x2
         public enum UIQualityEnum {
             Normal,
-            _4K
+            _4K,
         }
         /* 0x24 */ public UIQualityEnum UIQuality;
         // size: 0x5
@@ -26,7 +26,7 @@ namespace libMBIN.NMS.Toolkit
             Balanced,
             MaxQuality,
             UltraPerformance,
-            UltraQuality
+            UltraQuality,
         }
         /* 0x28 */ public DLSSQualityEnum DLSSQuality;
         // size: 0x5
@@ -35,7 +35,7 @@ namespace libMBIN.NMS.Toolkit
             UltraQuality,
             Quality,
             Balanced,
-            Performance
+            Performance,
         }
         /* 0x2C */ public FFXSRQualityEnum FFXSRQuality;
         // size: 0x4
@@ -43,7 +43,7 @@ namespace libMBIN.NMS.Toolkit
             UltraPerformance,
             Performance,
             Balanced,
-            Quality
+            Quality,
         }
         /* 0x30 */ public FFXSR2QualityEnum FFXSR2Quality;
         // size: 0x5
@@ -52,7 +52,7 @@ namespace libMBIN.NMS.Toolkit
             Performance,
             Balanced,
             MaxQuality,
-            UltraQuality
+            UltraQuality,
         }
         /* 0x34 */ public XESSQualityEnum XESSQuality;
         // size: 0x7
@@ -63,7 +63,7 @@ namespace libMBIN.NMS.Toolkit
             GTAO_High,
             GTAO_Ultra,
             HBAO_Low,
-            HBAO_High
+            HBAO_High,
         }
         /* 0x38 */ public AmbientOcclusionEnum AmbientOcclusion;
         // size: 0x5
@@ -72,7 +72,7 @@ namespace libMBIN.NMS.Toolkit
             _2,
             _4,
             _8,
-            _16
+            _16,
         }
         /* 0x3C */ public AnisotropyLevelEnum AnisotropyLevel;
         // size: 0x8
@@ -84,7 +84,7 @@ namespace libMBIN.NMS.Toolkit
             FFXSR2,
             DLSS,
             DLAA,
-            XESS
+            XESS,
         }
         /* 0x40 */ public AntiAliasingEnum AntiAliasing;
     }

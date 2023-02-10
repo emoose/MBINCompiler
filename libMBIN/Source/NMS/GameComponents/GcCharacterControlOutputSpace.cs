@@ -7,7 +7,7 @@ namespace libMBIN.NMS.GameComponents
         public enum CharacterControlOutputSpaceEnum {
             CameraRelative,
             CameraRelativeTopDown,
-            Raw
+            Raw,
         }
         /* 0x0 */ public CharacterControlOutputSpaceEnum CharacterControlOutputSpace;
     }

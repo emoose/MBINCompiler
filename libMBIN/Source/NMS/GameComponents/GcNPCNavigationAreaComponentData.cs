@@ -13,7 +13,7 @@ namespace libMBIN.NMS.GameComponents
             PlanetMech,
             Demo,
             WFCBase,
-            FreighterBase
+            FreighterBase,
         }
         /* 0x00 */ public NavAreaTypeEnum NavAreaType;
         /* 0x04 */ public float MinRadius;

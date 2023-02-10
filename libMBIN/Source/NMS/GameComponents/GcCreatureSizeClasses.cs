@@ -8,7 +8,7 @@ namespace libMBIN.NMS.GameComponents
             Small,
             Medium,
             Large,
-            Huge
+            Huge,
         }
         /* 0x0 */ public CreatureSizeClassEnum CreatureSizeClass;
     }

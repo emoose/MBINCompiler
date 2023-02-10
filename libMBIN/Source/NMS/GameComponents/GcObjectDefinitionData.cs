@@ -7,7 +7,7 @@ namespace libMBIN.NMS.GameComponents
         // size: 0x2
         public enum ObjectRenderTypeEnum {
             Instanced,
-            Single
+            Single,
         }
         /* 0x80 */ public ObjectRenderTypeEnum ObjectRenderType;
         /* 0x84 */ public bool AutoCollision;
@@ -18,14 +18,14 @@ namespace libMBIN.NMS.GameComponents
             Small,
             Medium,
             Large,
-            Massive
+            Massive,
         }
         /* 0x88 */ public SizeClassEnum SizeClass;
         // size: 0x3
         public enum ObjectCoverageTypeEnum {
             Blanket,
             Cluster,
-            Solo
+            Solo,
         }
         /* 0x8C */ public ObjectCoverageTypeEnum ObjectCoverageType;
         // size: 0x4
@@ -33,7 +33,7 @@ namespace libMBIN.NMS.GameComponents
             Rock,
             DryPlant,
             LushPlant,
-            Artificial
+            Artificial,
         }
         /* 0x90 */ public LifeTypeEnum LifeType;
         // size: 0x4
@@ -41,7 +41,7 @@ namespace libMBIN.NMS.GameComponents
             AboveGround,
             UnderGround,
             WaterSurface,
-            UnderWater
+            UnderWater,
         }
         /* 0x94 */ public LocationTypeEnum LocationType;
         // size: 0x6
@@ -51,7 +51,7 @@ namespace libMBIN.NMS.GameComponents
             LargeOffsetFromUpright,
             ToNormal,
             SlightOffsetFromNormal,
-            LargeOffsetFromNormal
+            LargeOffsetFromNormal,
         }
         /* 0x98 */ public ObjectAlignmentEnum ObjectAlignment;
     }

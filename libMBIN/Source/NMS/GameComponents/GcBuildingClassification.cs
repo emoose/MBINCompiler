@@ -56,7 +56,7 @@ namespace libMBIN.NMS.GameComponents
             Settlement_Farm,
             Settlement_Factory,
             Settlement_Clump,
-            DroneHive
+            DroneHive,
         }
         /* 0x0 */ public BuildingClassEnum BuildingClass;
     }

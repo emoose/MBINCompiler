@@ -10,7 +10,7 @@ namespace libMBIN.NMS.GameComponents
             Fuel,
             Portals,
             PlantGrowth,
-            ByteBeat
+            ByteBeat,
         }
         /* 0x0 */ public LinkNetworkTypeEnum LinkNetworkType;
     }

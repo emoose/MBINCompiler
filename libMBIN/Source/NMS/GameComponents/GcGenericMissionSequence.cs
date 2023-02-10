@@ -16,7 +16,7 @@ namespace libMBIN.NMS.GameComponents
             Guide,
             Wiki,
             Seasonal,
-            Milestone
+            Milestone,
         }
         /* 0x010 */ public MissionClassEnum MissionClass;
         /* 0x014 */ public bool MissionIsCritical;
@@ -47,14 +47,14 @@ namespace libMBIN.NMS.GameComponents
         public enum MessageCompleteEnum {
             Default,
             Always,
-            Never
+            Never,
         }
         /* 0x380 */ public MessageCompleteEnum MessageComplete;
         // size: 0x3
         public enum MessageStartEnum {
             Default,
             Always,
-            Never
+            Never,
         }
         /* 0x384 */ public MessageStartEnum MessageStart;
         /* 0x388 */ public GcMissionBoardOptions MissionBoardOptions;
@@ -63,7 +63,7 @@ namespace libMBIN.NMS.GameComponents
             None,
             AllModes,
             Seasonal,
-            OnSelected
+            OnSelected,
         }
         /* 0x408 */ public AutoStartEnum AutoStart;
         /* 0x40C */ public bool RestartOnCompletion;

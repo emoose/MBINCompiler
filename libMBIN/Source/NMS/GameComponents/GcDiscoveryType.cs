@@ -21,7 +21,7 @@ namespace libMBIN.NMS.GameComponents
             Treasure,
             Control,
             HarvestPlant,
-            FriendlyDrone
+            FriendlyDrone,
         }
         /* 0x0 */ public DiscoveryTypeEnum DiscoveryType;
     }

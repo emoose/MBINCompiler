@@ -11,7 +11,7 @@ namespace libMBIN.NMS.Toolkit
         public enum MergeProbabilityOptionsEnum {
             Balance,
             Prioritize,
-            Replace
+            Replace,
         }
         /* 0x20 */ public MergeProbabilityOptionsEnum MergeProbabilityOptions;
         /* 0x28 */ public List<TkLSystemLocatorEntry> Entries;

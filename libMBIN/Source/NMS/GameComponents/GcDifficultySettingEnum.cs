@@ -32,7 +32,7 @@ namespace libMBIN.NMS.GameComponents
             GroundCombat,
             ItemShopAvailablity,
             SprintingCost,
-            BreakTechOnDamage
+            BreakTechOnDamage,
         }
         /* 0x0 */ public DifficultySettingEnum DifficultySetting;
     }

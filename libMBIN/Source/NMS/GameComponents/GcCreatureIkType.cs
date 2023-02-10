@@ -13,7 +13,7 @@ namespace libMBIN.NMS.GameComponents
             Head,
             Toe,
             SpaceshipFoot,
-            SpaceshipToe
+            SpaceshipToe,
         }
         /* 0x0 */ public CreatureIkTypeEnum CreatureIkType;
     }

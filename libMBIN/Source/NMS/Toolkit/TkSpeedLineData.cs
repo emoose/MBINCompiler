@@ -20,7 +20,7 @@ namespace libMBIN.NMS.Toolkit
         // size: 0x2
         public enum LinesPositionEnum {
             Absolute,
-            Relative
+            Relative,
         }
         /* 0xD0 */ public LinesPositionEnum LinesPosition;
     }

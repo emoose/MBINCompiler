@@ -15,7 +15,7 @@ namespace libMBIN.NMS.GameComponents
             Maintenance,
             Personal,
             Personal_Maintenance,
-            FireteamSync
+            FireteamSync,
         }
         /* 0x0 */ public InteractionBufferTypeEnum InteractionBufferType;
     }

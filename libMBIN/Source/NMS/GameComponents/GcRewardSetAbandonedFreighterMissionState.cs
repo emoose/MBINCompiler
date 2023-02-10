@@ -10,7 +10,7 @@ namespace libMBIN.NMS.GameComponents
             CaptainsLogRead,
             HazardOn,
             SlowWalkOn,
-            OpenDoors
+            OpenDoors,
         }
         /* 0x0 */ public AbandonedFreighterMissionStateEnum AbandonedFreighterMissionState;
         /* 0x4 */ public bool Silent;

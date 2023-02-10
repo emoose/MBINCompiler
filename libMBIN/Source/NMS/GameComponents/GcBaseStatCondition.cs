@@ -6,7 +6,7 @@ namespace libMBIN.NMS.GameComponents
         // size: 0x2
         public enum BaseStatEnum {
             HasTeleporter,
-            HasMainframe
+            HasMainframe,
         }
         /* 0x0 */ public BaseStatEnum BaseStat;
         /* 0x4 */ public bool StatValue;

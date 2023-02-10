@@ -17,7 +17,7 @@ namespace libMBIN.NMS.GameComponents
             Portal,
             Ruin,
             MissionTower,
-            LargeBuilding
+            LargeBuilding,
         }
         /* 0x0 */ public PhotoBuildingTypeEnum PhotoBuildingType;
     }

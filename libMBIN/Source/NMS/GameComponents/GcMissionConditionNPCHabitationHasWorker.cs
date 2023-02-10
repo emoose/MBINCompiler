@@ -10,7 +10,7 @@ namespace libMBIN.NMS.GameComponents
         public enum WorkerInCurrentBaseEnum {
             DontCare,
             Yes,
-            No
+            No,
         }
         /* 0x4 */ public WorkerInCurrentBaseEnum WorkerInCurrentBase;
     }

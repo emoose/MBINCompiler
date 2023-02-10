@@ -21,7 +21,7 @@ namespace libMBIN.NMS.GameComponents
             CollectSubstanceProduct,
             Build,
             Always,
-            None
+            None,
         }
         /* 0x0 */ public MissionMarkupEnum MissionMarkup;
     }

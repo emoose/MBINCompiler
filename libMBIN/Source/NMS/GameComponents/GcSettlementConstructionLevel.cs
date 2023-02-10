@@ -10,7 +10,7 @@ namespace libMBIN.NMS.GameComponents
             RegularStorey,
             Roof,
             Decoration,
-            Other
+            Other,
         }
         /* 0x0 */ public SettlementConstructionLevelEnum SettlementConstructionLevel;
     }

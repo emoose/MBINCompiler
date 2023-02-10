@@ -20,7 +20,7 @@ namespace libMBIN.NMS.GameComponents
             Swamp,
             Lava,
             Waterworld,
-            All
+            All,
         }
         /* 0x0 */ public BiomeEnum Biome;
     }

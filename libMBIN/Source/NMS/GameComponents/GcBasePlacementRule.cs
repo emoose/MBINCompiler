@@ -15,7 +15,7 @@ namespace libMBIN.NMS.GameComponents
             MoveToTwin,
             StretchToTwin,
             StretchToRaycast,
-            MoveToTwinRelative
+            MoveToTwinRelative,
         }
         /* 0xB4 */ public TwinCriteriaEnum TwinCriteria;
     }

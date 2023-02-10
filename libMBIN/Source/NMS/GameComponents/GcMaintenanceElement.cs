@@ -16,7 +16,7 @@ namespace libMBIN.NMS.GameComponents
         public enum UpdateTypeEnum {
             UpdatesAlways,
             UpdateOnlyWhenComplete,
-            UpdateOnlyWhenNotComplete
+            UpdateOnlyWhenNotComplete,
         }
         /* 0x28 */ public UpdateTypeEnum UpdateType;
         /* 0x2C */ public int DamagedAfterTimePeriodMin;
@@ -25,7 +25,7 @@ namespace libMBIN.NMS.GameComponents
         public enum DamageStatusEnum {
             Damaged,
             Repaired,
-            Random
+            Random,
         }
         /* 0x34 */ public DamageStatusEnum DamageStatus;
         // size: 0x8
@@ -37,7 +37,7 @@ namespace libMBIN.NMS.GameComponents
             EmptySlot,
             NoRequirement,
             UserInstalls,
-            HasIngredients
+            HasIngredients,
         }
         /* 0x38 */ public CompletionRequirementEnum CompletionRequirement;
     }

@@ -7,7 +7,7 @@ namespace libMBIN.NMS.GameComponents
         public enum SubstanceCollectionDifficultyEnum {
             High,
             Normal,
-            Low
+            Low,
         }
         /* 0x0 */ public SubstanceCollectionDifficultyEnum SubstanceCollectionDifficulty;
     }

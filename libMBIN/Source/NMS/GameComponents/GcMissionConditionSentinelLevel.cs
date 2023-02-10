@@ -8,7 +8,7 @@ namespace libMBIN.NMS.GameComponents
             None,
             Low,
             Default,
-            Aggressive
+            Aggressive,
         }
         /* 0x0 */ public RequiredSentinelLevelEnum RequiredSentinelLevel;
     }

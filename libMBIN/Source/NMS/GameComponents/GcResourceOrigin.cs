@@ -9,7 +9,7 @@ namespace libMBIN.NMS.GameComponents
             Crystal,
             Asteroid,
             Robot,
-            Depot
+            Depot,
         }
         /* 0x0 */ public ResourceOriginEnum ResourceOrigin;
     }

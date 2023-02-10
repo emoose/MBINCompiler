@@ -44,7 +44,7 @@ namespace libMBIN.NMS.Toolkit
             EaseInOutElastic,
             EaseInBounce,
             EaseOutBounce,
-            EaseInOutBounce
+            EaseInOutBounce,
         }
         /* 0x0 */ public CurveEnum Curve;
     }

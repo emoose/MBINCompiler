@@ -45,7 +45,7 @@ namespace libMBIN.NMS.GameComponents
             RidePet,
             Normandy,
             LivingFrigate,
-            UpgradeSettlement
+            UpgradeSettlement,
         }
         /* 0x0 */ public ExperienceDebugTriggerActionEnum ExperienceDebugTriggerAction;
     }

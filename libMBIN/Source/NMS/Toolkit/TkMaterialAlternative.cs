@@ -8,7 +8,7 @@ namespace libMBIN.NMS.Toolkit
             Diffuse,
             Normal,
             Ambient,
-            Environment
+            Environment,
         }
         /* 0x00 */ public TextureTypeEnum TextureType;
         /* 0x04 */ public NMSString0x80 File;

@@ -10,7 +10,7 @@ namespace libMBIN.NMS.GameComponents
         public enum AerialViewModeEnum {
             FaceDown,
             FaceOut,
-            FaceDownThenOut
+            FaceDownThenOut,
         }
         /* 0x04 */ public AerialViewModeEnum AerialViewMode;
         /* 0x08 */ public float TimeBack;

@@ -8,7 +8,7 @@ namespace libMBIN.NMS.Toolkit
             Held,
             Pressed,
             Released,
-            HeldOver
+            HeldOver,
         }
         /* 0x0 */ public InputValidationEnum InputValidation;
     }

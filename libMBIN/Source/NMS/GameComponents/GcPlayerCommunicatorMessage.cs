@@ -18,7 +18,7 @@ namespace libMBIN.NMS.GameComponents
             Nada,
             QuicksilverBot,
             PlayerSettlementResident,
-            CargoScanDrone
+            CargoScanDrone,
         }
         /* 0x24 */ public CommunicatorTypeEnum CommunicatorType;
         /* 0x28 */ public GcAlienRace RaceOverride;

@@ -22,7 +22,7 @@ namespace libMBIN.NMS.Toolkit
             TraditionalChinese,
             SimplifiedChinese,
             TencentChinese,
-            Korean
+            Korean,
         }
         /* 0x0 */ public LanguageEnum Language;
     }

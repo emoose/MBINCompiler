@@ -22,7 +22,7 @@ namespace libMBIN.NMS.Toolkit
         public enum WaterFadeEnum {
             None,
             Above,
-            Below
+            Below,
         }
         /* 0x70 */ public WaterFadeEnum WaterFade;
         /* 0x74 */ public float PlateauStratas;

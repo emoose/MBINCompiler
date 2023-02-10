@@ -13,7 +13,7 @@ namespace libMBIN.NMS.GameComponents
             Pity,
             Sad,
             Dead,
-            Confused
+            Confused,
         }
         /* 0x0 */ public MoodEnum Mood;
     }

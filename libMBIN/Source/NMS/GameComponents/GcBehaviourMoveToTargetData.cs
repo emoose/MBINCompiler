@@ -11,7 +11,7 @@ namespace libMBIN.NMS.GameComponents
         public enum BehaviourMoveSpeedEnum {
             Normal,
             Fast,
-            Dynamic
+            Dynamic,
         }
         /* 0x30 */ public BehaviourMoveSpeedEnum BehaviourMoveSpeed;
         /* 0x34 */ public float DynamicMoveSlowdownDistMul;

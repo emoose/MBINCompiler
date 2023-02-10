@@ -8,7 +8,7 @@ namespace libMBIN.NMS.GameComponents
         // size: 0x2
         public enum AgeEnum {
             Regular,
-            Weird
+            Weird,
         }
         /* 0x000 */ public AgeEnum Age;
         /* 0x004 */ public NMSString0x80 Gender1;

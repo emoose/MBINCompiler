@@ -10,20 +10,20 @@ namespace libMBIN.NMS.GameComponents
         // size: 0x2
         public enum WeatherIntensityEnum {
             Default,
-            Extreme
+            Extreme,
         }
         /* 0x130 */ public WeatherIntensityEnum WeatherIntensity;
         // size: 0x3
         public enum StormFrequencyEnum {
             None,
             Low,
-            High
+            High,
         }
         /* 0x134 */ public StormFrequencyEnum StormFrequency;
         // size: 0x2
         public enum AtmosphereTypeEnum {
             None,
-            Normal
+            Normal,
         }
         /* 0x138 */ public AtmosphereTypeEnum AtmosphereType;
         /* 0x13C */ public int DayColourIndex;

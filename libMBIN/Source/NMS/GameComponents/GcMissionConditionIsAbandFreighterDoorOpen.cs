@@ -8,7 +8,7 @@ namespace libMBIN.NMS.GameComponents
             DungeonNotReady,
             Locked,
             Opening,
-            Open
+            Open,
         }
         /* 0x0 */ public AbandonedFreighterDoorStatusEnum AbandonedFreighterDoorStatus;
     }

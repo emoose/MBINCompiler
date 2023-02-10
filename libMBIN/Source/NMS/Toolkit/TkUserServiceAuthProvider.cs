@@ -10,7 +10,7 @@ namespace libMBIN.NMS.Toolkit
             Steam,
             Galaxy,
             Xbox,
-            WeGame
+            WeGame,
         }
         /* 0x0 */ public AuthProviderEnum AuthProvider;
     }

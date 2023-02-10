@@ -19,7 +19,7 @@ namespace libMBIN.NMS.GameComponents
             Standard,
             Fancy,
             Stats,
-            Settlement
+            Settlement,
         }
         /* 0x1A0 */ public OSDMessageStyleEnum OSDMessageStyle;
         /* 0x1A4 */ public bool OSDUseMissionIcon;

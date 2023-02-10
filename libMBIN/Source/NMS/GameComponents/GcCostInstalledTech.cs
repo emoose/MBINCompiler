@@ -11,7 +11,7 @@ namespace libMBIN.NMS.GameComponents
             Ship,
             Weapon,
             Freighter,
-            Buggy
+            Buggy,
         }
         /* 0x10 */ public InventoryToCheckEnum InventoryToCheck;
     }
