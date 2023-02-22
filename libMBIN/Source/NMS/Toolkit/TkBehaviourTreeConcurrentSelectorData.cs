@@ -2,7 +2,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0x8E763700B9B3D214, NameHash = 0x5A80A9FE39381A77)]
+    [NMS(GUID = 0x27BAAF4A069EC62C, NameHash = 0x5A80A9FE39381A77)]
     public class TkBehaviourTreeConcurrentSelectorData : NMSTemplate
     {
         /* 0x00 */ public NMSString0x10 Name;

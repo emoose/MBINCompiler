@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xE980B433FDF773FA, NameHash = 0xE4AFCD52DEB8A62F)]
+    [NMS(GUID = 0x13409ED5B2B860B4, NameHash = 0xE4AFCD52DEB8A62F)]
     public class GcGalaxyStarColours : NMSTemplate
     {
         [NMS(Size = 0x4, EnumType = typeof(GcGalaxyStarTypes.GalaxyStarTypeEnum))]

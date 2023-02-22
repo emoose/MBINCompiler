@@ -1,9 +1,9 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x73242E78FA0CAB23, NameHash = 0x8B94093DC3901046)]
+    [NMS(GUID = 0xF761FD349F49D28E, NameHash = 0x8B94093DC3901046)]
     public class GcAudioWwiseEvents : NMSTemplate
     {
-        // size: 0x9A6
+        // size: 0x9AB
         public enum AkEventEnum : uint {
             INVALID_EVENT = 0x0,
             ABANDONED_DOOR_UNLOCK = 0x264BED2D,
@@ -2299,6 +2299,10 @@ namespace libMBIN.NMS.GameComponents
             UI_TRADING_TEXT_TRANSLATE = 0x4022E06A,
             UI_UNITS_RECEIVED = 0x898CD56B,
             UI_VEGETABLE_COLLECT = 0xFC94B9A4,
+            UI_VR_HANDMENU_CLOSE = 0x364CF0A6,
+            UI_VR_HANDMENU_HIGHLIGHT = 0xE672686E,
+            UI_VR_HANDMENU_OPEN = 0x112C18F2,
+            UI_VR_HANDMENU_OPENLP = 0xD0DCFE1E,
             UI_VR_WRISTMENU_HIGHLIGHT = 0xB1E07F62,
             UI_VR_WRISTMENU_IN = 0xFC42EEA7,
             UI_VR_WRISTMENU_OUT = 0xDD62551A,
@@ -2450,6 +2454,7 @@ namespace libMBIN.NMS.GameComponents
             WPN_PL_RAILGUN_RELOAD = 0xCE68FDE6,
             WPN_PL_SCAN = 0x9E35101F,
             WPN_PL_SCAN_STOP = 0xE8E06EAA,
+            WPN_PL_SCATTERBLASTER = 0xC4F25AF5,
             WPN_PL_SHOTGUN = 0x128E00C2,
             WPN_PL_SHOTGUN_PATHFINDER = 0x381A3A7C,
             WPN_PL_SHOTGUN_RELOAD = 0xA0D247B6,

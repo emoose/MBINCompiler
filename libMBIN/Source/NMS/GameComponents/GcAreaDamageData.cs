@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xB0E03A79EA749BA, NameHash = 0x38D56749327FCFE6)]
+    [NMS(GUID = 0xDA0025A12F5C626D, NameHash = 0x38D56749327FCFE6)]
     public class GcAreaDamageData : NMSTemplate
     {
         /* 0x00 */ public NMSString0x10 Id;

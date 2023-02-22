@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xB5C9B91963CB4285, NameHash = 0x44CB81CE83D73B16)]
+    [NMS(GUID = 0x6322BA74C87A2DBB, NameHash = 0x44CB81CE83D73B16)]
     public class GcPuzzleTextFlow : NMSTemplate
     {
         /* 0x00 */ public NMSString0x20A Text;
@@ -24,5 +24,6 @@ namespace libMBIN.NMS.GameComponents
         }
         /* 0x50 */ public BracketsOverrideEnum BracketsOverride;
         /* 0x54 */ public GcAudioWwiseEvents AudioEvent;
+        /* 0x58 */ public bool ShowHologram;
     }
 }

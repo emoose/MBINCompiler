@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x59B3E24BEA30C9FD, NameHash = 0x71B7896BF38DAAE4)]
+    [NMS(GUID = 0x42BCABB3F2D44B9B, NameHash = 0x71B7896BF38DAAE4)]
     public class GcAlienPodComponentData : NMSTemplate
     {
         /* 0x00 */ public float AgroRate;

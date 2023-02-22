@@ -1,9 +1,9 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xC1D6E4E4ADECA317, NameHash = 0xB3E8C8CD4B9DB0B1)]
+    [NMS(GUID = 0x85D5C880F749EB2D, NameHash = 0xB3E8C8CD4B9DB0B1)]
     public class GcInputActions : NMSTemplate
     {
-        // size: 0x121
+        // size: 0x123
         public enum InputActionEnum {
             Invalid,
             Player_Forward,
@@ -30,6 +30,8 @@ namespace libMBIN.NMS.GameComponents
             Player_PlaceMarker,
             Quick_Menu,
             Build_Menu,
+            Ship_AltLeft,
+            Ship_AltRight,
             Ship_Thrust,
             Ship_Brake,
             Ship_Boost,

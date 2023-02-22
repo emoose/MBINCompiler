@@ -1,12 +1,10 @@
-using libMBIN.NMS.GameComponents;
-using System.Collections.Generic;
-
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xC960EFC70B63ADAA, NameHash = 0x77B3408A8150441E)]
+    [NMS(GUID = 0x35996503195FB978, NameHash = 0x77B3408A8150441E)]
     public class GcCameraShakeComponentData : NMSTemplate
     {
-        /* 0x0 */ public float DangerRange;
-        /* 0x8 */ public List<GcCameraShakeTriggerData> AnimTriggers;
+        /* 0x00 */ public NMSString0x10 ShakeID;
+        /* 0x10 */ public float FalloffDistanceMin;
+        /* 0x14 */ public float FalloffDistanceMax;
     }
 }

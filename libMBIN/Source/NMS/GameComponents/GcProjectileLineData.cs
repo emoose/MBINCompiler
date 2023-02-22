@@ -2,7 +2,7 @@ using libMBIN.NMS.Toolkit;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xAC55397F6C6C406A, NameHash = 0xF7D92F84640D5A1D)]
+    [NMS(GUID = 0xA065C08AD05D6180, NameHash = 0xF7D92F84640D5A1D)]
     public class GcProjectileLineData : NMSTemplate
     {
         /* 0x00 */ public float BulletLength;

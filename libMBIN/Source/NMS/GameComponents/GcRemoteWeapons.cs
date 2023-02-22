@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xABF33D845CD18EF5, NameHash = 0x3239FD75543805A7)]
+    [NMS(GUID = 0xC1E9F7C3F86D9EDD, NameHash = 0x3239FD75543805A7)]
     public class GcRemoteWeapons : NMSTemplate
     {
         // size: 0x16

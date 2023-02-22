@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xB47552C302FA77B3, NameHash = 0xD08C5A93AECF92B1)]
+    [NMS(GUID = 0x24F1EB504C2DDDFF, NameHash = 0xD08C5A93AECF92B1)]
     public class GcHUDImageData : NMSTemplate
     {
         /* 0x00 */ public GcHUDComponent Data;

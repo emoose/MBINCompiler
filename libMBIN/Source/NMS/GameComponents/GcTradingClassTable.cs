@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xEAA73E517055AB6A, NameHash = 0x8CBF7A7EE4372A7F)]
+    [NMS(GUID = 0x12960A97D242887, NameHash = 0x8CBF7A7EE4372A7F)]
     public class GcTradingClassTable : NMSTemplate
     {
         [NMS(Size = 0x7, EnumType = typeof(GcTradingClass.TradingClassEnum))]

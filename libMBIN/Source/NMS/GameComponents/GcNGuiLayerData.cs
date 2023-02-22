@@ -4,20 +4,20 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xE4AD346538AD5174, NameHash = 0x585832A31F4C2EA1)]
+    [NMS(GUID = 0x73FAEAF445FBDC01, NameHash = 0x585832A31F4C2EA1)]
     public class GcNGuiLayerData : NMSTemplate
     {
         /* 0x000 */ public GcNGuiElementData ElementData;
-        /* 0x080 */ public TkNGuiGraphicStyle Style;
-        /* 0x2A0 */ public NMSString0x80 Image;
-        /* 0x320 */ public List<NMSTemplate> Children;
-        /* 0x330 */ public NMSString0x80 DataFilename;
+        /* 0x070 */ public TkNGuiGraphicStyle Style;
+        /* 0x250 */ public NMSString0x80 Image;
+        /* 0x2D0 */ public List<NMSTemplate> Children;
+        /* 0x2E0 */ public NMSString0x80 DataFilename;
         // size: 0x3
         public enum AltModeEnum {
             None,
             Normal,
             Alt,
         }
-        /* 0x3B0 */ public AltModeEnum AltMode;
+        /* 0x360 */ public AltModeEnum AltMode;
     }
 }

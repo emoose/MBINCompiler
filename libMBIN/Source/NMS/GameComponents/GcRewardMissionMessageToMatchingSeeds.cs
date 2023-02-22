@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x65CC18FB00F2578A, NameHash = 0x9688A6EC7C08672F)]
+    [NMS(GUID = 0xC89FD031D987DE0C, NameHash = 0x9688A6EC7C08672F)]
     public class GcRewardMissionMessageToMatchingSeeds : NMSTemplate
     {
         /* 0x00 */ public NMSString0x10 MessageID;

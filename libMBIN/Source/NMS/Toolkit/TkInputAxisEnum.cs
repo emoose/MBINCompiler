@@ -1,9 +1,9 @@
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0x1F6E06F477FB487D, NameHash = 0x6DC70ADC2461C621)]
+    [NMS(GUID = 0xE2086B32C63C0768, NameHash = 0x6DC70ADC2461C621)]
     public class TkInputAxisEnum : NMSTemplate
     {
-        // size: 0x31
+        // size: 0x33
         public enum InputAxisEnum : uint {
             None = 0x0,
             Invalid = 0x0,
@@ -54,6 +54,8 @@ namespace libMBIN.NMS.Toolkit
             DirectionalButtonsX = 0x2D,
             DirectionalButtonsY = 0x2E,
             ChordAD = 0x2F,
+            FakeLeftStick = 0x30,
+            FakeRightStick = 0x31,
         }
         /* 0x0 */ public InputAxisEnum InputAxis;
     }

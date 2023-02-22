@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x9B7BE7540882F6A9, NameHash = 0x639D09D542659F2F)]
+    [NMS(GUID = 0xE5E0C2C9BFB8D83D, NameHash = 0x639D09D542659F2F)]
     public class GcDebugShipTravelLine : NMSTemplate
     {
         /* 0x00 */ public Vector3f Origin;

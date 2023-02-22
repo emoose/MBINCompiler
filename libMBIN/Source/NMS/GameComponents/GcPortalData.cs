@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x19DD8062330F0C9E, NameHash = 0x4915F8E34B74EAC3)]
+    [NMS(GUID = 0x97B1A76523FA5525, NameHash = 0x4915F8E34B74EAC3)]
     public class GcPortalData : NMSTemplate
     {
         /* 0x0 */ public float RuneRotateTime;

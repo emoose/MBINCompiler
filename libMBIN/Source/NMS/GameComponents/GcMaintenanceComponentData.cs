@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x5E75866A8E797E77, NameHash = 0x479CFCB871ABBE0)]
+    [NMS(GUID = 0x508485AA3B7F83E0, NameHash = 0x479CFCB871ABBE0)]
     public class GcMaintenanceComponentData : NMSTemplate
     {
         /* 0x000 */ public List<GcMaintenanceElement> PreInstalledTech;
@@ -50,7 +50,12 @@ namespace libMBIN.NMS.GameComponents
         /* 0x278 */ public NMSString0x20A DiscardDescriptionOverride;
         /* 0x298 */ public NMSString0x20A ActionWarningOverride;
         /* 0x2B8 */ public float InWorldUIScaler;
-        /* 0x2BC */ public bool InteractionRequiresPower;
-        /* 0x2C0 */ public NMSString0x10 StartMissionOnUse;
+        /* 0x2BC */ public float InWorldUIMinDistOverride;
+        /* 0x2C0 */ public float InWorldUIMinDistOverrideV2;
+        /* 0x2C4 */ public float InWorldUIForcedOffset;
+        /* 0x2C8 */ public float InWorldUIForcedOffsetV2;
+        /* 0x2CC */ public bool InWorldUIUseCameraUp;
+        /* 0x2CD */ public bool InteractionRequiresPower;
+        /* 0x2D0 */ public NMSString0x10 StartMissionOnUse;
     }
 }

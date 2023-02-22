@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x9F6F0B7E3BD34664, NameHash = 0xB5B196A1179FFE00)]
+    [NMS(GUID = 0x6795C586BE70BA4E, NameHash = 0xB5B196A1179FFE00)]
     public class GcDebugScene : NMSTemplate
     {
         /* 0x0000 */ public bool Active;
@@ -49,34 +49,34 @@ namespace libMBIN.NMS.GameComponents
         /* 0x39D8 */ public List<GcAIShipDebugSpawnData> DebugShipSpawns;
         [NMS(Size = 0x7, EnumType = typeof(GcVehicleType.VehicleTypeEnum))]
         /* 0x39E8 */ public GcCameraFollowSettings[] VehicleCameraOverride;
-        /* 0x40E8 */ public bool DebugDroneScanPlayer;
-        /* 0x40F0 */ public Vector3f DebugDroneSpawn;
-        /* 0x4100 */ public Vector3f DebugDroneTarget;
-        /* 0x4110 */ public int DebugNumDrones;
-        /* 0x4120 */ public Vector3f DebugWalkerSpawn;
-        /* 0x4130 */ public Vector3f DebugWalkerTarget;
-        /* 0x4140 */ public Vector3f DebugFlybyTarget;
-        /* 0x4150 */ public Vector3f DebugFlybyDir;
-        /* 0x4160 */ public float DebugFlybyRange;
-        /* 0x4168 */ public GcSeed DebugFlybySeed;
-        /* 0x4178 */ public NMSString0x10 DebugExperienceCamShake;
-        /* 0x4190 */ public Vector3f DebugShipSpawnPos;
-        /* 0x41A0 */ public Vector3f DebugShipSpawnFacing;
-        /* 0x41B0 */ public Vector3f DebugShipSpawnUp;
-        /* 0x41C0 */ public NMSString0x10 PulseEncounter;
-        /* 0x41D0 */ public NMSString0x10 BackgroundSpaceEncounter;
-        /* 0x41E0 */ public Vector3f SandwormSpawnPos;
-        /* 0x41F0 */ public Vector3f DebugFrigateFlybySpawnPos;
-        /* 0x4200 */ public float DebugFrigateFlybyRotation;
-        /* 0x4204 */ public float DebugFrigateFlybyHeightOffset;
-        /* 0x4208 */ public NMSString0x10 NormandyReward;
-        /* 0x4218 */ public NMSString0x10 LivingFrigateReward;
-        /* 0x4228 */ public float CameraSpinTime;
-        /* 0x422C */ public float CameraSpinRevolutions;
-        /* 0x4230 */ public float CameraSpinVerticalOffset;
-        /* 0x4234 */ public float CameraSpinDistanceOffset;
-        /* 0x4238 */ public TkCurveType CameraSpinEasing;
+        /* 0x40B0 */ public bool DebugDroneScanPlayer;
+        /* 0x40C0 */ public Vector3f DebugDroneSpawn;
+        /* 0x40D0 */ public Vector3f DebugDroneTarget;
+        /* 0x40E0 */ public int DebugNumDrones;
+        /* 0x40F0 */ public Vector3f DebugWalkerSpawn;
+        /* 0x4100 */ public Vector3f DebugWalkerTarget;
+        /* 0x4110 */ public Vector3f DebugFlybyTarget;
+        /* 0x4120 */ public Vector3f DebugFlybyDir;
+        /* 0x4130 */ public float DebugFlybyRange;
+        /* 0x4138 */ public GcSeed DebugFlybySeed;
+        /* 0x4148 */ public NMSString0x10 DebugExperienceCamShake;
+        /* 0x4160 */ public Vector3f DebugShipSpawnPos;
+        /* 0x4170 */ public Vector3f DebugShipSpawnFacing;
+        /* 0x4180 */ public Vector3f DebugShipSpawnUp;
+        /* 0x4190 */ public NMSString0x10 PulseEncounter;
+        /* 0x41A0 */ public NMSString0x10 BackgroundSpaceEncounter;
+        /* 0x41B0 */ public Vector3f SandwormSpawnPos;
+        /* 0x41C0 */ public Vector3f DebugFrigateFlybySpawnPos;
+        /* 0x41D0 */ public float DebugFrigateFlybyRotation;
+        /* 0x41D4 */ public float DebugFrigateFlybyHeightOffset;
+        /* 0x41D8 */ public NMSString0x10 NormandyReward;
+        /* 0x41E8 */ public NMSString0x10 LivingFrigateReward;
+        /* 0x41F8 */ public float CameraSpinTime;
+        /* 0x41FC */ public float CameraSpinRevolutions;
+        /* 0x4200 */ public float CameraSpinVerticalOffset;
+        /* 0x4204 */ public float CameraSpinDistanceOffset;
+        /* 0x4208 */ public TkCurveType CameraSpinEasing;
         [NMS(Size = 0x6)]
-        /* 0x4240 */ public GcDebugPlanetPos[] PlanetPositions;
+        /* 0x4210 */ public GcDebugPlanetPos[] PlanetPositions;
     }
 }

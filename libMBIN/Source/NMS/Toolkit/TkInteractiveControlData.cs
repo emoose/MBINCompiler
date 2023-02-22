@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0xB2B037E62CCF173E, NameHash = 0xF6987FC027F7291)]
+    [NMS(GUID = 0x5ECF7EC2AF5DF7BD, NameHash = 0xF6987FC027F7291)]
     public class TkInteractiveControlData : NMSTemplate
     {
         /* 0x00 */ public NMSString0x20 Id;

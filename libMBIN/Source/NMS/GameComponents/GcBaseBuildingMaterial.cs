@@ -2,7 +2,7 @@ using libMBIN.NMS.Toolkit;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x90410CCF5BC295B2, NameHash = 0x83E238320B2BEE42)]
+    [NMS(GUID = 0x2FF161ED46008665, NameHash = 0x83E238320B2BEE42)]
     public class GcBaseBuildingMaterial : NMSTemplate
     {
         /* 0x000 */ public TkTextureResource Icon;

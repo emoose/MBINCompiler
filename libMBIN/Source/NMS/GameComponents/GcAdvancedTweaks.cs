@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x9C6E8F2C0852891D, NameHash = 0x1C1691C0F8971C4A)]
+    [NMS(GUID = 0x6E9D7EAB573C6CD6, NameHash = 0x1C1691C0F8971C4A)]
     public class GcAdvancedTweaks : NMSTemplate
     {
         /* 0x00 */ public float ParticleKillSpeed;

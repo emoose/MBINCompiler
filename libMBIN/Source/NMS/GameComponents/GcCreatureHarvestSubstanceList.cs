@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x374C79FD940202A3, NameHash = 0xC8FD5EE28A99CF03)]
+    [NMS(GUID = 0xE886E62858AFB688, NameHash = 0xC8FD5EE28A99CF03)]
     public class GcCreatureHarvestSubstanceList : NMSTemplate
     {
         /* 0x00 */ public NMSString0x10 CreatureType;

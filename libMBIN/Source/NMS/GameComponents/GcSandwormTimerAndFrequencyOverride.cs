@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xCC07F13AD4FB0947, NameHash = 0x2E2A8DE0D58242BF)]
+    [NMS(GUID = 0xBE39D72AE1D2F6ED, NameHash = 0x2E2A8DE0D58242BF)]
     public class GcSandwormTimerAndFrequencyOverride : NMSTemplate
     {
         /* 0x0 */ public ulong PackedUA;

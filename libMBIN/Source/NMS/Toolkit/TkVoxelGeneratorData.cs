@@ -2,7 +2,7 @@ using libMBIN.NMS.Toolkit;
 
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0x1AE52F90142D657, NameHash = 0x7A347325F1154095)]
+    [NMS(GUID = 0x3541FEC673F2CB77, NameHash = 0x7A347325F1154095)]
     public class TkVoxelGeneratorData : NMSTemplate
     {
         /* 0x0000 */ public GcSeed BaseSeed;

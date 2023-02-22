@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xD5C95E7AD8C6F727, NameHash = 0x4EDC167332F6B824)]
+    [NMS(GUID = 0x5D65FBCDFF91C956, NameHash = 0x4EDC167332F6B824)]
     public class GcSeasonalMilestone : NMSTemplate
     {
         /* 0x000 */ public NMSString0x10 Mission;

@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x5BF35F84A3F4CF47, NameHash = 0x245D62E60DEB8B1E)]
+    [NMS(GUID = 0x8DBF2F46DA1B86F5, NameHash = 0x245D62E60DEB8B1E)]
     public class GcMissionSequenceCreateSpecificPulseEncounter : NMSTemplate
     {
         /* 0x000 */ public NMSString0x80 Message;

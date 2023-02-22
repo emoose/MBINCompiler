@@ -2,7 +2,7 @@ using libMBIN.NMS.Toolkit;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xCF078AA4A6E89B86, NameHash = 0x2AD2911065D6EA2)]
+    [NMS(GUID = 0x6E82971E628F0C68, NameHash = 0x2AD2911065D6EA2)]
     public class GcTerrainControls : NMSTemplate
     {
         [NMS(Size = 0x8, EnumType = typeof(TkNoiseLayersEnum.NoiseLayerTypesEnum))]

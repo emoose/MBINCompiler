@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x310A6FD38DF74683, NameHash = 0x1E85F3A419864E16)]
+    [NMS(GUID = 0x7173DCD61496ED, NameHash = 0x1E85F3A419864E16)]
     public class GcLootComponentData : NMSTemplate
     {
         /* 0x00 */ public Vector2f Timed;

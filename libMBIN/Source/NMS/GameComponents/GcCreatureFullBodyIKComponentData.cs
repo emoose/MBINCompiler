@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xC867BC83010CF622, NameHash = 0x741554C15123D097)]
+    [NMS(GUID = 0xD746E629D444C041, NameHash = 0x741554C15123D097)]
     public class GcCreatureFullBodyIKComponentData : NMSTemplate
     {
         /* 0x00 */ public List<GcCreatureIkData> JointData;

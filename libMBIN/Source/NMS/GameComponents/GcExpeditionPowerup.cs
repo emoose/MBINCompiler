@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x338A0578B9CA8E64, NameHash = 0xB76095BD04FCB5D2)]
+    [NMS(GUID = 0x52724DA9E32E1E14, NameHash = 0xB76095BD04FCB5D2)]
     public class GcExpeditionPowerup : NMSTemplate
     {
         /* 0x00 */ public NMSString0x10 ProductId;

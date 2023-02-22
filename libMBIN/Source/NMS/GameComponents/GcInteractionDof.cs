@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x4A43B515785A84EE, NameHash = 0xE4D4852DEDEE280B)]
+    [NMS(GUID = 0xE00369E1965F75C9, NameHash = 0xE4D4852DEDEE280B)]
     public class GcInteractionDof : NMSTemplate
     {
         /* 0x00 */ public bool IsEnabled;

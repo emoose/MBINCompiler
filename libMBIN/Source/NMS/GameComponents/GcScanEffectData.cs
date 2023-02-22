@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x2CCC267773D6C9CC, NameHash = 0xCB9E3018E759F166)]
+    [NMS(GUID = 0x1D30CF3BCBA8A73D, NameHash = 0xCB9E3018E759F166)]
     public class GcScanEffectData : NMSTemplate
     {
         /* 0x00 */ public NMSString0x10 Id;

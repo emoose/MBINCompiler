@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x44D6A72910CFECD3, NameHash = 0xC3AAF93B598F92B7)]
+    [NMS(GUID = 0x4935C058DDB98084, NameHash = 0xC3AAF93B598F92B7)]
     public class GcGalaxyRenderSetupData : NMSTemplate
     {
         /* 0x000 */ public Colour SunCoreColour;

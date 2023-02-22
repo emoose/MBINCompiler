@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xD681C6F03EAA84EE, NameHash = 0x49B6F6CA72CF5A3F)]
+    [NMS(GUID = 0x96267977B10C1DE0, NameHash = 0x49B6F6CA72CF5A3F)]
     public class GcPlayerSpaceshipControlData : NMSTemplate
     {
         /* 0x000 */ public GcPlayerSpaceshipEngineData SpaceEngine;
@@ -18,16 +18,16 @@ namespace libMBIN.NMS.GameComponents
         /* 0x1E4 */ public float ExitAngleMax;
         /* 0x1E8 */ public float ExitLeaveAngle;
         /* 0x1EC */ public TkCurveType ExitCurve;
-        /* 0x1F0 */ public TkCurveType ExitDownCurve;
-        /* 0x1F4 */ public float AngularFactor;
-        /* 0x1F8 */ public float MaxTorque;
-        /* 0x1FC */ public float ShipPlanetBrakeMinSpeed;
-        /* 0x200 */ public float ShipPlanetBrakeMaxSpeed;
-        /* 0x204 */ public float ShipPlanetBrakeMinHeight;
-        /* 0x208 */ public float ShipPlanetBrakeMaxHeight;
-        /* 0x20C */ public float ShipPlanetBrakeForce;
-        /* 0x210 */ public float ShipPlanetBrakeAlignMinTime;
-        /* 0x214 */ public float ShipPlanetBrakeAlignMaxTime;
-        /* 0x218 */ public float ShipMinHeightForce;
+        /* 0x1ED */ public TkCurveType ExitDownCurve;
+        /* 0x1F0 */ public float AngularFactor;
+        /* 0x1F4 */ public float MaxTorque;
+        /* 0x1F8 */ public float ShipPlanetBrakeMinSpeed;
+        /* 0x1FC */ public float ShipPlanetBrakeMaxSpeed;
+        /* 0x200 */ public float ShipPlanetBrakeMinHeight;
+        /* 0x204 */ public float ShipPlanetBrakeMaxHeight;
+        /* 0x208 */ public float ShipPlanetBrakeForce;
+        /* 0x20C */ public float ShipPlanetBrakeAlignMinTime;
+        /* 0x210 */ public float ShipPlanetBrakeAlignMaxTime;
+        /* 0x214 */ public float ShipMinHeightForce;
     }
 }

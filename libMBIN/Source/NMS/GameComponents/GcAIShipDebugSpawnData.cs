@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xEF34B6E9235C73D2, NameHash = 0xDFA8A7A9DD3ACC08)]
+    [NMS(GUID = 0xD616A0433497617, NameHash = 0xDFA8A7A9DD3ACC08)]
     public class GcAIShipDebugSpawnData : NMSTemplate
     {
         /* 0x00 */ public Vector3f Position;

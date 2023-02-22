@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x677A441AA913760C, NameHash = 0x6F8C3831DC1540EC)]
+    [NMS(GUID = 0xC0D8ABF2503E00DC, NameHash = 0x6F8C3831DC1540EC)]
     public class GcPlayerSpawnStateData : NMSTemplate
     {
         /* 0x00 */ public Vector4f PlayerPositionInSystem;

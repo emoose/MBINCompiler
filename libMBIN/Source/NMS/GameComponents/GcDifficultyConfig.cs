@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xEECB963387B3C01B, NameHash = 0xA688E4255C8FED76)]
+    [NMS(GUID = 0x24D7B6A525FF59C4, NameHash = 0xA688E4255C8FED76)]
     public class GcDifficultyConfig : NMSTemplate
     {
         /* 0x0000 */ public NMSString0x20A PresetLocId;
@@ -30,79 +30,81 @@ namespace libMBIN.NMS.GameComponents
         /* 0x1B58 */ public NMSString0x20A[] DamageReceivedOptionLocIds;
         [NMS(Size = 0x4, EnumType = typeof(GcDamageReceivedDifficultyOption.DamageReceivedDifficultyEnum))]
         /* 0x1BD8 */ public float[] DamageReceivedMultipliers;
+        [NMS(Size = 0x4, EnumType = typeof(GcDamageReceivedDifficultyOption.DamageReceivedDifficultyEnum))]
+        /* 0x1BE8 */ public int[] DamageReceivedAIMechTechDamageHits;
         [NMS(Size = 0x3, EnumType = typeof(GcDamageGivenDifficultyOption.DamageGivenDifficultyEnum))]
-        /* 0x1BE8 */ public NMSString0x20A[] DamageGivenOptionLocIds;
+        /* 0x1BF8 */ public NMSString0x20A[] DamageGivenOptionLocIds;
         [NMS(Size = 0x3, EnumType = typeof(GcDamageGivenDifficultyOption.DamageGivenDifficultyEnum))]
-        /* 0x1C48 */ public float[] DamageGivenMultipliers;
+        /* 0x1C58 */ public float[] DamageGivenMultipliers;
         [NMS(Size = 0x4, EnumType = typeof(GcActiveSurvivalBarsDifficultyOption.ActiveSurvivalBarsDifficultyEnum))]
-        /* 0x1C58 */ public NMSString0x20A[] ActiveSurvivalBarsOptionLocIds;
+        /* 0x1C68 */ public NMSString0x20A[] ActiveSurvivalBarsOptionLocIds;
         [NMS(Size = 0x3, EnumType = typeof(GcHazardDrainDifficultyOption.HazardDrainDifficultyEnum))]
-        /* 0x1CD8 */ public NMSString0x20A[] HazardDrainOptionLocIds;
+        /* 0x1CE8 */ public NMSString0x20A[] HazardDrainOptionLocIds;
         [NMS(Size = 0x3, EnumType = typeof(GcHazardDrainDifficultyOption.HazardDrainDifficultyEnum))]
-        /* 0x1D38 */ public float[] HazardDrainMultipliers;
+        /* 0x1D48 */ public float[] HazardDrainMultipliers;
         [NMS(Size = 0x3, EnumType = typeof(GcEnergyDrainDifficultyOption.EnergyDrainDifficultyEnum))]
-        /* 0x1D48 */ public NMSString0x20A[] EnergyDrainOptionLocIds;
+        /* 0x1D58 */ public NMSString0x20A[] EnergyDrainOptionLocIds;
         [NMS(Size = 0x3, EnumType = typeof(GcEnergyDrainDifficultyOption.EnergyDrainDifficultyEnum))]
-        /* 0x1DA8 */ public float[] EnergyDrainMultipliers;
+        /* 0x1DB8 */ public float[] EnergyDrainMultipliers;
         [NMS(Size = 0x3, EnumType = typeof(GcSubstanceCollectionDifficultyOption.SubstanceCollectionDifficultyEnum))]
-        /* 0x1DB8 */ public NMSString0x20A[] SubstanceCollectionOptionLocIds;
+        /* 0x1DC8 */ public NMSString0x20A[] SubstanceCollectionOptionLocIds;
         [NMS(Size = 0x3, EnumType = typeof(GcSubstanceCollectionDifficultyOption.SubstanceCollectionDifficultyEnum))]
-        /* 0x1E18 */ public float[] SubstanceCollectionMultipliers;
+        /* 0x1E28 */ public float[] SubstanceCollectionMultipliers;
         [NMS(Size = 0x3, EnumType = typeof(GcSubstanceCollectionDifficultyOption.SubstanceCollectionDifficultyEnum))]
-        /* 0x1E24 */ public int[] SubstanceCollectionLaserAmount;
+        /* 0x1E34 */ public int[] SubstanceCollectionLaserAmount;
         [NMS(Size = 0x3, EnumType = typeof(GcInventoryStackLimitsDifficultyOption.InventoryStackLimitsDifficultyEnum))]
-        /* 0x1E30 */ public NMSString0x20A[] InventoryStackLimitsOptionLocIds;
+        /* 0x1E40 */ public NMSString0x20A[] InventoryStackLimitsOptionLocIds;
         [NMS(Size = 0x3, EnumType = typeof(GcInventoryStackLimitsDifficultyOption.InventoryStackLimitsDifficultyEnum))]
-        /* 0x1E90 */ public GcDifficultyInventoryStackSizeOptionData[] InventoryStackLimitsOptionData;
+        /* 0x1EA0 */ public GcDifficultyInventoryStackSizeOptionData[] InventoryStackLimitsOptionData;
         [NMS(Size = 0x4, EnumType = typeof(GcChargingRequirementsDifficultyOption.ChargingRequirementsDifficultyEnum))]
-        /* 0x1FC8 */ public NMSString0x20A[] ChargingRequirementsOptionLocIds;
+        /* 0x1FD8 */ public NMSString0x20A[] ChargingRequirementsOptionLocIds;
         [NMS(Size = 0x4, EnumType = typeof(GcChargingRequirementsDifficultyOption.ChargingRequirementsDifficultyEnum))]
-        /* 0x2048 */ public float[] ChargingRequirementsMultipliers;
+        /* 0x2058 */ public float[] ChargingRequirementsMultipliers;
         [NMS(Size = 0x4, EnumType = typeof(GcFuelUseDifficultyOption.FuelUseDifficultyEnum))]
-        /* 0x2058 */ public NMSString0x20A[] FuelUseOptionLocIds;
+        /* 0x2068 */ public NMSString0x20A[] FuelUseOptionLocIds;
         [NMS(Size = 0x4, EnumType = typeof(GcFuelUseDifficultyOption.FuelUseDifficultyEnum))]
-        /* 0x20D8 */ public GcDifficultyFuelUseOptionData[] FuelUseOptionData;
+        /* 0x20E8 */ public GcDifficultyFuelUseOptionData[] FuelUseOptionData;
         [NMS(Size = 0x4, EnumType = typeof(GcLaunchFuelCostDifficultyOption.LaunchFuelCostDifficultyEnum))]
-        /* 0x2138 */ public NMSString0x20A[] LaunchFuelCostOptionLocIds;
+        /* 0x2148 */ public NMSString0x20A[] LaunchFuelCostOptionLocIds;
         [NMS(Size = 0x4, EnumType = typeof(GcLaunchFuelCostDifficultyOption.LaunchFuelCostDifficultyEnum))]
-        /* 0x21B8 */ public float[] LaunchFuelCostMultipliers;
+        /* 0x21C8 */ public float[] LaunchFuelCostMultipliers;
         [NMS(Size = 0x4, EnumType = typeof(GcLaunchFuelCostDifficultyOption.LaunchFuelCostDifficultyEnum))]
-        /* 0x21C8 */ public float[] ShipSummoningFuelCostMultipliers;
+        /* 0x21D8 */ public float[] ShipSummoningFuelCostMultipliers;
         [NMS(Size = 0x4, EnumType = typeof(GcCurrencyCostDifficultyOption.CurrencyCostDifficultyEnum))]
-        /* 0x21D8 */ public NMSString0x20A[] CurrencyCostOptionLocIds;
+        /* 0x21E8 */ public NMSString0x20A[] CurrencyCostOptionLocIds;
         [NMS(Size = 0x4, EnumType = typeof(GcCurrencyCostDifficultyOption.CurrencyCostDifficultyEnum))]
-        /* 0x2258 */ public GcDifficultyCurrencyCostOptionData[] CurrencyCostOptionData;
+        /* 0x2268 */ public GcDifficultyCurrencyCostOptionData[] CurrencyCostOptionData;
         [NMS(Size = 0x3, EnumType = typeof(GcItemShopAvailabilityDifficultyOption.ItemShopAvailabilityDifficultyEnum))]
-        /* 0x22B8 */ public NMSString0x20A[] ItemShopAvailabilityOptionLocIds;
+        /* 0x22C8 */ public NMSString0x20A[] ItemShopAvailabilityOptionLocIds;
         [NMS(Size = 0x3, EnumType = typeof(GcItemShopAvailabilityDifficultyOption.ItemShopAvailabilityDifficultyEnum))]
-        /* 0x2318 */ public GcItemShopAvailabilityDifficultyOptionData[] ItemShopAvailabilityOptionData;
+        /* 0x2328 */ public GcItemShopAvailabilityDifficultyOptionData[] ItemShopAvailabilityOptionData;
         [NMS(Size = 0x4, EnumType = typeof(GcScannerRechargeDifficultyOption.ScannerRechargeDifficultyEnum))]
-        /* 0x2348 */ public NMSString0x20A[] ScannerRechargeOptionLocIds;
+        /* 0x2358 */ public NMSString0x20A[] ScannerRechargeOptionLocIds;
         [NMS(Size = 0x4, EnumType = typeof(GcScannerRechargeDifficultyOption.ScannerRechargeDifficultyEnum))]
-        /* 0x23C8 */ public float[] ScannerRechargeMultipliers;
+        /* 0x23D8 */ public float[] ScannerRechargeMultipliers;
         [NMS(Size = 0x4, EnumType = typeof(GcReputationGainDifficultyOption.ReputationGainDifficultyEnum))]
-        /* 0x23D8 */ public NMSString0x20A[] ReputationGainOptionLocIds;
+        /* 0x23E8 */ public NMSString0x20A[] ReputationGainOptionLocIds;
         [NMS(Size = 0x4, EnumType = typeof(GcReputationGainDifficultyOption.ReputationGainDifficultyEnum))]
-        /* 0x2458 */ public float[] ReputationGainMultipliers;
+        /* 0x2468 */ public float[] ReputationGainMultipliers;
         [NMS(Size = 0x4, EnumType = typeof(GcCombatTimerDifficultyOption.CombatTimerDifficultyOptionEnum))]
-        /* 0x2468 */ public NMSString0x20A[] SpaceCombatOptionLocIds;
+        /* 0x2478 */ public NMSString0x20A[] SpaceCombatOptionLocIds;
         [NMS(Size = 0x4, EnumType = typeof(GcCombatTimerDifficultyOption.CombatTimerDifficultyOptionEnum))]
-        /* 0x24E8 */ public float[] SpaceCombatMultipliers;
+        /* 0x24F8 */ public float[] SpaceCombatMultipliers;
         [NMS(Size = 0x4, EnumType = typeof(GcCombatTimerDifficultyOption.CombatTimerDifficultyOptionEnum))]
-        /* 0x24F8 */ public float[] SpaceCombatDifficultyMultipliers;
+        /* 0x2508 */ public float[] SpaceCombatDifficultyMultipliers;
         [NMS(Size = 0x4, EnumType = typeof(GcCombatTimerDifficultyOption.CombatTimerDifficultyOptionEnum))]
-        /* 0x2508 */ public NMSString0x20A[] GroundCombatOptionLocIds;
+        /* 0x2518 */ public NMSString0x20A[] GroundCombatOptionLocIds;
         [NMS(Size = 0x4, EnumType = typeof(GcCombatTimerDifficultyOption.CombatTimerDifficultyOptionEnum))]
-        /* 0x2588 */ public float[] GroundCombatMultipliers;
+        /* 0x2598 */ public float[] GroundCombatMultipliers;
         [NMS(Size = 0x4, EnumType = typeof(GcCombatTimerDifficultyOption.CombatTimerDifficultyOptionEnum))]
-        /* 0x2598 */ public float[] SentinelTimeOutMultipliers;
+        /* 0x25A8 */ public float[] SentinelTimeOutMultipliers;
         [NMS(Size = 0x3, EnumType = typeof(GcSprintingCostDifficultyOption.SprintingCostDifficultyEnum))]
-        /* 0x25A8 */ public NMSString0x20A[] SprintingOptionLocIds;
+        /* 0x25B8 */ public NMSString0x20A[] SprintingOptionLocIds;
         [NMS(Size = 0x3, EnumType = typeof(GcSprintingCostDifficultyOption.SprintingCostDifficultyEnum))]
-        /* 0x2608 */ public float[] SprintingCostMultipliers;
+        /* 0x2618 */ public float[] SprintingCostMultipliers;
         [NMS(Size = 0x3, EnumType = typeof(GcBreakTechOnDamageDifficultyOption.BreakTechOnDamageProbabilityEnum))]
-        /* 0x2618 */ public NMSString0x20A[] BreakTechOnDamageOptionLocIds;
+        /* 0x2628 */ public NMSString0x20A[] BreakTechOnDamageOptionLocIds;
         [NMS(Size = 0x3, EnumType = typeof(GcBreakTechOnDamageDifficultyOption.BreakTechOnDamageProbabilityEnum))]
-        /* 0x2678 */ public float[] BreakTechOnDamageMultipliers;
+        /* 0x2688 */ public float[] BreakTechOnDamageMultipliers;
     }
 }

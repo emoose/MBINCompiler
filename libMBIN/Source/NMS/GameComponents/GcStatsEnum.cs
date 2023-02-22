@@ -1,9 +1,9 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x7A9E9C483E4E8BBC, NameHash = 0xACDE6E8DA19EC2E2)]
+    [NMS(GUID = 0xA5C5AEF74A763E5, NameHash = 0xACDE6E8DA19EC2E2)]
     public class GcStatsEnum : NMSTemplate
     {
-        // size: 0x11
+        // size: 0x12
         public enum StatEnumEnum {
             None,
             DEPOTS_BROKEN,
@@ -22,6 +22,7 @@ namespace libMBIN.NMS.GameComponents
             MINIWORM_KILL,
             POOP_COLLECTED,
             GRAVBALLS,
+            EGG_PODS,
         }
         /* 0x0 */ public StatEnumEnum StatEnum;
     }

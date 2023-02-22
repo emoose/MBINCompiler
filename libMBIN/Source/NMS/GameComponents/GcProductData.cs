@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xBCD5CB363EC984E6, NameHash = 0xE831C8A241FD8276)]
+    [NMS(GUID = 0xC8BD0ABA9E49767F, NameHash = 0xE831C8A241FD8276)]
     public class GcProductData : NMSTemplate
     {
         /* 0x000 */ public NMSString0x10 ID;
@@ -60,5 +60,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x3F0 */ public NMSString0x10 GiveRewardOnSpecialPurchase;
         /* 0x400 */ public bool EggModifierIngredient;
         /* 0x401 */ public bool IsTechbox;
+        /* 0x402 */ public bool CanSendToOtherPlayers;
     }
 }

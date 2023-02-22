@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x51A080B36857E55D, NameHash = 0xE5075EC0403F94CA)]
+    [NMS(GUID = 0xA6116160B4E36AE2, NameHash = 0xE5075EC0403F94CA)]
     public class GcPhotoModeSettings : NMSTemplate
     {
         /* 0x00 */ public float Fog;

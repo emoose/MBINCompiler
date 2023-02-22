@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x192E525EA30AC620, NameHash = 0x27661A8643F25227)]
+    [NMS(GUID = 0x87264FFD7270DC58, NameHash = 0x27661A8643F25227)]
     public class GcRewardProductRecipe : NMSTemplate
     {
         /* 0x00 */ public GcRealitySubstanceCategory ItemCatagory;

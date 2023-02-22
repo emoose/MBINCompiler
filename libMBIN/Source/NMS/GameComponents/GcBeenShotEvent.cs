@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x24C95C6740057C75, NameHash = 0xF554DC208673EE3D)]
+    [NMS(GUID = 0xC7EECD09781E1870, NameHash = 0xF554DC208673EE3D)]
     public class GcBeenShotEvent : NMSTemplate
     {
         // size: 0x3

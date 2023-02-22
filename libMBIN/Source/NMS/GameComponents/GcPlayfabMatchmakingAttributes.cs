@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x6A3ACADE5FC13574, NameHash = 0x49457F0F4ABEDEE6)]
+    [NMS(GUID = 0x7CB74261EDC1603B, NameHash = 0x49457F0F4ABEDEE6)]
     public class GcPlayfabMatchmakingAttributes : NMSTemplate
     {
         /* 0x000 */ public NMSString0x40 UA;

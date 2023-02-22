@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x3957851826EE3253, NameHash = 0x314960F4DFCC0B34)]
+    [NMS(GUID = 0x94AC076DB1249E22, NameHash = 0x314960F4DFCC0B34)]
     public class GcPlanetaryMappingValues : NMSTemplate
     {
         /* 0x0 */ public GcPlanetSize PlanetSize;

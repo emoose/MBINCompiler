@@ -107,6 +107,7 @@ DONT_OVERRIDE = [
     'TkMeshData',
     'TkSceneNodeData',
     'TkAnimNodeFrameData',
+    'TkAnimNodeFrameHalfData',
 ]
 
 SUMMARY_FILE = op.join(op.dirname(__file__), 'summary.txt')
@@ -466,6 +467,8 @@ class NMSClass():
             self.namespace = USING_MAPPING.get(
                 self.name[:2].lower(), 'libMBIN.NMS.GameComponents'
             )
+        elif self.name.endswith("TkGlobals"):
+            self.namespace = 'libMBIN.NMS.Toolkit'
         else:
             self.namespace = 'libMBIN.NMS.Globals'
         self.is_enum_class = False

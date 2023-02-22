@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x34BC4A0652731C5D, NameHash = 0x44D6DFC8A512D8CB)]
+    [NMS(GUID = 0x8BCCD4CF815D841F, NameHash = 0x44D6DFC8A512D8CB)]
     public class GcAntagonistPerception : NMSTemplate
     {
         /* 0x00 */ public NMSString0x10 Id;

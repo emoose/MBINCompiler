@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x43238365CE669527, NameHash = 0xF6BA3ABDC071904B)]
+    [NMS(GUID = 0xBE978CF26B73E54D, NameHash = 0xF6BA3ABDC071904B)]
     public class GcRewardCustomExpeditionLogEntry : NMSTemplate
     {
         /* 0x00 */ public bool FromIntervention;

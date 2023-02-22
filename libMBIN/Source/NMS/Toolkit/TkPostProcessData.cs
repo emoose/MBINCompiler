@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0xCB689F2D00383E5E, NameHash = 0xF95FF845E00A143C)]
+    [NMS(GUID = 0xAEB5B93A395579A3, NameHash = 0xF95FF845E00A143C)]
     public class TkPostProcessData : NMSTemplate
     {
         /* 0x00 */ public float DOFNearPlane;

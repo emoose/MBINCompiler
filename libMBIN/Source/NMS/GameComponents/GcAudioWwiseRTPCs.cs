@@ -1,9 +1,9 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x653F7C0290AEA171, NameHash = 0x92D4879C17049BD7)]
+    [NMS(GUID = 0x2BFA17ACBA2A7F13, NameHash = 0x92D4879C17049BD7)]
     public class GcAudioWwiseRTPCs : NMSTemplate
     {
-        // size: 0x5F
+        // size: 0x60
         public enum AkRTPCEnum : uint {
             INVALID_RTPC = 0x0,
             BASE_BATTERY_CHARGING = 0x7C13B3BA,
@@ -90,6 +90,7 @@ namespace libMBIN.NMS.GameComponents
             STORM = 0x648999E0,
             THEREMIN_PITCH = 0xD774D3B8,
             THEREMIN_VOLUME = 0x26294964,
+            UI_VR_MENU = 0x2C7EDD8C,
             VEHICLE_EXIT = 0xF4378552,
             VEHICLE_IMPACTS = 0x855298E7,
             VEHICLE_JUMP = 0x1E1DDD32,

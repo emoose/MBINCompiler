@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x2DC9930563101A5C, NameHash = 0x904DB42CF570F4BB)]
+    [NMS(GUID = 0xB5249A3FF5B2717C, NameHash = 0x904DB42CF570F4BB)]
     public class GcVehicleData : NMSTemplate
     {
         /* 0x0000 */ public NMSString0x10 Name;

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xF6AA8812F03D19EA, NameHash = 0xE4A9F22B5EB5CBF8)]
+    [NMS(GUID = 0x5FD10D87A7979DA5, NameHash = 0xE4A9F22B5EB5CBF8)]
     public class GcDroneComponentData : NMSTemplate
     {
         /* 0x00 */ public NMSString0x10 Id;

@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x315DC82D18EE19C8, NameHash = 0xDEABEB9DAFEFB3D9)]
+    [NMS(GUID = 0x2C56AC8AB40CE6A7, NameHash = 0xDEABEB9DAFEFB3D9)]
     public class GcRewardSetAbandonedFreighterMissionState : NMSTemplate
     {
         // size: 0x6

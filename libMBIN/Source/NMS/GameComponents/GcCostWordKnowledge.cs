@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x78F9CCEE9C7030B1, NameHash = 0x67494CEE3CE0F9F6)]
+    [NMS(GUID = 0xC4F9F786BC08F74, NameHash = 0x67494CEE3CE0F9F6)]
     public class GcCostWordKnowledge : NMSTemplate
     {
         /* 0x0 */ public GcAlienRace Race;

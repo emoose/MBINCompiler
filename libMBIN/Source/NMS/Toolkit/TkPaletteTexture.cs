@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0xE4B018E61C5C44F9, NameHash = 0x6A57676B42321253)]
+    [NMS(GUID = 0xE877E2E7DCA338C7, NameHash = 0x6A57676B42321253)]
     public class TkPaletteTexture : NMSTemplate
     {
         // size: 0x3A

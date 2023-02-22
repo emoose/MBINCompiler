@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xE6DDE6D23B8B28B3, NameHash = 0x1858CF2F851302AE)]
+    [NMS(GUID = 0x2C81FD0FE4E2CBFB, NameHash = 0x1858CF2F851302AE)]
     public class GcBreakTechOnDamageDifficultyOption : NMSTemplate
     {
         // size: 0x3

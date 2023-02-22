@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xD4B553E78A1DFEB8, NameHash = 0x5ED90B1D007B2123)]
+    [NMS(GUID = 0x98AFAB0C4330107C, NameHash = 0x5ED90B1D007B2123)]
     public class GcRewardDestructTable : NMSTemplate
     {
         [NMS(Size = 0x9, EnumType = typeof(GcRealitySubstanceCategory.SubstanceCategoryEnum))]

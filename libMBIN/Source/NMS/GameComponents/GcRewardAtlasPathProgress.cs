@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xD331E292AA263828, NameHash = 0x2FFD5C572426F075)]
+    [NMS(GUID = 0x29D761D8EFF76D18, NameHash = 0x2FFD5C572426F075)]
     public class GcRewardAtlasPathProgress : NMSTemplate
     {
         // size: 0x2

@@ -2,7 +2,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x54ECD7487D358670, NameHash = 0x37476C35069E0A8F)]
+    [NMS(GUID = 0x360C266CF8B4160B, NameHash = 0x37476C35069E0A8F)]
     public class GcGeneratedBasePruningRule : NMSTemplate
     {
         /* 0x00 */ public NMSString0x10 RuleId;

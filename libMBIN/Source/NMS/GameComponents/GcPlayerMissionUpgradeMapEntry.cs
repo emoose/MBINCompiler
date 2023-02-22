@@ -2,7 +2,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xBF393ECED0B0A81, NameHash = 0x783F7F56522EAFC6)]
+    [NMS(GUID = 0x18837F6683177204, NameHash = 0x783F7F56522EAFC6)]
     public class GcPlayerMissionUpgradeMapEntry : NMSTemplate
     {
         /* 0x00 */ public NMSString0x10 Mission;

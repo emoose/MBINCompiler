@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xA7A79743C3F9BEE3, NameHash = 0x9A26DA40EA0EA5D4)]
+    [NMS(GUID = 0x8A2A9AE2E98F7ED5, NameHash = 0x9A26DA40EA0EA5D4)]
     public class GcRegionHotspotSubstance : NMSTemplate
     {
         /* 0x00 */ public NMSString0x10 SubstanceId;

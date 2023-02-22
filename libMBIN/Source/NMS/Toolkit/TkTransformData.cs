@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0x7CCFDD99B1A3BD1C, NameHash = 0x984D549B93F94207)]
+    [NMS(GUID = 0x94371FCE320374EC, NameHash = 0x984D549B93F94207)]
     public class TkTransformData : NMSTemplate
     {
         /* 0x00 */ public float TransX;

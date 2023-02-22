@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x6E7FFD03356B7B0B, NameHash = 0x864FCB26DF972FCF)]
+    [NMS(GUID = 0x5D71BDFA93D8D2C7, NameHash = 0x864FCB26DF972FCF)]
     public class GcPlayerTitle : NMSTemplate
     {
         /* 0x00 */ public NMSString0x10 ID;
@@ -15,8 +15,10 @@ namespace libMBIN.NMS.GameComponents
         /* 0xA0 */ public NMSString0x10 UnlockedByTrophy;
         /* 0xB0 */ public NMSString0x10 UnlockedByStat;
         /* 0xC0 */ public float UnlockedByStatValue;
-        /* 0xC4 */ public GcInteractionType UnlockedByInteraction;
-        /* 0xC8 */ public int UnlockedByInteractionIndex;
-        /* 0xCC */ public GcAlienRace UnlockedByInteractionRace;
+        /* 0xC4 */ public int UnlockedByLeveledStatRank;
+        /* 0xC8 */ public GcInteractionType UnlockedByInteraction;
+        /* 0xCC */ public int UnlockedByInteractionIndex;
+        /* 0xD0 */ public GcAlienRace UnlockedByInteractionRace;
+        /* 0xD4 */ public bool UnlockedByInteractionOnlyTestMainRaces;
     }
 }

@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0x449B34A7F2405390, NameHash = 0xD1E7F0BE0B98FD48)]
+    [NMS(GUID = 0x71FA853C1F36341F, NameHash = 0xD1E7F0BE0B98FD48)]
     public class TkNGuiAlignment : NMSTemplate
     {
         // size: 0x3
@@ -16,6 +16,6 @@ namespace libMBIN.NMS.Toolkit
             Center,
             Right,
         }
-        /* 0x4 */ public HorizontalEnum Horizontal;
+        /* 0x1 */ public HorizontalEnum Horizontal;
     }
 }

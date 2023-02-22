@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0x6FE3CFF10A53E5D7, NameHash = 0x678F6A0ACE397B4)]
+    [NMS(GUID = 0xCF5018310EDBC8A2, NameHash = 0x678F6A0ACE397B4)]
     public class TkFoliageData : NMSTemplate
     {
         /* 0x00 */ public NMSString0x80 Material;

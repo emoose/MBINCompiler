@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x75B50CBD063DA9BE, NameHash = 0x434379BF90DDF679)]
+    [NMS(GUID = 0x16C04EDC7948B399, NameHash = 0x434379BF90DDF679)]
     public class GcStatusMessageDefinitions : NMSTemplate
     {
         /* 0x000 */ public List<GcStatusMessageDefinition> Messages;

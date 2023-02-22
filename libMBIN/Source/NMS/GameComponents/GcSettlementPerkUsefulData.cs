@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x9D3ED0315B5DAD27, NameHash = 0xDEB32057FC4A2AC1)]
+    [NMS(GUID = 0x27EC480E87BC3618, NameHash = 0xDEB32057FC4A2AC1)]
     public class GcSettlementPerkUsefulData : NMSTemplate
     {
         /* 0x00 */ public NMSString0x10 BaseID;

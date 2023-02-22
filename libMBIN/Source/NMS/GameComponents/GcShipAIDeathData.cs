@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xABA105DAD97AF135, NameHash = 0x52329167EAE2541C)]
+    [NMS(GUID = 0x8E0A7AFFD011AE23, NameHash = 0x52329167EAE2541C)]
     public class GcShipAIDeathData : NMSTemplate
     {
         /* 0x00 */ public float DroneDeathTime;

@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xB95FD1D6AA288B0, NameHash = 0x4FA3A2D9F8D4A156)]
+    [NMS(GUID = 0xAD1BE90CC526B2B9, NameHash = 0x4FA3A2D9F8D4A156)]
     public class GcMiningSubstanceData : NMSTemplate
     {
         /* 0x0 */ public GcRealitySubstanceCategory SubstanceCategory;

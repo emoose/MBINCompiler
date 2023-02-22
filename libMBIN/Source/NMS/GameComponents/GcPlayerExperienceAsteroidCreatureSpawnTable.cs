@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x144532A86792A532, NameHash = 0xC49FE6E5B9227EF6)]
+    [NMS(GUID = 0x13686FB01961A6D, NameHash = 0xC49FE6E5B9227EF6)]
     public class GcPlayerExperienceAsteroidCreatureSpawnTable : NMSTemplate
     {
         /* 0x00 */ public float SmallAsteroidSpawnPercent;

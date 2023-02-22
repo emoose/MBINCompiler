@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x653540D6BDAF9390, NameHash = 0x8E4A63D8D3818019)]
+    [NMS(GUID = 0x11879F8426DFCD89, NameHash = 0x8E4A63D8D3818019)]
     public class GcSquadronHologramComponentData : NMSTemplate
     {
         /* 0x00 */ public float HologramRotationSpeedDegPerSec;

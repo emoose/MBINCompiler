@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x2FDB95D73DE5CD33, NameHash = 0xF0679B25F5343B25)]
+    [NMS(GUID = 0x48FCC1BDF4A692B3, NameHash = 0xF0679B25F5343B25)]
     public class GcWFCTerrainConstraint : NMSTemplate
     {
         // size: 0x9

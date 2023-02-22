@@ -2,7 +2,7 @@ using libMBIN.NMS.Toolkit;
 
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0x25DA985683D5F067, NameHash = 0x56E0EB96EB3713F0)]
+    [NMS(GUID = 0xB319768677055F79, NameHash = 0x56E0EB96EB3713F0)]
     public class TkGraphicsDetailPreset : NMSTemplate
     {
         /* 0x00 */ public TkGraphicsDetailTypes TextureQuality;
@@ -87,5 +87,6 @@ namespace libMBIN.NMS.Toolkit
             XESS,
         }
         /* 0x40 */ public AntiAliasingEnum AntiAliasing;
+        /* 0x44 */ public TkDynamicResScalingSettings DynamicResScalingSettings;
     }
 }

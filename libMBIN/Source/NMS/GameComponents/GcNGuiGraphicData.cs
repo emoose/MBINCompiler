@@ -3,11 +3,11 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xA81A7779F9A01DB, NameHash = 0x264B878043DA20B3)]
+    [NMS(GUID = 0xFA260C4B6F9A60E0, NameHash = 0x264B878043DA20B3)]
     public class GcNGuiGraphicData : NMSTemplate
     {
         /* 0x000 */ public GcNGuiElementData ElementData;
-        /* 0x080 */ public TkNGuiGraphicStyle Style;
-        /* 0x2A0 */ public NMSString0x80 Image;
+        /* 0x070 */ public TkNGuiGraphicStyle Style;
+        /* 0x250 */ public NMSString0x80 Image;
     }
 }

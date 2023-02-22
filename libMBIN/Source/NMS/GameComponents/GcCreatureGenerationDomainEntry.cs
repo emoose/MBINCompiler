@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x898A97BA31566F3E, NameHash = 0x79E2609CF7F155CE)]
+    [NMS(GUID = 0x6F71AA2B77D5938C, NameHash = 0x79E2609CF7F155CE)]
     public class GcCreatureGenerationDomainEntry : NMSTemplate
     {
         /* 0x0 */ public GcCreatureGenerationDensity DensityModifier;

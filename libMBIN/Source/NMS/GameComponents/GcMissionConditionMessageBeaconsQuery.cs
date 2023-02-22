@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xA7A71D2D98606DEE, NameHash = 0x7A896811854A127F)]
+    [NMS(GUID = 0x2DAF7CC6F04E7A44, NameHash = 0x7A896811854A127F)]
     public class GcMissionConditionMessageBeaconsQuery : NMSTemplate
     {
         /* 0x0 */ public int MinPartsFound;

@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x9A762903FB261966, NameHash = 0x839AE0F21C2F266C)]
+    [NMS(GUID = 0x9426ADEECBC83FEE, NameHash = 0x839AE0F21C2F266C)]
     public class GcMissionSequenceCollectMoney : NMSTemplate
     {
         /* 0x000 */ public NMSString0x80 Message;

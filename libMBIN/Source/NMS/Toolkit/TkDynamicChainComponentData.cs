@@ -2,7 +2,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0xEC560F38D1282A8C, NameHash = 0x380D960FAA1BF837)]
+    [NMS(GUID = 0x2DD2D2E517ED0C52, NameHash = 0x380D960FAA1BF837)]
     public class TkDynamicChainComponentData : NMSTemplate
     {
         /* 0x00 */ public float AngularLimit;

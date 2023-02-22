@@ -3,7 +3,7 @@ using System;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x81366F08AE6B4242, NameHash = 0x6E51E89E7E62BE51)]
+    [NMS(GUID = 0x287BA08F43914FB5, NameHash = 0x6E51E89E7E62BE51)]
     public class GcPersistentBaseDifficultyData : NMSTemplate
     {
         /* 0x0 */ public GcDifficultyPresetType DifficultyPreset;
