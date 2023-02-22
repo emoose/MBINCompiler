@@ -19,7 +19,7 @@ namespace libMBIN.NMS.Toolkit
             SimpleWipe,
             SimpleWipeDown,
             CustomWipe,
-            CustomWipeAlpha
+            CustomWipeAlpha,
         }
         /* 0x1F0 */ public AnimateEnum Animate;
         /* 0x1F4 */ public float AnimTime;

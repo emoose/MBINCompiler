@@ -6,7 +6,7 @@ namespace libMBIN.NMS.GameComponents
         // size: 0x2
         public enum MessageTypeEnum {
             Leave,
-            Fight
+            Fight,
         }
         /* 0x0 */ public MessageTypeEnum MessageType;
     }

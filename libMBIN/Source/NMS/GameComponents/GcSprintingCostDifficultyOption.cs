@@ -7,7 +7,7 @@ namespace libMBIN.NMS.GameComponents
         public enum SprintingCostDifficultyEnum {
             Free,
             Low,
-            Full
+            Full,
         }
         /* 0x0 */ public SprintingCostDifficultyEnum SprintingCostDifficulty;
     }

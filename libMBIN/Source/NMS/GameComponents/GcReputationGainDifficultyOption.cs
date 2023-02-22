@@ -8,7 +8,7 @@ namespace libMBIN.NMS.GameComponents
             VeryFast,
             Fast,
             Normal,
-            Slow
+            Slow,
         }
         /* 0x0 */ public ReputationGainDifficultyEnum ReputationGainDifficulty;
     }

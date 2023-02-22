@@ -19,7 +19,7 @@ namespace libMBIN.NMS.GameComponents
             SummonedTrait,
             Hungry,
             Tickles,
-            Yummy
+            Yummy,
         }
         /* 0x0 */ public PetVocabularyWordEnum PetVocabularyWord;
     }

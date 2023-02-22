@@ -22,7 +22,7 @@ namespace libMBIN.NMS.Toolkit
             NexusHangar,
             RaceObstacle,
             HazardProtectionCold,
-            SpaceStorm
+            SpaceStorm,
         }
         /* 0x0 */ public VolumeTriggerTypeEnum VolumeTriggerType;
     }

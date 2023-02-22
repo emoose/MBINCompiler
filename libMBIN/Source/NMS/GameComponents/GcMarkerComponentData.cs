@@ -11,7 +11,7 @@ namespace libMBIN.NMS.GameComponents
         public enum DisplayModeEnum {
             Always,
             SpaceOnly,
-            PlanetOnly
+            PlanetOnly,
         }
         /* 0x08 */ public DisplayModeEnum DisplayMode;
         /* 0x0C */ public bool ShipScannable;

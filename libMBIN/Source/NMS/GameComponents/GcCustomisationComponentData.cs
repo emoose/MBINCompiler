@@ -24,7 +24,7 @@ namespace libMBIN.NMS.GameComponents
             Pet,
             Ship_07,
             Ship_08,
-            Ship_09
+            Ship_09,
         }
         /* 0x0 */ public CustomisationDataTypeEnum CustomisationDataType;
     }

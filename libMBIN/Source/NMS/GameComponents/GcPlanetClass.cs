@@ -7,7 +7,7 @@ namespace libMBIN.NMS.GameComponents
         public enum PlanetClassEnum {
             Default,
             Initial,
-            InInitialSystem
+            InInitialSystem,
         }
         /* 0x0 */ public PlanetClassEnum PlanetClass;
     }

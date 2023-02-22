@@ -9,7 +9,7 @@ namespace libMBIN.NMS.Toolkit
         public enum AuthoringEnum {
             FixedValue,
             RandomRangeFloat,
-            Curves
+            Curves,
         }
         /* 0x00 */ public AuthoringEnum Authoring;
         /* 0x04 */ public float FixedValue;

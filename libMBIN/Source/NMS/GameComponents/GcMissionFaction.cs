@@ -13,7 +13,7 @@ namespace libMBIN.NMS.GameComponents
             ExplorerGuild,
             Nexus,
             Pirates,
-            None
+            None,
         }
         /* 0x0 */ public MissionFactionEnum MissionFaction;
     }

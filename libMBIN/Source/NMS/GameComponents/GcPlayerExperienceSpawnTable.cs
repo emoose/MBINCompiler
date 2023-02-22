@@ -10,7 +10,7 @@ namespace libMBIN.NMS.GameComponents
         // size: 0x2
         public enum ExperienceSpawnTypeEnum {
             Freighter,
-            Mission
+            Mission,
         }
         /* 0x10 */ public ExperienceSpawnTypeEnum ExperienceSpawnType;
         /* 0x14 */ public float ResponseRate;

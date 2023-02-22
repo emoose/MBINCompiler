@@ -7,7 +7,7 @@ namespace libMBIN.NMS.GameComponents
         public enum MissionDifficultyEnum {
             Easy,
             Normal,
-            Hard
+            Hard,
         }
         /* 0x0 */ public MissionDifficultyEnum MissionDifficulty;
     }

@@ -19,7 +19,7 @@ namespace libMBIN.NMS.GameComponents
             LookAt_Player_Start,
             LookAt_Player_Stop,
             SetProp,
-            Interact_StartFromRemote
+            Interact_StartFromRemote,
         }
         /* 0x0 */ public NPCTriggerEnum NPCTrigger;
     }

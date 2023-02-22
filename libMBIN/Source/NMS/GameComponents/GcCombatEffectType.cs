@@ -8,7 +8,7 @@ namespace libMBIN.NMS.GameComponents
             None,
             Fire,
             Stun,
-            Slow
+            Slow,
         }
         /* 0x0 */ public CombatEffectTypeEnum CombatEffectType;
     }

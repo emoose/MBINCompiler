@@ -12,7 +12,7 @@ namespace libMBIN.NMS.Toolkit
             SaveWhenMultiplayerClient = 0x2,
             SavePlayerPosition = 0x4,
             SavePlayerInventory = 0x8,
-            SaveDifficultySettings = 0x10
+            SaveDifficultySettings = 0x10,
         }
         /* 0x0 */ public MetadataReadMaskEnum MetadataReadMask;
     }

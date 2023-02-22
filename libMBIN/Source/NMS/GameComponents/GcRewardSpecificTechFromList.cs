@@ -11,7 +11,7 @@ namespace libMBIN.NMS.GameComponents
         public enum TechListRewardOrderEnum {
             OneRandom,
             InOrder,
-            TryAllRandom
+            TryAllRandom,
         }
         /* 0x14 */ public TechListRewardOrderEnum TechListRewardOrder;
     }

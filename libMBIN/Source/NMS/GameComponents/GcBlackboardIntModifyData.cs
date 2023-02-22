@@ -8,7 +8,7 @@ namespace libMBIN.NMS.GameComponents
         // size: 0x2
         public enum ModifyIntTypeEnum {
             SetValue,
-            IncrementValue
+            IncrementValue,
         }
         /* 0x14 */ public ModifyIntTypeEnum ModifyIntType;
     }

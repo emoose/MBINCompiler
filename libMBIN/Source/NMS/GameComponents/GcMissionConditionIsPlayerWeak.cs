@@ -7,7 +7,7 @@ namespace libMBIN.NMS.GameComponents
         public enum ProgressTypeEnum {
             ShipOrWeapon,
             Ship,
-            Weapon
+            Weapon,
         }
         /* 0x0 */ public ProgressTypeEnum ProgressType;
     }

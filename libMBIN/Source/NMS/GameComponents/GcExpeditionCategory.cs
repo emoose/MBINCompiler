@@ -9,7 +9,7 @@ namespace libMBIN.NMS.GameComponents
             Exploration,
             Mining,
             Diplomacy,
-            Balanced
+            Balanced,
         }
         /* 0x0 */ public ExpeditionCategoryEnum ExpeditionCategory;
     }

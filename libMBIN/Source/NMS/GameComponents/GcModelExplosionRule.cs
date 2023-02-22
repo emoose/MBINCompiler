@@ -8,13 +8,13 @@ namespace libMBIN.NMS.GameComponents
             Any,
             Mesh,
             Model,
-            Joint
+            Joint,
         }
         /* 0x00 */ public MatchNodeTypeEnum MatchNodeType;
         // size: 0x2
         public enum MatchNameEnum {
             ContainsString,
-            ExactString
+            ExactString,
         }
         /* 0x04 */ public MatchNameEnum MatchName;
         /* 0x08 */ public NMSString0x20 String;
@@ -23,7 +23,7 @@ namespace libMBIN.NMS.GameComponents
             RelativeToParent,
             DontMove,
             SaveCenter,
-            RelativeToSaved
+            RelativeToSaved,
         }
         /* 0x28 */ public ExplodeActionEnum ExplodeAction;
         /* 0x30 */ public Vector3f AxisMultiplier;

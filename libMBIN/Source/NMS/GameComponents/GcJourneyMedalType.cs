@@ -14,7 +14,7 @@ namespace libMBIN.NMS.GameComponents
             Plants,
             Units,
             RaceCreatures,
-            DistanceWarped
+            DistanceWarped,
         }
         /* 0x0 */ public MedalTypeEnum MedalType;
     }

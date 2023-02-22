@@ -8,7 +8,7 @@ namespace libMBIN.NMS.Toolkit
             Common,
             Uncommon,
             Rare,
-            Extraordinary
+            Extraordinary,
         }
         /* 0x0 */ public ProbabilityEnum Probability;
     }

@@ -302,7 +302,7 @@ namespace libMBIN.NMS.Globals
         // size: 0x2
         public enum MouseSmoothModeEnum {
             Off,
-            Sprung
+            Sprung,
         }
         /* 0x09BC */ public MouseSmoothModeEnum MouseSmoothMode;
         /* 0x09C0 */ public Vector2f MouseSpringStrength;
@@ -605,7 +605,7 @@ namespace libMBIN.NMS.Globals
         public enum ControlModesEnum {
             Normal,
             FlightStick,
-            Inverted
+            Inverted,
         }
         /* 0x0FA8 */ public ControlModesEnum ControlModes;
         /* 0x0FAC */ public float PlayerViewTargetRange;

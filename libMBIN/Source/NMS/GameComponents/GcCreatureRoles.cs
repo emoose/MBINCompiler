@@ -15,7 +15,7 @@ namespace libMBIN.NMS.GameComponents
             FishPredator,
             Butterfly,
             Robot,
-            Pet
+            Pet,
         }
         /* 0x0 */ public CreatureRoleEnum CreatureRole;
     }

@@ -10,7 +10,7 @@ namespace libMBIN.NMS.Toolkit
             GreaterThan,
             GreaterThanEqual,
             LessThan,
-            LessThanEqual
+            LessThanEqual,
         }
         /* 0x0 */ public ComparisonTypeEnum ComparisonType;
     }

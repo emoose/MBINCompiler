@@ -8,7 +8,7 @@ namespace libMBIN.NMS.GameComponents
             Sparse,
             Normal,
             Dense,
-            VeryDense
+            VeryDense,
         }
         /* 0x0 */ public DensityEnum Density;
     }

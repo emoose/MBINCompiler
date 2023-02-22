@@ -8,7 +8,7 @@ namespace libMBIN.NMS.GameComponents
             DontIntervene,
             InterveneWithMission,
             MissionSuccess,
-            MissionFailure
+            MissionFailure,
         }
         /* 0x0 */ public ResponseTypeEnum ResponseType;
         /* 0x8 */ public NMSString0x10 MissionID;

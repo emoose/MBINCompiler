@@ -11,7 +11,7 @@ namespace libMBIN.NMS.GameComponents
         public enum InteractionActionEnum {
             PressButton,
             HoldButton,
-            Shoot
+            Shoot,
         }
         /* 0x000 */ public InteractionActionEnum InteractionAction;
         /* 0x004 */ public GcInteractionType InteractionType;
@@ -44,7 +44,7 @@ namespace libMBIN.NMS.GameComponents
         public enum OverrideInteriorExteriorMarkerEnum {
             No,
             Interior,
-            Exterior
+            Exterior,
         }
         /* 0x2D8 */ public OverrideInteriorExteriorMarkerEnum OverrideInteriorExteriorMarker;
         /* 0x2DC */ public bool ReseedAfterRewardSuccess;

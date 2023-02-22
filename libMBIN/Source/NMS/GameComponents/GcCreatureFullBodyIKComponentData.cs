@@ -15,7 +15,7 @@ namespace libMBIN.NMS.GameComponents
             Y,
             YNeg,
             Z,
-            ZNeg
+            ZNeg,
         }
         /* 0x20 */ public HeadUpAxisEnum HeadUpAxis;
         /* 0x24 */ public float MaxHeadPitch;

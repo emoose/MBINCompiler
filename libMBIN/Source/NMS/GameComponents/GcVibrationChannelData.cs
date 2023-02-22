@@ -9,7 +9,7 @@ namespace libMBIN.NMS.GameComponents
         // size: 0x2
         public enum DataEnum {
             Left,
-            Right
+            Right,
         }
         [NMS(Size = 0x2, EnumType = typeof(DataEnum))]
         /* 0x10 */ public GcVibrationData[] Data;

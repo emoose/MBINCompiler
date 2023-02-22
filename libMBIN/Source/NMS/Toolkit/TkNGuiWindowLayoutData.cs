@@ -13,7 +13,7 @@ namespace libMBIN.NMS.Toolkit
         public enum WindowStateEnum {
             Open,
             Minimised,
-            Closed
+            Closed,
         }
         /* 0x0094 */ public WindowStateEnum WindowState;
         [NMS(Size = 0x20)]

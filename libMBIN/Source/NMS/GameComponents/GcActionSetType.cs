@@ -20,7 +20,7 @@ namespace libMBIN.NMS.GameComponents
             BuildMenuAnalogueRotate,
             TextChat,
             BuildMenuSelectionMode,
-            BuildMenuPlacementMode
+            BuildMenuPlacementMode,
         }
         /* 0x0 */ public ActionSetTypeEnum ActionSetType;
     }

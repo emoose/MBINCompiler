@@ -13,7 +13,7 @@ namespace libMBIN.NMS.GameComponents
             Suit,
             Ship,
             Vehicle,
-            Freighter
+            Freighter,
         }
         /* 0x94 */ public RewardInventoryOverrideEnum RewardInventoryOverride;
         /* 0x98 */ public NMSString0x80 DebugText;

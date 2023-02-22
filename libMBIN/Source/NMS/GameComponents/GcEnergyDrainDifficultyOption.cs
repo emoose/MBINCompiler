@@ -7,7 +7,7 @@ namespace libMBIN.NMS.GameComponents
         public enum EnergyDrainDifficultyEnum {
             Slow,
             Normal,
-            Fast
+            Fast,
         }
         /* 0x0 */ public EnergyDrainDifficultyEnum EnergyDrainDifficulty;
     }

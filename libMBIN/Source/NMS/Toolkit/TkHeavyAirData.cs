@@ -28,7 +28,7 @@ namespace libMBIN.NMS.Toolkit
         public enum EmitterShapeEnum {
             Sphere,
             UpperHalfSphere,
-            BottomHalfSphere
+            BottomHalfSphere,
         }
         /* 0x130 */ public EmitterShapeEnum EmitterShape;
     }

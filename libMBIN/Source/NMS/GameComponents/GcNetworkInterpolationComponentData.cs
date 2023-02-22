@@ -7,7 +7,7 @@ namespace libMBIN.NMS.GameComponents
         public enum SynchroniseScaleEnum {
             Never,
             Once,
-            Always
+            Always,
         }
         /* 0x0 */ public SynchroniseScaleEnum SynchroniseScale;
         /* 0x4 */ public bool SupportTeleportation;

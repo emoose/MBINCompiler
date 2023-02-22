@@ -9,7 +9,7 @@ namespace libMBIN.NMS.GameComponents
             PosY,
             LayerWidth,
             LayerHeight,
-            MaxWidth
+            MaxWidth,
         }
         /* 0x0 */ public AccessibleOverride_LayoutEnum AccessibleOverride_Layout;
         /* 0x4 */ public float FloatValue;

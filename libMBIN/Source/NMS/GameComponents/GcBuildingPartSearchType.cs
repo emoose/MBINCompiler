@@ -11,7 +11,7 @@ namespace libMBIN.NMS.GameComponents
             Base,
             Freighter,
             AllPlayerOwned,
-            OtherPlayerBase
+            OtherPlayerBase,
         }
         /* 0x00 */ public BuildPartSearchTypeEnum BuildPartSearchType;
         /* 0x08 */ public List<GcPersistentBaseTypes> BaseSearchFilters;

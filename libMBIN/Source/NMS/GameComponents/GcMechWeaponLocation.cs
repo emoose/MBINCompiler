@@ -8,7 +8,7 @@ namespace libMBIN.NMS.GameComponents
             TurretExocraft,
             TurretSentinel,
             ArmLeft,
-            ArmRight
+            ArmRight,
         }
         /* 0x0 */ public MechWeaponLocationEnum MechWeaponLocation;
     }

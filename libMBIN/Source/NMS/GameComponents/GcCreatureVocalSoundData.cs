@@ -15,7 +15,7 @@ namespace libMBIN.NMS.GameComponents
             EmoteDie,
             EmoteMiniRoarNeutral,
             EmoteMiniRoarHappy,
-            EmoteMiniRoarAngry
+            EmoteMiniRoarAngry,
         }
         /* 0x10 */ public VocalEmoteEnum VocalEmote;
         /* 0x14 */ public float PlayFrequency;

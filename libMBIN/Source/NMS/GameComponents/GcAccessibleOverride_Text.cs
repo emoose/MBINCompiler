@@ -5,7 +5,7 @@ namespace libMBIN.NMS.GameComponents
     {
         // size: 0x1
         public enum AccessibleOverride_TextEnum {
-            FontHeight
+            FontHeight,
         }
         /* 0x0 */ public AccessibleOverride_TextEnum AccessibleOverride_Text;
         /* 0x4 */ public float FloatValue;

@@ -11,7 +11,7 @@ namespace libMBIN.NMS.GameComponents
             WheeledBike,
             Hovercraft,
             Submarine,
-            Mech
+            Mech,
         }
         /* 0x0 */ public VehicleTypeEnum VehicleType;
     }

@@ -18,7 +18,7 @@ namespace libMBIN.NMS.GameComponents
         // size: 0x2
         public enum PetBehaviourValidityEnum {
             Everywhere,
-            OnPlanet
+            OnPlanet,
         }
         /* 0x20 */ public PetBehaviourValidityEnum PetBehaviourValidity;
         /* 0x28 */ public List<GcPetFollowUpBehaviour> FollowUpBehaviours;

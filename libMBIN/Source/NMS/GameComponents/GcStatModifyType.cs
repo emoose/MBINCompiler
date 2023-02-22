@@ -7,7 +7,7 @@ namespace libMBIN.NMS.GameComponents
         public enum ModifyTypeEnum {
             Set,
             Add,
-            Subtract
+            Subtract,
         }
         /* 0x0 */ public ModifyTypeEnum ModifyType;
     }

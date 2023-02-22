@@ -9,7 +9,7 @@ namespace libMBIN.NMS.GameComponents
             Never,
             Rare,
             Common,
-            Always
+            Always,
         }
         /* 0x10 */ public DesiredTechProbabilityEnum DesiredTechProbability;
     }

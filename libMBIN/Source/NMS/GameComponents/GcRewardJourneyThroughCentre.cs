@@ -9,7 +9,7 @@ namespace libMBIN.NMS.GameComponents
             Abandoned,
             Vicious,
             Lush,
-            Balanced
+            Balanced,
         }
         /* 0x0 */ public CentreJourneyDestinationEnum CentreJourneyDestination;
     }

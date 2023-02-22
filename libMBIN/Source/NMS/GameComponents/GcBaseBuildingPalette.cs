@@ -14,7 +14,7 @@ namespace libMBIN.NMS.GameComponents
             Primary,
             Secondary,
             Ternary,
-            Quaternary
+            Quaternary,
         }
         /* 0x80 */ public SwatchPrimaryColourEnum SwatchPrimaryColour;
         // size: 0x4
@@ -22,7 +22,7 @@ namespace libMBIN.NMS.GameComponents
             Primary,
             Secondary,
             Ternary,
-            Quaternary
+            Quaternary,
         }
         /* 0x84 */ public SwatchSecondaryColourEnum SwatchSecondaryColour;
     }

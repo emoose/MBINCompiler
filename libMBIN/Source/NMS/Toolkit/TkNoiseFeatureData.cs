@@ -13,7 +13,7 @@ namespace libMBIN.NMS.Toolkit
         // size: 0x2
         public enum FeatureTypeEnum {
             Tube,
-            Blob
+            Blob,
         }
         /* 0x10 */ public FeatureTypeEnum FeatureType;
         /* 0x14 */ public float Width;

@@ -45,13 +45,13 @@ namespace libMBIN.NMS.GameComponents
         // size: 0x2
         public enum DeathTypeEnum {
             Explode,
-            Drop
+            Drop,
         }
         /* 0x0B0 */ public DeathTypeEnum DeathType;
         // size: 0x2
         public enum SubTypeEnum {
             Crystal,
-            Tentacle
+            Tentacle,
         }
         /* 0x0B4 */ public SubTypeEnum SubType;
         /* 0x0B8 */ public NMSString0x20 TentacleStartJoint;

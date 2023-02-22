@@ -9,7 +9,7 @@ namespace libMBIN.NMS.GameComponents
             Selection,
             Placement,
             Browse,
-            Relatives
+            Relatives,
         }
         /* 0x0 */ public BaseBuildingModeEnum BaseBuildingMode;
     }

@@ -6,7 +6,7 @@ namespace libMBIN.NMS.GameComponents
         // size: 0x2
         public enum LegalityEnum {
             Legal,
-            Illegal
+            Illegal,
         }
         /* 0x0 */ public LegalityEnum Legality;
     }

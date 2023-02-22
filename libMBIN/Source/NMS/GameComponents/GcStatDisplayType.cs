@@ -7,7 +7,7 @@ namespace libMBIN.NMS.GameComponents
         public enum StatDisplayTypeEnum {
             None,
             Sols,
-            Distance
+            Distance,
         }
         /* 0x0 */ public StatDisplayTypeEnum StatDisplayType;
     }

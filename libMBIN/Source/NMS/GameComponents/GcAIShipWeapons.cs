@@ -7,7 +7,7 @@ namespace libMBIN.NMS.GameComponents
         public enum AIShipWeaponEnum {
             Projectile,
             Laser,
-            MiningLaser
+            MiningLaser,
         }
         /* 0x0 */ public AIShipWeaponEnum AIShipWeapon;
     }

@@ -6,7 +6,7 @@ namespace libMBIN.NMS.GameComponents
         // size: 0x2
         public enum SnapStateEnum {
             IsSnapped,
-            NotSnapped
+            NotSnapped,
         }
         /* 0x0 */ public SnapStateEnum SnapState;
     }

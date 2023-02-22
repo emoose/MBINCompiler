@@ -6,7 +6,7 @@ namespace libMBIN.NMS.GameComponents
         // size: 0x2
         public enum AssistanceTypeEnum {
             Police,
-            Wingmen
+            Wingmen,
         }
         /* 0x0 */ public AssistanceTypeEnum AssistanceType;
         /* 0x4 */ public float Time;

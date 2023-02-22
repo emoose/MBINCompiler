@@ -12,7 +12,7 @@ namespace libMBIN.NMS.Toolkit
             UnderWater,
             Texture,
             Elevation,
-            Continent
+            Continent,
         }
         /* 0x0 */ public NoiseLayerTypesEnum NoiseLayerTypes;
     }

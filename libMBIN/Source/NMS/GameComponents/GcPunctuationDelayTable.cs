@@ -11,7 +11,7 @@ namespace libMBIN.NMS.GameComponents
             Gek,
             Korvax,
             Vykeen,
-            FourthRace
+            FourthRace,
         }
         [NMS(Size = 0x5, EnumType = typeof(PunctuationDelaysEnum))]
         /* 0x0 */ public GcPunctuationDelayData[] PunctuationDelays;

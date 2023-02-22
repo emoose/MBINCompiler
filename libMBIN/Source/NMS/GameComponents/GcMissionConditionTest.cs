@@ -8,7 +8,7 @@ namespace libMBIN.NMS.GameComponents
             AnyFalse,
             AllFalse,
             AnyTrue,
-            AllTrue
+            AllTrue,
         }
         /* 0x0 */ public ConditionTestEnum ConditionTest;
     }

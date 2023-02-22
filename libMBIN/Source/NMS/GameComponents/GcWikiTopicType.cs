@@ -27,7 +27,7 @@ namespace libMBIN.NMS.GameComponents
             Guide,
             Stories,
             ProcTreasures,
-            DebugSweep
+            DebugSweep,
         }
         /* 0x0 */ public WikiTopicTypeEnum WikiTopicType;
     }

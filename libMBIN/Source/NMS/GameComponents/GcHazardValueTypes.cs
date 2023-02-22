@@ -9,7 +9,7 @@ namespace libMBIN.NMS.GameComponents
             Water,
             Cave,
             Storm,
-            Night
+            Night,
         }
         /* 0x0 */ public HazardValueEnum HazardValue;
     }

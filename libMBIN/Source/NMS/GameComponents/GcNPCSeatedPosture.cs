@@ -6,7 +6,7 @@ namespace libMBIN.NMS.GameComponents
         // size: 0x2
         public enum NPCSeatedPostureEnum {
             Sofa,
-            Sit
+            Sit,
         }
         /* 0x0 */ public NPCSeatedPostureEnum NPCSeatedPosture;
     }

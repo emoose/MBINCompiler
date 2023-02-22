@@ -7,14 +7,14 @@ namespace libMBIN.NMS.Toolkit
         public enum VerticalEnum {
             Top,
             Middle,
-            Bottom
+            Bottom,
         }
         /* 0x0 */ public VerticalEnum Vertical;
         // size: 0x3
         public enum HorizontalEnum {
             Left,
             Center,
-            Right
+            Right,
         }
         /* 0x4 */ public HorizontalEnum Horizontal;
     }

@@ -7,7 +7,7 @@ namespace libMBIN.NMS.GameComponents
         public enum SentinelLevelEnum {
             Low,
             Default,
-            Aggressive
+            Aggressive,
         }
         /* 0x0 */ public SentinelLevelEnum SentinelLevel;
         /* 0x4 */ public int MaxActiveDrones;

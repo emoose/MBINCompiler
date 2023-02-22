@@ -9,7 +9,7 @@ namespace libMBIN.NMS.GameComponents
             CraftingAndTechnology,
             Buildables,
             Recipes,
-            Collections
+            Collections,
         }
         /* 0x0 */ public CatalogueGroupEnum CatalogueGroup;
     }

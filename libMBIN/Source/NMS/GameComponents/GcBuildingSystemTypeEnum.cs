@@ -6,7 +6,7 @@ namespace libMBIN.NMS.GameComponents
         // size: 0x2
         public enum BuildingSystemTypeEnum {
             Normal,
-            AbandonedSystem
+            AbandonedSystem,
         }
         /* 0x0 */ public BuildingSystemTypeEnum BuildingSystemType;
     }

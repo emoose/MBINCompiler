@@ -8,7 +8,7 @@ namespace libMBIN.NMS.GameComponents
         public enum WaypointTypeEnum {
             Move,
             MoveAlt,
-            Idle
+            Idle,
         }
         /* 0x10 */ public WaypointTypeEnum WaypointType;
         /* 0x18 */ public NMSString0x10 Anim;

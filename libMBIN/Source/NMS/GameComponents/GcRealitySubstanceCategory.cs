@@ -13,7 +13,7 @@ namespace libMBIN.NMS.GameComponents
             Earth,
             Exotic,
             Special,
-            BuildingPart
+            BuildingPart,
         }
         /* 0x0 */ public SubstanceCategoryEnum SubstanceCategory;
     }

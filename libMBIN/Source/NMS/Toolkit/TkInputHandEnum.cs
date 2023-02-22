@@ -7,7 +7,7 @@ namespace libMBIN.NMS.Toolkit
         public enum InputHandEnum {
             None,
             Left,
-            Right
+            Right,
         }
         /* 0x0 */ public InputHandEnum InputHand;
     }

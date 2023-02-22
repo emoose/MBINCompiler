@@ -25,7 +25,7 @@ namespace libMBIN.NMS.GameComponents
             Ride,
             Egg_Laid,
             Customise,
-            Unsummoned
+            Unsummoned,
         }
         /* 0x0 */ public PetChatTypeEnum PetChatType;
     }

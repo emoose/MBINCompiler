@@ -8,7 +8,7 @@ namespace libMBIN.NMS.GameComponents
         // size: 0x2
         public enum FreighterBaseGenerationModeEnum {
             Prefab,
-            WFC
+            WFC,
         }
         /* 0x00 */ public FreighterBaseGenerationModeEnum FreighterBaseGenerationMode;
         [NMS(Size = 0x4, EnumType = typeof(GcInventoryClass.InventoryClassEnum))]

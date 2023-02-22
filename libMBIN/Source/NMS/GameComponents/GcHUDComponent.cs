@@ -14,7 +14,7 @@ namespace libMBIN.NMS.GameComponents
             TopLeft,
             TopRight,
             BottomLeft,
-            BottomRight
+            BottomRight,
         }
         /* 0x20 */ public AlignEnum Align;
     }

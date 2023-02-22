@@ -16,7 +16,7 @@ namespace libMBIN.NMS.GameComponents
         public enum AltModeEnum {
             None,
             Normal,
-            Alt
+            Alt,
         }
         /* 0x3B0 */ public AltModeEnum AltMode;
     }

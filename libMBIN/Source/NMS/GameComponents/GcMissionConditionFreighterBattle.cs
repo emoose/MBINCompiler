@@ -10,7 +10,7 @@ namespace libMBIN.NMS.GameComponents
             None,
             Active,
             Joined,
-            Reward
+            Reward,
         }
         /* 0x0 */ public FreighterBattleStatusEnum FreighterBattleStatus;
         /* 0x4 */ public int FreighterBattleDistance;

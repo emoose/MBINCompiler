@@ -6,7 +6,7 @@ namespace libMBIN.NMS.GameComponents
         // size: 0x2
         public enum HandEnum {
             Right,
-            Left
+            Left,
         }
         /* 0x0 */ public HandEnum Hand;
     }

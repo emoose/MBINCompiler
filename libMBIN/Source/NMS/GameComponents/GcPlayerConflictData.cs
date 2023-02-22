@@ -8,7 +8,7 @@ namespace libMBIN.NMS.GameComponents
             Low,
             Default,
             High,
-            Pirate
+            Pirate,
         }
         /* 0x0 */ public ConflictLevelEnum ConflictLevel;
     }

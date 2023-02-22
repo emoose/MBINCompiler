@@ -11,7 +11,7 @@ namespace libMBIN.NMS.GameComponents
             NegativeX,
             NegativeY,
             NegativeZ,
-            CustomAxis
+            CustomAxis,
         }
         /* 0x00 */ public AxisEnum Axis;
         /* 0x10 */ public Vector3f CustomAxis;

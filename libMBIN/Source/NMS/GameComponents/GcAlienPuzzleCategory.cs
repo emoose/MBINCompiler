@@ -57,7 +57,7 @@ namespace libMBIN.NMS.GameComponents
             SettlementOwned,
             SettlementNotOwned,
             PirateStation,
-            StandardPilot
+            StandardPilot,
         }
         /* 0x0 */ public AlienPuzzleCategoryEnum AlienPuzzleCategory;
     }

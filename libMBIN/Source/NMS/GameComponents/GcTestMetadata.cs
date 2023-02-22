@@ -1,6 +1,6 @@
 using libMBIN.NMS.GameComponents;
-using System;
 using System.Collections.Generic;
+using System;
 
 namespace libMBIN.NMS.GameComponents
 {
@@ -40,7 +40,7 @@ namespace libMBIN.NMS.GameComponents
             SomeValue1,
             SomeValue2,
             SomeValue3,
-            SomeValue4
+            SomeValue4,
         }
         /* 0x5E0 */ public DocOptionalEnumEnum DocOptionalEnum;
         /* 0x5E8 */ public VariableSizeString TestDynamicString;
@@ -49,7 +49,7 @@ namespace libMBIN.NMS.GameComponents
             Default,
             Option1,
             Option2,
-            Option3
+            Option3,
         }
         /* 0x5F8 */ public TestEnumEnum TestEnum;
         [NMS(Size = 0xA)]
@@ -60,7 +60,7 @@ namespace libMBIN.NMS.GameComponents
             Default,
             Option1,
             Option2,
-            Option3
+            Option3,
         }
         [NMS(Size = 0x4, EnumType = typeof(TestEnumArrayEnum))]
         /* 0x638 */ public float[] TestEnumArray;
@@ -72,7 +72,7 @@ namespace libMBIN.NMS.GameComponents
             None = 0x0,
             Flag1 = 0x1,
             Flag2 = 0x2,
-            Flag3 = 0x4
+            Flag3 = 0x4,
         }
         /* 0x718 */ public TestFlagsEnum TestFlags;
     }

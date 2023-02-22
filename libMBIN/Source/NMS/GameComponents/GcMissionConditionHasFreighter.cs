@@ -7,7 +7,7 @@ namespace libMBIN.NMS.GameComponents
         public enum FreighterInCurrentSystemEnum {
             DontCare,
             Yes,
-            No
+            No,
         }
         /* 0x0 */ public FreighterInCurrentSystemEnum FreighterInCurrentSystem;
     }

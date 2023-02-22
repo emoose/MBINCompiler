@@ -20,7 +20,7 @@ namespace libMBIN.NMS.GameComponents
             SpacestationFixPosition,
             Settlement,
             Freighter,
-            Frigate
+            Frigate,
         }
         /* 0x40 */ public TeleporterTypeEnum TeleporterType;
         /* 0x44 */ public NMSString0x40 Name;

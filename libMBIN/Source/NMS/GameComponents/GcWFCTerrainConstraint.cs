@@ -13,20 +13,20 @@ namespace libMBIN.NMS.GameComponents
             RightBack,
             RightForward,
             LeftForward,
-            All
+            All,
         }
         /* 0x0 */ public DirectionEnum Direction;
         // size: 0x3
         public enum LevelsEnum {
             Lower,
             Upper,
-            Both
+            Both,
         }
         /* 0x4 */ public LevelsEnum Levels;
         // size: 0x2
         public enum TerrainEnum {
             RequireAbove,
-            RequireBelow
+            RequireBelow,
         }
         /* 0x8 */ public TerrainEnum Terrain;
     }

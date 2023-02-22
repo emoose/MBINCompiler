@@ -30,7 +30,7 @@ namespace libMBIN.NMS.GameComponents
             Toxic,
             Radioactive,
             Freeze,
-            Scorch
+            Scorch,
         }
         /* 0x164 */ public PlayerDamageTypeEnum PlayerDamageType;
         /* 0x168 */ public List<GcBreakTechByStatData> DamageTechWithStat;

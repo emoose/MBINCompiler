@@ -7,7 +7,7 @@ namespace libMBIN.NMS.GameComponents
         public enum ByteBeatEnvelopeEnum {
             Short,
             Med,
-            Long
+            Long,
         }
         /* 0x0 */ public ByteBeatEnvelopeEnum ByteBeatEnvelope;
     }

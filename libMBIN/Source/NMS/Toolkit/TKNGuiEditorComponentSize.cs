@@ -52,7 +52,7 @@ namespace libMBIN.NMS.Toolkit
             ScrollMargin,
             ScrollIncrement,
             EditorPin,
-            DynamicPanelTitle
+            DynamicPanelTitle,
         }
         /* 0x0 */ public NGuiEditorComponentSizeEnum NGuiEditorComponentSize;
     }

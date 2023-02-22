@@ -7,7 +7,7 @@ namespace libMBIN.NMS.Toolkit
         public enum BlackboardCategoryEnum {
             Local,
             Archetype,
-            PlayerControl
+            PlayerControl,
         }
         /* 0x0 */ public BlackboardCategoryEnum BlackboardCategory;
     }

@@ -13,7 +13,7 @@ namespace libMBIN.NMS.GameComponents
             ProcTech,
             ProcProduct,
             InventorySlot,
-            CommunityTierProduct
+            CommunityTierProduct,
         }
         /* 0x00 */ public MultiItemRewardTypeEnum MultiItemRewardType;
         /* 0x08 */ public NMSString0x10 Id;

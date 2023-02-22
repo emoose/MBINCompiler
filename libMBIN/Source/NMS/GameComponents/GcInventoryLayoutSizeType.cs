@@ -41,7 +41,7 @@ namespace libMBIN.NMS.GameComponents
             ChestCapsule,
             Suit,
             MaintObject,
-            RocketLocker
+            RocketLocker,
         }
         /* 0x0 */ public SizeTypeEnum SizeType;
     }

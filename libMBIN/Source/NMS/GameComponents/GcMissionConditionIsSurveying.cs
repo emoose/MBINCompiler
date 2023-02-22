@@ -8,7 +8,7 @@ namespace libMBIN.NMS.GameComponents
             Any,
             Power,
             Gas,
-            Minerals
+            Minerals,
         }
         /* 0x0 */ public ForHotspotTypeEnum ForHotspotType;
         /* 0x4 */ public bool RequireAlreadyAnalysed;

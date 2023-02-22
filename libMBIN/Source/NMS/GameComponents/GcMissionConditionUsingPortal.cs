@@ -7,7 +7,7 @@ namespace libMBIN.NMS.GameComponents
         public enum PortalTypeEnum {
             Any,
             Story,
-            NotStory
+            NotStory,
         }
         /* 0x0 */ public PortalTypeEnum PortalType;
     }

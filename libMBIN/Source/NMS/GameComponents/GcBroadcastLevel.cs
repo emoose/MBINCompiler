@@ -7,7 +7,7 @@ namespace libMBIN.NMS.GameComponents
         public enum BroadcastLevelEnum {
             Scene,
             LocalModel,
-            Local
+            Local,
         }
         /* 0x0 */ public BroadcastLevelEnum BroadcastLevel;
     }

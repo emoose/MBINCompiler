@@ -6,7 +6,7 @@ namespace libMBIN.NMS.GameComponents
         // size: 0x2
         public enum MechMeshTypeEnum {
             Exocraft,
-            Sentinel
+            Sentinel,
         }
         /* 0x0 */ public MechMeshTypeEnum MechMeshType;
     }

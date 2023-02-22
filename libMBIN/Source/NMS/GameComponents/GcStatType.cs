@@ -7,7 +7,7 @@ namespace libMBIN.NMS.GameComponents
         public enum StatTypeEnum {
             Int,
             Float,
-            AvgRate
+            AvgRate,
         }
         /* 0x0 */ public StatTypeEnum StatType;
     }

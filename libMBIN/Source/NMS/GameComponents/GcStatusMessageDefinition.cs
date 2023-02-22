@@ -20,7 +20,7 @@ namespace libMBIN.NMS.GameComponents
             Global_Distance,
             Fireteam_Distance,
             Fireteam_Global_Distance,
-            Not_Fireteam
+            Not_Fireteam,
         }
         /* 0x34 */ public ReplicateToEnum ReplicateTo;
         /* 0x38 */ public bool PostLocally;

@@ -12,7 +12,7 @@ namespace libMBIN.NMS.GameComponents
             Freighter,
             Vehicle,
             AttachedAbandonedShip,
-            Weapon
+            Weapon,
         }
         /* 0x0 */ public InventoryToRepairEnum InventoryToRepair;
     }

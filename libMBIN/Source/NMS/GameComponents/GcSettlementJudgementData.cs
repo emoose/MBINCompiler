@@ -26,7 +26,7 @@ namespace libMBIN.NMS.GameComponents
         public enum NPCsEnum {
             None,
             One,
-            Two
+            Two,
         }
         /* 0x210 */ public NPCsEnum NPCs;
     }

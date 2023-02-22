@@ -11,7 +11,7 @@ namespace libMBIN.NMS.GameComponents
             TRADE,
             LORE,
             TECH,
-            THREAT
+            THREAT,
         }
         /* 0x0 */ public wordcategorytableEnumEnum wordcategorytableEnum;
     }

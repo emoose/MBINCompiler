@@ -10,7 +10,7 @@ namespace libMBIN.NMS.GameComponents
         // size: 0x2
         public enum ViewShapeEnum {
             Pyramid,
-            Cone
+            Cone,
         }
         /* 0x1C */ public ViewShapeEnum ViewShape;
         /* 0x20 */ public bool Raycast;

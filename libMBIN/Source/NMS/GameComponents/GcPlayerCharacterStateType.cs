@@ -22,7 +22,7 @@ namespace libMBIN.NMS.GameComponents
             FullBodyOverride,
             InSpace,
             LowGWalk,
-            LowGRun
+            LowGRun,
         }
         /* 0x0 */ public CharacterStateEnum CharacterState;
     }

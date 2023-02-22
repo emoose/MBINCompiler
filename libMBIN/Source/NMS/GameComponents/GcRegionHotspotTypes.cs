@@ -13,7 +13,7 @@ namespace libMBIN.NMS.GameComponents
             Mineral2 = 0x4,
             Mineral3 = 0x8,
             Gas1 = 0x10,
-            Gas2 = 0x20
+            Gas2 = 0x20,
         }
         /* 0x0 */ public HotspotTypeEnum HotspotType;
     }

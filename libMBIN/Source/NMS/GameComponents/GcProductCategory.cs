@@ -13,7 +13,7 @@ namespace libMBIN.NMS.GameComponents
             Procedural,
             Emote,
             CustomisationPart,
-            CreatureEgg
+            CreatureEgg,
         }
         /* 0x0 */ public ProductCategoryEnum ProductCategory;
     }

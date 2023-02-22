@@ -7,7 +7,7 @@ namespace libMBIN.NMS.GameComponents
         // size: 0x2
         public enum ActivationTypeEnum {
             GroupNode,
-            Locator
+            Locator,
         }
         /* 0x20 */ public ActivationTypeEnum ActivationType;
         /* 0x24 */ public float FractionOfNodesActive;

@@ -12,7 +12,7 @@ namespace libMBIN.NMS.GameComponents
             Region_CH,
             Region_JP,
             Region_LT,
-            Region_FL
+            Region_FL,
         }
         /* 0x0 */ public MarkovSelectorEnum MarkovSelector;
     }

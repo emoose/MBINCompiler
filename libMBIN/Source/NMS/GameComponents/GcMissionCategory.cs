@@ -8,7 +8,7 @@ namespace libMBIN.NMS.GameComponents
             Info,
             Mission,
             Danger,
-            Urgent
+            Urgent,
         }
         /* 0x0 */ public MissionCategoryEnum MissionCategory;
     }

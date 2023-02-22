@@ -13,7 +13,7 @@ namespace libMBIN.NMS.GameComponents
             LayEgg,
             Adopt,
             Milk,
-            HarvestSpecial
+            HarvestSpecial,
         }
         /* 0x0 */ public PetActionEnum PetAction;
     }

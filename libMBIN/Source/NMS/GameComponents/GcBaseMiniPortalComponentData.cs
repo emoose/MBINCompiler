@@ -18,7 +18,7 @@ namespace libMBIN.NMS.GameComponents
             NearestPotal,
             BaseBuildingConnection,
             AbandonedFreighter,
-            PortalNearestPlayerShip
+            PortalNearestPlayerShip,
         }
         /* 0x30 */ public DestinationSortTypeEnum DestinationSortType;
     }

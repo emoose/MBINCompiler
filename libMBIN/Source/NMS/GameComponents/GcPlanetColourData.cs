@@ -64,7 +64,7 @@ namespace libMBIN.NMS.GameComponents
             BioShip_Cockpit,
             SailShip_Sails,
             Freighter,
-            FreighterPaint
+            FreighterPaint,
         }
         [NMS(Size = 0x3A, EnumType = typeof(PalettesEnum))]
         /* 0x0 */ public GcColourPaletteData[] Palettes;

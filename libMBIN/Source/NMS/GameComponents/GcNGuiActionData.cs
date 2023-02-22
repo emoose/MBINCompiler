@@ -10,7 +10,7 @@ namespace libMBIN.NMS.GameComponents
             Click,
             Hover,
             ArrowLeft,
-            ArrowRight
+            ArrowRight,
         }
         /* 0x90 */ public ActionEnum Action;
     }

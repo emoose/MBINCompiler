@@ -8,7 +8,7 @@ namespace libMBIN.NMS.GameComponents
             Atlas,
             BlackHole,
             Anomaly,
-            Explore
+            Explore,
         }
         /* 0x0 */ public GlobalMissionEnum GlobalMission;
     }

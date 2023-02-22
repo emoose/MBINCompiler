@@ -57,7 +57,7 @@ namespace libMBIN.NMS.Globals
         public enum SwitchTypeEnum {
             None,
             Debug,
-            Enabled
+            Enabled,
         }
         /* 0x3E8 */ public SwitchTypeEnum SwitchType;
         /* 0x3EC */ public float GrassNormalUpright;

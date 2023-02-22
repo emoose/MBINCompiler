@@ -12,7 +12,7 @@ namespace libMBIN.NMS.GameComponents
             Atlas,
             Diplomats,
             Exotics,
-            None
+            None,
         }
         /* 0x0 */ public AlienRaceEnum AlienRace;
     }

@@ -10,7 +10,7 @@ namespace libMBIN.NMS.GameComponents
         // size: 0x2
         public enum TypeEnum {
             Instanced,
-            Single
+            Single,
         }
         /* 0x010 */ public TypeEnum Type;
         /* 0x018 */ public GcResourceElement Resource;
@@ -22,7 +22,7 @@ namespace libMBIN.NMS.GameComponents
         public enum PlacementPriorityEnum {
             Low,
             Normal,
-            High
+            High,
         }
         /* 0x300 */ public PlacementPriorityEnum PlacementPriority;
         // size: 0x7
@@ -33,14 +33,14 @@ namespace libMBIN.NMS.GameComponents
             DoNotPlaceAnywhereNear,
             OnlyPlaceAround,
             OnlyPlaceAroundIgnoreFootprint,
-            AlwaysPlace
+            AlwaysPlace,
         }
         /* 0x304 */ public LargeObjectCoverageEnum LargeObjectCoverage;
         // size: 0x3
         public enum OverlapStyleEnum {
             None,
             SameSeed,
-            All
+            All,
         }
         /* 0x308 */ public OverlapStyleEnum OverlapStyle;
         /* 0x30C */ public float MinHeight;
@@ -53,7 +53,7 @@ namespace libMBIN.NMS.GameComponents
         public enum GroundColourIndexEnum {
             Auto,
             Main,
-            Patch
+            Patch,
         }
         /* 0x324 */ public GroundColourIndexEnum GroundColourIndex;
         /* 0x328 */ public bool SwapPrimaryForSecondaryColour;

@@ -8,7 +8,7 @@ namespace libMBIN.NMS.GameComponents
             WorldRelative,
             BodyRelative,
             HeadRelative,
-            NotSet
+            NotSet,
         }
         /* 0x0 */ public MovementDirectionEnum MovementDirection;
     }

@@ -10,7 +10,7 @@ namespace libMBIN.NMS.GameComponents
             Creatures,
             Sentinels,
             Turrets,
-            Walls
+            Walls,
         }
         /* 0x0 */ public AntagonistGroupEnum AntagonistGroup;
     }

@@ -8,7 +8,7 @@ namespace libMBIN.NMS.GameComponents
             Laser,
             Gun,
             TerrainEdit,
-            StunGun
+            StunGun,
         }
         /* 0x0 */ public VehicleWeaponModeEnum VehicleWeaponMode;
     }

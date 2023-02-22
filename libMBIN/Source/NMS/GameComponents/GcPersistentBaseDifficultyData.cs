@@ -11,7 +11,7 @@ namespace libMBIN.NMS.GameComponents
         [Flags]
         public enum PersistentBaseDifficultyFlagsEnum {
             None,
-            Locked
+            Locked,
         }
         /* 0x4 */ public PersistentBaseDifficultyFlagsEnum PersistentBaseDifficultyFlags;
     }

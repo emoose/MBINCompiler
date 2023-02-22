@@ -8,7 +8,7 @@ namespace libMBIN.NMS.Toolkit
             Zero,
             Base,
             All,
-            SeaLevel
+            SeaLevel,
         }
         /* 0x0 */ public OffsetTypeEnum OffsetType;
     }

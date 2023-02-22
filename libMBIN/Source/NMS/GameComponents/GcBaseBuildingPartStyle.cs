@@ -11,7 +11,7 @@ namespace libMBIN.NMS.GameComponents
             Concrete,
             Stone,
             Timber,
-            Fibreglass
+            Fibreglass,
         }
         /* 0x0 */ public StyleEnum Style;
     }

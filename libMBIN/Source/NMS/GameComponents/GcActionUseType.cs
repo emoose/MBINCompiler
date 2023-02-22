@@ -11,7 +11,7 @@ namespace libMBIN.NMS.GameComponents
             ActivePS4,
             Hidden,
             Debug,
-            Obsolete
+            Obsolete,
         }
         /* 0x0 */ public ActionUseTypeEnum ActionUseType;
     }

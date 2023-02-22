@@ -8,7 +8,7 @@ namespace libMBIN.NMS.GameComponents
         // size: 0x2
         public enum ModeEnum {
             SetVelocity,
-            ApplyForce
+            ApplyForce,
         }
         /* 0x14 */ public ModeEnum Mode;
     }

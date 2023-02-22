@@ -7,7 +7,7 @@ namespace libMBIN.NMS.GameComponents
         public enum CreatureHemiSphereEnum {
             Any,
             Northern,
-            Southern
+            Southern,
         }
         /* 0x0 */ public CreatureHemiSphereEnum CreatureHemiSphere;
     }

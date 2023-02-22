@@ -2474,7 +2474,7 @@ namespace libMBIN.NMS.GameComponents
             WPN_TERRAIN_DESTROY = 0x8487F81F,
             WPN_TERRAIN_DESTROY_END = 0xC4E8D681,
             WPN_TERRAIN_END = 0x33B1CD16,
-            WPN_TERRAIN_UNDO = 0x89B7D91D
+            WPN_TERRAIN_UNDO = 0x89B7D91D,
         }
         /* 0x0 */ public AkEventEnum AkEvent;
     }

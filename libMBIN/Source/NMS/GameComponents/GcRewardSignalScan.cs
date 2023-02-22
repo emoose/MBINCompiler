@@ -12,7 +12,7 @@ namespace libMBIN.NMS.GameComponents
             Relic,
             Industrial,
             Alien,
-            CrashedFreighter
+            CrashedFreighter,
         }
         /* 0x0 */ public SignalScanTypeEnum SignalScanType;
     }

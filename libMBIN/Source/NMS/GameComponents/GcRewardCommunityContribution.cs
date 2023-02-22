@@ -10,7 +10,7 @@ namespace libMBIN.NMS.GameComponents
         public enum SubmitTypeEnum {
             Value,
             Stat,
-            StatsDiff
+            StatsDiff,
         }
         /* 0x08 */ public SubmitTypeEnum SubmitType;
         /* 0x10 */ public NMSString0x10 Stat;

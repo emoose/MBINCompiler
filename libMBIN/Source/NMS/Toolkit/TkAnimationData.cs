@@ -13,7 +13,7 @@ namespace libMBIN.NMS.Toolkit
             Loop,
             OneShot,
             Control,
-            OneShotBlendable
+            OneShotBlendable,
         }
         /* 0x090 */ public AnimTypeEnum AnimType;
         /* 0x094 */ public int FrameStart;
@@ -31,7 +31,7 @@ namespace libMBIN.NMS.Toolkit
         public enum CreatureSizeEnum {
             AllSizes,
             SmallOnly,
-            LargeOnly
+            LargeOnly,
         }
         /* 0x10C */ public CreatureSizeEnum CreatureSize;
         /* 0x110 */ public bool Additive;

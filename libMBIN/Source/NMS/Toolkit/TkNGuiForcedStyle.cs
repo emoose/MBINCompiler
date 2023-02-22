@@ -8,7 +8,7 @@ namespace libMBIN.NMS.Toolkit
             None,
             Default,
             Highlight,
-            Active
+            Active,
         }
         /* 0x0 */ public NGuiForcedStyleEnum NGuiForcedStyle;
     }

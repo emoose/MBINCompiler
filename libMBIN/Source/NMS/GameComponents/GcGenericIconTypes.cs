@@ -10,7 +10,7 @@ namespace libMBIN.NMS.GameComponents
             SpaceStation,
             SpaceAnomaly,
             SpaceAtlas,
-            Nexus
+            Nexus,
         }
         /* 0x0 */ public GenericIconTypeEnum GenericIconType;
     }

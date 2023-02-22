@@ -8,7 +8,7 @@ namespace libMBIN.NMS.GameComponents
             Generic1,
             Generic2,
             Generic3,
-            Generic4
+            Generic4,
         }
         /* 0x0 */ public LocatorTypeEnum LocatorType;
     }

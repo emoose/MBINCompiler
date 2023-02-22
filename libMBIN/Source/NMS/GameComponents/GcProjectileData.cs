@@ -1,6 +1,6 @@
 using libMBIN.NMS.GameComponents;
-using System;
 using System.Collections.Generic;
+using System;
 
 namespace libMBIN.NMS.GameComponents
 {
@@ -54,7 +54,7 @@ namespace libMBIN.NMS.GameComponents
             Homing = 0x8,
             HomingLaser = 0x10,
             ScareCreatures = 0x20,
-            ExplosionForce = 0x40
+            ExplosionForce = 0x40,
         }
         /* 0x3A0 */ public BehaviourFlagsEnum BehaviourFlags;
         // size: 0x4
@@ -62,7 +62,7 @@ namespace libMBIN.NMS.GameComponents
             Player,
             PlayerShip,
             Ship,
-            Robot
+            Robot,
         }
         /* 0x3A4 */ public ClassEnum Class;
         /* 0x3A8 */ public NMSString0x10 DefaultImpact;

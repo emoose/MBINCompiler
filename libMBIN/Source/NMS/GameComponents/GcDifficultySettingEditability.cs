@@ -9,7 +9,7 @@ namespace libMBIN.NMS.GameComponents
             IncreaseOnly,
             DecreaseOnly,
             LockedVisible,
-            LockedHidden
+            LockedHidden,
         }
         /* 0x0 */ public DifficultySettingEditabilityEnum DifficultySettingEditability;
     }

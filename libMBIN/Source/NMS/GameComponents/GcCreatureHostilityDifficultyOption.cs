@@ -7,7 +7,7 @@ namespace libMBIN.NMS.GameComponents
         public enum CreatureHostilityDifficultyEnum {
             NeverAttack,
             AttackIfProvoked,
-            FullEcosystem
+            FullEcosystem,
         }
         /* 0x0 */ public CreatureHostilityDifficultyEnum CreatureHostilityDifficulty;
     }

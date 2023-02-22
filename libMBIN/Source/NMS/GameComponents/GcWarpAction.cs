@@ -6,7 +6,7 @@ namespace libMBIN.NMS.GameComponents
         // size: 0x2
         public enum WarpTypeEnum {
             BlackHole,
-            SpacePOI
+            SpacePOI,
         }
         /* 0x0 */ public WarpTypeEnum WarpType;
     }

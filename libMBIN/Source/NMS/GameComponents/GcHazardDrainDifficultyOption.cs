@@ -7,7 +7,7 @@ namespace libMBIN.NMS.GameComponents
         public enum HazardDrainDifficultyEnum {
             Slow,
             Normal,
-            Fast
+            Fast,
         }
         /* 0x0 */ public HazardDrainDifficultyEnum HazardDrainDifficulty;
     }

@@ -15,13 +15,13 @@ namespace libMBIN.NMS.Toolkit
         // size: 0x2
         public enum CoordinatesEnum {
             Polar,
-            Cartesian
+            Cartesian,
         }
         /* 0x60 */ public CoordinatesEnum Coordinates;
         // size: 0x2
         public enum BlendOpEnum {
             Blend,
-            Add
+            Add,
         }
         /* 0x64 */ public BlendOpEnum BlendOp;
         /* 0x68 */ public List<TkAnim2dBlendNodeData> BlendChildren;

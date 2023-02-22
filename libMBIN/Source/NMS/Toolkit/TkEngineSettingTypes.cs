@@ -53,7 +53,7 @@ namespace libMBIN.NMS.Toolkit
             UseTerrainTextureCache,
             AdapterIndex,
             UseHDR,
-            MinGPUMode
+            MinGPUMode,
         }
         /* 0x0 */ public EngineSettingEnum EngineSetting;
     }

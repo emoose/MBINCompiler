@@ -8,7 +8,7 @@ namespace libMBIN.NMS.GameComponents
             None,
             ItemGrave,
             DestroyItems,
-            DestroySave
+            DestroySave,
         }
         /* 0x0 */ public DeathConsequencesDifficultyEnum DeathConsequencesDifficulty;
     }

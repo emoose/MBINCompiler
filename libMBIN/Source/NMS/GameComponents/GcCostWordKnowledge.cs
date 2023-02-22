@@ -9,7 +9,7 @@ namespace libMBIN.NMS.GameComponents
         // size: 0x2
         public enum RequirementEnum {
             CanLearn,
-            CanSpeak
+            CanSpeak,
         }
         /* 0x4 */ public RequirementEnum Requirement;
     }

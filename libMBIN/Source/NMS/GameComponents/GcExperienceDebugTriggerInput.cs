@@ -20,7 +20,7 @@ namespace libMBIN.NMS.GameComponents
             PadUp,
             PadDown,
             PadLeft,
-            PadRight
+            PadRight,
         }
         /* 0x0 */ public KeyPressEnum KeyPress;
         /* 0x8 */ public List<GcExperienceDebugTriggerAction> Actions;

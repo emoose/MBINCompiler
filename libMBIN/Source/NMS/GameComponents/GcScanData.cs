@@ -15,7 +15,7 @@ namespace libMBIN.NMS.GameComponents
             DebugPlanet,
             DebugSpace,
             VisualOnly,
-            VisualOnlyAerial
+            VisualOnlyAerial,
         }
         /* 0x00 */ public ScanTypeEnum ScanType;
         /* 0x04 */ public float PulseRange;

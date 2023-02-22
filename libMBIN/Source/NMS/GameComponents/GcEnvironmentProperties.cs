@@ -1,3 +1,5 @@
+using libMBIN.NMS.GameComponents;
+
 namespace libMBIN.NMS.GameComponents
 {
     [NMS(GUID = 0xD0FDAC0E5505B979, NameHash = 0xB125AED843BB9164)]
@@ -17,7 +19,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x2C */ public float PlanetLodSwitch3;
         /* 0x30 */ public float AsteroidFadeHeightMin;
         /* 0x34 */ public float AsteroidFadeHeightMax;
-        [NMS(Size = 0x4)]
+        [NMS(Size = 0x4, EnumType = typeof(GcPlanetSize.PlanetSizeEnum))]
         /* 0x38 */ public float[] SkyHeight;
         /* 0x48 */ public float SkyAtmosphereHeight;
         /* 0x4C */ public float HorizonBlendHeight;

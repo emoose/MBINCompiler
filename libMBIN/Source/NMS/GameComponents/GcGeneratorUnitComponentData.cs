@@ -9,7 +9,7 @@ namespace libMBIN.NMS.GameComponents
         public enum GeneratorUnitTypeEnum {
             MiningUnit,
             GasHarvester,
-            SystemHoover
+            SystemHoover,
         }
         /* 0x000 */ public GeneratorUnitTypeEnum GeneratorUnitType;
         /* 0x004 */ public int ResourceMaintenanceSlotOverride;

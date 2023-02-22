@@ -25,7 +25,7 @@ namespace libMBIN.NMS.GameComponents
             Finishing,
             DiscoverPlanet,
             Done,
-            Inactive
+            Inactive,
         }
         [NMS(Size = 0xD, EnumType = typeof(HUDStartupEnum))]
         /* 0x18 */ public GcHUDStartup[] HUDStartup;

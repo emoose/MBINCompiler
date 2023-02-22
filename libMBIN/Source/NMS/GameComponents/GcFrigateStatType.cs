@@ -15,7 +15,7 @@ namespace libMBIN.NMS.GameComponents
             ExtraLoot,
             Repair,
             Invulnerable,
-            Stealth
+            Stealth,
         }
         /* 0x0 */ public FrigateStatTypeEnum FrigateStatType;
     }

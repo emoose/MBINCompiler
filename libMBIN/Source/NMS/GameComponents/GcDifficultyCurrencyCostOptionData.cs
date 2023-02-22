@@ -11,7 +11,7 @@ namespace libMBIN.NMS.GameComponents
         public enum FreeCostTypesEnum {
             Currency,
             Substance,
-            Product
+            Product,
         }
         [NMS(Size = 0x3, EnumType = typeof(FreeCostTypesEnum))]
         /* 0x0C */ public bool[] FreeCostTypes;

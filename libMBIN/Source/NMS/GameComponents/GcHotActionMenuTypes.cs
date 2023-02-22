@@ -7,7 +7,7 @@ namespace libMBIN.NMS.GameComponents
         public enum HotActionMenuTypesEnum {
             OnFoot,
             InShip,
-            InExocraft
+            InExocraft,
         }
         /* 0x0 */ public HotActionMenuTypesEnum HotActionMenuTypes;
     }

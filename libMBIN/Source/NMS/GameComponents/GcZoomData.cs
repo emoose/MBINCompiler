@@ -8,7 +8,7 @@ namespace libMBIN.NMS.GameComponents
             None,
             Far,
             Mid,
-            Close
+            Close,
         }
         /* 0x00 */ public ZoomTypeEnum ZoomType;
         /* 0x04 */ public float EffectStrength;

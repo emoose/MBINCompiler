@@ -193,7 +193,7 @@ namespace libMBIN.NMS.GameComponents
             Vehicle_StunGun,
             Vehicle_TerrainEdit,
             Vehicle_FuelRegen,
-            Vehicle_AutoPilot
+            Vehicle_AutoPilot,
         }
         /* 0x0 */ public StatsTypeEnum StatsType;
     }

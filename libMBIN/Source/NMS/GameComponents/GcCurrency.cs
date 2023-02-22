@@ -7,7 +7,7 @@ namespace libMBIN.NMS.GameComponents
         public enum CurrencyEnum {
             Units,
             Nanites,
-            Specials
+            Specials,
         }
         /* 0x0 */ public CurrencyEnum Currency;
     }

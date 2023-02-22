@@ -9,7 +9,7 @@ namespace libMBIN.NMS.GameComponents
             AtlasStation,
             AtlasStationFinal,
             BlackHole,
-            MiniStation
+            MiniStation,
         }
         /* 0x0 */ public GalaxyStarAnomalyEnum GalaxyStarAnomaly;
     }

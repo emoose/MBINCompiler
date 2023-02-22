@@ -8,7 +8,7 @@ namespace libMBIN.NMS.GameComponents
             Free,
             Low,
             Normal,
-            High
+            High,
         }
         /* 0x0 */ public LaunchFuelCostDifficultyEnum LaunchFuelCostDifficulty;
     }

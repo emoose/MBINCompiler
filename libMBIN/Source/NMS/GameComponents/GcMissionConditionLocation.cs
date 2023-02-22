@@ -31,7 +31,7 @@ namespace libMBIN.NMS.GameComponents
             AbandonedFreighterExterior,
             AbandonedFreighterInterior,
             AbandonedFreighterAirlock,
-            AtlasStation
+            AtlasStation,
         }
         /* 0x0 */ public MissionPlayerLocationEnum MissionPlayerLocation;
     }

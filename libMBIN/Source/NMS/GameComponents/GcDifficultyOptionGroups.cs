@@ -8,7 +8,7 @@ namespace libMBIN.NMS.GameComponents
             Survival,
             Crafting,
             Combat,
-            Ease
+            Ease,
         }
         /* 0x0 */ public DifficultyOptionGroupEnum DifficultyOptionGroup;
     }

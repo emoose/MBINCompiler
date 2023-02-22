@@ -9,7 +9,7 @@ namespace libMBIN.NMS.GameComponents
             Hexagon,
             Tag,
             Octagon,
-            Circle
+            Circle,
         }
         /* 0x0 */ public ScannerIconHighlightTypeEnum ScannerIconHighlightType;
     }

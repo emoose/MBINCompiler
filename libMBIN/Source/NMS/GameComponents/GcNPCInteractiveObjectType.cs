@@ -12,7 +12,7 @@ namespace libMBIN.NMS.GameComponents
             WatchShip,
             Shop,
             Dance,
-            None
+            None,
         }
         /* 0x0 */ public NPCInteractiveObjectTypeEnum NPCInteractiveObjectType;
     }

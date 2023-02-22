@@ -9,7 +9,7 @@ namespace libMBIN.NMS.GameComponents
         public enum DiscoverTargetOnThisPlanetEnum {
             Animal,
             Vegetable,
-            Mineral
+            Mineral,
         }
         /* 0x84 */ public DiscoverTargetOnThisPlanetEnum DiscoverTargetOnThisPlanet;
         /* 0x88 */ public NMSString0x80 DebugText;

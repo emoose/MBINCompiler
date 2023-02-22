@@ -15,7 +15,7 @@ namespace libMBIN.NMS.GameComponents
             Photo,
             Feeding,
             Planting,
-            Construction
+            Construction,
         }
         /* 0x0 */ public MissionTypeEnum MissionType;
     }

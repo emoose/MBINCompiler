@@ -17,7 +17,7 @@ namespace libMBIN.NMS.GameComponents
         public enum HitTypeEnum {
             Shootable,
             Terrain,
-            Generic
+            Generic,
         }
         /* 0x20 */ public HitTypeEnum HitType;
         /* 0x30 */ public Vector3f PosLocal;

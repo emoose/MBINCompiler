@@ -13,7 +13,7 @@ namespace libMBIN.NMS.GameComponents
             PlayerFreighter,
             Royal,
             Alien,
-            Sail
+            Sail,
         }
         /* 0x0 */ public ShipClassEnum ShipClass;
     }

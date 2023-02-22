@@ -31,7 +31,7 @@ namespace libMBIN.NMS.GameComponents
             RightHeadLights,
             RightArmourPlate,
             RightTurret,
-            RightSupportSystem
+            RightSupportSystem,
         }
         /* 0x0 */ public PetAccessoryEnum PetAccessory;
     }

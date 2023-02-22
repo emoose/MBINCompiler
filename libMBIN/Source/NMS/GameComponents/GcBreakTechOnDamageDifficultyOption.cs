@@ -7,7 +7,7 @@ namespace libMBIN.NMS.GameComponents
         public enum BreakTechOnDamageProbabilityEnum {
             None,
             Low,
-            High
+            High,
         }
         /* 0x0 */ public BreakTechOnDamageProbabilityEnum BreakTechOnDamageProbability;
     }

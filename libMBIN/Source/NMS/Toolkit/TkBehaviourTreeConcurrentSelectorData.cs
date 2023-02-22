@@ -9,13 +9,13 @@ namespace libMBIN.NMS.Toolkit
         // size: 0x2
         public enum SucceedWhenEnum {
             AllChildrenSucceed,
-            AnyChildSucceeds
+            AnyChildSucceeds,
         }
         /* 0x10 */ public SucceedWhenEnum SucceedWhen;
         // size: 0x2
         public enum FailWhenEnum {
             AnyChildFails,
-            AllChildrenFail
+            AllChildrenFail,
         }
         /* 0x14 */ public FailWhenEnum FailWhen;
         /* 0x18 */ public List<NMSTemplate> Children;

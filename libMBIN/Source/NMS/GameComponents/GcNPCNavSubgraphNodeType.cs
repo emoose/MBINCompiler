@@ -7,7 +7,7 @@ namespace libMBIN.NMS.GameComponents
         public enum NPCNavSubgraphNodeTypeEnum {
             Path,
             Connection,
-            PointOfInterest
+            PointOfInterest,
         }
         /* 0x0 */ public NPCNavSubgraphNodeTypeEnum NPCNavSubgraphNodeType;
     }

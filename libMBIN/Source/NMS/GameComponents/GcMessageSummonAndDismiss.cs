@@ -6,7 +6,7 @@ namespace libMBIN.NMS.GameComponents
         // size: 0x2
         public enum SummonEventTypeEnum {
             Summon,
-            Dismiss
+            Dismiss,
         }
         /* 0x0 */ public SummonEventTypeEnum SummonEventType;
     }

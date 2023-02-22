@@ -9,7 +9,7 @@ namespace libMBIN.NMS.GameComponents
             Farmer,
             Builder,
             Vehicles,
-            Scientist
+            Scientist,
         }
         /* 0x0 */ public NPCHabitationTypeEnum NPCHabitationType;
     }

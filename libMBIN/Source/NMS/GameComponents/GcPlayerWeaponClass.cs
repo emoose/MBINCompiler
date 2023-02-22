@@ -13,7 +13,7 @@ namespace libMBIN.NMS.GameComponents
             Utility,
             TerrainEditor,
             Spawner,
-            SpawnerAlt
+            SpawnerAlt,
         }
         /* 0x0 */ public WeaponClassEnum WeaponClass;
     }

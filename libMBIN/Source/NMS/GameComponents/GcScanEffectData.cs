@@ -10,7 +10,7 @@ namespace libMBIN.NMS.GameComponents
             TargetShip,
             Creature,
             Ground,
-            Objects
+            Objects,
         }
         /* 0x10 */ public ScanEffectTypeEnum ScanEffectType;
         /* 0x20 */ public Colour Colour;

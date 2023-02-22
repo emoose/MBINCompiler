@@ -13,7 +13,7 @@ namespace libMBIN.NMS.GameComponents
             UnderwaterPropCollected,
             RockTransform,
             GroundPropDamage,
-            ShotWorm
+            ShotWorm,
         }
         /* 0x0 */ public FiendCrimeEnum FiendCrime;
     }

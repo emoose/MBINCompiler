@@ -11,7 +11,7 @@ namespace libMBIN.NMS.GameComponents
             Missions,
             Tutorial,
             MissionsCreative,
-            NPCPlanetSite
+            NPCPlanetSite,
         }
         /* 0x20 */ public ScanEventTableEnum ScanEventTable;
         /* 0x24 */ public bool DoAerialScan;

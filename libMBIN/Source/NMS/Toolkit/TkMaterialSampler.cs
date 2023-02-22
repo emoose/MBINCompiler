@@ -15,14 +15,14 @@ namespace libMBIN.NMS.Toolkit
             Wrap,
             Clamp,
             ClampToBorder,
-            Mirror
+            Mirror,
         }
         /* 0xC8 */ public TextureAddressModeEnum TextureAddressMode;
         // size: 0x3
         public enum TextureFilterModeEnum {
             None,
             Bilinear,
-            Trilinear
+            Trilinear,
         }
         /* 0xCC */ public TextureFilterModeEnum TextureFilterMode;
         /* 0xD0 */ public int Anisotropy;

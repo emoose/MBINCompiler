@@ -51,7 +51,7 @@ namespace libMBIN.NMS.GameComponents
             Digger,
             Drill,
             Brainless,
-            Pet
+            Pet,
         }
         /* 0x0 */ public CreatureTypeEnum CreatureType;
     }

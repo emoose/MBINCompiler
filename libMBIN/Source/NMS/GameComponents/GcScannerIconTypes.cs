@@ -58,7 +58,7 @@ namespace libMBIN.NMS.GameComponents
             LandedPilot,
             PetEgg,
             Sandworm,
-            FriendlyDrone
+            FriendlyDrone,
         }
         /* 0x0 */ public ScanIconTypeEnum ScanIconType;
     }

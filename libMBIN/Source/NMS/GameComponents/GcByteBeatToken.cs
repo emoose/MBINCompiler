@@ -22,7 +22,7 @@ namespace libMBIN.NMS.GameComponents
             LessEqual,
             Number,
             OpenParenthesis,
-            CloseParenthesis
+            CloseParenthesis,
         }
         /* 0x0 */ public ByteBeatTokenEnum ByteBeatToken;
     }

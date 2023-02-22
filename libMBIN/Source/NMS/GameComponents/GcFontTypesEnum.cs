@@ -12,7 +12,7 @@ namespace libMBIN.NMS.GameComponents
             GeosansLightMedium,
             GeosansLightSmall,
             Segoeuib,
-            Segoeui32
+            Segoeui32,
         }
         /* 0x0 */ public FontEnum Font;
     }

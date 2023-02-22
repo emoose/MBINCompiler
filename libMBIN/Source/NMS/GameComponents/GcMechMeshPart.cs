@@ -9,7 +9,7 @@ namespace libMBIN.NMS.GameComponents
             Body,
             Legs,
             LeftArm,
-            RightArm
+            RightArm,
         }
         /* 0x0 */ public MechMeshPartEnum MechMeshPart;
     }

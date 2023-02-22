@@ -19,7 +19,7 @@ namespace libMBIN.NMS.GameComponents
             SettlementManagement,
             SquadronManagement,
             SquadronRecruitment,
-            FleetManagement
+            FleetManagement,
         }
         /* 0x0 */ public PageToOpenEnum PageToOpen;
         /* 0x4 */ public bool ReinteractWhenComplete;

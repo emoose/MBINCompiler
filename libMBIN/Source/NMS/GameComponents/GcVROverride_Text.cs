@@ -6,7 +6,7 @@ namespace libMBIN.NMS.GameComponents
         // size: 0x2
         public enum VROverride_TextEnum {
             FontHeight,
-            FontIndex
+            FontIndex,
         }
         /* 0x0 */ public VROverride_TextEnum VROverride_Text;
         /* 0x4 */ public int IntValue;

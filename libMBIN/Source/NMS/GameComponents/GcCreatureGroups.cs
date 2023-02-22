@@ -8,7 +8,7 @@ namespace libMBIN.NMS.GameComponents
             Solo,
             Couple,
             Group,
-            Herd
+            Herd,
         }
         /* 0x0 */ public CreatureGroupEnum CreatureGroup;
     }

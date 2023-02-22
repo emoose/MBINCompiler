@@ -9,7 +9,7 @@ namespace libMBIN.NMS.GameComponents
             ResourceSmall,
             ResourceMedium,
             ResourceLarge,
-            ResourceDebris
+            ResourceDebris,
         }
         /* 0x0 */ public ObjectPlacementEnum ObjectPlacement;
     }

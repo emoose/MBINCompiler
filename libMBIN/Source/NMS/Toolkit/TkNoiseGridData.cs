@@ -34,7 +34,7 @@ namespace libMBIN.NMS.Toolkit
             SuperFormulaRandom,
             SuperFormula,
             SuperPrimitive,
-            File
+            File,
         }
         /* 0x010 */ public NoiseGridTypeEnum NoiseGridType;
         /* 0x014 */ public NMSString0x80 Filename;

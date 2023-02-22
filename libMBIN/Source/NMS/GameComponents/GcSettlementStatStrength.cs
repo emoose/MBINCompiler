@@ -11,7 +11,7 @@ namespace libMBIN.NMS.GameComponents
             PositiveSmall,
             NegativeSmall,
             NegativeMedium,
-            NegativeLarge
+            NegativeLarge,
         }
         /* 0x0 */ public SettlementStatStrengthEnum SettlementStatStrength;
     }

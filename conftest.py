@@ -84,8 +84,8 @@ def convert_files():
     # First, figure out the first part of the MBINCompiler call.
     platform = os.environ.get('platform')
     mbincompiler_path = os.environ.get('mbincompiler_path')
-    if mbincompiler_path:
-        cmd = [op.join(mbincompiler_path, 'MBINCompiler.exe'), '-q']
+    if mbincompiler_path is not None:
+        cmd = [mbincompiler_path, '-q']
     else:
         if platform == 'linux-x64':
             # need to run with mono on linux

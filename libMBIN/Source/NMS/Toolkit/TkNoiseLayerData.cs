@@ -19,7 +19,7 @@ namespace libMBIN.NMS.Toolkit
             Erosion,
             Volcanic,
             Glacial,
-            Plateau
+            Plateau,
         }
         /* 0x04 */ public NoiseTypeEnum NoiseType;
         /* 0x08 */ public float Height;

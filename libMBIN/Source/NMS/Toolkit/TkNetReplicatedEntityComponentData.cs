@@ -15,13 +15,13 @@ namespace libMBIN.NMS.Toolkit
             PlanetLocal,
             Space,
             SpaceStation,
-            Nexus
+            Nexus,
         }
         /* 0x10 */ public ReplicationRangeEnum ReplicationRange;
         // size: 0x2
         public enum SpawnTypeEnum {
             Basic,
-            Creature
+            Creature,
         }
         /* 0x14 */ public SpawnTypeEnum SpawnType;
         /* 0x18 */ public bool IgnoreComponents;

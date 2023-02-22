@@ -32,7 +32,7 @@ namespace libMBIN.NMS.GameComponents
             Attack,
             Watch,
             Greet,
-            TeleportToPlayer
+            TeleportToPlayer,
         }
         /* 0x0 */ public PetBehaviourEnum PetBehaviour;
     }

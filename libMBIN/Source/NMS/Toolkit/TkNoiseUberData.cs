@@ -23,7 +23,7 @@ namespace libMBIN.NMS.Toolkit
             Plane,
             Check,
             Sine,
-            Uber
+            Uber,
         }
         /* 0x3C */ public DebugNoiseTypeEnum DebugNoiseType;
     }

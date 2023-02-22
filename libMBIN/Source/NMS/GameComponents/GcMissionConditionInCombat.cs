@@ -11,7 +11,7 @@ namespace libMBIN.NMS.GameComponents
             BigFishFiendCombat,
             CorruptedSentinelCombat,
             GroundWormCombat,
-            RewardEncounter
+            RewardEncounter,
         }
         /* 0x00 */ public CombatTypeEnum CombatType;
         /* 0x08 */ public NMSString0x20A OverrideOSDMessage;

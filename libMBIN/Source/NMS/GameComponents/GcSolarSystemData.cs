@@ -38,7 +38,7 @@ namespace libMBIN.NMS.GameComponents
         public enum AsteroidLevelEnum {
             NoRares,
             SomeRares,
-            LotsOfRares
+            LotsOfRares,
         }
         /* 0x05B8 */ public AsteroidLevelEnum AsteroidLevel;
         /* 0x05C0 */ public GcPlanetColourData Colours;

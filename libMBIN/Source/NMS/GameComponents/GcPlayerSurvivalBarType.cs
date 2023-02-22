@@ -7,7 +7,7 @@ namespace libMBIN.NMS.GameComponents
         public enum SurvivalBarEnum {
             Health,
             Hazard,
-            Energy
+            Energy,
         }
         /* 0x0 */ public SurvivalBarEnum SurvivalBar;
     }

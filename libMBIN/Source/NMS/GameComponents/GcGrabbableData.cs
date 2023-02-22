@@ -20,7 +20,7 @@ namespace libMBIN.NMS.GameComponents
             Default,
             EjectHandle,
             ControlStickLeft,
-            ControlStickRight
+            ControlStickRight,
         }
         /* 0x44 */ public GrabTypeEnum GrabType;
         /* 0x48 */ public NMSString0x10 HandPose;

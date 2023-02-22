@@ -12,7 +12,7 @@ namespace libMBIN.NMS.GameComponents
             MissionsCreative,
             Vehicle,
             NPCPlanetSite,
-            Seasonal
+            Seasonal,
         }
         /* 0x0 */ public ScanTableEnum ScanTable;
     }

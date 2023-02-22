@@ -13,7 +13,7 @@ namespace libMBIN.NMS.GameComponents
         public enum RequireModeEnum {
             Seated,
             Standing,
-            None
+            None,
         }
         /* 0x38 */ public RequireModeEnum RequireMode;
         /* 0x40 */ public List<NMSString0x10> ExcludeTags;

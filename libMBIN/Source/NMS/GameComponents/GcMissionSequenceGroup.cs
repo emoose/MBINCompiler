@@ -28,7 +28,7 @@ namespace libMBIN.NMS.GameComponents
         public enum RepeatLogicEnum {
             None,
             Loop,
-            RestartOnConditionFail
+            RestartOnConditionFail,
         }
         /* 0x1E0 */ public RepeatLogicEnum RepeatLogic;
         // size: 0x4
@@ -36,7 +36,7 @@ namespace libMBIN.NMS.GameComponents
             Default,
             Large,
             Square,
-            NoFrame
+            NoFrame,
         }
         /* 0x1E4 */ public IconStyleEnum IconStyle;
         /* 0x1E8 */ public TkInputEnum SpecialButtonIcon;

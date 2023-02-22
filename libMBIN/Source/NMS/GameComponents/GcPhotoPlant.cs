@@ -7,7 +7,7 @@ namespace libMBIN.NMS.GameComponents
         public enum PhotoPlantTypeEnum {
             Sodium,
             Oxygen,
-            BluePlant
+            BluePlant,
         }
         /* 0x0 */ public PhotoPlantTypeEnum PhotoPlantType;
     }

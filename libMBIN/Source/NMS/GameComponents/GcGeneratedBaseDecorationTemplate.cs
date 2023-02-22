@@ -19,7 +19,7 @@ namespace libMBIN.NMS.GameComponents
             Decoration1,
             Decoration2,
             Decoration3,
-            DecorationCorridor
+            DecorationCorridor,
         }
         /* 0x9C */ public DecorationLayerEnum DecorationLayer;
         /* 0xA0 */ public List<int> InvalidRoomIndexes;

@@ -6,7 +6,7 @@ namespace libMBIN.NMS.GameComponents
         // size: 0x2
         public enum PetMoodEnum {
             Hungry,
-            Lonely
+            Lonely,
         }
         /* 0x0 */ public PetMoodEnum PetMood;
     }

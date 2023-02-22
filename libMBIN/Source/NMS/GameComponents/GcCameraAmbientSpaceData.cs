@@ -14,7 +14,7 @@ namespace libMBIN.NMS.GameComponents
             FreighterHangar,
             AtlasStation,
             BlackHole,
-            Anomaly
+            Anomaly,
         }
         /* 0x20 */ public OriginEnum Origin;
     }

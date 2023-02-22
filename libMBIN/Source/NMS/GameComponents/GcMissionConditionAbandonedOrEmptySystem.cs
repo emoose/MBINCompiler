@@ -7,7 +7,7 @@ namespace libMBIN.NMS.GameComponents
         public enum MissionSystemTypeEnum {
             Either,
             Empty,
-            Abandoned
+            Abandoned,
         }
         /* 0x0 */ public MissionSystemTypeEnum MissionSystemType;
     }

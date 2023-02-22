@@ -12,7 +12,7 @@ namespace libMBIN.NMS.GameComponents
             ShipTech,
             Freighter,
             Vehicle,
-            Weapon
+            Weapon,
         }
         /* 0x10 */ public InventoryToInstallInEnum InventoryToInstallIn;
         /* 0x14 */ public bool Silent;

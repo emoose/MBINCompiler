@@ -20,7 +20,7 @@ namespace libMBIN.NMS.GameComponents
             ViewRelatives,
             CyclePart,
             PlaceWire,
-            CycleRotateMode
+            CycleRotateMode,
         }
         /* 0x0 */ public BuildMenuOptionEnum BuildMenuOption;
     }

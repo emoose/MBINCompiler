@@ -9,7 +9,7 @@ namespace libMBIN.NMS.GameComponents
         public enum CoverageTypeEnum {
             Total,
             SmoothPatch,
-            GridPatch
+            GridPatch,
         }
         /* 0x14 */ public CoverageTypeEnum CoverageType;
         /* 0x18 */ public float PatchSize;

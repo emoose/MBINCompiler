@@ -5,7 +5,7 @@ namespace libMBIN.NMS.Toolkit
     {
         // size: 0x1
         public enum CaveTypesEnum {
-            Underground
+            Underground,
         }
         /* 0x0 */ public CaveTypesEnum CaveTypes;
     }

@@ -12,7 +12,7 @@ namespace libMBIN.NMS.Toolkit
         // size: 0x2
         public enum RuleTypeEnum {
             Default,
-            BaseRule
+            BaseRule,
         }
         /* 0xB0 */ public RuleTypeEnum RuleType;
     }

@@ -11,7 +11,7 @@ namespace libMBIN.NMS.GameComponents
             Upkeep,
             Sentinels,
             Debt,
-            Alert
+            Alert,
         }
         /* 0x0 */ public SettlementStatTypeEnum SettlementStatType;
     }

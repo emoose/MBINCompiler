@@ -8,7 +8,7 @@ namespace libMBIN.NMS.GameComponents
             Never,
             Low,
             Normal,
-            High
+            High,
         }
         /* 0x0 */ public CreatureRoleFrequencyModifierEnum CreatureRoleFrequencyModifier;
     }

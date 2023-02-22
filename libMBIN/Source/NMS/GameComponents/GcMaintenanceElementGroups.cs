@@ -11,7 +11,7 @@ namespace libMBIN.NMS.GameComponents
             Repairing,
             EasyRepairing,
             Cleaning,
-            Frigate
+            Frigate,
         }
         /* 0x0 */ public MaintenanceGroupEnum MaintenanceGroup;
     }

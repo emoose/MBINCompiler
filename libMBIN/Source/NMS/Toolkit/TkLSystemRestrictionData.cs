@@ -8,7 +8,7 @@ namespace libMBIN.NMS.Toolkit
         public enum RestrictionEnum {
             NoMoreThan,
             AtLeast,
-            AtLeastIfICan
+            AtLeastIfICan,
         }
         /* 0x4 */ public RestrictionEnum Restriction;
     }

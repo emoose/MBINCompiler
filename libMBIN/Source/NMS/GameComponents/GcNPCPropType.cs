@@ -17,7 +17,7 @@ namespace libMBIN.NMS.GameComponents
             Cup,
             DontCare,
             RandomHologram,
-            HoloDrone
+            HoloDrone,
         }
         /* 0x0 */ public NPCPropEnum NPCProp;
     }

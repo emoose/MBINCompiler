@@ -9,7 +9,7 @@ namespace libMBIN.NMS.GameComponents
         public enum FactionOptionEnum {
             DataDefined,
             CurrentMission,
-            CurrentSystem
+            CurrentSystem,
         }
         /* 0x0 */ public FactionOptionEnum FactionOption;
         /* 0x4 */ public GcMissionFaction Faction;

@@ -13,7 +13,7 @@ namespace libMBIN.NMS.GameComponents
             FriendsFreighterBase,
             SpaceBase,
             GeneratedPlanetBase,
-            GeneratedPlanetBaseEdits
+            GeneratedPlanetBaseEdits,
         }
         /* 0x0 */ public PersistentBaseTypesEnum PersistentBaseTypes;
     }

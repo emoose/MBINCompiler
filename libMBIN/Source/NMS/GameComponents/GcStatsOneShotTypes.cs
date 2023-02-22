@@ -8,7 +8,7 @@ namespace libMBIN.NMS.GameComponents
             ShipLanded,
             ShipLaunched,
             ShipWarped,
-            WeaponFired
+            WeaponFired,
         }
         /* 0x0 */ public StatsOneShotEnum StatsOneShot;
     }

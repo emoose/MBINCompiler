@@ -9,7 +9,7 @@ namespace libMBIN.NMS.GameComponents
         public enum MoveModeEnum {
             Roll,
             Float,
-            Drill
+            Drill,
         }
         /* 0x000 */ public MoveModeEnum MoveMode;
         /* 0x004 */ public NMSString0x100 Node;

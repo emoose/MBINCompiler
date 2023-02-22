@@ -7,7 +7,7 @@ namespace libMBIN.NMS.GameComponents
         public enum CharacterControlInputValidityEnum {
             Always,
             PadOnly,
-            KeyboardAnMouseOnly
+            KeyboardAnMouseOnly,
         }
         /* 0x0 */ public CharacterControlInputValidityEnum CharacterControlInputValidity;
     }

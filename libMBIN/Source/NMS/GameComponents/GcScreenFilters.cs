@@ -86,7 +86,7 @@ namespace libMBIN.NMS.GameComponents
             NMSRetroD,
             NMSRetroE,
             NMSRetroF,
-            NMSRetroG
+            NMSRetroG,
         }
         /* 0x0 */ public ScreenFilterEnum ScreenFilter;
     }

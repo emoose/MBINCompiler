@@ -12,7 +12,7 @@ namespace libMBIN.NMS.GameComponents
             Compact,
             EyeLevel,
             Prompt,
-            Tooltip
+            Tooltip,
         }
         /* 0x000 */ public HUDTextDisplayTypeEnum HUDTextDisplayType;
         /* 0x004 */ public NMSString0x100 Title;

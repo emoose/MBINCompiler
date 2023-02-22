@@ -11,7 +11,7 @@ namespace libMBIN.NMS.GameComponents
             Minigun,
             Plasma,
             Missile,
-            Rocket
+            Rocket,
         }
         /* 0x0 */ public ShipWeaponEnum ShipWeapon;
     }

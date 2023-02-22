@@ -7,7 +7,7 @@ namespace libMBIN.NMS.GameComponents
         public enum SizeIndicatorEnum {
             Small,
             Medium,
-            Large
+            Large,
         }
         /* 0x0 */ public SizeIndicatorEnum SizeIndicator;
     }

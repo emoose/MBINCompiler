@@ -13,7 +13,7 @@ namespace libMBIN.NMS.Toolkit
             Resources_Nickel,
             Resources_Aluminium,
             Resources_Gold,
-            Resources_Emeril
+            Resources_Emeril,
         }
         /* 0x0 */ public GridLayerTypesEnum GridLayerTypes;
     }

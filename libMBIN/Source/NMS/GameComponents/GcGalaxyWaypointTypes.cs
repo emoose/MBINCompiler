@@ -10,7 +10,7 @@ namespace libMBIN.NMS.GameComponents
             Gameplay_DistressBeacon,
             Gameplay_BlackHole,
             Gameplay_Mission,
-            Gameplay_SeasonParty
+            Gameplay_SeasonParty,
         }
         /* 0x0 */ public GalaxyWaypointTypeEnum GalaxyWaypointType;
     }
