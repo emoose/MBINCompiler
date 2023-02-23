@@ -6,7 +6,7 @@ using System.Reflection;
 
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0x1465CF9A4F725ADA, NameHash = 0xA74EA06001E7577E)]
+    [NMS(GUID = 0x3705D946A3B218D4, NameHash = 0xA74EA06001E7577E)]
     public class TkGeometryData : NMSTemplate
     {
         /* 0x000 */ public int VertexCount;

@@ -8,7 +8,7 @@ using System.Reflection;
 
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0xA45155ABFDB4FF9C, NameHash = 0xF671716161E708E3)]
+    [NMS(GUID = 0xD3AC8F6F7A4D55FC, NameHash = 0xF671716161E708E3)]
     public class TkMeshData : NMSTemplate
     {
         [NMS(Size = 0x80, Padding = 0xFE)]

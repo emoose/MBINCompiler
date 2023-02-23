@@ -102,6 +102,8 @@ EXTRA_ATTRIBUTES = {
 }
 # List of classes to avoid overwriting as the have custom deserialisation
 # methods.
+# TODO: If the GUID changes we need to raise an important message so that we may
+# fix it manually.
 DONT_OVERRIDE = [
     'TkGeometryData',
     'TkMeshData',

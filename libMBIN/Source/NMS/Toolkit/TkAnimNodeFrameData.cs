@@ -7,7 +7,7 @@ using System.Linq;
 
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0xAACAD995AEC3891, NameHash = 0x270204EDCEE4DB62)]
+    [NMS(GUID = 0xC4C8B7669C8C9D44, NameHash = 0x270204EDCEE4DB62)]
     public class TkAnimNodeFrameData : NMSTemplate
     {
         /* 0x00 */ public List<Quaternion> Rotations;

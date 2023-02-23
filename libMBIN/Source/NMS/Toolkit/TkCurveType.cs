@@ -4,7 +4,7 @@ namespace libMBIN.NMS.Toolkit
     public class TkCurveType : NMSTemplate
     {
         // size: 0x28
-        public enum CurveEnum {
+        public enum CurveEnum : byte {
             Linear,
             SmoothInOut,
             FastInSlowOut,
