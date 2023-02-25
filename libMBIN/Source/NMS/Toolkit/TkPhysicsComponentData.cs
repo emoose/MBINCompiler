@@ -9,7 +9,7 @@ namespace libMBIN.NMS.Toolkit
         /* 0x18 */ public NMSTemplate RagdollData;
         /* 0x68 */ public TkVolumeTriggerType TriggerVolumeType;
         // size: 0x2
-        public enum SurfacePropertiesEnum {
+        public enum SurfacePropertiesEnum : uint {
             None,
             Glass,
         }

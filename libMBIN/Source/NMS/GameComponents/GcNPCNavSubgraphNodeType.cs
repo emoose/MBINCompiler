@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcNPCNavSubgraphNodeType : NMSTemplate
     {
         // size: 0x3
-        public enum NPCNavSubgraphNodeTypeEnum {
+        public enum NPCNavSubgraphNodeTypeEnum : uint {
             Path,
             Connection,
             PointOfInterest,

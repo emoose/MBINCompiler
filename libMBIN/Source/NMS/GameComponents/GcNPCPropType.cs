@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcNPCPropType : NMSTemplate
     {
         // size: 0xD
-        public enum NPCPropEnum {
+        public enum NPCPropEnum : uint {
             None,
             IPad,
             HoloBlob,

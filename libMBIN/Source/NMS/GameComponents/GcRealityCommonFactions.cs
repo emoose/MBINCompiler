@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcRealityCommonFactions : NMSTemplate
     {
         // size: 0x5
-        public enum AIFactionEnum {
+        public enum AIFactionEnum : uint {
             Player,
             Civilian,
             Pirate,

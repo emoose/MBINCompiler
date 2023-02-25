@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcSolarSystemLocatorTypes : NMSTemplate
     {
         // size: 0x4
-        public enum LocatorTypeEnum {
+        public enum LocatorTypeEnum : uint {
             Generic1,
             Generic2,
             Generic3,

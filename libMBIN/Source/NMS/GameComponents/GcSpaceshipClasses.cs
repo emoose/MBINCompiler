@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcSpaceshipClasses : NMSTemplate
     {
         // size: 0x9
-        public enum ShipClassEnum {
+        public enum ShipClassEnum : uint {
             Freighter,
             Dropship,
             Fighter,

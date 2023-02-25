@@ -4,7 +4,7 @@ namespace libMBIN.NMS.Toolkit
     public class TkSketchConditions : NMSTemplate
     {
         // size: 0x6
-        public enum ConditionEnum {
+        public enum ConditionEnum : uint {
             Equal,
             NotEqual,
             Greater,

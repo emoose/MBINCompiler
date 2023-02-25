@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcUniqueIdData : NMSTemplate
     {
         // size: 0x3
-        public enum UniqueIdTypeEnum {
+        public enum UniqueIdTypeEnum : uint {
             Invalid,
             Deterministic,
             UserSpawned,

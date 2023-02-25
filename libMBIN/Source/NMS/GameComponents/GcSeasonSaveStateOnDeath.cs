@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcSeasonSaveStateOnDeath : NMSTemplate
     {
         // size: 0x4
-        public enum SeasonSaveStateOnDeathEnum {
+        public enum SeasonSaveStateOnDeathEnum : uint {
             Standard,
             ResetAndQuit,
             ResetPosSaveAndQuit,

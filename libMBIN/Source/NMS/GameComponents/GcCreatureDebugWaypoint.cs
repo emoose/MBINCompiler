@@ -5,7 +5,7 @@ namespace libMBIN.NMS.GameComponents
     {
         /* 0x00 */ public Vector3f Position;
         // size: 0x3
-        public enum WaypointTypeEnum {
+        public enum WaypointTypeEnum : uint {
             Move,
             MoveAlt,
             Idle,

@@ -8,7 +8,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x00 */ public NMSString0x20 Connector;
         /* 0x20 */ public bool Symmetric;
         // size: 0x5
-        public enum TransformEnum {
+        public enum TransformEnum : uint {
             None,
             Rotated90,
             Rotated180,

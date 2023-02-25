@@ -39,7 +39,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x378 */ public float NormalisedValueOffWorld;
         /* 0x37C */ public GcTradeCategory TradeCategory;
         // size: 0x7
-        public enum WikiCategoryEnum {
+        public enum WikiCategoryEnum : uint {
             NotEnabled,
             Crafting,
             Tech,

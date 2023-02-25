@@ -6,7 +6,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcCreatureInfo : NMSTemplate
     {
         // size: 0x2
-        public enum AgeEnum {
+        public enum AgeEnum : uint {
             Regular,
             Weird,
         }

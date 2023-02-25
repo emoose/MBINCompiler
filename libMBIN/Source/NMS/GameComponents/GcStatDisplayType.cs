@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcStatDisplayType : NMSTemplate
     {
         // size: 0x3
-        public enum StatDisplayTypeEnum {
+        public enum StatDisplayTypeEnum : uint {
             None,
             Sols,
             Distance,

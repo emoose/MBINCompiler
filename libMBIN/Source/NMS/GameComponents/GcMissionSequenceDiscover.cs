@@ -6,7 +6,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x00 */ public NMSString0x80 Message;
         /* 0x80 */ public bool PerPlanet;
         // size: 0x3
-        public enum DiscoverTargetEnum {
+        public enum DiscoverTargetEnum : uint {
             Animal,
             Vegetable,
             Mineral,

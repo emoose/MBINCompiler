@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcInventoryStackSizeGroup : NMSTemplate
     {
         // size: 0xC
-        public enum InventoryStackSizeGroupEnum {
+        public enum InventoryStackSizeGroupEnum : uint {
             Default,
             Personal,
             PersonalCargo,

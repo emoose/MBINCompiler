@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcByteBeatToken : NMSTemplate
     {
         // size: 0x12
-        public enum ByteBeatTokenEnum {
+        public enum ByteBeatTokenEnum : uint {
             T,
             AND,
             OR,

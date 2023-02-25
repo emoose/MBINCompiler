@@ -8,20 +8,20 @@ namespace libMBIN.NMS.GameComponents
         /* 0x000 */ public GcWeatherOptions WeatherType;
         /* 0x010 */ public GcPlanetHeavyAirData HeavyAir;
         // size: 0x2
-        public enum WeatherIntensityEnum {
+        public enum WeatherIntensityEnum : uint {
             Default,
             Extreme,
         }
         /* 0x130 */ public WeatherIntensityEnum WeatherIntensity;
         // size: 0x3
-        public enum StormFrequencyEnum {
+        public enum StormFrequencyEnum : uint {
             None,
             Low,
             High,
         }
         /* 0x134 */ public StormFrequencyEnum StormFrequency;
         // size: 0x2
-        public enum AtmosphereTypeEnum {
+        public enum AtmosphereTypeEnum : uint {
             None,
             Normal,
         }

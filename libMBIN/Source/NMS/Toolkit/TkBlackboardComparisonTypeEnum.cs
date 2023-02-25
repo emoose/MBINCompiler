@@ -4,7 +4,7 @@ namespace libMBIN.NMS.Toolkit
     public class TkBlackboardComparisonTypeEnum : NMSTemplate
     {
         // size: 0x6
-        public enum ComparisonTypeEnum {
+        public enum ComparisonTypeEnum : uint {
             Equal,
             NotEqual,
             GreaterThan,

@@ -9,7 +9,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x000 */ public NMSString0x10 StatId;
         /* 0x010 */ public NMSString0x20A StatTitle;
         // size: 0x3
-        public enum StatMessageTypeEnum {
+        public enum StatMessageTypeEnum : uint {
             Full,
             Quick,
             Silent,

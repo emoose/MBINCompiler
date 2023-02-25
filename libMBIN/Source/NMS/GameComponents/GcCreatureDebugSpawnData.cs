@@ -10,7 +10,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x04 */ public float InitialDelay;
         /* 0x08 */ public List<GcCreatureDebugWaypoint> Waypoints;
         // size: 0x3
-        public enum OnCompleteEnum {
+        public enum OnCompleteEnum : uint {
             Hold,
             Loop,
             Destroy,

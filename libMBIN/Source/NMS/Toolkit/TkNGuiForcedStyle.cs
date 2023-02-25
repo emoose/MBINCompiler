@@ -4,7 +4,7 @@ namespace libMBIN.NMS.Toolkit
     public class TkNGuiForcedStyle : NMSTemplate
     {
         // size: 0x4
-        public enum NGuiForcedStyleEnum {
+        public enum NGuiForcedStyleEnum : uint {
             None,
             Default,
             Highlight,

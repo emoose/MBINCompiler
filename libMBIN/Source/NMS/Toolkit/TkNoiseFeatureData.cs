@@ -11,7 +11,7 @@ namespace libMBIN.NMS.Toolkit
         /* 0x09 */ public bool Trench;
         /* 0x0C */ public TkNoiseVoxelTypeEnum VoxelType;
         // size: 0x2
-        public enum FeatureTypeEnum {
+        public enum FeatureTypeEnum : uint {
             Tube,
             Blob,
         }

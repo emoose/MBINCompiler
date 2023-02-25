@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcDifficultyPresetType : NMSTemplate
     {
         // size: 0x7
-        public enum DifficultyPresetTypeEnum {
+        public enum DifficultyPresetTypeEnum : uint {
             Invalid,
             Custom,
             Normal,

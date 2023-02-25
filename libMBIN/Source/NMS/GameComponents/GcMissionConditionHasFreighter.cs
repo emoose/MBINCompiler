@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcMissionConditionHasFreighter : NMSTemplate
     {
         // size: 0x3
-        public enum FreighterInCurrentSystemEnum {
+        public enum FreighterInCurrentSystemEnum : uint {
             DontCare,
             Yes,
             No,

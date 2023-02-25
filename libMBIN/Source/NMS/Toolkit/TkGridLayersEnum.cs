@@ -4,7 +4,7 @@ namespace libMBIN.NMS.Toolkit
     public class TkGridLayersEnum : NMSTemplate
     {
         // size: 0x9
-        public enum GridLayerTypesEnum {
+        public enum GridLayerTypesEnum : uint {
             Small,
             Large,
             Resources_Heridium,

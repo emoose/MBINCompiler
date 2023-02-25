@@ -7,13 +7,13 @@ namespace libMBIN.NMS.Toolkit
     {
         /* 0x00 */ public NMSString0x10 Name;
         // size: 0x2
-        public enum SucceedWhenEnum {
+        public enum SucceedWhenEnum : uint {
             AllChildrenSucceed,
             AnyChildSucceeds,
         }
         /* 0x10 */ public SucceedWhenEnum SucceedWhen;
         // size: 0x2
-        public enum FailWhenEnum {
+        public enum FailWhenEnum : uint {
             AnyChildFails,
             AllChildrenFail,
         }

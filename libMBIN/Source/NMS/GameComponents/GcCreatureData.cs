@@ -14,7 +14,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x1D */ public bool CanBeFemale;
         /* 0x20 */ public List<GcCreatureTagAndRarity> Tags;
         // size: 0x4
-        public enum MoveAreaEnum {
+        public enum MoveAreaEnum : uint {
             Ground,
             Water,
             Air,

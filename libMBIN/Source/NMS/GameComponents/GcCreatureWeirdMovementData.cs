@@ -6,7 +6,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcCreatureWeirdMovementData : NMSTemplate
     {
         // size: 0x3
-        public enum MoveModeEnum {
+        public enum MoveModeEnum : uint {
             Roll,
             Float,
             Drill,

@@ -11,7 +11,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x50 */ public GcWordCategoryTableEnum Category;
         /* 0x54 */ public int Frequency;
         // size: 0x2
-        public enum WordInteractEffectEnum {
+        public enum WordInteractEffectEnum : uint {
             Pain,
             Heal,
         }

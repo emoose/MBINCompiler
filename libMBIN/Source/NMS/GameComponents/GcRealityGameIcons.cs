@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcRealityGameIcons : NMSTemplate
     {
         // size: 0x56
-        public enum GameIconsEnum {
+        public enum GameIconsEnum : uint {
             Stamina,
             NoStamina,
             EnergyCharge,

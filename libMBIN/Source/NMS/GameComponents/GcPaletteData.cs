@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcPaletteData : NMSTemplate
     {
         // size: 0x6
-        public enum NumColoursEnum {
+        public enum NumColoursEnum : uint {
             Inactive,
             _1,
             _4,

@@ -5,7 +5,7 @@ namespace libMBIN.NMS.GameComponents
     {
         /* 0x0 */ public float Delay;
         // size: 0x4
-        public enum MenuToCloseEnum {
+        public enum MenuToCloseEnum : uint {
             QuickMenu,
             BuildMenu,
             Inventory,

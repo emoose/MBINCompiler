@@ -4,7 +4,7 @@ namespace libMBIN.NMS.Toolkit
     public class TkMaterialFlags : NMSTemplate
     {
         // size: 0x40
-        public enum MaterialFlagEnum {
+        public enum MaterialFlagEnum : uint {
             _F01_DIFFUSEMAP,
             _F02_SKINNED,
             _F03_NORMALMAP,

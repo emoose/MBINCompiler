@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcResourceOrigin : NMSTemplate
     {
         // size: 0x5
-        public enum ResourceOriginEnum {
+        public enum ResourceOriginEnum : uint {
             Terrain,
             Crystal,
             Asteroid,

@@ -26,7 +26,7 @@ namespace libMBIN.NMS.Toolkit
         /* 0x390 */ public TkEmitterFloatProperty ParticleDamping;
         /* 0x408 */ public TkEmitterFloatProperty ParticleDrag;
         // size: 0x3
-        public enum DragTypeEnum {
+        public enum DragTypeEnum : uint {
             IgnoreGravity,
             PhysicallyBased,
             ApplyWind,
@@ -35,7 +35,7 @@ namespace libMBIN.NMS.Toolkit
         /* 0x484 */ public float Variation;
         /* 0x488 */ public float StartOffset;
         // size: 0x6
-        public enum SpawnOffsetTypeEnum {
+        public enum SpawnOffsetTypeEnum : uint {
             Sphere,
             Box,
             Disc,
@@ -50,14 +50,14 @@ namespace libMBIN.NMS.Toolkit
         /* 0x590 */ public float StartRotationVariation;
         /* 0x598 */ public TkEmitterFloatProperty Rotation;
         // size: 0x3
-        public enum AlignmentEnum {
+        public enum AlignmentEnum : uint {
             Rotation,
             Velocity,
             VelocityScreenSpace,
         }
         /* 0x610 */ public AlignmentEnum Alignment;
         // size: 0x8
-        public enum BillboardAlignmentEnum {
+        public enum BillboardAlignmentEnum : uint {
             Screen,
             XLocal,
             YLocal,
@@ -76,7 +76,7 @@ namespace libMBIN.NMS.Toolkit
         /* 0x640 */ public float RotateAroundEmitter;
         /* 0x650 */ public Vector3f RotateAroundEmitterAxis;
         // size: 0x4
-        public enum FlipbookPlaybackRateEnum {
+        public enum FlipbookPlaybackRateEnum : uint {
             Absolute,
             RelativeToMax,
             OnceToCompletion,
@@ -92,7 +92,7 @@ namespace libMBIN.NMS.Toolkit
         /* 0x6A0 */ public Colour ColourEnd;
         /* 0x6B0 */ public TkEmitterFloatProperty AlphaThreshold;
         // size: 0x2
-        public enum OnRefractionsDisabledEnum {
+        public enum OnRefractionsDisabledEnum : uint {
             Hide,
             AlphaBlend,
         }

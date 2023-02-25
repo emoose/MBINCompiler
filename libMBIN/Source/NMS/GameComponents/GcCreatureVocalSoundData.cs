@@ -5,7 +5,7 @@ namespace libMBIN.NMS.GameComponents
     {
         /* 0x00 */ public NMSString0x10 Id;
         // size: 0xA
-        public enum VocalEmoteEnum {
+        public enum VocalEmoteEnum : uint {
             EmoteIdle,
             EmoteFlee,
             EmoteAggression,

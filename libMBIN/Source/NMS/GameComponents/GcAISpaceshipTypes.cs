@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcAISpaceshipTypes : NMSTemplate
     {
         // size: 0x7
-        public enum ShipTypeEnum {
+        public enum ShipTypeEnum : uint {
             None,
             Pirate,
             Police,

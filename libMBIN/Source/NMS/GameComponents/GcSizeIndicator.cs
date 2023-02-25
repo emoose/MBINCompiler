@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcSizeIndicator : NMSTemplate
     {
         // size: 0x3
-        public enum SizeIndicatorEnum {
+        public enum SizeIndicatorEnum : uint {
             Small,
             Medium,
             Large,

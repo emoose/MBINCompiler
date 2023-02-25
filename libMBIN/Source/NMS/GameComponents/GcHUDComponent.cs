@@ -9,7 +9,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x18 */ public int Width;
         /* 0x1C */ public int Height;
         // size: 0x5
-        public enum AlignEnum {
+        public enum AlignEnum : uint {
             Center,
             TopLeft,
             TopRight,

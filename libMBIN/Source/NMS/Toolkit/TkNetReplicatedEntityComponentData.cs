@@ -7,7 +7,7 @@ namespace libMBIN.NMS.Toolkit
     {
         /* 0x00 */ public List<NMSString0x80> ReplicaComponentMask;
         // size: 0x8
-        public enum ReplicationRangeEnum {
+        public enum ReplicationRangeEnum : uint {
             NotSet,
             System,
             SystemLocal,
@@ -19,7 +19,7 @@ namespace libMBIN.NMS.Toolkit
         }
         /* 0x10 */ public ReplicationRangeEnum ReplicationRange;
         // size: 0x2
-        public enum SpawnTypeEnum {
+        public enum SpawnTypeEnum : uint {
             Basic,
             Creature,
         }

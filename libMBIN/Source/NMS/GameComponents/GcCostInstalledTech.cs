@@ -5,7 +5,7 @@ namespace libMBIN.NMS.GameComponents
     {
         /* 0x00 */ public NMSString0x10 Id;
         // size: 0x6
-        public enum InventoryToCheckEnum {
+        public enum InventoryToCheckEnum : uint {
             All,
             Suit,
             Ship,

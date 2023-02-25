@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcChargingRequirementsDifficultyOption : NMSTemplate
     {
         // size: 0x4
-        public enum ChargingRequirementsDifficultyEnum {
+        public enum ChargingRequirementsDifficultyEnum : uint {
             None,
             Low,
             Normal,

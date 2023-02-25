@@ -9,7 +9,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x00 */ public List<GcCreatureIkData> JointData;
         /* 0x10 */ public List<GcIkPistonData> PistonData;
         // size: 0x6
-        public enum HeadUpAxisEnum {
+        public enum HeadUpAxisEnum : uint {
             X,
             XNeg,
             Y,

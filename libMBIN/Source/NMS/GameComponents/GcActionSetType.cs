@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcActionSetType : NMSTemplate
     {
         // size: 0x10
-        public enum ActionSetTypeEnum {
+        public enum ActionSetTypeEnum : uint {
             None,
             FRONTEND,
             OnFootControls,

@@ -43,13 +43,13 @@ namespace libMBIN.NMS.GameComponents
         /* 0x0A0 */ public float DeathFadeStart;
         /* 0x0A4 */ public float DeathFadeTime;
         // size: 0x2
-        public enum DeathTypeEnum {
+        public enum DeathTypeEnum : uint {
             Explode,
             Drop,
         }
         /* 0x0A8 */ public DeathTypeEnum DeathType;
         // size: 0x2
-        public enum SubTypeEnum {
+        public enum SubTypeEnum : uint {
             Crystal,
             Tentacle,
         }

@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcExpeditionDuration : NMSTemplate
     {
         // size: 0x5
-        public enum ExpeditionDurationEnum {
+        public enum ExpeditionDurationEnum : uint {
             VeryShort,
             Short,
             Medium,

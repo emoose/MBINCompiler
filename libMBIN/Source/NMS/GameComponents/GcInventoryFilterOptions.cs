@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcInventoryFilterOptions : NMSTemplate
     {
         // size: 0x5
-        public enum InventoryFilterEnum {
+        public enum InventoryFilterEnum : uint {
             All,
             Substance,
             HighValue,

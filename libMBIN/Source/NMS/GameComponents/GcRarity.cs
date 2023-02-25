@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcRarity : NMSTemplate
     {
         // size: 0x3
-        public enum RarityEnum {
+        public enum RarityEnum : uint {
             Common,
             Uncommon,
             Rare,

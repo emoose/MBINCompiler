@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcRainbowType : NMSTemplate
     {
         // size: 0x4
-        public enum RainbowTypeEnum {
+        public enum RainbowTypeEnum : uint {
             Always,
             Occasional,
             Storm,

@@ -13,13 +13,13 @@ namespace libMBIN.NMS.Toolkit
         /* 0x58 */ public float PositionSpringTime;
         /* 0x5C */ public TkCurveType PositionCurve;
         // size: 0x2
-        public enum CoordinatesEnum {
+        public enum CoordinatesEnum : uint {
             Polar,
             Cartesian,
         }
         /* 0x60 */ public CoordinatesEnum Coordinates;
         // size: 0x2
-        public enum BlendOpEnum {
+        public enum BlendOpEnum : uint {
             Blend,
             Add,
         }

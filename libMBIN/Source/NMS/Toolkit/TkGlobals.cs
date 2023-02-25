@@ -6,7 +6,7 @@ namespace libMBIN.NMS.Toolkit
     public class TkGlobals : NMSTemplate
     {
         // size: 0x4
-        public enum AssertsLevelEnum {
+        public enum AssertsLevelEnum : uint {
             Disabled,
             Ignored,
             Skipped,

@@ -7,7 +7,7 @@ namespace libMBIN.NMS.Toolkit
     public class TkAnimVectorBlendNode : NMSTemplate
     {
         // size: 0x2
-        public enum BlendOperationEnum {
+        public enum BlendOperationEnum : uint {
             Blend,
             Add,
         }

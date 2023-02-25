@@ -4,7 +4,7 @@ namespace libMBIN.NMS.Toolkit
     public class TkUserServiceAuthProvider : NMSTemplate
     {
         // size: 0x7
-        public enum AuthProviderEnum {
+        public enum AuthProviderEnum : uint {
             Null,
             PSN,
             Steam,

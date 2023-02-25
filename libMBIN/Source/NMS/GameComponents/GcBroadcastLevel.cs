@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcBroadcastLevel : NMSTemplate
     {
         // size: 0x3
-        public enum BroadcastLevelEnum {
+        public enum BroadcastLevelEnum : uint {
             Scene,
             LocalModel,
             Local,

@@ -10,7 +10,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x14 */ public int Count;
         /* 0x18 */ public GcBuildingPartSearchType Type;
         // size: 0x2
-        public enum PartInCurrentBaseEnum {
+        public enum PartInCurrentBaseEnum : uint {
             DontCare,
             YesAllPlayerOwned,
         }

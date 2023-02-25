@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcCustomisationComponentData : NMSTemplate
     {
         // size: 0x17
-        public enum CustomisationDataTypeEnum {
+        public enum CustomisationDataTypeEnum : uint {
             Player,
             Vehicle,
             Weapon,

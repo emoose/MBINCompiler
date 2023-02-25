@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcScanData : NMSTemplate
     {
         // size: 0xB
-        public enum ScanTypeEnum {
+        public enum ScanTypeEnum : uint {
             Tool,
             Beacon,
             RadioTower,

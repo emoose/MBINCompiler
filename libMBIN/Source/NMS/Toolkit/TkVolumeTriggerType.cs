@@ -4,7 +4,7 @@ namespace libMBIN.NMS.Toolkit
     public class TkVolumeTriggerType : NMSTemplate
     {
         // size: 0x12
-        public enum VolumeTriggerTypeEnum {
+        public enum VolumeTriggerTypeEnum : uint {
             Open,
             GenericInterior,
             GenericGlassInterior,

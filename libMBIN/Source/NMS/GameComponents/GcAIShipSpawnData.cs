@@ -23,7 +23,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x174 */ public Vector2f Count;
         /* 0x17C */ public Vector2f StartTime;
         // size: 0x2
-        public enum SpawnShapeEnum {
+        public enum SpawnShapeEnum : uint {
             Sphere,
             Cone,
         }

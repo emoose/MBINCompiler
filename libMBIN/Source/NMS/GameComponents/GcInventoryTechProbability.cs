@@ -5,7 +5,7 @@ namespace libMBIN.NMS.GameComponents
     {
         /* 0x00 */ public NMSString0x10 Tech;
         // size: 0x4
-        public enum DesiredTechProbabilityEnum {
+        public enum DesiredTechProbabilityEnum : uint {
             Never,
             Rare,
             Common,

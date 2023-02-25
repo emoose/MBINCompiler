@@ -5,7 +5,7 @@ namespace libMBIN.NMS.GameComponents
     {
         /* 0x00 */ public NMSString0x10 TechId;
         // size: 0x7
-        public enum InventoryToInstallInEnum {
+        public enum InventoryToInstallInEnum : uint {
             Personal,
             PersonalTech,
             Ship,

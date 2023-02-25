@@ -8,7 +8,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x00 */ public List<NMSString0x10> TechList;
         /* 0x10 */ public bool FailIfAllKnown;
         // size: 0x3
-        public enum TechListRewardOrderEnum {
+        public enum TechListRewardOrderEnum : uint {
             OneRandom,
             InOrder,
             TryAllRandom,

@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcMechMeshPart : NMSTemplate
     {
         // size: 0x5
-        public enum MechMeshPartEnum {
+        public enum MechMeshPartEnum : uint {
             Scanner,
             Body,
             Legs,

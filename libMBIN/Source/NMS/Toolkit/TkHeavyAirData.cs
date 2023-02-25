@@ -25,7 +25,7 @@ namespace libMBIN.NMS.Toolkit
         /* 0x110 */ public Colour Colour1;
         /* 0x120 */ public Colour Colour2;
         // size: 0x3
-        public enum EmitterShapeEnum {
+        public enum EmitterShapeEnum : uint {
             Sphere,
             UpperHalfSphere,
             BottomHalfSphere,

@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcNameGeneratorSectorTypes : NMSTemplate
     {
         // size: 0xC
-        public enum SectorNameEnum {
+        public enum SectorNameEnum : uint {
             Generic,
             Elevated,
             Low,

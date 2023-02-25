@@ -5,7 +5,7 @@ namespace libMBIN.NMS.GameComponents
     {
         /* 0x00 */ public NMSString0x80 RequiredFace;
         // size: 0x3
-        public enum CanWalkEnum {
+        public enum CanWalkEnum : uint {
             None,
             RequireCanWalk,
             RequireCanNotWalk,

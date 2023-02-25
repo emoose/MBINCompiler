@@ -5,7 +5,7 @@ namespace libMBIN.NMS.Toolkit
     {
         /* 0x0 */ public int Amount;
         // size: 0x3
-        public enum RestrictionEnum {
+        public enum RestrictionEnum : uint {
             NoMoreThan,
             AtLeast,
             AtLeastIfICan,

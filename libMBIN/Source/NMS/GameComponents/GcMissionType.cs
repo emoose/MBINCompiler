@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcMissionType : NMSTemplate
     {
         // size: 0xB
-        public enum MissionTypeEnum {
+        public enum MissionTypeEnum : uint {
             SpaceCombat,
             GroundCombat,
             Research,

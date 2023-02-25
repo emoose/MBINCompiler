@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcCreaturePetTraits : NMSTemplate
     {
         // size: 0x3
-        public enum PetTraitEnum {
+        public enum PetTraitEnum : uint {
             Helpfulness,
             Aggression,
             Independence,

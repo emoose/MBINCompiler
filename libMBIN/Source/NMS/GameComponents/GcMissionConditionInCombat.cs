@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcMissionConditionInCombat : NMSTemplate
     {
         // size: 0x7
-        public enum CombatTypeEnum {
+        public enum CombatTypeEnum : uint {
             GroundCombat,
             SpaceCombat,
             FiendCombat,

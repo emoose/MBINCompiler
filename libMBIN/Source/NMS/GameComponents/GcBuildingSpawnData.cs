@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x73F5BCBDB2B9E02, NameHash = 0x2FE28DE7841506AF)]
+    [NMS(GUID = 0xFFDC604437C8CD16, NameHash = 0x2FE28DE7841506AF)]
     public class GcBuildingSpawnData : NMSTemplate
     {
         /* 0x000 */ public float Density;
@@ -31,5 +31,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x320 */ public Vector3f AABBMin;
         /* 0x330 */ public Vector3f AABBMax;
         /* 0x340 */ public bool BuildingSizeCalculated;
+        /* 0x341 */ public bool IgnoreParticlesAABB;
     }
 }

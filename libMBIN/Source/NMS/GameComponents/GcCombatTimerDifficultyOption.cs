@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcCombatTimerDifficultyOption : NMSTemplate
     {
         // size: 0x4
-        public enum CombatTimerDifficultyOptionEnum {
+        public enum CombatTimerDifficultyOptionEnum : uint {
             Off,
             Slow,
             Normal,

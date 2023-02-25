@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcStatsEnum : NMSTemplate
     {
         // size: 0x12
-        public enum StatEnumEnum {
+        public enum StatEnumEnum : uint {
             None,
             DEPOTS_BROKEN,
             FPODS_BROKEN,

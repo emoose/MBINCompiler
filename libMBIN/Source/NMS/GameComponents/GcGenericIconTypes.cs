@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcGenericIconTypes : NMSTemplate
     {
         // size: 0x6
-        public enum GenericIconTypeEnum {
+        public enum GenericIconTypeEnum : uint {
             None,
             Interaction,
             SpaceStation,

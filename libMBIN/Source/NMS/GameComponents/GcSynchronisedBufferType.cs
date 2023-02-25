@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcSynchronisedBufferType : NMSTemplate
     {
         // size: 0x4
-        public enum SyncBufferTypeEnum {
+        public enum SyncBufferTypeEnum : byte {
             Refiner,
             Example1,
             Example2,

@@ -28,7 +28,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x3884 */ public int Filter;
         /* 0x3888 */ public bool DamageNumbers;
         // size: 0x3
-        public enum PS4FixedFPSEnum {
+        public enum PS4FixedFPSEnum : uint {
             Invalid,
             False,
             True,
@@ -39,7 +39,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x3898 */ public bool XboxOneXHighResolutionMode;
         /* 0x3899 */ public bool PS4VignetteAndScanlines;
         // size: 0x3
-        public enum BaseSharingModeEnum {
+        public enum BaseSharingModeEnum : uint {
             Undecided,
             On,
             Off,
@@ -62,7 +62,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x3944 */ public bool Translate;
         /* 0x3945 */ public bool CrossPlatform;
         // size: 0x4
-        public enum TemperatureUnitEnum {
+        public enum TemperatureUnitEnum : uint {
             Invalid,
             C,
             F,
@@ -73,7 +73,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x3950 */ public int LastSeenCommunityMission;
         /* 0x3954 */ public int LastSeenCommunityMissionTier;
         // size: 0x2
-        public enum MovementModeEnum {
+        public enum MovementModeEnum : uint {
             Teleporter,
             Smooth,
         }
@@ -82,7 +82,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x3960 */ public GcMovementDirection MovementDirectionHands;
         /* 0x3964 */ public bool EnableControllerCursorInVR;
         // size: 0x2
-        public enum TurnModeEnum {
+        public enum TurnModeEnum : uint {
             Smooth,
             Snap,
         }
@@ -93,7 +93,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x3978 */ public float FrontendZoom;
         /* 0x397C */ public bool UseAutoTorch;
         // size: 0x4
-        public enum UIColourSchemeEnum {
+        public enum UIColourSchemeEnum : uint {
             Default,
             Protanopia,
             Deuteranopia,
@@ -113,7 +113,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x3998 */ public int CamerShakeStrength;
         /* 0x399C */ public int TriggerFeedbackStrength;
         // size: 0x3
-        public enum SpaceCombatFollowModeEnum {
+        public enum SpaceCombatFollowModeEnum : uint {
             Disabled,
             Hold,
             Toggle,
@@ -126,7 +126,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x39BB */ public bool SprintScanSwap;
         /* 0x39BC */ public bool PlaceJumpSwap;
         // size: 0x4
-        public enum EyeTrackingEnum {
+        public enum EyeTrackingEnum : uint {
             None,
             Both,
             Left,
@@ -140,7 +140,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x3A54 */ public float HazardEffectsStrength;
         /* 0x3A58 */ public bool QuickMenuBuildMenuSwap;
         // size: 0x2
-        public enum HighResVRUIEnum {
+        public enum HighResVRUIEnum : uint {
             High,
             Low,
         }

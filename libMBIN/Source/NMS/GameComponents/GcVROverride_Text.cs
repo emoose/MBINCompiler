@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcVROverride_Text : NMSTemplate
     {
         // size: 0x2
-        public enum VROverride_TextEnum {
+        public enum VROverride_TextEnum : uint {
             FontHeight,
             FontIndex,
         }

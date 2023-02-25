@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcHazardValueTypes : NMSTemplate
     {
         // size: 0x5
-        public enum HazardValueEnum {
+        public enum HazardValueEnum : uint {
             Ambient,
             Water,
             Cave,

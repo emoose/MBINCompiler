@@ -36,7 +36,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x580 */ public NMSString0x40 DocRenamedString64;
         /* 0x5C0 */ public NMSString0x20A DocOptionalRenamed;
         // size: 0x4
-        public enum DocOptionalEnumEnum {
+        public enum DocOptionalEnumEnum : uint {
             SomeValue1,
             SomeValue2,
             SomeValue3,
@@ -45,7 +45,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x5E0 */ public DocOptionalEnumEnum DocOptionalEnum;
         /* 0x5E8 */ public VariableSizeString TestDynamicString;
         // size: 0x4
-        public enum TestEnumEnum {
+        public enum TestEnumEnum : uint {
             Default,
             Option1,
             Option2,

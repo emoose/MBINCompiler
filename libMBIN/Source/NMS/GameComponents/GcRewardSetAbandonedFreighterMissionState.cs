@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcRewardSetAbandonedFreighterMissionState : NMSTemplate
     {
         // size: 0x6
-        public enum AbandonedFreighterMissionStateEnum {
+        public enum AbandonedFreighterMissionStateEnum : uint {
             EndRoomComplete,
             CrewManifestRead,
             CaptainsLogRead,

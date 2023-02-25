@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcBaseStatCondition : NMSTemplate
     {
         // size: 0x2
-        public enum BaseStatEnum {
+        public enum BaseStatEnum : uint {
             HasTeleporter,
             HasMainframe,
         }

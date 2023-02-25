@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcMonth : NMSTemplate
     {
         // size: 0xC
-        public enum MonthEnum {
+        public enum MonthEnum : uint {
             January,
             February,
             March,

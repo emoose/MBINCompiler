@@ -7,7 +7,7 @@ namespace libMBIN.NMS.GameComponents
     {
         /* 0x00 */ public NMSString0x10 CostTypeID;
         // size: 0x3
-        public enum TypeOfCostEnum {
+        public enum TypeOfCostEnum : uint {
             Currency,
             Substance,
             Product,

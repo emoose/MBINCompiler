@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcRewardChangeGlobalMission : NMSTemplate
     {
         // size: 0x4
-        public enum GlobalMissionEnum {
+        public enum GlobalMissionEnum : uint {
             Atlas,
             BlackHole,
             Anomaly,

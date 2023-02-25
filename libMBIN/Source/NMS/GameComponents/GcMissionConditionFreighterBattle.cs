@@ -6,7 +6,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcMissionConditionFreighterBattle : NMSTemplate
     {
         // size: 0x4
-        public enum FreighterBattleStatusEnum {
+        public enum FreighterBattleStatusEnum : uint {
             None,
             Active,
             Joined,

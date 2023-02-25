@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcMissionConditionHasCreatureEggItem : NMSTemplate
     {
         // size: 0x2
-        public enum EggItemTypeEnum {
+        public enum EggItemTypeEnum : uint {
             Egg,
             ValidCatalyst,
         }

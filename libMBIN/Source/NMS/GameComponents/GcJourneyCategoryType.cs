@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcJourneyCategoryType : NMSTemplate
     {
         // size: 0x3
-        public enum CategoryTypeEnum {
+        public enum CategoryTypeEnum : uint {
             Journey,
             Race,
             Guild,

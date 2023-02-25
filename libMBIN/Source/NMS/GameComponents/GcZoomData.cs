@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcZoomData : NMSTemplate
     {
         // size: 0x4
-        public enum ZoomTypeEnum {
+        public enum ZoomTypeEnum : uint {
             None,
             Far,
             Mid,

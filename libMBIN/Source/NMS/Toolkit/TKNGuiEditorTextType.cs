@@ -4,7 +4,7 @@ namespace libMBIN.NMS.Toolkit
     public class TKNGuiEditorTextType : NMSTemplate
     {
         // size: 0xE
-        public enum NGuiEditorTextEnum {
+        public enum NGuiEditorTextEnum : uint {
             Text,
             Button,
             WindowTab,

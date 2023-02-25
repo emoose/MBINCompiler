@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcExpeditionCategory : NMSTemplate
     {
         // size: 0x5
-        public enum ExpeditionCategoryEnum {
+        public enum ExpeditionCategoryEnum : uint {
             Combat,
             Exploration,
             Mining,

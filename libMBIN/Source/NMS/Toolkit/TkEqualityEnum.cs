@@ -4,7 +4,7 @@ namespace libMBIN.NMS.Toolkit
     public class TkEqualityEnum : NMSTemplate
     {
         // size: 0x5
-        public enum EqualityEnumEnum {
+        public enum EqualityEnumEnum : uint {
             Equal,
             Greater,
             Less,

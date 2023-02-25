@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcSentinelMechWeaponMode : NMSTemplate
     {
         // size: 0x3
-        public enum SentinelMechWeaponModeEnum {
+        public enum SentinelMechWeaponModeEnum : uint {
             Gun,
             Canon,
             Flamethrower,

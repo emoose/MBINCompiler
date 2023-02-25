@@ -8,7 +8,7 @@ namespace libMBIN.NMS.Toolkit
     {
         /* 0x00 */ public NMSString0x20 LocatorType;
         // size: 0x3
-        public enum MergeProbabilityOptionsEnum {
+        public enum MergeProbabilityOptionsEnum : uint {
             Balance,
             Prioritize,
             Replace,

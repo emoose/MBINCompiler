@@ -15,7 +15,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x110 */ public NMSString0x80 OSDMessageSubtitle;
         /* 0x190 */ public Colour OSDMessageColour;
         // size: 0x4
-        public enum OSDMessageStyleEnum {
+        public enum OSDMessageStyleEnum : uint {
             Standard,
             Fancy,
             Stats,

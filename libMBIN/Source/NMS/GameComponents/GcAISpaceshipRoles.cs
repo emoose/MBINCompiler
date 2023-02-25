@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcAISpaceshipRoles : NMSTemplate
     {
         // size: 0x7
-        public enum AIShipRoleEnum {
+        public enum AIShipRoleEnum : uint {
             Standard,
             PlayerSquadron,
             Freighter,

@@ -6,7 +6,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcFreighterBaseComponentData : NMSTemplate
     {
         // size: 0x2
-        public enum FreighterBaseGenerationModeEnum {
+        public enum FreighterBaseGenerationModeEnum : uint {
             Prefab,
             WFC,
         }

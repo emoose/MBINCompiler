@@ -4,7 +4,7 @@ namespace libMBIN.NMS.Toolkit
     public class TkLanguages : NMSTemplate
     {
         // size: 0x12
-        public enum LanguageEnum {
+        public enum LanguageEnum : uint {
             Default,
             English,
             USEnglish,

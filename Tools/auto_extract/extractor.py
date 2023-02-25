@@ -438,6 +438,18 @@ class EnumField(Field):
             self.is_flag = False
 
     @property
+    def enum_dtype(self) -> str:
+        if self.field_size == 0x4:
+            return 'uint'
+        elif self.field_size == 0x2:
+            return 'ushort'
+        elif self.field_size == 0x1:
+            return 'byte'
+        else:
+            raise ValueError(f'The field {self.field_name} has an unexpected '
+                             f'size: {self.field_size}')
+
+    @property
     def is_flag(self) -> bool:
         return self._is_flag
 
@@ -591,7 +603,7 @@ def read_class(
     if out_dir != './output':
         out_dir = op.join(out_dir, 'Source', 'NMS')
     # Add the folder to the output path directory
-    out_dir = op.join(out_dir, dir_)
+    out_dir = op.join(op.dirname(__file__), out_dir, dir_)
     if not op.exists(out_dir):
         os.makedirs(out_dir, exist_ok=True)
     fields, has_enum_arrays = extract(nms_mem, ptr_data, field_num)

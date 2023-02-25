@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcStatType : NMSTemplate
     {
         // size: 0x3
-        public enum StatTypeEnum {
+        public enum StatTypeEnum : uint {
             Int,
             Float,
             AvgRate,

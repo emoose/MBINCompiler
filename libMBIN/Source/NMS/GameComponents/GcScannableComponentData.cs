@@ -17,7 +17,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x34 */ public bool UseModelNode;
         /* 0x38 */ public GcScannerIconTypes Icon;
         // size: 0x5
-        public enum ScannableTypeEnum {
+        public enum ScannableTypeEnum : uint {
             Binoculars,
             BinocularsHotspots,
             Scanner,

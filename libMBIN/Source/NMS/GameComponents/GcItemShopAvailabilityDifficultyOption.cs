@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcItemShopAvailabilityDifficultyOption : NMSTemplate
     {
         // size: 0x3
-        public enum ItemShopAvailabilityDifficultyEnum {
+        public enum ItemShopAvailabilityDifficultyEnum : uint {
             High,
             Normal,
             Low,

@@ -9,7 +9,7 @@ namespace libMBIN.NMS.Toolkit
         /* 0x0C */ public int Offset;
         /* 0x10 */ public int Normalise;
         // size: 0x2
-        public enum InstancingEnum {
+        public enum InstancingEnum : uint {
             PerVertex,
             PerModel,
         }

@@ -6,7 +6,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x00 */ public NMSString0x10 LayerID;
         /* 0x10 */ public NMSString0x80 Data;
         // size: 0x4
-        public enum ActionEnum {
+        public enum ActionEnum : uint {
             Click,
             Hover,
             ArrowLeft,

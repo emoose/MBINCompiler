@@ -15,7 +15,7 @@ namespace libMBIN.NMS.Toolkit
         /* 0x024 */ public int ResolutionHeight;
         /* 0x028 */ public float ResolutionScale;
         // size: 0x4
-        public enum VsyncExEnum {
+        public enum VsyncExEnum : uint {
             Off,
             On,
             Adaptive,
@@ -32,7 +32,7 @@ namespace libMBIN.NMS.Toolkit
         /* 0x094 */ public int NumHighThreads;
         /* 0x098 */ public int NumLowThreads;
         // size: 0x4
-        public enum TextureStreamingVkEnum {
+        public enum TextureStreamingVkEnum : uint {
             Off,
             On,
             Auto,
@@ -45,7 +45,7 @@ namespace libMBIN.NMS.Toolkit
         /* 0x0A8 */ public bool UseTerrainTextureCache;
         /* 0x0A9 */ public bool UseArbSparseTexture;
         // size: 0x4
-        public enum HDRModeEnum {
+        public enum HDRModeEnum : uint {
             Off,
             HDR400,
             HDR600,

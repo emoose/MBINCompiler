@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcSentinelCoverState : NMSTemplate
     {
         // size: 0x4
-        public enum SentinelCoverStateEnum {
+        public enum SentinelCoverStateEnum : uint {
             Deploying,
             Deployed,
             ShuttingDown,

@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcBasePartAudioLocation : NMSTemplate
     {
         // size: 0x5
-        public enum BasePartAudioLocationEnum {
+        public enum BasePartAudioLocationEnum : uint {
             None,
             Freighter_SpaceWalk,
             Freighter_BioRoom,

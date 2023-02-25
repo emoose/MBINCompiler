@@ -7,7 +7,7 @@ namespace libMBIN.NMS.GameComponents
     {
         /* 0x00 */ public List<NMSString0x10> ProductList;
         // size: 0x4
-        public enum ProductListRewardOrderEnum {
+        public enum ProductListRewardOrderEnum : uint {
             OneRandom,
             InOrder,
             TryAllRandom,

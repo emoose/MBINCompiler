@@ -4,7 +4,7 @@ namespace libMBIN.NMS.Toolkit
     public class TkCoordinateOrientation : NMSTemplate
     {
         // size: 0x2
-        public enum CoordinateOrientationEnum {
+        public enum CoordinateOrientationEnum : uint {
             None,
             Random,
         }

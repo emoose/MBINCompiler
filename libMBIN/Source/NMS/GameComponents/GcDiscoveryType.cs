@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcDiscoveryType : NMSTemplate
     {
         // size: 0x11
-        public enum DiscoveryTypeEnum {
+        public enum DiscoveryTypeEnum : uint {
             Unknown,
             SolarSystem,
             Planet,

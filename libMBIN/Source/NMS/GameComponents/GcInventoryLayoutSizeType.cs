@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcInventoryLayoutSizeType : NMSTemplate
     {
         // size: 0x25
-        public enum SizeTypeEnum {
+        public enum SizeTypeEnum : uint {
             SciSmall,
             SciMedium,
             SciLarge,

@@ -5,7 +5,7 @@ namespace libMBIN.NMS.GameComponents
     {
         /* 0x00 */ public NMSString0x20A Event;
         // size: 0x6
-        public enum ScanEventTableEnum {
+        public enum ScanEventTableEnum : uint {
             Space,
             Planet,
             Missions,

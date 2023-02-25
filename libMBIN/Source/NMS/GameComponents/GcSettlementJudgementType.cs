@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcSettlementJudgementType : NMSTemplate
     {
         // size: 0x7
-        public enum SettlementJudgementTypeEnum {
+        public enum SettlementJudgementTypeEnum : uint {
             None,
             StrangerVisit,
             Policy,

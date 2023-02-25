@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcRewardRepairWholeInventory : NMSTemplate
     {
         // size: 0x8
-        public enum InventoryToRepairEnum {
+        public enum InventoryToRepairEnum : uint {
             Personal,
             PersonalTech,
             Ship,

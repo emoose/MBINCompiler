@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcPlanetClass : NMSTemplate
     {
         // size: 0x3
-        public enum PlanetClassEnum {
+        public enum PlanetClassEnum : uint {
             Default,
             Initial,
             InInitialSystem,

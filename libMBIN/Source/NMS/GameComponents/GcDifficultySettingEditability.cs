@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcDifficultySettingEditability : NMSTemplate
     {
         // size: 0x5
-        public enum DifficultySettingEditabilityEnum {
+        public enum DifficultySettingEditabilityEnum : uint {
             FullyEditable,
             IncreaseOnly,
             DecreaseOnly,

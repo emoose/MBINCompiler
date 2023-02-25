@@ -11,7 +11,7 @@
 {%- if field.is_flag %}
         [Flags]
 {%- endif %}
-        public enum {{ field.field_name }}Enum {% if field.requires_values %}: uint {% endif %}{
+        public enum {{ field.field_name }}Enum : {{ field.enum_dtype }} {
 {%- for enum_val in field.enum_data %}
             {{ enum_val[1] }}{% if field.requires_values %} = {{enum_val[0] }}{% endif %},
 {%- endfor %}

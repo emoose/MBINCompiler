@@ -6,7 +6,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x00 */ public NMSString0x10 Animation;
         /* 0x10 */ public NMSString0x10 DroneAnimation;
         // size: 0x8
-        public enum OriginEnum {
+        public enum OriginEnum : uint {
             SpaceStationInternals,
             SpaceStationBack,
             FreighterBattle,

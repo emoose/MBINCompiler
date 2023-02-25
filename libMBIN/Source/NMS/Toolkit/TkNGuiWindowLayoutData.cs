@@ -15,7 +15,7 @@ namespace libMBIN.NMS.Toolkit
         /* 0x1098 */ public float ScrollX;
         /* 0x109C */ public float ScrollY;
         // size: 0x3
-        public enum WindowStateEnum {
+        public enum WindowStateEnum : byte {
             Open,
             Minimised,
             Closed,

@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcSettlementStatStrength : NMSTemplate
     {
         // size: 0x7
-        public enum SettlementStatStrengthEnum {
+        public enum SettlementStatStrengthEnum : uint {
             PositiveWide,
             PositiveLarge,
             PositiveMedium,

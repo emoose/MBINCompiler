@@ -7,7 +7,7 @@ namespace libMBIN.NMS.GameComponents
     {
         /* 0x00 */ public List<NMSString0x10> Techs;
         // size: 0x1
-        public enum InventoryEnum {
+        public enum InventoryEnum : uint {
             Vehicle,
         }
         /* 0x10 */ public InventoryEnum Inventory;

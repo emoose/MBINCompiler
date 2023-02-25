@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcDefaultMissionSubstanceEnum : NMSTemplate
     {
         // size: 0x3
-        public enum DefaultSubstanceTypeEnum {
+        public enum DefaultSubstanceTypeEnum : uint {
             None,
             PrimarySubstance,
             SecondarySubstance,

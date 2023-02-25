@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcCreatureDiet : NMSTemplate
     {
         // size: 0x4
-        public enum DietEnum {
+        public enum DietEnum : uint {
             Carnivore,
             Omnivore,
             Herbivore,

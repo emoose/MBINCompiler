@@ -4,7 +4,7 @@ namespace libMBIN.NMS.Toolkit
     public class TkNoiseLayersEnum : NMSTemplate
     {
         // size: 0x8
-        public enum NoiseLayerTypesEnum {
+        public enum NoiseLayerTypesEnum : uint {
             Base,
             Hill,
             Mountain,

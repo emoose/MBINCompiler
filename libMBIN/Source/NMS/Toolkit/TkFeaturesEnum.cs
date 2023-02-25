@@ -4,7 +4,7 @@ namespace libMBIN.NMS.Toolkit
     public class TkFeaturesEnum : NMSTemplate
     {
         // size: 0x7
-        public enum FeatureTypesEnum {
+        public enum FeatureTypesEnum : uint {
             River,
             Crater,
             Arches,

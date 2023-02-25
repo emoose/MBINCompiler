@@ -4,7 +4,7 @@ namespace libMBIN.NMS.Toolkit
     public class TkEngineSettingTypes : NMSTemplate
     {
         // size: 0x32
-        public enum EngineSettingEnum {
+        public enum EngineSettingEnum : uint {
             FullScreen,
             Borderless,
             ResolutionWidth,

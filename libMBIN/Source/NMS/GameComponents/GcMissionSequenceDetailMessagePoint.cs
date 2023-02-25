@@ -5,7 +5,7 @@ namespace libMBIN.NMS.GameComponents
     {
         /* 0x00 */ public NMSString0x20A Text;
         // size: 0x3
-        public enum PointStateEnum {
+        public enum PointStateEnum : uint {
             Statement,
             ObjectiveIncomplete,
             ObjectiveComplete,

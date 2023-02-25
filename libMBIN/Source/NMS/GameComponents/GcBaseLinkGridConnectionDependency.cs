@@ -8,7 +8,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x00 */ public GcBaseLinkGridConnectionData Connection;
         /* 0x38 */ public int DependentRate;
         // size: 0x5
-        public enum DependentEffectEnum {
+        public enum DependentEffectEnum : uint {
             None,
             EnablesRate,
             DisablesRate,

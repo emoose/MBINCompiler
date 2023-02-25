@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcScannerIconHighlightTypes : NMSTemplate
     {
         // size: 0x5
-        public enum ScannerIconHighlightTypeEnum {
+        public enum ScannerIconHighlightTypeEnum : uint {
             Diamond,
             Hexagon,
             Tag,

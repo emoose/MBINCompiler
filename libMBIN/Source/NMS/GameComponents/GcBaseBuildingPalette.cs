@@ -10,7 +10,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x40 */ public NMSString0x20A Name;
         /* 0x60 */ public NMSString0x20A Id;
         // size: 0x4
-        public enum SwatchPrimaryColourEnum {
+        public enum SwatchPrimaryColourEnum : uint {
             Primary,
             Secondary,
             Ternary,
@@ -18,7 +18,7 @@ namespace libMBIN.NMS.GameComponents
         }
         /* 0x80 */ public SwatchPrimaryColourEnum SwatchPrimaryColour;
         // size: 0x4
-        public enum SwatchSecondaryColourEnum {
+        public enum SwatchSecondaryColourEnum : uint {
             Primary,
             Secondary,
             Ternary,

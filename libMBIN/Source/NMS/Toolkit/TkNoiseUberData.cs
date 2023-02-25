@@ -19,7 +19,7 @@ namespace libMBIN.NMS.Toolkit
         /* 0x34 */ public float RemapToMin;
         /* 0x38 */ public float RemapToMax;
         // size: 0x4
-        public enum DebugNoiseTypeEnum {
+        public enum DebugNoiseTypeEnum : uint {
             Plane,
             Check,
             Sine,

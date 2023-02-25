@@ -8,7 +8,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x00 */ public bool Claimed;
         /* 0x04 */ public GcPersistentBaseTypes Base;
         // size: 0x3
-        public enum IsOnCurrentSystemEnum {
+        public enum IsOnCurrentSystemEnum : uint {
             DontCare,
             Yes,
             No,

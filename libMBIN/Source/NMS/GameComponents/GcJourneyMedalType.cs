@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcJourneyMedalType : NMSTemplate
     {
         // size: 0xA
-        public enum MedalTypeEnum {
+        public enum MedalTypeEnum : uint {
             Standings,
             Missions,
             Words,

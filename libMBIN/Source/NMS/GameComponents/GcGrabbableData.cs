@@ -16,7 +16,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x3D */ public bool AutoGrab;
         /* 0x40 */ public float ToggleGrabTime;
         // size: 0x4
-        public enum GrabTypeEnum {
+        public enum GrabTypeEnum : uint {
             Default,
             EjectHandle,
             ControlStickLeft,

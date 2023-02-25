@@ -19,7 +19,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x0C8 */ public float StartTimeMax;
         /* 0x0CC */ public bool SpawnAlert;
         // size: 0x4
-        public enum SpawnerModeEnum {
+        public enum SpawnerModeEnum : uint {
             Hidden,
             Visible,
             HideOnSpawn,

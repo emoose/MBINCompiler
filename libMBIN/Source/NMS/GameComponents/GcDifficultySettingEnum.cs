@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcDifficultySettingEnum : NMSTemplate
     {
         // size: 0x1C
-        public enum DifficultySettingEnum {
+        public enum DifficultySettingEnum : uint {
             SettingsLocked,
             InventoriesAlwaysInRange,
             AllSlotsUnlocked,

@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcProceduralProductCategory : NMSTemplate
     {
         // size: 0x1A
-        public enum ProceduralProductCategoryEnum {
+        public enum ProceduralProductCategoryEnum : uint {
             Loot,
             Document,
             BioSample,

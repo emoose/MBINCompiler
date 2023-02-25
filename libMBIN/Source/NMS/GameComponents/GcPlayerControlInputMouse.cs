@@ -7,7 +7,7 @@ namespace libMBIN.NMS.GameComponents
     {
         /* 0x00 */ public GcCharacterControlInputValidity Validity;
         // size: 0x1
-        public enum InputMouseModeEnum {
+        public enum InputMouseModeEnum : uint {
             ScreenCentrePos,
         }
         /* 0x04 */ public InputMouseModeEnum InputMouseMode;

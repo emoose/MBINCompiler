@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcNetworkInterpolationComponentData : NMSTemplate
     {
         // size: 0x3
-        public enum SynchroniseScaleEnum {
+        public enum SynchroniseScaleEnum : uint {
             Never,
             Once,
             Always,

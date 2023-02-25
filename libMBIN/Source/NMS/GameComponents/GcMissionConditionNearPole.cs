@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcMissionConditionNearPole : NMSTemplate
     {
         // size: 0x2
-        public enum PoleConditionEnum {
+        public enum PoleConditionEnum : uint {
             North,
             South,
         }

@@ -7,7 +7,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcSimpleInteractionComponentData : NMSTemplate
     {
         // size: 0x24
-        public enum SimpleInteractionTypeEnum {
+        public enum SimpleInteractionTypeEnum : uint {
             Interact,
             Treasure,
             Beacon,

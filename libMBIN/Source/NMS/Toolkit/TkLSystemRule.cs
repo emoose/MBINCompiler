@@ -10,7 +10,7 @@ namespace libMBIN.NMS.Toolkit
         /* 0x20 */ public NMSString0x80 Model;
         /* 0xA0 */ public List<TkLSystemInnerRule> Rules;
         // size: 0x2
-        public enum RuleTypeEnum {
+        public enum RuleTypeEnum : uint {
             Default,
             BaseRule,
         }

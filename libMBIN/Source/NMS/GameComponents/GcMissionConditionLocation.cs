@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcMissionConditionLocation : NMSTemplate
     {
         // size: 0x1B
-        public enum MissionPlayerLocationEnum {
+        public enum MissionPlayerLocationEnum : uint {
             OnPlanet,
             OnPlanetInVehicle,
             InShipLanded,

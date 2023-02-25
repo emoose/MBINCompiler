@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcModelExplosionRule : NMSTemplate
     {
         // size: 0x4
-        public enum MatchNodeTypeEnum {
+        public enum MatchNodeTypeEnum : uint {
             Any,
             Mesh,
             Model,
@@ -12,14 +12,14 @@ namespace libMBIN.NMS.GameComponents
         }
         /* 0x00 */ public MatchNodeTypeEnum MatchNodeType;
         // size: 0x2
-        public enum MatchNameEnum {
+        public enum MatchNameEnum : uint {
             ContainsString,
             ExactString,
         }
         /* 0x04 */ public MatchNameEnum MatchName;
         /* 0x08 */ public NMSString0x20 String;
         // size: 0x4
-        public enum ExplodeActionEnum {
+        public enum ExplodeActionEnum : uint {
             RelativeToParent,
             DontMove,
             SaveCenter,

@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcPhotoCreature : NMSTemplate
     {
         // size: 0x3
-        public enum PhotoCreatureTypeEnum {
+        public enum PhotoCreatureTypeEnum : uint {
             Ground,
             Water,
             Air,

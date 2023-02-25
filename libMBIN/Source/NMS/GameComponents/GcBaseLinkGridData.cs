@@ -10,14 +10,14 @@ namespace libMBIN.NMS.GameComponents
         /* 0x38 */ public int Rate;
         /* 0x3C */ public int Storage;
         // size: 0x3
-        public enum DependsOnEnvironmentEnum {
+        public enum DependsOnEnvironmentEnum : uint {
             None,
             DayNight,
             Storms,
         }
         /* 0x40 */ public DependsOnEnvironmentEnum DependsOnEnvironment;
         // size: 0x4
-        public enum DependsOnHotspotsEnum {
+        public enum DependsOnHotspotsEnum : uint {
             None,
             Power,
             Mineral,

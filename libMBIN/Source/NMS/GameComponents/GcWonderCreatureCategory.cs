@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcWonderCreatureCategory : NMSTemplate
     {
         // size: 0xF
-        public enum WonderCreatureCategoryEnum {
+        public enum WonderCreatureCategoryEnum : uint {
             HerbivoreSizeMax,
             HerbivoreSizeMin,
             CarnivoreSizeMax,

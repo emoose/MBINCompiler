@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcCreatureRoles : NMSTemplate
     {
         // size: 0xB
-        public enum CreatureRoleEnum {
+        public enum CreatureRoleEnum : uint {
             None,
             Predator,
             PlayerPredator,

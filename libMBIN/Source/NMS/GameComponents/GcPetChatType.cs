@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcPetChatType : NMSTemplate
     {
         // size: 0x15
-        public enum PetChatTypeEnum {
+        public enum PetChatTypeEnum : uint {
             Adopted,
             Hatched,
             Summoned,

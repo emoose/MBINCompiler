@@ -5,7 +5,7 @@ namespace libMBIN.NMS.Toolkit
     {
         /* 0x0 */ public int OtherEmitterIndex;
         // size: 0x2
-        public enum EmissionRateTypeEnum {
+        public enum EmissionRateTypeEnum : uint {
             PerParticle,
             Distance,
         }

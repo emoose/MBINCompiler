@@ -9,7 +9,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x4 */ public GcInputActions Action;
         /* 0x8 */ public GcInputActions CanBeTriggeredBy;
         // size: 0x2
-        public enum InputRemapModeEnum {
+        public enum InputRemapModeEnum : uint {
             ReplaceOriginalBinding,
             AdditionalBinding,
         }

@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcPlayerSurvivalBarType : NMSTemplate
     {
         // size: 0x3
-        public enum SurvivalBarEnum {
+        public enum SurvivalBarEnum : uint {
             Health,
             Hazard,
             Energy,

@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcFiendCrime : NMSTemplate
     {
         // size: 0x9
-        public enum FiendCrimeEnum {
+        public enum FiendCrimeEnum : uint {
             None,
             EggDamaged,
             EggDestroyed,

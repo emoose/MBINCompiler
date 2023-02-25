@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcInputActions : NMSTemplate
     {
         // size: 0x123
-        public enum InputActionEnum {
+        public enum InputActionEnum : uint {
             Invalid,
             Player_Forward,
             Player_Back,

@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcMissionConditionNearObject : NMSTemplate
     {
         // size: 0x4
-        public enum MissionObjectEnum {
+        public enum MissionObjectEnum : uint {
             PlayerShip,
             PlayerVehicle,
             StoryPortal,

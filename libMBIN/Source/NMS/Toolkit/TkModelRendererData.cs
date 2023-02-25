@@ -9,14 +9,14 @@ namespace libMBIN.NMS.Toolkit
         /* 0x40 */ public float Fov;
         /* 0x44 */ public float AspectRatio;
         // size: 0x3
-        public enum ThumbnailModeEnum {
+        public enum ThumbnailModeEnum : uint {
             None,
             HUD,
             GUI,
         }
         /* 0x48 */ public ThumbnailModeEnum ThumbnailMode;
         // size: 0x4
-        public enum FocusTypeEnum {
+        public enum FocusTypeEnum : uint {
             ResourceBounds,
             ResourceBoundingHeight,
             NodeBoundingBox,

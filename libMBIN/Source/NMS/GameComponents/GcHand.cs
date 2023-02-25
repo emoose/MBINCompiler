@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcHand : NMSTemplate
     {
         // size: 0x2
-        public enum HandEnum {
+        public enum HandEnum : uint {
             Right,
             Left,
         }

@@ -13,7 +13,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x20 */ public int MaxCapacity;
         /* 0x24 */ public float AmountEmptyTimePeriod;
         // size: 0x3
-        public enum UpdateTypeEnum {
+        public enum UpdateTypeEnum : uint {
             UpdatesAlways,
             UpdateOnlyWhenComplete,
             UpdateOnlyWhenNotComplete,
@@ -22,14 +22,14 @@ namespace libMBIN.NMS.GameComponents
         /* 0x2C */ public int DamagedAfterTimePeriodMin;
         /* 0x30 */ public int DamagedAfterTimePeriodMax;
         // size: 0x3
-        public enum DamageStatusEnum {
+        public enum DamageStatusEnum : uint {
             Damaged,
             Repaired,
             Random,
         }
         /* 0x34 */ public DamageStatusEnum DamageStatus;
         // size: 0x8
-        public enum CompletionRequirementEnum {
+        public enum CompletionRequirementEnum : uint {
             FullyChargedAndRepaired,
             AnyChargeAndRepaired,
             FullyRepaired,

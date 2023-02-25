@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcCombatEffectType : NMSTemplate
     {
         // size: 0x4
-        public enum CombatEffectTypeEnum {
+        public enum CombatEffectTypeEnum : uint {
             None,
             Fire,
             Stun,

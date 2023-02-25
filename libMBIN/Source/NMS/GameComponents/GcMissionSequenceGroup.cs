@@ -26,14 +26,14 @@ namespace libMBIN.NMS.GameComponents
         /* 0x1DC */ public GcMissionConditionTest ConditionTest;
         /* 0x1E0 */ public bool HideFromLogIfConditionsMet;
         // size: 0x3
-        public enum RepeatLogicEnum {
+        public enum RepeatLogicEnum : uint {
             None,
             Loop,
             RestartOnConditionFail,
         }
         /* 0x1E4 */ public RepeatLogicEnum RepeatLogic;
         // size: 0x4
-        public enum IconStyleEnum {
+        public enum IconStyleEnum : uint {
             Default,
             Large,
             Square,

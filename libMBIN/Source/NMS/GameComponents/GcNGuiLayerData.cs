@@ -13,7 +13,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x2D0 */ public List<NMSTemplate> Children;
         /* 0x2E0 */ public NMSString0x80 DataFilename;
         // size: 0x3
-        public enum AltModeEnum {
+        public enum AltModeEnum : uint {
             None,
             Normal,
             Alt,

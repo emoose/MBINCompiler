@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcLookAtComponentData : NMSTemplate
     {
         // size: 0x1
-        public enum LookAtTypeEnum {
+        public enum LookAtTypeEnum : uint {
             Player,
         }
         /* 0x00 */ public LookAtTypeEnum LookAtType;

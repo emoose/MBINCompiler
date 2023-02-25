@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcSettlementStatType : NMSTemplate
     {
         // size: 0x7
-        public enum SettlementStatTypeEnum {
+        public enum SettlementStatTypeEnum : uint {
             Population,
             Happiness,
             Production,

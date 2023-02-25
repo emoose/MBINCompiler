@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcFrigateTraitStrength : NMSTemplate
     {
         // size: 0xA
-        public enum FrigateTraitStrengthEnum {
+        public enum FrigateTraitStrengthEnum : uint {
             NegativeLarge,
             NegativeMedium,
             NegativeSmall,

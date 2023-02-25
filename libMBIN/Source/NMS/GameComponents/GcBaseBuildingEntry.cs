@@ -48,7 +48,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x18D */ public bool RemovesWhenUnsnapped;
         /* 0x18E */ public bool EditsTerrain;
         // size: 0x2
-        public enum BaseTerrainEditShapeEnum {
+        public enum BaseTerrainEditShapeEnum : uint {
             Cube,
             Cylinder,
         }

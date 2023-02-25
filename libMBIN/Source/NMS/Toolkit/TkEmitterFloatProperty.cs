@@ -6,7 +6,7 @@ namespace libMBIN.NMS.Toolkit
     public class TkEmitterFloatProperty : NMSTemplate
     {
         // size: 0x3
-        public enum AuthoringEnum {
+        public enum AuthoringEnum : uint {
             FixedValue,
             RandomRangeFloat,
             Curves,

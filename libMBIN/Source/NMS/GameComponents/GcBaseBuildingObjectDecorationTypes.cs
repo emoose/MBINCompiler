@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcBaseBuildingObjectDecorationTypes : NMSTemplate
     {
         // size: 0x7
-        public enum BaseBuildingDecorationTypeEnum {
+        public enum BaseBuildingDecorationTypeEnum : uint {
             Normal,
             SurfaceNormal,
             Ceiling,

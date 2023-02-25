@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcTechnologyCategory : NMSTemplate
     {
         // size: 0xE
-        public enum TechnologyCategoryEnum {
+        public enum TechnologyCategoryEnum : uint {
             Ship,
             Weapon,
             Suit,

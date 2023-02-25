@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcMessageCrime : NMSTemplate
     {
         // size: 0xD
-        public enum CrimeEnum {
+        public enum CrimeEnum : uint {
             AttackCreature,
             AttackSentinel,
             AttackSentinelLaser,

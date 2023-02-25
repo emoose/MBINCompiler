@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcNPCSettlementBehaviourAreaProperty : NMSTemplate
     {
         // size: 0x2
-        public enum NPCSettlementBehaviourAreaPropertyEnum {
+        public enum NPCSettlementBehaviourAreaPropertyEnum : uint {
             ContainsPlayer,
             ContainsNPCs,
         }

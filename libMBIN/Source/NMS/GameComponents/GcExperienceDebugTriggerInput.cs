@@ -7,7 +7,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcExperienceDebugTriggerInput : NMSTemplate
     {
         // size: 0xD
-        public enum KeyPressEnum {
+        public enum KeyPressEnum : uint {
             _1,
             _2,
             _3,

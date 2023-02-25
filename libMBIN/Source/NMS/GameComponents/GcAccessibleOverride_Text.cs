@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcAccessibleOverride_Text : NMSTemplate
     {
         // size: 0x1
-        public enum AccessibleOverride_TextEnum {
+        public enum AccessibleOverride_TextEnum : uint {
             FontHeight,
         }
         /* 0x0 */ public AccessibleOverride_TextEnum AccessibleOverride_Text;

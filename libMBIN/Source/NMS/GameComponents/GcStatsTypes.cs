@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcStatsTypes : NMSTemplate
     {
         // size: 0xBD
-        public enum StatsTypeEnum {
+        public enum StatsTypeEnum : uint {
             Unspecified,
             Weapon_Laser,
             Weapon_Laser_Damage,

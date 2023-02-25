@@ -4,7 +4,7 @@ namespace libMBIN.NMS.Toolkit
     public class TkInputValidation : NMSTemplate
     {
         // size: 0x4
-        public enum InputValidationEnum {
+        public enum InputValidationEnum : uint {
             Held,
             Pressed,
             Released,

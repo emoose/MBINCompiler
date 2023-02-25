@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcRewardSignalScan : NMSTemplate
     {
         // size: 0x8
-        public enum SignalScanTypeEnum {
+        public enum SignalScanTypeEnum : uint {
             None,
             DropPod,
             Shelter,

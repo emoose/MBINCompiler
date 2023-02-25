@@ -4,7 +4,7 @@ namespace libMBIN.NMS.Toolkit
     public class TkMaterialAlternative : NMSTemplate
     {
         // size: 0x4
-        public enum TextureTypeEnum {
+        public enum TextureTypeEnum : uint {
             Diffuse,
             Normal,
             Ambient,

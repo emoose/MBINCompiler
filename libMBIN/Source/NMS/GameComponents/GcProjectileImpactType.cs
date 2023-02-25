@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcProjectileImpactType : NMSTemplate
     {
         // size: 0x11
-        public enum ImpactEnum {
+        public enum ImpactEnum : uint {
             Default,
             Terrain,
             Substance,

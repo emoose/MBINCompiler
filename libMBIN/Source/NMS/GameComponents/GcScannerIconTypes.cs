@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcScannerIconTypes : NMSTemplate
     {
         // size: 0x36
-        public enum ScanIconTypeEnum {
+        public enum ScanIconTypeEnum : uint {
             None,
             Health,
             Shield,

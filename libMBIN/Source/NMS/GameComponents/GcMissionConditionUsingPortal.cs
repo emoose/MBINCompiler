@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcMissionConditionUsingPortal : NMSTemplate
     {
         // size: 0x3
-        public enum PortalTypeEnum {
+        public enum PortalTypeEnum : uint {
             Any,
             Story,
             NotStory,

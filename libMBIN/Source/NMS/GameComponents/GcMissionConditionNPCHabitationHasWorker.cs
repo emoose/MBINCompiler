@@ -7,7 +7,7 @@ namespace libMBIN.NMS.GameComponents
     {
         /* 0x0 */ public GcNPCHabitationType WorkerType;
         // size: 0x3
-        public enum WorkerInCurrentBaseEnum {
+        public enum WorkerInCurrentBaseEnum : uint {
             DontCare,
             Yes,
             No,

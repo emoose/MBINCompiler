@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcFontTypesEnum : NMSTemplate
     {
         // size: 0x8
-        public enum FontEnum {
+        public enum FontEnum : uint {
             Impact,
             Bebas,
             GeosansLightWide,

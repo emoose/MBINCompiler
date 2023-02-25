@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcSubstanceCollectionDifficultyOption : NMSTemplate
     {
         // size: 0x3
-        public enum SubstanceCollectionDifficultyEnum {
+        public enum SubstanceCollectionDifficultyEnum : uint {
             High,
             Normal,
             Low,

@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcByteBeatWave : NMSTemplate
     {
         // size: 0x4
-        public enum ByteBeatWaveEnum {
+        public enum ByteBeatWaveEnum : uint {
             SawTooth,
             Sine,
             Square,

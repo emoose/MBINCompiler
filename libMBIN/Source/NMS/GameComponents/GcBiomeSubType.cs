@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcBiomeSubType : NMSTemplate
     {
         // size: 0x1B
-        public enum BiomeSubTypeEnum {
+        public enum BiomeSubTypeEnum : uint {
             None,
             Standard,
             HighQuality,

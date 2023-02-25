@@ -12,7 +12,7 @@ namespace libMBIN.NMS.Toolkit
         /* 0x00A */ public bool Hemisphere;
         /* 0x00C */ public TkNoiseVoxelTypeEnum VoxelType;
         // size: 0x16
-        public enum NoiseGridTypeEnum {
+        public enum NoiseGridTypeEnum : uint {
             Cube,
             Cone,
             Torus,

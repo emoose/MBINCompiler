@@ -14,7 +14,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x1A */ public bool LaserHeatBoost;
         /* 0x1C */ public GcNodeID Node;
         // size: 0x3
-        public enum HitTypeEnum {
+        public enum HitTypeEnum : uint {
             Shootable,
             Terrain,
             Generic,

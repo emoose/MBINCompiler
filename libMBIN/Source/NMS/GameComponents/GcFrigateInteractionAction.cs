@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcFrigateInteractionAction : NMSTemplate
     {
         // size: 0x3
-        public enum ActionTypeEnum {
+        public enum ActionTypeEnum : uint {
             Repair,
             UpdateDamagedComponents,
             CargoPhoneCall,

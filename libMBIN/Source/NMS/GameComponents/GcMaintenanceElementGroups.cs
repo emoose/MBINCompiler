@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcMaintenanceElementGroups : NMSTemplate
     {
         // size: 0x7
-        public enum MaintenanceGroupEnum {
+        public enum MaintenanceGroupEnum : uint {
             Custom,
             Farming,
             Fuelling,

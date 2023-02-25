@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcMechMeshType : NMSTemplate
     {
         // size: 0x2
-        public enum MechMeshTypeEnum {
+        public enum MechMeshTypeEnum : uint {
             Exocraft,
             Sentinel,
         }

@@ -6,7 +6,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcGeneratorUnitComponentData : NMSTemplate
     {
         // size: 0x3
-        public enum GeneratorUnitTypeEnum {
+        public enum GeneratorUnitTypeEnum : uint {
             MiningUnit,
             GasHarvester,
             SystemHoover,

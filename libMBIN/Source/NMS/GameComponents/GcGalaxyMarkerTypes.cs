@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcGalaxyMarkerTypes : NMSTemplate
     {
         // size: 0x10
-        public enum GalaxyMarkerTypeEnum {
+        public enum GalaxyMarkerTypeEnum : uint {
             StartingLocation,
             Home,
             Waypoint,

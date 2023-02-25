@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcMissionGalacticFeature : NMSTemplate
     {
         // size: 0x3
-        public enum GalacticFeatureEnum {
+        public enum GalacticFeatureEnum : uint {
             Anomaly,
             Atlas,
             BlackHole,

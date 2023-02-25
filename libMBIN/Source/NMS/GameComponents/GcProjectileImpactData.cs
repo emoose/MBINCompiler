@@ -8,13 +8,13 @@ namespace libMBIN.NMS.GameComponents
         /* 0x00 */ public NMSString0x10 Effect;
         /* 0x10 */ public GcProjectileImpactType Impact;
         // size: 0x2
-        public enum ImpactAlignmentEnum {
+        public enum ImpactAlignmentEnum : uint {
             ImpactNormal,
             GravityUp,
         }
         /* 0x14 */ public ImpactAlignmentEnum ImpactAlignment;
         // size: 0x2
-        public enum ImpactAttachmentEnum {
+        public enum ImpactAttachmentEnum : uint {
             World,
             HitBody,
         }

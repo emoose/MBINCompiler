@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcActionUseType : NMSTemplate
     {
         // size: 0x7
-        public enum ActionUseTypeEnum {
+        public enum ActionUseTypeEnum : uint {
             Active,
             ActiveVR,
             ActiveXbox,

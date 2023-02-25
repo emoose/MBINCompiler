@@ -18,7 +18,7 @@ namespace libMBIN.NMS.Toolkit
         /* 0x1D4 */ public TkCurveType AnimCurve1;
         /* 0x1D5 */ public TkCurveType AnimCurve2;
         // size: 0x6
-        public enum AnimateEnum {
+        public enum AnimateEnum : byte {
             None,
             WipeRightToLeft,
             SimpleWipe,

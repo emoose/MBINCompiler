@@ -18,7 +18,7 @@ namespace libMBIN.NMS.Toolkit
         /* 0xB0 */ public Colour ColourOrigin;
         /* 0xC0 */ public Colour ColourEnd;
         // size: 0x2
-        public enum LinesPositionEnum {
+        public enum LinesPositionEnum : uint {
             Absolute,
             Relative,
         }

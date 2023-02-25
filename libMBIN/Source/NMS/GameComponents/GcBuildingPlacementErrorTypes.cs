@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcBuildingPlacementErrorTypes : NMSTemplate
     {
         // size: 0x16
-        public enum InvalidPlacementReasonEnum {
+        public enum InvalidPlacementReasonEnum : uint {
             Offline,
             InvalidBiome,
             InvalidAboveWater,

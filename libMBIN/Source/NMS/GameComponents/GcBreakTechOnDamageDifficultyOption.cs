@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcBreakTechOnDamageDifficultyOption : NMSTemplate
     {
         // size: 0x3
-        public enum BreakTechOnDamageProbabilityEnum {
+        public enum BreakTechOnDamageProbabilityEnum : uint {
             None,
             Low,
             High,

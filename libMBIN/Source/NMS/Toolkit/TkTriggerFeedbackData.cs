@@ -4,7 +4,7 @@ namespace libMBIN.NMS.Toolkit
     public class TkTriggerFeedbackData : NMSTemplate
     {
         // size: 0x4
-        public enum FeedbackTypeEnum {
+        public enum FeedbackTypeEnum : uint {
             None,
             Feedback,
             Weapon,

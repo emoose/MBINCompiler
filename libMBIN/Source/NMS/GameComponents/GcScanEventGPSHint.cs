@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcScanEventGPSHint : NMSTemplate
     {
         // size: 0x7
-        public enum ScanEventGPSHintEnum {
+        public enum ScanEventGPSHintEnum : uint {
             None,
             Accurate,
             OffsetNarrow,

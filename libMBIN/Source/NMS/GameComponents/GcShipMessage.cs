@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcShipMessage : NMSTemplate
     {
         // size: 0x2
-        public enum MessageTypeEnum {
+        public enum MessageTypeEnum : uint {
             Leave,
             Fight,
         }

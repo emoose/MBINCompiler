@@ -20,7 +20,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x38 */ public NMSString0x20A MultiplayerMissionInitialWarpScanEvent;
         /* 0x58 */ public List<NMSString0x20A> DefaultItemInitialWarpScanEvents;
         // size: 0x5
-        public enum DefaultItemTypeForInitialWarpEnum {
+        public enum DefaultItemTypeForInitialWarpEnum : uint {
             None,
             PrimaryProduct,
             PrimarySubstance,

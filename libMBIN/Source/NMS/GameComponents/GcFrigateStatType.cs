@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcFrigateStatType : NMSTemplate
     {
         // size: 0xB
-        public enum FrigateStatTypeEnum {
+        public enum FrigateStatTypeEnum : uint {
             Combat,
             Exploration,
             Mining,

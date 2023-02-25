@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcSolarSystemClass : NMSTemplate
     {
         // size: 0x4
-        public enum SolarSystemClassEnum {
+        public enum SolarSystemClassEnum : uint {
             Default,
             Initial,
             Anomaly,

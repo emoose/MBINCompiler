@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcAntagonistGroup : NMSTemplate
     {
         // size: 0x6
-        public enum AntagonistGroupEnum {
+        public enum AntagonistGroupEnum : uint {
             Player,
             Fiends,
             Creatures,

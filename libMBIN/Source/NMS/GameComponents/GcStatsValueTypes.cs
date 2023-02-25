@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcStatsValueTypes : NMSTemplate
     {
         // size: 0x4
-        public enum StatsValueEnum {
+        public enum StatsValueEnum : uint {
             DistanceJetpacked,
             DistanceWalked,
             DistanceWarped,

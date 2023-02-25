@@ -9,7 +9,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x0 */ public GcDifficultyPresetType DifficultyPreset;
         // size: 0x2
         [Flags]
-        public enum PersistentBaseDifficultyFlagsEnum {
+        public enum PersistentBaseDifficultyFlagsEnum : uint {
             None,
             Locked,
         }

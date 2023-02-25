@@ -9,7 +9,7 @@ namespace libMBIN.NMS.GameComponents
     {
         /* 0x000 */ public NMSString0x10 MissionID;
         // size: 0x7
-        public enum MissionClassEnum {
+        public enum MissionClassEnum : uint {
             Primary,
             Secondary,
             ChainedSecondary,
@@ -45,14 +45,14 @@ namespace libMBIN.NMS.GameComponents
         /* 0x388 */ public bool PrefixTitle;
         /* 0x390 */ public NMSString0x10 NextMissionHint;
         // size: 0x3
-        public enum MessageCompleteEnum {
+        public enum MessageCompleteEnum : uint {
             Default,
             Always,
             Never,
         }
         /* 0x3A0 */ public MessageCompleteEnum MessageComplete;
         // size: 0x3
-        public enum MessageStartEnum {
+        public enum MessageStartEnum : uint {
             Default,
             Always,
             Never,
@@ -60,7 +60,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x3A4 */ public MessageStartEnum MessageStart;
         /* 0x3A8 */ public GcMissionBoardOptions MissionBoardOptions;
         // size: 0x4
-        public enum AutoStartEnum {
+        public enum AutoStartEnum : uint {
             None,
             AllModes,
             Seasonal,

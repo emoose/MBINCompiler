@@ -8,7 +8,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x00 */ public GcGenericIconTypes Icon;
         /* 0x04 */ public float Radius;
         // size: 0x3
-        public enum DisplayModeEnum {
+        public enum DisplayModeEnum : uint {
             Always,
             SpaceOnly,
             PlanetOnly,

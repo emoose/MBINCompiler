@@ -7,7 +7,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcRewardTableItemList : NMSTemplate
     {
         // size: 0xA
-        public enum RewardChoiceEnum {
+        public enum RewardChoiceEnum : uint {
             GiveAll,
             Select,
             SelectAlways,

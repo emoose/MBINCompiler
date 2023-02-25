@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcMissionFaction : NMSTemplate
     {
         // size: 0x9
-        public enum MissionFactionEnum {
+        public enum MissionFactionEnum : uint {
             Gek,
             Korvax,
             Vykeen,

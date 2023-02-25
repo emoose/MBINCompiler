@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcNPCHabitationType : NMSTemplate
     {
         // size: 0x5
-        public enum NPCHabitationTypeEnum {
+        public enum NPCHabitationTypeEnum : uint {
             WeaponsExpert,
             Farmer,
             Builder,

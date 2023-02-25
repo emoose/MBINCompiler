@@ -7,7 +7,7 @@ namespace libMBIN.NMS.Toolkit
     {
         /* 0x000 */ public NMSString0x80 ExternalMaterial;
         // size: 0x7
-        public enum ShaderEnum {
+        public enum ShaderEnum : uint {
             UberShader,
             Sky,
             Screen,
@@ -71,7 +71,7 @@ namespace libMBIN.NMS.Toolkit
         /* 0x3F8 */ public bool DecalDiffuse;
         /* 0x3F9 */ public bool DecalTerrainOnly;
         // size: 0x3
-        public enum DecalNormalEnum {
+        public enum DecalNormalEnum : uint {
             None,
             Decal,
             Vertex,

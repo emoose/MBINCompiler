@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcPlanetLife : NMSTemplate
     {
         // size: 0x4
-        public enum LifeSettingEnum {
+        public enum LifeSettingEnum : uint {
             Dead,
             Low,
             Mid,

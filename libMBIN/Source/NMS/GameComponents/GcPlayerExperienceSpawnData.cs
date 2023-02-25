@@ -10,7 +10,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x20 */ public NMSString0x10 SpawnLocator;
         /* 0x30 */ public NMSString0x20A SpawnLocatorScanEvent;
         // size: 0x3
-        public enum FaceDirEnum {
+        public enum FaceDirEnum : uint {
             Random,
             TowardsPlayer,
             SpawnerAt,

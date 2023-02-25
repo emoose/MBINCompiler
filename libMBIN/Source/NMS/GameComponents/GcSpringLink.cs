@@ -11,7 +11,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x060 */ public Vector3f CentreOfMassLocal;
         /* 0x070 */ public Vector3f PivotLocal;
         // size: 0x4
-        public enum PivotAnchorsToEnum {
+        public enum PivotAnchorsToEnum : uint {
             Itself,
             Parent,
             Node,
@@ -29,7 +29,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x0F8 */ public bool SpringPivots;
         /* 0x0F9 */ public bool ApplySpringInMovingFrame;
         // size: 0x5
-        public enum ApplyMotionScaleInEnum {
+        public enum ApplyMotionScaleInEnum : uint {
             Disabled,
             Uniform,
             Itself,
@@ -40,7 +40,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x100 */ public float MotionScale_Uniform;
         /* 0x110 */ public Vector3f MotionScale;
         // size: 0x5
-        public enum ApplyMotionLimitsInEnum {
+        public enum ApplyMotionLimitsInEnum : uint {
             Disabled,
             Uniform,
             Itself,
@@ -60,7 +60,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x174 */ public float AngularNaturalFrequency;
         /* 0x178 */ public float ApplyAngularSpringInMovingFrame;
         // size: 0x5
-        public enum ApplyAngularMotionScaleInEnum {
+        public enum ApplyAngularMotionScaleInEnum : uint {
             Disabled,
             Uniform,
             Itself,
@@ -71,7 +71,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x180 */ public float AngularMotionScale_Uniform;
         /* 0x190 */ public Vector3f AngularMotionScale;
         // size: 0x4
-        public enum ApplyAngularLimitsInEnum {
+        public enum ApplyAngularLimitsInEnum : uint {
             Disabled,
             Itself,
             Parent,

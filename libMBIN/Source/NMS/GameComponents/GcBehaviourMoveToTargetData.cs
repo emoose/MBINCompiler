@@ -8,7 +8,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x00 */ public NMSString0x10 TargetKey;
         /* 0x10 */ public TkBlackboardDefaultValueFloat ArriveDist;
         // size: 0x3
-        public enum BehaviourMoveSpeedEnum {
+        public enum BehaviourMoveSpeedEnum : uint {
             Normal,
             Fast,
             Dynamic,

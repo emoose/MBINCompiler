@@ -15,7 +15,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x1C0 */ public NMSString0x80 Description;
         /* 0x240 */ public Colour Colour;
         // size: 0x6
-        public enum QualityEnum {
+        public enum QualityEnum : uint {
             Normal,
             Rare,
             Epic,

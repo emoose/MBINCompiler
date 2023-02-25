@@ -25,28 +25,28 @@ namespace libMBIN.NMS.GameComponents
         /* 0x0B8 */ public float StandardGravityScale;
         /* 0x0BC */ public NMSString0x40 InitialShapeReferenceBone;
         // size: 0x3
-        public enum ScaleInTransformApplicationOnClothEnum {
+        public enum ScaleInTransformApplicationOnClothEnum : uint {
             Multiply,
             Divide,
             Ignore,
         }
         /* 0x0FC */ public ScaleInTransformApplicationOnClothEnum ScaleInTransformApplicationOnCloth;
         // size: 0x3
-        public enum ScaleInTransformApplicationOnCollisionEnum {
+        public enum ScaleInTransformApplicationOnCollisionEnum : uint {
             Multiply,
             Divide,
             Ignore,
         }
         /* 0x100 */ public ScaleInTransformApplicationOnCollisionEnum ScaleInTransformApplicationOnCollision;
         // size: 0x3
-        public enum ScaleInTransformApplicationOnAttachmentEnum {
+        public enum ScaleInTransformApplicationOnAttachmentEnum : uint {
             Multiply,
             Divide,
             Ignore,
         }
         /* 0x104 */ public ScaleInTransformApplicationOnAttachmentEnum ScaleInTransformApplicationOnAttachment;
         // size: 0x3
-        public enum InitialShapeSourceEnum {
+        public enum InitialShapeSourceEnum : uint {
             Rectangular,
             TakenFromRenderMesh,
             Saved,

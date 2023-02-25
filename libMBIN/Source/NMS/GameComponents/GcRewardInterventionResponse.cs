@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcRewardInterventionResponse : NMSTemplate
     {
         // size: 0x4
-        public enum ResponseTypeEnum {
+        public enum ResponseTypeEnum : uint {
             DontIntervene,
             InterveneWithMission,
             MissionSuccess,

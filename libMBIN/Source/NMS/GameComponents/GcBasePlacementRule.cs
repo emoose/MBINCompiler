@@ -10,7 +10,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x90 */ public NMSString0x20A PartID;
         /* 0xB0 */ public bool ORConditions;
         // size: 0x5
-        public enum TwinCriteriaEnum {
+        public enum TwinCriteriaEnum : uint {
             None,
             MoveToTwin,
             StretchToTwin,

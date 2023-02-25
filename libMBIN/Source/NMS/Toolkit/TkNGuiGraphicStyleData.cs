@@ -22,7 +22,7 @@ namespace libMBIN.NMS.Toolkit
         /* 0x7C */ public float StrokeGradientOffset;
         /* 0x80 */ public float StrokeGradientFeather;
         // size: 0x8
-        public enum ShapeEnum {
+        public enum ShapeEnum : byte {
             Rectangle,
             Ellipse,
             Line,
@@ -34,7 +34,7 @@ namespace libMBIN.NMS.Toolkit
         }
         /* 0x84 */ public ShapeEnum Shape;
         // size: 0x6
-        public enum GradientEnum {
+        public enum GradientEnum : byte {
             None,
             Vertical,
             Horizontal,

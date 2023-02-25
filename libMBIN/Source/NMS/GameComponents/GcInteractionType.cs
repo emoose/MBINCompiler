@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcInteractionType : NMSTemplate
     {
         // size: 0x83
-        public enum InteractionTypeEnum {
+        public enum InteractionTypeEnum : uint {
             None,
             Shop,
             NPC,

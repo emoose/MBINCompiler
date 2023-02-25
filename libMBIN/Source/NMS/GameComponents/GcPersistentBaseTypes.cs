@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcPersistentBaseTypes : NMSTemplate
     {
         // size: 0x9
-        public enum PersistentBaseTypesEnum {
+        public enum PersistentBaseTypesEnum : uint {
             HomePlanetBase,
             FreighterBase,
             ExternalPlanetBase,

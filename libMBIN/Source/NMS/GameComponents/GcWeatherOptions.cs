@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcWeatherOptions : NMSTemplate
     {
         // size: 0x10
-        public enum WeatherEnum {
+        public enum WeatherEnum : uint {
             Clear,
             Dust,
             Humid,

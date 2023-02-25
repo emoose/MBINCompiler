@@ -9,7 +9,7 @@ namespace libMBIN.NMS.Toolkit
         /* 0x020 */ public TkPaletteTexture Palette;
         /* 0x028 */ public float Probability;
         // size: 0x3
-        public enum TextureGameplayUseEnum {
+        public enum TextureGameplayUseEnum : uint {
             IgnoreName,
             MatchName,
             DoNotMatchName,

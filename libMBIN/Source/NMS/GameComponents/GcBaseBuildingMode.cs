@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcBaseBuildingMode : NMSTemplate
     {
         // size: 0x5
-        public enum BaseBuildingModeEnum {
+        public enum BaseBuildingModeEnum : uint {
             Inactive,
             Selection,
             Placement,

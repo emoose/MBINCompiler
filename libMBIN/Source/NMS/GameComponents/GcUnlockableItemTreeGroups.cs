@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcUnlockableItemTreeGroups : NMSTemplate
     {
         // size: 0xE
-        public enum UnlockableItemTreeEnum {
+        public enum UnlockableItemTreeEnum : uint {
             Test,
             BasicBaseParts,
             BasicTechParts,

@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcRewardTeleport : NMSTemplate
     {
         // size: 0x7
-        public enum TeleportRewardTypeEnum {
+        public enum TeleportRewardTypeEnum : uint {
             None,
             ToBase,
             Station0,

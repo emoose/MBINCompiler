@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcMissionConditionPulseEncounterActive : NMSTemplate
     {
         // size: 0x6
-        public enum TestEncounterTypeEnum {
+        public enum TestEncounterTypeEnum : uint {
             AnyEncounter,
             AnyObject,
             SpecificObject,

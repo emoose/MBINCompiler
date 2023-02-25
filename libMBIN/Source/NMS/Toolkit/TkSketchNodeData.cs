@@ -8,7 +8,7 @@ namespace libMBIN.NMS.Toolkit
     {
         /* 0x00 */ public NMSString0x20 TypeName;
         // size: 0x6
-        public enum TriggerTypeEnum {
+        public enum TriggerTypeEnum : uint {
             Disabled,
             Interrupt,
             RunParallel,

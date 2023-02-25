@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcPetAccessoryType : NMSTemplate
     {
         // size: 0x1B
-        public enum PetAccessoryEnum {
+        public enum PetAccessoryEnum : uint {
             None,
             CargoCylinder,
             Containers,

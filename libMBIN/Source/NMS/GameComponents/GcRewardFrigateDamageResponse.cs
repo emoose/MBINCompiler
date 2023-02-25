@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcRewardFrigateDamageResponse : NMSTemplate
     {
         // size: 0x6
-        public enum ResponseEnum {
+        public enum ResponseEnum : uint {
             StayOut,
             ReturnHome,
             CheckForMoreDamage,

@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcMissionSequenceShowMissionUpdateMessage : NMSTemplate
     {
         // size: 0x2
-        public enum MissionUpdateMessageEnum {
+        public enum MissionUpdateMessageEnum : uint {
             Start,
             End,
         }
@@ -15,7 +15,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x49 */ public bool WaitForMessageOver;
         /* 0x4A */ public bool ShowChangeMissionNotify;
         // size: 0x3
-        public enum PlayMusicStingEnum {
+        public enum PlayMusicStingEnum : uint {
             None,
             Start,
             End,

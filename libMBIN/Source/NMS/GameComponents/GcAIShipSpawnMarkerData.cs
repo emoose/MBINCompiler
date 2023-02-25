@@ -12,7 +12,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0xB0 */ public float MaxVisibleRange;
         /* 0xB4 */ public float MinAngleVisible;
         // size: 0x3
-        public enum ShipsToMarkEnum {
+        public enum ShipsToMarkEnum : uint {
             None,
             Leader,
             All,

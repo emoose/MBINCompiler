@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcDeathConsequencesDifficultyOption : NMSTemplate
     {
         // size: 0x4
-        public enum DeathConsequencesDifficultyEnum {
+        public enum DeathConsequencesDifficultyEnum : uint {
             None,
             ItemGrave,
             DestroyItems,

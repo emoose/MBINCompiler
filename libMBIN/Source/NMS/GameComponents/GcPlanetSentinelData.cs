@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcPlanetSentinelData : NMSTemplate
     {
         // size: 0x3
-        public enum SentinelLevelEnum {
+        public enum SentinelLevelEnum : uint {
             Low,
             Default,
             Aggressive,

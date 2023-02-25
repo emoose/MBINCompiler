@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcNodeActivationAction : NMSTemplate
     {
         // size: 0x6
-        public enum NodeActiveStateEnum {
+        public enum NodeActiveStateEnum : uint {
             Activate,
             Deactivate,
             Toggle,

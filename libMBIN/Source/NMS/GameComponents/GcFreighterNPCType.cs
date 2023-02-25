@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcFreighterNPCType : NMSTemplate
     {
         // size: 0x5
-        public enum FreighterNPCTypeEnum {
+        public enum FreighterNPCTypeEnum : uint {
             SquadronPilot,
             FrigateCaptain,
             WorkerBio,

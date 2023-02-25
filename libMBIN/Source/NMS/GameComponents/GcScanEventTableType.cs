@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcScanEventTableType : NMSTemplate
     {
         // size: 0x8
-        public enum ScanTableEnum {
+        public enum ScanTableEnum : uint {
             Space,
             Planet ,
             Missions,

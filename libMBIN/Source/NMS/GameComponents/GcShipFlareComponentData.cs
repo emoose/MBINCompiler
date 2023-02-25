@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcShipFlareComponentData : NMSTemplate
     {
         // size: 0x1
-        public enum FlareTypeEnum {
+        public enum FlareTypeEnum : uint {
             Default,
         }
         /* 0x0 */ public FlareTypeEnum FlareType;

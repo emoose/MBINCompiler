@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcSpaceStationSpawnData : NMSTemplate
     {
         // size: 0x3
-        public enum SpawnModeEnum {
+        public enum SpawnModeEnum : uint {
             None,
             UseSeed,
             UseAltID,

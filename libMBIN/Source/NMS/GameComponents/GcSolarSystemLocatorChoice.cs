@@ -6,7 +6,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcSolarSystemLocatorChoice : NMSTemplate
     {
         // size: 0x4
-        public enum ChoiceEnum {
+        public enum ChoiceEnum : uint {
             LookupName,
             AnyOfType,
             SpecificIndex,

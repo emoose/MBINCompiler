@@ -11,7 +11,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x94 */ public float Probability;
         /* 0x98 */ public int MaxPerRoom;
         // size: 0x8
-        public enum DecorationLayerEnum {
+        public enum DecorationLayerEnum : uint {
             Stairs,
             Corridor,
             Room,

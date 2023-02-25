@@ -21,7 +21,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x01D */ public bool UseModelResourceRenderer;
         /* 0x01E */ public bool UseBoundsForIconCentre;
         // size: 0x4
-        public enum InteractableEnum {
+        public enum InteractableEnum : uint {
             OnlyWhenComplete,
             OnlyWhenNotComplete,
             Always,
@@ -34,7 +34,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x030 */ public TkModelRendererData ModelRenderData;
         /* 0x0E0 */ public TkModelRendererData ModelRenderDataAlt;
         // size: 0x2
-        public enum ModelRendererResourceEnum {
+        public enum ModelRendererResourceEnum : uint {
             ModelNode,
             MasterModelNode,
         }

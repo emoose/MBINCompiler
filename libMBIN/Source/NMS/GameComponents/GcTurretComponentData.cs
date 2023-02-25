@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcTurretComponentData : NMSTemplate
     {
         // size: 0x3
-        public enum GunTypeEnum {
+        public enum GunTypeEnum : uint {
             Laser,
             Projectile,
             Missile,

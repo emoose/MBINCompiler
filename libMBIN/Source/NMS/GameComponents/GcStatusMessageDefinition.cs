@@ -12,7 +12,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x32 */ public bool AddFriendlyDronePrefix;
         /* 0x33 */ public bool IncludePlayerName;
         // size: 0x8
-        public enum ReplicateToEnum {
+        public enum ReplicateToEnum : uint {
             None,
             Fireteam,
             Fireteam_SameUA,

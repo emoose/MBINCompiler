@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcProceduralTechnologyCategory : NMSTemplate
     {
         // size: 0x5
-        public enum ProceduralTechnologyCategoryEnum {
+        public enum ProceduralTechnologyCategoryEnum : uint {
             None,
             Combat,
             Mining,

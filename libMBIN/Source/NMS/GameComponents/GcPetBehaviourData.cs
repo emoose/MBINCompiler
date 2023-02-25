@@ -16,7 +16,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x18 */ public float ApproachPlayerDist;
         /* 0x1C */ public float SearchDist;
         // size: 0x2
-        public enum PetBehaviourValidityEnum {
+        public enum PetBehaviourValidityEnum : uint {
             Everywhere,
             OnPlanet,
         }

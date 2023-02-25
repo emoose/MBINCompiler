@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcWonderCategoryConfig : NMSTemplate
     {
         // size: 0x2
-        public enum WonderCategoryComparisonTypeEnum {
+        public enum WonderCategoryComparisonTypeEnum : uint {
             Max,
             Min,
         }

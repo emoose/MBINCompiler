@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcGameMode : NMSTemplate
     {
         // size: 0x7
-        public enum PresetGameModeEnum {
+        public enum PresetGameModeEnum : uint {
             Unspecified,
             Normal,
             Creative,

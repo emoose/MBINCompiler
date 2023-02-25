@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcInventoryType : NMSTemplate
     {
         // size: 0x3
-        public enum InventoryTypeEnum {
+        public enum InventoryTypeEnum : uint {
             Substance,
             Technology,
             Product,

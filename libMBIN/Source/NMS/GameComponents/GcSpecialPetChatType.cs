@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcSpecialPetChatType : NMSTemplate
     {
         // size: 0x3
-        public enum SpecialPetChatTypeEnum {
+        public enum SpecialPetChatTypeEnum : uint {
             Monster,
             Quad,
             MiniRobo,

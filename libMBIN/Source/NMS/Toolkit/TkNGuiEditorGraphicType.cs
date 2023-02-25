@@ -4,7 +4,7 @@ namespace libMBIN.NMS.Toolkit
     public class TkNGuiEditorGraphicType : NMSTemplate
     {
         // size: 0x48
-        public enum NGuiEditorGraphicEnum {
+        public enum NGuiEditorGraphicEnum : uint {
             Panel,
             Button,
             Text,

@@ -6,7 +6,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x00 */ public bool GyroEnabled;
         /* 0x01 */ public bool GyroEnabledHandheld;
         // size: 0x4
-        public enum ActiveModeOnFootEnum {
+        public enum ActiveModeOnFootEnum : uint {
             None,
             ScopeOnly,
             ScopeOrFiring,
@@ -15,7 +15,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x04 */ public ActiveModeOnFootEnum ActiveModeOnFoot;
         /* 0x08 */ public bool AllowWhenRidingCreatures;
         // size: 0x4
-        public enum ActiveModeWhenBuildingEnum {
+        public enum ActiveModeWhenBuildingEnum : uint {
             None,
             BuildPlacementOnly,
             SelectionModeOnly,
@@ -23,21 +23,21 @@ namespace libMBIN.NMS.GameComponents
         }
         /* 0x0C */ public ActiveModeWhenBuildingEnum ActiveModeWhenBuilding;
         // size: 0x3
-        public enum EnableGyroInBuildingFreeCamEnum {
+        public enum EnableGyroInBuildingFreeCamEnum : uint {
             Never,
             MatchActiveModeWhenBuilding,
             Always,
         }
         /* 0x10 */ public EnableGyroInBuildingFreeCamEnum EnableGyroInBuildingFreeCam;
         // size: 0x3
-        public enum ActiveModeInExocraftEnum {
+        public enum ActiveModeInExocraftEnum : uint {
             None,
             Firing,
             Always,
         }
         /* 0x14 */ public ActiveModeInExocraftEnum ActiveModeInExocraft;
         // size: 0x3
-        public enum LookStickEnabledEnum {
+        public enum LookStickEnabledEnum : uint {
             None,
             Disabled,
             Enabled,
@@ -48,13 +48,13 @@ namespace libMBIN.NMS.GameComponents
         /* 0x24 */ public float CursorSensitivityY;
         /* 0x28 */ public float CursorTighteningThreshold;
         // size: 0x2
-        public enum CursorLookStickEnabledEnum {
+        public enum CursorLookStickEnabledEnum : uint {
             None,
             Disabled,
         }
         /* 0x2C */ public CursorLookStickEnabledEnum CursorLookStickEnabled;
         // size: 0x2
-        public enum HandednessEnum {
+        public enum HandednessEnum : uint {
             Left,
             Right,
         }
@@ -70,33 +70,33 @@ namespace libMBIN.NMS.GameComponents
         /* 0x54 */ public float BuildingMultiplier;
         /* 0x58 */ public bool ZoomScalesSensitivity;
         // size: 0x2
-        public enum GyroRotationSpaceEnum {
+        public enum GyroRotationSpaceEnum : uint {
             Local,
             Player,
         }
         /* 0x5C */ public GyroRotationSpaceEnum GyroRotationSpace;
         // size: 0x2
-        public enum GyroRotationSpaceHandheldEnum {
+        public enum GyroRotationSpaceHandheldEnum : uint {
             Local,
             Player,
         }
         /* 0x60 */ public GyroRotationSpaceHandheldEnum GyroRotationSpaceHandheld;
         // size: 0x3
-        public enum YawAxisDirectionEnum {
+        public enum YawAxisDirectionEnum : uint {
             Disabled,
             Standard,
             Inverted,
         }
         /* 0x64 */ public YawAxisDirectionEnum YawAxisDirection;
         // size: 0x3
-        public enum RollAxisDirectionEnum {
+        public enum RollAxisDirectionEnum : uint {
             Disabled,
             Standard,
             Inverted,
         }
         /* 0x68 */ public RollAxisDirectionEnum RollAxisDirection;
         // size: 0x3
-        public enum PitchAxisDirectionEnum {
+        public enum PitchAxisDirectionEnum : uint {
             Disabled,
             Standard,
             Inverted,

@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcWeightingCurve : NMSTemplate
     {
         // size: 0x7
-        public enum WeightingCurveEnum {
+        public enum WeightingCurveEnum : uint {
             NoWeighting,
             MaxIsUncommon,
             MaxIsRare,

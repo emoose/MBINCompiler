@@ -35,7 +35,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x0598 */ public List<GcSolarSystemLocator> Locators;
         /* 0x05A8 */ public List<NMSTemplate> AsteroidGenerators;
         // size: 0x3
-        public enum AsteroidLevelEnum {
+        public enum AsteroidLevelEnum : uint {
             NoRares,
             SomeRares,
             LotsOfRares,

@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcShipWeapons : NMSTemplate
     {
         // size: 0x7
-        public enum ShipWeaponEnum {
+        public enum ShipWeaponEnum : uint {
             Laser,
             Projectile,
             Shotgun,

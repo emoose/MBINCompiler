@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcFrigateFlybyType : NMSTemplate
     {
         // size: 0x5
-        public enum FrigateFlybyTypeEnum {
+        public enum FrigateFlybyTypeEnum : uint {
             SingleShip,
             AmbientGroup,
             ScriptedGroup,

@@ -5,7 +5,7 @@ namespace libMBIN.NMS.Toolkit
     {
         /* 0x0 */ public float LowestDynamicResScalingFactor;
         // size: 0x3
-        public enum DynamicResScalingAggressivenessEnum {
+        public enum DynamicResScalingAggressivenessEnum : uint {
             Moderate,
             Balanced,
             Aggressive,

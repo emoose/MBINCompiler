@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcDroneTypes : NMSTemplate
     {
         // size: 0x3
-        public enum DroneTypeEnum {
+        public enum DroneTypeEnum : uint {
             Patrol,
             Combat,
             Corrupted,

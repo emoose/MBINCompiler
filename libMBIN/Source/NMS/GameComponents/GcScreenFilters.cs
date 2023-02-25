@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcScreenFilters : NMSTemplate
     {
         // size: 0x52
-        public enum ScreenFilterEnum {
+        public enum ScreenFilterEnum : uint {
             Default,
             DefaultStorm,
             Frozen,

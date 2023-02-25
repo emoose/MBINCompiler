@@ -10,14 +10,14 @@ namespace libMBIN.NMS.GameComponents
         /* 0x10 */ public GcCurrency CostCurrency;
         /* 0x14 */ public bool AssertIfOutOfBounds;
         // size: 0x3
-        public enum OutOfBoundsBehaviourEnum {
+        public enum OutOfBoundsBehaviourEnum : uint {
             NoCost,
             UseFirst,
             UseLast,
         }
         /* 0x18 */ public OutOfBoundsBehaviourEnum OutOfBoundsBehaviour;
         // size: 0x9
-        public enum IndexProviderEnum {
+        public enum IndexProviderEnum : uint {
             None,
             ShipSlot,
             ShipClass,

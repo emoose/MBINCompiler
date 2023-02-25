@@ -7,7 +7,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcMultiSpecificItemEntry : NMSTemplate
     {
         // size: 0x6
-        public enum MultiItemRewardTypeEnum {
+        public enum MultiItemRewardTypeEnum : uint {
             Product,
             Substance,
             ProcTech,

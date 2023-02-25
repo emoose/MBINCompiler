@@ -7,7 +7,7 @@ namespace libMBIN.NMS.GameComponents
     {
         /* 0x00 */ public float Time;
         // size: 0x3
-        public enum AerialViewModeEnum {
+        public enum AerialViewModeEnum : uint {
             FaceDown,
             FaceOut,
             FaceDownThenOut,

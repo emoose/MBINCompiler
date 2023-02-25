@@ -23,7 +23,7 @@ namespace libMBIN.NMS.Toolkit
         /* 0x118 */ public float ActionFrame;
         /* 0x11C */ public float AdditiveBaseFrame;
         // size: 0x4
-        public enum AnimTypeEnum {
+        public enum AnimTypeEnum : uint {
             Loop,
             OneShot,
             Control,
@@ -31,7 +31,7 @@ namespace libMBIN.NMS.Toolkit
         }
         /* 0x120 */ public AnimTypeEnum AnimType;
         // size: 0x3
-        public enum CreatureSizeEnum {
+        public enum CreatureSizeEnum : uint {
             AllSizes,
             SmallOnly,
             LargeOnly,

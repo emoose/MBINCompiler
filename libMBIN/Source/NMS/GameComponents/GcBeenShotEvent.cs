@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcBeenShotEvent : NMSTemplate
     {
         // size: 0x3
-        public enum ShotByEnum {
+        public enum ShotByEnum : uint {
             Player,
             Anything,
             PlayerOrRemotePlayer,

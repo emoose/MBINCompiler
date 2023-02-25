@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcBaseBuildingPartStyle : NMSTemplate
     {
         // size: 0x7
-        public enum StyleEnum {
+        public enum StyleEnum : uint {
             None,
             Wood,
             Metal,

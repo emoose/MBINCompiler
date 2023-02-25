@@ -19,7 +19,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x68 */ public float AugmentPitchFalloff;
         /* 0x6C */ public float AugmentPitchFalloffPower;
         // size: 0x3
-        public enum AugmentModeEnum {
+        public enum AugmentModeEnum : uint {
             Add,
             Multiply,
             Max,

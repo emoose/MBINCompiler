@@ -7,7 +7,7 @@ namespace libMBIN.NMS.GameComponents
     {
         /* 0x0 */ public GcAlienRace Race;
         // size: 0x2
-        public enum RequirementEnum {
+        public enum RequirementEnum : uint {
             CanLearn,
             CanSpeak,
         }

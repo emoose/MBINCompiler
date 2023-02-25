@@ -7,7 +7,7 @@ namespace libMBIN.NMS.GameComponents
     {
         /* 0x00 */ public GcAtlasSendSubmitContribution Contribution;
         // size: 0x3
-        public enum SubmitTypeEnum {
+        public enum SubmitTypeEnum : uint {
             Value,
             Stat,
             StatsDiff,

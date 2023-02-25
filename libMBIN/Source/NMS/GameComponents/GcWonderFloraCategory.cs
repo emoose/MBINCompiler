@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcWonderFloraCategory : NMSTemplate
     {
         // size: 0x8
-        public enum WonderFloraCategoryEnum {
+        public enum WonderFloraCategoryEnum : uint {
             GeneralFact0,
             GeneralFact1,
             GeneralFact2,

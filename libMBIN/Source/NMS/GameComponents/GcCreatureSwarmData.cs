@@ -11,7 +11,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x08 */ public float SwarmMovementSpeed;
         /* 0x0C */ public float SwarmMovementRadius;
         // size: 0x6
-        public enum SwarmMovementTypeEnum {
+        public enum SwarmMovementTypeEnum : uint {
             None,
             Circle,
             Random,

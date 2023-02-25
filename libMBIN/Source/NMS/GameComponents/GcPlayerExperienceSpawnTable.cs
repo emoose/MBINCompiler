@@ -8,7 +8,7 @@ namespace libMBIN.NMS.GameComponents
     {
         /* 0x00 */ public NMSString0x10 Event;
         // size: 0x2
-        public enum ExperienceSpawnTypeEnum {
+        public enum ExperienceSpawnTypeEnum : uint {
             Freighter,
             Mission,
         }

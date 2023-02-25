@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcGalaxyStarAnomaly : NMSTemplate
     {
         // size: 0x5
-        public enum GalaxyStarAnomalyEnum {
+        public enum GalaxyStarAnomalyEnum : uint {
             None,
             AtlasStation,
             AtlasStationFinal,

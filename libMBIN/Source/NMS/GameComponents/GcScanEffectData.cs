@@ -5,7 +5,7 @@ namespace libMBIN.NMS.GameComponents
     {
         /* 0x00 */ public NMSString0x10 Id;
         // size: 0x5
-        public enum ScanEffectTypeEnum {
+        public enum ScanEffectTypeEnum : uint {
             Building,
             TargetShip,
             Creature,

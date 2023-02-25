@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcCreatureGenerationDensity : NMSTemplate
     {
         // size: 0x4
-        public enum DensityEnum {
+        public enum DensityEnum : uint {
             Sparse,
             Normal,
             Dense,

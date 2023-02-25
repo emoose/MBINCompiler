@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcNPCNavigationAreaComponentData : NMSTemplate
     {
         // size: 0x9
-        public enum NavAreaTypeEnum {
+        public enum NavAreaTypeEnum : uint {
             Normal,
             BuildingWithExterior,
             Debris,

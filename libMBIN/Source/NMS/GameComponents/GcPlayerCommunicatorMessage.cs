@@ -8,7 +8,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x00 */ public NMSString0x20A Dialog;
         /* 0x20 */ public bool ShowHologram;
         // size: 0xB
-        public enum CommunicatorTypeEnum {
+        public enum CommunicatorTypeEnum : uint {
             HoloExplorer,
             HoloSceptic,
             HoloNoone,

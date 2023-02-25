@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcPlayerCharacterStateType : NMSTemplate
     {
         // size: 0x12
-        public enum CharacterStateEnum {
+        public enum CharacterStateEnum : uint {
             Idle,
             Jog,
             JogUphill,

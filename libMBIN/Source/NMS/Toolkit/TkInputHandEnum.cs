@@ -4,7 +4,7 @@ namespace libMBIN.NMS.Toolkit
     public class TkInputHandEnum : NMSTemplate
     {
         // size: 0x3
-        public enum InputHandEnum {
+        public enum InputHandEnum : uint {
             None,
             Left,
             Right,

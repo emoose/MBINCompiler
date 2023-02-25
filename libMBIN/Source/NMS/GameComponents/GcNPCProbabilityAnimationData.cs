@@ -9,7 +9,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x00 */ public NMSString0x10 Name;
         /* 0x10 */ public float Probability;
         // size: 0x4
-        public enum AnimationIntensityEnum {
+        public enum AnimationIntensityEnum : uint {
             Low,
             Medium,
             High,

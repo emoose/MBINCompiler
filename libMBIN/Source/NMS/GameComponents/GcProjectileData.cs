@@ -58,7 +58,7 @@ namespace libMBIN.NMS.GameComponents
         }
         /* 0x3A0 */ public BehaviourFlagsEnum BehaviourFlags;
         // size: 0x4
-        public enum ClassEnum {
+        public enum ClassEnum : uint {
             Player,
             PlayerShip,
             Ship,

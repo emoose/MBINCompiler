@@ -4,7 +4,7 @@ namespace libMBIN.NMS.Toolkit
     public class TKNGuiEditorComponentSize : NMSTemplate
     {
         // size: 0x30
-        public enum NGuiEditorComponentSizeEnum {
+        public enum NGuiEditorComponentSizeEnum : uint {
             WindowResize,
             WindowButton,
             Indent,

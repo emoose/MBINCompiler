@@ -25,7 +25,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x161 */ public bool ForceDamageInInteraction;
         /* 0x162 */ public bool AllowDeathInInteraction;
         // size: 0x5
-        public enum PlayerDamageTypeEnum {
+        public enum PlayerDamageTypeEnum : uint {
             Normal,
             Toxic,
             Radioactive,

@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcCreaturePetRewardActions : NMSTemplate
     {
         // size: 0x9
-        public enum PetActionEnum {
+        public enum PetActionEnum : uint {
             Tickle,
             Treat,
             Ride,

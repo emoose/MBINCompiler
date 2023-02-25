@@ -7,7 +7,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x1 */ public bool Static;
         /* 0x4 */ public float ArriveDist;
         // size: 0x2
-        public enum AttractorTypeEnum {
+        public enum AttractorTypeEnum : uint {
             Food,
             Harvester,
         }

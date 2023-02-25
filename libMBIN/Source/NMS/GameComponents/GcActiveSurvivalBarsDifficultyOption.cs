@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcActiveSurvivalBarsDifficultyOption : NMSTemplate
     {
         // size: 0x4
-        public enum ActiveSurvivalBarsDifficultyEnum {
+        public enum ActiveSurvivalBarsDifficultyEnum : uint {
             None,
             HealthOnly,
             HealthAndHazard,

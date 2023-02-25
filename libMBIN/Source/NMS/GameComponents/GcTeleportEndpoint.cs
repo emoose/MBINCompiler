@@ -9,7 +9,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x20 */ public Vector3f Position;
         /* 0x30 */ public Vector3f Facing;
         // size: 0xB
-        public enum TeleporterTypeEnum {
+        public enum TeleporterTypeEnum : uint {
             Base,
             Spacestation,
             Atlas,

@@ -8,7 +8,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcInteractionComponentData : NMSTemplate
     {
         // size: 0x3
-        public enum InteractionActionEnum {
+        public enum InteractionActionEnum : uint {
             PressButton,
             HoldButton,
             Shoot,
@@ -41,7 +41,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x288 */ public List<GcAlienPuzzleMissionOverride> PuzzleMissionOverrideTable;
         /* 0x298 */ public GcStoryUtilityOverride StoryUtilityOverrideData;
         // size: 0x3
-        public enum OverrideInteriorExteriorMarkerEnum {
+        public enum OverrideInteriorExteriorMarkerEnum : uint {
             No,
             Interior,
             Exterior,

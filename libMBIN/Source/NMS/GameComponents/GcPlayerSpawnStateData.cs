@@ -10,7 +10,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x40 */ public Vector4f ShipPositionInSystem;
         /* 0x50 */ public Vector4f ShipTransformAt;
         // size: 0x7
-        public enum LastKnownPlayerStateEnum {
+        public enum LastKnownPlayerStateEnum : uint {
             OnFoot,
             InShip,
             InStation,

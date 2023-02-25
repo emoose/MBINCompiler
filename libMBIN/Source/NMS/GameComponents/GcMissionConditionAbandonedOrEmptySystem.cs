@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcMissionConditionAbandonedOrEmptySystem : NMSTemplate
     {
         // size: 0x3
-        public enum MissionSystemTypeEnum {
+        public enum MissionSystemTypeEnum : uint {
             Either,
             Empty,
             Abandoned,

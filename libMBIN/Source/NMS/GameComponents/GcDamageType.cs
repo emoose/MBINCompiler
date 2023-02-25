@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcDamageType : NMSTemplate
     {
         // size: 0x17
-        public enum DamageTypeEnum {
+        public enum DamageTypeEnum : uint {
             Gun,
             Laser,
             Shotgun,

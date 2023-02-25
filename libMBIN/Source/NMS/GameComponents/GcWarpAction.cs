@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcWarpAction : NMSTemplate
     {
         // size: 0x2
-        public enum WarpTypeEnum {
+        public enum WarpTypeEnum : uint {
             BlackHole,
             SpacePOI,
         }

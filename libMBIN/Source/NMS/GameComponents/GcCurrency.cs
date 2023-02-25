@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcCurrency : NMSTemplate
     {
         // size: 0x3
-        public enum CurrencyEnum {
+        public enum CurrencyEnum : uint {
             Units,
             Nanites,
             Specials,

@@ -16,7 +16,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x1A0 */ public List<NMSString0x20> CameraNeckBones;
         /* 0x1B0 */ public GcIKConstraint SitConstraint;
         // size: 0x6
-        public enum PlayerHeadUpAxisEnum {
+        public enum PlayerHeadUpAxisEnum : uint {
             X,
             XNeg,
             Y,

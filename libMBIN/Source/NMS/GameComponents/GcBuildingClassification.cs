@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcBuildingClassification : NMSTemplate
     {
         // size: 0x34
-        public enum BuildingClassEnum {
+        public enum BuildingClassEnum : uint {
             None,
             TerrainResource,
             Shelter,

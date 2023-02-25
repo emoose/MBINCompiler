@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcBuildingDensityLevels : NMSTemplate
     {
         // size: 0x6
-        public enum BuildingDensityEnum {
+        public enum BuildingDensityEnum : uint {
             Dead,
             Low,
             Mid,

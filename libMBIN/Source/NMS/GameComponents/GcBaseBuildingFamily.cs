@@ -7,7 +7,7 @@ namespace libMBIN.NMS.GameComponents
     {
         /* 0x00 */ public NMSString0x10 ID;
         // size: 0x2
-        public enum FamilyTypeEnum {
+        public enum FamilyTypeEnum : uint {
             Replacements,
             Extras,
         }

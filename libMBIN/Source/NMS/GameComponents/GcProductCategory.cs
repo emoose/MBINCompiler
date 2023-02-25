@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcProductCategory : NMSTemplate
     {
         // size: 0x9
-        public enum ProductCategoryEnum {
+        public enum ProductCategoryEnum : uint {
             Component,
             Consumable,
             Tradeable,

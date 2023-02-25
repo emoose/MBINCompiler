@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcWeaponClasses : NMSTemplate
     {
         // size: 0x5
-        public enum WeaponStatClassEnum {
+        public enum WeaponStatClassEnum : uint {
             Pistol,
             Rifle,
             Pristine,

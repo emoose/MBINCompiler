@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcExperienceDebugTriggerActionTypes : NMSTemplate
     {
         // size: 0x29
-        public enum ExperienceDebugTriggerActionEnum {
+        public enum ExperienceDebugTriggerActionEnum : uint {
             None,
             Drones,
             FlyBy,

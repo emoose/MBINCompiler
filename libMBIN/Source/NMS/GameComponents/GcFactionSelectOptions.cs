@@ -6,7 +6,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcFactionSelectOptions : NMSTemplate
     {
         // size: 0x3
-        public enum FactionOptionEnum {
+        public enum FactionOptionEnum : uint {
             DataDefined,
             CurrentMission,
             CurrentSystem,

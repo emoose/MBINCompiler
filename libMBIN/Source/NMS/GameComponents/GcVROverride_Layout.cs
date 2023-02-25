@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcVROverride_Layout : NMSTemplate
     {
         // size: 0x5
-        public enum VROverride_LayoutEnum {
+        public enum VROverride_LayoutEnum : uint {
             PosX,
             PosY,
             LayerWidth,

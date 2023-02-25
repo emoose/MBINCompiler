@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcBaseDefenceStatusType : NMSTemplate
     {
         // size: 0x5
-        public enum BaseDefenceStatusEnum {
+        public enum BaseDefenceStatusEnum : uint {
             AttackingTarget,
             Alert,
             SearchingForTarget,

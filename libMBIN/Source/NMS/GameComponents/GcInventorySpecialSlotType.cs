@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcInventorySpecialSlotType : NMSTemplate
     {
         // size: 0x5
-        public enum InventorySpecialSlotTypeEnum {
+        public enum InventorySpecialSlotTypeEnum : uint {
             Broken,
             TechOnly,
             Cargo,

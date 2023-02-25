@@ -5,7 +5,7 @@ namespace libMBIN.NMS.GameComponents
     {
         /* 0x00 */ public NMSString0x20 GroupNodeName;
         // size: 0x2
-        public enum ActivationTypeEnum {
+        public enum ActivationTypeEnum : uint {
             GroupNode,
             Locator,
         }

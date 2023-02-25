@@ -2,16 +2,16 @@
 // They will always be disabled/ignored in Release builds.
 
 // Uncomment to enable debug logging of the template de/serialization.
-#define DEBUG_TEMPLATE
+// #define DEBUG_TEMPLATE
 
 // Uncomment to enable debug logging of XML comments
 //#define DEBUG_COMMENTS
 
 // Uncomment to enable debug logging of MBIN field names
-#define DEBUG_FIELD_NAMES
+// #define DEBUG_FIELD_NAMES
 
 // Uncomment to enable debug logging of XML property names
-#define DEBUG_PROPERTY_NAMES
+// #define DEBUG_PROPERTY_NAMES
 
 
 using System;
@@ -294,8 +294,14 @@ namespace libMBIN
                     }
 
                     if (type.IsEnum) {
-                        // TODO: This won't work with byte type enums.
-                        alignment = 0x4;
+                        Type enumType = type.GetEnumUnderlyingType();
+                        if ( enumType.Name == "UInt32") {
+                            alignment = 0x4;
+                        } else if (enumType.Name == "UInt16") {
+                            alignment = 0x2;
+                        } else {
+                            alignment = 0x1;
+                        }
                         break;
                     }
 
@@ -411,9 +417,17 @@ namespace libMBIN
                     }
 
                     if (field.IsEnum) {
-                        // TODO: fix to handle arbitrary sized enum types
-                        reader.Align( 4 );
-                        return fieldType == "Int32" ? (object)reader.ReadInt32() : (object)reader.ReadUInt32();
+                        Type enumType = field.GetEnumUnderlyingType();
+                        if (enumType.Name == "UInt32") {
+                            reader.Align( 4 );
+                            return (object)reader.ReadUInt32();
+                        } else if (enumType.Name == "UInt16") {
+                            reader.Align( 2 );
+                            return (object)reader.ReadUInt16();
+                        } else if (enumType.Name == "Byte") {
+                            reader.Align( 1 );
+                            return (object)reader.ReadByte();
+                        }
                     }
 
                     if (field.IsArray) {
@@ -708,15 +722,15 @@ namespace libMBIN
                             SerializeValue( writer, realObj.GetType(), realObj, realObj.GetType().GetCustomAttribute<NMSAttribute>(), field, ref additionalData, ref addtDataIndex, listEnding );
                         }
                     } else if ( fieldType.IsEnum ) {
-                        writer.Align(4, field?.Name ?? fieldType.Name );
                         Type enumType = Enum.GetUnderlyingType(field.FieldType);
+                        writer.Align(AlignOf(enumType), field?.Name ?? fieldType.Name);
                         // TODO: Can we make this generic??
                         if (enumType.Name == "UInt32") {
                             writer.Write((uint)Enum.Parse(field.FieldType, fieldData.ToString()));
-                        } else if (enumType.Name == "Byte") {
-                            writer.Write((byte)Enum.Parse(field.FieldType, fieldData.ToString()));
+                        } else if (enumType.Name == "UInt16") {
+                            writer.Write((ushort)Enum.Parse(field.FieldType, fieldData.ToString()));
                         } else {
-                            writer.Write((int)Enum.Parse(field.FieldType, fieldData.ToString()));
+                            writer.Write((byte)Enum.Parse(field.FieldType, fieldData.ToString()));
                         }
 
                     } else if ( fieldType.BaseType == typeof( NMSTemplate ) ) {

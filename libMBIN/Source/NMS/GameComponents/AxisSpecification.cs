@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class AxisSpecification : NMSTemplate
     {
         // size: 0x7
-        public enum AxisEnum {
+        public enum AxisEnum : uint {
             X,
             Y,
             Z,

@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcPlayerConflictData : NMSTemplate
     {
         // size: 0x4
-        public enum ConflictLevelEnum {
+        public enum ConflictLevelEnum : uint {
             Low,
             Default,
             High,

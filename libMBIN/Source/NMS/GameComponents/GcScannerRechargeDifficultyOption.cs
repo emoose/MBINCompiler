@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcScannerRechargeDifficultyOption : NMSTemplate
     {
         // size: 0x4
-        public enum ScannerRechargeDifficultyEnum {
+        public enum ScannerRechargeDifficultyEnum : uint {
             VeryFast,
             Fast,
             Normal,

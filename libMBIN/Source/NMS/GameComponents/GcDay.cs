@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcDay : NMSTemplate
     {
         // size: 0x7
-        public enum DayEnum {
+        public enum DayEnum : uint {
             Sunday,
             Monday,
             Tuesday,

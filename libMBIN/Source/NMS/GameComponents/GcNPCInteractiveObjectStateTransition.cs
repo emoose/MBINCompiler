@@ -10,7 +10,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x18 */ public NMSString0x10 RequireEvent;
         /* 0x28 */ public NMSString0x10 RequireLocator;
         // size: 0x3
-        public enum RequireModeEnum {
+        public enum RequireModeEnum : uint {
             Seated,
             Standing,
             None,

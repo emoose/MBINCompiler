@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcInteractionBufferType : NMSTemplate
     {
         // size: 0xB
-        public enum InteractionBufferTypeEnum {
+        public enum InteractionBufferTypeEnum : uint {
             Distress_Signal,
             Crate,
             Destructable,

@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcNPCSeatedPosture : NMSTemplate
     {
         // size: 0x2
-        public enum NPCSeatedPostureEnum {
+        public enum NPCSeatedPostureEnum : uint {
             Sofa,
             Sit,
         }

@@ -23,7 +23,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x1F0 */ public NMSString0x10 NPC1HoloEffect;
         /* 0x200 */ public NMSString0x10 NPC2HoloEffect;
         // size: 0x3
-        public enum NPCsEnum {
+        public enum NPCsEnum : uint {
             None,
             One,
             Two,

@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcMissionCategory : NMSTemplate
     {
         // size: 0x4
-        public enum MissionCategoryEnum {
+        public enum MissionCategoryEnum : uint {
             Info,
             Mission,
             Danger,

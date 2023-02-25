@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcTeleporterType : NMSTemplate
     {
         // size: 0xA
-        public enum TeleporterDestinationTypeEnum {
+        public enum TeleporterDestinationTypeEnum : uint {
             Base,
             Spacestation,
             Atlas,

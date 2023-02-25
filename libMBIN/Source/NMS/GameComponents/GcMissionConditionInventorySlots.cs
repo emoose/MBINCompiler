@@ -6,7 +6,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcMissionConditionInventorySlots : NMSTemplate
     {
         // size: 0x4
-        public enum InventoryTestEnum {
+        public enum InventoryTestEnum : uint {
             Current,
             Personal,
             Ship,

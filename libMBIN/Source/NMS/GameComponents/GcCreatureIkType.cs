@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcCreatureIkType : NMSTemplate
     {
         // size: 0x9
-        public enum CreatureIkTypeEnum {
+        public enum CreatureIkTypeEnum : uint {
             Foot,
             Hinge_X,
             Hinge_Y,

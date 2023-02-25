@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcPlanetSize : NMSTemplate
     {
         // size: 0x4
-        public enum PlanetSizeEnum {
+        public enum PlanetSizeEnum : uint {
             Large,
             Medium,
             Small,

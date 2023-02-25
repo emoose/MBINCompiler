@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcShipDialogueTreeEnum : NMSTemplate
     {
         // size: 0x7
-        public enum DialogueTreeEnum {
+        public enum DialogueTreeEnum : uint {
             Bribe,
             Beg,
             Ambush,

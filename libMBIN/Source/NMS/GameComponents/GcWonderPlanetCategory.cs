@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcWonderPlanetCategory : NMSTemplate
     {
         // size: 0xB
-        public enum WonderPlanetCategoryEnum {
+        public enum WonderPlanetCategoryEnum : uint {
             TemperatureMax,
             TemperatureMin,
             ToxicityMax,

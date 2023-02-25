@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcCreatureActiveTime : NMSTemplate
     {
         // size: 0x5
-        public enum CreatureActiveTimeEnum {
+        public enum CreatureActiveTimeEnum : uint {
             OnlyDay,
             MostlyDay,
             AnyTime,

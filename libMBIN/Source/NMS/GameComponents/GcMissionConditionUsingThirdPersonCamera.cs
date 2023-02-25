@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcMissionConditionUsingThirdPersonCamera : NMSTemplate
     {
         // size: 0x3
-        public enum UsingCameraModeEnum {
+        public enum UsingCameraModeEnum : uint {
             OnFoot,
             Ship,
             Vehicle,

@@ -19,7 +19,7 @@ namespace libMBIN.NMS.Toolkit
         /* 0x68 */ public float HeightOffset;
         /* 0x6C */ public TkNoiseOffsetEnum Offset;
         // size: 0x3
-        public enum WaterFadeEnum {
+        public enum WaterFadeEnum : uint {
             None,
             Above,
             Below,

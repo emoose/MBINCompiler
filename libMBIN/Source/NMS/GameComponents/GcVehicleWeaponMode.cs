@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcVehicleWeaponMode : NMSTemplate
     {
         // size: 0x4
-        public enum VehicleWeaponModeEnum {
+        public enum VehicleWeaponModeEnum : uint {
             Laser,
             Gun,
             TerrainEdit,

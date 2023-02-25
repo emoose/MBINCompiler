@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcBaseSnapState : NMSTemplate
     {
         // size: 0x2
-        public enum SnapStateEnum {
+        public enum SnapStateEnum : uint {
             IsSnapped,
             NotSnapped,
         }

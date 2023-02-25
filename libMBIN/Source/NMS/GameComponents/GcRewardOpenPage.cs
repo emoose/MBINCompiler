@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcRewardOpenPage : NMSTemplate
     {
         // size: 0xF
-        public enum PageToOpenEnum {
+        public enum PageToOpenEnum : uint {
             FreighterShipTransfer,
             DisplayPortalUa,
             ExpeditionSelect,

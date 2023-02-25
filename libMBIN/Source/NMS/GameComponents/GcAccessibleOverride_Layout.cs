@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcAccessibleOverride_Layout : NMSTemplate
     {
         // size: 0x5
-        public enum AccessibleOverride_LayoutEnum {
+        public enum AccessibleOverride_LayoutEnum : uint {
             PosX,
             PosY,
             LayerWidth,

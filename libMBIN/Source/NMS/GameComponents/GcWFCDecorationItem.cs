@@ -19,14 +19,14 @@ namespace libMBIN.NMS.GameComponents
         /* 0x058 */ public int MinPerBuilding;
         /* 0x05C */ public bool RequireAboveTerrain;
         // size: 0x3
-        public enum InsideOutsideEnum {
+        public enum InsideOutsideEnum : uint {
             Both,
             InteriorOnly,
             ExteriorOnly,
         }
         /* 0x060 */ public InsideOutsideEnum InsideOutside;
         // size: 0x3
-        public enum LevelEnum {
+        public enum LevelEnum : uint {
             Everywhere,
             GroundLevelOnly,
             AboveGroundOnly,

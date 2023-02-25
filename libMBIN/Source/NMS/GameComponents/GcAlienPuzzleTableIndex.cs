@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcAlienPuzzleTableIndex : NMSTemplate
     {
         // size: 0x3
-        public enum IndexTypeEnum {
+        public enum IndexTypeEnum : uint {
             Regular,
             Seeded,
             Random,

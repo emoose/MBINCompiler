@@ -4,7 +4,7 @@ namespace libMBIN.NMS.Toolkit
     public class TkProbability : NMSTemplate
     {
         // size: 0x4
-        public enum ProbabilityEnum {
+        public enum ProbabilityEnum : uint {
             Common,
             Uncommon,
             Rare,

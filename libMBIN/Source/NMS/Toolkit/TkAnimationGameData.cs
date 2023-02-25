@@ -6,7 +6,7 @@ namespace libMBIN.NMS.Toolkit
         /* 0x0 */ public bool RootMotionEnabled;
         /* 0x1 */ public bool BlockPlayerMovement;
         // size: 0x3
-        public enum BlockPlayerWeaponEnum {
+        public enum BlockPlayerWeaponEnum : uint {
             Unblocked,
             Sheathed,
             OutButCannotFire,

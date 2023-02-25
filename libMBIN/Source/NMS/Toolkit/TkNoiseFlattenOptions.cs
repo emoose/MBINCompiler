@@ -4,14 +4,14 @@ namespace libMBIN.NMS.Toolkit
     public class TkNoiseFlattenOptions : NMSTemplate
     {
         // size: 0x3
-        public enum FlatteningEnum {
+        public enum FlatteningEnum : uint {
             None,
             Flatten,
             TerrainEdits,
         }
         /* 0x0 */ public FlatteningEnum Flattening;
         // size: 0x4
-        public enum WaterPlacementEnum {
+        public enum WaterPlacementEnum : uint {
             None,
             OnWater,
             Underwater,

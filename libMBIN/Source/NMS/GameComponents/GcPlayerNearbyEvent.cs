@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcPlayerNearbyEvent : NMSTemplate
     {
         // size: 0x6
-        public enum RequirePlayerActionEnum {
+        public enum RequirePlayerActionEnum : uint {
             None,
             Fire,
             InShip,
@@ -20,7 +20,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x14 */ public bool AngleReflected;
         /* 0x18 */ public float AngleMinDistance;
         // size: 0x2
-        public enum DistanceCheckTypeEnum {
+        public enum DistanceCheckTypeEnum : uint {
             Radius,
             BoundingBox,
         }

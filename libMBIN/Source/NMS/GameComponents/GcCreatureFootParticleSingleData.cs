@@ -8,7 +8,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x14 */ public float MinCreatureSize;
         /* 0x18 */ public float MaxCreatureSize;
         // size: 0x3
-        public enum MoveSpeedEnum {
+        public enum MoveSpeedEnum : uint {
             Always,
             Walk,
             Run,

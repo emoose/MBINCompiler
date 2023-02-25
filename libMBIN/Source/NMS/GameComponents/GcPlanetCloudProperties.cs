@@ -15,7 +15,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x34 */ public float RateOfChange;
         /* 0x38 */ public float SecondaryRateOfChange;
         // size: 0x2
-        public enum CloudinessEnum {
+        public enum CloudinessEnum : uint {
             CloudyWithClearSpells,
             ClearWithCloudySpells,
         }

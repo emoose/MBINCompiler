@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcPlayerWeaponClass : NMSTemplate
     {
         // size: 0x9
-        public enum WeaponClassEnum {
+        public enum WeaponClassEnum : uint {
             None,
             Projectile,
             ChargedProjectile,

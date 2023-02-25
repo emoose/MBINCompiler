@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcGalaxyStarTypes : NMSTemplate
     {
         // size: 0x4
-        public enum GalaxyStarTypeEnum {
+        public enum GalaxyStarTypeEnum : uint {
             Yellow,
             Green,
             Blue,

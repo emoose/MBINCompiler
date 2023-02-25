@@ -5,7 +5,7 @@ namespace libMBIN.NMS.GameComponents
     {
         /* 0x00 */ public NMSString0x80 Message;
         // size: 0xB
-        public enum KillTargetEnum {
+        public enum KillTargetEnum : uint {
             Robots,
             Drones,
             Quads,

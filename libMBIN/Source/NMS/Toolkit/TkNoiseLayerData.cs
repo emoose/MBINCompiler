@@ -8,7 +8,7 @@ namespace libMBIN.NMS.Toolkit
         /* 0x02 */ public bool Absolute;
         /* 0x03 */ public bool Subtract;
         // size: 0xB
-        public enum NoiseTypeEnum {
+        public enum NoiseTypeEnum : uint {
             Plane,
             Check,
             Sine,

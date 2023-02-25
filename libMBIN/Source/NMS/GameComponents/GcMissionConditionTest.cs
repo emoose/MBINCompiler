@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcMissionConditionTest : NMSTemplate
     {
         // size: 0x4
-        public enum ConditionTestEnum {
+        public enum ConditionTestEnum : uint {
             AnyFalse,
             AllFalse,
             AnyTrue,

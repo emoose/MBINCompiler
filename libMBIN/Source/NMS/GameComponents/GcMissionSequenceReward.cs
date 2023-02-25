@@ -8,7 +8,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x90 */ public bool DoMissionBoardOverride;
         /* 0x91 */ public bool Silent;
         // size: 0x5
-        public enum RewardInventoryOverrideEnum {
+        public enum RewardInventoryOverrideEnum : uint {
             None,
             Suit,
             Ship,

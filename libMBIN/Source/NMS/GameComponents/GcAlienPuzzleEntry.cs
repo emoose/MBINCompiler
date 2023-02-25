@@ -13,7 +13,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x02C */ public GcInteractionType Type;
         /* 0x030 */ public GcAlienPuzzleCategory Category;
         // size: 0x3
-        public enum AdditionalOptionsEnum {
+        public enum AdditionalOptionsEnum : uint {
             None,
             LearnWord,
             SayWord,
@@ -33,7 +33,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x0F4 */ public GcNPCPropType Prop;
         /* 0x0F8 */ public List<GcPuzzleTextFlow> AdvancedInteractionFlow;
         // size: 0x3
-        public enum PersistancyBufferOverrideEnum {
+        public enum PersistancyBufferOverrideEnum : uint {
             None,
             AlwaysPersonal,
             AlwaysFireteam,

@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcMissionConditionIsSurveying : NMSTemplate
     {
         // size: 0x4
-        public enum ForHotspotTypeEnum {
+        public enum ForHotspotTypeEnum : uint {
             Any,
             Power,
             Gas,

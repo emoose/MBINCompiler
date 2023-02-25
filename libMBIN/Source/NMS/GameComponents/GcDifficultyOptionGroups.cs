@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcDifficultyOptionGroups : NMSTemplate
     {
         // size: 0x4
-        public enum DifficultyOptionGroupEnum {
+        public enum DifficultyOptionGroupEnum : uint {
             Survival,
             Crafting,
             Combat,

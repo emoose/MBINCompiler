@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcCurrencyCostDifficultyOption : NMSTemplate
     {
         // size: 0x4
-        public enum CurrencyCostDifficultyEnum {
+        public enum CurrencyCostDifficultyEnum : uint {
             Free,
             Cheap,
             Normal,

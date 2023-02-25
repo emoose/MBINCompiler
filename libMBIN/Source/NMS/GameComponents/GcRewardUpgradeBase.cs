@@ -7,7 +7,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcRewardUpgradeBase : NMSTemplate
     {
         // size: 0x2
-        public enum UpgradeBaseTypeEnum {
+        public enum UpgradeBaseTypeEnum : uint {
             AllMatching,
             NearestMatching,
         }

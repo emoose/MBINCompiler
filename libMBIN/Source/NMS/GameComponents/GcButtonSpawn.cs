@@ -8,7 +8,7 @@ namespace libMBIN.NMS.GameComponents
     {
         /* 0x0 */ public TkInputEnum Button;
         // size: 0x5
-        public enum EventEnum {
+        public enum EventEnum : uint {
             None,
             Pirates,
             Police,

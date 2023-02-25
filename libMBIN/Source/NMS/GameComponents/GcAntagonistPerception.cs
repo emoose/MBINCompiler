@@ -8,7 +8,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x14 */ public float XFOV;
         /* 0x18 */ public float YFOV;
         // size: 0x2
-        public enum ViewShapeEnum {
+        public enum ViewShapeEnum : uint {
             Pyramid,
             Cone,
         }

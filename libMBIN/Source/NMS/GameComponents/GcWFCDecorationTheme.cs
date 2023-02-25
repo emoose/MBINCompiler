@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcWFCDecorationTheme : NMSTemplate
     {
         // size: 0x2
-        public enum WFCDecorationThemeEnum {
+        public enum WFCDecorationThemeEnum : uint {
             Default,
             Construction,
         }

@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcInventoryStackLimitsDifficultyOption : NMSTemplate
     {
         // size: 0x3
-        public enum InventoryStackLimitsDifficultyEnum {
+        public enum InventoryStackLimitsDifficultyEnum : uint {
             High,
             Normal,
             Low,

@@ -6,7 +6,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcBaseBuildingSettingsAction : NMSTemplate
     {
         // size: 0x3
-        public enum UseCorePartsOnlyEnum {
+        public enum UseCorePartsOnlyEnum : uint {
             False,
             True,
             DontCare,

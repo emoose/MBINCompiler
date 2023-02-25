@@ -11,7 +11,7 @@ namespace libMBIN.NMS.Toolkit
         /* 0xA3 */ public bool IsSRGB;
         /* 0xA8 */ public NMSString0x20A MaterialAlternativeId;
         // size: 0x4
-        public enum TextureAddressModeEnum {
+        public enum TextureAddressModeEnum : uint {
             Wrap,
             Clamp,
             ClampToBorder,
@@ -19,7 +19,7 @@ namespace libMBIN.NMS.Toolkit
         }
         /* 0xC8 */ public TextureAddressModeEnum TextureAddressMode;
         // size: 0x3
-        public enum TextureFilterModeEnum {
+        public enum TextureFilterModeEnum : uint {
             None,
             Bilinear,
             Trilinear,

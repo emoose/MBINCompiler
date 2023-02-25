@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcQuickMenuActions : NMSTemplate
     {
         // size: 0x39
-        public enum QuickMenuActionsEnum {
+        public enum QuickMenuActionsEnum : uint {
             None,
             CallFreighter,
             DismissFreighter,

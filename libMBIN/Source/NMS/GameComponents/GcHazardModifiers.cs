@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcHazardModifiers : NMSTemplate
     {
         // size: 0x5
-        public enum HazardModifierEnum {
+        public enum HazardModifierEnum : uint {
             Temperature,
             Toxicity,
             Radiation,

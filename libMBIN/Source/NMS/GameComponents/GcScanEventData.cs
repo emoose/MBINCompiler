@@ -26,7 +26,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x090 */ public float SurveyDistance;
         /* 0x098 */ public NMSString0x20A SurveyDiscoveryOSDMessage;
         // size: 0x6
-        public enum EventStartTypeEnum {
+        public enum EventStartTypeEnum : uint {
             None,
             Special,
             Discovered,
@@ -36,7 +36,7 @@ namespace libMBIN.NMS.GameComponents
         }
         /* 0x0B8 */ public EventStartTypeEnum EventStartType;
         // size: 0x5
-        public enum EventEndTypeEnum {
+        public enum EventEndTypeEnum : uint {
             None,
             Proximity,
             Interact,
@@ -45,7 +45,7 @@ namespace libMBIN.NMS.GameComponents
         }
         /* 0x0BC */ public EventEndTypeEnum EventEndType;
         // size: 0x2
-        public enum EventPriorityEnum {
+        public enum EventPriorityEnum : uint {
             Regular,
             High,
         }
@@ -54,7 +54,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x0C5 */ public bool DisableMultiplayerSync;
         /* 0x0C6 */ public bool ReplaceEventIfAlreadyActive;
         // size: 0x7
-        public enum BuildingLocationEnum {
+        public enum BuildingLocationEnum : uint {
             Nearest,
             AllNearest,
             Random,
@@ -65,7 +65,7 @@ namespace libMBIN.NMS.GameComponents
         }
         /* 0x0C8 */ public BuildingLocationEnum BuildingLocation;
         // size: 0x17
-        public enum BuildingTypeEnum {
+        public enum BuildingTypeEnum : uint {
             Any,
             AnyShelter,
             AnyNPC,
@@ -97,7 +97,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x0D6 */ public bool MustFindSystem;
         /* 0x0D7 */ public bool AllowOverriddenBuildings;
         // size: 0x6
-        public enum SolarSystemLocationEnum {
+        public enum SolarSystemLocationEnum : uint {
             Local,
             Near,
             LocalOrNear,

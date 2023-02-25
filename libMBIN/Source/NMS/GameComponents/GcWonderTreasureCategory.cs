@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcWonderTreasureCategory : NMSTemplate
     {
         // size: 0xD
-        public enum WonderTreasureCategoryEnum {
+        public enum WonderTreasureCategoryEnum : uint {
             Loot,
             Document,
             BioSample,

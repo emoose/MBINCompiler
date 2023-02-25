@@ -7,7 +7,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcBuildingPartSearchType : NMSTemplate
     {
         // size: 0x4
-        public enum BuildPartSearchTypeEnum {
+        public enum BuildPartSearchTypeEnum : uint {
             Base,
             Freighter,
             AllPlayerOwned,

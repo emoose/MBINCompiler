@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcVehicleType : NMSTemplate
     {
         // size: 0x7
-        public enum VehicleTypeEnum {
+        public enum VehicleTypeEnum : uint {
             Buggy,
             Bike,
             Truck,

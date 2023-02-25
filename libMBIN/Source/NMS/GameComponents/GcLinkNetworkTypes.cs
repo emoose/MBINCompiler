@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcLinkNetworkTypes : NMSTemplate
     {
         // size: 0x6
-        public enum LinkNetworkTypeEnum {
+        public enum LinkNetworkTypeEnum : uint {
             Power,
             Resources,
             Fuel,

@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcCreatureTypes : NMSTemplate
     {
         // size: 0x30
-        public enum CreatureTypeEnum {
+        public enum CreatureTypeEnum : uint {
             None,
             Bird,
             FlyingLizard,

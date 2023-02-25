@@ -8,7 +8,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x10 */ public Vector4f SunDir;
         /* 0x20 */ public float FoV;
         // size: 0x4
-        public enum DepthOfFieldSettingEnum {
+        public enum DepthOfFieldSettingEnum : uint {
             Off,
             Mid,
             On,

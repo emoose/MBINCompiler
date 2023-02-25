@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcAtlasDownloadType : NMSTemplate
     {
         // size: 0x4
-        public enum DownloadTypeEnum {
+        public enum DownloadTypeEnum : uint {
             Unknown,
             Discovery,
             Base,

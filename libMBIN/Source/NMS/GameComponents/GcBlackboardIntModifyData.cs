@@ -6,7 +6,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x00 */ public NMSString0x10 Key;
         /* 0x10 */ public int Value;
         // size: 0x2
-        public enum ModifyIntTypeEnum {
+        public enum ModifyIntTypeEnum : uint {
             SetValue,
             IncrementValue,
         }

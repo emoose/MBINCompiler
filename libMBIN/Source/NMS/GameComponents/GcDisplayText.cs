@@ -7,7 +7,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcDisplayText : NMSTemplate
     {
         // size: 0x5
-        public enum HUDTextDisplayTypeEnum {
+        public enum HUDTextDisplayTypeEnum : uint {
             Full,
             Compact,
             EyeLevel,
