@@ -2,16 +2,16 @@
 // They will always be disabled/ignored in Release builds.
 
 // Uncomment to enable debug logging of the template de/serialization.
-// #define DEBUG_TEMPLATE
+//#define DEBUG_TEMPLATE
 
 // Uncomment to enable debug logging of XML comments
 //#define DEBUG_COMMENTS
 
 // Uncomment to enable debug logging of MBIN field names
-// #define DEBUG_FIELD_NAMES
+//#define DEBUG_FIELD_NAMES
 
 // Uncomment to enable debug logging of XML property names
-// #define DEBUG_PROPERTY_NAMES
+//#define DEBUG_PROPERTY_NAMES
 
 
 using System;
@@ -724,7 +724,6 @@ namespace libMBIN
                     } else if ( fieldType.IsEnum ) {
                         Type enumType = Enum.GetUnderlyingType(field.FieldType);
                         writer.Align(AlignOf(enumType), field?.Name ?? fieldType.Name);
-                        // TODO: Can we make this generic??
                         if (enumType.Name == "UInt32") {
                             writer.Write((uint)Enum.Parse(field.FieldType, fieldData.ToString()));
                         } else if (enumType.Name == "UInt16") {
@@ -1362,13 +1361,12 @@ namespace libMBIN
                     } else if (field.FieldType.IsEnum) {
                         try {
                             Type enumType = Enum.GetUnderlyingType(field.FieldType);
-                            // TODO: Can we make this more generic?
                             if (enumType.Name == "UInt32") {
                                 return (uint)Enum.Parse(field.FieldType, xmlProperty.Value);
-                            } else if (enumType.Name == "Byte") {
-                                return (byte)Enum.Parse(field.FieldType, xmlProperty.Value);
+                            } else if (enumType.Name == "UInt16") {
+                                return (ushort)Enum.Parse(field.FieldType, xmlProperty.Value);
                             } else {
-                                return (int)Enum.Parse(field.FieldType, xmlProperty.Value);
+                                return (byte)Enum.Parse(field.FieldType, xmlProperty.Value);
                             }
                         } catch (ArgumentException) {
                             // material flags can have a custom suffix

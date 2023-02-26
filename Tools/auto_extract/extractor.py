@@ -99,6 +99,7 @@ FLAG_ENUM_FIXES = {
 # Lookup for classes with extra attributes.
 EXTRA_ATTRIBUTES = {
     'GcPlayerClothComponentData': ', Alignment = 0x10',
+    'GcClothComponentData': ', Alignment = 0x10',
 }
 # List of classes to avoid overwriting as the have custom deserialisation
 # methods.

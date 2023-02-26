@@ -140,7 +140,7 @@ def pytest_terminal_summary(terminalreporter):
     for failed in terminalreporter.stats.get('failed', []):
         if len(failed.sections) != 0:
             try:
-                fname, err = failed.sections[0][1].split(',')
+                fname, err = failed.sections[-1][1].split(',')
             except ValueError:
                 # This should only happen if something gets printed during the 
                 # test. We should be able to safely ignore them.
