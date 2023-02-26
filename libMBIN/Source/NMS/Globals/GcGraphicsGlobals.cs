@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(GUID = 0xB5BC4F0206F0F706, NameHash = 0xB24409E83457E875)]
+    [NMS(GUID = 0x127EDCDB5C006C4C, NameHash = 0xB24409E83457E875)]
     public class GcGraphicsGlobals : NMSTemplate
     {
         /* 0x000 */ public float LUTDistanceFlightMultiplier;

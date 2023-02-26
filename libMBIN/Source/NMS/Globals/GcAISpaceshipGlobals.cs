@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(GUID = 0xCF44F2A2053D8AE3, NameHash = 0xD338272248F67908)]
+    [NMS(GUID = 0x30DBD8A59C64E734, NameHash = 0xD338272248F67908)]
     public class GcAISpaceshipGlobals : NMSTemplate
     {
         /* 0x000 */ public GcPlayerSquadronConfig PlayerSquadronConfig;

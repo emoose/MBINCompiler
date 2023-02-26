@@ -2,7 +2,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(GUID = 0x2A82EBFCB6417B2D, NameHash = 0xFF2996557C508B00)]
+    [NMS(GUID = 0x31ECD5378BB33870, NameHash = 0xFF2996557C508B00)]
     public class GcSceneOptions : NMSTemplate
     {
         /* 0x000 */ public int RecentToolboxIndex;
