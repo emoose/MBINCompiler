@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x9ADFFB8A55F479CE, NameHash = 0x3AAEFA9CCB9353C1)]
+    [NMS(GUID = 0x501E9D30483F120B, NameHash = 0x3AAEFA9CCB9353C1)]
     public class GcObjectSpawnDataArray : NMSTemplate
     {
         /* 0x0 */ public GcTerrainTileType TileType;

@@ -1,10 +1,10 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xECDA52622D7A0FAD, NameHash = 0xEFC8FCE1F6004590)]
+    [NMS(GUID = 0xAEC58C1CD705E809, NameHash = 0xEFC8FCE1F6004590)]
     public class GcPhotoPlant : NMSTemplate
     {
         // size: 0x3
-        public enum PhotoPlantTypeEnum {
+        public enum PhotoPlantTypeEnum : uint {
             Sodium,
             Oxygen,
             BluePlant,

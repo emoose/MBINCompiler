@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x51A080B36857E55D, NameHash = 0xE5075EC0403F94CA)]
+    [NMS(GUID = 0xA6116160B4E36AE2, NameHash = 0xE5075EC0403F94CA)]
     public class GcPhotoModeSettings : NMSTemplate
     {
         /* 0x00 */ public float Fog;
@@ -8,7 +8,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x10 */ public Vector4f SunDir;
         /* 0x20 */ public float FoV;
         // size: 0x4
-        public enum DepthOfFieldSettingEnum {
+        public enum DepthOfFieldSettingEnum : uint {
             Off,
             Mid,
             On,

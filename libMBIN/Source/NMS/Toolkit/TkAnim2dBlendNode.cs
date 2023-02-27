@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0x3D986C559A7C523E, NameHash = 0xB08E12209E446AC4)]
+    [NMS(GUID = 0xFF4AD3EEDA81AD59, NameHash = 0xB08E12209E446AC4)]
     public class TkAnim2dBlendNode : NMSTemplate
     {
         /* 0x00 */ public NMSString0x10 NodeId;
@@ -13,13 +13,13 @@ namespace libMBIN.NMS.Toolkit
         /* 0x58 */ public float PositionSpringTime;
         /* 0x5C */ public TkCurveType PositionCurve;
         // size: 0x2
-        public enum CoordinatesEnum {
+        public enum CoordinatesEnum : uint {
             Polar,
             Cartesian,
         }
         /* 0x60 */ public CoordinatesEnum Coordinates;
         // size: 0x2
-        public enum BlendOpEnum {
+        public enum BlendOpEnum : uint {
             Blend,
             Add,
         }

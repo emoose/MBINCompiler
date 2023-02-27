@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x865E9558438DF2CB, NameHash = 0x950617F05949472B)]
+    [NMS(GUID = 0xEF6181D1BC4CEE7B, NameHash = 0x950617F05949472B)]
     public class GcInventoryStoreBalance : NMSTemplate
     {
         /* 0x00 */ public int PlayerPersonalInventoryTechWidth;

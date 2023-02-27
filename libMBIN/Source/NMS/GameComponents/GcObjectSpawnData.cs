@@ -3,12 +3,12 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xD3659DA85FE203A5, NameHash = 0x43EBB2E6AFAC5863)]
+    [NMS(GUID = 0xD5427D42870E991C, NameHash = 0x43EBB2E6AFAC5863)]
     public class GcObjectSpawnData : NMSTemplate
     {
         /* 0x000 */ public NMSString0x10 DebugName;
         // size: 0x2
-        public enum TypeEnum {
+        public enum TypeEnum : uint {
             Instanced,
             Single,
         }
@@ -19,14 +19,14 @@ namespace libMBIN.NMS.GameComponents
         /* 0x2E0 */ public NMSString0x10 Placement;
         /* 0x2F0 */ public GcSeed Seed;
         // size: 0x3
-        public enum PlacementPriorityEnum {
+        public enum PlacementPriorityEnum : uint {
             Low,
             Normal,
             High,
         }
         /* 0x300 */ public PlacementPriorityEnum PlacementPriority;
         // size: 0x7
-        public enum LargeObjectCoverageEnum {
+        public enum LargeObjectCoverageEnum : uint {
             DoNotPlace,
             DoNotPlaceIgnoreFootprint,
             DoNotPlaceClose,
@@ -37,7 +37,7 @@ namespace libMBIN.NMS.GameComponents
         }
         /* 0x304 */ public LargeObjectCoverageEnum LargeObjectCoverage;
         // size: 0x3
-        public enum OverlapStyleEnum {
+        public enum OverlapStyleEnum : uint {
             None,
             SameSeed,
             All,
@@ -50,7 +50,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x31C */ public float MaxAngle;
         /* 0x320 */ public bool MatchGroundColour;
         // size: 0x3
-        public enum GroundColourIndexEnum {
+        public enum GroundColourIndexEnum : uint {
             Auto,
             Main,
             Patch,

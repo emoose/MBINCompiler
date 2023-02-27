@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x4080311E0BFA9BB, NameHash = 0x7F0D775900CDB2FD)]
+    [NMS(GUID = 0x1EEB6E34193A8D63, NameHash = 0x7F0D775900CDB2FD)]
     public class GcRegionHotspotsTable : NMSTemplate
     {
         /* 0x000 */ public float RegionHotspotsPoleSpacing;

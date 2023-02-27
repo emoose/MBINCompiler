@@ -1,10 +1,10 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x89419CA1628D820B, NameHash = 0xDCBFB26222DD9DE6)]
+    [NMS(GUID = 0xA041098462C7EC70, NameHash = 0xDCBFB26222DD9DE6)]
     public class GcPetVocabularyWords : NMSTemplate
     {
         // size: 0xF
-        public enum PetVocabularyWordEnum {
+        public enum PetVocabularyWordEnum : uint {
             Attack,
             Dislike,
             Cute,

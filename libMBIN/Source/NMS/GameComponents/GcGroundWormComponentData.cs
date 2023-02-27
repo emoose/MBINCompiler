@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xCBC8CB17AC79213A, NameHash = 0x93C5F18EADCD6C3C)]
+    [NMS(GUID = 0x5D4EF68A1BE622F5, NameHash = 0x93C5F18EADCD6C3C)]
     public class GcGroundWormComponentData : NMSTemplate
     {
         /* 0x000 */ public NMSString0x100 LookJoint;

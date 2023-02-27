@@ -1,10 +1,10 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xCDFACA66786AB325, NameHash = 0x83ECCC918AB076A1)]
+    [NMS(GUID = 0x61187D71A7849AFA, NameHash = 0x83ECCC918AB076A1)]
     public class GcPlayerWeaponClass : NMSTemplate
     {
         // size: 0x9
-        public enum WeaponClassEnum {
+        public enum WeaponClassEnum : uint {
             None,
             Projectile,
             ChargedProjectile,

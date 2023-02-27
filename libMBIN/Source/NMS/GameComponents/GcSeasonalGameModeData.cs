@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x24B8F01541C7E2F3, NameHash = 0xFD6B0BE30E218605)]
+    [NMS(GUID = 0xA4C94919ED47AAA7, NameHash = 0xFD6B0BE30E218605)]
     public class GcSeasonalGameModeData : NMSTemplate
     {
         /* 0x0000 */ public int SeasonId;
@@ -35,6 +35,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x0478 */ public NMSString0x20A MainMissionMessage;
         /* 0x0498 */ public bool DoCommunityMissionTextSubstitutions;
         /* 0x0499 */ public bool DefaultToPvPOff;
+        /* 0x049A */ public bool MustCraftInBases;
         /* 0x04A0 */ public List<NMSString0x10> AdditionalTradeProducts;
         /* 0x04B0 */ public List<NMSString0x10> NeverTradeProducts;
         /* 0x04C0 */ public int StartingSuitSlots;
@@ -47,6 +48,8 @@ namespace libMBIN.NMS.GameComponents
         /* 0x04F5 */ public NMSString0x80 FreighterBaseOverrideFilename;
         /* 0x0578 */ public GcAlienRace FreighterRace;
         /* 0x057C */ public bool StartAboardFreighter;
+        /* 0x057D */ public bool ForceStartSystemTernary;
+        /* 0x057E */ public bool ForceStartSystemAbandoned;
         /* 0x0580 */ public List<GcBuildingClassification> ValidSpawnBuildings;
         /* 0x0590 */ public GcInventoryLayout WeaponInventoryLayout;
         /* 0x05B0 */ public GcInventoryLayout ShipInventoryLayout;
@@ -91,5 +94,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x33C8 */ public List<GcTechnology> TechnologyTable;
         /* 0x33D8 */ public List<GcProductData> ProductTable;
         /* 0x33E8 */ public List<GcRealitySubstanceData> SubstanceTable;
+        /* 0x33F8 */ public GcTradeData SeasonalUAStationTradeData;
+        /* 0x34C8 */ public bool UseSeasonalUAStationTradeData;
     }
 }

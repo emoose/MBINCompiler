@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0x5EAE5D891077DCD8, NameHash = 0x474596B01166F6A6)]
+    [NMS(GUID = 0xC6E7F5301C2A5B2A, NameHash = 0x474596B01166F6A6)]
     public class TkNoiseLayerData : NMSTemplate
     {
         /* 0x00 */ public bool Active;
@@ -8,7 +8,7 @@ namespace libMBIN.NMS.Toolkit
         /* 0x02 */ public bool Absolute;
         /* 0x03 */ public bool Subtract;
         // size: 0xB
-        public enum NoiseTypeEnum {
+        public enum NoiseTypeEnum : uint {
             Plane,
             Check,
             Sine,

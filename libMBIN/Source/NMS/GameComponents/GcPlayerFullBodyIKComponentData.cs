@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x3013446740EE3000, NameHash = 0x80648B8FC1E7CB4D)]
+    [NMS(GUID = 0x1050DC441F582ECB, NameHash = 0x80648B8FC1E7CB4D)]
     public class GcPlayerFullBodyIKComponentData : NMSTemplate
     {
         /* 0x000 */ public bool Enabled;
@@ -16,7 +16,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x1A0 */ public List<NMSString0x20> CameraNeckBones;
         /* 0x1B0 */ public GcIKConstraint SitConstraint;
         // size: 0x6
-        public enum PlayerHeadUpAxisEnum {
+        public enum PlayerHeadUpAxisEnum : uint {
             X,
             XNeg,
             Y,

@@ -1,10 +1,10 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x15776A9491BAFF8D, NameHash = 0x651218B208D538A0)]
+    [NMS(GUID = 0x1EB28DC3AE2177C7, NameHash = 0x651218B208D538A0)]
     public class GcMissionConditionAbandonedOrEmptySystem : NMSTemplate
     {
         // size: 0x3
-        public enum MissionSystemTypeEnum {
+        public enum MissionSystemTypeEnum : uint {
             Either,
             Empty,
             Abandoned,

@@ -1,10 +1,10 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xCEADEC2DF1B32E7B, NameHash = 0xE8FE27493120750F)]
+    [NMS(GUID = 0xAA4AA33B8FCAE03E, NameHash = 0xE8FE27493120750F)]
     public class GcBiomeSubType : NMSTemplate
     {
         // size: 0x1B
-        public enum BiomeSubTypeEnum {
+        public enum BiomeSubTypeEnum : uint {
             None,
             Standard,
             HighQuality,

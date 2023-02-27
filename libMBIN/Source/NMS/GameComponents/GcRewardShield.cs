@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x7984353A2C662C46, NameHash = 0x55E2192D51D7971B)]
+    [NMS(GUID = 0x505557EF5A3779E9, NameHash = 0x55E2192D51D7971B)]
     public class GcRewardShield : NMSTemplate
     {
         /* 0x0 */ public int AmountMin;

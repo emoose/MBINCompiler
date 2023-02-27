@@ -1,10 +1,10 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xDFFF639482153F5D, NameHash = 0x6B6B42D850BF9519)]
+    [NMS(GUID = 0xB0B0A7490B06DF04, NameHash = 0x6B6B42D850BF9519)]
     public class GcFrigateTraitStrength : NMSTemplate
     {
         // size: 0xA
-        public enum FrigateTraitStrengthEnum {
+        public enum FrigateTraitStrengthEnum : uint {
             NegativeLarge,
             NegativeMedium,
             NegativeSmall,

@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x54B079D182D709EC, NameHash = 0xBBBD45634207B79F)]
+    [NMS(GUID = 0x6B51F3B80FECAB80, NameHash = 0xBBBD45634207B79F)]
     public class GcBaseMiniPortalComponentData : NMSTemplate
     {
         /* 0x00 */ public bool AllowVehicles;
@@ -14,7 +14,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x10 */ public NMSString0x10 GroupID;
         /* 0x20 */ public NMSString0x10 DestinationGroupID;
         // size: 0x4
-        public enum DestinationSortTypeEnum {
+        public enum DestinationSortTypeEnum : uint {
             NearestPotal,
             BaseBuildingConnection,
             AbandonedFreighter,

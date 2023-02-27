@@ -1,10 +1,10 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xEE3B2E5A9112AB35, NameHash = 0xB0C58666F58DF1C)]
+    [NMS(GUID = 0x8B12A7765BF54C2D, NameHash = 0xB0C58666F58DF1C)]
     public class GcRewardRepairWholeInventory : NMSTemplate
     {
         // size: 0x8
-        public enum InventoryToRepairEnum {
+        public enum InventoryToRepairEnum : uint {
             Personal,
             PersonalTech,
             Ship,

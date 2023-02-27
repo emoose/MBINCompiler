@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x6BFB9E699FF82E72, NameHash = 0x823BF33F97DC4F32)]
+    [NMS(GUID = 0x5D34A50945512403, NameHash = 0x823BF33F97DC4F32)]
     public class GcCreatureGenerationWeightedListDomainEntry : NMSTemplate
     {
         /* 0x0 */ public float Weight;

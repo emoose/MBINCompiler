@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x317CC475080CF8F1, NameHash = 0x96E42AD217EA55B2)]
+    [NMS(GUID = 0x9F922C89C96A1B4F, NameHash = 0x96E42AD217EA55B2)]
     public class GcPlanetCloudProperties : NMSTemplate
     {
         /* 0x00 */ public GcSeed Seed;
@@ -15,7 +15,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x34 */ public float RateOfChange;
         /* 0x38 */ public float SecondaryRateOfChange;
         // size: 0x2
-        public enum CloudinessEnum {
+        public enum CloudinessEnum : uint {
             CloudyWithClearSpells,
             ClearWithCloudySpells,
         }

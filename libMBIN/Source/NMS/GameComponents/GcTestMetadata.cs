@@ -4,7 +4,7 @@ using System;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x978C88C00E087D3B, NameHash = 0xCE965FAFD6BBF99E)]
+    [NMS(GUID = 0x73F3D69C8298DC6B, NameHash = 0xCE965FAFD6BBF99E)]
     public class GcTestMetadata : NMSTemplate
     {
         /* 0x000 */ public bool TestBool;
@@ -36,7 +36,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x580 */ public NMSString0x40 DocRenamedString64;
         /* 0x5C0 */ public NMSString0x20A DocOptionalRenamed;
         // size: 0x4
-        public enum DocOptionalEnumEnum {
+        public enum DocOptionalEnumEnum : uint {
             SomeValue1,
             SomeValue2,
             SomeValue3,
@@ -45,7 +45,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x5E0 */ public DocOptionalEnumEnum DocOptionalEnum;
         /* 0x5E8 */ public VariableSizeString TestDynamicString;
         // size: 0x4
-        public enum TestEnumEnum {
+        public enum TestEnumEnum : uint {
             Default,
             Option1,
             Option2,

@@ -99,14 +99,18 @@ FLAG_ENUM_FIXES = {
 # Lookup for classes with extra attributes.
 EXTRA_ATTRIBUTES = {
     'GcPlayerClothComponentData': ', Alignment = 0x10',
+    'GcClothComponentData': ', Alignment = 0x10',
 }
 # List of classes to avoid overwriting as the have custom deserialisation
 # methods.
+# TODO: If the GUID changes we need to raise an important message so that we may
+# fix it manually.
 DONT_OVERRIDE = [
     'TkGeometryData',
     'TkMeshData',
     'TkSceneNodeData',
     'TkAnimNodeFrameData',
+    'TkAnimNodeFrameHalfData',
 ]
 
 SUMMARY_FILE = op.join(op.dirname(__file__), 'summary.txt')
@@ -435,6 +439,18 @@ class EnumField(Field):
             self.is_flag = False
 
     @property
+    def enum_dtype(self) -> str:
+        if self.field_size == 0x4:
+            return 'uint'
+        elif self.field_size == 0x2:
+            return 'ushort'
+        elif self.field_size == 0x1:
+            return 'byte'
+        else:
+            raise ValueError(f'The field {self.field_name} has an unexpected '
+                             f'size: {self.field_size}')
+
+    @property
     def is_flag(self) -> bool:
         return self._is_flag
 
@@ -466,6 +482,8 @@ class NMSClass():
             self.namespace = USING_MAPPING.get(
                 self.name[:2].lower(), 'libMBIN.NMS.GameComponents'
             )
+        elif self.name.endswith("TkGlobals"):
+            self.namespace = 'libMBIN.NMS.Toolkit'
         else:
             self.namespace = 'libMBIN.NMS.Globals'
         self.is_enum_class = False
@@ -586,7 +604,7 @@ def read_class(
     if out_dir != './output':
         out_dir = op.join(out_dir, 'Source', 'NMS')
     # Add the folder to the output path directory
-    out_dir = op.join(out_dir, dir_)
+    out_dir = op.join(op.dirname(__file__), out_dir, dir_)
     if not op.exists(out_dir):
         os.makedirs(out_dir, exist_ok=True)
     fields, has_enum_arrays = extract(nms_mem, ptr_data, field_num)

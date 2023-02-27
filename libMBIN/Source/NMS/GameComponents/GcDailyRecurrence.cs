@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xAD2C57445EF0B623, NameHash = 0xA4B99A409C0C214B)]
+    [NMS(GUID = 0x97FB1C988472469D, NameHash = 0xA4B99A409C0C214B)]
     public class GcDailyRecurrence : NMSTemplate
     {
         /* 0x0 */ public int RecurrenceMinute;

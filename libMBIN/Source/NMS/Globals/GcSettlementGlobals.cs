@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(GUID = 0xFFD3C747588178DD, NameHash = 0x8652A1B779227539)]
+    [NMS(GUID = 0x9BD8E8362EBCB0C3, NameHash = 0x8652A1B779227539)]
     public class GcSettlementGlobals : NMSTemplate
     {
         /* 0x0000 */ public List<NMSString0x20A> ScanEventsThatPreventSentinelAlert;

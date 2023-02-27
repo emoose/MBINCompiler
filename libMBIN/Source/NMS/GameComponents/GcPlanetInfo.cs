@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xD262D71E1CBF8558, NameHash = 0x458D53EF402BA3C9)]
+    [NMS(GUID = 0x98F6CCB88342CA8, NameHash = 0x458D53EF402BA3C9)]
     public class GcPlanetInfo : NMSTemplate
     {
         /* 0x000 */ public NMSString0x80 PlanetDescription;

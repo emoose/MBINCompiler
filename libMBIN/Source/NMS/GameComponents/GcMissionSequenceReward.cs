@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x202C3B247BBD701F, NameHash = 0x7471FD77815538C2)]
+    [NMS(GUID = 0x3589DA89D687D2BD, NameHash = 0x7471FD77815538C2)]
     public class GcMissionSequenceReward : NMSTemplate
     {
         /* 0x00 */ public NMSString0x80 Message;
@@ -8,7 +8,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x90 */ public bool DoMissionBoardOverride;
         /* 0x91 */ public bool Silent;
         // size: 0x5
-        public enum RewardInventoryOverrideEnum {
+        public enum RewardInventoryOverrideEnum : uint {
             None,
             Suit,
             Ship,

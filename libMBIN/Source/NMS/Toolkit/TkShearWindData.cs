@@ -2,7 +2,7 @@ using libMBIN.NMS.Toolkit;
 
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0x51D6F3EC9AC109C8, NameHash = 0xB9B8ADD8C9FFC2D8)]
+    [NMS(GUID = 0xC462D4F8119851CF, NameHash = 0xB9B8ADD8C9FFC2D8)]
     public class TkShearWindData : NMSTemplate
     {
         /* 0x00 */ public NMSString0x10 Name;

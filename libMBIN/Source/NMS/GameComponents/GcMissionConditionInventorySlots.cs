@@ -2,11 +2,11 @@ using libMBIN.NMS.Toolkit;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xAC6C70FE2FE65BC4, NameHash = 0xF112AB8FC14A734A)]
+    [NMS(GUID = 0xAB070DA8379B54B1, NameHash = 0xF112AB8FC14A734A)]
     public class GcMissionConditionInventorySlots : NMSTemplate
     {
         // size: 0x4
-        public enum InventoryTestEnum {
+        public enum InventoryTestEnum : uint {
             Current,
             Personal,
             Ship,

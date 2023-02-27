@@ -2,7 +2,7 @@ using libMBIN.NMS.Toolkit;
 
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0x25DA985683D5F067, NameHash = 0x56E0EB96EB3713F0)]
+    [NMS(GUID = 0xB319768677055F79, NameHash = 0x56E0EB96EB3713F0)]
     public class TkGraphicsDetailPreset : NMSTemplate
     {
         /* 0x00 */ public TkGraphicsDetailTypes TextureQuality;
@@ -15,13 +15,13 @@ namespace libMBIN.NMS.Toolkit
         /* 0x1C */ public TkGraphicsDetailTypes PlanetQuality;
         /* 0x20 */ public TkGraphicsDetailTypes BaseQuality;
         // size: 0x2
-        public enum UIQualityEnum {
+        public enum UIQualityEnum : uint {
             Normal,
             _4K,
         }
         /* 0x24 */ public UIQualityEnum UIQuality;
         // size: 0x5
-        public enum DLSSQualityEnum {
+        public enum DLSSQualityEnum : uint {
             MaxPerformance,
             Balanced,
             MaxQuality,
@@ -30,7 +30,7 @@ namespace libMBIN.NMS.Toolkit
         }
         /* 0x28 */ public DLSSQualityEnum DLSSQuality;
         // size: 0x5
-        public enum FFXSRQualityEnum {
+        public enum FFXSRQualityEnum : uint {
             Off,
             UltraQuality,
             Quality,
@@ -39,7 +39,7 @@ namespace libMBIN.NMS.Toolkit
         }
         /* 0x2C */ public FFXSRQualityEnum FFXSRQuality;
         // size: 0x4
-        public enum FFXSR2QualityEnum {
+        public enum FFXSR2QualityEnum : uint {
             UltraPerformance,
             Performance,
             Balanced,
@@ -47,7 +47,7 @@ namespace libMBIN.NMS.Toolkit
         }
         /* 0x30 */ public FFXSR2QualityEnum FFXSR2Quality;
         // size: 0x5
-        public enum XESSQualityEnum {
+        public enum XESSQualityEnum : uint {
             UltraPerformance,
             Performance,
             Balanced,
@@ -56,7 +56,7 @@ namespace libMBIN.NMS.Toolkit
         }
         /* 0x34 */ public XESSQualityEnum XESSQuality;
         // size: 0x7
-        public enum AmbientOcclusionEnum {
+        public enum AmbientOcclusionEnum : uint {
             Off,
             GTAO_Low,
             GTAO_Medium,
@@ -67,7 +67,7 @@ namespace libMBIN.NMS.Toolkit
         }
         /* 0x38 */ public AmbientOcclusionEnum AmbientOcclusion;
         // size: 0x5
-        public enum AnisotropyLevelEnum {
+        public enum AnisotropyLevelEnum : uint {
             _1,
             _2,
             _4,
@@ -76,7 +76,7 @@ namespace libMBIN.NMS.Toolkit
         }
         /* 0x3C */ public AnisotropyLevelEnum AnisotropyLevel;
         // size: 0x8
-        public enum AntiAliasingEnum {
+        public enum AntiAliasingEnum : uint {
             None,
             TAA_LOW,
             TAA,
@@ -87,5 +87,6 @@ namespace libMBIN.NMS.Toolkit
             XESS,
         }
         /* 0x40 */ public AntiAliasingEnum AntiAliasing;
+        /* 0x44 */ public TkDynamicResScalingSettings DynamicResScalingSettings;
     }
 }

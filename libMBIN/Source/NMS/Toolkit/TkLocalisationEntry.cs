@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0xFA68E11A3B251946, NameHash = 0xBCFA2AE11CD16318)]
+    [NMS(GUID = 0xD21A74F102B57C1A, NameHash = 0xBCFA2AE11CD16318)]
     public class TkLocalisationEntry : NMSTemplate
     {
         /* 0x000 */ public NMSString0x20A Id;

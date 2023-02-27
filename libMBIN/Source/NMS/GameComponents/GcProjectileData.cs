@@ -4,7 +4,7 @@ using System;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x7B5EEA8A509F46F6, NameHash = 0x98B648B5C054B7F7)]
+    [NMS(GUID = 0x37F1B214BC74234A, NameHash = 0x98B648B5C054B7F7)]
     public class GcProjectileData : NMSTemplate
     {
         /* 0x000 */ public NMSString0x10 Id;
@@ -58,7 +58,7 @@ namespace libMBIN.NMS.GameComponents
         }
         /* 0x3A0 */ public BehaviourFlagsEnum BehaviourFlags;
         // size: 0x4
-        public enum ClassEnum {
+        public enum ClassEnum : uint {
             Player,
             PlayerShip,
             Ship,

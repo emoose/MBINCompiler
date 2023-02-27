@@ -1,12 +1,12 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x58DDFCA299CF2247, NameHash = 0x16AA46E72671EDE7)]
+    [NMS(GUID = 0xAAF0F26B8FB365A8, NameHash = 0x16AA46E72671EDE7)]
     public class GcBlackboardIntModifyData : NMSTemplate
     {
         /* 0x00 */ public NMSString0x10 Key;
         /* 0x10 */ public int Value;
         // size: 0x2
-        public enum ModifyIntTypeEnum {
+        public enum ModifyIntTypeEnum : uint {
             SetValue,
             IncrementValue,
         }

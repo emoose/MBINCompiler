@@ -4,11 +4,11 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xABFDDC5DEA71CFB4, NameHash = 0xDAB0554EA36957B5)]
+    [NMS(GUID = 0x345DED12B36153C4, NameHash = 0xDAB0554EA36957B5)]
     public class GcInteractionComponentData : NMSTemplate
     {
         // size: 0x3
-        public enum InteractionActionEnum {
+        public enum InteractionActionEnum : uint {
             PressButton,
             HoldButton,
             Shoot,
@@ -41,7 +41,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x288 */ public List<GcAlienPuzzleMissionOverride> PuzzleMissionOverrideTable;
         /* 0x298 */ public GcStoryUtilityOverride StoryUtilityOverrideData;
         // size: 0x3
-        public enum OverrideInteriorExteriorMarkerEnum {
+        public enum OverrideInteriorExteriorMarkerEnum : uint {
             No,
             Interior,
             Exterior,
@@ -50,7 +50,12 @@ namespace libMBIN.NMS.GameComponents
         /* 0x2DC */ public bool ReseedAfterRewardSuccess;
         /* 0x2DD */ public bool UsePersonalPersistentBuffer;
         /* 0x2E0 */ public float InWorldUIScaler;
-        /* 0x2E8 */ public NMSString0x10 StartMissionOnUse;
-        /* 0x2F8 */ public bool AllowMissionUnderwater;
+        /* 0x2E4 */ public float InWorldUIMinDistOverride;
+        /* 0x2E8 */ public float InWorldUIMinDistOverrideV2;
+        /* 0x2EC */ public float InWorldUIForcedOffset;
+        /* 0x2F0 */ public float InWorldUIForcedOffsetV2;
+        /* 0x2F4 */ public bool InWorldUIUseCameraUp;
+        /* 0x2F8 */ public NMSString0x10 StartMissionOnUse;
+        /* 0x308 */ public bool AllowMissionUnderwater;
     }
 }

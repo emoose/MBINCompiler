@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xB8EAD6D192EF966, NameHash = 0x756972574B9CCB08)]
+    [NMS(GUID = 0x205BFEB3B8061079, NameHash = 0x756972574B9CCB08)]
     public class GcHUDManagerData : NMSTemplate
     {
         /* 0x000 */ public GcTextPreset TitleFont;
@@ -38,6 +38,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x1B8 */ public float ModelRenderDisplayOffset;
         /* 0x1BC */ public float ModelRenderDisplayMove;
         /* 0x1C0 */ public TkCurveType ModelRenderDisplayAlphaCurve;
-        /* 0x1C4 */ public TkCurveType ModelRenderDisplayMoveCurve;
+        /* 0x1C1 */ public TkCurveType ModelRenderDisplayMoveCurve;
     }
 }

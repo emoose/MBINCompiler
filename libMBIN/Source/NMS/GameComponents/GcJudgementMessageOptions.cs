@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x8189EC5105D2AF19, NameHash = 0x8A1CA9D7910E2ABB)]
+    [NMS(GUID = 0x8ED76BBC5E9E0941, NameHash = 0x8A1CA9D7910E2ABB)]
     public class GcJudgementMessageOptions : NMSTemplate
     {
         /* 0x000 */ public NMSString0x80 MessageInSettlement;

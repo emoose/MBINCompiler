@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x7EE90411147EFC38, NameHash = 0x3213D59A0301372C)]
+    [NMS(GUID = 0xB66CB6E7E0D4B11A, NameHash = 0x3213D59A0301372C)]
     public class GcImpactCombatEffectData : NMSTemplate
     {
         /* 0x0 */ public GcCombatEffectType CombatEffectType;

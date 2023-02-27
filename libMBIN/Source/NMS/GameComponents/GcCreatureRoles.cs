@@ -1,10 +1,10 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x507509ED0C935B63, NameHash = 0xA8AB3ECD5F81E80C)]
+    [NMS(GUID = 0xEAA141147D899B8, NameHash = 0xA8AB3ECD5F81E80C)]
     public class GcCreatureRoles : NMSTemplate
     {
         // size: 0xB
-        public enum CreatureRoleEnum {
+        public enum CreatureRoleEnum : uint {
             None,
             Predator,
             PlayerPredator,

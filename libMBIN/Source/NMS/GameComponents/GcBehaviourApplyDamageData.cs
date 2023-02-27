@@ -2,7 +2,7 @@ using libMBIN.NMS.Toolkit;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xD703C43065CC9294, NameHash = 0x88EF02AAFC25BCE6)]
+    [NMS(GUID = 0xB185E9E89F4E3649, NameHash = 0x88EF02AAFC25BCE6)]
     public class GcBehaviourApplyDamageData : NMSTemplate
     {
         /* 0x00 */ public TkBlackboardDefaultValueId PlayerDamageType;

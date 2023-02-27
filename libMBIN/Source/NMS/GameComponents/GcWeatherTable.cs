@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x6CBEA5105267947B, NameHash = 0x4452780AB55C81D6)]
+    [NMS(GUID = 0xE82BC2FFD780DC01, NameHash = 0x4452780AB55C81D6)]
     public class GcWeatherTable : NMSTemplate
     {
         [NMS(Size = 0x10, EnumType = typeof(GcWeatherOptions.WeatherEnum))]

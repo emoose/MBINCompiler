@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x15C948E9EEAE1A30, NameHash = 0x68CB2B62199F1EFA)]
+    [NMS(GUID = 0xC4EEDF35BA1C202B, NameHash = 0x68CB2B62199F1EFA)]
     public class GcNPCWordReactionCategory : NMSTemplate
     {
         [NMS(Size = 0x7, EnumType = typeof(GcWordCategoryTableEnum.wordcategorytableEnumEnum))]

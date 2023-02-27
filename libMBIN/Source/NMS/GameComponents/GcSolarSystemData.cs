@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xE3E6D8886E90244A, NameHash = 0x9B09276BB2795541)]
+    [NMS(GUID = 0xA2E4A21CCF757F1A, NameHash = 0x9B09276BB2795541)]
     public class GcSolarSystemData : NMSTemplate
     {
         /* 0x0000 */ public GcSeed Seed;
@@ -35,7 +35,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x0598 */ public List<GcSolarSystemLocator> Locators;
         /* 0x05A8 */ public List<NMSTemplate> AsteroidGenerators;
         // size: 0x3
-        public enum AsteroidLevelEnum {
+        public enum AsteroidLevelEnum : uint {
             NoRares,
             SomeRares,
             LotsOfRares,

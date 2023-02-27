@@ -1,10 +1,10 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x424831EA107022FD, NameHash = 0xB66F8D60603D1092)]
+    [NMS(GUID = 0x9DFAC1F6DF6F3F6A, NameHash = 0xB66F8D60603D1092)]
     public class GcPaletteData : NMSTemplate
     {
         // size: 0x6
-        public enum NumColoursEnum {
+        public enum NumColoursEnum : uint {
             Inactive,
             _1,
             _4,

@@ -1,10 +1,10 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x540A930A52C0384E, NameHash = 0xBFFCA397C2DEA0EE)]
+    [NMS(GUID = 0x5198BF8A16C55353, NameHash = 0xBFFCA397C2DEA0EE)]
     public class GcNPCNavSubgraphNodeType : NMSTemplate
     {
         // size: 0x3
-        public enum NPCNavSubgraphNodeTypeEnum {
+        public enum NPCNavSubgraphNodeTypeEnum : uint {
             Path,
             Connection,
             PointOfInterest,

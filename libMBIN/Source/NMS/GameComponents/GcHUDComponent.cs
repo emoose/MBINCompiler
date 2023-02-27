@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x5911A9BEF6B2A984, NameHash = 0x9658E308A74D3E3C)]
+    [NMS(GUID = 0x3585F426181D439A, NameHash = 0x9658E308A74D3E3C)]
     public class GcHUDComponent : NMSTemplate
     {
         /* 0x00 */ public NMSString0x10 ID;
@@ -9,7 +9,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x18 */ public int Width;
         /* 0x1C */ public int Height;
         // size: 0x5
-        public enum AlignEnum {
+        public enum AlignEnum : uint {
             Center,
             TopLeft,
             TopRight,

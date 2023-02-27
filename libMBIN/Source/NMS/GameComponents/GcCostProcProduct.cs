@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x83091766E9E718C2, NameHash = 0x2D9EAD5F5CF5EAF6)]
+    [NMS(GUID = 0x3C8D0F7D4CC9EBCC, NameHash = 0x2D9EAD5F5CF5EAF6)]
     public class GcCostProcProduct : NMSTemplate
     {
         /* 0x0 */ public GcProceduralProductCategory Type;

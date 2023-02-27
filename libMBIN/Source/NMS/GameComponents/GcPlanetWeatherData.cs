@@ -2,26 +2,26 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x745DBAE7B552A303, NameHash = 0xEBF08BE1E3CAE3AC)]
+    [NMS(GUID = 0x69F3C1EFE29BC64E, NameHash = 0xEBF08BE1E3CAE3AC)]
     public class GcPlanetWeatherData : NMSTemplate
     {
         /* 0x000 */ public GcWeatherOptions WeatherType;
         /* 0x010 */ public GcPlanetHeavyAirData HeavyAir;
         // size: 0x2
-        public enum WeatherIntensityEnum {
+        public enum WeatherIntensityEnum : uint {
             Default,
             Extreme,
         }
         /* 0x130 */ public WeatherIntensityEnum WeatherIntensity;
         // size: 0x3
-        public enum StormFrequencyEnum {
+        public enum StormFrequencyEnum : uint {
             None,
             Low,
             High,
         }
         /* 0x134 */ public StormFrequencyEnum StormFrequency;
         // size: 0x2
-        public enum AtmosphereTypeEnum {
+        public enum AtmosphereTypeEnum : uint {
             None,
             Normal,
         }

@@ -294,7 +294,14 @@ namespace libMBIN
                     }
 
                     if (type.IsEnum) {
-                        alignment = 0x4;
+                        Type enumType = type.GetEnumUnderlyingType();
+                        if ( enumType.Name == "UInt32") {
+                            alignment = 0x4;
+                        } else if (enumType.Name == "UInt16") {
+                            alignment = 0x2;
+                        } else {
+                            alignment = 0x1;
+                        }
                         break;
                     }
 
@@ -410,8 +417,17 @@ namespace libMBIN
                     }
 
                     if (field.IsEnum) {
-                        reader.Align( 4 );
-                        return fieldType == "Int32" ? (object)reader.ReadInt32() : (object)reader.ReadUInt32();
+                        Type enumType = field.GetEnumUnderlyingType();
+                        if (enumType.Name == "UInt32") {
+                            reader.Align( 4 );
+                            return (object)reader.ReadUInt32();
+                        } else if (enumType.Name == "UInt16") {
+                            reader.Align( 2 );
+                            return (object)reader.ReadUInt16();
+                        } else if (enumType.Name == "Byte") {
+                            reader.Align( 1 );
+                            return (object)reader.ReadByte();
+                        }
                     }
 
                     if (field.IsArray) {
@@ -706,13 +722,14 @@ namespace libMBIN
                             SerializeValue( writer, realObj.GetType(), realObj, realObj.GetType().GetCustomAttribute<NMSAttribute>(), field, ref additionalData, ref addtDataIndex, listEnding );
                         }
                     } else if ( fieldType.IsEnum ) {
-                        writer.Align(4, field?.Name ?? fieldType.Name );
                         Type enumType = Enum.GetUnderlyingType(field.FieldType);
+                        writer.Align(AlignOf(enumType), field?.Name ?? fieldType.Name);
                         if (enumType.Name == "UInt32") {
                             writer.Write((uint)Enum.Parse(field.FieldType, fieldData.ToString()));
-                        }
-                        else {
-                            writer.Write((int)Enum.Parse(field.FieldType, fieldData.ToString()));
+                        } else if (enumType.Name == "UInt16") {
+                            writer.Write((ushort)Enum.Parse(field.FieldType, fieldData.ToString()));
+                        } else {
+                            writer.Write((byte)Enum.Parse(field.FieldType, fieldData.ToString()));
                         }
 
                     } else if ( fieldType.BaseType == typeof( NMSTemplate ) ) {
@@ -1346,8 +1363,10 @@ namespace libMBIN
                             Type enumType = Enum.GetUnderlyingType(field.FieldType);
                             if (enumType.Name == "UInt32") {
                                 return (uint)Enum.Parse(field.FieldType, xmlProperty.Value);
+                            } else if (enumType.Name == "UInt16") {
+                                return (ushort)Enum.Parse(field.FieldType, xmlProperty.Value);
                             } else {
-                                return (int)Enum.Parse(field.FieldType, xmlProperty.Value);
+                                return (byte)Enum.Parse(field.FieldType, xmlProperty.Value);
                             }
                         } catch (ArgumentException) {
                             // material flags can have a custom suffix

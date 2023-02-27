@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x74FF85B64E55CAFD, NameHash = 0xEB530C995C41BAF0)]
+    [NMS(GUID = 0x3695ECADA7CB07DC, NameHash = 0xEB530C995C41BAF0)]
     public class GcPetActionMoodModifier : NMSTemplate
     {
         [NMS(Size = 0x2, EnumType = typeof(GcCreaturePetMood.PetMoodEnum))]

@@ -2,12 +2,12 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0x2A966EB68A4B77C, NameHash = 0xDB0FD87A0597E5FD)]
+    [NMS(GUID = 0x4A0243DD40AA8081, NameHash = 0xDB0FD87A0597E5FD)]
     public class TkNetReplicatedEntityComponentData : NMSTemplate
     {
         /* 0x00 */ public List<NMSString0x80> ReplicaComponentMask;
         // size: 0x8
-        public enum ReplicationRangeEnum {
+        public enum ReplicationRangeEnum : uint {
             NotSet,
             System,
             SystemLocal,
@@ -19,7 +19,7 @@ namespace libMBIN.NMS.Toolkit
         }
         /* 0x10 */ public ReplicationRangeEnum ReplicationRange;
         // size: 0x2
-        public enum SpawnTypeEnum {
+        public enum SpawnTypeEnum : uint {
             Basic,
             Creature,
         }

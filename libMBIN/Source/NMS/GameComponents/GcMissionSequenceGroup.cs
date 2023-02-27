@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x3A1F54E888D8A892, NameHash = 0x51B3554FFBEBED66)]
+    [NMS(GUID = 0xB370FD96C3A251EC, NameHash = 0x51B3554FFBEBED66)]
     public class GcMissionSequenceGroup : NMSTemplate
     {
         /* 0x000 */ public bool Silent;
@@ -24,22 +24,23 @@ namespace libMBIN.NMS.GameComponents
         /* 0x1B8 */ public NMSString0x20A PrefixTitleText;
         /* 0x1D8 */ public bool BlockPinning;
         /* 0x1DC */ public GcMissionConditionTest ConditionTest;
+        /* 0x1E0 */ public bool HideFromLogIfConditionsMet;
         // size: 0x3
-        public enum RepeatLogicEnum {
+        public enum RepeatLogicEnum : uint {
             None,
             Loop,
             RestartOnConditionFail,
         }
-        /* 0x1E0 */ public RepeatLogicEnum RepeatLogic;
+        /* 0x1E4 */ public RepeatLogicEnum RepeatLogic;
         // size: 0x4
-        public enum IconStyleEnum {
+        public enum IconStyleEnum : uint {
             Default,
             Large,
             Square,
             NoFrame,
         }
-        /* 0x1E4 */ public IconStyleEnum IconStyle;
-        /* 0x1E8 */ public TkInputEnum SpecialButtonIcon;
+        /* 0x1E8 */ public IconStyleEnum IconStyle;
+        /* 0x1EC */ public TkInputEnum SpecialButtonIcon;
         /* 0x1F0 */ public GcObjectiveTextFormatOptions ObjectiveFormatting;
         /* 0x238 */ public GcTargetMissionSurveyOptions SurveyTarget;
         /* 0x450 */ public GcCustomNotifyTimerOptions CustomNotifyTimers;

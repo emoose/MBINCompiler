@@ -1,10 +1,10 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x7A9E1B9DE550238D, NameHash = 0x5EEC6F79915C67C2)]
+    [NMS(GUID = 0xD0B9100ACFDEC9E1, NameHash = 0x5EEC6F79915C67C2)]
     public class GcQuickMenuActions : NMSTemplate
     {
         // size: 0x39
-        public enum QuickMenuActionsEnum {
+        public enum QuickMenuActionsEnum : uint {
             None,
             CallFreighter,
             DismissFreighter,

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xDD088D42AC56C9BB, NameHash = 0x5F9BF82F9925D932)]
+    [NMS(GUID = 0x1E4BCD483220FC93, NameHash = 0x5F9BF82F9925D932)]
     public class GcPlayerDamageData : NMSTemplate
     {
         /* 0x000 */ public NMSString0x10 Id;
@@ -25,7 +25,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x161 */ public bool ForceDamageInInteraction;
         /* 0x162 */ public bool AllowDeathInInteraction;
         // size: 0x5
-        public enum PlayerDamageTypeEnum {
+        public enum PlayerDamageTypeEnum : uint {
             Normal,
             Toxic,
             Radioactive,

@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xD0FDAC0E5505B979, NameHash = 0xB125AED843BB9164)]
+    [NMS(GUID = 0x5878DB43951227CC, NameHash = 0xB125AED843BB9164)]
     public class GcEnvironmentProperties : NMSTemplate
     {
         /* 0x00 */ public float FlightFogHeight;

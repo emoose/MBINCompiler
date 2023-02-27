@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0x4E976D9B325E3B7D, NameHash = 0x38D7F8085AD4CE3)]
+    [NMS(GUID = 0xC6CBA4BB1305622B, NameHash = 0x38D7F8085AD4CE3)]
     public class TkCreatureTailJoints : NMSTemplate
     {
         /* 0x00 */ public NMSString0x20 StartJoint;

@@ -2,12 +2,12 @@ using libMBIN.NMS.Toolkit;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x82B81A91FF1AAE67, NameHash = 0x7AB4D686179F9F82)]
+    [NMS(GUID = 0xF1087A135ED0653B, NameHash = 0x7AB4D686179F9F82)]
     public class GcCameraAerialViewData : NMSTemplate
     {
         /* 0x00 */ public float Time;
         // size: 0x3
-        public enum AerialViewModeEnum {
+        public enum AerialViewModeEnum : uint {
             FaceDown,
             FaceOut,
             FaceDownThenOut,
@@ -21,7 +21,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x1C */ public int Stages;
         /* 0x20 */ public float SpeedLineDist;
         /* 0x24 */ public TkCurveType Curve;
-        /* 0x28 */ public TkCurveType CurveDown;
-        /* 0x2C */ public TkCurveType SlerpCurve;
+        /* 0x25 */ public TkCurveType CurveDown;
+        /* 0x26 */ public TkCurveType SlerpCurve;
     }
 }

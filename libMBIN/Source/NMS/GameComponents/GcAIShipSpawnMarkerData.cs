@@ -2,7 +2,7 @@ using libMBIN.NMS.Toolkit;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x8E66A7303B4C1575, NameHash = 0xDB40771B3EB38336)]
+    [NMS(GUID = 0x103B4E1E1547DE0E, NameHash = 0xDB40771B3EB38336)]
     public class GcAIShipSpawnMarkerData : NMSTemplate
     {
         /* 0x00 */ public TkTextureResource MarkerIcon;
@@ -12,7 +12,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0xB0 */ public float MaxVisibleRange;
         /* 0xB4 */ public float MinAngleVisible;
         // size: 0x3
-        public enum ShipsToMarkEnum {
+        public enum ShipsToMarkEnum : uint {
             None,
             Leader,
             All,

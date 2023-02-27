@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xD4E903930A82FB66, NameHash = 0xCCEE5C02303ACEC6)]
+    [NMS(GUID = 0xFC07380B8762421C, NameHash = 0xCCEE5C02303ACEC6)]
     public class GcPlayerCharacterStateData : NMSTemplate
     {
         /* 0x00 */ public NMSString0x10 Locomotion0H;

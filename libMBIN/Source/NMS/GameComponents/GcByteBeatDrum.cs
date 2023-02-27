@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xAD6D1E0E3CA0F23B, NameHash = 0xAAB4AB6EC567BC2F)]
+    [NMS(GUID = 0xF8AAFC9337502934, NameHash = 0xAAB4AB6EC567BC2F)]
     public class GcByteBeatDrum : NMSTemplate
     {
         /* 0x00 */ public NMSString0x40 Tree;
@@ -19,7 +19,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x68 */ public float AugmentPitchFalloff;
         /* 0x6C */ public float AugmentPitchFalloffPower;
         // size: 0x3
-        public enum AugmentModeEnum {
+        public enum AugmentModeEnum : uint {
             Add,
             Multiply,
             Max,

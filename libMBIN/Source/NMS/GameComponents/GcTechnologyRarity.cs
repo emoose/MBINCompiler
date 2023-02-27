@@ -1,10 +1,10 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x6541E6E3B8E260EF, NameHash = 0xDB3D22C1C68F20C3)]
+    [NMS(GUID = 0x39B9A7A9078A0304, NameHash = 0xDB3D22C1C68F20C3)]
     public class GcTechnologyRarity : NMSTemplate
     {
         // size: 0x7
-        public enum TechnologyRarityEnum {
+        public enum TechnologyRarityEnum : uint {
             Normal,
             VeryCommon,
             Common,

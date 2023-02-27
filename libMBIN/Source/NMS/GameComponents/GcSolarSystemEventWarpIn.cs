@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x917B15F71EFE0B08, NameHash = 0x71B66F631708B3B1)]
+    [NMS(GUID = 0x64B0FDB2C959986B, NameHash = 0x71B66F631708B3B1)]
     public class GcSolarSystemEventWarpIn : NMSTemplate
     {
         /* 0x00 */ public GcSolarSystemLocatorChoice Locator;

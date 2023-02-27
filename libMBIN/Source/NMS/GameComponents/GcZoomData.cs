@@ -1,10 +1,10 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xF482232839FFF753, NameHash = 0x2E92A561CA97070C)]
+    [NMS(GUID = 0x94899B4FFFB85110, NameHash = 0x2E92A561CA97070C)]
     public class GcZoomData : NMSTemplate
     {
         // size: 0x4
-        public enum ZoomTypeEnum {
+        public enum ZoomTypeEnum : uint {
             None,
             Far,
             Mid,

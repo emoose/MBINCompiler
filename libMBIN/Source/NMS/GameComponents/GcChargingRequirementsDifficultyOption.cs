@@ -1,10 +1,10 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xF60678649B66CF1A, NameHash = 0x5F6767A5FB0B2FEA)]
+    [NMS(GUID = 0xF94E671711FD8656, NameHash = 0x5F6767A5FB0B2FEA)]
     public class GcChargingRequirementsDifficultyOption : NMSTemplate
     {
         // size: 0x4
-        public enum ChargingRequirementsDifficultyEnum {
+        public enum ChargingRequirementsDifficultyEnum : uint {
             None,
             Low,
             Normal,

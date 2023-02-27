@@ -2,12 +2,12 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x79DD345542FB87AF, NameHash = 0x8CC79014E9CB899E)]
+    [NMS(GUID = 0x680E1192FFA80143, NameHash = 0x8CC79014E9CB899E)]
     public class GcPlayerControlInputMouse : NMSTemplate
     {
         /* 0x00 */ public GcCharacterControlInputValidity Validity;
         // size: 0x1
-        public enum InputMouseModeEnum {
+        public enum InputMouseModeEnum : uint {
             ScreenCentrePos,
         }
         /* 0x04 */ public InputMouseModeEnum InputMouseMode;

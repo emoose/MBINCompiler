@@ -1,10 +1,10 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x401F7AD64DEEABD0, NameHash = 0xF808614547AF2B25)]
+    [NMS(GUID = 0x35632D9AFE0F476F, NameHash = 0xF808614547AF2B25)]
     public class GcGalaxyWaypointTypes : NMSTemplate
     {
         // size: 0x6
-        public enum GalaxyWaypointTypeEnum {
+        public enum GalaxyWaypointTypeEnum : uint {
             User,
             Gameplay_AtlasStation,
             Gameplay_DistressBeacon,

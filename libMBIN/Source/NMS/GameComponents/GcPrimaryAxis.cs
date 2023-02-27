@@ -1,10 +1,10 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x194BD3F1542BF5AE, NameHash = 0x839577D6883299CA)]
+    [NMS(GUID = 0x73409D6BF75AFA73, NameHash = 0x839577D6883299CA)]
     public class GcPrimaryAxis : NMSTemplate
     {
         // size: 0x6
-        public enum PrimaryAxisEnum {
+        public enum PrimaryAxisEnum : uint {
             Z,
             ZNeg,
             X,

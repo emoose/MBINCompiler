@@ -1,10 +1,10 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x2093DE0A83BBE73B, NameHash = 0xC264A609B1BBACB5)]
+    [NMS(GUID = 0x53145C2A847F1078, NameHash = 0xC264A609B1BBACB5)]
     public class GcLookAtComponentData : NMSTemplate
     {
         // size: 0x1
-        public enum LookAtTypeEnum {
+        public enum LookAtTypeEnum : uint {
             Player,
         }
         /* 0x00 */ public LookAtTypeEnum LookAtType;

@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0xECC11AB751D360B3, NameHash = 0x51D536C649733342)]
+    [NMS(GUID = 0xA2014717593869BC, NameHash = 0x51D536C649733342)]
     public class TkTrophyEntry : NMSTemplate
     {
         /* 0x00 */ public NMSString0x10 TrophyId;

@@ -2,7 +2,7 @@ using libMBIN.NMS.Toolkit;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x2D248F140A535F94, NameHash = 0x4453C3D28B780FD8)]
+    [NMS(GUID = 0xA1292A1ED2EC32C9, NameHash = 0x4453C3D28B780FD8)]
     public class GcHUDEffectRewardData : NMSTemplate
     {
         /* 0x00 */ public int NumBoxes;

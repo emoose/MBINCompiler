@@ -2,11 +2,11 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x2823AE055070AEBD, NameHash = 0xBE42E310FC94C8E3)]
+    [NMS(GUID = 0xE92FCC2DF81C6C7D, NameHash = 0xBE42E310FC94C8E3)]
     public class GcCreatureWeirdMovementData : NMSTemplate
     {
         // size: 0x3
-        public enum MoveModeEnum {
+        public enum MoveModeEnum : uint {
             Roll,
             Float,
             Drill,

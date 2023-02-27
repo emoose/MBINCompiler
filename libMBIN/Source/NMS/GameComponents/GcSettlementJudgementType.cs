@@ -1,10 +1,10 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x65B2E92C356C3B73, NameHash = 0x9B6A014776B1F8BB)]
+    [NMS(GUID = 0xBCAE176B666C6AF7, NameHash = 0x9B6A014776B1F8BB)]
     public class GcSettlementJudgementType : NMSTemplate
     {
         // size: 0x7
-        public enum SettlementJudgementTypeEnum {
+        public enum SettlementJudgementTypeEnum : uint {
             None,
             StrangerVisit,
             Policy,

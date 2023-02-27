@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xCA74BBBC16245257, NameHash = 0x694A21AA8BC8BAD4)]
+    [NMS(GUID = 0xC3530D73DF7B4A6A, NameHash = 0x694A21AA8BC8BAD4)]
     public class GcMissionSequenceConstruct : NMSTemplate
     {
         /* 0x00 */ public NMSString0x80 Message;

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x7F3472783DCEB892, NameHash = 0x6C4510BB243EFA64)]
+    [NMS(GUID = 0x38B02BE7B50BA6E2, NameHash = 0x6C4510BB243EFA64)]
     public class GcPlayerStateData : NMSTemplate
     {
         /* 0x00000 */ public GcUniverseAddressData UniverseAddress;
@@ -177,74 +177,90 @@ namespace libMBIN.NMS.GameComponents
         [NMS(Size = 0x7, EnumType = typeof(GcVehicleType.VehicleTypeEnum))]
         /* 0x4C7D0 */ public GcPlayerOwnershipData[] VehicleOwnership;
         /* 0x4F9B0 */ public int PrimaryVehicle;
-        [NMS(Size = 0x9)]
+        [NMS(Size = 0xC)]
         /* 0x4F9C0 */ public GcPlayerOwnershipData[] ShipOwnership;
-        /* 0x539E0 */ public int PrimaryShip;
-        /* 0x539E4 */ public bool MultiShipEnabled;
-        /* 0x539E5 */ public bool VehicleAIControlEnabled;
-        /* 0x539E6 */ public NMSString0x20 PlayerFreighterName;
-        /* 0x53A10 */ public Vector4f StartGameShipPosition;
-        /* 0x53A20 */ public bool ShipNeedsTerrainPositioning;
-        /* 0x53A24 */ public int TradingSupplyDataIndex;
-        /* 0x53A28 */ public List<GcTradingSupplyData> TradingSupplyData;
-        /* 0x53A38 */ public List<GcPortalSaveData> LastPortal;
-        /* 0x53A48 */ public GcPortalSaveData VisitedPortal;
-        /* 0x53A68 */ public int KnownPortalRunes;
-        /* 0x53A6C */ public bool OnOtherSideOfPortal;
-        /* 0x53A70 */ public GcTeleportEndpoint OtherSideOfPortalReturnBase;
-        /* 0x53B00 */ public Vector4f PortalMarkerPosition_Local;
-        /* 0x53B10 */ public Vector4f PortalMarkerPosition_Offset;
-        /* 0x53B20 */ public GcPlayerWeapons StartingPrimaryWeapon;
-        /* 0x53B24 */ public GcPlayerWeapons StartingSecondaryWeapon;
-        [NMS(Size = 0x14, EnumType = typeof(GcCustomisationComponentData.CustomisationDataTypeEnum))]
-        /* 0x53B28 */ public GcCharacterCustomisationSaveData[] CharacterCustomisationData;
-        [NMS(Size = 0x9)]
-        /* 0x54208 */ public bool[] ShipUsesLegacyColours;
+        /* 0x54F40 */ public int PrimaryShip;
+        /* 0x54F44 */ public bool MultiShipEnabled;
+        /* 0x54F45 */ public bool VehicleAIControlEnabled;
+        /* 0x54F46 */ public NMSString0x20 PlayerFreighterName;
+        /* 0x54F70 */ public Vector4f StartGameShipPosition;
+        /* 0x54F80 */ public bool ShipNeedsTerrainPositioning;
+        /* 0x54F84 */ public int TradingSupplyDataIndex;
+        /* 0x54F88 */ public List<GcTradingSupplyData> TradingSupplyData;
+        /* 0x54F98 */ public List<GcPortalSaveData> LastPortal;
+        /* 0x54FA8 */ public GcPortalSaveData VisitedPortal;
+        /* 0x54FC8 */ public int KnownPortalRunes;
+        /* 0x54FCC */ public bool OnOtherSideOfPortal;
+        /* 0x54FD0 */ public GcTeleportEndpoint OtherSideOfPortalReturnBase;
+        /* 0x55060 */ public Vector4f PortalMarkerPosition_Local;
+        /* 0x55070 */ public Vector4f PortalMarkerPosition_Offset;
+        /* 0x55080 */ public GcPlayerWeapons StartingPrimaryWeapon;
+        /* 0x55084 */ public GcPlayerWeapons StartingSecondaryWeapon;
+        [NMS(Size = 0x17, EnumType = typeof(GcCustomisationComponentData.CustomisationDataTypeEnum))]
+        /* 0x55088 */ public GcCharacterCustomisationSaveData[] CharacterCustomisationData;
+        [NMS(Size = 0xC)]
+        /* 0x55870 */ public bool[] ShipUsesLegacyColours;
         [NMS(Size = 0x3)]
-        /* 0x54218 */ public GcCharacterCustomisationData[] Outfits;
-        /* 0x542F0 */ public NMSString0x10 JetpackEffect;
-        /* 0x54300 */ public NMSString0x10 FreighterEngineEffect;
-        /* 0x54310 */ public GcSeed FleetSeed;
-        /* 0x54320 */ public List<GcFleetFrigateSaveData> FleetFrigates;
-        /* 0x54330 */ public List<GcFleetExpeditionSaveData> FleetExpeditions;
-        /* 0x54340 */ public List<ulong> ExpeditionSeedsSelectedToday;
-        /* 0x54350 */ public ulong LastKnownDay;
-        /* 0x54358 */ public ulong SunTimer;
-        /* 0x54360 */ public ulong MultiplayerLobbyID;
-        /* 0x54368 */ public GcUniverseAddressData MultiplayerUA;
-        /* 0x54380 */ public GcPlayerSpawnStateData MultiplayerSpawn;
-        /* 0x54450 */ public List<GcRepairTechData> RepairTechBuffer;
-        /* 0x54460 */ public ulong MultiplayerPrivileges;
+        /* 0x55880 */ public GcCharacterCustomisationData[] Outfits;
+        /* 0x55958 */ public NMSString0x10 JetpackEffect;
+        /* 0x55968 */ public NMSString0x10 FreighterEngineEffect;
+        /* 0x55978 */ public GcSeed FleetSeed;
+        /* 0x55988 */ public List<GcFleetFrigateSaveData> FleetFrigates;
+        /* 0x55998 */ public List<GcFleetExpeditionSaveData> FleetExpeditions;
+        /* 0x559A8 */ public List<ulong> ExpeditionSeedsSelectedToday;
+        /* 0x559B8 */ public ulong LastKnownDay;
+        /* 0x559C0 */ public ulong SunTimer;
+        /* 0x559C8 */ public ulong MultiplayerLobbyID;
+        /* 0x559D0 */ public GcUniverseAddressData MultiplayerUA;
+        /* 0x559F0 */ public GcPlayerSpawnStateData MultiplayerSpawn;
+        /* 0x55AC0 */ public List<GcRepairTechData> RepairTechBuffer;
+        /* 0x55AD0 */ public ulong MultiplayerPrivileges;
         [NMS(Size = 0x3, EnumType = typeof(GcHotActionMenuTypes.HotActionMenuTypesEnum))]
-        /* 0x54468 */ public GcHotActionsSaveData[] HotActions;
-        /* 0x54918 */ public ulong LastUABeforePortalWarp;
-        /* 0x54920 */ public ulong StoryPortalSeed;
-        /* 0x54928 */ public ushort ShopNumber;
-        /* 0x5492A */ public ushort ShopTier;
-        /* 0x5492C */ public bool HasAccessToNexus;
-        /* 0x54930 */ public GcUniverseAddressData NexusUniverseAddress;
-        /* 0x54950 */ public Vector3f NexusMatrixAt;
-        /* 0x54960 */ public Vector3f NexusMatrixUp;
-        /* 0x54970 */ public Vector3f NexusMatrixPos;
-        /* 0x54980 */ public GcPhotoModeSettings PhotoModeSettings;
-        /* 0x549D0 */ public int BannerIcon;
-        /* 0x549D4 */ public int BannerMainColour;
-        /* 0x549D8 */ public int BannerBackgroundColour;
-        /* 0x549E0 */ public NMSString0x10 BannerTitleId;
-        /* 0x549F0 */ public int TelemetryUploadVersion;
-        /* 0x549F4 */ public bool UsesThirdPersonVehicleCam;
-        /* 0x549F8 */ public float VRCameraOffset;
-        /* 0x54A00 */ public GcSeasonalGameModeData SeasonData;
-        /* 0x57DF8 */ public GcSeasonStateData SeasonState;
-        /* 0x57E50 */ public bool RestartAllInactiveSeasonalMissions;
-        /* 0x57E58 */ public List<NMSString0x10> RedeemedSeasonRewards;
-        /* 0x57E68 */ public List<NMSString0x10> RedeemedTwitchRewards;
-        /* 0x57E78 */ public List<NMSString0x10> RedeemedPlatformRewards;
+        /* 0x55AD8 */ public GcHotActionsSaveData[] HotActions;
+        /* 0x55F88 */ public ulong LastUABeforePortalWarp;
+        /* 0x55F90 */ public ulong StoryPortalSeed;
+        /* 0x55F98 */ public ushort ShopNumber;
+        /* 0x55F9A */ public ushort ShopTier;
+        /* 0x55F9C */ public bool HasAccessToNexus;
+        /* 0x55FA0 */ public GcUniverseAddressData NexusUniverseAddress;
+        /* 0x55FC0 */ public Vector3f NexusMatrixAt;
+        /* 0x55FD0 */ public Vector3f NexusMatrixUp;
+        /* 0x55FE0 */ public Vector3f NexusMatrixPos;
+        /* 0x55FF0 */ public GcPhotoModeSettings PhotoModeSettings;
+        /* 0x56040 */ public int BannerIcon;
+        /* 0x56044 */ public int BannerMainColour;
+        /* 0x56048 */ public int BannerBackgroundColour;
+        /* 0x56050 */ public NMSString0x10 BannerTitleId;
+        /* 0x56060 */ public int TelemetryUploadVersion;
+        /* 0x56064 */ public bool UsesThirdPersonVehicleCam;
+        /* 0x56068 */ public float VRCameraOffset;
+        /* 0x56070 */ public GcSeasonalGameModeData SeasonData;
+        /* 0x59540 */ public GcSeasonStateData SeasonState;
+        /* 0x59598 */ public bool RestartAllInactiveSeasonalMissions;
+        /* 0x595A0 */ public List<NMSString0x10> RedeemedSeasonRewards;
+        /* 0x595B0 */ public List<NMSString0x10> RedeemedTwitchRewards;
+        /* 0x595C0 */ public List<NMSString0x10> RedeemedPlatformRewards;
         [NMS(Size = 0x64)]
-        /* 0x57E90 */ public GcSettlementState[] SettlementStatesV2;
-        /* 0x77290 */ public int SettlementStateRingBufferIndexV2;
-        /* 0x77294 */ public bool NextLoadSpawnsWithFreshStart;
+        /* 0x595D0 */ public GcSettlementState[] SettlementStatesV2;
+        /* 0x789D0 */ public int SettlementStateRingBufferIndexV2;
+        /* 0x789D4 */ public bool NextLoadSpawnsWithFreshStart;
         [NMS(Size = 0x8, EnumType = typeof(GcAlienRace.AlienRaceEnum))]
-        /* 0x77298 */ public GcStoryPageSeenDataArray[] SeenStories;
+        /* 0x789D8 */ public GcStoryPageSeenDataArray[] SeenStories;
+        [NMS(Size = 0xB, EnumType = typeof(GcWonderPlanetCategory.WonderPlanetCategoryEnum))]
+        /* 0x78A58 */ public GcWonderRecord[] WonderPlanetRecords;
+        [NMS(Size = 0xF, EnumType = typeof(GcWonderCreatureCategory.WonderCreatureCategoryEnum))]
+        /* 0x78B60 */ public GcWonderRecord[] WonderCreatureRecords;
+        [NMS(Size = 0x8, EnumType = typeof(GcWonderFloraCategory.WonderFloraCategoryEnum))]
+        /* 0x78CC8 */ public GcWonderRecord[] WonderFloraRecords;
+        [NMS(Size = 0x8, EnumType = typeof(GcWonderMineralCategory.WonderMineralCategoryEnum))]
+        /* 0x78D88 */ public GcWonderRecord[] WonderMineralRecords;
+        [NMS(Size = 0xD, EnumType = typeof(GcWonderTreasureCategory.WonderTreasureCategoryEnum))]
+        /* 0x78E48 */ public GcWonderRecord[] WonderTreasureRecords;
+        [NMS(Size = 0xB, EnumType = typeof(GcWonderWeirdBasePartCategory.WonderWeirdBasePartCategoryEnum))]
+        /* 0x78F80 */ public GcWonderRecord[] WonderWeirdBasePartRecords;
+        [NMS(Size = 0x4, EnumType = typeof(GcSynchronisedBufferType.SyncBufferTypeEnum))]
+        /* 0x79088 */ public GcSyncBufferSaveDataArray[] SyncBuffersData;
+        /* 0x790C8 */ public List<GcMaintenanceSaveKey> RefinerBufferKeys;
+        /* 0x790D8 */ public List<GcMaintenanceContainer> RefinerBufferData;
     }
 }

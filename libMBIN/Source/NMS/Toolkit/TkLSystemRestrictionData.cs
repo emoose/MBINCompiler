@@ -1,11 +1,11 @@
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0x8FFFCAD36B6B1F2F, NameHash = 0x2CE937F1C349DD12)]
+    [NMS(GUID = 0xF3991C126F82FBD, NameHash = 0x2CE937F1C349DD12)]
     public class TkLSystemRestrictionData : NMSTemplate
     {
         /* 0x0 */ public int Amount;
         // size: 0x3
-        public enum RestrictionEnum {
+        public enum RestrictionEnum : uint {
             NoMoreThan,
             AtLeast,
             AtLeastIfICan,

@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xF99EC15DA32626C, NameHash = 0xE523CFAD6AFB4BB6)]
+    [NMS(GUID = 0xDC65FBB3D6D18DC4, NameHash = 0xE523CFAD6AFB4BB6)]
     public class GcScanEventSolarSystemLookup : NMSTemplate
     {
         /* 0x00 */ public bool UseStarType;
@@ -19,14 +19,15 @@ namespace libMBIN.NMS.GameComponents
         /* 0x1F */ public bool RequireUndiscovered;
         /* 0x20 */ public bool NeedsWaterPlanet;
         /* 0x21 */ public bool NeedsPrimePlanet;
-        /* 0x22 */ public bool NeedsExtremeSentinelPlanet;
-        /* 0x23 */ public bool NeverAllowExtremeSentinelPlanet;
-        /* 0x24 */ public bool NeedsExtremeWeatherPlanet;
-        /* 0x25 */ public bool NeedsExtremeHazardPlanet;
-        /* 0x26 */ public bool AnyBiomeNotWeirdOrDead;
-        /* 0x27 */ public bool AnyRGBBiome;
-        /* 0x28 */ public bool AnyInfestedBiome;
-        /* 0x29 */ public bool NeedsBiome;
+        /* 0x22 */ public bool NeedsSentinels;
+        /* 0x23 */ public bool NeedsExtremeSentinelPlanet;
+        /* 0x24 */ public bool NeverAllowExtremeSentinelPlanet;
+        /* 0x25 */ public bool NeedsExtremeWeatherPlanet;
+        /* 0x26 */ public bool NeedsExtremeHazardPlanet;
+        /* 0x27 */ public bool AnyBiomeNotWeirdOrDead;
+        /* 0x28 */ public bool AnyRGBBiome;
+        /* 0x29 */ public bool AnyInfestedBiome;
+        /* 0x2A */ public bool NeedsBiome;
         /* 0x2C */ public GcBiomeType NeedsBiomeType;
         /* 0x30 */ public GcBiomeSubType UseBiomeSubType;
         /* 0x34 */ public bool NeedsEmptySystem;
@@ -35,5 +36,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x48 */ public bool SuitableForCreatureDiscovery;
         /* 0x49 */ public bool SuitableForCreatureTaming;
         /* 0x50 */ public NMSString0x20A SamePlanetAsEvent;
+        /* 0x70 */ public int SamePlanetAsSeasonParty;
     }
 }

@@ -1,10 +1,10 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x488978FD0D4C514A, NameHash = 0xE3C593A400EF084C)]
+    [NMS(GUID = 0x45119BD09851A673, NameHash = 0xE3C593A400EF084C)]
     public class GcInventoryType : NMSTemplate
     {
         // size: 0x3
-        public enum InventoryTypeEnum {
+        public enum InventoryTypeEnum : uint {
             Substance,
             Technology,
             Product,

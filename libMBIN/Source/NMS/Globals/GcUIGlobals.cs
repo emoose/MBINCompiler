@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(GUID = 0x4039D37156547AB0, NameHash = 0x95C306B1A90F3E08)]
+    [NMS(GUID = 0xA7EE382EC728AE9D, NameHash = 0x95C306B1A90F3E08)]
     public class GcUIGlobals : NMSTemplate
     {
         /* 0x0000 */ public bool ShowDifficultyForBases;

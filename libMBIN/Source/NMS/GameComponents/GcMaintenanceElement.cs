@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x364A34A0E77652B0, NameHash = 0x79BDBA7746F3C796)]
+    [NMS(GUID = 0xC7878A2059B371AB, NameHash = 0x79BDBA7746F3C796)]
     public class GcMaintenanceElement : NMSTemplate
     {
         /* 0x00 */ public GcMaintenanceElementGroups ItemGroupOverride;
@@ -13,7 +13,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x20 */ public int MaxCapacity;
         /* 0x24 */ public float AmountEmptyTimePeriod;
         // size: 0x3
-        public enum UpdateTypeEnum {
+        public enum UpdateTypeEnum : uint {
             UpdatesAlways,
             UpdateOnlyWhenComplete,
             UpdateOnlyWhenNotComplete,
@@ -22,14 +22,14 @@ namespace libMBIN.NMS.GameComponents
         /* 0x2C */ public int DamagedAfterTimePeriodMin;
         /* 0x30 */ public int DamagedAfterTimePeriodMax;
         // size: 0x3
-        public enum DamageStatusEnum {
+        public enum DamageStatusEnum : uint {
             Damaged,
             Repaired,
             Random,
         }
         /* 0x34 */ public DamageStatusEnum DamageStatus;
         // size: 0x8
-        public enum CompletionRequirementEnum {
+        public enum CompletionRequirementEnum : uint {
             FullyChargedAndRepaired,
             AnyChargeAndRepaired,
             FullyRepaired,

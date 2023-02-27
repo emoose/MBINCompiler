@@ -1,11 +1,11 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x9F28B353BFF0683F, NameHash = 0x7FE7156AA587561F)]
+    [NMS(GUID = 0xE5A63220EF7B73B5, NameHash = 0x7FE7156AA587561F)]
     public class GcCreatureVocalSoundData : NMSTemplate
     {
         /* 0x00 */ public NMSString0x10 Id;
         // size: 0xA
-        public enum VocalEmoteEnum {
+        public enum VocalEmoteEnum : uint {
             EmoteIdle,
             EmoteFlee,
             EmoteAggression,

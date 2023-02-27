@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xF6D937C4524B6AB3, NameHash = 0x1232AC16AD2DF95C)]
+    [NMS(GUID = 0x918FDBF743EC6311, NameHash = 0x1232AC16AD2DF95C)]
     public class GcCreatureCrystalMovementDataParams : NMSTemplate
     {
         /* 0x000 */ public List<GcBiomeSubType> ValidBiomes;
@@ -30,46 +30,46 @@ namespace libMBIN.NMS.GameComponents
         /* 0x064 */ public float HideOffset;
         /* 0x068 */ public float MinShowTime;
         /* 0x06C */ public bool CustomHideCurve;
-        /* 0x070 */ public TkCurveType HideCurve;
-        /* 0x074 */ public float IdleSpeedModifier;
-        /* 0x078 */ public float WalkSpeedModifier;
-        /* 0x07C */ public float RunSpeedModifier;
-        /* 0x080 */ public float ParticleScale;
-        /* 0x088 */ public NMSString0x10 DustEffect;
-        /* 0x098 */ public GcAudioWwiseEvents Audio;
-        /* 0x09C */ public GcAudioWwiseEvents RetractAudio;
-        /* 0x0A0 */ public GcAudioWwiseEvents MoveStartAudio;
-        /* 0x0A4 */ public GcAudioWwiseEvents MoveStopAudio;
-        /* 0x0A8 */ public float DeathFadeStart;
-        /* 0x0AC */ public float DeathFadeTime;
+        /* 0x06D */ public TkCurveType HideCurve;
+        /* 0x070 */ public float IdleSpeedModifier;
+        /* 0x074 */ public float WalkSpeedModifier;
+        /* 0x078 */ public float RunSpeedModifier;
+        /* 0x07C */ public float ParticleScale;
+        /* 0x080 */ public NMSString0x10 DustEffect;
+        /* 0x090 */ public GcAudioWwiseEvents Audio;
+        /* 0x094 */ public GcAudioWwiseEvents RetractAudio;
+        /* 0x098 */ public GcAudioWwiseEvents MoveStartAudio;
+        /* 0x09C */ public GcAudioWwiseEvents MoveStopAudio;
+        /* 0x0A0 */ public float DeathFadeStart;
+        /* 0x0A4 */ public float DeathFadeTime;
         // size: 0x2
-        public enum DeathTypeEnum {
+        public enum DeathTypeEnum : uint {
             Explode,
             Drop,
         }
-        /* 0x0B0 */ public DeathTypeEnum DeathType;
+        /* 0x0A8 */ public DeathTypeEnum DeathType;
         // size: 0x2
-        public enum SubTypeEnum {
+        public enum SubTypeEnum : uint {
             Crystal,
             Tentacle,
         }
-        /* 0x0B4 */ public SubTypeEnum SubType;
-        /* 0x0B8 */ public NMSString0x20 TentacleStartJoint;
-        /* 0x0D8 */ public NMSString0x20 TentacleEndJoint;
-        /* 0x0F8 */ public float TentacleSpeed;
-        /* 0x0FC */ public float TentacleChurnSpeed;
-        /* 0x100 */ public float TentacleIdleLookChance;
-        /* 0x104 */ public float TentacleStretchMin;
-        /* 0x108 */ public float TentacleStretchMax;
-        /* 0x10C */ public float TentacleMoveSwingAngle;
-        /* 0x110 */ public float TentacleWalkSwingSpeed;
-        /* 0x114 */ public float TentacleRunSwingSpeed;
-        /* 0x118 */ public float TentacleRotationApplyBase;
-        /* 0x11C */ public float TentacleRotationApplyTip;
-        /* 0x120 */ public float TentacleMoveTimeMin;
-        /* 0x124 */ public float TentacleMoveTimeMax;
-        /* 0x128 */ public float TentaclePitchRange;
-        /* 0x12C */ public float TentacleYawRange;
-        /* 0x130 */ public float TentacleRollRange;
+        /* 0x0AC */ public SubTypeEnum SubType;
+        /* 0x0B0 */ public NMSString0x20 TentacleStartJoint;
+        /* 0x0D0 */ public NMSString0x20 TentacleEndJoint;
+        /* 0x0F0 */ public float TentacleSpeed;
+        /* 0x0F4 */ public float TentacleChurnSpeed;
+        /* 0x0F8 */ public float TentacleIdleLookChance;
+        /* 0x0FC */ public float TentacleStretchMin;
+        /* 0x100 */ public float TentacleStretchMax;
+        /* 0x104 */ public float TentacleMoveSwingAngle;
+        /* 0x108 */ public float TentacleWalkSwingSpeed;
+        /* 0x10C */ public float TentacleRunSwingSpeed;
+        /* 0x110 */ public float TentacleRotationApplyBase;
+        /* 0x114 */ public float TentacleRotationApplyTip;
+        /* 0x118 */ public float TentacleMoveTimeMin;
+        /* 0x11C */ public float TentacleMoveTimeMax;
+        /* 0x120 */ public float TentaclePitchRange;
+        /* 0x124 */ public float TentacleYawRange;
+        /* 0x128 */ public float TentacleRollRange;
     }
 }

@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xC84E6FBB7A37351F, NameHash = 0xB81D78F21EBE37)]
+    [NMS(GUID = 0xC9729B0D1412C4AB, NameHash = 0xB81D78F21EBE37)]
     public class GcAlienSpeechEntry : NMSTemplate
     {
         /* 0x00 */ public NMSString0x10 Id;
@@ -11,7 +11,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x50 */ public GcWordCategoryTableEnum Category;
         /* 0x54 */ public int Frequency;
         // size: 0x2
-        public enum WordInteractEffectEnum {
+        public enum WordInteractEffectEnum : uint {
             Pain,
             Heal,
         }

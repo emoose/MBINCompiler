@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x6E9FCAE18CCE7A69, NameHash = 0x9DDB490E0E777CD8)]
+    [NMS(GUID = 0x37516E17AC76EC4E, NameHash = 0x9DDB490E0E777CD8)]
     public class GcWFCDecorationItem : NMSTemplate
     {
         /* 0x000 */ public NMSString0x10 Name;
@@ -19,14 +19,14 @@ namespace libMBIN.NMS.GameComponents
         /* 0x058 */ public int MinPerBuilding;
         /* 0x05C */ public bool RequireAboveTerrain;
         // size: 0x3
-        public enum InsideOutsideEnum {
+        public enum InsideOutsideEnum : uint {
             Both,
             InteriorOnly,
             ExteriorOnly,
         }
         /* 0x060 */ public InsideOutsideEnum InsideOutside;
         // size: 0x3
-        public enum LevelEnum {
+        public enum LevelEnum : uint {
             Everywhere,
             GroundLevelOnly,
             AboveGroundOnly,

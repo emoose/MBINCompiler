@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0xEB8DC91C6007A0C0, NameHash = 0x9BF04097261BBFEA)]
+    [NMS(GUID = 0x37F80B4F24A556F4, NameHash = 0x9BF04097261BBFEA)]
     public class TkOpenVRControllerList : NMSTemplate
     {
         /* 0x0 */ public List<TkOpenVRControllerLookup> Devices;

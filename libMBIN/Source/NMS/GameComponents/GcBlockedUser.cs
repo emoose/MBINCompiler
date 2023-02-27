@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x85043D8204A321AB, NameHash = 0x3317FE9999913ADE)]
+    [NMS(GUID = 0x7072D0794DC08252, NameHash = 0x3317FE9999913ADE)]
     public class GcBlockedUser : NMSTemplate
     {
         /* 0x00 */ public NMSString0x40 UserId;

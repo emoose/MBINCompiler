@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0x9258136D0DB9FFF2, NameHash = 0xB538605B35EDD12C)]
+    [NMS(GUID = 0xBFECB029B47E76AA, NameHash = 0xB538605B35EDD12C)]
     public class TkJointExtentData : NMSTemplate
     {
         [NMS(Size = 0x3)]

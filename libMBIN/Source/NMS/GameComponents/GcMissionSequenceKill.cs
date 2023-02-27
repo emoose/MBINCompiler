@@ -1,11 +1,11 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x38BF9B21E00D00E2, NameHash = 0xF2F929BD28DDCD6B)]
+    [NMS(GUID = 0x79A38FA0B68F95E0, NameHash = 0xF2F929BD28DDCD6B)]
     public class GcMissionSequenceKill : NMSTemplate
     {
         /* 0x00 */ public NMSString0x80 Message;
         // size: 0xB
-        public enum KillTargetEnum {
+        public enum KillTargetEnum : uint {
             Robots,
             Drones,
             Quads,

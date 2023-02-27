@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x5643EEDB60F585F4, NameHash = 0xFA78E3D1251A147D)]
+    [NMS(GUID = 0x1A88CE9EA395D3BD, NameHash = 0xFA78E3D1251A147D)]
     public class GcPlayerSpaceshipClassBonuses : NMSTemplate
     {
         /* 0x00 */ public float ThrustForceMax;

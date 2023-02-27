@@ -1,10 +1,10 @@
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0x38B1146A8FA37504, NameHash = 0xDF72B6BAF8A085A2)]
+    [NMS(GUID = 0x17A8EF62D5BC39D6, NameHash = 0xDF72B6BAF8A085A2)]
     public class TkNoiseLayersEnum : NMSTemplate
     {
         // size: 0x8
-        public enum NoiseLayerTypesEnum {
+        public enum NoiseLayerTypesEnum : uint {
             Base,
             Hill,
             Mountain,

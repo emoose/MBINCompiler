@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xA1526847A0DD70D4, NameHash = 0x34A4221AAD19DAAE)]
+    [NMS(GUID = 0x5ECAAC50617EAB79, NameHash = 0x34A4221AAD19DAAE)]
     public class GcLightProperties : NMSTemplate
     {
         /* 0x00 */ public Colour SunColour;

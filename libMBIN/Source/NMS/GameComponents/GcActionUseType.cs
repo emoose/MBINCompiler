@@ -1,10 +1,10 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xCAC9AF77BBCE4356, NameHash = 0x498BFDCD029948EF)]
+    [NMS(GUID = 0x52A5A4E9BF42BBF, NameHash = 0x498BFDCD029948EF)]
     public class GcActionUseType : NMSTemplate
     {
         // size: 0x7
-        public enum ActionUseTypeEnum {
+        public enum ActionUseTypeEnum : uint {
             Active,
             ActiveVR,
             ActiveXbox,

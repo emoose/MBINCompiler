@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xABF1D371B87DFC2B, NameHash = 0xACD740CC9B208196)]
+    [NMS(GUID = 0xF90EE308A4458A80, NameHash = 0xACD740CC9B208196)]
     public class GcMessageTrackTargetAlert : NMSTemplate
     {
         /* 0x00 */ public int Attacker;

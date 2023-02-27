@@ -3,14 +3,14 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xE560C1064EF2BE4D, NameHash = 0x5995CC3B21976698)]
+    [NMS(GUID = 0x4804062C877D7175, NameHash = 0x5995CC3B21976698)]
     public class GcCreatureDebugSpawnData : NMSTemplate
     {
         /* 0x00 */ public int CreatureIndex;
         /* 0x04 */ public float InitialDelay;
         /* 0x08 */ public List<GcCreatureDebugWaypoint> Waypoints;
         // size: 0x3
-        public enum OnCompleteEnum {
+        public enum OnCompleteEnum : uint {
             Hold,
             Loop,
             Destroy,

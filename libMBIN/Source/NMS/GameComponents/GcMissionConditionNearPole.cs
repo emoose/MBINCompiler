@@ -1,10 +1,10 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x99569AD8ED653AB9, NameHash = 0x5D8EF27FCF8A3E08)]
+    [NMS(GUID = 0x694723CFD80EC95E, NameHash = 0x5D8EF27FCF8A3E08)]
     public class GcMissionConditionNearPole : NMSTemplate
     {
         // size: 0x2
-        public enum PoleConditionEnum {
+        public enum PoleConditionEnum : uint {
             North,
             South,
         }

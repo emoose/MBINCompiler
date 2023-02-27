@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xD3123B05A2CFFEE7, NameHash = 0x93C1244DBEE0E0CF)]
+    [NMS(GUID = 0xDE28BA6FB5EB5CDE, NameHash = 0x93C1244DBEE0E0CF)]
     public class GcStatusMessageDefinition : NMSTemplate
     {
         /* 0x00 */ public NMSString0x10 Id;
@@ -12,7 +12,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x32 */ public bool AddFriendlyDronePrefix;
         /* 0x33 */ public bool IncludePlayerName;
         // size: 0x8
-        public enum ReplicateToEnum {
+        public enum ReplicateToEnum : uint {
             None,
             Fireteam,
             Fireteam_SameUA,

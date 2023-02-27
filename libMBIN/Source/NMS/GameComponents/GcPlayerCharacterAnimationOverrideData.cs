@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x217875B80C13A3, NameHash = 0x78D4180CEDFDC316)]
+    [NMS(GUID = 0xE1E8F5FEA4CE3E2D, NameHash = 0x78D4180CEDFDC316)]
     public class GcPlayerCharacterAnimationOverrideData : NMSTemplate
     {
         /* 0x00 */ public NMSString0x10 AnimName;

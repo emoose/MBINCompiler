@@ -2,10 +2,10 @@ using libMBIN.NMS.Toolkit;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x9F4D8FF55FC80312, NameHash = 0xC3362B34D26192B6)]
+    [NMS(GUID = 0x7B1249563A2BFE0, NameHash = 0xC3362B34D26192B6)]
     public class GcModelViewCollection : NMSTemplate
     {
-        // size: 0x21
+        // size: 0x29
         public enum ModelViewsEnum {
             Suit,
             Weapon,
@@ -13,6 +13,14 @@ namespace libMBIN.NMS.GameComponents
             Vehicle,
             DiscoveryMain,
             DiscoveryThumbnail,
+            WonderThumbnail,
+            WonderThumbnailCreatureSmall,
+            WonderThumbnailCreatureMed,
+            WonderThumbnailCreatureLarge,
+            WonderThumbnailFloraSmall,
+            WonderThumbnailFloraLarge,
+            WonderThumbnailMineralSmall,
+            WonderThumbnailMineralLarge,
             ToolboxMain,
             ToolboxThumbnail,
             TradeSuit,
@@ -41,7 +49,7 @@ namespace libMBIN.NMS.GameComponents
             SquadronPilotThumbnail,
             SquadronSpaceshipThumbnail,
         }
-        [NMS(Size = 0x21, EnumType = typeof(ModelViewsEnum))]
+        [NMS(Size = 0x29, EnumType = typeof(ModelViewsEnum))]
         /* 0x0 */ public TkModelRendererData[] ModelViews;
     }
 }

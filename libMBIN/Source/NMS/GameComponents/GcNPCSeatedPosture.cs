@@ -1,10 +1,10 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xBC4CEC80C64B45F3, NameHash = 0xDE7AA917D5163592)]
+    [NMS(GUID = 0x3A01B0DDBBB3040D, NameHash = 0xDE7AA917D5163592)]
     public class GcNPCSeatedPosture : NMSTemplate
     {
         // size: 0x2
-        public enum NPCSeatedPostureEnum {
+        public enum NPCSeatedPostureEnum : uint {
             Sofa,
             Sit,
         }

@@ -1,10 +1,10 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x93B815B477945D77, NameHash = 0x8531B20A02DD0931)]
+    [NMS(GUID = 0x10D41904DB6F3321, NameHash = 0x8531B20A02DD0931)]
     public class GcScanData : NMSTemplate
     {
         // size: 0xB
-        public enum ScanTypeEnum {
+        public enum ScanTypeEnum : uint {
             Tool,
             Beacon,
             RadioTower,

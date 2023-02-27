@@ -3,14 +3,14 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xEEAA2DF60B4A9497, NameHash = 0x419E50F8E497D496)]
+    [NMS(GUID = 0xFBBD7E692B03EE3, NameHash = 0x419E50F8E497D496)]
     public class GcWeatherEffect : NMSTemplate
     {
         /* 0x000 */ public NMSString0x10 Id;
         /* 0x010 */ public NMSString0x20A OSDMessage;
         /* 0x030 */ public List<GcWeightedFilename> Effects;
         // size: 0x5
-        public enum SpawnConditionsEnum {
+        public enum SpawnConditionsEnum : uint {
             Anytime,
             DuringStorm,
             AtNight,
@@ -22,14 +22,14 @@ namespace libMBIN.NMS.GameComponents
         /* 0x048 */ public NMSString0x10 ForcedOnByHazard;
         /* 0x058 */ public NMSString0x10 BlockedByCluster;
         // size: 0x3
-        public enum WeatherEffectBehaviourEnum {
+        public enum WeatherEffectBehaviourEnum : uint {
             Static,
             Wander,
             ChasePlayer,
         }
         /* 0x068 */ public WeatherEffectBehaviourEnum WeatherEffectBehaviour;
         // size: 0x3
-        public enum WeatherEffectSpawnTypeEnum {
+        public enum WeatherEffectSpawnTypeEnum : uint {
             Single,
             Cluster,
             Patch,

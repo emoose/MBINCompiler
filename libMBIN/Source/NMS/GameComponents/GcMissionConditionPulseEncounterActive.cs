@@ -1,10 +1,10 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xE0F240A1992E5B93, NameHash = 0x56207A2C2009340)]
+    [NMS(GUID = 0xAB5AE414E5866353, NameHash = 0x56207A2C2009340)]
     public class GcMissionConditionPulseEncounterActive : NMSTemplate
     {
         // size: 0x6
-        public enum TestEncounterTypeEnum {
+        public enum TestEncounterTypeEnum : uint {
             AnyEncounter,
             AnyObject,
             SpecificObject,

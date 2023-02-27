@@ -1,10 +1,10 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x3D4825D78C2A288A, NameHash = 0xF848BA9A5DFC4197)]
+    [NMS(GUID = 0x79FB96ED0674516A, NameHash = 0xF848BA9A5DFC4197)]
     public class GcCreatureTypes : NMSTemplate
     {
-        // size: 0x2F
-        public enum CreatureTypeEnum {
+        // size: 0x30
+        public enum CreatureTypeEnum : uint {
             None,
             Bird,
             FlyingLizard,
@@ -40,6 +40,7 @@ namespace libMBIN.NMS.GameComponents
             Scuttler,
             Slug,
             MiniDrone,
+            MiniRobo,
             SpaceFloater,
             Weird,
             SeaSnake,

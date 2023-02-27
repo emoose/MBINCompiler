@@ -1,10 +1,10 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x79FF7276E4DB890A, NameHash = 0x9699B119759C861B)]
+    [NMS(GUID = 0xF8CE0E13EB01EA06, NameHash = 0x9699B119759C861B)]
     public class GcPlayerHazardType : NMSTemplate
     {
         // size: 0x6
-        public enum HazardEnum {
+        public enum HazardEnum : uint {
             None,
             NoOxygen,
             ExtremeHeat,

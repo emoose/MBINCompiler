@@ -1,10 +1,10 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x421065E59E69DDC4, NameHash = 0x7D370752342BB815)]
+    [NMS(GUID = 0xDCFA575FE29DF1DD, NameHash = 0x7D370752342BB815)]
     public class GcShipMessage : NMSTemplate
     {
         // size: 0x2
-        public enum MessageTypeEnum {
+        public enum MessageTypeEnum : uint {
             Leave,
             Fight,
         }

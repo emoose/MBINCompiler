@@ -2,21 +2,21 @@ using libMBIN.NMS.Toolkit;
 
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0x74D270A4AA90E8DE, NameHash = 0x53EC68060BE631FB)]
+    [NMS(GUID = 0x4B24E25067FB7537, NameHash = 0x53EC68060BE631FB)]
     public class TkModelRendererData : NMSTemplate
     {
         /* 0x00 */ public TkModelRendererCameraData Camera;
         /* 0x40 */ public float Fov;
         /* 0x44 */ public float AspectRatio;
         // size: 0x3
-        public enum ThumbnailModeEnum {
+        public enum ThumbnailModeEnum : uint {
             None,
             HUD,
             GUI,
         }
         /* 0x48 */ public ThumbnailModeEnum ThumbnailMode;
         // size: 0x4
-        public enum FocusTypeEnum {
+        public enum FocusTypeEnum : uint {
             ResourceBounds,
             ResourceBoundingHeight,
             NodeBoundingBox,
@@ -31,7 +31,8 @@ namespace libMBIN.NMS.Toolkit
         /* 0x90 */ public NMSString0x10 Anim;
         /* 0xA0 */ public float HeightOffset;
         /* 0xA4 */ public bool UsePlayerCameraInHmd;
-        /* 0xA5 */ public bool UseSensibleCameraFocusNodeIsNowOffsetNode;
-        /* 0xA6 */ public bool LookForFocusInMasterModel;
+        /* 0xA5 */ public bool AlignUIToCameraInHmd;
+        /* 0xA6 */ public bool UseSensibleCameraFocusNodeIsNowOffsetNode;
+        /* 0xA7 */ public bool LookForFocusInMasterModel;
     }
 }

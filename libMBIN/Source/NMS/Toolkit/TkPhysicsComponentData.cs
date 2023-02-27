@@ -2,14 +2,14 @@ using libMBIN.NMS.Toolkit;
 
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0xFA52F5501CCCDA87, NameHash = 0xC58660803669C46F)]
+    [NMS(GUID = 0x25CD3FFA8E448F4E, NameHash = 0xC58660803669C46F)]
     public class TkPhysicsComponentData : NMSTemplate
     {
         /* 0x00 */ public TkPhysicsData Data;
         /* 0x18 */ public NMSTemplate RagdollData;
         /* 0x68 */ public TkVolumeTriggerType TriggerVolumeType;
         // size: 0x2
-        public enum SurfacePropertiesEnum {
+        public enum SurfacePropertiesEnum : uint {
             None,
             Glass,
         }

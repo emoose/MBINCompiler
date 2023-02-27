@@ -1,10 +1,10 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xB00C4F33BF93C17F, NameHash = 0x8A17532BB2410967)]
+    [NMS(GUID = 0xBE69B1FFFEBFE9FD, NameHash = 0x8A17532BB2410967)]
     public class GcPlayerWeapons : NMSTemplate
     {
         // size: 0x13
-        public enum WeaponModeEnum {
+        public enum WeaponModeEnum : uint {
             Bolt,
             Shotgun,
             Burst,

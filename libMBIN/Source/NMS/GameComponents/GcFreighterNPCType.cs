@@ -1,10 +1,10 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x1A4F46CA881F933, NameHash = 0xC53DA60AB5E3B8A5)]
+    [NMS(GUID = 0xFB83EA1F426900E2, NameHash = 0xC53DA60AB5E3B8A5)]
     public class GcFreighterNPCType : NMSTemplate
     {
         // size: 0x5
-        public enum FreighterNPCTypeEnum {
+        public enum FreighterNPCTypeEnum : uint {
             SquadronPilot,
             FrigateCaptain,
             WorkerBio,

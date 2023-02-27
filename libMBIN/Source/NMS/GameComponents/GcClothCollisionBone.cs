@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x7EB190D9C89F338D, NameHash = 0x3183C2CA4E0D9600)]
+    [NMS(GUID = 0x1DC689F860E9E48F, NameHash = 0x3183C2CA4E0D9600)]
     public class GcClothCollisionBone : NMSTemplate
     {
         /* 0x00 */ public bool Enabled;

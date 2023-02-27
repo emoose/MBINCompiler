@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xA816960417866DAF, NameHash = 0x74BA808E86F0EC01)]
+    [NMS(GUID = 0x99F74C03F8948E2C, NameHash = 0x74BA808E86F0EC01)]
     public class GcScannableComponentData : NMSTemplate
     {
         /* 0x00 */ public float ScanRange;
@@ -17,7 +17,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x34 */ public bool UseModelNode;
         /* 0x38 */ public GcScannerIconTypes Icon;
         // size: 0x5
-        public enum ScannableTypeEnum {
+        public enum ScannableTypeEnum : uint {
             Binoculars,
             BinocularsHotspots,
             Scanner,

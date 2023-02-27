@@ -1,11 +1,11 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x71087ADFCE7F1C9, NameHash = 0xD6D2BF5DDCCD9F49)]
+    [NMS(GUID = 0x1AB044C825466554, NameHash = 0xD6D2BF5DDCCD9F49)]
     public class GcRewardScanEvent : NMSTemplate
     {
         /* 0x00 */ public NMSString0x20A Event;
         // size: 0x6
-        public enum ScanEventTableEnum {
+        public enum ScanEventTableEnum : uint {
             Space,
             Planet,
             Missions,

@@ -2,7 +2,7 @@ using libMBIN.NMS.Toolkit;
 
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0xD93E7BCFFAC67831, NameHash = 0xE8F15AD4B3CB30AC)]
+    [NMS(GUID = 0x401F7F6C34A94AA4, NameHash = 0xE8F15AD4B3CB30AC)]
     public class TkImGuiData : NMSTemplate
     {
         /* 0x0000 */ public TkImGuiWindowData MainWindow;

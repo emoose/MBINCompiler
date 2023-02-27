@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x1EA0AC6E658C8004, NameHash = 0x5CE6C6E85ABBB6DB)]
+    [NMS(GUID = 0x88B34845F702A880, NameHash = 0x5CE6C6E85ABBB6DB)]
     public class GcMechTargetSelectionWeightingSettings : NMSTemplate
     {
         /* 0x00 */ public float ThreatWeightFactorBase;

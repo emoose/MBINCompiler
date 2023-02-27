@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xE2F532D7C1D70AA8, NameHash = 0x3454C9AB7AAC46D9)]
+    [NMS(GUID = 0x46D508F9992D3331, NameHash = 0x3454C9AB7AAC46D9)]
     public class GcGalaxySolarSystemParams : NMSTemplate
     {
         /* 0x00 */ public GcGalaxySolarSystemOrbitParams PlanetParameters;

@@ -1,10 +1,10 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xEB53748DEA89AD2D, NameHash = 0x337390D414A23798)]
+    [NMS(GUID = 0x2CE170CA39CB196F, NameHash = 0x337390D414A23798)]
     public class GcMissionConditionIsAbandFreighterDoorOpen : NMSTemplate
     {
         // size: 0x4
-        public enum AbandonedFreighterDoorStatusEnum {
+        public enum AbandonedFreighterDoorStatusEnum : uint {
             DungeonNotReady,
             Locked,
             Opening,

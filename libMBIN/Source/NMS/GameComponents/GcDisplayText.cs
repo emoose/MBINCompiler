@@ -3,11 +3,11 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xA22DB14A469ED818, NameHash = 0x39E3C3DE16466069)]
+    [NMS(GUID = 0xD668510B347FF09D, NameHash = 0x39E3C3DE16466069)]
     public class GcDisplayText : NMSTemplate
     {
         // size: 0x5
-        public enum HUDTextDisplayTypeEnum {
+        public enum HUDTextDisplayTypeEnum : uint {
             Full,
             Compact,
             EyeLevel,

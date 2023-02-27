@@ -1,10 +1,10 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x5757F28AC6CD590A, NameHash = 0x878911013D83AEE9)]
+    [NMS(GUID = 0xEFFA7BD969859911, NameHash = 0x878911013D83AEE9)]
     public class GcRealityGameIcons : NMSTemplate
     {
         // size: 0x56
-        public enum GameIconsEnum {
+        public enum GameIconsEnum : uint {
             Stamina,
             NoStamina,
             EnergyCharge,

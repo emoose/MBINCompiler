@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x1E9865B1A44F4190, NameHash = 0xEF85A351ABA84D63)]
+    [NMS(GUID = 0xC52A83607CC704B8, NameHash = 0xEF85A351ABA84D63)]
     public class GcGrabbableData : NMSTemplate
     {
         /* 0x00 */ public NMSString0x20 LocatorName;
@@ -16,7 +16,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x3D */ public bool AutoGrab;
         /* 0x40 */ public float ToggleGrabTime;
         // size: 0x4
-        public enum GrabTypeEnum {
+        public enum GrabTypeEnum : uint {
             Default,
             EjectHandle,
             ControlStickLeft,

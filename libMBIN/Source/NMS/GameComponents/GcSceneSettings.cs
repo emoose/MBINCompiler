@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xF7910603FAA37A0A, NameHash = 0xF75874C269CFFEA3)]
+    [NMS(GUID = 0x3D244C4E181E581D, NameHash = 0xF75874C269CFFEA3)]
     public class GcSceneSettings : NMSTemplate
     {
         /* 0x000 */ public NMSString0x80 NextSettingFile;

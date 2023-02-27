@@ -1,10 +1,10 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xCA1D7E494DBD81D7, NameHash = 0x69F60839059BF3CD)]
+    [NMS(GUID = 0x6A5117479225A1A, NameHash = 0x69F60839059BF3CD)]
     public class GcNPCPropType : NMSTemplate
     {
         // size: 0xD
-        public enum NPCPropEnum {
+        public enum NPCPropEnum : uint {
             None,
             IPad,
             HoloBlob,

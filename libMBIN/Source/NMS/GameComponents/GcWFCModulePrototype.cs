@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xE512D444B6E94280, NameHash = 0xEB956F6AA5C15F5C)]
+    [NMS(GUID = 0x74D021303F06166E, NameHash = 0xEB956F6AA5C15F5C)]
     public class GcWFCModulePrototype : NMSTemplate
     {
         /* 0x000 */ public NMSString0x80 Name;
@@ -20,7 +20,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x120 */ public NMSString0x10 LayoutGroup;
         /* 0x130 */ public List<GcWeightedResource> Scenes;
         // size: 0x4
-        public enum TerrainEditsEnum {
+        public enum TerrainEditsEnum : uint {
             None,
             ClearEntireBlock,
             UseScene,
@@ -35,7 +35,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x358 */ public GcWFCFace Up;
         /* 0x3D8 */ public GcWFCFace Forward;
         // size: 0x3
-        public enum FreighterModuleTypeEnum {
+        public enum FreighterModuleTypeEnum : uint {
             None,
             Room,
             Corridor,

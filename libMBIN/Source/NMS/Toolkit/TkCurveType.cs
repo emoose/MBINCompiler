@@ -1,10 +1,10 @@
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0x1316819AD912DA45, NameHash = 0x48849654049904EA)]
+    [NMS(GUID = 0xA0AA35E82CAB5940, NameHash = 0x48849654049904EA)]
     public class TkCurveType : NMSTemplate
     {
         // size: 0x28
-        public enum CurveEnum {
+        public enum CurveEnum : byte {
             Linear,
             SmoothInOut,
             FastInSlowOut,

@@ -1,10 +1,10 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xD998428F78FE36A9, NameHash = 0xB4FC959D6A910DEB)]
+    [NMS(GUID = 0xA0E00875B7A6ABD0, NameHash = 0xB4FC959D6A910DEB)]
     public class GcNPCNavigationAreaComponentData : NMSTemplate
     {
         // size: 0x9
-        public enum NavAreaTypeEnum {
+        public enum NavAreaTypeEnum : uint {
             Normal,
             BuildingWithExterior,
             Debris,

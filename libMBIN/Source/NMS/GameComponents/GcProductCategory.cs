@@ -1,10 +1,10 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x301034BCF5288797, NameHash = 0xB3E1998DF67B4EF2)]
+    [NMS(GUID = 0xFD2D86AE268A7F24, NameHash = 0xB3E1998DF67B4EF2)]
     public class GcProductCategory : NMSTemplate
     {
         // size: 0x9
-        public enum ProductCategoryEnum {
+        public enum ProductCategoryEnum : uint {
             Component,
             Consumable,
             Tradeable,

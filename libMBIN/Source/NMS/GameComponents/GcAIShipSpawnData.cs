@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x5D04F4C3019F54F3, NameHash = 0x35C91009067A6431)]
+    [NMS(GUID = 0x9CE6A6ED6DE9D4B5, NameHash = 0x35C91009067A6431)]
     public class GcAIShipSpawnData : NMSTemplate
     {
         /* 0x000 */ public NMSString0x20A Message;
@@ -23,7 +23,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x174 */ public Vector2f Count;
         /* 0x17C */ public Vector2f StartTime;
         // size: 0x2
-        public enum SpawnShapeEnum {
+        public enum SpawnShapeEnum : uint {
             Sphere,
             Cone,
         }

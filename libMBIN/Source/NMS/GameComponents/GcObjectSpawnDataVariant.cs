@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x31059C72D9F972F1, NameHash = 0xB5D7AD8F4482D8AE)]
+    [NMS(GUID = 0x338FD10AF4E1E015, NameHash = 0xB5D7AD8F4482D8AE)]
     public class GcObjectSpawnDataVariant : NMSTemplate
     {
         /* 0x00 */ public NMSString0x10 ID;

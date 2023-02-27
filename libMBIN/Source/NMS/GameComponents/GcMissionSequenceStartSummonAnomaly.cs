@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xE9082665EB398F89, NameHash = 0x6AFB1C1263D2F6F3)]
+    [NMS(GUID = 0xB0ECCFBDAC455333, NameHash = 0x6AFB1C1263D2F6F3)]
     public class GcMissionSequenceStartSummonAnomaly : NMSTemplate
     {
         /* 0x0 */ public GcGalaxyStarAnomaly Anomaly;

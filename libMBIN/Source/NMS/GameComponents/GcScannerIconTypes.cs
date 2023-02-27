@@ -1,10 +1,10 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x29D3366FF4200594, NameHash = 0x8A4027FC041677F0)]
+    [NMS(GUID = 0xDF9C8B4D08CC8914, NameHash = 0x8A4027FC041677F0)]
     public class GcScannerIconTypes : NMSTemplate
     {
         // size: 0x36
-        public enum ScanIconTypeEnum {
+        public enum ScanIconTypeEnum : uint {
             None,
             Health,
             Shield,

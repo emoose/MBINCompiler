@@ -1,10 +1,10 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x3F1642161707CBD3, NameHash = 0xC1BECA54193DD3FB)]
+    [NMS(GUID = 0x30816B6D0D302F6E, NameHash = 0xC1BECA54193DD3FB)]
     public class GcMissionConditionTest : NMSTemplate
     {
         // size: 0x4
-        public enum ConditionTestEnum {
+        public enum ConditionTestEnum : uint {
             AnyFalse,
             AllFalse,
             AnyTrue,

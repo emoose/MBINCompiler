@@ -1,10 +1,10 @@
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0x70EA576613E79C6C, NameHash = 0xB649393FB6E397AE)]
+    [NMS(GUID = 0x15C71D80B19E4AE8, NameHash = 0xB649393FB6E397AE)]
     public class TKNGuiEditorComponentSize : NMSTemplate
     {
         // size: 0x30
-        public enum NGuiEditorComponentSizeEnum {
+        public enum NGuiEditorComponentSizeEnum : uint {
             WindowResize,
             WindowButton,
             Indent,

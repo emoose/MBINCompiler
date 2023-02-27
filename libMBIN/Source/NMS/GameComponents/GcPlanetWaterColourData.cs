@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x41FF395583E0222B, NameHash = 0x5148874790D0404C)]
+    [NMS(GUID = 0xFE16295F97CAA527, NameHash = 0x5148874790D0404C)]
     public class GcPlanetWaterColourData : NMSTemplate
     {
         /* 0x00 */ public Colour WaterFogColourNear;

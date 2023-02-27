@@ -2,7 +2,7 @@ using libMBIN.NMS.Toolkit;
 
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0x9E26385AB18373E0, NameHash = 0xA45052EB66E281C7)]
+    [NMS(GUID = 0x4C8832CFE3785F00, NameHash = 0xA45052EB66E281C7)]
     public class TkNoiseGridData : NMSTemplate
     {
         /* 0x000 */ public bool Active;
@@ -12,7 +12,7 @@ namespace libMBIN.NMS.Toolkit
         /* 0x00A */ public bool Hemisphere;
         /* 0x00C */ public TkNoiseVoxelTypeEnum VoxelType;
         // size: 0x16
-        public enum NoiseGridTypeEnum {
+        public enum NoiseGridTypeEnum : uint {
             Cube,
             Cone,
             Torus,

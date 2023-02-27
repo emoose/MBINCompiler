@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xB79E8311D497B6CC, NameHash = 0x41B161469E53B05E)]
+    [NMS(GUID = 0xD4A53608778A385B, NameHash = 0x41B161469E53B05E)]
     public class GcCreatureFiendAttackData : NMSTemplate
     {
         /* 0x00 */ public float NearDist;

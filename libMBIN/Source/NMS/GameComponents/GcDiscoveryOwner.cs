@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x3FCC66892065DEA2, NameHash = 0x59B76FD6543E9F75)]
+    [NMS(GUID = 0x43D52A16FFF4C492, NameHash = 0x59B76FD6543E9F75)]
     public class GcDiscoveryOwner : NMSTemplate
     {
         /* 0x000 */ public NMSString0x40 LocalID;

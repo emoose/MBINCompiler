@@ -2,14 +2,14 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xDD5B8730ACF30CEF, NameHash = 0x18CD621AAAB1F01D)]
+    [NMS(GUID = 0xEA4F0B98C8572FC, NameHash = 0x18CD621AAAB1F01D)]
     public class GcTeleportEndpoint : NMSTemplate
     {
         /* 0x00 */ public GcUniverseAddressData UniverseAddress;
         /* 0x20 */ public Vector3f Position;
         /* 0x30 */ public Vector3f Facing;
         // size: 0xB
-        public enum TeleporterTypeEnum {
+        public enum TeleporterTypeEnum : uint {
             Base,
             Spacestation,
             Atlas,

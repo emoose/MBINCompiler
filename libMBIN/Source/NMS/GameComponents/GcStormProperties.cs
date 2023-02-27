@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x7E377D7E679E424D, NameHash = 0x82B1B19A1A57F975)]
+    [NMS(GUID = 0xA85160500E3060F0, NameHash = 0x82B1B19A1A57F975)]
     public class GcStormProperties : NMSTemplate
     {
         /* 0x000 */ public float Weighting;

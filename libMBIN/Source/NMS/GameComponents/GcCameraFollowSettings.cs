@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x18A9B10F53C2E260, NameHash = 0x200FDA306DC86654)]
+    [NMS(GUID = 0xDF33D9C6EF3F5AF1, NameHash = 0x200FDA306DC86654)]
     public class GcCameraFollowSettings : NMSTemplate
     {
         /* 0x00 */ public NMSString0x10 Name;
@@ -45,27 +45,24 @@ namespace libMBIN.NMS.GameComponents
         /* 0xA8 */ public float VelocityAnticipateSpringSpeed;
         /* 0xAC */ public float VertMaxSpring;
         /* 0xB0 */ public float CenterStartSpeed;
-        /* 0xB4 */ public float MinClose;
-        /* 0xB8 */ public float MaxClose;
-        /* 0xBC */ public float CloseSpring;
-        /* 0xC0 */ public float LookStickLimitAngle;
-        /* 0xC4 */ public bool EnableCollisionDetection;
-        /* 0xC8 */ public int NumLRProbes;
-        /* 0xCC */ public float LRProbesRange;
-        /* 0xD0 */ public float LRProbesRadius;
-        /* 0xD4 */ public int NumUDProbes;
-        /* 0xD8 */ public float UDProbesRange;
-        /* 0xDC */ public float ProbeCenterX;
-        /* 0xE0 */ public float ProbeCenterY;
-        /* 0xE4 */ public float PushForwardDropoffLR;
-        /* 0xE8 */ public float PushForwardDropoffUD;
-        /* 0xEC */ public float AvoidCollisionLRSpeed;
-        /* 0xF0 */ public float AvoidCollisionUDSpeed;
-        /* 0xF4 */ public float AvoidCollisionPushSpeed;
-        /* 0xF8 */ public bool AvoidCollisionUDUseStickDelay;
-        /* 0xF9 */ public bool AvoidCollisionLRUseStickDelay;
-        /* 0xFA */ public bool UseSpeedBasedSpring;
-        /* 0xFB */ public bool UseCustomBlendTime;
-        /* 0xFC */ public float CustomBlendTime;
+        /* 0xB4 */ public float LookStickLimitAngle;
+        /* 0xB8 */ public bool EnableCollisionDetection;
+        /* 0xBC */ public int NumLRProbes;
+        /* 0xC0 */ public float LRProbesRange;
+        /* 0xC4 */ public float LRProbesRadius;
+        /* 0xC8 */ public int NumUDProbes;
+        /* 0xCC */ public float UDProbesRange;
+        /* 0xD0 */ public float ProbeCenterX;
+        /* 0xD4 */ public float ProbeCenterY;
+        /* 0xD8 */ public float PushForwardDropoffLR;
+        /* 0xDC */ public float PushForwardDropoffUD;
+        /* 0xE0 */ public float AvoidCollisionLRSpeed;
+        /* 0xE4 */ public float AvoidCollisionUDSpeed;
+        /* 0xE8 */ public float AvoidCollisionPushSpeed;
+        /* 0xEC */ public bool AvoidCollisionUDUseStickDelay;
+        /* 0xED */ public bool AvoidCollisionLRUseStickDelay;
+        /* 0xEE */ public bool UseSpeedBasedSpring;
+        /* 0xEF */ public bool UseCustomBlendTime;
+        /* 0xF0 */ public float CustomBlendTime;
     }
 }

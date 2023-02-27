@@ -94,6 +94,7 @@ def convert_files():
                 op.join(BASE_PATH, platform, 'MBINCompiler.exe'), '-q']
         else:
             cmd = [op.join(BASE_PATH, 'MBINCompiler.exe'), '-q']
+    cmd.append('--force')
 
     datapath = os.environ.get('datapath', DATA_PATH)
 
@@ -138,7 +139,12 @@ def pytest_terminal_summary(terminalreporter):
     failed_fpaths = []
     for failed in terminalreporter.stats.get('failed', []):
         if len(failed.sections) != 0:
-            fname, err = failed.sections[0][1].split(',')
+            try:
+                fname, err = failed.sections[-1][1].split(',')
+            except ValueError:
+                # This should only happen if something gets printed during the 
+                # test. We should be able to safely ignore them.
+                continue
             # Clean up the filename
             try:
                 clean_fname = fname.split('mbin_', 1)[1].split(op.sep, 1)[1]

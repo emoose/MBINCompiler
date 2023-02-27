@@ -1,10 +1,10 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x2E9283F10929B64D, NameHash = 0xA63D153E45037707)]
+    [NMS(GUID = 0xF632B2B1C66A9F6A, NameHash = 0xA63D153E45037707)]
     public class GcModelExplosionRule : NMSTemplate
     {
         // size: 0x4
-        public enum MatchNodeTypeEnum {
+        public enum MatchNodeTypeEnum : uint {
             Any,
             Mesh,
             Model,
@@ -12,14 +12,14 @@ namespace libMBIN.NMS.GameComponents
         }
         /* 0x00 */ public MatchNodeTypeEnum MatchNodeType;
         // size: 0x2
-        public enum MatchNameEnum {
+        public enum MatchNameEnum : uint {
             ContainsString,
             ExactString,
         }
         /* 0x04 */ public MatchNameEnum MatchName;
         /* 0x08 */ public NMSString0x20 String;
         // size: 0x4
-        public enum ExplodeActionEnum {
+        public enum ExplodeActionEnum : uint {
             RelativeToParent,
             DontMove,
             SaveCenter,

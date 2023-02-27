@@ -1,11 +1,11 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x8DD543F0DE5546C6, NameHash = 0xC2F4FABD9EDAFE6A)]
+    [NMS(GUID = 0x111193B7216264B4, NameHash = 0xC2F4FABD9EDAFE6A)]
     public class GcMissionSequenceDetailMessagePoint : NMSTemplate
     {
         /* 0x00 */ public NMSString0x20A Text;
         // size: 0x3
-        public enum PointStateEnum {
+        public enum PointStateEnum : uint {
             Statement,
             ObjectiveIncomplete,
             ObjectiveComplete,

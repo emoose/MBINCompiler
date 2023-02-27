@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xC99380CB599C463, NameHash = 0xDE1F17CE7E01A8C2)]
+    [NMS(GUID = 0x7922B45DF52C43C3, NameHash = 0xDE1F17CE7E01A8C2)]
     public class GcAlienPuzzleEntry : NMSTemplate
     {
         /* 0x000 */ public int ProgressionIndex;
@@ -13,7 +13,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x02C */ public GcInteractionType Type;
         /* 0x030 */ public GcAlienPuzzleCategory Category;
         // size: 0x3
-        public enum AdditionalOptionsEnum {
+        public enum AdditionalOptionsEnum : uint {
             None,
             LearnWord,
             SayWord,
@@ -33,7 +33,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x0F4 */ public GcNPCPropType Prop;
         /* 0x0F8 */ public List<GcPuzzleTextFlow> AdvancedInteractionFlow;
         // size: 0x3
-        public enum PersistancyBufferOverrideEnum {
+        public enum PersistancyBufferOverrideEnum : uint {
             None,
             AlwaysPersonal,
             AlwaysFireteam,

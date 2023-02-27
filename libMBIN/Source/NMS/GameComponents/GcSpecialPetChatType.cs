@@ -1,12 +1,13 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x4CB2E1CB51B9AEB5, NameHash = 0x3748852F6280E90F)]
+    [NMS(GUID = 0x4FDA1EC6477A8B8C, NameHash = 0x3748852F6280E90F)]
     public class GcSpecialPetChatType : NMSTemplate
     {
-        // size: 0x2
-        public enum SpecialPetChatTypeEnum {
+        // size: 0x3
+        public enum SpecialPetChatTypeEnum : uint {
             Monster,
             Quad,
+            MiniRobo,
         }
         /* 0x0 */ public SpecialPetChatTypeEnum SpecialPetChatType;
     }

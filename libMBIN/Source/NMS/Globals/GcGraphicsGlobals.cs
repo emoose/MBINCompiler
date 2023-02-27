@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(GUID = 0xB5BC4F0206F0F706, NameHash = 0xB24409E83457E875)]
+    [NMS(GUID = 0x127EDCDB5C006C4C, NameHash = 0xB24409E83457E875)]
     public class GcGraphicsGlobals : NMSTemplate
     {
         /* 0x000 */ public float LUTDistanceFlightMultiplier;
@@ -52,6 +52,7 @@ namespace libMBIN.NMS.Globals
         /* 0x108 */ public float Old_TopRimIntensity;
         /* 0x10C */ public float ModelRendererLightIntensity;
         /* 0x110 */ public float PetModelRendererLightIntensity;
+        /* 0x1   */ public float WonderModelRendererLightIntensity;
         /* 0x114 */ public float ScanFresnel;
         /* 0x118 */ public float ScanClamp;
         /* 0x11C */ public float ScanAlpha;
@@ -214,6 +215,7 @@ namespace libMBIN.NMS.Globals
         /* 0x5D4 */ public float AtmosphereSize;
         /* 0x5D8 */ public float RingSize;
         /* 0x5DC */ public float RingRadius;
+        /* 0x5   */ public float RingAvoidanceSphereInterpTime;
         /* 0x5E0 */ public float HueVariance;
         /* 0x5E4 */ public float SaturationVariance;
         /* 0x5E8 */ public float ValueVariance;
@@ -319,6 +321,8 @@ namespace libMBIN.NMS.Globals
         /* 0xA08 */ public TkGraphicsDetailPreset GraphicsDetailPresetXB1;
         /* 0xA4C */ public TkGraphicsDetailPreset GraphicsDetailPresetXB1X;
         /* 0xA90 */ public TkGraphicsDetailPreset GraphicsDetailPresetOberon;
+        /* 0xA   */ public TkGraphicsDetailPreset GraphicsDetailPresetNX64Handheld;
+        /* 0xA   */ public TkGraphicsDetailPreset GraphicsDetailPresetPS5;
         /* 0xAD4 */ public TkGraphicsDetailPreset GraphicsDetailPresetPS5VR;
         /* 0xB18 */ public bool EnableVariableUpdate;
         [NMS(Size = 0x4, EnumType = typeof(TkGraphicsDetailTypes.GraphicDetailEnum))]

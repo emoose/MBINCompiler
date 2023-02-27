@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x8F7191C20FA9DA1A, NameHash = 0x2A28407EECDFA4CC)]
+    [NMS(GUID = 0x697FC0BB94821DD3, NameHash = 0x2A28407EECDFA4CC)]
     public class GcRealityIconTable : NMSTemplate
     {
         [NMS(Size = 0x6, EnumType = typeof(GcPlayerHazardType.HazardEnum))]
@@ -38,7 +38,9 @@ namespace libMBIN.NMS.GameComponents
         /* 0x54D0 */ public TkTextureResource[] DifficultyPresetIcons;
         [NMS(Size = 0x4, EnumType = typeof(GcDifficultyOptionGroups.DifficultyOptionGroupEnum))]
         /* 0x586C */ public TkTextureResource[] DifficultyUIOptionIcons;
+        [NMS(Size = 0x5, EnumType = typeof(GcOptionsUIHeaderIcons.OptionsUIHeaderIconTypeEnum))]
+        /* 0x5A7C */ public TkTextureResource[] OptionsUIHeaderIcons;
         [NMS(Size = 0x5, EnumType = typeof(GcInventoryFilterOptions.InventoryFilterEnum))]
-        /* 0x5A7C */ public TkTextureResource[] InventoryFilterIcons;
+        /* 0x5D10 */ public TkTextureResource[] InventoryFilterIcons;
     }
 }

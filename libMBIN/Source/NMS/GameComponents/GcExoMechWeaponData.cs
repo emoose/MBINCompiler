@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x3B2A782B81E95503, NameHash = 0xAB111A88D43A92B4)]
+    [NMS(GUID = 0x34E79E36B5462BA, NameHash = 0xAB111A88D43A92B4)]
     public class GcExoMechWeaponData : NMSTemplate
     {
         /* 0x00 */ public List<GcMechWeaponLocation> LocationPriority;

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(GUID = 0x6E7D2F0861FA58D2, NameHash = 0x13FED27DF728C38)]
+    [NMS(GUID = 0x1A486F75DA30C4DC, NameHash = 0x13FED27DF728C38)]
     public class GcDebugOptions : NMSTemplate
     {
         /* 0x0000 */ public bool ForceScanEventsToGoPrime;
@@ -48,18 +48,22 @@ namespace libMBIN.NMS.Globals
         /* 0x003D */ public bool DisableSaving;
         /* 0x003E */ public bool DisableContinuousSaving;
         /* 0x003F */ public bool DisableStorms;
-        /* 0x0040 */ public bool ForceEnablePlayerClothComponent;
-        /* 0x0041 */ public bool ForceDisablePlayerClothComponent;
+        /* 0x0040 */ public bool ForceEnableClothComponent;
+        /* 0x0041 */ public bool ForceDisableClothComponent;
         /* 0x0042 */ public bool ClothForcePositionExtrapolationOff;
         /* 0x0043 */ public bool ClothForcePositionExtrapolationOn;
         /* 0x0044 */ public bool ClothForcePositionExtrapolationBackOn;
         /* 0x0045 */ public bool ClothForcePositionExtrapolationUpdateOrderDependent;
         /* 0x0046 */ public bool ClothForcePositionExtrapolationSyncWithFpsLock;
         /* 0x0047 */ public bool ClothForcePositionExtrapolationAntiSyncWithFpsLock;
-        /* 0x0048 */ public bool ForceEnablePlayerSpringAttachmentComponent;
-        /* 0x0049 */ public bool ForceDisablePlayerSpringAttachmentComponent;
+        /* 0x00   */ public bool ClothForceAsyncSimulationOff;
+        /* 0x00   */ public bool ClothForceAsyncSimulationOn;
+        /* 0x0048 */ public bool ForceEnableSpringAttachmentComponent;
+        /* 0x0049 */ public bool ForceDisableSpringAttachmentComponent;
         /* 0x004A */ public bool ForceEnableSplitIkOptimisation;
         /* 0x004B */ public bool ForceDisableSplitIkOptimisation;
+        /* 0x00   */ public bool SampleCollisionWithCamera;
+        /* 0x00   */ public bool ShowPlayerCollisions;
         /* 0x004C */ public bool DisableNPCs;
         /* 0x004D */ public bool AlternateControls;
         /* 0x004E */ public bool AlwaysShowURI;
@@ -84,12 +88,13 @@ namespace libMBIN.NMS.Globals
         /* 0x065F */ public bool OctahedralImpostersDisable;
         /* 0x0660 */ public bool OctahedralImpostersViewFromSpace;
         /* 0x0664 */ public int OctahedralImpostersViewCount;
+        /* 0x06   */ public bool EnableMemoryPoolAllocPrint;
         /* 0x0668 */ public bool UseDebugScreenSettings;
         /* 0x066C */ public int ScreenWidth;
         /* 0x0670 */ public int ScreenHeight;
         /* 0x0674 */ public bool DisableVSync;
         // size: 0x3
-        public enum GameWindowModeEnum {
+        public enum GameWindowModeEnum : uint {
             Bordered,
             Borderless,
             Fullscreen,
@@ -103,14 +108,14 @@ namespace libMBIN.NMS.Globals
         /* 0x0888 */ public bool ForceInitialShip;
         /* 0x0889 */ public bool ForceInitialWeapon;
         // size: 0x3
-        public enum GameStateModeEnum {
+        public enum GameStateModeEnum : uint {
             LoadPreset,
             UserStorage,
             FreshStart,
         }
         /* 0x088C */ public GameStateModeEnum GameStateMode;
         // size: 0x7
-        public enum BootModeEnum {
+        public enum BootModeEnum : uint {
             MinimalSolarSystem,
             SolarSystem,
             GalaxyMap,
@@ -121,7 +126,7 @@ namespace libMBIN.NMS.Globals
         }
         /* 0x0890 */ public BootModeEnum BootMode;
         // size: 0x7
-        public enum PlayerSpawnLocationOverrideEnum {
+        public enum PlayerSpawnLocationOverrideEnum : uint {
             None,
             FromSettings,
             Space,
@@ -135,13 +140,13 @@ namespace libMBIN.NMS.Globals
         /* 0x0918 */ public NMSString0x100 WorkingDirectory;
         /* 0x0A18 */ public NMSString0x80 DebugScene;
         // size: 0x2
-        public enum SolarSystemBootEnum {
+        public enum SolarSystemBootEnum : uint {
             FromSettings,
             Generate,
         }
         /* 0x0A98 */ public SolarSystemBootEnum SolarSystemBoot;
         // size: 0x2
-        public enum ShaderPreloadEnum {
+        public enum ShaderPreloadEnum : uint {
             Off,
             Full,
         }
@@ -150,7 +155,7 @@ namespace libMBIN.NMS.Globals
         /* 0x0AA1 */ public bool ShaderPreloadListImport;
         /* 0x0AA2 */ public bool ShaderCaching;
         // size: 0x3
-        public enum BootLoadDelayEnum {
+        public enum BootLoadDelayEnum : uint {
             LoadAll,
             WaitForPlanet,
             WaitForNothing,
@@ -162,9 +167,11 @@ namespace libMBIN.NMS.Globals
         /* 0x0AB4 */ public bool ForceSunDirectionFromPhotoMode;
         /* 0x0AB8 */ public float ForceSunAngle;
         /* 0x0ABC */ public bool ResetForcedSaveSlotOnLoad;
+        /* 0x0A   */ public bool EnableFrontendPreload;
         /* 0x0ABD */ public bool MissionMessageLoggingEnabled;
+        /* 0x0A   */ public bool MissionNGUIShowsConditionResults;
         /* 0x0ABE */ public bool UseParticles;
-        /* 0x0ABF */ public bool UseHeavyAir;
+        ///* 0x0ABF */ public bool UseHeavyAir;
         /* 0x0AC0 */ public bool UseVolumetrics;
         /* 0x0AC1 */ public bool UseClouds;
         /* 0x0AC2 */ public bool EnableCloudAnimation;
@@ -210,7 +217,7 @@ namespace libMBIN.NMS.Globals
         /* 0x0B10 */ public bool DoAlienLanguage;
         /* 0x0B14 */ public GcAlienRace ForceInteractionRaceTo;
         // size: 0x2
-        public enum RealityModeEnum {
+        public enum RealityModeEnum : uint {
             LoadPreset,
             Generate,
         }
@@ -232,7 +239,7 @@ namespace libMBIN.NMS.Globals
         /* 0x0C4C */ public float _3dTextDistance;
         /* 0x0C50 */ public float _3dTextMinScale;
         // size: 0x3
-        public enum RecordSettingEnum {
+        public enum RecordSettingEnum : uint {
             None,
             Record,
             Playback,
@@ -252,8 +259,11 @@ namespace libMBIN.NMS.Globals
         /* 0x0D10 */ public NMSString0x20 CrashDumpIdentifier;
         /* 0x0D30 */ public bool EnableLivePP;
         /* 0x0D31 */ public bool DebugThreatLevels;
+        /* 0x0D   */ public bool DumpManifestContents;
         /* 0x0D32 */ public bool ShowDebugMessages;
         /* 0x0D33 */ public bool ShowFramerate;
+        /* 0x0D   */ public bool ShowGPURenderTime;
+        /* 0x0D   */ public bool ShowDynamicResScale;
         /* 0x0D34 */ public bool PrintAvgFrameTimes;
         /* 0x0D35 */ public bool ShowPositionDebug;
         /* 0x0D36 */ public bool ShowGPUMemory;
@@ -268,7 +278,7 @@ namespace libMBIN.NMS.Globals
         /* 0x0E43 */ public bool GraphTexStreaming;
         /* 0x0E44 */ public bool SmokeTestDumpStatsMode;
         // size: 0x7
-        public enum SmokeTestCycleModeEnum {
+        public enum SmokeTestCycleModeEnum : uint {
             None,
             TourPlanet,
             TourSolarSystem,
@@ -279,7 +289,7 @@ namespace libMBIN.NMS.Globals
         }
         /* 0x0E48 */ public SmokeTestCycleModeEnum SmokeTestCycleMode;
         // size: 0x8
-        public enum SmokeTestScenarioEnum {
+        public enum SmokeTestScenarioEnum : uint {
             None,
             TerrainSnapShotFromAltitude,
             BelowCloudLayerSnapShot,
@@ -324,16 +334,17 @@ namespace libMBIN.NMS.Globals
         /* 0x10C2 */ public NMSString0x80 PipelineFileVRPS4;
         /* 0x1142 */ public NMSString0x80 PipelineFileFrontend;
         /* 0x11C2 */ public NMSString0x80 PipelineFileEditor;
+        /* 0x11   */ public NMSString0x80 PipelineFileSwitch;
         /* 0x1242 */ public bool RenderLowFramerate;
         /* 0x1243 */ public bool EnableComputePost;
         /* 0x1244 */ public bool EnableEvenOddRender;
         /* 0x1245 */ public bool MinGPUMode;
         /* 0x1246 */ public bool Proto2DevKit;
-        /* 0x1247 */ public bool SimulateDisabledParticleRefractions;
+        ///* 0x1247 */ public bool SimulateDisabledParticleRefractions;
         /* 0x1248 */ public bool AlwaysIncludeLocalPlayerInChatMessage;
         /* 0x1249 */ public bool SimulateNoNetworkConnection;
         // size: 0x3
-        public enum ProxyTypeEnum {
+        public enum ProxyTypeEnum : uint {
             None,
             ManualURI,
             InetProxy,
@@ -341,7 +352,7 @@ namespace libMBIN.NMS.Globals
         /* 0x124C */ public ProxyTypeEnum ProxyType;
         /* 0x1250 */ public NMSString0x80 ProxyURI;
         // size: 0x8
-        public enum ServerEnvEnum {
+        public enum ServerEnvEnum : uint {
             Default,
             dev,
             qa,

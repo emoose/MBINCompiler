@@ -1,10 +1,10 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x672DB0802F05AF1E, NameHash = 0x1A5C8AEE15BC00C7)]
+    [NMS(GUID = 0x42748B3F25F8C43A, NameHash = 0x1A5C8AEE15BC00C7)]
     public class GcCreatureIkType : NMSTemplate
     {
         // size: 0x9
-        public enum CreatureIkTypeEnum {
+        public enum CreatureIkTypeEnum : uint {
             Foot,
             Hinge_X,
             Hinge_Y,

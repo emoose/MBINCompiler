@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x1605E4AB343449E7, NameHash = 0x309337FC0812738C)]
+    [NMS(GUID = 0x285F130A426C7C92, NameHash = 0x309337FC0812738C)]
     public class GcPetBehaviourData : NMSTemplate
     {
         /* 0x00 */ public bool ReactiveBehaviour;
@@ -16,7 +16,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x18 */ public float ApproachPlayerDist;
         /* 0x1C */ public float SearchDist;
         // size: 0x2
-        public enum PetBehaviourValidityEnum {
+        public enum PetBehaviourValidityEnum : uint {
             Everywhere,
             OnPlanet,
         }

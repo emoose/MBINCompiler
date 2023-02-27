@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x78FEAE7506F8392E, NameHash = 0x35FB9E28116A4F2A)]
+    [NMS(GUID = 0xEC55DBADBB2207F2, NameHash = 0x35FB9E28116A4F2A)]
     public class GcMissionSequenceCompleteSettlementJudgement : NMSTemplate
     {
         [NMS(Size = 0x7, EnumType = typeof(GcSettlementJudgementType.SettlementJudgementTypeEnum))]

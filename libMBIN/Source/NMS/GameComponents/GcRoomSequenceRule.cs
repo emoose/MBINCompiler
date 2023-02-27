@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x49C28B5B5E8784C1, NameHash = 0x836CEABBD3EE007D)]
+    [NMS(GUID = 0xA1B2A3B82AB3ED0D, NameHash = 0x836CEABBD3EE007D)]
     public class GcRoomSequenceRule : NMSTemplate
     {
         /* 0x00 */ public NMSString0x10 RoomID;

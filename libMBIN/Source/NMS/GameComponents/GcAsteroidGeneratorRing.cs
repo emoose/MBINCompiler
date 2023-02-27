@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xAB9A00B42E8007C4, NameHash = 0x79403B157D846B70)]
+    [NMS(GUID = 0xFEAAE4F2806F9584, NameHash = 0x79403B157D846B70)]
     public class GcAsteroidGeneratorRing : NMSTemplate
     {
         /* 0x00 */ public GcAsteroidGeneratorAssignment Assignment;

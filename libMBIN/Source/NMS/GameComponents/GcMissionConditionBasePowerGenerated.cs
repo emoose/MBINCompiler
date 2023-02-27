@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x82BBCA6C23F9D05C, NameHash = 0x957DDD469FE6A35C)]
+    [NMS(GUID = 0xFAD831A8B2051585, NameHash = 0x957DDD469FE6A35C)]
     public class GcMissionConditionBasePowerGenerated : NMSTemplate
     {
         /* 0x0 */ public int Amount;

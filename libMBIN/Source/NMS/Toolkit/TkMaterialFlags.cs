@@ -1,10 +1,10 @@
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0xE6EDF4A0AFC086CC, NameHash = 0x71610F70BA400437)]
+    [NMS(GUID = 0xEA132F026E55C047, NameHash = 0x71610F70BA400437)]
     public class TkMaterialFlags : NMSTemplate
     {
         // size: 0x40
-        public enum MaterialFlagEnum {
+        public enum MaterialFlagEnum : uint {
             _F01_DIFFUSEMAP,
             _F02_SKINNED,
             _F03_NORMALMAP,
@@ -30,7 +30,7 @@ namespace libMBIN.NMS.Toolkit
             _F23_TRANSLUCENT,
             _F24_AOMAP,
             _F25_ROUGHNESS_MASK,
-            _F26_STRETCHY_PARTICLE,
+            _F26_,
             _F27_VBTANGENT,
             _F28_VBSKINNED,
             _F29_VBCOLOUR,

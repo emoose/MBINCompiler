@@ -1,10 +1,10 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x40AF5F7334FAFE6C, NameHash = 0xA3C86E46D2A8CA67)]
+    [NMS(GUID = 0xD7FC9616F212080A, NameHash = 0xA3C86E46D2A8CA67)]
     public class GcFrigateClass : NMSTemplate
     {
         // size: 0x8
-        public enum FrigateClassEnum {
+        public enum FrigateClassEnum : uint {
             Combat,
             Exploration,
             Mining,

@@ -2,7 +2,7 @@ using libMBIN.NMS.Toolkit;
 
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0x38699D8EA62C6FF6, NameHash = 0x174C8C3DB33CE268)]
+    [NMS(GUID = 0x3F104057D08F304F, NameHash = 0x174C8C3DB33CE268)]
     public class TkNoiseUberLayerData : NMSTemplate
     {
         /* 0x00 */ public TkNoiseUberData NoiseData;
@@ -19,7 +19,7 @@ namespace libMBIN.NMS.Toolkit
         /* 0x68 */ public float HeightOffset;
         /* 0x6C */ public TkNoiseOffsetEnum Offset;
         // size: 0x3
-        public enum WaterFadeEnum {
+        public enum WaterFadeEnum : uint {
             None,
             Above,
             Below,

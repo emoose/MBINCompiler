@@ -1,10 +1,10 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x73DE15601B3C18, NameHash = 0xB47279F1694E0681)]
+    [NMS(GUID = 0xD19A2E040F8046A2, NameHash = 0xB47279F1694E0681)]
     public class GcPetAccessoryType : NMSTemplate
     {
         // size: 0x1B
-        public enum PetAccessoryEnum {
+        public enum PetAccessoryEnum : uint {
             None,
             CargoCylinder,
             Containers,

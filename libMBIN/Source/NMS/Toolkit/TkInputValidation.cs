@@ -1,10 +1,10 @@
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0x9D23D7C1CD3E8EB0, NameHash = 0xE57F8ACB51D80972)]
+    [NMS(GUID = 0x30AC58313BDDBA37, NameHash = 0xE57F8ACB51D80972)]
     public class TkInputValidation : NMSTemplate
     {
         // size: 0x4
-        public enum InputValidationEnum {
+        public enum InputValidationEnum : uint {
             Held,
             Pressed,
             Released,

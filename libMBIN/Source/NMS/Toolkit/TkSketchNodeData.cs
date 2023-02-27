@@ -3,12 +3,12 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0x737644F5760BE32E, NameHash = 0x34A0F43E0ECB3765)]
+    [NMS(GUID = 0x42A7CE67E1CAAAA6, NameHash = 0x34A0F43E0ECB3765)]
     public class TkSketchNodeData : NMSTemplate
     {
         /* 0x00 */ public NMSString0x20 TypeName;
         // size: 0x6
-        public enum TriggerTypeEnum {
+        public enum TriggerTypeEnum : uint {
             Disabled,
             Interrupt,
             RunParallel,

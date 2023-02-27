@@ -1,10 +1,10 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x2B1765D3EB30767E, NameHash = 0x9A637E59AB66BFB0)]
+    [NMS(GUID = 0x24CC01D94B6A1C1B, NameHash = 0x9A637E59AB66BFB0)]
     public class GcAlienMood : NMSTemplate
     {
         // size: 0x9
-        public enum MoodEnum {
+        public enum MoodEnum : uint {
             Neutral,
             Positive,
             VeryPositive,

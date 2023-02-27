@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(GUID = 0x408828F957889A6B, NameHash = 0xCB9E3321AA0276BD)]
+    [NMS(GUID = 0xD225FA4D7B61C282, NameHash = 0xCB9E3321AA0276BD)]
     public class GcFreighterBaseGlobals : NMSTemplate
     {
         /* 0x00 */ public int MaxTotalNPCCount;

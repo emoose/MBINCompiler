@@ -1,10 +1,10 @@
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0x6640477A901066E, NameHash = 0x5DE2B54C774CA122)]
+    [NMS(GUID = 0x5D8E386894CA5E6B, NameHash = 0x5DE2B54C774CA122)]
     public class TkTriggerFeedbackData : NMSTemplate
     {
         // size: 0x4
-        public enum FeedbackTypeEnum {
+        public enum FeedbackTypeEnum : uint {
             None,
             Feedback,
             Weapon,

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xF7D4B41BC174ECAC, NameHash = 0x132EB7906E53B7A7)]
+    [NMS(GUID = 0xE8545DE962F52F8E, NameHash = 0x132EB7906E53B7A7)]
     public class GcCreatureData : NMSTemplate
     {
         /* 0x00 */ public NMSString0x10 Id;
@@ -14,7 +14,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x1D */ public bool CanBeFemale;
         /* 0x20 */ public List<GcCreatureTagAndRarity> Tags;
         // size: 0x4
-        public enum MoveAreaEnum {
+        public enum MoveAreaEnum : uint {
             Ground,
             Water,
             Air,

@@ -1,10 +1,10 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xE93CD66ACF1BDF14, NameHash = 0xC2EE53901B0156DE)]
+    [NMS(GUID = 0xBA85C40C7D96F32C, NameHash = 0xC2EE53901B0156DE)]
     public class GcBuildingPlacementErrorTypes : NMSTemplate
     {
         // size: 0x16
-        public enum InvalidPlacementReasonEnum {
+        public enum InvalidPlacementReasonEnum : uint {
             Offline,
             InvalidBiome,
             InvalidAboveWater,

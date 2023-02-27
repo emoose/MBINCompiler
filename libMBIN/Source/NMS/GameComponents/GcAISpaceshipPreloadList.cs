@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xD0A9F729BED12AAE, NameHash = 0xC546551B048ACC33)]
+    [NMS(GUID = 0x4531553B105E462, NameHash = 0xC546551B048ACC33)]
     public class GcAISpaceshipPreloadList : NMSTemplate
     {
         /* 0x0 */ public GcRealityCommonFactions Faction;

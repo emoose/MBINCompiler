@@ -1,10 +1,10 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x70E61328AFB9E8C2, NameHash = 0x3E904C2466567A08)]
+    [NMS(GUID = 0x985634C4BE6A9411, NameHash = 0x3E904C2466567A08)]
     public class GcRewardInterventionResponse : NMSTemplate
     {
         // size: 0x4
-        public enum ResponseTypeEnum {
+        public enum ResponseTypeEnum : uint {
             DontIntervene,
             InterveneWithMission,
             MissionSuccess,

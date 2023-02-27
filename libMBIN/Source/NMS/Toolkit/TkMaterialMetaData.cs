@@ -2,12 +2,12 @@ using libMBIN.NMS.Toolkit;
 
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0x7D099C5BCD4E1786, NameHash = 0xE39CB7AA4D818260)]
+    [NMS(GUID = 0xC4E74407D409755F, NameHash = 0xE39CB7AA4D818260)]
     public class TkMaterialMetaData : NMSTemplate
     {
         /* 0x000 */ public NMSString0x80 ExternalMaterial;
         // size: 0x7
-        public enum ShaderEnum {
+        public enum ShaderEnum : uint {
             UberShader,
             Sky,
             Screen,
@@ -71,7 +71,7 @@ namespace libMBIN.NMS.Toolkit
         /* 0x3F8 */ public bool DecalDiffuse;
         /* 0x3F9 */ public bool DecalTerrainOnly;
         // size: 0x3
-        public enum DecalNormalEnum {
+        public enum DecalNormalEnum : uint {
             None,
             Decal,
             Vertex,
@@ -105,7 +105,7 @@ namespace libMBIN.NMS.Toolkit
         /* 0x428 */ public float FurNoiseThickness;
         /* 0x42C */ public float FurNoiseTurbulence;
         /* 0x430 */ public float FurTurbulenceScale;
-        /* 0x434 */ public bool StretchyParticle;
+        /* 0x434 */ public bool HighQualityParticle;
         /* 0x435 */ public bool UVScrolling;
         /* 0x438 */ public float UVScrollX;
         /* 0x43C */ public float UVScrollY;

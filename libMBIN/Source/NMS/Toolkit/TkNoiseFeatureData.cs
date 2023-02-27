@@ -2,7 +2,7 @@ using libMBIN.NMS.Toolkit;
 
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0xDACD705E2F49F6FA, NameHash = 0xBC975A8E0D580FFA)]
+    [NMS(GUID = 0x11FD8C247496B7E8, NameHash = 0xBC975A8E0D580FFA)]
     public class TkNoiseFeatureData : NMSTemplate
     {
         /* 0x00 */ public bool Active;
@@ -11,7 +11,7 @@ namespace libMBIN.NMS.Toolkit
         /* 0x09 */ public bool Trench;
         /* 0x0C */ public TkNoiseVoxelTypeEnum VoxelType;
         // size: 0x2
-        public enum FeatureTypeEnum {
+        public enum FeatureTypeEnum : uint {
             Tube,
             Blob,
         }

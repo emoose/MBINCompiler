@@ -1,10 +1,10 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xB66E86BB410213C0, NameHash = 0x8F4800F7EA8399A7)]
+    [NMS(GUID = 0x8B954AFB7658126B, NameHash = 0x8F4800F7EA8399A7)]
     public class GcPlanetWeatherColourIndex : NMSTemplate
     {
         // size: 0x2
-        public enum WeatherColourSetEnum {
+        public enum WeatherColourSetEnum : uint {
             Common,
             Rare,
         }

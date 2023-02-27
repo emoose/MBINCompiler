@@ -1,11 +1,11 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x6F58825498BA33C8, NameHash = 0x6520972F5B89CD77)]
+    [NMS(GUID = 0x44119D1A01247A34, NameHash = 0x6520972F5B89CD77)]
     public class GcObjectPlacementComponentData : NMSTemplate
     {
         /* 0x00 */ public NMSString0x20 GroupNodeName;
         // size: 0x2
-        public enum ActivationTypeEnum {
+        public enum ActivationTypeEnum : uint {
             GroupNode,
             Locator,
         }

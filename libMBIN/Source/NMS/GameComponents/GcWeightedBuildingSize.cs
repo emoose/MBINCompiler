@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x1FF58EFC7A2FCB64, NameHash = 0x90DB43477E714E6D)]
+    [NMS(GUID = 0xDC7CD8229B1A09FC, NameHash = 0x90DB43477E714E6D)]
     public class GcWeightedBuildingSize : NMSTemplate
     {
         /* 0x00 */ public float RelativeProbability;

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x158BBFB4ADCB5FF4, NameHash = 0x6E62CCB542C4E505)]
+    [NMS(GUID = 0xE48BA78CFF998BDE, NameHash = 0x6E62CCB542C4E505)]
     public class GcCostTable : NMSTemplate
     {
         /* 0x00 */ public List<GcCostTableEntry> SimpleInteractionTable;

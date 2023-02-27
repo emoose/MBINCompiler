@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xBA78C6E818D81297, NameHash = 0x84D6228673F661A6)]
+    [NMS(GUID = 0x719B3F025CECFCC, NameHash = 0x84D6228673F661A6)]
     public class GcMissionSequenceCollectSubstance : NMSTemplate
     {
         /* 0x00 */ public NMSString0x80 Message;
@@ -16,6 +16,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0xC8 */ public GcItemNeedPurpose Purpose;
         /* 0xCC */ public bool FromNow;
         /* 0xCD */ public bool TakeAmountFromSeasonData;
-        /* 0xCE */ public NMSString0x80 DebugText;
+        /* 0xCE */ public bool SearchCookingIngredients;
+        /* 0xCF */ public NMSString0x80 DebugText;
     }
 }

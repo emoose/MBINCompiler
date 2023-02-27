@@ -1,10 +1,10 @@
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0xE4B018E61C5C44F9, NameHash = 0x6A57676B42321253)]
+    [NMS(GUID = 0xE877E2E7DCA338C7, NameHash = 0x6A57676B42321253)]
     public class TkPaletteTexture : NMSTemplate
     {
         // size: 0x3A
-        public enum PaletteEnum {
+        public enum PaletteEnum : uint {
             Grass,
             Plant,
             Leaf,
@@ -66,7 +66,7 @@ namespace libMBIN.NMS.Toolkit
         }
         /* 0x0 */ public PaletteEnum Palette;
         // size: 0x8
-        public enum ColourAltEnum {
+        public enum ColourAltEnum : uint {
             Primary,
             Alternative1,
             Alternative2,

@@ -1,10 +1,10 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xD853CB4C6EB4F8E7, NameHash = 0x47E189998F5D82E7)]
+    [NMS(GUID = 0x152319DBCA3C6F48, NameHash = 0x47E189998F5D82E7)]
     public class GcInteractionType : NMSTemplate
     {
         // size: 0x83
-        public enum InteractionTypeEnum {
+        public enum InteractionTypeEnum : uint {
             None,
             Shop,
             NPC,

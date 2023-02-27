@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xF19FD2F80F61B632, NameHash = 0x861FBB2F05462ADE)]
+    [NMS(GUID = 0x9E8D237D872B6B19, NameHash = 0x861FBB2F05462ADE)]
     public class GcMissionConditionWaterPlanet : NMSTemplate
     {
     }
