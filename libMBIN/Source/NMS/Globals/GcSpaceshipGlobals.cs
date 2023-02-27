@@ -7,6 +7,9 @@ namespace libMBIN.NMS.Globals
     [NMS(GUID = 0xF740D338AB05386D, NameHash = 0xC45203411E9AFE95)]
     public class GcSpaceshipGlobals : NMSTemplate
     {
+        /* 0x00   */ public float ShipThrottleNotchVibrationStrength;
+        /* 0x00   */ public float ShipThrottleBrakeVibrationStrength;
+        /* 0x00   */ public float ShipThrustReverseThreshhold;
         /* 0x0000 */ public float ShieldLeechMul;
         /* 0x0004 */ public float AtmosphereCombatHeight;
         /* 0x0008 */ public NMSString0x10 SailShipCoreTechID;
