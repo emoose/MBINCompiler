@@ -7,6 +7,7 @@ namespace libMBIN.NMS.Globals
     [NMS(GUID = 0x9EDF704E68FE0D91, NameHash = 0x49E4A0E330E783EE)]
     public class GcPlayerGlobals : NMSTemplate
     {
+        /* 0x00   */ public Vector3f LeftHandModeWeaponAttachSocketCorrection;
         /* 0x0000 */ public bool ForceFreighterProcTechRandom;
         /* 0x0004 */ public float AlienPodAggroDecay;
         /* 0x0008 */ public float AlienPodAggroSpring;
@@ -20,20 +21,27 @@ namespace libMBIN.NMS.Globals
         /* 0x0028 */ public float MiniportalAppearEffectTime;
         /* 0x002C */ public float MiniportalDisappearEffectTime;
         /* 0x0030 */ public bool RecenterViewWhenEnteringShip;
-        /* 0x0031 */ public bool UseInitialFacingForMoveDirection;
-        /* 0x0032 */ public bool EmulateNoHandsForHandScreens;
+        ///* 0x0031 */ public bool UseInitialFacingForMoveDirection;
+        ///* 0x0032 */ public bool EmulateNoHandsForHandScreens;
         /* 0x0034 */ public float BinocularAimOffset;
         /* 0x0038 */ public float BinocularScopeScale;
         /* 0x003C */ public float BinocularScopeSmoothing;
         /* 0x0040 */ public float MaxArmExtension;
         /* 0x0044 */ public float MinArmExtension;
+        /* 0x00   */ public float ThirdPersonWeaponAttachRotationCorrectionAngle;
+        /* 0x00   */ public float ThirdPersonWeaponXOffset;
         /* 0x0048 */ public float SummonArcRange;
         /* 0x004C */ public float InteractionAimOffset;
         /* 0x0050 */ public GcProjectorOffsetData QuickMenuLauncherTransforms;
+        /* 0x00   */ public GcProjectorOffsetData QuickMenuLauncherTransformsNoBuildMenu;
         /* 0x00C0 */ public GcProjectorOffsetData WeaponMenuLauncherTransforms;
+        /* 0x00   */ public GcProjectorOffsetData LargeWeaponMenuLauncherTransforms;
         /* 0x0130 */ public GcInWorldUIScreenData QuickMenuOffset;
         /* 0x0160 */ public GcInWorldUIScreenData InventoryOffset;
         /* 0x0190 */ public GcInWorldUIScreenData FrontendOffset;
+        /* 0x01   */ public GcInWorldUIScreenData QuickMenuOffsetV2;
+        /* 0x01   */ public GcInWorldUIScreenData InventoryOffsetV2;
+        /* 0x01   */ public GcInWorldUIScreenData FrontendOffsetV2;
         /* 0x01C0 */ public GcInWorldUIScreenData FrontendMessagesOffset;
         /* 0x01F0 */ public GcInWorldUIScreenData DefaultLeftHandTransform;
         /* 0x0220 */ public GcInWorldUIScreenData DefaultLeftHandTransformVehicle;
@@ -286,7 +294,12 @@ namespace libMBIN.NMS.Globals
         /* 0x097C */ public float FrontShieldOffsetOn;
         /* 0x0980 */ public float FrontShieldSpeedSlowdown;
         /* 0x0984 */ public float FrontShieldSlerpTime;
-        /* 0x0988 */ public float CombatSpawnMinWantedTime;
+        /* 0x09   */ public float FrontShieldScaleVR;
+        /* 0x09   */ public float FrontShieldUpOffsetVR;
+        /* 0x09   */ public float FrontShieldOffsetOffVR;
+        /* 0x09   */ public float FrontShieldOffsetOnVR;
+        /* 0x09   */ public float FrontShieldSlerpTimeVR;
+        /* 0x09 */ public float CombatSpawnMinWantedTime;
         /* 0x098C */ public float ExperiencePiratesDifficultyVariance;
         /* 0x0990 */ public float ExperienceHardPiratesDamageMaxOdds;
         /* 0x0994 */ public float ExperienceMediumPiratesDamageMaxOdds;
@@ -300,7 +313,7 @@ namespace libMBIN.NMS.Globals
         /* 0x09B4 */ public float CockpitEjectSideTestRange;
         /* 0x09B8 */ public float WeaponShotgunSlowdown;
         // size: 0x2
-        public enum MouseSmoothModeEnum {
+        public enum MouseSmoothModeEnum : uint {
             Off,
             Sprung,
         }
@@ -602,7 +615,7 @@ namespace libMBIN.NMS.Globals
         /* 0x0F88 */ public List<float> WantedEscalateTime;
         /* 0x0F98 */ public List<float> WantedExtremeEscalateTime;
         // size: 0x3
-        public enum ControlModesEnum {
+        public enum ControlModesEnum : uint {
             Normal,
             FlightStick,
             Inverted,

@@ -76,7 +76,10 @@ namespace libMBIN.NMS.Globals
         /* 0x0210 */ public Vector2f SolarInfoPanelOffsetVR;
         /* 0x0218 */ public Vector2f SolarInfoPanelAlignment;
         /* 0x0220 */ public Vector2f SolarMarkerAlignmentVR;
-        /* 0x0228 */ public Vector2f IntroLabelAlignmentVR;
+        /* 0x02   */ public Vector2f SolarMarkerSizeVRPS4;
+        /* 0x02   */ public Vector2f SolarMarkerSizeVR;
+        /* 0x02   */ public Vector2f SolarMarkerOriginOffsetVRPS4;
+        ///* 0x0228 */ public Vector2f IntroLabelAlignmentVR;
         /* 0x0230 */ public Vector2f SolarMarkerOriginOffsetVR;
         /* 0x0238 */ public float SolarMarkerPanelScaleVR;
         /* 0x023C */ public float SolarInfoPanelScaleVR;
