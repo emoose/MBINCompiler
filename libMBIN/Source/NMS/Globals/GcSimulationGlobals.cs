@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(GUID = 0x479F88A620294086, NameHash = 0xD1D7201E3228DD7B)]
+    [NMS(GUID = 0x5DF2330383863397, NameHash = 0xD1D7201E3228DD7B)]
     public class GcSimulationGlobals : NMSTemplate
     {
         /* 0x000 */ public NMSString0x80 StartingSceneFile;

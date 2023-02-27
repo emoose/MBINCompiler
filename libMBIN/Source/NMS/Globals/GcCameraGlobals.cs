@@ -4,12 +4,14 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(GUID = 0x1E4AA04F9B8E5078, NameHash = 0xA826BCA4D4C3DFE3)]
+    [NMS(GUID = 0x405B62BAD58CCC0A, NameHash = 0xA826BCA4D4C3DFE3)]
     public class GcCameraGlobals : NMSTemplate
     {
+        /* 0x00   */ public float SClassLandingShakeMultiplier;
         /* 0x0000 */ public bool OffsetCombatCameraHorizontal;
         /* 0x0004 */ public float OffsetCombatCameraHorizontalAngle;
         /* 0x0010 */ public TkModelRendererData FreighterCustomisationStandardCamera;
+        /* 0x00   */ public TkModelRendererData FreighterCustomisationStandardCameraAlt;
         /* 0x00C0 */ public List<GcCameraFollowSettings> Cameras;
         /* 0x00D0 */ public GcCameraFollowSettings VehicleCamHmd;
         /* 0x01D0 */ public GcCameraFollowSettings VehicleCam;
@@ -182,6 +184,7 @@ namespace libMBIN.NMS.Globals
         /* 0x3278 */ public float PhotoModeFlashDuration;
         /* 0x327C */ public float PhotoModeFlashIntensity;
         /* 0x3280 */ public Vector3f PhotoModeShipOffset;
+        /* 0x32   */ public Vector3f PhotoModeVRFPOffset;
         /* 0x3290 */ public Vector3f BuildingModeInitialOffset;
         /* 0x32A0 */ public float BuildingModeMaxDistance;
         /* 0x32A4 */ public float RunningFoVAdjust;
@@ -240,6 +243,7 @@ namespace libMBIN.NMS.Globals
         /* 0x3428 */ public bool DebugAICam;
         /* 0x342C */ public float DebugAICamUp;
         /* 0x3430 */ public float DebugAICamAt;
+        /* 0x34   */ public float VRShakeMultiplier;
         /* 0x3434 */ public float PainShakeTime;
         /* 0x3438 */ public float ShipShakeDamper;
         /* 0x343C */ public float IndoorCamShakeDamper;

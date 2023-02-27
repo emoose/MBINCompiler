@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(GUID = 0x8101A732F636B82, NameHash = 0xE2DEF8CC8775E050)]
+    [NMS(GUID = 0xD48DE89FC3AC3765, NameHash = 0xE2DEF8CC8775E050)]
     public class GcCreatureGlobals : NMSTemplate
     {
         /* 0x0000 */ public int NumCreaturesRequiredForDiscoveryMission;
@@ -559,12 +559,12 @@ namespace libMBIN.NMS.Globals
         /* 0x1FCC */ public bool DrawRoutineFollowDebug;
         /* 0x1FCD */ public bool DrawRoutineInfo;
         /* 0x1FD0 */ public float AdultCorrelationValue;
-        /* 0x1FD4 */ public float GrassHeightForMaxPush;
-        /* 0x1FD8 */ public float GrassHeightForMinPush;
-        /* 0x1FDC */ public float GrassPushMaxStrength;
-        /* 0x1FE0 */ public float GrassPushMinStrength;
-        /* 0x1FE4 */ public float GrassPushMaxLimit;
-        /* 0x1FE8 */ public float GrassPushMinLimit;
+        ///* 0x1FD4 */ public float GrassHeightForMaxPush;
+        ///* 0x1FD8 */ public float GrassHeightForMinPush;
+        ///* 0x1FDC */ public float GrassPushMaxStrength;
+        ///* 0x1FE0 */ public float GrassPushMinStrength;
+        ///* 0x1FE4 */ public float GrassPushMaxLimit;
+        ///* 0x1FE8 */ public float GrassPushMinLimit;
         /* 0x1FEC */ public float GrassPushRadius;
         /* 0x1FF0 */ public float GrassPushMaxSize;
         /* 0x1FF4 */ public bool DrawGrassPushRadius;

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(GUID = 0x99747A5E7531FC2D, NameHash = 0xB032629C37506E6A)]
+    [NMS(GUID = 0x575F27B826997D2B, NameHash = 0xB032629C37506E6A)]
     public class GcFleetGlobals : NMSTemplate
     {
         /* 0x0000 */ public Vector3f FreighterCustomiserSunAngleAdjust;
@@ -46,7 +46,7 @@ namespace libMBIN.NMS.Globals
         /* 0x0107 */ public bool DisablePlayerFleets;
         /* 0x0108 */ public NMSString0x20A DebugInterventionEvent;
         // size: 0xB
-        public enum ForceDebriefEntryTypeEnum {
+        public enum ForceDebriefEntryTypeEnum : uint {
             None,
             PrimarySuccess,
             WhaleSuccess,

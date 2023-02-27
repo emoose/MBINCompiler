@@ -2,7 +2,7 @@ using libMBIN.NMS.Toolkit;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(GUID = 0x8B775B353C2392B1, NameHash = 0xAE0EEF5ED0659FF3)]
+    [NMS(GUID = 0x1BACFD16963BC1C6, NameHash = 0xAE0EEF5ED0659FF3)]
     public class GcMultiplayerGlobals : NMSTemplate
     {
         /* 0x000 */ public Vector2f FullSimHandUpdateDistance;

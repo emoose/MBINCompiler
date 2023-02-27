@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(GUID = 0x273F0B7B39FF493D, NameHash = 0x1E09DD001FDA82F8)]
+    [NMS(GUID = 0x83753B9514A0E9EE, NameHash = 0x1E09DD001FDA82F8)]
     public class GcEnvironmentGlobals : NMSTemplate
     {
         [NMS(Size = 0x4, EnumType = typeof(TkGraphicsDetailTypes.GraphicDetailEnum))]
@@ -34,6 +34,7 @@ namespace libMBIN.NMS.Globals
         /* 0x38C */ public float VDeform;
         /* 0x390 */ public float LocationStableTime;
         /* 0x394 */ public float InterestStableTime;
+        /* 0x3   */ public float CameraLocationStableTime;
         /* 0x398 */ public float AsteroidFieldStableEnterTime;
         /* 0x39C */ public float AsteroidFieldStableLeaveTime;
         /* 0x3A0 */ public float TemperatureSmoothTime;
@@ -54,7 +55,7 @@ namespace libMBIN.NMS.Globals
         /* 0x3E0 */ public bool MatchPlantPalettes;
         /* 0x3E4 */ public float DuplicateColourThreshold;
         // size: 0x3
-        public enum SwitchTypeEnum {
+        public enum SwitchTypeEnum : uint {
             None,
             Debug,
             Enabled,
