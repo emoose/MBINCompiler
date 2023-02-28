@@ -143,10 +143,13 @@ namespace libMBIN.NMS.Globals
         /* 0x2F0 */ public GcMechAudioEventTable MechAudioEventTable;
         /* 0x410 */ public float AIMechLaserFireDurationMin;
         /* 0x414 */ public float AIMechLaserFireDurationMax;
-        /* 0x418 */ public NMSString0x10 AIMechGunProjectile;
+        ///* 0x418 */ public NMSString0x10 AIMechGunProjectile;
         /* 0x428 */ public float AIMechGunFireInterval;
         /* 0x42C */ public int AIMechGunNumShotsMin;
         /* 0x430 */ public int AIMechGunNumShotsMax;
+        /* 0x4   */ public int AIMechStunGunFireInterval;
+        /* 0x4   */ public int AIMechStunGunNumShotsMin;
+        /* 0x4   */ public int AIMechStunGunNumShotsMax;
         /* 0x434 */ public float AIMechGunExplosionRadius;
         /* 0x438 */ public float AIMechGunInheritVelocity;
         /* 0x43C */ public float MechWeaponInterpSpeed;

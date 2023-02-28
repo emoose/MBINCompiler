@@ -7,9 +7,24 @@ namespace libMBIN.NMS.Globals
     [NMS(GUID = 0xA7EE382EC728AE9D, NameHash = 0x95C306B1A90F3E08)]
     public class GcUIGlobals : NMSTemplate
     {
+        /* 0x00   */ public bool EnableWondersPage;
         /* 0x0000 */ public bool ShowDifficultyForBases;
         /* 0x0001 */ public bool ShowPadlockForLockedSettings;
         /* 0x0004 */ public int DebugMedalRank;
+        [NMS(Size = 0x6, EnumType = typeof(GcWonderType.WonderTypeEnum))]
+        /* 0x00   */ public TkTextureResource[] WonderTypeIcons;
+        [NMS(Size = 0xB, EnumType = typeof(GcWonderPlanetCategory.WonderPlanetCategoryEnum))]
+        /* 0x00   */ public GcWonderCategoryConfig[] WonderPlanetCategoryConfig;
+        [NMS(Size = 0xF, EnumType = typeof(GcWonderCreatureCategory.WonderCreatureCategoryEnum))]
+        /* 0x00   */ public GcWonderCategoryConfig[] WonderCreatureCategoryConfig;
+        [NMS(Size = 0x8, EnumType = typeof(GcWonderFloraCategory.WonderFloraCategoryEnum))]
+        /* 0x00   */ public GcWonderCategoryConfig[] WonderFloraCategoryConfig;
+        [NMS(Size = 0x8, EnumType = typeof(GcWonderMineralCategory.WonderMineralCategoryEnum))]
+        /* 0x00   */ public GcWonderCategoryConfig[] WonderMineralCategoryConfig;
+        [NMS(Size = 0xD, EnumType = typeof(GcWonderTreasureCategory.WonderTreasureCategoryEnum))]
+        /* 0x00   */ public GcWonderCategoryConfig[] WonderTreasureCategoryConfig;
+        [NMS(Size = 0xB, EnumType = typeof(GcWonderWeirdBasePartCategory.WonderWeirdBasePartCategoryEnum))]
+        /* 0x00   */ public GcWonderCategoryConfig[] WonderWeirdBasePartCategoryConfig;
         /* 0x0008 */ public TkCurveType PadCursorUICurve;
         /* 0x0010 */ public Colour JoaoBoxCompletedObjectiveColour;
         /* 0x0020 */ public Colour InvSlotGradientBaseColour;
@@ -40,6 +55,7 @@ namespace libMBIN.NMS.Globals
         /* 0x00C4 */ public float UseZoomedOutBuildCamRadius;
         /* 0x00C8 */ public float ParagraphAutoScrollSpeed;
         /* 0x00CC */ public bool AutoScrollParagraphs;
+        /* 0x00   */ public float GameModeSelectColourFadeTime;
         /* 0x00D0 */ public float EggModifiyAnimMaxSize;
         /* 0x00D4 */ public float EggModifiyAnimLoopTime;
         /* 0x00D8 */ public int SeasonFinalStageIndex;
@@ -74,6 +90,7 @@ namespace libMBIN.NMS.Globals
         /* 0x016C */ public float QuickMenuSideOffset;
         /* 0x0170 */ public float QuickMenuCentreSideOffset;
         /* 0x0174 */ public float InWorldInteractLabelScale;
+        /* 0x01   */ public float InWorldInteractLabelScaleV2;
         /* 0x0178 */ public float InWorldScreenScaleDistance;
         /* 0x017C */ public Vector2f InWorldInteractLabelAlignment;
         /* 0x0190 */ public Vector3f InWorldInteractLabelCentreOffset;
@@ -110,6 +127,7 @@ namespace libMBIN.NMS.Globals
         /* 0x0234 */ public float BinocularsFarIconFadeDist;
         /* 0x0238 */ public float AlignmentRequiredToDisableFrostedGlass;
         /* 0x0240 */ public Vector3f BinocularPanelLinePointOffset;
+        /* 0x02   */ public float GalmapDiscoveryOffsetVR;
         /* 0x0250 */ public float FrontendOffsetVR;
         /* 0x0254 */ public float ProjectorScale;
         /* 0x0258 */ public float CockpitGlassFrostTime;
@@ -234,7 +252,11 @@ namespace libMBIN.NMS.Globals
         /* 0x07BC */ public bool InteractionInWorldPlayerCamAlways;
         /* 0x07C0 */ public float InteractionInWorldPitchDistance;
         /* 0x07C4 */ public float InteractionInWorldMinScreenDistance;
+        /* 0x07   */ public float InteractionInWorldMinScreenDistanceV2;
         /* 0x07C8 */ public float InteractionInWorldSeatedNPCHeightAdjust;
+        /* 0x07   */ public float InteractionInWorldSeatedNPCHeightAdjustV2;
+        /* 0x07   */ public float ShipHologramInWorldUIHeightAdjust;
+        /* 0x07   */ public float ShipHologramInWorldUIHeightAdjustV2;
         /* 0x07CC */ public float TravelTargetRadius;
         /* 0x07D0 */ public float TravelLineThickness;
         /* 0x07E0 */ public Colour TravelLineColour;
@@ -303,6 +325,7 @@ namespace libMBIN.NMS.Globals
         /* 0x0A3C */ public float CompassDistanceSpaceScaleRange;
         /* 0x0A40 */ public float CompassDistanceScale;
         /* 0x0A44 */ public float CompassDistanceShipMinScale;
+        /* 0x0A   */ public float CompassDistanceMarkerMinScale;
         /* 0x0A48 */ public float CompassDistanceMaxAngle;
         /* 0x0A4C */ public float CompassDistanceYOffset;
         /* 0x0A50 */ public float CompassAngleClamp;
@@ -1197,6 +1220,7 @@ namespace libMBIN.NMS.Globals
         /* 0x5184 */ public TkCurveType HUDMarkerAnimCurve;
         /* 0x5188 */ public float HUDMarkerPrimaryIndicatorSize;
         /* 0x518C */ public float HUDPetMarkerAngleTest;
+        /* 0x51   */ public float HUDPetMarkerAngleVRMul;
         /* 0x5190 */ public float HUDMarkerHoverAngleTestGround;
         /* 0x5194 */ public float HUDPetCentreScreenAngle;
         /* 0x5198 */ public float HUDNetworkMarkerHoverAngleTestGround;
@@ -1204,6 +1228,7 @@ namespace libMBIN.NMS.Globals
         /* 0x51A0 */ public float HUDMarkerHoverAngleTestShip;
         /* 0x51A4 */ public float HUDMarkerHoverShowLargeAngleTest;
         /* 0x51A8 */ public float HUDNetworkMarkerHoverShowLargeAngleTest;
+        /* 0x51   */ public float HUDNetworkMarkerHoverAngleVRMul;
         /* 0x51AC */ public float HUDMarkerShipOffsetMaxDist;
         /* 0x51B0 */ public float HUDMarkerShipOffsetMinDist;
         /* 0x51B4 */ public float HUDMarkerNearFadeDistance;
@@ -1312,19 +1337,20 @@ namespace libMBIN.NMS.Globals
         [NMS(Size = 0x7, EnumType = typeof(GcSettlementStatType.SettlementStatTypeEnum))]
         /* 0x6018 */ public TkTextureResource[] SettlementStatNegativeImages;
         /* 0x63B4 */ public float MinimumHoldFill;
-        /* 0x63B8 */ public bool EnableAccessibleUI;
+        /* 0x63B8 */ public bool EnableAccessibleUIOnSwitch;
         /* 0x63BC */ public float AccessibleUIPopupScale;
+        /* 0x63   */ public float AccessibleUIHUDPopupScale;
         /* 0x63C0 */ public float DetailMessageDismissTime;
+        /* 0x63   */ public float ManualScrollChangePerInputMin;
+        /* 0x63   */ public float ManualScrollChangePerInputMax;
+        /* 0x63   */ public float InfoPortalGuideCycleTime;
+        /* 0x63   */ public float InfoPortalMilestonesCycleTime;
+        /* 0x63   */ public float FeedFrigateAnimPeriod;
+        /* 0x63   */ public int FeedFrigateAnimNumPeriods;
+        /* 0x63   */ public float FeedFrigateAnimScaleChange;
+        /* 0x63   */ public float FeedFrigateAnimAlphaChange;
         /* 0x63C4 */ public float TouchScrollMaxDelta;
         /* 0x63C8 */ public float TextTouchScrollCap;
         /* 0x63CC */ public float TouchScrollChangePageThreshold;
-        /* 0x63D0 */ public float ManualScrollChangePerInputMin;
-        /* 0x63D4 */ public float ManualScrollChangePerInputMax;
-        /* 0x63D8 */ public float InfoPortalGuideCycleTime;
-        /* 0x63DC */ public float InfoPortalMilestonesCycleTime;
-        /* 0x63E0 */ public float FeedFrigateAnimPeriod;
-        /* 0x63E4 */ public int FeedFrigateAnimNumPeriods;
-        /* 0x63E8 */ public float FeedFrigateAnimScaleChange;
-        /* 0x63EC */ public float FeedFrigateAnimAlphaChange;
     }
 }
