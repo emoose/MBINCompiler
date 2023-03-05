@@ -2,6 +2,7 @@
 
 from abc import ABC
 import configparser
+import json
 import os
 import os.path as op
 import pathlib
@@ -476,6 +477,7 @@ class NMSClass():
         self._field_names = set()
         self.name = name
         self.name_hash = fmt_hex(name_hash)
+        self._guid = guid
         self.guid = fmt_hex(guid)
         self.required_usings = set()
         if self.name not in ACTUALLY_GLOBALS and not self.name.endswith('Globals'):
@@ -715,17 +717,28 @@ if __name__ == '__main__':
         nms = pymem.Pymem('NMS.exe')
         nms_base = nms.base_address
         t1 = time.time()
-        names = []
+        names: list[str] = []
         classes: list[NMSClass] = []
+        class_guid_mapping: dict[str, str] = {}
+        guids: list[int] = []
         for name, offset in find_classes(binary_path):
             cls_ = read_class(nms, nms_base + offset, filepaths, config)
             if name[1:] in NAME_MAPPING:
                 name = 'c' + NAME_MAPPING[name[1:]]
             names.append(f'{name}, {nms_base + offset:X}')
             classes.append(cls_)
+            class_guid_mapping[cls_.guid] = cls_.name
+            guids.append(cls_._guid)
         names.sort()
         with open(SUMMARY_FILE, 'w') as f:
             f.write('\n'.join(names))
+        if config['general'].getboolean('write_guid_json', fallback=False):
+            # Experimental code to generate a mapping of GUID's to names.
+            _guid_hash = 0
+            for guid in guids:
+                _guid_hash = (_guid_hash ^ guid) & 0xFFFFFFFFFFFFFFFF
+            with open(f'guids_{fmt_hex(_guid_hash)}.json', 'w') as f:
+                f.write(json.dumps(class_guid_mapping))
         for cls_ in classes:
             # Before writing out, loop over the fields of the class also to
             # determine if any of the array fields need to have updated enum

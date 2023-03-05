@@ -52,6 +52,7 @@ jobs:
             libMBIN-dotnet4.dll
             libMBIN-dotnet6.dll
             MBINCompiler.exe
+            MBINCompiler-dotnet6.exe
             libMBIN.dll
             report.json
             mapping.json
