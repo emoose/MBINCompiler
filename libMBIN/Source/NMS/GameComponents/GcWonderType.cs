@@ -1,9 +1,9 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x1CE70970224A6067, NameHash = 0xBA9101F9B520DE21)]
+    [NMS(GUID = 0x8FDB3630AB843ADE, NameHash = 0xBA9101F9B520DE21)]
     public class GcWonderType : NMSTemplate
     {
-        // size: 0x6
+        // size: 0x7
         public enum WonderTypeEnum : uint {
             Treasure,
             WeirdBasePart,
@@ -11,6 +11,7 @@ namespace libMBIN.NMS.GameComponents
             Creature,
             Flora,
             Mineral,
+            Custom,
         }
         /* 0x0 */ public WonderTypeEnum WonderType;
     }
