@@ -728,8 +728,11 @@ namespace libMBIN
                             writer.Write((uint)Enum.Parse(field.FieldType, fieldData.ToString()));
                         } else if (enumType.Name == "UInt16") {
                             writer.Write((ushort)Enum.Parse(field.FieldType, fieldData.ToString()));
-                        } else {
+                        } else if (enumType.Name == "Byte") {
                             writer.Write((byte)Enum.Parse(field.FieldType, fieldData.ToString()));
+                        } else {
+                            // Fall back to int parsing just in case the enum has no type specified.
+                            writer.Write((int)Enum.Parse(field.FieldType, fieldData.ToString()));
                         }
 
                     } else if ( fieldType.BaseType == typeof( NMSTemplate ) ) {
@@ -1365,8 +1368,11 @@ namespace libMBIN
                                 return (uint)Enum.Parse(field.FieldType, xmlProperty.Value);
                             } else if (enumType.Name == "UInt16") {
                                 return (ushort)Enum.Parse(field.FieldType, xmlProperty.Value);
-                            } else {
+                            } else if (enumType.Name == "Byte") {
                                 return (byte)Enum.Parse(field.FieldType, xmlProperty.Value);
+                            } else {
+                                // Fall back to int parsing just in case the enum has no type specified.
+                                return (int)Enum.Parse(field.FieldType, xmlProperty.Value);
                             }
                         } catch (ArgumentException) {
                             // material flags can have a custom suffix
