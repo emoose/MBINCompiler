@@ -1,10 +1,11 @@
 using libMBIN.NMS.Toolkit;
 using libMBIN.NMS.GameComponents;
 using System.Collections.Generic;
+using System;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xA6EFF7D6E5D8CCC5, NameHash = 0x3A50D683FD1CF4BF)]
+    [NMS(GUID = 0xB1245EFE662ED9AE, NameHash = 0x3A50D683FD1CF4BF)]
     public class GcUserSettingsData : NMSTemplate
     {
         /* 0x0000 */ public bool InvertLookControls;
@@ -58,9 +59,10 @@ namespace libMBIN.NMS.GameComponents
         /* 0x3940 */ public bool VoiceChat;
         /* 0x3941 */ public bool Multiplayer;
         /* 0x3942 */ public bool InstantUIInputs;
-        /* 0x3943 */ public bool SpeechToText;
-        /* 0x3944 */ public bool Translate;
-        /* 0x3945 */ public bool CrossPlatform;
+        /* 0x3943 */ public bool InstantUIDelete;
+        /* 0x3944 */ public bool SpeechToText;
+        /* 0x3945 */ public bool Translate;
+        /* 0x3946 */ public bool CrossPlatform;
         // size: 0x4
         public enum TemperatureUnitEnum : uint {
             Invalid,
@@ -125,14 +127,16 @@ namespace libMBIN.NMS.GameComponents
         /* 0x39BA */ public bool AutoScanDiscoveries;
         /* 0x39BB */ public bool SprintScanSwap;
         /* 0x39BC */ public bool PlaceJumpSwap;
-        // size: 0x4
-        public enum EyeTrackingEnum : uint {
-            None,
-            Both,
-            Left,
-            Right,
+        // size: 0x5
+        [Flags]
+        public enum EyeTrackingFlagsEnum : uint {
+            None = 0x0,
+            BaseBuilding = 0x1,
+            WristMenus = 0x2,
+            LookVector = 0x4,
+            BinocScanner = 0x8,
         }
-        /* 0x39C0 */ public EyeTrackingEnum EyeTracking;
+        /* 0x39C0 */ public EyeTrackingFlagsEnum EyeTrackingFlags;
         /* 0x39C4 */ public GcGyroSettingsData GyroSettings;
         /* 0x3A48 */ public TkLanguages Language;
         /* 0x3A4C */ public bool AutoRotateThirdPersonPlayerCamera;
@@ -147,5 +151,9 @@ namespace libMBIN.NMS.GameComponents
         /* 0x3A5C */ public HighResVRUIEnum HighResVRUI;
         /* 0x3A60 */ public float PlayerHUDVROffset;
         /* 0x3A64 */ public float ShipHUDVROffset;
+        /* 0x3A70 */ public GcInWorldUIScreenData QuickMenuLauncherScreenData;
+        /* 0x3AA0 */ public GcInWorldUIScreenData VehicleWristMenuScreenData;
+        /* 0x3AD0 */ public GcInWorldUIScreenData WeaponMenuScreenData;
+        /* 0x3B00 */ public GcInWorldUIScreenData LargeWeaponMenuScreenData;
     }
 }

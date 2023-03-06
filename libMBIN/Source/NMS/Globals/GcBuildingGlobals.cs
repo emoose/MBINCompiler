@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(GUID = 0x1D69DA358376E6FF, NameHash = 0xCFD86CFD7BD870B1)]
+    [NMS(GUID = 0x5352DFE8ACEDAD04, NameHash = 0xCFD86CFD7BD870B1)]
     public class GcBuildingGlobals : NMSTemplate
     {
         /* 0x0000 */ public Vector3f BuildingPartPreviewOffset;
@@ -151,53 +151,54 @@ namespace libMBIN.NMS.Globals
         /* 0x145C */ public float BuildingPlacementMinDistanceScaleIncreaseVR;
         /* 0x1460 */ public float BuildingPlacementGhostReductionMaxSize;
         /* 0x1464 */ public float BuildingPlacementNumGhostsVRMultiplier;
-        /* 0x1468 */ public float BuildingPlacementNumGhostsMinOffset;
-        /* 0x146C */ public float BuildingPlacementNumGhostsVolume;
-        /* 0x1470 */ public float BuildingPlacementGhostHearScaleDistanceMod;
-        /* 0x1474 */ public float BuildingPlacementGhostHeartSizeScaleMin;
-        /* 0x1478 */ public float BuildingPlacementGhostHeartSizeScale;
-        /* 0x147C */ public float BuildingPlacementGhostHeartSizeSelected;
-        /* 0x1480 */ public TkCurveType BuildingPlacementGhostHeartSizeCurve;
-        /* 0x1484 */ public float BuildingPlacementGhostHeartWiringSizeOtherSnapped;
-        /* 0x1488 */ public float BuildingPlacementGhostHeartWiringSizeScaleMin;
-        /* 0x148C */ public float BuildingPlacementGhostHeartWiringSizeScale;
-        /* 0x1490 */ public float BuildingPlacementTwistScale;
-        /* 0x1494 */ public float BuildingPlacementConeStartRadius;
-        /* 0x1498 */ public float BuildingPlacementConeEndRadius;
-        /* 0x149C */ public float BuildingPlacementConeEndDistance;
-        /* 0x14A0 */ public float BuildingPlacementConeStartRadiusIndoors;
-        /* 0x14A4 */ public float BuildingPlacementConeEndRadiusIndoors;
-        /* 0x14A8 */ public float BuildingPlacementConeEndDistanceIndoors;
-        /* 0x14AC */ public bool BuildingPlacementEffectEnabled;
-        /* 0x14B0 */ public float BuildingPlacementEffectDissolveSpeed;
-        /* 0x14B4 */ public float BuildingPlacementEffectFadeWaitTime;
-        /* 0x14B8 */ public float BuildingPlacementEffectCrossFadeTime;
-        /* 0x14BC */ public float BuildingPlacementEffectHidePlaceholderFadeTime;
-        /* 0x14C0 */ public float BuildingPlacementEffectHidePlaceholderDistance;
-        /* 0x14C4 */ public Vector2f BuildingPlacementScaleMinMax;
-        /* 0x14CA */ public float InactiveVisibleComplexityFactor;
-        /* 0x14D0 */ public bool DebugForceShowInactives;
+        /* 0x1468 */ public float BuildingPlacementNumGhostsVRMultiplierEyeTracking;
+        /* 0x146C */ public float BuildingPlacementNumGhostsMinOffset;
+        /* 0x1470 */ public float BuildingPlacementNumGhostsVolume;
+        /* 0x1474 */ public float BuildingPlacementGhostHearScaleDistanceMod;
+        /* 0x1478 */ public float BuildingPlacementGhostHeartSizeScaleMin;
+        /* 0x147C */ public float BuildingPlacementGhostHeartSizeScale;
+        /* 0x1480 */ public float BuildingPlacementGhostHeartSizeSelected;
+        /* 0x1484 */ public TkCurveType BuildingPlacementGhostHeartSizeCurve;
+        /* 0x1488 */ public float BuildingPlacementGhostHeartWiringSizeOtherSnapped;
+        /* 0x148C */ public float BuildingPlacementGhostHeartWiringSizeScaleMin;
+        /* 0x1490 */ public float BuildingPlacementGhostHeartWiringSizeScale;
+        /* 0x1494 */ public float BuildingPlacementTwistScale;
+        /* 0x1498 */ public float BuildingPlacementConeStartRadius;
+        /* 0x149C */ public float BuildingPlacementConeEndRadius;
+        /* 0x14A0 */ public float BuildingPlacementConeEndDistance;
+        /* 0x14A4 */ public float BuildingPlacementConeStartRadiusIndoors;
+        /* 0x14A8 */ public float BuildingPlacementConeEndRadiusIndoors;
+        /* 0x14AC */ public float BuildingPlacementConeEndDistanceIndoors;
+        /* 0x14B0 */ public bool BuildingPlacementEffectEnabled;
+        /* 0x14B4 */ public float BuildingPlacementEffectDissolveSpeed;
+        /* 0x14B8 */ public float BuildingPlacementEffectFadeWaitTime;
+        /* 0x14BC */ public float BuildingPlacementEffectCrossFadeTime;
+        /* 0x14C0 */ public float BuildingPlacementEffectHidePlaceholderFadeTime;
+        /* 0x14C4 */ public float BuildingPlacementEffectHidePlaceholderDistance;
+        /* 0x14C8 */ public Vector2f BuildingPlacementScaleMinMax;
+        /* 0x14D0 */ public float InactiveVisibleComplexityFactor;
+        /* 0x14D4 */ public bool DebugForceShowInactives;
         [NMS(Size = 0x4, EnumType = typeof(TkGraphicsDetailTypes.GraphicDetailEnum))]
-        /* 0x14D4 */ public float[] TotalPlanetFrameTimeForComplexity;
+        /* 0x14D8 */ public float[] TotalPlanetFrameTimeForComplexity;
         [NMS(Size = 0x4, EnumType = typeof(TkGraphicsDetailTypes.GraphicDetailEnum))]
-        /* 0x14E4 */ public float[] TotalSpaceFrameTimeForComplexity;
-        /* 0x14F4 */ public float MinPercentageNodesBufferFree;
-        /* 0x14F8 */ public float MinLoadingPercentageNodesBufferFree;
-        /* 0x14FC */ public float PercentagePhysicsComponentsForComplexity;
-        /* 0x1500 */ public float MaximumComplexityDensity;
-        /* 0x1504 */ public float ComplexityDensityTestRange;
-        /* 0x1508 */ public float ComplexityDensitySigmaSquared;
-        /* 0x150C */ public float StartCrashSiteMinDistance;
-        /* 0x1510 */ public float StartCrashSiteMaxDistance;
-        /* 0x1514 */ public float StartShelterMinDistance;
-        /* 0x1518 */ public float StartShelterMaxDistance;
-        /* 0x151C */ public NMSString0x80 FreighterBaseSpawnOverride;
-        /* 0x159C */ public bool BaseBuildingTerrainEditBoundsOverride;
-        /* 0x15A0 */ public float BaseBuildingTerrainEditBaseYOffset;
-        /* 0x15A4 */ public float BaseBuildingTerrainEditTopYOffset;
-        /* 0x15A8 */ public float BaseBuildingTerrainEditBoundsScalar;
-        /* 0x15AC */ public bool BaseBuildingCamEnabled;
-        /* 0x15B0 */ public float BaseBuildingWiringSnappingScaleFactorEasy;
-        /* 0x15B4 */ public float BaseBuildingWiringSnappingScaleFactorHard;
+        /* 0x14E8 */ public float[] TotalSpaceFrameTimeForComplexity;
+        /* 0x14F8 */ public float MinPercentageNodesBufferFree;
+        /* 0x14FC */ public float MinLoadingPercentageNodesBufferFree;
+        /* 0x1500 */ public float PercentagePhysicsComponentsForComplexity;
+        /* 0x1504 */ public float MaximumComplexityDensity;
+        /* 0x1508 */ public float ComplexityDensityTestRange;
+        /* 0x150C */ public float ComplexityDensitySigmaSquared;
+        /* 0x1510 */ public float StartCrashSiteMinDistance;
+        /* 0x1514 */ public float StartCrashSiteMaxDistance;
+        /* 0x1518 */ public float StartShelterMinDistance;
+        /* 0x151C */ public float StartShelterMaxDistance;
+        /* 0x1520 */ public NMSString0x80 FreighterBaseSpawnOverride;
+        /* 0x15A0 */ public bool BaseBuildingTerrainEditBoundsOverride;
+        /* 0x15A4 */ public float BaseBuildingTerrainEditBaseYOffset;
+        /* 0x15A8 */ public float BaseBuildingTerrainEditTopYOffset;
+        /* 0x15AC */ public float BaseBuildingTerrainEditBoundsScalar;
+        /* 0x15B0 */ public bool BaseBuildingCamEnabled;
+        /* 0x15B4 */ public float BaseBuildingWiringSnappingScaleFactorEasy;
+        /* 0x15B8 */ public float BaseBuildingWiringSnappingScaleFactorHard;
     }
 }

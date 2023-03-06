@@ -1,9 +1,9 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xE6DED7BDDC0FB460, NameHash = 0x72439AF10F4C849F)]
+    [NMS(GUID = 0x89F7B9EF1A67D94F, NameHash = 0x72439AF10F4C849F)]
     public class GcWikiTopicType : NMSTemplate
     {
-        // size: 0x1C
+        // size: 0x1D
         public enum WikiTopicTypeEnum : uint {
             Substances,
             CustomSubstanceList,
@@ -32,6 +32,7 @@ namespace libMBIN.NMS.GameComponents
             CreatureWonders,
             FloraWonders,
             MineralWonders,
+            CustomWonders,
             DebugSweep,
         }
         /* 0x0 */ public WikiTopicTypeEnum WikiTopicType;

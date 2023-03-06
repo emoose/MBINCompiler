@@ -2,10 +2,10 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x36C6DCAF9885E4DA, NameHash = 0x223C08FAB30D9754)]
+    [NMS(GUID = 0x47532B4C506CB5A9, NameHash = 0x223C08FAB30D9754)]
     public class GcWonderRecordCustomData : NMSTemplate
     {
-        /* 0x000 */ public NMSString0x200 CustomName;
-        /* 0x200 */ public GcWonderType ActualType;
+        /* 0x00 */ public NMSString0x40 CustomName;
+        /* 0x40 */ public GcWonderType ActualType;
     }
 }

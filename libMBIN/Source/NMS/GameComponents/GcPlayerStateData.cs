@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x38B02BE7B50BA6E2, NameHash = 0x6C4510BB243EFA64)]
+    [NMS(GUID = 0x8FEEE8175F5670DD, NameHash = 0x6C4510BB243EFA64)]
     public class GcPlayerStateData : NMSTemplate
     {
         /* 0x00000 */ public GcUniverseAddressData UniverseAddress;
@@ -258,9 +258,13 @@ namespace libMBIN.NMS.GameComponents
         /* 0x78E48 */ public GcWonderRecord[] WonderTreasureRecords;
         [NMS(Size = 0xB, EnumType = typeof(GcWonderWeirdBasePartCategory.WonderWeirdBasePartCategoryEnum))]
         /* 0x78F80 */ public GcWonderRecord[] WonderWeirdBasePartRecords;
+        [NMS(Size = 0xC, EnumType = typeof(GcWonderCustomCategory.WonderCustomCategoryEnum))]
+        /* 0x79088 */ public GcWonderRecord[] WonderCustomRecords;
+        [NMS(Size = 0xC, EnumType = typeof(GcWonderCustomCategory.WonderCustomCategoryEnum))]
+        /* 0x791A8 */ public GcWonderRecordCustomData[] WonderCustomRecordsExtraData;
         [NMS(Size = 0x4, EnumType = typeof(GcSynchronisedBufferType.SyncBufferTypeEnum))]
-        /* 0x79088 */ public GcSyncBufferSaveDataArray[] SyncBuffersData;
-        /* 0x790C8 */ public List<GcMaintenanceSaveKey> RefinerBufferKeys;
-        /* 0x790D8 */ public List<GcMaintenanceContainer> RefinerBufferData;
+        /* 0x794D8 */ public GcSyncBufferSaveDataArray[] SyncBuffersData;
+        /* 0x79518 */ public List<GcMaintenanceSaveKey> RefinerBufferKeys;
+        /* 0x79528 */ public List<GcMaintenanceContainer> RefinerBufferData;
     }
 }

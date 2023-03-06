@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xB0073686DD0C3189, NameHash = 0xB9DD91F357A56979)]
+    [NMS(GUID = 0x9E692218EF2AC71A, NameHash = 0xB9DD91F357A56979)]
     public class GcProjectorOffsetData : NMSTemplate
     {
         /* 0x00 */ public float Scale;
