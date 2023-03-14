@@ -2,6 +2,7 @@
 
 from abc import ABC
 import configparser
+import importlib
 import json
 import os
 import os.path as op
@@ -15,6 +16,41 @@ from typing import Optional
 
 from jinja2 import Template
 import pymem
+
+
+GUID_REGEX = re.compile(r'GUID = (0x[a-fA-F0-9]+)')
+
+
+if __name__ == "__main__":
+    # Handle the loading of the config first before declaring any constants, as
+    # we will want to also import the constants file. This will need to be done
+    # based on the folder which we are reading from.
+    config = configparser.ConfigParser()
+    config_path = op.join(op.dirname(__file__), 'extract.cfg')
+    if not op.exists(config_path):
+        raise FileNotFoundError('extract.cfg not found in same directory as '
+                                'this script. Please copy the '
+                                'extract.cfg.sample file, rename it '
+                                'extract.cfg, and modify any values as needed.')
+    config.read(config_path)
+    TEMPLATE_DIR = config['general'].get(
+        'template_dir',
+        fallback='templates/default/'
+    )
+    _constants = op.join(TEMPLATE_DIR, 'constants')
+    _constants = re.sub(r'([\\/])', '.', _constants)
+    # TODO: This won't work unless the script is run from the same directory it
+    # is in. Fix this.
+    constants = importlib.import_module(_constants)
+    static_templates_dir = op.join(TEMPLATE_DIR, 'static_templates')
+    static_templates = {}
+    if op.exists(static_templates_dir):
+        for fname in os.listdir(static_templates_dir):
+            fullpath = op.join(static_templates_dir, fname)
+            with open(fullpath, 'r') as f:
+                if guid := re.search(GUID_REGEX, f.read()):
+                    guid = guid.group(1)
+                    static_templates[op.splitext(fname)[0]] = (fullpath, guid)
 
 
 ENUM_OVERRIDES = {
@@ -107,17 +143,20 @@ EXTRA_ATTRIBUTES = {
 # TODO: If the GUID changes we need to raise an important message so that we may
 # fix it manually.
 DONT_OVERRIDE = [
+    'TkAnimNodeFrameData',
+    'TkAnimNodeFrameHalfData',
     'TkGeometryData',
     'TkMeshData',
     'TkSceneNodeData',
-    'TkAnimNodeFrameData',
-    'TkAnimNodeFrameHalfData',
 ]
 
 SUMMARY_FILE = op.join(op.dirname(__file__), 'summary.txt')
-TEMPLATES_DIR = op.join(op.dirname(__file__), 'templates')
+TEMPLATES_DIR = op.join(op.dirname(__file__), TEMPLATE_DIR)
 PROJITEMS_TEMPLATE = op.join(TEMPLATES_DIR, 'libMBIN-Shared.projitems.j2')
-CSFILE_TEMPLATE = op.join(TEMPLATES_DIR, 'csfile.j2')
+# Check to see if the projitems.j2 exists. If not then we don't need to fill it
+# in and copy it over.
+USE_PROJITEMS = op.exists(PROJITEMS_TEMPLATE)
+CLASS_TEMPLATE = op.join(TEMPLATES_DIR, 'class_template.j2')
 
 STATIC_BASE = 0x140000000
 TYPE_MAPPING = {
@@ -157,15 +196,11 @@ TYPE_MAPPING = {
     0x25: 'Vector3f',
     0x26: 'Vector4f',
 }
+PRIMITIVES = (0x01, 0x02, 0x09, 0x0B, 0x0C, 0x11, 0x12, 0x13, 0x20, 0x21, 0x22)
 PREFIX_MAPPING = {
     'ccg': 'GameComponents',
     'cgc': 'GameComponents',
     'ctk': 'Toolkit'
-}
-USING_MAPPING = {
-    'gc': 'libMBIN.NMS.GameComponents',
-    'cg': 'libMBIN.NMS.GameComponents',
-    'tk': 'libMBIN.NMS.Toolkit'
 }
 
 
@@ -304,11 +339,11 @@ class CustomField(Field):
 
         if self.field_type[:2].lower() in ('cg', 'gc', 'tk'):
             self.required_using.add(
-                USING_MAPPING.get(self.field_type[:2].lower(),
-                                  'libMBIN.NMS.GameComponents')
+                constants.USING_MAPPING.get(self.field_type[:2].lower(),
+                                            constants.USING_MAPPING['gc'])
             )
         elif self.field_type == 'AxisSpecification':
-            self.required_using.add('libMBIN.NMS.GameComponents')
+            self.required_using.add(constants.USING_MAPPING['gc'])
 
     @property
     def field_type(self):
@@ -335,8 +370,8 @@ class ArrayField(Field):
             )
             self._field_type = nms_mem.read_string(ptr_custom_type, byte=128)[1:]
             self.required_using.add(
-                USING_MAPPING.get(self._field_type[:2].lower(),
-                                  'libMBIN.NMS.GameComponents')
+                constants.USING_MAPPING.get(self._field_type[:2].lower(),
+                                            constants.USING_MAPPING['gc'])
             )
         else:
             self._field_type = TYPE_MAPPING.get(
@@ -382,8 +417,8 @@ class ListField(Field):
             )
             self._field_type = nms_mem.read_string(ptr_custom_type, byte=128)[1:]
             self.required_using.add(
-                USING_MAPPING.get(self._field_type[:2].lower(),
-                                  'libMBIN.NMS.GameComponents')
+                constants.USING_MAPPING.get(self._field_type[:2].lower(),
+                                  constants.USING_MAPPING['gc'])
             )
         else:
             self._field_type = TYPE_MAPPING.get(
@@ -481,13 +516,13 @@ class NMSClass():
         self.guid = fmt_hex(guid)
         self.required_usings = set()
         if self.name not in ACTUALLY_GLOBALS and not self.name.endswith('Globals'):
-            self.namespace = USING_MAPPING.get(
-                self.name[:2].lower(), 'libMBIN.NMS.GameComponents'
+            self.namespace = constants.USING_MAPPING.get(
+                self.name[:2].lower(), constants.USING_MAPPING['gc']
             )
         elif self.name.endswith("TkGlobals"):
-            self.namespace = 'libMBIN.NMS.Toolkit'
+            self.namespace = constants.USING_MAPPING['tk']
         else:
-            self.namespace = 'libMBIN.NMS.Globals'
+            self.namespace = constants.USING_MAPPING['globals']
         self.is_enum_class = False
         self.ptr_enum = None
         self.output_fname = None
@@ -535,9 +570,9 @@ class NMSClass():
                     )
                     if field.array_enum_type is not None:
                         self.required_usings.add(
-                            USING_MAPPING.get(
+                            constants.USING_MAPPING.get(
                                 field.array_enum_type[:2].lower(),
-                                'libMBIN.NMS.GameComponents'
+                                constants.USING_MAPPING['gc']
                             )
                         )
                     elif field.field_name in ENUM_OVERRIDES.get(self.name, {}):
@@ -550,9 +585,9 @@ class NMSClass():
                         )
                         if field.array_enum_type is not None:
                             self.required_usings.add(
-                                USING_MAPPING.get(
+                                constants.USING_MAPPING.get(
                                     field.array_enum_type[:2].lower(),
-                                    'libMBIN.NMS.GameComponents'
+                                    constants.USING_MAPPING['gc']
                                 )
                             )
                             # Set the array_enum property to be an empty list so
@@ -688,25 +723,18 @@ def find_classes(nms_path: pathlib.Path):
 
 if __name__ == '__main__':
     # First, handle the configuration loading.
-    config = configparser.ConfigParser()
-    config_path = op.join(op.dirname(__file__), 'extract.cfg')
-    if not op.exists(config_path):
-        raise FileNotFoundError('extract.cfg not found in same directory as '
-                                'this script. Please copy the '
-                                'extract.cfg.sample file, rename it '
-                                'extract.cfg, and modify any values as needed.')
-    config.read(config_path)
     binary_path = config['NMS']['binary_path']
 
     nms_proc = subprocess.Popen(binary_path)
     print(f'Opened NMS with PID: {nms_proc.pid}')
     filepaths = []
-    with open(PROJITEMS_TEMPLATE, 'r') as f:
-        template = Template(f.read())
+    if USE_PROJITEMS:
+        with open(PROJITEMS_TEMPLATE, 'r') as f:
+            template = Template(f.read())
 
-    # Load the .cs file template
-    with open(CSFILE_TEMPLATE, 'r') as f:
-        csfile_template = Template(f.read())
+    # Load the class template.
+    with open(CLASS_TEMPLATE, 'r') as f:
+        class_template = Template(f.read())
 
     try:
         # Wait some time for the data to be written to memory.
@@ -744,15 +772,19 @@ if __name__ == '__main__':
             # determine if any of the array fields need to have updated enum
             # references.
             cls_.update_array_enum_refs()
-            cls_.write(csfile_template)
-        filepaths.sort()
-        if config['general'].getboolean('replace_existing_files', fallback=False):
-            projitems_path = config['general'].get('output_dir', '.')
-        else:
-            projitems_path = '.'
-        projitems_path = op.join(projitems_path, 'libMBIN-Shared.projitems')
-        with open(projitems_path, 'w') as f:
-            f.write(template.render(filepaths=filepaths))
+            cls_.write(class_template)
+        if USE_PROJITEMS:
+            filepaths.sort()
+            if config['general'].getboolean(
+                'replace_existing_files',
+                fallback=False
+            ):
+                projitems_path = config['general'].get('output_dir', '.')
+            else:
+                projitems_path = '.'
+            projitems_path = op.join(projitems_path, 'libMBIN-Shared.projitems')
+            with open(projitems_path, 'w') as f:
+                f.write(template.render(filepaths=filepaths))
         print(f'Took {time.time() - t1}s')
     except Exception as exc:
         raise exc
