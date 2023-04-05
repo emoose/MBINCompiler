@@ -1,15 +1,15 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x6AB59E33F960A69F, NameHash = 0x1EB5C4AE3BDB484E)]
-    public class GcPlanetSentinelData : NMSTemplate
+    [NMS(GUID = 0x60A1D6C7C2DEB1E, NameHash = 0x7EDB1F462D38BEFC)]
+    public class GcPlanetSentinelLevel : NMSTemplate
     {
-        // size: 0x3
+        // size: 0x4
         public enum SentinelLevelEnum : uint {
             Low,
             Default,
             Aggressive,
+            Corrupt,
         }
         /* 0x0 */ public SentinelLevelEnum SentinelLevel;
-        /* 0x4 */ public int MaxActiveDrones;
     }
 }

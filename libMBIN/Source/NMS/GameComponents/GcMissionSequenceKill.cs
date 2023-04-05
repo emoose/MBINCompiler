@@ -1,10 +1,10 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x79A38FA0B68F95E0, NameHash = 0xF2F929BD28DDCD6B)]
+    [NMS(GUID = 0x24BF6D662F244AB, NameHash = 0xF2F929BD28DDCD6B)]
     public class GcMissionSequenceKill : NMSTemplate
     {
         /* 0x00 */ public NMSString0x80 Message;
-        // size: 0xB
+        // size: 0xD
         public enum KillTargetEnum : uint {
             Robots,
             Drones,
@@ -17,6 +17,8 @@ namespace libMBIN.NMS.GameComponents
             Fiends,
             HazardousFlora,
             Worms,
+            CorruptSentinels,
+            CorruptPillars,
         }
         /* 0x80 */ public KillTargetEnum KillTarget;
         /* 0x84 */ public int AmountMin;

@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x120CDC0D966EB569, NameHash = 0xDF9F37F8504FFE4D)]
+    [NMS(GUID = 0x5E71DBE268F475D3, NameHash = 0xDF9F37F8504FFE4D)]
     public class GcCameraAmbientBuildingData : NMSTemplate
     {
         /* 0x00 */ public NMSString0x10 Animation;
@@ -10,9 +10,9 @@ namespace libMBIN.NMS.GameComponents
         /* 0x20 */ public float Offset;
         /* 0x24 */ public bool UseLookAt;
         /* 0x25 */ public bool AvoidTerrain;
-        [NMS(Size = 0x34, EnumType = typeof(GcBuildingClassification.BuildingClassEnum))]
+        [NMS(Size = 0x36, EnumType = typeof(GcBuildingClassification.BuildingClassEnum))]
         /* 0x26 */ public bool[] AvailableBuildings;
         [NMS(Size = 0x8, EnumType = typeof(GcAlienRace.AlienRaceEnum))]
-        /* 0x5A */ public bool[] AvailableRaces;
+        /* 0x5C */ public bool[] AvailableRaces;
     }
 }

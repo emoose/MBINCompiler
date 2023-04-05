@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x56497BC5426DAD98, NameHash = 0xC42B2790FC61E0A9)]
+    [NMS(GUID = 0x89E1E1205BB6EA1A, NameHash = 0xC42B2790FC61E0A9)]
     public class GcDroneData : NMSTemplate
     {
         /* 0x000 */ public GcDroneControlData Patrol;
@@ -58,24 +58,24 @@ namespace libMBIN.NMS.GameComponents
         /* 0x2B8 */ public float CoverPlacementUpOffset;
         /* 0x2BC */ public int CoverPlacementMaxActiveCover;
         /* 0x2C0 */ public GcSentinelResource CoverResource;
-        /* 0x350 */ public float DroneSearchTime;
-        /* 0x354 */ public float DroneSearchRadius;
-        /* 0x358 */ public float DroneSearchPauseTime;
-        /* 0x35C */ public float DroneSearchCriminalScanRadius;
-        /* 0x360 */ public float DroneSearchCriminalScanRadiusWanted;
-        /* 0x364 */ public float DroneSearchCriminalScanRadiusInShip;
-        /* 0x368 */ public float DroneScanPlayerTime;
-        /* 0x36C */ public float LeanAmount;
-        /* 0x370 */ public float LeanSpeedMin;
-        /* 0x374 */ public float LeanSpeedRange;
-        /* 0x378 */ public float EyeOffset;
-        /* 0x37C */ public float EyeFocusTime;
-        /* 0x380 */ public int EyeNumRandomsMin;
-        /* 0x384 */ public int EyeNumRandomsMax;
-        /* 0x388 */ public float EyeTimeMin;
-        /* 0x38C */ public float EyeTimeMax;
-        /* 0x390 */ public float EyeAngleMax;
-        /* 0x394 */ public float EngineDirSpeedMin;
-        /* 0x398 */ public float EngineDirAngleMax;
+        /* 0x354 */ public float DroneSearchTime;
+        /* 0x358 */ public float DroneSearchRadius;
+        /* 0x35C */ public float DroneSearchPauseTime;
+        /* 0x360 */ public float DroneSearchCriminalScanRadius;
+        /* 0x364 */ public float DroneSearchCriminalScanRadiusWanted;
+        /* 0x368 */ public float DroneSearchCriminalScanRadiusInShip;
+        /* 0x36C */ public float DroneScanPlayerTime;
+        /* 0x370 */ public float LeanAmount;
+        /* 0x374 */ public float LeanSpeedMin;
+        /* 0x378 */ public float LeanSpeedRange;
+        /* 0x37C */ public float EyeOffset;
+        /* 0x380 */ public float EyeFocusTime;
+        /* 0x384 */ public int EyeNumRandomsMin;
+        /* 0x388 */ public int EyeNumRandomsMax;
+        /* 0x38C */ public float EyeTimeMin;
+        /* 0x390 */ public float EyeTimeMax;
+        /* 0x394 */ public float EyeAngleMax;
+        /* 0x398 */ public float EngineDirSpeedMin;
+        /* 0x39C */ public float EngineDirAngleMax;
     }
 }

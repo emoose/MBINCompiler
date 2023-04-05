@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x4EB2192DB02EF8F2, NameHash = 0x59A43238181BB69F)]
+    [NMS(GUID = 0x22837E0EE2B85563, NameHash = 0x59A43238181BB69F)]
     public class GcBuildingDefinitionData : NMSTemplate
     {
         /* 0x00 */ public TkNoiseFlattenOptions FlattenType;
@@ -19,6 +19,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x64 */ public bool GivesShelter;
         /* 0x68 */ public float MinHeight;
         /* 0x6C */ public float MaxHeight;
-        /* 0x70 */ public bool IgnoreParticlesInAABB;
+        /* 0x70 */ public GcPlanetaryBuildingRestrictions PlanetRestrictions;
+        /* 0x72 */ public bool IgnoreParticlesInAABB;
     }
 }

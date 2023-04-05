@@ -1,9 +1,9 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xC6F0D71CBBA16147, NameHash = 0x894C8A7A0498F6C5)]
+    [NMS(GUID = 0xA87D6CA497B95EAD, NameHash = 0x894C8A7A0498F6C5)]
     public class GcScannerBuildingIconTypes : NMSTemplate
     {
-        // size: 0x21
+        // size: 0x23
         public enum ScanBuildingIconTypeEnum : uint {
             None,
             Generic,
@@ -38,6 +38,8 @@ namespace libMBIN.NMS.GameComponents
             HoloHub,
             Settlement,
             DroneHive,
+            SentinelDistress,
+            AbandonedRobotCamp,
         }
         /* 0x0 */ public ScanBuildingIconTypeEnum ScanBuildingIconType;
     }

@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x404B0424B3A13ADA, NameHash = 0xDA5F4DFE0527A693)]
+    [NMS(GUID = 0x770E196006B0AA74, NameHash = 0xDA5F4DFE0527A693)]
     public class GcConsumableItem : NMSTemplate
     {
         /* 0x000 */ public NMSString0x10 ID;
@@ -17,5 +17,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x0F9 */ public bool AddCommunityTierClassIcon;
         /* 0x0FA */ public bool SuppressResourceMessage;
         /* 0x100 */ public NMSString0x20A CustomOSD;
+        /* 0x120 */ public NMSString0x10 RequiresMissionActive;
     }
 }

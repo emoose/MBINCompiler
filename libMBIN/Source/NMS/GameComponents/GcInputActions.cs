@@ -1,9 +1,9 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x85D5C880F749EB2D, NameHash = 0xB3E8C8CD4B9DB0B1)]
+    [NMS(GUID = 0x2E11BE86C7F9F1EA, NameHash = 0xB3E8C8CD4B9DB0B1)]
     public class GcInputActions : NMSTemplate
     {
-        // size: 0x123
+        // size: 0x124
         public enum InputActionEnum : uint {
             Invalid,
             Player_Forward,
@@ -245,6 +245,7 @@ namespace libMBIN.NMS.GameComponents
             UI_Up_Sub_Discovery,
             UI_Down_Sub_Discovery,
             Fe_Upload_Discovery,
+            Fe_Assign_Custom_Wonder,
             HMD_Recenter,
             HMD_Recenter2,
             HMD_FEOpen,

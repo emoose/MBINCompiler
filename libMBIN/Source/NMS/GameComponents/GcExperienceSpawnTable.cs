@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xBFCF7EAF13124D91, NameHash = 0x5F4CA33999F0D259)]
+    [NMS(GUID = 0xAC11057818EC3F5D, NameHash = 0x5F4CA33999F0D259)]
     public class GcExperienceSpawnTable : NMSTemplate
     {
         /* 0x000 */ public List<GcAIShipSpawnData> FlybySpawns;
@@ -14,7 +14,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x050 */ public List<GcAIShipSpawnData> PlanetaryPirateFlybySpawns;
         /* 0x060 */ public List<GcAIShipSpawnData> PlanetaryPirateRaidSpawns;
         /* 0x070 */ public List<GcAIShipSpawnData> PirateBattleSpawns;
-        /* 0x080 */ public List<GcAIShipSpawnData> PoliceSpawns;
+        /* 0x080 */ public List<GcPoliceSpawnWaveData> PoliceSpawns;
         /* 0x090 */ public List<GcAIShipSpawnData> TraderSpawns;
         /* 0x0A0 */ public List<GcAIShipSpawnData> AmbientSpawns;
         /* 0x0B0 */ public List<GcAIShipSpawnData> BattleSpawns;
@@ -31,11 +31,11 @@ namespace libMBIN.NMS.GameComponents
         /* 0x198 */ public List<GcAIShipSpawnData> FrigateFlybySpawns;
         [NMS(Size = 0x6)]
         /* 0x1A8 */ public GcSentinelSpawnSequenceGroupList[] WantedLevelSpawns;
-        [NMS(Size = 0x7, EnumType = typeof(GcEncounterType.EncounterTypeEnum))]
-        /* 0x268 */ public GcSentinelSpawnSequenceGroupList[] EncounterSpawns;
-        /* 0x348 */ public List<GcSentinelEncounterOverride> EncounterOverrides;
-        /* 0x358 */ public GcSentinelWaveGroup SummonerSpawns;
-        /* 0x378 */ public List<GcSentinelSpawnNamedSequence> SentinelSequences;
-        /* 0x388 */ public List<GcSentinelSpawnWave> SentinelSpawns;
+        [NMS(Size = 0x8, EnumType = typeof(GcEncounterType.EncounterTypeEnum))]
+        /* 0x2C8 */ public GcSentinelSpawnSequenceGroupList[] EncounterSpawns;
+        /* 0x448 */ public List<GcSentinelEncounterOverride> EncounterOverrides;
+        /* 0x458 */ public GcSentinelWaveGroup SummonerSpawns;
+        /* 0x478 */ public List<GcSentinelSpawnNamedSequence> SentinelSequences;
+        /* 0x488 */ public List<GcSentinelSpawnWave> SentinelSpawns;
     }
 }

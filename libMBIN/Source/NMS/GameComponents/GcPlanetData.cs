@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x2DC122FA5D947C91, NameHash = 0x25EDFA0EC4C3AF0A)]
+    [NMS(GUID = 0x2C3008282613D2B, NameHash = 0x25EDFA0EC4C3AF0A)]
     public class GcPlanetData : NMSTemplate
     {
         /* 0x0000 */ public NMSString0x80 Name;
@@ -36,13 +36,12 @@ namespace libMBIN.NMS.GameComponents
         /* 0x35D8 */ public GcAlienRace InhabitingRace;
         /* 0x35E0 */ public GcPlanetBuildingData BuildingData;
         /* 0x3628 */ public GcPlanetGenerationIntermediateData GenerationData;
-        /* 0x3A90 */ public Vector2f SentinelTimer;
-        /* 0x3A98 */ public Vector2f FlybyTimer;
-        /* 0x3AA0 */ public GcPlanetInfo PlanetInfo;
-        /* 0x3E24 */ public GcPlanetSentinelData SentinelData;
-        /* 0x3E30 */ public GcPlanetRingData Rings;
-        /* 0x3E90 */ public bool InEmptySystem;
-        /* 0x3E91 */ public bool InAbandonedSystem;
-        /* 0x3E94 */ public float FuelMultiplier;
+        [NMS(Size = 0x4, EnumType = typeof(GcCombatTimerDifficultyOption.CombatTimerDifficultyOptionEnum))]
+        /* 0x3A90 */ public GcPlanetGroundCombatData[] GroundCombatDataPerDifficulty;
+        /* 0x3AF0 */ public GcPlanetInfo PlanetInfo;
+        /* 0x4000 */ public GcPlanetRingData Rings;
+        /* 0x4060 */ public bool InEmptySystem;
+        /* 0x4061 */ public bool InAbandonedSystem;
+        /* 0x4064 */ public float FuelMultiplier;
     }
 }

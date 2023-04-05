@@ -1,9 +1,9 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x152319DBCA3C6F48, NameHash = 0x47E189998F5D82E7)]
+    [NMS(GUID = 0x1150678AA9EE5DE9, NameHash = 0x47E189998F5D82E7)]
     public class GcInteractionType : NMSTemplate
     {
-        // size: 0x83
+        // size: 0x85
         public enum InteractionTypeEnum : uint {
             None,
             Shop,
@@ -136,6 +136,8 @@ namespace libMBIN.NMS.GameComponents
             NPC_FreighterBase_SquadronPilot,
             NPC_FreighterBase_FrigateCaptain,
             NPC_FreighterBase_Worker,
+            RobotHead,
+            RobotCampTerminal,
         }
         /* 0x0 */ public InteractionTypeEnum InteractionType;
     }

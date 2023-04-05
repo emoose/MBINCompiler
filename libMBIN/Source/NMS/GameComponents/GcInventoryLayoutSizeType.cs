@@ -1,9 +1,9 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xAC86A11A653B6456, NameHash = 0xCFB91CCA40995CDC)]
+    [NMS(GUID = 0x3557950AA0C0BAE5, NameHash = 0xCFB91CCA40995CDC)]
     public class GcInventoryLayoutSizeType : NMSTemplate
     {
-        // size: 0x25
+        // size: 0x28
         public enum SizeTypeEnum : uint {
             SciSmall,
             SciMedium,
@@ -26,6 +26,9 @@ namespace libMBIN.NMS.GameComponents
             SailSmall,
             SailMedium,
             SailLarge,
+            RobotSmall,
+            RobotMedium,
+            RobotLarge,
             WeaponSmall,
             WeaponMedium,
             WeaponLarge,

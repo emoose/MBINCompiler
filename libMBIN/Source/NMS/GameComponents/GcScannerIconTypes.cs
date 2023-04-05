@@ -1,9 +1,9 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xDF9C8B4D08CC8914, NameHash = 0x8A4027FC041677F0)]
+    [NMS(GUID = 0x2E3A45B79D124688, NameHash = 0x8A4027FC041677F0)]
     public class GcScannerIconTypes : NMSTemplate
     {
-        // size: 0x36
+        // size: 0x39
         public enum ScanIconTypeEnum : uint {
             None,
             Health,
@@ -59,6 +59,9 @@ namespace libMBIN.NMS.GameComponents
             PetEgg,
             Sandworm,
             FriendlyDrone,
+            CorruptedCrystal,
+            CorruptedMachine,
+            RobotHead,
         }
         /* 0x0 */ public ScanIconTypeEnum ScanIconType;
     }

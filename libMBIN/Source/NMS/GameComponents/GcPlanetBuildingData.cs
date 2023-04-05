@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x9E12FCC020E66CD3, NameHash = 0xF6213EDD899A8CAE)]
+    [NMS(GUID = 0x3CB0C1EAB48A3CC0, NameHash = 0xF6213EDD899A8CAE)]
     public class GcPlanetBuildingData : NMSTemplate
     {
         /* 0x00 */ public List<GcBuildingSpawnSlot> BuildingSlots;

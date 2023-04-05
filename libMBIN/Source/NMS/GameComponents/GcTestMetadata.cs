@@ -4,7 +4,7 @@ using System;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x73F3D69C8298DC6B, NameHash = 0xCE965FAFD6BBF99E)]
+    [NMS(GUID = 0x317FF2F1271A5028, NameHash = 0xCE965FAFD6BBF99E)]
     public class GcTestMetadata : NMSTemplate
     {
         /* 0x000 */ public bool TestBool;
@@ -64,7 +64,7 @@ namespace libMBIN.NMS.GameComponents
         }
         [NMS(Size = 0x4, EnumType = typeof(TestEnumArrayEnum))]
         /* 0x638 */ public float[] TestEnumArray;
-        [NMS(Size = 0x34, EnumType = typeof(GcBuildingClassification.BuildingClassEnum))]
+        [NMS(Size = 0x36, EnumType = typeof(GcBuildingClassification.BuildingClassEnum))]
         /* 0x648 */ public float[] TestExternalEnumArray;
         // size: 0x4
         [Flags]
@@ -74,6 +74,6 @@ namespace libMBIN.NMS.GameComponents
             Flag2 = 0x2,
             Flag3 = 0x4,
         }
-        /* 0x718 */ public TestFlagsEnum TestFlags;
+        /* 0x720 */ public TestFlagsEnum TestFlags;
     }
 }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x94B8F33BBE978540, NameHash = 0x995CD6C5BC075C98)]
+    [NMS(GUID = 0x7E297E9658CBEFAB, NameHash = 0x995CD6C5BC075C98)]
     public class GcPetData : NMSTemplate
     {
         /* 0x000 */ public float Scale;

@@ -1,9 +1,9 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xE55FAD85F8721A06, NameHash = 0x902E6B8A4F1B75A6)]
+    [NMS(GUID = 0xC8D5D253A82C9A52, NameHash = 0x902E6B8A4F1B75A6)]
     public class GcExperienceDebugTriggerActionTypes : NMSTemplate
     {
-        // size: 0x29
+        // size: 0x2E
         public enum ExperienceDebugTriggerActionEnum : uint {
             None,
             Drones,
@@ -46,6 +46,11 @@ namespace libMBIN.NMS.GameComponents
             Normandy,
             LivingFrigate,
             UpgradeSettlement,
+            SentinelFreighter,
+            ClearSpacePolice,
+            SpawnQuad,
+            SpawnSpiderQuad,
+            SpawnSpiderQuadMini,
         }
         /* 0x0 */ public ExperienceDebugTriggerActionEnum ExperienceDebugTriggerAction;
     }
