@@ -7,3 +7,4 @@ close_NMS_process = true
 replace_existing_files = false
 output_dir = ../../libMBIN/
 write_guid_json = false
+template_dir = templates/default/
