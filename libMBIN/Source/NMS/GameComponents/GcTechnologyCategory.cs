@@ -1,9 +1,9 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xE7799F4552A81DC2, NameHash = 0xA5FDDD239156B452)]
+    [NMS(GUID = 0x363A8B85A41FFE28, NameHash = 0xA5FDDD239156B452)]
     public class GcTechnologyCategory : NMSTemplate
     {
-        // size: 0xE
+        // size: 0x10
         public enum TechnologyCategoryEnum : uint {
             Ship,
             Weapon,
@@ -19,6 +19,8 @@ namespace libMBIN.NMS.GameComponents
             AllVehicles,
             AlienShip,
             AllShips,
+            RobotShip,
+            AllShipsExceptAlien,
         }
         /* 0x0 */ public TechnologyCategoryEnum TechnologyCategory;
     }

@@ -1,9 +1,9 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x62BB97425837BAD1, NameHash = 0x428DC2A675E89B6D)]
+    [NMS(GUID = 0x375227C1491C9D72, NameHash = 0x428DC2A675E89B6D)]
     public class GcAlienPuzzleCategory : NMSTemplate
     {
-        // size: 0x35
+        // size: 0x37
         public enum AlienPuzzleCategoryEnum : uint {
             Default,
             GuildTraderNone,
@@ -58,6 +58,8 @@ namespace libMBIN.NMS.GameComponents
             SettlementNotOwned,
             PirateStation,
             StandardPilot,
+            Unlocked,
+            NotUnlocked,
         }
         /* 0x0 */ public AlienPuzzleCategoryEnum AlienPuzzleCategory;
     }

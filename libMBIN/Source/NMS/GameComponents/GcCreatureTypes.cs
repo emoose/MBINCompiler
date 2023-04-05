@@ -1,9 +1,9 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x79FB96ED0674516A, NameHash = 0xF848BA9A5DFC4197)]
+    [NMS(GUID = 0x914B6F4D2E2039EB, NameHash = 0xF848BA9A5DFC4197)]
     public class GcCreatureTypes : NMSTemplate
     {
-        // size: 0x30
+        // size: 0x32
         public enum CreatureTypeEnum : uint {
             None,
             Bird,
@@ -23,6 +23,8 @@ namespace libMBIN.NMS.GameComponents
             Fiend,
             Drone,
             Quad,
+            SpiderQuad,
+            SpiderQuadMini,
             Walker,
             Predator,
             PlayerPredator,

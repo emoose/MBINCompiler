@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xA2E4A21CCF757F1A, NameHash = 0x9B09276BB2795541)]
+    [NMS(GUID = 0x9021118C2C60F927, NameHash = 0x9B09276BB2795541)]
     public class GcSolarSystemData : NMSTemplate
     {
         /* 0x0000 */ public GcSeed Seed;
@@ -47,8 +47,9 @@ namespace libMBIN.NMS.GameComponents
         /* 0x2000 */ public GcScreenFilters ScreenFilter;
         /* 0x2004 */ public NMSString0x80 HeavyAir;
         /* 0x2088 */ public List<GcAISpaceshipPreloadCacheData> SystemShips;
-        /* 0x2098 */ public GcAlienRace InhabitingRace;
-        /* 0x209C */ public GcPlanetTradingData TradingData;
-        /* 0x20A4 */ public GcPlayerConflictData ConflictData;
+        /* 0x2098 */ public GcSeed SentinelCrashSiteShipSeed;
+        /* 0x20A8 */ public GcAlienRace InhabitingRace;
+        /* 0x20AC */ public GcPlanetTradingData TradingData;
+        /* 0x20B4 */ public GcPlayerConflictData ConflictData;
     }
 }

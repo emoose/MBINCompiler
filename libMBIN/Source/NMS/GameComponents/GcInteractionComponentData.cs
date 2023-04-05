@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x345DED12B36153C4, NameHash = 0xDAB0554EA36957B5)]
+    [NMS(GUID = 0xA6A4A1E339092A93, NameHash = 0xDAB0554EA36957B5)]
     public class GcInteractionComponentData : NMSTemplate
     {
         // size: 0x3
@@ -26,36 +26,36 @@ namespace libMBIN.NMS.GameComponents
         /* 0x17C */ public float BlendToCameraTime;
         /* 0x180 */ public float BlendFromCameraTime;
         /* 0x188 */ public GcInteractionActivationCost ActivationCost;
-        /* 0x1D0 */ public NMSString0x10 TriggerAction;
-        /* 0x1E0 */ public NMSString0x10 TriggerActionOnPrepare;
-        /* 0x1F0 */ public bool BroadcastTriggerAction;
-        /* 0x1F4 */ public float InteractAngle;
-        /* 0x1F8 */ public float InteractDistance;
-        /* 0x1FC */ public bool InteractInvertFace;
-        /* 0x200 */ public GcInteractionType SecondaryInteractionType;
-        /* 0x208 */ public GcInteractionActivationCost SecondaryActivationCost;
-        /* 0x250 */ public List<TkModelRendererData> EventRenderers;
-        /* 0x260 */ public List<TkModelRendererData> EventRenderersAlt;
-        /* 0x270 */ public float SecondaryCameraTransitionTime;
-        /* 0x274 */ public GcInteractionDof DepthOfField;
-        /* 0x288 */ public List<GcAlienPuzzleMissionOverride> PuzzleMissionOverrideTable;
-        /* 0x298 */ public GcStoryUtilityOverride StoryUtilityOverrideData;
+        /* 0x1F0 */ public NMSString0x10 TriggerAction;
+        /* 0x200 */ public NMSString0x10 TriggerActionOnPrepare;
+        /* 0x210 */ public bool BroadcastTriggerAction;
+        /* 0x214 */ public float InteractAngle;
+        /* 0x218 */ public float InteractDistance;
+        /* 0x21C */ public bool InteractInvertFace;
+        /* 0x220 */ public GcInteractionType SecondaryInteractionType;
+        /* 0x228 */ public GcInteractionActivationCost SecondaryActivationCost;
+        /* 0x290 */ public List<TkModelRendererData> EventRenderers;
+        /* 0x2A0 */ public List<TkModelRendererData> EventRenderersAlt;
+        /* 0x2B0 */ public float SecondaryCameraTransitionTime;
+        /* 0x2B4 */ public GcInteractionDof DepthOfField;
+        /* 0x2C8 */ public List<GcAlienPuzzleMissionOverride> PuzzleMissionOverrideTable;
+        /* 0x2D8 */ public GcStoryUtilityOverride StoryUtilityOverrideData;
         // size: 0x3
         public enum OverrideInteriorExteriorMarkerEnum : uint {
             No,
             Interior,
             Exterior,
         }
-        /* 0x2D8 */ public OverrideInteriorExteriorMarkerEnum OverrideInteriorExteriorMarker;
-        /* 0x2DC */ public bool ReseedAfterRewardSuccess;
-        /* 0x2DD */ public bool UsePersonalPersistentBuffer;
-        /* 0x2E0 */ public float InWorldUIScaler;
-        /* 0x2E4 */ public float InWorldUIMinDistOverride;
-        /* 0x2E8 */ public float InWorldUIMinDistOverrideV2;
-        /* 0x2EC */ public float InWorldUIForcedOffset;
-        /* 0x2F0 */ public float InWorldUIForcedOffsetV2;
-        /* 0x2F4 */ public bool InWorldUIUseCameraUp;
-        /* 0x2F8 */ public NMSString0x10 StartMissionOnUse;
-        /* 0x308 */ public bool AllowMissionUnderwater;
+        /* 0x318 */ public OverrideInteriorExteriorMarkerEnum OverrideInteriorExteriorMarker;
+        /* 0x31C */ public bool ReseedAfterRewardSuccess;
+        /* 0x31D */ public bool UsePersonalPersistentBuffer;
+        /* 0x320 */ public float InWorldUIScaler;
+        /* 0x324 */ public float InWorldUIMinDistOverride;
+        /* 0x328 */ public float InWorldUIMinDistOverrideV2;
+        /* 0x32C */ public float InWorldUIForcedOffset;
+        /* 0x330 */ public float InWorldUIForcedOffsetV2;
+        /* 0x334 */ public bool InWorldUIUseCameraUp;
+        /* 0x338 */ public NMSString0x10 StartMissionOnUse;
+        /* 0x348 */ public bool AllowMissionUnderwater;
     }
 }

@@ -4,10 +4,12 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(GUID = 0xFAA7CB7C9C03AA4F, NameHash = 0xEAC286274BBCA057)]
+    [NMS(GUID = 0x27B8606CDF40F240, NameHash = 0xEAC286274BBCA057)]
     public class GcSolarGenerationGlobals : NMSTemplate
     {
-        /* 0x000 */ public bool MassiveSolarSystems;
+        /* 0x000 */ public GcCombatTimerDifficultyOption CorruptSentinelBuildingCheckDifficulty;
+        /* 0x004 */ public bool UseCorruptSentinelLUT;
+        /* 0x005 */ public bool MassiveSolarSystems;
         /* 0x010 */ public Vector3f SolarSystemSize;
         /* 0x020 */ public float SolarSystemMaximumRadius;
         /* 0x024 */ public float SolarSystemMaximumRadiusMassive;

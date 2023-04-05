@@ -1,9 +1,9 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x8E5A2CCD93F4130A, NameHash = 0xFF746C1098C0C4DE)]
+    [NMS(GUID = 0x95AA5BB8C89BD91E, NameHash = 0xFF746C1098C0C4DE)]
     public class GcEncounterType : NMSTemplate
     {
-        // size: 0x7
+        // size: 0x8
         public enum EncounterTypeEnum : uint {
             FactoryGuards,
             HarvesterGuards,
@@ -12,6 +12,7 @@ namespace libMBIN.NMS.GameComponents
             CorruptedDroneInteract,
             GroundWorms,
             DroneHiveGuards,
+            CorruptDronePillar,
         }
         /* 0x0 */ public EncounterTypeEnum EncounterType;
     }

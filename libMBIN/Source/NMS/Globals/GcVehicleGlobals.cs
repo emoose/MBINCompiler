@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(GUID = 0xDFA6C85856B369C9, NameHash = 0x9B5DDD6D76FBC918)]
+    [NMS(GUID = 0xCF8A7FBC0E693C1B, NameHash = 0x9B5DDD6D76FBC918)]
     public class GcVehicleGlobals : NMSTemplate
     {
         /* 0x000 */ public float UnderwaterScannerIconRangeBoost;

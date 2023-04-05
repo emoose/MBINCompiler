@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xBEE64C539734FC9B, NameHash = 0x8318BC4815036659)]
+    [NMS(GUID = 0x8743DB625AD8F8F8, NameHash = 0x8318BC4815036659)]
     public class GcExplosionData : NMSTemplate
     {
         /* 0x00 */ public NMSString0x10 Id;
@@ -24,5 +24,10 @@ namespace libMBIN.NMS.GameComponents
         /* 0xD2 */ public bool AllowDestructableDebris;
         /* 0xD4 */ public float MaxSpawnDistance;
         /* 0xD8 */ public float CamShakeCustomMaxDistance;
+        /* 0xDC */ public float LightFadeInTime;
+        /* 0xE0 */ public float LightFadeOutTime;
+        /* 0xE4 */ public bool AddLight;
+        /* 0xE8 */ public float AddedLightIntensity;
+        /* 0xF0 */ public Colour AddedLightColour;
     }
 }

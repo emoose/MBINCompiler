@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x814F1020C18B16EE, NameHash = 0x3330409D2B3F48C1)]
+    [NMS(GUID = 0xC31CD7BE6255CB, NameHash = 0x3330409D2B3F48C1)]
     public class GcCreatureRoleData : NMSTemplate
     {
         /* 0x000 */ public GcSeed Seed;

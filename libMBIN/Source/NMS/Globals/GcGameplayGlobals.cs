@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(GUID = 0x7BE6E7121AA262BA, NameHash = 0x71CAF682B6986E6E)]
+    [NMS(GUID = 0x9C864AF6240F6D4C, NameHash = 0x71CAF682B6986E6E)]
     public class GcGameplayGlobals : NMSTemplate
     {
         /* 0x0000 */ public GcDifficultyConfig DifficultyConfig;
@@ -572,50 +572,51 @@ namespace libMBIN.NMS.Globals
         /* 0x42FC */ public int FourthRaceSpawnPercentage;
         /* 0x4300 */ public int NonDominantRaceSpawnPercentage;
         /* 0x4304 */ public int NonDominantRaceSpawnPercentagePirate;
-        /* 0x4308 */ public float ViciousSentinelProbability;
-        /* 0x430C */ public float ViciousStormProbability;
-        /* 0x4310 */ public float ViciousWeatherProbability;
-        /* 0x4314 */ public float ScrapDroneProbability;
-        /* 0x4318 */ public float MaxRespawnOnGroundHeight;
-        /* 0x431C */ public float DeadPlanetGravityFactor;
-        /* 0x4320 */ public GcScanEffectData ShipSalvageScanEffect;
-        /* 0x4370 */ public float SalvageShipPitch;
-        /* 0x4374 */ public float SalvageShipHeightOffset;
-        /* 0x4378 */ public float SalvageShipExplodeSpeed;
-        /* 0x437C */ public float SalvageShipShowShipSpeed;
-        /* 0x4380 */ public float SalvageShipShowShipDistance;
-        /* 0x4384 */ public float SalvageShipExplodeShipDistance;
-        /* 0x4388 */ public float SalvageShipOneRevolutionTime;
-        /* 0x4390 */ public NMSString0x20A CommunicatorFireteamNexusExitDialog;
-        /* 0x43B0 */ public NMSString0x20A CommunicatorNexusExitAbandonWarningDialog;
-        /* 0x43D0 */ public float BackgroundSpaceEncounterCheckTimer;
-        /* 0x43D4 */ public float PulseEncounterCheckTimer;
-        /* 0x43D8 */ public float PulseEncounterChance;
-        /* 0x43DC */ public float PulseEncounterChanceStandard;
-        /* 0x43E0 */ public float PulseEncounterChanceRed;
-        /* 0x43E4 */ public float PulseEncounterChanceGreen;
-        /* 0x43E8 */ public float PulseEncounterChanceBlue;
-        /* 0x43EC */ public float PulseEncounterStopPower;
-        /* 0x43F0 */ public float PulseEncounterStopSpeed;
-        /* 0x43F4 */ public float DerelictPulseEncounterAtmosphericEffectChance;
+        /* 0x4308 */ public float CorruptSentinelProbability;
+        /* 0x430C */ public float ViciousSentinelProbability;
+        /* 0x4310 */ public float ViciousStormProbability;
+        /* 0x4314 */ public float ViciousWeatherProbability;
+        /* 0x4318 */ public float ScrapDroneProbability;
+        /* 0x431C */ public float MaxRespawnOnGroundHeight;
+        /* 0x4320 */ public float DeadPlanetGravityFactor;
+        /* 0x4330 */ public GcScanEffectData ShipSalvageScanEffect;
+        /* 0x4380 */ public float SalvageShipPitch;
+        /* 0x4384 */ public float SalvageShipHeightOffset;
+        /* 0x4388 */ public float SalvageShipExplodeSpeed;
+        /* 0x438C */ public float SalvageShipShowShipSpeed;
+        /* 0x4390 */ public float SalvageShipShowShipDistance;
+        /* 0x4394 */ public float SalvageShipExplodeShipDistance;
+        /* 0x4398 */ public float SalvageShipOneRevolutionTime;
+        /* 0x43A0 */ public NMSString0x20A CommunicatorFireteamNexusExitDialog;
+        /* 0x43C0 */ public NMSString0x20A CommunicatorNexusExitAbandonWarningDialog;
+        /* 0x43E0 */ public float BackgroundSpaceEncounterCheckTimer;
+        /* 0x43E4 */ public float PulseEncounterCheckTimer;
+        /* 0x43E8 */ public float PulseEncounterChance;
+        /* 0x43EC */ public float PulseEncounterChanceStandard;
+        /* 0x43F0 */ public float PulseEncounterChanceRed;
+        /* 0x43F4 */ public float PulseEncounterChanceGreen;
+        /* 0x43F8 */ public float PulseEncounterChanceBlue;
+        /* 0x43FC */ public float PulseEncounterStopPower;
+        /* 0x4400 */ public float PulseEncounterStopSpeed;
+        /* 0x4404 */ public float DerelictPulseEncounterAtmosphericEffectChance;
         [NMS(Size = 0x6)]
-        /* 0x43F8 */ public int[] AlienShipEvolveCosts;
-        /* 0x4410 */ public float SpawnerWeaponRange;
-        /* 0x4414 */ public TkModelResource WeaponSpawnObject;
-        /* 0x4498 */ public TkModelResource WeaponSpawnAltObject;
-        /* 0x451C */ public bool UseCustomSaveDirectory;
-        /* 0x4520 */ public Vector2f FrigateFlybyTimer;
-        /* 0x4528 */ public int PersonalInventoryMinWidthMax;
-        /* 0x452C */ public int PersonalInventoryMinHeightMax;
-        /* 0x4530 */ public int PersonalTechInventoryMinWidthMax;
-        /* 0x4534 */ public int PersonalTechInventoryMinHeightMax;
-        /* 0x4538 */ public int ShipInventoryMinWidthMax;
-        /* 0x453C */ public int ShipInventoryMinHeightMax;
-        /* 0x4540 */ public int ShipTechInventoryMinWidthMax;
-        /* 0x4544 */ public int ShipTechInventoryMinHeightMax;
-        /* 0x4548 */ public int VehicleInventoryMinWidthMax;
-        /* 0x454C */ public int VehicleInventoryMinHeightMax;
-        /* 0x4550 */ public int WeaponInventoryMinWidthMax;
-        /* 0x4554 */ public int WeaponInventoryMinHeightMax;
+        /* 0x4408 */ public int[] AlienShipEvolveCosts;
+        /* 0x4420 */ public float SpawnerWeaponRange;
+        /* 0x4424 */ public TkModelResource WeaponSpawnObject;
+        /* 0x44A8 */ public TkModelResource WeaponSpawnAltObject;
+        /* 0x452C */ public bool UseCustomSaveDirectory;
+        /* 0x4530 */ public Vector2f FrigateFlybyTimer;
+        /* 0x4538 */ public int PersonalInventoryMinWidthMax;
+        /* 0x453C */ public int PersonalInventoryMinHeightMax;
+        /* 0x4540 */ public int PersonalTechInventoryMinWidthMax;
+        /* 0x4544 */ public int PersonalTechInventoryMinHeightMax;
+        /* 0x4548 */ public int ShipInventoryMinWidthMax;
+        /* 0x454C */ public int ShipInventoryMinHeightMax;
+        /* 0x4550 */ public int ShipTechInventoryMinWidthMax;
+        /* 0x4554 */ public int ShipTechInventoryMinHeightMax;
+        /* 0x4558 */ public int VehicleInventoryMinWidthMax;
+        /* 0x455C */ public int VehicleInventoryMinHeightMax;
+        /* 0x4560 */ public int WeaponInventoryMinWidthMax;
+        /* 0x4564 */ public int WeaponInventoryMinHeightMax;
     }
 }

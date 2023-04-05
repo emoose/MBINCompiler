@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xC53919B53D4EA93E, NameHash = 0x4F5433BCFC028B49)]
+    [NMS(GUID = 0xF3EC816D39FC1D1D, NameHash = 0x4F5433BCFC028B49)]
     public class GcAISpaceshipComponentData : NMSTemplate
     {
         /* 0x00 */ public GcAISpaceshipTypes Type;
@@ -11,5 +11,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x08 */ public GcPrimaryAxis Axis;
         /* 0x0C */ public TkModelResource Hangar;
         /* 0x90 */ public bool IsSpaceAnomaly;
+        /* 0x91 */ public bool IsPoliceFreighter;
     }
 }

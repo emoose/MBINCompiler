@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xA369C87DCDDF335B, NameHash = 0x2FD5560612237D4D)]
+    [NMS(GUID = 0x1CBE36B08EA2C89, NameHash = 0x2FD5560612237D4D)]
     public class GcBiomeData : NMSTemplate
     {
         /* 0x000 */ public NMSString0x80 TextureFile;

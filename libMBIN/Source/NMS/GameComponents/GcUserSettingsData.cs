@@ -5,7 +5,7 @@ using System;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xB1245EFE662ED9AE, NameHash = 0x3A50D683FD1CF4BF)]
+    [NMS(GUID = 0x5F4EE2D8A8E7C69C, NameHash = 0x3A50D683FD1CF4BF)]
     public class GcUserSettingsData : NMSTemplate
     {
         /* 0x0000 */ public bool InvertLookControls;
@@ -83,6 +83,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x395C */ public GcMovementDirection MovementDirectionPad;
         /* 0x3960 */ public GcMovementDirection MovementDirectionHands;
         /* 0x3964 */ public bool EnableControllerCursorInVR;
+        /* 0x3965 */ public bool BaseBuildingShowOptionsFromVision;
         // size: 0x2
         public enum TurnModeEnum : uint {
             Smooth,
@@ -127,33 +128,31 @@ namespace libMBIN.NMS.GameComponents
         /* 0x39BA */ public bool AutoScanDiscoveries;
         /* 0x39BB */ public bool SprintScanSwap;
         /* 0x39BC */ public bool PlaceJumpSwap;
-        // size: 0x5
+        // size: 0x4
         [Flags]
         public enum EyeTrackingFlagsEnum : uint {
             None = 0x0,
             BaseBuilding = 0x1,
             WristMenus = 0x2,
-            LookVector = 0x4,
-            BinocScanner = 0x8,
+            Menus = 0x4,
         }
         /* 0x39C0 */ public EyeTrackingFlagsEnum EyeTrackingFlags;
-        /* 0x39C4 */ public GcGyroSettingsData GyroSettings;
-        /* 0x3A48 */ public TkLanguages Language;
-        /* 0x3A4C */ public bool AutoRotateThirdPersonPlayerCamera;
-        /* 0x3A50 */ public GcHand DominantHand;
-        /* 0x3A54 */ public float HazardEffectsStrength;
-        /* 0x3A58 */ public bool QuickMenuBuildMenuSwap;
+        /* 0x39C4 */ public bool MoveableWristMenus;
+        /* 0x39C8 */ public GcGyroSettingsData GyroSettings;
+        /* 0x3A4C */ public TkLanguages Language;
+        /* 0x3A50 */ public bool AutoRotateThirdPersonPlayerCamera;
+        /* 0x3A54 */ public GcHand DominantHand;
+        /* 0x3A58 */ public float HazardEffectsStrength;
+        /* 0x3A5C */ public bool QuickMenuBuildMenuSwap;
         // size: 0x2
         public enum HighResVRUIEnum : uint {
             High,
             Low,
         }
-        /* 0x3A5C */ public HighResVRUIEnum HighResVRUI;
-        /* 0x3A60 */ public float PlayerHUDVROffset;
-        /* 0x3A64 */ public float ShipHUDVROffset;
-        /* 0x3A70 */ public GcInWorldUIScreenData QuickMenuLauncherScreenData;
-        /* 0x3AA0 */ public GcInWorldUIScreenData VehicleWristMenuScreenData;
-        /* 0x3AD0 */ public GcInWorldUIScreenData WeaponMenuScreenData;
-        /* 0x3B00 */ public GcInWorldUIScreenData LargeWeaponMenuScreenData;
+        /* 0x3A60 */ public HighResVRUIEnum HighResVRUI;
+        /* 0x3A64 */ public float PlayerHUDVROffset;
+        /* 0x3A68 */ public float ShipHUDVROffset;
+        /* 0x3A6C */ public bool VRHandControllerSwapYawAndRoll;
+        /* 0x3A6D */ public bool VRHandControllerEnableTwist;
     }
 }

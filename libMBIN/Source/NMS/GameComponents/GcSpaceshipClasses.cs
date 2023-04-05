@@ -1,9 +1,9 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xBCA7F95FF0E24D2D, NameHash = 0xB9B04C0CA0357C57)]
+    [NMS(GUID = 0xA6355357C115C555, NameHash = 0xB9B04C0CA0357C57)]
     public class GcSpaceshipClasses : NMSTemplate
     {
-        // size: 0x9
+        // size: 0xA
         public enum ShipClassEnum : uint {
             Freighter,
             Dropship,
@@ -14,6 +14,7 @@ namespace libMBIN.NMS.GameComponents
             Royal,
             Alien,
             Sail,
+            Robot,
         }
         /* 0x0 */ public ShipClassEnum ShipClass;
     }
