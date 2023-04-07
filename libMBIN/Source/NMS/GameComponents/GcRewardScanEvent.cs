@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xFB25A3682982F26C, NameHash = 0xD6D2BF5DDCCD9F49)]
+    [NMS(GUID = 0xC6C01260FE2B261, NameHash = 0xD6D2BF5DDCCD9F49)]
     public class GcRewardScanEvent : NMSTemplate
     {
         /* 0x00 */ public NMSString0x20A Event;
@@ -19,5 +19,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x28 */ public float StartDelay;
         /* 0x2C */ public bool UseStartDelayWhenNoAerialScan;
         /* 0x2D */ public bool ForceSilentFailure;
+        /* 0x30 */ public NMSString0x20A FailureOSD;
     }
 }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(GUID = 0xEB07333114AD8E52, NameHash = 0xDD7401143C40F868)]
+    [NMS(GUID = 0x960B6E942B5EBFC5, NameHash = 0xDD7401143C40F868)]
     public class GcRobotGlobals : NMSTemplate
     {
         /* 0x0000 */ public bool ForceShowDebugMoveTrail;
@@ -317,10 +317,10 @@ namespace libMBIN.NMS.Globals
         /* 0x0F70 */ public GcDroneData DroneControl;
         [NMS(Size = 0x4, EnumType = typeof(GcSentinelQuadWeaponMode.SentinelQuadWeaponModeEnum))]
         /* 0x1310 */ public GcSentinelQuadWeaponData[] QuadWeapons;
-        /* 0x1550 */ public List<GcDroneWeaponData> DroneWeapons;
+        /* 0x1630 */ public List<GcDroneWeaponData> DroneWeapons;
         [NMS(Size = 0xB, EnumType = typeof(GcSentinelTypes.SentinelTypeEnum))]
-        /* 0x1560 */ public GcSentinelDamagedData[] DamageData;
+        /* 0x1640 */ public GcSentinelDamagedData[] DamageData;
         [NMS(Size = 0xB, EnumType = typeof(GcSentinelTypes.SentinelTypeEnum))]
-        /* 0x1878 */ public GcSentinelPounceBalance[] PounceData;
+        /* 0x1958 */ public GcSentinelPounceBalance[] PounceData;
     }
 }
