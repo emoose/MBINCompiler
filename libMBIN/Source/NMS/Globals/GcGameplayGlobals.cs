@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(GUID = 0x9C864AF6240F6D4C, NameHash = 0x71CAF682B6986E6E)]
+    [NMS(GUID = 0xF98DB091A2D50F28, NameHash = 0x71CAF682B6986E6E)]
     public class GcGameplayGlobals : NMSTemplate
     {
         /* 0x0000 */ public GcDifficultyConfig DifficultyConfig;
@@ -32,16 +32,17 @@ namespace libMBIN.NMS.Globals
         /* 0x2700 */ public float PoliceAcceleratorNoCargoSkipScanOdds;
         /* 0x2704 */ public float ShipInterestAcceleratorInAsteroidField;
         /* 0x2708 */ public float InfestedPlanetDeepSpaceFlybyMultiplier;
-        /* 0x270C */ public float SmugglerSellingMarkup;
-        /* 0x2710 */ public float IllegalTechProductTradingMod;
-        /* 0x2714 */ public float CombatLevelBestWeaponBias;
-        /* 0x2718 */ public float CombatLevelBaseValueBoltcaster;
-        /* 0x271C */ public float CombatLevelBaseValueShotgun;
-        /* 0x2720 */ public float CombatLevelBaseValueRailgun;
-        /* 0x2724 */ public float CombatLevelBaseValueSMG;
-        /* 0x2728 */ public float CombatLevelBaseValueCannon;
-        /* 0x272C */ public float CombatLevelBaseValueGrenade;
-        /* 0x2730 */ public float CombatLevelSClassValue;
+        /* 0x270C */ public float ShipMiningMul;
+        /* 0x2710 */ public float SmugglerSellingMarkup;
+        /* 0x2714 */ public float IllegalTechProductTradingMod;
+        /* 0x2718 */ public float CombatLevelBestWeaponBias;
+        /* 0x271C */ public float CombatLevelBaseValueBoltcaster;
+        /* 0x2720 */ public float CombatLevelBaseValueShotgun;
+        /* 0x2724 */ public float CombatLevelBaseValueRailgun;
+        /* 0x2728 */ public float CombatLevelBaseValueSMG;
+        /* 0x272C */ public float CombatLevelBaseValueCannon;
+        /* 0x2730 */ public float CombatLevelBaseValueGrenade;
+        /* 0x2734 */ public float CombatLevelSClassValue;
         /* 0x2738 */ public NMSString0x10 NexusRecipeCostType;
         /* 0x2748 */ public int NexusRecipeCostNaniteMultiplier;
         /* 0x274C */ public float ShipScanPlanetRechargeMultiplier;
