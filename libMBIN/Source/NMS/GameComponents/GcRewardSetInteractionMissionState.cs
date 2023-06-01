@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x61DA84E749F0CC57, NameHash = 0x6CE18BA2B414C4ED)]
+    [NMS(GUID = 0xD470919B8A2F4197, NameHash = 0x6CE18BA2B414C4ED)]
     public class GcRewardSetInteractionMissionState : NMSTemplate
     {
         /* 0x0 */ public GcInteractionMissionState MissionState;

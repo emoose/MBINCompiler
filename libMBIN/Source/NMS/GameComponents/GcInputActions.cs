@@ -1,9 +1,9 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x2E11BE86C7F9F1EA, NameHash = 0xB3E8C8CD4B9DB0B1)]
+    [NMS(GUID = 0x57EEE24627A3442D, NameHash = 0xB3E8C8CD4B9DB0B1)]
     public class GcInputActions : NMSTemplate
     {
-        // size: 0x124
+        // size: 0x125
         public enum InputActionEnum : uint {
             Invalid,
             Player_Forward,
@@ -178,6 +178,7 @@ namespace libMBIN.NMS.GameComponents
             DiscoveryNetworkRetry,
             QuitGame,
             ReportBase,
+            Unbound,
             GalacticMap_Select,
             GalacticMap_Deselect,
             GalacticMap_Exit,

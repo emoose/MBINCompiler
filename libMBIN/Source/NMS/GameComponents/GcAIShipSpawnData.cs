@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x9CE6A6ED6DE9D4B5, NameHash = 0x35C91009067A6431)]
+    [NMS(GUID = 0xDA8D131C6E951D4D, NameHash = 0x35C91009067A6431)]
     public class GcAIShipSpawnData : NMSTemplate
     {
         /* 0x000 */ public NMSString0x20A Message;

@@ -1,9 +1,9 @@
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0x644B852D83365033, NameHash = 0x943946549DEC2216)]
+    [NMS(GUID = 0xF8DC60B42FFEDC3E, NameHash = 0x943946549DEC2216)]
     public class TkEngineSettingTypes : NMSTemplate
     {
-        // size: 0x32
+        // size: 0x33
         public enum EngineSettingEnum : uint {
             FullScreen,
             Borderless,
@@ -55,6 +55,7 @@ namespace libMBIN.NMS.Toolkit
             AdapterIndex,
             UseHDR,
             MinGPUMode,
+            MetalFXQuality,
         }
         /* 0x0 */ public EngineSettingEnum EngineSetting;
     }

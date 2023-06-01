@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(GUID = 0x127EDCDB5C006C4C, NameHash = 0xB24409E83457E875)]
+    [NMS(GUID = 0x81F908EC0D6EE45A, NameHash = 0xB24409E83457E875)]
     public class GcGraphicsGlobals : NMSTemplate
     {
         /* 0x000 */ public float LUTDistanceFlightMultiplier;
@@ -314,26 +314,28 @@ namespace libMBIN.NMS.Globals
         /* 0x804 */ public float SharpenFilterDepthFactorEnd;
         [NMS(Size = 0x4, EnumType = typeof(TkGraphicsDetailTypes.GraphicDetailEnum))]
         /* 0x808 */ public TkGraphicsDetailPreset[] GraphicsDetailPresetsPC;
-        /* 0x938 */ public TkGraphicsDetailPreset GraphicsDetailPresetPS4;
-        /* 0x984 */ public TkGraphicsDetailPreset GraphicsDetailPresetPS4VR;
-        /* 0x9D0 */ public TkGraphicsDetailPreset GraphicsDetailPresetPS4Pro;
-        /* 0xA1C */ public TkGraphicsDetailPreset GraphicsDetailPresetPS4ProVR;
-        /* 0xA68 */ public TkGraphicsDetailPreset GraphicsDetailPresetXB1;
-        /* 0xAB4 */ public TkGraphicsDetailPreset GraphicsDetailPresetXB1X;
-        /* 0xB00 */ public TkGraphicsDetailPreset GraphicsDetailPresetOberon;
-        /* 0xB4C */ public TkGraphicsDetailPreset GraphicsDetailPresetNX64Handheld;
-        /* 0xB98 */ public TkGraphicsDetailPreset GraphicsDetailPresetPS5;
-        /* 0xBE4 */ public TkGraphicsDetailPreset GraphicsDetailPresetPS5VR;
-        /* 0xC30 */ public bool EnableVariableUpdate;
+        /* 0x958 */ public TkGraphicsDetailPreset GraphicsDetailPresetPS4;
+        /* 0x9AC */ public TkGraphicsDetailPreset GraphicsDetailPresetPS4VR;
+        /* 0xA00 */ public TkGraphicsDetailPreset GraphicsDetailPresetPS4Pro;
+        /* 0xA54 */ public TkGraphicsDetailPreset GraphicsDetailPresetPS4ProVR;
+        /* 0xAA8 */ public TkGraphicsDetailPreset GraphicsDetailPresetXB1;
+        /* 0xAFC */ public TkGraphicsDetailPreset GraphicsDetailPresetXB1X;
+        /* 0xB50 */ public TkGraphicsDetailPreset GraphicsDetailPresetOberon;
+        /* 0xBA4 */ public TkGraphicsDetailPreset GraphicsDetailPresetNX64Handheld;
+        /* 0xBF8 */ public TkGraphicsDetailPreset GraphicsDetailPresetPS5;
+        /* 0xC4C */ public TkGraphicsDetailPreset GraphicsDetailPresetPS5VR;
+        /* 0xCA0 */ public TkGraphicsDetailPreset GraphicsDetailPresetMacOS;
+        /* 0xCF4 */ public TkGraphicsDetailPreset GraphicsDetailPresetiOS;
+        /* 0xD48 */ public bool EnableVariableUpdate;
         [NMS(Size = 0x4, EnumType = typeof(TkGraphicsDetailTypes.GraphicDetailEnum))]
-        /* 0xC34 */ public float[] VariableUpdatePeriodModifers;
-        /* 0xC44 */ public float PhotoModeBloomGainMin;
-        /* 0xC48 */ public float PhotoModeBloomThresholdMin;
-        /* 0xC4C */ public float PhotoModeDefaultBloomValue;
-        /* 0xC50 */ public float PhotoModeMediumValue;
-        /* 0xC54 */ public float PhotoModeBloomGainMedium;
-        /* 0xC58 */ public float PhotoModeBloomThresholdMedium;
-        /* 0xC5C */ public float PhotoModeBloomGainMax;
-        /* 0xC60 */ public float PhotoModeBloomThresholdMax;
+        /* 0xD4C */ public float[] VariableUpdatePeriodModifers;
+        /* 0xD5C */ public float PhotoModeBloomGainMin;
+        /* 0xD60 */ public float PhotoModeBloomThresholdMin;
+        /* 0xD64 */ public float PhotoModeDefaultBloomValue;
+        /* 0xD68 */ public float PhotoModeMediumValue;
+        /* 0xD6C */ public float PhotoModeBloomGainMedium;
+        /* 0xD70 */ public float PhotoModeBloomThresholdMedium;
+        /* 0xD74 */ public float PhotoModeBloomGainMax;
+        /* 0xD78 */ public float PhotoModeBloomThresholdMax;
     }
 }

@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x268CAA99387B382B, NameHash = 0x52A4BE1415A68ECA)]
+    [NMS(GUID = 0x66EE5B4805A148CE, NameHash = 0x52A4BE1415A68ECA)]
     public class GcPlayerControlInputAxis : NMSTemplate
     {
         /* 0x00 */ public GcCharacterControlInputValidity Validity;

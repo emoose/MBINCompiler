@@ -1,9 +1,9 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xA28BFB467509CAE4, NameHash = 0x8B94093DC3901046)]
+    [NMS(GUID = 0x65E118273CEB9875, NameHash = 0x8B94093DC3901046)]
     public class GcAudioWwiseEvents : NMSTemplate
     {
-        // size: 0x9CD
+        // size: 0x9D3
         public enum AkEventEnum : uint {
             INVALID_EVENT = 0x0,
             ABANDONED_DOOR_UNLOCK = 0x264BED2D,
@@ -85,6 +85,11 @@ namespace libMBIN.NMS.GameComponents
             ATLAS_ORB_FLARE = 0xA3217125,
             ATLAS_ORB_ILLUMINATE = 0x1736FCDD,
             ATLAS_PLINTH_RISE = 0x8464FB10,
+            ATLAS_SEED_01 = 0x82B25AB8,
+            ATLAS_SEED_02 = 0x82B25ABB,
+            ATLAS_SEED_03 = 0x82B25ABA,
+            ATLAS_SEED_04 = 0x82B25ABD,
+            ATLAS_SEED_05 = 0x82B25ABC,
             ATLAS_SPHERE_PULSE = 0x6F545734,
             ATLAS_SPHERE_SPARK = 0xC0F94248,
             ATLAS_SPHERE_WIND = 0x59F53DC7,
@@ -1092,6 +1097,7 @@ namespace libMBIN.NMS.GameComponents
             NPC_FOLEY_CLOTHING_1H_UNSHEATH_IPAD = 0xEEA97,
             NPC_FOOTSTEPS_GENERIC = 0xEBEBBF24,
             NPC_HANDHOLOGRAM = 0x826D3313,
+            NPC_ROBOT_FOOTSTEP = 0x72AB250,
             NPC_SCIENCE_WORKSTATION_ARMS = 0x2AE4A2D5,
             NPC_SHIP_ENGINE_FREIGHTER_FRONT = 0xA84C5D19,
             NPC_SHIP_ENGINES = 0xB264012B,

@@ -2,7 +2,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x7DA8BF75E7FFBA01, NameHash = 0x4B56CD3D914485CF)]
+    [NMS(GUID = 0x36D9AF7E0A1B8FDA, NameHash = 0x4B56CD3D914485CF)]
     public class GcSpringLink : NMSTemplate
     {
         /* 0x000 */ public bool Enabled;
@@ -23,7 +23,8 @@ namespace libMBIN.NMS.GameComponents
         /* 0x0E0 */ public float ApplyGameGravity;
         /* 0x0E4 */ public float ApplyGameWind;
         /* 0x0E8 */ public float AirSpeedFromMovementSpeedScale;
-        /* 0x0EC */ public bool PositionalSpringEnabled;
+        /* 0x0EC */ public bool SpringCollides;
+        /* 0x0ED */ public bool PositionalSpringEnabled;
         /* 0x0F0 */ public float DampingCriticality;
         /* 0x0F4 */ public float NaturalFrequency;
         /* 0x0F8 */ public bool SpringPivots;

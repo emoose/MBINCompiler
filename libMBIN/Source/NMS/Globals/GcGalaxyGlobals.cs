@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(GUID = 0xFA9ACEF087B11E01, NameHash = 0x3BC94060600296E8)]
+    [NMS(GUID = 0x9E8E3638BA107CBA, NameHash = 0x3BC94060600296E8)]
     public class GcGalaxyGlobals : NMSTemplate
     {
         /* 0x0000 */ public bool NewStyleLookAtCamera;
@@ -40,26 +40,27 @@ namespace libMBIN.NMS.Globals
         /* 0x00F8 */ public float HandControlRotateSpeed;
         /* 0x00FC */ public float HandControlPitchSpeed;
         /* 0x0100 */ public float HandControlMoveSpeed;
-        /* 0x0104 */ public float HandControlPointerLength;
-        /* 0x0108 */ public float HandControlPointerLengthMini;
-        /* 0x010C */ public float HandControlGizmoScale;
-        /* 0x0110 */ public float HandControlMaxOffset;
-        /* 0x0114 */ public float HandControlMoveBlendRate;
-        /* 0x0118 */ public float HandControlRotateBlendRate;
-        /* 0x011C */ public float HandControlFreeMoveMaxOffset;
-        /* 0x0120 */ public float HandControlFreeMoveAngleOffset;
-        /* 0x0124 */ public float HandControlDefaultOffset;
-        /* 0x0128 */ public float HandControlWarpSelectAngle;
-        /* 0x012C */ public float HandControlMinLockDistance;
-        /* 0x0130 */ public float HandControlMaxLockDistance;
-        /* 0x0134 */ public float HandTurnFactorMin;
-        /* 0x0138 */ public float HandTurnFactorRange;
-        /* 0x013C */ public float HandPitchFactorMin;
-        /* 0x0140 */ public float HandPitchFactorRange;
-        /* 0x0144 */ public float HandPitchMaxDistance;
-        /* 0x0148 */ public float HandZoomFactorMin;
-        /* 0x014C */ public float HandZoomFactorRange;
-        /* 0x0150 */ public float HandControlZoomSpeed;
+        /* 0x0104 */ public float HandControlMoveSpeedTurbo;
+        /* 0x0108 */ public float HandControlPointerLength;
+        /* 0x010C */ public float HandControlPointerLengthMini;
+        /* 0x0110 */ public float HandControlGizmoScale;
+        /* 0x0114 */ public float HandControlMaxOffset;
+        /* 0x0118 */ public float HandControlMoveBlendRate;
+        /* 0x011C */ public float HandControlRotateBlendRate;
+        /* 0x0120 */ public float HandControlFreeMoveMaxOffset;
+        /* 0x0124 */ public float HandControlFreeMoveAngleOffset;
+        /* 0x0128 */ public float HandControlDefaultOffset;
+        /* 0x012C */ public float HandControlWarpSelectAngle;
+        /* 0x0130 */ public float HandControlMinLockDistance;
+        /* 0x0134 */ public float HandControlMaxLockDistance;
+        /* 0x0138 */ public float HandTurnFactorMin;
+        /* 0x013C */ public float HandTurnFactorRange;
+        /* 0x0140 */ public float HandPitchFactorMin;
+        /* 0x0144 */ public float HandPitchFactorRange;
+        /* 0x0148 */ public float HandPitchMaxDistance;
+        /* 0x014C */ public float HandZoomFactorMin;
+        /* 0x0150 */ public float HandZoomFactorRange;
+        /* 0x0154 */ public float HandControlZoomSpeed;
         /* 0x0160 */ public Colour HandGizmoColourAt;
         /* 0x0170 */ public Colour HandGizmoColourRight;
         /* 0x0180 */ public Colour HandGizmoColourUp;
