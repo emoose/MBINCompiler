@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xABA3C17DBE6EBD46, NameHash = 0x7596FBA2C232AC37)]
+    [NMS(GUID = 0x903E0F718394285, NameHash = 0x7596FBA2C232AC37)]
     public class GcClothPiece : NMSTemplate
     {
         /* 0x000 */ public bool Enabled;
@@ -54,7 +54,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x108 */ public InitialShapeSourceEnum InitialShapeSource;
         /* 0x110 */ public GcRectangularInitialShape RectangularInitialShape;
         /* 0x150 */ public List<Vector3f> InitialShapePoints;
-        /* 0x160 */ public List<GcClothCollisionBone> CollisionBones;
+        /* 0x160 */ public List<GcCollisionCapsule> CollisionCapsules;
         /* 0x170 */ public List<GcClothAttachmentCirlce> AttachmentCircles;
         /* 0x180 */ public List<GcClothAttachmentLine> AttachmentLines;
         /* 0x190 */ public List<GcAttachmentPointSet> AttachmentPointSets;

@@ -4,18 +4,19 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(GUID = 0x75B48859C7107478, NameHash = 0x95C306B1A90F3E08)]
+    [NMS(GUID = 0x476C15D00E62634D, NameHash = 0x95C306B1A90F3E08)]
     public class GcUIGlobals : NMSTemplate
     {
         /* 0x0000 */ public float HoverPopScaleModification;
         /* 0x0004 */ public float HoverPopAnimDuration;
         /* 0x0010 */ public Colour WristMenuDefaultBorderColour;
         /* 0x0020 */ public Colour WristMenuRepositionableBorderColour;
-        /* 0x0030 */ public float EyeTrackingTimeBeforePopupsActivate;
-        /* 0x0034 */ public float EyeTrackingPopupLookAwayTime;
-        /* 0x0038 */ public float EyeTrackingCursorBlendRateGameModeSelect;
-        /* 0x003C */ public float EyeTrackingCursorBlendRate;
-        /* 0x0040 */ public float EyeTrackingStickyHoverTime;
+        /* 0x0030 */ public float InWorldUIInteractionDistanceWithEyeTrackingEnabled;
+        /* 0x0034 */ public float EyeTrackingTimeBeforePopupsActivate;
+        /* 0x0038 */ public float EyeTrackingPopupLookAwayTime;
+        /* 0x003C */ public float EyeTrackingCursorBlendRateGameModeSelect;
+        /* 0x0040 */ public float EyeTrackingCursorBlendRate;
+        /* 0x0044 */ public float EyeTrackingStickyHoverTime;
         /* 0x0050 */ public Colour NetworkPopupTextEnabledColour;
         /* 0x0060 */ public Colour NetworkPopupTextDisabledColour;
         /* 0x0070 */ public bool ShowDifficultyForBases;
@@ -240,10 +241,11 @@ namespace libMBIN.NMS.Globals
         /* 0x1948 */ public float HandControlMenuSelectRadius1;
         /* 0x194C */ public float HandControlMenuSelectRadius2;
         /* 0x1950 */ public float HandControlTopMenuSelectRadius;
-        /* 0x1954 */ public int HandScreenWeaponWidth;
-        /* 0x1958 */ public int HandScreenWeaponHeight;
-        /* 0x195C */ public int HandScreenWidth;
-        /* 0x1960 */ public int HandScreenHeight;
+        /* 0x1954 */ public float HandControlMenuDepth;
+        /* 0x1958 */ public int HandScreenWeaponWidth;
+        /* 0x195C */ public int HandScreenWeaponHeight;
+        /* 0x1960 */ public int HandScreenWidth;
+        /* 0x1964 */ public int HandScreenHeight;
         /* 0x1970 */ public Colour DebugEditorAxisColourUpInactive;
         /* 0x1980 */ public Colour DebugEditorAxisColourUpActive;
         /* 0x1990 */ public Colour DebugEditorAxisColourRightInactive;
@@ -1328,51 +1330,52 @@ namespace libMBIN.NMS.Globals
         /* 0x7138 */ public GcInventorySlotActionData NewSlotRevealAction;
         /* 0x7154 */ public GcInventorySlotActionData NewSlotPulseAction;
         /* 0x7170 */ public GcInventorySlotActionData InventoryHintAction;
-        /* 0x718C */ public float ReportBaseFlashTime;
-        /* 0x7190 */ public float ReportBaseFlashIntensity;
-        /* 0x7194 */ public float ReportBaseFlashDelay;
-        /* 0x7198 */ public int ReportBaseTexWidth;
-        /* 0x719C */ public int ReportBaseTexHeight;
-        /* 0x71A0 */ public float ReportCameraSpeed;
-        /* 0x71A4 */ public float AmbientModeFadeTime;
-        /* 0x71A8 */ public bool HideQuickMenuControls;
-        /* 0x71A9 */ public bool QuickMenuAllowCycle;
-        /* 0x71AC */ public float TextChatMaxDisplayTime;
-        /* 0x71B0 */ public float TextChatStayBigAfterTextInput;
-        /* 0x71B4 */ public int BuildingShopMaxItems;
-        /* 0x71B8 */ public float ShipScreenTexScale;
-        /* 0x71BC */ public float MultiplayerTeleportEffectDisappearTime;
-        /* 0x71C0 */ public float MultiplayerTeleportEffectAppearTime;
-        /* 0x71C4 */ public int AbandonedFreighterAirlockRoomNumber;
-        /* 0x71C8 */ public float SettlementStatInnerRadius;
-        /* 0x71CC */ public float SettlementStatOuterRadius;
-        /* 0x71D0 */ public Colour SettlementStatColour;
-        /* 0x71E0 */ public Colour SettlementStatBackgroundColour;
+        /* 0x718C */ public GcInventorySlotActionData InventoryHintActionNoGlow;
+        /* 0x71A8 */ public float ReportBaseFlashTime;
+        /* 0x71AC */ public float ReportBaseFlashIntensity;
+        /* 0x71B0 */ public float ReportBaseFlashDelay;
+        /* 0x71B4 */ public int ReportBaseTexWidth;
+        /* 0x71B8 */ public int ReportBaseTexHeight;
+        /* 0x71BC */ public float ReportCameraSpeed;
+        /* 0x71C0 */ public float AmbientModeFadeTime;
+        /* 0x71C4 */ public bool HideQuickMenuControls;
+        /* 0x71C5 */ public bool QuickMenuAllowCycle;
+        /* 0x71C8 */ public float TextChatMaxDisplayTime;
+        /* 0x71CC */ public float TextChatStayBigAfterTextInput;
+        /* 0x71D0 */ public int BuildingShopMaxItems;
+        /* 0x71D4 */ public float ShipScreenTexScale;
+        /* 0x71D8 */ public float MultiplayerTeleportEffectDisappearTime;
+        /* 0x71DC */ public float MultiplayerTeleportEffectAppearTime;
+        /* 0x71E0 */ public int AbandonedFreighterAirlockRoomNumber;
+        /* 0x71E4 */ public float SettlementStatInnerRadius;
+        /* 0x71E8 */ public float SettlementStatOuterRadius;
+        /* 0x71F0 */ public Colour SettlementStatColour;
+        /* 0x7200 */ public Colour SettlementStatBackgroundColour;
         [NMS(Size = 0x7, EnumType = typeof(GcSettlementStatType.SettlementStatTypeEnum))]
-        /* 0x71F0 */ public NMSString0x20A[] SettlementStatLoc;
+        /* 0x7210 */ public NMSString0x20A[] SettlementStatLoc;
         [NMS(Size = 0x7, EnumType = typeof(GcSettlementStatType.SettlementStatTypeEnum))]
-        /* 0x72D0 */ public NMSString0x20A[] SettlementStatFormatLoc;
+        /* 0x72F0 */ public NMSString0x20A[] SettlementStatFormatLoc;
         [NMS(Size = 0x7, EnumType = typeof(GcSettlementStatType.SettlementStatTypeEnum))]
-        /* 0x73B0 */ public TkTextureResource[] SettlementStatBasicImages;
+        /* 0x73D0 */ public TkTextureResource[] SettlementStatBasicImages;
         [NMS(Size = 0x7, EnumType = typeof(GcSettlementStatType.SettlementStatTypeEnum))]
-        /* 0x774C */ public TkTextureResource[] SettlementStatPositiveImages;
+        /* 0x776C */ public TkTextureResource[] SettlementStatPositiveImages;
         [NMS(Size = 0x7, EnumType = typeof(GcSettlementStatType.SettlementStatTypeEnum))]
-        /* 0x7AE8 */ public TkTextureResource[] SettlementStatNegativeImages;
-        /* 0x7E84 */ public float MinimumHoldFill;
-        /* 0x7E88 */ public bool EnableAccessibleUIOnSwitch;
-        /* 0x7E8C */ public float AccessibleUIPopupScale;
-        /* 0x7E90 */ public float AccessibleUIHUDPopupScale;
-        /* 0x7E94 */ public float DetailMessageDismissTime;
-        /* 0x7E98 */ public float ManualScrollChangePerInputMin;
-        /* 0x7E9C */ public float ManualScrollChangePerInputMax;
-        /* 0x7EA0 */ public float InfoPortalGuideCycleTime;
-        /* 0x7EA4 */ public float InfoPortalMilestonesCycleTime;
-        /* 0x7EA8 */ public float FeedFrigateAnimPeriod;
-        /* 0x7EAC */ public int FeedFrigateAnimNumPeriods;
-        /* 0x7EB0 */ public float FeedFrigateAnimScaleChange;
-        /* 0x7EB4 */ public float FeedFrigateAnimAlphaChange;
-        /* 0x7EB8 */ public float TouchScrollMaxDelta;
-        /* 0x7EBC */ public float TextTouchScrollCap;
-        /* 0x7EC0 */ public float TouchScrollChangePageThreshold;
+        /* 0x7B08 */ public TkTextureResource[] SettlementStatNegativeImages;
+        /* 0x7EA4 */ public float MinimumHoldFill;
+        /* 0x7EA8 */ public bool EnableAccessibleUIOnSwitch;
+        /* 0x7EAC */ public float AccessibleUIPopupScale;
+        /* 0x7EB0 */ public float AccessibleUIHUDPopupScale;
+        /* 0x7EB4 */ public float DetailMessageDismissTime;
+        /* 0x7EB8 */ public float ManualScrollChangePerInputMin;
+        /* 0x7EBC */ public float ManualScrollChangePerInputMax;
+        /* 0x7EC0 */ public float InfoPortalGuideCycleTime;
+        /* 0x7EC4 */ public float InfoPortalMilestonesCycleTime;
+        /* 0x7EC8 */ public float FeedFrigateAnimPeriod;
+        /* 0x7ECC */ public int FeedFrigateAnimNumPeriods;
+        /* 0x7ED0 */ public float FeedFrigateAnimScaleChange;
+        /* 0x7ED4 */ public float FeedFrigateAnimAlphaChange;
+        /* 0x7ED8 */ public float TouchScrollMaxDelta;
+        /* 0x7EDC */ public float TextTouchScrollCap;
+        /* 0x7EE0 */ public float TouchScrollChangePageThreshold;
     }
 }

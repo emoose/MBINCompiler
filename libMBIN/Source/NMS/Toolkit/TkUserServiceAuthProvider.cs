@@ -1,9 +1,9 @@
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0xBEFB647B9E09BAE7, NameHash = 0x91EF3068AEC32FB7)]
+    [NMS(GUID = 0x5D934A889912272A, NameHash = 0x91EF3068AEC32FB7)]
     public class TkUserServiceAuthProvider : NMSTemplate
     {
-        // size: 0x7
+        // size: 0x8
         public enum AuthProviderEnum : uint {
             Null,
             PSN,
@@ -12,6 +12,7 @@ namespace libMBIN.NMS.Toolkit
             Xbox,
             WeGame,
             NSO,
+            GameCenter,
         }
         /* 0x0 */ public AuthProviderEnum AuthProvider;
     }

@@ -2,12 +2,12 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x1DC689F860E9E48F, NameHash = 0x3183C2CA4E0D9600)]
-    public class GcClothCollisionBone : NMSTemplate
+    [NMS(GUID = 0x6900D314A3A5E2D6, NameHash = 0xF0A6F41B4CF7E771)]
+    public class GcCollisionCapsule : NMSTemplate
     {
         /* 0x00 */ public bool Enabled;
-        /* 0x01 */ public NMSString0x40 DebugName;
-        /* 0x41 */ public NMSString0x40 BoneName;
+        /* 0x01 */ public NMSString0x40 Name;
+        /* 0x41 */ public NMSString0x40 NodeName;
         /* 0x90 */ public Vector3f CapsuleCentre;
         /* 0xA0 */ public AxisSpecification CapsuleAxis;
         /* 0xC0 */ public float CapsuleRadius;

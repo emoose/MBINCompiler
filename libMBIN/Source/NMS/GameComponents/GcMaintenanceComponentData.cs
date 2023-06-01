@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x670A5521A9BC7C3B, NameHash = 0x479CFCB871ABBE0)]
+    [NMS(GUID = 0xA5109DDBC54AB30, NameHash = 0x479CFCB871ABBE0)]
     public class GcMaintenanceComponentData : NMSTemplate
     {
         /* 0x000 */ public List<GcMaintenanceElement> PreInstalledTech;
@@ -52,19 +52,21 @@ namespace libMBIN.NMS.GameComponents
         /* 0x248 */ public NMSString0x20A TransferDescriptionOverride;
         /* 0x268 */ public NMSString0x20A DiscardButtonOverride;
         /* 0x288 */ public NMSString0x20A DiscardDescriptionOverride;
-        /* 0x2A8 */ public NMSString0x20A ActionWarningOverride;
-        /* 0x2C8 */ public float InWorldUIScaler;
-        /* 0x2CC */ public float InWorldUIMinDistOverride;
-        /* 0x2D0 */ public float InWorldUIMinDistOverrideV2;
-        /* 0x2D4 */ public float InWorldUIForcedOffset;
-        /* 0x2D8 */ public float InWorldUIForcedOffsetV2;
-        /* 0x2DC */ public bool InWorldUIUseCameraUp;
-        /* 0x2DD */ public bool InteractionRequiresPower;
-        /* 0x2E0 */ public NMSString0x10 StartMissionOnUse;
-        /* 0x2F0 */ public NMSString0x10 GiveRewardOnCompletion;
-        /* 0x300 */ public bool OpenInteractionOnQuit;
-        /* 0x301 */ public bool ForceOneClickRepair;
-        /* 0x304 */ public GcAudioWwiseEvents AudioIDOnSuccess;
-        /* 0x308 */ public GcMaintenanceGroupInstallData GroupInstallSetup;
+        /* 0x2A8 */ public NMSString0x20A ChargeButtonOverride;
+        /* 0x2C8 */ public NMSString0x20A ChargeDescriptionOverride;
+        /* 0x2E8 */ public NMSString0x20A ActionWarningOverride;
+        /* 0x308 */ public float InWorldUIScaler;
+        /* 0x30C */ public float InWorldUIMinDistOverride;
+        /* 0x310 */ public float InWorldUIMinDistOverrideV2;
+        /* 0x314 */ public float InWorldUIForcedOffset;
+        /* 0x318 */ public float InWorldUIForcedOffsetV2;
+        /* 0x31C */ public bool InWorldUIUseCameraUp;
+        /* 0x31D */ public bool InteractionRequiresPower;
+        /* 0x320 */ public NMSString0x10 StartMissionOnUse;
+        /* 0x330 */ public NMSString0x10 GiveRewardOnCompletion;
+        /* 0x340 */ public bool OpenInteractionOnQuit;
+        /* 0x341 */ public bool ForceOneClickRepair;
+        /* 0x344 */ public GcAudioWwiseEvents AudioIDOnSuccess;
+        /* 0x348 */ public GcMaintenanceGroupInstallData GroupInstallSetup;
     }
 }

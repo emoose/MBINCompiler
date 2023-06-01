@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xA6A4A1E339092A93, NameHash = 0xDAB0554EA36957B5)]
+    [NMS(GUID = 0xDD02CADCEED644E8, NameHash = 0xDAB0554EA36957B5)]
     public class GcInteractionComponentData : NMSTemplate
     {
         // size: 0x3
@@ -57,5 +57,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x334 */ public bool InWorldUIUseCameraUp;
         /* 0x338 */ public NMSString0x10 StartMissionOnUse;
         /* 0x348 */ public bool AllowMissionUnderwater;
+        /* 0x349 */ public bool UseUnlockedInteractionIfMaintDone;
     }
 }
