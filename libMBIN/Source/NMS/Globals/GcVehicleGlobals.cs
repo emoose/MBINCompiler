@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(GUID = 0x41ECA48267C7DF7, NameHash = 0x9B5DDD6D76FBC918)]
+    [NMS(GUID = 0x4DDB34B7D1F35D9F, NameHash = 0x9B5DDD6D76FBC918)]
     public class GcVehicleGlobals : NMSTemplate
     {
         /* 0x000 */ public float UnderwaterScannerIconRangeBoost;
@@ -279,11 +279,11 @@ namespace libMBIN.NMS.Globals
         /* 0xAE0 */ public bool ThrottleButtonCamRelative;
         /* 0xAE4 */ public float StickReverseTurnThreshold;
         /* 0xAE8 */ public float StickReverseTurnStiffness;
-        /* 0xAEC */ public GcScanData VehicleScan;
-        /* 0xB00 */ public GcScanData VehicleLocalScan;
+        /* 0xAF0 */ public NMSString0x10 VehicleScan;
+        /* 0xB00 */ public NMSString0x10 VehicleLocalScan;
         [NMS(Size = 0x7, EnumType = typeof(GcVehicleType.VehicleTypeEnum))]
-        /* 0xB18 */ public GcVehicleMuzzleData[] VehicleWeaponMuzzleFlash;
-        /* 0xCD8 */ public List<GcVehicleWeaponMuzzleData> VehicleWeaponMuzzleDataTable;
-        /* 0xCE8 */ public List<GcVehicleData> VehicleDataTable;
+        /* 0xB10 */ public GcVehicleMuzzleData[] VehicleWeaponMuzzleFlash;
+        /* 0xCD0 */ public List<GcVehicleWeaponMuzzleData> VehicleWeaponMuzzleDataTable;
+        /* 0xCE0 */ public List<GcVehicleData> VehicleDataTable;
     }
 }

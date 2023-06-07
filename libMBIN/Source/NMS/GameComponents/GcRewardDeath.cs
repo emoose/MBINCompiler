@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x20F02ED9D8F8C332, NameHash = 0xAF7590464B3BC984)]
+    [NMS(GUID = 0x3F0495D0DC9EEEF7, NameHash = 0xAF7590464B3BC984)]
     public class GcRewardDeath : NMSTemplate
     {
         /* 0x00 */ public NMSString0x10 PlayerDamage;

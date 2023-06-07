@@ -2,7 +2,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xBAE43A4AAE4C25DF, NameHash = 0xC06F148BB67FE0E2)]
+    [NMS(GUID = 0x4FB3FDA510FDF844, NameHash = 0xC06F148BB67FE0E2)]
     public class GcUnlockableSeasonReward : NMSTemplate
     {
         /* 0x00 */ public NMSString0x10 ID;
@@ -12,5 +12,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x13 */ public bool SwitchExclusive;
         /* 0x18 */ public List<int> SeasonIds;
         /* 0x28 */ public List<int> StageIds;
+        /* 0x38 */ public NMSString0x20A SpecificMilestoneLoc;
     }
 }

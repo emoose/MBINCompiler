@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(GUID = 0x9E8E3638BA107CBA, NameHash = 0x3BC94060600296E8)]
+    [NMS(GUID = 0x70320CDC9EBCD60B, NameHash = 0x3BC94060600296E8)]
     public class GcGalaxyGlobals : NMSTemplate
     {
         /* 0x0000 */ public bool NewStyleLookAtCamera;

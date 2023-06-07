@@ -2,7 +2,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x36D9AF7E0A1B8FDA, NameHash = 0x4B56CD3D914485CF)]
+    [NMS(GUID = 0x6E4CEEBDD7911A13, NameHash = 0x4B56CD3D914485CF)]
     public class GcSpringLink : NMSTemplate
     {
         /* 0x000 */ public bool Enabled;
@@ -24,11 +24,12 @@ namespace libMBIN.NMS.GameComponents
         /* 0x0E4 */ public float ApplyGameWind;
         /* 0x0E8 */ public float AirSpeedFromMovementSpeedScale;
         /* 0x0EC */ public bool SpringCollides;
-        /* 0x0ED */ public bool PositionalSpringEnabled;
-        /* 0x0F0 */ public float DampingCriticality;
-        /* 0x0F4 */ public float NaturalFrequency;
-        /* 0x0F8 */ public bool SpringPivots;
-        /* 0x0F9 */ public bool ApplySpringInMovingFrame;
+        /* 0x0F0 */ public float SpringHangsDown;
+        /* 0x0F4 */ public bool PositionalSpringEnabled;
+        /* 0x0F8 */ public float DampingCriticality;
+        /* 0x0FC */ public float NaturalFrequency;
+        /* 0x100 */ public bool SpringPivots;
+        /* 0x101 */ public bool ApplySpringInMovingFrame;
         // size: 0x5
         public enum ApplyMotionScaleInEnum : uint {
             Disabled,
@@ -37,8 +38,8 @@ namespace libMBIN.NMS.GameComponents
             Parent,
             Component,
         }
-        /* 0x0FC */ public ApplyMotionScaleInEnum ApplyMotionScaleIn;
-        /* 0x100 */ public float MotionScale_Uniform;
+        /* 0x104 */ public ApplyMotionScaleInEnum ApplyMotionScaleIn;
+        /* 0x108 */ public float MotionScale_Uniform;
         /* 0x110 */ public Vector3f MotionScale;
         // size: 0x5
         public enum ApplyMotionLimitsInEnum : uint {

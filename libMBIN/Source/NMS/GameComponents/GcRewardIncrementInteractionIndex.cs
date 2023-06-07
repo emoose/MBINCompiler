@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x9A181B3F81E17A4D, NameHash = 0x317FB72CFB424340)]
+    [NMS(GUID = 0x7F9FF98F97639517, NameHash = 0x317FB72CFB424340)]
     public class GcRewardIncrementInteractionIndex : NMSTemplate
     {
         /* 0x0 */ public GcInteractionType InteractionToIncrement;

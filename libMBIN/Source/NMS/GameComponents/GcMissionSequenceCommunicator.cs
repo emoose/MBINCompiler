@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xDD46519927037100, NameHash = 0xD14F8D38E31CAB20)]
+    [NMS(GUID = 0x4DDAEFDAF77E8C3E, NameHash = 0xD14F8D38E31CAB20)]
     public class GcMissionSequenceCommunicator : NMSTemplate
     {
         /* 0x000 */ public NMSString0x80 Message;
@@ -10,6 +10,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x100 */ public NMSString0x80 OSDMessage;
         /* 0x180 */ public GcPlayerCommunicatorMessage Comms;
         /* 0x1D0 */ public bool AutoOpen;
-        /* 0x1D1 */ public NMSString0x80 DebugText;
+        /* 0x1D1 */ public bool UsePulseEncounterObjectAsAttachment;
+        /* 0x1D2 */ public NMSString0x80 DebugText;
     }
 }

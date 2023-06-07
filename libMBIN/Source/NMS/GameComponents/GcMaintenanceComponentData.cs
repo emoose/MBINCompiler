@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xA5109DDBC54AB30, NameHash = 0x479CFCB871ABBE0)]
+    [NMS(GUID = 0xD28DF6CB38B451D0, NameHash = 0x479CFCB871ABBE0)]
     public class GcMaintenanceComponentData : NMSTemplate
     {
         /* 0x000 */ public List<GcMaintenanceElement> PreInstalledTech;
@@ -55,18 +55,20 @@ namespace libMBIN.NMS.GameComponents
         /* 0x2A8 */ public NMSString0x20A ChargeButtonOverride;
         /* 0x2C8 */ public NMSString0x20A ChargeDescriptionOverride;
         /* 0x2E8 */ public NMSString0x20A ActionWarningOverride;
-        /* 0x308 */ public float InWorldUIScaler;
-        /* 0x30C */ public float InWorldUIMinDistOverride;
-        /* 0x310 */ public float InWorldUIMinDistOverrideV2;
-        /* 0x314 */ public float InWorldUIForcedOffset;
-        /* 0x318 */ public float InWorldUIForcedOffsetV2;
-        /* 0x31C */ public bool InWorldUIUseCameraUp;
-        /* 0x31D */ public bool InteractionRequiresPower;
-        /* 0x320 */ public NMSString0x10 StartMissionOnUse;
-        /* 0x330 */ public NMSString0x10 GiveRewardOnCompletion;
-        /* 0x340 */ public bool OpenInteractionOnQuit;
-        /* 0x341 */ public bool ForceOneClickRepair;
-        /* 0x344 */ public GcAudioWwiseEvents AudioIDOnSuccess;
-        /* 0x348 */ public GcMaintenanceGroupInstallData GroupInstallSetup;
+        /* 0x308 */ public bool SilenceSuitVOIAlerts;
+        /* 0x30C */ public float InWorldUIScaler;
+        /* 0x310 */ public float InWorldUIMinDistOverride;
+        /* 0x314 */ public float InWorldUIMinDistOverrideV2;
+        /* 0x318 */ public float InWorldUIForcedOffset;
+        /* 0x31C */ public float InWorldUIForcedOffsetV2;
+        /* 0x320 */ public bool InWorldUIUseCameraUp;
+        /* 0x321 */ public bool InteractionRequiresPower;
+        /* 0x328 */ public NMSString0x10 StartMissionOnUse;
+        /* 0x338 */ public NMSString0x10 GiveRewardOnCompletion;
+        /* 0x348 */ public bool OpenInteractionOnQuit;
+        /* 0x349 */ public bool ForceOneClickRepair;
+        /* 0x34C */ public GcAudioWwiseEvents AudioIDOnSuccess;
+        /* 0x350 */ public GcMaintenanceGroupInstallData GroupInstallSetup;
+        /* 0x3E0 */ public bool DisableSynchronise;
     }
 }

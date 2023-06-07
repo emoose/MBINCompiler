@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x2F1095FDA8B8012A, NameHash = 0xD0F82AE353636444)]
+    [NMS(GUID = 0x22F11ED974BED324, NameHash = 0xD0F82AE353636444)]
     public class GcPlayerWeaponPropertiesData : NMSTemplate
     {
         /* 0x000 */ public GcPlayerWeaponClass WeaponClass;

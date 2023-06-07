@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(GUID = 0x476C15D00E62634D, NameHash = 0x95C306B1A90F3E08)]
+    [NMS(GUID = 0x33302443F45FD5E7, NameHash = 0x95C306B1A90F3E08)]
     public class GcUIGlobals : NMSTemplate
     {
         /* 0x0000 */ public float HoverPopScaleModification;
