@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xDA96C6899E73D75A, NameHash = 0xA12AC584067DF8E0)]
+    [NMS(GUID = 0x898E12CB295327E7, NameHash = 0xA12AC584067DF8E0)]
     public class GcNPCPlacementInfo : NMSTemplate
     {
         /* 0x00 */ public NMSString0x10 PlacementRuleId;
@@ -24,8 +24,11 @@ namespace libMBIN.NMS.GameComponents
         /* 0xB1 */ public bool UseFreighterNPC;
         /* 0xB2 */ public bool PlaceAtLeastOne;
         /* 0xB3 */ public bool SpawnMoving;
-        /* 0xB4 */ public bool SpawnInAbandoned;
+        /* 0xB4 */ public bool CanTurn;
+        /* 0xB5 */ public bool SpawnInAbandoned;
         /* 0xB8 */ public List<NMSString0x10> HideDuringMissions;
         /* 0xC8 */ public bool OnlyUsePuzzleOverridesIfPlayerOwned;
+        /* 0xC9 */ public bool UseScanToRevealData;
+        /* 0xD0 */ public GcScanToRevealComponentData ScanToRevealData;
     }
 }

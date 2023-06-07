@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xB32222FDB5279407, NameHash = 0x662E605B574D59AB)]
+    [NMS(GUID = 0x974E19FFD599F187, NameHash = 0x662E605B574D59AB)]
     public class GcPulseEncounterSpawnConditions : NMSTemplate
     {
         /* 0x00 */ public bool AllowedInCreative;
@@ -14,7 +14,8 @@ namespace libMBIN.NMS.GameComponents
         /* 0x38 */ public NMSString0x10 RequiresMissionNotComplete;
         /* 0x48 */ public NMSString0x10 RequiresMissionNotActive;
         /* 0x58 */ public bool RequiresAlienShip;
-        /* 0x59 */ public bool StandardEncounter;
-        /* 0x5A */ public bool MissionEncounter;
+        /* 0x59 */ public bool RequiresNearbyCorruptWorld;
+        /* 0x5A */ public bool StandardEncounter;
+        /* 0x5B */ public bool MissionEncounter;
     }
 }

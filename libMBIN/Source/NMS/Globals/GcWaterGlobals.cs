@@ -2,11 +2,10 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(GUID = 0xE8E828F4FBF8D5D3, NameHash = 0x6A6072ECC3DD12D0)]
+    [NMS(GUID = 0xA518900715F7C824, NameHash = 0x6A6072ECC3DD12D0)]
     public class GcWaterGlobals : NMSTemplate
     {
-        /* 0x000 */ public bool RenderReflections;
-        /* 0x001 */ public bool UseNewWater;
+        /* 0x000 */ public bool UseNewWater;
         /* 0x004 */ public float WaveHeight;
         /* 0x008 */ public float WaveFrequency;
         /* 0x00C */ public float WaveChoppiness;

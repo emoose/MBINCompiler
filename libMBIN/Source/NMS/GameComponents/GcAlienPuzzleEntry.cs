@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x3BB19CF5D25ACD9C, NameHash = 0xDE1F17CE7E01A8C2)]
+    [NMS(GUID = 0x4F48946F3631E0CC, NameHash = 0xDE1F17CE7E01A8C2)]
     public class GcAlienPuzzleEntry : NMSTemplate
     {
         /* 0x000 */ public int ProgressionIndex;
@@ -41,6 +41,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x108 */ public PersistancyBufferOverrideEnum PersistancyBufferOverride;
         /* 0x10C */ public int CustomFreighterTextIndex;
         /* 0x110 */ public bool RadialInteraction;
+        /* 0x111 */ public bool UseTitleOverrideInLabel;
         /* 0x114 */ public GcAudioWwiseEvents NextStageAudioEventOverride;
     }
 }

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(GUID = 0x81F908EC0D6EE45A, NameHash = 0xB24409E83457E875)]
+    [NMS(GUID = 0xE49AEAEF27F6C070, NameHash = 0xB24409E83457E875)]
     public class GcGraphicsGlobals : NMSTemplate
     {
         /* 0x000 */ public float LUTDistanceFlightMultiplier;
@@ -337,5 +337,7 @@ namespace libMBIN.NMS.Globals
         /* 0xD70 */ public float PhotoModeBloomThresholdMedium;
         /* 0xD74 */ public float PhotoModeBloomGainMax;
         /* 0xD78 */ public float PhotoModeBloomThresholdMax;
+        /* 0xD7C */ public bool WaterReflections;
+        /* 0xD7D */ public bool IBLReflections;
     }
 }

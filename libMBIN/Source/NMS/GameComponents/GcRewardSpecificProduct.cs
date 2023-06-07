@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x54DD0DBD5DAB09E9, NameHash = 0x691B32769ECE3BC6)]
+    [NMS(GUID = 0x7D5987E0615F9C9C, NameHash = 0x691B32769ECE3BC6)]
     public class GcRewardSpecificProduct : NMSTemplate
     {
         /* 0x00 */ public GcDefaultMissionProductEnum Default;
@@ -13,7 +13,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x21 */ public bool ForceSpecialMessage;
         /* 0x22 */ public bool HideInSeasonRewards;
         /* 0x23 */ public bool Silent;
-        /* 0x28 */ public NMSString0x10 SeasonRewardListFormat;
-        /* 0x38 */ public NMSString0x10 RequiresTech;
+        /* 0x28 */ public NMSString0x20A SeasonRewardListFormat;
+        /* 0x48 */ public NMSString0x10 RequiresTech;
     }
 }

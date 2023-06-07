@@ -1,9 +1,9 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x4BCEFF83182C4119, NameHash = 0x3E6292A999E2A6)]
+    [NMS(GUID = 0x93EF490D69D7B74, NameHash = 0x3E6292A999E2A6)]
     public class GcStatsTypes : NMSTemplate
     {
-        // size: 0xBD
+        // size: 0xBE
         public enum StatsTypeEnum : uint {
             Unspecified,
             Weapon_Laser,
@@ -71,6 +71,7 @@ namespace libMBIN.NMS.GameComponents
             Weapon_Scan_Secondary,
             Weapon_Scan_Terrain_Resource,
             Weapon_Scan_Surveying,
+            Weapon_Scan_BuilderReveal,
             Weapon_Stun,
             Weapon_Stun_Duration,
             Weapon_Stun_Damage_Multiplier,

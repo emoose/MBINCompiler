@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xD5427D42870E991C, NameHash = 0x43EBB2E6AFAC5863)]
+    [NMS(GUID = 0xB594096F36114314, NameHash = 0x43EBB2E6AFAC5863)]
     public class GcObjectSpawnData : NMSTemplate
     {
         /* 0x000 */ public NMSString0x10 DebugName;
@@ -75,6 +75,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x34E */ public bool InvisibleToCamera;
         /* 0x34F */ public bool CreaturesCanEat;
         /* 0x350 */ public float ShearWindStrength;
+        /* 0x354 */ public bool SupportsScanToReveal;
         /* 0x358 */ public NMSString0x10 DestroyedByVehicleEffect;
         /* 0x368 */ public GcObjectSpawnDataVariant QualityVariantData;
         /* 0x3B0 */ public List<GcObjectSpawnDataVariant> QualityVariants;

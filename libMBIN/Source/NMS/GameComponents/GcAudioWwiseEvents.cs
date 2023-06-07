@@ -1,9 +1,9 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x65E118273CEB9875, NameHash = 0x8B94093DC3901046)]
+    [NMS(GUID = 0xD8C3AD114697ECD1, NameHash = 0x8B94093DC3901046)]
     public class GcAudioWwiseEvents : NMSTemplate
     {
-        // size: 0x9D3
+        // size: 0x9DB
         public enum AkEventEnum : uint {
             INVALID_EVENT = 0x0,
             ABANDONED_DOOR_UNLOCK = 0x264BED2D,
@@ -307,6 +307,10 @@ namespace libMBIN.NMS.GameComponents
             CORRUPTEDQUAD_POUNCE = 0x760FEF17,
             CORRUPTEDQUAD_POUNCEBACK = 0xA18C6526,
             CORRUPTEDQUAD_STUNNED = 0x71BCF6C2,
+            CORRUPTMONOLITH_BASE = 0xEE3CFFE4,
+            CORRUPTMONOLITH_BURST = 0xE30F0A57,
+            CORRUPTMONOLITH_CLOSE = 0x62AB0D15,
+            CORRUPTMONOLITH_SPARK = 0x5B7D7DAA,
             COWATTACK1 = 0xF26FF8FF,
             COWATTACK2 = 0xF26FF8FC,
             COWATTACK2HIND = 0xFED92B2F,
@@ -449,6 +453,7 @@ namespace libMBIN.NMS.GameComponents
             EXPL_SHIPS_MED = 0x618DEA29,
             EXPL_SHIPS_SMALL = 0xB8D9B746,
             EXPL_SMALL_SPACE_GENERIC = 0xC7DD7E03,
+            EXPL_SPACE_MEMORYBOAT = 0xC7026C2B,
             EXPLODINGBARREL = 0xA7AE41A9,
             EXPLORERANGRYIPAD = 0xB1BD172B,
             EXPLORERCHATTER = 0xE1C4E07B,
@@ -1778,6 +1783,8 @@ namespace libMBIN.NMS.GameComponents
             POI_HORROR = 0xF3D9CFF2,
             POI_JELLYFISH = 0x74BD0818,
             POI_LINE_GEO = 0x1F696682,
+            POI_MEMORYLIFEBOAT_FLARE = 0x6C22D0CE,
+            POI_MEMORYLIFEBOAT_IDLE = 0x55D58134,
             POI_NEURON = 0x3B4DCF27,
             POI_RADIO_PILLAR = 0x64CC1342,
             POI_RELAYBEACON = 0x1B7DE839,
@@ -1912,6 +1919,7 @@ namespace libMBIN.NMS.GameComponents
             SENTINELS_INCOMING3 = 0x5862BAD2,
             SENTINELS_INCOMING4 = 0x5862BAD5,
             SENTINELS_INCOMING5 = 0x5862BAD4,
+            SENTINENCEECHO_REVEAL = 0xAC879F8,
             SETTLEMENT_ALARM = 0x39A0EC12,
             SETTLEMENT_ALARM_SHIP = 0x9DE3B01B,
             SETTLEMENT_ANTENNA0 = 0xDBD71864,

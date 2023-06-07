@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(GUID = 0x2A333F79A0F7C091, NameHash = 0xE2DEF8CC8775E050)]
+    [NMS(GUID = 0x154C8BACC6C7F694, NameHash = 0xE2DEF8CC8775E050)]
     public class GcCreatureGlobals : NMSTemplate
     {
         /* 0x0000 */ public int NumCreaturesRequiredForDiscoveryMission;
@@ -424,20 +424,20 @@ namespace libMBIN.NMS.Globals
         /* 0x1BEC */ public float PetHeelLateralShiftTimeMax;
         /* 0x1BF0 */ public float PetWalkAtHeelLateralShift;
         /* 0x1BF4 */ public float PetHeelPosSpringTime;
-        /* 0x1BF8 */ public GcScanData PetScan;
-        /* 0x1C0C */ public float PetRadialCentre;
-        /* 0x1C10 */ public float PetRadialRadius;
-        /* 0x1C14 */ public float PetRadialWidth;
-        /* 0x1C18 */ public float PetRadialPulseMul;
-        /* 0x1C1C */ public float PetRadialPulseTime;
-        /* 0x1C20 */ public float PetHeartMaxSize;
-        /* 0x1C24 */ public float PetHeartChangePerLayer;
-        /* 0x1C28 */ public float PetHeartResponseLoopTime;
-        /* 0x1C2C */ public float PetHeartResponseTotalTime;
-        /* 0x1C30 */ public float PetLastActionReportTime;
-        /* 0x1C34 */ public float PetMoodSmoothTime;
-        /* 0x1C38 */ public float PetFollowRunPlayerDistance;
-        /* 0x1C3C */ public float PetFollowRange;
+        /* 0x1BF8 */ public NMSString0x10 PetScan;
+        /* 0x1C08 */ public float PetRadialCentre;
+        /* 0x1C0C */ public float PetRadialRadius;
+        /* 0x1C10 */ public float PetRadialWidth;
+        /* 0x1C14 */ public float PetRadialPulseMul;
+        /* 0x1C18 */ public float PetRadialPulseTime;
+        /* 0x1C1C */ public float PetHeartMaxSize;
+        /* 0x1C20 */ public float PetHeartChangePerLayer;
+        /* 0x1C24 */ public float PetHeartResponseLoopTime;
+        /* 0x1C28 */ public float PetHeartResponseTotalTime;
+        /* 0x1C2C */ public float PetLastActionReportTime;
+        /* 0x1C30 */ public float PetMoodSmoothTime;
+        /* 0x1C34 */ public float PetFollowRunPlayerDistance;
+        /* 0x1C38 */ public float PetFollowRange;
         /* 0x1C40 */ public Colour PetRadialBadColour;
         /* 0x1C50 */ public Colour PetRadialNeutralColour;
         /* 0x1C60 */ public Colour PetRadialGoodColour;
