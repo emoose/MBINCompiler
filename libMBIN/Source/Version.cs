@@ -25,13 +25,14 @@
         //      the Prerelease version should be reset to 1
         // When the Release version is incremented:
         //      the Prerelease version should be reset to 0
-        internal const string VERSION_STRING = "4.33.0.1";
+        internal const string VERSION_STRING = "4.34.0.1";
 
         /// <summary>Shorthand for AssemblyVersion.Major</summary>
         public static int Major      => AssemblyVersion.Major;
         /// <summary>Shorthand for AssemblyVersion.Minor</summary>
         public static int Minor      => AssemblyVersion.Minor;
-        /// <summary>Shorthand for AssemblyVersion.Build</summary>
+        /// <summary>Shorthand for AssemblyVersion.Build</summary>t
+        /// 
         public static int Release    => AssemblyVersion.Build;
         /// <summary>Shorthand for AssemblyVersion.Revision</summary>
         public static int Prerelease => AssemblyVersion.Revision;
