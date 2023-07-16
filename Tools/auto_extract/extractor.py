@@ -159,6 +159,7 @@ USE_PROJITEMS = op.exists(PROJITEMS_TEMPLATE)
 CLASS_TEMPLATE = op.join(TEMPLATES_DIR, 'class_template.j2')
 
 STATIC_BASE = 0x140000000
+# This is cTkMetaDataMember::eType
 TYPE_MAPPING = {
     0x00: 'undefined',
     0x01: 'bool',
