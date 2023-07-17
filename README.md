@@ -8,8 +8,8 @@ _**For Developers:** You can download a precompiled DLL or get the libMBIN sourc
 
 [DOWNLOAD LATEST RELEASE](../../releases)  
 
-** PLEASE NOTE:** MBINCompiler requires .NET 5 to run. If you do not have this you can download is [here](https://dotnet.microsoft.com/download/dotnet/5.0/runtime)
-Some applications which depend on libMBIN however require a .NET 4 version of the library, and this is also provided with the downloads in each release.
+** PLEASE NOTE:** MBINCompiler requires .NET 6 to run. If you do not have this you can download is [here](https://dotnet.microsoft.com/download/dotnet/6.0/runtime)
+Select an appropriate download under the the "Run console apps" set of downloads
 
 Each release contains the following files:
 
@@ -25,8 +25,7 @@ Various MBIN files have different data formats. MBINCompiler maps all of these f
 
 **Please note** that every update to the game breaks any number of MBIN formats. This requires updating MBINCompiler for each game update and depending on the size and frequency of updates, can take some time so please be patient as new game updates roll out.
 
-Because each version of MBINCompiler is tied to a specific version of NMS, it is also **very important to note** that MBIN files
-compiled with a previous version may not be decompiled successfully with a newer version of MBINCompiler if that particular MBIN format has changed. The correct version of MBINCompiler should be used to decompile the corresponding file, then it can be updated and recompiled with the newer version.
+Because each version of MBINCompiler is tied to a specific version of NMS, it is also **very important to note** that MBIN files compiled with a previous version may not be decompiled successfully with a newer version of MBINCompiler if that particular MBIN format has changed. The correct version of MBINCompiler should be used to decompile the corresponding file, then it can be updated and recompiled with the newer version.
 
 If you need to find out what version of MBINCompiler to download for a particular MBIN file, there is a `--version` command line option that will tell you what version the MBIN file was compiled with. You can get more information about the command line options in the [User Documentation](https://github.com/monkeyman192/MBINCompiler/wiki/User-Documentation).
 
@@ -99,10 +98,10 @@ While this library targets multiple frameworks, building MBINCompiler and libMBI
 The full command to build all the libraries under the .NET  framework looks like:
 
 ```sh
-dotnet publish -c Release -f net5.0-windows -r win-x64 -o Build/Release/net5/ /nowarn:cs0618
+dotnet publish -c Release -f net6.0-windows -r win-x64 -o Build/Release/net6/ /nowarn:cs0618
 ```
 
-For convenience we have included two batch scripts which build either the entire project for the .NET 5 framework (`build.bat`), or just libMBIN for the .NET 4 framework (`build-dotnet4.bat`).
+For convenience we have included two batch scripts which build either the entire project for the .NET 6 framework (`build-net6.bat`) or the .NET 7 framework (`build-net7.bat`)
 
 
 ## TESTING INSTRUCTIONS
