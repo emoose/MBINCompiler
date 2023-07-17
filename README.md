@@ -9,7 +9,7 @@ _**For Developers:** You can download a precompiled DLL or get the libMBIN sourc
 [DOWNLOAD LATEST RELEASE](../../releases)  
 
 ** PLEASE NOTE:** MBINCompiler requires .NET 6 to run. If you do not have this you can download is [here](https://dotnet.microsoft.com/download/dotnet/6.0/runtime)
-Select an appropriate download under the the "Run console apps" set of downloads
+Select an appropriate download under the the "Run desktop apps" set of downloads
 
 Each release contains the following files:
 
