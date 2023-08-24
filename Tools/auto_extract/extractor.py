@@ -106,9 +106,6 @@ ENUM_OVERRIDES = {
         'PilotRankTraitRanges': 'GcInventoryClass.InventoryClassEnum',
         'PilotRankAttackDefinitions': 'GcInventoryClass.InventoryClassEnum',
     },
-    'GcRealityManagerData': {
-        'MissionBoardRewardOptions': 'GcMissionType.MissionTypeEnum',
-    },
     'GcUIGlobals': {
         'CrosshairTargetLockSizeSpecific': 'GcPlayerWeapons.WeaponModeEnum',
     },

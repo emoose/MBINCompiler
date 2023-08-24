@@ -1,9 +1,9 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x3CC505295BDAFC43, NameHash = 0xCD0F83EA324443E1)]
+    [NMS(GUID = 0x97CA318EDCC4FB02, NameHash = 0xCD0F83EA324443E1)]
     public class GcDamageType : NMSTemplate
     {
-        // size: 0x17
+        // size: 0x19
         public enum DamageTypeEnum : uint {
             Gun,
             Laser,
@@ -28,6 +28,8 @@ namespace libMBIN.NMS.GameComponents
             VehicleWeapons,
             CombatEffects,
             Fiend,
+            FreighterLaser,
+            FreighterTorpedo,
         }
         /* 0x0 */ public DamageTypeEnum DamageType;
     }

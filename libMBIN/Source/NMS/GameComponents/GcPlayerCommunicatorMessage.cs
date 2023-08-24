@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x1974CA6D4B99B386, NameHash = 0xF839343C27983F1A)]
+    [NMS(GUID = 0x950288C8B4874DB4, NameHash = 0xF839343C27983F1A)]
     public class GcPlayerCommunicatorMessage : NMSTemplate
     {
         /* 0x00 */ public NMSString0x20A Dialog;
@@ -24,5 +24,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x24 */ public CommunicatorTypeEnum CommunicatorType;
         /* 0x28 */ public GcAlienRace RaceOverride;
         /* 0x30 */ public NMSString0x20A ShipHUDOverride;
+        /* 0x50 */ public GcAudioWwiseEvents HailAudioOverride;
     }
 }

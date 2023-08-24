@@ -1,9 +1,9 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x57EEE24627A3442D, NameHash = 0xB3E8C8CD4B9DB0B1)]
+    [NMS(GUID = 0xF83A3527A0E8420D, NameHash = 0xB3E8C8CD4B9DB0B1)]
     public class GcInputActions : NMSTemplate
     {
-        // size: 0x125
+        // size: 0x126
         public enum InputActionEnum : uint {
             Invalid,
             Player_Forward,
@@ -49,6 +49,7 @@ namespace libMBIN.NMS.GameComponents
             Ship_FreeLook,
             Ship_AutoFollow_Toggle,
             Ship_AutoFollow_Hold,
+            Ship_CyclePower,
             Vehicle_Forward,
             Vehicle_Reverse,
             Vehicle_Left,

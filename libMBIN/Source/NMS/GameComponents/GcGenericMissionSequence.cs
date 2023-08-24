@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xC47353DADB97FA1A, NameHash = 0xFAE86B2801335B6D)]
+    [NMS(GUID = 0x33DD87693095B1BD, NameHash = 0xFAE86B2801335B6D)]
     public class GcGenericMissionSequence : NMSTemplate
     {
         /* 0x000 */ public NMSString0x10 MissionID;
@@ -42,23 +42,23 @@ namespace libMBIN.NMS.GameComponents
         /* 0x330 */ public Colour MissionColourOverride;
         /* 0x340 */ public int BeginCheckFrequency;
         /* 0x348 */ public GcDefaultMissionItemsTable DefaultItems;
-        /* 0x388 */ public bool PrefixTitle;
-        /* 0x390 */ public NMSString0x10 NextMissionHint;
+        /* 0x398 */ public bool PrefixTitle;
+        /* 0x3A0 */ public NMSString0x10 NextMissionHint;
         // size: 0x3
         public enum MessageCompleteEnum : uint {
             Default,
             Always,
             Never,
         }
-        /* 0x3A0 */ public MessageCompleteEnum MessageComplete;
+        /* 0x3B0 */ public MessageCompleteEnum MessageComplete;
         // size: 0x3
         public enum MessageStartEnum : uint {
             Default,
             Always,
             Never,
         }
-        /* 0x3A4 */ public MessageStartEnum MessageStart;
-        /* 0x3A8 */ public GcMissionBoardOptions MissionBoardOptions;
+        /* 0x3B4 */ public MessageStartEnum MessageStart;
+        /* 0x3B8 */ public GcMissionBoardOptions MissionBoardOptions;
         // size: 0x4
         public enum AutoStartEnum : uint {
             None,
@@ -66,30 +66,30 @@ namespace libMBIN.NMS.GameComponents
             Seasonal,
             OnSelected,
         }
-        /* 0x428 */ public AutoStartEnum AutoStart;
-        /* 0x42C */ public bool RestartOnCompletion;
-        /* 0x42D */ public bool CancelSetsComplete;
-        /* 0x430 */ public GcAlienPuzzleTable Dialog;
-        /* 0x440 */ public List<GcScanEventData> ScanEvents;
-        /* 0x450 */ public List<GcGenericRewardTableEntry> Rewards;
-        /* 0x460 */ public List<GcCostTableEntry> Costs;
-        /* 0x470 */ public GcTradeData TradingDataOverride;
-        /* 0x540 */ public GcMissionConditionTest StartConditionTest;
-        /* 0x544 */ public GcMissionConditionTest CancelConditionTest;
-        /* 0x548 */ public bool StartIsCancel;
-        /* 0x550 */ public List<NMSTemplate> StartingConditions;
-        /* 0x560 */ public List<NMSTemplate> CancelingConditions;
-        /* 0x570 */ public List<GcGenericMissionVersionProgress> FinalStageVersions;
-        /* 0x580 */ public List<GcGenericMissionStage> Stages;
-        /* 0x590 */ public bool ForcesPageHint;
-        /* 0x591 */ public bool ForcesBuildMenuHint;
-        /* 0x592 */ public bool IsProceduralAllowed;
-        /* 0x593 */ public bool IsRecurring;
-        /* 0x594 */ public bool IsLegacy;
-        /* 0x595 */ public bool BlocksPinning;
-        /* 0x596 */ public bool CanRenounce;
-        /* 0x598 */ public NMSString0x10 UseCommunityMissionForLog;
-        /* 0x5A8 */ public bool TelemetryUpload;
-        /* 0x5A9 */ public bool UseSeasonTitleOverride;
+        /* 0x438 */ public AutoStartEnum AutoStart;
+        /* 0x43C */ public bool RestartOnCompletion;
+        /* 0x43D */ public bool CancelSetsComplete;
+        /* 0x440 */ public GcAlienPuzzleTable Dialog;
+        /* 0x450 */ public List<GcScanEventData> ScanEvents;
+        /* 0x460 */ public List<GcGenericRewardTableEntry> Rewards;
+        /* 0x470 */ public List<GcCostTableEntry> Costs;
+        /* 0x480 */ public GcTradeData TradingDataOverride;
+        /* 0x550 */ public GcMissionConditionTest StartConditionTest;
+        /* 0x554 */ public GcMissionConditionTest CancelConditionTest;
+        /* 0x558 */ public bool StartIsCancel;
+        /* 0x560 */ public List<NMSTemplate> StartingConditions;
+        /* 0x570 */ public List<NMSTemplate> CancelingConditions;
+        /* 0x580 */ public List<GcGenericMissionVersionProgress> FinalStageVersions;
+        /* 0x590 */ public List<GcGenericMissionStage> Stages;
+        /* 0x5A0 */ public bool ForcesPageHint;
+        /* 0x5A1 */ public bool ForcesBuildMenuHint;
+        /* 0x5A2 */ public bool IsProceduralAllowed;
+        /* 0x5A3 */ public bool IsRecurring;
+        /* 0x5A4 */ public bool IsLegacy;
+        /* 0x5A5 */ public bool BlocksPinning;
+        /* 0x5A6 */ public bool CanRenounce;
+        /* 0x5A8 */ public NMSString0x10 UseCommunityMissionForLog;
+        /* 0x5B8 */ public bool TelemetryUpload;
+        /* 0x5B9 */ public bool UseSeasonTitleOverride;
     }
 }

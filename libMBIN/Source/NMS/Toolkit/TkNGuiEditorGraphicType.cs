@@ -1,9 +1,9 @@
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0x60E007940935D5F2, NameHash = 0x2DD2249029019040)]
+    [NMS(GUID = 0xCCC9709BD9C5B5D0, NameHash = 0x2DD2249029019040)]
     public class TkNGuiEditorGraphicType : NMSTemplate
     {
-        // size: 0x48
+        // size: 0x4D
         public enum NGuiEditorGraphicEnum : uint {
             Panel,
             Button,
@@ -77,6 +77,11 @@ namespace libMBIN.NMS.Toolkit
             UnpinChildren,
             DynamicPanel,
             DynamicPanelTitle,
+            TreeNodeCustomPanel,
+            IconButtonBordered,
+            IconButtonBorderedSelected,
+            Tooltip,
+            ContextMenuButton,
         }
         /* 0x0 */ public NGuiEditorGraphicEnum NGuiEditorGraphic;
     }

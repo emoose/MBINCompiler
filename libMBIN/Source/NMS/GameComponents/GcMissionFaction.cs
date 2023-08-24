@@ -1,9 +1,9 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x5721A97130AFD54E, NameHash = 0x1D300E2AA74F7BA7)]
+    [NMS(GUID = 0xB76E0C8D3E433192, NameHash = 0x1D300E2AA74F7BA7)]
     public class GcMissionFaction : NMSTemplate
     {
-        // size: 0x9
+        // size: 0xA
         public enum MissionFactionEnum : uint {
             Gek,
             Korvax,
@@ -13,6 +13,7 @@ namespace libMBIN.NMS.GameComponents
             ExplorerGuild,
             Nexus,
             Pirates,
+            Builders,
             None,
         }
         /* 0x0 */ public MissionFactionEnum MissionFaction;

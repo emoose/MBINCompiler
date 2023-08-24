@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x3C1EDCEA0FFEC185, NameHash = 0x5F4CA33999F0D259)]
+    [NMS(GUID = 0x7BBF38F24B4A474C, NameHash = 0x5F4CA33999F0D259)]
     public class GcExperienceSpawnTable : NMSTemplate
     {
         /* 0x000 */ public List<GcAIShipSpawnData> FlybySpawns;
@@ -18,24 +18,27 @@ namespace libMBIN.NMS.GameComponents
         /* 0x090 */ public List<GcAIShipSpawnData> TraderSpawns;
         /* 0x0A0 */ public List<GcAIShipSpawnData> AmbientSpawns;
         /* 0x0B0 */ public List<GcAIShipSpawnData> BattleSpawns;
-        /* 0x0C0 */ public List<GcAIShipSpawnData> AbandonedFreighterSpawns;
-        /* 0x0D0 */ public List<GcAIShipSpawnData> BattleInitialStandardSpawns;
-        /* 0x0E0 */ public List<GcAIShipSpawnData> BattleInitialPirateSpawns;
-        /* 0x0F0 */ public List<GcAIShipSpawnData> BattleSecondaryPirateSpawns;
-        /* 0x100 */ public List<GcBountySpawnInfo> PirateBountySpawns;
-        /* 0x110 */ public List<GcPulseEncounterInfo> PulseEncounters;
-        /* 0x120 */ public List<GcBackgroundSpaceEncounterInfo> BackgroundSpaceEncounters;
-        /* 0x130 */ public List<GcPlayerExperienceSpawnTable> CreatureSpawnTable;
-        /* 0x140 */ public List<GcPlayerExperienceSpawnArchetypeData> CreatureSpawnArchetypes;
-        /* 0x150 */ public GcPlayerExperienceAsteroidCreatureSpawnTable AsteroidCreatureSpawns;
-        /* 0x198 */ public List<GcAIShipSpawnData> FrigateFlybySpawns;
+        /* 0x0C0 */ public List<GcAIShipSpawnData> BattlePirateSpawns;
+        /* 0x0D0 */ public List<GcAIShipSpawnData> AbandonedFreighterSpawns;
+        /* 0x0E0 */ public List<GcAIShipSpawnData> BattleInitialStandardSpawns;
+        /* 0x0F0 */ public List<GcAIShipSpawnData> BattleInitialPirateSpawns;
+        /* 0x100 */ public List<GcAIShipSpawnData> BattleSecondaryPirateSpawns;
+        /* 0x110 */ public List<GcAIShipSpawnData> BattleRecurringPirateSpawns;
+        /* 0x120 */ public GcAIShipSpawnData BattleReinforcingPirateFrigateSpawn;
+        /* 0x300 */ public List<GcBountySpawnInfo> PirateBountySpawns;
+        /* 0x310 */ public List<GcPulseEncounterInfo> PulseEncounters;
+        /* 0x320 */ public List<GcBackgroundSpaceEncounterInfo> BackgroundSpaceEncounters;
+        /* 0x330 */ public List<GcPlayerExperienceSpawnTable> CreatureSpawnTable;
+        /* 0x340 */ public List<GcPlayerExperienceSpawnArchetypeData> CreatureSpawnArchetypes;
+        /* 0x350 */ public GcPlayerExperienceAsteroidCreatureSpawnTable AsteroidCreatureSpawns;
+        /* 0x398 */ public List<GcAIShipSpawnData> FrigateFlybySpawns;
         [NMS(Size = 0x6)]
-        /* 0x1A8 */ public GcSentinelSpawnSequenceGroupList[] WantedLevelSpawns;
+        /* 0x3A8 */ public GcSentinelSpawnSequenceGroupList[] WantedLevelSpawns;
         [NMS(Size = 0x8, EnumType = typeof(GcEncounterType.EncounterTypeEnum))]
-        /* 0x2C8 */ public GcSentinelSpawnSequenceGroupList[] EncounterSpawns;
-        /* 0x448 */ public List<GcSentinelEncounterOverride> EncounterOverrides;
-        /* 0x458 */ public GcSentinelWaveGroup SummonerSpawns;
-        /* 0x478 */ public List<GcSentinelSpawnNamedSequence> SentinelSequences;
-        /* 0x488 */ public List<GcSentinelSpawnWave> SentinelSpawns;
+        /* 0x4C8 */ public GcSentinelSpawnSequenceGroupList[] EncounterSpawns;
+        /* 0x648 */ public List<GcSentinelEncounterOverride> EncounterOverrides;
+        /* 0x658 */ public GcSentinelWaveGroup SummonerSpawns;
+        /* 0x678 */ public List<GcSentinelSpawnNamedSequence> SentinelSequences;
+        /* 0x688 */ public List<GcSentinelSpawnWave> SentinelSpawns;
     }
 }

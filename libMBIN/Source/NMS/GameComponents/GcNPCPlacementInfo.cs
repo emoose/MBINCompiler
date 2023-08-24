@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x898E12CB295327E7, NameHash = 0xA12AC584067DF8E0)]
+    [NMS(GUID = 0x301DF6763624CC30, NameHash = 0xA12AC584067DF8E0)]
     public class GcNPCPlacementInfo : NMSTemplate
     {
         /* 0x00 */ public NMSString0x10 PlacementRuleId;
@@ -20,15 +20,17 @@ namespace libMBIN.NMS.GameComponents
         /* 0x7C */ public GcTechnologyCategory TechShopCategory;
         /* 0x80 */ public NMSString0x20A ForceInteraction;
         /* 0xA0 */ public List<GcAlienPuzzleMissionOverride> PuzzleMissionOverrideTable;
-        /* 0xB0 */ public bool DisableInteraction;
-        /* 0xB1 */ public bool UseFreighterNPC;
-        /* 0xB2 */ public bool PlaceAtLeastOne;
-        /* 0xB3 */ public bool SpawnMoving;
-        /* 0xB4 */ public bool CanTurn;
-        /* 0xB5 */ public bool SpawnInAbandoned;
-        /* 0xB8 */ public List<NMSString0x10> HideDuringMissions;
-        /* 0xC8 */ public bool OnlyUsePuzzleOverridesIfPlayerOwned;
-        /* 0xC9 */ public bool UseScanToRevealData;
-        /* 0xD0 */ public GcScanToRevealComponentData ScanToRevealData;
+        /* 0xB0 */ public List<GcAlienMoodMissionOverride> MoodMissionOverrideTable;
+        /* 0xC0 */ public bool DisableInteraction;
+        /* 0xC4 */ public GcNPCPropType DefaultProp;
+        /* 0xC8 */ public bool UseFreighterNPC;
+        /* 0xC9 */ public bool PlaceAtLeastOne;
+        /* 0xCA */ public bool SpawnMoving;
+        /* 0xCB */ public bool CanTurn;
+        /* 0xCC */ public bool SpawnInAbandoned;
+        /* 0xD0 */ public List<NMSString0x10> HideDuringMissions;
+        /* 0xE0 */ public bool OnlyUsePuzzleOverridesIfPlayerOwned;
+        /* 0xE1 */ public bool UseScanToRevealData;
+        /* 0xE8 */ public GcScanToRevealComponentData ScanToRevealData;
     }
 }

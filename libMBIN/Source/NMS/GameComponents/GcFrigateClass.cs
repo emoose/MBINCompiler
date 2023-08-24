@@ -1,9 +1,9 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xD7FC9616F212080A, NameHash = 0xA3C86E46D2A8CA67)]
+    [NMS(GUID = 0x7E1800728A66DF21, NameHash = 0xA3C86E46D2A8CA67)]
     public class GcFrigateClass : NMSTemplate
     {
-        // size: 0x8
+        // size: 0x9
         public enum FrigateClassEnum : uint {
             Combat,
             Exploration,
@@ -13,6 +13,7 @@ namespace libMBIN.NMS.GameComponents
             Normandy,
             DeepSpace,
             DeepSpaceCommon,
+            Pirate,
         }
         /* 0x0 */ public FrigateClassEnum FrigateClass;
     }

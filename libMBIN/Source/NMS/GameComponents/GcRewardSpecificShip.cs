@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x817C1DBE87C98F46, NameHash = 0x977CF58471E48CD1)]
+    [NMS(GUID = 0x4CC8F9329CA1F58B, NameHash = 0x977CF58471E48CD1)]
     public class GcRewardSpecificShip : NMSTemplate
     {
         /* 0x000 */ public GcResourceElement ShipResource;

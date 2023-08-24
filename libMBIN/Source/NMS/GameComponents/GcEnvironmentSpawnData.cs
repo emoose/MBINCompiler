@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x1CC228AC2841F984, NameHash = 0x1B03CB87DECA6BCC)]
+    [NMS(GUID = 0xC44AB1E1207C989, NameHash = 0x1B03CB87DECA6BCC)]
     public class GcEnvironmentSpawnData : NMSTemplate
     {
         /* 0x00 */ public List<GcCreatureSpawnData> Creatures;

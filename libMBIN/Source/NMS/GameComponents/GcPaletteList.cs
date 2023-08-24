@@ -2,10 +2,10 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x79F4DEF6AC60DDA3, NameHash = 0xDF4A26E5B1BF936A)]
+    [NMS(GUID = 0xD004C704446E184B, NameHash = 0xDF4A26E5B1BF936A)]
     public class GcPaletteList : NMSTemplate
     {
-        // size: 0x3A
+        // size: 0x3C
         public enum PalettesEnum {
             Grass,
             Plant,
@@ -65,8 +65,10 @@ namespace libMBIN.NMS.GameComponents
             SailShip_Sails,
             Freighter,
             FreighterPaint,
+            PirateBase,
+            PirateAlt,
         }
-        [NMS(Size = 0x3A, EnumType = typeof(PalettesEnum))]
+        [NMS(Size = 0x3C, EnumType = typeof(PalettesEnum))]
         /* 0x0 */ public GcPaletteData[] Palettes;
     }
 }

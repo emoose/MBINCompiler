@@ -2,13 +2,20 @@ using libMBIN.NMS.Toolkit;
 
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0x353F8C32388B38B0, NameHash = 0xE9525144C4F949EB)]
+    [NMS(GUID = 0x193FC11F040913E9, NameHash = 0xE9525144C4F949EB)]
     public class TkParticleData : NMSTemplate
     {
-        /* 0x000 */ public uint AudioEvent;
-        /* 0x004 */ public bool StartEnabled;
-        /* 0x005 */ public bool Oneshot;
-        /* 0x008 */ public int MaxCount;
+        // size: 0x3
+        public enum EmitterQualityLevelEnum : uint {
+            All,
+            Low,
+            High,
+        }
+        /* 0x000 */ public EmitterQualityLevelEnum EmitterQualityLevel;
+        /* 0x004 */ public uint AudioEvent;
+        /* 0x008 */ public bool StartEnabled;
+        /* 0x009 */ public bool Oneshot;
+        /* 0x00C */ public int MaxCount;
         /* 0x010 */ public TkParticleBurstData BurstData;
         /* 0x108 */ public TkEmitterFloatProperty EmissionRate;
         /* 0x180 */ public float Delay;
@@ -102,6 +109,7 @@ namespace libMBIN.NMS.Toolkit
         /* 0x740 */ public float MaxRenderDistance;
         /* 0x744 */ public float MaxSpawnDistance;
         /* 0x748 */ public float SoftFadeStrength;
-        /* 0x74C */ public TkFloatRange CameraDistanceFade;
+        /* 0x74C */ public float SurfaceDistanceFadeStrength;
+        /* 0x750 */ public TkFloatRange CameraDistanceFade;
     }
 }

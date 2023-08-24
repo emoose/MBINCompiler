@@ -1,6 +1,8 @@
+using libMBIN.NMS.GameComponents;
+
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x258D16F407B02A00, NameHash = 0xDF91F2B5F746FB61)]
+    [NMS(GUID = 0x7537C0789888A6DC, NameHash = 0xDF91F2B5F746FB61)]
     public class GcRewardWeapon : NMSTemplate
     {
         /* 0x00 */ public int ItemLevel;
@@ -10,7 +12,8 @@ namespace libMBIN.NMS.GameComponents
         /* 0x07 */ public bool RequeueInteraction;
         /* 0x08 */ public bool ReinteractOnDecline;
         /* 0x09 */ public bool OnlyUseNextInteractionOnSuccess;
-        /* 0x0C */ public float SecretPoolChance;
-        /* 0x10 */ public float SentinelPoolChance;
+        [NMS(Size = 0x4, EnumType = typeof(GcMultitoolPoolType.MultiToolPoolTypeEnum))]
+        /* 0x0C */ public float[] PoolTypeProbabilities;
+        /* 0x1C */ public GcInteractionMissionState SetInteractionStateOnSuccess;
     }
 }

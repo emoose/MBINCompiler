@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(GUID = 0x61BB4E398201BB9, NameHash = 0x8652A1B779227539)]
+    [NMS(GUID = 0x19AC494C0B929E4B, NameHash = 0x8652A1B779227539)]
     public class GcSettlementGlobals : NMSTemplate
     {
         /* 0x0000 */ public List<NMSString0x20A> ScanEventsThatPreventSentinelAlert;
@@ -21,104 +21,104 @@ namespace libMBIN.NMS.Globals
         /* 0x0044 */ public float SettlementEntryMessageDistance;
         /* 0x0048 */ public NMSString0x10 SettlementMiniExpeditionMissionID;
         /* 0x0058 */ public float SettlementMiniExpeditionSuccessChance;
-        [NMS(Size = 0x36, EnumType = typeof(GcBuildingClassification.BuildingClassEnum))]
+        [NMS(Size = 0x37, EnumType = typeof(GcBuildingClassification.BuildingClassEnum))]
         /* 0x0060 */ public ulong[] SettlementBuildingTimes;
-        [NMS(Size = 0x36, EnumType = typeof(GcBuildingClassification.BuildingClassEnum))]
-        /* 0x0210 */ public GcSettlementBuildingCost[] SettlementBuildingCosts;
-        /* 0x3ED0 */ public List<GcSettlementJudgementData> Judgements;
-        /* 0x3EE0 */ public List<GcSettlementCustomJudgement> CustomJudgements;
-        [NMS(Size = 0x36, EnumType = typeof(GcBuildingClassification.BuildingClassEnum))]
-        /* 0x3EF0 */ public GcSettlementStatChangeArray[] SettlementBuildingStatRewards;
-        /* 0x4250 */ public NMSString0x10 SettlementCostGek;
-        /* 0x4260 */ public NMSString0x10 SettlementCostKorvax;
-        /* 0x4270 */ public NMSString0x10 SettlementCostVykeen;
-        /* 0x4280 */ public int MaxPerksCount;
-        /* 0x4284 */ public int MinInitialPositivePerksCount;
-        /* 0x4288 */ public int MaxInitialPositivePerksCount;
-        /* 0x428C */ public int MinInitialNegativePerksCount;
-        /* 0x4290 */ public int MaxInitialNegativePerksCount;
+        [NMS(Size = 0x37, EnumType = typeof(GcBuildingClassification.BuildingClassEnum))]
+        /* 0x0218 */ public GcSettlementBuildingCost[] SettlementBuildingCosts;
+        /* 0x3FF8 */ public List<GcSettlementJudgementData> Judgements;
+        /* 0x4008 */ public List<GcSettlementCustomJudgement> CustomJudgements;
+        [NMS(Size = 0x37, EnumType = typeof(GcBuildingClassification.BuildingClassEnum))]
+        /* 0x4018 */ public GcSettlementStatChangeArray[] SettlementBuildingStatRewards;
+        /* 0x4388 */ public NMSString0x10 SettlementCostGek;
+        /* 0x4398 */ public NMSString0x10 SettlementCostKorvax;
+        /* 0x43A8 */ public NMSString0x10 SettlementCostVykeen;
+        /* 0x43B8 */ public int MaxPerksCount;
+        /* 0x43BC */ public int MinInitialPositivePerksCount;
+        /* 0x43C0 */ public int MaxInitialPositivePerksCount;
+        /* 0x43C4 */ public int MinInitialNegativePerksCount;
+        /* 0x43C8 */ public int MaxInitialNegativePerksCount;
         [NMS(Size = 0x7, EnumType = typeof(GcSettlementStatType.SettlementStatTypeEnum))]
-        /* 0x4294 */ public int[] StatsMinValues;
+        /* 0x43CC */ public int[] StatsMinValues;
         [NMS(Size = 0x7, EnumType = typeof(GcSettlementStatType.SettlementStatTypeEnum))]
-        /* 0x42B0 */ public int[] StatsMaxValues;
+        /* 0x43E8 */ public int[] StatsMaxValues;
         [NMS(Size = 0x7, EnumType = typeof(GcSettlementStatType.SettlementStatTypeEnum))]
-        /* 0x42CC */ public int[] InitialStatsMinValues;
-        /* 0x42E8 */ public int InitialBuildingCountMin;
-        /* 0x42EC */ public int InitialBuildingCountMax;
+        /* 0x4404 */ public int[] InitialStatsMinValues;
+        /* 0x4420 */ public int InitialBuildingCountMin;
+        /* 0x4424 */ public int InitialBuildingCountMax;
         [NMS(Size = 0x7, EnumType = typeof(GcSettlementStatType.SettlementStatTypeEnum))]
-        /* 0x42F0 */ public int[] InitialStatsMaxValues;
+        /* 0x4428 */ public int[] InitialStatsMaxValues;
         [NMS(Size = 0x7, EnumType = typeof(GcSettlementStatType.SettlementStatTypeEnum))]
-        /* 0x430C */ public bool[] StatIsGoodWhenPositive;
+        /* 0x4444 */ public bool[] StatIsGoodWhenPositive;
         [NMS(Size = 0x7, EnumType = typeof(GcSettlementStatType.SettlementStatTypeEnum))]
-        /* 0x4314 */ public float[] NormalisedStatBadThresholds;
+        /* 0x444C */ public float[] NormalisedStatBadThresholds;
         [NMS(Size = 0x7, EnumType = typeof(GcSettlementStatType.SettlementStatTypeEnum))]
-        /* 0x4330 */ public float[] NormalisedStatGoodThresholds;
-        /* 0x4350 */ public Colour PositiveStatColour;
-        /* 0x4360 */ public Colour NegativeStatColour;
-        /* 0x4370 */ public ulong ProductionSlotTimerOffsetInSeconds;
-        /* 0x4378 */ public ulong ProductionCycleDurationInSeconds;
-        /* 0x4380 */ public ulong AlertCycleDurationInSeconds;
-        /* 0x4388 */ public int MaxProductionSlotUnits;
-        /* 0x438C */ public int ProductUnitsPerCycleRateModifier;
-        /* 0x4390 */ public int SubstanceUnitsPerCycleRateModifier;
-        /* 0x4394 */ public int InitialDebtCycles;
-        /* 0x4398 */ public int DailyDebtPaymentModifier;
-        /* 0x439C */ public int AlertUnitsPerCycleRateModifier;
+        /* 0x4468 */ public float[] NormalisedStatGoodThresholds;
+        /* 0x4490 */ public Colour PositiveStatColour;
+        /* 0x44A0 */ public Colour NegativeStatColour;
+        /* 0x44B0 */ public ulong ProductionSlotTimerOffsetInSeconds;
+        /* 0x44B8 */ public ulong ProductionCycleDurationInSeconds;
+        /* 0x44C0 */ public ulong AlertCycleDurationInSeconds;
+        /* 0x44C8 */ public int MaxProductionSlotUnits;
+        /* 0x44CC */ public int ProductUnitsPerCycleRateModifier;
+        /* 0x44D0 */ public int SubstanceUnitsPerCycleRateModifier;
+        /* 0x44D4 */ public int InitialDebtCycles;
+        /* 0x44D8 */ public int DailyDebtPaymentModifier;
+        /* 0x44DC */ public int AlertUnitsPerCycleRateModifier;
         [NMS(Size = 0x7, EnumType = typeof(GcSettlementStatType.SettlementStatTypeEnum))]
-        /* 0x43A0 */ public int[] StatProductivityContributionModifiers;
+        /* 0x44E0 */ public int[] StatProductivityContributionModifiers;
         [NMS(Size = 0x7, EnumType = typeof(GcSettlementStatType.SettlementStatTypeEnum))]
-        /* 0x43BC */ public bool[] StatProductionIsNegativeWhenBad;
+        /* 0x44FC */ public bool[] StatProductionIsNegativeWhenBad;
         [NMS(Size = 0x7, EnumType = typeof(GcSettlementStatType.SettlementStatTypeEnum))]
-        /* 0x43C8 */ public NMSString0x10[] PolicyPerks;
+        /* 0x4508 */ public NMSString0x10[] PolicyPerks;
         [NMS(Size = 0x7, EnumType = typeof(GcSettlementStatType.SettlementStatTypeEnum))]
-        /* 0x4438 */ public NMSString0x10[] ResearchPerks;
+        /* 0x4578 */ public NMSString0x10[] ResearchPerks;
         [NMS(Size = 0x7, EnumType = typeof(GcSettlementStatType.SettlementStatTypeEnum))]
-        /* 0x44A8 */ public NMSString0x10[] AltResearchPerks;
+        /* 0x45E8 */ public NMSString0x10[] AltResearchPerks;
         [NMS(Size = 0x7, EnumType = typeof(GcSettlementStatType.SettlementStatTypeEnum))]
-        /* 0x4518 */ public GcSettlementStatStrengthData[] PerkStatStrengthValues;
-        /* 0x46A0 */ public List<NMSString0x10> GekProductionElements;
-        /* 0x46B0 */ public List<NMSString0x10> KorvaxProductionElements;
-        /* 0x46C0 */ public List<NMSString0x10> VykeenProductionElements;
-        /* 0x46D0 */ public List<NMSString0x10> PoorProductionElements;
-        /* 0x46E0 */ public List<NMSString0x10> NeutralProductionElements;
-        /* 0x46F0 */ public List<NMSString0x10> RichProductionElements;
+        /* 0x4658 */ public GcSettlementStatStrengthData[] PerkStatStrengthValues;
+        /* 0x47E0 */ public List<NMSString0x10> GekProductionElements;
+        /* 0x47F0 */ public List<NMSString0x10> KorvaxProductionElements;
+        /* 0x4800 */ public List<NMSString0x10> VykeenProductionElements;
+        /* 0x4810 */ public List<NMSString0x10> PoorProductionElements;
+        /* 0x4820 */ public List<NMSString0x10> NeutralProductionElements;
+        /* 0x4830 */ public List<NMSString0x10> RichProductionElements;
         [NMS(Size = 0x7, EnumType = typeof(GcSettlementJudgementType.SettlementJudgementTypeEnum))]
-        /* 0x4700 */ public NMSString0x20A[] JudgementUpdateTitles;
+        /* 0x4840 */ public NMSString0x20A[] JudgementUpdateTitles;
         [NMS(Size = 0x7, EnumType = typeof(GcSettlementJudgementType.SettlementJudgementTypeEnum))]
-        /* 0x47E0 */ public NMSString0x20A[] JudgementUpdateMainText;
+        /* 0x4920 */ public NMSString0x20A[] JudgementUpdateMainText;
         [NMS(Size = 0x7, EnumType = typeof(GcSettlementJudgementType.SettlementJudgementTypeEnum))]
-        /* 0x48C0 */ public NMSString0x20A[] JudgementUpdateSubtitles;
+        /* 0x4A00 */ public NMSString0x20A[] JudgementUpdateSubtitles;
         [NMS(Size = 0x7, EnumType = typeof(GcSettlementStatType.SettlementStatTypeEnum))]
-        /* 0x49A0 */ public NMSString0x20A[] PositiveStatChangeOSDLocIDs;
+        /* 0x4AE0 */ public NMSString0x20A[] PositiveStatChangeOSDLocIDs;
         [NMS(Size = 0x7, EnumType = typeof(GcSettlementStatType.SettlementStatTypeEnum))]
-        /* 0x4A80 */ public NMSString0x20A[] NegativeStatChangeOSDLocIDs;
+        /* 0x4BC0 */ public NMSString0x20A[] NegativeStatChangeOSDLocIDs;
         [NMS(Size = 0x7, EnumType = typeof(GcSettlementStatType.SettlementStatTypeEnum))]
-        /* 0x4B60 */ public NMSString0x10[] PositiveStatChangeSubstances;
+        /* 0x4CA0 */ public NMSString0x10[] PositiveStatChangeSubstances;
         [NMS(Size = 0x7, EnumType = typeof(GcSettlementStatType.SettlementStatTypeEnum))]
-        /* 0x4BD0 */ public NMSString0x10[] NegativeStatChangeSubstances;
+        /* 0x4D10 */ public NMSString0x10[] NegativeStatChangeSubstances;
         [NMS(Size = 0x7, EnumType = typeof(GcSettlementStatType.SettlementStatTypeEnum))]
-        /* 0x4C40 */ public NMSString0x20A[] PositiveFakePerkOSDLocIDs;
+        /* 0x4D80 */ public NMSString0x20A[] PositiveFakePerkOSDLocIDs;
         [NMS(Size = 0x7, EnumType = typeof(GcSettlementStatType.SettlementStatTypeEnum))]
-        /* 0x4D20 */ public NMSString0x20A[] NegativeFakePerkOSDLocIDs;
+        /* 0x4E60 */ public NMSString0x20A[] NegativeFakePerkOSDLocIDs;
         [NMS(Size = 0x7, EnumType = typeof(GcSettlementStatType.SettlementStatTypeEnum))]
-        /* 0x4E00 */ public NMSString0x20A[] ProcPerkDescriptions;
+        /* 0x4F40 */ public NMSString0x20A[] ProcPerkDescriptions;
         [NMS(Size = 0x7, EnumType = typeof(GcSettlementStatType.SettlementStatTypeEnum))]
-        /* 0x4EE0 */ public NMSString0x20A[] ShortPolicyLocIDs;
+        /* 0x5020 */ public NMSString0x20A[] ShortPolicyLocIDs;
         [NMS(Size = 0x7, EnumType = typeof(GcSettlementStatType.SettlementStatTypeEnum))]
-        /* 0x4FC0 */ public NMSString0x20A[] LongPolicyLocIDs;
+        /* 0x5100 */ public NMSString0x20A[] LongPolicyLocIDs;
         [NMS(Size = 0x7, EnumType = typeof(GcSettlementStatType.SettlementStatTypeEnum))]
-        /* 0x50A0 */ public NMSString0x20A[] ShortResearchLocIDs;
+        /* 0x51E0 */ public NMSString0x20A[] ShortResearchLocIDs;
         [NMS(Size = 0x7, EnumType = typeof(GcSettlementStatType.SettlementStatTypeEnum))]
-        /* 0x5180 */ public NMSString0x20A[] LongResearchLocIDs;
+        /* 0x52C0 */ public NMSString0x20A[] LongResearchLocIDs;
         [NMS(Size = 0x7, EnumType = typeof(GcSettlementStatType.SettlementStatTypeEnum))]
-        /* 0x5260 */ public NMSString0x20A[] ShortAltResearchLocIDs;
+        /* 0x53A0 */ public NMSString0x20A[] ShortAltResearchLocIDs;
         [NMS(Size = 0x7, EnumType = typeof(GcSettlementStatType.SettlementStatTypeEnum))]
-        /* 0x5340 */ public NMSString0x20A[] LongAltResearchLocIDs;
-        /* 0x5420 */ public List<GcSettlementGiftDetails> GekGifts;
-        /* 0x5430 */ public List<GcSettlementGiftDetails> KorvaxGifts;
-        /* 0x5440 */ public List<GcSettlementGiftDetails> VykeenGifts;
-        /* 0x5450 */ public List<GcSettlementGiftDetails> Gifts;
-        /* 0x5460 */ public List<NMSString0x10> TechGiftPerks;
-        /* 0x5470 */ public List<GcSettlementJobDetails> JobTypes;
+        /* 0x5480 */ public NMSString0x20A[] LongAltResearchLocIDs;
+        /* 0x5560 */ public List<GcSettlementGiftDetails> GekGifts;
+        /* 0x5570 */ public List<GcSettlementGiftDetails> KorvaxGifts;
+        /* 0x5580 */ public List<GcSettlementGiftDetails> VykeenGifts;
+        /* 0x5590 */ public List<GcSettlementGiftDetails> Gifts;
+        /* 0x55A0 */ public List<NMSString0x10> TechGiftPerks;
+        /* 0x55B0 */ public List<GcSettlementJobDetails> JobTypes;
     }
 }

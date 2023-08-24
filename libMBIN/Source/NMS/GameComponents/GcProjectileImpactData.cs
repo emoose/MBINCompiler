@@ -2,14 +2,15 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xA4AFE56500C79074, NameHash = 0x2F2FAFA4A7023B71)]
+    [NMS(GUID = 0x7B8919E91759922E, NameHash = 0x2F2FAFA4A7023B71)]
     public class GcProjectileImpactData : NMSTemplate
     {
         /* 0x00 */ public NMSString0x10 Effect;
         /* 0x10 */ public GcProjectileImpactType Impact;
-        // size: 0x2
+        // size: 0x3
         public enum ImpactAlignmentEnum : uint {
             ImpactNormal,
+            ImpactReflected,
             GravityUp,
         }
         /* 0x14 */ public ImpactAlignmentEnum ImpactAlignment;

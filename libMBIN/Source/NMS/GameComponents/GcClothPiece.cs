@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x903E0F718394285, NameHash = 0x7596FBA2C232AC37)]
+    [NMS(GUID = 0x615EA6466922EFC5, NameHash = 0x7596FBA2C232AC37)]
     public class GcClothPiece : NMSTemplate
     {
         /* 0x000 */ public bool Enabled;
@@ -59,16 +59,13 @@ namespace libMBIN.NMS.GameComponents
         /* 0x180 */ public List<GcClothAttachmentLine> AttachmentLines;
         /* 0x190 */ public List<GcAttachmentPointSet> AttachmentPointSets;
         /* 0x1A0 */ public GcConstraintsToCreateSpec ConstraintsToCreate;
-        /* 0x1F0 */ public List<NMSString0x40> NodesThatMustBePresent;
-        /* 0x200 */ public List<NMSString0x40> NodesToHide;
+        /* 0x1F0 */ public bool VertexBasedClothRenderingEnabled;
+        /* 0x1F1 */ public bool AttachedNodesEnabled;
+        /* 0x1F8 */ public List<GcAttachedNode> AttachedNodes;
+        /* 0x208 */ public float AttachedNodesOverallBlendStrength;
         /* 0x210 */ public GcAdvancedTweaks Advanced;
-        /* 0x228 */ public bool VertexBasedClothRenderingEnabled;
-        /* 0x229 */ public bool AttachedNodesEnabled;
-        /* 0x230 */ public List<GcAttachedNode> AttachedNodes;
-        /* 0x240 */ public float AttachedNodesOverallBlendStrength;
-        /* 0x248 */ public List<int> DeletedSimPoints;
-        /* 0x258 */ public List<int> DeletedConstraintsI;
-        /* 0x268 */ public List<int> DeletedConstraintsJ;
-        /* 0x278 */ public bool LeaveRenderedTrianglesUnaffected;
+        /* 0x250 */ public List<int> DeletedSimPoints;
+        /* 0x260 */ public List<int> DeletedConstraintsI;
+        /* 0x270 */ public List<int> DeletedConstraintsJ;
     }
 }

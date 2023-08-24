@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x9556ACEFE6016A1E, NameHash = 0x6B8472FADE3C492C)]
+    [NMS(GUID = 0x24B6220B3391D51C, NameHash = 0x6B8472FADE3C492C)]
     public class GcProceduralTechnologyData : NMSTemplate
     {
         /* 0x000 */ public NMSString0x10 ID;
@@ -14,7 +14,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x140 */ public NMSString0x80 Subtitle;
         /* 0x1C0 */ public NMSString0x80 Description;
         /* 0x240 */ public Colour Colour;
-        // size: 0x6
+        // size: 0x7
         public enum QualityEnum : uint {
             Normal,
             Rare,
@@ -22,6 +22,7 @@ namespace libMBIN.NMS.GameComponents
             Legendary,
             Illegal,
             Sentinel,
+            Robot,
         }
         /* 0x250 */ public QualityEnum Quality;
         /* 0x254 */ public GcProceduralTechnologyCategory Category;

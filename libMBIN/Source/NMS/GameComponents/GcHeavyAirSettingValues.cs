@@ -2,7 +2,7 @@ using libMBIN.NMS.Toolkit;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x5A9F0129EFF1FE8A, NameHash = 0xF53E6F170BCA9237)]
+    [NMS(GUID = 0xA6CEB8493C9964CA, NameHash = 0xF53E6F170BCA9237)]
     public class GcHeavyAirSettingValues : NMSTemplate
     {
         /* 0x00 */ public float Thickness;

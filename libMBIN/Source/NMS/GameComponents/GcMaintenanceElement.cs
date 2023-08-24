@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x12457EE20485AFC8, NameHash = 0x79BDBA7746F3C796)]
+    [NMS(GUID = 0x75750D559E7D12C3, NameHash = 0x79BDBA7746F3C796)]
     public class GcMaintenanceElement : NMSTemplate
     {
         /* 0x00 */ public GcMaintenanceElementGroups ItemGroupOverride;

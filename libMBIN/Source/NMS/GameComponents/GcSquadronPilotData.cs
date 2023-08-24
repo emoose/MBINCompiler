@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x4366B5FDF0BD2877, NameHash = 0x1B17AE774F200920)]
+    [NMS(GUID = 0xEADBAADC982E068, NameHash = 0x1B17AE774F200920)]
     public class GcSquadronPilotData : NMSTemplate
     {
         /* 0x000 */ public GcResourceElement NPCResource;

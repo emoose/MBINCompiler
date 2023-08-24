@@ -2,18 +2,19 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x98FAEC01CF3A50C7, NameHash = 0x8A35BC3F94D0949F)]
+    [NMS(GUID = 0x53AB8296E1933C71, NameHash = 0x8A35BC3F94D0949F)]
     public class GcPunctuationDelayTable : NMSTemplate
     {
-        // size: 0x5
+        // size: 0x6
         public enum PunctuationDelaysEnum {
             Default,
             Gek,
             Korvax,
             Vykeen,
             FourthRace,
+            Builders,
         }
-        [NMS(Size = 0x5, EnumType = typeof(PunctuationDelaysEnum))]
+        [NMS(Size = 0x6, EnumType = typeof(PunctuationDelaysEnum))]
         /* 0x0 */ public GcPunctuationDelayData[] PunctuationDelays;
     }
 }

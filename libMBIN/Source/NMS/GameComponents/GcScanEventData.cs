@@ -4,16 +4,17 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x23F3EB13824A95EC, NameHash = 0x7BBBCE7D7BC0F1F4)]
+    [NMS(GUID = 0xD65FBBD84F1D566D, NameHash = 0x7BBBCE7D7BC0F1F4)]
     public class GcScanEventData : NMSTemplate
     {
         /* 0x000 */ public NMSString0x20A Name;
         /* 0x020 */ public NMSString0x20A ForceInteraction;
         /* 0x040 */ public GcInteractionType ForceInteractionType;
         /* 0x044 */ public GcAlienRace RequireInteractionRace;
-        /* 0x048 */ public bool ForceBroken;
-        /* 0x049 */ public bool ForceFixed;
-        /* 0x04A */ public bool ForceOverridesAll;
+        /* 0x048 */ public GcAlienRace OverrideInteractionRace;
+        /* 0x04C */ public bool ForceBroken;
+        /* 0x04D */ public bool ForceFixed;
+        /* 0x04E */ public bool ForceOverridesAll;
         /* 0x050 */ public NMSString0x10 ForceOverrideEncounter;
         /* 0x060 */ public bool IsCommunityPortalOverride;
         /* 0x061 */ public bool ClearForcedInteractionOnCompletion;
@@ -52,7 +53,8 @@ namespace libMBIN.NMS.GameComponents
         /* 0x0C0 */ public EventPriorityEnum EventPriority;
         /* 0x0C4 */ public bool CanEndFromOutsideMission;
         /* 0x0C5 */ public bool DisableMultiplayerSync;
-        /* 0x0C6 */ public bool ReplaceEventIfAlreadyActive;
+        /* 0x0C6 */ public bool BlockStartedOnUseEvents;
+        /* 0x0C7 */ public bool ReplaceEventIfAlreadyActive;
         // size: 0x7
         public enum BuildingLocationEnum : uint {
             Nearest,
@@ -64,7 +66,7 @@ namespace libMBIN.NMS.GameComponents
             PlayerSettlement,
         }
         /* 0x0C8 */ public BuildingLocationEnum BuildingLocation;
-        // size: 0x17
+        // size: 0x18
         public enum BuildingTypeEnum : uint {
             Any,
             AnyShelter,
@@ -89,6 +91,7 @@ namespace libMBIN.NMS.GameComponents
             UnownedSettlement,
             NPC_HideOut,
             FriendlyDrone,
+            AnyRobotSite,
         }
         /* 0x0CC */ public BuildingTypeEnum BuildingType;
         /* 0x0D0 */ public GcBuildingClassification BuildingClass;
@@ -96,6 +99,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x0D5 */ public bool ForceWideRandom;
         /* 0x0D6 */ public bool MustFindSystem;
         /* 0x0D7 */ public bool AllowOverriddenBuildings;
+        /* 0x0D8 */ public bool TargetMustMatchMissionSeed;
         // size: 0x6
         public enum SolarSystemLocationEnum : uint {
             Local,
@@ -105,7 +109,7 @@ namespace libMBIN.NMS.GameComponents
             FromList,
             SeasonParty,
         }
-        /* 0x0D8 */ public SolarSystemLocationEnum SolarSystemLocation;
+        /* 0x0DC */ public SolarSystemLocationEnum SolarSystemLocation;
         /* 0x0E0 */ public GcScanEventSolarSystemLookup SolarSystemAttributes;
         /* 0x158 */ public GcScanEventSolarSystemLookup SolarSystemAttributesFallback;
         /* 0x1D0 */ public bool ForceRestartInteraction;

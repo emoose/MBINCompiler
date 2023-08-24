@@ -1,12 +1,13 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xF1FF349FCBFB33CA, NameHash = 0x64A394B637C25752)]
+    [NMS(GUID = 0xF911D7E9F69F045, NameHash = 0x64A394B637C25752)]
     public class GcMissionConditionLocation : NMSTemplate
     {
-        // size: 0x1B
+        // size: 0x1C
         public enum MissionPlayerLocationEnum : uint {
             OnPlanet,
             OnPlanetInVehicle,
+            AnywhereInPlanetAtmos,
             InShipLanded,
             InShipInPlanetOrbit,
             InShipInSpace,
