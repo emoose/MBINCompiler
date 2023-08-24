@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xD28DF6CB38B451D0, NameHash = 0x479CFCB871ABBE0)]
+    [NMS(GUID = 0x4B073F1DAAA23991, NameHash = 0x479CFCB871ABBE0)]
     public class GcMaintenanceComponentData : NMSTemplate
     {
         /* 0x000 */ public List<GcMaintenanceElement> PreInstalledTech;
@@ -18,11 +18,12 @@ namespace libMBIN.NMS.GameComponents
         /* 0x01A */ public bool AllowTransfer;
         /* 0x01B */ public bool AllowMoveAndStack;
         /* 0x01C */ public bool AllowTransferIn;
-        /* 0x01D */ public bool AutoCompleteOnStart;
-        /* 0x01E */ public bool UseModelResourceRenderer;
-        /* 0x01F */ public bool UseBoundsForIconCentre;
-        /* 0x020 */ public bool ForceRemoveUIRenderLayer;
-        /* 0x021 */ public bool HideMaxAmountOnProductSlots;
+        /* 0x01D */ public bool AllowPinning;
+        /* 0x01E */ public bool AutoCompleteOnStart;
+        /* 0x01F */ public bool UseModelResourceRenderer;
+        /* 0x020 */ public bool UseBoundsForIconCentre;
+        /* 0x021 */ public bool ForceRemoveUIRenderLayer;
+        /* 0x022 */ public bool HideMaxAmountOnProductSlots;
         // size: 0x4
         public enum InteractableEnum : uint {
             OnlyWhenComplete,
@@ -64,11 +65,12 @@ namespace libMBIN.NMS.GameComponents
         /* 0x320 */ public bool InWorldUIUseCameraUp;
         /* 0x321 */ public bool InteractionRequiresPower;
         /* 0x328 */ public NMSString0x10 StartMissionOnUse;
-        /* 0x338 */ public NMSString0x10 GiveRewardOnCompletion;
-        /* 0x348 */ public bool OpenInteractionOnQuit;
-        /* 0x349 */ public bool ForceOneClickRepair;
-        /* 0x34C */ public GcAudioWwiseEvents AudioIDOnSuccess;
-        /* 0x350 */ public GcMaintenanceGroupInstallData GroupInstallSetup;
-        /* 0x3E0 */ public bool DisableSynchronise;
+        /* 0x338 */ public NMSString0x10 StartMissionOnCompletion;
+        /* 0x348 */ public NMSString0x10 GiveRewardOnCompletion;
+        /* 0x358 */ public bool OpenInteractionOnQuit;
+        /* 0x359 */ public bool ForceOneClickRepair;
+        /* 0x35C */ public GcAudioWwiseEvents AudioIDOnSuccess;
+        /* 0x360 */ public GcMaintenanceGroupInstallData GroupInstallSetup;
+        /* 0x3F0 */ public bool DisableSynchronise;
     }
 }

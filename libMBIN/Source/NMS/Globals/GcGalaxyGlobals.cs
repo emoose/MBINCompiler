@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(GUID = 0x70320CDC9EBCD60B, NameHash = 0x3BC94060600296E8)]
+    [NMS(GUID = 0xC7FF93DF2BD53C9A, NameHash = 0x3BC94060600296E8)]
     public class GcGalaxyGlobals : NMSTemplate
     {
         /* 0x0000 */ public bool NewStyleLookAtCamera;
@@ -119,85 +119,85 @@ namespace libMBIN.NMS.Globals
         /* 0x03A0 */ public Colour[] GalacticWaypointDeuteranopiaColours;
         [NMS(Size = 0x7)]
         /* 0x0410 */ public Colour[] GalacticWaypointTritanopiaColours;
-        [NMS(Size = 0x8, EnumType = typeof(GcAlienRace.AlienRaceEnum))]
+        [NMS(Size = 0x9, EnumType = typeof(GcAlienRace.AlienRaceEnum))]
         /* 0x0480 */ public Colour[] RaceFilterDefaultColours;
-        [NMS(Size = 0x8, EnumType = typeof(GcAlienRace.AlienRaceEnum))]
-        /* 0x0500 */ public Colour[] RaceFilterProtanopiaColours;
-        [NMS(Size = 0x8, EnumType = typeof(GcAlienRace.AlienRaceEnum))]
-        /* 0x0580 */ public Colour[] RaceFilterDeuteranopiaColours;
-        [NMS(Size = 0x8, EnumType = typeof(GcAlienRace.AlienRaceEnum))]
-        /* 0x0600 */ public Colour[] RaceFilterTritanopiaColours;
+        [NMS(Size = 0x9, EnumType = typeof(GcAlienRace.AlienRaceEnum))]
+        /* 0x0510 */ public Colour[] RaceFilterProtanopiaColours;
+        [NMS(Size = 0x9, EnumType = typeof(GcAlienRace.AlienRaceEnum))]
+        /* 0x05A0 */ public Colour[] RaceFilterDeuteranopiaColours;
+        [NMS(Size = 0x9, EnumType = typeof(GcAlienRace.AlienRaceEnum))]
+        /* 0x0630 */ public Colour[] RaceFilterTritanopiaColours;
         [NMS(Size = 0x7, EnumType = typeof(GcTradingClass.TradingClassEnum))]
-        /* 0x0680 */ public Colour[] EconomyFilterDefaultColours;
+        /* 0x06C0 */ public Colour[] EconomyFilterDefaultColours;
         [NMS(Size = 0x7, EnumType = typeof(GcTradingClass.TradingClassEnum))]
-        /* 0x06F0 */ public Colour[] EconomyFilterProtanopiaColours;
+        /* 0x0730 */ public Colour[] EconomyFilterProtanopiaColours;
         [NMS(Size = 0x7, EnumType = typeof(GcTradingClass.TradingClassEnum))]
-        /* 0x0760 */ public Colour[] EconomyFilterDeuteranopiaColours;
+        /* 0x07A0 */ public Colour[] EconomyFilterDeuteranopiaColours;
         [NMS(Size = 0x7, EnumType = typeof(GcTradingClass.TradingClassEnum))]
-        /* 0x07D0 */ public Colour[] EconomyFilterTritanopiaColours;
+        /* 0x0810 */ public Colour[] EconomyFilterTritanopiaColours;
         [NMS(Size = 0x4, EnumType = typeof(GcPlayerConflictData.ConflictLevelEnum))]
-        /* 0x0840 */ public Colour[] ConflictFilterDefaultColours;
+        /* 0x0880 */ public Colour[] ConflictFilterDefaultColours;
         [NMS(Size = 0x4, EnumType = typeof(GcPlayerConflictData.ConflictLevelEnum))]
-        /* 0x0880 */ public Colour[] ConflictFilterProtanopiaColours;
+        /* 0x08C0 */ public Colour[] ConflictFilterProtanopiaColours;
         [NMS(Size = 0x4, EnumType = typeof(GcPlayerConflictData.ConflictLevelEnum))]
-        /* 0x08C0 */ public Colour[] ConflictFilterDeuteranopiaColours;
+        /* 0x0900 */ public Colour[] ConflictFilterDeuteranopiaColours;
         [NMS(Size = 0x4, EnumType = typeof(GcPlayerConflictData.ConflictLevelEnum))]
-        /* 0x0900 */ public Colour[] ConflictFilterTritanopiaColours;
+        /* 0x0940 */ public Colour[] ConflictFilterTritanopiaColours;
         [NMS(Size = 0x10, EnumType = typeof(GcGalaxyMarkerTypes.GalaxyMarkerTypeEnum))]
-        /* 0x0940 */ public GcGalaxyMarkerSettings[] MarkerSettings;
-        /* 0x1B40 */ public float IntroFadeInRate;
-        /* 0x1B44 */ public float IntroTitleFadeTrigger;
-        /* 0x1B48 */ public float IntroTitleHoldTime;
-        /* 0x1B4C */ public float IntroFadeOutRate;
-        /* 0x1B50 */ public float IntroCameraLookSmoothRate;
-        /* 0x1B54 */ public float IntroTitleTextureScale;
-        /* 0x1B58 */ public float TransitionTime;
-        /* 0x1B5C */ public TkCurveType TransitionOutCurve;
-        /* 0x1B60 */ public float FinalHoldTime;
-        /* 0x1B64 */ public float FinalFadedTime;
-        /* 0x1B68 */ public float FinalHoldTowardsCenterTime;
-        /* 0x1B6C */ public float FinalFadeInRate;
-        /* 0x1B70 */ public float FinalFadeOutRate;
-        /* 0x1B74 */ public float FinalTransitionMaxSpeed;
-        /* 0x1B78 */ public float FinalTransitionAcceleration;
-        /* 0x1B7C */ public float FinalTransitionInterpolationValue;
-        /* 0x1B80 */ public float EarlyStageMultiplier;
-        /* 0x1B84 */ public float OffWorldDistance;
-        /* 0x1B88 */ public float DistanceComputerScale;
-        /* 0x1B8C */ public float PathRenderingSelectedStartAlpha;
-        /* 0x1B90 */ public float PathRenderingSelectedEndAlpha;
-        /* 0x1B94 */ public float PathRenderingSelectedStepAlpha;
-        /* 0x1B98 */ public float PathRenderingUnselectedStartAlpha;
-        /* 0x1B9C */ public float PathRenderingUnselectedEndAlpha;
-        /* 0x1BA0 */ public float PathRenderingUnselectedStepAlpha;
-        /* 0x1BA4 */ public float StarBlurMaxDistanceFromCamera;
-        /* 0x1BA8 */ public float StarBlurMaxBlurLength;
-        /* 0x1BAC */ public float StarBlurSizeMultiplier;
-        /* 0x1BB0 */ public float StarBlurLineWidth;
-        /* 0x1BB4 */ public float StarBlurIntroMultiplier;
-        /* 0x1BB8 */ public float AnostreakAlpha;
-        /* 0x1BBC */ public TkCurveType AnostreakAlphaCurve;
-        /* 0x1BBD */ public TkCurveType AnostreakValueCurve;
-        /* 0x1BC0 */ public GcGalaxyRenderAnostreakData AnostreakAway;
-        /* 0x1BF0 */ public GcGalaxyRenderAnostreakData AnostreakFacing;
-        /* 0x1C20 */ public float SelectionTreeAlpha;
-        /* 0x1C30 */ public Colour SelectionTreeColour;
-        /* 0x1C40 */ public Vector2f GoalDistanceRange;
-        /* 0x1C50 */ public GcGalaxyStarColours BaseStarDefaultColours;
-        /* 0x1C90 */ public GcGalaxyStarColours BaseStarProtanopiaColours;
-        /* 0x1CD0 */ public GcGalaxyStarColours BaseStarDeuteranopiaColours;
-        /* 0x1D10 */ public GcGalaxyStarColours BaseStarTritanopiaColours;
-        /* 0x1D50 */ public GcGalaxyCameraData Camera;
-        /* 0x1DBC */ public GcGalaxyAudioSetupData Audio;
-        /* 0x1E00 */ public float FadeGameOutTime;
-        /* 0x1E04 */ public float FadeMapInTime;
-        /* 0x1E08 */ public float FadeMapOutTime;
-        /* 0x1E0C */ public float FadeGameInTime;
-        /* 0x1E10 */ public float LargeAreaColourScale;
-        /* 0x1E20 */ public GcGalaxyRenderSetupData DefaultRenderSetup;
-        /* 0x2170 */ public GcGalaxyGenerationSetupData DefaultGeneration;
-        /* 0x22F0 */ public GcGalaxyRenderSetupData FinalAnimationRenderSetup;
-        /* 0x2640 */ public GcGalaxyGenerationSetupData FinalAnimationGeneration;
-        /* 0x27C0 */ public GcGalaxySolarSystemParams SolarSystemParameters;
+        /* 0x0980 */ public GcGalaxyMarkerSettings[] MarkerSettings;
+        /* 0x1B80 */ public float IntroFadeInRate;
+        /* 0x1B84 */ public float IntroTitleFadeTrigger;
+        /* 0x1B88 */ public float IntroTitleHoldTime;
+        /* 0x1B8C */ public float IntroFadeOutRate;
+        /* 0x1B90 */ public float IntroCameraLookSmoothRate;
+        /* 0x1B94 */ public float IntroTitleTextureScale;
+        /* 0x1B98 */ public float TransitionTime;
+        /* 0x1B9C */ public TkCurveType TransitionOutCurve;
+        /* 0x1BA0 */ public float FinalHoldTime;
+        /* 0x1BA4 */ public float FinalFadedTime;
+        /* 0x1BA8 */ public float FinalHoldTowardsCenterTime;
+        /* 0x1BAC */ public float FinalFadeInRate;
+        /* 0x1BB0 */ public float FinalFadeOutRate;
+        /* 0x1BB4 */ public float FinalTransitionMaxSpeed;
+        /* 0x1BB8 */ public float FinalTransitionAcceleration;
+        /* 0x1BBC */ public float FinalTransitionInterpolationValue;
+        /* 0x1BC0 */ public float EarlyStageMultiplier;
+        /* 0x1BC4 */ public float OffWorldDistance;
+        /* 0x1BC8 */ public float DistanceComputerScale;
+        /* 0x1BCC */ public float PathRenderingSelectedStartAlpha;
+        /* 0x1BD0 */ public float PathRenderingSelectedEndAlpha;
+        /* 0x1BD4 */ public float PathRenderingSelectedStepAlpha;
+        /* 0x1BD8 */ public float PathRenderingUnselectedStartAlpha;
+        /* 0x1BDC */ public float PathRenderingUnselectedEndAlpha;
+        /* 0x1BE0 */ public float PathRenderingUnselectedStepAlpha;
+        /* 0x1BE4 */ public float StarBlurMaxDistanceFromCamera;
+        /* 0x1BE8 */ public float StarBlurMaxBlurLength;
+        /* 0x1BEC */ public float StarBlurSizeMultiplier;
+        /* 0x1BF0 */ public float StarBlurLineWidth;
+        /* 0x1BF4 */ public float StarBlurIntroMultiplier;
+        /* 0x1BF8 */ public float AnostreakAlpha;
+        /* 0x1BFC */ public TkCurveType AnostreakAlphaCurve;
+        /* 0x1BFD */ public TkCurveType AnostreakValueCurve;
+        /* 0x1C00 */ public GcGalaxyRenderAnostreakData AnostreakAway;
+        /* 0x1C30 */ public GcGalaxyRenderAnostreakData AnostreakFacing;
+        /* 0x1C60 */ public float SelectionTreeAlpha;
+        /* 0x1C70 */ public Colour SelectionTreeColour;
+        /* 0x1C80 */ public Vector2f GoalDistanceRange;
+        /* 0x1C90 */ public GcGalaxyStarColours BaseStarDefaultColours;
+        /* 0x1CD0 */ public GcGalaxyStarColours BaseStarProtanopiaColours;
+        /* 0x1D10 */ public GcGalaxyStarColours BaseStarDeuteranopiaColours;
+        /* 0x1D50 */ public GcGalaxyStarColours BaseStarTritanopiaColours;
+        /* 0x1D90 */ public GcGalaxyCameraData Camera;
+        /* 0x1DFC */ public GcGalaxyAudioSetupData Audio;
+        /* 0x1E40 */ public float FadeGameOutTime;
+        /* 0x1E44 */ public float FadeMapInTime;
+        /* 0x1E48 */ public float FadeMapOutTime;
+        /* 0x1E4C */ public float FadeGameInTime;
+        /* 0x1E50 */ public float LargeAreaColourScale;
+        /* 0x1E60 */ public GcGalaxyRenderSetupData DefaultRenderSetup;
+        /* 0x21B0 */ public GcGalaxyGenerationSetupData DefaultGeneration;
+        /* 0x2330 */ public GcGalaxyRenderSetupData FinalAnimationRenderSetup;
+        /* 0x2680 */ public GcGalaxyGenerationSetupData FinalAnimationGeneration;
+        /* 0x2800 */ public GcGalaxySolarSystemParams SolarSystemParameters;
     }
 }

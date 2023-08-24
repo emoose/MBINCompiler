@@ -1,9 +1,9 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x848A6E19ACF6BF6B, NameHash = 0x47E189998F5D82E7)]
+    [NMS(GUID = 0xF9689CD2F67C89FE, NameHash = 0x47E189998F5D82E7)]
     public class GcInteractionType : NMSTemplate
     {
-        // size: 0x87
+        // size: 0x8A
         public enum InteractionTypeEnum : uint {
             None,
             Shop,
@@ -140,6 +140,9 @@ namespace libMBIN.NMS.GameComponents
             RobotCampTerminal,
             MonolithNub,
             NexusSpiderman,
+            WeaponSalvage,
+            DiscoverySelector,
+            RobotShop,
         }
         /* 0x0 */ public InteractionTypeEnum InteractionType;
     }

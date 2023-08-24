@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x7449E1BB8B10F55B, NameHash = 0x4B63CD1B58DAF5A4)]
+    [NMS(GUID = 0x583F92EAEB6EC7D7, NameHash = 0x4B63CD1B58DAF5A4)]
     public class GcTradeSettings : NMSTemplate
     {
         /* 0x0000 */ public GcTradeData SpaceStation;
@@ -27,5 +27,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x0F70 */ public GcTradeData SmugglerStation;
         /* 0x1040 */ public GcTradeData PirateTech;
         /* 0x1110 */ public GcTradeData PirateVisitor;
+        /* 0x11E0 */ public GcTradeData BuilderShop;
     }
 }

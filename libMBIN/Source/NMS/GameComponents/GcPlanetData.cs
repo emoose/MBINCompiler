@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xEAC409C751BBCCF5, NameHash = 0x25EDFA0EC4C3AF0A)]
+    [NMS(GUID = 0x6B58302530AA605E, NameHash = 0x25EDFA0EC4C3AF0A)]
     public class GcPlanetData : NMSTemplate
     {
         /* 0x0000 */ public NMSString0x80 Name;
@@ -24,24 +24,24 @@ namespace libMBIN.NMS.GameComponents
         /* 0x0110 */ public List<GcPlanetDataResourceHint> ExtraResourceHints;
         /* 0x0120 */ public GcPlanetColourData Colours;
         [NMS(Size = 0x17)]
-        /* 0x1A80 */ public Colour[] TileColours;
-        /* 0x1BF0 */ public GcPlanetWeatherData Weather;
-        /* 0x1D50 */ public GcPlanetCloudProperties Clouds;
-        /* 0x1D90 */ public GcPlanetWaterData Water;
-        /* 0x1F10 */ public NMSString0x80 TerrainFile;
-        /* 0x1F90 */ public TkVoxelGeneratorData Terrain;
-        /* 0x3560 */ public int TileTypeSet;
-        /* 0x3568 */ public List<int> TileTypeIndices;
-        /* 0x3578 */ public GcEnvironmentSpawnData SpawnData;
-        /* 0x35D8 */ public GcAlienRace InhabitingRace;
-        /* 0x35E0 */ public GcPlanetBuildingData BuildingData;
-        /* 0x3628 */ public GcPlanetGenerationIntermediateData GenerationData;
+        /* 0x1B60 */ public Colour[] TileColours;
+        /* 0x1CD0 */ public GcPlanetWeatherData Weather;
+        /* 0x1E30 */ public GcPlanetCloudProperties Clouds;
+        /* 0x1E70 */ public GcPlanetWaterData Water;
+        /* 0x1FF0 */ public NMSString0x80 TerrainFile;
+        /* 0x2070 */ public TkVoxelGeneratorData Terrain;
+        /* 0x3640 */ public int TileTypeSet;
+        /* 0x3648 */ public List<int> TileTypeIndices;
+        /* 0x3658 */ public GcEnvironmentSpawnData SpawnData;
+        /* 0x36B8 */ public GcAlienRace InhabitingRace;
+        /* 0x36C0 */ public GcPlanetBuildingData BuildingData;
+        /* 0x3708 */ public GcPlanetGenerationIntermediateData GenerationData;
         [NMS(Size = 0x4, EnumType = typeof(GcCombatTimerDifficultyOption.CombatTimerDifficultyOptionEnum))]
-        /* 0x3A90 */ public GcPlanetGroundCombatData[] GroundCombatDataPerDifficulty;
-        /* 0x3AF0 */ public GcPlanetInfo PlanetInfo;
-        /* 0x4000 */ public GcPlanetRingData Rings;
-        /* 0x4060 */ public bool InEmptySystem;
-        /* 0x4061 */ public bool InAbandonedSystem;
-        /* 0x4064 */ public float FuelMultiplier;
+        /* 0x3B70 */ public GcPlanetGroundCombatData[] GroundCombatDataPerDifficulty;
+        /* 0x3BD0 */ public GcPlanetInfo PlanetInfo;
+        /* 0x40E0 */ public GcPlanetRingData Rings;
+        /* 0x4140 */ public bool InEmptySystem;
+        /* 0x4141 */ public bool InAbandonedSystem;
+        /* 0x4144 */ public float FuelMultiplier;
     }
 }

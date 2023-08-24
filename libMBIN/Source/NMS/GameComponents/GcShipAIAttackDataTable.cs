@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x6FB2E2B112C03148, NameHash = 0xC501980088063B)]
+    [NMS(GUID = 0x794F23B164A927C9, NameHash = 0xC501980088063B)]
     public class GcShipAIAttackDataTable : NMSTemplate
     {
         /* 0x00 */ public List<GcShipAICombatDefinition> Definitions;

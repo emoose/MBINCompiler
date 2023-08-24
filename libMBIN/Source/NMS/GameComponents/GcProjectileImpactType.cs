@@ -1,9 +1,9 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x4B2046067B91DF22, NameHash = 0xC652A220FFABA4FE)]
+    [NMS(GUID = 0xAB6F35E6A5707415, NameHash = 0xC652A220FFABA4FE)]
     public class GcProjectileImpactType : NMSTemplate
     {
-        // size: 0x11
+        // size: 0x12
         public enum ImpactEnum : uint {
             Default,
             Terrain,
@@ -22,6 +22,7 @@ namespace libMBIN.NMS.GameComponents
             OtherPlayer,
             SentinelShield,
             SpaceshipShield,
+            FreighterShield,
         }
         /* 0x0 */ public ImpactEnum Impact;
     }

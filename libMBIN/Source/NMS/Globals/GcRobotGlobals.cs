@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(GUID = 0xBD1A0899953A4451, NameHash = 0xDD7401143C40F868)]
+    [NMS(GUID = 0x314FD330F20F310, NameHash = 0xDD7401143C40F868)]
     public class GcRobotGlobals : NMSTemplate
     {
         /* 0x0000 */ public bool ForceShowDebugMoveTrail;

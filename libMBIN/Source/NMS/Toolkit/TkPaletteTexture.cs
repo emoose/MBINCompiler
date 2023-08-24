@@ -1,9 +1,9 @@
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0xE877E2E7DCA338C7, NameHash = 0x6A57676B42321253)]
+    [NMS(GUID = 0x9DF9FE2C82C0C9AA, NameHash = 0x6A57676B42321253)]
     public class TkPaletteTexture : NMSTemplate
     {
-        // size: 0x3A
+        // size: 0x3C
         public enum PaletteEnum : uint {
             Grass,
             Plant,
@@ -63,6 +63,8 @@ namespace libMBIN.NMS.Toolkit
             SailShip_Sails,
             Freighter,
             FreighterPaint,
+            PirateBase,
+            PirateAlt,
         }
         /* 0x0 */ public PaletteEnum Palette;
         // size: 0x8

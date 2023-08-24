@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xE57B2F997E3F6E10, NameHash = 0xF3F4ABE3661F3779)]
+    [NMS(GUID = 0xAFB451007B628183, NameHash = 0xF3F4ABE3661F3779)]
     public class GcRewardSpecificSubstance : NMSTemplate
     {
         /* 0x00 */ public GcDefaultMissionSubstanceEnum Default;
@@ -13,5 +13,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x21 */ public bool RewardAsBlobs;
         /* 0x22 */ public bool UseFuelMultiplier;
         /* 0x23 */ public bool Silent;
+        /* 0x24 */ public bool UseMissionBoardDifficultyScale;
     }
 }

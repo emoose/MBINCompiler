@@ -2,11 +2,12 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xB46ABB7A9E9FE94F, NameHash = 0x139E6194371FE10E)]
+    [NMS(GUID = 0x3A76CD94128BB70A, NameHash = 0x139E6194371FE10E)]
     public class GcMissionSequenceCollectProduct : NMSTemplate
     {
         /* 0x00 */ public NMSString0x80 Message;
         /* 0x80 */ public GcDefaultMissionProductEnum Default;
+        /* 0x84 */ public bool UseDefaultValue;
         /* 0x88 */ public NMSString0x10 Product;
         /* 0x98 */ public int AmountMin;
         /* 0x9C */ public int AmountMax;

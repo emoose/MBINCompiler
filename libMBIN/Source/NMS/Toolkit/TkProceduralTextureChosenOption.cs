@@ -2,7 +2,7 @@ using libMBIN.NMS.Toolkit;
 
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0xEF693901D9F148D0, NameHash = 0x4BFAC826445A23F2)]
+    [NMS(GUID = 0xC071BFB97E3A2C91, NameHash = 0x4BFAC826445A23F2)]
     public class TkProceduralTextureChosenOption : NMSTemplate
     {
         /* 0x00 */ public NMSString0x10 Layer;
