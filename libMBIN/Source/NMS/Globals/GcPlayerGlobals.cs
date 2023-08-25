@@ -4,11 +4,12 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(GUID = 0x225FE482B51811F5, NameHash = 0x49E4A0E330E783EE)]
+    [NMS(GUID = 0x24525DCF0CF48BF7, NameHash = 0x49E4A0E330E783EE)]
     public class GcPlayerGlobals : NMSTemplate
     {
         /* 0x0000 */ public Vector3f LeftHandModeWeaponAttachSocketCorrection;
         /* 0x0010 */ public bool ForceFreighterProcTechRandom;
+        /* 0x0011 */ public bool SetWeaponIKTargetsInPostEngineUpdate;
         /* 0x0014 */ public float AlienPodAggroDecay;
         /* 0x0018 */ public float AlienPodAggroSpring;
         /* 0x001C */ public float FoodValueThresholdBest;
