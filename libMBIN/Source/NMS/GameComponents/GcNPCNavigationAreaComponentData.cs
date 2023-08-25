@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xA0E00875B7A6ABD0, NameHash = 0xB4FC959D6A910DEB)]
+    [NMS(GUID = 0xAB6146971456B356, NameHash = 0xB4FC959D6A910DEB)]
     public class GcNPCNavigationAreaComponentData : NMSTemplate
     {
         // size: 0x9
@@ -21,6 +21,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x0C */ public float SphereCastHeightClearance;
         /* 0x10 */ public float NeighbourCandidateDistance;
         /* 0x14 */ public float MaxNeighbourSlope;
-        /* 0x18 */ public float ConnectionLengthFactor;
+        /* 0x18 */ public bool LimitPOIConnections;
+        /* 0x1C */ public float ConnectionLengthFactor;
     }
 }

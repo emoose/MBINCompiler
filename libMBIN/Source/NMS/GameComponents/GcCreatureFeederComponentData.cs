@@ -3,14 +3,14 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x22B252B6D5AEE25B, NameHash = 0x32441F8B4528DF91)]
+    [NMS(GUID = 0xB822DB08128AAB11, NameHash = 0x32441F8B4528DF91)]
     public class GcCreatureFeederComponentData : NMSTemplate
     {
         /* 0x000 */ public GcMaintenanceComponentData MaintenanceData;
-        /* 0x400 */ public int NumInputs;
-        /* 0x404 */ public int NumMealsPerBait;
-        /* 0x408 */ public List<NMSString0x100> DispenseNodes;
-        /* 0x418 */ public float DispenseVelocity;
-        /* 0x41C */ public float DispensePeriod;
+        /* 0x420 */ public int NumInputs;
+        /* 0x424 */ public int NumMealsPerBait;
+        /* 0x428 */ public List<NMSString0x100> DispenseNodes;
+        /* 0x438 */ public float DispenseVelocity;
+        /* 0x43C */ public float DispensePeriod;
     }
 }

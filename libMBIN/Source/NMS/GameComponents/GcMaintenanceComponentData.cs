@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x4B073F1DAAA23991, NameHash = 0x479CFCB871ABBE0)]
+    [NMS(GUID = 0xA04402698077DA68, NameHash = 0x479CFCB871ABBE0)]
     public class GcMaintenanceComponentData : NMSTemplate
     {
         /* 0x000 */ public List<GcMaintenanceElement> PreInstalledTech;
@@ -37,40 +37,40 @@ namespace libMBIN.NMS.GameComponents
         /* 0x030 */ public bool ShareInteractionModelRender;
         /* 0x031 */ public bool UseInteractionStyleCameraEvent;
         /* 0x040 */ public TkModelRendererData ModelRenderData;
-        /* 0x0F0 */ public TkModelRendererData ModelRenderDataAlt;
+        /* 0x100 */ public TkModelRendererData ModelRenderDataAlt;
         // size: 0x2
         public enum ModelRendererResourceEnum : uint {
             ModelNode,
             MasterModelNode,
         }
-        /* 0x1A0 */ public ModelRendererResourceEnum ModelRendererResource;
-        /* 0x1A4 */ public GcBroadcastLevel BroadcastLevel;
-        /* 0x1A8 */ public NMSString0x20A Title;
-        /* 0x1C8 */ public NMSString0x20A Description;
-        /* 0x1E8 */ public NMSString0x20A ActionButtonOverride;
-        /* 0x208 */ public NMSString0x20A ActionDescriptionOverride;
-        /* 0x228 */ public NMSString0x20A TransferButtonOverride;
-        /* 0x248 */ public NMSString0x20A TransferDescriptionOverride;
-        /* 0x268 */ public NMSString0x20A DiscardButtonOverride;
-        /* 0x288 */ public NMSString0x20A DiscardDescriptionOverride;
-        /* 0x2A8 */ public NMSString0x20A ChargeButtonOverride;
-        /* 0x2C8 */ public NMSString0x20A ChargeDescriptionOverride;
-        /* 0x2E8 */ public NMSString0x20A ActionWarningOverride;
-        /* 0x308 */ public bool SilenceSuitVOIAlerts;
-        /* 0x30C */ public float InWorldUIScaler;
-        /* 0x310 */ public float InWorldUIMinDistOverride;
-        /* 0x314 */ public float InWorldUIMinDistOverrideV2;
-        /* 0x318 */ public float InWorldUIForcedOffset;
-        /* 0x31C */ public float InWorldUIForcedOffsetV2;
-        /* 0x320 */ public bool InWorldUIUseCameraUp;
-        /* 0x321 */ public bool InteractionRequiresPower;
-        /* 0x328 */ public NMSString0x10 StartMissionOnUse;
-        /* 0x338 */ public NMSString0x10 StartMissionOnCompletion;
-        /* 0x348 */ public NMSString0x10 GiveRewardOnCompletion;
-        /* 0x358 */ public bool OpenInteractionOnQuit;
-        /* 0x359 */ public bool ForceOneClickRepair;
-        /* 0x35C */ public GcAudioWwiseEvents AudioIDOnSuccess;
-        /* 0x360 */ public GcMaintenanceGroupInstallData GroupInstallSetup;
-        /* 0x3F0 */ public bool DisableSynchronise;
+        /* 0x1C0 */ public ModelRendererResourceEnum ModelRendererResource;
+        /* 0x1C4 */ public GcBroadcastLevel BroadcastLevel;
+        /* 0x1C8 */ public NMSString0x20A Title;
+        /* 0x1E8 */ public NMSString0x20A Description;
+        /* 0x208 */ public NMSString0x20A ActionButtonOverride;
+        /* 0x228 */ public NMSString0x20A ActionDescriptionOverride;
+        /* 0x248 */ public NMSString0x20A TransferButtonOverride;
+        /* 0x268 */ public NMSString0x20A TransferDescriptionOverride;
+        /* 0x288 */ public NMSString0x20A DiscardButtonOverride;
+        /* 0x2A8 */ public NMSString0x20A DiscardDescriptionOverride;
+        /* 0x2C8 */ public NMSString0x20A ChargeButtonOverride;
+        /* 0x2E8 */ public NMSString0x20A ChargeDescriptionOverride;
+        /* 0x308 */ public NMSString0x20A ActionWarningOverride;
+        /* 0x328 */ public bool SilenceSuitVOIAlerts;
+        /* 0x32C */ public float InWorldUIScaler;
+        /* 0x330 */ public float InWorldUIMinDistOverride;
+        /* 0x334 */ public float InWorldUIMinDistOverrideV2;
+        /* 0x338 */ public float InWorldUIForcedOffset;
+        /* 0x33C */ public float InWorldUIForcedOffsetV2;
+        /* 0x340 */ public bool InWorldUIUseCameraUp;
+        /* 0x341 */ public bool InteractionRequiresPower;
+        /* 0x348 */ public NMSString0x10 StartMissionOnUse;
+        /* 0x358 */ public NMSString0x10 StartMissionOnCompletion;
+        /* 0x368 */ public NMSString0x10 GiveRewardOnCompletion;
+        /* 0x378 */ public bool OpenInteractionOnQuit;
+        /* 0x379 */ public bool ForceOneClickRepair;
+        /* 0x37C */ public GcAudioWwiseEvents AudioIDOnSuccess;
+        /* 0x380 */ public GcMaintenanceGroupInstallData GroupInstallSetup;
+        /* 0x410 */ public bool DisableSynchronise;
     }
 }

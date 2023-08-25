@@ -2,19 +2,20 @@ using libMBIN.NMS.Toolkit;
 
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0x4B24E25067FB7537, NameHash = 0x53EC68060BE631FB)]
+    [NMS(GUID = 0xBB38158CAEEEAA45, NameHash = 0x53EC68060BE631FB)]
     public class TkModelRendererData : NMSTemplate
     {
         /* 0x00 */ public TkModelRendererCameraData Camera;
         /* 0x40 */ public float Fov;
         /* 0x44 */ public float AspectRatio;
+        /* 0x48 */ public float LightIntensityMultiplier;
         // size: 0x3
         public enum ThumbnailModeEnum : uint {
             None,
             HUD,
             GUI,
         }
-        /* 0x48 */ public ThumbnailModeEnum ThumbnailMode;
+        /* 0x4C */ public ThumbnailModeEnum ThumbnailMode;
         // size: 0x4
         public enum FocusTypeEnum : uint {
             ResourceBounds,
@@ -22,17 +23,17 @@ namespace libMBIN.NMS.Toolkit
             NodeBoundingBox,
             DiscoveryView,
         }
-        /* 0x4C */ public FocusTypeEnum FocusType;
-        /* 0x50 */ public NMSString0x20A FocusLocator;
-        /* 0x70 */ public Vector3f FocusOffset;
-        /* 0x80 */ public float FocusInterpTime;
-        /* 0x84 */ public float BlendInTime;
-        /* 0x88 */ public float BlendInOffset;
-        /* 0x90 */ public NMSString0x10 Anim;
-        /* 0xA0 */ public float HeightOffset;
-        /* 0xA4 */ public bool UsePlayerCameraInHmd;
-        /* 0xA5 */ public bool AlignUIToCameraInHmd;
-        /* 0xA6 */ public bool UseSensibleCameraFocusNodeIsNowOffsetNode;
-        /* 0xA7 */ public bool LookForFocusInMasterModel;
+        /* 0x50 */ public FocusTypeEnum FocusType;
+        /* 0x58 */ public NMSString0x20A FocusLocator;
+        /* 0x80 */ public Vector3f FocusOffset;
+        /* 0x90 */ public float FocusInterpTime;
+        /* 0x94 */ public float BlendInTime;
+        /* 0x98 */ public float BlendInOffset;
+        /* 0xA0 */ public NMSString0x10 Anim;
+        /* 0xB0 */ public float HeightOffset;
+        /* 0xB4 */ public bool UsePlayerCameraInHmd;
+        /* 0xB5 */ public bool AlignUIToCameraInHmd;
+        /* 0xB6 */ public bool UseSensibleCameraFocusNodeIsNowOffsetNode;
+        /* 0xB7 */ public bool LookForFocusInMasterModel;
     }
 }
