@@ -23,11 +23,11 @@ jobs:
             7.0.100
       - name: Build Windows binaries
         run: |
-          dotnet publish libMBIN-DLL -c Release -f net6.0-windows -r win-x64 -o Build/Release/net6/ /nowarn:cs0618
-          dotnet publish MBINCompiler -c Release -f net6.0-windows -r win-x64 -o Build/Release/net6/ /nowarn:cs0618
-          dotnet publish SaveFileMapping -c Release -f net6.0-windows -r win-x64 -o Build/Release/net6/ /nowarn:cs0618
-          dotnet publish libMBIN-DLL -c Release -f net7.0-windows -r win-x64 -o Build/Release/net7/ /nowarn:cs0618
-          dotnet publish MBINCompiler -c Release -f net7.0-windows -r win-x64 -o Build/Release/net7/ /nowarn:cs0618
+          dotnet publish libMBIN-DLL -c Release -f net6.0 -r win-x64 -o Build/Release/net6/ /nowarn:cs0618
+          dotnet publish MBINCompiler -c Release -f net6.0 -r win-x64 -o Build/Release/net6/ /nowarn:cs0618
+          dotnet publish SaveFileMapping -c Release -f net6.0 -r win-x64 -o Build/Release/net6/ /nowarn:cs0618
+          dotnet publish libMBIN-DLL -c Release -f net7.0 -r win-x64 -o Build/Release/net7/ /nowarn:cs0618
+          dotnet publish MBINCompiler -c Release -f net7.0 -r win-x64 -o Build/Release/net7/ /nowarn:cs0618
       - name: Move the exe so the tests can find it easier
         run: |
           cp Build/Release/net6/MBINCompiler.exe MBINCompiler.exe
