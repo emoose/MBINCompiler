@@ -5,7 +5,7 @@
     <AssemblyName>libMBIN</AssemblyName>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <TargetFrameworks>net6.0;net7.0</TargetFrameworks>
-    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <AppendTargetFrameworkToOutputPath>true</AppendTargetFrameworkToOutputPath>
     <Configurations>Release;Debug;Release-XML</Configurations>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <RepositoryType>git</RepositoryType>
