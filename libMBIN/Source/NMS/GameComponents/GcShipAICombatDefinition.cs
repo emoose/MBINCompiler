@@ -2,7 +2,7 @@ using libMBIN.NMS.Toolkit;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x8BEA7A915EDC0D2B, NameHash = 0x27F13746A084A731)]
+    [NMS(GUID = 0x57AA65E33D1B7E3, NameHash = 0x27F13746A084A731)]
     public class GcShipAICombatDefinition : NMSTemplate
     {
         /* 0x00 */ public NMSString0x10 Id;
@@ -16,8 +16,10 @@ namespace libMBIN.NMS.GameComponents
         /* 0x68 */ public int LevelledExtraHealth;
         /* 0x70 */ public NMSString0x10 DamageMultiplier;
         /* 0x80 */ public NMSString0x10 Shield;
-        /* 0x90 */ public NMSString0x10 Gun;
-        /* 0xA0 */ public int LaserDamageLevel;
-        /* 0xA4 */ public TkTextureResource Icon;
+        /* 0x90 */ public bool UsesShieldGenerators;
+        /* 0x91 */ public bool UsesFuelRods;
+        /* 0x98 */ public NMSString0x10 Gun;
+        /* 0xA8 */ public int LaserDamageLevel;
+        /* 0xAC */ public TkTextureResource Icon;
     }
 }
