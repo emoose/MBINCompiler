@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x1DB3113BBEA2B461, NameHash = 0xE24B3D78ED0634BD)]
+    [NMS(GUID = 0x4014343A9EF34D90, NameHash = 0xE24B3D78ED0634BD)]
     public class GcDestructableComponentData : NMSTemplate
     {
         /* 0x000 */ public NMSString0x10 Explosion;
@@ -26,7 +26,8 @@ namespace libMBIN.NMS.GameComponents
         /* 0x070 */ public List<GcSubstanceAmount> GivesSubstances;
         /* 0x080 */ public GcStatsEnum StatToTrack;
         /* 0x088 */ public NMSString0x10 GivesReward;
-        /* 0x098 */ public int OverrideChipAmount;
+        /* 0x098 */ public bool BlockDestructionIfRewardFails;
+        /* 0x09C */ public int OverrideChipAmount;
         /* 0x0A0 */ public NMSString0x10 PirateSystemAltReward;
         /* 0x0B0 */ public bool RewardIfDestroyedByOther;
         /* 0x0B1 */ public bool NoConsequencesDuringPirateBattle;

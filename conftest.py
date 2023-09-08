@@ -10,7 +10,7 @@ from tests.utils import download_data, format_err_results, generate_report
 
 TEST_ROOT_PATH = op.join(op.dirname(__file__), 'tests')
 DATA_PATH = op.join(TEST_ROOT_PATH, 'data')
-BASE_PATH = op.join("Build", "Release", "win-x64")
+BASE_PATH = op.join("Build", "Release", "net6.0", "win-x64", "publish")
 FAILED_FNAME = '_failed.txt'
 REPORT_FNAME = op.join(op.dirname(__file__), 'results.txt')
 JSON_REPORT_FNAME = op.join(op.dirname(__file__), 'report.json')
