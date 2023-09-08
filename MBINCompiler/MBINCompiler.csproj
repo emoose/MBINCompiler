@@ -3,7 +3,7 @@
     <OutputType>Exe</OutputType>
     <TargetFrameworks>net6.0;net7.0</TargetFrameworks>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
-    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <AppendTargetFrameworkToOutputPath>true</AppendTargetFrameworkToOutputPath>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <RuntimeIdentifiers>linux-x64;win-x64</RuntimeIdentifiers>
     <TargetLatestRuntimePatch>true</TargetLatestRuntimePatch>
@@ -48,32 +48,6 @@
     <RuntimeIdentifiers>linux-x64;win-x64</RuntimeIdentifiers>
     <PlatformTarget>x64</PlatformTarget>
   </PropertyGroup>
-
-  <Target Name="Clean-DotNetExe" AfterTargets="Clean" Condition="$(TargetFramework.StartsWith('netcore'))">
-    <Delete Files="$(TargetDir)$(TargetName).exe" />
-  </Target>
-
-  <Target Name="Build-DotNetExe" AfterTargets="Build" Condition="$(TargetFramework.StartsWith('netcore')) and '$(IsNestedBuild)' != 'true'">
-    <Message Text="SolutionDir = $(SolutionDir)" />
-    <Message Text="ProjectPath = $(ProjectPath)" />
-    <Message Text="OutDir      = $(OutDir)" />
-    <Message Text="OutputDir   = $(OutputDir)" />
-    <Message Text="TargetDir   = $(TargetDir)" />
-    <Message Text="TargetName  = $(TargetName)" />
-
-    <Exec ConsoleToMSBuild="true" Command="dotnet build &quot;$(ProjectPath)&quot; /p:CopyLocalLockFileAssemblies=false;IsNestedBuild=true --output &quot;$(TargetDir)stage/&quot;">
-      <Output TaskParameter="ConsoleOutput" PropertyName="OutputOfExec" />
-    </Exec>
-    <Copy SourceFiles="$(TargetDir)stage/$(TargetName).exe" DestinationFolder="$(TargetDir)" />
-    <RemoveDir Directories="$(TargetDir)stage/" />
-
-    <Exec ConsoleToMSBuild="true" IgnoreExitCode="true" Command="dotnet tool install --tool-path ../.nuget/tools dotnet-warp">
-      <Output TaskParameter="ConsoleOutput" PropertyName="OutputOfExec" />
-    </Exec>
-    <Exec ConsoleToMSBuild="true" Command="&quot;../.nuget/tools/dotnet-warp&quot; -v -p:CopyLocalLockFileAssemblies=false;IsNestedBuild=true -o &quot;$(TargetDir)$(TargetName).exe&quot;">
-      <Output TaskParameter="ConsoleOutput" PropertyName="OutputOfExec" />
-    </Exec>
-  </Target>
 
   <Import Project="..\libMBIN\libMBIN-Shared.projitems" Label="Shared" />
 
