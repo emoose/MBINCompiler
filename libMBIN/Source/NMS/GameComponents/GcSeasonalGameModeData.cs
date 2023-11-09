@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x2968EC49F636EDB1, NameHash = 0xFD6B0BE30E218605)]
+    [NMS(GUID = 0xCCC632C77B9B7F73, NameHash = 0xFD6B0BE30E218605)]
     public class GcSeasonalGameModeData : NMSTemplate
     {
         /* 0x0000 */ public int SeasonId;
@@ -75,8 +75,9 @@ namespace libMBIN.NMS.GameComponents
         /* 0x3358 */ public float DistanceFromShipAtStartOfGame;
         /* 0x335C */ public float BuildingRadiusShipOffsetMultiplier;
         /* 0x3360 */ public bool ShipStartsDamaged;
-        /* 0x3361 */ public bool AllowMissionDetailMessages;
-        /* 0x3362 */ public bool UseStartPlanetObjectListOverrides;
+        /* 0x3361 */ public bool BlockStormsAtStart;
+        /* 0x3362 */ public bool AllowMissionDetailMessages;
+        /* 0x3363 */ public bool UseStartPlanetObjectListOverrides;
         /* 0x3368 */ public NMSString0x10 StartPlanetRareSubstanceOverride;
         /* 0x3378 */ public bool TrashInventoryOnGalaxyTravel;
         /* 0x337C */ public int FreighterBattleEarlyWarpsOverride;

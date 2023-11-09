@@ -1,9 +1,10 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x21F8F59124D39327, NameHash = 0x75DF796697F3DB0A)]
+    [NMS(GUID = 0x8394A683A8878273, NameHash = 0x75DF796697F3DB0A)]
     public class GcRewardInstallTech : NMSTemplate
     {
         /* 0x00 */ public NMSString0x10 TechId;
+        /* 0x10 */ public NMSString0x10 ReplaceExistingTech;
         // size: 0x7
         public enum InventoryToInstallInEnum : uint {
             Personal,
@@ -14,8 +15,8 @@ namespace libMBIN.NMS.GameComponents
             Vehicle,
             Weapon,
         }
-        /* 0x10 */ public InventoryToInstallInEnum InventoryToInstallIn;
-        /* 0x14 */ public bool Silent;
-        /* 0x15 */ public bool InstallBroken;
+        /* 0x20 */ public InventoryToInstallInEnum InventoryToInstallIn;
+        /* 0x24 */ public bool Silent;
+        /* 0x25 */ public bool InstallBroken;
     }
 }
