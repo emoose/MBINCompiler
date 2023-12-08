@@ -1,5 +1,12 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
+    <ILLinkPackVersion>7.0.100-1.23211.1</ILLinkPackVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.ILLink.Tasks" Version="$(ILLinkPackVersion)" />
+    <PackageReference Include="Microsoft.NET.ILLink.Analyzers" Version="$(ILLinkPackVersion)" />
+  </ItemGroup>
+  <PropertyGroup>
     <OutputType>Library</OutputType>
     <RootNamespace>libMBIN</RootNamespace>
     <AssemblyName>libMBIN</AssemblyName>
