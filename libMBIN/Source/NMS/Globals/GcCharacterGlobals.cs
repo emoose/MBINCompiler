@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(GUID = 0x3CD469333A37CDED, NameHash = 0x9904F7D363A81377)]
+    [NMS(GUID = 0x790A4A578F2ABC82, NameHash = 0x9904F7D363A81377)]
     public class GcCharacterGlobals : NMSTemplate
     {
         /* 0x000 */ public float HoldWeaponAsPropXRotationDegrees;
@@ -181,5 +181,6 @@ namespace libMBIN.NMS.Globals
         /* 0x3A4 */ public float NPCDisplayThoughtsRefreshInterval;
         /* 0x3A8 */ public float NPCDisplayThoughtsProbability;
         /* 0x3AC */ public float NPCPOISelectionNearbyNPCBaseMultiplier;
+        /* 0x3B0 */ public float NPCHackMoveUpToStopFallingThoughFloor;
     }
 }
