@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x758B742446C82F24, NameHash = 0xDAB0554EA36957B5)]
+    [NMS(GUID = 0xEBF28F88CAC268BE, NameHash = 0xDAB0554EA36957B5)]
     public class GcInteractionComponentData : NMSTemplate
     {
         // size: 0x3
@@ -36,27 +36,28 @@ namespace libMBIN.NMS.GameComponents
         /* 0x248 */ public GcInteractionActivationCost SecondaryActivationCost;
         /* 0x2B0 */ public List<TkModelRendererData> EventRenderers;
         /* 0x2C0 */ public List<TkModelRendererData> EventRenderersAlt;
-        /* 0x2D0 */ public float SecondaryCameraTransitionTime;
-        /* 0x2D4 */ public GcInteractionDof DepthOfField;
-        /* 0x2E8 */ public List<GcAlienPuzzleMissionOverride> PuzzleMissionOverrideTable;
-        /* 0x2F8 */ public GcStoryUtilityOverride StoryUtilityOverrideData;
+        /* 0x2D0 */ public List<GcInteractionDof> EventRenderersDoF;
+        /* 0x2E0 */ public float SecondaryCameraTransitionTime;
+        /* 0x2E4 */ public GcInteractionDof DepthOfField;
+        /* 0x2F8 */ public List<GcAlienPuzzleMissionOverride> PuzzleMissionOverrideTable;
+        /* 0x308 */ public GcStoryUtilityOverride StoryUtilityOverrideData;
         // size: 0x3
         public enum OverrideInteriorExteriorMarkerEnum : uint {
             No,
             Interior,
             Exterior,
         }
-        /* 0x338 */ public OverrideInteriorExteriorMarkerEnum OverrideInteriorExteriorMarker;
-        /* 0x33C */ public bool ReseedAfterRewardSuccess;
-        /* 0x33D */ public bool UsePersonalPersistentBuffer;
-        /* 0x340 */ public float InWorldUIScaler;
-        /* 0x344 */ public float InWorldUIMinDistOverride;
-        /* 0x348 */ public float InWorldUIMinDistOverrideV2;
-        /* 0x34C */ public float InWorldUIForcedOffset;
-        /* 0x350 */ public float InWorldUIForcedOffsetV2;
-        /* 0x354 */ public bool InWorldUIUseCameraUp;
-        /* 0x358 */ public NMSString0x10 StartMissionOnUse;
-        /* 0x368 */ public bool AllowMissionUnderwater;
-        /* 0x369 */ public bool UseUnlockedInteractionIfMaintDone;
+        /* 0x348 */ public OverrideInteriorExteriorMarkerEnum OverrideInteriorExteriorMarker;
+        /* 0x34C */ public bool ReseedAfterRewardSuccess;
+        /* 0x34D */ public bool UsePersonalPersistentBuffer;
+        /* 0x350 */ public float InWorldUIScaler;
+        /* 0x354 */ public float InWorldUIMinDistOverride;
+        /* 0x358 */ public float InWorldUIMinDistOverrideV2;
+        /* 0x35C */ public float InWorldUIForcedOffset;
+        /* 0x360 */ public float InWorldUIForcedOffsetV2;
+        /* 0x364 */ public bool InWorldUIUseCameraUp;
+        /* 0x368 */ public NMSString0x10 StartMissionOnUse;
+        /* 0x378 */ public bool AllowMissionUnderwater;
+        /* 0x379 */ public bool UseUnlockedInteractionIfMaintDone;
     }
 }

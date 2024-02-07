@@ -4,33 +4,34 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(GUID = 0x24525DCF0CF48BF7, NameHash = 0x49E4A0E330E783EE)]
+    [NMS(GUID = 0xD539B38FB85CB3CA, NameHash = 0x49E4A0E330E783EE)]
     public class GcPlayerGlobals : NMSTemplate
     {
         /* 0x0000 */ public Vector3f LeftHandModeWeaponAttachSocketCorrection;
-        /* 0x0010 */ public bool ForceFreighterProcTechRandom;
-        /* 0x0011 */ public bool SetWeaponIKTargetsInPostEngineUpdate;
-        /* 0x0014 */ public float AlienPodAggroDecay;
-        /* 0x0018 */ public float AlienPodAggroSpring;
-        /* 0x001C */ public float FoodValueThresholdBest;
-        /* 0x0020 */ public float FoodValueThresholdGood;
-        /* 0x0024 */ public float FoodValueThresholdAverage;
-        /* 0x0028 */ public float FoodValueThresholdBad;
-        /* 0x002C */ public float FoodValueThresholdWorst;
-        /* 0x0030 */ public float TeleportAppearEffectSpeed;
-        /* 0x0034 */ public float TeleportDisappearEffectSpeed;
-        /* 0x0038 */ public float MiniportalAppearEffectTime;
-        /* 0x003C */ public float MiniportalDisappearEffectTime;
-        /* 0x0040 */ public bool RecenterViewWhenEnteringShip;
-        /* 0x0044 */ public float BinocularAimOffset;
-        /* 0x0048 */ public float BinocularScopeScale;
-        /* 0x004C */ public float BinocularScopeSmoothing;
-        /* 0x0050 */ public float MaxArmExtension;
-        /* 0x0054 */ public float MinArmExtension;
-        /* 0x0058 */ public float ThirdPersonWeaponAttachRotationCorrectionAngle;
-        /* 0x005C */ public float ThirdPersonWeaponXOffset;
-        /* 0x0060 */ public float SummonArcRange;
-        /* 0x0064 */ public float InteractionAimOffset;
+        /* 0x0010 */ public float MinRespawnCharge;
+        /* 0x0014 */ public bool ForceFreighterProcTechRandom;
+        /* 0x0015 */ public bool SetWeaponIKTargetsInPostEngineUpdate;
+        /* 0x0018 */ public float AlienPodAggroDecay;
+        /* 0x001C */ public float AlienPodAggroSpring;
+        /* 0x0020 */ public float FoodValueThresholdBest;
+        /* 0x0024 */ public float FoodValueThresholdGood;
+        /* 0x0028 */ public float FoodValueThresholdAverage;
+        /* 0x002C */ public float FoodValueThresholdBad;
+        /* 0x0030 */ public float FoodValueThresholdWorst;
+        /* 0x0034 */ public float TeleportAppearEffectSpeed;
+        /* 0x0038 */ public float TeleportDisappearEffectSpeed;
+        /* 0x003C */ public float MiniportalAppearEffectTime;
+        /* 0x0040 */ public float MiniportalDisappearEffectTime;
+        /* 0x0044 */ public bool RecenterViewWhenEnteringShip;
+        /* 0x0048 */ public float BinocularAimOffset;
+        /* 0x004C */ public float BinocularScopeScale;
+        /* 0x0050 */ public float BinocularScopeSmoothing;
+        /* 0x0054 */ public float MaxArmExtension;
+        /* 0x0058 */ public float MinArmExtension;
+        /* 0x005C */ public float ThirdPersonWeaponAttachRotationCorrectionAngle;
+        /* 0x0060 */ public float ThirdPersonWeaponXOffset;
+        /* 0x0064 */ public float SummonArcRange;
+        /* 0x0068 */ public float InteractionAimOffset;
         /* 0x0070 */ public GcProjectorOffsetData QuickMenuLauncherTransforms;
         /* 0x00E0 */ public GcProjectorOffsetData QuickMenuLauncherTransformsNoBuildMenu;
         /* 0x0150 */ public GcProjectorOffsetData WeaponMenuTransforms;

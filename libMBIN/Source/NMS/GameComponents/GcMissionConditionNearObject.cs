@@ -1,12 +1,13 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x450C3B881FF849F0, NameHash = 0x748605335FA1C427)]
+    [NMS(GUID = 0x4FD311BB97293E36, NameHash = 0x748605335FA1C427)]
     public class GcMissionConditionNearObject : NMSTemplate
     {
-        // size: 0x5
+        // size: 0x6
         public enum MissionObjectEnum : uint {
             PlayerShip,
             PlayerVehicle,
+            PlayerSubmarine,
             StoryPortal,
             OpenStoryPortal,
             OpenStandardPortal,

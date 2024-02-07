@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x68D2368BE2F08CB5, NameHash = 0xD811F4C9E014843E)]
+    [NMS(GUID = 0x241F3A24C8346F91, NameHash = 0xD811F4C9E014843E)]
     public class GcRealitySubstanceData : NMSTemplate
     {
         /* 0x000 */ public NMSString0x20 Name;
@@ -30,9 +30,12 @@ namespace libMBIN.NMS.GameComponents
         /* 0x1FC */ public float EconomyInfluenceMultiplier;
         /* 0x200 */ public NMSString0x20A PinObjective;
         /* 0x220 */ public NMSString0x20A PinObjectiveTip;
-        /* 0x240 */ public NMSString0x10 WikiMissionID;
-        /* 0x250 */ public bool CookingIngredient;
-        /* 0x251 */ public bool GoodForSelling;
-        /* 0x252 */ public bool EggModifierIngredient;
+        /* 0x240 */ public NMSString0x20A PinObjectiveMessage;
+        /* 0x260 */ public GcScannerIconTypes PinObjectiveScannableType;
+        /* 0x268 */ public NMSString0x10 WikiMissionID;
+        /* 0x278 */ public bool CookingIngredient;
+        /* 0x279 */ public bool GoodForSelling;
+        /* 0x27A */ public bool EasyToRefine;
+        /* 0x27B */ public bool EggModifierIngredient;
     }
 }

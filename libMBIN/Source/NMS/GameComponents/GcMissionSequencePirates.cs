@@ -1,9 +1,15 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xCC277D2F01D5CC7A, NameHash = 0x9166CF1D0ED63522)]
+    [NMS(GUID = 0x96958F6D9642716D, NameHash = 0x9166CF1D0ED63522)]
     public class GcMissionSequencePirates : NMSTemplate
     {
-        /* 0x00 */ public bool ScanCargo;
+        // size: 0x3
+        public enum PirateSpawnTypeEnum : uint {
+            CargoAttackStart,
+            ProbeSuccess,
+            PlanetaryRaidStart,
+        }
+        /* 0x00 */ public PirateSpawnTypeEnum PirateSpawnType;
         /* 0x04 */ public int NumSquads;
         /* 0x08 */ public NMSString0x10 AttackDefinition;
         /* 0x18 */ public NMSString0x20A RewardMessageOverride;

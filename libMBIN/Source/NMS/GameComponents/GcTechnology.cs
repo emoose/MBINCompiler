@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xFEB58100EFFBD55F, NameHash = 0x9F1CE8466638E767)]
+    [NMS(GUID = 0x9687EF15CEEF3FE9, NameHash = 0x9F1CE8466638E767)]
     public class GcTechnology : NMSTemplate
     {
         /* 0x000 */ public NMSString0x10 ID;
@@ -32,6 +32,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x26A */ public bool Core;
         /* 0x26B */ public bool RepairTech;
         /* 0x26C */ public bool Procedural;
+        /* 0x26D */ public bool BrokenSlotTech;
         /* 0x270 */ public GcTechnologyCategory Category;
         /* 0x274 */ public GcTechnologyRarity Rarity;
         /* 0x278 */ public float Value;

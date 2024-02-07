@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xEF2FA1139D998310, NameHash = 0x5930542B7B565329)]
+    [NMS(GUID = 0xCCAE46AE685FCEAC, NameHash = 0x5930542B7B565329)]
     public class GcRealityManagerData : NMSTemplate
     {
         /* 0x00000 */ public ushort HomeRealityIteration;
@@ -29,68 +29,70 @@ namespace libMBIN.NMS.GameComponents
         /* 0x00910 */ public NMSString0x80 ProductDescriptionOverrideTable;
         /* 0x00990 */ public NMSString0x80 AlienWordsTable;
         /* 0x00A10 */ public List<NMSString0x80> AlienPuzzleTables;
-        [NMS(Size = 0x8A, EnumType = typeof(GcInteractionType.InteractionTypeEnum))]
+        [NMS(Size = 0x8C, EnumType = typeof(GcInteractionType.InteractionTypeEnum))]
         /* 0x00A20 */ public bool[] LoopInteractionPuzzles;
-        [NMS(Size = 0x8A, EnumType = typeof(GcInteractionType.InteractionTypeEnum))]
+        [NMS(Size = 0x8C, EnumType = typeof(GcInteractionType.InteractionTypeEnum))]
         /* 0x00AAC */ public GcAlienPuzzleTableIndex[] InteractionPuzzlesIndexTypes;
         [NMS(Size = 0x7, EnumType = typeof(GcWeightingCurve.WeightingCurveEnum))]
-        /* 0x00CD4 */ public TkCurveType[] WeightingCurves;
-        /* 0x00CE0 */ public List<GcDamageMultiplierLookup> DamageMultiplierTable;
-        /* 0x00CF0 */ public NMSString0x80 RewardTable;
-        /* 0x00D70 */ public NMSString0x80 DiscoveryRewardTable;
-        /* 0x00DF0 */ public NMSString0x80 InventoryTable;
-        /* 0x00E70 */ public NMSString0x80 DamageTable;
-        /* 0x00EF0 */ public NMSString0x80 PurchaseableBuildingBlueprintsTable;
-        /* 0x00F70 */ public NMSString0x80 PurchaseableSpecialsTable;
-        /* 0x00FF0 */ public NMSString0x80 UnlockableSeasonRewardsTable;
-        /* 0x01070 */ public NMSString0x80 UnlockableTwitchRewardsTable;
-        /* 0x010F0 */ public NMSString0x80 UnlockablePlatformRewardsTable;
-        /* 0x01170 */ public NMSString0x80 CostTable;
-        /* 0x011F0 */ public NMSString0x80 TradingCostTable;
-        /* 0x01270 */ public NMSString0x80 TradingClassDataTable;
-        /* 0x012F0 */ public NMSString0x80 MaintenanceGroupsTable;
-        /* 0x01370 */ public NMSString0x80 UnlockableItemTrees;
-        /* 0x013F0 */ public NMSString0x80 SettlementPerksTable;
-        /* 0x01470 */ public NMSString0x80 PlayerWeaponPropertiesTable;
-        /* 0x014F0 */ public NMSString0x80 CombatEffectsTable;
-        /* 0x01570 */ public NMSString0x80 TechBoxTable;
-        /* 0x015F0 */ public List<GcFreighterCargoOption> FreighterCargoOptions;
+        /* 0x00CDC */ public TkCurveType[] WeightingCurves;
+        /* 0x00CE8 */ public List<GcDamageMultiplierLookup> DamageMultiplierTable;
+        /* 0x00CF8 */ public NMSString0x80 HistoricalSeasonDataTable;
+        /* 0x00D78 */ public NMSString0x80 RewardTable;
+        /* 0x00DF8 */ public NMSString0x80 DiscoveryRewardTable;
+        /* 0x00E78 */ public NMSString0x80 StatRewardsTable;
+        /* 0x00EF8 */ public NMSString0x80 InventoryTable;
+        /* 0x00F78 */ public NMSString0x80 DamageTable;
+        /* 0x00FF8 */ public NMSString0x80 PurchaseableBuildingBlueprintsTable;
+        /* 0x01078 */ public NMSString0x80 PurchaseableSpecialsTable;
+        /* 0x010F8 */ public NMSString0x80 UnlockableSeasonRewardsTable;
+        /* 0x01178 */ public NMSString0x80 UnlockableTwitchRewardsTable;
+        /* 0x011F8 */ public NMSString0x80 UnlockablePlatformRewardsTable;
+        /* 0x01278 */ public NMSString0x80 CostTable;
+        /* 0x012F8 */ public NMSString0x80 TradingCostTable;
+        /* 0x01378 */ public NMSString0x80 TradingClassDataTable;
+        /* 0x013F8 */ public NMSString0x80 MaintenanceGroupsTable;
+        /* 0x01478 */ public NMSString0x80 UnlockableItemTrees;
+        /* 0x014F8 */ public NMSString0x80 SettlementPerksTable;
+        /* 0x01578 */ public NMSString0x80 PlayerWeaponPropertiesTable;
+        /* 0x015F8 */ public NMSString0x80 CombatEffectsTable;
+        /* 0x01678 */ public NMSString0x80 TechBoxTable;
+        /* 0x016F8 */ public List<GcFreighterCargoOption> FreighterCargoOptions;
         [NMS(Size = 0x7, EnumType = typeof(GcShipWeapons.ShipWeaponEnum))]
-        /* 0x01600 */ public GcShipWeaponData[] ShipWeapons;
+        /* 0x01708 */ public GcShipWeaponData[] ShipWeapons;
         [NMS(Size = 0x13, EnumType = typeof(GcPlayerWeapons.WeaponModeEnum))]
-        /* 0x017C0 */ public GcPlayerWeaponData[] PlayerWeapons;
+        /* 0x018C8 */ public GcPlayerWeaponData[] PlayerWeapons;
         [NMS(Size = 0x7, EnumType = typeof(GcVehicleType.VehicleTypeEnum))]
-        /* 0x018F0 */ public TkIdArray[] DefaultVehicleLoadout;
+        /* 0x019F8 */ public TkIdArray[] DefaultVehicleLoadout;
         [NMS(Size = 0xA, EnumType = typeof(GcMissionFaction.MissionFactionEnum))]
-        /* 0x01960 */ public NMSString0x10[] FactionStandingIDs;
+        /* 0x01A68 */ public NMSString0x10[] FactionStandingIDs;
         [NMS(Size = 0xA, EnumType = typeof(GcMissionFaction.MissionFactionEnum))]
-        /* 0x01A00 */ public NMSString0x20A[] FactionNames;
+        /* 0x01B08 */ public NMSString0x20A[] FactionNames;
         [NMS(Size = 0xA, EnumType = typeof(GcMissionFaction.MissionFactionEnum))]
-        /* 0x01B40 */ public GcNumberedTextList[] FactionClients;
-        [NMS(Size = 0xE, EnumType = typeof(GcMissionType.MissionTypeEnum))]
-        /* 0x01CA8 */ public GcNumberedTextList[] MissionNameFormats;
-        [NMS(Size = 0xE, EnumType = typeof(GcMissionType.MissionTypeEnum))]
-        /* 0x01EA0 */ public GcNumberedTextList[] MissionNameAdjectives;
-        [NMS(Size = 0xE, EnumType = typeof(GcMissionType.MissionTypeEnum))]
-        /* 0x02098 */ public GcNumberedTextList[] MissionNameNouns;
+        /* 0x01C48 */ public GcNumberedTextList[] FactionClients;
+        [NMS(Size = 0x15, EnumType = typeof(GcMissionType.MissionTypeEnum))]
+        /* 0x01DB0 */ public GcNumberedTextList[] MissionNameFormats;
+        [NMS(Size = 0x15, EnumType = typeof(GcMissionType.MissionTypeEnum))]
+        /* 0x020A4 */ public GcNumberedTextList[] MissionNameAdjectives;
+        [NMS(Size = 0x15, EnumType = typeof(GcMissionType.MissionTypeEnum))]
+        /* 0x02398 */ public GcNumberedTextList[] MissionNameNouns;
         [NMS(Size = 0xB)]
-        /* 0x02290 */ public TkIdArray[] MissionBoardRewardOptions;
-        /* 0x02340 */ public List<GcRewardMissionOverride> BuilderMissionRewardOverrides;
+        /* 0x02690 */ public TkIdArray[] MissionBoardRewardOptions;
+        /* 0x02740 */ public List<GcRewardMissionOverride> BuilderMissionRewardOverrides;
         [NMS(Size = 0x3, EnumType = typeof(GcRarity.RarityEnum))]
-        /* 0x02350 */ public float[] WeightedTextWeights;
-        /* 0x02360 */ public GcRealityIconTable Icons;
+        /* 0x02750 */ public float[] WeightedTextWeights;
+        /* 0x02760 */ public GcRealityIconTable Icons;
         [NMS(Size = 0x6, EnumType = typeof(GcPlayerHazardType.HazardEnum))]
-        /* 0x08520 */ public Colour[] HazardColours;
+        /* 0x089A0 */ public Colour[] HazardColours;
         [NMS(Size = 0x3, EnumType = typeof(GcRarity.RarityEnum))]
-        /* 0x08580 */ public Colour[] RarityColours;
+        /* 0x08A00 */ public Colour[] RarityColours;
         [NMS(Size = 0x9, EnumType = typeof(GcRealitySubstanceCategory.SubstanceCategoryEnum))]
-        /* 0x085B0 */ public Colour[] SubstanceCategoryColours;
+        /* 0x08A30 */ public Colour[] SubstanceCategoryColours;
         [NMS(Size = 0x9, EnumType = typeof(GcRealitySubstanceCategory.SubstanceCategoryEnum))]
-        /* 0x08640 */ public TkTextureResource[] SubstanceChargeIcons;
-        [NMS(Size = 0xBE, EnumType = typeof(GcStatsTypes.StatsTypeEnum))]
-        /* 0x08AE4 */ public TkTextureResource[] StatCategoryIcons;
-        [NMS(Size = 0xBE, EnumType = typeof(GcStatsTypes.StatsTypeEnum))]
-        /* 0x0ECDC */ public TkTextureResource[] StatTechPackageIcons;
+        /* 0x08AC0 */ public TkTextureResource[] SubstanceChargeIcons;
+        [NMS(Size = 0xBF, EnumType = typeof(GcStatsTypes.StatsTypeEnum))]
+        /* 0x08F64 */ public TkTextureResource[] StatCategoryIcons;
+        [NMS(Size = 0xBF, EnumType = typeof(GcStatsTypes.StatsTypeEnum))]
+        /* 0x0F1E0 */ public TkTextureResource[] StatTechPackageIcons;
         // size: 0x5
         public enum StatsEnum {
             Suit,
@@ -100,28 +102,28 @@ namespace libMBIN.NMS.GameComponents
             Vehicle,
         }
         [NMS(Size = 0x5, EnumType = typeof(StatsEnum))]
-        /* 0x14ED8 */ public GcStats[] Stats;
-        /* 0x14F28 */ public GcTechList StationTechShops;
+        /* 0x15460 */ public GcStats[] Stats;
+        /* 0x154B0 */ public GcTechList StationTechShops;
         [NMS(Size = 0x10, EnumType = typeof(GcBiomeType.BiomeEnum))]
-        /* 0x14F38 */ public GcTechList[] PlanetTechShops;
-        /* 0x15038 */ public GcTradeSettings TradeSettings;
-        /* 0x162E8 */ public List<NMSString0x10> PirateStationExtraProds;
-        /* 0x162F8 */ public GcInventoryLayout SuitStartingSlotLayout;
-        /* 0x16318 */ public GcInventoryLayout SuitTechOnlyStartingSlotLayout;
-        /* 0x16338 */ public GcInventoryLayout SuitCargoStartingSlotLayout;
-        /* 0x16358 */ public GcInventoryLayout ShipStartingLayout;
-        /* 0x16378 */ public GcInventoryLayout ShipTechOnlyStartingLayout;
-        /* 0x16398 */ public GcInventoryLayout ShipCargoOnlyStartingLayout;
-        /* 0x163B8 */ public List<int> SuitUpgradePrices;
-        /* 0x163C8 */ public List<int> SuitTechOnlyUpgradePrices;
-        /* 0x163D8 */ public List<int> SuitCargoUpgradePrices;
-        /* 0x163E8 */ public List<NMSString0x10> NeverSellableItems;
-        /* 0x163F8 */ public List<NMSString0x10> NeverOfferedForSale;
+        /* 0x154C0 */ public GcTechList[] PlanetTechShops;
+        /* 0x155C0 */ public GcTradeSettings TradeSettings;
+        /* 0x16870 */ public List<NMSString0x10> PirateStationExtraProds;
+        /* 0x16880 */ public GcInventoryLayout SuitStartingSlotLayout;
+        /* 0x168A0 */ public GcInventoryLayout SuitTechOnlyStartingSlotLayout;
+        /* 0x168C0 */ public GcInventoryLayout SuitCargoStartingSlotLayout;
+        /* 0x168E0 */ public GcInventoryLayout ShipStartingLayout;
+        /* 0x16900 */ public GcInventoryLayout ShipTechOnlyStartingLayout;
+        /* 0x16920 */ public GcInventoryLayout ShipCargoOnlyStartingLayout;
+        /* 0x16940 */ public List<int> SuitUpgradePrices;
+        /* 0x16950 */ public List<int> SuitTechOnlyUpgradePrices;
+        /* 0x16960 */ public List<int> SuitCargoUpgradePrices;
+        /* 0x16970 */ public List<NMSString0x10> NeverSellableItems;
+        /* 0x16980 */ public List<NMSString0x10> NeverOfferedForSale;
         [NMS(Size = 0x5)]
-        /* 0x16408 */ public float[] NormalisedPriceLimits;
-        /* 0x16420 */ public List<GcFiendCrimeSpawnTable> FiendCrimeSpawnTable;
-        /* 0x16430 */ public List<GcIDPair> FreighterBaseItemPairs;
+        /* 0x16990 */ public float[] NormalisedPriceLimits;
+        /* 0x169A8 */ public List<GcFiendCrimeSpawnTable> FiendCrimeSpawnTable;
+        /* 0x169B8 */ public List<GcIDPair> FreighterBaseItemPairs;
         [NMS(Size = 0x5, EnumType = typeof(GcCatalogueGroups.CatalogueGroupEnum))]
-        /* 0x16440 */ public NMSString0x80[] Catalogues;
+        /* 0x169C8 */ public NMSString0x80[] Catalogues;
     }
 }

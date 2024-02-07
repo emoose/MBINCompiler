@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x4F204E9991BBC456, NameHash = 0x2ECD4E3663FDB26F)]
+    [NMS(GUID = 0x319B723CBDE00151, NameHash = 0x2ECD4E3663FDB26F)]
     public class GcRewardTable : NMSTemplate
     {
         /* 0x000 */ public List<GcGenericRewardTableEntry> GenericTable;
@@ -34,5 +34,10 @@ namespace libMBIN.NMS.GameComponents
         /* 0x190 */ public List<GcGenericRewardTableEntry> SeasonRewardTable9;
         /* 0x1A0 */ public List<GcGenericRewardTableEntry> SeasonRewardTable10;
         /* 0x1B0 */ public List<GcGenericRewardTableEntry> SeasonRewardTable11;
+        /* 0x1C0 */ public List<GcGenericRewardTableEntry> SeasonRewardTable12;
+        /* 0x1D0 */ public List<GcGenericRewardTableEntry> SeasonRewardTable13;
+        /* 0x1E0 */ public List<GcGenericRewardTableEntry> SeasonRewardTable14;
+        /* 0x1F0 */ public List<GcGenericRewardTableEntry> SeasonRewardTable15;
+        /* 0x200 */ public List<GcGenericRewardTableEntry> SeasonRewardTable16;
     }
 }

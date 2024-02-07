@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x226FE853AE3E63DD, NameHash = 0xBCDA670B36E2534)]
+    [NMS(GUID = 0x3EFF0072813E9A12, NameHash = 0xBCDA670B36E2534)]
     public class GcExperienceDebugTriggerInput : NMSTemplate
     {
         // size: 0xD

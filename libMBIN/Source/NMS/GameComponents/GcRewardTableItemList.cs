@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xB8BAF404996F6201, NameHash = 0xF97DB1C704357E47)]
+    [NMS(GUID = 0xA9EED7C55B0F050F, NameHash = 0xF97DB1C704357E47)]
     public class GcRewardTableItemList : NMSTemplate
     {
         // size: 0xA
@@ -19,9 +19,10 @@ namespace libMBIN.NMS.GameComponents
             SelectAlwaysSilent,
             SelectFromSuccessSilent,
         }
-        /* 0x0 */ public RewardChoiceEnum RewardChoice;
-        /* 0x4 */ public bool OverrideZeroSeed;
-        /* 0x5 */ public bool UseInventoryChoiceOverride;
-        /* 0x8 */ public List<GcRewardTableItem> List;
+        /* 0x00 */ public RewardChoiceEnum RewardChoice;
+        /* 0x04 */ public bool OverrideZeroSeed;
+        /* 0x05 */ public bool UseInventoryChoiceOverride;
+        /* 0x08 */ public NMSString0x10 IncrementStat;
+        /* 0x18 */ public List<GcRewardTableItem> List;
     }
 }

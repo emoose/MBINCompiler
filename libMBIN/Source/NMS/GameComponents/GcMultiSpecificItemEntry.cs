@@ -3,16 +3,18 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xE83D9C2444D3380, NameHash = 0x7439D28A897F0ACC)]
+    [NMS(GUID = 0x6D4A4E9F958B1465, NameHash = 0x7439D28A897F0ACC)]
     public class GcMultiSpecificItemEntry : NMSTemplate
     {
-        // size: 0x6
+        // size: 0x8
         public enum MultiItemRewardTypeEnum : uint {
             Product,
             Substance,
             ProcTech,
             ProcProduct,
             InventorySlot,
+            InventorySlotShip,
+            InventorySlotWeapon,
             CommunityTierProduct,
         }
         /* 0x00 */ public MultiItemRewardTypeEnum MultiItemRewardType;

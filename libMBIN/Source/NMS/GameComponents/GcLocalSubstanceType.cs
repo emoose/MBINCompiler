@@ -1,14 +1,15 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xB7A9039BF7A8F27, NameHash = 0xE639CB6E87DF64B)]
+    [NMS(GUID = 0x6ECC91CA241FAC30, NameHash = 0xE639CB6E87DF64B)]
     public class GcLocalSubstanceType : NMSTemplate
     {
-        // size: 0x4
+        // size: 0x5
         public enum LocalSubstanceTypeEnum : uint {
-            Any,
+            AnyDeposit,
             Common,
             Uncommon,
             Rare,
+            Plant,
         }
         /* 0x0 */ public LocalSubstanceTypeEnum LocalSubstanceType;
     }

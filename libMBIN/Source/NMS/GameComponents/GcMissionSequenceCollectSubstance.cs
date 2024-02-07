@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xCE986C52268A4B16, NameHash = 0x84D6228673F661A6)]
+    [NMS(GUID = 0x345E1430C561E466, NameHash = 0x84D6228673F661A6)]
     public class GcMissionSequenceCollectSubstance : NMSTemplate
     {
         /* 0x00 */ public NMSString0x80 Message;
@@ -14,6 +14,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0xA4 */ public int AmountMax;
         /* 0xA8 */ public bool WaitForSelected;
         /* 0xA9 */ public bool CanSetIcon;
+        /* 0xAA */ public bool CanFormatObjectives;
         /* 0xB0 */ public NMSString0x10 ForBuild;
         /* 0xC0 */ public NMSString0x10 ForRepair;
         /* 0xD0 */ public GcItemNeedPurpose Purpose;

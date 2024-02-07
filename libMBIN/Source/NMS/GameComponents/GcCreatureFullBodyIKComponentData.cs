@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xD746E629D444C041, NameHash = 0x741554C15123D097)]
+    [NMS(GUID = 0x8CE0334F5701E7E7, NameHash = 0x741554C15123D097)]
     public class GcCreatureFullBodyIKComponentData : NMSTemplate
     {
         /* 0x00 */ public List<GcCreatureIkData> JointData;
@@ -25,7 +25,8 @@ namespace libMBIN.NMS.GameComponents
         /* 0x34 */ public float Omega;
         /* 0x38 */ public float OmegaDropOff;
         /* 0x3C */ public float MovementDamp;
-        /* 0x40 */ public bool UseFootGlue;
+        /* 0x40 */ public bool UseFootRaycasts;
+        /* 0x41 */ public bool UseFootGlue;
         /* 0x44 */ public float FootPlantSpringTime;
         /* 0x48 */ public bool UseFootAngle;
         /* 0x4C */ public float FootAngleSpeed;

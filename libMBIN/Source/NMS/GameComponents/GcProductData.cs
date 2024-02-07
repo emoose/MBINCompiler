@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xC8BD0ABA9E49767F, NameHash = 0xE831C8A241FD8276)]
+    [NMS(GUID = 0x268CAA7D7CCCB649, NameHash = 0xE831C8A241FD8276)]
     public class GcProductData : NMSTemplate
     {
         /* 0x000 */ public NMSString0x10 ID;
@@ -54,12 +54,15 @@ namespace libMBIN.NMS.GameComponents
         /* 0x398 */ public float EconomyInfluenceMultiplier;
         /* 0x3A0 */ public NMSString0x20A PinObjective;
         /* 0x3C0 */ public NMSString0x20A PinObjectiveTip;
-        /* 0x3E0 */ public bool CookingIngredient;
-        /* 0x3E4 */ public float CookingValue;
-        /* 0x3E8 */ public bool GoodForSelling;
-        /* 0x3F0 */ public NMSString0x10 GiveRewardOnSpecialPurchase;
-        /* 0x400 */ public bool EggModifierIngredient;
-        /* 0x401 */ public bool IsTechbox;
-        /* 0x402 */ public bool CanSendToOtherPlayers;
+        /* 0x3E0 */ public NMSString0x20A PinObjectiveMessage;
+        /* 0x400 */ public GcScannerIconTypes PinObjectiveScannableType;
+        /* 0x404 */ public bool PinObjectiveEasyToRefine;
+        /* 0x405 */ public bool CookingIngredient;
+        /* 0x408 */ public float CookingValue;
+        /* 0x40C */ public bool GoodForSelling;
+        /* 0x410 */ public NMSString0x10 GiveRewardOnSpecialPurchase;
+        /* 0x420 */ public bool EggModifierIngredient;
+        /* 0x421 */ public bool IsTechbox;
+        /* 0x422 */ public bool CanSendToOtherPlayers;
     }
 }
