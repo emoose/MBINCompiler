@@ -1,9 +1,9 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xBA85C40C7D96F32C, NameHash = 0xC2EE53901B0156DE)]
+    [NMS(GUID = 0xF8944A35F1313994, NameHash = 0xC2EE53901B0156DE)]
     public class GcBuildingPlacementErrorTypes : NMSTemplate
     {
-        // size: 0x16
+        // size: 0x17
         public enum InvalidPlacementReasonEnum : uint {
             Offline,
             InvalidBiome,
@@ -12,6 +12,7 @@ namespace libMBIN.NMS.GameComponents
             PlanetLimitReached,
             BaseLimitReached,
             RegionLimitReached,
+            InvalidMaxBasesReached,
             InvalidOverlappingAnyBase,
             InvalidOverlappingSettlement,
             InvalidOverlappingBase,

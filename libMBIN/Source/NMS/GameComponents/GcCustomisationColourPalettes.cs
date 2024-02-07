@@ -2,12 +2,12 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xEBEFF3A4D2A4DE2B, NameHash = 0x8D353F7BD3E655C5)]
+    [NMS(GUID = 0x8607CC21A025527D, NameHash = 0x8D353F7BD3E655C5)]
     public class GcCustomisationColourPalettes : NMSTemplate
     {
-        [NMS(Size = 0x17, EnumType = typeof(GcCustomisationComponentData.CustomisationDataTypeEnum))]
+        [NMS(Size = 0x18, EnumType = typeof(GcCustomisationComponentData.CustomisationDataTypeEnum))]
         /* 0x0000 */ public GcPaletteData[] ColourPalettes;
-        [NMS(Size = 0x17, EnumType = typeof(GcCustomisationComponentData.CustomisationDataTypeEnum))]
-        /* 0x5D70 */ public GcCustomisationColourPaletteExtraData[] ExtraData;
+        [NMS(Size = 0x18, EnumType = typeof(GcCustomisationComponentData.CustomisationDataTypeEnum))]
+        /* 0x6180 */ public GcCustomisationColourPaletteExtraData[] ExtraData;
     }
 }

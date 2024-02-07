@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xA8A0373A6ACF760B, NameHash = 0x4EDC167332F6B824)]
+    [NMS(GUID = 0x4ED9AB261420750B, NameHash = 0x4EDC167332F6B824)]
     public class GcSeasonalMilestone : NMSTemplate
     {
         /* 0x000 */ public NMSString0x10 Mission;
@@ -30,6 +30,8 @@ namespace libMBIN.NMS.GameComponents
         /* 0x789 */ public bool GreyIfCantStart;
         /* 0x78A */ public bool IsRendezvous;
         /* 0x78B */ public bool IsStageControl;
-        /* 0x790 */ public GcSeasonalMilestoneEncryption Encryption;
+        /* 0x78C */ public int BlockRendezvousMilestoneSeed;
+        /* 0x790 */ public bool DontAttemptFallbackTextSubs;
+        /* 0x798 */ public GcSeasonalMilestoneEncryption Encryption;
     }
 }

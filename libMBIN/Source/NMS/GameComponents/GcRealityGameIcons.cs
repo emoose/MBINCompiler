@@ -1,9 +1,9 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x4CEFF0A92F4FD59, NameHash = 0x878911013D83AEE9)]
+    [NMS(GUID = 0xADA14C6F04360B71, NameHash = 0x878911013D83AEE9)]
     public class GcRealityGameIcons : NMSTemplate
     {
-        // size: 0x58
+        // size: 0x59
         public enum GameIconsEnum : uint {
             Stamina,
             NoStamina,
@@ -34,6 +34,7 @@ namespace libMBIN.NMS.GameComponents
             VehicleBoost,
             VehicleBoostRecharge,
             Fuel,
+            FuelEmpty,
             GekStanding,
             VykeenStanding,
             KorvaxStanding,

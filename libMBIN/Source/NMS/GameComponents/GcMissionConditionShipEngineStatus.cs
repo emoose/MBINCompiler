@@ -1,9 +1,9 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x53E888018E30D82B, NameHash = 0x9A43A9B870251F8C)]
+    [NMS(GUID = 0x874558482EBF8780, NameHash = 0x9A43A9B870251F8C)]
     public class GcMissionConditionShipEngineStatus : NMSTemplate
     {
-        // size: 0x9
+        // size: 0xA
         public enum EngineStatusEnum : uint {
             Thrusting,
             Braking,
@@ -14,6 +14,7 @@ namespace libMBIN.NMS.GameComponents
             LowFlight,
             Inverted,
             EnginesRepaired,
+            PulsingToPlanet,
         }
         /* 0x0 */ public EngineStatusEnum EngineStatus;
     }

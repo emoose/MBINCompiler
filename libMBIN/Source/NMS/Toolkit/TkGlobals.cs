@@ -2,7 +2,7 @@ using System;
 
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0x2615D8C72020005, NameHash = 0xB62E6456DFE47836)]
+    [NMS(GUID = 0xEB7C9677BE54349F, NameHash = 0xB62E6456DFE47836)]
     public class TkGlobals : NMSTemplate
     {
         // size: 0x4
@@ -83,21 +83,28 @@ namespace libMBIN.NMS.Toolkit
         /* 0x25C */ public float UpdatePeriodSteam;
         /* 0x260 */ public float VoiceUpdatePeriod;
         /* 0x264 */ public float VoiceUpdatePeriodSteam;
-        /* 0x268 */ public bool HmdEnable;
-        /* 0x269 */ public bool HmdFoveated;
-        /* 0x26C */ public int HmdPreviewScale;
-        /* 0x270 */ public bool HmdTracking;
-        /* 0x271 */ public bool HmdStereoRender;
-        /* 0x272 */ public bool HmdDistortionPassthru;
-        /* 0x274 */ public int HmdMonitor;
-        /* 0x278 */ public int HmdEyeBufferWidth;
-        /* 0x27C */ public int HmdEyeBufferHeight;
-        /* 0x280 */ public float HmdEyeScalePos;
-        /* 0x284 */ public float HmdHeadScalePos;
-        /* 0x288 */ public float HmdImmersionFactor;
-        /* 0x28C */ public int FrameFlipRateDefault;
-        /* 0x290 */ public int FrameFlipRateLoad;
-        /* 0x294 */ public int FrameFlipRateGame;
-        /* 0x298 */ public float MaxFrameRate;
+        // size: 0x3
+        public enum TrialStatusEnum : uint {
+            SystemDefault,
+            ForceTrial,
+            ForceFullGame,
+        }
+        /* 0x268 */ public TrialStatusEnum TrialStatus;
+        /* 0x26C */ public bool HmdEnable;
+        /* 0x26D */ public bool HmdFoveated;
+        /* 0x270 */ public int HmdPreviewScale;
+        /* 0x274 */ public bool HmdTracking;
+        /* 0x275 */ public bool HmdStereoRender;
+        /* 0x276 */ public bool HmdDistortionPassthru;
+        /* 0x278 */ public int HmdMonitor;
+        /* 0x27C */ public int HmdEyeBufferWidth;
+        /* 0x280 */ public int HmdEyeBufferHeight;
+        /* 0x284 */ public float HmdEyeScalePos;
+        /* 0x288 */ public float HmdHeadScalePos;
+        /* 0x28C */ public float HmdImmersionFactor;
+        /* 0x290 */ public int FrameFlipRateDefault;
+        /* 0x294 */ public int FrameFlipRateLoad;
+        /* 0x298 */ public int FrameFlipRateGame;
+        /* 0x29C */ public float MaxFrameRate;
     }
 }

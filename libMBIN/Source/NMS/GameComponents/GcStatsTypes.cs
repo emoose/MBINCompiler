@@ -1,9 +1,9 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x93EF490D69D7B74, NameHash = 0x3E6292A999E2A6)]
+    [NMS(GUID = 0x4585D71B26606764, NameHash = 0x3E6292A999E2A6)]
     public class GcStatsTypes : NMSTemplate
     {
-        // size: 0xBE
+        // size: 0xBF
         public enum StatsTypeEnum : uint {
             Unspecified,
             Weapon_Laser,
@@ -115,6 +115,7 @@ namespace libMBIN.NMS.GameComponents
             Suit_AutoTranslator,
             Suit_Utility,
             Suit_RocketLocker,
+            Suit_Denier,
             Ship_Weapons_Guns,
             Ship_Weapons_Guns_Damage,
             Ship_Weapons_Guns_Rate,

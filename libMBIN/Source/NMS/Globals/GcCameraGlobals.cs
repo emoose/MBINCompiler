@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(GUID = 0x9735EEE7C2BF7221, NameHash = 0xA826BCA4D4C3DFE3)]
+    [NMS(GUID = 0x71E94C1882EA4827, NameHash = 0xA826BCA4D4C3DFE3)]
     public class GcCameraGlobals : NMSTemplate
     {
         /* 0x0000 */ public float ScanCameraLookAtTime;
@@ -257,8 +257,9 @@ namespace libMBIN.NMS.Globals
         /* 0x3448 */ public float PainShakeTime;
         /* 0x344C */ public float ShipShakeDamper;
         /* 0x3450 */ public float IndoorCamShakeDamper;
-        /* 0x3454 */ public float FirstPersonSlerpAway;
-        /* 0x3458 */ public float FirstPersonSlerpTowards;
+        /* 0x3454 */ public float NoControlCamShakeDamper;
+        /* 0x3458 */ public float FirstPersonSlerpAway;
+        /* 0x345C */ public float FirstPersonSlerpTowards;
         /* 0x3460 */ public List<GcCameraShakeData> CameraShakeTable;
         /* 0x3470 */ public float BobAmountAbandFreighter;
         /* 0x3474 */ public float BobFactorAbandFreighter;
@@ -362,5 +363,6 @@ namespace libMBIN.NMS.Globals
         /* 0x3D60 */ public List<Vector3f> SavedCameraFacing;
         /* 0x3D70 */ public GcCameraWarpSettings WarpSettings;
         /* 0x3DC4 */ public GcCameraWarpSettings FreighterWarpSettings;
+        /* 0x3E18 */ public GcCameraWarpSettings PirateFreighterWarpSettings;
     }
 }

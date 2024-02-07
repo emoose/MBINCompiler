@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xD1014F22A244874, NameHash = 0x61E014828AD14CD)]
+    [NMS(GUID = 0x239C1C17A8015109, NameHash = 0x61E014828AD14CD)]
     public class GcPulseEncounterSpawnTrader : NMSTemplate
     {
         /* 0x000 */ public GcResourceElement CustomShipResource;

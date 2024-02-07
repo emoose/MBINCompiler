@@ -1,9 +1,9 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x2EA92F3027D31030, NameHash = 0x8A4027FC041677F0)]
+    [NMS(GUID = 0xEBD91269A8E88EA2, NameHash = 0x8A4027FC041677F0)]
     public class GcScannerIconTypes : NMSTemplate
     {
-        // size: 0x40
+        // size: 0x42
         public enum ScanIconTypeEnum : uint {
             None,
             Health,
@@ -69,6 +69,8 @@ namespace libMBIN.NMS.GameComponents
             FreighterEngine,
             FreighterWeakPoint,
             FreighterTrenchEntrance,
+            Terrain,
+            FuelAsteroid,
         }
         /* 0x0 */ public ScanIconTypeEnum ScanIconType;
     }

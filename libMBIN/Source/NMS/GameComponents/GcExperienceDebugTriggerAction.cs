@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x8E61093397807DF6, NameHash = 0x3339FF1DC3ABF146)]
+    [NMS(GUID = 0x94549CDD49034A0B, NameHash = 0x3339FF1DC3ABF146)]
     public class GcExperienceDebugTriggerAction : NMSTemplate
     {
         /* 0x0 */ public GcExperienceDebugTriggerActionTypes Action;

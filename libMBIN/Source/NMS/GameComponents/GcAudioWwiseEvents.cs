@@ -1,9 +1,9 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x343FBB9E2F0D5690, NameHash = 0x8B94093DC3901046)]
+    [NMS(GUID = 0xF6D62DC781474A4F, NameHash = 0x8B94093DC3901046)]
     public class GcAudioWwiseEvents : NMSTemplate
     {
-        // size: 0x9FF
+        // size: 0xA01
         public enum AkEventEnum : uint {
             INVALID_EVENT = 0x0,
             ABANDONED_DOOR_UNLOCK = 0x264BED2D,
@@ -1364,6 +1364,8 @@ namespace libMBIN.NMS.GameComponents
             PL_SHIP_MINIWARP_COUNTDOWN = 0x5064D24A,
             PL_SHIP_MINIWARP_END = 0x53B4B6F4,
             PL_SHIP_MINIWARP_JUMP = 0xA54A1259,
+            PL_SHIP_RACER_LANDING = 0x23B40F78,
+            PL_SHIP_RACER_TAKEOFF = 0xB52D6DE5,
             PL_SHIP_ROBOT_CARRIAGELOCK_LANDING = 0xECF68579,
             PL_SHIP_ROBOT_CARRIAGELOCK_TAKEOFF = 0x19B453B0,
             PL_SHIP_ROBOT_CHUNKYLEGS_LANDING = 0xECF46219,

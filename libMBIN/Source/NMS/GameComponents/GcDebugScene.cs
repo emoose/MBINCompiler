@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x2E3C5B9EC12CF3ED, NameHash = 0xB5B196A1179FFE00)]
+    [NMS(GUID = 0x86CD59EDE89C4BF5, NameHash = 0xB5B196A1179FFE00)]
     public class GcDebugScene : NMSTemplate
     {
         /* 0x0000 */ public bool Active;
@@ -68,20 +68,21 @@ namespace libMBIN.NMS.GameComponents
         /* 0x4190 */ public Vector3f DebugShipSpawnUp;
         /* 0x41A0 */ public NMSString0x10 PulseEncounter;
         /* 0x41B0 */ public NMSString0x10 BackgroundSpaceEncounter;
-        /* 0x41C0 */ public Vector3f SandwormSpawnPos;
-        /* 0x41D0 */ public Vector3f DebugFrigateFlybySpawnPos;
-        /* 0x41E0 */ public Vector3f DebugSpaceBattleSpawnPosOffset;
-        /* 0x41F0 */ public Vector3f DebugSpaceBattleSpawnRotOffset;
-        /* 0x4200 */ public float DebugFrigateFlybyRotation;
-        /* 0x4204 */ public float DebugFrigateFlybyHeightOffset;
-        /* 0x4208 */ public NMSString0x10 NormandyReward;
-        /* 0x4218 */ public NMSString0x10 LivingFrigateReward;
-        /* 0x4228 */ public float CameraSpinTime;
-        /* 0x422C */ public float CameraSpinRevolutions;
-        /* 0x4230 */ public float CameraSpinVerticalOffset;
-        /* 0x4234 */ public float CameraSpinDistanceOffset;
-        /* 0x4238 */ public TkCurveType CameraSpinEasing;
+        /* 0x41C0 */ public bool PulseEncountersAlwaysPersist;
+        /* 0x41D0 */ public Vector3f SandwormSpawnPos;
+        /* 0x41E0 */ public Vector3f DebugFrigateFlybySpawnPos;
+        /* 0x41F0 */ public Vector3f DebugSpaceBattleSpawnPosOffset;
+        /* 0x4200 */ public Vector3f DebugSpaceBattleSpawnRotOffset;
+        /* 0x4210 */ public float DebugFrigateFlybyRotation;
+        /* 0x4214 */ public float DebugFrigateFlybyHeightOffset;
+        /* 0x4218 */ public NMSString0x10 NormandyReward;
+        /* 0x4228 */ public NMSString0x10 LivingFrigateReward;
+        /* 0x4238 */ public float CameraSpinTime;
+        /* 0x423C */ public float CameraSpinRevolutions;
+        /* 0x4240 */ public float CameraSpinVerticalOffset;
+        /* 0x4244 */ public float CameraSpinDistanceOffset;
+        /* 0x4248 */ public TkCurveType CameraSpinEasing;
         [NMS(Size = 0x6)]
-        /* 0x4240 */ public GcDebugPlanetPos[] PlanetPositions;
+        /* 0x4250 */ public GcDebugPlanetPos[] PlanetPositions;
     }
 }

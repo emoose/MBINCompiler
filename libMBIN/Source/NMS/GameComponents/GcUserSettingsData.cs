@@ -5,7 +5,7 @@ using System;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x5F4EE2D8A8E7C69C, NameHash = 0x3A50D683FD1CF4BF)]
+    [NMS(GUID = 0x3DF85DC4FC201AF5, NameHash = 0x3A50D683FD1CF4BF)]
     public class GcUserSettingsData : NMSTemplate
     {
         /* 0x0000 */ public bool InvertLookControls;
@@ -152,7 +152,8 @@ namespace libMBIN.NMS.GameComponents
         /* 0x3A60 */ public HighResVRUIEnum HighResVRUI;
         /* 0x3A64 */ public float PlayerHUDVROffset;
         /* 0x3A68 */ public float ShipHUDVROffset;
-        /* 0x3A6C */ public bool VRHandControllerSwapYawAndRoll;
-        /* 0x3A6D */ public bool VRHandControllerEnableTwist;
+        /* 0x3A6C */ public bool HighlightInteractableObjects;
+        /* 0x3A6D */ public bool VRHandControllerSwapYawAndRoll;
+        /* 0x3A6E */ public bool VRHandControllerEnableTwist;
     }
 }

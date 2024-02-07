@@ -4,36 +4,37 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(GUID = 0x3EA9DD368590F409, NameHash = 0x9B5DDD6D76FBC918)]
+    [NMS(GUID = 0x99CCCD26F955BB56, NameHash = 0x9B5DDD6D76FBC918)]
     public class GcVehicleGlobals : NMSTemplate
     {
-        /* 0x000 */ public float UnderwaterScannerIconRangeBoost;
-        /* 0x004 */ public float VehicleSolarRegenFactor;
-        /* 0x008 */ public NMSString0x10 VehicleStrongLaser;
-        /* 0x018 */ public NMSString0x10 MechStrongLaser;
-        /* 0x028 */ public NMSString0x10 SentinelRightArmTech;
-        /* 0x038 */ public NMSString0x10 SentinelLeftArmTech;
-        /* 0x048 */ public NMSString0x20A SentinelRightArmTechNameOverride;
-        /* 0x068 */ public NMSString0x10 SentinelRightLeftArmLaserData;
-        /* 0x078 */ public bool UseFirstPersonCamera;
-        /* 0x07C */ public float LevelVehicleCameraFactor;
-        /* 0x080 */ public bool ShowAllCheckpoints;
-        /* 0x084 */ public float ControlStickRecenterSpeedDegPerSec;
-        /* 0x088 */ public float SteeringWheelPushRange;
-        /* 0x08C */ public float SteeringWheelPitchAngle;
-        /* 0x090 */ public float SteeringWheelSpringBothHands;
-        /* 0x094 */ public float SteeringWheelSpringOneHand;
-        /* 0x098 */ public float SteeringWheelCentreOffset;
-        /* 0x09C */ public TkCurveType SteeringWheelOutputCurve;
-        /* 0x0A0 */ public float RemoteBoostingEffectTimeout;
-        /* 0x0A4 */ public float TestFrictionStat;
-        /* 0x0A8 */ public float TestSkidFrictionStat;
-        /* 0x0AC */ public bool TestAnims;
-        /* 0x0B0 */ public float TestAnimThrust;
-        /* 0x0B4 */ public float TestAnimBoost;
-        /* 0x0B8 */ public float TestAnimTurn;
-        /* 0x0BC */ public float VisualTurnUnderwaterSpring;
-        /* 0x0C0 */ public float VisualTurnSpring;
+        /* 0x000 */ public float VehicleCollisionScaleFactor;
+        /* 0x004 */ public float UnderwaterScannerIconRangeBoost;
+        /* 0x008 */ public float VehicleSolarRegenFactor;
+        /* 0x010 */ public NMSString0x10 VehicleStrongLaser;
+        /* 0x020 */ public NMSString0x10 MechStrongLaser;
+        /* 0x030 */ public NMSString0x10 SentinelRightArmTech;
+        /* 0x040 */ public NMSString0x10 SentinelLeftArmTech;
+        /* 0x050 */ public NMSString0x20A SentinelRightArmTechNameOverride;
+        /* 0x070 */ public NMSString0x10 SentinelRightLeftArmLaserData;
+        /* 0x080 */ public bool UseFirstPersonCamera;
+        /* 0x084 */ public float LevelVehicleCameraFactor;
+        /* 0x088 */ public bool ShowAllCheckpoints;
+        /* 0x08C */ public float ControlStickRecenterSpeedDegPerSec;
+        /* 0x090 */ public float SteeringWheelPushRange;
+        /* 0x094 */ public float SteeringWheelPitchAngle;
+        /* 0x098 */ public float SteeringWheelSpringBothHands;
+        /* 0x09C */ public float SteeringWheelSpringOneHand;
+        /* 0x0A0 */ public float SteeringWheelCentreOffset;
+        /* 0x0A4 */ public TkCurveType SteeringWheelOutputCurve;
+        /* 0x0A8 */ public float RemoteBoostingEffectTimeout;
+        /* 0x0AC */ public float TestFrictionStat;
+        /* 0x0B0 */ public float TestSkidFrictionStat;
+        /* 0x0B4 */ public bool TestAnims;
+        /* 0x0B8 */ public float TestAnimThrust;
+        /* 0x0BC */ public float TestAnimBoost;
+        /* 0x0C0 */ public float TestAnimTurn;
+        /* 0x0C4 */ public float VisualTurnUnderwaterSpring;
+        /* 0x0C8 */ public float VisualTurnSpring;
         /* 0x0D0 */ public Colour DefaultBoosterColour;
         /* 0x0E0 */ public float WheelDustColourLightFactor;
         /* 0x0E4 */ public Vector2f MechMovementStickSpeedLimit;

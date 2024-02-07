@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x1B8D24A676A7B12D, NameHash = 0x2A28407EECDFA4CC)]
+    [NMS(GUID = 0xAC7CA061653F89A1, NameHash = 0x2A28407EECDFA4CC)]
     public class GcRealityIconTable : NMSTemplate
     {
         [NMS(Size = 0x6, EnumType = typeof(GcPlayerHazardType.HazardEnum))]
@@ -31,16 +31,16 @@ namespace libMBIN.NMS.GameComponents
         /* 0x2940 */ public List<GcPlanetResourceIconLookup> TerrainIconLookups;
         /* 0x2950 */ public List<GcPlanetResourceIconLookup> PlanetResourceIconLookups;
         /* 0x2960 */ public List<TkTextureResource> RepairTechIcons;
-        [NMS(Size = 0x58, EnumType = typeof(GcRealityGameIcons.GameIconsEnum))]
+        [NMS(Size = 0x59, EnumType = typeof(GcRealityGameIcons.GameIconsEnum))]
         /* 0x2970 */ public TkTextureResource[] GameIcons;
-        /* 0x56D0 */ public List<GcRealityIcon> MissionDetailIcons;
+        /* 0x5758 */ public List<GcRealityIcon> MissionDetailIcons;
         [NMS(Size = 0x7, EnumType = typeof(GcDifficultyPresetType.DifficultyPresetTypeEnum))]
-        /* 0x56E0 */ public TkTextureResource[] DifficultyPresetIcons;
+        /* 0x5768 */ public TkTextureResource[] DifficultyPresetIcons;
         [NMS(Size = 0x4, EnumType = typeof(GcDifficultyOptionGroups.DifficultyOptionGroupEnum))]
-        /* 0x5A7C */ public TkTextureResource[] DifficultyUIOptionIcons;
+        /* 0x5B04 */ public TkTextureResource[] DifficultyUIOptionIcons;
         [NMS(Size = 0x5, EnumType = typeof(GcOptionsUIHeaderIcons.OptionsUIHeaderIconTypeEnum))]
-        /* 0x5C8C */ public TkTextureResource[] OptionsUIHeaderIcons;
+        /* 0x5D14 */ public TkTextureResource[] OptionsUIHeaderIcons;
         [NMS(Size = 0x5, EnumType = typeof(GcInventoryFilterOptions.InventoryFilterEnum))]
-        /* 0x5F20 */ public TkTextureResource[] InventoryFilterIcons;
+        /* 0x5FA8 */ public TkTextureResource[] InventoryFilterIcons;
     }
 }

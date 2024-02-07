@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x398D1617F840E14D, NameHash = 0x392CEA8FE98D0F4)]
+    [NMS(GUID = 0xDA6E1BB1C26B5916, NameHash = 0x392CEA8FE98D0F4)]
     public class GcScannerIcons : NMSTemplate
     {
         /* 0x00000 */ public GcScannerIcon TaggedBuilding;
@@ -44,61 +44,60 @@ namespace libMBIN.NMS.GameComponents
         /* 0x04A54 */ public GcScannerIcon[] BuildingIconsBinocs;
         [NMS(Size = 0x23, EnumType = typeof(GcScannerBuildingIconTypes.ScanBuildingIconTypeEnum))]
         /* 0x06EF8 */ public GcScannerIcon[] BuildingIconsHuge;
-        [NMS(Size = 0x40, EnumType = typeof(GcScannerIconTypes.ScanIconTypeEnum))]
+        [NMS(Size = 0x42, EnumType = typeof(GcScannerIconTypes.ScanIconTypeEnum))]
         /* 0x0939C */ public GcScannerIcon[] ScannableIcons;
-        [NMS(Size = 0x40, EnumType = typeof(GcScannerIconTypes.ScanIconTypeEnum))]
-        /* 0x0D69C */ public GcScannerIcon[] ScannableIconsBinocs;
-        [NMS(Size = 0x40, EnumType = typeof(GcScannerIconTypes.ScanIconTypeEnum))]
-        /* 0x119A0 */ public Colour[] ScannableColours;
-        /* 0x11DA0 */ public Colour BuildingColour;
-        /* 0x11DB0 */ public Colour GenericColour;
-        /* 0x11DC0 */ public Colour RelicColour;
-        /* 0x11DD0 */ public Colour SignalColour;
-        /* 0x11DE0 */ public Colour UnknownColour;
-        /* 0x11DF0 */ public GcScannerIcon CreatureDiscovered;
-        /* 0x11EFC */ public GcScannerIcon CreatureUndiscovered;
-        /* 0x12008 */ public GcScannerIcon CreatureUnknown;
-        /* 0x12114 */ public GcScannerIcon MessageBeacon;
-        /* 0x12220 */ public GcScannerIcon MessageBeaconSmall;
-        /* 0x1232C */ public GcScannerIcon BaseBuildingMarker;
-        /* 0x12438 */ public GcScannerIcon PlanetPoleNorth;
-        /* 0x12544 */ public GcScannerIcon PlanetPoleSouth;
-        /* 0x12650 */ public GcScannerIcon MonumentMarker;
-        /* 0x1275C */ public GcScannerIcon NetworkPlayerMarker;
-        /* 0x12868 */ public GcScannerIcon NetworkPlayerMarkerShip;
-        /* 0x12974 */ public GcScannerIcon NetworkPlayerMarkerVehicle;
+        [NMS(Size = 0x42, EnumType = typeof(GcScannerIconTypes.ScanIconTypeEnum))]
+        /* 0x0D8B4 */ public GcScannerIcon[] ScannableIconsBinocs;
+        [NMS(Size = 0x42, EnumType = typeof(GcScannerIconTypes.ScanIconTypeEnum))]
+        /* 0x11DD0 */ public Colour[] ScannableColours;
+        /* 0x121F0 */ public Colour BuildingColour;
+        /* 0x12200 */ public Colour GenericColour;
+        /* 0x12210 */ public Colour RelicColour;
+        /* 0x12220 */ public Colour SignalColour;
+        /* 0x12230 */ public Colour UnknownColour;
+        /* 0x12240 */ public GcScannerIcon CreatureDiscovered;
+        /* 0x1234C */ public GcScannerIcon CreatureUndiscovered;
+        /* 0x12458 */ public GcScannerIcon CreatureUnknown;
+        /* 0x12564 */ public GcScannerIcon MessageBeacon;
+        /* 0x12670 */ public GcScannerIcon MessageBeaconSmall;
+        /* 0x1277C */ public GcScannerIcon BaseBuildingMarker;
+        /* 0x12888 */ public GcScannerIcon PlanetPoleNorth;
+        /* 0x12994 */ public GcScannerIcon PlanetPoleSouth;
+        /* 0x12AA0 */ public GcScannerIcon MonumentMarker;
+        /* 0x12BAC */ public GcScannerIcon NetworkPlayerMarker;
+        /* 0x12CB8 */ public GcScannerIcon NetworkPlayerMarkerShip;
+        /* 0x12DC4 */ public GcScannerIcon NetworkPlayerMarkerVehicle;
         [NMS(Size = 0x4)]
-        /* 0x12A80 */ public GcScannerIcon[] NetworkFSPlayerMarkers;
+        /* 0x12ED0 */ public GcScannerIcon[] NetworkFSPlayerMarkers;
         [NMS(Size = 0x4)]
-        /* 0x12EB0 */ public GcScannerIcon[] NetworkFSPlayerMarkersShip;
+        /* 0x13300 */ public GcScannerIcon[] NetworkFSPlayerMarkersShip;
         [NMS(Size = 0x4)]
-        /* 0x132E0 */ public Colour[] NetworkFSPlayerColours;
+        /* 0x13730 */ public Colour[] NetworkFSPlayerColours;
         [NMS(Size = 0x4)]
-        /* 0x13320 */ public GcScannerIcon[] NetworkPlayerFreighter;
-        /* 0x13750 */ public GcScannerIcon PortalMarker;
-        /* 0x1385C */ public GcScannerIcon BlackHole;
-        /* 0x13968 */ public GcScannerIcon CreatureCurious;
-        /* 0x13A74 */ public GcScannerIcon CreatureAction;
-        /* 0x13B80 */ public GcScannerIcon CreatureTame;
-        /* 0x13C8C */ public GcScannerIcon CreatureDanger;
-        /* 0x13D98 */ public GcScannerIcon CreatureFiend;
-        /* 0x13EA4 */ public GcScannerIcon CreatureMilk;
+        /* 0x13770 */ public GcScannerIcon[] NetworkPlayerFreighter;
+        /* 0x13BA0 */ public GcScannerIcon PortalMarker;
+        /* 0x13CAC */ public GcScannerIcon BlackHole;
+        /* 0x13DB8 */ public GcScannerIcon CreatureCurious;
+        /* 0x13EC4 */ public GcScannerIcon CreatureAction;
+        /* 0x13FD0 */ public GcScannerIcon CreatureTame;
+        /* 0x140DC */ public GcScannerIcon CreatureDanger;
+        /* 0x141E8 */ public GcScannerIcon CreatureFiend;
+        /* 0x142F4 */ public GcScannerIcon CreatureMilk;
         [NMS(Size = 0x5, EnumType = typeof(GcScannerIconHighlightTypes.ScannerIconHighlightTypeEnum))]
-        /* 0x13FB0 */ public TkTextureResource[] HighlightIcons;
-        /* 0x14244 */ public GcScannerIcon MissionEnterOrbit;
-        /* 0x14350 */ public GcScannerIcon MissionEnterBuilding;
-        /* 0x1445C */ public GcScannerIcon MissionEnterStation;
-        /* 0x14568 */ public GcScannerIcon MissionEnterFreighter;
-        /* 0x14674 */ public GcScannerIcon MissionAbandonedFreighter;
-        /* 0x14780 */ public GcScannerIcon CreatureInteraction;
-        /* 0x1488C */ public GcScannerIcon PetInteraction;
-        /* 0x14998 */ public GcScannerIcon Pet;
-        /* 0x14AA4 */ public GcScannerIcon PetSad;
-        /* 0x14BB0 */ public GcScannerIcon PetActivity;
-        /* 0x14CBC */ public GcScannerIcon PlayerSettlement;
-        /* 0x14DC8 */ public GcScannerIcon OtherPlayerSettlement;
-        /* 0x14ED4 */ public GcScannerIcon FriendlyDrone;
-        /* 0x14FE0 */ public GcScannerIcon PirateRaid;
-        /* 0x150EC */ public GcScannerIcon FuelAsteroid;
+        /* 0x14400 */ public TkTextureResource[] HighlightIcons;
+        /* 0x14694 */ public GcScannerIcon MissionEnterOrbit;
+        /* 0x147A0 */ public GcScannerIcon MissionEnterBuilding;
+        /* 0x148AC */ public GcScannerIcon MissionEnterStation;
+        /* 0x149B8 */ public GcScannerIcon MissionEnterFreighter;
+        /* 0x14AC4 */ public GcScannerIcon MissionAbandonedFreighter;
+        /* 0x14BD0 */ public GcScannerIcon CreatureInteraction;
+        /* 0x14CDC */ public GcScannerIcon PetInteraction;
+        /* 0x14DE8 */ public GcScannerIcon Pet;
+        /* 0x14EF4 */ public GcScannerIcon PetSad;
+        /* 0x15000 */ public GcScannerIcon PetActivity;
+        /* 0x1510C */ public GcScannerIcon PlayerSettlement;
+        /* 0x15218 */ public GcScannerIcon OtherPlayerSettlement;
+        /* 0x15324 */ public GcScannerIcon FriendlyDrone;
+        /* 0x15430 */ public GcScannerIcon PirateRaid;
     }
 }

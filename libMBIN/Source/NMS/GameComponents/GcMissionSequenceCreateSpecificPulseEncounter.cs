@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x8E8B5A78757E2259, NameHash = 0x245D62E60DEB8B1E)]
+    [NMS(GUID = 0x4CE72BD65D6ADF5E, NameHash = 0x245D62E60DEB8B1E)]
     public class GcMissionSequenceCreateSpecificPulseEncounter : NMSTemplate
     {
         /* 0x000 */ public NMSString0x80 Message;
@@ -9,9 +9,10 @@ namespace libMBIN.NMS.GameComponents
         /* 0x180 */ public NMSString0x80 MessageSignalBlocked;
         /* 0x200 */ public float MinTimeInPulse;
         /* 0x208 */ public NMSString0x10 PulseEncounterID;
-        /* 0x218 */ public bool AllowAnyEncounter;
-        /* 0x219 */ public bool Silent;
-        /* 0x21A */ public bool AllowOutsideShip;
-        /* 0x21B */ public NMSString0x80 DebugText;
+        /* 0x218 */ public bool TakeEncounterIDFromSeasonData;
+        /* 0x219 */ public bool AllowAnyEncounter;
+        /* 0x21A */ public bool Silent;
+        /* 0x21B */ public bool AllowOutsideShip;
+        /* 0x21C */ public NMSString0x80 DebugText;
     }
 }

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x42A2F90FB68AA08A, NameHash = 0x51B3554FFBEBED66)]
+    [NMS(GUID = 0xEDF14FB3A359222F, NameHash = 0x51B3554FFBEBED66)]
     public class GcMissionSequenceGroup : NMSTemplate
     {
         /* 0x000 */ public bool Silent;
@@ -13,25 +13,28 @@ namespace libMBIN.NMS.GameComponents
         /* 0x090 */ public NMSString0x20A PageDataLocID;
         /* 0x0B0 */ public NMSString0x10 BuildMenuHint;
         /* 0x0C0 */ public NMSString0x10 InventoryHint;
-        /* 0x0D0 */ public NMSString0x80 DebugText;
-        /* 0x150 */ public NMSString0x20A ObjectiveID;
-        /* 0x170 */ public NMSString0x20A ObjectiveTipID;
-        /* 0x190 */ public bool HasCategoryOverride;
-        /* 0x194 */ public GcMissionCategory OverrideCategory;
-        /* 0x198 */ public bool HasColourOverride;
-        /* 0x1A0 */ public Colour ColourOverride;
-        /* 0x1B0 */ public bool PrefixTitle;
-        /* 0x1B8 */ public NMSString0x20A PrefixTitleText;
-        /* 0x1D8 */ public bool BlockPinning;
-        /* 0x1DC */ public GcMissionConditionTest ConditionTest;
-        /* 0x1E0 */ public bool HideFromLogIfConditionsMet;
+        /* 0x0D0 */ public NMSString0x10 TerrainTarget;
+        /* 0x0E0 */ public NMSString0x80 DebugText;
+        /* 0x160 */ public NMSString0x20A ObjectiveID;
+        /* 0x180 */ public NMSString0x20A ObjectiveTipID;
+        /* 0x1A0 */ public bool HasCategoryOverride;
+        /* 0x1A4 */ public GcMissionCategory OverrideCategory;
+        /* 0x1A8 */ public bool HasColourOverride;
+        /* 0x1B0 */ public Colour ColourOverride;
+        /* 0x1C0 */ public bool PrefixTitle;
+        /* 0x1C8 */ public NMSString0x20A PrefixTitleText;
+        /* 0x1E8 */ public bool BlockPinning;
+        /* 0x1E9 */ public bool AutoPinRepairs;
+        /* 0x1EA */ public bool BlockSpaceBattles;
+        /* 0x1EC */ public GcMissionConditionTest ConditionTest;
+        /* 0x1F0 */ public bool HideFromLogIfConditionsMet;
         // size: 0x3
         public enum RepeatLogicEnum : uint {
             None,
             Loop,
             RestartOnConditionFail,
         }
-        /* 0x1E4 */ public RepeatLogicEnum RepeatLogic;
+        /* 0x1F4 */ public RepeatLogicEnum RepeatLogic;
         // size: 0x4
         public enum IconStyleEnum : uint {
             Default,
@@ -39,13 +42,21 @@ namespace libMBIN.NMS.GameComponents
             Square,
             NoFrame,
         }
-        /* 0x1E8 */ public IconStyleEnum IconStyle;
-        /* 0x1EC */ public TkInputEnum SpecialButtonIcon;
-        /* 0x1F0 */ public GcObjectiveTextFormatOptions ObjectiveFormatting;
-        /* 0x238 */ public GcTargetMissionSurveyOptions SurveyTarget;
-        /* 0x450 */ public GcCustomNotifyTimerOptions CustomNotifyTimers;
-        /* 0x460 */ public List<NMSTemplate> Conditions;
-        /* 0x470 */ public List<NMSTemplate> Consequences;
-        /* 0x480 */ public List<GcGenericMissionStage> Stages;
+        /* 0x1F8 */ public IconStyleEnum IconStyle;
+        // size: 0x3
+        public enum GalMapPathOverrideEnum : uint {
+            None,
+            BlackHole,
+            Atlas,
+        }
+        /* 0x1FC */ public GalMapPathOverrideEnum GalMapPathOverride;
+        /* 0x200 */ public TkInputEnum SpecialButtonIcon;
+        /* 0x208 */ public GcObjectiveTextFormatOptions ObjectiveFormatting;
+        /* 0x250 */ public GcSeasonalObjectiveOverrides SeasonalObjectiveOverrides;
+        /* 0x2A0 */ public GcTargetMissionSurveyOptions SurveyTarget;
+        /* 0x4B8 */ public GcCustomNotifyTimerOptions CustomNotifyTimers;
+        /* 0x4C8 */ public List<NMSTemplate> Conditions;
+        /* 0x4D8 */ public List<NMSTemplate> Consequences;
+        /* 0x4E8 */ public List<GcGenericMissionStage> Stages;
     }
 }

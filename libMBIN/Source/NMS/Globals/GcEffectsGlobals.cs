@@ -2,7 +2,7 @@ using libMBIN.NMS.Toolkit;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(GUID = 0x11982C795138506F, NameHash = 0x5FE8CF76972566C2)]
+    [NMS(GUID = 0x35972C85C1BDA232, NameHash = 0x5FE8CF76972566C2)]
     public class GcEffectsGlobals : NMSTemplate
     {
         /* 0x00 */ public float ClickToPlayScale;

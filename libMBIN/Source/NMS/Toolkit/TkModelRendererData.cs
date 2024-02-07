@@ -2,7 +2,7 @@ using libMBIN.NMS.Toolkit;
 
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0xBB38158CAEEEAA45, NameHash = 0x53EC68060BE631FB)]
+    [NMS(GUID = 0x342F98A7F9398C24, NameHash = 0x53EC68060BE631FB)]
     public class TkModelRendererData : NMSTemplate
     {
         /* 0x00 */ public TkModelRendererCameraData Camera;
@@ -35,5 +35,6 @@ namespace libMBIN.NMS.Toolkit
         /* 0xB5 */ public bool AlignUIToCameraInHmd;
         /* 0xB6 */ public bool UseSensibleCameraFocusNodeIsNowOffsetNode;
         /* 0xB7 */ public bool LookForFocusInMasterModel;
+        /* 0xB8 */ public bool FlipRotationIfNecessary;
     }
 }

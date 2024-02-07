@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xF889993177174456, NameHash = 0xA688E4255C8FED76)]
+    [NMS(GUID = 0xE68D87E1532DEDB8, NameHash = 0xA688E4255C8FED76)]
     public class GcDifficultyConfig : NMSTemplate
     {
         /* 0x0000 */ public NMSString0x20A PresetLocId;
@@ -57,54 +57,54 @@ namespace libMBIN.NMS.GameComponents
         [NMS(Size = 0x3, EnumType = typeof(GcInventoryStackLimitsDifficultyOption.InventoryStackLimitsDifficultyEnum))]
         /* 0x1EA0 */ public GcDifficultyInventoryStackSizeOptionData[] InventoryStackLimitsOptionData;
         [NMS(Size = 0x4, EnumType = typeof(GcChargingRequirementsDifficultyOption.ChargingRequirementsDifficultyEnum))]
-        /* 0x1FD8 */ public NMSString0x20A[] ChargingRequirementsOptionLocIds;
+        /* 0x1FF0 */ public NMSString0x20A[] ChargingRequirementsOptionLocIds;
         [NMS(Size = 0x4, EnumType = typeof(GcChargingRequirementsDifficultyOption.ChargingRequirementsDifficultyEnum))]
-        /* 0x2058 */ public float[] ChargingRequirementsMultipliers;
+        /* 0x2070 */ public float[] ChargingRequirementsMultipliers;
         [NMS(Size = 0x4, EnumType = typeof(GcFuelUseDifficultyOption.FuelUseDifficultyEnum))]
-        /* 0x2068 */ public NMSString0x20A[] FuelUseOptionLocIds;
+        /* 0x2080 */ public NMSString0x20A[] FuelUseOptionLocIds;
         [NMS(Size = 0x4, EnumType = typeof(GcFuelUseDifficultyOption.FuelUseDifficultyEnum))]
-        /* 0x20E8 */ public GcDifficultyFuelUseOptionData[] FuelUseOptionData;
+        /* 0x2100 */ public GcDifficultyFuelUseOptionData[] FuelUseOptionData;
         [NMS(Size = 0x4, EnumType = typeof(GcLaunchFuelCostDifficultyOption.LaunchFuelCostDifficultyEnum))]
-        /* 0x2148 */ public NMSString0x20A[] LaunchFuelCostOptionLocIds;
+        /* 0x2160 */ public NMSString0x20A[] LaunchFuelCostOptionLocIds;
         [NMS(Size = 0x4, EnumType = typeof(GcLaunchFuelCostDifficultyOption.LaunchFuelCostDifficultyEnum))]
-        /* 0x21C8 */ public float[] LaunchFuelCostMultipliers;
+        /* 0x21E0 */ public float[] LaunchFuelCostMultipliers;
         [NMS(Size = 0x4, EnumType = typeof(GcLaunchFuelCostDifficultyOption.LaunchFuelCostDifficultyEnum))]
-        /* 0x21D8 */ public float[] ShipSummoningFuelCostMultipliers;
+        /* 0x21F0 */ public float[] ShipSummoningFuelCostMultipliers;
         [NMS(Size = 0x4, EnumType = typeof(GcCurrencyCostDifficultyOption.CurrencyCostDifficultyEnum))]
-        /* 0x21E8 */ public NMSString0x20A[] CurrencyCostOptionLocIds;
+        /* 0x2200 */ public NMSString0x20A[] CurrencyCostOptionLocIds;
         [NMS(Size = 0x4, EnumType = typeof(GcCurrencyCostDifficultyOption.CurrencyCostDifficultyEnum))]
-        /* 0x2268 */ public GcDifficultyCurrencyCostOptionData[] CurrencyCostOptionData;
+        /* 0x2280 */ public GcDifficultyCurrencyCostOptionData[] CurrencyCostOptionData;
         [NMS(Size = 0x3, EnumType = typeof(GcItemShopAvailabilityDifficultyOption.ItemShopAvailabilityDifficultyEnum))]
-        /* 0x22C8 */ public NMSString0x20A[] ItemShopAvailabilityOptionLocIds;
+        /* 0x22E0 */ public NMSString0x20A[] ItemShopAvailabilityOptionLocIds;
         [NMS(Size = 0x3, EnumType = typeof(GcItemShopAvailabilityDifficultyOption.ItemShopAvailabilityDifficultyEnum))]
-        /* 0x2328 */ public GcItemShopAvailabilityDifficultyOptionData[] ItemShopAvailabilityOptionData;
+        /* 0x2340 */ public GcItemShopAvailabilityDifficultyOptionData[] ItemShopAvailabilityOptionData;
         [NMS(Size = 0x4, EnumType = typeof(GcScannerRechargeDifficultyOption.ScannerRechargeDifficultyEnum))]
-        /* 0x2358 */ public NMSString0x20A[] ScannerRechargeOptionLocIds;
+        /* 0x2370 */ public NMSString0x20A[] ScannerRechargeOptionLocIds;
         [NMS(Size = 0x4, EnumType = typeof(GcScannerRechargeDifficultyOption.ScannerRechargeDifficultyEnum))]
-        /* 0x23D8 */ public float[] ScannerRechargeMultipliers;
+        /* 0x23F0 */ public float[] ScannerRechargeMultipliers;
         [NMS(Size = 0x4, EnumType = typeof(GcReputationGainDifficultyOption.ReputationGainDifficultyEnum))]
-        /* 0x23E8 */ public NMSString0x20A[] ReputationGainOptionLocIds;
+        /* 0x2400 */ public NMSString0x20A[] ReputationGainOptionLocIds;
         [NMS(Size = 0x4, EnumType = typeof(GcReputationGainDifficultyOption.ReputationGainDifficultyEnum))]
-        /* 0x2468 */ public float[] ReputationGainMultipliers;
+        /* 0x2480 */ public float[] ReputationGainMultipliers;
         [NMS(Size = 0x4, EnumType = typeof(GcCombatTimerDifficultyOption.CombatTimerDifficultyOptionEnum))]
-        /* 0x2478 */ public NMSString0x20A[] SpaceCombatOptionLocIds;
+        /* 0x2490 */ public NMSString0x20A[] SpaceCombatOptionLocIds;
         [NMS(Size = 0x4, EnumType = typeof(GcCombatTimerDifficultyOption.CombatTimerDifficultyOptionEnum))]
-        /* 0x24F8 */ public float[] SpaceCombatMultipliers;
+        /* 0x2510 */ public float[] SpaceCombatMultipliers;
         [NMS(Size = 0x4, EnumType = typeof(GcCombatTimerDifficultyOption.CombatTimerDifficultyOptionEnum))]
-        /* 0x2508 */ public float[] SpaceCombatDifficultyMultipliers;
+        /* 0x2520 */ public float[] SpaceCombatDifficultyMultipliers;
         [NMS(Size = 0x4, EnumType = typeof(GcCombatTimerDifficultyOption.CombatTimerDifficultyOptionEnum))]
-        /* 0x2518 */ public NMSString0x20A[] GroundCombatOptionLocIds;
+        /* 0x2530 */ public NMSString0x20A[] GroundCombatOptionLocIds;
         [NMS(Size = 0x4, EnumType = typeof(GcCombatTimerDifficultyOption.CombatTimerDifficultyOptionEnum))]
-        /* 0x2598 */ public float[] GroundCombatMultipliers;
+        /* 0x25B0 */ public float[] GroundCombatMultipliers;
         [NMS(Size = 0x4, EnumType = typeof(GcCombatTimerDifficultyOption.CombatTimerDifficultyOptionEnum))]
-        /* 0x25A8 */ public float[] SentinelTimeOutMultipliers;
+        /* 0x25C0 */ public float[] SentinelTimeOutMultipliers;
         [NMS(Size = 0x3, EnumType = typeof(GcSprintingCostDifficultyOption.SprintingCostDifficultyEnum))]
-        /* 0x25B8 */ public NMSString0x20A[] SprintingOptionLocIds;
+        /* 0x25D0 */ public NMSString0x20A[] SprintingOptionLocIds;
         [NMS(Size = 0x3, EnumType = typeof(GcSprintingCostDifficultyOption.SprintingCostDifficultyEnum))]
-        /* 0x2618 */ public float[] SprintingCostMultipliers;
+        /* 0x2630 */ public float[] SprintingCostMultipliers;
         [NMS(Size = 0x3, EnumType = typeof(GcBreakTechOnDamageDifficultyOption.BreakTechOnDamageProbabilityEnum))]
-        /* 0x2628 */ public NMSString0x20A[] BreakTechOnDamageOptionLocIds;
+        /* 0x2640 */ public NMSString0x20A[] BreakTechOnDamageOptionLocIds;
         [NMS(Size = 0x3, EnumType = typeof(GcBreakTechOnDamageDifficultyOption.BreakTechOnDamageProbabilityEnum))]
-        /* 0x2688 */ public float[] BreakTechOnDamageMultipliers;
+        /* 0x26A0 */ public float[] BreakTechOnDamageMultipliers;
     }
 }

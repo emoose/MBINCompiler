@@ -1,9 +1,9 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xF911D7E9F69F045, NameHash = 0x64A394B637C25752)]
+    [NMS(GUID = 0xEE5EE3466EF236CB, NameHash = 0x64A394B637C25752)]
     public class GcMissionConditionLocation : NMSTemplate
     {
-        // size: 0x1C
+        // size: 0x1D
         public enum MissionPlayerLocationEnum : uint {
             OnPlanet,
             OnPlanetInVehicle,
@@ -33,6 +33,7 @@ namespace libMBIN.NMS.GameComponents
             AbandonedFreighterInterior,
             AbandonedFreighterAirlock,
             AtlasStation,
+            AtlasStationFinal,
         }
         /* 0x0 */ public MissionPlayerLocationEnum MissionPlayerLocation;
     }
