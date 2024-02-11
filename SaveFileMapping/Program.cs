@@ -90,21 +90,36 @@ namespace SaveFileMapping
             var data = new HashSet<Tuple<string, string>>();
             UpdateHashes(s, data);
             // Add some other values we need:
+            // Added Keys:
             data.Add(new Tuple<string, string>(HashName("Version"), "Version"));
             data.Add(new Tuple<string, string>(HashName("Platform"), "Platform"));
+            data.Add(new Tuple<string, string>(HashName("ActiveContext"), "ActiveContext"));
+            data.Add(new Tuple<string, string>(HashName("GameMode"), "GameMode"));
+            data.Add(new Tuple<string, string>(HashName("ReserveStore"), "ReserveStore"));
+            data.Add(new Tuple<string, string>(HashName("ReserveManaged"), "ReserveManaged"));
+            // Open Objects:
+            data.Add(new Tuple<string, string>(HashName("CommonStateData"), "CommonStateData"));
+            // CommonStateData is of type GcPlayerCommonStateData
+            UpdateHashes(typeof(libMBIN.NMS.GameComponents.GcPlayerCommonStateData), data);
+            data.Add(new Tuple<string, string>(HashName("BaseContext"), "BaseContext"));
+            data.Add(new Tuple<string, string>(HashName("ExpeditionContext"), "ExpeditionContext"));
             data.Add(new Tuple<string, string>(HashName("PlayerStateData"), "PlayerStateData"));
-            data.Add(new Tuple<string, string>(HashName("MultiTool"), "MultiTool"));
             data.Add(new Tuple<string, string>(HashName("SpawnStateData"), "SpawnStateData"));
             data.Add(new Tuple<string, string>(HashName("GameKnowledgeData"), "GameKnowledgeData"));
+            data.Add(new Tuple<string, string>(HashName("DiscoveryManagerData"), "DiscoveryManagerData"));
+            data.Add(new Tuple<string, string>(HashName("DiscoveryData-v1"), "DiscoveryData-v1"));
+            // Open Arrays:
+            data.Add(new Tuple<string, string>(HashName("MultiTool"), "MultiTool"));
             data.Add(new Tuple<string, string>(HashName("Waypoints"), "Waypoints"));
             // Waypoints is a list of GcGalaxyWaypoint's:
             UpdateHashes(typeof(libMBIN.NMS.GameComponents.GcGalaxyWaypoint), data);
-            data.Add(new Tuple<string, string>(HashName("DiscoveryManagerData"), "DiscoveryManagerData"));
-            data.Add(new Tuple<string, string>(HashName("DiscoveryData-v1"), "DiscoveryData-v1"));
-            data.Add(new Tuple<string, string>(HashName("ReserveStore"), "ReserveStore"));
-            data.Add(new Tuple<string, string>(HashName("ReserveManaged"), "ReserveManaged"));
+            // Session::SavePersistent
             data.Add(new Tuple<string, string>(HashName("Store"), "Store"));
             data.Add(new Tuple<string, string>(HashName("Record"), "Record"));
+            data.Add(new Tuple<string, string>(HashName("TSrec"), "TSrec"));
+            data.Add(new Tuple<string, string>(HashName("Available"), "Available"));
+            data.Add(new Tuple<string, string>(HashName("Enqueued"), "Enqueued"));
+            // Not sure if these are still used, but kept for any kind of backward compatibility.
             data.Add(new Tuple<string, string>(HashName("OWS"), "OWS"));
             data.Add(new Tuple<string, string>(HashName("LID"), "LID"));
             data.Add(new Tuple<string, string>(HashName("UID"), "UID"));
@@ -123,9 +138,6 @@ namespace SaveFileMapping
             data.Add(new Tuple<string, string>(HashName("DT"), "DT"));
             data.Add(new Tuple<string, string>(HashName("VP"), "VP"));
             data.Add(new Tuple<string, string>(HashName("TS"), "TS"));
-            data.Add(new Tuple<string, string>(HashName("TSrec"), "TSrec"));
-            data.Add(new Tuple<string, string>(HashName("Available"), "Available"));
-            data.Add(new Tuple<string, string>(HashName("Enqueued"), "Enqueued"));
             data.Add(new Tuple<string, string>(HashName("USN"), "USN"));
             // Also add the GcUserSettingsData class
             data.Add(new Tuple<string, string>(HashName("UserSettingsData"), "UserSettingsData"));
