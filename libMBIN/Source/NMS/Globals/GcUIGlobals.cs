@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(GUID = 0xFB138C7DF7BA18DB, NameHash = 0x95C306B1A90F3E08)]
+    [NMS(GUID = 0xE3600F5023DA817C, NameHash = 0x95C306B1A90F3E08)]
     public class GcUIGlobals : NMSTemplate
     {
         /* 0x0000 */ public float TradePageNotifyOffset;
