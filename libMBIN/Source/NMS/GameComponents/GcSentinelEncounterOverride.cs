@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x3BCF2EF1B64CEFCE, NameHash = 0x858F65761E6CEB71)]
+    [NMS(GUID = 0x9A45F7CC9F20EDFC, NameHash = 0x858F65761E6CEB71)]
     public class GcSentinelEncounterOverride : NMSTemplate
     {
         /* 0x00 */ public NMSString0x10 Id;

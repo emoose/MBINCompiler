@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(GUID = 0xD539B38FB85CB3CA, NameHash = 0x49E4A0E330E783EE)]
+    [NMS(GUID = 0xD5EC1458178A30A, NameHash = 0x49E4A0E330E783EE)]
     public class GcPlayerGlobals : NMSTemplate
     {
         /* 0x0000 */ public Vector3f LeftHandModeWeaponAttachSocketCorrection;

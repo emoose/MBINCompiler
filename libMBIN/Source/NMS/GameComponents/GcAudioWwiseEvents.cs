@@ -1,9 +1,9 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xF6D62DC781474A4F, NameHash = 0x8B94093DC3901046)]
+    [NMS(GUID = 0xA6E921206349BF01, NameHash = 0x8B94093DC3901046)]
     public class GcAudioWwiseEvents : NMSTemplate
     {
-        // size: 0xA01
+        // size: 0xA03
         public enum AkEventEnum : uint {
             INVALID_EVENT = 0x0,
             ABANDONED_DOOR_UNLOCK = 0x264BED2D,
@@ -82,6 +82,8 @@ namespace libMBIN.NMS.GameComponents
             ATLAS_GALAXYBEAM = 0xC5B56B54,
             ATLAS_GALAXYSTART_MULTIPLE = 0xA3DFC892,
             ATLAS_GALAXYSTART_SINGLE = 0x1D6B1966,
+            ATLAS_INTERFACE_GALAXY_SPIN = 0xC1D86B30,
+            ATLAS_INTERFACE_TRIGGER = 0xFCA6F003,
             ATLAS_ORB_FLARE = 0xA3217125,
             ATLAS_ORB_ILLUMINATE = 0x1736FCDD,
             ATLAS_PLINTH_RISE = 0x8464FB10,
