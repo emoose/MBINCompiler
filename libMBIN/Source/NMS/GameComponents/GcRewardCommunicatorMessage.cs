@@ -2,13 +2,11 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x50993A5B4442C2C7, NameHash = 0x382AC51563627203)]
+    [NMS(GUID = 0x7B423F05942EB5E, NameHash = 0x382AC51563627203)]
     public class GcRewardCommunicatorMessage : NMSTemplate
     {
-        /* 0x000 */ public NMSString0x80 Message;
-        /* 0x080 */ public NMSString0x80 VRMessage;
-        /* 0x100 */ public NMSString0x80 OSDMessage;
-        /* 0x180 */ public GcPlayerCommunicatorMessage Comms;
-        /* 0x1D8 */ public bool AutoOpen;
+        /* 0x00 */ public NMSString0x20A FailureMessageBusy;
+        /* 0x20 */ public NMSString0x20A FailureMessageNotInShip;
+        /* 0x40 */ public GcPlayerCommunicatorMessage Comms;
     }
 }

@@ -4,11 +4,11 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xD6A0B799E2C6D0C2, NameHash = 0xFAE86B2801335B6D)]
+    [NMS(GUID = 0x96D4DC761A1242F, NameHash = 0xFAE86B2801335B6D)]
     public class GcGenericMissionSequence : NMSTemplate
     {
         /* 0x000 */ public NMSString0x10 MissionID;
-        // size: 0x9
+        // size: 0xA
         public enum MissionClassEnum : uint {
             Primary,
             Secondary,
@@ -19,6 +19,7 @@ namespace libMBIN.NMS.GameComponents
             Milestone,
             Atlas,
             BlackHole,
+            FleetSupport,
         }
         /* 0x010 */ public MissionClassEnum MissionClass;
         /* 0x014 */ public bool MissionIsCritical;

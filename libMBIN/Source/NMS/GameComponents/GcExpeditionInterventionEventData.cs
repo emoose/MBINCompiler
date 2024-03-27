@@ -2,18 +2,22 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x243622A7FB6C6BCB, NameHash = 0x1920DA0CB7B61986)]
+    [NMS(GUID = 0xA4BB93E3F8F2AAAD, NameHash = 0x1920DA0CB7B61986)]
     public class GcExpeditionInterventionEventData : NMSTemplate
     {
-        /* 0x00 */ public NMSString0x20A ID;
-        /* 0x20 */ public int SelectionWeight;
-        /* 0x24 */ public GcExpeditionCategory ExpeditionCategory;
-        /* 0x28 */ public GcNumberedTextList InteractionID;
-        /* 0x4C */ public NMSString0x20 SuccessLogEntry;
-        /* 0x6C */ public NMSString0x20 AvoidanceLogEntry;
-        /* 0x8C */ public NMSString0x20 FailureLogEntry;
-        /* 0xB0 */ public NMSString0x10 SuccessReward;
-        /* 0xC0 */ public NMSString0x10 FailureReward;
-        /* 0xD0 */ public int FailureDamageChance;
+        /* 0x000 */ public NMSString0x20A ID;
+        /* 0x020 */ public GcMissionType MissionType;
+        /* 0x024 */ public int SelectionWeight;
+        /* 0x028 */ public GcExpeditionCategory ExpeditionCategory;
+        /* 0x02C */ public GcNumberedTextList InteractionID;
+        /* 0x050 */ public NMSString0x20 SuccessLogEntry;
+        /* 0x070 */ public NMSString0x20 AvoidanceSuccessLogEntry;
+        /* 0x090 */ public NMSString0x20 AvoidanceFailureLogEntry;
+        /* 0x0B0 */ public NMSString0x20 FailureLogEntry;
+        /* 0x0D0 */ public NMSString0x10 SuccessReward;
+        /* 0x0E0 */ public NMSString0x10 AvoidanceSuccessReward;
+        /* 0x0F0 */ public NMSString0x10 AvoidanceFailureReward;
+        /* 0x100 */ public NMSString0x10 FailureReward;
+        /* 0x110 */ public int FailureDamageChance;
     }
 }

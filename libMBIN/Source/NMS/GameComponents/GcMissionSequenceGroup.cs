@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xEDF14FB3A359222F, NameHash = 0x51B3554FFBEBED66)]
+    [NMS(GUID = 0xBEA5909A9D17C463, NameHash = 0x51B3554FFBEBED66)]
     public class GcMissionSequenceGroup : NMSTemplate
     {
         /* 0x000 */ public bool Silent;
@@ -28,6 +28,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x1EA */ public bool BlockSpaceBattles;
         /* 0x1EC */ public GcMissionConditionTest ConditionTest;
         /* 0x1F0 */ public bool HideFromLogIfConditionsMet;
+        /* 0x1F1 */ public bool DoConsequencesIfNeverActivated;
         // size: 0x3
         public enum RepeatLogicEnum : uint {
             None,

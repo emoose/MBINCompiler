@@ -3,10 +3,10 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xA9EED7C55B0F050F, NameHash = 0xF97DB1C704357E47)]
+    [NMS(GUID = 0x2B21604483DD7434, NameHash = 0xF97DB1C704357E47)]
     public class GcRewardTableItemList : NMSTemplate
     {
-        // size: 0xA
+        // size: 0xB
         public enum RewardChoiceEnum : uint {
             GiveAll,
             Select,
@@ -15,6 +15,7 @@ namespace libMBIN.NMS.GameComponents
             SelectSilent,
             GiveAllSilent,
             TryFirst_ThenSelectAlways,
+            GiveFirst_ThenAlsoSelectAlwaysFromRest,
             SelectFromSuccess,
             SelectAlwaysSilent,
             SelectFromSuccessSilent,
