@@ -1,0 +1,145 @@
+name: MBINCompiler
+
+on:
+  # Run on all branches except for the gh-pages branch
+  push:
+    paths-ignore:
+      - '*.md'
+    branches-ignore:
+      - 'gh-pages'
+  pull_request:
+    paths-ignore:
+      - '*.md'
+    branches-ignore:
+      - 'gh-pages'
+  create:
+
+jobs:
+  build_test:
+    name: Build artefacts - ${{ matrix.os.name }}/${{ matrix.dotnet.framework }}
+    runs-on: ${{ matrix.os.name }}-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [{name: 'Ubuntu', runtime: 'linux-x64'}, {name: 'Windows', runtime: 'win-x64'}]
+        dotnet: [{framework: 'net6.0', version: '6.0.0'}, {framework: 'net7.0', version: '7.0.0'}]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build ${{ matrix.os.name }}-dotnet ${{ matrix.dotnet }} binaries
+        run: |
+          sed -i '\|<TargetFrameworks>net6.0;net7.0</TargetFrameworks>|a\    <RuntimeFrameworkVersion>${{ matrix.dotnet.version }}</RuntimeFrameworkVersion>' ./MBINCompiler/MBINCompiler.csproj
+          sed -i '\|<TargetFrameworks>net6.0;net7.0</TargetFrameworks>|a\    <RuntimeFrameworkVersion>${{ matrix.dotnet.version }}</RuntimeFrameworkVersion>' ./libMBIN-DLL/libMBIN-DLL.csproj
+          dotnet publish libMBIN-DLL --no-self-contained -c Release -f ${{ matrix.dotnet.framework }} -r ${{ matrix.os.runtime }} /nowarn:cs0618
+          dotnet publish MBINCompiler --no-self-contained -c Release -f ${{ matrix.dotnet.framework }} -r ${{ matrix.os.runtime }} /nowarn:cs0618
+      - name: Move the exe so the tests can find it easier
+        run: |
+          cp Build/Release/${{ matrix.dotnet.framework }}/${{ matrix.os.runtime }}/publish/MBINCompiler.exe MBINCompiler.exe
+          cp Build/Release/${{ matrix.dotnet.framework }}/${{ matrix.os.runtime }}/publish/libMBIN.dll libMBIN.dll
+        if: ${{matrix.os.name  == 'Windows' }}
+      - name: Move the exe so the tests can find it easier
+        run: |
+          cp Build/Release/${{ matrix.dotnet.framework }}/${{ matrix.os.runtime }}/publish/MBINCompiler MBINCompiler.exe
+          cp Build/Release/${{ matrix.dotnet.framework }}/${{ matrix.os.runtime }}/publish/libMBIN.dll libMBIN.dll
+        if: ${{matrix.os.name  == 'Ubuntu' }}
+      - name: Set up Python 3.9
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.9"
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pytest requests
+      - name: Run tests
+        run: python -m pytest --mbincompiler_path="./MBINCompiler.exe" --tb=no --report
+      - name: Upload Windows binaries
+        uses: actions/upload-artifact@v4
+        with:
+          name: MBINCompiler-${{ matrix.os.name }}-${{ matrix.dotnet.framework }}
+          path: |
+            MBINCompiler.exe
+            libMBIN.dll
+        if: ${{matrix.os.name  == 'Windows' }}
+      - name: Upload Linux binaries
+        uses: actions/upload-artifact@v4
+        with:
+          name: MBINCompiler-${{ matrix.os.name }}-${{ matrix.dotnet.framework }}
+          path: |
+            MBINCompiler.exe
+            MBINCompiler.dll
+            libMBIN.dll
+        if: ${{matrix.os.name  == 'Ubuntu' }}
+      - name: Upload report
+        uses: actions/upload-artifact@v4
+        with:
+          name: MBINCompiler-report
+          path: report.json
+        if: ${{matrix.os.name  == 'Windows' && matrix.dotnet.framework == 'net6.0'}}
+  save_mapping:
+    name: Build save file mapping and generate mapping
+    runs-on: Windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build SaveFileMapping binary
+        run: dotnet publish SaveFileMapping -c Release -f net6.0 -r win-x64 -o Build/Release/net6/ /nowarn:cs0618
+      - name: Generate save data mapping
+        run : Build/Release/net6/SaveFileMapping.exe
+        shell: bash
+      - name: Upload report
+        uses: actions/upload-artifact@v4
+        with:
+          name: savedata-mapping
+          path: mapping.json
+  release:
+    name: Release MBINCompiler binaries and other data
+    # Only run this job if the commit was tagged.
+    if: ${{ startsWith(github.ref, 'refs/tags/') }}
+    runs-on: windows-latest
+    needs: [build_test, save_mapping]
+    steps:
+      - name: Download files for release
+        uses: actions/download-artifact@v4
+      - name: Rename files for release
+        run: |
+          mv MBINCompiler-Windows-net6.0/MBINCompiler.exe MBINCompiler.exe
+          mv MBINCompiler-Windows-net6.0/libMBIN.dll libMBIN.dll
+          mv MBINCompiler-Windows-net7.0/MBINCompiler.exe MBINCompiler-dotnet7.exe
+          mv MBINCompiler-Windows-net7.0/libMBIN.dll libMBIN-dotnet7.dll
+          mv MBINCompiler-Ubuntu-net6.0/MBINCompiler.exe MBINCompiler-linux
+          mv MBINCompiler-Ubuntu-net6.0/libMBIN.dll libMBIN-linux.dll
+          mv MBINCompiler-Ubuntu-net7.0/MBINCompiler.exe MBINCompiler-linux-dotnet7
+          mv MBINCompiler-Ubuntu-net7.0/libMBIN.dll libMBIN-linux-dotnet7.dll
+          mv savedata-mapping/mapping.json mapping.json
+          mv MBINCompiler-report/report.json report.json
+      - name: Get MBINCompiler tag version
+        run: |
+          echo "VERSION=$(./MBINCompiler.exe version | awk '{print $2}')" >> $GITHUB_ENV
+          echo "TAG=${GITHUB_REF/refs\/tags\//}" >> $GITHUB_ENV
+        shell: bash
+      - name: Upload resources if version matches
+        if: env.VERSION == env.TAG
+        uses: softprops/action-gh-release@v1
+        with:
+          name: "${{ env.TAG }}"
+          tag_name: ${{ env.TAG }}
+          prerelease: true
+          files: |
+            MBINCompiler.exe
+            libMBIN.dll
+            MBINCompiler-dotnet7.exe
+            libMBIN-dotnet7.dll
+            MBINCompiler-linux
+            libMBIN-linux.dll
+            MBINCompiler-linux-dotnet7
+            libMBIN-linux-dotnet7.dll
+            report.json
+            mapping.json
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Check if tag doesn't match version
+        if: env.VERSION != env.TAG
+        run: |
+          echo "There is a version mismatch between the tag and MBINCompiler version!"
+          echo "MBINCompiler version: ${{ env.VERSION }}"
+          echo "Tag version: ${{ env.TAG }}"
+          exit 1
+        shell: bash

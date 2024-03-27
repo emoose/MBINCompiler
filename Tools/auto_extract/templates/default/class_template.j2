@@ -1,0 +1,39 @@
+{%+ if cls.usings|length > 0 %}{% for using in cls.usings %}using {{ using }};
+{% endfor %}
+{% endif %}namespace {{ cls.namespace }}
+{
+    [NMS(GUID = {{ cls.guid }}, NameHash = {{ cls.name_hash }}{{ cls.extra_attributes }})]
+    public class {{ cls.name }} : NMSTemplate
+    {
+{%- for field in cls.fields %}
+{%- if field._is_enum_field %}{# Start of enum chunk #}
+        // size: {{ field.enum_count }}
+{%- if field.is_flag %}
+        [Flags]
+{%- endif %}
+        public enum {{ field.field_name }}Enum : {{ field.enum_dtype }} {
+{%- for enum_val in field.enum_data %}
+            {{ enum_val[1] }}{% if field.requires_values %} = {{enum_val[0] }}{% endif %},
+{%- endfor %}
+        }
+        /* {{ field.field_offset }} */ public {{ field.field_name }}Enum {{ field.field_name }};
+{%- elif field._is_array_field %}{# End of enum chunk, start of array chunk #}
+{%- if field.local_enum %}
+        // size: {{ field.array_size }}
+        public enum {{ field.array_enum_type }} {
+{%- for enum_val in field.array_enum %}
+            {{ enum_val }},
+{%- endfor %}
+        }
+{%- endif %}
+        [NMS(Size = {{ field.array_size }}{% if field.array_enum_type is not none %}, EnumType = typeof({{ field.array_enum_type }}){% endif %})]
+        /* {{ field.field_offset }} */ public {{ field.field_type }}[] {{ field.field_name }};
+{%- elif field._is_list_field %}{# End of array chunk, start of list chunk #}
+        /* {{ field.field_offset }} */ public List<{{ field.field_type }}> {{ field.field_name }};
+{%- else %}{# End of array chunk, start of normal field chunk #}
+        /* {{ field.field_offset }} */ public {{ field.field_type }} {{ field.field_name }};
+{%- endif %}
+{%- endfor %}
+    }
+}
+
