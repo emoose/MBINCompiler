@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x886FE1EA0C7469C4, NameHash = 0x9B09276BB2795541)]
+    [NMS(GUID = 0xAFAC54E3E24D9E8E, NameHash = 0x9B09276BB2795541)]
     public class GcSolarSystemData : NMSTemplate
     {
         /* 0x0000 */ public GcSeed Seed;
@@ -42,14 +42,14 @@ namespace libMBIN.NMS.GameComponents
         }
         /* 0x05B8 */ public AsteroidLevelEnum AsteroidLevel;
         /* 0x05C0 */ public GcPlanetColourData Colours;
-        /* 0x2000 */ public GcLightProperties Light;
-        /* 0x2030 */ public GcSpaceSkyProperties Sky;
-        /* 0x20E0 */ public GcScreenFilters ScreenFilter;
-        /* 0x20E4 */ public NMSString0x80 HeavyAir;
-        /* 0x2168 */ public List<GcAISpaceshipPreloadCacheData> SystemShips;
-        /* 0x2178 */ public GcSeed SentinelCrashSiteShipSeed;
-        /* 0x2188 */ public GcAlienRace InhabitingRace;
-        /* 0x218C */ public GcPlanetTradingData TradingData;
-        /* 0x2194 */ public GcPlayerConflictData ConflictData;
+        /* 0x2150 */ public GcLightProperties Light;
+        /* 0x2180 */ public GcSpaceSkyProperties Sky;
+        /* 0x2230 */ public GcScreenFilters ScreenFilter;
+        /* 0x2234 */ public NMSString0x80 HeavyAir;
+        /* 0x22B8 */ public List<GcAISpaceshipPreloadCacheData> SystemShips;
+        /* 0x22C8 */ public GcSeed SentinelCrashSiteShipSeed;
+        /* 0x22D8 */ public GcAlienRace InhabitingRace;
+        /* 0x22DC */ public GcPlanetTradingData TradingData;
+        /* 0x22E4 */ public GcPlayerConflictData ConflictData;
     }
 }

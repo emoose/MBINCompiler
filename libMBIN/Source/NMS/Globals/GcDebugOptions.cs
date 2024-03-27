@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(GUID = 0x5F3F6D05AFD48742, NameHash = 0x13FED27DF728C38)]
+    [NMS(GUID = 0x98EC4F11626B56E1, NameHash = 0x13FED27DF728C38)]
     public class GcDebugOptions : NMSTemplate
     {
         /* 0x0000 */ public bool ForceScanEventsToGoPrime;
@@ -48,31 +48,33 @@ namespace libMBIN.NMS.Globals
         /* 0x003C */ public bool MaximumFreighterSpawns;
         /* 0x003D */ public bool AlwaysSpaceBattle;
         /* 0x0040 */ public int ForceSpaceBattleLevel;
-        /* 0x0044 */ public bool DisableSaveSlotSorting;
-        /* 0x0045 */ public bool DisableSaving;
-        /* 0x0046 */ public bool DisableContinuousSaving;
-        /* 0x0047 */ public bool DisableInvalidSaveVersion;
-        /* 0x0048 */ public bool DisableStorms;
-        /* 0x0049 */ public bool ForceEnableClothComponent;
-        /* 0x004A */ public bool ForceDisableClothComponent;
-        /* 0x004B */ public bool ClothForcePositionExtrapolationOff;
-        /* 0x004C */ public bool ClothForcePositionExtrapolationOn;
-        /* 0x004D */ public bool ClothForcePositionExtrapolationBackOn;
-        /* 0x004E */ public bool ClothForcePositionExtrapolationUpdateOrderDependent;
-        /* 0x004F */ public bool ClothForcePositionExtrapolationSyncWithFpsLock;
-        /* 0x0050 */ public bool ClothForcePositionExtrapolationAntiSyncWithFpsLock;
-        /* 0x0051 */ public bool ClothForceAsyncSimulationOff;
-        /* 0x0052 */ public bool ClothForceAsyncSimulationOn;
-        /* 0x0053 */ public bool ForceEnableSpringAttachmentComponent;
-        /* 0x0054 */ public bool ForceDisableSpringAttachmentComponent;
-        /* 0x0055 */ public bool ForceEnableRagdollComponent;
-        /* 0x0056 */ public bool ForceDisableRagdollComponent;
-        /* 0x0057 */ public bool ForceDisableNonPlayerRagdollComponents;
-        /* 0x0058 */ public bool ForceEnableSplitIkOptimisation;
-        /* 0x0059 */ public bool ForceDisableSplitIkOptimisation;
-        /* 0x005A */ public bool DisableNPCs;
-        /* 0x005B */ public bool DisableNPCHiddenUntilScanned;
-        /* 0x005C */ public bool ForceBuildersAlwaysKnown;
+        /* 0x0044 */ public bool FastAndFrequentFleetInterventions;
+        /* 0x0045 */ public bool DisableSaveSlotSorting;
+        /* 0x0046 */ public bool DisableSaving;
+        /* 0x0047 */ public bool DisableContinuousSaving;
+        /* 0x0048 */ public bool DisableInvalidSaveVersion;
+        /* 0x0049 */ public bool DisableStorms;
+        /* 0x004A */ public bool ForceEnableClothComponent;
+        /* 0x004B */ public bool ForceDisableClothComponent;
+        /* 0x004C */ public bool ClothForcePositionExtrapolationOff;
+        /* 0x004D */ public bool ClothForcePositionExtrapolationOn;
+        /* 0x004E */ public bool ClothForcePositionExtrapolationBackOn;
+        /* 0x004F */ public bool ClothForcePositionExtrapolationUpdateOrderDependent;
+        /* 0x0050 */ public bool ClothForcePositionExtrapolationSyncWithFpsLock;
+        /* 0x0051 */ public bool ClothForcePositionExtrapolationAntiSyncWithFpsLock;
+        /* 0x0052 */ public bool ClothForceAsyncSimulationOff;
+        /* 0x0053 */ public bool ClothForceAsyncSimulationOn;
+        /* 0x0054 */ public bool ForceEnableSpringAttachmentComponent;
+        /* 0x0055 */ public bool ForceDisableSpringAttachmentComponent;
+        /* 0x0056 */ public bool ForceEnableRagdollComponent;
+        /* 0x0057 */ public bool ForceDisableRagdollComponent;
+        /* 0x0058 */ public bool ForceDisableNonPlayerRagdollComponents;
+        /* 0x0059 */ public bool ForceEnableSplitIkOptimisation;
+        /* 0x005A */ public bool ForceDisableSplitIkOptimisation;
+        /* 0x005B */ public bool DisableNPCs;
+        /* 0x005C */ public bool DisableNPCHiddenUntilScanned;
+        /* 0x005D */ public bool ShipSalvageGivesAllParts;
+        /* 0x005E */ public bool ForceBuildersAlwaysKnown;
         /* 0x0060 */ public NMSString0x10 ForceBuilderMissionBoardMission;
         /* 0x0070 */ public bool AlternateControls;
         /* 0x0071 */ public bool AlwaysShowURI;

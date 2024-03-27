@@ -1,9 +1,9 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x1BD155E6F18D55B, NameHash = 0x881C97F393A2FB50)]
+    [NMS(GUID = 0x22B4C5EFBC325DCC, NameHash = 0x881C97F393A2FB50)]
     public class GcMissionType : NMSTemplate
     {
-        // size: 0x15
+        // size: 0x16
         public enum MissionTypeEnum : uint {
             SpaceCombat,
             GroundCombat,
@@ -26,6 +26,7 @@ namespace libMBIN.NMS.GameComponents
             LocalPlanetaryPirates,
             LocalPredators,
             LocalSentinels,
+            BuildersLanguage,
         }
         /* 0x0 */ public MissionTypeEnum MissionType;
     }

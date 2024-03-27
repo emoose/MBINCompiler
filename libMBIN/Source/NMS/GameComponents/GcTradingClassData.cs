@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xFE8A924B1CD0A55E, NameHash = 0xB0C75D0F1E252081)]
+    [NMS(GUID = 0x32EFC0B76CA1A467, NameHash = 0xB0C75D0F1E252081)]
     public class GcTradingClassData : NMSTemplate
     {
         /* 0x00 */ public GcTradeCategory Sells;
@@ -12,6 +12,8 @@ namespace libMBIN.NMS.GameComponents
         /* 0x0C */ public float MaxSellingPriceMultiplier;
         /* 0x10 */ public float MinBuyingPriceMultiplier;
         /* 0x14 */ public float MaxBuyingPriceMultiplier;
-        /* 0x18 */ public TkTextureResource Icon;
+        /* 0x18 */ public float MinBuyingPriceMultiplierSurge;
+        /* 0x1C */ public float MaxBuyingPriceMultiplierSurge;
+        /* 0x20 */ public TkTextureResource Icon;
     }
 }

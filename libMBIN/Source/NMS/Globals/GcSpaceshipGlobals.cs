@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(GUID = 0x19D7575A27CAB797, NameHash = 0xC45203411E9AFE95)]
+    [NMS(GUID = 0xEAADE228C92E39EE, NameHash = 0xC45203411E9AFE95)]
     public class GcSpaceshipGlobals : NMSTemplate
     {
         /* 0x0000 */ public NMSString0x20 HoverShipDataName;
@@ -93,18 +93,20 @@ namespace libMBIN.NMS.Globals
         /* 0x0188 */ public int TrailMaxNumPointsPerFrameOverride;
         /* 0x018C */ public float TestTrailSpeed;
         /* 0x0190 */ public float TestTrailRadius;
-        /* 0x0194 */ public float CockpitExitAnimMul;
-        /* 0x0198 */ public float CockpitExitAnimTime;
-        /* 0x019C */ public float CockpitExitAnimOffset;
-        /* 0x01A0 */ public TkCurveType CockpitExitAnimCurve;
-        /* 0x01A4 */ public float WingmanSpeedTrackForceMax;
-        /* 0x01A8 */ public float WingmanSpeedTrackForceMin;
-        /* 0x01AC */ public float WingmanSpeedTrackDistance;
-        /* 0x01B0 */ public float WingmanSpeedTrackOffset;
-        /* 0x01B4 */ public float WingmanSpeedApproachSpeed;
-        /* 0x01B8 */ public float WingmanSpeedApproachSpeedSpace;
-        /* 0x01BC */ public float DockingAttractAlign;
-        /* 0x01C0 */ public float DockingAttractAlignRange;
+        /* 0x0194 */ public float WarpAnimMinSpeed;
+        /* 0x0198 */ public float WarpAnimMaxSpeed;
+        /* 0x019C */ public float CockpitExitAnimMul;
+        /* 0x01A0 */ public float CockpitExitAnimTime;
+        /* 0x01A4 */ public float CockpitExitAnimOffset;
+        /* 0x01A8 */ public TkCurveType CockpitExitAnimCurve;
+        /* 0x01AC */ public float WingmanSpeedTrackForceMax;
+        /* 0x01B0 */ public float WingmanSpeedTrackForceMin;
+        /* 0x01B4 */ public float WingmanSpeedTrackDistance;
+        /* 0x01B8 */ public float WingmanSpeedTrackOffset;
+        /* 0x01BC */ public float WingmanSpeedApproachSpeed;
+        /* 0x01C0 */ public float WingmanSpeedApproachSpeedSpace;
+        /* 0x01C4 */ public float DockingAttractAlign;
+        /* 0x01C8 */ public float DockingAttractAlignRange;
         /* 0x01D0 */ public Colour LandingEffectSpaceColourOverride;
         /* 0x01E0 */ public Colour GroundEffectBuildingColour;
         /* 0x01F0 */ public Colour GroundEffectWaterColour;

@@ -3,11 +3,12 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(GUID = 0x70BA238673F067ED, NameHash = 0xE2DEF8CC8775E050)]
+    [NMS(GUID = 0x244E8233E9CB5FED, NameHash = 0xE2DEF8CC8775E050)]
     public class GcCreatureGlobals : NMSTemplate
     {
         /* 0x0000 */ public int NumCreaturesRequiredForDiscoveryMission;
-        /* 0x0004 */ public int AllCreaturesDiscoveredBonusMul;
+        /* 0x0004 */ public int NumWeirdCreaturesRequiredForDiscoveryMission;
+        /* 0x0008 */ public int AllCreaturesDiscoveredBonusMul;
         /* 0x0010 */ public Colour AllCreaturesDiscoveredColour;
         /* 0x0020 */ public NMSString0x20A PetCarePuzzleOverrideID;
         /* 0x0040 */ public float CreatureInteractionRangeBoostHuge;

@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x3255843A2226BDB0, NameHash = 0xE523CFAD6AFB4BB6)]
+    [NMS(GUID = 0xA5E6163960C68336, NameHash = 0xE523CFAD6AFB4BB6)]
     public class GcScanEventSolarSystemLookup : NMSTemplate
     {
         /* 0x00 */ public bool UseStarType;
@@ -35,7 +35,8 @@ namespace libMBIN.NMS.GameComponents
         /* 0x35 */ public bool NeedsAbandonedSystem;
         /* 0x38 */ public NMSString0x10 NeedsResourceHint;
         /* 0x48 */ public bool SuitableForCreatureDiscovery;
-        /* 0x49 */ public bool SuitableForCreatureTaming;
+        /* 0x49 */ public bool SuitableForWeirdCreatureDiscovery;
+        /* 0x4A */ public bool SuitableForCreatureTaming;
         /* 0x50 */ public NMSString0x20A SamePlanetAsEvent;
         /* 0x70 */ public int SamePlanetAsSeasonParty;
     }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x2A580A45F27AB1B8, NameHash = 0xCDB7AC6D11C9DF03)]
+    [NMS(GUID = 0x5BC4F83DDB5CF580, NameHash = 0xCDB7AC6D11C9DF03)]
     public class GcCustomisationTextureOption : NMSTemplate
     {
         /* 0x00 */ public NMSString0x10 TextureOptionsID;
