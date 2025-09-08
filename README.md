@@ -8,7 +8,7 @@ _**For Developers:** You can download a precompiled DLL or get the libMBIN sourc
 
 [DOWNLOAD LATEST RELEASE](../../releases)  
 
-**PLEASE NOTE:** MBINCompiler requires .NET 6 to run. If you do not have this you can download is [here](https://dotnet.microsoft.com/download/dotnet/6.0/runtime)
+**PLEASE NOTE:** MBINCompiler requires .NET 8 to run. If you do not have this you can download is [here](https://dotnet.microsoft.com/download/dotnet/8.0/runtime)
 Select an appropriate download under the the "Run desktop apps" set of downloads
 
 **ALSO NOTE:** As of the Worlds part 2 update, MBINCompiler will no longer generate or handle EXML files, and will instead handle MXML files. This is to (finally) get MBINCompiler producing files in the same format as NMS expects. For modding puposes the MXML are not the actual files you need to place in a mod directory. To do this, you can rename the MXML file to EXML.
@@ -107,10 +107,10 @@ While this library targets multiple frameworks, building MBINCompiler and libMBI
 The full command to build all the libraries under the .NET  framework looks like:
 
 ```sh
-dotnet publish -c Release -f net6.0-windows -r win-x64 -o Build/Release/net6/ /nowarn:cs0618 /nowarn:cs0169 /nowarn:cs0414
+dotnet publish -c Release -f net8.0 -r win-x64 /nowarn:cs0618 /nowarn:cs0169 /nowarn:cs0414
 ```
 
-For convenience we have included two batch scripts which build either the entire project for the .NET 6 framework (`build-net6.bat`) or the .NET 7 framework (`build-net7.bat`)
+For convenience we have included two batch scripts which build either the entire project for the .NET 6 framework (`build-net6.bat`) or the .NET 8 framework (`build-net8.bat`)
 
 ## Installing python dependencies
 
@@ -125,12 +125,12 @@ For anyone helping to develop MBINCompiler, if you are contributing new structs 
 ### Requirements
 
 Before running the tests, you need to have built a `Release` version of MBINCompiler locally.
-You can do this by running `dotnet publish --no-self-contained -c Release -f net6.0 -r win-x64 /nowarn:cs0618 /nowarn:cs0169 /nowarn:cs0414` (change dotnet and framework version as required).
+You can do this by running `dotnet publish --no-self-contained -c Release -f net8.0 -r win-x64 /nowarn:cs0618 /nowarn:cs0169 /nowarn:cs0414` (change dotnet and framework version as required).
 See section above about building for more details.
 
 ### Running the tests
 
-Open a command line window in the root MBINCompiler directory and enter `uv run python -m pytest`.
+Open a command line window in the root MBINCompiler directory and enter `uv run pytest`.
 This will pull the latest test data into the directory `./tests/data`.
 
 #### Command line arguments:
