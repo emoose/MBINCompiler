@@ -1,0 +1,15 @@
+namespace libMBIN.NMS.GameComponents
+{
+    [NMS(GUID = 0x6AD27BA9280BA498, NameHash = 0xC99B18E5)]
+    public class GcCostStat : NMSTemplate
+    {
+        [NMS(Index = 3)]
+        /* 0x00 */ public NMSString0x20A CostAsString;
+        [NMS(Index = 0)]
+        /* 0x20 */ public NMSString0x10 Stat;
+        [NMS(Index = 1)]
+        /* 0x30 */ public NMSString0x10 StatGroup;
+        [NMS(Index = 2)]
+        /* 0x40 */ public int Value;
+    }
+}

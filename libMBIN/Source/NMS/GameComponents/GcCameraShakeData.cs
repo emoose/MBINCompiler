@@ -1,0 +1,33 @@
+using libMBIN.NMS.GameComponents;
+
+namespace libMBIN.NMS.GameComponents
+{
+    [NMS(GUID = 0xBA9D5F3F85BE736B, NameHash = 0xC9BED6CF)]
+    public class GcCameraShakeData : NMSTemplate
+    {
+        [NMS(Index = 9)]
+        /* 0x00 */ public GcCameraShakeMechanicalData MechanicalData;
+        [NMS(Index = 0)]
+        /* 0x70 */ public NMSString0x10 Name;
+        [NMS(Index = 8)]
+        /* 0x80 */ public GcCameraShakeCapturedData CapturedData;
+        [NMS(Index = 3)]
+        /* 0x94 */ public float DecayRate;
+        [NMS(Index = 11)]
+        /* 0x98 */ public float FovFrequency;
+        [NMS(Index = 10)]
+        /* 0x9C */ public float FovStrength;
+        [NMS(Index = 4)]
+        /* 0xA0 */ public float StrengthScale;
+        [NMS(Index = 5)]
+        /* 0xA4 */ public float ThirdPersonDamp;
+        [NMS(Index = 1)]
+        /* 0xA8 */ public float TimeStart;
+        [NMS(Index = 2)]
+        /* 0xAC */ public float TotalTime;
+        [NMS(Index = 6)]
+        /* 0xB0 */ public float VRStrength;
+        [NMS(Index = 7)]
+        /* 0xB4 */ public bool ShakeIfOffScreen;
+    }
+}

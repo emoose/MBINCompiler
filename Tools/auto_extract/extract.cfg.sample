@@ -1,0 +1,10 @@
+[NMS]
+binary_path = C:/Program Files (x86)/Steam/steamapps/common/No Man's Sky/Binaries/NMS.exe
+
+[general]
+wait_time = 5
+close_NMS_process = true
+replace_existing_files = false
+output_dir = ../../libMBIN/
+write_guid_json = false
+template_dir = templates/default/

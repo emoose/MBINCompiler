@@ -1,0 +1,20 @@
+namespace libMBIN.NMS.GameComponents
+{
+    [NMS(GUID = 0x3627CB10E493A410, NameHash = 0xFCB3C50A)]
+    public class GcNameGeneratorTypes : NMSTemplate
+    {
+        // size: 0x8
+        public enum MarkovSelectorEnum : uint {
+            Generic,
+            Mineral,
+            Region_NO,
+            Region_RU,
+            Region_CH,
+            Region_JP,
+            Region_LT,
+            Region_FL,
+        }
+        [NMS(Index = 0)]
+        /* 0x0 */ public MarkovSelectorEnum MarkovSelector;
+    }
+}

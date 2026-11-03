@@ -1,0 +1,67 @@
+namespace libMBIN.NMS.GameComponents
+{
+    [NMS(GUID = 0x9D1380B52FDCB94D, NameHash = 0x5E9188D8)]
+    public class GcCreatureTypes : NMSTemplate
+    {
+        // size: 0x37
+        public enum CreatureTypeEnum : uint {
+            None,
+            Bird,
+            FlyingLizard,
+            FlyingSnake,
+            Butterfly,
+            FlyingBeetle,
+            Beetle,
+            Fish,
+            Shark,
+            Crab,
+            Snake,
+            Dino,
+            Antelope,
+            Rodent,
+            Cat,
+            Fiend,
+            BugQueen,
+            BugFiend,
+            Drone,
+            Quad,
+            SpiderQuad,
+            SpiderQuadMini,
+            Walker,
+            Predator,
+            PlayerPredator,
+            Prey,
+            Passive,
+            FishPredator,
+            FishPrey,
+            FiendFishSmall,
+            FiendFishBig,
+            Jellyfish,
+            LandJellyfish,
+            RockCreature,
+            MiniFiend,
+            Floater,
+            Scuttler,
+            Slug,
+            MiniDrone,
+            MiniRobo,
+            SpaceFloater,
+            JellyBoss,
+            JellyBossBrood,
+            LandSquid,
+            Weird,
+            SeaSnake,
+            SandWorm,
+            ProtoRoller,
+            ProtoFlyer,
+            ProtoDigger,
+            Plough,
+            Digger,
+            Drill,
+            Brainless,
+            Pet,
+        }
+        [NMS(Index = 0)]
+        /* 0x0 */ public CreatureTypeEnum CreatureType;
+    }
+}

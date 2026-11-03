@@ -1,0 +1,42 @@
+namespace libMBIN.NMS.GameComponents
+{
+    [NMS(GUID = 0xEBBEAE6542D62565, NameHash = 0x38671555)]
+    public class GcPetAccessoryType : NMSTemplate
+    {
+        // size: 0x1E
+        public enum PetAccessoryEnum : uint {
+            None,
+            CargoCylinder,
+            Containers,
+            ShieldArmour,
+            SolarBattery,
+            Tank,
+            WingPanel,
+            TravelPack,
+            SpacePack,
+            CargoLong,
+            Antennae,
+            Computer,
+            Toolbelt,
+            LeftCanisters,
+            LeftEnergyCoil,
+            LeftFrigateTurret,
+            LeftHeadLights,
+            LeftArmourPlate,
+            LeftTurret,
+            LeftSupportSystem,
+            RightCanisters,
+            RightEnergyCoil,
+            RightFrigateTurret,
+            RightHeadLights,
+            RightArmourPlate,
+            RightTurret,
+            RightSupportSystem,
+            RightMechanicalPaw,
+            LeftMechanicalPaw,
+            MechanicalPaw,
+        }
+        [NMS(Index = 0)]
+        /* 0x0 */ public PetAccessoryEnum PetAccessory;
+    }
+}

@@ -1,0 +1,21 @@
+namespace libMBIN.NMS.Toolkit
+{
+    [NMS(GUID = 0x4DE3EBE31B56BFA1, NameHash = 0xB05D46CA)]
+    public class TkGridLayersEnum : NMSTemplate
+    {
+        // size: 0x9
+        public enum GridLayerTypesEnum : uint {
+            Small,
+            Large,
+            Resources_Heridium,
+            Resources_Iridium,
+            Resources_Copper,
+            Resources_Nickel,
+            Resources_Aluminium,
+            Resources_Gold,
+            Resources_Emeril,
+        }
+        [NMS(Index = 0)]
+        /* 0x0 */ public GridLayerTypesEnum GridLayerTypes;
+    }
+}

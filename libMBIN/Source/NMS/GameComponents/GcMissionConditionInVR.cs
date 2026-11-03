@@ -1,0 +1,17 @@
+namespace libMBIN.NMS.GameComponents
+{
+    [NMS(GUID = 0x980B532229713D1D, NameHash = 0x76663F76)]
+    public class GcMissionConditionInVR : NMSTemplate
+    {
+        [NMS(Index = 0)]
+        /* 0x0 */ public bool NeedsHandControllers;
+        [NMS(Index = 2)]
+        /* 0x1 */ public bool NeedsNoHandControllers;
+        [NMS(Index = 4)]
+        /* 0x2 */ public bool NeedsSmoothMoveOn;
+        [NMS(Index = 1)]
+        /* 0x3 */ public bool NeedsSnapTurnOn;
+        [NMS(Index = 3)]
+        /* 0x4 */ public bool NeedsTeleportOn;
+    }
+}

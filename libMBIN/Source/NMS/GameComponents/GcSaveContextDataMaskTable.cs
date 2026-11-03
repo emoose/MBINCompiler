@@ -1,0 +1,14 @@
+using libMBIN.NMS.GameComponents;
+using System.Collections.Generic;
+
+namespace libMBIN.NMS.GameComponents
+{
+    [NMS(GUID = 0xE636DCD00A41E3F6, NameHash = 0x3ECB0104)]
+    public class GcSaveContextDataMaskTable : NMSTemplate
+    {
+        [NMS(Index = 1)]
+        /* 0x00 */ public List<GcSaveContextDataMaskTableEntry> Masks;
+        [NMS(Index = 0)]
+        /* 0x10 */ public GcSaveContextDataMask Default;
+    }
+}

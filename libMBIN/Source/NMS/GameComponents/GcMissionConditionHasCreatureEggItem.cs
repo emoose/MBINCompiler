@@ -1,0 +1,16 @@
+namespace libMBIN.NMS.GameComponents
+{
+    [NMS(GUID = 0x9B38CB8591D47246, NameHash = 0x96437798)]
+    public class GcMissionConditionHasCreatureEggItem : NMSTemplate
+    {
+        // size: 0x2
+        public enum EggItemTypeEnum : uint {
+            Egg,
+            ValidCatalyst,
+        }
+        [NMS(Index = 0)]
+        /* 0x0 */ public EggItemTypeEnum EggItemType;
+        [NMS(Index = 1)]
+        /* 0x4 */ public bool IncludeEggMachineInventoryInSearch;
+    }
+}

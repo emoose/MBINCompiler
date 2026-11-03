@@ -1,0 +1,15 @@
+namespace libMBIN.NMS.GameComponents
+{
+    [NMS(GUID = 0xECC05F12D57F8509, NameHash = 0x973875A9)]
+    public class GcStatDisplayType : NMSTemplate
+    {
+        // size: 0x3
+        public enum StatDisplayTypeEnum : uint {
+            None,
+            Sols,
+            Distance,
+        }
+        [NMS(Index = 0)]
+        /* 0x0 */ public StatDisplayTypeEnum StatDisplayType;
+    }
+}

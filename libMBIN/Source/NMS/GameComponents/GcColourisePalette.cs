@@ -1,0 +1,15 @@
+namespace libMBIN.NMS.GameComponents
+{
+    [NMS(GUID = 0xFEACB2BE8F14CF98, NameHash = 0x19F7C327)]
+    public class GcColourisePalette : NMSTemplate
+    {
+        [NMS(Index = 0)]
+        /* 0x00 */ public Colour PrimaryColour;
+        [NMS(Index = 3)]
+        /* 0x10 */ public Colour QuaternaryColour;
+        [NMS(Index = 1)]
+        /* 0x20 */ public Colour SecondaryColour;
+        [NMS(Index = 2)]
+        /* 0x30 */ public Colour TernaryColour;
+    }
+}

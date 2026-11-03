@@ -1,0 +1,13 @@
+using libMBIN.NMS.GameComponents;
+
+namespace libMBIN.NMS.GameComponents
+{
+    [NMS(GUID = 0x5C027B1CF73842D5, NameHash = 0x68F19B20)]
+    public class GcCreatureTagAndRarity : NMSTemplate
+    {
+        [NMS(Index = 0)]
+        /* 0x00 */ public NMSString0x10 Tag;
+        [NMS(Index = 1)]
+        /* 0x10 */ public GcCreatureRarity RarityOverride;
+    }
+}

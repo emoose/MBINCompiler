@@ -1,0 +1,13 @@
+using libMBIN.NMS.Toolkit;
+
+namespace libMBIN.NMS.Toolkit
+{
+    [NMS(GUID = 0x49D68F83B5369F18, NameHash = 0xCD648C11)]
+    public class TkNoiseCaveData : NMSTemplate
+    {
+        [NMS(Index = 0)]
+        /* 0x00 */ public TkNoiseFeatureData Mouth;
+        [NMS(Index = 1)]
+        /* 0x40 */ public TkNoiseFeatureData Tunnel;
+    }
+}

@@ -1,0 +1,34 @@
+using libMBIN.NMS.GameComponents;
+using System.Collections.Generic;
+
+namespace libMBIN.NMS.GameComponents
+{
+    [NMS(GUID = 0xE342E0DCA6975A0, NameHash = 0xA98CD11F)]
+    public class GcInventoryContainer : NMSTemplate
+    {
+        [NMS(Index = 4)]
+        /* 0x000 */ public List<GcInventoryBaseStatEntry> BaseStatValues;
+        [NMS(Index = 0)]
+        /* 0x010 */ public List<GcInventoryElement> Slots;
+        [NMS(Index = 5)]
+        /* 0x020 */ public List<GcInventorySpecialSlot> SpecialSlots;
+        [NMS(Index = 1)]
+        /* 0x030 */ public List<GcInventoryIndex> ValidSlotIndices;
+        [NMS(Index = 2)]
+        /* 0x040 */ public GcInventoryClass Class;
+        [NMS(Index = 7)]
+        /* 0x044 */ public int Height;
+        [NMS(Index = 11)]
+        /* 0x048 */ public int NumSlotsFromTech;
+        [NMS(Index = 3)]
+        /* 0x04C */ public GcInventoryStackSizeGroup StackSizeGroup;
+        [NMS(Index = 10)]
+        /* 0x050 */ public int Version;
+        [NMS(Index = 6)]
+        /* 0x054 */ public int Width;
+        [NMS(Index = 9)]
+        /* 0x058 */ public NMSString0x100 Name;
+        [NMS(Index = 8)]
+        /* 0x158 */ public bool IsCool;
+    }
+}

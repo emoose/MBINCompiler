@@ -1,0 +1,12 @@
+using libMBIN.NMS.GameComponents;
+using System.Collections.Generic;
+
+namespace libMBIN.NMS.GameComponents
+{
+    [NMS(GUID = 0x6EF4B81BBD13FB65, NameHash = 0xF29EC845)]
+    public class GcMechWeaponLocationPriority : NMSTemplate
+    {
+        [NMS(Index = 0)]
+        /* 0x0 */ public List<GcMechWeaponLocation> MechWeaponLocationPriority;
+    }
+}

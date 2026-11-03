@@ -1,0 +1,13 @@
+using System.Collections.Generic;
+
+namespace libMBIN.NMS.GameComponents
+{
+    [NMS(GUID = 0x2C90569E6DD7D688, NameHash = 0x4E19DF75)]
+    public class GcGroupCondition : NMSTemplate
+    {
+        [NMS(Index = 0)]
+        /* 0x00 */ public List<NMSTemplate> Conditions;
+        [NMS(Index = 1)]
+        /* 0x10 */ public bool ORConditions;
+    }
+}

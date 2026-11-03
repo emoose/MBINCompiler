@@ -1,0 +1,12 @@
+theme:
+  name: readthedocs
+  custom_dir: 'docs/custom_theme/'
+  highlightjs: true
+site_name: MBINCompiler
+site_dir: html_docs/site/
+nav:
+    - Home: index.md
+    - Installation: installation.md
+    - Usage: usage.md
+    - libMBIN: libmbin/usage.md
+    - Classes: classes/index.md

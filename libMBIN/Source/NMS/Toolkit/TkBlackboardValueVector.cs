@@ -1,0 +1,11 @@
+namespace libMBIN.NMS.Toolkit
+{
+    [NMS(GUID = 0x2FEFEF55E7B957E8, NameHash = 0xC73FFBD)]
+    public class TkBlackboardValueVector : NMSTemplate
+    {
+        [NMS(Index = 1)]
+        /* 0x00 */ public Vector3f Value;
+        [NMS(Index = 0)]
+        /* 0x10 */ public NMSString0x10 Key;
+    }
+}
